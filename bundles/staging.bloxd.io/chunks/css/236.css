@@ -1,23 +1,551 @@
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicListWindow {
+.CharCustomisationBody {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
-  min-height: 0
-}
-
-.SchematicList {
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  row-gap: .5rem;
+  height: 100%;
   width: 100%
 }
 
-.SchematicList .NoSchematicsText {
-  color: #cfcfcf;
+.CharCustomisationBody .CharCustomisationBodyHeader {
+  align-items: center;
+  background-color: #303a59;
+  color: #ffb914;
+  display: flex;
+  gap: .5rem;
+  padding: .5rem 1rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyHeader .GoldButton {
+  box-shadow: none;
+  color: #fff;
+  margin-left: 1rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyHeader .GoldButton .ButtonBody {
+  padding: .3rem .5rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner {
+  align-items: flex-start;
+  display: flex;
+  flex-grow: 1;
+  min-height: 0;
+  position: relative;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 1rem;
+  scrollbar-gutter: stable;
+  width: 46rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .EmoteLoadoutSummary {
+  background-color: rgba(57, 73, 128, .3);
+  border: .3rem solid #394980;
+  box-sizing: border-box;
+  color: #ffb914;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  margin-bottom: .5rem;
+  padding: .5rem .75rem;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .EmoteLoadoutSummary .EmoteLoadoutSummaryText {
+  font-size: 1.4rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .EmoteLoadoutSummary .EmoteLoadoutSummaryHint {
+  font-size: 1.1rem;
+  opacity: .8
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomisationActions {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding-bottom: 1rem;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup {
+  background-color: rgba(57, 73, 128, .3);
+  border: .3rem solid #394980;
+  box-sizing: content-box;
+  font-size: .8rem;
+  margin-bottom: .5rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner {
+  background-color: #ffb914;
+  border-width: 0;
+  box-shadow: none;
+  position: relative
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerHeader {
+  font-size: 1.2rem;
+  padding: .3rem .5rem;
+  text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerHeader .svg-inline--fa,
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerHeader.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerHeader .svg-inline--fa path:only-of-type,
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerHeader.svg-inline--fa path:only-of-type {
+  stroke: #303a59;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerHeader .CosmeticShopBannerIcon {
+  color: #fff
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerHeader .CosmeticShopBannerSubtitle {
+  display: none
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerHeader .CountdownTime {
+  color: #fff
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerContent {
+  display: none
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupLabel {
+  align-items: center;
+  -webkit-backdrop-filter: blur(.1rem);
+  backdrop-filter: blur(.1rem);
+  background-color: rgba(48, 58, 89, .4);
+  color: #ffb914;
+  display: flex;
+  font-size: 1.8rem;
+  font-weight: 800;
+  justify-content: space-between;
+  padding: .4rem .75rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupLabel .CosmeticPackGroupLabelName {
+  align-items: center;
+  display: flex;
+  gap: .5rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupLabel .NewButton {
+  color: #fff;
+  font-size: 1.4rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupLabel .NewButton .ButtonBody {
+  padding: .3rem .8rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems {
+  grid-gap: .5rem;
+  align-items: center;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(6, 1fr);
+  padding: .5rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CosmeticColorSwatchCell {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CosmeticColorSwatchCell .CosmeticColorOption {
+  aspect-ratio: 1/1;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform .15s;
+  width: 33%
+}
+
+@media(hover:hover) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CosmeticColorSwatchCell .CosmeticColorOption:hover {
+    transform: scale(1.1)
+  }
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CosmeticColorSwatchCell .CosmeticColorOption.pad-focused {
+  transform: scale(1.1)
+}
+
+@media(hover:none) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CosmeticColorSwatchCell .CosmeticColorOption:active {
+    transform: scale(1.1)
+  }
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CosmeticColorSwatchCell .CosmeticColorOption.CosmeticColorOptionSelected {
+  border: .25rem solid #ffb914
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper {
+  margin: 0;
+  width: auto
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.CharCustomPartWrapperProfileEffect {
+  box-sizing: border-box;
+  height: 4rem;
+  padding: .3rem;
+  width: 16rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper {
+  align-items: center;
+  background-color: rgba(182, 131, 14, .2);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPart {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: .3rem;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPart .EmoteCustomPartIcon {
+  aspect-ratio: 1/1;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPart .EmoteCustomPartLabel {
+  color: #fcd373;
   font-size: 1rem;
-  margin: 2rem
+  text-align: center
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPartToggleContainer {
+  align-items: stretch;
+  display: flex;
+  height: 2.5rem;
+  justify-content: center;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPartToggleContainer .EmoteCustomPartSlotBadge {
+  align-items: center;
+  background-color: #ffb914;
+  color: #303a59;
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  padding: 0 .3rem;
+  pointer-events: none;
+  width: 1.5rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPartToggleContainer .EmoteCustomPartToggle {
+  align-items: center;
+  background-color: #ffb914;
+  border: none;
+  color: #303a59;
+  cursor: pointer;
+  display: flex;
+  flex-grow: 1;
+  font-size: 1.2rem;
+  justify-content: center;
+  transition: transform .1s, background-color .1s
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPartToggleContainer .EmoteCustomPartToggle.EmoteCustomPartToggleEquipped {
+  background-color: #e34f4f
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPartToggleContainer .EmoteCustomPartToggle.EmoteCustomPartToggleDisabled {
+  cursor: not-allowed;
+  opacity: .4
+}
+
+@media(hover:hover) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPartToggleContainer .EmoteCustomPartToggle.EmoteCustomPartToggleDisabled:hover {
+    transform: none
+  }
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPartToggleContainer .EmoteCustomPartToggle.EmoteCustomPartToggleDisabled.pad-focused {
+  transform: none
+}
+
+@media(hover:none) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPartToggleContainer .EmoteCustomPartToggle.EmoteCustomPartToggleDisabled:active {
+    transform: none
+  }
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper {
+  align-items: center;
+  -webkit-backdrop-filter: blur(.1rem);
+  backdrop-filter: blur(.1rem);
+  border: .2rem solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  height: 7rem;
+  justify-content: center;
+  margin: .5rem;
+  position: relative;
+  transition: transform .1s, background-color .1s, border-color .1s;
+  width: 7rem
+}
+
+@media(hover:hover) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper:hover {
+    transform: scale(1.05)
+  }
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper.pad-focused {
+  transform: scale(1.05)
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper.SelectedCharCustomPartWrapper {
+  background-color: rgba(255, 185, 20, .15);
+  border-color: #ffb914
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper.TryingOnCharCustomPartWrapper {
+  background-color: rgba(255, 185, 20, .15);
+  border-color: #ffb914;
+  border-style: dashed
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper.DisabledCharCustomPartWrapper {
+  filter: brightness(.5);
+  pointer-events: none
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper .LockedCosmeticIcon {
+  color: #ffb914;
+  font-size: 2rem;
+  opacity: .7;
+  position: absolute;
+  right: 50%;
+  text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59;
+  top: 50%;
+  transform: translate(50%, -50%)
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper .LockedCosmeticIcon .svg-inline--fa,
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper .LockedCosmeticIcon.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper .LockedCosmeticIcon .svg-inline--fa path:only-of-type,
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper .LockedCosmeticIcon.svg-inline--fa path:only-of-type {
+  stroke: #303a59;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper .CharCustomPart {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 85%;
+  width: 85%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper .CharCustomPart.CharCustomProfileEffect {
+  height: 100%;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid {
+  grid-gap: .5rem;
+  box-sizing: border-box;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(4, 1fr);
+  padding: .5rem;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard {
+  align-items: center;
+  border: .2rem solid transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  position: relative;
+  transition: transform .15s, border-color .15s, background-color .15s
+}
+
+@media(hover:hover) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard:hover {
+    transform: scale(1.05)
+  }
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard.pad-focused {
+  transform: scale(1.05)
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard.CharacterPresetCardActive {
+  background-color: rgba(255, 185, 20, .15);
+  border-color: #ffb914
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard.CharacterPresetCardTryingOn {
+  background-color: rgba(255, 185, 20, .15);
+  border-color: #ffb914;
+  border-style: dashed
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard .LockedCosmeticIcon {
+  color: #ffb914;
+  font-size: 2.4rem;
+  opacity: .7;
+  position: absolute;
+  right: 50%;
+  text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59;
+  top: 50%;
+  transform: translate(50%, -50%)
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard .LockedCosmeticIcon .svg-inline--fa,
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard .LockedCosmeticIcon.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard .LockedCosmeticIcon .svg-inline--fa path:only-of-type,
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard .LockedCosmeticIcon.svg-inline--fa path:only-of-type {
+  stroke: #303a59;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard .CharacterPresetCardPreview {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 10rem;
+  width: 8rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisationUndo {
+  bottom: 1rem;
+  position: absolute;
+  right: 1rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisationPreview {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  justify-content: center;
+  width: 12rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisationPreview .CharCustomisationPreviewCanvas {
+  height: 100%;
+  outline: none;
+  width: 100%
+}
+
+@media(orientation:portrait)and (max-width:1200px) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper {
+    flex-shrink: 0;
+    overflow-x: hidden;
+    padding: 1rem .5rem;
+    width: calc(11rem + 1.5vmin)
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupLabel {
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    gap: .3rem;
+    padding: .4rem .5rem
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupLabel .NewButton {
+    flex-basis: 100%
+  }
+}
+
+@media(orientation:portrait)and (max-width:1200px)and (pointer:coarse) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupLabel .NewButton {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+@media(orientation:portrait)and (max-width:1200px) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupLabel .NewButton .ButtonBody {
+    white-space: normal
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems {
+    grid-template-columns: minmax(0, 1fr)
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CosmeticColorSwatchCell .CosmeticColorOption {
+    width: 50%
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper {
+    justify-self: center
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper,
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper {
+    width: 7rem
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.CharCustomPartWrapperProfileEffect {
+    width: 100%
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid {
+    grid-template-columns: minmax(0, 1fr)
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisationPreview {
+    align-self: flex-start;
+    aspect-ratio: 3/4;
+    height: auto;
+    margin: 0 auto;
+    max-height: 100%;
+    min-height: 0
+  }
 }
 
 @keyframes rainbowShimmer {
@@ -119,196 +647,137 @@
   }
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer {
-  align-items: stretch;
-  display: flex;
-  flex-direction: column
+.SavedOutfits .SavedOutfitSlot {
+  display: grid;
+  position: relative
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload {
-  align-items: center;
-  border: 3px solid #303a59;
-  border-radius: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  height: 10rem;
-  justify-content: center;
-  padding: 2rem 1rem
+.SavedOutfits.CosmeticPackGroup .CharacterPresetsGrid.SavedOutfitsGrid {
+  padding-top: 1.75rem
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload .SchematicUploadIcon {
-  font-size: 3rem;
-  opacity: .4;
-  text-shadow: 0 0 0 #000;
-  transition: color .2s, opacity .3s
+.SavedOutfits .SavedOutfitDeleteButton {
+  background: none;
+  border: none;
+  bottom: calc(100% - .5rem);
+  box-sizing: content-box;
+  color: inherit;
+  color: #cfcfcf;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.2rem;
+  letter-spacing: inherit;
+  line-height: inherit;
+  line-height: 1;
+  margin: 0;
+  padding: .4rem .65rem;
+  position: absolute;
+  right: .4rem;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit;
+  z-index: 1
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload .SchematicUploadIcon.Active {
-  color: #4f94f1;
-  opacity: 1
+@media(hover:hover) {
+  .SavedOutfits .SavedOutfitDeleteButton:hover {
+    color: #ff8a80
+  }
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload .SchematicUploadIcon.Active.TooBig {
+.SavedOutfits .SavedOutfitDeleteButton.pad-focused {
   color: #ff8a80
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload .SchematicUploadIcon.Complete {
-  color: #1dd06d;
-  opacity: 1
+@media(hover:none) {
+  .SavedOutfits .SavedOutfitDeleteButton:active {
+    color: #ff8a80
+  }
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload .SchematicUploadInstructions {
-  font-size: 1.2rem;
-  opacity: .4;
-  text-shadow: 0 0 0 #000;
-  transition: opacity .2s, color .3s
+@media(pointer:coarse) {
+  .SavedOutfits .SavedOutfitDeleteButton:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) max(1.2rem/-2, min(0px, (100% - 44px)/2));
+    position: absolute
+  }
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload .SchematicUploadInstructions.Active {
-  opacity: 1
+@media(orientation:portrait)and (max-width:1200px) {
+  .SavedOutfits.CosmeticPackGroup .CharacterPresetsGrid.SavedOutfitsGrid {
+    padding-top: .5rem
+  }
+
+  .SavedOutfits .SavedOutfitSlot.SavedOutfitSlotFilled {
+    padding-right: 2rem
+  }
+
+  .SavedOutfits .SavedOutfitDeleteButton {
+    bottom: auto;
+    right: .25rem;
+    top: .4rem
+  }
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload .SchematicUploadInstructions.Complete {
-  color: #1dd06d;
-  opacity: 1
+@media(orientation:portrait)and (max-width:1200px)and (pointer:coarse) {
+  .SavedOutfits .SavedOutfitDeleteButton:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload.ActiveDrag .SchematicUploadIcon,
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload.ActiveDrag .SchematicUploadInstructions {
-  opacity: 1
+@media(hover:hover) {
+  .SavedOutfits .SavedOutfitSlot:hover .SavedOutfitCard {
+    transform: scale(1.05)
+  }
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUploadButton {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  box-sizing: border-box
+.SavedOutfits .SavedOutfitSlot.pad-focused .SavedOutfitCard {
+  transform: scale(1.05)
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUploadButton .ButtonBody {
-  padding: 1rem
-}
-
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .OtherOptions {
-  align-items: center;
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
-  width: 100%
-}
-
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .OtherOptions .NewButton {
-  align-items: center;
-  display: flex;
-  flex-grow: 1;
-  font-size: 1.5rem;
-  justify-content: center
-}
-
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .OtherOptions .NewButton .ButtonBody {
-  padding: .8rem
-}
-
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow {
-  width: 100%
-}
-
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicName {
-  box-shadow: none;
-  box-sizing: border-box;
-  font-size: 1.5rem;
-  height: 3rem;
-  margin-top: .5rem;
-  padding: .5rem;
-  text-align: left;
-  width: 100%
-}
-
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicName.Error {
-  border: 2px solid #e34f4f
-}
-
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicDescription {
-  box-shadow: none;
-  box-sizing: border-box;
-  font-size: 1.5rem;
-  height: 7rem;
-  margin-top: .5rem;
-  padding: .5rem;
-  resize: none;
-  text-align: left;
-  width: 100%
-}
-
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicDescription.Hidden {
-  display: none
-}
-
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicError {
-  color: #ff8a80;
+.SavedOutfits .SavedOutfitCard {
   font-size: 1rem;
-  font-weight: 700;
-  height: 1rem;
-  margin-top: .1rem;
-  text-shadow: none
+  font-weight: 800;
+  justify-content: center;
+  min-height: 10rem;
+  overflow: hidden
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicCheckboxContainer {
-  align-items: center;
-  display: flex;
-  margin-left: 1px;
-  margin-top: 1.5rem
+.SavedOutfits .SavedOutfitCard.SavedOutfitCardEmpty {
+  color: #cfcfcf
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicCheckboxContainer .SchematicPopupSubtitle {
-  font-size: 1.35rem;
-  margin-left: 1rem;
-  margin-top: 0
+.SavedOutfits .SavedOutfitCard .SavedOutfitCardPicture {
+  font-size: 4rem;
+  isolation: isolate;
+  padding-bottom: .34em
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicCheckboxContainer.WarningBorder {
-  border: 1px solid #ffb914;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  margin-left: -5px;
-  margin-right: -5px;
-  padding: .5rem
+.SavedOutfits .SavedOutfitCard .SecondaryButton {
+  position: relative
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicLobbyCodeWarning {
-  background-color: #ffb914;
-  border: 1px solid #ffb914;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  color: #000;
-  font-size: .75rem;
-  font-weight: 700;
-  margin-left: -5px;
-  margin-right: -5px;
-  padding: .5rem 0 .5rem .5rem;
-  text-shadow: none
+@media(pointer:coarse) {
+  .SavedOutfits .SavedOutfitCard .SecondaryButton {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicButtons {
-  align-items: center;
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
-  margin-top: 3rem;
-  width: 100%
+@media(orientation:portrait)and (max-width:1200px) {
+  .SavedOutfits .SavedOutfitCard.SavedOutfitCardEmpty {
+    min-height: 0;
+    padding: .5rem
+  }
 }
 
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicButtons .NewButton {
-  align-items: center;
-  display: flex;
-  flex-grow: 1;
-  font-size: 1.5rem;
-  justify-content: center
-}
-
-.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicButtons .NewButton .ButtonBody {
-  padding: .8rem
+@media(orientation:portrait)and (max-width:1200px)and (pointer:coarse) {
+  .SavedOutfits .SavedOutfitCard.SavedOutfitCardEmpty {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
 }

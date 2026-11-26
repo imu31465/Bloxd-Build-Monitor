@@ -1,43 +1,40 @@
 export const id = 189;
 export const ids = [189];
 export const modules = {
-  9629: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      pageBody: () => JV
+  9714: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      pageBody: () => AH
     });
-    const JV = {
-      whatIs: ["The world is ending, and the only way out is up. Bloxd Build a Factory is the original factory mode on Bloxd. You automate a factory, build a rocket and launch it to escape before time runs out. It's a race against everyone else in your world, the fastest launches go top of the leaderboard, and you don't need to install anything first.", "The world resets every 6 hours, so every session is a brand new race to the stars. Want a factory that keeps going forever? Have a look at the Persistent world or Build a Factory 2."],
-      howToPlay: ["Place your first Chest (or bed) and you'll get an Auto Miner and, in public lobbies, a Protector. Craft some Pipes and hook the Auto Miner up to the Chest. Open the Auto Miner, put some Coal in to fuel it, and now it mines for you.", "Next up, craft an Extractor Pipe and an Auto Crafter. Connect a Chest to the Auto Crafter with the Extractor Pipe and it'll turn your resources into new items by itself. As things grow, add Auto Harvesters for crops and Solar Panels with Wire for power. Splitter, Filter and Merger Pipes send items exactly where they need to go.", "Then place your Rocket Ship and upgrade it one stage at a time using whatever your factory makes. When it's ready, launch it, escape the dying world and set your time. Upgrades are cheaper in the resetting world, so a full rocket fits into one session.", "In the Persistent world, nothing resets. You launch rockets to reach the Moon, mine Lunite there and build faster Lunite machines."],
-      features: ["Factory Automation with a Rocket Race at the End", "Auto Miners, Auto Crafters and Auto Harvesters", "Pipes, Extractor, Splitter, Filter and Merger Pipes", "Solar Panels and Wire for Power", "Leaderboard for Best Launch Time and Rocket Stage", "Fresh World Every 6 Hours", "Persistent World with Moon Trips and Lunite Machines", "Step-by-Step Tutorial for New Players"],
-      tips: ["Follow the tutorial and you'll have your first Auto Miner running in no time", "Keep your Auto Miners topped up with Coal so they never stop", "Use Extractor Pipes to feed Chests into your Auto Crafters", "Filter and Splitter Pipes sort items into the right machines", "Leave about 50 blocks of open air above your Solar Panels", "Upgrade your rocket as soon as you can afford the next stage", 'Keep an eye on the "World resets in" timer and plan your launch before it runs out', "In the Persistent world each chunk holds up to 5 Auto Miners, 5 Auto Crafters and 5 Auto Harvesters, so spread your factory out", "Mine Lunite on the Moon to craft Lunite machines that run 1.5\xd7 faster"],
-      similarGames: ["buildAFactory2", "skyblock", "oneBlock", "classic_survival"],
+    const AH = {
+      whatIs: ["One block, floating in the sky, with a nametag that says \"I'm your One Block, break me!\" That's how every Bloxd One Block island starts. Break it and it comes straight back as something new, so you keep getting blocks, items and chests. Survive up there, unlock new phases, and slowly turn your tiny island into an empire."],
+      howToPlay: ["Break your One Block. Then break it again. And again. The more blocks you mine, the more phases you unlock, from the Forest and Plains right up to the Volcano and the Moon. Each phase changes what your block turns into, so there's always something new popping up. Once every phase is unlocked, you can switch between them whenever you like.", "To get going, collect 3 Gold Coins from chests. Then bridge over to the portal island nearby and walk into your portal. It takes you to One Village, the Hub. There you can spend coins in the shops, leave them with Bling Bling the banker, do daily and weekly quests and upgrade the guilds. When you're done, type /home or use a portal to head back to your island."],
+      features: ["17 Phases to Unlock, from Forest to the Moon", "Super Mining, Super Digging and Mega Chop Skills", "One Village Hub with Shops, a Bank and Treasure Chests", "Daily and Weekly Quests", "Painter's, Monster Hunter's and Farmer's Guilds", "Chat Events like Trivia, Unscramble and Type the Fastest", "Crops, a Rotating Trader and Double Drop Chance", "Gold Portal Skins for Saving Coins", "Visit Friends' Islands and Keep Multiple Island Saves"],
+      tips: ["Open every chest you find. That's where your Gold Coins come from.", "Put your coins in the bank, where your balance stays safe forever.", "Save 1,000, 50,000 or 1,000,000 coins in the bank to unlock gold portal skins.", "Level up your skills, then right click to use them. They've got a cooldown, so pick your moment.", "Use Mega Chop on trees to find way more chests.", "Only switch on Allow Edit for people you trust. Anyone with it can take your blocks.", "Lost? Type /home and you'll be straight back on your island."],
+      similarGames: ["skyblock", "skyIslands", "classic_survival"],
       faq: [{
-        question: "What is Bloxd Build a Factory?",
-        answer: "A factory automation race. You automate your factory, build a rocket and try to escape the dying world as fast as you can."
+        question: "What is Bloxd One Block?",
+        answer: "A sky challenge where you start on a single floating block. Break it to get new blocks, items and chests, unlock phases and grow your island into an empire."
       }, {
-        question: "How do you build a rocket in Bloxd Build a Factory?",
-        answer: "Place your Rocket Ship from your inventory, then feed it resources from your factory to upgrade it stage by stage. Once it's finished, launch it to beat the game."
+        question: "Is Bloxd One Block a skyblock game?",
+        answer: "Sort of. You start with one block in the sky and build everything from there. Bloxd Skyblock is a different mode, though: that one's an RPG with skills, quests and dungeons, while One Block is all about breaking your block to unlock 17 phases."
       }, {
-        question: "What's the goal in Build a Factory?",
-        answer: "Launch a rocket and escape the dying world. Your final time gets saved, and the quickest launches end up on the leaderboard."
+        question: "How many phases are in Bloxd One Block?",
+        answer: "17, from Forest and Plains through Ocean, Desert and Dungeon to the Volcano and the Moon. Mine enough blocks to unlock each one. When you've got them all, you can change phase."
       }, {
-        question: "How often does the Build a Factory world reset?",
-        answer: "Every 6 hours. After you launch, you can jump into another lobby and play again, or hang around until your world resets."
+        question: "How do I get to the Hub in One Block?",
+        answer: "Grab 3 Gold Coins from chests, bridge over to the portal island nearby and walk into your portal. Type /home to come back."
       }, {
-        question: "What is the Persistent world in Build a Factory?",
-        answer: "It's a Build a Factory world that never resets. You can build up to 5 Auto Miners, 5 Auto Crafters and 5 Auto Harvesters per chunk, and you launch rockets to climb the leaderboard and reach the Moon."
+        question: "Where do One Block coins come from?",
+        answer: "Chests from your One Block and the Hub treasure chests, daily and weekly quests, or watching an ad for coins."
       }, {
-        question: "How do you get to the Moon in Build a Factory?",
-        answer: "In the Persistent world, launch a rocket. You'll land on the Moon, where you can mine Lunite. No rocket to get back? Open the shop to return home."
+        question: "How do I open my portal in One Block?",
+        answer: "Type /open in chat. You can also add visitors in your island access settings, even if your portal is closed."
       }, {
-        question: "What does Lunite do?",
-        answer: "You use it to craft Lunite Auto Miners, Auto Crafters and Auto Harvesters. They run 1.5\xd7 faster, and the Lunite Auto Crafter and Auto Harvester can sometimes give you extra items."
-      }, {
-        question: "What's the difference between Build a Factory and Build a Factory 2?",
-        answer: "Build a Factory is a race to launch a rocket in a shared world that resets. In Build a Factory 2 you get your own floating factory island that you grow at your own pace."
+        question: "Can I have more than one island?",
+        answer: "Yes. The Island Manager lets you create new islands, rename them, load another save or delete one, up to a maximum number of islands."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

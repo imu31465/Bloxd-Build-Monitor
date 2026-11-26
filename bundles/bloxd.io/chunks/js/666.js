@@ -1,62 +1,62 @@
 export const id = 666;
 export const ids = [666];
 export const modules = {
-  64380: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      applyLightFoOffset: () => yV,
-      getFloatingOriginOffset: () => YV,
-      lightFoVersion: () => UV,
-      wrapRenderableForFO: () => pV
+  64186: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      applyLightFoOffset: () => hH,
+      getFloatingOriginOffset: () => rH,
+      lightFoVersion: () => SH,
+      wrapRenderableForFO: () => tH
     });
-    var JV = xV(44627);
+    var AH = LH(45215);
 
-    function YV(VV) {
-      const eV = VV.camera;
-      if (!eV) return {
+    function rH(HH) {
+      const BH = HH.camera;
+      if (!BH) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const xV = eV.worldMatrix;
+      const LH = BH.worldMatrix;
       return {
-        x: xV[12],
-        y: xV[13],
-        z: xV[14]
+        x: LH[12],
+        y: LH[13],
+        z: LH[14]
       }
     }
 
-    function UV(VV) {
-      return VV.camera ? VV.camera.worldMatrixVersion : 0
+    function SH(HH) {
+      return HH.camera ? HH.camera.worldMatrixVersion : 0
     }
 
-    function yV(VV, eV) {
-      const xV = eV.camera?.worldMatrix;
-      if (!xV) return;
-      const YV = xV[12],
-        UV = xV[13],
-        yV = xV[14];
-      let pV = 0;
-      for (const QV of eV.lights) {
-        if (pV >= JV.b) break;
-        if (!QV._writeLightUbo) continue;
-        const eV = 4 + 16 * pV,
-          xV = VV[eV + 3];
-        if (0 === xV || 2 === xV) {
-          const xV = QV.worldMatrix;
-          VV[eV] = xV[12] - YV, VV[eV + 1] = xV[13] - UV, VV[eV + 2] = xV[14] - yV
+    function hH(HH, BH) {
+      const LH = BH.camera?.worldMatrix;
+      if (!LH) return;
+      const rH = LH[12],
+        SH = LH[13],
+        hH = LH[14];
+      let tH = 0;
+      for (const zH of BH.lights) {
+        if (tH >= AH.e) break;
+        if (!zH._writeLightUbo) continue;
+        const BH = 4 + 16 * tH,
+          LH = HH[BH + 3];
+        if (0 === LH || 2 === LH) {
+          const LH = zH.worldMatrix;
+          HH[BH] = LH[12] - rH, HH[BH + 1] = LH[13] - SH, HH[BH + 2] = LH[14] - hH
         }
-        pV++
+        tH++
       }
     }
 
-    function pV(VV, eV, xV) {
-      let JV = -1;
+    function tH(HH, BH, LH) {
+      let AH = -1;
       return () => {
-        const YV = eV.camera ? eV.camera.worldMatrixVersion : -1;
-        YV !== JV && (xV(), JV = YV), VV()
+        const rH = BH.camera ? BH.camera.worldMatrixVersion : -1;
+        rH !== AH && (LH(), AH = rH), HH()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

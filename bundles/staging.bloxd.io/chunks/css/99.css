@@ -2140,14 +2140,14 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   margin-bottom: .75rem
 }
 
-.InviteLinkInnerWrapper {
+.CopyTextRow {
   align-items: center;
   display: flex;
   flex-direction: row;
   max-width: 100%
 }
 
-.InviteLinkInner {
+.CopyTextRow .CopyTextRowText {
   background-color: #394980;
   border-color: #1a2139 #6578ba #6578ba #1a2139;
   border-radius: 0;
@@ -2162,12 +2162,12 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   white-space: nowrap
 }
 
-.InviteLinkCopyButton {
+.CopyTextRow .CopyTextRowButton {
   flex-shrink: 0
 }
 
 @media(pointer:coarse) {
-  .InviteLinkCopyButton {
+  .CopyTextRow .CopyTextRowButton {
     box-sizing: border-box;
     min-height: 44px;
     min-width: 44px
@@ -5411,7 +5411,7 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 }
 
 .InGameUi.HiddenByWorldPanel,
-.InGameUi.HiddenByWorldPanel :not(.WorldPanelTouchControl .TouchMovementWrapper, .WorldPanelTouchControl .TouchMovementWrapper *, .WorldPanelTouchControl .TouchComponentsButtons, .WorldPanelTouchControl .TouchComponentsButtons *) {
+.InGameUi.HiddenByWorldPanel :not(.WorldPanelTouchControl .TouchMovementWrapper, .WorldPanelTouchControl .TouchMovementWrapper *, .WorldPanelTouchControl .TouchComponentsButtons, .WorldPanelTouchControl .TouchComponentsButtons *, .WorldPanelTouchControl .RecordingIndicator, .WorldPanelTouchControl .RecordingIndicator *) {
   visibility: hidden !important
 }
 
@@ -5426,7 +5426,7 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   width: var(--worldViewWidth)
 }
 
-.InGameUi.WorldPanelTouchControl:not(.Hidden) :is(.TouchMovementWrapper, .TouchComponentsButtons) {
+.InGameUi.WorldPanelTouchControl:not(.Hidden) :is(.TouchMovementWrapper, .TouchComponentsButtons, .RecordingIndicator) {
   visibility: visible
 }
 
@@ -6512,7 +6512,8 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   width: 100%
 }
 
-.GameBackgroundScreen.CodeEditorBg .CodeEditorEngineNotice {
+.GameBackgroundScreen.CodeEditorBg .CodeEditorEngineNotice,
+.GameBackgroundScreen.CodeEditorBg .CodeEditorLengthNotice {
   background-color: #303a59;
   box-sizing: border-box;
   color: #fff;
@@ -6522,7 +6523,13 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   width: 100%
 }
 
-.GameBackgroundScreen.CodeEditorBg .CodeEditorEngineNotice .CodeEditorEngineNoticeLink {
+.GameBackgroundScreen.CodeEditorBg .CodeEditorEngineNotice.CodeEditorLengthCounter,
+.GameBackgroundScreen.CodeEditorBg .CodeEditorLengthNotice.CodeEditorLengthCounter {
+  color: #cfcfcf
+}
+
+.GameBackgroundScreen.CodeEditorBg .CodeEditorEngineNotice .CodeEditorEngineNoticeLink,
+.GameBackgroundScreen.CodeEditorBg .CodeEditorLengthNotice .CodeEditorEngineNoticeLink {
   background: none;
   border: none;
   color: #ffb914;
@@ -6669,12 +6676,19 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   color: #383a42
 }
 
-.GameBackgroundScreen.CodeEditorBg.CodeEditorLight .CodeEditorEngineNotice {
+.GameBackgroundScreen.CodeEditorBg.CodeEditorLight .CodeEditorEngineNotice,
+.GameBackgroundScreen.CodeEditorBg.CodeEditorLight .CodeEditorLengthNotice {
   background-color: #e8ebf2;
   color: #383a42
 }
 
-.GameBackgroundScreen.CodeEditorBg.CodeEditorLight .CodeEditorEngineNotice .CodeEditorEngineNoticeLink {
+.GameBackgroundScreen.CodeEditorBg.CodeEditorLight .CodeEditorEngineNotice.CodeEditorLengthCounter,
+.GameBackgroundScreen.CodeEditorBg.CodeEditorLight .CodeEditorLengthNotice.CodeEditorLengthCounter {
+  color: #383a42
+}
+
+.GameBackgroundScreen.CodeEditorBg.CodeEditorLight .CodeEditorEngineNotice .CodeEditorEngineNoticeLink,
+.GameBackgroundScreen.CodeEditorBg.CodeEditorLight .CodeEditorLengthNotice .CodeEditorEngineNoticeLink {
   color: #8f6400
 }
 
@@ -11451,6 +11465,10 @@ html.ScreenshotMode :is(#root, .WasmCameraLayer) * {
 .RecordingIndicator .RecordingIndicatorLabel {
   color: #fff;
   letter-spacing: .05em
+}
+
+.RecordingIndicator.RecordingIndicatorClipping .RecordingIndicatorDot {
+  animation: none
 }
 
 @keyframes RecordingIndicatorPulse {

@@ -1,370 +1,370 @@
 export const id = 30;
 export const ids = [30];
 export const modules = {
-  5333: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => EV,
-      i: () => BV
+  5308: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => WH,
+      h: () => MH
     });
-    var JV = xV(1146),
-      YV = xV.n(JV),
-      UV = xV(62),
-      yV = xV(1220),
-      pV = xV(5335),
-      QV = xV(2021),
-      nV = xV(2693),
-      wV = xV(5339),
-      ZV = xV(1321);
-    const vV = new WeakMap;
-    let rV = 0;
+    var AH = LH(1038),
+      rH = LH.n(AH),
+      SH = LH(45),
+      hH = LH(1123),
+      tH = LH(5314),
+      zH = LH(1967),
+      CH = LH(2628),
+      EH = LH(5319),
+      XH = LH(1225);
+    const GH = new WeakMap;
+    let YH = 0;
 
-    function kV(VV) {
-      let eV = vV.get(VV);
-      return void 0 === eV && (eV = rV++, vV.set(VV, eV)), eV
+    function uH(HH) {
+      let BH = GH.get(HH);
+      return void 0 === BH && (BH = YH++, GH.set(HH, BH)), BH
     }
 
-    function bV(VV) {
+    function QH(HH) {
       let {
-        piece: eV
-      } = VV;
-      return "space" === eV.kind ? (0, ZV.jsx)(ZV.Fragment, {
-        children: eV.text
-      }) : (0, ZV.jsx)("span", {
+        piece: BH
+      } = HH;
+      return "space" === BH.kind ? (0, XH.jsx)(XH.Fragment, {
+        children: BH.text
+      }) : (0, XH.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${eV.delayMs}ms`
+          "--word-delay": `${BH.delayMs}ms`
         },
-        children: (0, ZV.jsx)(pV.e, {
-          text: "icon" === eV.kind ? `[[${eV.icon}]]` : eV.text
+        children: (0, XH.jsx)(tH.b, {
+          text: "icon" === BH.kind ? `[[${BH.icon}]]` : BH.text
         })
       })
     }
 
-    function EV(VV) {
+    function WH(HH) {
       let {
-        display: eV
-      } = VV;
+        display: BH
+      } = HH;
       const {
-        selectedLanguage: xV
-      } = (0, yV.A)(), JV = (0, UV.useMemo)((() => (0, wV.c)((0, wV.g)(eV).plan.pieces)), [eV, xV.code]);
-      return (0, ZV.jsxs)("div", {
-        className: YV()("Dialogue", {
-          DialogueAnimateIn: !1 !== eV.animateIn
+        selectedLanguage: LH
+      } = (0, hH.B)(), AH = (0, SH.useMemo)((() => (0, EH.b)((0, EH.d)(BH).plan.pieces)), [BH, LH.code]);
+      return (0, XH.jsxs)("div", {
+        className: rH()("Dialogue", {
+          DialogueAnimateIn: !1 !== BH.animateIn
         }),
-        children: [eV.speakerName && (0, ZV.jsx)(QV.b, {
-          text: eV.speakerName,
+        children: [BH.speakerName && (0, XH.jsx)(zH.b, {
+          text: BH.speakerName,
           className: "DialogueSpeaker"
-        }), (0, ZV.jsx)("p", {
+        }), (0, XH.jsx)("p", {
           className: "DialogueLine",
-          children: JV.map(((VV, eV) => 1 === VV.length && "space" === VV[0].kind ? VV[0].text : (0, ZV.jsx)("span", {
+          children: AH.map(((HH, BH) => 1 === HH.length && "space" === HH[0].kind ? HH[0].text : (0, XH.jsx)("span", {
             className: "DialogueGlue",
-            children: VV.map(((VV, eV) => (0, ZV.jsx)(bV, {
-              piece: VV
-            }, eV)))
-          }, eV)))
+            children: HH.map(((HH, BH) => (0, XH.jsx)(QH, {
+              piece: HH
+            }, BH)))
+          }, BH)))
         })]
       })
     }
-    const BV = (0, UV.memo)((function() {
-      const VV = (0, nV.j)("dialogue");
-      return (0, ZV.jsx)("div", {
+    const MH = (0, SH.memo)((function() {
+      const HH = (0, CH.j)("dialogue");
+      return (0, XH.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: VV && (0, ZV.jsx)(EV, {
-          display: VV
-        }, kV(VV))
+        children: HH && (0, XH.jsx)(WH, {
+          display: HH
+        }, uH(HH))
       })
     }))
   },
-  5335: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => pV
+  5314: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => tH
     });
-    var JV = xV(62),
-      YV = xV(364),
-      UV = xV(2039),
-      yV = xV(1321);
+    var AH = LH(45),
+      rH = LH(304),
+      SH = LH(1986),
+      hH = LH(1225);
 
-    function pV(VV) {
+    function tH(HH) {
       let {
-        text: eV
-      } = VV;
-      const xV = [];
-      let pV = "";
-      return (0, YV.dc)(eV).forEach(((VV, eV) => {
-        if ("string" === typeof VV || !(0, UV.h)(VV.icon)) return void(pV += "string" === typeof VV ? VV : VV.icon);
-        const YV = Math.max(0, pV.trimEnd().search(/\S{1,12}$/));
-        xV.push((0, yV.jsxs)(JV.Fragment, {
-          children: [pV.slice(0, YV), (0, yV.jsxs)("span", {
+        text: BH
+      } = HH;
+      const LH = [];
+      let tH = "";
+      return (0, rH.tc)(BH).forEach(((HH, BH) => {
+        if ("string" === typeof HH || !(0, SH.f)(HH.icon)) return void(tH += "string" === typeof HH ? HH : HH.icon);
+        const rH = Math.max(0, tH.trimEnd().search(/\S{1,12}$/));
+        LH.push((0, hH.jsxs)(AH.Fragment, {
+          children: [tH.slice(0, rH), (0, hH.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [pV.slice(YV), (0, yV.jsx)("span", {
+            children: [tH.slice(rH), (0, hH.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": VV.icon,
-              children: (0, yV.jsx)(UV.e, {
-                itemName: VV.icon,
+              "aria-label": HH.icon,
+              children: (0, hH.jsx)(SH.e, {
+                itemName: HH.icon,
                 amount: 0
               })
             })]
           })]
-        }, eV)), pV = ""
-      })), xV.push(pV), (0, yV.jsx)(yV.Fragment, {
-        children: xV
+        }, BH)), tH = ""
+      })), LH.push(tH), (0, hH.jsx)(hH.Fragment, {
+        children: LH
       })
     }
   },
-  35300: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV
+  34986: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => SH
     });
-    var JV = xV(5015),
-      YV = xV(5020);
+    var AH = LH(4947),
+      rH = LH(4951);
 
-    function UV(VV) {
+    function SH(HH) {
       let {
-        children: eV,
-        showing: xV,
-        globallyUniqueKey: UV,
-        alwaysMountChildren: yV = !1,
-        doGameplayStartStopOnShow: pV = !0,
-        keepsMovement: QV = !1
-      } = VV;
-      return (0, YV.b)(!0, xV, UV, QV), (0, JV.c)(pV, xV), xV || yV ? eV : null
+        children: BH,
+        showing: LH,
+        globallyUniqueKey: SH,
+        alwaysMountChildren: hH = !1,
+        doGameplayStartStopOnShow: tH = !0,
+        keepsMovement: zH = !1
+      } = HH;
+      return (0, rH.c)(!0, LH, SH, zH), (0, AH.e)(tH, LH), LH || hH ? BH : null
     }
   },
-  5339: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => DV,
-      g: () => gV
+  5319: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => cH,
+      d: () => KH
     });
-    var JV = xV(5342),
-      YV = xV(364);
-    const UV = 120,
-      yV = 260,
-      pV = 1.15,
-      QV = 1.2,
-      nV = 2,
-      wV = 1.08,
-      ZV = .8,
-      vV = .95,
-      rV = 8,
-      kV = "[\"')\\]\u300d\u300f\uff09]*",
-      bV = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${kV}$`),
-      EV = new RegExp(`[?\uff1f]${kV}$`),
-      BV = new RegExp(`[!\uff01]${kV}$`),
-      jV = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      qV = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      tV = new RegExp(`[${qV}]`),
-      FV = new RegExp(`[${qV}]|[^${qV}]+`, "g"),
-      TV = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var AH = LH(5325),
+      rH = LH(304);
+    const SH = 120,
+      hH = 260,
+      tH = 1.15,
+      zH = 1.2,
+      CH = 2,
+      EH = 1.08,
+      XH = .8,
+      GH = .95,
+      YH = 8,
+      uH = "[\"')\\]\u300d\u300f\uff09]*",
+      QH = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${uH}$`),
+      WH = new RegExp(`[?\uff1f]${uH}$`),
+      MH = new RegExp(`[!\uff01]${uH}$`),
+      xH = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      vH = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      PH = new RegExp(`[${vH}]`),
+      TH = new RegExp(`[${vH}]|[^${vH}]+`, "g"),
+      UH = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function PV(VV) {
-      let eV = 2166136261;
-      for (let xV = 0; xV < VV.length; xV++) eV ^= VV.charCodeAt(xV), eV = Math.imul(eV, 16777619);
-      return (eV >>> 0) / 4294967295 * 2 - 1
+    function VH(HH) {
+      let BH = 2166136261;
+      for (let LH = 0; LH < HH.length; LH++) BH ^= HH.charCodeAt(LH), BH = Math.imul(BH, 16777619);
+      return (BH >>> 0) / 4294967295 * 2 - 1
     }
 
-    function AV(VV) {
-      var eV;
-      if (tV.test(VV)) return 1;
-      const xV = VV.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        JV = xV.replace(/[^0-9]/g, "");
-      if (JV.length > 0 && !/\p{L}/u.test(xV)) return Math.min(JV.length, 4);
-      const YV = null !== (eV = xV.match(TV)) && void 0 !== eV ? eV : [];
-      if (0 === YV.length) {
-        var UV, yV;
-        const VV = null !== (UV = null === (yV = xV.match(/\p{L}/gu)) || void 0 === yV ? void 0 : yV.length) && void 0 !== UV ? UV : 0;
-        return 0 === VV ? 0 : Math.min(Math.max(1, Math.round(VV / 2.5)), rV)
+    function OH(HH) {
+      var BH;
+      if (PH.test(HH)) return 1;
+      const LH = HH.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        AH = LH.replace(/[^0-9]/g, "");
+      if (AH.length > 0 && !/\p{L}/u.test(LH)) return Math.min(AH.length, 4);
+      const rH = null !== (BH = LH.match(UH)) && void 0 !== BH ? BH : [];
+      if (0 === rH.length) {
+        var SH, hH;
+        const HH = null !== (SH = null === (hH = LH.match(/\p{L}/gu)) || void 0 === hH ? void 0 : hH.length) && void 0 !== SH ? SH : 0;
+        return 0 === HH ? 0 : Math.min(Math.max(1, Math.round(HH / 2.5)), YH)
       }
-      const pV = xV.replace(/[^\p{L}]/gu, ""),
-        QV = YV.length > 1 && "e" === YV.at(-1) && pV.endsWith("e") && !pV.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(VV.replace(/[^\p{L}]/gu, ""));
-      return Math.min(YV.length - (QV ? 1 : 0), rV)
+      const tH = LH.replace(/[^\p{L}]/gu, ""),
+        zH = rH.length > 1 && "e" === rH.at(-1) && tH.endsWith("e") && !tH.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(HH.replace(/[^\p{L}]/gu, ""));
+      return Math.min(rH.length - (zH ? 1 : 0), YH)
     }
 
-    function NV(VV) {
-      return VV.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function bH(HH) {
+      return HH.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function XV(VV) {
-      const eV = VV.replace(/[^\p{L}]/gu, "");
-      return eV.length >= 2 && eV === eV.toUpperCase() && eV !== eV.toLowerCase()
+    function kH(HH) {
+      const BH = HH.replace(/[^\p{L}]/gu, "");
+      return BH.length >= 2 && BH === BH.toUpperCase() && BH !== BH.toLowerCase()
     }
 
-    function MV(VV, eV) {
-      var xV;
-      const rV = eV && (0, JV.j)(eV),
-        kV = null !== (xV = null === rV || void 0 === rV ? void 0 : rV.syllableMs) && void 0 !== xV ? xV : JV.e,
-        qV = function(VV) {
-          const eV = [];
-          for (const JV of (0, YV.dc)(VV))
-            if ("string" === typeof JV)
-              for (const VV of JV.split(/(\s+)/)) {
-                if ("" === VV) continue;
-                if (/^\s+$/.test(VV)) {
-                  eV.push({
+    function mH(HH, BH) {
+      var LH;
+      const YH = BH && (0, AH.k)(BH),
+        uH = null !== (LH = null === YH || void 0 === YH ? void 0 : YH.syllableMs) && void 0 !== LH ? LH : AH.e,
+        vH = function(HH) {
+          const BH = [];
+          for (const AH of (0, rH.tc)(HH))
+            if ("string" === typeof AH)
+              for (const HH of AH.split(/(\s+)/)) {
+                if ("" === HH) continue;
+                if (/^\s+$/.test(HH)) {
+                  BH.push({
                     kind: "space",
-                    text: VV
+                    text: HH
                   });
                   continue
                 }
-                if (!tV.test(VV)) {
-                  eV.push({
+                if (!PH.test(HH)) {
+                  BH.push({
                     kind: "word",
-                    text: VV,
+                    text: HH,
                     delayMs: 0
                   });
                   continue
                 }
-                let JV = !0;
-                for (const YV of null !== (xV = VV.match(FV)) && void 0 !== xV ? xV : []) {
-                  var xV;
-                  const VV = eV.at(-1);
-                  JV || "word" !== (null === VV || void 0 === VV ? void 0 : VV.kind) || tV.test(YV) || /[\p{L}\p{N}]/u.test(YV) ? (JV || eV.push({
+                let AH = !0;
+                for (const rH of null !== (LH = HH.match(TH)) && void 0 !== LH ? LH : []) {
+                  var LH;
+                  const HH = BH.at(-1);
+                  AH || "word" !== (null === HH || void 0 === HH ? void 0 : HH.kind) || PH.test(rH) || /[\p{L}\p{N}]/u.test(rH) ? (AH || BH.push({
                     kind: "space",
                     text: "\u200b"
-                  }), eV.push({
+                  }), BH.push({
                     kind: "word",
-                    text: YV,
+                    text: rH,
                     delayMs: 0
-                  }), JV = !1) : VV.text += YV
+                  }), AH = !1) : HH.text += rH
                 }
-              } else eV.push({
+              } else BH.push({
                 kind: "icon",
-                text: JV.icon,
+                text: AH.icon,
                 delayMs: 0
               });
-          return eV
-        }(VV),
-        TV = [];
-      let MV = [];
-      for (const JV of qV) "space" !== JV.kind && (MV.push(JV), bV.test(JV.text) && (TV.push(MV), MV = []));
-      TV.push(MV);
-      const zV = [];
-      let GV = 0;
-      for (const JV of TV) {
-        var WV, RV;
-        const VV = null !== (WV = null === (RV = JV.at(-1)) || void 0 === RV ? void 0 : RV.text) && void 0 !== WV ? WV : "",
-          eV = EV.test(VV),
-          xV = BV.test(VV),
-          YV = JV.map((VV => "word" === VV.kind ? AV(VV.text) : 1)),
-          qV = YV.findLastIndex((VV => VV > 0));
-        for (const [EV, BV] of JV.entries()) {
-          const VV = "word" === BV.kind,
-            JV = YV[EV];
-          BV.delayMs = GV;
-          for (let YV = 0; rV && YV < JV; YV++) {
+          return BH
+        }(HH),
+        UH = [];
+      let mH = [];
+      for (const AH of vH) "space" !== AH.kind && (mH.push(AH), QH.test(AH.text) && (UH.push(mH), mH = []));
+      UH.push(mH);
+      const oH = [];
+      let IH = 0;
+      for (const AH of UH) {
+        var fH, lH;
+        const HH = null !== (fH = null === (lH = AH.at(-1)) || void 0 === lH ? void 0 : lH.text) && void 0 !== fH ? fH : "",
+          BH = WH.test(HH),
+          LH = MH.test(HH),
+          rH = AH.map((HH => "word" === HH.kind ? OH(HH.text) : 1)),
+          vH = rH.findLastIndex((HH => HH > 0));
+        for (const [WH, MH] of AH.entries()) {
+          const HH = "word" === MH.kind,
+            AH = rH[WH];
+          MH.delayMs = IH;
+          for (let rH = 0; YH && rH < AH; rH++) {
             const {
-              intonation: UV
-            } = rV;
-            let yV = qV > 0 ? -UV.declineSemitones * (EV / qV) : 0;
-            yV += PV(`${NV(BV.text)}|${YV}`) * UV.variationSemitones;
-            const bV = Math.min(1, UV.variationSemitones);
-            let jV = rV.glideSemitones,
-              tV = 1;
-            xV && (yV += UV.exclaimLiftSemitones, tV *= pV), eV && EV === qV && (yV += UV.questionRiseSemitones * (JV > 1 ? .5 + .5 * YV / (JV - 1) : 1), YV === JV - 1 && (jV = Math.abs(jV) + UV.questionRiseSemitones / 2)), VV && XV(BV.text) && (yV += nV * bV, tV *= QV), JV > 1 && 0 === YV && (yV += ZV * bV, tV *= wV), zV.push({
-              atMs: GV + YV * kV,
-              semitones: yV,
-              glideSemitones: jV,
-              durationMs: YV < JV - 1 ? Math.min(rV.durationMs, kV * vV) : rV.durationMs,
-              level: tV
+              intonation: SH
+            } = YH;
+            let hH = vH > 0 ? -SH.declineSemitones * (WH / vH) : 0;
+            hH += VH(`${bH(MH.text)}|${rH}`) * SH.variationSemitones;
+            const QH = Math.min(1, SH.variationSemitones);
+            let xH = YH.glideSemitones,
+              PH = 1;
+            LH && (hH += SH.exclaimLiftSemitones, PH *= tH), BH && WH === vH && (hH += SH.questionRiseSemitones * (AH > 1 ? .5 + .5 * rH / (AH - 1) : 1), rH === AH - 1 && (xH = Math.abs(xH) + SH.questionRiseSemitones / 2)), HH && kH(MH.text) && (hH += CH * QH, PH *= zH), AH > 1 && 0 === rH && (hH += XH * QH, PH *= EH), oH.push({
+              atMs: IH + rH * uH,
+              semitones: hH,
+              glideSemitones: xH,
+              durationMs: rH < AH - 1 ? Math.min(YH.durationMs, uH * GH) : YH.durationMs,
+              level: PH
             })
           }
-          GV += JV * kV + (bV.test(BV.text) ? yV : jV.test(BV.text) ? UV : 0)
+          IH += AH * uH + (QH.test(MH.text) ? hH : xH.test(MH.text) ? SH : 0)
         }
       }
       return {
-        pieces: qV.map((VV => "space" === VV.kind ? VV : "icon" === VV.kind ? {
+        pieces: vH.map((HH => "space" === HH.kind ? HH : "icon" === HH.kind ? {
           kind: "icon",
-          icon: VV.text,
-          delayMs: VV.delayMs
+          icon: HH.text,
+          delayMs: HH.delayMs
         } : {
           kind: "word",
-          text: VV.text,
-          delayMs: VV.delayMs
+          text: HH.text,
+          delayMs: HH.delayMs
         })),
-        blips: zV
+        blips: oH
       }
     }
-    var zV = xV(1220),
-      GV = xV(1279),
-      WV = xV(2059);
+    var oH = LH(1123),
+      IH = LH(1194),
+      fH = LH(2003);
 
-    function RV(VV) {
-      if ("string" === typeof VV) return VV;
-      const eV = GV.c.get().getCurrentLanguageCode();
-      return (0, zV.r)(eV, VV.translationKey, (0, zV.p)(VV.params, WV.e.shown))
+    function lH(HH) {
+      if ("string" === typeof HH) return HH;
+      const BH = IH.g.get().getCurrentLanguageCode();
+      return (0, oH.r)(BH, HH.translationKey, (0, oH.q)(HH.params, fH.c.shown))
     }
 
-    function gV(VV) {
-      const eV = void 0 === VV.voice ? null : (0, JV.n)(VV.voice),
-        xV = eV && (0, JV.j)(eV);
+    function KH(HH) {
+      const BH = void 0 === HH.voice ? null : (0, AH.l)(HH.voice),
+        LH = BH && (0, AH.k)(BH);
       return {
-        plan: MV(RV(VV.line), xV),
-        synth: xV
+        plan: mH(lH(HH.line), LH),
+        synth: LH
       }
     }
 
-    function DV(VV) {
-      const eV = [];
-      let xV = [];
-      for (const [YV, UV] of VV.entries()) {
-        var JV;
-        "space" === UV.kind && (" " !== UV.text || "icon" !== (null === (JV = VV[YV + 1]) || void 0 === JV ? void 0 : JV.kind)) ? (xV.length > 0 && eV.push(xV), eV.push([UV]), xV = []) : xV.push(UV)
+    function cH(HH) {
+      const BH = [];
+      let LH = [];
+      for (const [rH, SH] of HH.entries()) {
+        var AH;
+        "space" === SH.kind && (" " !== SH.text || "icon" !== (null === (AH = HH[rH + 1]) || void 0 === AH ? void 0 : AH.kind)) ? (LH.length > 0 && BH.push(LH), BH.push([SH]), LH = []) : LH.push(SH)
       }
-      return xV.length > 0 && eV.push(xV), eV
+      return LH.length > 0 && BH.push(LH), BH
     }
   },
-  39665: (VV, eV, xV) => {
-    function JV(VV, eV, xV) {
-      const JV = new Set,
-        YV = new ResizeObserver(xV),
-        UV = () => {
-          const eV = new Set(document.querySelectorAll(VV));
-          let UV = !1;
-          for (const VV of JV) eV.has(VV) || (YV.unobserve(VV), JV.delete(VV), UV = !0);
-          for (const VV of eV) JV.has(VV) || (YV.observe(VV), yV.observe(VV, {
+  39388: (HH, BH, LH) => {
+    function AH(HH, BH, LH) {
+      const AH = new Set,
+        rH = new ResizeObserver(LH),
+        SH = () => {
+          const BH = new Set(document.querySelectorAll(HH));
+          let SH = !1;
+          for (const HH of AH) BH.has(HH) || (rH.unobserve(HH), AH.delete(HH), SH = !0);
+          for (const HH of BH) AH.has(HH) || (rH.observe(HH), hH.observe(HH, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), JV.add(VV));
-          UV && xV()
+          }), AH.add(HH));
+          SH && LH()
         },
-        yV = new MutationObserver((eV => {
-          eV.some((VV => "attributes" === VV.type)) && xV(), eV.some((eV => function(VV, eV, xV) {
-            if ("childList" !== VV.type) return !1;
-            for (const JV of VV.addedNodes)
-              if (JV instanceof Element && (JV.matches(eV) || JV.querySelector(eV))) return !0;
-            for (const JV of VV.removedNodes)
-              if (JV instanceof Element)
-                for (const VV of xV)
-                  if (JV.contains(VV)) return !0;
+        hH = new MutationObserver((BH => {
+          BH.some((HH => "attributes" === HH.type)) && LH(), BH.some((BH => function(HH, BH, LH) {
+            if ("childList" !== HH.type) return !1;
+            for (const AH of HH.addedNodes)
+              if (AH instanceof Element && (AH.matches(BH) || AH.querySelector(BH))) return !0;
+            for (const AH of HH.removedNodes)
+              if (AH instanceof Element)
+                for (const HH of LH)
+                  if (AH.contains(HH)) return !0;
             return !1
-          }(eV, VV, JV))) && UV()
+          }(BH, HH, AH))) && SH()
         }));
-      yV.observe(document.body, {
+      hH.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const pV of eV) YV.observe(pV);
-      return window.addEventListener("resize", xV), UV(), xV(), () => {
-        YV.disconnect(), yV.disconnect(), window.removeEventListener("resize", xV)
+      for (const tH of BH) rH.observe(tH);
+      return window.addEventListener("resize", LH), SH(), LH(), () => {
+        rH.disconnect(), hH.disconnect(), window.removeEventListener("resize", LH)
       }
     }
-    xV.d(eV, {
-      b: () => JV
+    LH.d(BH, {
+      c: () => AH
     })
   },
-  9477: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => pV,
-      g: () => QV
+  9577: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => tH,
+      g: () => zH
     });
-    var JV = xV(27),
-      YV = xV(1391),
-      UV = xV(99);
-    const yV = {
+    var AH = LH(15),
+      rH = LH(1297),
+      SH = LH(81);
+    const hH = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -407,41 +407,41 @@ export const modules = {
       }
     };
 
-    function pV() {
-      return (0, UV.isMobile)() && "function" === typeof navigator.vibrate
+    function tH() {
+      return (0, SH.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const QV = new class {
-      constructor(VV) {
-        this.deps = VV, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const zH = new class {
+      constructor(HH) {
+        this.deps = HH, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(VV, eV) {
-        var xV;
+      play(HH, BH) {
+        var LH;
         if (!this.deps.enabled()) return;
-        const JV = yV[VV],
-          YV = null !== eV && void 0 !== eV ? eV : JV.pattern;
-        if (null === YV) return void console.warn("No vibration pattern for", VV);
-        const UV = this.deps.now();
-        UV - this.lastAnyAt < 40 && JV.priority < this.playingPriority || UV - (null !== (xV = this.lastAt.get(VV)) && void 0 !== xV ? xV : -1 / 0) < JV.minGapMs || UV < this.playingUntil && JV.priority < this.playingPriority || (this.lastAt.set(VV, UV), this.lastAnyAt = UV, this.playingUntil = UV + YV.reduce(((VV, eV) => VV + eV), 0), this.playingPriority = JV.priority, this.deps.vibrate(YV))
+        const AH = hH[HH],
+          rH = null !== BH && void 0 !== BH ? BH : AH.pattern;
+        if (null === rH) return void console.warn("No vibration pattern for", HH);
+        const SH = this.deps.now();
+        SH - this.lastAnyAt < 40 && AH.priority < this.playingPriority || SH - (null !== (LH = this.lastAt.get(HH)) && void 0 !== LH ? LH : -1 / 0) < AH.minGapMs || SH < this.playingUntil && AH.priority < this.playingPriority || (this.lastAt.set(HH, SH), this.lastAnyAt = SH, this.playingUntil = SH + rH.reduce(((HH, BH) => HH + BH), 0), this.playingPriority = AH.priority, this.deps.vibrate(rH))
       }
     }({
-      vibrate: VV => {
-        navigator.vibrate([...VV])
+      vibrate: HH => {
+        navigator.vibrate([...HH])
       },
       now: () => performance.now(),
-      enabled: () => pV() && JV.b.get("isTouchScreen") && JV.b.get("clientEscMenuOptions").vibration && !(0, YV.f)()
+      enabled: () => tH() && AH.c.get("isTouchScreen") && AH.c.get("clientEscMenuOptions").vibration && !(0, rH.d)()
     })
   },
-  5342: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => YV,
-      g: () => JV,
-      i: () => UV,
-      j: () => QV,
-      n: () => yV
+  5325: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => rH,
+      g: () => AH,
+      i: () => SH,
+      k: () => zH,
+      l: () => hH
     });
-    const JV = ["sine", "triangle", "square", "sawtooth"],
-      YV = 55,
-      UV = {
+    const AH = ["sine", "triangle", "square", "sawtooth"],
+      rH = 55,
+      SH = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -580,39 +580,39 @@ export const modules = {
         }
       };
 
-    function yV(VV) {
-      return "string" !== typeof VV ? VV : Object.hasOwn(UV, VV) ? UV[VV] : null
+    function hH(HH) {
+      return "string" !== typeof HH ? HH : Object.hasOwn(SH, HH) ? SH[HH] : null
     }
 
-    function pV(VV, eV, xV) {
-      return Math.min(xV, Math.max(eV, VV))
+    function tH(HH, BH, LH) {
+      return Math.min(LH, Math.max(BH, HH))
     }
 
-    function QV(VV) {
-      const eV = pV(VV.durationMs, 10, 500),
-        xV = pV(VV.attackMs, 0, eV),
+    function zH(HH) {
+      const BH = tH(HH.durationMs, 10, 500),
+        LH = tH(HH.attackMs, 0, BH),
         {
-          intonation: YV
-        } = VV;
+          intonation: rH
+        } = HH;
       return {
-        waveform: JV.includes(VV.waveform) ? VV.waveform : "sine",
-        pitchHz: pV(VV.pitchHz, 20, 4e3),
-        glideSemitones: pV(VV.glideSemitones, -24, 24),
-        durationMs: eV,
-        attackMs: xV,
-        releaseMs: pV(VV.releaseMs, 0, eV - xV),
-        lowpassHz: null === VV.lowpassHz ? null : pV(VV.lowpassHz, 20, 2e4),
-        volume: pV(VV.volume, 0, 2),
+        waveform: AH.includes(HH.waveform) ? HH.waveform : "sine",
+        pitchHz: tH(HH.pitchHz, 20, 4e3),
+        glideSemitones: tH(HH.glideSemitones, -24, 24),
+        durationMs: BH,
+        attackMs: LH,
+        releaseMs: tH(HH.releaseMs, 0, BH - LH),
+        lowpassHz: null === HH.lowpassHz ? null : tH(HH.lowpassHz, 20, 2e4),
+        volume: tH(HH.volume, 0, 2),
         intonation: {
-          variationSemitones: pV(YV.variationSemitones, 0, 6),
-          declineSemitones: pV(YV.declineSemitones, 0, 12),
-          questionRiseSemitones: pV(YV.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: pV(YV.exclaimLiftSemitones, 0, 12)
+          variationSemitones: tH(rH.variationSemitones, 0, 6),
+          declineSemitones: tH(rH.declineSemitones, 0, 12),
+          questionRiseSemitones: tH(rH.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: tH(rH.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: pV(VV.syllableMs, 25, 200)
+        syllableMs: tH(HH.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

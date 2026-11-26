@@ -1,11 +1,11 @@
 export const id = 98;
 export const ids = [98];
 export const modules = {
-  5259: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      default: () => JV
+  5240: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      default: () => AH
     });
-    const JV = String.raw`export interface GameApi {
+    const AH = String.raw`export interface GameApi {
 		/** The ID of the player running the code.
 		 *
 		 * Lobby code usually has nobody running it, so this is null.
@@ -1756,6 +1756,7 @@ getVehicleSetting<TSetting extends SettableVehicleSetting>(vehicleEId: EntityId,
 setVehicleSetting<TSetting extends SettableVehicleSetting>(vehicleEId: EntityId, setting: TSetting, value: SettableVehicleSettingValue<TSetting>): void
 /**
  * Try to spawn a rideable vehicle, which players can mount with an alt action.
+ * A player breaking it removes it without giving them an item: only a vehicle placed from an item gives that item back.
  * There is a limit to the number of mesh entities with physics that can be created.
  * WARNING: Either the "onPlayerAttemptSpawnVehicle" or the "onWorldAttemptSpawnVehicle" game callback will be called
  * depending on whether "spawnerId" is provided. Calling this function inside those callbacks risks infinite recursion.
@@ -2897,9 +2898,11 @@ export type BlockId = number
 
 export type WorldBlockChangedInfo = {
 	cause: WorldBlockChangedCause | null
+	/** Cause FluidFlow: the cell the fluid flows in from, so a claim can let its own water flow within it */
+	flowFrom?: readonly [number, number, number]
 }
 
-export type WorldBlockChangedCause = "Paintball" | "FloorCreator" | "Sapling" | "StemFruit" | "MeltingIce" | "Explosion" | "AutoShape"
+export type WorldBlockChangedCause = "Paintball" | "FloorCreator" | "Sapling" | "StemFruit" | "MeltingIce" | "Explosion" | "AutoShape" | "FluidFlow"
 
 export type GameChunk = {
 	blockData: any
@@ -3961,7 +3964,7 @@ export interface _TypeOf {
 	lifeformBodyParts: readonly ["Torso", "Head", "ArmRight", "ArmLeft", "LegLeft", "LegRight"]
 	damageCauses: readonly ["Melee", "Projectile", "Gun", "Explosion", "Spikes", "Fall", "Stomp", "Thorns", "Effect"]
 	enchantmentTiers: readonly ["Tier 1", "Tier 2", "Tier 3", "Tier 4", "Tier 5"]
-	ranks: readonly ["developer", "admin", "super", "youtuber", "creatorLevel1", "creatorLevel2", "creatorLevel3"]
+	ranks: readonly ["developer", "admin", "super", "hyper", "youtuber", "creatorLevel1", "creatorLevel2", "creatorLevel3"]
 	noaActions: readonly ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo"]
 	SPEECH_VOICE_PRESETS: { readonly soft: { readonly waveform: "sine"; readonly pitchHz: 300; readonly glideSemitones: -0.5; readonly durationMs: 80; readonly attackMs: 6; readonly releaseMs: 18; readonly lowpassHz: any; readonly volume: 0.6; readonly intonation: { readonly variationSemitones: 1.2; readonly declineSemitones: 1.5; readonly questionRiseSemitones: 3.5; readonly exclaimLiftSemitones: 1.5; }; readonly syllableMs: 60; }; readonly regular: { readonly waveform: "triangle"; readonly pitchHz: 195; readonly glideSemitones: -0.6; readonly durationMs: 70; readonly attackMs: 2; readonly releaseMs: 12; readonly lowpassHz: any; readonly volume: 1; readonly intonation: { readonly variationSemitones: 1.5; readonly declineSemitones: 2; readonly questionRiseSemitones: 4; readonly exclaimLiftSemitones: 2; }; readonly syllableMs: 52; }; readonly dark: { readonly waveform: "sawtooth"; readonly pitchHz: 80; readonly glideSemitones: -0.6; readonly durationMs: 85; readonly attackMs: 6; readonly releaseMs: 16; readonly lowpassHz: 420; readonly volume: 1.05; readonly intonation: { readonly variationSemitones: 1; readonly declineSemitones: 3.5; readonly questionRiseSemitones: 2.5; readonly exclaimLiftSemitones: 1; }; readonly syllableMs: 64; }; readonly "high-pitched": { readonly waveform: "triangle"; readonly pitchHz: 300; readonly glideSemitones: -0.8; readonly durationMs: 55; readonly attackMs: 2; readonly releaseMs: 10; readonly lowpassHz: any; readonly volume: 0.8; readonly intonation: { readonly variationSemitones: 2.2; readonly declineSemitones: 2; readonly questionRiseSemitones: 5; readonly exclaimLiftSemitones: 3; }; readonly syllableMs: 44; }; readonly gruff: { readonly waveform: "sawtooth"; readonly pitchHz: 105; readonly glideSemitones: -0.8; readonly durationMs: 75; readonly attackMs: 4; readonly releaseMs: 14; readonly lowpassHz: 900; readonly volume: 0.85; readonly intonation: { readonly variationSemitones: 1.2; readonly declineSemitones: 3; readonly questionRiseSemitones: 3; readonly exclaimLiftSemitones: 2; }; readonly syllableMs: 58; }; readonly lively: { readonly waveform: "square"; readonly pitchHz: 230; readonly glideSemitones: 0.6; readonly durationMs: 55; readonly attackMs: 2; readonly releaseMs: 10; readonly lowpassHz: 2400; readonly volume: 0.5; readonly intonation: { readonly variationSemitones: 2.6; readonly declineSemitones: 1.5; readonly questionRiseSemitones: 5; readonly exclaimLiftSemitones: 3.5; }; readonly syllableMs: 44; }; readonly posh: { readonly waveform: "triangle"; readonly pitchHz: 175; readonly glideSemitones: 1.2; readonly durationMs: 90; readonly attackMs: 6; readonly releaseMs: 20; readonly lowpassHz: 2000; readonly volume: 1; readonly intonation: { readonly variationSemitones: 2; readonly declineSemitones: 4; readonly questionRiseSemitones: 5; readonly exclaimLiftSemitones: 2.5; }; readonly syllableMs: 60; }; readonly mechanical: { readonly waveform: "square"; readonly pitchHz: 140; readonly glideSemitones: 0; readonly durationMs: 60; readonly attackMs: 0; readonly releaseMs: 4; readonly lowpassHz: 1400; readonly volume: 0.55; readonly intonation: { readonly variationSemitones: 0; readonly declineSemitones: 0; readonly questionRiseSemitones: 0; readonly exclaimLiftSemitones: 0; }; readonly syllableMs: 62; }; }
 	SPEECH_SYNTH_WAVEFORMS: readonly ["sine", "triangle", "square", "sawtooth"]
@@ -4502,4 +4505,4 @@ export type OtherEntitySettings = {
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

@@ -1,25 +1,25 @@
-export const id = 59;
-export const ids = [59];
+export const id = 60;
+export const ids = [60];
 export const modules = {
-  5196: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      MAX_LINES: () => pV,
-      MAX_SETTLE_MS: () => yV,
-      SETTLE_MS: () => UV,
-      ScrollDebugLog: () => tV,
-      changeText: () => EV,
-      elementText: () => jV,
-      fullStateText: () => bV,
-      startScrollDebug: () => FV,
-      touchedText: () => qV
+  5158: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      MAX_LINES: () => tH,
+      MAX_SETTLE_MS: () => hH,
+      SETTLE_MS: () => SH,
+      ScrollDebugLog: () => PH,
+      changeText: () => WH,
+      elementText: () => xH,
+      fullStateText: () => QH,
+      startScrollDebug: () => TH,
+      touchedText: () => vH
     });
-    var JV = xV(27),
-      YV = xV(3142);
-    const UV = 300,
-      yV = 2e3,
-      pV = 40,
-      QV = 2,
-      nV = {
+    var AH = LH(15),
+      rH = LH(3105);
+    const SH = 300,
+      hH = 2e3,
+      tH = 40,
+      zH = 2,
+      CH = {
         vvOffsetTop: "vv offsetTop",
         vvOffsetLeft: "vv offsetLeft",
         vvPageTop: "vv pageTop",
@@ -31,142 +31,142 @@ export const modules = {
         scrollHeight: "scrollHeight",
         innerHeight: "innerHeight"
       },
-      wV = Object.keys(nV),
-      ZV = new Set(["scrollHeight", "innerHeight"]);
+      EH = Object.keys(CH),
+      XH = new Set(["scrollHeight", "innerHeight"]);
 
-    function vV(VV, eV) {
-      const xV = 10 ** eV;
-      return Math.round(VV * xV) / xV
+    function GH(HH, BH) {
+      const LH = 10 ** BH;
+      return Math.round(HH * LH) / LH
     }
 
-    function rV() {
-      const VV = window.visualViewport;
+    function YH() {
+      const HH = window.visualViewport;
       return {
-        vvOffsetTop: vV(VV.offsetTop, 1),
-        vvOffsetLeft: vV(VV.offsetLeft, 1),
-        vvPageTop: vV(VV.pageTop, 1),
-        vvPageLeft: vV(VV.pageLeft, 1),
-        vvHeight: vV(VV.height, 1),
-        vvScale: vV(VV.scale, 3),
-        scrollX: vV(window.scrollX, 1),
-        scrollY: vV(window.scrollY, 1),
+        vvOffsetTop: GH(HH.offsetTop, 1),
+        vvOffsetLeft: GH(HH.offsetLeft, 1),
+        vvPageTop: GH(HH.pageTop, 1),
+        vvPageLeft: GH(HH.pageLeft, 1),
+        vvHeight: GH(HH.height, 1),
+        vvScale: GH(HH.scale, 3),
+        scrollX: GH(window.scrollX, 1),
+        scrollY: GH(window.scrollY, 1),
         scrollHeight: document.documentElement.scrollHeight,
         innerHeight: window.innerHeight
       }
     }
 
-    function kV(VV, eV) {
-      return `${nV[VV]} ${eV}`
+    function uH(HH, BH) {
+      return `${CH[HH]} ${BH}`
     }
 
-    function bV(VV) {
-      return wV.map((eV => kV(eV, String(VV[eV])))).join(", ")
+    function QH(HH) {
+      return EH.map((BH => uH(BH, String(HH[BH])))).join(", ")
     }
 
-    function EV(VV, eV, xV, JV) {
-      return wV.flatMap((YV => {
-        const UV = VV[YV] !== eV[YV],
-          yV = xV[YV] < Math.min(VV[YV], eV[YV]) || JV[YV] > Math.max(VV[YV], eV[YV]);
-        if (!UV && !yV && !ZV.has(YV)) return [];
-        return [kV(YV, `${UV?`${VV[YV]} -> ${eV[YV]}`:String(eV[YV])}${yV?` (via ${xV[YV]}..${JV[YV]})`:""}`)]
+    function WH(HH, BH, LH, AH) {
+      return EH.flatMap((rH => {
+        const SH = HH[rH] !== BH[rH],
+          hH = LH[rH] < Math.min(HH[rH], BH[rH]) || AH[rH] > Math.max(HH[rH], BH[rH]);
+        if (!SH && !hH && !XH.has(rH)) return [];
+        return [uH(rH, `${SH?`${HH[rH]} -> ${BH[rH]}`:String(BH[rH])}${hH?` (via ${LH[rH]}..${AH[rH]})`:""}`)]
       })).join(", ")
     }
 
-    function BV(VV, eV, xV) {
-      return Object.fromEntries(wV.map((JV => [JV, xV(VV[JV], eV[JV])])))
+    function MH(HH, BH, LH) {
+      return Object.fromEntries(EH.map((AH => [AH, LH(HH[AH], BH[AH])])))
     }
 
-    function jV(VV) {
-      var eV;
-      const xV = (null !== (eV = VV.getAttribute("class")) && void 0 !== eV ? eV : "").trim().replace(/\s+/g, ".").slice(0, 40);
-      return `${VV.tagName.toLowerCase()}${xV?`.${xV}`:""}`
+    function xH(HH) {
+      var BH;
+      const LH = (null !== (BH = HH.getAttribute("class")) && void 0 !== BH ? BH : "").trim().replace(/\s+/g, ".").slice(0, 40);
+      return `${HH.tagName.toLowerCase()}${LH?`.${LH}`:""}`
     }
 
-    function qV(VV, eV) {
-      const xV = [];
-      for (let JV = VV.parentElement; null !== JV && xV.length < QV; JV = JV.parentElement) {
-        const VV = eV(JV);
-        "auto" !== VV && xV.push(`${VV} on ${jV(JV)}`)
+    function vH(HH, BH) {
+      const LH = [];
+      for (let AH = HH.parentElement; null !== AH && LH.length < zH; AH = AH.parentElement) {
+        const HH = BH(AH);
+        "auto" !== HH && LH.push(`${HH} on ${xH(AH)}`)
       }
-      return `${jV(VV)} touch-action ${eV(VV)}${xV.length>0?` (${xV.join(", ")})`:""}`
+      return `${xH(HH)} touch-action ${BH(HH)}${LH.length>0?` (${LH.join(", ")})`:""}`
     }
-    class tV {
-      constructor(VV) {
-        this.deps = VV, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
-          const VV = this.deps.now(),
-            eV = VV - this.lastEventMs;
-          if (eV < UV && VV - this.burstStartMs < yV) return void(this.timer = setTimeout(this.settle, UV - eV));
+    class PH {
+      constructor(HH) {
+        this.deps = HH, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
+          const HH = this.deps.now(),
+            BH = HH - this.lastEventMs;
+          if (BH < SH && HH - this.burstStartMs < hH) return void(this.timer = setTimeout(this.settle, SH - BH));
           this.timer = null;
-          const xV = this.deps.read(),
+          const LH = this.deps.read(),
             {
-              last: JV,
-              innerScrolled: YV,
-              burstTouch: QV
+              last: AH,
+              innerScrolled: rH,
+              burstTouch: zH
             } = this,
-            nV = BV(this.low, xV, Math.min),
-            ZV = BV(this.high, xV, Math.max);
-          if (this.last = xV, this.low = xV, this.high = xV, this.innerScrolled = null, rV = nV, kV = ZV, wV.every((VV => rV[VV] === kV[VV])) || !this.burstInGame || !this.deps.inGame()) return;
-          var rV, kV;
-          if (this.lines === pV) return this.capped = !0, void this.deps.log(`further changes unlogged: ${pV} lines logged`);
+            CH = MH(this.low, LH, Math.min),
+            XH = MH(this.high, LH, Math.max);
+          if (this.last = LH, this.low = LH, this.high = LH, this.innerScrolled = null, YH = CH, uH = XH, EH.every((HH => YH[HH] === uH[HH])) || !this.burstInGame || !this.deps.inGame()) return;
+          var YH, uH;
+          if (this.lines === tH) return this.capped = !0, void this.deps.log(`further changes unlogged: ${tH} lines logged`);
           this.lines++;
-          const bV = null === QV ? "no touch yet" : `touch on ${QV.text}, ${Math.round(this.burstStartMs-QV.atMs)} ms before`,
-            qV = null === YV ? "" : `; inner scroll ${jV(YV)} scrollTop ${vV(YV.scrollTop,1)}`;
-          this.deps.log(`moved over ${Math.round(VV-this.burstStartMs)} ms; ${bV}${qV}: ${EV(JV,xV,nV,ZV)}`)
-        }, this.last = VV.read(), this.low = this.last, this.high = this.last, VV.log(`start: ${bV(this.last)}`)
+          const QH = null === zH ? "no touch yet" : `touch on ${zH.text}, ${Math.round(this.burstStartMs-zH.atMs)} ms before`,
+            vH = null === rH ? "" : `; inner scroll ${xH(rH)} scrollTop ${GH(rH.scrollTop,1)}`;
+          this.deps.log(`moved over ${Math.round(HH-this.burstStartMs)} ms; ${QH}${vH}: ${WH(AH,LH,CH,XH)}`)
+        }, this.last = HH.read(), this.low = this.last, this.high = this.last, HH.log(`start: ${QH(this.last)}`)
       }
       moved() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         if (this.capped) return;
-        const eV = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
-        if (null !== VV && (null === eV || !VV.contains(eV.target))) return;
-        const xV = this.deps.now();
-        this.lastEventMs = xV, null === this.timer && (this.burstStartMs = xV, this.burstInGame = this.deps.inGame(), this.burstTouch = eV, this.timer = setTimeout(this.settle, UV));
-        const JV = this.deps.read();
-        this.low = BV(this.low, JV, Math.min), this.high = BV(this.high, JV, Math.max), this.innerScrolled = null !== VV && void 0 !== VV ? VV : this.innerScrolled
+        const BH = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
+        if (null !== HH && (null === BH || !HH.contains(BH.target))) return;
+        const LH = this.deps.now();
+        this.lastEventMs = LH, null === this.timer && (this.burstStartMs = LH, this.burstInGame = this.deps.inGame(), this.burstTouch = BH, this.timer = setTimeout(this.settle, SH));
+        const AH = this.deps.read();
+        this.low = MH(this.low, AH, Math.min), this.high = MH(this.high, AH, Math.max), this.innerScrolled = null !== HH && void 0 !== HH ? HH : this.innerScrolled
       }
     }
 
-    function FV() {
-      let VV = null;
-      const eV = new tV({
-        read: rV,
-        inGame: () => "inGame" === JV.b.get("gameState"),
-        lastTouch: () => VV,
-        log: VV => {
-          (0, YV.i)("scroll", VV)
+    function TH() {
+      let HH = null;
+      const BH = new PH({
+        read: YH,
+        inGame: () => "inGame" === AH.c.get("gameState"),
+        lastTouch: () => HH,
+        log: HH => {
+          (0, rH.j)("scroll", HH)
         },
         now: () => performance.now()
       });
-      document.addEventListener("touchstart", (eV => {
-        if (eV.target instanceof Element) {
-          const xV = qV(eV.target, (VV => getComputedStyle(VV).touchAction));
-          VV = {
-            target: eV.target,
-            text: xV,
+      document.addEventListener("touchstart", (BH => {
+        if (BH.target instanceof Element) {
+          const LH = vH(BH.target, (HH => getComputedStyle(HH).touchAction));
+          HH = {
+            target: BH.target,
+            text: LH,
             atMs: performance.now()
           }
         }
       }), {
         capture: !0,
         passive: !0
-      }), document.addEventListener("scroll", (VV => {
-        eV.moved(VV.target instanceof Element ? VV.target : null)
+      }), document.addEventListener("scroll", (HH => {
+        BH.moved(HH.target instanceof Element ? HH.target : null)
       }), {
         capture: !0,
         passive: !0
       });
-      const xV = () => {
-        eV.moved()
+      const LH = () => {
+        BH.moved()
       };
-      window.addEventListener("resize", xV, {
+      window.addEventListener("resize", LH, {
         passive: !0
-      }), window.visualViewport.addEventListener("scroll", xV, {
+      }), window.visualViewport.addEventListener("scroll", LH, {
         passive: !0
-      }), window.visualViewport.addEventListener("resize", xV, {
+      }), window.visualViewport.addEventListener("resize", LH, {
         passive: !0
       })
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

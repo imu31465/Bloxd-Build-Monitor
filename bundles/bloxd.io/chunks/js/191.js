@@ -1,37 +1,43 @@
 export const id = 191;
 export const ids = [191];
 export const modules = {
-  9646: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      pageBody: () => JV
+  9724: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      pageBody: () => AH
     });
-    const JV = {
-      whatIs: ["Build a home, earn some gold and take life at your own pace. Bloxd Greenville is a chill social sandbox and life sim set in a laid-back town. You work jobs, play mini-games and hang out with other players, and there's no rush to do any of it."],
-      howToPlay: ["Press B to pick your starting house, then take the portal to the Town Square and start earning gold. Choose a job. You could help customers at the Market, smash blocks and buildings in Demolition, dig for minerals in Mining, or try Woodcutting and Farming. Jobs level up the more you work them, so your earnings grow over time.", "Spend your gold in the shop on new houses like the Castle, Treehouse, Hobbit Hole or Japanese House. Or grab an Empty Plot and build a house of your own. You can also unlock fast travel, buy flower and wool packs, and sell the stuff you collect. Keep your mood up by resting in your bed, because a happy player earns alot more. Once your home's ready, throw a party and invite everyone over."],
-      features: ["Unlock and Switch Between Houses and Plots", "Build Your Own House on an Empty Plot", "5 Jobs to Level Up: Market, Demolition, Mining, Woodcutting and Farming", "PvP Arena and Spleef Mini-Games", "Unlock Fast Travel to Get Around Quickly", "Host Parties and Choose Who Can Visit", "Turn On PvP or Build a Parkour Course at Home"],
-      tips: ["Rest in your bed when your mood drops. Low mood means lower earnings.", "A better bed means bigger earnings, so upgrade it when you can", "Sell the items you collect in the shop for extra gold", "In Mining, head back up to sell when your backpack's full", "Some minerals need a higher Mining level, so keep levelling", "Use the booster in Demolition to multi-jump up tall buildings", "Spleef needs at least 2 players, so bring a mate", "Building a parkour course? Light blue wool is the start, yellow is a checkpoint, orange is the finish and red eliminates players"],
-      similarGames: ["plots", "classic_creative", "fishing", "classic"],
+    const AH = {
+      whatIs: ["The world is ending, and the only way out is up. Bloxd Build a Factory is the original factory mode on Bloxd. You automate a factory, build a rocket and launch it to escape before time runs out. It's a race against everyone else in your world, the fastest launches go top of the leaderboard, and you don't need to install anything first.", "The world resets every 6 hours, so every session is a brand new race to the stars. Want a factory that keeps going forever? Have a look at the Persistent world or Build a Factory 2."],
+      howToPlay: ["Place your first Chest (or bed) and you'll get an Auto Miner and, in public lobbies, a Protector. Craft some Pipes and hook the Auto Miner up to the Chest. Open the Auto Miner, put some Coal in to fuel it, and now it mines for you.", "Next up, craft an Extractor Pipe and an Auto Crafter. Connect a Chest to the Auto Crafter with the Extractor Pipe and it'll turn your resources into new items by itself. As things grow, add Auto Harvesters for crops and Solar Panels with Wire for power. Splitter, Filter and Merger Pipes send items exactly where they need to go.", "Then place your Rocket Ship and upgrade it one stage at a time using whatever your factory makes. When it's ready, launch it, escape the dying world and set your time. Upgrades are cheaper in the resetting world, so a full rocket fits into one session.", "In the Persistent world, nothing resets. You launch rockets to reach the Moon, mine Lunite there and build faster Lunite machines."],
+      features: ["Factory Automation with a Rocket Race at the End", "Auto Miners, Auto Crafters and Auto Harvesters", "Pipes, Extractor, Splitter, Filter and Merger Pipes", "Solar Panels and Wire for Power", "Leaderboard for Best Launch Time and Rocket Stage", "Fresh World Every 6 Hours", "Persistent World with Moon Trips and Lunite Machines", "Step-by-Step Tutorial for New Players"],
+      tips: ["Follow the tutorial and you'll have your first Auto Miner running in no time", "Keep your Auto Miners topped up with Coal so they never stop", "Use Extractor Pipes to feed Chests into your Auto Crafters", "Filter and Splitter Pipes sort items into the right machines", "Leave about 50 blocks of open air above your Solar Panels", "Upgrade your rocket as soon as you can afford the next stage", 'Keep an eye on the "World resets in" timer and plan your launch before it runs out', "In the Persistent world each chunk holds up to 5 Auto Miners, 5 Auto Crafters and 5 Auto Harvesters, so spread your factory out", "Mine Lunite on the Moon to craft Lunite machines that run 1.5\xd7 faster"],
+      similarGames: ["buildAFactory2", "skyblock", "oneBlock", "classic_survival"],
       faq: [{
-        question: "What is Bloxd Greenville?",
-        answer: "A town life sim where you build a home, earn gold from jobs and play mini-games with other players."
+        question: "What is Bloxd Build a Factory?",
+        answer: "A factory automation race. You automate your factory, build a rocket and try to escape the dying world as fast as you can."
       }, {
-        question: "How do I earn gold in Greenville?",
-        answer: "Work jobs like Market, Demolition, Mining, Woodcutting and Farming, eliminate players in the Arena and Spleef, and sell what you collect. Keep your mood up as well, because low mood cuts your earnings."
+        question: "How do you build a rocket in Bloxd Build a Factory?",
+        answer: "Place your Rocket Ship from your inventory, then feed it resources from your factory to upgrade it stage by stage. Once it's finished, launch it to beat the game."
       }, {
-        question: "Can I build my own house in Greenville?",
-        answer: "Yes! Pick one of the ready-made houses in the shop, or unlock an Empty Plot and build from scratch."
+        question: "What's the goal in Build a Factory?",
+        answer: "Launch a rocket and escape the dying world. Your final time gets saved, and the quickest launches end up on the leaderboard."
       }, {
-        question: "How do I change my house in Bloxd Greenville?",
-        answer: "Unlock new houses in the Houses section of the shop, then switch to whichever one you like."
+        question: "How often does the Build a Factory world reset?",
+        answer: "Every 6 hours. After you launch, you can jump into another lobby and play again, or hang around until your world resets."
       }, {
-        question: "Can my friends visit my house?",
-        answer: "Sure. Turn on Allow Entry, add friends to your whitelist, or host a party to invite everyone over. You also get to choose who's allowed to edit your home."
+        question: "What is the Persistent world in Build a Factory?",
+        answer: "It's a Build a Factory world that never resets. You can build up to 5 Auto Miners, 5 Auto Crafters and 5 Auto Harvesters per chunk, and you launch rockets to climb the leaderboard and reach the Moon."
       }, {
-        question: "Which mini-games are in Greenville?",
-        answer: "Spleef, where you try to make every other player fall, and the Arena, where you battle other players in PvP. Both pay out gold."
+        question: "How do you get to the Moon in Build a Factory?",
+        answer: "In the Persistent world, launch a rocket. You'll land on the Moon, where you can mine Lunite. No rocket to get back? Open the shop to return home."
+      }, {
+        question: "What does Lunite do?",
+        answer: "You use it to craft Lunite Auto Miners, Auto Crafters and Auto Harvesters. They run 1.5\xd7 faster, and the Lunite Auto Crafter and Auto Harvester can sometimes give you extra items."
+      }, {
+        question: "What's the difference between Build a Factory and Build a Factory 2?",
+        answer: "Build a Factory is a race to launch a rocket in a shared world that resets. In Build a Factory 2 you get your own floating factory island that you grow at your own pace."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

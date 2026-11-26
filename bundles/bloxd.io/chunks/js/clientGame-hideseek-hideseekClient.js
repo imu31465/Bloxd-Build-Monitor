@@ -1,11 +1,11 @@
 export const id = 21;
 export const ids = [21];
 export const modules = {
-  40699: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      default: () => JV
+  40454: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      default: () => AH
     });
-    const JV = () => ({
+    const AH = () => ({
       plugins: {
         cosmeticCompanions: null
       }
@@ -13,4 +13,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

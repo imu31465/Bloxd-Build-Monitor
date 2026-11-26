@@ -1,332 +1,332 @@
 export const id = 171;
 export const ids = [171];
 export const modules = {
-  9475: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => pV
+  9568: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => tH
     });
-    var JV = xV(27),
-      YV = xV(1220),
-      UV = xV(5500),
-      yV = xV(1321);
+    var AH = LH(15),
+      rH = LH(1123),
+      SH = LH(5478),
+      hH = LH(1225);
 
-    function pV(VV) {
+    function tH(HH) {
       let {
-        note: eV
-      } = VV;
+        note: BH
+      } = HH;
       const {
-        t: xV
-      } = (0, YV.A)(), {
-        clientEscMenuOptions: pV
-      } = (0, JV.l)(["clientEscMenuOptions"]);
-      return (0, yV.jsx)(UV.e, {
-        label: xV("touchSettings:actionButtons"),
-        checked: pV.touchActionButtons,
-        onClick: VV => {
-          JV.b.setClientEscMenuOptions({
-            touchActionButtons: VV
+        t: LH
+      } = (0, rH.B)(), {
+        clientEscMenuOptions: tH
+      } = (0, AH.m)(["clientEscMenuOptions"]);
+      return (0, hH.jsx)(SH.c, {
+        label: LH("touchSettings:actionButtons"),
+        checked: tH.touchActionButtons,
+        onClick: HH => {
+          AH.c.setClientEscMenuOptions({
+            touchActionButtons: HH
           })
         },
-        circleInfoText: xV("touchSettings:actionButtonsInfo"),
-        note: eV
+        circleInfoText: LH("touchSettings:actionButtonsInfo"),
+        note: BH
       })
     }
   },
-  9469: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => Mx,
-      e: () => Xx
+  9552: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => mL,
+      h: () => kL
     });
-    var JV = xV(1220),
-      YV = xV(62),
-      UV = xV(2116),
-      yV = xV(2130),
-      pV = xV(1146),
-      QV = xV.n(pV),
-      nV = xV(1551),
-      wV = xV(27),
-      ZV = xV(99),
-      vV = xV(115),
-      rV = xV(5500),
-      kV = xV(2693),
-      bV = xV(313),
-      EV = xV(2138),
-      BV = xV(2141),
-      jV = xV(9471),
-      qV = xV(9475),
-      tV = xV(364),
-      FV = xV(1321);
-    const TV = {
+    var AH = LH(1123),
+      rH = LH(45),
+      SH = LH(2064),
+      hH = LH(2073),
+      tH = LH(1038),
+      zH = LH.n(tH),
+      CH = LH(1455),
+      EH = LH(15),
+      XH = LH(81),
+      GH = LH(101),
+      YH = LH(5478),
+      uH = LH(2628),
+      QH = LH(257),
+      WH = LH(2075),
+      MH = LH(2081),
+      xH = LH(9561),
+      vH = LH(9568),
+      PH = LH(304),
+      TH = LH(1225);
+    const UH = {
       floating: "settingsMenu:joystickFloating",
       fixed_shown: "settingsMenu:joystickFixed",
       fixed_hidden: "settingsMenu:joystickHidden"
     };
-    var PV = xV(9477);
-    var AV = xV(1586),
-      NV = xV(1439),
-      XV = xV(9482),
-      MV = xV(1493),
-      zV = xV(1414),
-      GV = xV(9491),
-      WV = xV(2729);
+    var VH = LH(9577);
+    var OH = LH(1475),
+      bH = LH(1352),
+      kH = LH(9584),
+      mH = LH(1405),
+      oH = LH(1315),
+      IH = LH(9588),
+      fH = LH(2659);
 
-    function RV(VV) {
+    function lH(HH) {
       let {
-        className: eV,
-        keepPlace: xV
-      } = VV;
-      return xV ? (0, FV.jsx)("div", {
-        className: QV()(eV, "Placeholder")
+        className: BH,
+        keepPlace: LH
+      } = HH;
+      return LH ? (0, TH.jsx)("div", {
+        className: zH()(BH, "Placeholder")
       }) : null
     }
 
-    function gV(VV) {
+    function KH(HH) {
       let {
-        id: eV,
-        elements: xV,
-        actionButtons: YV,
-        keyNames: UV,
-        className: yV,
-        keepPlace: pV,
-        onHidden: QV
-      } = VV;
+        id: BH,
+        elements: LH,
+        actionButtons: rH,
+        keyNames: SH,
+        className: hH,
+        keepPlace: tH,
+        onHidden: zH
+      } = HH;
       const {
-        t: wV
-      } = (0, JV.A)();
-      if (!GV.i[eV].hide) return (0, FV.jsx)(RV, {
-        className: yV,
-        keepPlace: pV
+        t: EH
+      } = (0, AH.B)();
+      if (!IH.k[BH].hide) return (0, TH.jsx)(lH, {
+        className: hH,
+        keepPlace: tH
       });
-      const ZV = (0, WV.v)(xV, eV);
-      return (0, FV.jsx)(nV.M, {
-        className: yV,
-        ariaLabel: wV(ZV ? "hudLayout:showElement" : "hudLayout:hideElement", {
-          name: (0, GV.u)(eV, YV, wV, UV)
+      const XH = (0, fH.s)(LH, BH);
+      return (0, TH.jsx)(CH.W, {
+        className: hH,
+        ariaLabel: EH(XH ? "hudLayout:showElement" : "hudLayout:hideElement", {
+          name: (0, IH.B)(BH, rH, EH, SH)
         }),
-        pressed: !ZV,
+        pressed: !XH,
         onClick: () => {
-          QV(eV, !ZV)
+          zH(BH, !XH)
         },
-        children: (0, FV.jsx)(zV.b, {
-          name: ZV ? "eye-slash" : "eye"
+        children: (0, TH.jsx)(oH.c, {
+          name: XH ? "eye-slash" : "eye"
         })
       })
     }
 
-    function DV(VV) {
+    function cH(HH) {
       let {
-        id: eV,
-        elements: xV,
-        actionButtons: YV,
-        keyNames: UV,
-        className: yV,
-        keepPlace: pV,
-        onlyWhenMoved: QV,
-        locked: wV,
-        onReset: ZV
-      } = VV;
+        id: BH,
+        elements: LH,
+        actionButtons: rH,
+        keyNames: SH,
+        className: hH,
+        keepPlace: tH,
+        onlyWhenMoved: zH,
+        locked: EH,
+        onReset: XH
+      } = HH;
       const {
-        t: vV
-      } = (0, JV.A)(), rV = GV.i[eV], kV = (0, WV.P)(xV[eV]);
-      return !rV.move && !rV.scale || QV && kV ? (0, FV.jsx)(RV, {
-        className: yV,
-        keepPlace: pV
-      }) : (0, FV.jsx)(nV.M, {
-        className: yV,
-        disabled: kV || wV,
-        ariaLabel: vV("hudLayout:resetElement", {
-          name: (0, GV.u)(eV, YV, vV, UV)
+        t: GH
+      } = (0, AH.B)(), YH = IH.k[BH], uH = (0, fH.F)(LH[BH]);
+      return !YH.move && !YH.scale || zH && uH ? (0, TH.jsx)(lH, {
+        className: hH,
+        keepPlace: tH
+      }) : (0, TH.jsx)(CH.W, {
+        className: hH,
+        disabled: uH || EH,
+        ariaLabel: GH("hudLayout:resetElement", {
+          name: (0, IH.B)(BH, rH, GH, SH)
         }),
         analyticsClick: {
           id: "hud_layout.reset_element",
-          value: eV
+          value: BH
         },
-        onClick: VV => {
-          QV && oV(VV.currentTarget), ZV(eV)
+        onClick: HH => {
+          zH && NH(HH.currentTarget), XH(BH)
         },
-        children: (0, FV.jsx)(zV.b, {
+        children: (0, TH.jsx)(oH.c, {
           name: "rotate-left"
         })
       })
     }
 
-    function iV(VV) {
+    function eH(HH) {
       let {
-        id: eV,
-        actionButtons: xV,
-        keyNames: YV,
-        className: UV,
-        keepPlace: yV,
-        locked: pV,
-        lockable: QV,
-        onLocked: wV
-      } = VV;
+        id: BH,
+        actionButtons: LH,
+        keyNames: rH,
+        className: SH,
+        keepPlace: hH,
+        locked: tH,
+        lockable: zH,
+        onLocked: EH
+      } = HH;
       const {
-        t: ZV
-      } = (0, JV.A)();
-      return QV || pV ? (0, FV.jsx)(nV.M, {
-        className: UV,
-        ariaLabel: ZV(pV ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
-          name: (0, GV.u)(eV, xV, ZV, YV)
+        t: XH
+      } = (0, AH.B)();
+      return zH || tH ? (0, TH.jsx)(CH.W, {
+        className: SH,
+        ariaLabel: XH(tH ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
+          name: (0, IH.B)(BH, LH, XH, rH)
         }),
-        pressed: pV,
-        active: pV,
+        pressed: tH,
+        active: tH,
         analyticsClick: {
           id: "hud_layout.edit",
-          value: `${pV?"unlock":"lock"}:${eV}`
+          value: `${tH?"unlock":"lock"}:${BH}`
         },
         onClick: () => {
-          wV(eV, !pV)
+          EH(BH, !tH)
         },
-        children: (0, FV.jsx)(zV.b, {
-          name: pV ? "lock" : "lock-open"
+        children: (0, TH.jsx)(oH.c, {
+          name: tH ? "lock" : "lock-open"
         })
-      }) : (0, FV.jsx)(RV, {
-        className: UV,
-        keepPlace: yV
+      }) : (0, TH.jsx)(lH, {
+        className: SH,
+        keepPlace: hH
       })
     }
 
-    function CV(VV) {
+    function qH(HH) {
       let {
-        className: eV,
-        open: xV,
-        name: YV,
-        onToggle: UV
-      } = VV;
+        className: BH,
+        open: LH,
+        name: rH,
+        onToggle: SH
+      } = HH;
       const {
-        t: yV
-      } = (0, JV.A)();
-      return (0, FV.jsx)(nV.M, {
-        className: eV,
-        ariaLabel: yV(xV ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
-          name: YV
+        t: hH
+      } = (0, AH.B)();
+      return (0, TH.jsx)(CH.W, {
+        className: BH,
+        ariaLabel: hH(LH ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
+          name: rH
         }),
-        pressed: xV,
+        pressed: LH,
         analyticsClick: {
           id: "hud_layout.children",
-          value: xV ? "close" : "open"
+          value: LH ? "close" : "open"
         },
         onClick: () => {
-          UV(!xV)
+          SH(!LH)
         },
-        children: (0, FV.jsx)(zV.b, {
-          name: xV ? "angle-up" : "angle-down"
+        children: (0, TH.jsx)(oH.c, {
+          name: LH ? "angle-up" : "angle-down"
         })
       })
     }
 
-    function aV(VV, eV) {
-      var xV;
-      VV.contains(document.activeElement) && eV.focus({
+    function gH(HH, BH) {
+      var LH;
+      HH.contains(document.activeElement) && BH.focus({
         preventScroll: !0
-      }), null === (xV = (0, MV.e)()) || void 0 === xV || xV.handOverPadFocus(VV, eV)
+      }), null === (LH = (0, mH.c)()) || void 0 === LH || LH.handOverPadFocus(HH, BH)
     }
 
-    function oV(VV) {
-      const eV = VV.closest("[data-hud-row]"),
-        xV = null === eV || void 0 === eV ? void 0 : eV.querySelector(".HudElementRowName");
-      return !(!eV || !xV) && (aV(eV, xV), !0)
+    function NH(HH) {
+      const BH = HH.closest("[data-hud-row]"),
+        LH = null === BH || void 0 === BH ? void 0 : BH.querySelector(".HudElementRowName");
+      return !(!BH || !LH) && (gH(BH, LH), !0)
     }
-    const cV = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
+    const RH = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
 
-    function hV(VV, eV) {
-      return "joystick" === VV && !eV
+    function jH(HH, BH) {
+      return "joystick" === HH && !BH
     }
 
-    function lV() {
+    function nH() {
       const {
-        t: VV
-      } = (0, JV.A)();
-      return (0, FV.jsx)(nV.M, {
+        t: HH
+      } = (0, AH.B)();
+      return (0, TH.jsx)(CH.W, {
         className: "HudFixJoystickButton",
         analyticsClick: {
           id: "hud_layout.fix_joystick"
         },
-        onClick: VV => {
-          const eV = VV.currentTarget;
-          if (!oV(eV)) {
-            const VV = function(VV) {
-              var eV, xV;
-              const JV = [VV.previousElementSibling, VV.nextElementSibling].find((VV => VV instanceof HTMLElement && VV.matches(cV)));
-              return null !== (eV = null !== JV && void 0 !== JV ? JV : null === (xV = VV.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === xV ? void 0 : xV.querySelector(`:is(${cV}):not(.HudFixJoystickButton)`)) && void 0 !== eV ? eV : null
-            }(eV);
-            VV && aV(eV, VV)
+        onClick: HH => {
+          const BH = HH.currentTarget;
+          if (!NH(BH)) {
+            const HH = function(HH) {
+              var BH, LH;
+              const AH = [HH.previousElementSibling, HH.nextElementSibling].find((HH => HH instanceof HTMLElement && HH.matches(RH)));
+              return null !== (BH = null !== AH && void 0 !== AH ? AH : null === (LH = HH.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === LH ? void 0 : LH.querySelector(`:is(${RH}):not(.HudFixJoystickButton)`)) && void 0 !== BH ? BH : null
+            }(BH);
+            HH && gH(BH, HH)
           }
-          wV.b.setClientEscMenuOptions({
+          EH.c.setClientEscMenuOptions({
             joystickMode: "fixed_shown"
           })
         },
-        children: VV("hudLayout:fixJoystick")
+        children: HH("hudLayout:fixJoystick")
       })
     }
-    var LV = xV(78),
-      fV = xV(1309),
-      mV = xV(3528),
-      KV = xV(3080),
-      HV = xV(9500),
-      uV = xV(9503),
-      sV = xV(2736),
-      SV = xV(2752),
-      IV = xV(3584),
-      dV = xV(9506);
-    const OV = VV => ({
-      [GV.f]: VV
+    var FH = LH(69),
+      DH = LH(1214),
+      wH = LH(3465),
+      ZH = LH(3018),
+      dH = LH(9590),
+      aH = LH(9592),
+      sH = LH(2661),
+      JH = LH(2680),
+      iH = LH(3503),
+      pH = LH(9598);
+    const yH = HH => ({
+      [IH.h]: HH
     });
 
-    function Ve(VV) {
+    function HB(HH) {
       let {
-        id: eV,
-        slot: xV,
-        icon: JV,
-        label: UV,
-        hidden: yV,
-        className: pV,
-        face: nV
-      } = VV;
-      const wV = (0, YV.useRef)(null);
-      return (0, YV.useLayoutEffect)((() => {
-        nV && wV.current && (0, dV.m)(wV.current, nV)
-      }), [nV]), (0, FV.jsxs)("div", {
-        className: QV()("TouchKeyHit", `TouchSlot${xV}`, pV, {
-          HudPreviewGhost: yV.has(eV)
+        id: BH,
+        slot: LH,
+        icon: AH,
+        label: SH,
+        hidden: hH,
+        className: tH,
+        face: CH
+      } = HH;
+      const EH = (0, rH.useRef)(null);
+      return (0, rH.useLayoutEffect)((() => {
+        CH && EH.current && (0, pH.m)(EH.current, CH)
+      }), [CH]), (0, TH.jsxs)("div", {
+        className: zH()("TouchKeyHit", `TouchSlot${LH}`, tH, {
+          HudPreviewGhost: hH.has(BH)
         }),
-        ...OV(eV),
-        children: [nV && (0, FV.jsx)("div", {
-          ref: wV,
-          className: QV()("TouchKey", {
-            Labelled: nV.classList.contains("Labelled")
+        ...yH(BH),
+        children: [CH && (0, TH.jsx)("div", {
+          ref: EH,
+          className: zH()("TouchKey", {
+            Labelled: CH.classList.contains("Labelled")
           })
-        }), !nV && (0, FV.jsxs)("div", {
-          className: QV()("TouchKey", {
-            Labelled: void 0 !== UV
+        }), !CH && (0, TH.jsxs)("div", {
+          className: zH()("TouchKey", {
+            Labelled: void 0 !== SH
           }),
-          children: [JV && (0, FV.jsx)(zV.b, {
-            name: JV
-          }), void 0 !== UV && (0, FV.jsx)("span", {
+          children: [AH && (0, TH.jsx)(oH.c, {
+            name: AH
+          }), void 0 !== SH && (0, TH.jsx)("span", {
             className: "TouchKeyLabel",
-            children: UV
+            children: SH
           })]
         })]
       })
     }
 
-    function ee(VV) {
+    function BB(HH) {
       let {
-        item: eV,
-        selected: xV
-      } = VV;
-      const JV = (0, YV.useRef)(null);
-      return (0, YV.useLayoutEffect)((() => {
-        JV.current && (0, dV.m)(JV.current, eV)
-      }), [eV]), (0, FV.jsx)("div", {
-        ref: JV,
-        className: QV()("InvenItem", {
-          Selected: xV
+        item: BH,
+        selected: LH
+      } = HH;
+      const AH = (0, rH.useRef)(null);
+      return (0, rH.useLayoutEffect)((() => {
+        AH.current && (0, pH.m)(AH.current, BH)
+      }), [BH]), (0, TH.jsx)("div", {
+        ref: AH,
+        className: zH()("InvenItem", {
+          Selected: LH
         })
       })
     }
-    const xe = {
+    const LB = {
         emotes: "face-smile",
         perspective: "video",
         scoreboard: "list",
@@ -335,173 +335,173 @@ export const modules = {
         invite: "user-plus",
         settings: "gear"
       },
-      Je = VV => void 0 === VV ? {} : {
+      AB = HH => void 0 === HH ? {} : {
         style: {
-          "--parked": VV
+          "--parked": HH
         }
       };
 
-    function Ye(VV) {
+    function rB(HH) {
       let {
-        id: eV,
-        hidden: xV,
-        parked: JV,
-        unslotted: YV = !1
-      } = VV;
-      return (0, FV.jsx)("div", {
-        className: QV()("TopRightIcon", SV.i[eV], {
-          HudPreviewGhost: xV.has(eV),
-          [sV.d]: void 0 !== JV,
-          [sV.e]: YV
+        id: BH,
+        hidden: LH,
+        parked: AH,
+        unslotted: rH = !1
+      } = HH;
+      return (0, TH.jsx)("div", {
+        className: zH()("TopRightIcon", JH.n[BH], {
+          HudPreviewGhost: LH.has(BH),
+          [sH.b]: void 0 !== AH,
+          [sH.f]: rH
         }),
-        ...Je(JV),
-        children: (0, FV.jsx)("div", {
+        ...AB(AH),
+        children: (0, TH.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          ...OV(eV),
-          children: (0, FV.jsx)("div", {
+          ...yH(BH),
+          children: (0, TH.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, FV.jsx)(zV.b, {
-              name: xe[eV]
+            children: (0, TH.jsx)(oH.c, {
+              name: LB[BH]
             })
           })
         })
       })
     }
 
-    function Ue(VV) {
+    function SB(HH) {
       let {
-        portraitPhone: eV,
-        icons: xV,
-        pinnedIcons: JV,
-        hidden: UV,
-        moved: yV,
-        trayState: pV
-      } = VV;
-      const nV = eV ? (0, sV.E)(xV) : [],
-        wV = xV.filter((VV => "settings" === VV)),
-        ZV = xV.filter((VV => "settings" !== VV && !nV.includes(VV))).reverse(),
-        vV = nV.length > 0 && "gone" === pV,
-        rV = [...wV, ...vV ? ["tray"] : [], ...ZV].filter((VV => "tray" === VV || UV.has(VV) && !yV.has(VV))),
-        kV = VV => {
-          const eV = rV.indexOf(VV);
-          return eV < 0 ? void 0 : eV
+        portraitPhone: BH,
+        icons: LH,
+        pinnedIcons: AH,
+        hidden: SH,
+        moved: hH,
+        trayState: tH
+      } = HH;
+      const CH = BH ? (0, sH.C)(LH) : [],
+        EH = LH.filter((HH => "settings" === HH)),
+        XH = LH.filter((HH => "settings" !== HH && !CH.includes(HH))).reverse(),
+        GH = CH.length > 0 && "gone" === tH,
+        YH = [...EH, ...GH ? ["tray"] : [], ...XH].filter((HH => "tray" === HH || SH.has(HH) && !hH.has(HH))),
+        uH = HH => {
+          const BH = YH.indexOf(HH);
+          return BH < 0 ? void 0 : BH
         },
-        bV = (VV, eV) => (0, FV.jsx)(Ye, {
-          id: VV,
-          hidden: UV,
-          parked: eV ? kV(VV) : void 0,
-          unslotted: eV && UV.has(VV) && yV.has(VV)
-        }, VV);
-      return (0, FV.jsxs)("div", {
-        className: QV()("TopRightIcons TouchInGame", {
-          Column: eV
+        QH = (HH, BH) => (0, TH.jsx)(rB, {
+          id: HH,
+          hidden: SH,
+          parked: BH ? uH(HH) : void 0,
+          unslotted: BH && SH.has(HH) && hH.has(HH)
+        }, HH);
+      return (0, TH.jsxs)("div", {
+        className: zH()("TopRightIcons TouchInGame", {
+          Column: BH
         }),
-        children: [wV.map((VV => bV(VV, !0))), nV.length > 0 && (0, FV.jsxs)("div", {
-          className: QV()("TopRightIcon TopRightTrayToggle Open", {
-            [sV.d]: vV
+        children: [EH.map((HH => QH(HH, !0))), CH.length > 0 && (0, TH.jsxs)("div", {
+          className: zH()("TopRightIcon TopRightTrayToggle Open", {
+            [sH.b]: GH
           }),
-          ...Je(kV("tray")),
-          children: [(0, FV.jsx)("div", {
-            className: QV()("UiItemIcon SmallTextBold", {
-              HudPreviewGhost: "filled" !== pV
+          ...AB(uH("tray")),
+          children: [(0, TH.jsx)("div", {
+            className: zH()("UiItemIcon SmallTextBold", {
+              HudPreviewGhost: "filled" !== tH
             }),
-            children: (0, FV.jsx)("div", {
+            children: (0, TH.jsx)("div", {
               className: "ScaleOnHover",
-              children: (0, FV.jsx)(zV.b, {
+              children: (0, TH.jsx)(oH.c, {
                 name: "ellipsis"
               })
             })
-          }), (0, FV.jsx)("div", {
+          }), (0, TH.jsx)("div", {
             className: "TopRightTray",
-            children: nV.map((VV => bV(VV, !1)))
+            children: CH.map((HH => QH(HH, !1)))
           })]
-        }), ZV.map((VV => (0, FV.jsxs)(YV.Fragment, {
-          children: ["perspective" === VV && null !== JV.rightOfCamera && (0, FV.jsx)(ye, {
-            icon: JV.rightOfCamera
-          }), bV(VV, !0)]
-        }, VV))), null !== JV.leftEnd && (0, FV.jsx)(ye, {
-          icon: JV.leftEnd
+        }), XH.map((HH => (0, TH.jsxs)(rH.Fragment, {
+          children: ["perspective" === HH && null !== AH.rightOfCamera && (0, TH.jsx)(hB, {
+            icon: AH.rightOfCamera
+          }), QH(HH, !0)]
+        }, HH))), null !== AH.leftEnd && (0, TH.jsx)(hB, {
+          icon: AH.leftEnd
         })]
       })
     }
 
-    function ye(VV) {
+    function hB(HH) {
       let {
-        icon: eV
-      } = VV;
-      return (0, FV.jsx)("div", {
+        icon: BH
+      } = HH;
+      return (0, TH.jsx)("div", {
         className: "TopRightIcon",
-        children: (0, FV.jsx)("div", {
+        children: (0, TH.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          children: (0, FV.jsx)("div", {
+          children: (0, TH.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, FV.jsx)(zV.b, {
-              name: eV
+            children: (0, TH.jsx)(oH.c, {
+              name: BH
             })
           })
         })
       })
     }
 
-    function pe(VV) {
+    function tB(HH) {
       let {
-        next: eV,
-        hidden: xV
-      } = VV;
-      return (0, FV.jsx)("div", {
-        className: QV()("HotBarArrow", eV ? "Next" : "Previous", {
-          HudPreviewGhost: xV
+        next: BH,
+        hidden: LH
+      } = HH;
+      return (0, TH.jsx)("div", {
+        className: zH()("HotBarArrow", BH ? "Next" : "Previous", {
+          HudPreviewGhost: LH
         }),
-        ...OV("arrows"),
-        children: (0, FV.jsx)("div", {
+        ...yH("arrows"),
+        children: (0, TH.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          children: (0, FV.jsx)("div", {
+          children: (0, TH.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, FV.jsx)(zV.b, {
-              name: eV ? "caret-right" : "caret-left"
+            children: (0, TH.jsx)(oH.c, {
+              name: BH ? "caret-right" : "caret-left"
             })
           })
         })
       })
     }
 
-    function Qe() {
-      return (0, FV.jsx)("div", {
+    function zB() {
+      return (0, TH.jsx)("div", {
         className: "SocialBarContainer",
-        children: (0, FV.jsx)("div", {
+        children: (0, TH.jsx)("div", {
           className: "SocialBarOuter",
-          children: (0, FV.jsx)("div", {
+          children: (0, TH.jsx)("div", {
             className: "SocialBar",
-            children: (0, FV.jsx)("div", {
+            children: (0, TH.jsx)("div", {
               className: "CondensedSocialBarInner",
-              children: (0, FV.jsx)("div", {
+              children: (0, TH.jsx)("div", {
                 className: "CondensedSectionsContainer",
-                children: (0, FV.jsxs)("div", {
+                children: (0, TH.jsxs)("div", {
                   className: "CondensedSections",
-                  children: [(0, FV.jsxs)("div", {
+                  children: [(0, TH.jsxs)("div", {
                     className: "CondensedSection CondensedSectionFriendRequests",
-                    children: [(0, FV.jsx)("div", {
+                    children: [(0, TH.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, FV.jsx)("div", {
+                    }), (0, TH.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, FV.jsx)(zV.b, {
+                      children: (0, TH.jsx)(oH.c, {
                         name: "user-clock"
                       })
                     })]
-                  }), (0, FV.jsx)("div", {
+                  }), (0, TH.jsx)("div", {
                     className: "SocialBarDividerContainer",
-                    children: (0, FV.jsx)("div", {
+                    children: (0, TH.jsx)("div", {
                       className: "SocialBarDivider"
                     })
-                  }), (0, FV.jsxs)("div", {
+                  }), (0, TH.jsxs)("div", {
                     className: "CondensedSection CondensedSectionOnlineFriends",
-                    children: [(0, FV.jsx)("div", {
+                    children: [(0, TH.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, FV.jsx)("div", {
+                    }), (0, TH.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, FV.jsx)(zV.b, {
+                      children: (0, TH.jsx)(oH.c, {
                         name: "user"
                       })
                     })]
@@ -513,11 +513,11 @@ export const modules = {
         })
       })
     }
-    const ne = {
+    const CB = {
         J: "JumpKey",
         C: "CrouchKey"
       },
-      we = {
+      EB = {
         P: {
           icon: "crosshairs",
           labelKey: "touchKeys:scope"
@@ -527,8 +527,8 @@ export const modules = {
           labelKey: "touchKeys:fly"
         }
       },
-      Ze = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-      ve = {
+      XB = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      GB = {
         0: "swords",
         1: "hammer",
         2: "cube",
@@ -536,320 +536,320 @@ export const modules = {
         5: "cookie"
       };
 
-    function re(VV) {
+    function YB(HH) {
       let {
-        presence: eV,
-        portraitPhone: xV,
-        hidden: YV,
-        actionButtons: UV,
-        joystickFixed: yV,
-        keysAbove: pV,
-        auraBar: nV,
-        trayState: wV,
-        moved: vV
-      } = VV;
+        presence: BH,
+        portraitPhone: LH,
+        hidden: rH,
+        actionButtons: SH,
+        joystickFixed: hH,
+        keysAbove: tH,
+        auraBar: CH,
+        trayState: EH,
+        moved: GH
+      } = HH;
       const {
-        t: rV
-      } = (0, JV.A)(), {
-        faces: kV,
-        items: bV
-      } = eV, EV = VV => ({
-        HudPreviewGhost: (0, GV.A)(VV).some((VV => YV.has(VV)))
+        t: YH
+      } = (0, AH.B)(), {
+        faces: uH,
+        items: QH
+      } = BH, WH = HH => ({
+        HudPreviewGhost: (0, IH.L)(HH).some((HH => rH.has(HH)))
       });
-      return (0, FV.jsxs)("div", {
+      return (0, TH.jsxs)("div", {
         className: "InGameUi HudPreviewInGameUi",
-        children: [(0, FV.jsx)("div", {
+        children: [(0, TH.jsx)("div", {
           className: "InGameHeaderContainer Touchscreen",
-          children: (0, FV.jsxs)("div", {
+          children: (0, TH.jsxs)("div", {
             className: "InGameHeader",
-            children: [(0, FV.jsx)("div", {
+            children: [(0, TH.jsx)("div", {
               className: "InGameHeaderLogo",
               children: "bloxd.io"
-            }), (0, FV.jsx)("div", {
+            }), (0, TH.jsx)("div", {
               className: "InGameHeaderSpacer"
-            }), (0, FV.jsx)("div", {
+            }), (0, TH.jsx)("div", {
               className: "InGameHeaderGameName",
-              children: rV("hudLayout:previewGameName")
+              children: YH("hudLayout:previewGameName")
             })]
           })
-        }), (0, FV.jsx)("div", {
+        }), (0, TH.jsx)("div", {
           className: "TopLeftElements",
-          children: (0, FV.jsx)("div", {
+          children: (0, TH.jsx)("div", {
             className: "InGameHeaderAndChat",
-            children: (0, FV.jsxs)("div", {
+            children: (0, TH.jsxs)("div", {
               className: "Chat",
-              children: [(0, FV.jsx)("div", {
+              children: [(0, TH.jsx)("div", {
                 className: "ChatMessages HideScrollbar",
-                children: [rV("hudLayout:previewChatLine"), rV("hudLayout:previewChatJoined", {
-                  name: "Steve"
-                }), rV("hudLayout:previewChatJoined", {
+                children: [YH("hudLayout:previewChatLine"), YH("hudLayout:previewChatJoined", {
+                  name: "Arthur"
+                }), YH("hudLayout:previewChatJoined", {
                   name: "Alex"
-                })].map((VV => (0, FV.jsx)("div", {
+                })].map((HH => (0, TH.jsx)("div", {
                   className: "MessageWrapper",
-                  children: (0, FV.jsx)("div", {
+                  children: (0, TH.jsx)("div", {
                     className: "TextFromServer",
-                    children: (0, FV.jsx)("div", {
+                    children: (0, TH.jsx)("div", {
                       className: "IndividualText",
-                      children: VV
+                      children: HH
                     })
                   })
-                }, VV)))
-              }), (0, FV.jsx)("button", {
+                }, HH)))
+              }), (0, TH.jsx)("button", {
                 type: "button",
                 tabIndex: -1,
-                className: QV()("ChatIconWrapper SmallTextLight", EV("chat")),
-                ...OV("chat"),
-                children: (0, FV.jsx)(zV.b, {
+                className: zH()("ChatIconWrapper SmallTextLight", WH("chat")),
+                ...yH("chat"),
+                children: (0, TH.jsx)(oH.c, {
                   name: "comment-dots",
                   className: "ChatIcon"
                 })
               })]
             })
           })
-        }), (0, FV.jsx)("div", {
+        }), (0, TH.jsx)("div", {
           className: "RightElements RightElementsTouchscreen",
-          children: (0, FV.jsxs)("div", {
+          children: (0, TH.jsxs)("div", {
             className: "TopRightElements",
-            children: [(0, FV.jsx)("div", {
+            children: [(0, TH.jsx)("div", {
               className: "TopRightElementsLeft",
-              children: (0, FV.jsx)("div", {
+              children: (0, TH.jsx)("div", {
                 className: "TopRightIconsContainer",
-                ...OV("menu"),
-                children: (0, FV.jsx)(Ue, {
-                  portraitPhone: xV,
-                  icons: eV.rowIcons,
-                  pinnedIcons: eV.pinnedIcons,
-                  hidden: YV,
-                  trayState: wV,
-                  moved: vV
+                ...yH("menu"),
+                children: (0, TH.jsx)(SB, {
+                  portraitPhone: LH,
+                  icons: BH.rowIcons,
+                  pinnedIcons: BH.pinnedIcons,
+                  hidden: rH,
+                  trayState: EH,
+                  moved: GH
                 })
               })
-            }), ZV.featureFlags.useSocialFeatures && (0, FV.jsx)("div", {
+            }), XH.featureFlags.useSocialFeatures && (0, TH.jsx)("div", {
               className: "TopRightElementsRight",
-              children: (0, FV.jsx)(Qe, {})
+              children: (0, TH.jsx)(zB, {})
             })]
           })
-        }), (0, FV.jsx)("div", {
+        }), (0, TH.jsx)("div", {
           className: "HudPreviewCrosshair"
-        }), (0, FV.jsx)("div", {
+        }), (0, TH.jsx)("div", {
           className: "TouchInteractHit HudPreviewInteract",
-          children: (0, FV.jsxs)("div", {
+          children: (0, TH.jsxs)("div", {
             className: "TouchInteractKey",
-            ...OV("interact"),
-            children: [(0, FV.jsx)("div", {
+            ...yH("interact"),
+            children: [(0, TH.jsx)("div", {
               className: "TouchInteractIcon",
-              children: (0, FV.jsx)(zV.b, {
+              children: (0, TH.jsx)(oH.c, {
                 name: "hand-back-point-up"
               })
-            }), (0, FV.jsx)("div", {
-              children: rV("hudLayout:previewInteract")
+            }), (0, TH.jsx)("div", {
+              children: YH("hudLayout:previewInteract")
             })]
           })
-        }), (0, FV.jsx)("div", {
+        }), (0, TH.jsx)("div", {
           className: "BottomCentre",
-          children: (0, FV.jsxs)("div", {
+          children: (0, TH.jsxs)("div", {
             className: "BottomElements",
-            children: [(0, FV.jsx)("div", {
+            children: [(0, TH.jsx)("div", {
               className: "BottomLeftElements Touch"
-            }), (0, FV.jsxs)("div", {
+            }), (0, TH.jsxs)("div", {
               className: "BottomMiddleElements",
-              children: [(0, FV.jsx)("div", {
+              children: [(0, TH.jsx)("div", {
                 className: "BottomScreenStatBarList",
-                ...OV("hotbar"),
-                children: (0, FV.jsx)("div", {
+                ...yH("hotbar"),
+                children: (0, TH.jsx)("div", {
                   className: "BottomScreenStatBarWrapper",
-                  children: (0, FV.jsxs)("div", {
+                  children: (0, TH.jsxs)("div", {
                     className: "BottomScreenStatBarBackground",
-                    children: [(0, FV.jsx)("div", {
+                    children: [(0, TH.jsx)("div", {
                       className: "BottomScreenStatBar HealthBar",
                       style: {
                         transform: "scaleX(0.8)",
                         transformOrigin: "left center"
                       }
-                    }), (0, FV.jsxs)("div", {
+                    }), (0, TH.jsxs)("div", {
                       className: "BottomScreenStatBarText SmallTextBold",
-                      children: [(0, FV.jsx)(zV.b, {
+                      children: [(0, TH.jsx)(oH.c, {
                         name: "heart"
                       }), " 80/100"]
                     })]
                   })
                 })
-              }), nV && (0, FV.jsxs)("div", {
+              }), CH && (0, TH.jsxs)("div", {
                 className: "AuraBarWrapper",
-                children: [(0, FV.jsxs)("div", {
+                children: [(0, TH.jsxs)("div", {
                   className: "AuraBarLabel SmallTextBold",
-                  children: [(0, FV.jsx)("img", {
+                  children: [(0, TH.jsx)("img", {
                     className: "AuraBarLabelImage",
-                    src: (0, IV.e)("glint"),
+                    src: (0, iH.f)("glint"),
                     alt: ""
-                  }), (0, FV.jsx)("div", {
+                  }), (0, TH.jsx)("div", {
                     className: "AuraBarLabelText",
                     children: "0"
                   })]
-                }), (0, FV.jsx)("div", {
+                }), (0, TH.jsx)("div", {
                   className: "AuraBar",
-                  children: (0, FV.jsx)("div", {
+                  children: (0, TH.jsx)("div", {
                     className: "AuraBarBackground",
                     style: {
                       width: "40%"
                     }
                   })
                 })]
-              }), (0, FV.jsx)("div", {
+              }), (0, TH.jsx)("div", {
                 className: "HotBarRow",
-                children: (0, FV.jsx)("div", {
-                  className: QV()("HotBarContainer Touch", {
-                    KeysAbove: pV
+                children: (0, TH.jsx)("div", {
+                  className: zH()("HotBarContainer Touch", {
+                    KeysAbove: tH
                   }),
-                  children: (0, FV.jsxs)("div", {
+                  children: (0, TH.jsxs)("div", {
                     className: "HotBar",
-                    ...OV("hotbar"),
-                    children: [(0, FV.jsxs)("div", {
-                      className: QV()("TouchInventoryKeys", {
-                        NoAuraBar: !nV
+                    ...yH("hotbar"),
+                    children: [(0, TH.jsxs)("div", {
+                      className: zH()("TouchInventoryKeys", {
+                        NoAuraBar: !CH
                       }),
-                      children: [(0, FV.jsx)("div", {
-                        className: QV()("TouchInventoryKey ShopKey", EV("shop"), {
-                          Hidden: !eV.shop
+                      children: [(0, TH.jsx)("div", {
+                        className: zH()("TouchInventoryKey ShopKey", WH("shop"), {
+                          Hidden: !BH.shop
                         }),
-                        ...OV("shop"),
-                        children: (0, FV.jsx)("div", {
+                        ...yH("shop"),
+                        children: (0, TH.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, FV.jsx)("div", {
+                          children: (0, TH.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, FV.jsx)(zV.b, {
+                            children: (0, TH.jsx)(oH.c, {
                               name: "cart-shopping"
                             })
                           })
                         })
-                      }), (0, FV.jsx)("div", {
-                        className: QV()("TouchInventoryKey BagKey", EV("bag"), {
-                          Hidden: !eV.bag
+                      }), (0, TH.jsx)("div", {
+                        className: zH()("TouchInventoryKey BagKey", WH("bag"), {
+                          Hidden: !BH.bag
                         }),
-                        ...OV("bag"),
-                        children: (0, FV.jsx)("div", {
+                        ...yH("bag"),
+                        children: (0, TH.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, FV.jsx)("div", {
+                          children: (0, TH.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, FV.jsx)(zV.b, {
+                            children: (0, TH.jsx)(oH.c, {
                               name: "backpack"
                             })
                           })
                         })
                       })]
-                    }), (0, FV.jsx)(pe, {
+                    }), (0, TH.jsx)(tB, {
                       next: !1,
-                      hidden: YV.has("arrows")
-                    }), (0, FV.jsxs)("div", {
+                      hidden: rH.has("arrows")
+                    }), (0, TH.jsxs)("div", {
                       className: "HotBarGameItemsContainer",
-                      children: [null !== bV && bV.map(((VV, eV) => (0, FV.jsx)(ee, {
-                        item: VV,
-                        selected: VV.classList.contains("Selected")
-                      }, eV))), null === bV && Ze.map((VV => {
-                        const eV = ve[VV];
-                        return (0, FV.jsx)("div", {
-                          className: QV()("InvenItem", {
-                            Selected: 0 === VV
+                      children: [null !== QH && QH.map(((HH, BH) => (0, TH.jsx)(BB, {
+                        item: HH,
+                        selected: HH.classList.contains("Selected")
+                      }, BH))), null === QH && XB.map((HH => {
+                        const BH = GB[HH];
+                        return (0, TH.jsx)("div", {
+                          className: zH()("InvenItem", {
+                            Selected: 0 === HH
                           }),
-                          children: eV && (0, FV.jsx)("div", {
+                          children: BH && (0, TH.jsx)("div", {
                             className: "HudPreviewItem",
-                            children: (0, FV.jsx)(zV.b, {
-                              name: eV
+                            children: (0, TH.jsx)(oH.c, {
+                              name: BH
                             })
                           })
-                        }, VV)
+                        }, HH)
                       }))]
-                    }), (0, FV.jsx)(pe, {
+                    }), (0, TH.jsx)(tB, {
                       next: !0,
-                      hidden: YV.has("arrows")
+                      hidden: rH.has("arrows")
                     })]
                   })
                 })
               })]
-            }), (0, FV.jsx)("div", {
+            }), (0, TH.jsx)("div", {
               className: "BottomRightElements",
-              children: (0, FV.jsxs)("div", {
+              children: (0, TH.jsxs)("div", {
                 className: "TouchComponentsButtons",
-                children: [null !== kV && dV.i.map((VV => {
-                  const eV = kV[VV];
-                  return eV && (0, FV.jsx)(Ve, {
-                    id: dV.g[VV],
-                    slot: VV,
-                    face: eV,
-                    className: ne[VV],
-                    hidden: YV
-                  }, VV)
-                })), (0, dV.n)(eV, UV).map((VV => (0, FV.jsx)(Ve, {
-                  id: dV.g[VV],
-                  slot: VV,
-                  icon: we[VV].icon,
-                  label: rV(we[VV].labelKey),
+                children: [null !== uH && pH.f.map((HH => {
+                  const BH = uH[HH];
+                  return BH && (0, TH.jsx)(HB, {
+                    id: pH.c[HH],
+                    slot: HH,
+                    face: BH,
+                    className: CB[HH],
+                    hidden: rH
+                  }, HH)
+                })), (0, pH.q)(BH, SH).map((HH => (0, TH.jsx)(HB, {
+                  id: pH.c[HH],
+                  slot: HH,
+                  icon: EB[HH].icon,
+                  label: YH(EB[HH].labelKey),
                   className: "HudPreviewContextSlot",
-                  hidden: YV
-                }, VV))), null === kV && (0, FV.jsxs)(FV.Fragment, {
-                  children: [(0, FV.jsx)(Ve, {
+                  hidden: rH
+                }, HH))), null === uH && (0, TH.jsxs)(TH.Fragment, {
+                  children: [(0, TH.jsx)(HB, {
                     id: "jump",
                     slot: "J",
                     icon: "arrow-up-from-line",
                     className: "JumpKey",
-                    hidden: YV
-                  }), (0, FV.jsx)(Ve, {
+                    hidden: rH
+                  }), (0, TH.jsx)(HB, {
                     id: "crouch",
                     slot: "C",
                     icon: "arrow-down-to-line",
                     className: "CrouchKey",
-                    hidden: YV
-                  }), UV && (0, FV.jsxs)(FV.Fragment, {
-                    children: [(0, FV.jsx)(Ve, {
+                    hidden: rH
+                  }), SH && (0, TH.jsxs)(TH.Fragment, {
+                    children: [(0, TH.jsx)(HB, {
                       id: "attack",
                       slot: "A",
                       icon: "swords",
-                      hidden: YV
-                    }), (0, FV.jsx)(Ve, {
+                      hidden: rH
+                    }), (0, TH.jsx)(HB, {
                       id: "use",
                       slot: "U",
                       icon: "hand-back-point-up",
-                      hidden: YV
+                      hidden: rH
                     })]
-                  }), (0, dV.l)(UV).map((VV => (0, FV.jsx)(Ve, {
-                    id: dV.g[VV],
-                    slot: VV,
-                    icon: we[VV].icon,
-                    label: rV(we[VV].labelKey),
-                    hidden: YV
-                  }, VV))), (0, FV.jsx)(Ve, {
+                  }), (0, pH.i)(SH).map((HH => (0, TH.jsx)(HB, {
+                    id: pH.c[HH],
+                    slot: HH,
+                    icon: EB[HH].icon,
+                    label: YH(EB[HH].labelKey),
+                    hidden: rH
+                  }, HH))), (0, TH.jsx)(HB, {
                     id: "game",
                     slot: "G",
                     icon: "bolt",
-                    hidden: YV
+                    hidden: rH
                   })]
                 })]
               })
             })]
           })
-        }), (0, FV.jsxs)("div", {
+        }), (0, TH.jsxs)("div", {
           className: "TouchMovementWrapper",
-          children: [(0, FV.jsx)("div", {
+          children: [(0, TH.jsx)("div", {
             className: "JoystickZone HudPreviewJoystickZone",
-            children: (0, FV.jsxs)("div", {
-              className: QV()("Joystick Resting HudPreviewJoystick", {
-                Floating: !yV
+            children: (0, TH.jsxs)("div", {
+              className: zH()("Joystick Resting HudPreviewJoystick", {
+                Floating: !hH
               }),
-              ...OV("joystick"),
-              children: [(0, FV.jsx)("div", {
+              ...yH("joystick"),
+              children: [(0, TH.jsx)("div", {
                 className: "JoystickBase"
-              }), (0, FV.jsx)("div", {
+              }), (0, TH.jsx)("div", {
                 className: "JoystickKnob"
               })]
             })
-          }), eV.sprint && (0, FV.jsx)("div", {
-            className: QV()("TouchSprintHit", EV("sprint"), {
-              AtHome: !yV
+          }), BH.sprint && (0, TH.jsx)("div", {
+            className: zH()("TouchSprintHit", WH("sprint"), {
+              AtHome: !hH
             }),
-            ...OV("sprint"),
-            children: (0, FV.jsx)("div", {
+            ...yH("sprint"),
+            children: (0, TH.jsx)("div", {
               className: "TouchKey TouchSprintKey Lit",
-              children: (0, FV.jsx)(zV.b, {
+              children: (0, TH.jsx)(oH.c, {
                 name: "person-running"
               })
             })
@@ -858,1050 +858,1050 @@ export const modules = {
       })
     }
 
-    function ke() {
-      const [VV, eV] = (0, YV.useState)({}), xV = (0, YV.useCallback)((VV => {
-        eV((eV => [...new Set([...Object.keys(eV), ...Object.keys(VV)])].every((xV => eV[xV] === VV[xV])) ? eV : VV))
+    function uB() {
+      const [HH, BH] = (0, rH.useState)({}), LH = (0, rH.useCallback)((HH => {
+        BH((BH => [...new Set([...Object.keys(BH), ...Object.keys(HH)])].every((LH => BH[LH] === HH[LH])) ? BH : HH))
       }), []);
-      return [VV, xV]
+      return [HH, LH]
     }
-    const be = .05;
+    const QB = .05;
 
-    function Ee(VV) {
-      var eV;
+    function WB(HH) {
+      var BH;
       let {
-        selected: xV,
-        layout: YV,
-        actionButtons: UV,
-        keyNames: yV,
-        overlaps: pV,
-        scaleCaps: wV,
-        joystickFixed: ZV,
-        onScale: vV,
-        onHidden: rV,
-        onReset: kV,
-        locked: bV,
-        lockable: EV,
-        onLocked: BV,
-        extra: jV
-      } = VV;
+        selected: LH,
+        layout: rH,
+        actionButtons: SH,
+        keyNames: hH,
+        overlaps: tH,
+        scaleCaps: EH,
+        joystickFixed: XH,
+        onScale: GH,
+        onHidden: YH,
+        onReset: uH,
+        locked: QH,
+        lockable: WH,
+        onLocked: MH,
+        extra: xH
+      } = HH;
       const {
-        t: qV
-      } = (0, JV.A)(), tV = xV ? GV.i[xV] : null, TV = null !== xV && bV.has(xV), PV = (xV && YV.hudElements[xV] || WV.q)[2], AV = null !== (eV = xV && wV[xV]) && void 0 !== eV ? eV : WV.k, NV = VV => {
-        xV && vV(xV, Math.min(AV, Math.round(100 * (PV + .1 * VV)) / 100))
+        t: vH
+      } = (0, AH.B)(), PH = LH ? IH.k[LH] : null, UH = null !== LH && QH.has(LH), VH = (LH && rH.hudElements[LH] || fH.o)[2], OH = null !== (BH = LH && EH[LH]) && void 0 !== BH ? BH : fH.j, bH = HH => {
+        LH && GH(LH, Math.min(OH, Math.round(100 * (VH + .1 * HH)) / 100))
       };
-      return (0, FV.jsxs)(FV.Fragment, {
-        children: [(0, FV.jsxs)("div", {
-          className: QV()("HudQuickName SmallTextBold", {
-            Overlap: pV.length > 0
+      return (0, TH.jsxs)(TH.Fragment, {
+        children: [(0, TH.jsxs)("div", {
+          className: zH()("HudQuickName SmallTextBold", {
+            Overlap: tH.length > 0
           }),
-          children: [pV.length > 0 && (0, FV.jsx)(zV.b, {
+          children: [tH.length > 0 && (0, TH.jsx)(oH.c, {
             name: "triangle-exclamation"
-          }), tV ? (0, GV.u)(tV.id, UV, qV, yV) : qV("hudLayout:fullScreenHint"), pV.length > 0 && (0, FV.jsx)("span", {
+          }), PH ? (0, IH.B)(PH.id, SH, vH, hH) : vH("hudLayout:fullScreenHint"), tH.length > 0 && (0, TH.jsx)("span", {
             className: "HudQuickOverlap",
-            children: qV("hudLayout:overlapsShort", {
-              names: (0, GV.r)(pV, UV, qV, yV)
+            children: vH("hudLayout:overlapsShort", {
+              names: (0, IH.y)(tH, SH, vH, hH)
             })
           })]
-        }), (null === tV || void 0 === tV ? void 0 : tV.scale) && (0, FV.jsxs)("div", {
+        }), (null === PH || void 0 === PH ? void 0 : PH.scale) && (0, TH.jsxs)("div", {
           className: "HudQuickSize",
-          children: [(0, FV.jsx)(nV.M, {
-            disabled: TV || PV <= WV.o,
-            ariaLabel: qV("hudLayout:smaller"),
+          children: [(0, TH.jsx)(CH.W, {
+            disabled: UH || VH <= fH.n,
+            ariaLabel: vH("hudLayout:smaller"),
             onClick: () => {
-              NV(-1)
+              bH(-1)
             },
-            children: (0, FV.jsx)(zV.b, {
+            children: (0, TH.jsx)(oH.c, {
               name: "minus"
             })
-          }), (0, FV.jsx)("span", {
+          }), (0, TH.jsx)("span", {
             className: "HudQuickSizeValue",
-            children: `${Math.round(100*PV)}%`
-          }), (0, FV.jsx)(nV.M, {
-            disabled: TV || PV >= AV,
-            ariaLabel: qV("hudLayout:larger"),
+            children: `${Math.round(100*VH)}%`
+          }), (0, TH.jsx)(CH.W, {
+            disabled: UH || VH >= OH,
+            ariaLabel: vH("hudLayout:larger"),
             onClick: () => {
-              NV(1)
+              bH(1)
             },
-            children: (0, FV.jsx)(zV.b, {
+            children: (0, TH.jsx)(oH.c, {
               name: "plus"
             })
           })]
-        }), (tV || jV) && (0, FV.jsxs)("div", {
+        }), (PH || xH) && (0, TH.jsxs)("div", {
           className: "HudQuickActions",
-          children: [tV && (0, FV.jsxs)(FV.Fragment, {
-            children: [(0, FV.jsx)(iV, {
-              id: tV.id,
-              actionButtons: UV,
-              keyNames: yV,
-              locked: TV,
-              lockable: EV(tV.id),
-              onLocked: BV
-            }), (0, FV.jsx)(gV, {
-              id: tV.id,
-              elements: YV.hudElements,
-              actionButtons: UV,
-              keyNames: yV,
-              onHidden: rV
-            }), (0, FV.jsx)(DV, {
-              id: tV.id,
-              elements: YV.hudElements,
-              actionButtons: UV,
-              keyNames: yV,
-              locked: TV,
-              onReset: kV
-            }), hV(tV.id, ZV) && (0, FV.jsx)(lV, {})]
-          }), jV]
+          children: [PH && (0, TH.jsxs)(TH.Fragment, {
+            children: [(0, TH.jsx)(eH, {
+              id: PH.id,
+              actionButtons: SH,
+              keyNames: hH,
+              locked: UH,
+              lockable: WH(PH.id),
+              onLocked: MH
+            }), (0, TH.jsx)(KH, {
+              id: PH.id,
+              elements: rH.hudElements,
+              actionButtons: SH,
+              keyNames: hH,
+              onHidden: YH
+            }), (0, TH.jsx)(cH, {
+              id: PH.id,
+              elements: rH.hudElements,
+              actionButtons: SH,
+              keyNames: hH,
+              locked: UH,
+              onReset: uH
+            }), jH(PH.id, XH) && (0, TH.jsx)(nH, {})]
+          }), xH]
         })]
       })
     }
-    var Be = xV(1157),
-      je = xV(4882);
-    const qe = "HudPreviewDoc",
-      te = {
+    var MB = LH(1049),
+      xB = LH(4826);
+    const vB = "HudPreviewDoc",
+      PB = {
         hotbar: "TouchHotbar",
         keysAbove: "TouchHotbarKeysAbove",
         hasShop: "TouchHotbarHasShop",
         hasBag: "TouchHotbarHasBag"
       },
-      Fe = new Set([qe, ...Object.values(te)]),
-      Te = new Set(WV.z.map(SV.w)),
-      Pe = new Set(SV.g),
-      Ae = 'style, link[rel="stylesheet"]';
+      TB = new Set([vB, ...Object.values(PB)]),
+      UB = new Set(fH.y.map(JH.y)),
+      VB = new Set(JH.i),
+      OB = 'style, link[rel="stylesheet"]';
 
-    function Ne(VV, eV, xV, JV) {
-      const YV = new Map,
-        UV = new Set,
-        yV = new URL(VV.baseURI).origin,
-        pV = eV => {
-          var xV;
-          if ("LINK" !== eV.nodeName) return !0;
-          const JV = null === (xV = eV.getAttribute("href")) || void 0 === xV ? void 0 : xV.trim();
-          if (!JV) return !1;
+    function bB(HH, BH, LH, AH) {
+      const rH = new Map,
+        SH = new Set,
+        hH = new URL(HH.baseURI).origin,
+        tH = BH => {
+          var LH;
+          if ("LINK" !== BH.nodeName) return !0;
+          const AH = null === (LH = BH.getAttribute("href")) || void 0 === LH ? void 0 : LH.trim();
+          if (!AH) return !1;
           try {
-            return new URL(JV, VV.baseURI).origin === yV
+            return new URL(AH, HH.baseURI).origin === hH
           } catch {
             return !1
           }
         };
-      let QV = null;
-      const nV = () => {
-          QV !== (0 === UV.size) && (QV = 0 === UV.size, null === JV || void 0 === JV || JV(QV))
+      let zH = null;
+      const CH = () => {
+          zH !== (0 === SH.size) && (zH = 0 === SH.size, null === AH || void 0 === AH || AH(zH))
         },
-        wV = VV => {
-          const eV = VV.cloneNode(!0);
-          if ("LINK" === eV.tagName) {
-            UV.add(eV);
-            const VV = () => {
-              UV.delete(eV), nV()
+        EH = HH => {
+          const BH = HH.cloneNode(!0);
+          if ("LINK" === BH.tagName) {
+            SH.add(BH);
+            const HH = () => {
+              SH.delete(BH), CH()
             };
-            eV.addEventListener("load", VV), eV.addEventListener("error", VV), xV && eV.addEventListener("load", xV)
+            BH.addEventListener("load", HH), BH.addEventListener("error", HH), LH && BH.addEventListener("load", LH)
           }
-          return eV
+          return BH
         },
-        ZV = () => {
-          const JV = function(VV) {
-              const eV = [...VV.body.children].filter((VV => VV.matches(Ae)));
-              return [...VV.head.querySelectorAll(Ae), ...eV]
-            }(VV).filter(pV),
-            yV = new Set(JV);
-          for (const [VV, eV] of YV) yV.has(VV) || (eV.remove(), YV.delete(VV), UV.delete(eV));
-          let QV = null;
-          for (let VV = JV.length - 1; VV >= 0; VV--) {
-            const UV = JV[VV];
-            let yV = YV.get(UV);
-            yV ? "STYLE" === UV.tagName && yV.textContent !== UV.textContent && (yV.textContent = UV.textContent, null === xV || void 0 === xV || xV()) : (yV = wV(UV), YV.set(UV, yV), eV.head.insertBefore(yV, QV)), QV = yV
+        XH = () => {
+          const AH = function(HH) {
+              const BH = [...HH.body.children].filter((HH => HH.matches(OB)));
+              return [...HH.head.querySelectorAll(OB), ...BH]
+            }(HH).filter(tH),
+            hH = new Set(AH);
+          for (const [HH, BH] of rH) hH.has(HH) || (BH.remove(), rH.delete(HH), SH.delete(BH));
+          let zH = null;
+          for (let HH = AH.length - 1; HH >= 0; HH--) {
+            const SH = AH[HH];
+            let hH = rH.get(SH);
+            hH ? "STYLE" === SH.tagName && hH.textContent !== SH.textContent && (hH.textContent = SH.textContent, null === LH || void 0 === LH || LH()) : (hH = EH(SH), rH.set(SH, hH), BH.head.insertBefore(hH, zH)), zH = hH
           }
-          nV()
+          CH()
         };
-      ZV();
-      const vV = new MutationObserver(ZV);
-      return vV.observe(VV.head, {
+      XH();
+      const GH = new MutationObserver(XH);
+      return GH.observe(HH.head, {
         childList: !0,
         subtree: !0,
         characterData: !0
-      }), vV.observe(VV.body, {
+      }), GH.observe(HH.body, {
         childList: !0
       }), () => {
-        vV.disconnect()
+        GH.disconnect()
       }
     }
 
-    function Xe(VV, eV, xV) {
+    function kB(HH, BH, LH) {
       let {
-        keysAbove: JV
-      } = xV;
-      const YV = [...VV.documentElement.classList].filter((VV => !Fe.has(VV) && !Pe.has(VV))),
-        UV = [...eV.documentElement.classList].filter((VV => Pe.has(VV))),
-        yV = [qe, te.hotbar, te.hasShop, te.hasBag];
-      JV && yV.push(te.keysAbove), eV.documentElement.className = [...YV, ...yV, ...UV].join(" ")
+        keysAbove: AH
+      } = LH;
+      const rH = [...HH.documentElement.classList].filter((HH => !TB.has(HH) && !VB.has(HH))),
+        SH = [...BH.documentElement.classList].filter((HH => VB.has(HH))),
+        hH = [vB, PB.hotbar, PB.hasShop, PB.hasBag];
+      AH && hH.push(PB.keysAbove), BH.documentElement.className = [...rH, ...hH, ...SH].join(" ")
     }
-    const Me = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
+    const mB = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
 
-    function ze(VV, eV, xV, JV, YV) {
-      const UV = (0, WV.C)(xV, JV, "joystick"),
-        yV = (0, SV.A)((0, SV.Q)(xV, JV, YV), JV),
-        pV = yV.classes.filter((VV => !Te.has(VV))),
-        QV = eV.documentElement,
-        nV = xV.hudLayouts[JV].hudSafe,
-        wV = (0, SV.F)(nV, window.innerWidth, window.innerHeight, Ge(), nV ? (0, SV.U)(eV) : 0);
-      (0, SV.V)({
-        ...yV,
-        classes: pV
+    function oB(HH, BH, LH, AH, rH) {
+      const SH = (0, fH.z)(LH, AH, "joystick"),
+        hH = (0, JH.z)((0, JH.G)(LH, AH, rH), AH),
+        tH = hH.classes.filter((HH => !UB.has(HH))),
+        zH = BH.documentElement,
+        CH = LH.hudLayouts[AH].hudSafe,
+        EH = (0, JH.B)(CH, window.innerWidth, window.innerHeight, IB(), CH ? (0, JH.K)(BH) : 0);
+      (0, JH.N)({
+        ...hH,
+        classes: tH
       }, {
-        vars: QV,
-        safe: QV,
-        classes: QV
-      }), QV.style.setProperty("--preview-joystick-shift-left", `${wV[3]}px`), QV.style.setProperty("--preview-joystick-shift-bottom", `${wV[2]}px`), QV.style.setProperty("--preview-joystick-scale", String(UV[2])), (0, je.e)(QV, eV, xV, JV);
-      for (const ZV of Me) QV.style.setProperty(ZV, VV.documentElement.style.getPropertyValue(ZV) || "0px")
+        vars: zH,
+        safe: zH,
+        classes: zH
+      }), zH.style.setProperty("--preview-joystick-shift-left", `${EH[3]}px`), zH.style.setProperty("--preview-joystick-shift-bottom", `${EH[2]}px`), zH.style.setProperty("--preview-joystick-scale", String(SH[2])), (0, xB.h)(zH, BH, LH, AH);
+      for (const XH of mB) zH.style.setProperty(XH, HH.documentElement.style.getPropertyValue(XH) || "0px")
     }
 
-    function Ge() {
-      return (0, SV.M)(wV.b.get("notchSize"), window.innerWidth, window.innerHeight)
+    function IB() {
+      return (0, JH.F)(EH.c.get("notchSize"), window.innerWidth, window.innerHeight)
     }
 
-    function We(VV) {
-      return (0, SV.q)(Ge(), (0, SV.U)(VV))
+    function fB(HH) {
+      return (0, JH.s)(IB(), (0, JH.K)(HH))
     }
 
-    function Re(VV, eV, xV) {
-      const JV = VV.documentElement.style,
-        YV = (0, SV.I)(eV),
-        UV = JV.getPropertyValue(YV);
+    function lB(HH, BH, LH) {
+      const AH = HH.documentElement.style,
+        rH = (0, JH.D)(BH),
+        SH = AH.getPropertyValue(rH);
       try {
-        return xV((VV => {
-          JV.setProperty(YV, String(VV))
+        return LH((HH => {
+          AH.setProperty(rH, String(HH))
         }))
       } finally {
-        "" === UV ? JV.removeProperty(YV) : JV.setProperty(YV, UV)
+        "" === SH ? AH.removeProperty(rH) : AH.setProperty(rH, SH)
       }
     }
 
-    function ge(VV, eV) {
-      const [xV, JV] = Re(VV, "hotbar", (eV => {
-        const xV = xV => {
-          var JV, YV;
-          return eV(xV), null !== (JV = null === (YV = VV.querySelector(".HotBarGameItemsContainer")) || void 0 === YV ? void 0 : YV.getBoundingClientRect().width) && void 0 !== JV ? JV : 0
+    function KB(HH, BH) {
+      const [LH, AH] = lB(HH, "hotbar", (BH => {
+        const LH = LH => {
+          var AH, rH;
+          return BH(LH), null !== (AH = null === (rH = HH.querySelector(".HotBarGameItemsContainer")) || void 0 === rH ? void 0 : rH.getBoundingClientRect().width) && void 0 !== AH ? AH : 0
         };
-        return [xV(1), xV(WV.k)]
+        return [LH(1), LH(fH.j)]
       }));
-      return xV <= 0 ? WV.k : Math.min(WV.k, Math.max(1, Math.floor(JV / xV / eV + 1e-6) * eV))
+      return LH <= 0 ? fH.j : Math.min(fH.j, Math.max(1, Math.floor(AH / LH / BH + 1e-6) * BH))
     }
-    const De = 3,
-      ie = .5,
-      Ce = VV => VV.right - VV.left;
-    const ae = (VV, eV) => Math.abs((0, HV.d)(VV).x - (0, HV.d)(eV).x) + Math.abs((0, HV.d)(VV).y - (0, HV.d)(eV).y) + Math.abs(Ce(VV) - Ce(eV));
+    const cB = 3,
+      eB = .5,
+      qB = HH => HH.right - HH.left;
+    const gB = (HH, BH) => Math.abs((0, dH.d)(HH).x - (0, dH.d)(BH).x) + Math.abs((0, dH.d)(HH).y - (0, dH.d)(BH).y) + Math.abs(qB(HH) - qB(BH));
 
-    function oe(VV, eV, xV, JV, YV) {
+    function NB(HH, BH, LH, AH, rH) {
       let {
-        canKeep: UV = () => !0,
-        passes: yV = De,
-        before: pV
+        canKeep: SH = () => !0,
+        passes: hH = cB,
+        before: tH
       } = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-      const QV = eV.hudLayouts[xV].hudLocked.filter(UV);
-      if (0 === QV.length) return eV;
-      const nV = [...GV.b].filter((JV => !QV.includes(JV) && (0, WV.C)(VV, xV, JV).join() === (0, WV.C)(eV, xV, JV).join())),
-        wV = VV => {
-          const eV = (0, HV.I)(nV.flatMap((eV => VV[eV] ? [VV[eV]] : [])));
+      const zH = BH.hudLayouts[LH].hudLocked.filter(SH);
+      if (0 === zH.length) return BH;
+      const CH = [...IH.e].filter((AH => !zH.includes(AH) && (0, fH.z)(HH, LH, AH).join() === (0, fH.z)(BH, LH, AH).join())),
+        EH = HH => {
+          const BH = (0, dH.K)(CH.flatMap((BH => HH[BH] ? [HH[BH]] : [])));
           return {
-            ...VV,
-            cluster: null !== eV && void 0 !== eV ? eV : void 0
+            ...HH,
+            cluster: null !== BH && void 0 !== BH ? BH : void 0
           }
         };
-      let ZV = null;
-      const vV = VV => {
-          ZV = VV;
-          const eV = YV(VV);
-          return eV && {
-            ...eV,
-            boxes: wV(eV.boxes)
+      let XH = null;
+      const GH = HH => {
+          XH = HH;
+          const BH = rH(HH);
+          return BH && {
+            ...BH,
+            boxes: EH(BH.boxes)
           }
         },
-        rV = pV ? {
-          ...pV,
-          boxes: wV(pV.boxes)
-        } : vV(VV),
-        kV = rV && vV(eV);
-      if (!rV || !kV) return eV;
-      const bV = rV.boxes;
-      let EV = kV.boxes;
-      const BV = rV.keysAbove !== kV.keysAbove,
-        jV = BV || Boolean(rV.shopAlone) !== Boolean(kV.shopAlone),
-        qV = new Set(QV.filter((VV => !(0, GV.x)(VV) || !("bag" === VV ? BV : jV))));
-      let tV = eV;
-      for (let PV = 0; PV < yV && qV.size > 0; PV++) {
-        var FV, TV;
-        const VV = new Map;
-        for (const eV of qV) {
-          const YV = bV[eV],
-            UV = EV[eV],
-            yV = YV && UV ? ce(eV, (0, WV.C)(tV, xV, eV), YV, UV, JV) : null;
-          yV ? VV.set(eV, yV) : qV.delete(eV)
+        YH = tH ? {
+          ...tH,
+          boxes: EH(tH.boxes)
+        } : GH(HH),
+        uH = YH && GH(BH);
+      if (!YH || !uH) return BH;
+      const QH = YH.boxes;
+      let WH = uH.boxes;
+      const MH = YH.keysAbove !== uH.keysAbove,
+        xH = MH || Boolean(YH.shopAlone) !== Boolean(uH.shopAlone),
+        vH = new Set(zH.filter((HH => !(0, IH.D)(HH) || !("bag" === HH ? MH : xH))));
+      let PH = BH;
+      for (let VH = 0; VH < hH && vH.size > 0; VH++) {
+        var TH, UH;
+        const HH = new Map;
+        for (const BH of vH) {
+          const rH = QH[BH],
+            SH = WH[BH],
+            hH = rH && SH ? RB(BH, (0, fH.z)(PH, LH, BH), rH, SH, AH) : null;
+          hH ? HH.set(BH, hH) : vH.delete(BH)
         }
-        if (0 === VV.size) break;
-        let YV = tV;
-        for (const [eV, JV] of VV) YV = (0, WV.mb)(YV, xV, eV, JV);
-        const UV = null === (FV = vV(YV)) || void 0 === FV ? void 0 : FV.boxes;
-        if (!UV) return eV;
-        let yV = tV;
-        for (const [eV, JV] of VV) {
-          const VV = UV[eV];
-          VV && ae(bV[eV], VV) < ae(bV[eV], EV[eV]) - ie ? yV = (0, WV.mb)(yV, xV, eV, JV) : qV.delete(eV)
+        if (0 === HH.size) break;
+        let rH = PH;
+        for (const [BH, AH] of HH) rH = (0, fH._)(rH, LH, BH, AH);
+        const SH = null === (TH = GH(rH)) || void 0 === TH ? void 0 : TH.boxes;
+        if (!SH) return BH;
+        let hH = PH;
+        for (const [BH, AH] of HH) {
+          const HH = SH[BH];
+          HH && gB(QH[BH], HH) < gB(QH[BH], WH[BH]) - eB ? hH = (0, fH._)(hH, LH, BH, AH) : vH.delete(BH)
         }
-        if (yV === tV) break;
-        const pV = [...VV.keys()].every((VV => qV.has(VV)));
-        tV = pV ? YV : yV;
-        const QV = pV ? UV : null === (TV = vV(tV)) || void 0 === TV ? void 0 : TV.boxes;
-        if (!QV) return eV;
-        EV = QV
+        if (hH === PH) break;
+        const tH = [...HH.keys()].every((HH => vH.has(HH)));
+        PH = tH ? rH : hH;
+        const zH = tH ? SH : null === (UH = GH(PH)) || void 0 === UH ? void 0 : UH.boxes;
+        if (!zH) return BH;
+        WH = zH
       }
-      return ZV !== tV && YV(tV), tV
+      return XH !== PH && rH(PH), PH
     }
 
-    function ce(VV, eV, xV, JV, YV) {
-      let [UV, yV, pV] = eV;
-      const QV = WV.y[VV],
-        nV = {};
-      QV.scale && Ce(JV) > 0 && Math.abs(Ce(xV) - Ce(JV)) > ie && (nV.scale = Math.max(WV.o, Math.min(WV.k, pV * Ce(xV) / Ce(JV))));
-      const wV = (0, HV.d)(xV).x - (0, HV.d)(JV).x,
-        ZV = (0, HV.d)(xV).y - (0, HV.d)(JV).y;
-      return QV.move && (Math.abs(wV) > ie || Math.abs(ZV) > ie) && (nV.dx = UV + wV / YV.width, nV.dy = yV + ZV / YV.height), void 0 === nV.scale && void 0 === nV.dx ? null : nV
+    function RB(HH, BH, LH, AH, rH) {
+      let [SH, hH, tH] = BH;
+      const zH = fH.v[HH],
+        CH = {};
+      zH.scale && qB(AH) > 0 && Math.abs(qB(LH) - qB(AH)) > eB && (CH.scale = Math.max(fH.n, Math.min(fH.j, tH * qB(LH) / qB(AH))));
+      const EH = (0, dH.d)(LH).x - (0, dH.d)(AH).x,
+        XH = (0, dH.d)(LH).y - (0, dH.d)(AH).y;
+      return zH.move && (Math.abs(EH) > eB || Math.abs(XH) > eB) && (CH.dx = SH + EH / rH.width, CH.dy = hH + XH / rH.height), void 0 === CH.scale && void 0 === CH.dx ? null : CH
     }
-    let he = 0;
+    let jB = 0;
 
-    function le() {
-      return he > 0
+    function nB() {
+      return jB > 0
     }
-    const Le = VV => 0 === VV.dx && 0 === VV.dy,
-      fe = .001,
-      me = VV => Math.abs(VV.dx) >= 5e-4 || Math.abs(VV.dy) >= 5e-4 ? VV : {
-        dx: VV.dx,
-        dy: VV.dy < 0 ? -.001 : fe
+    const FB = HH => 0 === HH.dx && 0 === HH.dy,
+      DB = .001,
+      wB = HH => Math.abs(HH.dx) >= 5e-4 || Math.abs(HH.dy) >= 5e-4 ? HH : {
+        dx: HH.dx,
+        dy: HH.dy < 0 ? -.001 : DB
       };
 
-    function Ke(VV) {
+    function ZB(HH) {
       let {
-        preview: eV,
-        stageRef: xV,
-        ringRef: JV,
-        centreLineRef: UV,
-        snapCentre: yV,
-        ready: pV,
-        measure: QV,
-        k: nV,
-        viewport: wV,
-        boxes: ZV,
-        pieces: vV,
-        selected: rV,
-        insets: kV,
-        layout: bV,
-        canMove: EV,
-        onSelect: BV,
-        onMove: jV
-      } = VV;
-      const qV = (0, YV.useRef)(null),
-        tV = (0, YV.useCallback)((() => null !== qV.current), []),
-        FV = (VV, eV) => {
-          if (!eV) return null;
-          const xV = (0, HV.d)(VV.origin),
-            JV = (0, HV.d)(eV),
-            YV = (VV.to.dx - VV.from.dx) * wV.width,
-            UV = (VV.to.dy - VV.from.dy) * wV.height,
-            yV = eV.right - eV.left,
-            pV = eV.bottom - eV.top;
+        preview: BH,
+        stageRef: LH,
+        ringRef: AH,
+        centreLineRef: SH,
+        snapCentre: hH,
+        ready: tH,
+        measure: zH,
+        k: CH,
+        viewport: EH,
+        boxes: XH,
+        pieces: GH,
+        selected: YH,
+        insets: uH,
+        layout: QH,
+        canMove: WH,
+        onSelect: MH,
+        onMove: xH
+      } = HH;
+      const vH = (0, rH.useRef)(null),
+        PH = (0, rH.useCallback)((() => null !== vH.current), []),
+        TH = (HH, BH) => {
+          if (!BH) return null;
+          const LH = (0, dH.d)(HH.origin),
+            AH = (0, dH.d)(BH),
+            rH = (HH.to.dx - HH.from.dx) * EH.width,
+            SH = (HH.to.dy - HH.from.dy) * EH.height,
+            hH = BH.right - BH.left,
+            tH = BH.bottom - BH.top;
           return {
             skew: {
-              x: JV.x - xV.x - YV,
-              y: JV.y - xV.y - UV
+              x: AH.x - LH.x - rH,
+              y: AH.y - LH.y - SH
             },
             box: {
-              left: xV.x - yV / 2,
-              top: xV.y - pV / 2,
-              right: xV.x + yV / 2,
-              bottom: xV.y + pV / 2
+              left: LH.x - hH / 2,
+              top: LH.y - tH / 2,
+              right: LH.x + hH / 2,
+              bottom: LH.y + tH / 2
             }
           }
         },
-        TV = (VV, xV) => {
-          var YV;
-          const yV = qV.current;
-          if (!yV || yV.pointerId !== VV.pointerId) return;
-          qV.current = null, null === (YV = UV.current) || void 0 === YV || YV.classList.remove("Shown", "Snapped");
-          const pV = JV.current;
-          if (pV && null !== yV.ringStyle && pV.setAttribute("style", yV.ringStyle), xV && yV.moved) {
-            const VV = Le(yV.to) ? null : QV(yV.id),
-              eV = VV ? (0, HV.F)(VV, (0, HV.E)(wV.width, wV.height, kV)) : {
+        UH = (HH, LH) => {
+          var rH;
+          const hH = vH.current;
+          if (!hH || hH.pointerId !== HH.pointerId) return;
+          vH.current = null, null === (rH = SH.current) || void 0 === rH || rH.classList.remove("Shown", "Snapped");
+          const tH = AH.current;
+          if (tH && null !== hH.ringStyle && tH.setAttribute("style", hH.ringStyle), LH && hH.moved) {
+            const HH = FB(hH.to) ? null : zH(hH.id),
+              BH = HH ? (0, dH.G)(HH, (0, dH.E)(EH.width, EH.height, uH)) : {
                 x: 0,
                 y: 0
               },
-              xV = {
-                dx: yV.to.dx + eV.x / wV.width,
-                dy: yV.to.dy + eV.y / wV.height
+              LH = {
+                dx: hH.to.dx + BH.x / EH.width,
+                dy: hH.to.dy + BH.y / EH.height
               },
-              JV = Le(yV.to) ? xV : me(xV);
-            jV(yV.id, JV.dx, JV.dy)
-          } else eV(yV.id, null), xV && yV.tapPick && BV(yV.tapPick)
+              AH = FB(hH.to) ? LH : wB(LH);
+            xH(hH.id, AH.dx, AH.dy)
+          } else BH(hH.id, null), LH && hH.tapPick && MH(hH.tapPick)
         };
       return {
-        busy: tV,
+        busy: PH,
         handlers: {
-          onPointerDown: VV => {
-            var eV;
-            if (!pV || qV.current || !VV.target.closest(".HudPreviewHandle")) return;
-            const JV = xV.current.getBoundingClientRect(),
-              YV = {
-                x: (VV.clientX - JV.left) / nV,
-                y: (VV.clientY - JV.top) / nV
+          onPointerDown: HH => {
+            var BH;
+            if (!tH || vH.current || !HH.target.closest(".HudPreviewHandle")) return;
+            const AH = LH.current.getBoundingClientRect(),
+              rH = {
+                x: (HH.clientX - AH.left) / CH,
+                y: (HH.clientY - AH.top) / CH
               },
-              UV = (0, HV.x)(YV, vV, 40 / nV),
-              yV = null !== rV ? GV.o.get(rV) : void 0,
-              QV = void 0 !== yV && null !== (0, HV.x)(YV, vV.filter((VV => {
+              SH = (0, dH.z)(rH, GH, 40 / CH),
+              hH = null !== YH ? IH.t.get(YH) : void 0,
+              zH = void 0 !== hH && null !== (0, dH.z)(rH, GH.filter((HH => {
                 let {
-                  id: eV
-                } = VV;
-                return yV.has(eV)
-              })), 40 / nV),
-              wV = "menu" === rV && void 0 !== ZV.menu && (0, HV.g)(ZV.menu, YV) && ("menu" === UV || null !== UV && (0, sV.v)(UV, bV.hudElements[UV])),
-              kV = QV ? rV : wV ? "menu" : null,
-              jV = null !== kV,
-              tV = null !== kV && void 0 !== kV ? kV : UV;
-            if (!tV) return;
-            if (function(VV) {
-                he++;
-                const eV = xV => {
-                  xV.pointerId === VV && (he = Math.max(0, he - 1), window.removeEventListener("pointerup", eV, !0), window.removeEventListener("pointercancel", eV, !0))
+                  id: BH
+                } = HH;
+                return hH.has(BH)
+              })), 40 / CH),
+              EH = "menu" === YH && void 0 !== XH.menu && (0, dH.g)(XH.menu, rH) && ("menu" === SH || null !== SH && (0, sH.t)(SH, QH.hudElements[SH])),
+              uH = zH ? YH : EH ? "menu" : null,
+              xH = null !== uH,
+              PH = null !== uH && void 0 !== uH ? uH : SH;
+            if (!PH) return;
+            if (function(HH) {
+                jB++;
+                const BH = LH => {
+                  LH.pointerId === HH && (jB = Math.max(0, jB - 1), window.removeEventListener("pointerup", BH, !0), window.removeEventListener("pointercancel", BH, !0))
                 };
-                window.addEventListener("pointerup", eV, !0), window.addEventListener("pointercancel", eV, !0)
-              }(VV.pointerId), !EV(tV)) return void BV(jV && UV ? UV : tV);
-            BV(tV);
-            const [FV, TV] = null !== (eV = bV.hudElements[tV]) && void 0 !== eV ? eV : [0, 0], PV = {
-              dx: FV,
-              dy: TV
-            }, AV = {
+                window.addEventListener("pointerup", BH, !0), window.addEventListener("pointercancel", BH, !0)
+              }(HH.pointerId), !WH(PH)) return void MH(xH && SH ? SH : PH);
+            MH(PH);
+            const [TH, UH] = null !== (BH = QH.hudElements[PH]) && void 0 !== BH ? BH : [0, 0], VH = {
+              dx: TH,
+              dy: UH
+            }, OH = {
               skew: {
                 x: 0,
                 y: 0
               },
-              box: ZV[tV]
+              box: XH[PH]
             };
-            qV.current = {
-              id: tV,
-              pointerId: VV.pointerId,
-              startX: VV.clientX,
-              startY: VV.clientY,
-              origin: ZV[tV],
-              from: PV,
-              to: PV,
+            vH.current = {
+              id: PH,
+              pointerId: HH.pointerId,
+              startX: HH.clientX,
+              startY: HH.clientY,
+              origin: XH[PH],
+              from: VH,
+              to: VH,
               moved: !1,
-              home: Le(PV) ? {
-                centre: (0, HV.d)(ZV[tV]),
-                anchor: AV
+              home: FB(VH) ? {
+                centre: (0, dH.d)(XH[PH]),
+                anchor: OH
               } : null,
-              away: Le(PV) ? null : AV,
-              anchor: AV,
+              away: FB(VH) ? null : OH,
+              anchor: OH,
               ringStyle: null,
-              tapPick: jV ? UV : null
-            }, VV.currentTarget.setPointerCapture(VV.pointerId)
+              tapPick: xH ? SH : null
+            }, HH.currentTarget.setPointerCapture(HH.pointerId)
           },
-          onPointerMove: VV => {
-            const xV = qV.current;
-            if (!xV || xV.pointerId !== VV.pointerId) return;
-            const YV = VV.clientX - xV.startX,
-              pV = VV.clientY - xV.startY;
-            if (!xV.moved && Math.hypot(YV, pV) < 5) return;
-            const ZV = !xV.moved;
-            var vV, rV;
-            (xV.moved = !0, ZV) && (xV.ringStyle = null !== (vV = null === (rV = JV.current) || void 0 === rV ? void 0 : rV.getAttribute("style")) && void 0 !== vV ? vV : null);
-            const bV = (0, HV.E)(wV.width, wV.height, kV);
-            if (!xV.home) {
-              var EV;
-              xV.to = {
+          onPointerMove: HH => {
+            const LH = vH.current;
+            if (!LH || LH.pointerId !== HH.pointerId) return;
+            const rH = HH.clientX - LH.startX,
+              tH = HH.clientY - LH.startY;
+            if (!LH.moved && Math.hypot(rH, tH) < 5) return;
+            const XH = !LH.moved;
+            var GH, YH;
+            (LH.moved = !0, XH) && (LH.ringStyle = null !== (GH = null === (YH = AH.current) || void 0 === YH ? void 0 : YH.getAttribute("style")) && void 0 !== GH ? GH : null);
+            const QH = (0, dH.E)(EH.width, EH.height, uH);
+            if (!LH.home) {
+              var WH;
+              LH.to = {
                 dx: 0,
                 dy: 0
-              }, eV(xV.id, xV.to);
-              const VV = QV(xV.id),
-                JV = null !== (EV = FV(xV, VV)) && void 0 !== EV ? EV : {
+              }, BH(LH.id, LH.to);
+              const HH = zH(LH.id),
+                AH = null !== (WH = TH(LH, HH)) && void 0 !== WH ? WH : {
                   skew: {
                     x: 0,
                     y: 0
                   },
-                  box: xV.origin
+                  box: LH.origin
                 },
-                YV = (0, HV.d)(xV.origin);
-              xV.home = {
-                centre: VV ? (0, HV.d)(VV) : {
-                  x: YV.x - xV.from.dx * wV.width,
-                  y: YV.y - xV.from.dy * wV.height
+                rH = (0, dH.d)(LH.origin);
+              LH.home = {
+                centre: HH ? (0, dH.d)(HH) : {
+                  x: rH.x - LH.from.dx * EH.width,
+                  y: rH.y - LH.from.dy * EH.height
                 },
-                anchor: JV
+                anchor: AH
               }
             }
-            const BV = xV.home;
-            let jV = !1;
-            const tV = VV => {
-                jV = !1;
-                let JV = (0, HV.q)(VV.box, YV / nV, pV / nV, bV);
-                const UV = wV.width / 2;
-                if (yV && Math.abs((0, HV.d)(xV.origin).x + JV.x - UV) <= 8 / nV) {
-                  const eV = UV - (0, HV.d)(xV.origin).x,
-                    YV = (0, HV.q)(VV.box, eV, JV.y, bV);
-                  jV = Math.abs(YV.x - eV) < .01, jV && (JV = YV)
+            const MH = LH.home;
+            let xH = !1;
+            const PH = HH => {
+                xH = !1;
+                let AH = (0, dH.p)(HH.box, rH / CH, tH / CH, QH);
+                const SH = EH.width / 2;
+                if (hH && Math.abs((0, dH.d)(LH.origin).x + AH.x - SH) <= 8 / CH) {
+                  const BH = SH - (0, dH.d)(LH.origin).x,
+                    rH = (0, dH.p)(HH.box, BH, AH.y, QH);
+                  xH = Math.abs(rH.x - BH) < .01, xH && (AH = rH)
                 }
-                const QV = (0, HV.w)(xV.from, JV.x - VV.skew.x, JV.y - VV.skew.y, wV.width, wV.height);
-                xV.to = me(QV), xV.anchor = VV, eV(xV.id, xV.to)
+                const zH = (0, dH.w)(LH.from, AH.x - HH.skew.x, AH.y - HH.skew.y, EH.width, EH.height);
+                LH.to = wB(zH), LH.anchor = HH, BH(LH.id, LH.to)
               },
-              TV = (0, HV.q)(BV.anchor.box, YV / nV, pV / nV, bV),
-              PV = UV.current,
-              AV = (0, HV.d)(xV.origin),
-              NV = ((0, WV.T)(xV.id) ? 20 : 6) / nV;
-            if (Math.abs(AV.x + TV.x - BV.centre.x) <= NV && Math.abs(AV.y + TV.y - BV.centre.y) <= NV) xV.to = {
+              UH = (0, dH.p)(MH.anchor.box, rH / CH, tH / CH, QH),
+              VH = SH.current,
+              OH = (0, dH.d)(LH.origin),
+              bH = ((0, fH.H)(LH.id) ? 20 : 6) / CH;
+            if (Math.abs(OH.x + UH.x - MH.centre.x) <= bH && Math.abs(OH.y + UH.y - MH.centre.y) <= bH) LH.to = {
               dx: 0,
               dy: 0
-            }, xV.anchor = BV.anchor, jV = yV && Math.abs(BV.centre.x - wV.width / 2) < 1, eV(xV.id, xV.to);
-            else if (xV.away) tV(xV.away);
+            }, LH.anchor = MH.anchor, xH = hH && Math.abs(MH.centre.x - EH.width / 2) < 1, BH(LH.id, LH.to);
+            else if (LH.away) PH(LH.away);
             else {
-              var XV;
-              tV(BV.anchor), xV.away = null !== (XV = FV(xV, QV(xV.id))) && void 0 !== XV ? XV : BV.anchor, tV(xV.away)
+              var kH;
+              PH(MH.anchor), LH.away = null !== (kH = TH(LH, zH(LH.id))) && void 0 !== kH ? kH : MH.anchor, PH(LH.away)
             }
-            null === PV || void 0 === PV || PV.classList.add("Shown"), null === PV || void 0 === PV || PV.classList.toggle("Snapped", jV), (VV => {
-              const eV = JV.current;
-              if (eV) {
+            null === VH || void 0 === VH || VH.classList.add("Shown"), null === VH || void 0 === VH || VH.classList.toggle("Snapped", xH), (HH => {
+              const BH = AH.current;
+              if (BH) {
                 const {
-                  skew: xV,
-                  box: JV
-                } = VV.anchor;
-                eV.style.left = JV.left * nV + "px", eV.style.top = JV.top * nV + "px", eV.style.width = (JV.right - JV.left) * nV + "px", eV.style.height = (JV.bottom - JV.top) * nV + "px", eV.style.translate = `${((VV.to.dx-VV.from.dx)*wV.width+xV.x)*nV}px ${((VV.to.dy-VV.from.dy)*wV.height+xV.y)*nV}px`
+                  skew: LH,
+                  box: AH
+                } = HH.anchor;
+                BH.style.left = AH.left * CH + "px", BH.style.top = AH.top * CH + "px", BH.style.width = (AH.right - AH.left) * CH + "px", BH.style.height = (AH.bottom - AH.top) * CH + "px", BH.style.translate = `${((HH.to.dx-HH.from.dx)*EH.width+LH.x)*CH}px ${((HH.to.dy-HH.from.dy)*EH.height+LH.y)*CH}px`
               }
-            })(xV)
+            })(LH)
           },
-          onPointerUp: VV => {
-            TV(VV, !0)
+          onPointerUp: HH => {
+            UH(HH, !0)
           },
-          onPointerCancel: VV => {
-            TV(VV, !1)
+          onPointerCancel: HH => {
+            UH(HH, !1)
           }
         }
       }
     }
-    var He = xV(9513);
+    var dB = LH(9603);
 
-    function ue(VV, eV) {
-      return Object.keys(VV).filter((VV => VV !== eV)).map((eV => VV[eV]))
+    function aB(HH, BH) {
+      return Object.keys(HH).filter((HH => HH !== BH)).map((BH => HH[BH]))
     }
 
-    function se(VV) {
-      return VV.map((VV => {
+    function sB(HH) {
+      return HH.map((HH => {
         let {
-          id: eV,
-          box: xV
-        } = VV;
-        return `${eV}:${xV.left},${xV.top},${xV.right},${xV.bottom}`
+          id: BH,
+          box: LH
+        } = HH;
+        return `${BH}:${LH.left},${LH.top},${LH.right},${LH.bottom}`
       })).join(";")
     }
 
-    function Se(VV) {
-      const eV = [],
-        xV = eV => (0, WV.T)(eV) && !VV.documentElement.classList.contains((0, SV.B)(eV));
-      for (const pV of VV.querySelectorAll(`[${GV.f}]`)) {
-        const VV = xV(pV.getAttribute(GV.f)) ? pV.querySelector(".ScaleOnHover") : null,
-          JV = (null !== VV && void 0 !== VV ? VV : pV).getBoundingClientRect();
-        (JV.width > 0 || JV.height > 0) && eV.push({
-          id: pV.getAttribute(GV.f),
-          box: (0, HV.h)(JV)
+    function JB(HH) {
+      const BH = [],
+        LH = BH => (0, fH.H)(BH) && !HH.documentElement.classList.contains((0, JH.A)(BH));
+      for (const tH of HH.querySelectorAll(`[${IH.h}]`)) {
+        const HH = LH(tH.getAttribute(IH.h)) ? tH.querySelector(".ScaleOnHover") : null,
+          AH = (null !== HH && void 0 !== HH ? HH : tH).getBoundingClientRect();
+        (AH.width > 0 || AH.height > 0) && BH.push({
+          id: tH.getAttribute(IH.h),
+          box: (0, dH.h)(AH)
         })
       }
-      const JV = VV => (0, HV.I)(eV.filter((eV => {
+      const AH = HH => (0, dH.K)(BH.filter((BH => {
           let {
-            id: xV
-          } = eV;
-          return VV(xV)
-        })).map((VV => {
+            id: LH
+          } = BH;
+          return HH(LH)
+        })).map((HH => {
           let {
-            box: eV
-          } = VV;
-          return eV
+            box: BH
+          } = HH;
+          return BH
         }))),
-        YV = {};
-      for (const pV of new Set(eV.map((VV => VV.id)))) YV[pV] = JV((VV => VV === pV));
-      for (const [pV, QV] of GV.o) {
-        const VV = JV((VV => QV.has(VV)));
-        VV && (YV[pV] = VV)
+        rH = {};
+      for (const tH of new Set(BH.map((HH => HH.id)))) rH[tH] = AH((HH => HH === tH));
+      for (const [tH, zH] of IH.t) {
+        const HH = AH((HH => zH.has(HH)));
+        HH && (rH[tH] = HH)
       }
-      const UV = VV.querySelector(".TouchInventoryKeys"),
-        yV = UV ? (0, HV.h)(UV.getBoundingClientRect()) : null;
+      const SH = HH.querySelector(".TouchInventoryKeys"),
+        hH = SH ? (0, dH.h)(SH.getBoundingClientRect()) : null;
       return {
-        boxes: YV,
-        pieces: eV,
-        pairHome: yV
+        boxes: rH,
+        pieces: BH,
+        pairHome: hH
       }
     }
 
-    function Ie(VV, eV, xV) {
-      const JV = eV.right - eV.left,
-        YV = eV.bottom - eV.top;
-      return Re(VV, "cluster", (eV => {
-        const UV = xV => {
-            eV(xV);
-            const JV = [...VV.querySelectorAll(`[${GV.f}]:not(.HudPreviewGhost)`)].filter((VV => GV.b.has(VV.getAttribute(GV.f)))).map((VV => (0, HV.h)(VV.getBoundingClientRect()))),
-              YV = (0, HV.I)(JV);
-            return YV ? {
-              w: YV.right - YV.left,
-              h: YV.bottom - YV.top
+    function iB(HH, BH, LH) {
+      const AH = BH.right - BH.left,
+        rH = BH.bottom - BH.top;
+      return lB(HH, "cluster", (BH => {
+        const SH = LH => {
+            BH(LH);
+            const AH = [...HH.querySelectorAll(`[${IH.h}]:not(.HudPreviewGhost)`)].filter((HH => IH.e.has(HH.getAttribute(IH.h)))).map((HH => (0, dH.h)(HH.getBoundingClientRect()))),
+              rH = (0, dH.K)(AH);
+            return rH ? {
+              w: rH.right - rH.left,
+              h: rH.bottom - rH.top
             } : null
           },
-          yV = VV => !VV || VV.w <= JV && VV.h <= YV,
-          pV = UV(1),
-          QV = UV(WV.k);
-        if (!pV || yV(QV)) return WV.k;
-        const nV = (VV, eV, xV) => eV > VV ? 1 + (xV - VV) * (WV.k - 1) / (eV - VV) : WV.k;
-        let wV = Math.floor(Math.min(WV.k, nV(pV.w, QV.w, JV), nV(pV.h, QV.h, YV)) / xV + 1e-6) * xV;
-        for (; wV > 1 && !yV(UV(wV));) wV = Math.round(100 * (wV - xV)) / 100;
-        return Math.max(1, wV)
+          hH = HH => !HH || HH.w <= AH && HH.h <= rH,
+          tH = SH(1),
+          zH = SH(fH.j);
+        if (!tH || hH(zH)) return fH.j;
+        const CH = (HH, BH, LH) => BH > HH ? 1 + (LH - HH) * (fH.j - 1) / (BH - HH) : fH.j;
+        let EH = Math.floor(Math.min(fH.j, CH(tH.w, zH.w, AH), CH(tH.h, zH.h, rH)) / LH + 1e-6) * LH;
+        for (; EH > 1 && !hH(SH(EH));) EH = Math.round(100 * (EH - LH)) / 100;
+        return Math.max(1, EH)
       }))
     }
 
-    function de(VV) {
-      Xe(document, VV, {
+    function pB(HH) {
+      kB(document, HH, {
         keysAbove: !1
       });
-      const eV = parseFloat(getComputedStyle(VV.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
-        xV = Number.isFinite(eV) && eV < 0;
-      return Xe(document, VV, {
-        keysAbove: xV
-      }), (0, He.b)(VV), xV
+      const BH = parseFloat(getComputedStyle(HH.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
+        LH = Number.isFinite(BH) && BH < 0;
+      return kB(document, HH, {
+        keysAbove: LH
+      }), (0, dB.e)(HH), LH
     }
 
-    function Oe(VV) {
-      const eV = VV.querySelector(".TouchInventoryKey.ShopKey");
-      return null !== eV && "1" === getComputedStyle(eV).getPropertyValue("--touch-shop-above").trim()
+    function yB(HH) {
+      const BH = HH.querySelector(".TouchInventoryKey.ShopKey");
+      return null !== BH && "1" === getComputedStyle(BH).getPropertyValue("--touch-shop-above").trim()
     }
 
-    function Vx(VV, eV) {
+    function HL(HH, BH) {
       let {
-        layout: xV,
-        orientation: JV,
-        viewport: UV,
-        replicaKey: yV,
-        joystickFixed: pV,
-        busy: QV
-      } = eV;
-      const [nV, wV] = (0, YV.useState)(null), [ZV, vV] = (0, YV.useState)({
+        layout: LH,
+        orientation: AH,
+        viewport: SH,
+        replicaKey: hH,
+        joystickFixed: tH,
+        busy: zH
+      } = BH;
+      const [CH, EH] = (0, rH.useState)(null), [XH, GH] = (0, rH.useState)({
         boxes: {},
         pieces: []
-      }), [rV, kV] = (0, YV.useState)({
+      }), [YH, uH] = (0, rH.useState)({
         top: 0,
         right: 0,
         bottom: 0,
         left: 0
-      }), [bV, EV] = (0, YV.useState)(!1), [BV, jV] = (0, YV.useState)(!1), [qV, tV] = (0, YV.useState)(!1), FV = (0, YV.useCallback)((VV => {
-        jV(VV), VV && tV(!0)
-      }), []), TV = xV.hudLayouts[JV].hudSafe;
-      (0, YV.useLayoutEffect)((() => {
-        const eV = VV.current.contentDocument;
-        eV.open(), eV.write("<!DOCTYPE html><html><head></head><body></body></html>"), eV.close(), wV(eV)
-      }), [VV]);
-      const PV = (0, YV.useCallback)((() => {
-          nV && ((0, sV.z)(nV), vV(Se(nV)), kV(function(VV, eV) {
-            const xV = We(VV),
-              [JV, YV, UV, yV] = eV ? (0, SV.t)(eV, window.innerWidth, window.innerHeight, xV) : xV;
+      }), [QH, WH] = (0, rH.useState)(!1), [MH, xH] = (0, rH.useState)(!1), [vH, PH] = (0, rH.useState)(!1), TH = (0, rH.useCallback)((HH => {
+        xH(HH), HH && PH(!0)
+      }), []), UH = LH.hudLayouts[AH].hudSafe;
+      (0, rH.useLayoutEffect)((() => {
+        const BH = HH.current.contentDocument;
+        BH.open(), BH.write("<!DOCTYPE html><html><head></head><body></body></html>"), BH.close(), EH(BH)
+      }), [HH]);
+      const VH = (0, rH.useCallback)((() => {
+          CH && ((0, sH.u)(CH), GH(JB(CH)), uH(function(HH, BH) {
+            const LH = fB(HH),
+              [AH, rH, SH, hH] = BH ? (0, JH.w)(BH, window.innerWidth, window.innerHeight, LH) : LH;
             return {
-              top: JV,
-              right: YV,
-              bottom: UV,
-              left: yV
+              top: AH,
+              right: rH,
+              bottom: SH,
+              left: hH
             }
-          }(nV, TV)))
-        }), [nV, TV]),
-        AV = (0, YV.useCallback)((() => {
-          nV && EV(de(nV))
-        }), [nV]),
-        NV = (0, YV.useRef)((() => {}));
-      return NV.current = () => {
-        AV(), QV() || PV()
-      }, (0, YV.useLayoutEffect)((() => {
-        if (nV) return Ne(document, nV, (() => {
-          NV.current()
-        }), FV)
-      }), [nV, FV]), (0, YV.useLayoutEffect)(AV, [AV, UV]), (0, YV.useLayoutEffect)((() => {
-        nV && (Xe(document, nV, {
-          keysAbove: bV
-        }), ze(document, nV, xV, JV, pV), AV(), PV())
-      }), [nV, xV, JV, bV, yV, pV, UV, PV, AV]), (0, YV.useEffect)((() => {
-        var VV;
-        if (!nV) return;
-        const eV = new ResizeObserver((() => {
-          QV() || PV()
+          }(CH, UH)))
+        }), [CH, UH]),
+        OH = (0, rH.useCallback)((() => {
+          CH && WH(pB(CH))
+        }), [CH]),
+        bH = (0, rH.useRef)((() => {}));
+      return bH.current = () => {
+        OH(), zH() || VH()
+      }, (0, rH.useLayoutEffect)((() => {
+        if (CH) return bB(document, CH, (() => {
+          bH.current()
+        }), TH)
+      }), [CH, TH]), (0, rH.useLayoutEffect)(OH, [OH, SH]), (0, rH.useLayoutEffect)((() => {
+        CH && (kB(document, CH, {
+          keysAbove: QH
+        }), oB(document, CH, LH, AH, tH), OH(), VH())
+      }), [CH, LH, AH, QH, hH, tH, SH, VH, OH]), (0, rH.useEffect)((() => {
+        var HH;
+        if (!CH) return;
+        const BH = new ResizeObserver((() => {
+          zH() || VH()
         }));
-        for (const xV of nV.querySelectorAll(`[${GV.f}]`)) eV.observe(xV);
-        return null === (VV = nV.fonts) || void 0 === VV || VV.ready.then(PV), () => {
-          eV.disconnect()
+        for (const LH of CH.querySelectorAll(`[${IH.h}]`)) BH.observe(LH);
+        return null === (HH = CH.fonts) || void 0 === HH || HH.ready.then(VH), () => {
+          BH.disconnect()
         }
-      }), [nV, PV, QV, yV]), {
-        doc: nV,
-        boxes: ZV.boxes,
-        pieces: ZV.pieces,
-        insets: rV,
-        keysAbove: bV,
-        ready: BV,
-        settled: qV
+      }), [CH, VH, zH, hH]), {
+        doc: CH,
+        boxes: XH.boxes,
+        pieces: XH.pieces,
+        insets: YH,
+        keysAbove: QH,
+        ready: MH,
+        settled: vH
       }
     }
-    const ex = ["Above", "Below", "Left", "Right"];
+    const BL = ["Above", "Below", "Left", "Right"];
 
-    function xx(VV, eV, xV, JV, YV) {
-      const UV = xV[VV],
-        yV = (UV.left + UV.right) / 2,
-        pV = (UV.top + UV.bottom) / 2,
-        QV = (7.5 * eV.length + 14) / JV,
-        nV = 18 / JV,
-        wV = {
+    function LL(HH, BH, LH, AH, rH) {
+      const SH = LH[HH],
+        hH = (SH.left + SH.right) / 2,
+        tH = (SH.top + SH.bottom) / 2,
+        zH = (7.5 * BH.length + 14) / AH,
+        CH = 18 / AH,
+        EH = {
           Above: {
-            left: yV - QV / 2,
-            top: UV.top - nV,
-            right: yV + QV / 2,
-            bottom: UV.top
+            left: hH - zH / 2,
+            top: SH.top - CH,
+            right: hH + zH / 2,
+            bottom: SH.top
           },
           Below: {
-            left: yV - QV / 2,
-            top: UV.bottom,
-            right: yV + QV / 2,
-            bottom: UV.bottom + nV
+            left: hH - zH / 2,
+            top: SH.bottom,
+            right: hH + zH / 2,
+            bottom: SH.bottom + CH
           },
           Left: {
-            left: UV.left - QV,
-            top: pV - nV / 2,
-            right: UV.left,
-            bottom: pV + nV / 2
+            left: SH.left - zH,
+            top: tH - CH / 2,
+            right: SH.left,
+            bottom: tH + CH / 2
           },
           Right: {
-            left: UV.right,
-            top: pV - nV / 2,
-            right: UV.right + QV,
-            bottom: pV + nV / 2
+            left: SH.right,
+            top: tH - CH / 2,
+            right: SH.right + zH,
+            bottom: tH + CH / 2
           }
         },
-        ZV = ue(xV, VV),
-        vV = {
+        XH = aB(LH, HH),
+        GH = {
           left: 0,
           top: 0,
-          right: YV.width,
-          bottom: YV.height
+          right: rH.width,
+          bottom: rH.height
         };
-      return ex[(0, HV.u)(ex.map((VV => wV[VV])), ZV, {
-        bounds: vV
+      return BL[(0, dH.u)(BL.map((HH => EH[HH])), XH, {
+        bounds: GH
       })]
     }
 
-    function Jx() {
-      const [VV, eV] = (0, mV.e)();
-      return (0, YV.useMemo)((() => ({
-        width: VV,
-        height: eV
-      })), [VV, eV])
+    function AL() {
+      const [HH, BH] = (0, wH.b)();
+      return (0, rH.useMemo)((() => ({
+        width: HH,
+        height: BH
+      })), [HH, BH])
     }
 
-    function Yx(VV) {
-      var eV;
+    function rL(HH) {
+      var BH;
       const {
-        layout: xV,
-        orientation: UV,
-        selected: yV,
-        onSelect: pV,
-        onMove: nV,
-        canMove: wV,
-        actionButtons: ZV,
-        joystickFixed: vV,
-        presence: rV,
-        keyNames: bV,
-        maxHeight: EV,
-        fill: BV = !1,
-        apiRef: jV
-      } = VV, {
-        t: qV
-      } = (0, JV.A)(), tV = Jx(), TV = (null !== (eV = (0, kV.j)("maxAuraLevel")) && void 0 !== eV ? eV : 0) > 0, PV = xV.hudLayouts[UV], AV = (0, YV.useRef)(null), NV = (0, YV.useRef)(null), XV = (0, YV.useRef)(null), MV = (0, YV.useRef)(null), RV = (0, YV.useRef)(null), gV = (0, YV.useRef)(null), DV = (0, KV.d)(AV).width, iV = BV ? 1 : DV > 0 ? (0, HV.B)(DV, tV.width, tV.height, EV) : 0, CV = (0, YV.useRef)((() => !1)), aV = (0, YV.useCallback)((() => CV.current()), []), oV = `${ZV}:${vV}:${TV}`, {
-        doc: cV,
-        boxes: hV,
-        pieces: lV,
-        insets: fV,
-        keysAbove: mV,
-        ready: IV,
-        settled: dV
-      } = Vx(XV, {
-        layout: xV,
-        orientation: UV,
-        viewport: tV,
-        replicaKey: oV,
-        joystickFixed: vV,
-        busy: aV
-      }), OV = (0, YV.useCallback)((VV => {
-        cV && ze(document, cV, VV, UV, vV)
-      }), [cV, UV, vV]), Ve = (0, YV.useCallback)((VV => {
-        if (!cV || !dV) return null;
-        OV(VV);
-        const eV = de(cV),
-          xV = function(VV, eV) {
+        layout: LH,
+        orientation: SH,
+        selected: hH,
+        onSelect: tH,
+        onMove: CH,
+        canMove: EH,
+        actionButtons: XH,
+        joystickFixed: GH,
+        presence: YH,
+        keyNames: QH,
+        maxHeight: WH,
+        fill: MH = !1,
+        apiRef: xH
+      } = HH, {
+        t: vH
+      } = (0, AH.B)(), PH = AL(), UH = (null !== (BH = (0, uH.j)("maxAuraLevel")) && void 0 !== BH ? BH : 0) > 0, VH = LH.hudLayouts[SH], OH = (0, rH.useRef)(null), bH = (0, rH.useRef)(null), kH = (0, rH.useRef)(null), mH = (0, rH.useRef)(null), lH = (0, rH.useRef)(null), KH = (0, rH.useRef)(null), cH = (0, ZH.c)(OH).width, eH = MH ? 1 : cH > 0 ? (0, dH.C)(cH, PH.width, PH.height, WH) : 0, qH = (0, rH.useRef)((() => !1)), gH = (0, rH.useCallback)((() => qH.current()), []), NH = `${XH}:${GH}:${UH}`, {
+        doc: RH,
+        boxes: jH,
+        pieces: nH,
+        insets: DH,
+        keysAbove: wH,
+        ready: iH,
+        settled: pH
+      } = HL(kH, {
+        layout: LH,
+        orientation: SH,
+        viewport: PH,
+        replicaKey: NH,
+        joystickFixed: GH,
+        busy: gH
+      }), yH = (0, rH.useCallback)((HH => {
+        RH && oB(document, RH, HH, SH, GH)
+      }), [RH, SH, GH]), HB = (0, rH.useCallback)((HH => {
+        if (!RH || !pH) return null;
+        yH(HH);
+        const BH = pB(RH),
+          LH = function(HH, BH) {
             let {
-              boxes: xV,
-              pieces: JV,
-              pairHome: YV
-            } = VV;
-            const UV = JV.find((VV => GV.n.has(VV.id)));
-            if (!UV || !YV) return xV;
-            const yV = (0, HV.d)(YV),
-              pV = eV(UV.id),
-              QV = Ce(UV.box) / pV / 2,
-              nV = (UV.box.bottom - UV.box.top) / pV / 2;
+              boxes: LH,
+              pieces: AH,
+              pairHome: rH
+            } = HH;
+            const SH = AH.find((HH => IH.q.has(HH.id)));
+            if (!SH || !rH) return LH;
+            const hH = (0, dH.d)(rH),
+              tH = BH(SH.id),
+              zH = qB(SH.box) / tH / 2,
+              CH = (SH.box.bottom - SH.box.top) / tH / 2;
             return {
-              ...xV,
+              ...LH,
               inventory: {
-                left: yV.x - QV,
-                top: yV.y - nV,
-                right: yV.x + QV,
-                bottom: yV.y + nV
+                left: hH.x - zH,
+                top: hH.y - CH,
+                right: hH.x + zH,
+                bottom: hH.y + CH
               }
             }
-          }(Se(cV), (eV => (0, WV.C)(VV, UV, eV)[2]));
+          }(JB(RH), (BH => (0, fH.z)(HH, SH, BH)[2]));
         return {
-          boxes: xV,
-          keysAbove: eV,
-          shopAlone: Oe(cV)
+          boxes: LH,
+          keysAbove: BH,
+          shopAlone: yB(RH)
         }
-      }), [cV, dV, OV, UV]), ee = (0, YV.useRef)(null), xe = (0, YV.useRef)(null), Je = (0, YV.useRef)(xV);
-      Je.current = xV;
-      const Ye = (0, YV.useCallback)((() => {
-        null !== ee.current && (cancelAnimationFrame(ee.current), ee.current = null)
+      }), [RH, pH, yH, SH]), BB = (0, rH.useRef)(null), LB = (0, rH.useRef)(null), AB = (0, rH.useRef)(LH);
+      AB.current = LH;
+      const rB = (0, rH.useCallback)((() => {
+        null !== BB.current && (cancelAnimationFrame(BB.current), BB.current = null)
       }), []);
-      (0, YV.useEffect)((() => Ye), [xV, Ye]);
-      const Ue = (0, YV.useRef)(-1 / 0),
+      (0, rH.useEffect)((() => rB), [LH, rB]);
+      const SB = (0, rH.useRef)(-1 / 0),
         {
-          lockable: ye
-        } = VV,
-        pe = (0, YV.useCallback)((VV => {
-          if (OV(VV), Ue.current = performance.now(), !dV || 0 === xV.hudLayouts[UV].hudLocked.length) return;
-          const eV = xV;
-          Ye(), ee.current = requestAnimationFrame((() => {
-            var xV;
-            if (ee.current = null, Je.current !== eV) return;
-            const JV = (null === (xV = xe.current) || void 0 === xV ? void 0 : xV.from) === eV ? xe.current.measured : Ve(eV);
-            JV && (xe.current = {
-              from: eV,
-              measured: JV
-            }), OV(JV ? oe(eV, VV, UV, tV, Ve, {
-              canKeep: ye,
+          lockable: hB
+        } = HH,
+        tB = (0, rH.useCallback)((HH => {
+          if (yH(HH), SB.current = performance.now(), !pH || 0 === LH.hudLayouts[SH].hudLocked.length) return;
+          const BH = LH;
+          rB(), BB.current = requestAnimationFrame((() => {
+            var LH;
+            if (BB.current = null, AB.current !== BH) return;
+            const AH = (null === (LH = LB.current) || void 0 === LH ? void 0 : LH.from) === BH ? LB.current.measured : HB(BH);
+            AH && (LB.current = {
+              from: BH,
+              measured: AH
+            }), yH(AH ? NB(BH, HH, SH, PH, HB, {
+              canKeep: hB,
               passes: 1,
-              before: JV
-            }) : VV)
+              before: AH
+            }) : HH)
           }))
-        }), [OV, dV, xV, UV, tV, Ve, ye, Ye]),
-        Qe = Ke({
-          preview: (VV, eV) => {
-            eV ? pe((0, WV.mb)(xV, UV, VV, eV)) : (Ye(), OV(xV))
+        }), [yH, pH, LH, SH, PH, HB, hB, rB]),
+        zB = ZB({
+          preview: (HH, BH) => {
+            BH ? tB((0, fH._)(LH, SH, HH, BH)) : (rB(), yH(LH))
           },
-          stageRef: NV,
-          ringRef: MV,
-          centreLineRef: RV,
-          snapCentre: xV.hudSnapCentre,
-          ready: dV,
-          measure: VV => {
-            const eV = cV && IV ? Se(cV).boxes[VV] : void 0;
-            return eV && (0, HV.l)(eV, tV.width, tV.height) ? eV : null
+          stageRef: bH,
+          ringRef: mH,
+          centreLineRef: lH,
+          snapCentre: LH.hudSnapCentre,
+          ready: pH,
+          measure: HH => {
+            const BH = RH && iH ? JB(RH).boxes[HH] : void 0;
+            return BH && (0, dH.j)(BH, PH.width, PH.height) ? BH : null
           },
-          k: iV,
-          viewport: tV,
-          boxes: hV,
-          pieces: lV,
-          selected: yV,
-          insets: fV,
-          layout: PV,
-          canMove: wV,
-          onSelect: pV,
-          onMove: (VV, eV, xV) => {
-            Ye(), nV(VV, eV, xV)
+          k: eH,
+          viewport: PH,
+          boxes: jH,
+          pieces: nH,
+          selected: hH,
+          insets: DH,
+          layout: VH,
+          canMove: EH,
+          onSelect: tH,
+          onMove: (HH, BH, LH) => {
+            rB(), CH(HH, BH, LH)
           }
         });
-      (0, YV.useLayoutEffect)((() => {
-        CV.current = Qe.busy
-      }), [Qe.busy]);
-      const ne = (0, YV.useRef)([]),
-        we = (0, YV.useRef)(PV.hudElements);
-      (0, YV.useEffect)((() => {
-        for (const YV of Object.keys(PV.hudElements)) {
-          var VV, eV, xV, JV;
-          (null !== (VV = null === (eV = PV.hudElements[YV]) || void 0 === eV ? void 0 : eV[2]) && void 0 !== VV ? VV : 1) > (null !== (xV = null === (JV = we.current[YV]) || void 0 === JV ? void 0 : JV[2]) && void 0 !== xV ? xV : 1) && wV(YV) && !(0, sV.v)(YV, PV.hudElements[YV]) && ne.current.push(...(0, GV.z)(YV, mV, wV))
+      (0, rH.useLayoutEffect)((() => {
+        qH.current = zB.busy
+      }), [zB.busy]);
+      const CB = (0, rH.useRef)([]),
+        EB = (0, rH.useRef)(VH.hudElements);
+      (0, rH.useEffect)((() => {
+        for (const rH of Object.keys(VH.hudElements)) {
+          var HH, BH, LH, AH;
+          (null !== (HH = null === (BH = VH.hudElements[rH]) || void 0 === BH ? void 0 : BH[2]) && void 0 !== HH ? HH : 1) > (null !== (LH = null === (AH = EB.current[rH]) || void 0 === AH ? void 0 : AH[2]) && void 0 !== LH ? LH : 1) && EH(rH) && !(0, sH.t)(rH, VH.hudElements[rH]) && CB.current.push(...(0, IH.K)(rH, wH, EH))
         }
-        we.current = PV.hudElements
-      }), [PV.hudElements, wV, mV]), (0, YV.useEffect)((() => {
-        if (!IV) return;
-        const VV = (0, HV.E)(tV.width, tV.height, fV);
-        for (const xV of (0, GV.y)(ne.current.splice(0), hV, VV, wV)) {
-          const JV = hV[xV];
-          if (!JV || Qe.busy() || !(0, HV.l)(JV, tV.width, tV.height)) continue;
-          const YV = (0, HV.F)(JV, VV);
-          if (0 !== YV.x || 0 !== YV.y) {
-            var eV;
-            const [VV, JV] = null !== (eV = PV.hudElements[xV]) && void 0 !== eV ? eV : [0, 0];
-            nV(xV, VV + YV.x / tV.width, JV + YV.y / tV.height)
+        EB.current = VH.hudElements
+      }), [VH.hudElements, EH, wH]), (0, rH.useEffect)((() => {
+        if (!iH) return;
+        const HH = (0, dH.E)(PH.width, PH.height, DH);
+        for (const LH of (0, IH.G)(CB.current.splice(0), jH, HH, EH)) {
+          const AH = jH[LH];
+          if (!AH || zB.busy() || !(0, dH.j)(AH, PH.width, PH.height)) continue;
+          const rH = (0, dH.G)(AH, HH);
+          if (0 !== rH.x || 0 !== rH.y) {
+            var BH;
+            const [HH, AH] = null !== (BH = VH.hudElements[LH]) && void 0 !== BH ? BH : [0, 0];
+            CH(LH, HH + rH.x / PH.width, AH + rH.y / PH.height)
           }
         }
-      }), [hV, IV]), (0, YV.useImperativeHandle)(jV, (() => ({
-        setScale: (VV, eV) => {
-          pe((0, WV.mb)(xV, UV, VV, {
-            scale: eV
+      }), [jH, iH]), (0, rH.useImperativeHandle)(xH, (() => ({
+        setScale: (HH, BH) => {
+          tB((0, fH._)(LH, SH, HH, {
+            scale: BH
           }))
         },
-        setOpacity: VV => {
-          OV({
-            ...xV,
-            hudKeyOpacity: VV
+        setOpacity: HH => {
+          yH({
+            ...LH,
+            hudKeyOpacity: HH
           })
         },
-        keepLocks: (VV, eV) => (Ye(), oe(VV, eV, UV, tV, Ve, {
-          canKeep: ye
+        keepLocks: (HH, BH) => (rB(), NB(HH, BH, SH, PH, HB, {
+          canKeep: hB
         })),
-        setSafe: VV => {
-          const eV = (0, SV.t)(VV, tV.width, tV.height, We(null !== cV && void 0 !== cV ? cV : document));
-          pe((0, WV.ub)(xV, UV, VV)), gV.current && (gV.current.style.inset = eV.map((VV => VV * iV + "px")).join(" "))
+        setSafe: HH => {
+          const BH = (0, JH.w)(HH, PH.width, PH.height, fB(null !== RH && void 0 !== RH ? RH : document));
+          tB((0, fH.eb)(LH, SH, HH)), KH.current && (KH.current.style.inset = BH.map((HH => HH * eH + "px")).join(" "))
         }
-      })), [OV, pe, Ve, Ye, ye, cV, xV, UV, tV, iV]);
-      const Ze = new Set(Object.keys(PV.hudElements).filter((VV => (0, WV.v)(PV.hudElements, VV)))),
-        ve = yV ? hV[yV] : void 0,
-        ke = yV ? (0, GV.u)(yV, ZV, qV, bV) : "",
-        Ee = (0, Be.f)(tV.width, tV.height),
-        je = yV ? (0, uV.c)(yV, lV, PV, Ee) : [],
-        qe = new Set((0, sV.q)(PV.hudElements)),
-        te = (0, sV.I)(PV, (0, sV.E)(rV.rowIcons)).state,
-        Fe = je.join(),
-        Te = (0, YV.useRef)(VV.onReady);
-      Te.current = VV.onReady, (0, YV.useEffect)((() => {
-        var VV;
-        null === (VV = Te.current) || void 0 === VV || VV.call(Te, dV)
-      }), [dV]);
-      const Pe = (0, YV.useRef)(VV.onMeasured);
-      (0, YV.useLayoutEffect)((() => {
-        Pe.current = VV.onMeasured
+      })), [yH, tB, HB, rB, hB, RH, LH, SH, PH, eH]);
+      const XB = new Set(Object.keys(VH.hudElements).filter((HH => (0, fH.s)(VH.hudElements, HH)))),
+        GB = hH ? jH[hH] : void 0,
+        uB = hH ? (0, IH.B)(hH, XH, vH, QH) : "",
+        WB = (0, MB.h)(PH.width, PH.height),
+        xB = hH ? (0, aH.g)(hH, nH, VH, WB) : [],
+        vB = new Set((0, sH.r)(VH.hudElements)),
+        PB = (0, sH.G)(VH, (0, sH.C)(YH.rowIcons)).state,
+        TB = xB.join(),
+        UB = (0, rH.useRef)(HH.onReady);
+      UB.current = HH.onReady, (0, rH.useEffect)((() => {
+        var HH;
+        null === (HH = UB.current) || void 0 === HH || HH.call(UB, pH)
+      }), [pH]);
+      const VB = (0, rH.useRef)(HH.onMeasured);
+      (0, rH.useLayoutEffect)((() => {
+        VB.current = HH.onMeasured
       }));
-      const Ae = (0, YV.useRef)({
+      const OB = (0, rH.useRef)({
           layout: null,
           input: "",
           caps: {}
         }),
-        Ne = [se(lV), tV.width, tV.height, fV.top, fV.right, fV.bottom, fV.left, IV, oV].join("|");
-      (0, YV.useEffect)((() => {
-        const VV = Fe ? Fe.split(",") : [],
-          eV = () => {
-            var eV;
-            null === (eV = Pe.current) || void 0 === eV || eV.call(Pe, hV, VV, Ae.current.caps)
+        bB = [sB(nH), PH.width, PH.height, DH.top, DH.right, DH.bottom, DH.left, iH, NH].join("|");
+      (0, rH.useEffect)((() => {
+        const HH = TB ? TB.split(",") : [],
+          BH = () => {
+            var BH;
+            null === (BH = VB.current) || void 0 === BH || BH.call(VB, jH, HH, OB.current.caps)
           };
-        let xV;
-        const JV = () => {
-          const VV = Je.current;
-          if (!cV || VV === Ae.current.layout && Ne === Ae.current.input) return !1;
-          const YV = Ue.current + 250 - performance.now();
-          return VV === Ae.current.layout && (YV > 0 || aV()) ? (xV = setTimeout((() => {
-            JV() && eV()
-          }), Math.max(YV, 62.5)), !1) : (Ae.current = {
-            layout: VV,
-            input: Ne,
+        let LH;
+        const AH = () => {
+          const HH = AB.current;
+          if (!RH || HH === OB.current.layout && bB === OB.current.input) return !1;
+          const rH = SB.current + 250 - performance.now();
+          return HH === OB.current.layout && (rH > 0 || gH()) ? (LH = setTimeout((() => {
+            AH() && BH()
+          }), Math.max(rH, 62.5)), !1) : (OB.current = {
+            layout: HH,
+            input: bB,
             caps: {
-              hotbar: ge(cV, be),
-              cluster: Ie(cV, (0, HV.E)(tV.width, tV.height, fV), be)
+              hotbar: KB(RH, QB),
+              cluster: iB(RH, (0, dH.E)(PH.width, PH.height, DH), QB)
             }
           }, !0)
         };
-        return JV(), eV(), () => {
-          clearTimeout(xV)
+        return AH(), BH(), () => {
+          clearTimeout(LH)
         }
-      }), [hV, Fe, cV, tV, fV, Ne, aV]);
-      const Xe = VV => ({
-        left: VV.left * iV,
-        top: VV.top * iV,
-        width: (VV.right - VV.left) * iV,
-        height: (VV.bottom - VV.top) * iV
+      }), [jH, TB, RH, PH, DH, bB, gH]);
+      const kB = HH => ({
+        left: HH.left * eH,
+        top: HH.top * eH,
+        width: (HH.right - HH.left) * eH,
+        height: (HH.bottom - HH.top) * eH
       });
-      return (0, FV.jsx)("div", {
-        ref: AV,
-        className: QV()("HudPreviewBox", {
-          Fill: BV
+      return (0, TH.jsx)("div", {
+        ref: OH,
+        className: zH()("HudPreviewBox", {
+          Fill: MH
         }),
         style: {
-          height: tV.height * iV
+          height: PH.height * eH
         },
-        children: (0, FV.jsxs)("div", {
-          ref: NV,
+        children: (0, TH.jsxs)("div", {
+          ref: bH,
           className: "HudPreviewStage",
           style: {
-            width: tV.width * iV,
-            height: tV.height * iV
+            width: PH.width * eH,
+            height: PH.height * eH
           },
-          children: [(0, FV.jsx)("iframe", {
-            ref: XV,
+          children: [(0, TH.jsx)("iframe", {
+            ref: kH,
             className: "HudPreviewFrame",
-            title: qV("hudLayout:preview"),
+            title: vH("hudLayout:preview"),
             "aria-hidden": !0,
             tabIndex: -1,
             style: {
-              width: tV.width,
-              height: tV.height,
-              transform: `scale(${iV})`
+              width: PH.width,
+              height: PH.height,
+              transform: `scale(${eH})`
             }
-          }), cV && (0, LV.createPortal)((0, FV.jsx)(re, {
-            presence: rV,
-            portraitPhone: Ee,
-            hidden: Ze,
-            actionButtons: ZV,
-            joystickFixed: vV,
-            keysAbove: mV,
-            auraBar: TV,
-            trayState: te,
-            moved: qe
-          }), cV.body), (0, FV.jsxs)("div", {
+          }), RH && (0, FH.createPortal)((0, TH.jsx)(YB, {
+            presence: YH,
+            portraitPhone: WB,
+            hidden: XB,
+            actionButtons: XH,
+            joystickFixed: GH,
+            keysAbove: wH,
+            auraBar: UH,
+            trayState: PB,
+            moved: vB
+          }), RH.body), (0, TH.jsxs)("div", {
             className: "HudPreviewOverlay",
-            ...Qe.handlers,
-            children: [(0, FV.jsx)("div", {
-              ref: gV,
+            ...zB.handlers,
+            children: [(0, TH.jsx)("div", {
+              ref: KH,
               className: "HudPreviewSafeZone",
               style: {
-                top: fV.top * iV,
-                right: fV.right * iV,
-                bottom: fV.bottom * iV,
-                left: fV.left * iV
+                top: DH.top * eH,
+                right: DH.right * eH,
+                bottom: DH.bottom * eH,
+                left: DH.left * eH
               }
-            }), lV.map(((VV, eV) => {
+            }), nH.map(((HH, BH) => {
               let {
-                id: xV,
-                box: JV
-              } = VV;
-              return (0, FV.jsx)("div", {
+                id: LH,
+                box: AH
+              } = HH;
+              return (0, TH.jsx)("div", {
                 className: "HudPreviewHandle",
-                style: Xe((0, HV.t)(JV, 40 / iV))
-              }, `${xV}:${eV}`)
-            })), PV.hudLocked.map((VV => {
-              const eV = hV[VV];
-              return eV && (0, FV.jsx)("span", {
+                style: kB((0, dH.r)(AH, 40 / eH))
+              }, `${LH}:${BH}`)
+            })), VH.hudLocked.map((HH => {
+              const BH = jH[HH];
+              return BH && (0, TH.jsx)("span", {
                 className: "HudPreviewLockBadge",
                 style: {
-                  left: eV.right * iV,
-                  top: eV.top * iV
+                  left: BH.right * eH,
+                  top: BH.top * eH
                 },
-                children: (0, FV.jsx)(zV.b, {
+                children: (0, TH.jsx)(oH.c, {
                   name: "lock"
                 })
-              }, VV)
-            })), (0, FV.jsx)("div", {
-              ref: RV,
+              }, HH)
+            })), (0, TH.jsx)("div", {
+              ref: lH,
               className: "HudPreviewCentreLine",
               style: {
-                left: tV.width / 2 * iV
+                left: PH.width / 2 * eH
               }
-            }), yV && ve && (0, FV.jsx)("div", {
-              ref: MV,
-              className: QV()("HudPreviewRing", {
-                Fixed: !wV(yV),
-                Overlap: je.length > 0
+            }), hH && GB && (0, TH.jsx)("div", {
+              ref: mH,
+              className: zH()("HudPreviewRing", {
+                Fixed: !EH(hH),
+                Overlap: xB.length > 0
               }),
-              style: Xe(ve),
-              children: (0, FV.jsx)("span", {
-                className: QV()("HudPreviewRingLabel", xx(yV, ke, hV, iV, tV)),
-                children: ke
+              style: kB(GB),
+              children: (0, TH.jsx)("span", {
+                className: zH()("HudPreviewRingLabel", LL(hH, uB, jH, eH, PH)),
+                children: uB
               })
             })]
           })]
@@ -1909,1436 +1909,1436 @@ export const modules = {
       })
     }
 
-    function Ux(VV, eV) {
-      (0, YV.useEffect)((() => {
-        var xV;
-        null === (xV = VV.current) || void 0 === xV || xV.toggleAttribute("inert", eV)
-      }), [VV, eV])
+    function SL(HH, BH) {
+      (0, rH.useEffect)((() => {
+        var LH;
+        null === (LH = HH.current) || void 0 === LH || LH.toggleAttribute("inert", BH)
+      }), [HH, BH])
     }
-    const yx = "hudFullScreen";
+    const hL = "hudFullScreen";
 
-    function px(VV) {
+    function tL(HH) {
       let {
-        onScale: eV,
-        onHidden: xV,
-        onReset: UV,
-        locked: yV,
-        lockable: pV,
-        onLocked: QV,
-        onClose: wV,
-        ...ZV
-      } = VV;
+        onScale: BH,
+        onHidden: LH,
+        onReset: SH,
+        locked: hH,
+        lockable: tH,
+        onLocked: zH,
+        onClose: EH,
+        ...XH
+      } = HH;
       const {
-        t: vV
-      } = (0, JV.A)(), rV = (0, YV.useRef)(null);
-      (0, fV.s)("popup", rV, wV),
-      function(VV) {
-        const eV = (0, YV.useRef)(VV);
-        eV.current = VV, (0, YV.useEffect)((() => {
+        t: GH
+      } = (0, AH.B)(), YH = (0, rH.useRef)(null);
+      (0, DH.r)("popup", YH, EH),
+      function(HH) {
+        const BH = (0, rH.useRef)(HH);
+        BH.current = HH, (0, rH.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [yx]: !0
+            [hL]: !0
           }, "");
-          let VV = !1;
-          const xV = () => {
-            VV = !0, eV.current()
+          let HH = !1;
+          const LH = () => {
+            HH = !0, BH.current()
           };
-          return window.addEventListener("popstate", xV), () => {
-            var eV;
-            window.removeEventListener("popstate", xV), !VV && null !== (eV = window.history.state) && void 0 !== eV && eV[yx] && window.history.back()
+          return window.addEventListener("popstate", LH), () => {
+            var BH;
+            window.removeEventListener("popstate", LH), !HH && null !== (BH = window.history.state) && void 0 !== BH && BH[hL] && window.history.back()
           }
         }), [])
-      }(wV), (0, YV.useEffect)((() => {
-        function VV(VV) {
-          "Escape" === VV.key && (VV.stopPropagation(), wV())
+      }(EH), (0, rH.useEffect)((() => {
+        function HH(HH) {
+          "Escape" === HH.key && (HH.stopPropagation(), EH())
         }
-        return window.addEventListener("keydown", VV, !0), () => {
-          window.removeEventListener("keydown", VV, !0)
+        return window.addEventListener("keydown", HH, !0), () => {
+          window.removeEventListener("keydown", HH, !0)
         }
-      }), [wV]);
+      }), [EH]);
       const {
-        selected: kV
-      } = ZV, bV = (0, YV.useRef)(null), EV = (0, YV.useRef)(null), [BV, jV] = (0, YV.useState)(!1);
-      Ux(EV, !BV);
-      const [qV, tV] = (0, YV.useState)(null), [TV, PV] = (0, YV.useState)([]), [AV, NV] = ke(), XV = (0, YV.useRef)(ZV.selected);
-      XV.current = ZV.selected;
-      const MV = (0, YV.useRef)({}),
-        zV = (0, YV.useCallback)((() => {
-          const VV = bV.current;
-          VV && tV(function(VV, eV, xV) {
-            var JV;
+        selected: uH
+      } = XH, QH = (0, rH.useRef)(null), WH = (0, rH.useRef)(null), [MH, xH] = (0, rH.useState)(!1);
+      SL(WH, !MH);
+      const [vH, PH] = (0, rH.useState)(null), [UH, VH] = (0, rH.useState)([]), [OH, bH] = uB(), kH = (0, rH.useRef)(XH.selected);
+      kH.current = XH.selected;
+      const mH = (0, rH.useRef)({}),
+        oH = (0, rH.useCallback)((() => {
+          const HH = QH.current;
+          HH && PH(function(HH, BH, LH) {
+            var AH;
             const {
-              innerWidth: YV,
-              innerHeight: UV
-            } = window, yV = VV.offsetWidth, pV = VV.offsetHeight, QV = Math.max(Ge()[0], 6), nV = [];
-            for (const vV of [QV, .2 * UV, .5 * UV - pV / 2, .33 * UV])
-              for (const VV of [.5, .3, .7]) nV.push({
-                left: Math.max(0, Math.min(YV - yV - 6, Math.max(6, YV * VV - yV / 2))),
-                top: vV
+              innerWidth: rH,
+              innerHeight: SH
+            } = window, hH = HH.offsetWidth, tH = HH.offsetHeight, zH = Math.max(IB()[0], 6), CH = [];
+            for (const GH of [zH, .2 * SH, .5 * SH - tH / 2, .33 * SH])
+              for (const HH of [.5, .3, .7]) CH.push({
+                left: Math.max(0, Math.min(rH - hH - 6, Math.max(6, rH * HH - hH / 2))),
+                top: GH
               });
-            const wV = nV.map((VV => ({
-                left: VV.left - 6,
-                top: VV.top - 6,
-                right: VV.left + yV + 6,
-                bottom: VV.top + pV + 6
+            const EH = CH.map((HH => ({
+                left: HH.left - 6,
+                top: HH.top - 6,
+                right: HH.left + hH + 6,
+                bottom: HH.top + tH + 6
               }))),
-              ZV = ue(eV, xV);
-            return nV[(0, HV.u)(wV, ZV, {
-              avoid: xV && null !== (JV = eV[xV]) && void 0 !== JV ? JV : null
+              XH = aB(BH, LH);
+            return CH[(0, dH.u)(EH, XH, {
+              avoid: LH && null !== (AH = BH[LH]) && void 0 !== AH ? AH : null
             })]
-          }(VV, MV.current, XV.current))
+          }(HH, mH.current, kH.current))
         }), []),
-        GV = (0, YV.useCallback)(((VV, eV, xV) => {
-          PV(eV), NV(xV), MV.current = VV, zV()
-        }), [zV, NV]);
-      return (0, YV.useLayoutEffect)(zV, [ZV.selected, zV]), (0, LV.createPortal)((0, FV.jsxs)("div", {
-        ref: rV,
+        IH = (0, rH.useCallback)(((HH, BH, LH) => {
+          VH(BH), bH(LH), mH.current = HH, oH()
+        }), [oH, bH]);
+      return (0, rH.useLayoutEffect)(oH, [XH.selected, oH]), (0, FH.createPortal)((0, TH.jsxs)("div", {
+        ref: YH,
         className: "HudFullScreenEditor",
-        children: [(0, FV.jsx)(Yx, {
-          ...ZV,
+        children: [(0, TH.jsx)(rL, {
+          ...XH,
           maxHeight: window.innerHeight,
           fill: !0,
-          onMeasured: GV,
-          onReady: jV,
-          lockable: pV
-        }), (0, FV.jsxs)("div", {
-          ref: bV,
+          onMeasured: IH,
+          onReady: xH,
+          lockable: tH
+        }), (0, TH.jsxs)("div", {
+          ref: QH,
           className: "HudFullScreenToolbar",
-          style: null === qV ? void 0 : {
-            left: qV.left,
-            top: qV.top,
+          style: null === vH ? void 0 : {
+            left: vH.left,
+            top: vH.top,
             transform: "none"
           },
-          children: [(0, FV.jsx)("div", {
-            ref: EV,
+          children: [(0, TH.jsx)("div", {
+            ref: WH,
             className: "HudFullScreenControls",
-            children: (0, FV.jsx)(Ee, {
-              selected: kV,
-              layout: ZV.layout.hudLayouts[ZV.orientation],
-              actionButtons: ZV.actionButtons,
-              keyNames: ZV.keyNames,
-              overlaps: TV,
-              scaleCaps: AV,
-              onScale: eV,
-              onHidden: xV,
-              onReset: UV,
-              locked: yV,
-              lockable: pV,
-              onLocked: QV,
-              joystickFixed: ZV.joystickFixed
+            children: (0, TH.jsx)(WB, {
+              selected: uH,
+              layout: XH.layout.hudLayouts[XH.orientation],
+              actionButtons: XH.actionButtons,
+              keyNames: XH.keyNames,
+              overlaps: UH,
+              scaleCaps: OH,
+              onScale: BH,
+              onHidden: LH,
+              onReset: SH,
+              locked: hH,
+              lockable: tH,
+              onLocked: zH,
+              joystickFixed: XH.joystickFixed
             })
-          }), (0, FV.jsx)(nV.f, {
+          }), (0, TH.jsx)(CH.i, {
             className: "HudFullScreenDone",
-            onClick: wV,
+            onClick: EH,
             padDefaultFocus: !0,
-            children: vV("hudLayout:done")
+            children: GH("hudLayout:done")
           })]
         })]
       }), document.body)
     }
-    const Qx = VV => `${Math.round(100*VV)}%`;
+    const zL = HH => `${Math.round(100*HH)}%`;
 
-    function nx(VV) {
+    function CL(HH) {
       let {
-        info: eV,
-        tuple: xV,
-        props: YV
-      } = VV;
+        info: BH,
+        tuple: LH,
+        props: rH
+      } = HH;
       const {
-        t: UV
-      } = (0, JV.A)();
-      return (0, FV.jsx)(rV.m, {
-        name: UV("hudLayout:size"),
-        min: WV.o,
-        max: WV.k,
-        step: be,
-        initValue: xV[2],
-        disabled: YV.locked.has(eV.id),
-        selectableMax: YV.scaleCaps[eV.id],
-        cappedNote: UV("hudLayout:sizeCapped"),
-        format: Qx,
-        onChange: VV => {
-          YV.onScalePreview(eV.id, VV)
+        t: SH
+      } = (0, AH.B)();
+      return (0, TH.jsx)(YH.f, {
+        name: SH("hudLayout:size"),
+        min: fH.n,
+        max: fH.j,
+        step: QB,
+        initValue: LH[2],
+        disabled: rH.locked.has(BH.id),
+        selectableMax: rH.scaleCaps[BH.id],
+        cappedNote: SH("hudLayout:sizeCapped"),
+        format: zL,
+        onChange: HH => {
+          rH.onScalePreview(BH.id, HH)
         },
-        onChangeComplete: VV => {
-          YV.onScale(eV.id, VV)
+        onChangeComplete: HH => {
+          rH.onScale(BH.id, HH)
         }
       })
     }
 
-    function wx(VV) {
+    function EL(HH) {
       const {
-        t: eV
-      } = (0, JV.A)(), {
-        present: xV,
-        elements: UV,
-        selected: yV,
-        onSelect: pV,
-        onHidden: nV,
-        onReset: wV,
-        note: ZV,
-        actionButtons: vV,
-        keyNames: rV,
-        sizeBesidePreview: kV,
-        locked: bV,
-        lockable: EV,
-        onLocked: BV
-      } = VV, {
-        rowIconsOpen: jV,
-        onRowIconsOpen: qV
-      } = VV, tV = (0, YV.useRef)(null), TV = null !== yV && (jV || !(0, WV.T)(yV));
-      return (0, YV.useEffect)((() => {
-        var VV;
-        const eV = yV ? null === (VV = tV.current) || void 0 === VV ? void 0 : VV.querySelector(`[data-hud-row="${yV}"]`) : null;
-        if (!eV) return;
-        const xV = eV.closest(".SettingsMenuRight"),
-          JV = performance.now();
-        let YV = null;
-        const UV = () => {
-            clearInterval(QV), null === xV || void 0 === xV || xV.removeEventListener("scroll", pV)
+        t: BH
+      } = (0, AH.B)(), {
+        present: LH,
+        elements: SH,
+        selected: hH,
+        onSelect: tH,
+        onHidden: CH,
+        onReset: EH,
+        note: XH,
+        actionButtons: GH,
+        keyNames: YH,
+        sizeBesidePreview: uH,
+        locked: QH,
+        lockable: WH,
+        onLocked: MH
+      } = HH, {
+        rowIconsOpen: xH,
+        onRowIconsOpen: vH
+      } = HH, PH = (0, rH.useRef)(null), UH = null !== hH && (xH || !(0, fH.H)(hH));
+      return (0, rH.useEffect)((() => {
+        var HH;
+        const BH = hH ? null === (HH = PH.current) || void 0 === HH ? void 0 : HH.querySelector(`[data-hud-row="${hH}"]`) : null;
+        if (!BH) return;
+        const LH = BH.closest(".SettingsMenuRight"),
+          AH = performance.now();
+        let rH = null;
+        const SH = () => {
+            clearInterval(zH), null === LH || void 0 === LH || LH.removeEventListener("scroll", tH)
           },
-          pV = () => {
-            le() || UV()
+          tH = () => {
+            nB() || SH()
           },
-          QV = setInterval((() => {
-            const VV = performance.now();
-            VV - JV > 1500 ? UV() : le() ? YV = null : null === YV ? YV = VV : VV - YV >= 150 && (UV(), function(VV) {
-              var eV;
-              const xV = VV.closest(".SettingsMenuRight"),
-                JV = null === (eV = VV.closest(".HudLayoutSettings")) || void 0 === eV ? void 0 : eV.querySelector(".HudLayoutPreviewBox");
-              if (!xV || !JV) return;
-              const YV = JV.getBoundingClientRect().bottom + 8,
-                UV = xV.getBoundingClientRect().bottom - 8,
-                yV = VV.getBoundingClientRect();
-              yV.top < YV ? xV.scrollBy({
-                top: yV.top - YV,
+          zH = setInterval((() => {
+            const HH = performance.now();
+            HH - AH > 1500 ? SH() : nB() ? rH = null : null === rH ? rH = HH : HH - rH >= 150 && (SH(), function(HH) {
+              var BH;
+              const LH = HH.closest(".SettingsMenuRight"),
+                AH = null === (BH = HH.closest(".HudLayoutSettings")) || void 0 === BH ? void 0 : BH.querySelector(".HudLayoutPreviewBox");
+              if (!LH || !AH) return;
+              const rH = AH.getBoundingClientRect().bottom + 8,
+                SH = LH.getBoundingClientRect().bottom - 8,
+                hH = HH.getBoundingClientRect();
+              hH.top < rH ? LH.scrollBy({
+                top: hH.top - rH,
                 behavior: "smooth"
-              }) : yV.bottom > UV && xV.scrollBy({
-                top: Math.min(yV.bottom - UV, yV.top - YV),
+              }) : hH.bottom > SH && LH.scrollBy({
+                top: Math.min(hH.bottom - SH, hH.top - rH),
                 behavior: "smooth"
               })
-            }(eV))
+            }(BH))
           }), 50);
-        return null === xV || void 0 === xV || xV.addEventListener("scroll", pV, {
+        return null === LH || void 0 === LH || LH.addEventListener("scroll", tH, {
           passive: !0
-        }), UV
-      }), [yV, TV]), (0, FV.jsx)("div", {
-        ref: tV,
+        }), SH
+      }), [hH, UH]), (0, TH.jsx)("div", {
+        ref: PH,
         className: "SettingBoxGroup HudElementList",
-        children: GV.j.filter((VV => xV.has(VV.id) && (jV || !(0, WV.T)(VV.id)))).map((xV => {
-          const JV = ((VV, eV) => {
-              var xV;
-              return null !== (xV = VV[eV]) && void 0 !== xV ? xV : WV.q
-            })(UV, xV.id),
-            YV = (0, WV.v)(UV, xV.id),
-            tV = xV.id === yV,
-            TV = xV.scale && !kV,
-            PV = ZV(xV.id, tV);
-          return (0, FV.jsxs)("div", {
-            "data-hud-row": xV.id,
-            className: QV()("SettingBox HudElementRow", {
-              Open: tV,
-              Hidden: YV,
-              Child: void 0 !== xV.parent,
-              Grandchild: (0, GV.q)(xV.id).length > 1
+        children: IH.o.filter((HH => LH.has(HH.id) && (xH || !(0, fH.H)(HH.id)))).map((LH => {
+          const AH = ((HH, BH) => {
+              var LH;
+              return null !== (LH = HH[BH]) && void 0 !== LH ? LH : fH.o
+            })(SH, LH.id),
+            rH = (0, fH.s)(SH, LH.id),
+            PH = LH.id === hH,
+            UH = LH.scale && !uH,
+            VH = XH(LH.id, PH);
+          return (0, TH.jsxs)("div", {
+            "data-hud-row": LH.id,
+            className: zH()("SettingBox HudElementRow", {
+              Open: PH,
+              Hidden: rH,
+              Child: void 0 !== LH.parent,
+              Grandchild: (0, IH.x)(LH.id).length > 1
             }),
-            children: [(0, FV.jsxs)("div", {
+            children: [(0, TH.jsxs)("div", {
               className: "HudElementRowHead",
-              children: [(0, FV.jsx)("button", {
+              children: [(0, TH.jsx)("button", {
                 type: "button",
                 className: "HudElementRowName",
-                "aria-expanded": TV ? tV : void 0,
+                "aria-expanded": UH ? PH : void 0,
                 onClick: () => {
-                  pV(xV.id)
+                  tH(LH.id)
                 },
-                children: (0, FV.jsxs)("span", {
+                children: (0, TH.jsxs)("span", {
                   className: "HudElementRowLabel",
-                  children: [(0, GV.u)(xV.id, vV, eV, rV), xV.scale && 1 !== JV[2] && !(tV && TV) && (0, FV.jsxs)(FV.Fragment, {
-                    children: [" ", (0, FV.jsx)("span", {
+                  children: [(0, IH.B)(LH.id, GH, BH, YH), LH.scale && 1 !== AH[2] && !(PH && UH) && (0, TH.jsxs)(TH.Fragment, {
+                    children: [" ", (0, TH.jsx)("span", {
                       className: "HudElementRowSize",
-                      children: Qx(JV[2])
+                      children: zL(AH[2])
                     })]
-                  }), TV && (0, FV.jsxs)(FV.Fragment, {
-                    children: [" ", (0, FV.jsx)("span", {
+                  }), UH && (0, TH.jsxs)(TH.Fragment, {
+                    children: [" ", (0, TH.jsx)("span", {
                       className: "HudElementRowChevron",
                       children: "\u25be"
                     })]
                   })]
                 })
-              }), (0, FV.jsx)(iV, {
+              }), (0, TH.jsx)(eH, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: xV.id,
-                actionButtons: vV,
-                keyNames: rV,
-                locked: bV.has(xV.id),
-                lockable: EV(xV.id),
-                onLocked: BV
-              }), "menu" === xV.id && (0, FV.jsx)(CV, {
+                id: LH.id,
+                actionButtons: GH,
+                keyNames: YH,
+                locked: QH.has(LH.id),
+                lockable: WH(LH.id),
+                onLocked: MH
+              }), "menu" === LH.id && (0, TH.jsx)(qH, {
                 className: "HudElementRowIcon",
-                open: jV,
-                name: (0, GV.u)(xV.id, vV, eV, rV),
-                onToggle: qV
-              }), "menu" !== xV.id && (0, FV.jsx)(gV, {
+                open: xH,
+                name: (0, IH.B)(LH.id, GH, BH, YH),
+                onToggle: vH
+              }), "menu" !== LH.id && (0, TH.jsx)(KH, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: xV.id,
-                elements: UV,
-                actionButtons: vV,
-                keyNames: rV,
-                onHidden: nV
-              }), (0, FV.jsx)(DV, {
+                id: LH.id,
+                elements: SH,
+                actionButtons: GH,
+                keyNames: YH,
+                onHidden: CH
+              }), (0, TH.jsx)(cH, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
                 onlyWhenMoved: !0,
-                locked: bV.has(xV.id),
-                id: xV.id,
-                elements: UV,
-                actionButtons: vV,
-                keyNames: rV,
-                onReset: wV
+                locked: QH.has(LH.id),
+                id: LH.id,
+                elements: SH,
+                actionButtons: GH,
+                keyNames: YH,
+                onReset: EH
               })]
-            }), tV && TV && (0, FV.jsx)(nx, {
-              info: xV,
-              tuple: JV,
-              props: VV
-            }), PV && (0, FV.jsx)("div", {
+            }), PH && UH && (0, TH.jsx)(CL, {
+              info: LH,
+              tuple: AH,
+              props: HH
+            }), VH && (0, TH.jsx)("div", {
               className: "HudElementNote",
-              children: PV
+              children: VH
             })]
-          }, xV.id)
+          }, LH.id)
         }))
       })
     }
 
-    function Zx(VV) {
+    function XL(HH) {
       let {
-        preview: eV,
-        quick: xV,
-        onFullScreen: UV,
-        resting: yV,
-        onSidePanel: pV
-      } = VV;
+        preview: BH,
+        quick: LH,
+        onFullScreen: SH,
+        resting: hH,
+        onSidePanel: tH
+      } = HH;
       const {
-        t: QV
-      } = (0, JV.A)(), wV = Jx(), ZV = (0, YV.useRef)(null), {
-        width: vV
-      } = (0, KV.d)(ZV), rV = Math.floor(wV.width * Math.min(1, eV.maxHeight / wV.height)), kV = vV - rV - 12, bV = kV >= 130, EV = vV > 0;
-      (0, YV.useEffect)((() => {
-        EV && pV(bV)
-      }), [EV, bV, pV]);
-      const BV = (0, HV.B)(bV ? rV : vV, wV.width, wV.height, eV.maxHeight),
-        jV = yV ? (0, FV.jsx)("div", {
+        t: zH
+      } = (0, AH.B)(), EH = AL(), XH = (0, rH.useRef)(null), {
+        width: GH
+      } = (0, ZH.c)(XH), YH = Math.floor(EH.width * Math.min(1, BH.maxHeight / EH.height)), uH = GH - YH - 12, QH = uH >= 130, WH = GH > 0;
+      (0, rH.useEffect)((() => {
+        WH && tH(QH)
+      }), [WH, QH, tH]);
+      const MH = (0, dH.C)(QH ? YH : GH, EH.width, EH.height, BH.maxHeight),
+        xH = hH ? (0, TH.jsx)("div", {
           className: "HudPreviewResting",
           style: {
-            height: wV.height * BV
+            height: EH.height * MH
           }
-        }) : (0, FV.jsx)(Yx, {
-          ...eV
+        }) : (0, TH.jsx)(rL, {
+          ...BH
         }),
-        qV = VV => (0, FV.jsxs)(nV.M, {
+        vH = HH => (0, TH.jsxs)(CH.W, {
           className: "HudLayoutFullScreenButton",
-          ariaLabel: QV("hudLayout:fullScreen"),
+          ariaLabel: zH("hudLayout:fullScreen"),
           analyticsClick: {
             id: "hud_layout.full_screen"
           },
-          onClick: UV,
-          children: [(0, FV.jsx)(zV.b, {
+          onClick: SH,
+          children: [(0, TH.jsx)(oH.c, {
             name: "expand"
-          }), VV && (0, FV.jsx)("span", {
-            children: QV("hudLayout:fullScreen")
+          }), HH && (0, TH.jsx)("span", {
+            children: zH("hudLayout:fullScreen")
           })]
         });
-      return (0, FV.jsxs)("div", {
-        ref: ZV,
+      return (0, TH.jsxs)("div", {
+        ref: XH,
         className: "SettingBox HudLayoutPreviewBox",
-        children: [vV > 0 && bV && (0, FV.jsxs)("div", {
+        children: [GH > 0 && QH && (0, TH.jsxs)("div", {
           className: "HudLayoutPreviewRow",
-          children: [(0, FV.jsx)("div", {
+          children: [(0, TH.jsx)("div", {
             style: {
-              width: rV
+              width: YH
             },
-            children: jV
-          }), (0, FV.jsx)("div", {
+            children: xH
+          }), (0, TH.jsx)("div", {
             className: "HudLayoutSidePanel",
-            children: (0, FV.jsx)(Ee, {
-              selected: eV.selected,
-              ...xV,
-              joystickFixed: eV.joystickFixed,
-              extra: qV(!eV.selected || kV >= 278)
+            children: (0, TH.jsx)(WB, {
+              selected: BH.selected,
+              ...LH,
+              joystickFixed: BH.joystickFixed,
+              extra: vH(!BH.selected || uH >= 278)
             })
           })]
-        }), vV > 0 && !bV && (0, FV.jsxs)(FV.Fragment, {
-          children: [jV, (0, FV.jsx)("div", {
+        }), GH > 0 && !QH && (0, TH.jsxs)(TH.Fragment, {
+          children: [xH, (0, TH.jsx)("div", {
             className: "HudLayoutCornerButton",
-            children: qV(!1)
+            children: vH(!1)
           })]
         })]
       })
     }
-    var vx = xV(2744),
-      rx = xV(4874),
-      kx = xV(2722),
-      bx = xV(2672);
-    const Ex = VV => {
-      const eV = SV.l * ("sides" === VV ? window.innerWidth : window.innerHeight);
-      return Math.min(64, 2 * Math.floor(eV / 2))
+    var GL = LH(2673),
+      YL = LH(4818),
+      uL = LH(2656),
+      QL = LH(2613);
+    const WL = HH => {
+      const BH = JH.p * ("sides" === HH ? window.innerWidth : window.innerHeight);
+      return Math.min(64, 2 * Math.floor(BH / 2))
     };
 
-    function Bx(VV, eV, xV) {
-      const [JV, YV, UV, yV] = VV;
-      return "sides" === eV ? [JV, xV, UV, xV] : [xV, YV, xV, yV]
+    function ML(HH, BH, LH) {
+      const [AH, rH, SH, hH] = HH;
+      return "sides" === BH ? [AH, LH, SH, LH] : [LH, rH, LH, hH]
     }
-    const jx = [null, null, null, null],
-      qx = VV => `${VV}px`;
+    const xL = [null, null, null, null],
+      vL = HH => `${HH}px`;
 
-    function tx(VV) {
+    function PL(HH) {
       let {
-        safe: eV,
-        onPreview: xV,
-        onCommit: UV
-      } = VV;
+        safe: BH,
+        onPreview: LH,
+        onCommit: SH
+      } = HH;
       const {
-        t: yV
-      } = (0, JV.A)(), pV = (0, SV.t)(null !== eV && void 0 !== eV ? eV : jx, window.innerWidth, window.innerHeight, We(document).map(Math.round)), QV = (0, YV.useRef)(null !== eV && void 0 !== eV ? eV : jx);
-      QV.current = null !== eV && void 0 !== eV ? eV : jx;
-      const wV = VV => {
-        const eV = Math.min(Ex(VV), "sides" === VV ? Math.max(pV[1], pV[3]) : Math.max(pV[0], pV[2]));
-        return (0, FV.jsx)(rV.m, {
-          name: yV("sides" === VV ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
+        t: hH
+      } = (0, AH.B)(), tH = (0, JH.w)(null !== BH && void 0 !== BH ? BH : xL, window.innerWidth, window.innerHeight, fB(document).map(Math.round)), zH = (0, rH.useRef)(null !== BH && void 0 !== BH ? BH : xL);
+      zH.current = null !== BH && void 0 !== BH ? BH : xL;
+      const EH = HH => {
+        const BH = Math.min(WL(HH), "sides" === HH ? Math.max(tH[1], tH[3]) : Math.max(tH[0], tH[2]));
+        return (0, TH.jsx)(YH.f, {
+          name: hH("sides" === HH ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
           min: 0,
-          max: Ex(VV),
+          max: WL(HH),
           step: 2,
-          initValue: eV,
-          format: qx,
-          onChange: eV => {
-            xV(Bx(QV.current, VV, eV))
+          initValue: BH,
+          format: vL,
+          onChange: BH => {
+            LH(ML(zH.current, HH, BH))
           },
-          onChangeComplete: JV => {
-            if (JV === eV) return void xV(QV.current);
-            const YV = Bx(QV.current, VV, JV);
-            QV.current = YV, UV(YV), (0, AV.reportAnalyticsClick)({
+          onChangeComplete: AH => {
+            if (AH === BH) return void LH(zH.current);
+            const rH = ML(zH.current, HH, AH);
+            zH.current = rH, SH(rH), (0, OH.reportAnalyticsClick)({
               id: "hud_layout.safe_zone",
-              value: VV
+              value: HH
             })
           }
         })
       };
-      return (0, FV.jsxs)("div", {
+      return (0, TH.jsxs)("div", {
         className: "SettingBoxGroup HudSafeZone",
-        children: [(0, FV.jsxs)("div", {
+        children: [(0, TH.jsxs)("div", {
           className: "SettingBox HudSafeZoneHeader",
-          children: [(0, FV.jsx)("div", {
-            children: yV("hudLayout:safeZone")
-          }), (0, FV.jsx)(nV.M, {
-            active: null === eV,
-            pressed: null === eV,
+          children: [(0, TH.jsx)("div", {
+            children: hH("hudLayout:safeZone")
+          }), (0, TH.jsx)(CH.W, {
+            active: null === BH,
+            pressed: null === BH,
             onClick: () => {
-              UV(null)
+              SH(null)
             },
-            children: yV("hudLayout:safeZoneAuto")
+            children: hH("hudLayout:safeZoneAuto")
           })]
-        }), wV("sides"), wV("ends")]
+        }), EH("sides"), EH("ends")]
       })
     }
 
-    function Fx() {
+    function TL() {
       const {
-        t: VV
-      } = (0, JV.A)(), eV = (0, WV.ib)(), {
-        clientEscMenuOptions: xV
-      } = (0, wV.l)(["clientEscMenuOptions"]), UV = (0, vx.g)(), yV = eV.hudLayouts[UV], [pV, QV] = (0, YV.useState)(null), {
-        rowIconsOpen: ZV,
-        onRowIconsOpen: vV,
-        select: kV
-      } = function(VV, eV) {
-        const [xV, JV] = (0, YV.useState)((() => WV.G.some((eV => void 0 !== VV.hudElements[eV] || VV.hudLocked.includes(eV))))), UV = (0, YV.useCallback)((VV => {
-          eV(VV), (0, WV.T)(VV) && JV(!0)
-        }), [eV]);
+        t: HH
+      } = (0, AH.B)(), BH = (0, fH.X)(), {
+        clientEscMenuOptions: LH
+      } = (0, EH.m)(["clientEscMenuOptions"]), SH = (0, GL.g)(), hH = BH.hudLayouts[SH], [tH, zH] = (0, rH.useState)(null), {
+        rowIconsOpen: XH,
+        onRowIconsOpen: GH,
+        select: uH
+      } = function(HH, BH) {
+        const [LH, AH] = (0, rH.useState)((() => fH.A.some((BH => void 0 !== HH.hudElements[BH] || HH.hudLocked.includes(BH))))), SH = (0, rH.useCallback)((HH => {
+          BH(HH), (0, fH.H)(HH) && AH(!0)
+        }), [BH]);
         return {
-          rowIconsOpen: xV,
-          onRowIconsOpen: JV,
-          select: UV
+          rowIconsOpen: LH,
+          onRowIconsOpen: AH,
+          select: SH
         }
-      }(yV, QV), [bV, EV] = (0, YV.useState)([]), [BV, jV] = (0, YV.useState)(null), [qV, tV] = ke(), TV = (0, YV.useCallback)(((VV, eV, xV) => {
-        EV(eV), tV(xV);
-        const JV = Object.keys(VV);
-        jV((VV => (null === VV || void 0 === VV ? void 0 : VV.size) === JV.length && JV.every((eV => VV.has(eV))) ? VV : new Set(JV)))
-      }), [tV]), {
-        gameState: PV
-      } = (0, wV.l)(["gameState"]), XV = (0, kx.h)(), MV = (0, bx.u)(), [zV] = (0, YV.useState)((() => {
-        var VV, eV, xV, JV;
-        return "inGame" === PV ? (0, dV.u)(document, XV, {
-          rightOfCamera: null !== (VV = null === (eV = MV.rightOfCamera) || void 0 === eV ? void 0 : eV.icon) && void 0 !== VV ? VV : null,
-          leftEnd: null !== (xV = null === (JV = MV.leftEnd) || void 0 === JV ? void 0 : JV.icon) && void 0 !== xV ? xV : null
-        }) : dV.d
-      })), RV = (0, YV.useRef)(null), gV = (0, YV.useRef)(null), DV = function(VV) {
-        const [eV, xV] = (0, YV.useState)((() => .4 * window.innerHeight));
-        return (0, YV.useLayoutEffect)((() => {
-          var eV;
-          const JV = null === (eV = VV.current) || void 0 === eV ? void 0 : eV.closest(".SettingsMenuRight");
-          if (!JV) return;
-          const YV = () => {
-            const VV = JV.clientHeight < Tx ? .4 : .5;
-            xV(Math.max(80, JV.clientHeight * VV - 24))
+      }(hH, zH), [QH, WH] = (0, rH.useState)([]), [MH, xH] = (0, rH.useState)(null), [vH, PH] = uB(), UH = (0, rH.useCallback)(((HH, BH, LH) => {
+        WH(BH), PH(LH);
+        const AH = Object.keys(HH);
+        xH((HH => (null === HH || void 0 === HH ? void 0 : HH.size) === AH.length && AH.every((BH => HH.has(BH))) ? HH : new Set(AH)))
+      }), [PH]), {
+        gameState: VH
+      } = (0, EH.m)(["gameState"]), kH = (0, uL.j)(), mH = (0, QL.s)(), [oH] = (0, rH.useState)((() => {
+        var HH, BH, LH, AH;
+        return "inGame" === VH ? (0, pH.u)(document, kH, {
+          rightOfCamera: null !== (HH = null === (BH = mH.rightOfCamera) || void 0 === BH ? void 0 : BH.icon) && void 0 !== HH ? HH : null,
+          leftEnd: null !== (LH = null === (AH = mH.leftEnd) || void 0 === AH ? void 0 : AH.icon) && void 0 !== LH ? LH : null
+        }) : pH.b
+      })), lH = (0, rH.useRef)(null), KH = (0, rH.useRef)(null), cH = function(HH) {
+        const [BH, LH] = (0, rH.useState)((() => .4 * window.innerHeight));
+        return (0, rH.useLayoutEffect)((() => {
+          var BH;
+          const AH = null === (BH = HH.current) || void 0 === BH ? void 0 : BH.closest(".SettingsMenuRight");
+          if (!AH) return;
+          const rH = () => {
+            const HH = AH.clientHeight < UL ? .4 : .5;
+            LH(Math.max(80, AH.clientHeight * HH - 24))
           };
-          YV();
-          const UV = new ResizeObserver(YV);
-          return UV.observe(JV), () => {
-            UV.disconnect()
+          rH();
+          const SH = new ResizeObserver(rH);
+          return SH.observe(AH), () => {
+            SH.disconnect()
           }
-        }), [VV]), eV
-      }(gV), iV = (0, rx.n)(xV.joystickMode), CV = xV.touchActionButtons, aV = (0, YV.useMemo)((() => (0, dV.q)(zV, CV)), [zV, CV]), oV = (0, YV.useMemo)((() => new Set((0, dV.n)(zV, CV).map((VV => dV.g[VV])))), [zV, CV]);
-      (0, YV.useEffect)((() => {
-        (0, AV.reportAnalyticsClick)({
+        }), [HH]), BH
+      }(KH), eH = (0, YL.s)(LH.joystickMode), qH = LH.touchActionButtons, gH = (0, rH.useMemo)((() => (0, pH.r)(oH, qH)), [oH, qH]), NH = (0, rH.useMemo)((() => new Set((0, pH.q)(oH, qH).map((HH => pH.c[HH])))), [oH, qH]);
+      (0, rH.useEffect)((() => {
+        (0, OH.reportAnalyticsClick)({
           id: "hud_layout.open"
         })
       }), []);
-      const [cV, LV] = (0, YV.useState)(!1), [fV, mV] = (0, YV.useState)(!1), KV = (0, YV.useRef)(null);
-      Ux(KV, !fV);
-      const [HV, uV] = (0, YV.useState)(!1), SV = (0, YV.useCallback)((() => {
-        uV(!1)
-      }), []), IV = (0, YV.useMemo)((() => new Set(yV.hudLocked)), [yV.hudLocked]), OV = VV => {
-        var eV, xV;
-        const JV = (0, WV.r)(),
-          YV = VV(JV);
-        (0, WV.db)(null !== (eV = null === (xV = RV.current) || void 0 === xV ? void 0 : xV.keepLocks(JV, YV)) && void 0 !== eV ? eV : YV)
-      }, Ve = (VV, eV) => {
-        OV((xV => (0, WV.mb)(xV, UV, VV, eV)))
-      }, ee = (VV, eV, xV) => {
-        Ve(VV, {
-          dx: eV,
-          dy: xV
-        }), (0, AV.reportAnalyticsClick)({
+      const [RH, FH] = (0, rH.useState)(!1), [DH, wH] = (0, rH.useState)(!1), ZH = (0, rH.useRef)(null);
+      SL(ZH, !DH);
+      const [dH, aH] = (0, rH.useState)(!1), JH = (0, rH.useCallback)((() => {
+        aH(!1)
+      }), []), iH = (0, rH.useMemo)((() => new Set(hH.hudLocked)), [hH.hudLocked]), yH = HH => {
+        var BH, LH;
+        const AH = (0, fH.p)(),
+          rH = HH(AH);
+        (0, fH.R)(null !== (BH = null === (LH = lH.current) || void 0 === LH ? void 0 : LH.keepLocks(AH, rH)) && void 0 !== BH ? BH : rH)
+      }, HB = (HH, BH) => {
+        yH((LH => (0, fH._)(LH, SH, HH, BH)))
+      }, BB = (HH, BH, LH) => {
+        HB(HH, {
+          dx: BH,
+          dy: LH
+        }), (0, OH.reportAnalyticsClick)({
           id: "hud_layout.edit",
-          value: `move:${VV}`
+          value: `move:${HH}`
         })
-      }, xe = (VV, eV) => {
-        OV((xV => (0, WV.qb)(xV, UV, VV, eV)))
-      }, Je = VV => {
-        const eV = GV.i[VV];
-        return (eV.move || eV.scale) && ("joystick" !== VV || iV) && !(0, sV.v)(VV, yV.hudElements[VV])
-      }, Ye = VV => GV.i[VV].move && ("joystick" !== VV || iV) && !IV.has(VV), Ue = new Set(GV.j.map((VV => VV.id)).filter((VV => {
-        const eV = (0, WV.T)(VV) && !zV.rowIcons.includes(VV);
-        return null === BV || BV.has(VV) || (0, WV.v)(yV.hudElements, VV) && !eV
-      }))), ye = {
-        present: Ue,
-        actionButtons: CV,
-        keyNames: aV,
-        scaleCaps: qV,
-        sizeBesidePreview: cV,
-        elements: yV.hudElements,
-        selected: pV,
-        onSelect: kV,
-        rowIconsOpen: ZV,
-        onRowIconsOpen: vV,
-        onScalePreview: (VV, eV) => {
-          var xV;
-          null === (xV = RV.current) || void 0 === xV || xV.setScale(VV, eV)
+      }, LB = (HH, BH) => {
+        yH((LH => (0, fH.ab)(LH, SH, HH, BH)))
+      }, AB = HH => {
+        const BH = IH.k[HH];
+        return (BH.move || BH.scale) && ("joystick" !== HH || eH) && !(0, sH.t)(HH, hH.hudElements[HH])
+      }, rB = HH => IH.k[HH].move && ("joystick" !== HH || eH) && !iH.has(HH), SB = new Set(IH.o.map((HH => HH.id)).filter((HH => {
+        const BH = (0, fH.H)(HH) && !oH.rowIcons.includes(HH);
+        return null === MH || MH.has(HH) || (0, fH.s)(hH.hudElements, HH) && !BH
+      }))), hB = {
+        present: SB,
+        actionButtons: qH,
+        keyNames: gH,
+        scaleCaps: vH,
+        sizeBesidePreview: RH,
+        elements: hH.hudElements,
+        selected: tH,
+        onSelect: uH,
+        rowIconsOpen: XH,
+        onRowIconsOpen: GH,
+        onScalePreview: (HH, BH) => {
+          var LH;
+          null === (LH = lH.current) || void 0 === LH || LH.setScale(HH, BH)
         },
-        onScale: (VV, eV) => {
-          Ve(VV, {
-            scale: eV
-          }), (0, AV.reportAnalyticsClick)({
+        onScale: (HH, BH) => {
+          HB(HH, {
+            scale: BH
+          }), (0, OH.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `size:${VV}`
+            value: `size:${HH}`
           })
         },
-        onHidden: (VV, eV) => {
-          Ve(VV, {
-            hidden: eV
-          }), (0, AV.reportAnalyticsClick)({
+        onHidden: (HH, BH) => {
+          HB(HH, {
+            hidden: BH
+          }), (0, OH.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `${eV?"hide":"show"}:${VV}`
+            value: `${BH?"hide":"show"}:${HH}`
           })
         },
-        onReset: VV => {
-          Ve(VV, WV.e)
+        onReset: HH => {
+          HB(HH, fH.e)
         },
-        locked: IV,
-        lockable: Je,
-        onLocked: xe,
-        note: (eV, xV) => {
-          const JV = xV && bV.length > 0 ? VV("hudLayout:overlapsNote", {
-            names: (0, GV.r)(bV, CV, VV, aV)
+        locked: iH,
+        lockable: AB,
+        onLocked: LB,
+        note: (BH, LH) => {
+          const AH = LH && QH.length > 0 ? HH("hudLayout:overlapsNote", {
+            names: (0, IH.y)(QH, qH, HH, gH)
           }) : null;
-          if (xV && hV(eV, iV)) return (0, FV.jsxs)(FV.Fragment, {
-            children: [JV && (0, FV.jsx)("span", {
-              children: JV
-            }), (0, FV.jsx)("span", {
-              children: VV("hudLayout:floatingJoystickNote")
-            }), !cV && (0, FV.jsx)(lV, {})]
+          if (LH && jH(BH, eH)) return (0, TH.jsxs)(TH.Fragment, {
+            children: [AH && (0, TH.jsx)("span", {
+              children: AH
+            }), (0, TH.jsx)("span", {
+              children: HH("hudLayout:floatingJoystickNote")
+            }), !RH && (0, TH.jsx)(nH, {})]
           });
-          if (JV) return JV;
-          const YV = xV && IV.has(eV) ? VV("hudLayout:lockedNote") : null,
-            UV = xV && oV.has(eV) ? VV("hudLayout:contextSlotNote") : null;
-          return YV || UV ? (0, FV.jsxs)(FV.Fragment, {
-            children: [YV && (0, FV.jsx)("span", {
-              children: YV
-            }), UV && (0, FV.jsx)("span", {
-              children: UV
+          if (AH) return AH;
+          const rH = LH && iH.has(BH) ? HH("hudLayout:lockedNote") : null,
+            SH = LH && NH.has(BH) ? HH("hudLayout:contextSlotNote") : null;
+          return rH || SH ? (0, TH.jsxs)(TH.Fragment, {
+            children: [rH && (0, TH.jsx)("span", {
+              children: rH
+            }), SH && (0, TH.jsx)("span", {
+              children: SH
             })]
-          }) : xV && "cluster" === eV ? VV("hudLayout:clusterNote") : xV && "inventory" === eV ? VV("hudLayout:inventoryNote") : xV && "menu" === eV ? VV("hudLayout:menuNote") : xV && (0, sV.v)(eV, yV.hudElements[eV]) && Ye(eV) ? VV("hudLayout:rowIconNote") : xV && "arrows" === eV ? VV("hudLayout:arrowsNote") : xV && "sprint" === eV ? VV("hudLayout:sprintNote") : (0, GV.x)(eV) && (0, WV.v)(yV.hudElements, eV) ? VV("hudLayout:inventoryHiddenNote", {
-            name: (0, GV.u)(eV, CV, VV, aV)
+          }) : LH && "cluster" === BH ? HH("hudLayout:clusterNote") : LH && "inventory" === BH ? HH("hudLayout:inventoryNote") : LH && "menu" === BH ? HH("hudLayout:menuNote") : LH && (0, sH.t)(BH, hH.hudElements[BH]) && rB(BH) ? HH("hudLayout:rowIconNote") : LH && "arrows" === BH ? HH("hudLayout:arrowsNote") : LH && "sprint" === BH ? HH("hudLayout:sprintNote") : (0, IH.D)(BH) && (0, fH.s)(hH.hudElements, BH) ? HH("hudLayout:inventoryHiddenNote", {
+            name: (0, IH.B)(BH, qH, HH, gH)
           }) : null
         }
       };
-      return (0, FV.jsxs)("div", {
-        ref: gV,
+      return (0, TH.jsxs)("div", {
+        ref: KH,
         className: "HudLayoutSettings",
-        children: [(0, FV.jsxs)("div", {
-          ref: KV,
+        children: [(0, TH.jsxs)("div", {
+          ref: ZH,
           className: "HudLayoutBody",
-          children: [(0, FV.jsx)("div", {
+          children: [(0, TH.jsx)("div", {
             className: "HudLayoutOrientation",
-            children: VV("landscape" === UV ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
-          }), (0, FV.jsx)(Zx, {
+            children: HH("landscape" === SH ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
+          }), (0, TH.jsx)(XL, {
             preview: {
-              layout: eV,
-              orientation: UV,
-              selected: pV,
-              onSelect: kV,
-              onMove: ee,
-              canMove: Ye,
-              actionButtons: CV,
-              joystickFixed: iV,
-              presence: zV,
-              keyNames: aV,
-              maxHeight: DV,
-              apiRef: RV,
-              onMeasured: TV,
-              onReady: mV,
-              lockable: Je
+              layout: BH,
+              orientation: SH,
+              selected: tH,
+              onSelect: uH,
+              onMove: BB,
+              canMove: rB,
+              actionButtons: qH,
+              joystickFixed: eH,
+              presence: oH,
+              keyNames: gH,
+              maxHeight: cH,
+              apiRef: lH,
+              onMeasured: UH,
+              onReady: wH,
+              lockable: AB
             },
             quick: {
-              layout: yV,
-              actionButtons: CV,
-              keyNames: aV,
-              scaleCaps: qV,
-              overlaps: bV,
-              onScale: ye.onScale,
-              onHidden: ye.onHidden,
-              onReset: ye.onReset,
-              locked: IV,
-              lockable: Je,
-              onLocked: xe
+              layout: hH,
+              actionButtons: qH,
+              keyNames: gH,
+              scaleCaps: vH,
+              overlaps: QH,
+              onScale: hB.onScale,
+              onHidden: hB.onHidden,
+              onReset: hB.onReset,
+              locked: iH,
+              lockable: AB,
+              onLocked: LB
             },
             onFullScreen: () => {
-              uV(!0)
+              aH(!0)
             },
-            resting: HV,
-            onSidePanel: LV
-          }), HV && (0, FV.jsx)(px, {
-            layout: eV,
-            orientation: UV,
-            selected: pV,
-            onSelect: kV,
-            onMove: ee,
-            canMove: Ye,
-            actionButtons: CV,
-            joystickFixed: iV,
-            presence: zV,
-            keyNames: aV,
-            onScale: ye.onScale,
-            onHidden: ye.onHidden,
-            onReset: ye.onReset,
-            locked: IV,
-            lockable: Je,
-            onLocked: xe,
-            apiRef: RV,
-            onClose: SV
-          }), (0, FV.jsx)(tx, {
-            safe: yV.hudSafe,
-            onCommit: VV => {
-              OV((eV => (0, WV.ub)(eV, UV, VV)))
+            resting: dH,
+            onSidePanel: FH
+          }), dH && (0, TH.jsx)(tL, {
+            layout: BH,
+            orientation: SH,
+            selected: tH,
+            onSelect: uH,
+            onMove: BB,
+            canMove: rB,
+            actionButtons: qH,
+            joystickFixed: eH,
+            presence: oH,
+            keyNames: gH,
+            onScale: hB.onScale,
+            onHidden: hB.onHidden,
+            onReset: hB.onReset,
+            locked: iH,
+            lockable: AB,
+            onLocked: LB,
+            apiRef: lH,
+            onClose: JH
+          }), (0, TH.jsx)(PL, {
+            safe: hH.hudSafe,
+            onCommit: HH => {
+              yH((BH => (0, fH.eb)(BH, SH, HH)))
             },
-            onPreview: VV => {
-              var eV;
-              null === (eV = RV.current) || void 0 === eV || eV.setSafe(VV)
+            onPreview: HH => {
+              var BH;
+              null === (BH = lH.current) || void 0 === BH || BH.setSafe(HH)
             }
-          }), (0, FV.jsx)(rV.e, {
-            label: VV("hudLayout:snapCentre"),
-            checked: eV.hudSnapCentre,
-            onClick: VV => {
-              (0, WV.bb)(VV)
+          }), (0, TH.jsx)(YH.c, {
+            label: HH("hudLayout:snapCentre"),
+            checked: BH.hudSnapCentre,
+            onClick: HH => {
+              (0, fH.O)(HH)
             },
-            circleInfoText: VV("hudLayout:snapCentreInfo")
-          }), (0, FV.jsx)(wx, {
-            ...ye
-          }), (0, FV.jsx)(rV.i, {
-            label: VV("hudLayout:shape"),
-            options: WV.J.map((eV => ({
-              value: eV,
-              label: VV(`hudLayout:shape_${eV}`)
+            circleInfoText: HH("hudLayout:snapCentreInfo")
+          }), (0, TH.jsx)(EL, {
+            ...hB
+          }), (0, TH.jsx)(YH.e, {
+            label: HH("hudLayout:shape"),
+            options: fH.B.map((BH => ({
+              value: BH,
+              label: HH(`hudLayout:shape_${BH}`)
             }))),
-            value: eV.hudShape,
-            onChange: VV => {
-              OV((eV => ({
-                ...eV,
-                hudShape: VV
-              }))), (0, AV.reportAnalyticsClick)({
+            value: BH.hudShape,
+            onChange: HH => {
+              yH((BH => ({
+                ...BH,
+                hudShape: HH
+              }))), (0, OH.reportAnalyticsClick)({
                 id: "hud_layout.shape",
-                value: VV
+                value: HH
               })
             }
-          }), (0, FV.jsx)(rV.m, {
-            name: VV("hudLayout:opacity"),
-            min: WV.i,
+          }), (0, TH.jsx)(YH.f, {
+            name: HH("hudLayout:opacity"),
+            min: fH.h,
             max: 1,
             step: .05,
-            initValue: eV.hudKeyOpacity,
-            format: VV => `${Math.round(100*VV)}%`,
-            circleInfoText: VV("hudLayout:opacityInfo"),
-            onChange: VV => {
-              var eV;
-              null === (eV = RV.current) || void 0 === eV || eV.setOpacity(VV)
+            initValue: BH.hudKeyOpacity,
+            format: HH => `${Math.round(100*HH)}%`,
+            circleInfoText: HH("hudLayout:opacityInfo"),
+            onChange: HH => {
+              var BH;
+              null === (BH = lH.current) || void 0 === BH || BH.setOpacity(HH)
             },
-            onChangeComplete: VV => {
-              (0, WV.Z)(VV), (0, AV.reportAnalyticsClick)({
+            onChangeComplete: HH => {
+              (0, fH.N)(HH), (0, OH.reportAnalyticsClick)({
                 id: "hud_layout.edit",
                 value: "opacity"
               })
             }
           })]
-        }), (0, FV.jsx)(nV.E, {
+        }), (0, TH.jsx)(CH.O, {
           className: "HudLayoutResetAll",
           analyticsClick: {
             id: "hud_layout.reset_all"
           },
           onClick: () => {
             !async function() {
-              const VV = NV.NotificationProvider.showPromptPopup({
+              const HH = bH.NotificationProvider.showPromptPopup({
                 title: "hudLayout:resetAllTitle",
                 subtitle: "hudLayout:resetAllSubtitle",
                 confirmText: "hudLayout:resetAllConfirm",
                 cancelText: "general:cancel",
                 destructive: !0
               });
-              !0 === await VV.getResult() && (0, WV.X)()
+              !0 === await HH.getResult() && (0, fH.L)()
             }()
           },
-          children: VV("hudLayout:resetAll")
+          children: HH("hudLayout:resetAll")
         })]
       })
     }
-    const Tx = 350;
-    const Px = [function() {
+    const UL = 350;
+    const VL = [function() {
       const {
-        t: VV
-      } = (0, JV.A)(), [eV, xV] = (0, YV.useState)(!1), UV = (0, YV.useRef)(null);
-      return (0, YV.useEffect)((() => {
-        var VV;
-        eV && (null === (VV = UV.current) || void 0 === VV || VV.scrollIntoView({
+        t: HH
+      } = (0, AH.B)(), [BH, LH] = (0, rH.useState)(!1), SH = (0, rH.useRef)(null);
+      return (0, rH.useEffect)((() => {
+        var HH;
+        BH && (null === (HH = SH.current) || void 0 === HH || HH.scrollIntoView({
           block: "start",
           behavior: "smooth"
         }))
-      }), [eV]), (0, FV.jsxs)("div", {
+      }), [BH]), (0, TH.jsxs)("div", {
         className: "HudLayoutSection",
-        children: [(0, FV.jsx)(XV.c, {
-          ref: UV,
+        children: [(0, TH.jsx)(kH.c, {
+          ref: SH,
           icon: "arrows-up-down-left-right",
-          title: VV("hudLayout:title"),
-          sub: VV("hudLayout:entrySub"),
-          expanded: eV,
+          title: HH("hudLayout:title"),
+          sub: HH("hudLayout:entrySub"),
+          expanded: BH,
           onClick: () => {
-            xV(!eV)
+            LH(!BH)
           }
-        }), eV && (0, FV.jsx)(Fx, {})]
+        }), BH && (0, TH.jsx)(TL, {})]
       })
     }, function() {
       const {
-        t: VV
-      } = (0, JV.A)(), {
-        joystickMode: eV,
-        touchSpeedCurve: xV,
-        autorun: YV,
-        jumpLock: UV,
-        touchEdgeGuard: yV
-      } = (0, wV.l)(["clientEscMenuOptions"]).clientEscMenuOptions;
-      return (0, FV.jsxs)(FV.Fragment, {
-        children: [(0, FV.jsx)(rV.i, {
-          label: VV("settingsMenu:joystick"),
-          options: tV.yb.map((eV => ({
-            value: eV,
-            label: VV(TV[eV])
+        t: HH
+      } = (0, AH.B)(), {
+        joystickMode: BH,
+        touchSpeedCurve: LH,
+        autorun: rH,
+        jumpLock: SH,
+        touchEdgeGuard: hH
+      } = (0, EH.m)(["clientEscMenuOptions"]).clientEscMenuOptions;
+      return (0, TH.jsxs)(TH.Fragment, {
+        children: [(0, TH.jsx)(YH.e, {
+          label: HH("settingsMenu:joystick"),
+          options: PH.Hb.map((BH => ({
+            value: BH,
+            label: HH(UH[BH])
           }))),
-          value: eV,
-          onChange: VV => {
-            wV.b.setClientEscMenuOptions({
-              joystickMode: VV
+          value: BH,
+          onChange: HH => {
+            EH.c.setClientEscMenuOptions({
+              joystickMode: HH
             })
           },
-          circleInfoText: VV("settingsMenu:joystickInfo")
-        }), (0, FV.jsx)(rV.e, {
-          label: VV("settingsMenu:preciseWalking"),
-          checked: xV,
-          onClick: VV => {
-            wV.b.setClientEscMenuOptions({
-              touchSpeedCurve: VV
+          circleInfoText: HH("settingsMenu:joystickInfo")
+        }), (0, TH.jsx)(YH.c, {
+          label: HH("settingsMenu:preciseWalking"),
+          checked: LH,
+          onClick: HH => {
+            EH.c.setClientEscMenuOptions({
+              touchSpeedCurve: HH
             })
           },
-          circleInfoText: VV("settingsMenu:preciseWalkingInfo")
-        }), (0, FV.jsx)(rV.e, {
-          label: VV("settingsMenu:autoRun"),
-          checked: YV,
-          onClick: VV => {
-            wV.b.setClientEscMenuOptions({
-              autorun: VV
+          circleInfoText: HH("settingsMenu:preciseWalkingInfo")
+        }), (0, TH.jsx)(YH.c, {
+          label: HH("settingsMenu:autoRun"),
+          checked: rH,
+          onClick: HH => {
+            EH.c.setClientEscMenuOptions({
+              autorun: HH
             })
           },
-          circleInfoText: VV("settingsMenu:autoRunInfo")
-        }), (0, FV.jsx)(rV.e, {
-          label: VV("settingsMenu:jumpLock"),
-          checked: UV,
-          onClick: VV => {
-            wV.b.setClientEscMenuOptions({
-              jumpLock: VV
+          circleInfoText: HH("settingsMenu:autoRunInfo")
+        }), (0, TH.jsx)(YH.c, {
+          label: HH("settingsMenu:jumpLock"),
+          checked: SH,
+          onClick: HH => {
+            EH.c.setClientEscMenuOptions({
+              jumpLock: HH
             })
           },
-          circleInfoText: VV("settingsMenu:jumpLockInfo")
-        }), (0, FV.jsx)(rV.e, {
-          label: VV("touchSettings:stopAtEdges"),
-          checked: yV,
-          onClick: VV => {
-            wV.b.setClientEscMenuOptions({
-              touchEdgeGuard: VV
+          circleInfoText: HH("settingsMenu:jumpLockInfo")
+        }), (0, TH.jsx)(YH.c, {
+          label: HH("touchSettings:stopAtEdges"),
+          checked: hH,
+          onClick: HH => {
+            EH.c.setClientEscMenuOptions({
+              touchEdgeGuard: HH
             })
           },
-          circleInfoText: VV("touchSettings:stopAtEdgesInfo")
+          circleInfoText: HH("touchSettings:stopAtEdgesInfo")
         })]
       })
     }, function() {
-      return (0, FV.jsx)(qV.b, {})
+      return (0, TH.jsx)(vH.e, {})
     }, function() {
       const {
-        t: VV
-      } = (0, JV.A)(), {
-        clientEscMenuOptions: eV
-      } = (0, wV.l)(["clientEscMenuOptions"]);
-      return (0, PV.c)() ? (0, FV.jsx)(rV.e, {
-        label: VV("settingsMenu:vibration"),
-        checked: eV.vibration,
-        onClick: VV => {
-          wV.b.setClientEscMenuOptions({
-            vibration: VV
+        t: HH
+      } = (0, AH.B)(), {
+        clientEscMenuOptions: BH
+      } = (0, EH.m)(["clientEscMenuOptions"]);
+      return (0, VH.c)() ? (0, TH.jsx)(YH.c, {
+        label: HH("settingsMenu:vibration"),
+        checked: BH.vibration,
+        onClick: HH => {
+          EH.c.setClientEscMenuOptions({
+            vibration: HH
           })
         },
-        circleInfoText: VV("settingsMenu:vibrationInfo")
+        circleInfoText: HH("settingsMenu:vibrationInfo")
       }) : null
     }];
 
-    function Ax() {
-      return (0, FV.jsx)(FV.Fragment, {
-        children: Px.map(((VV, eV) => (0, FV.jsx)(VV, {}, eV)))
+    function OL() {
+      return (0, TH.jsx)(TH.Fragment, {
+        children: VL.map(((HH, BH) => (0, TH.jsx)(HH, {}, BH)))
       })
     }
-    var Nx = xV(4798);
+    var bL = LH(4753);
 
-    function Xx() {
+    function kL() {
       const {
-        t: VV
-      } = (0, JV.A)(), {
-        isTouchScreen: eV,
-        clientEscMenuOptions: xV,
-        gameState: yV
-      } = (0, wV.l)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), pV = (0, kV.j)("ezBridging"), QV = (0, kV.j)("ezTowering"), EV = "inGame" !== yV || !0 === pV, BV = (0, bV.d)(), qV = null !== BV && ("inGame" !== yV || !0 === QV), [, tV] = (0, YV.useReducer)((VV => VV + 1), 0), TV = (0, jV.h)(), [PV, AV] = (0, YV.useState)(Nx.f);
-      return (0, FV.jsxs)("div", {
+        t: HH
+      } = (0, AH.B)(), {
+        isTouchScreen: BH,
+        clientEscMenuOptions: LH,
+        gameState: hH
+      } = (0, EH.m)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), tH = (0, uH.j)("ezBridging"), zH = (0, uH.j)("ezTowering"), WH = "inGame" !== hH || !0 === tH, MH = (0, QH.i)(), vH = null !== MH && ("inGame" !== hH || !0 === zH), [, PH] = (0, rH.useReducer)((HH => HH + 1), 0), UH = (0, xH.g)(), [VH, OH] = (0, rH.useState)(bL.e);
+      return (0, TH.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [TV && (0, FV.jsxs)("div", {
+        children: [UH && (0, TH.jsxs)("div", {
           className: "SettingBox SettingBoxWithButton",
-          children: [(0, FV.jsx)("div", {
-            children: VV("controller:settingsControlsNote")
-          }), (0, FV.jsx)(nV.M, {
+          children: [(0, TH.jsx)("div", {
+            children: HH("controller:settingsControlsNote")
+          }), (0, TH.jsx)(CH.W, {
             onClick: () => {
-              wV.b.set({
+              EH.c.set({
                 openSettingsCategory: "controller"
               })
             },
-            children: VV("controller:settingsOpenController")
+            children: HH("controller:settingsOpenController")
           })]
-        }), (0, ZV.isTouchscreen)() && !(0, ZV.isMobile)() ? (0, FV.jsx)(FV.Fragment, {
-          children: (0, FV.jsx)(rV.e, {
-            label: VV("settingsMenu:useTouchControls"),
-            checked: PV,
-            onClick: VV => {
-              (0, Nx.c)(VV), AV(VV)
+        }), (0, XH.isTouchscreen)() && !(0, XH.isMobile)() ? (0, TH.jsx)(TH.Fragment, {
+          children: (0, TH.jsx)(YH.c, {
+            label: HH("settingsMenu:useTouchControls"),
+            checked: VH,
+            onClick: HH => {
+              (0, bL.d)(HH), OH(HH)
             }
           })
-        }) : null, eV && (0, FV.jsx)(Ax, {}), EV && (0, FV.jsx)(rV.e, {
-          label: VV("settingsMenu:ezBridging"),
-          checked: xV.ezBridging,
-          onClick: VV => {
-            wV.b.setClientEscMenuOptions({
-              ezBridging: VV
+        }) : null, BH && (0, TH.jsx)(OL, {}), WH && (0, TH.jsx)(YH.c, {
+          label: HH("settingsMenu:ezBridging"),
+          checked: LH.ezBridging,
+          onClick: HH => {
+            EH.c.setClientEscMenuOptions({
+              ezBridging: HH
             })
           },
-          circleInfoText: VV("settingsMenu:ezBridgingInfo")
-        }), qV && (0, FV.jsx)(rV.e, {
-          label: VV("settingsMenu:ezTowering"),
-          checked: xV.ezTowering,
-          onClick: VV => {
-            wV.b.setClientEscMenuOptions({
-              ezTowering: VV
+          circleInfoText: HH("settingsMenu:ezBridgingInfo")
+        }), vH && (0, TH.jsx)(YH.c, {
+          label: HH("settingsMenu:ezTowering"),
+          checked: LH.ezTowering,
+          onClick: HH => {
+            EH.c.setClientEscMenuOptions({
+              ezTowering: HH
             })
           },
-          circleInfoText: VV("jump" === BV ? "ezTowering:jumpInfo" : "settingsMenu:ezToweringInfo")
-        }), (0, FV.jsx)(rV.e, {
-          label: VV("settingsMenu:crouchToggle"),
-          checked: xV.crouchIsToggle,
-          onClick: VV => {
-            wV.b.setClientEscMenuOptions({
-              crouchIsToggle: VV
+          circleInfoText: HH("jump" === MH ? "ezTowering:jumpInfo" : "settingsMenu:ezToweringInfo")
+        }), (0, TH.jsx)(YH.c, {
+          label: HH("settingsMenu:crouchToggle"),
+          checked: LH.crouchIsToggle,
+          onClick: HH => {
+            EH.c.setClientEscMenuOptions({
+              crouchIsToggle: HH
             })
           },
-          circleInfoText: VV("settingsMenu:crouchToggleInfo")
-        }), (0, FV.jsx)(rV.e, {
-          label: VV("settingsMenu:hideUiToggle"),
-          checked: xV.hideUiIsToggle,
-          onClick: VV => {
-            wV.b.setClientEscMenuOptions({
-              hideUiIsToggle: VV
+          circleInfoText: HH("settingsMenu:crouchToggleInfo")
+        }), (0, TH.jsx)(YH.c, {
+          label: HH("settingsMenu:hideUiToggle"),
+          checked: LH.hideUiIsToggle,
+          onClick: HH => {
+            EH.c.setClientEscMenuOptions({
+              hideUiIsToggle: HH
             })
           },
-          circleInfoText: VV("settingsMenu:hideUiToggleInfo")
-        }), "mouseOnly" !== (0, vV.c)() && (0, FV.jsx)(rV.m, {
-          name: VV("settingsMenu:touchscreenSensitivity"),
+          circleInfoText: HH("settingsMenu:hideUiToggleInfo")
+        }), "mouseOnly" !== (0, GH.d)() && (0, TH.jsx)(YH.f, {
+          name: HH("settingsMenu:touchscreenSensitivity"),
           min: 1,
           max: 900,
           step: 1,
-          initValue: xV.touchscreenSensitivity,
-          onChange: VV => {
-            wV.b.setClientEscMenuOptions({
-              touchscreenSensitivity: VV
+          initValue: LH.touchscreenSensitivity,
+          onChange: HH => {
+            EH.c.setClientEscMenuOptions({
+              touchscreenSensitivity: HH
             })
           }
-        }), !(0, ZV.isMobile)() && (0, FV.jsx)(rV.m, {
-          name: VV("settingsMenu:mouseSensitivity"),
+        }), !(0, XH.isMobile)() && (0, TH.jsx)(YH.f, {
+          name: HH("settingsMenu:mouseSensitivity"),
           min: 1,
           max: 200,
           step: 1,
-          initValue: xV.mouseSensitivity,
-          onChange: VV => {
-            wV.b.setClientEscMenuOptions({
-              mouseSensitivity: VV
+          initValue: LH.mouseSensitivity,
+          onChange: HH => {
+            EH.c.setClientEscMenuOptions({
+              mouseSensitivity: HH
             })
           }
-        }), !(0, ZV.isMobile)() && (0, FV.jsxs)("div", {
+        }), !(0, XH.isMobile)() && (0, TH.jsxs)("div", {
           className: "ControlsContainer",
-          children: [(0, FV.jsx)("div", {
+          children: [(0, TH.jsx)("div", {
             className: "SliderText",
-            children: VV("settingsMenu:keyBindings")
-          }), UV.f.map((eV => (0, FV.jsx)(Mx, {
-            title: VV(eV.name.translationKey, eV.name.params),
-            defaultOpen: UV.g.has(eV.id),
-            children: eV.actions.map((VV => (0, FV.jsx)(zx, {
-              noaAction: VV,
-              forceUpdate: tV,
-              clashesWith: eV.clashesWith,
-              showPadGlyph: TV
-            }, VV)))
-          }, eV.name.translationKey))), (0, FV.jsx)(nV.E, {
+            children: HH("settingsMenu:keyBindings")
+          }), SH.e.map((BH => (0, TH.jsx)(mL, {
+            title: HH(BH.name.translationKey, BH.name.params),
+            defaultOpen: SH.i.has(BH.id),
+            children: BH.actions.map((HH => (0, TH.jsx)(oL, {
+              noaAction: HH,
+              forceUpdate: PH,
+              clashesWith: BH.clashesWith,
+              showPadGlyph: UH
+            }, HH)))
+          }, BH.name.translationKey))), (0, TH.jsx)(CH.O, {
             className: "ResetBindingsButton",
             onClick: () => {
-              (0, UV.A)(), tV()
+              (0, SH.K)(), PH()
             },
-            children: VV("controls:resetBindings")
+            children: HH("controls:resetBindings")
           })]
         })]
       })
     }
 
-    function Mx(VV) {
+    function mL(HH) {
       let {
-        title: eV,
-        defaultOpen: xV,
-        children: JV
-      } = VV;
-      const [UV, yV] = (0, YV.useState)(xV);
-      return (0, FV.jsxs)("div", {
-        className: QV()("ControlsSection", {
-          Collapsed: !UV
+        title: BH,
+        defaultOpen: LH,
+        children: AH
+      } = HH;
+      const [SH, hH] = (0, rH.useState)(LH);
+      return (0, TH.jsxs)("div", {
+        className: zH()("ControlsSection", {
+          Collapsed: !SH
         }),
-        children: [(0, FV.jsxs)("div", {
+        children: [(0, TH.jsxs)("div", {
           className: "ControlsSectionHeader",
           "data-pad-focusable": !0,
           onClick: () => {
-            yV(!UV)
+            hH(!SH)
           },
-          children: [(0, FV.jsx)("div", {
+          children: [(0, TH.jsx)("div", {
             className: "ControlsSectionTitle",
-            children: eV
-          }), (0, FV.jsx)("div", {
+            children: BH
+          }), (0, TH.jsx)("div", {
             className: "ControlsSectionChevron",
             children: "\u25be"
           })]
-        }), UV && (0, FV.jsx)("div", {
+        }), SH && (0, TH.jsx)("div", {
           className: "ControlsSectionRows",
-          children: JV
+          children: AH
         })]
       })
     }
 
-    function zx(VV) {
+    function oL(HH) {
       let {
-        noaAction: eV,
-        forceUpdate: xV,
-        clashesWith: pV,
-        showPadGlyph: wV
-      } = VV;
+        noaAction: BH,
+        forceUpdate: LH,
+        clashesWith: tH,
+        showPadGlyph: EH
+      } = HH;
       const {
-        t: ZV
-      } = (0, JV.A)(), vV = (0, BV.e)(eV), [rV, kV] = (0, YV.useState)(!1), [bV, jV] = (0, YV.useState)("controls:clickToEnterNewBinding"), [qV, tV] = (0, YV.useState)(null), [TV, PV] = (0, YV.useState)(null), AV = (0, YV.useRef)(null);
-      (0, YV.useEffect)((() => {
-        rV && AV.current && AV.current.focus()
-      }), [rV]);
-      const NV = UV.t[eV].filter((VV => yV.g[VV]));
-      let XV = null;
-      const MV = [],
-        zV = pV.flatMap((VV => {
-          var eV, xV;
-          return null !== (eV = null === (xV = UV.f.find((eV => eV.id === VV))) || void 0 === xV ? void 0 : xV.actions) && void 0 !== eV ? eV : []
+        t: XH
+      } = (0, AH.B)(), GH = (0, MH.d)(BH), [YH, uH] = (0, rH.useState)(!1), [QH, xH] = (0, rH.useState)("controls:clickToEnterNewBinding"), [vH, PH] = (0, rH.useState)(null), [UH, VH] = (0, rH.useState)(null), OH = (0, rH.useRef)(null);
+      (0, rH.useEffect)((() => {
+        YH && OH.current && OH.current.focus()
+      }), [YH]);
+      const bH = SH.w[BH].filter((HH => hH.i[HH]));
+      let kH = null;
+      const mH = [],
+        oH = tH.flatMap((HH => {
+          var BH, LH;
+          return null !== (BH = null === (LH = SH.e.find((BH => BH.id === HH))) || void 0 === LH ? void 0 : LH.actions) && void 0 !== BH ? BH : []
         }));
-      for (const JV of zV) {
-        if (JV === eV) continue;
-        const VV = UV.t[JV];
-        for (const eV of VV) NV.includes(eV) && MV.push(ZV(UV.v[JV].translationKey, UV.v[JV].params))
+      for (const AH of oH) {
+        if (AH === BH) continue;
+        const HH = SH.w[AH];
+        for (const BH of HH) bH.includes(BH) && mH.push(XH(SH.A[AH].translationKey, SH.A[AH].params))
       }
-      MV.length > 0 && (XV = ZV("controls:sharedBindingsWarning") + " ", XV += MV.join(", "));
-      const GV = () => {
-          kV(!1), tV(null), jV("controls:clickToEnterNewBinding"), PV(null)
+      mH.length > 0 && (kH = XH("controls:sharedBindingsWarning") + " ", kH += mH.join(", "));
+      const IH = () => {
+          uH(!1), PH(null), xH("controls:clickToEnterNewBinding"), VH(null)
         },
-        WV = () => "BindingInput_" + eV;
-      return (0, FV.jsxs)("div", {
-        className: QV()("ControlRow", {
-          WarningBorder: null !== XV
+        fH = () => "BindingInput_" + BH;
+      return (0, TH.jsxs)("div", {
+        className: zH()("ControlRow", {
+          WarningBorder: null !== kH
         }),
-        children: [(0, FV.jsxs)("div", {
+        children: [(0, TH.jsxs)("div", {
           className: "ControlRowInner",
-          children: [(0, FV.jsxs)("div", {
+          children: [(0, TH.jsxs)("div", {
             className: "ControlName",
-            children: [ZV(UV.v[eV].translationKey, UV.v[eV].params), wV && vV && (0, FV.jsx)(EV.c, {
-              glyph: vV,
+            children: [XH(SH.A[BH].translationKey, SH.A[BH].params), EH && GH && (0, TH.jsx)(WH.d, {
+              glyph: GH,
               className: "ControlPadGlyph"
             })]
-          }), (0, FV.jsxs)("div", {
+          }), (0, TH.jsxs)("div", {
             className: "ControlBindingsContainer",
-            children: [(0, FV.jsxs)("div", {
+            children: [(0, TH.jsxs)("div", {
               className: "ControlBindingsList",
-              children: [NV.map((VV => (0, FV.jsxs)("div", {
+              children: [bH.map((HH => (0, TH.jsxs)("div", {
                 className: "ControlBinding",
-                children: [(0, FV.jsx)("div", {
-                  children: (0, UV.l)(VV)
-                }), (0, FV.jsx)("div", {
+                children: [(0, TH.jsx)("div", {
+                  children: (0, SH.p)(HH)
+                }), (0, TH.jsx)("div", {
                   className: "ControlBindingRemoveIcon",
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    const JV = (0, UV.w)(eV, VV);
-                    JV.isError() ? PV(JV.asError().message) : PV(null), xV()
+                    const AH = (0, SH.E)(BH, HH);
+                    AH.isError() ? VH(AH.asError().message) : VH(null), LH()
                   },
                   children: "\xd7"
                 })]
-              }, VV))), !rV && (0, FV.jsx)("div", {
+              }, HH))), !YH && (0, TH.jsx)("div", {
                 className: "ControlBinding ControlBindingAdd",
                 onClick: () => {
-                  kV(!0), PV(null)
+                  uH(!0), VH(null)
                 },
-                children: (0, FV.jsx)("div", {
+                children: (0, TH.jsx)("div", {
                   className: "ControlBindingAddIcon",
                   children: "+"
                 })
               })]
-            }), rV && (0, FV.jsxs)("div", {
+            }), YH && (0, TH.jsxs)("div", {
               className: "ControlBindingAddInput",
-              children: [(0, FV.jsxs)("div", {
+              children: [(0, TH.jsxs)("div", {
                 className: "InputContainer",
-                children: [(0, FV.jsx)("div", {
+                children: [(0, TH.jsx)("div", {
                   className: "InputOverlay",
-                  children: qV ? (0, UV.l)(qV) : (0, FV.jsx)("div", {
+                  children: vH ? (0, SH.p)(vH) : (0, TH.jsx)("div", {
                     className: "InputOverlayPlaceholder",
-                    children: ZV(bV)
+                    children: XH(QH)
                   })
-                }), (0, FV.jsx)("input", {
-                  ref: AV,
-                  id: WV(),
+                }), (0, TH.jsx)("input", {
+                  ref: OH,
+                  id: fH(),
                   "data-pad-no-osk": !0,
                   defaultValue: "",
-                  onKeyDown: VV => {
-                    if ("Escape" === VV.code) return GV(), VV.preventDefault(), void VV.stopPropagation();
-                    const eV = VV.code;
-                    yV.c.includes(eV) ? (PV(null), tV(eV)) : (PV("controls:keyIsReserved"), tV(null)), VV.preventDefault(), VV.stopPropagation()
+                  onKeyDown: HH => {
+                    if ("Escape" === HH.code) return IH(), HH.preventDefault(), void HH.stopPropagation();
+                    const BH = HH.code;
+                    hH.c.includes(BH) ? (VH(null), PH(BH)) : (VH("controls:keyIsReserved"), PH(null)), HH.preventDefault(), HH.stopPropagation()
                   },
-                  onMouseDown: VV => {
-                    const eV = "Mouse" + (VV.button + 1);
-                    document.activeElement && document.activeElement.id === WV() ? yV.c.includes(eV) ? (PV(null), tV(eV)) : (PV("controls:keyIsReserved"), tV(null)) : jV("controls:enterNewBinding"), VV.stopPropagation()
+                  onMouseDown: HH => {
+                    const BH = "Mouse" + (HH.button + 1);
+                    document.activeElement && document.activeElement.id === fH() ? hH.c.includes(BH) ? (VH(null), PH(BH)) : (VH("controls:keyIsReserved"), PH(null)) : xH("controls:enterNewBinding"), HH.stopPropagation()
                   },
                   onBlur: () => {
-                    jV("controls:clickToEnterNewBinding")
+                    xH("controls:clickToEnterNewBinding")
                   }
                 })]
-              }), (0, FV.jsx)(nV.f, {
-                onPointerDown: VV => {
-                  VV.preventDefault()
+              }), (0, TH.jsx)(CH.i, {
+                onPointerDown: HH => {
+                  HH.preventDefault()
                 },
                 onClick: () => {
-                  (0, UV.d)(eV, qV), xV(), GV()
+                  (0, SH.b)(BH, vH), LH(), IH()
                 },
                 className: "ControlBindingAddButton",
-                disabled: null === qV,
-                children: ZV("general:add")
-              }), (0, FV.jsx)("div", {
+                disabled: null === vH,
+                children: XH("general:add")
+              }), (0, TH.jsx)("div", {
                 className: "ControlBindingAddCancel",
                 onClick: () => {
-                  GV()
+                  IH()
                 },
                 children: "\xd7"
               })]
-            }), TV && (0, FV.jsx)("div", {
+            }), UH && (0, TH.jsx)("div", {
               className: "ControlBindingError",
-              children: ZV(TV)
+              children: XH(UH)
             })]
           })]
-        }), XV && (0, FV.jsx)("div", {
+        }), kH && (0, TH.jsx)("div", {
           className: "ControlRowWarning",
-          children: XV
+          children: kH
         })]
       })
     }
   },
-  9482: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => yV
+  9584: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => hH
     });
-    var JV = xV(62),
-      YV = xV(1414),
-      UV = xV(1321);
-    const yV = (0, JV.forwardRef)((function(VV, eV) {
+    var AH = LH(45),
+      rH = LH(1315),
+      SH = LH(1225);
+    const hH = (0, AH.forwardRef)((function(HH, BH) {
       let {
-        icon: xV,
-        title: JV,
-        sub: yV,
-        expanded: pV,
-        onClick: QV
-      } = VV;
-      return (0, UV.jsxs)("button", {
-        ref: eV,
+        icon: LH,
+        title: AH,
+        sub: hH,
+        expanded: tH,
+        onClick: zH
+      } = HH;
+      return (0, SH.jsxs)("button", {
+        ref: BH,
         type: "button",
         className: "SettingBox SettingBoxFeatured FeaturedSettingsEntry",
-        "aria-expanded": pV,
-        onClick: QV,
-        children: [(0, UV.jsx)(YV.b, {
-          name: xV,
+        "aria-expanded": tH,
+        onClick: zH,
+        children: [(0, SH.jsx)(rH.c, {
+          name: LH,
           className: "FeaturedSettingsEntryIcon"
-        }), (0, UV.jsxs)("span", {
+        }), (0, SH.jsxs)("span", {
           className: "FeaturedSettingsEntryText",
-          children: [(0, UV.jsx)("span", {
+          children: [(0, SH.jsx)("span", {
             className: "FeaturedSettingsEntryTitle",
-            children: JV
-          }), (0, UV.jsx)("span", {
+            children: AH
+          }), (0, SH.jsx)("span", {
             className: "FeaturedSettingsEntrySub",
-            children: yV
+            children: hH
           })]
-        }), (0, UV.jsx)("span", {
+        }), (0, SH.jsx)("span", {
           className: "FeaturedSettingsEntryChevron",
           children: "\u25be"
         })]
       })
     }))
   },
-  9301: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => BV,
-      f: () => EV,
-      h: () => wV,
-      l: () => jV,
-      m: () => qV,
-      o: () => vV
+  9364: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => MH,
+      h: () => WH,
+      k: () => EH,
+      o: () => xH,
+      p: () => vH,
+      s: () => GH
     });
-    var JV = xV(1764),
-      YV = xV(1840);
-    const UV = VV => VV >= 56320 && VV <= 57343,
-      yV = VV => VV >= 55296 && VV <= 56319,
-      pV = (VV, eV) => eV >= 2 && UV(VV.charCodeAt(eV - 1)) && yV(VV.charCodeAt(eV - 2)) ? eV - 2 : Math.max(0, eV - 1),
-      QV = (VV, eV) => {
-        let xV;
-        var JV, YV;
-        return xV = VV.start !== VV.end ? eV < 0 ? VV.start : VV.end : eV < 0 ? pV(VV.value, VV.start) : (JV = VV.value, (YV = VV.start) + 1 < JV.length && yV(JV.charCodeAt(YV)) && UV(JV.charCodeAt(YV + 1)) ? YV + 2 : Math.min(JV.length, YV + 1)), {
-          value: VV.value,
-          start: xV,
-          end: xV
+    var AH = LH(1696),
+      rH = LH(1797);
+    const SH = HH => HH >= 56320 && HH <= 57343,
+      hH = HH => HH >= 55296 && HH <= 56319,
+      tH = (HH, BH) => BH >= 2 && SH(HH.charCodeAt(BH - 1)) && hH(HH.charCodeAt(BH - 2)) ? BH - 2 : Math.max(0, BH - 1),
+      zH = (HH, BH) => {
+        let LH;
+        var AH, rH;
+        return LH = HH.start !== HH.end ? BH < 0 ? HH.start : HH.end : BH < 0 ? tH(HH.value, HH.start) : (AH = HH.value, (rH = HH.start) + 1 < AH.length && hH(AH.charCodeAt(rH)) && SH(AH.charCodeAt(rH + 1)) ? rH + 2 : Math.min(AH.length, rH + 1)), {
+          value: HH.value,
+          start: LH,
+          end: LH
         }
       },
-      nV = ["text", "search", "url", "email", "tel", "password", "number"],
-      wV = VV => !(!(0, YV.b)(VV) || VV.isContentEditable || VV.hasAttribute("data-pad-no-osk")) && (VV instanceof HTMLTextAreaElement || VV instanceof HTMLInputElement && nV.includes(VV.type)),
-      ZV = VV => null !== VV.selectionStart,
-      vV = VV => {
-        var eV, xV;
+      CH = ["text", "search", "url", "email", "tel", "password", "number"],
+      EH = HH => !(!(0, rH.e)(HH) || HH.isContentEditable || HH.hasAttribute("data-pad-no-osk")) && (HH instanceof HTMLTextAreaElement || HH instanceof HTMLInputElement && CH.includes(HH.type)),
+      XH = HH => null !== HH.selectionStart,
+      GH = HH => {
+        var BH, LH;
         const {
-          value: JV
-        } = VV;
+          value: AH
+        } = HH;
         return {
-          value: JV,
-          start: null !== (eV = VV.selectionStart) && void 0 !== eV ? eV : JV.length,
-          end: null !== (xV = VV.selectionEnd) && void 0 !== xV ? xV : JV.length
+          value: AH,
+          start: null !== (BH = HH.selectionStart) && void 0 !== BH ? BH : AH.length,
+          end: null !== (LH = HH.selectionEnd) && void 0 !== LH ? LH : AH.length
         }
       },
-      rV = (VV, eV, xV) => {
-        if (VV.readOnly) return;
-        const YV = VV instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
-        Object.getOwnPropertyDescriptor(YV, "value").set.call(VV, eV.value), ZV(VV) && VV.setSelectionRange(eV.start, eV.end), (0, JV.f)(VV, new InputEvent("input", {
+      YH = (HH, BH, LH) => {
+        if (HH.readOnly) return;
+        const rH = HH instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
+        Object.getOwnPropertyDescriptor(rH, "value").set.call(HH, BH.value), XH(HH) && HH.setSelectionRange(BH.start, BH.end), (0, AH.h)(HH, new InputEvent("input", {
           bubbles: !0,
-          inputType: xV
+          inputType: LH
         }))
       };
-    let kV = !1;
-    const bV = (VV, eV) => !!document.execCommand(VV, !1, eV) || (kV || (kV = !0, console.warn(`execCommand("${VV}") failed; the on-screen keyboard is setting the value directly`)), !1),
-      EV = (VV, eV) => {
-        bV("insertText", eV) || rV(VV, function(VV, eV) {
-          let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-          const JV = VV.value.slice(0, VV.start),
-            YV = VV.value.slice(VV.end);
-          let UV = xV < 0 ? eV.length : Math.max(0, xV - JV.length - YV.length);
-          UV > 0 && UV < eV.length && yV(eV.charCodeAt(UV - 1)) && UV--;
-          const pV = eV.slice(0, UV),
-            QV = JV.length + pV.length;
+    let uH = !1;
+    const QH = (HH, BH) => !!document.execCommand(HH, !1, BH) || (uH || (uH = !0, console.warn(`execCommand("${HH}") failed; the on-screen keyboard is setting the value directly`)), !1),
+      WH = (HH, BH) => {
+        QH("insertText", BH) || YH(HH, function(HH, BH) {
+          let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+          const AH = HH.value.slice(0, HH.start),
+            rH = HH.value.slice(HH.end);
+          let SH = LH < 0 ? BH.length : Math.max(0, LH - AH.length - rH.length);
+          SH > 0 && SH < BH.length && hH(BH.charCodeAt(SH - 1)) && SH--;
+          const tH = BH.slice(0, SH),
+            zH = AH.length + tH.length;
           return {
-            value: JV + pV + YV,
-            start: QV,
-            end: QV
+            value: AH + tH + rH,
+            start: zH,
+            end: zH
           }
-        }(vV(VV), eV, VV.maxLength), "insertText")
+        }(GH(HH), BH, HH.maxLength), "insertText")
       },
-      BV = VV => {
-        bV("delete") || rV(VV, (VV => {
-          const eV = VV.start === VV.end ? pV(VV.value, VV.start) : VV.start;
+      MH = HH => {
+        QH("delete") || YH(HH, (HH => {
+          const BH = HH.start === HH.end ? tH(HH.value, HH.start) : HH.start;
           return {
-            value: VV.value.slice(0, eV) + VV.value.slice(VV.end),
-            start: eV,
-            end: eV
+            value: HH.value.slice(0, BH) + HH.value.slice(HH.end),
+            start: BH,
+            end: BH
           }
-        })(vV(VV)), "deleteContentBackward")
+        })(GH(HH)), "deleteContentBackward")
       },
-      jV = (VV, eV) => {
-        if (!ZV(VV)) return;
-        const xV = QV(vV(VV), eV);
-        VV.setSelectionRange(xV.start, xV.end)
+      xH = (HH, BH) => {
+        if (!XH(HH)) return;
+        const LH = zH(GH(HH), BH);
+        HH.setSelectionRange(LH.start, LH.end)
       },
-      qV = VV => {
-        ZV(VV) && 0 === VV.selectionStart && 0 === VV.selectionEnd && VV.setSelectionRange(VV.value.length, VV.value.length)
+      vH = HH => {
+        XH(HH) && 0 === HH.selectionStart && 0 === HH.selectionEnd && HH.setSelectionRange(HH.value.length, HH.value.length)
       }
   },
-  9445: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => pV
+  9537: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => tH
     });
-    var JV = xV(27),
-      YV = xV(2259),
-      UV = xV(1439),
-      yV = xV(1473);
-    const pV = async () => {
-      if ((0, yV.m)()) {
-        if (!0 !== await UV.NotificationProvider.showPromptPopup({
+    var AH = LH(15),
+      rH = LH(2213),
+      SH = LH(1352),
+      hH = LH(1390);
+    const tH = async () => {
+      if ((0, hH.m)()) {
+        if (!0 !== await SH.NotificationProvider.showPromptPopup({
             title: "controller:menusLeaveGameTitle",
             confirmText: "controller:menusLeaveGameLeave",
             cancelText: "controller:menusLeaveGameStay",
             destructive: !0
-          }).getResult() || "inGame" !== JV.b.get("gameState")) return
-      }(0, YV.f)()
+          }).getResult() || "inGame" !== AH.c.get("gameState")) return
+      }(0, rH.d)()
     }
   },
-  9453: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => QV,
-      e: () => UV,
-      f: () => yV,
-      h: () => YV,
-      i: () => pV
+  9540: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => zH,
+      i: () => SH,
+      l: () => hH,
+      n: () => rH,
+      p: () => tH
     });
-    var JV = xV(2086);
-    const YV = "controllerPadShopOpen",
-      UV = VV => JV.i.includes(VV),
-      yV = VV => Object.values(VV).some((VV => !1 !== VV.canBuy && !VV.isRewardedAd)),
-      pV = (VV, eV, xV) => {
-        var JV, YV, yV, pV;
-        const QV = VV.filter((VV => !UV(VV))),
-          nV = null !== eV && VV.includes(eV) ? eV : null;
-        return null !== nV && !UV(nV) && xV(nV) ? nV : null !== (JV = null !== (YV = null !== (yV = null !== (pV = QV.find(xV)) && void 0 !== pV ? pV : QV[0]) && void 0 !== yV ? yV : nV) && void 0 !== YV ? YV : VV[0]) && void 0 !== JV ? JV : null
+    var AH = LH(2043);
+    const rH = "controllerPadShopOpen",
+      SH = HH => AH.i.includes(HH),
+      hH = HH => Object.values(HH).some((HH => !1 !== HH.canBuy && !HH.isRewardedAd)),
+      tH = (HH, BH, LH) => {
+        var AH, rH, hH, tH;
+        const zH = HH.filter((HH => !SH(HH))),
+          CH = null !== BH && HH.includes(BH) ? BH : null;
+        return null !== CH && !SH(CH) && LH(CH) ? CH : null !== (AH = null !== (rH = null !== (hH = null !== (tH = zH.find(LH)) && void 0 !== tH ? tH : zH[0]) && void 0 !== hH ? hH : CH) && void 0 !== rH ? rH : HH[0]) && void 0 !== AH ? AH : null
       },
-      QV = VV => VV.userInput || VV.isRewardedAd || "boolean" === typeof VV.isSelected ? null : JSON.stringify([VV.image, VV.cost, VV.currency, VV.amount, VV.customTitle, VV.buyButtonText, VV.description, VV.canBuy])
+      zH = HH => HH.userInput || HH.isRewardedAd || "boolean" === typeof HH.isSelected ? null : JSON.stringify([HH.image, HH.cost, HH.currency, HH.amount, HH.customTitle, HH.buyButtonText, HH.description, HH.canBuy])
   },
-  9471: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => nV,
-      h: () => wV
+  9561: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => CH,
+      g: () => EH
     });
-    var JV = xV(62),
-      YV = xV(1542),
-      UV = xV(2147),
-      yV = xV(1493),
-      pV = xV(1528),
-      QV = xV(1321);
-    const nV = () => {
-        const VV = (0, yV.r)();
-        if ((0, JV.useEffect)((() => {
-            (0, yV.j)()
-          }), []), !VV) return null;
+    var AH = LH(45),
+      rH = LH(1450),
+      SH = LH(2085),
+      hH = LH(1405),
+      tH = LH(1433),
+      zH = LH(1225);
+    const CH = () => {
+        const HH = (0, hH.o)();
+        if ((0, AH.useEffect)((() => {
+            (0, hH.i)()
+          }), []), !HH) return null;
         const {
-          ControllerCategory: eV
-        } = VV;
-        return (0, QV.jsx)(pV.c, {
-          children: (0, QV.jsx)(eV, {})
+          ControllerCategory: BH
+        } = HH;
+        return (0, zH.jsx)(tH.e, {
+          children: (0, zH.jsx)(BH, {})
         })
       },
-      wV = () => {
-        var VV;
-        const eV = (0, yV.r)(),
-          [, xV] = (0, JV.useReducer)((VV => VV + 1), 0);
-        return (0, YV.g)(UV.d, xV), null !== (VV = null === eV || void 0 === eV ? void 0 : eV.hasActivePad()) && void 0 !== VV && VV
+      EH = () => {
+        var HH;
+        const BH = (0, hH.o)(),
+          [, LH] = (0, AH.useReducer)((HH => HH + 1), 0);
+        return (0, rH.d)(SH.c, LH), null !== (HH = null === BH || void 0 === BH ? void 0 : BH.hasActivePad()) && void 0 !== HH && HH
       }
   },
-  9284: (VV, eV, xV) => {
-    xV.d(eV, {
-      B: () => AV,
-      D: () => nV,
-      F: () => XV,
-      G: () => TV,
-      K: () => PV,
-      L: () => EV,
-      M: () => QV,
-      O: () => wV,
-      c: () => BV,
-      g: () => NV,
-      k: () => FV,
-      m: () => tV,
-      q: () => kV,
-      r: () => bV,
-      u: () => vV,
-      y: () => rV
+  9356: (HH, BH, LH) => {
+    LH.d(BH, {
+      C: () => CH,
+      G: () => kH,
+      I: () => UH,
+      K: () => VH,
+      O: () => WH,
+      S: () => zH,
+      U: () => EH,
+      c: () => MH,
+      f: () => bH,
+      h: () => TH,
+      l: () => PH,
+      n: () => uH,
+      r: () => QH,
+      t: () => GH,
+      v: () => YH,
+      z: () => OH
     });
-    var JV = xV(32),
-      YV = xV(1764),
-      UV = xV(9293),
-      yV = xV(9301),
-      pV = xV(2550);
-    const QV = VV => (0, yV.h)(VV),
-      nV = VV => {
-        const eV = VV.getBoundingClientRect();
+    var AH = LH(18),
+      rH = LH(1696),
+      SH = LH(9361),
+      hH = LH(9364),
+      tH = LH(2548);
+    const zH = HH => (0, hH.k)(HH),
+      CH = HH => {
+        const BH = HH.getBoundingClientRect();
         return {
-          x: eV.left + eV.width / 2,
-          y: eV.top + eV.height / 2
+          x: BH.left + BH.width / 2,
+          y: BH.top + BH.height / 2
         }
       },
-      wV = (VV, eV, xV) => ({
+      EH = (HH, BH, LH) => ({
         bubbles: !0,
         cancelable: !0,
         composed: !0,
         view: window,
-        clientX: VV.x,
-        clientY: VV.y,
-        screenX: VV.x,
-        screenY: VV.y,
-        button: eV,
-        buttons: xV,
+        clientX: HH.x,
+        clientY: HH.y,
+        screenX: HH.x,
+        screenY: HH.y,
+        button: BH,
+        buttons: LH,
         pointerId: 1,
         pointerType: "mouse",
         isPrimary: !0
       }),
-      ZV = (VV, eV) => {
-        (0, YV.f)(VV, eV)
+      XH = (HH, BH) => {
+        (0, rH.h)(HH, BH)
       },
-      vV = function(VV, eV) {
-        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        const JV = 0 === xV ? 1 : 2;
-        ZV(VV, new PointerEvent("pointerdown", wV(eV, xV, JV))), ZV(VV, new MouseEvent("mousedown", wV(eV, xV, JV)))
+      GH = function(HH, BH) {
+        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        const AH = 0 === LH ? 1 : 2;
+        XH(HH, new PointerEvent("pointerdown", EH(BH, LH, AH))), XH(HH, new MouseEvent("mousedown", EH(BH, LH, AH)))
       },
-      rV = function(VV, eV) {
-        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        ZV(VV, new PointerEvent("pointerup", wV(eV, xV, 0))), ZV(VV, new MouseEvent("mouseup", wV(eV, xV, 0)))
+      YH = function(HH, BH) {
+        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        XH(HH, new PointerEvent("pointerup", EH(BH, LH, 0))), XH(HH, new MouseEvent("mouseup", EH(BH, LH, 0)))
       },
-      kV = function(VV, eV) {
-        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        vV(VV, eV, xV), rV(VV, eV, xV), ZV(VV, 0 === xV ? new MouseEvent("click", wV(eV, 0, 0)) : new MouseEvent("contextmenu", wV(eV, 2, 0)))
+      uH = function(HH, BH) {
+        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        GH(HH, BH, LH), YH(HH, BH, LH), XH(HH, 0 === LH ? new MouseEvent("click", EH(BH, 0, 0)) : new MouseEvent("contextmenu", EH(BH, 2, 0)))
       },
-      bV = function(VV, eV, xV) {
+      QH = function(HH, BH, LH) {
         let {
-          leaveBelow: JV = null,
-          enterBelow: YV = null
+          leaveBelow: AH = null,
+          enterBelow: rH = null
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        if (VV !== eV) {
-          if (null !== VV && void 0 !== VV && VV.isConnected) {
-            const YV = {
-              ...wV(xV, 0, 0),
-              relatedTarget: eV
+        if (HH !== BH) {
+          if (null !== HH && void 0 !== HH && HH.isConnected) {
+            const rH = {
+              ...EH(LH, 0, 0),
+              relatedTarget: BH
             };
-            ZV(VV, new PointerEvent("pointerout", YV)), ZV(VV, new MouseEvent("mouseout", YV));
-            const UV = VV => !!eV && VV.contains(eV) || !!JV && VV.contains(JV);
-            for (let eV = VV; eV && !UV(eV); eV = eV.parentElement) ZV(eV, new PointerEvent("pointerleave", {
-              ...YV,
+            XH(HH, new PointerEvent("pointerout", rH)), XH(HH, new MouseEvent("mouseout", rH));
+            const SH = HH => !!BH && HH.contains(BH) || !!AH && HH.contains(AH);
+            for (let BH = HH; BH && !SH(BH); BH = BH.parentElement) XH(BH, new PointerEvent("pointerleave", {
+              ...rH,
               bubbles: !1
-            })), ZV(eV, new MouseEvent("mouseleave", {
-              ...YV,
+            })), XH(BH, new MouseEvent("mouseleave", {
+              ...rH,
               bubbles: !1
             }))
           }
-          if (eV) {
-            const JV = {
-              ...wV(xV, 0, 0),
-              relatedTarget: VV
+          if (BH) {
+            const AH = {
+              ...EH(LH, 0, 0),
+              relatedTarget: HH
             };
-            ZV(eV, new PointerEvent("pointerover", JV)), ZV(eV, new MouseEvent("mouseover", JV));
-            const UV = [],
-              yV = eV => !(null === VV || void 0 === VV || !VV.isConnected) && eV.contains(VV) || !!YV && eV.contains(YV);
-            for (let VV = eV; VV && !yV(VV); VV = VV.parentElement) UV.push(VV);
-            for (const VV of UV.reverse()) ZV(VV, new PointerEvent("pointerenter", {
-              ...JV,
+            XH(BH, new PointerEvent("pointerover", AH)), XH(BH, new MouseEvent("mouseover", AH));
+            const SH = [],
+              hH = BH => !(null === HH || void 0 === HH || !HH.isConnected) && BH.contains(HH) || !!rH && BH.contains(rH);
+            for (let HH = BH; HH && !hH(HH); HH = HH.parentElement) SH.push(HH);
+            for (const HH of SH.reverse()) XH(HH, new PointerEvent("pointerenter", {
+              ...AH,
               bubbles: !1
-            })), ZV(VV, new MouseEvent("mouseenter", {
-              ...JV,
+            })), XH(HH, new MouseEvent("mouseenter", {
+              ...AH,
               bubbles: !1
             }));
-            ZV(eV, new PointerEvent("pointermove", wV(xV, 0, 0))), ZV(eV, new MouseEvent("mousemove", wV(xV, 0, 0)))
+            XH(BH, new PointerEvent("pointermove", EH(LH, 0, 0))), XH(BH, new MouseEvent("mousemove", EH(LH, 0, 0)))
           }
-        } else eV && (ZV(eV, new PointerEvent("pointermove", wV(xV, 0, 0))), ZV(eV, new MouseEvent("mousemove", wV(xV, 0, 0))))
+        } else BH && (XH(BH, new PointerEvent("pointermove", EH(LH, 0, 0))), XH(BH, new MouseEvent("mousemove", EH(LH, 0, 0))))
       },
-      EV = VV => {
-        JV.h.QZ(UV.f, VV)
+      WH = HH => {
+        AH.k.AX(SH.e, HH)
       },
-      BV = VV => {
-        if (QV(VV)) return void EV(VV);
-        const eV = VV.hasAttribute("data-pad-focusable") ? VV.querySelector("a[href]") : null,
-          xV = null !== eV && void 0 !== eV ? eV : VV;
-        kV(xV, nV(xV))
+      MH = HH => {
+        if (zH(HH)) return void WH(HH);
+        const BH = HH.hasAttribute("data-pad-focusable") ? HH.querySelector("a[href]") : null,
+          LH = null !== BH && void 0 !== BH ? BH : HH;
+        uH(LH, CH(LH))
       },
-      jV = ".Dropdown-root.is-open",
-      qV = VV => {
-        const eV = VV.querySelector(".Dropdown-control");
-        return BV(eV), eV
+      xH = ".Dropdown-root.is-open",
+      vH = HH => {
+        const BH = HH.querySelector(".Dropdown-control");
+        return MH(BH), BH
       },
-      tV = VV => {
-        var eV;
-        const xV = null !== (eV = VV.closest(jV)) && void 0 !== eV ? eV : VV.querySelector(jV);
-        return xV ? qV(xV) : null
+      PH = HH => {
+        var BH;
+        const LH = null !== (BH = HH.closest(xH)) && void 0 !== BH ? BH : HH.querySelector(xH);
+        return LH ? vH(LH) : null
       },
-      FV = VV => {
-        for (const eV of document.querySelectorAll(jV)) eV.contains(VV) || qV(eV)
+      TH = HH => {
+        for (const BH of document.querySelectorAll(xH)) BH.contains(HH) || vH(BH)
       },
-      TV = VV => null !== VV.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
-      PV = VV => {
-        const eV = VV ? document.elementFromPoint(VV.x, VV.y) : null;
-        return !(null === eV || void 0 === eV || !eV.closest("[data-pad-repeat]"))
+      UH = HH => null !== HH.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
+      VH = HH => {
+        const BH = HH ? document.elementFromPoint(HH.x, HH.y) : null;
+        return !(null === BH || void 0 === BH || !BH.closest("[data-pad-repeat]"))
       },
-      AV = VV => {
-        var eV;
-        return null !== (eV = [...VV.querySelectorAll("[data-pad-back]")].find(pV.n)) && void 0 !== eV ? eV : null
+      OH = HH => {
+        var BH;
+        return null !== (BH = [...HH.querySelectorAll("[data-pad-back]")].find(tH.u)) && void 0 !== BH ? BH : null
       },
-      NV = VV => {
-        const eV = AV(VV);
-        return !!eV && (BV(eV), !0)
+      bH = HH => {
+        const BH = OH(HH);
+        return !!BH && (MH(BH), !0)
       },
-      XV = VV => {
-        var eV, xV, JV, YV;
-        return null !== (eV = null !== (xV = null !== (JV = VV.getAttribute("data-pad-key")) && void 0 !== JV ? JV : VV.getAttribute("href")) && void 0 !== xV ? xV : null === (YV = VV.querySelector("a[href]")) || void 0 === YV ? void 0 : YV.getAttribute("href")) && void 0 !== eV ? eV : null
+      kH = HH => {
+        var BH, LH, AH, rH;
+        return null !== (BH = null !== (LH = null !== (AH = HH.getAttribute("data-pad-key")) && void 0 !== AH ? AH : HH.getAttribute("href")) && void 0 !== LH ? LH : null === (rH = HH.querySelector("a[href]")) || void 0 === rH ? void 0 : rH.getAttribute("href")) && void 0 !== BH ? BH : null
       }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

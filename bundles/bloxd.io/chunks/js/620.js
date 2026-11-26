@@ -1,52 +1,52 @@
 export const id = 620;
 export const ids = [620];
 export const modules = {
-  44717: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => BV
+  45290: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => MH
     });
-    var JV = xV(38296),
-      YV = xV(38269),
-      UV = xV(41738),
-      yV = xV(41398),
-      pV = xV(41190),
-      QV = xV(39870),
-      nV = xV(41383),
-      wV = xV(41413),
-      ZV = xV(38278),
-      vV = xV(41145),
-      rV = xV(41353),
-      kV = xV(41458);
-    class bV {
+    var AH = LH(37997),
+      rH = LH(37963),
+      SH = LH(41777),
+      hH = LH(41433),
+      tH = LH(41222),
+      zH = LH(39595),
+      CH = LH(41416),
+      EH = LH(41448),
+      XH = LH(37974),
+      GH = LH(41179),
+      YH = LH(41398),
+      uH = LH(41472);
+    class QH {
       get renderList() {
         return this._renderList
       }
-      set renderList(VV) {
-        this._renderList !== VV && (this._unObserveRenderList && (this._unObserveRenderList(), this._unObserveRenderList = null), VV && (this._unObserveRenderList = (0, ZV.i)(VV, this._renderListHasChanged)), this._renderList = VV)
+      set renderList(HH) {
+        this._renderList !== HH && (this._unObserveRenderList && (this._unObserveRenderList(), this._unObserveRenderList = null), HH && (this._unObserveRenderList = (0, XH.i)(HH, this._renderListHasChanged)), this._renderList = HH)
       }
       get disableImageProcessing() {
         return this._disableImageProcessing
       }
-      set disableImageProcessing(VV) {
-        VV !== this._disableImageProcessing && (this._disableImageProcessing = VV, this._scene.markAllMaterialsAsDirty(64))
+      set disableImageProcessing(HH) {
+        HH !== this._disableImageProcessing && (this._disableImageProcessing = HH, this._scene.markAllMaterialsAsDirty(64))
       }
       get disableDepthPrePass() {
         return this._disableDepthPrePass
       }
-      set disableDepthPrePass(VV) {
-        this._disableDepthPrePass = VV, this._renderingManager.disableDepthPrePass = VV
+      set disableDepthPrePass(HH) {
+        this._disableDepthPrePass = HH, this._renderingManager.disableDepthPrePass = HH
       }
       get name() {
         return this._name
       }
-      set name(VV) {
-        if (this._name !== VV) {
-          if (this._name = VV, this._sceneUBOs)
-            for (let VV = 0; VV < this._sceneUBOs.length; ++VV) this._sceneUBOs[VV].name = `Scene ubo #${VV} for ${this.name}`;
+      set name(HH) {
+        if (this._name !== HH) {
+          if (this._name = HH, this._sceneUBOs)
+            for (let HH = 0; HH < this._sceneUBOs.length; ++HH) this._sceneUBOs[HH].name = `Scene ubo #${HH} for ${this.name}`;
           if (this._scene)
-            for (let VV = 0; VV < this._renderPassIds.length; ++VV) {
-              const eV = this._renderPassIds[VV];
-              this._engine._renderPassNames[eV] = `${this._name}#${VV}`
+            for (let HH = 0; HH < this._renderPassIds.length; ++HH) {
+              const BH = this._renderPassIds[HH];
+              this._engine._renderPassNames[BH] = `${this._name}#${HH}`
             }
         }
       }
@@ -59,66 +59,66 @@ export const modules = {
       getActiveMeshes() {
         return this._activeMeshes
       }
-      setMaterialForRendering(VV, eV) {
-        let xV;
-        xV = Array.isArray(VV) ? VV : [VV];
-        for (let JV = 0; JV < xV.length; ++JV)
-          for (let VV = 0; VV < this.options.numPasses; ++VV) {
-            let YV = xV[JV];
-            xV[JV].JC && (YV = xV[JV].XUV), YV.setMaterialForRenderPass(this._renderPassIds[VV], void 0 !== eV ? Array.isArray(eV) ? eV[VV] : eV : void 0)
+      setMaterialForRendering(HH, BH) {
+        let LH;
+        LH = Array.isArray(HH) ? HH : [HH];
+        for (let AH = 0; AH < LH.length; ++AH)
+          for (let HH = 0; HH < this.options.numPasses; ++HH) {
+            let rH = LH[AH];
+            LH[AH].xR && (rH = LH[AH].XSH), rH.setMaterialForRenderPass(this._renderPassIds[HH], void 0 !== BH ? Array.isArray(BH) ? BH[HH] : BH : void 0)
           }
       }
-      _freezeActiveMeshes(VV) {
-        this._freezeActiveMeshesCancel = (0, vV.f)((() => this._checkReadiness()), (() => {
-          if (this._freezeActiveMeshesCancel = null, VV)
-            for (let VV = 0; VV < this._activeMeshes.length; VV++) this._activeMeshes.data[VV]._freeze();
+      _freezeActiveMeshes(HH) {
+        this._freezeActiveMeshesCancel = (0, GH.f)((() => this._checkReadiness()), (() => {
+          if (this._freezeActiveMeshesCancel = null, HH)
+            for (let HH = 0; HH < this._activeMeshes.length; HH++) this._activeMeshes.data[HH]._freeze();
           this._prepareRenderingManager(0, !0), this._isFrozen = !0
-        }), ((VV, eV) => {
-          this._freezeActiveMeshesCancel = null, eV ? (QV.b.Error("ObjectRenderer: Timeout while waiting for the renderer to be ready."), VV && QV.b.Error(VV)) : (QV.b.Error("ObjectRenderer: An unexpected error occurred while waiting for the renderer to be ready."), VV && (QV.b.Error(VV), VV.stack && QV.b.Error(VV.stack)))
+        }), ((HH, BH) => {
+          this._freezeActiveMeshesCancel = null, BH ? (zH.e.Error("ObjectRenderer: Timeout while waiting for the renderer to be ready."), HH && zH.e.Error(HH)) : (zH.e.Error("ObjectRenderer: An unexpected error occurred while waiting for the renderer to be ready."), HH && (zH.e.Error(HH), HH.stack && zH.e.Error(HH.stack)))
         }))
       }
       _unfreezeActiveMeshes() {
         this._freezeActiveMeshesCancel?.(), this._freezeActiveMeshesCancel = null;
-        for (let VV = 0; VV < this._activeMeshes.length; VV++) this._activeMeshes.data[VV]._unFreeze();
+        for (let HH = 0; HH < this._activeMeshes.length; HH++) this._activeMeshes.data[HH]._unFreeze();
         this._isFrozen = !1
       }
-      constructor(VV, eV, xV) {
-        this._unObserveRenderList = null, this._renderListHasChanged = (VV, eV) => {
-          const xV = this._renderList ? this._renderList.length : 0;
-          if (0 === eV && xV > 0 || 0 === xV)
-            for (const JV of this._scene.meshes) JV._markSubMeshesAsLightDirty()
-        }, this.particleSystemList = null, this.spriteManagerList = null, this.getCustomRenderList = null, this.renderMeshes = !0, this.renderDepthOnlyMeshes = !0, this.renderOpaqueMeshes = !0, this.renderAlphaTestMeshes = !0, this.renderTransparentMeshes = !0, this.renderParticles = !0, this.renderSprites = !1, this.forceLayerMaskCheck = !1, this.enableBoundingBoxRendering = !1, this.enableOutlineRendering = !0, this._disableImageProcessing = !1, this.dontSetTransformationMatrix = !1, this._disableDepthPrePass = !1, this.onBeforeRenderObservable = new JV.c, this.onAfterRenderObservable = new JV.c, this.onBeforeRenderingManagerRenderObservable = new JV.c, this.onAfterRenderingManagerRenderObservable = new JV.c, this.onInitRenderingObservable = new JV.c, this.onFinishRenderingObservable = new JV.c, this.onFastPathRenderObservable = new JV.c, this._currentRefreshId = -1, this._refreshRate = 1, this._currentApplyByPostProcessSetting = !1, this._activeMeshes = new rV.f(256), this._activeBoundingBoxes = new rV.f(32), this._currentFrameId = -1, this._currentSceneUBOIndex = 0, this._isFrozen = !1, this._freezeActiveMeshesCancel = null, this._currentSceneCamera = null, this.name = VV, this._scene = eV, this._engine = this._scene.sk(), this._useUBO = this._engine.supportsUniformBuffers, this.renderList = [], this._renderPassIds = [], this.options = {
+      constructor(HH, BH, LH) {
+        this._unObserveRenderList = null, this._renderListHasChanged = (HH, BH) => {
+          const LH = this._renderList ? this._renderList.length : 0;
+          if (0 === BH && LH > 0 || 0 === LH)
+            for (const AH of this._scene.meshes) AH._markSubMeshesAsLightDirty()
+        }, this.particleSystemList = null, this.spriteManagerList = null, this.getCustomRenderList = null, this.renderMeshes = !0, this.renderDepthOnlyMeshes = !0, this.renderOpaqueMeshes = !0, this.renderAlphaTestMeshes = !0, this.renderTransparentMeshes = !0, this.renderParticles = !0, this.renderSprites = !1, this.forceLayerMaskCheck = !1, this.enableBoundingBoxRendering = !1, this.enableOutlineRendering = !0, this._disableImageProcessing = !1, this.dontSetTransformationMatrix = !1, this._disableDepthPrePass = !1, this.onBeforeRenderObservable = new AH.d, this.onAfterRenderObservable = new AH.d, this.onBeforeRenderingManagerRenderObservable = new AH.d, this.onAfterRenderingManagerRenderObservable = new AH.d, this.onInitRenderingObservable = new AH.d, this.onFinishRenderingObservable = new AH.d, this.onFastPathRenderObservable = new AH.d, this._currentRefreshId = -1, this._refreshRate = 1, this._currentApplyByPostProcessSetting = !1, this._activeMeshes = new YH.i(256), this._activeBoundingBoxes = new YH.i(32), this._currentFrameId = -1, this._currentSceneUBOIndex = 0, this._isFrozen = !1, this._freezeActiveMeshesCancel = null, this._currentSceneCamera = null, this.name = HH, this._scene = BH, this._engine = this._scene.Iu(), this._useUBO = this._engine.supportsUniformBuffers, this.renderList = [], this._renderPassIds = [], this.options = {
           numPasses: 1,
           doNotChangeAspectRatio: !0,
           enableClusteredLights: !1,
-          ...xV
-        }, this._createRenderPassId(), this.renderPassId = this._renderPassIds[0], this._renderingManager = new wV.b(eV), this._renderingManager._useSceneAutoClearSetup = !0, this.options.enableClusteredLights && this.onInitRenderingObservable.add((() => {
-          for (const VV of this._scene.lights) VV.getTypeID() === kV.b.LIGHTTYPEID_CLUSTERED_CONTAINER && VV.isSupported && VV._updateBatches(this.activeCamera).render()
+          ...LH
+        }, this._createRenderPassId(), this.renderPassId = this._renderPassIds[0], this._renderingManager = new EH.c(BH), this._renderingManager._useSceneAutoClearSetup = !0, this.options.enableClusteredLights && this.onInitRenderingObservable.add((() => {
+          for (const HH of this._scene.lights) HH.getTypeID() === uH.e.LIGHTTYPEID_CLUSTERED_CONTAINER && HH.isSupported && HH._updateBatches(this.activeCamera).render()
         })), this._scene.addObjectRenderer(this)
       }
       _releaseRenderPassId() {
-        for (let VV = 0; VV < this.options.numPasses; ++VV) this._engine.releaseRenderPassId(this._renderPassIds[VV]);
+        for (let HH = 0; HH < this.options.numPasses; ++HH) this._engine.releaseRenderPassId(this._renderPassIds[HH]);
         this._renderPassIds.length = 0
       }
       _createRenderPassId() {
         this._releaseRenderPassId();
-        for (let VV = 0; VV < this.options.numPasses; ++VV) this._renderPassIds[VV] = this._engine.createRenderPassId(`${this.name}#${VV}`)
+        for (let HH = 0; HH < this.options.numPasses; ++HH) this._renderPassIds[HH] = this._engine.createRenderPassId(`${this.name}#${HH}`)
       }
-      _createSceneUBO(VV, eV) {
-        const xV = this._scene.sk(),
-          JV = new nV.b(xV, void 0, eV, VV, void 0, !1);
-        return JV.addUniform("viewProjection", 16), eV && JV.addUniform("viewProjectionR", 16), JV.addUniform("view", 16), JV.addUniform("projection", 16), JV.addUniform("vEyePosition", 4), JV.addUniform("inverseProjection", 16), JV
+      _createSceneUBO(HH, BH) {
+        const LH = this._scene.Iu(),
+          AH = new CH.c(LH, void 0, BH, HH, void 0, !1);
+        return AH.addUniform("viewProjection", 16), BH && AH.addUniform("viewProjectionR", 16), AH.addUniform("view", 16), AH.addUniform("projection", 16), AH.addUniform("vEyePosition", 4), AH.addUniform("inverseProjection", 16), AH
       }
       _getSceneUBO() {
         this._currentFrameId !== this._engine.frameId && (this._currentSceneUBOIndex = 0, this._currentFrameId = this._engine.frameId), this._sceneUBOs || (this._sceneUBOs = [], this._sceneUBOIsMultiview = []);
-        const VV = this._engine._currentRenderTarget,
-          eV = !(!VV || !VV.texture?.isMultiview) || !!this._scene._multiviewSceneUboIsActive;
+        const HH = this._engine._currentRenderTarget,
+          BH = !(!HH || !HH.texture?.isMultiview) || !!this._scene._multiviewSceneUboIsActive;
         if (this._currentSceneUBOIndex >= this._sceneUBOs.length) {
-          const VV = this._sceneUBOs.length;
-          this._sceneUBOs.push(this._createSceneUBO(`Scene ubo #${VV} for ${this.name}`, eV)), this._sceneUBOIsMultiview.push(eV)
-        } else this._sceneUBOIsMultiview[this._currentSceneUBOIndex] !== eV && (this._sceneUBOs[this._currentSceneUBOIndex].dispose(), this._sceneUBOs[this._currentSceneUBOIndex] = this._createSceneUBO(`Scene ubo #${this._currentSceneUBOIndex} for ${this.name}`, eV), this._sceneUBOIsMultiview[this._currentSceneUBOIndex] = eV);
-        const xV = this._sceneUBOs[this._currentSceneUBOIndex++];
-        return xV.unbindEffect(), xV
+          const HH = this._sceneUBOs.length;
+          this._sceneUBOs.push(this._createSceneUBO(`Scene ubo #${HH} for ${this.name}`, BH)), this._sceneUBOIsMultiview.push(BH)
+        } else this._sceneUBOIsMultiview[this._currentSceneUBOIndex] !== BH && (this._sceneUBOs[this._currentSceneUBOIndex].dispose(), this._sceneUBOs[this._currentSceneUBOIndex] = this._createSceneUBO(`Scene ubo #${this._currentSceneUBOIndex} for ${this.name}`, BH), this._sceneUBOIsMultiview[this._currentSceneUBOIndex] = BH);
+        const LH = this._sceneUBOs[this._currentSceneUBOIndex++];
+        return LH.unbindEffect(), LH
       }
       resetRefreshCounter() {
         this._currentRefreshId = -1
@@ -126,306 +126,306 @@ export const modules = {
       get refreshRate() {
         return this._refreshRate
       }
-      set refreshRate(VV) {
-        this._refreshRate = VV, this.resetRefreshCounter()
+      set refreshRate(HH) {
+        this._refreshRate = HH, this.resetRefreshCounter()
       }
       shouldRender() {
         return !!this._engine.snapshotRendering || (-1 === this._currentRefreshId || this.refreshRate === this._currentRefreshId ? (this._currentRefreshId = 1, !0) : (this._currentRefreshId++, !1))
       }
-      isReadyForRendering(VV, eV) {
-        this.prepareRenderList(), this.initRender(VV, eV);
-        const xV = this._checkReadiness();
-        return this.finishRender(), xV
+      isReadyForRendering(HH, BH) {
+        this.prepareRenderList(), this.initRender(HH, BH);
+        const LH = this._checkReadiness();
+        return this.finishRender(), LH
       }
       prepareRenderList() {
-        const VV = this._scene;
+        const HH = this._scene;
         if (this._waitingRenderList) {
           if (!this.renderListPredicate) {
             this.renderList = [];
-            for (let eV = 0; eV < this._waitingRenderList.length; eV++) {
-              const xV = this._waitingRenderList[eV],
-                JV = VV.getMeshById(xV);
-              JV && this.renderList.push(JV)
+            for (let BH = 0; BH < this._waitingRenderList.length; BH++) {
+              const LH = this._waitingRenderList[BH],
+                AH = HH.getMeshById(LH);
+              AH && this.renderList.push(AH)
             }
           }
           this._waitingRenderList = void 0
         }
         if (this.renderListPredicate) {
           this.renderList ? this.renderList.length = 0 : this.renderList = [];
-          const VV = this._scene.meshes;
-          for (let eV = 0; eV < VV.length; eV++) {
-            const xV = VV[eV];
-            this.renderListPredicate(xV) && this.renderList.push(xV)
+          const HH = this._scene.meshes;
+          for (let BH = 0; BH < HH.length; BH++) {
+            const LH = HH[BH];
+            this.renderListPredicate(LH) && this.renderList.push(LH)
           }
         }
         this._currentApplyByPostProcessSetting = this._scene.imageProcessingConfiguration.applyByPostProcess, this._disableImageProcessing && (this._scene.imageProcessingConfiguration._applyByPostProcess = this._disableImageProcessing)
       }
-      initRender(VV, eV) {
-        const xV = this.activeCamera ?? this._scene.activeCamera;
-        this._currentSceneCamera = this._scene.activeCamera, this._useUBO && (this._currentSceneUBO = this._scene.getSceneUniformBuffer(), this._currentSceneUBO.unbindEffect(), this._scene.setSceneUniformBuffer(this._getSceneUBO())), this.onInitRenderingObservable.notifyObservers(this), xV && (this.dontSetTransformationMatrix || this._scene.setTransformMatrix(xV.getViewMatrix(), xV.getProjectionMatrix(!0)), this._scene._activeCamera = xV, this._engine.setViewport(xV.rigParent ? xV.rigParent.viewport : xV.viewport, VV, eV)), this._useUBO && this._scene.finalizeSceneUbo(), this._defaultRenderListPrepared = !1
+      initRender(HH, BH) {
+        const LH = this.activeCamera ?? this._scene.activeCamera;
+        this._currentSceneCamera = this._scene.activeCamera, this._useUBO && (this._currentSceneUBO = this._scene.getSceneUniformBuffer(), this._currentSceneUBO.unbindEffect(), this._scene.setSceneUniformBuffer(this._getSceneUBO())), this.onInitRenderingObservable.notifyObservers(this), LH && (this.dontSetTransformationMatrix || this._scene.setTransformMatrix(LH.getViewMatrix(), LH.getProjectionMatrix(!0)), this._scene._activeCamera = LH, this._engine.setViewport(LH.rigParent ? LH.rigParent.viewport : LH.viewport, HH, BH)), this._useUBO && this._scene.finalizeSceneUbo(), this._defaultRenderListPrepared = !1
       }
       finishRender() {
-        const VV = this._scene;
-        this._useUBO && this._scene.setSceneUniformBuffer(this._currentSceneUBO), this._disableImageProcessing && (VV.imageProcessingConfiguration._applyByPostProcess = this._currentApplyByPostProcessSetting), VV._activeCamera = this._currentSceneCamera, this._currentSceneCamera && (this.activeCamera && this.activeCamera !== VV.activeCamera && VV.setTransformMatrix(this._currentSceneCamera.getViewMatrix(), this._currentSceneCamera.getProjectionMatrix(!0)), this._engine.setViewport(this._currentSceneCamera.viewport)), VV.resetCachedMaterial(), this.onFinishRenderingObservable.notifyObservers(this)
+        const HH = this._scene;
+        this._useUBO && this._scene.setSceneUniformBuffer(this._currentSceneUBO), this._disableImageProcessing && (HH.imageProcessingConfiguration._applyByPostProcess = this._currentApplyByPostProcessSetting), HH._activeCamera = this._currentSceneCamera, this._currentSceneCamera && (this.activeCamera && this.activeCamera !== HH.activeCamera && HH.setTransformMatrix(this._currentSceneCamera.getViewMatrix(), this._currentSceneCamera.getProjectionMatrix(!0)), this._engine.setViewport(this._currentSceneCamera.viewport)), HH.resetCachedMaterial(), this.onFinishRenderingObservable.notifyObservers(this)
       }
       render() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const xV = this._engine.currentRenderPassId;
-        this._engine.currentRenderPassId = this._renderPassIds[VV], this.onBeforeRenderObservable.notifyObservers(VV);
-        if (this._engine.snapshotRendering && 1 === this._engine.snapshotRenderingMode) this.onFastPathRenderObservable.notifyObservers(VV);
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const LH = this._engine.currentRenderPassId;
+        this._engine.currentRenderPassId = this._renderPassIds[HH], this.onBeforeRenderObservable.notifyObservers(HH);
+        if (this._engine.snapshotRendering && 1 === this._engine.snapshotRenderingMode) this.onFastPathRenderObservable.notifyObservers(HH);
         else {
-          const eV = this._prepareRenderingManager(VV),
-            xV = this._scene.getOutlineRenderer?.(),
-            JV = xV?.enabled;
-          xV && (xV.enabled = this.enableOutlineRendering), this.onBeforeRenderingManagerRenderObservable.notifyObservers(VV), this._renderingManager.render(this.customRenderFunction, eV, this.renderParticles, this.renderSprites, this.renderDepthOnlyMeshes, this.renderOpaqueMeshes, this.renderAlphaTestMeshes, this.renderTransparentMeshes, this.customRenderTransparentSubMeshes, this.spriteManagerList), this.onAfterRenderingManagerRenderObservable.notifyObservers(VV), xV && (xV.enabled = JV)
+          const BH = this._prepareRenderingManager(HH),
+            LH = this._scene.getOutlineRenderer?.(),
+            AH = LH?.enabled;
+          LH && (LH.enabled = this.enableOutlineRendering), this.onBeforeRenderingManagerRenderObservable.notifyObservers(HH), this._renderingManager.render(this.customRenderFunction, BH, this.renderParticles, this.renderSprites, this.renderDepthOnlyMeshes, this.renderOpaqueMeshes, this.renderAlphaTestMeshes, this.renderTransparentMeshes, this.customRenderTransparentSubMeshes, this.spriteManagerList), this.onAfterRenderingManagerRenderObservable.notifyObservers(HH), LH && (LH.enabled = AH)
         }
-        eV || this.onAfterRenderObservable.notifyObservers(VV), this._engine.currentRenderPassId = xV
+        BH || this.onAfterRenderObservable.notifyObservers(HH), this._engine.currentRenderPassId = LH
       }
       _checkReadiness() {
-        const VV = this._scene,
-          eV = this._engine.currentRenderPassId;
-        let xV = !0;
-        VV.getViewMatrix() || VV.updateTransformMatrix();
-        const JV = this.options.numPasses;
-        for (let YV = 0; YV < JV && xV; YV++) {
-          const eV = this.renderList ? this.renderList : VV.frameGraph ? VV.meshes : VV.getActiveMeshes().data,
-            UV = this.renderList || VV.frameGraph ? eV.length : VV.getActiveMeshes().length;
-          this._engine.currentRenderPassId = this._renderPassIds[YV], this.onBeforeRenderObservable.notifyObservers(YV);
-          let yV = null,
-            pV = UV;
-          this.getCustomRenderList && (yV = this.getCustomRenderList(YV, eV, UV), yV && (pV = yV.length)), yV || (yV = eV), this.options.doNotChangeAspectRatio || VV.updateTransformMatrix(!0);
-          for (let VV = 0; VV < pV && xV; ++VV) {
-            const eV = yV[VV];
-            if (!eV.isEnabled() || eV.isBlocked || !eV.isVisible || !eV.hT) continue;
+        const HH = this._scene,
+          BH = this._engine.currentRenderPassId;
+        let LH = !0;
+        HH.getViewMatrix() || HH.updateTransformMatrix();
+        const AH = this.options.numPasses;
+        for (let rH = 0; rH < AH && LH; rH++) {
+          const BH = this.renderList ? this.renderList : HH.frameGraph ? HH.meshes : HH.getActiveMeshes().data,
+            SH = this.renderList || HH.frameGraph ? BH.length : HH.getActiveMeshes().length;
+          this._engine.currentRenderPassId = this._renderPassIds[rH], this.onBeforeRenderObservable.notifyObservers(rH);
+          let hH = null,
+            tH = SH;
+          this.getCustomRenderList && (hH = this.getCustomRenderList(rH, BH, SH), hH && (tH = hH.length)), hH || (hH = BH), this.options.doNotChangeAspectRatio || HH.updateTransformMatrix(!0);
+          for (let HH = 0; HH < tH && LH; ++HH) {
+            const BH = hH[HH];
+            if (!BH.isEnabled() || BH.isBlocked || !BH.isVisible || !BH.jU) continue;
             if (this.customIsReadyFunction) {
-              if (!this.customIsReadyFunction(eV, this.refreshRate, !0)) {
-                xV = !1;
+              if (!this.customIsReadyFunction(BH, this.refreshRate, !0)) {
+                LH = !1;
                 continue
               }
-            } else if (!eV.isReady(!0)) {
-              xV = !1;
+            } else if (!BH.isReady(!0)) {
+              LH = !1;
               continue
             }
-            let JV = eV._edgesRenderer,
-              YV = eV.hasThinInstances;
-            if (eV.JC) {
-              const VV = eV.XUV;
-              VV.edgesShareWithInstances && VV._edgesRenderer?.isEnabled && (JV = VV._edgesRenderer, YV = !0)
-            } else eV.NUV && eV.edgesShareWithInstances && (YV = !0);
-            !this.customRenderFunction && this.renderOpaqueMeshes && JV?.isEnabled && (JV.isReady(YV) || (xV = !1))
+            let AH = BH._edgesRenderer,
+              rH = BH.hasThinInstances;
+            if (BH.xR) {
+              const HH = BH.XSH;
+              HH.edgesShareWithInstances && HH._edgesRenderer?.isEnabled && (AH = HH._edgesRenderer, rH = !0)
+            } else BH.ESH && BH.edgesShareWithInstances && (rH = !0);
+            !this.customRenderFunction && this.renderOpaqueMeshes && AH?.isEnabled && (AH.isReady(rH) || (LH = !1))
           }
-          if (this.renderParticles && VV.particlesEnabled) {
-            const eV = this.particleSystemList || VV.lT;
-            for (const VV of eV) VV.isReady() || (xV = !1)
+          if (this.renderParticles && HH.particlesEnabled) {
+            const BH = this.particleSystemList || HH.dU;
+            for (const HH of BH) HH.isReady() || (LH = !1)
           }
-          if (this.renderSprites && VV.spritesEnabled) {
-            const eV = this.spriteManagerList || VV.spriteManagers;
-            if (eV)
-              for (const JV of eV) VV.activeCamera && 0 === (JV.layerMask & VV.activeCamera.layerMask) || JV.isReady && !JV.isReady() && (xV = !1)
+          if (this.renderSprites && HH.spritesEnabled) {
+            const BH = this.spriteManagerList || HH.spriteManagers;
+            if (BH)
+              for (const AH of BH) HH.activeCamera && 0 === (AH.layerMask & HH.activeCamera.layerMask) || AH.isReady && !AH.isReady() && (LH = !1)
           }
-          this.onAfterRenderObservable.notifyObservers(YV), JV > 1 && (VV.incrementRenderId(), VV.resetCachedMaterial())
+          this.onAfterRenderObservable.notifyObservers(rH), AH > 1 && (HH.incrementRenderId(), HH.resetCachedMaterial())
         }
-        return this._engine.currentRenderPassId = eV, xV
+        return this._engine.currentRenderPassId = BH, LH
       }
       _prepareRenderingManager() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const xV = this._scene;
-        let JV, YV, UV = null;
-        const yV = this.renderList ? this.renderList : xV.frameGraph ? xV.meshes : xV.getActiveMeshes().data,
-          pV = this.renderList || xV.frameGraph ? yV.length : xV.getActiveMeshes().length;
-        if (this.getCustomRenderList && (UV = this.getCustomRenderList(VV, yV, pV)), UV) JV = UV.length, YV = this.forceLayerMaskCheck;
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const LH = this._scene;
+        let AH, rH, SH = null;
+        const hH = this.renderList ? this.renderList : LH.frameGraph ? LH.meshes : LH.getActiveMeshes().data,
+          tH = this.renderList || LH.frameGraph ? hH.length : LH.getActiveMeshes().length;
+        if (this.getCustomRenderList && (SH = this.getCustomRenderList(HH, hH, tH)), SH) AH = SH.length, rH = this.forceLayerMaskCheck;
         else {
-          if (this._defaultRenderListPrepared && !eV && !this._engine.isWebGPU) return yV;
-          this._defaultRenderListPrepared = !0, UV = yV, JV = pV, YV = !this.renderList || this.forceLayerMaskCheck
+          if (this._defaultRenderListPrepared && !BH && !this._engine.isWebGPU) return hH;
+          this._defaultRenderListPrepared = !0, SH = hH, AH = tH, rH = !this.renderList || this.forceLayerMaskCheck
         }
-        const QV = xV.activeCamera,
-          nV = this.cameraForLOD ?? QV,
-          wV = xV.getBoundingBoxRenderer?.();
-        if (xV._activeMeshesFrozen && this._isFrozen) {
-          if (this._renderingManager.resetSprites(), this.enableBoundingBoxRendering && wV) {
-            wV.reset();
-            for (let VV = 0; VV < this._activeBoundingBoxes.length; VV++) {
-              const eV = this._activeBoundingBoxes.data[VV];
-              wV.renderList.push(eV)
+        const zH = LH.activeCamera,
+          CH = this.cameraForLOD ?? zH,
+          EH = LH.getBoundingBoxRenderer?.();
+        if (LH._activeMeshesFrozen && this._isFrozen) {
+          if (this._renderingManager.resetSprites(), this.enableBoundingBoxRendering && EH) {
+            EH.reset();
+            for (let HH = 0; HH < this._activeBoundingBoxes.length; HH++) {
+              const BH = this._activeBoundingBoxes.data[HH];
+              EH.renderList.push(BH)
             }
           }
-          return UV
+          return SH
         }
-        if (this._renderingManager.reset(), this._activeMeshes.reset(), this._activeBoundingBoxes.reset(), wV && wV.reset(), this.renderMeshes) {
-          const VV = xV.getRenderId(),
-            eV = xV.getFrameId();
-          for (let yV = 0; yV < JV; yV++) {
-            const JV = UV[yV];
-            if (JV && !JV.isBlocked) {
+        if (this._renderingManager.reset(), this._activeMeshes.reset(), this._activeBoundingBoxes.reset(), EH && EH.reset(), this.renderMeshes) {
+          const HH = LH.getRenderId(),
+            BH = LH.getFrameId();
+          for (let hH = 0; hH < AH; hH++) {
+            const AH = SH[hH];
+            if (AH && !AH.isBlocked) {
               if (this.customIsReadyFunction) {
-                if (!this.customIsReadyFunction(JV, this.refreshRate, !1)) {
+                if (!this.customIsReadyFunction(AH, this.refreshRate, !1)) {
                   this.resetRefreshCounter();
                   continue
                 }
-              } else if (!JV.isReady(0 === this.refreshRate)) {
+              } else if (!AH.isReady(0 === this.refreshRate)) {
                 this.resetRefreshCounter();
                 continue
               }
-              let UV, yV;
-              if (nV) {
-                const VV = JV._internalAbstractMeshDataInfo._currentLOD.get(nV);
-                VV && VV[1] === eV ? UV = VV[0] : (UV = xV.customLODSelector ? xV.customLODSelector(JV, nV) : JV.getLOD(nV), VV ? (VV[0] = UV, VV[1] = eV) : JV._internalAbstractMeshDataInfo._currentLOD.set(nV, [UV, eV]))
-              } else UV = JV;
-              if (!UV) continue;
-              if (UV !== JV && 0 !== UV.billboardMode && UV.computeWorldMatrix(), UV._preActivateForIntermediateRendering(VV), yV = !(!YV || !QV) && 0 === (JV.layerMask & QV.layerMask), JV.isEnabled() && JV.isVisible && JV.hT && !yV) {
-                if (this._activeMeshes.push(JV), UV._internalAbstractMeshDataInfo._wasActiveLastFrame = !0, UV !== JV && UV._activate(VV, !0), this.enableBoundingBoxRendering && wV && wV._preActiveMesh(JV), JV._activate(VV, !0) && JV.hT.length) {
-                  JV.JC ? JV._internalAbstractMeshDataInfo._actAsRegularMesh && (UV = JV) : UV._internalAbstractMeshDataInfo._onlyForInstancesIntermediate = !1, UV._internalAbstractMeshDataInfo._isActiveIntermediate = !0, xV._prepareSkeleton(UV);
-                  for (let VV = 0; VV < UV.hT.length; VV++) {
-                    const eV = UV.hT[VV];
-                    this.enableBoundingBoxRendering && wV && wV._evaluateSubMesh(JV, eV), this._renderingManager.dispatch(eV, UV)
+              let SH, hH;
+              if (CH) {
+                const HH = AH._internalAbstractMeshDataInfo._currentLOD.get(CH);
+                HH && HH[1] === BH ? SH = HH[0] : (SH = LH.customLODSelector ? LH.customLODSelector(AH, CH) : AH.getLOD(CH), HH ? (HH[0] = SH, HH[1] = BH) : AH._internalAbstractMeshDataInfo._currentLOD.set(CH, [SH, BH]))
+              } else SH = AH;
+              if (!SH) continue;
+              if (SH !== AH && 0 !== SH.billboardMode && SH.computeWorldMatrix(), SH._preActivateForIntermediateRendering(HH), hH = !(!rH || !zH) && 0 === (AH.layerMask & zH.layerMask), AH.isEnabled() && AH.isVisible && AH.jU && !hH) {
+                if (this._activeMeshes.push(AH), SH._internalAbstractMeshDataInfo._wasActiveLastFrame = !0, SH !== AH && SH._activate(HH, !0), this.enableBoundingBoxRendering && EH && EH._preActiveMesh(AH), AH._activate(HH, !0) && AH.jU.length) {
+                  AH.xR ? AH._internalAbstractMeshDataInfo._actAsRegularMesh && (SH = AH) : SH._internalAbstractMeshDataInfo._onlyForInstancesIntermediate = !1, SH._internalAbstractMeshDataInfo._isActiveIntermediate = !0, LH._prepareSkeleton(SH);
+                  for (let HH = 0; HH < SH.jU.length; HH++) {
+                    const BH = SH.jU[HH];
+                    this.enableBoundingBoxRendering && EH && EH._evaluateSubMesh(AH, BH), this._renderingManager.dispatch(BH, SH)
                   }
                 }
-                JV._postActivate()
+                AH._postActivate()
               }
             }
           }
         }
-        if (this.enableBoundingBoxRendering && wV && eV)
-          for (let ZV = 0; ZV < wV.renderList.length; ZV++) {
-            const VV = wV.renderList.data[ZV];
-            this._activeBoundingBoxes.push(VV)
+        if (this.enableBoundingBoxRendering && EH && BH)
+          for (let XH = 0; XH < EH.renderList.length; XH++) {
+            const HH = EH.renderList.data[XH];
+            this._activeBoundingBoxes.push(HH)
           }
         if (this._scene.particlesEnabled && this.renderParticles) {
           this._scene.onBeforeParticlesRenderingObservable.notifyObservers(this._scene);
-          const VV = this.particleSystemList || xV.lT;
-          for (let eV = 0; eV < VV.length; eV++) {
-            const xV = VV[eV],
-              JV = xV.emitter;
-            xV.isStarted() && JV && (!JV.position || JV.isEnabled()) && this._renderingManager.dispatchParticles(xV)
+          const HH = this.particleSystemList || LH.dU;
+          for (let BH = 0; BH < HH.length; BH++) {
+            const LH = HH[BH],
+              AH = LH.emitter;
+            LH.isStarted() && AH && (!AH.position || AH.isEnabled()) && this._renderingManager.dispatchParticles(LH)
           }
           this._scene.onAfterParticlesRenderingObservable.notifyObservers(this._scene)
         }
-        return UV
+        return SH
       }
       get renderingManager() {
         return this._renderingManager
       }
-      setRenderingOrder(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this._renderingManager.setRenderingOrder(VV, eV, xV, JV)
+      setRenderingOrder(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        this._renderingManager.setRenderingOrder(HH, BH, LH, AH)
       }
-      setRenderingAutoClearDepthStencil(VV, eV) {
-        let xV = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-          JV = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        this._renderingManager.setRenderingAutoClearDepthStencil(VV, eV, xV, JV), this._renderingManager._useSceneAutoClearSetup = !1
+      setRenderingAutoClearDepthStencil(HH, BH) {
+        let LH = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+          AH = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        this._renderingManager.setRenderingAutoClearDepthStencil(HH, BH, LH, AH), this._renderingManager._useSceneAutoClearSetup = !1
       }
       clone() {
-        const VV = new bV(this.name, this._scene, this.options);
-        return this.renderList && (VV.renderList = this.renderList.slice(0)), VV
+        const HH = new QH(this.name, this._scene, this.options);
+        return this.renderList && (HH.renderList = this.renderList.slice(0)), HH
       }
       dispose() {
-        const VV = this.renderList ? this.renderList : this._scene.getActiveMeshes().data,
-          eV = this.renderList ? this.renderList.length : this._scene.getActiveMeshes().length;
-        for (let xV = 0; xV < eV; xV++) {
-          const eV = VV[xV];
-          eV && void 0 !== eV.getMaterialForRenderPass(this.renderPassId) && eV.setMaterialForRenderPass(this.renderPassId, void 0)
+        const HH = this.renderList ? this.renderList : this._scene.getActiveMeshes().data,
+          BH = this.renderList ? this.renderList.length : this._scene.getActiveMeshes().length;
+        for (let LH = 0; LH < BH; LH++) {
+          const BH = HH[LH];
+          BH && void 0 !== BH.getMaterialForRenderPass(this.renderPassId) && BH.setMaterialForRenderPass(this.renderPassId, void 0)
         }
         if (this.onInitRenderingObservable.clear(), this.onFinishRenderingObservable.clear(), this.onBeforeRenderObservable.clear(), this.onAfterRenderObservable.clear(), this.onBeforeRenderingManagerRenderObservable.clear(), this.onAfterRenderingManagerRenderObservable.clear(), this.onFastPathRenderObservable.clear(), this._releaseRenderPassId(), this.renderList = null, this._sceneUBOs)
-          for (const xV of this._sceneUBOs) xV.dispose();
+          for (const LH of this._sceneUBOs) LH.dispose();
         this._sceneUBOs = void 0, this._scene.removeObjectRenderer(this)
       }
       _rebuild() {
-        this.refreshRate === bV.REFRESHRATE_RENDER_ONCE && (this.refreshRate = bV.REFRESHRATE_RENDER_ONCE)
+        this.refreshRate === QH.REFRESHRATE_RENDER_ONCE && (this.refreshRate = QH.REFRESHRATE_RENDER_ONCE)
       }
       freeRenderingGroups() {
         this._renderingManager && this._renderingManager.freeRenderingGroups()
       }
     }
-    bV.REFRESHRATE_RENDER_ONCE = 0, bV.REFRESHRATE_RENDER_ONEVERYFRAME = 1, bV.REFRESHRATE_RENDER_ONEVERYTWOFRAMES = 2;
-    var EV = xV(41138);
-    class BV extends UV.f {
+    QH.REFRESHRATE_RENDER_ONCE = 0, QH.REFRESHRATE_RENDER_ONEVERYFRAME = 1, QH.REFRESHRATE_RENDER_ONEVERYTWOFRAMES = 2;
+    var WH = LH(41169);
+    class MH extends SH.g {
       get renderListPredicate() {
         return this._objectRenderer.renderListPredicate
       }
-      set renderListPredicate(VV) {
-        this._objectRenderer.renderListPredicate = VV
+      set renderListPredicate(HH) {
+        this._objectRenderer.renderListPredicate = HH
       }
       get renderList() {
         return this._objectRenderer.renderList
       }
-      set renderList(VV) {
-        this._objectRenderer.renderList = VV
+      set renderList(HH) {
+        this._objectRenderer.renderList = HH
       }
       get particleSystemList() {
         return this._objectRenderer.particleSystemList
       }
-      set particleSystemList(VV) {
-        this._objectRenderer.particleSystemList = VV
+      set particleSystemList(HH) {
+        this._objectRenderer.particleSystemList = HH
       }
       get getCustomRenderList() {
         return this._objectRenderer.getCustomRenderList
       }
-      set getCustomRenderList(VV) {
-        this._objectRenderer.getCustomRenderList = VV
+      set getCustomRenderList(HH) {
+        this._objectRenderer.getCustomRenderList = HH
       }
       get renderParticles() {
         return this._objectRenderer.renderParticles
       }
-      set renderParticles(VV) {
-        this._objectRenderer.renderParticles = VV
+      set renderParticles(HH) {
+        this._objectRenderer.renderParticles = HH
       }
       get renderSprites() {
         return this._objectRenderer.renderSprites
       }
-      set renderSprites(VV) {
-        this._objectRenderer.renderSprites = VV
+      set renderSprites(HH) {
+        this._objectRenderer.renderSprites = HH
       }
       get enableBoundingBoxRendering() {
         return this._objectRenderer.enableBoundingBoxRendering
       }
-      set enableBoundingBoxRendering(VV) {
-        this._objectRenderer.enableBoundingBoxRendering = VV
+      set enableBoundingBoxRendering(HH) {
+        this._objectRenderer.enableBoundingBoxRendering = HH
       }
       get enableOutlineRendering() {
         return this._objectRenderer.enableOutlineRendering
       }
-      set enableOutlineRendering(VV) {
-        this._objectRenderer.enableOutlineRendering = VV
+      set enableOutlineRendering(HH) {
+        this._objectRenderer.enableOutlineRendering = HH
       }
       get forceLayerMaskCheck() {
         return this._objectRenderer.forceLayerMaskCheck
       }
-      set forceLayerMaskCheck(VV) {
-        this._objectRenderer.forceLayerMaskCheck = VV
+      set forceLayerMaskCheck(HH) {
+        this._objectRenderer.forceLayerMaskCheck = HH
       }
       get activeCamera() {
         return this._objectRenderer.activeCamera
       }
-      set activeCamera(VV) {
-        this._objectRenderer.activeCamera = VV
+      set activeCamera(HH) {
+        this._objectRenderer.activeCamera = HH
       }
       get cameraForLOD() {
         return this._objectRenderer.cameraForLOD
       }
-      set cameraForLOD(VV) {
-        this._objectRenderer.cameraForLOD = VV
+      set cameraForLOD(HH) {
+        this._objectRenderer.cameraForLOD = HH
       }
       get disableImageProcessing() {
         return this._objectRenderer.disableImageProcessing
       }
-      set disableImageProcessing(VV) {
-        this._objectRenderer.disableImageProcessing = VV
+      set disableImageProcessing(HH) {
+        this._objectRenderer.disableImageProcessing = HH
       }
       get customIsReadyFunction() {
         return this._objectRenderer.customIsReadyFunction
       }
-      set customIsReadyFunction(VV) {
-        this._objectRenderer.customIsReadyFunction = VV
+      set customIsReadyFunction(HH) {
+        this._objectRenderer.customIsReadyFunction = HH
       }
       get customRenderFunction() {
         return this._objectRenderer.customRenderFunction
       }
-      set customRenderFunction(VV) {
-        this._objectRenderer.customRenderFunction = VV
+      set customRenderFunction(HH) {
+        this._objectRenderer.customRenderFunction = HH
       }
       get postProcesses() {
         return this._postProcesses
@@ -433,29 +433,29 @@ export const modules = {
       get _prePassEnabled() {
         return !!this._prePassRenderTarget && this._prePassRenderTarget.enabled
       }
-      set onAfterUnbind(VV) {
-        this._onAfterUnbindObserver && this.onAfterUnbindObservable.remove(this._onAfterUnbindObserver), this._onAfterUnbindObserver = this.onAfterUnbindObservable.add(VV)
+      set onAfterUnbind(HH) {
+        this._onAfterUnbindObserver && this.onAfterUnbindObservable.remove(this._onAfterUnbindObserver), this._onAfterUnbindObserver = this.onAfterUnbindObservable.add(HH)
       }
       get onBeforeRenderObservable() {
         return this._objectRenderer.onBeforeRenderObservable
       }
-      set onBeforeRender(VV) {
-        this._onBeforeRenderObserver && this.onBeforeRenderObservable.remove(this._onBeforeRenderObserver), this._onBeforeRenderObserver = this.onBeforeRenderObservable.add(VV)
+      set onBeforeRender(HH) {
+        this._onBeforeRenderObserver && this.onBeforeRenderObservable.remove(this._onBeforeRenderObserver), this._onBeforeRenderObserver = this.onBeforeRenderObservable.add(HH)
       }
       get onAfterRenderObservable() {
         return this._objectRenderer.onAfterRenderObservable
       }
-      set onAfterRender(VV) {
-        this._onAfterRenderObserver && this.onAfterRenderObservable.remove(this._onAfterRenderObserver), this._onAfterRenderObserver = this.onAfterRenderObservable.add(VV)
+      set onAfterRender(HH) {
+        this._onAfterRenderObserver && this.onAfterRenderObservable.remove(this._onAfterRenderObserver), this._onAfterRenderObserver = this.onAfterRenderObservable.add(HH)
       }
-      set onClear(VV) {
-        this._onClearObserver && this.onClearObservable.remove(this._onClearObserver), this._onClearObserver = this.onClearObservable.add(VV)
+      set onClear(HH) {
+        this._onClearObserver && this.onClearObservable.remove(this._onClearObserver), this._onClearObserver = this.onClearObservable.add(HH)
       }
       get _waitingRenderList() {
         return this._objectRenderer._waitingRenderList
       }
-      set _waitingRenderList(VV) {
-        this._objectRenderer._waitingRenderList = VV
+      set _waitingRenderList(HH) {
+        this._objectRenderer._waitingRenderList = HH
       }
       get renderPassId() {
         return this._objectRenderer.renderPassId
@@ -466,8 +466,8 @@ export const modules = {
       get currentRefreshId() {
         return this._objectRenderer.currentRefreshId
       }
-      setMaterialForRendering(VV, eV) {
-        this._objectRenderer.setMaterialForRendering(VV, eV)
+      setMaterialForRendering(HH, BH) {
+        this._objectRenderer.setMaterialForRendering(HH, BH)
       }
       get isMulti() {
         return this._renderTarget?.isMulti ?? !1
@@ -481,11 +481,11 @@ export const modules = {
       _onRatioRescale() {
         this._sizeRatio && this.resize(this._initialSizeParameter)
       }
-      set boundingBoxSize(VV) {
-        if (this._boundingBoxSize && this._boundingBoxSize.equals(VV)) return;
-        this._boundingBoxSize = VV;
-        const eV = this.dD();
-        eV && eV.markAllMaterialsAsDirty(1)
+      set boundingBoxSize(HH) {
+        if (this._boundingBoxSize && this._boundingBoxSize.equals(HH)) return;
+        this._boundingBoxSize = HH;
+        const BH = this.yN();
+        BH && BH.markAllMaterialsAsDirty(1)
       }
       get boundingBoxSize() {
         return this._boundingBoxSize
@@ -493,108 +493,108 @@ export const modules = {
       get depthStencilTexture() {
         return this._renderTarget?._depthStencilTexture ?? null
       }
-      constructor(VV, eV, xV) {
-        let yV, pV, nV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          wV = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          ZV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          vV = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-          rV = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : UV.f.TRILINEAR_SAMPLINGMODE,
-          kV = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-          EV = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
-          BV = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
-          jV = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : 5,
-          qV = arguments.length > 12 && void 0 !== arguments[12] && arguments[12],
-          tV = arguments.length > 13 ? arguments[13] : void 0,
-          FV = arguments.length > 14 ? arguments[14] : void 0,
-          TV = arguments.length > 15 && void 0 !== arguments[15] && arguments[15],
-          PV = arguments.length > 16 && void 0 !== arguments[16] && arguments[16],
-          AV = !0,
-          NV = !1;
-        if ("object" === typeof nV) {
-          const VV = nV;
-          nV = !!VV.generateMipMaps, wV = VV.doNotChangeAspectRatio ?? !0, ZV = VV.type ?? 0, vV = !!VV.isCube, rV = VV.samplingMode ?? UV.f.TRILINEAR_SAMPLINGMODE, kV = VV.generateDepthBuffer ?? !0, EV = !!VV.generateStencilBuffer, BV = !!VV.isMulti, jV = VV.format ?? 5, qV = !!VV.delayAllocation, tV = VV.samples, FV = VV.creationFlags, TV = !!VV.noColorAttachment, PV = !!VV.useSRGBBuffer, yV = VV.colorAttachment, AV = VV.gammaSpace ?? AV, pV = VV.existingObjectRenderer, NV = !!VV.enableClusteredLights
+      constructor(HH, BH, LH) {
+        let hH, tH, CH = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          EH = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          XH = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          GH = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+          YH = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : SH.g.TRILINEAR_SAMPLINGMODE,
+          uH = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+          WH = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+          MH = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
+          xH = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : 5,
+          vH = arguments.length > 12 && void 0 !== arguments[12] && arguments[12],
+          PH = arguments.length > 13 ? arguments[13] : void 0,
+          TH = arguments.length > 14 ? arguments[14] : void 0,
+          UH = arguments.length > 15 && void 0 !== arguments[15] && arguments[15],
+          VH = arguments.length > 16 && void 0 !== arguments[16] && arguments[16],
+          OH = !0,
+          bH = !1;
+        if ("object" === typeof CH) {
+          const HH = CH;
+          CH = !!HH.generateMipMaps, EH = HH.doNotChangeAspectRatio ?? !0, XH = HH.type ?? 0, GH = !!HH.isCube, YH = HH.samplingMode ?? SH.g.TRILINEAR_SAMPLINGMODE, uH = HH.generateDepthBuffer ?? !0, WH = !!HH.generateStencilBuffer, MH = !!HH.isMulti, xH = HH.format ?? 5, vH = !!HH.delayAllocation, PH = HH.samples, TH = HH.creationFlags, UH = !!HH.noColorAttachment, VH = !!HH.useSRGBBuffer, hH = HH.colorAttachment, OH = HH.gammaSpace ?? OH, tH = HH.existingObjectRenderer, bH = !!HH.enableClusteredLights
         }
-        if (super(null, xV, !nV, void 0, rV, void 0, void 0, void 0, void 0, jV), this.ignoreCameraViewport = !1, this.onBeforeBindObservable = new JV.c, this.onAfterUnbindObservable = new JV.c, this.onClearObservable = new JV.c, this.onResizeObservable = new JV.c, this._cleared = !1, this.skipInitialClear = !1, this._samples = 1, this._canRescale = !0, this._renderTarget = null, this._dontDisposeObjectRenderer = !1, this.boundingBoxPosition = YV.o.Zero(), this._disableEngineStages = !1, this._dumpToolsLoading = !1, !(xV = this.dD())) return;
-        const XV = this.dD().sk();
-        this._gammaSpace = AV, this._coordinatesMode = UV.f.PROJECTION_MODE, this.name = VV, this.isRenderTarget = !0, this._initialSizeParameter = eV, this._dontDisposeObjectRenderer = !!pV, this._processSizeParameter(eV), this._objectRenderer = pV ?? new bV(VV, xV, {
-          numPasses: vV ? 6 : this.getRenderLayers() || 1,
-          doNotChangeAspectRatio: wV,
-          enableClusteredLights: NV
+        if (super(null, LH, !CH, void 0, YH, void 0, void 0, void 0, void 0, xH), this.ignoreCameraViewport = !1, this.onBeforeBindObservable = new AH.d, this.onAfterUnbindObservable = new AH.d, this.onClearObservable = new AH.d, this.onResizeObservable = new AH.d, this._cleared = !1, this.skipInitialClear = !1, this._samples = 1, this._canRescale = !0, this._renderTarget = null, this._dontDisposeObjectRenderer = !1, this.boundingBoxPosition = rH.o.Zero(), this._disableEngineStages = !1, this._dumpToolsLoading = !1, !(LH = this.yN())) return;
+        const kH = this.yN().Iu();
+        this._gammaSpace = OH, this._coordinatesMode = SH.g.PROJECTION_MODE, this.name = HH, this.isRenderTarget = !0, this._initialSizeParameter = BH, this._dontDisposeObjectRenderer = !!tH, this._processSizeParameter(BH), this._objectRenderer = tH ?? new QH(HH, LH, {
+          numPasses: GH ? 6 : this.getRenderLayers() || 1,
+          doNotChangeAspectRatio: EH,
+          enableClusteredLights: bH
         }), this._onBeforeRenderingManagerRenderObserver = this._objectRenderer.onBeforeRenderingManagerRenderObservable.add((() => {
-          const VV = this._scene;
+          const HH = this._scene;
           if (!this._disableEngineStages)
-            for (const eV of VV._beforeRenderTargetClearStage) eV.action(this, this._currentFaceIndex, this._currentLayer);
-          if (this.onClearObservable.hasObservers() ? this.onClearObservable.notifyObservers(XV) : this.skipInitialClear || XV.clear(this.clearColor ?? VV.clearColor, !0, !0, !0), this._doNotChangeAspectRatio || VV.updateTransformMatrix(!0), !this._disableEngineStages)
-            for (const eV of VV._beforeRenderTargetDrawStage) eV.action(this, this._currentFaceIndex, this._currentLayer);
-          XV._debugPushGroup && XV._debugPushGroup(`Render to ${this.name} (face #${this._currentFaceIndex} layer #${this._currentLayer})`)
+            for (const BH of HH._beforeRenderTargetClearStage) BH.action(this, this._currentFaceIndex, this._currentLayer);
+          if (this.onClearObservable.hasObservers() ? this.onClearObservable.notifyObservers(kH) : this.skipInitialClear || kH.clear(this.clearColor ?? HH.clearColor, !0, !0, !0), this._doNotChangeAspectRatio || HH.updateTransformMatrix(!0), !this._disableEngineStages)
+            for (const BH of HH._beforeRenderTargetDrawStage) BH.action(this, this._currentFaceIndex, this._currentLayer);
+          kH._debugPushGroup && kH._debugPushGroup(`Render to ${this.name} (face #${this._currentFaceIndex} layer #${this._currentLayer})`)
         })), this._onAfterRenderingManagerRenderObserver = this._objectRenderer.onAfterRenderingManagerRenderObservable.add((() => {
-          if (XV._debugPopGroup && XV._debugPopGroup(), !this._disableEngineStages)
-            for (const eV of this._scene._afterRenderTargetDrawStage) eV.action(this, this._currentFaceIndex, this._currentLayer);
-          const VV = this._texture?.generateMipMaps ?? !1;
+          if (kH._debugPopGroup && kH._debugPopGroup(), !this._disableEngineStages)
+            for (const BH of this._scene._afterRenderTargetDrawStage) BH.action(this, this._currentFaceIndex, this._currentLayer);
+          const HH = this._texture?.generateMipMaps ?? !1;
           if (this._texture && (this._texture.generateMipMaps = !1), this._postProcessManager ? this._postProcessManager._finalizeFrame(!1, this._renderTarget ?? void 0, this._currentFaceIndex, this._postProcesses, this.ignoreCameraViewport) : this._currentUseCameraPostProcess && this._scene.postProcessManager._finalizeFrame(!1, this._renderTarget ?? void 0, this._currentFaceIndex), !this._disableEngineStages)
-            for (const eV of this._scene._afterRenderTargetPostProcessStage) eV.action(this, this._currentFaceIndex, this._currentLayer);
-          this._texture && (this._texture.generateMipMaps = VV), this._doNotChangeAspectRatio || this._scene.updateTransformMatrix(!0), this._currentDumpForDebug && (this._dumpTools ? this._dumpTools.DumpFramebuffer(this.getRenderWidth(), this.getRenderHeight(), XV) : QV.b.Error("dumpTools module is still being loaded. To speed up the process import dump tools directly in your project"))
+            for (const BH of this._scene._afterRenderTargetPostProcessStage) BH.action(this, this._currentFaceIndex, this._currentLayer);
+          this._texture && (this._texture.generateMipMaps = HH), this._doNotChangeAspectRatio || this._scene.updateTransformMatrix(!0), this._currentDumpForDebug && (this._dumpTools ? this._dumpTools.DumpFramebuffer(this.getRenderWidth(), this.getRenderHeight(), kH) : zH.e.Error("dumpTools module is still being loaded. To speed up the process import dump tools directly in your project"))
         })), this._onFastPathRenderObserver = this._objectRenderer.onFastPathRenderObservable.add((() => {
-          this.onClearObservable.hasObservers() ? this.onClearObservable.notifyObservers(XV) : this.skipInitialClear || XV.clear(this.clearColor || this._scene.clearColor, !0, !0, !0)
-        })), this._resizeObserver = XV.onResizeObservable.add((() => {})), this._generateMipMaps = !!nV, this._doNotChangeAspectRatio = wV, BV || (this._renderTargetOptions = {
-          generateMipMaps: nV,
-          type: ZV,
+          this.onClearObservable.hasObservers() ? this.onClearObservable.notifyObservers(kH) : this.skipInitialClear || kH.clear(this.clearColor || this._scene.clearColor, !0, !0, !0)
+        })), this._resizeObserver = kH.onResizeObservable.add((() => {})), this._generateMipMaps = !!CH, this._doNotChangeAspectRatio = EH, MH || (this._renderTargetOptions = {
+          generateMipMaps: CH,
+          type: XH,
           format: this._format ?? void 0,
           samplingMode: this.samplingMode,
-          generateDepthBuffer: kV,
-          generateStencilBuffer: EV,
-          samples: tV,
-          creationFlags: FV,
-          noColorAttachment: TV,
-          useSRGBBuffer: PV,
-          colorAttachment: yV,
+          generateDepthBuffer: uH,
+          generateStencilBuffer: WH,
+          samples: PH,
+          creationFlags: TH,
+          noColorAttachment: UH,
+          useSRGBBuffer: VH,
+          colorAttachment: hH,
           label: this.name
-        }, this.samplingMode === UV.f.NEAREST_SAMPLINGMODE && (this.wrapU = UV.f.CLAMP_ADDRESSMODE, this.wrapV = UV.f.CLAMP_ADDRESSMODE), qV || (vV ? (this._renderTarget = xV.sk().createRenderTargetCubeTexture(this.getRenderSize(), this._renderTargetOptions), this.coordinatesMode = UV.f.INVCUBIC_MODE, this._textureMatrix = YV.d.Identity()) : this._renderTarget = xV.sk().createRenderTargetTexture(this._size, this._renderTargetOptions), this._texture = this._renderTarget.texture, void 0 !== tV && (this.samples = tV)))
+        }, this.samplingMode === SH.g.NEAREST_SAMPLINGMODE && (this.wrapU = SH.g.CLAMP_ADDRESSMODE, this.wrapV = SH.g.CLAMP_ADDRESSMODE), vH || (GH ? (this._renderTarget = LH.Iu().createRenderTargetCubeTexture(this.getRenderSize(), this._renderTargetOptions), this.coordinatesMode = SH.g.INVCUBIC_MODE, this._textureMatrix = rH.e.Identity()) : this._renderTarget = LH.Iu().createRenderTargetTexture(this._size, this._renderTargetOptions), this._texture = this._renderTarget.texture, void 0 !== PH && (this.samples = PH)))
       }
       createDepthStencilTexture() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          eV = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          xV = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
-          YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 14,
-          UV = arguments.length > 5 ? arguments[5] : void 0;
-        this._renderTarget?.createDepthStencilTexture(VV, eV, xV, JV, YV, UV)
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          BH = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          LH = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+          rH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 14,
+          SH = arguments.length > 5 ? arguments[5] : void 0;
+        this._renderTarget?.createDepthStencilTexture(HH, BH, LH, AH, rH, SH)
       }
-      _processSizeParameter(VV) {
-        if (VV.ratio) {
-          this._sizeRatio = VV.ratio;
-          const eV = this._getEngine();
+      _processSizeParameter(HH) {
+        if (HH.ratio) {
+          this._sizeRatio = HH.ratio;
+          const BH = this._getEngine();
           this._size = {
-            width: this._bestReflectionRenderTargetDimension(eV.getRenderWidth(), this._sizeRatio),
-            height: this._bestReflectionRenderTargetDimension(eV.getRenderHeight(), this._sizeRatio)
+            width: this._bestReflectionRenderTargetDimension(BH.getRenderWidth(), this._sizeRatio),
+            height: this._bestReflectionRenderTargetDimension(BH.getRenderHeight(), this._sizeRatio)
           }
-        } else this._size = VV
+        } else this._size = HH
       }
       get samples() {
         return this._renderTarget?.samples ?? this._samples
       }
-      set samples(VV) {
-        this._renderTarget && (this._samples = this._renderTarget.setSamples(VV))
+      set samples(HH) {
+        this._renderTarget && (this._samples = this._renderTarget.setSamples(HH))
       }
-      addPostProcess(VV) {
+      addPostProcess(HH) {
         if (!this._postProcessManager) {
-          const VV = this.dD();
-          if (!VV) return;
-          this._postProcessManager = new yV.d(VV), this._postProcesses = new Array
+          const HH = this.yN();
+          if (!HH) return;
+          this._postProcessManager = new hH.e(HH), this._postProcesses = new Array
         }
-        this._postProcesses.push(VV), this._postProcesses[0].autoClear = !1
+        this._postProcesses.push(HH), this._postProcesses[0].autoClear = !1
       }
       clearPostProcesses() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let HH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (this._postProcesses) {
-          if (VV)
-            for (const VV of this._postProcesses) VV.dispose();
+          if (HH)
+            for (const HH of this._postProcesses) HH.dispose();
           this._postProcesses = []
         }
       }
-      removePostProcess(VV) {
+      removePostProcess(HH) {
         if (!this._postProcesses) return;
-        const eV = this._postProcesses.indexOf(VV); - 1 !== eV && (this._postProcesses.splice(eV, 1), this._postProcesses.length > 0 && (this._postProcesses[0].autoClear = !1))
+        const BH = this._postProcesses.indexOf(HH); - 1 !== BH && (this._postProcesses.splice(BH, 1), this._postProcesses.length > 0 && (this._postProcesses[0].autoClear = !1))
       }
       resetRefreshCounter() {
         this._objectRenderer.resetRefreshCounter()
@@ -602,8 +602,8 @@ export const modules = {
       get refreshRate() {
         return this._objectRenderer.refreshRate
       }
-      set refreshRate(VV) {
-        this._objectRenderer.refreshRate = VV
+      set refreshRate(HH) {
+        this._objectRenderer.refreshRate = HH
       }
       _shouldRender() {
         return this._objectRenderer.shouldRender()
@@ -618,10 +618,10 @@ export const modules = {
         return this._size.width ? this._size.height : this._size
       }
       getRenderLayers() {
-        const VV = this._size.layers;
-        if (VV) return VV;
-        const eV = this._size.depth;
-        return eV || 0
+        const HH = this._size.layers;
+        if (HH) return HH;
+        const BH = this._size.depth;
+        return BH || 0
       }
       disableRescaling() {
         this._canRescale = !1
@@ -629,92 +629,92 @@ export const modules = {
       get canRescale() {
         return this._canRescale
       }
-      scale(VV) {
-        const eV = Math.max(1, this.getRenderSize() * VV);
-        this.resize(eV)
+      scale(HH) {
+        const BH = Math.max(1, this.getRenderSize() * HH);
+        this.resize(BH)
       }
       getReflectionTextureMatrix() {
         return this.isCube ? this._textureMatrix : super.getReflectionTextureMatrix()
       }
-      resize(VV) {
-        const eV = this.isCube;
+      resize(HH) {
+        const BH = this.isCube;
         this._renderTarget?.dispose(), this._renderTarget = null;
-        const xV = this.dD();
-        xV && (this._processSizeParameter(VV), this._renderTarget = eV ? xV.sk().createRenderTargetCubeTexture(this.getRenderSize(), this._renderTargetOptions) : xV.sk().createRenderTargetTexture(this._size, this._renderTargetOptions), this._texture = this._renderTarget.texture, void 0 !== this._renderTargetOptions.samples && (this.samples = this._renderTargetOptions.samples), this.onResizeObservable.hasObservers() && this.onResizeObservable.notifyObservers(this))
+        const LH = this.yN();
+        LH && (this._processSizeParameter(HH), this._renderTarget = BH ? LH.Iu().createRenderTargetCubeTexture(this.getRenderSize(), this._renderTargetOptions) : LH.Iu().createRenderTargetTexture(this._size, this._renderTargetOptions), this._texture = this._renderTarget.texture, void 0 !== this._renderTargetOptions.samples && (this.samples = this._renderTargetOptions.samples), this.onResizeObservable.hasObservers() && this.onResizeObservable.notifyObservers(this))
       }
       render() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this._render(VV, eV)
+        let HH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this._render(HH, BH)
       }
       isReadyForRendering() {
-        this._dumpToolsLoading || (this._dumpToolsLoading = !0, Promise.resolve().then((() => xV(44723))).then((VV => this._dumpTools = VV))), this._objectRenderer.prepareRenderList(), this.onBeforeBindObservable.notifyObservers(this), this._objectRenderer.initRender(this.getRenderWidth(), this.getRenderHeight());
-        const VV = this._objectRenderer._checkReadiness();
-        return this.onAfterUnbindObservable.notifyObservers(this), this._objectRenderer.finishRender(), VV
+        this._dumpToolsLoading || (this._dumpToolsLoading = !0, Promise.resolve().then((() => LH(45299))).then((HH => this._dumpTools = HH))), this._objectRenderer.prepareRenderList(), this.onBeforeBindObservable.notifyObservers(this), this._objectRenderer.initRender(this.getRenderWidth(), this.getRenderHeight());
+        const HH = this._objectRenderer._checkReadiness();
+        return this.onAfterUnbindObservable.notifyObservers(this), this._objectRenderer.finishRender(), HH
       }
       _render() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const xV = this.dD();
-        if (!xV) return;
-        void 0 !== this.useCameraPostProcesses && (VV = this.useCameraPostProcesses);
-        const JV = xV.sk();
-        if (JV._debugPushGroup && JV._debugPushGroup(`Render to ${this.name}`), this._objectRenderer.prepareRenderList(), this.onBeforeBindObservable.notifyObservers(this), this._objectRenderer.initRender(this.getRenderWidth(), this.getRenderHeight()), !this.is2DArray && !this.is3D || this.isMulti)
+        let HH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const LH = this.yN();
+        if (!LH) return;
+        void 0 !== this.useCameraPostProcesses && (HH = this.useCameraPostProcesses);
+        const AH = LH.Iu();
+        if (AH._debugPushGroup && AH._debugPushGroup(`Render to ${this.name}`), this._objectRenderer.prepareRenderList(), this.onBeforeBindObservable.notifyObservers(this), this._objectRenderer.initRender(this.getRenderWidth(), this.getRenderHeight()), !this.is2DArray && !this.is3D || this.isMulti)
           if (this.isCube && !this.isMulti)
-            for (let YV = 0; YV < 6; YV++) this._renderToTarget(YV, VV, eV), xV.incrementRenderId(), xV.resetCachedMaterial();
-          else this._renderToTarget(0, VV, eV);
+            for (let rH = 0; rH < 6; rH++) this._renderToTarget(rH, HH, BH), LH.incrementRenderId(), LH.resetCachedMaterial();
+          else this._renderToTarget(0, HH, BH);
         else
-          for (let YV = 0; YV < this.getRenderLayers(); YV++) this._renderToTarget(0, VV, eV, YV), xV.incrementRenderId(), xV.resetCachedMaterial();
-        this.onAfterUnbindObservable.notifyObservers(this), this._objectRenderer.finishRender(), JV._debugPopGroup && JV._debugPopGroup()
+          for (let rH = 0; rH < this.getRenderLayers(); rH++) this._renderToTarget(0, HH, BH, rH), LH.incrementRenderId(), LH.resetCachedMaterial();
+        this.onAfterUnbindObservable.notifyObservers(this), this._objectRenderer.finishRender(), AH._debugPopGroup && AH._debugPopGroup()
       }
-      _bestReflectionRenderTargetDimension(VV, eV) {
-        const xV = VV * eV,
-          JV = (0, pV.o)(xV + 16384 / (128 + xV));
-        return Math.min((0, pV.e)(VV), JV)
+      _bestReflectionRenderTargetDimension(HH, BH) {
+        const LH = HH * BH,
+          AH = (0, tH.m)(LH + 16384 / (128 + LH));
+        return Math.min((0, tH.b)(HH), AH)
       }
       _bindFrameBuffer() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const xV = this.dD();
-        if (!xV) return;
-        const JV = xV.sk();
-        this._renderTarget && JV.bindFramebuffer(this._renderTarget, this.isCube ? VV : void 0, void 0, void 0, this.ignoreCameraViewport, 0, eV)
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const LH = this.yN();
+        if (!LH) return;
+        const AH = LH.Iu();
+        this._renderTarget && AH.bindFramebuffer(this._renderTarget, this.isCube ? HH : void 0, void 0, void 0, this.ignoreCameraViewport, 0, BH)
       }
-      _unbindFrameBuffer(VV, eV) {
-        this._renderTarget && VV.unBindFramebuffer(this._renderTarget, this.isCube, (() => {
-          this.onAfterRenderObservable.notifyObservers(eV)
+      _unbindFrameBuffer(HH, BH) {
+        this._renderTarget && HH.unBindFramebuffer(this._renderTarget, this.isCube, (() => {
+          this.onAfterRenderObservable.notifyObservers(BH)
         }))
       }
-      _prepareFrame(VV, eV, xV, JV) {
-        this._postProcessManager ? this._prePassEnabled || this._postProcessManager._prepareFrame(this._texture, this._postProcesses) || this._bindFrameBuffer(eV, xV) : JV && VV.postProcessManager._prepareFrame(this._texture) || this._bindFrameBuffer(eV, xV)
+      _prepareFrame(HH, BH, LH, AH) {
+        this._postProcessManager ? this._prePassEnabled || this._postProcessManager._prepareFrame(this._texture, this._postProcesses) || this._bindFrameBuffer(BH, LH) : AH && HH.postProcessManager._prepareFrame(this._texture) || this._bindFrameBuffer(BH, LH)
       }
-      _renderToTarget(VV, eV, xV) {
-        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        const YV = this.dD();
-        if (!YV) return;
-        const UV = YV.sk();
-        this._currentFaceIndex = VV, this._currentLayer = JV, this._currentUseCameraPostProcess = eV, this._currentDumpForDebug = xV, this._prepareFrame(YV, VV, JV, eV), this._objectRenderer.render(VV + JV, !0), this._unbindFrameBuffer(UV, VV), this._texture && this.isCube && 5 === VV && UV.generateMipMapsForCubemap(this._texture, !0)
+      _renderToTarget(HH, BH, LH) {
+        let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        const rH = this.yN();
+        if (!rH) return;
+        const SH = rH.Iu();
+        this._currentFaceIndex = HH, this._currentLayer = AH, this._currentUseCameraPostProcess = BH, this._currentDumpForDebug = LH, this._prepareFrame(rH, HH, AH, BH), this._objectRenderer.render(HH + AH, !0), this._unbindFrameBuffer(SH, HH), this._texture && this.isCube && 5 === HH && SH.generateMipMapsForCubemap(this._texture, !0)
       }
-      setRenderingOrder(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this._objectRenderer.setRenderingOrder(VV, eV, xV, JV)
+      setRenderingOrder(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        this._objectRenderer.setRenderingOrder(HH, BH, LH, AH)
       }
-      setRenderingAutoClearDepthStencil(VV, eV) {
-        this._objectRenderer.setRenderingAutoClearDepthStencil(VV, eV)
+      setRenderingAutoClearDepthStencil(HH, BH) {
+        this._objectRenderer.setRenderingAutoClearDepthStencil(HH, BH)
       }
       clone() {
-        const VV = this.getSize(),
-          eV = new BV(this.name, VV, this.dD(), this._renderTargetOptions.generateMipMaps, this._doNotChangeAspectRatio, this._renderTargetOptions.type, this.isCube, this._renderTargetOptions.samplingMode, this._renderTargetOptions.generateDepthBuffer, this._renderTargetOptions.generateStencilBuffer, void 0, this._renderTargetOptions.format, void 0, this._renderTargetOptions.samples);
-        return eV.hasAlpha = this.hasAlpha, eV.level = this.level, eV.coordinatesMode = this.coordinatesMode, this.renderList && (eV.renderList = this.renderList.slice(0)), eV
+        const HH = this.getSize(),
+          BH = new MH(this.name, HH, this.yN(), this._renderTargetOptions.generateMipMaps, this._doNotChangeAspectRatio, this._renderTargetOptions.type, this.isCube, this._renderTargetOptions.samplingMode, this._renderTargetOptions.generateDepthBuffer, this._renderTargetOptions.generateStencilBuffer, void 0, this._renderTargetOptions.format, void 0, this._renderTargetOptions.samples);
+        return BH.hasAlpha = this.hasAlpha, BH.level = this.level, BH.coordinatesMode = this.coordinatesMode, this.renderList && (BH.renderList = this.renderList.slice(0)), BH
       }
       serialize() {
         if (!this.name) return null;
-        const VV = super.serialize();
-        if (VV.renderTargetSize = this.getRenderSize(), VV.renderList = [], this.renderList)
-          for (let eV = 0; eV < this.renderList.length; eV++) VV.renderList.push(this.renderList[eV].id);
-        return VV
+        const HH = super.serialize();
+        if (HH.renderTargetSize = this.getRenderSize(), HH.renderList = [], this.renderList)
+          for (let BH = 0; BH < this.renderList.length; BH++) HH.renderList.push(this.renderList[BH].id);
+        return HH
       }
       disposeFramebufferObjects() {
         this._renderTarget?.dispose(!0)
@@ -723,12 +723,12 @@ export const modules = {
         this._renderTarget?.releaseTextures(), this._texture = null
       }
       dispose() {
-        this.onResizeObservable.clear(), this.onClearObservable.clear(), this.onAfterUnbindObservable.clear(), this.onBeforeBindObservable.clear(), this._postProcessManager && (this._postProcessManager.dispose(), this._postProcessManager = null), this._prePassRenderTarget && this._prePassRenderTarget.dispose(), this._objectRenderer.onBeforeRenderingManagerRenderObservable.remove(this._onBeforeRenderingManagerRenderObserver), this._objectRenderer.onAfterRenderingManagerRenderObservable.remove(this._onAfterRenderingManagerRenderObserver), this._objectRenderer.onFastPathRenderObservable.remove(this._onFastPathRenderObserver), this._dontDisposeObjectRenderer || this._objectRenderer.dispose(), this.clearPostProcesses(!0), this._resizeObserver && (this.dD().sk().onResizeObservable.remove(this._resizeObserver), this._resizeObserver = null);
-        const VV = this.dD();
-        if (!VV) return;
-        let eV = VV.customRenderTargets.indexOf(this);
-        eV >= 0 && VV.customRenderTargets.splice(eV, 1);
-        for (const xV of VV.cameras) eV = xV.customRenderTargets.indexOf(this), eV >= 0 && xV.customRenderTargets.splice(eV, 1);
+        this.onResizeObservable.clear(), this.onClearObservable.clear(), this.onAfterUnbindObservable.clear(), this.onBeforeBindObservable.clear(), this._postProcessManager && (this._postProcessManager.dispose(), this._postProcessManager = null), this._prePassRenderTarget && this._prePassRenderTarget.dispose(), this._objectRenderer.onBeforeRenderingManagerRenderObservable.remove(this._onBeforeRenderingManagerRenderObserver), this._objectRenderer.onAfterRenderingManagerRenderObservable.remove(this._onAfterRenderingManagerRenderObserver), this._objectRenderer.onFastPathRenderObservable.remove(this._onFastPathRenderObserver), this._dontDisposeObjectRenderer || this._objectRenderer.dispose(), this.clearPostProcesses(!0), this._resizeObserver && (this.yN().Iu().onResizeObservable.remove(this._resizeObserver), this._resizeObserver = null);
+        const HH = this.yN();
+        if (!HH) return;
+        let BH = HH.customRenderTargets.indexOf(this);
+        BH >= 0 && HH.customRenderTargets.splice(BH, 1);
+        for (const LH of HH.cameras) BH = LH.customRenderTargets.indexOf(this), BH >= 0 && LH.customRenderTargets.splice(BH, 1);
         this._renderTarget?.dispose(), this._renderTarget = null, this._texture = null, super.dispose()
       }
       _rebuild() {
@@ -741,49 +741,49 @@ export const modules = {
         return 1
       }
     }
-    BV.REFRESHRATE_RENDER_ONCE = bV.REFRESHRATE_RENDER_ONCE, BV.REFRESHRATE_RENDER_ONEVERYFRAME = bV.REFRESHRATE_RENDER_ONEVERYFRAME, BV.REFRESHRATE_RENDER_ONEVERYTWOFRAMES = bV.REFRESHRATE_RENDER_ONEVERYTWOFRAMES;
-    Object.getOwnPropertyDescriptor(BV.prototype, "noPrePassRenderer") || Object.defineProperty(BV.prototype, "noPrePassRenderer", (0, EV.g)("RenderTargetTexture", "noPrePassRenderer"))
+    MH.REFRESHRATE_RENDER_ONCE = QH.REFRESHRATE_RENDER_ONCE, MH.REFRESHRATE_RENDER_ONEVERYFRAME = QH.REFRESHRATE_RENDER_ONEVERYFRAME, MH.REFRESHRATE_RENDER_ONEVERYTWOFRAMES = QH.REFRESHRATE_RENDER_ONEVERYTWOFRAMES;
+    Object.getOwnPropertyDescriptor(MH.prototype, "noPrePassRenderer") || Object.defineProperty(MH.prototype, "noPrePassRenderer", (0, WH.e)("RenderTargetTexture", "noPrePassRenderer"))
   },
-  44699: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => nV,
-      d: () => wV
+  45271: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => CH,
+      f: () => EH
     });
-    var JV = xV(41394),
-      YV = xV(39240),
-      UV = xV(38296),
-      yV = xV(41101),
-      pV = xV(41577);
-    const QV = {
+    var AH = LH(41427),
+      rH = LH(38966),
+      SH = LH(37997),
+      hH = LH(41134),
+      tH = LH(41609);
+    const zH = {
       positions: [1, 1, -1, 1, -1, -1, 1, -1],
       indices: [0, 1, 2, 0, 2, 3]
     };
-    class nV {
-      constructor(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : QV;
-        this._fullscreenViewport = new YV.c(0, 0, 1, 1);
-        const xV = eV.positions ?? QV.positions,
-          UV = eV.indices ?? QV.indices;
-        this.engine = VV, this._vertexBuffers = {
-          [JV.j.PositionKind]: new JV.j(VV, xV, JV.j.PositionKind, !1, !1, 2)
-        }, this._indexBuffer = VV.createIndexBuffer(UV), this._indexBufferLength = UV.length, this._onContextRestoredObserver = VV.uk.add((() => {
-          this._indexBuffer = VV.createIndexBuffer(UV);
-          for (const VV in this._vertexBuffers) {
-            this._vertexBuffers[VV]._rebuild()
+    class CH {
+      constructor(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zH;
+        this._fullscreenViewport = new rH.c(0, 0, 1, 1);
+        const LH = BH.positions ?? zH.positions,
+          SH = BH.indices ?? zH.indices;
+        this.engine = HH, this._vertexBuffers = {
+          [AH.i.PositionKind]: new AH.i(HH, LH, AH.i.PositionKind, !1, !1, 2)
+        }, this._indexBuffer = HH.createIndexBuffer(SH), this._indexBufferLength = SH.length, this._onContextRestoredObserver = HH.ou.add((() => {
+          this._indexBuffer = HH.createIndexBuffer(SH);
+          for (const HH in this._vertexBuffers) {
+            this._vertexBuffers[HH]._rebuild()
           }
         }))
       }
       setViewport() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._fullscreenViewport;
-        this.engine.setViewport(VV)
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._fullscreenViewport;
+        this.engine.setViewport(HH)
       }
-      bindBuffers(VV) {
-        this.engine.bindBuffers(this._vertexBuffers, this._indexBuffer, VV)
+      bindBuffers(HH) {
+        this.engine.bindBuffers(this._vertexBuffers, this._indexBuffer, HH)
       }
-      applyEffectWrapper(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          xV = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this.engine.setState(!0), this.engine.depthCullingState.depthTest = eV, this.engine.stencilState.stencilTest = xV, this.engine.enableEffect(VV.drawWrapper), this.bindBuffers(VV.effect), VV.onApplyObservable.notifyObservers({})
+      applyEffectWrapper(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          LH = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this.engine.setState(!0), this.engine.depthCullingState.depthTest = BH, this.engine.stencilState.stencilTest = LH, this.engine.enableEffect(HH.drawWrapper), this.bindBuffers(HH.effect), HH.onApplyObservable.notifyObservers({})
       }
       saveStates() {
         this._savedStateDepthTest = this.engine.depthCullingState.depthTest, this._savedStateStencilTest = this.engine.stencilState.stencilTest
@@ -794,33 +794,33 @@ export const modules = {
       draw() {
         this.engine.drawElementsType(0, 0, this._indexBufferLength)
       }
-      _isRenderTargetTexture(VV) {
-        return void 0 !== VV.renderTarget
+      _isRenderTargetTexture(HH) {
+        return void 0 !== HH.renderTarget
       }
-      render(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (!VV.effect.isReady()) return;
+      render(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        if (!HH.effect.isReady()) return;
         this.saveStates(), this.setViewport();
-        const xV = null === eV ? null : this._isRenderTargetTexture(eV) ? eV.renderTarget : eV;
-        xV && this.engine.bindFramebuffer(xV), this.applyEffectWrapper(VV), this.draw(), xV && this.engine.unBindFramebuffer(xV), this.restoreStates()
+        const LH = null === BH ? null : this._isRenderTargetTexture(BH) ? BH.renderTarget : BH;
+        LH && this.engine.bindFramebuffer(LH), this.applyEffectWrapper(HH), this.draw(), LH && this.engine.unBindFramebuffer(LH), this.restoreStates()
       }
       dispose() {
-        const VV = this._vertexBuffers[JV.j.PositionKind];
-        VV && (VV.dispose(), delete this._vertexBuffers[JV.j.PositionKind]), this._indexBuffer && this.engine._releaseBuffer(this._indexBuffer), this._onContextRestoredObserver && (this.engine.uk.remove(this._onContextRestoredObserver), this._onContextRestoredObserver = null)
+        const HH = this._vertexBuffers[AH.i.PositionKind];
+        HH && (HH.dispose(), delete this._vertexBuffers[AH.i.PositionKind]), this._indexBuffer && this.engine._releaseBuffer(this._indexBuffer), this._onContextRestoredObserver && (this.engine.ou.remove(this._onContextRestoredObserver), this._onContextRestoredObserver = null)
       }
     }
-    class wV {
-      static RegisterShaderCodeProcessing(VV, eV) {
-        eV ? wV._CustomShaderCodeProcessing[VV ?? ""] = eV : delete wV._CustomShaderCodeProcessing[VV ?? ""]
+    class EH {
+      static RegisterShaderCodeProcessing(HH, BH) {
+        BH ? EH._CustomShaderCodeProcessing[HH ?? ""] = BH : delete EH._CustomShaderCodeProcessing[HH ?? ""]
       }
-      static _GetShaderCodeProcessing(VV) {
-        return wV._CustomShaderCodeProcessing[VV] ?? wV._CustomShaderCodeProcessing[""]
+      static _GetShaderCodeProcessing(HH) {
+        return EH._CustomShaderCodeProcessing[HH] ?? EH._CustomShaderCodeProcessing[""]
       }
       get name() {
         return this.options.name
       }
-      set name(VV) {
-        this.options.name = VV
+      set name(HH) {
+        this.options.name = HH
       }
       isReady() {
         return this._drawWrapper.effect?.isReady() ?? !1
@@ -831,34 +831,34 @@ export const modules = {
       get effect() {
         return this._drawWrapper.effect
       }
-      set effect(VV) {
-        this._drawWrapper.effect = VV
+      set effect(HH) {
+        this._drawWrapper.effect = HH
       }
-      constructor(VV) {
-        this.alphaMode = 0, this.onEffectCreatedObservable = new UV.c(void 0, !0), this.onApplyObservable = new UV.c, this._shadersLoaded = !1, this._webGPUReady = !1, this._importPromises = [], this.options = {
-          ...VV,
-          name: VV.name || "effectWrapper",
-          engine: VV.engine,
-          uniforms: VV.uniforms || VV.uniformNames || [],
+      constructor(HH) {
+        this.alphaMode = 0, this.onEffectCreatedObservable = new SH.d(void 0, !0), this.onApplyObservable = new SH.d, this._shadersLoaded = !1, this._webGPUReady = !1, this._importPromises = [], this.options = {
+          ...HH,
+          name: HH.name || "effectWrapper",
+          engine: HH.engine,
+          uniforms: HH.uniforms || HH.uniformNames || [],
           uniformNames: void 0,
-          samplers: VV.samplers || VV.samplerNames || [],
+          samplers: HH.samplers || HH.samplerNames || [],
           samplerNames: void 0,
-          attributeNames: VV.attributeNames || ["position"],
-          uniformBuffers: VV.uniformBuffers || [],
-          defines: VV.defines || "",
-          useShaderStore: VV.useShaderStore || !1,
-          vertexUrl: VV.vertexUrl || VV.vertexShader || "postprocess",
+          attributeNames: HH.attributeNames || ["position"],
+          uniformBuffers: HH.uniformBuffers || [],
+          defines: HH.defines || "",
+          useShaderStore: HH.useShaderStore || !1,
+          vertexUrl: HH.vertexUrl || HH.vertexShader || "postprocess",
           vertexShader: void 0,
-          fragmentShader: VV.fragmentShader || "pass",
-          indexParameters: VV.indexParameters,
-          blockCompilation: VV.blockCompilation || !1,
-          shaderLanguage: VV.shaderLanguage || 0,
-          onCompiled: VV.onCompiled || void 0,
-          extraInitializations: VV.extraInitializations || void 0,
-          extraInitializationsAsync: VV.extraInitializationsAsync || void 0,
-          useAsPostProcess: VV.useAsPostProcess ?? !1,
-          allowEmptySourceTexture: VV.allowEmptySourceTexture ?? !1
-        }, this.options.uniformNames = this.options.uniforms, this.options.samplerNames = this.options.samplers, this.options.vertexShader = this.options.vertexUrl, this.options.useAsPostProcess && (this.options.allowEmptySourceTexture || -1 !== this.options.samplers.indexOf("textureSampler") || this.options.samplers.push("textureSampler"), -1 === this.options.uniforms.indexOf("scale") && this.options.uniforms.push("scale")), VV.vertexUrl || VV.vertexShader ? this._shaderPath = {
+          fragmentShader: HH.fragmentShader || "pass",
+          indexParameters: HH.indexParameters,
+          blockCompilation: HH.blockCompilation || !1,
+          shaderLanguage: HH.shaderLanguage || 0,
+          onCompiled: HH.onCompiled || void 0,
+          extraInitializations: HH.extraInitializations || void 0,
+          extraInitializationsAsync: HH.extraInitializationsAsync || void 0,
+          useAsPostProcess: HH.useAsPostProcess ?? !1,
+          allowEmptySourceTexture: HH.allowEmptySourceTexture ?? !1
+        }, this.options.uniformNames = this.options.uniforms, this.options.samplerNames = this.options.samplers, this.options.vertexShader = this.options.vertexUrl, this.options.useAsPostProcess && (this.options.allowEmptySourceTexture || -1 !== this.options.samplers.indexOf("textureSampler") || this.options.samplers.push("textureSampler"), -1 === this.options.uniforms.indexOf("scale") && this.options.uniforms.push("scale")), HH.vertexUrl || HH.vertexShader ? this._shaderPath = {
           vertexSource: this.options.vertexShader
         } : (this.options.useAsPostProcess || (this.options.uniforms.push("scale"), this.onApplyObservable.add((() => {
           this.effect.setFloat2("scale", 1, 1)
@@ -866,101 +866,101 @@ export const modules = {
           vertex: this.options.vertexShader
         }), this._shaderPath.fragmentSource = this.options.fragmentShader, this._shaderPath.spectorName = this.options.name, this.options.useShaderStore && (this._shaderPath.fragment = this._shaderPath.fragmentSource, this._shaderPath.vertex || (this._shaderPath.vertex = this._shaderPath.vertexSource), delete this._shaderPath.fragmentSource, delete this._shaderPath.vertexSource), this.onApplyObservable.add((() => {
           this.bind()
-        })), this.options.useShaderStore || (this._onContextRestoredObserver = this.options.engine.uk.add((() => {
+        })), this.options.useShaderStore || (this._onContextRestoredObserver = this.options.engine.ou.add((() => {
           this.effect._pipelineContext = null, this.effect._prepareEffect()
-        }))), this._drawWrapper = new pV.d(this.options.engine), this._webGPUReady = 1 === this.options.shaderLanguage;
-        const eV = Array.isArray(this.options.defines) ? this.options.defines.join("\n") : this.options.defines;
-        this._postConstructor(this.options.blockCompilation, eV, this.options.extraInitializations)
+        }))), this._drawWrapper = new tH.e(this.options.engine), this._webGPUReady = 1 === this.options.shaderLanguage;
+        const BH = Array.isArray(this.options.defines) ? this.options.defines.join("\n") : this.options.defines;
+        this._postConstructor(this.options.blockCompilation, BH, this.options.extraInitializations)
       }
       _gatherImports() {}
-      _postConstructor(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          JV = arguments.length > 2 ? arguments[2] : void 0,
-          YV = arguments.length > 3 ? arguments[3] : void 0;
-        this._importPromises.length = 0, YV && this._importPromises.push(...YV);
-        const UV = this.options.engine.isWebGPU && !wV.ForceGLSL;
-        this._gatherImports(UV, this._importPromises), this.options.useShaderStore && "postprocess" === this._shaderPath.vertex && this._importPromises.push(UV && this._webGPUReady ? xV.e(672).then((() => xV(64421))) : xV.e(662).then((() => xV(64298)))), void 0 !== JV && JV(UV, this._importPromises), UV && this._webGPUReady && (this.options.shaderLanguage = 1), VV || this.updateEffect(eV)
+      _postConstructor(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          AH = arguments.length > 2 ? arguments[2] : void 0,
+          rH = arguments.length > 3 ? arguments[3] : void 0;
+        this._importPromises.length = 0, rH && this._importPromises.push(...rH);
+        const SH = this.options.engine.isWebGPU && !EH.ForceGLSL;
+        this._gatherImports(SH, this._importPromises), this.options.useShaderStore && "postprocess" === this._shaderPath.vertex && this._importPromises.push(SH && this._webGPUReady ? LH.e(672).then((() => LH(64241))) : LH.e(662).then((() => LH(64110)))), void 0 !== AH && AH(SH, this._importPromises), SH && this._webGPUReady && (this.options.shaderLanguage = 1), HH || this.updateEffect(BH)
       }
       updateEffect() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          JV = arguments.length > 3 ? arguments[3] : void 0,
-          YV = arguments.length > 4 ? arguments[4] : void 0,
-          UV = arguments.length > 5 ? arguments[5] : void 0,
-          pV = arguments.length > 6 ? arguments[6] : void 0,
-          QV = arguments.length > 7 ? arguments[7] : void 0;
-        const nV = wV._GetShaderCodeProcessing(this.name);
-        if (nV?.defineCustomBindings) {
-          const JV = eV?.slice() ?? [];
-          JV.push(...this.options.uniforms);
-          const YV = xV?.slice() ?? [];
-          YV.push(...this.options.samplers), VV = nV.defineCustomBindings(this.name, VV, JV, YV), eV = JV, xV = YV
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          AH = arguments.length > 3 ? arguments[3] : void 0,
+          rH = arguments.length > 4 ? arguments[4] : void 0,
+          SH = arguments.length > 5 ? arguments[5] : void 0,
+          tH = arguments.length > 6 ? arguments[6] : void 0,
+          zH = arguments.length > 7 ? arguments[7] : void 0;
+        const CH = EH._GetShaderCodeProcessing(this.name);
+        if (CH?.defineCustomBindings) {
+          const AH = BH?.slice() ?? [];
+          AH.push(...this.options.uniforms);
+          const rH = LH?.slice() ?? [];
+          rH.push(...this.options.samplers), HH = CH.defineCustomBindings(this.name, HH, AH, rH), BH = AH, LH = rH
         }
-        this.options.defines = VV || "";
-        const ZV = this._shadersLoaded || 0 === this._importPromises.length ? void 0 : async () => {
+        this.options.defines = HH || "";
+        const XH = this._shadersLoaded || 0 === this._importPromises.length ? void 0 : async () => {
           await Promise.all(this._importPromises), this._shadersLoaded = !0
         };
-        let vV;
-        vV = this.options.extraInitializationsAsync ? async () => {
-          await (ZV?.()), await this.options.extraInitializationsAsync()
-        }: ZV, this.options.useShaderStore ? this._drawWrapper.effect = this.options.engine.createEffect({
-          vertex: pV ?? this._shaderPath.vertex,
-          fragment: QV ?? this._shaderPath.fragment
+        let GH;
+        GH = this.options.extraInitializationsAsync ? async () => {
+          await (XH?.()), await this.options.extraInitializationsAsync()
+        }: XH, this.options.useShaderStore ? this._drawWrapper.effect = this.options.engine.createEffect({
+          vertex: tH ?? this._shaderPath.vertex,
+          fragment: zH ?? this._shaderPath.fragment
         }, {
           attributes: this.options.attributeNames,
-          uniformsNames: eV || this.options.uniforms,
+          uniformsNames: BH || this.options.uniforms,
           uniformBuffersNames: this.options.uniformBuffers,
-          samplers: xV || this.options.samplers,
-          defines: null !== VV ? VV : "",
+          samplers: LH || this.options.samplers,
+          defines: null !== HH ? HH : "",
           fallbacks: null,
-          onCompiled: YV ?? this.options.onCompiled,
-          onError: UV ?? null,
-          indexParameters: JV || this.options.indexParameters,
-          processCodeAfterIncludes: nV?.processCodeAfterIncludes ? (VV, eV) => nV.processCodeAfterIncludes(this.name, VV, eV) : null,
-          processFinalCode: nV?.processFinalCode ? (VV, eV) => nV.processFinalCode(this.name, VV, eV) : null,
+          onCompiled: rH ?? this.options.onCompiled,
+          onError: SH ?? null,
+          indexParameters: AH || this.options.indexParameters,
+          processCodeAfterIncludes: CH?.processCodeAfterIncludes ? (HH, BH) => CH.processCodeAfterIncludes(this.name, HH, BH) : null,
+          processFinalCode: CH?.processFinalCode ? (HH, BH) => CH.processFinalCode(this.name, HH, BH) : null,
           shaderLanguage: this.options.shaderLanguage,
-          extraInitializationsAsync: vV
-        }, this.options.engine) : this._drawWrapper.effect = new yV.c(this._shaderPath, this.options.attributeNames, eV || this.options.uniforms, xV || this.options.samplerNames, this.options.engine, VV, void 0, YV || this.options.onCompiled, void 0, void 0, void 0, this.options.shaderLanguage, vV), this.onEffectCreatedObservable.notifyObservers(this._drawWrapper.effect)
+          extraInitializationsAsync: GH
+        }, this.options.engine) : this._drawWrapper.effect = new hH.c(this._shaderPath, this.options.attributeNames, BH || this.options.uniforms, LH || this.options.samplerNames, this.options.engine, HH, void 0, rH || this.options.onCompiled, void 0, void 0, void 0, this.options.shaderLanguage, GH), this.onEffectCreatedObservable.notifyObservers(this._drawWrapper.effect)
       }
       bind() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.options.useAsPostProcess && !VV && (this.options.engine.setAlphaMode(this.alphaMode), this.drawWrapper.effect.setFloat2("scale", 1, 1)), wV._GetShaderCodeProcessing(this.name)?.bindCustomBindings?.(this.name, this._drawWrapper.effect)
+        let HH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.options.useAsPostProcess && !HH && (this.options.engine.setAlphaMode(this.alphaMode), this.drawWrapper.effect.setFloat2("scale", 1, 1)), EH._GetShaderCodeProcessing(this.name)?.bindCustomBindings?.(this.name, this._drawWrapper.effect)
       }
       dispose() {
-        this._onContextRestoredObserver && (this.effect.sk().uk.remove(this._onContextRestoredObserver), this._onContextRestoredObserver = null), this.onEffectCreatedObservable.clear(), this._drawWrapper.dispose(!0)
+        this._onContextRestoredObserver && (this.effect.Iu().ou.remove(this._onContextRestoredObserver), this._onContextRestoredObserver = null), this.onEffectCreatedObservable.clear(), this._drawWrapper.dispose(!0)
       }
     }
-    wV.ForceGLSL = !1, wV._CustomShaderCodeProcessing = {}
+    EH.ForceGLSL = !1, EH._CustomShaderCodeProcessing = {}
   },
-  44723: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      Dispose: () => jV,
-      DumpData: () => BV,
-      DumpDataAsync: () => EV,
-      DumpFramebuffer: () => bV,
-      DumpTools: () => qV,
-      EncodeImageAsync: () => kV,
-      RegisterDumpTools: () => FV
+  45299: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      Dispose: () => xH,
+      DumpData: () => MH,
+      DumpDataAsync: () => WH,
+      DumpFramebuffer: () => QH,
+      DumpTools: () => vH,
+      EncodeImageAsync: () => uH,
+      RegisterDumpTools: () => TH
     });
-    var JV = xV(41257),
-      YV = xV(44699),
-      UV = xV(41341),
-      yV = xV(38303),
-      pV = xV(38287),
-      QV = xV(39870),
-      nV = xV(41315),
-      wV = xV(41263);
-    let ZV = null;
-    async function vV() {
-      return ZV || (ZV = async function() {
-        const VV = pV.d.LastCreatedEngine?.createCanvas(100, 100) ?? new OffscreenCanvas(100, 100);
-        VV instanceof OffscreenCanvas && QV.b.Warn("DumpData: OffscreenCanvas will be used for dumping data. This may result in lossy alpha values.");
+    var AH = LH(41290),
+      rH = LH(45271),
+      SH = LH(41387),
+      hH = LH(38002),
+      tH = LH(37989),
+      zH = LH(39595),
+      CH = LH(41353),
+      EH = LH(41297);
+    let XH = null;
+    async function GH() {
+      return XH || (XH = async function() {
+        const HH = tH.d.LastCreatedEngine?.createCanvas(100, 100) ?? new OffscreenCanvas(100, 100);
+        HH instanceof OffscreenCanvas && zH.e.Warn("DumpData: OffscreenCanvas will be used for dumping data. This may result in lossy alpha values.");
         const {
-          ThinEngine: eV
-        } = await Promise.resolve().then((() => xV(41095)));
-        if (!eV.IsSupported) throw new Error("DumpData: No WebGL context available. Cannot dump data.");
-        const JV = new eV(VV, !1, {
+          ThinEngine: BH
+        } = await Promise.resolve().then((() => LH(41129)));
+        if (!BH.IsSupported) throw new Error("DumpData: No WebGL context available. Cannot dump data.");
+        const AH = new BH(HH, !1, {
           preserveDrawingBuffer: !0,
           depth: !1,
           stencil: !1,
@@ -969,262 +969,262 @@ export const modules = {
           antialias: !1,
           failIfMajorPerformanceCaveat: !1
         });
-        pV.d.Instances.pop(), pV.d.OnEnginesDisposedObservable.add((VV => {
-          JV && VV !== JV && !JV.iN && 0 === pV.d.Instances.length && jV()
-        })), JV.getCaps().parallelShaderCompile = void 0;
-        const UV = new YV.c(JV),
+        tH.d.Instances.pop(), tH.d.OnEnginesDisposedObservable.add((HH => {
+          AH && HH !== AH && !AH.mV && 0 === tH.d.Instances.length && xH()
+        })), AH.getCaps().parallelShaderCompile = void 0;
+        const SH = new rH.e(AH),
           {
-            passPixelShader: yV
-          } = await xV.e(680).then((() => xV(64476))),
-          nV = new YV.d({
-            engine: JV,
-            name: yV.name,
-            fragmentShader: yV.shader,
+            passPixelShader: hH
+          } = await LH.e(680).then((() => LH(64302))),
+          CH = new rH.f({
+            engine: AH,
+            name: hH.name,
+            fragmentShader: hH.shader,
             samplerNames: ["textureSampler"]
           });
         return {
-          canvas: VV,
+          canvas: HH,
           dumpEngine: {
-            engine: JV,
-            renderer: UV,
-            wrapper: nV
+            engine: AH,
+            renderer: SH,
+            wrapper: CH
           }
         }
-      }()), await ZV
+      }()), await XH
     }
-    let rV = (() => {
-      var VV;
-      let eV, xV = [];
-      return VV = class {
-        static async EncodeImageAsync(VV, eV, xV, JV, YV, yV) {
-          const pV = await vV(),
-            QV = pV.dumpEngine;
-          QV.engine.setSize(eV, xV, !0);
-          const nV = QV.engine.createRawTexture(VV, eV, xV, 5, !1, !YV, 1);
-          return QV.renderer.setViewport(), QV.renderer.applyEffectWrapper(QV.wrapper), QV.wrapper.effect._bindTexture("textureSampler", nV), QV.renderer.draw(), nV.dispose(), await new Promise(((VV, eV) => {
-            UV.j.ToBlob(pV.canvas, (xV => {
-              xV ? VV(xV) : eV(new Error("EncodeImageAsync: Failed to convert canvas to blob."))
-            }), JV, yV)
+    let YH = (() => {
+      var HH;
+      let BH, LH = [];
+      return HH = class {
+        static async EncodeImageAsync(HH, BH, LH, AH, rH, hH) {
+          const tH = await GH(),
+            zH = tH.dumpEngine;
+          zH.engine.setSize(BH, LH, !0);
+          const CH = zH.engine.createRawTexture(HH, BH, LH, 5, !1, !rH, 1);
+          return zH.renderer.setViewport(), zH.renderer.applyEffectWrapper(zH.wrapper), zH.wrapper.effect._bindTexture("textureSampler", CH), zH.renderer.draw(), CH.dispose(), await new Promise(((HH, BH) => {
+            SH.i.ToBlob(tH.canvas, (LH => {
+              LH ? HH(LH) : BH(new Error("EncodeImageAsync: Failed to convert canvas to blob."))
+            }), AH, hH)
           }))
         }
       }, (() => {
-        const YV = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        eV = [wV.j], (0, JV.i)(VV, null, eV, {
+        const rH = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        BH = [EH.g], (0, AH.g)(HH, null, BH, {
           kind: "method",
           name: "EncodeImageAsync",
           static: !0,
           private: !1,
           access: {
-            has: VV => "EncodeImageAsync" in VV,
-            get: VV => VV.EncodeImageAsync
+            has: HH => "EncodeImageAsync" in HH,
+            get: HH => HH.EncodeImageAsync
           },
-          metadata: YV
-        }, null, xV), YV && Object.defineProperty(VV, Symbol.metadata, {
+          metadata: rH
+        }, null, LH), rH && Object.defineProperty(HH, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: YV
-        }), (0, JV.l)(VV, xV)
-      })(), VV
+          value: rH
+        }), (0, AH.k)(HH, LH)
+      })(), HH
     })();
-    const kV = rV.EncodeImageAsync;
-    async function bV(VV, eV, xV, JV) {
-      let YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
-        UV = arguments.length > 5 ? arguments[5] : void 0,
-        yV = arguments.length > 6 ? arguments[6] : void 0;
-      const pV = await xV.readPixels(0, 0, VV, eV);
-      BV(VV, eV, new Uint8Array(pV.buffer), JV, YV, UV, !0, void 0, yV)
+    const uH = YH.EncodeImageAsync;
+    async function QH(HH, BH, LH, AH) {
+      let rH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
+        SH = arguments.length > 5 ? arguments[5] : void 0,
+        hH = arguments.length > 6 ? arguments[6] : void 0;
+      const tH = await LH.readPixels(0, 0, HH, BH);
+      MH(HH, BH, new Uint8Array(tH.buffer), AH, rH, SH, !0, void 0, hH)
     }
-    async function EV(VV, eV, xV) {
-      let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
-        YV = arguments.length > 4 ? arguments[4] : void 0,
-        pV = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        wV = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        ZV = arguments.length > 7 ? arguments[7] : void 0;
-      if (xV instanceof Float32Array) {
-        const VV = new Uint8Array(xV.length);
-        let eV = xV.length;
-        for (; eV--;) {
-          const JV = xV[eV];
-          VV[eV] = Math.round(255 * (0, yV.Clamp)(JV))
+    async function WH(HH, BH, LH) {
+      let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
+        rH = arguments.length > 4 ? arguments[4] : void 0,
+        tH = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        EH = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        XH = arguments.length > 7 ? arguments[7] : void 0;
+      if (LH instanceof Float32Array) {
+        const HH = new Uint8Array(LH.length);
+        let BH = LH.length;
+        for (; BH--;) {
+          const AH = LH[BH];
+          HH[BH] = Math.round(255 * (0, hH.Clamp)(AH))
         }
-        xV = VV
+        LH = HH
       }
-      const vV = await rV.EncodeImageAsync(xV, VV, eV, JV, pV, ZV);
-      void 0 !== YV && UV.j.DownloadBlob(vV, YV), vV.type !== JV && QV.b.Warn(`DumpData: The requested mimeType '${JV}' is not supported. The result has mimeType '${vV.type}' instead.`);
-      const kV = await vV.arrayBuffer();
-      return wV ? kV : `data:${JV};base64,${(0,nV.h)(kV)}`
+      const GH = await YH.EncodeImageAsync(LH, HH, BH, AH, tH, XH);
+      void 0 !== rH && SH.i.DownloadBlob(GH, rH), GH.type !== AH && zH.e.Warn(`DumpData: The requested mimeType '${AH}' is not supported. The result has mimeType '${GH.type}' instead.`);
+      const uH = await GH.arrayBuffer();
+      return EH ? uH : `data:${AH};base64,${(0,CH.f)(uH)}`
     }
 
-    function BV(VV, eV, xV, JV) {
-      let YV = arguments.length > 5 ? arguments[5] : void 0;
-      void 0 !== YV || JV || (YV = ""), EV(VV, eV, xV, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png", YV, arguments.length > 6 && void 0 !== arguments[6] && arguments[6], arguments.length > 7 && void 0 !== arguments[7] && arguments[7], arguments.length > 8 ? arguments[8] : void 0).then((VV => {
-        JV && JV(VV)
+    function MH(HH, BH, LH, AH) {
+      let rH = arguments.length > 5 ? arguments[5] : void 0;
+      void 0 !== rH || AH || (rH = ""), WH(HH, BH, LH, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png", rH, arguments.length > 6 && void 0 !== arguments[6] && arguments[6], arguments.length > 7 && void 0 !== arguments[7] && arguments[7], arguments.length > 8 ? arguments[8] : void 0).then((HH => {
+        AH && AH(HH)
       }))
     }
 
-    function jV() {
-      ZV && (ZV?.then((VV => {
-        VV.canvas instanceof HTMLCanvasElement && VV.canvas.remove(), VV.dumpEngine && (VV.dumpEngine.engine.dispose(), VV.dumpEngine.renderer.dispose(), VV.dumpEngine.wrapper.dispose())
-      })), ZV = null)
+    function xH() {
+      XH && (XH?.then((HH => {
+        HH.canvas instanceof HTMLCanvasElement && HH.canvas.remove(), HH.dumpEngine && (HH.dumpEngine.engine.dispose(), HH.dumpEngine.renderer.dispose(), HH.dumpEngine.wrapper.dispose())
+      })), XH = null)
     }
-    const qV = {
-      DumpData: BV,
-      DumpDataAsync: EV,
-      DumpFramebuffer: bV,
-      Dispose: jV
+    const vH = {
+      DumpData: MH,
+      DumpDataAsync: WH,
+      DumpFramebuffer: QH,
+      Dispose: xH
     };
-    let tV = !1;
+    let PH = !1;
 
-    function FV() {
-      if (tV) return;
-      tV = !0;
-      UV.j.DumpData = BV, UV.j.DumpDataAsync = EV, UV.j.DumpFramebuffer = bV
+    function TH() {
+      if (PH) return;
+      PH = !0;
+      SH.i.DumpData = MH, SH.i.DumpDataAsync = WH, SH.i.DumpFramebuffer = QH
     }
   },
-  44714: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => rV,
-      e: () => kV,
-      g: () => bV
+  45285: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => YH,
+      g: () => uH,
+      i: () => QH
     });
-    var JV = xV(41738),
-      YV = xV(44717),
-      UV = xV(41257),
-      yV = xV(44697),
-      pV = xV(41279),
-      QV = xV(44719),
-      nV = xV(41263);
-    class wV extends yV.d {
+    var AH = LH(41777),
+      rH = LH(45290),
+      SH = LH(41290),
+      hH = LH(45266),
+      tH = LH(41319),
+      zH = LH(45296),
+      CH = LH(41297);
+    class EH extends hH.d {
       getClassName() {
         return "PassPostProcess"
       }
-      constructor(VV, eV) {
-        let xV = arguments.length > 4 ? arguments[4] : void 0;
-        const JV = {
-          size: "number" === typeof eV ? eV : void 0,
+      constructor(HH, BH) {
+        let LH = arguments.length > 4 ? arguments[4] : void 0;
+        const AH = {
+          size: "number" === typeof BH ? BH : void 0,
           camera: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
           samplingMode: arguments.length > 3 ? arguments[3] : void 0,
-          engine: xV,
+          engine: LH,
           reusable: arguments.length > 5 ? arguments[5] : void 0,
           textureType: arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
           blockCompilation: arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-          ...eV
+          ...BH
         };
-        super(VV, QV.e.FragmentUrl, {
-          effectWrapper: "number" !== typeof eV && eV.effectWrapper ? void 0 : new QV.e(VV, xV, JV),
-          ...JV
+        super(HH, zH.f.FragmentUrl, {
+          effectWrapper: "number" !== typeof BH && BH.effectWrapper ? void 0 : new zH.f(HH, LH, AH),
+          ...AH
         })
       }
-      static _Parse(VV, eV, xV, JV) {
-        return pV.b.Parse((() => new wV(VV.name, VV.options, eV, VV.renderTargetSamplingMode, VV._engine, VV.reusable)), VV, xV, JV)
+      static _Parse(HH, BH, LH, AH) {
+        return tH.c.Parse((() => new EH(HH.name, HH.options, BH, HH.renderTargetSamplingMode, HH._engine, HH.reusable)), HH, LH, AH)
       }
     }(() => {
-      var VV;
-      let eV, xV = yV.d,
-        JV = [];
-      VV = class extends xV {
+      var HH;
+      let BH, LH = hH.d,
+        AH = [];
+      HH = class extends LH {
         get face() {
           return this._effectWrapper.face
         }
-        set face(VV) {
-          this._effectWrapper.face = VV
+        set face(HH) {
+          this._effectWrapper.face = HH
         }
         getClassName() {
           return "PassCubePostProcess"
         }
-        constructor(VV, eV) {
-          let xV = arguments.length > 4 ? arguments[4] : void 0;
-          const YV = {
-            size: "number" === typeof eV ? eV : void 0,
+        constructor(HH, BH) {
+          let LH = arguments.length > 4 ? arguments[4] : void 0;
+          const rH = {
+            size: "number" === typeof BH ? BH : void 0,
             camera: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
             samplingMode: arguments.length > 3 ? arguments[3] : void 0,
-            engine: xV,
+            engine: LH,
             reusable: arguments.length > 5 ? arguments[5] : void 0,
             textureType: arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
             blockCompilation: arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-            ...eV
+            ...BH
           };
-          super(VV, QV.e.FragmentUrl, {
-            effectWrapper: "number" !== typeof eV && eV.effectWrapper ? void 0 : new QV.c(VV, xV, YV),
-            ...YV
-          }), (0, UV.l)(this, JV)
+          super(HH, zH.f.FragmentUrl, {
+            effectWrapper: "number" !== typeof BH && BH.effectWrapper ? void 0 : new zH.b(HH, LH, rH),
+            ...rH
+          }), (0, SH.k)(this, AH)
         }
-        static _Parse(eV, xV, JV, YV) {
-          return pV.b.Parse((() => new VV(eV.name, eV.options, xV, eV.renderTargetSamplingMode, eV._engine, eV.reusable)), eV, JV, YV)
+        static _Parse(BH, LH, AH, rH) {
+          return tH.c.Parse((() => new HH(BH.name, BH.options, LH, BH.renderTargetSamplingMode, BH._engine, BH.reusable)), BH, AH, rH)
         }
       }, (() => {
-        const YV = "function" === typeof Symbol && Symbol.metadata ? Object.create(xV[Symbol.metadata] ?? null) : void 0;
-        eV = [(0, nV.J)()], (0, UV.i)(VV, null, eV, {
+        const rH = "function" === typeof Symbol && Symbol.metadata ? Object.create(LH[Symbol.metadata] ?? null) : void 0;
+        BH = [(0, CH.H)()], (0, SH.g)(HH, null, BH, {
           kind: "getter",
           name: "face",
           static: !1,
           private: !1,
           access: {
-            has: VV => "face" in VV,
-            get: VV => VV.face
+            has: HH => "face" in HH,
+            get: HH => HH.face
           },
-          metadata: YV
-        }, null, JV), YV && Object.defineProperty(VV, Symbol.metadata, {
+          metadata: rH
+        }, null, AH), rH && Object.defineProperty(HH, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: YV
+          value: rH
         })
       })()
     })();
-    var ZV = xV(38303),
-      vV = xV(41323);
+    var XH = LH(38002),
+      GH = LH(41364);
 
-    function rV(VV, eV, xV, JV, YV, UV, pV, QV) {
-      const nV = eV.sk();
-      return eV.isReady = !1, YV = YV ?? eV.samplingMode, JV = JV ?? eV.type, UV = UV ?? eV.format, pV = pV ?? eV.width, QV = QV ?? eV.height, -1 === JV && (JV = 0), new Promise((wV => {
-        const ZV = new yV.d("postprocess", VV, null, null, 1, null, YV, nV, !1, void 0, JV, void 0, null, !1, UV);
-        ZV.externalTextureSamplerBinding = !0;
-        const vV = nV.createRenderTargetTexture({
-          width: pV,
-          height: QV
+    function YH(HH, BH, LH, AH, rH, SH, tH, zH) {
+      const CH = BH.Iu();
+      return BH.isReady = !1, rH = rH ?? BH.samplingMode, AH = AH ?? BH.type, SH = SH ?? BH.format, tH = tH ?? BH.width, zH = zH ?? BH.height, -1 === AH && (AH = 0), new Promise((EH => {
+        const XH = new hH.d("postprocess", HH, null, null, 1, null, rH, CH, !1, void 0, AH, void 0, null, !1, SH);
+        XH.externalTextureSamplerBinding = !0;
+        const GH = CH.createRenderTargetTexture({
+          width: tH,
+          height: zH
         }, {
           generateDepthBuffer: !1,
           generateMipMaps: !1,
           generateStencilBuffer: !1,
-          samplingMode: YV,
-          type: JV,
-          format: UV
+          samplingMode: rH,
+          type: AH,
+          format: SH
         });
-        ZV.onEffectCreatedObservable.addOnce((VV => {
-          VV.executeWhenCompiled((() => {
-            ZV.onApply = VV => {
-              VV._bindTexture("textureSampler", eV), VV.setFloat2("scale", 1, 1)
-            }, xV.postProcessManager.directRender([ZV], vV, !0), nV.restoreDefaultFramebuffer(), nV._releaseTexture(eV), ZV && ZV.dispose(), vV._swapAndDie(eV), eV.type = JV, eV.format = 5, eV.isReady = !0, wV(eV)
+        XH.onEffectCreatedObservable.addOnce((HH => {
+          HH.executeWhenCompiled((() => {
+            XH.onApply = HH => {
+              HH._bindTexture("textureSampler", BH), HH.setFloat2("scale", 1, 1)
+            }, LH.postProcessManager.directRender([XH], GH, !0), CH.restoreDefaultFramebuffer(), CH._releaseTexture(BH), XH && XH.dispose(), GH._swapAndDie(BH), BH.type = AH, BH.format = 5, BH.isReady = !0, EH(BH)
           }))
         }))
       }))
     }
-    async function kV(VV, eV, UV) {
-      let pV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        QV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
-        nV = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        wV = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
-      await async function(VV) {
-        if (VV.isReady()) return;
-        if (VV.loadingError) throw new Error(VV.errorObject?.message || `Texture ${VV.name} errored while loading.`);
-        const eV = VV.onLoadObservable;
-        if (eV) return await new Promise((VV => eV.addOnce((() => VV()))));
-        const xV = VV._texture?.onLoadedObservable;
-        if (xV) return await new Promise((VV => xV.addOnce((() => VV()))));
-        throw new Error(`Cannot determine readiness of texture ${VV.name}.`)
-      }(VV);
-      const vV = VV.getInternalTexture(),
-        rV = VV.is3D || !!vV?.is3D,
+    async function uH(HH, BH, SH) {
+      let tH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        zH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
+        CH = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        EH = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
+      await async function(HH) {
+        if (HH.isReady()) return;
+        if (HH.loadingError) throw new Error(HH.errorObject?.message || `Texture ${HH.name} errored while loading.`);
+        const BH = HH.onLoadObservable;
+        if (BH) return await new Promise((HH => BH.addOnce((() => HH()))));
+        const LH = HH._texture?.onLoadedObservable;
+        if (LH) return await new Promise((HH => LH.addOnce((() => HH()))));
+        throw new Error(`Cannot determine readiness of texture ${HH.name}.`)
+      }(HH);
+      const GH = HH.getInternalTexture(),
+        YH = HH.is3D || !!GH?.is3D,
         {
-          width: kV,
-          height: bV
-        } = VV.getSize(),
-        EV = eV ?? kV,
-        BV = UV ?? bV;
-      if (nV || rV || function(VV) {
-          switch (VV) {
+          width: uH,
+          height: QH
+        } = HH.getSize(),
+        WH = BH ?? uH,
+        MH = SH ?? QH;
+      if (CH || YH || function(HH) {
+          switch (HH) {
             case 36492:
             case 36493:
             case 36495:
@@ -1276,196 +1276,196 @@ export const modules = {
             default:
               return !1
           }
-        }(VV.textureFormat) || EV !== kV || BV !== bV) {
-        if (VV.is2DArray) throw new Error(`Reading pixels from 2D array textures with ${nV?"RTT":"compression"} is not supported.`);
-        return await async function(VV, eV, UV, pV, QV) {
-          let nV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-          const wV = VV.dD(),
-            ZV = wV.sk(),
-            vV = VV.getInternalTexture(),
-            rV = VV.is3D || !!vV?.is3D;
-          let kV;
-          if (ZV.isWebGPU ? rV ? await xV.e(676).then((() => xV(64452))) : VV.isCube ? await xV.e(677).then((() => xV(64461))) : await xV.e(678).then((() => xV(64467))) : rV ? await xV.e(673).then((() => xV(64438))) : VV.isCube ? await xV.e(674).then((() => xV(64441))) : await xV.e(675).then((() => xV(64450))), rV) kV = new yV.d("lod3D", "lod3D", {
+        }(HH.textureFormat) || WH !== uH || MH !== QH) {
+        if (HH.is2DArray) throw new Error(`Reading pixels from 2D array textures with ${CH?"RTT":"compression"} is not supported.`);
+        return await async function(HH, BH, SH, tH, zH) {
+          let CH = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+          const EH = HH.yN(),
+            XH = EH.Iu(),
+            GH = HH.getInternalTexture(),
+            YH = HH.is3D || !!GH?.is3D;
+          let uH;
+          if (XH.isWebGPU ? YH ? await LH.e(676).then((() => LH(64276))) : HH.isCube ? await LH.e(677).then((() => LH(64283))) : await LH.e(678).then((() => LH(64288))) : YH ? await LH.e(673).then((() => LH(64252))) : HH.isCube ? await LH.e(674).then((() => LH(64261))) : await LH.e(675).then((() => LH(64267))), YH) uH = new hH.d("lod3D", "lod3D", {
             uniforms: ["lod", "gamma", "slice"],
-            samplingMode: JV.f.NEAREST_NEAREST_MIPNEAREST,
-            engine: ZV,
-            shaderLanguage: ZV.isWebGPU ? 1 : 0
+            samplingMode: AH.g.NEAREST_NEAREST_MIPNEAREST,
+            engine: XH,
+            shaderLanguage: XH.isWebGPU ? 1 : 0
           });
-          else if (VV.isCube) {
-            const VV = ["#define POSITIVEX", "#define NEGATIVEX", "#define POSITIVEY", "#define NEGATIVEY", "#define POSITIVEZ", "#define NEGATIVEZ"];
-            kV = new yV.d("lodCube", "lodCube", {
+          else if (HH.isCube) {
+            const HH = ["#define POSITIVEX", "#define NEGATIVEX", "#define POSITIVEY", "#define NEGATIVEY", "#define POSITIVEZ", "#define NEGATIVEZ"];
+            uH = new hH.d("lodCube", "lodCube", {
               uniforms: ["lod", "gamma"],
-              samplingMode: JV.f.NEAREST_NEAREST_MIPNEAREST,
-              engine: ZV,
-              defines: VV[pV],
-              shaderLanguage: ZV.isWebGPU ? 1 : 0
+              samplingMode: AH.g.NEAREST_NEAREST_MIPNEAREST,
+              engine: XH,
+              defines: HH[tH],
+              shaderLanguage: XH.isWebGPU ? 1 : 0
             })
-          } else kV = new yV.d("lod", "lod", {
+          } else uH = new hH.d("lod", "lod", {
             uniforms: ["lod", "gamma"],
-            samplingMode: JV.f.NEAREST_NEAREST_MIPNEAREST,
-            engine: ZV,
-            shaderLanguage: ZV.isWebGPU ? 1 : 0
+            samplingMode: AH.g.NEAREST_NEAREST_MIPNEAREST,
+            engine: XH,
+            shaderLanguage: XH.isWebGPU ? 1 : 0
           });
-          await new Promise((VV => {
-            kV.onEffectCreatedObservable.addOnce((eV => {
-              eV.executeWhenCompiled((() => {
-                VV(0)
+          await new Promise((HH => {
+            uH.onEffectCreatedObservable.addOnce((BH => {
+              BH.executeWhenCompiled((() => {
+                HH(0)
               }))
             }))
           }));
-          const bV = new YV.b("temp", {
-            width: eV,
-            height: UV
-          }, wV, !1);
-          kV.onApply = function(eV) {
-            eV.setTexture("textureSampler", VV), eV.setFloat("lod", QV), eV.setInt("gamma", VV.gammaSpace ? 1 : 0), rV && eV.setFloat("slice", nV)
+          const QH = new rH.c("temp", {
+            width: BH,
+            height: SH
+          }, EH, !1);
+          uH.onApply = function(BH) {
+            BH.setTexture("textureSampler", HH), BH.setFloat("lod", zH), BH.setInt("gamma", HH.gammaSpace ? 1 : 0), YH && BH.setFloat("slice", CH)
           };
           try {
-            if (bV.renderTarget && vV) {
-              const xV = vV.samplingMode;
-              0 !== QV ? VV.updateSamplingMode(JV.f.NEAREST_NEAREST_MIPNEAREST) : VV.updateSamplingMode(JV.f.NEAREST_NEAREST), wV.postProcessManager.directRender([kV], bV.renderTarget, !0), VV.updateSamplingMode(xV);
-              const YV = await ZV.readPixels(0, 0, eV, UV),
-                yV = new Uint8Array(YV.buffer, YV.byteOffset, YV.byteLength);
-              return ZV.unBindFramebuffer(bV.renderTarget), yV
+            if (QH.renderTarget && GH) {
+              const LH = GH.samplingMode;
+              0 !== zH ? HH.updateSamplingMode(AH.g.NEAREST_NEAREST_MIPNEAREST) : HH.updateSamplingMode(AH.g.NEAREST_NEAREST), EH.postProcessManager.directRender([uH], QH.renderTarget, !0), HH.updateSamplingMode(LH);
+              const rH = await XH.readPixels(0, 0, BH, SH),
+                hH = new Uint8Array(rH.buffer, rH.byteOffset, rH.byteLength);
+              return XH.unBindFramebuffer(QH.renderTarget), hH
             }
             throw Error("Render to texture failed.")
           } finally {
-            bV.dispose(), kV.dispose()
+            QH.dispose(), uH.dispose()
           }
-        }(VV, EV, BV, pV, QV, wV)
+        }(HH, WH, MH, tH, zH, EH)
       }
-      let jV = await VV.readPixels(pV, QV);
-      if (!jV) throw new Error(`Failed to read pixels from texture ${VV.name}.`);
-      if (jV instanceof Float32Array) {
-        const VV = new Uint8Array(jV.length);
-        let eV = jV.length;
-        for (; eV--;) {
-          const xV = jV[eV];
-          VV[eV] = Math.round(255 * (0, ZV.Clamp)(xV))
+      let xH = await HH.readPixels(tH, zH);
+      if (!xH) throw new Error(`Failed to read pixels from texture ${HH.name}.`);
+      if (xH instanceof Float32Array) {
+        const HH = new Uint8Array(xH.length);
+        let BH = xH.length;
+        for (; BH--;) {
+          const LH = xH[BH];
+          HH[BH] = Math.round(255 * (0, XH.Clamp)(LH))
         }
-        jV = VV
+        xH = HH
       }
-      const qV = EV * BV,
-        tV = 4 * qV;
-      if (jV.length !== tV) {
-        const VV = 0 === qV ? 0 : jV.length / qV;
-        if (1 === VV || 2 === VV || 3 === VV) {
-          const eV = new Uint8Array(tV);
-          for (let xV = 0, JV = 0, YV = 0; xV < qV; xV++, YV += 4) {
-            const xV = jV[JV++];
-            if (1 === VV) {
-              eV[YV] = xV, eV[YV + 1] = xV, eV[YV + 2] = xV, eV[YV + 3] = 255;
+      const vH = WH * MH,
+        PH = 4 * vH;
+      if (xH.length !== PH) {
+        const HH = 0 === vH ? 0 : xH.length / vH;
+        if (1 === HH || 2 === HH || 3 === HH) {
+          const BH = new Uint8Array(PH);
+          for (let LH = 0, AH = 0, rH = 0; LH < vH; LH++, rH += 4) {
+            const LH = xH[AH++];
+            if (1 === HH) {
+              BH[rH] = LH, BH[rH + 1] = LH, BH[rH + 2] = LH, BH[rH + 3] = 255;
               continue
             }
-            const UV = jV[JV++];
-            2 !== VV ? (eV[YV] = xV, eV[YV + 1] = UV, eV[YV + 2] = jV[JV++], eV[YV + 3] = 255) : (eV[YV] = xV, eV[YV + 1] = UV, eV[YV + 2] = 0, eV[YV + 3] = 255)
+            const SH = xH[AH++];
+            2 !== HH ? (BH[rH] = LH, BH[rH + 1] = SH, BH[rH + 2] = xH[AH++], BH[rH + 3] = 255) : (BH[rH] = LH, BH[rH + 1] = SH, BH[rH + 2] = 0, BH[rH + 3] = 255)
           }
-          return eV
+          return BH
         }
       }
-      return jV
+      return xH
     }
-    const bV = {
-      CreateResizedCopy: function(VV, eV, xV) {
-        let UV = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const yV = VV.dD(),
-          pV = yV.sk(),
-          QV = new YV.b("resized" + VV.name, {
-            width: eV,
-            height: xV
-          }, yV, !VV.noMipmap, !0, VV._texture.type, !1, VV.samplingMode, !1);
-        QV.wrapU = VV.wrapU, QV.wrapV = VV.wrapV, QV.uOffset = VV.uOffset, QV.vOffset = VV.vOffset, QV.uScale = VV.uScale, QV.vScale = VV.vScale, QV.uAng = VV.uAng, QV.vAng = VV.vAng, QV.wAng = VV.wAng, QV.coordinatesIndex = VV.coordinatesIndex, QV.level = VV.level, QV.anisotropicFilteringLevel = VV.anisotropicFilteringLevel, QV._texture.isReady = !1, VV.wrapU = JV.f.CLAMP_ADDRESSMODE, VV.wrapV = JV.f.CLAMP_ADDRESSMODE;
-        const nV = new wV("pass", 1, null, UV ? JV.f.BILINEAR_SAMPLINGMODE : JV.f.NEAREST_SAMPLINGMODE, pV, !1, 0);
-        return nV.externalTextureSamplerBinding = !0, nV.onEffectCreatedObservable.addOnce((eV => {
-          eV.executeWhenCompiled((() => {
-            nV.onApply = function(eV) {
-              eV.setTexture("textureSampler", VV)
+    const QH = {
+      CreateResizedCopy: function(HH, BH, LH) {
+        let SH = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const hH = HH.yN(),
+          tH = hH.Iu(),
+          zH = new rH.c("resized" + HH.name, {
+            width: BH,
+            height: LH
+          }, hH, !HH.noMipmap, !0, HH._texture.type, !1, HH.samplingMode, !1);
+        zH.wrapU = HH.wrapU, zH.wrapV = HH.wrapV, zH.uOffset = HH.uOffset, zH.vOffset = HH.vOffset, zH.uScale = HH.uScale, zH.vScale = HH.vScale, zH.uAng = HH.uAng, zH.vAng = HH.vAng, zH.wAng = HH.wAng, zH.coordinatesIndex = HH.coordinatesIndex, zH.level = HH.level, zH.anisotropicFilteringLevel = HH.anisotropicFilteringLevel, zH._texture.isReady = !1, HH.wrapU = AH.g.CLAMP_ADDRESSMODE, HH.wrapV = AH.g.CLAMP_ADDRESSMODE;
+        const CH = new EH("pass", 1, null, SH ? AH.g.BILINEAR_SAMPLINGMODE : AH.g.NEAREST_SAMPLINGMODE, tH, !1, 0);
+        return CH.externalTextureSamplerBinding = !0, CH.onEffectCreatedObservable.addOnce((BH => {
+          BH.executeWhenCompiled((() => {
+            CH.onApply = function(BH) {
+              BH.setTexture("textureSampler", HH)
             };
-            const eV = QV.renderTarget;
-            eV && (yV.postProcessManager.directRender([nV], eV), pV.unBindFramebuffer(eV), QV.disposeFramebufferObjects(), nV.dispose(), QV.getInternalTexture().isReady = !0)
+            const BH = zH.renderTarget;
+            BH && (hH.postProcessManager.directRender([CH], BH), tH.unBindFramebuffer(BH), zH.disposeFramebufferObjects(), CH.dispose(), zH.getInternalTexture().isReady = !0)
           }))
-        })), QV
+        })), zH
       },
-      ApplyPostProcess: rV,
-      ToHalfFloat: vV.j,
-      FromHalfFloat: vV.c,
-      GetTextureDataAsync: kV
+      ApplyPostProcess: YH,
+      ToHalfFloat: GH.f,
+      FromHalfFloat: GH.d,
+      GetTextureDataAsync: uH
     }
   },
-  44697: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => kV
+  45266: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => uH
     });
-    var JV = xV(41257),
-      YV = xV(41353),
-      UV = xV(38296),
-      yV = xV(38269),
-      pV = xV(41101),
-      QV = xV(41263),
-      nV = xV(41279),
-      wV = xV(38318),
-      ZV = xV(41150),
-      vV = xV(41190),
-      rV = xV(44699);
-    let kV = (() => {
-        var VV;
-        let eV, pV, ZV, kV, bV, BV, jV, qV, tV, FV, TV, PV, AV, NV, XV, MV, zV = [],
-          GV = [],
-          WV = [],
-          RV = [],
-          gV = [],
-          DV = [],
-          iV = [],
-          CV = [],
-          aV = [],
-          oV = [],
-          cV = [],
-          hV = [],
-          lV = [],
-          LV = [],
-          fV = [],
-          mV = [],
-          KV = [],
-          HV = [],
-          uV = [],
-          sV = [],
-          SV = [],
-          IV = [],
-          dV = [],
-          OV = [],
-          Ve = [],
-          ee = [],
-          xe = [],
-          Je = [],
-          Ye = [];
-        return VV = class {
+    var AH = LH(41290),
+      rH = LH(41398),
+      SH = LH(37997),
+      hH = LH(37963),
+      tH = LH(41134),
+      zH = LH(41297),
+      CH = LH(41319),
+      EH = LH(38012),
+      XH = LH(41184),
+      GH = LH(41222),
+      YH = LH(45271);
+    let uH = (() => {
+        var HH;
+        let BH, tH, XH, uH, QH, MH, xH, vH, PH, TH, UH, VH, OH, bH, kH, mH, oH = [],
+          IH = [],
+          fH = [],
+          lH = [],
+          KH = [],
+          cH = [],
+          eH = [],
+          qH = [],
+          gH = [],
+          NH = [],
+          RH = [],
+          jH = [],
+          nH = [],
+          FH = [],
+          DH = [],
+          wH = [],
+          ZH = [],
+          dH = [],
+          aH = [],
+          sH = [],
+          JH = [],
+          iH = [],
+          pH = [],
+          yH = [],
+          HB = [],
+          BB = [],
+          LB = [],
+          AB = [],
+          rB = [];
+        return HH = class {
           static get ForceGLSL() {
-            return rV.d.ForceGLSL
+            return YH.f.ForceGLSL
           }
-          static set ForceGLSL(VV) {
-            rV.d.ForceGLSL = VV
+          static set ForceGLSL(HH) {
+            YH.f.ForceGLSL = HH
           }
-          static RegisterShaderCodeProcessing(VV, eV) {
-            rV.d.RegisterShaderCodeProcessing(VV, eV)
+          static RegisterShaderCodeProcessing(HH, BH) {
+            YH.f.RegisterShaderCodeProcessing(HH, BH)
           }
           get name() {
             return this._effectWrapper.name
           }
-          set name(VV) {
-            this._effectWrapper.name = VV
+          set name(HH) {
+            this._effectWrapper.name = HH
           }
           get alphaMode() {
             return this._effectWrapper.alphaMode
           }
-          set alphaMode(VV) {
-            this._effectWrapper.alphaMode = VV
+          set alphaMode(HH) {
+            this._effectWrapper.alphaMode = HH
           }
           get samples() {
             return this._samples
           }
-          set samples(VV) {
-            this._samples = Math.min(VV, this._engine.getCaps().maxMSAASamples), this._textures.forEach((VV => {
-              VV.setSamples(this._samples)
+          set samples(HH) {
+            this._samples = Math.min(HH, this._engine.getCaps().maxMSAASamples), this._textures.forEach((HH => {
+              HH.setSamples(this._samples)
             }))
           }
           get shaderLanguage() {
@@ -1474,108 +1474,108 @@ export const modules = {
           getEffectName() {
             return this._fragmentUrl
           }
-          set onActivate(VV) {
-            this._onActivateObserver && this.onActivateObservable.remove(this._onActivateObserver), VV && (this._onActivateObserver = this.onActivateObservable.add(VV))
+          set onActivate(HH) {
+            this._onActivateObserver && this.onActivateObservable.remove(this._onActivateObserver), HH && (this._onActivateObserver = this.onActivateObservable.add(HH))
           }
-          set onSizeChanged(VV) {
-            this._onSizeChangedObserver && this.onSizeChangedObservable.remove(this._onSizeChangedObserver), this._onSizeChangedObserver = this.onSizeChangedObservable.add(VV)
+          set onSizeChanged(HH) {
+            this._onSizeChangedObserver && this.onSizeChangedObservable.remove(this._onSizeChangedObserver), this._onSizeChangedObserver = this.onSizeChangedObservable.add(HH)
           }
-          set onApply(VV) {
-            this._onApplyObserver && this.onApplyObservable.remove(this._onApplyObserver), this._onApplyObserver = this.onApplyObservable.add(VV)
+          set onApply(HH) {
+            this._onApplyObserver && this.onApplyObservable.remove(this._onApplyObserver), this._onApplyObserver = this.onApplyObservable.add(HH)
           }
-          set onBeforeRender(VV) {
-            this._onBeforeRenderObserver && this.onBeforeRenderObservable.remove(this._onBeforeRenderObserver), this._onBeforeRenderObserver = this.onBeforeRenderObservable.add(VV)
+          set onBeforeRender(HH) {
+            this._onBeforeRenderObserver && this.onBeforeRenderObservable.remove(this._onBeforeRenderObserver), this._onBeforeRenderObserver = this.onBeforeRenderObservable.add(HH)
           }
-          set onAfterRender(VV) {
-            this._onAfterRenderObserver && this.onAfterRenderObservable.remove(this._onAfterRenderObserver), this._onAfterRenderObserver = this.onAfterRenderObservable.add(VV)
+          set onAfterRender(HH) {
+            this._onAfterRenderObserver && this.onAfterRenderObservable.remove(this._onAfterRenderObserver), this._onAfterRenderObserver = this.onAfterRenderObservable.add(HH)
           }
           get inputTexture() {
             return this._textures.data[this._currentRenderTextureInd]
           }
-          set inputTexture(VV) {
-            this._forcedOutputTexture = VV
+          set inputTexture(HH) {
+            this._forcedOutputTexture = HH
           }
           restoreDefaultInputTexture() {
             this._forcedOutputTexture && (this._forcedOutputTexture = null, this.markTextureDirty())
           }
           getCamera() {
-            return this.U1
+            return this.j_
           }
           get texelSize() {
-            return this._shareOutputWithPostProcess ? this._shareOutputWithPostProcess.texelSize : (this._forcedOutputTexture && this._texelSize.FeV(1 / this._forcedOutputTexture.width, 1 / this._forcedOutputTexture.height), this._texelSize)
+            return this._shareOutputWithPostProcess ? this._shareOutputWithPostProcess.texelSize : (this._forcedOutputTexture && this._texelSize.SBH(1 / this._forcedOutputTexture.width, 1 / this._forcedOutputTexture.height), this._texelSize)
           }
-          constructor(eV, xV, pV, QV, nV, wV) {
-            let ZV = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1,
-              vV = arguments.length > 7 ? arguments[7] : void 0,
-              kV = arguments.length > 8 ? arguments[8] : void 0,
-              bV = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
-              BV = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
-              jV = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : "postprocess",
-              qV = arguments.length > 12 ? arguments[12] : void 0,
-              tV = arguments.length > 13 && void 0 !== arguments[13] && arguments[13],
-              FV = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : 5,
-              TV = arguments.length > 15 ? arguments[15] : void 0,
-              PV = arguments.length > 16 ? arguments[16] : void 0;
-            this._parentContainer = ((0, JV.l)(this, zV), null), this.uniqueId = (0, JV.l)(this, GV, void 0), this.width = ((0, JV.l)(this, WV), (0, JV.l)(this, RV, -1)), this.height = ((0, JV.l)(this, gV), (0, JV.l)(this, DV, -1)), this.nodeMaterialSource = ((0, JV.l)(this, iV), null), this._outputTexture = null, this.renderTargetSamplingMode = (0, JV.l)(this, CV, void 0), this.clearColor = ((0, JV.l)(this, aV), (0, JV.l)(this, oV, void 0)), this.autoClear = ((0, JV.l)(this, cV), (0, JV.l)(this, hV, !0)), this.forceAutoClearInAlphaMode = ((0, JV.l)(this, lV), (0, JV.l)(this, LV, !1)), this.alphaConstants = ((0, JV.l)(this, fV), (0, JV.l)(this, mV, void 0)), this.animations = ((0, JV.l)(this, KV), []), this.enablePixelPerfectMode = (0, JV.l)(this, HV, !1), this.forceFullscreenViewport = ((0, JV.l)(this, uV), (0, JV.l)(this, sV, !0)), this.inspectableCustomProperties = (0, JV.l)(this, SV), this.scaleMode = (0, JV.l)(this, IV, 1), this.alwaysForcePOT = ((0, JV.l)(this, dV), (0, JV.l)(this, OV, !1)), this._samples = ((0, JV.l)(this, Ve), (0, JV.l)(this, ee, 1)), this.adaptScaleToCurrentViewport = ((0, JV.l)(this, xe), (0, JV.l)(this, Je, !1)), this.doNotSerialize = ((0, JV.l)(this, Ye), !1), this._webGPUReady = !1, this._reusable = !1, this._renderId = 0, this.externalTextureSamplerBinding = !1, this._textures = new YV.f(2), this._textureCache = [], this._currentRenderTextureInd = 0, this._scaleRatio = new yV.n(1, 1), this._texelSize = yV.n.Zero(), this.onActivateObservable = new UV.c, this.onSizeChangedObservable = new UV.c, this.onApplyObservable = new UV.c, this.onBeforeRenderObservable = new UV.c, this.onAfterRenderObservable = new UV.c, this.eC = new UV.c, EV();
-            let AV, NV = 1,
-              XV = null;
-            if (pV && !Array.isArray(pV)) {
-              const VV = pV;
-              pV = VV.uniforms ?? null, QV = VV.samplers ?? null, NV = VV.size ?? 1, wV = VV.camera ?? null, ZV = VV.samplingMode ?? 1, vV = VV.engine, kV = VV.reusable, bV = Array.isArray(VV.defines) ? VV.defines.join("\n") : VV.defines ?? null, BV = VV.textureType ?? 0, jV = VV.vertexUrl ?? "postprocess", qV = VV.indexParameters, tV = VV.blockCompilation ?? !1, FV = VV.textureFormat ?? 5, TV = VV.shaderLanguage ?? 0, XV = VV.uniformBuffers ?? null, PV = VV.extraInitializations, AV = VV.effectWrapper
-            } else nV && (NV = "number" === typeof nV ? nV : {
-              width: nV.width,
-              height: nV.height
+          constructor(BH, LH, tH, zH, CH, EH) {
+            let XH = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1,
+              GH = arguments.length > 7 ? arguments[7] : void 0,
+              uH = arguments.length > 8 ? arguments[8] : void 0,
+              QH = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
+              MH = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
+              xH = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : "postprocess",
+              vH = arguments.length > 12 ? arguments[12] : void 0,
+              PH = arguments.length > 13 && void 0 !== arguments[13] && arguments[13],
+              TH = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : 5,
+              UH = arguments.length > 15 ? arguments[15] : void 0,
+              VH = arguments.length > 16 ? arguments[16] : void 0;
+            this._parentContainer = ((0, AH.k)(this, oH), null), this.uniqueId = (0, AH.k)(this, IH, void 0), this.width = ((0, AH.k)(this, fH), (0, AH.k)(this, lH, -1)), this.height = ((0, AH.k)(this, KH), (0, AH.k)(this, cH, -1)), this.nodeMaterialSource = ((0, AH.k)(this, eH), null), this._outputTexture = null, this.renderTargetSamplingMode = (0, AH.k)(this, qH, void 0), this.clearColor = ((0, AH.k)(this, gH), (0, AH.k)(this, NH, void 0)), this.autoClear = ((0, AH.k)(this, RH), (0, AH.k)(this, jH, !0)), this.forceAutoClearInAlphaMode = ((0, AH.k)(this, nH), (0, AH.k)(this, FH, !1)), this.alphaConstants = ((0, AH.k)(this, DH), (0, AH.k)(this, wH, void 0)), this.animations = ((0, AH.k)(this, ZH), []), this.enablePixelPerfectMode = (0, AH.k)(this, dH, !1), this.forceFullscreenViewport = ((0, AH.k)(this, aH), (0, AH.k)(this, sH, !0)), this.inspectableCustomProperties = (0, AH.k)(this, JH), this.scaleMode = (0, AH.k)(this, iH, 1), this.alwaysForcePOT = ((0, AH.k)(this, pH), (0, AH.k)(this, yH, !1)), this._samples = ((0, AH.k)(this, HB), (0, AH.k)(this, BB, 1)), this.adaptScaleToCurrentViewport = ((0, AH.k)(this, LB), (0, AH.k)(this, AB, !1)), this.doNotSerialize = ((0, AH.k)(this, rB), !1), this._webGPUReady = !1, this._reusable = !1, this._renderId = 0, this.externalTextureSamplerBinding = !1, this._textures = new rH.i(2), this._textureCache = [], this._currentRenderTextureInd = 0, this._scaleRatio = new hH.n(1, 1), this._texelSize = hH.n.Zero(), this.onActivateObservable = new SH.d, this.onSizeChangedObservable = new SH.d, this.onApplyObservable = new SH.d, this.onBeforeRenderObservable = new SH.d, this.onAfterRenderObservable = new SH.d, this.uR = new SH.d, WH();
+            let OH, bH = 1,
+              kH = null;
+            if (tH && !Array.isArray(tH)) {
+              const HH = tH;
+              tH = HH.uniforms ?? null, zH = HH.samplers ?? null, bH = HH.size ?? 1, EH = HH.camera ?? null, XH = HH.samplingMode ?? 1, GH = HH.engine, uH = HH.reusable, QH = Array.isArray(HH.defines) ? HH.defines.join("\n") : HH.defines ?? null, MH = HH.textureType ?? 0, xH = HH.vertexUrl ?? "postprocess", vH = HH.indexParameters, PH = HH.blockCompilation ?? !1, TH = HH.textureFormat ?? 5, UH = HH.shaderLanguage ?? 0, kH = HH.uniformBuffers ?? null, VH = HH.extraInitializations, OH = HH.effectWrapper
+            } else CH && (bH = "number" === typeof CH ? CH : {
+              width: CH.width,
+              height: CH.height
             });
-            if (this._useExistingThinPostProcess = !!AV, this._effectWrapper = AV ?? new rV.d({
-                name: eV,
+            if (this._useExistingThinPostProcess = !!OH, this._effectWrapper = OH ?? new YH.f({
+                name: BH,
                 useShaderStore: !0,
                 useAsPostProcess: !0,
-                fragmentShader: xV,
-                engine: vV || wV?.dD().sk(),
-                uniforms: pV,
-                samplers: QV,
-                uniformBuffers: XV,
-                defines: bV,
-                vertexUrl: jV,
-                indexParameters: qV,
+                fragmentShader: LH,
+                engine: GH || EH?.yN().Iu(),
+                uniforms: tH,
+                samplers: zH,
+                uniformBuffers: kH,
+                defines: QH,
+                vertexUrl: xH,
+                indexParameters: vH,
                 blockCompilation: !0,
-                shaderLanguage: TV,
+                shaderLanguage: UH,
                 extraInitializations: void 0
-              }), this.name = eV, this.onEffectCreatedObservable = this._effectWrapper.onEffectCreatedObservable, null != wV ? (this.U1 = wV, this._scene = wV.dD(), wV.attachPostProcess(this), this._engine = this._scene.sk(), this._scene.addPostProcess(this), this.uniqueId = this._scene.getUniqueId()) : vV && (this._engine = vV, this._engine.postProcesses.push(this)), this._options = NV, this.renderTargetSamplingMode = ZV || 1, this._reusable = kV || !1, this._textureType = BV, this._textureFormat = FV, this._shaderLanguage = TV || 0, this._samplers = QV || [], -1 === this._samplers.indexOf("textureSampler") && this._samplers.push("textureSampler"), this._fragmentUrl = xV, this._vertexUrl = jV, this._parameters = pV || [], -1 === this._parameters.indexOf("scale") && this._parameters.push("scale"), this._uniformBuffers = XV || [], this._indexParameters = qV, !this._useExistingThinPostProcess) {
+              }), this.name = BH, this.onEffectCreatedObservable = this._effectWrapper.onEffectCreatedObservable, null != EH ? (this.j_ = EH, this._scene = EH.yN(), EH.attachPostProcess(this), this._engine = this._scene.Iu(), this._scene.addPostProcess(this), this.uniqueId = this._scene.getUniqueId()) : GH && (this._engine = GH, this._engine.postProcesses.push(this)), this._options = bH, this.renderTargetSamplingMode = XH || 1, this._reusable = uH || !1, this._textureType = MH, this._textureFormat = TH, this._shaderLanguage = UH || 0, this._samplers = zH || [], -1 === this._samplers.indexOf("textureSampler") && this._samplers.push("textureSampler"), this._fragmentUrl = LH, this._vertexUrl = xH, this._parameters = tH || [], -1 === this._parameters.indexOf("scale") && this._parameters.push("scale"), this._uniformBuffers = kH || [], this._indexParameters = vH, !this._useExistingThinPostProcess) {
               this._webGPUReady = 1 === this._shaderLanguage;
-              const eV = [];
-              this._gatherImports(this._engine.isWebGPU && !VV.ForceGLSL, eV), this._effectWrapper._webGPUReady = this._webGPUReady, this._effectWrapper._postConstructor(tV, bV, PV, eV)
+              const BH = [];
+              this._gatherImports(this._engine.isWebGPU && !HH.ForceGLSL, BH), this._effectWrapper._webGPUReady = this._webGPUReady, this._effectWrapper._postConstructor(PH, QH, VH, BH)
             }
           }
           _gatherImports() {
-            let VV = arguments.length > 1 ? arguments[1] : void 0;
-            arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && this._webGPUReady ? VV.push(Promise.all([xV.e(672).then((() => xV(64421)))])) : VV.push(Promise.all([xV.e(662).then((() => xV(64298)))]))
+            let HH = arguments.length > 1 ? arguments[1] : void 0;
+            arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && this._webGPUReady ? HH.push(Promise.all([LH.e(672).then((() => LH(64241)))])) : HH.push(Promise.all([LH.e(662).then((() => LH(64110)))]))
           }
           getClassName() {
             return "PostProcess"
           }
-          sk() {
+          Iu() {
             return this._engine
           }
           getEffect() {
             return this._effectWrapper.drawWrapper.effect
           }
-          shareOutputWith(VV) {
-            return this._disposeTextures(), this._shareOutputWithPostProcess = VV, this
+          shareOutputWith(HH) {
+            return this._disposeTextures(), this._shareOutputWithPostProcess = HH, this
           }
           useOwnOutput() {
-            0 == this._textures.length && (this._textures = new YV.f(2)), this._shareOutputWithPostProcess = null
+            0 == this._textures.length && (this._textures = new rH.i(2)), this._shareOutputWithPostProcess = null
           }
           updateEffect() {
-            let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-              eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-              JV = arguments.length > 3 ? arguments[3] : void 0,
-              YV = arguments.length > 4 ? arguments[4] : void 0,
-              UV = arguments.length > 5 ? arguments[5] : void 0,
-              yV = arguments.length > 6 ? arguments[6] : void 0,
-              pV = arguments.length > 7 ? arguments[7] : void 0;
-            this._effectWrapper.updateEffect(VV, eV, xV, JV, YV, UV, yV, pV), this._postProcessDefines = Array.isArray(this._effectWrapper.options.defines) ? this._effectWrapper.options.defines.join("\n") : this._effectWrapper.options.defines
+            let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+              BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+              AH = arguments.length > 3 ? arguments[3] : void 0,
+              rH = arguments.length > 4 ? arguments[4] : void 0,
+              SH = arguments.length > 5 ? arguments[5] : void 0,
+              hH = arguments.length > 6 ? arguments[6] : void 0,
+              tH = arguments.length > 7 ? arguments[7] : void 0;
+            this._effectWrapper.updateEffect(HH, BH, LH, AH, rH, SH, hH, tH), this._postProcessDefines = Array.isArray(this._effectWrapper.options.defines) ? this._effectWrapper.options.defines.join("\n") : this._effectWrapper.options.defines
           }
           isReusable() {
             return this._reusable
@@ -1583,93 +1583,93 @@ export const modules = {
           markTextureDirty() {
             this.width = -1
           }
-          _createRenderTargetTexture(VV, eV) {
-            let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-            for (let YV = 0; YV < this._textureCache.length; YV++)
-              if (this._textureCache[YV].texture.width === VV.width && this._textureCache[YV].texture.height === VV.height && this._textureCache[YV].postProcessChannel === xV && this._textureCache[YV].texture._generateDepthBuffer === eV.generateDepthBuffer && this._textureCache[YV].texture.samples === eV.samples) return this._textureCache[YV].texture;
-            const JV = this._engine.createRenderTargetTexture(VV, eV);
+          _createRenderTargetTexture(HH, BH) {
+            let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+            for (let rH = 0; rH < this._textureCache.length; rH++)
+              if (this._textureCache[rH].texture.width === HH.width && this._textureCache[rH].texture.height === HH.height && this._textureCache[rH].postProcessChannel === LH && this._textureCache[rH].texture._generateDepthBuffer === BH.generateDepthBuffer && this._textureCache[rH].texture.samples === BH.samples) return this._textureCache[rH].texture;
+            const AH = this._engine.createRenderTargetTexture(HH, BH);
             return this._textureCache.push({
-              texture: JV,
-              postProcessChannel: xV,
+              texture: AH,
+              postProcessChannel: LH,
               lastUsedRenderId: -1
-            }), JV
+            }), AH
           }
           _flushTextureCache() {
-            const VV = this._renderId;
-            for (let eV = this._textureCache.length - 1; eV >= 0; eV--)
-              if (VV - this._textureCache[eV].lastUsedRenderId > 100) {
-                let VV = !1;
-                for (let xV = 0; xV < this._textures.length; xV++)
-                  if (this._textures.data[xV] === this._textureCache[eV].texture) {
-                    VV = !0;
+            const HH = this._renderId;
+            for (let BH = this._textureCache.length - 1; BH >= 0; BH--)
+              if (HH - this._textureCache[BH].lastUsedRenderId > 100) {
+                let HH = !1;
+                for (let LH = 0; LH < this._textures.length; LH++)
+                  if (this._textures.data[LH] === this._textureCache[BH].texture) {
+                    HH = !0;
                     break
-                  } VV || (this._textureCache[eV].texture.dispose(), this._textureCache.splice(eV, 1))
+                  } HH || (this._textureCache[BH].texture.dispose(), this._textureCache.splice(BH, 1))
               }
           }
-          resize(VV, eV) {
-            let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-              JV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              YV = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-            this._textures.length > 0 && this._textures.reset(), this.width = VV, this.height = eV;
-            let UV = null;
-            if (xV)
-              for (let QV = 0; QV < xV._postProcesses.length; QV++)
-                if (null !== xV._postProcesses[QV]) {
-                  UV = xV._postProcesses[QV];
+          resize(HH, BH) {
+            let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+              AH = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              rH = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+            this._textures.length > 0 && this._textures.reset(), this.width = HH, this.height = BH;
+            let SH = null;
+            if (LH)
+              for (let zH = 0; zH < LH._postProcesses.length; zH++)
+                if (null !== LH._postProcesses[zH]) {
+                  SH = LH._postProcesses[zH];
                   break
-                } const yV = {
+                } const hH = {
                 width: this.width,
                 height: this.height
               },
-              pV = {
-                generateMipMaps: JV,
-                generateDepthBuffer: YV || UV === this,
-                generateStencilBuffer: (YV || UV === this) && this._engine.isStencilEnable,
+              tH = {
+                generateMipMaps: AH,
+                generateDepthBuffer: rH || SH === this,
+                generateStencilBuffer: (rH || SH === this) && this._engine.isStencilEnable,
                 samplingMode: this.renderTargetSamplingMode,
                 type: this._textureType,
                 format: this._textureFormat,
                 samples: this._samples,
                 label: "PostProcessRTT-" + this.name
               };
-            this._textures.push(this._createRenderTargetTexture(yV, pV, 0)), this._reusable && this._textures.push(this._createRenderTargetTexture(yV, pV, 1)), this._texelSize.FeV(1 / this.width, 1 / this.height), this.onSizeChangedObservable.notifyObservers(this)
+            this._textures.push(this._createRenderTargetTexture(hH, tH, 0)), this._reusable && this._textures.push(this._createRenderTargetTexture(hH, tH, 1)), this._texelSize.SBH(1 / this.width, 1 / this.height), this.onSizeChangedObservable.notifyObservers(this)
           }
           _getTarget() {
-            let VV;
-            if (this._shareOutputWithPostProcess) VV = this._shareOutputWithPostProcess.inputTexture;
-            else if (this._forcedOutputTexture) VV = this._forcedOutputTexture, this.width = this._forcedOutputTexture.width, this.height = this._forcedOutputTexture.height;
+            let HH;
+            if (this._shareOutputWithPostProcess) HH = this._shareOutputWithPostProcess.inputTexture;
+            else if (this._forcedOutputTexture) HH = this._forcedOutputTexture, this.width = this._forcedOutputTexture.width, this.height = this._forcedOutputTexture.height;
             else {
-              let eV;
-              VV = this.inputTexture;
-              for (let xV = 0; xV < this._textureCache.length; xV++)
-                if (this._textureCache[xV].texture === VV) {
-                  eV = this._textureCache[xV];
+              let BH;
+              HH = this.inputTexture;
+              for (let LH = 0; LH < this._textureCache.length; LH++)
+                if (this._textureCache[LH].texture === HH) {
+                  BH = this._textureCache[LH];
                   break
-                } eV && (eV.lastUsedRenderId = this._renderId)
+                } BH && (BH.lastUsedRenderId = this._renderId)
             }
-            return VV
+            return HH
           }
-          activate(VV) {
-            let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              xV = arguments.length > 2 ? arguments[2] : void 0;
-            const JV = null === VV || void 0 !== VV.cameraRigMode ? VV || this.U1 : null,
-              YV = JV?.dD() ?? VV,
-              UV = YV.sk(),
-              yV = UV.getCaps().maxTextureSize,
-              pV = (eV ? eV.width : this._engine.getRenderWidth(!0)) * this._options | 0,
-              QV = (eV ? eV.height : this._engine.getRenderHeight(!0)) * this._options | 0;
-            let nV = this._options.width || pV,
-              wV = this._options.height || QV;
-            const ZV = 7 !== this.renderTargetSamplingMode && 1 !== this.renderTargetSamplingMode && 2 !== this.renderTargetSamplingMode;
-            let rV = null;
+          activate(HH) {
+            let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              LH = arguments.length > 2 ? arguments[2] : void 0;
+            const AH = null === HH || void 0 !== HH.cameraRigMode ? HH || this.j_ : null,
+              rH = AH?.yN() ?? HH,
+              SH = rH.Iu(),
+              hH = SH.getCaps().maxTextureSize,
+              tH = (BH ? BH.width : this._engine.getRenderWidth(!0)) * this._options | 0,
+              zH = (BH ? BH.height : this._engine.getRenderHeight(!0)) * this._options | 0;
+            let CH = this._options.width || tH,
+              EH = this._options.height || zH;
+            const XH = 7 !== this.renderTargetSamplingMode && 1 !== this.renderTargetSamplingMode && 2 !== this.renderTargetSamplingMode;
+            let YH = null;
             if (!this._shareOutputWithPostProcess && !this._forcedOutputTexture) {
               if (this.adaptScaleToCurrentViewport) {
-                const VV = UV.currentViewport;
-                VV && (nV *= VV.width, wV *= VV.height)
-              }(ZV || this.alwaysForcePOT) && (this._options.width || (nV = UV.needPOTTextures ? (0, vV.i)(nV, yV, this.scaleMode) : nV), this._options.height || (wV = UV.needPOTTextures ? (0, vV.i)(wV, yV, this.scaleMode) : wV)), this.width === nV && this.height === wV && (rV = this._getTarget()) || this.resize(nV, wV, JV, ZV, xV), this._textures.forEach((VV => {
-                VV.samples !== this.samples && this._engine.updateRenderTargetTextureSampleCount(VV, this.samples)
+                const HH = SH.currentViewport;
+                HH && (CH *= HH.width, EH *= HH.height)
+              }(XH || this.alwaysForcePOT) && (this._options.width || (CH = SH.needPOTTextures ? (0, GH.c)(CH, hH, this.scaleMode) : CH), this._options.height || (EH = SH.needPOTTextures ? (0, GH.c)(EH, hH, this.scaleMode) : EH)), this.width === CH && this.height === EH && (YH = this._getTarget()) || this.resize(CH, EH, AH, XH, LH), this._textures.forEach((HH => {
+                HH.samples !== this.samples && this._engine.updateRenderTargetTextureSampleCount(HH, this.samples)
               })), this._flushTextureCache(), this._renderId++
             }
-            return rV || (rV = this._getTarget()), this.enablePixelPerfectMode ? (this._scaleRatio.FeV(pV / nV, QV / wV), this._engine.bindFramebuffer(rV, 0, pV, QV, this.forceFullscreenViewport)) : (this._scaleRatio.FeV(1, 1), this._engine.bindFramebuffer(rV, 0, void 0, void 0, this.forceFullscreenViewport)), this._engine._debugInsertMarker?.(`post process ${this.name} input`), this.onActivateObservable.notifyObservers(JV), this.autoClear && (0 === this.alphaMode || this.forceAutoClearInAlphaMode) && this._engine.clear(this.clearColor ? this.clearColor : YV.clearColor, YV._allowPostProcessClearColor, !0, !0), this._reusable && (this._currentRenderTextureInd = (this._currentRenderTextureInd + 1) % 2), rV
+            return YH || (YH = this._getTarget()), this.enablePixelPerfectMode ? (this._scaleRatio.SBH(tH / CH, zH / EH), this._engine.bindFramebuffer(YH, 0, tH, zH, this.forceFullscreenViewport)) : (this._scaleRatio.SBH(1, 1), this._engine.bindFramebuffer(YH, 0, void 0, void 0, this.forceFullscreenViewport)), this._engine._debugInsertMarker?.(`post process ${this.name} input`), this.onActivateObservable.notifyObservers(AH), this.autoClear && (0 === this.alphaMode || this.forceAutoClearInAlphaMode) && this._engine.clear(this.clearColor ? this.clearColor : rH.clearColor, rH._allowPostProcessClearColor, !0, !0), this._reusable && (this._currentRenderTextureInd = (this._currentRenderTextureInd + 1) % 2), YH
           }
           get isSupported() {
             return this._effectWrapper.drawWrapper.effect.isSupported
@@ -1682,321 +1682,321 @@ export const modules = {
           }
           apply() {
             if (!this._effectWrapper.isReady()) return null;
-            let VV;
-            return this._engine.enableEffect(this._effectWrapper.drawWrapper), this._engine.setState(!1), this._engine.setDepthBuffer(!1), this._engine.setDepthWrite(!1), this.alphaConstants && this.sk().setAlphaConstants(this.alphaConstants.r, this.alphaConstants.g, this.alphaConstants.b, this.alphaConstants.a), this._engine.setAlphaMode(this.alphaMode), VV = this._shareOutputWithPostProcess ? this._shareOutputWithPostProcess.inputTexture : this._forcedOutputTexture ? this._forcedOutputTexture : this.inputTexture, this.externalTextureSamplerBinding || this._effectWrapper.drawWrapper.effect._bindTexture("textureSampler", VV?.texture), this._effectWrapper.drawWrapper.effect.setVector2("scale", this._scaleRatio), this.onApplyObservable.notifyObservers(this._effectWrapper.drawWrapper.effect), this._effectWrapper.bind(!0), this._effectWrapper.drawWrapper.effect
+            let HH;
+            return this._engine.enableEffect(this._effectWrapper.drawWrapper), this._engine.setState(!1), this._engine.setDepthBuffer(!1), this._engine.setDepthWrite(!1), this.alphaConstants && this.Iu().setAlphaConstants(this.alphaConstants.r, this.alphaConstants.g, this.alphaConstants.b, this.alphaConstants.a), this._engine.setAlphaMode(this.alphaMode), HH = this._shareOutputWithPostProcess ? this._shareOutputWithPostProcess.inputTexture : this._forcedOutputTexture ? this._forcedOutputTexture : this.inputTexture, this.externalTextureSamplerBinding || this._effectWrapper.drawWrapper.effect._bindTexture("textureSampler", HH?.texture), this._effectWrapper.drawWrapper.effect.setVector2("scale", this._scaleRatio), this.onApplyObservable.notifyObservers(this._effectWrapper.drawWrapper.effect), this._effectWrapper.bind(!0), this._effectWrapper.drawWrapper.effect
           }
           _disposeTextures() {
             this._shareOutputWithPostProcess || this._forcedOutputTexture ? this._disposeTextureCache() : (this._disposeTextureCache(), this._textures.dispose())
           }
           _disposeTextureCache() {
-            for (let VV = this._textureCache.length - 1; VV >= 0; VV--) this._textureCache[VV].texture.dispose();
+            for (let HH = this._textureCache.length - 1; HH >= 0; HH--) this._textureCache[HH].texture.dispose();
             this._textureCache.length = 0
           }
-          setPrePassRenderer(VV) {
-            return !!this._prePassEffectConfiguration && (this._prePassEffectConfiguration = VV.addEffectConfiguration(this._prePassEffectConfiguration), this._prePassEffectConfiguration.enabled = !0, !0)
+          setPrePassRenderer(HH) {
+            return !!this._prePassEffectConfiguration && (this._prePassEffectConfiguration = HH.addEffectConfiguration(this._prePassEffectConfiguration), this._prePassEffectConfiguration.enabled = !0, !0)
           }
-          dispose(VV) {
-            let eV;
-            if (VV = VV || this.U1, this._useExistingThinPostProcess || this._effectWrapper.dispose(), this._disposeTextures(), this._scene && this._scene.removePostProcess(this), this._parentContainer && (eV = this._parentContainer.postProcesses.indexOf(this), eV > -1 && this._parentContainer.postProcesses.splice(eV, 1), this._parentContainer = null), eV = this._engine.postProcesses.indexOf(this), -1 !== eV && this._engine.postProcesses.splice(eV, 1), this.eC.notifyObservers(), VV) {
-              if (VV.detachPostProcess(this), eV = VV._postProcesses.indexOf(this), 0 === eV && VV._postProcesses.length > 0) {
-                const VV = this.U1._getFirstPostProcess();
-                VV && VV.markTextureDirty()
+          dispose(HH) {
+            let BH;
+            if (HH = HH || this.j_, this._useExistingThinPostProcess || this._effectWrapper.dispose(), this._disposeTextures(), this._scene && this._scene.removePostProcess(this), this._parentContainer && (BH = this._parentContainer.postProcesses.indexOf(this), BH > -1 && this._parentContainer.postProcesses.splice(BH, 1), this._parentContainer = null), BH = this._engine.postProcesses.indexOf(this), -1 !== BH && this._engine.postProcesses.splice(BH, 1), this.uR.notifyObservers(), HH) {
+              if (HH.detachPostProcess(this), BH = HH._postProcesses.indexOf(this), 0 === BH && HH._postProcesses.length > 0) {
+                const HH = this.j_._getFirstPostProcess();
+                HH && HH.markTextureDirty()
               }
               this.onActivateObservable.clear(), this.onAfterRenderObservable.clear(), this.onApplyObservable.clear(), this.onBeforeRenderObservable.clear(), this.onSizeChangedObservable.clear(), this.onEffectCreatedObservable.clear()
             }
           }
           serialize() {
-            const VV = nV.b.Serialize(this),
-              eV = this.getCamera() || this._scene && this._scene.activeCamera;
-            return VV.customType = "BABYLON." + this.getClassName(), VV.cameraId = eV ? eV.id : null, VV.reusable = this._reusable, VV.textureType = this._textureType, VV.fragmentUrl = this._fragmentUrl, VV.parameters = this._parameters, VV.samplers = this._samplers, VV.uniformBuffers = this._uniformBuffers, VV.options = this._options, VV.defines = this._postProcessDefines, VV.textureFormat = this._textureFormat, VV.vertexUrl = this._vertexUrl, VV.indexParameters = this._indexParameters, VV
+            const HH = CH.c.Serialize(this),
+              BH = this.getCamera() || this._scene && this._scene.activeCamera;
+            return HH.customType = "BABYLON." + this.getClassName(), HH.cameraId = BH ? BH.id : null, HH.reusable = this._reusable, HH.textureType = this._textureType, HH.fragmentUrl = this._fragmentUrl, HH.parameters = this._parameters, HH.samplers = this._samplers, HH.uniformBuffers = this._uniformBuffers, HH.options = this._options, HH.defines = this._postProcessDefines, HH.textureFormat = this._textureFormat, HH.vertexUrl = this._vertexUrl, HH.indexParameters = this._indexParameters, HH
           }
           clone() {
-            const eV = this.serialize();
-            eV._engine = this._engine, eV.cameraId = null;
-            const xV = VV.Parse(eV, this._scene, "");
-            return xV ? (xV.onActivateObservable = this.onActivateObservable.clone(), xV.onSizeChangedObservable = this.onSizeChangedObservable.clone(), xV.onApplyObservable = this.onApplyObservable.clone(), xV.onBeforeRenderObservable = this.onBeforeRenderObservable.clone(), xV.onAfterRenderObservable = this.onAfterRenderObservable.clone(), xV._prePassEffectConfiguration = this._prePassEffectConfiguration, xV) : null
+            const BH = this.serialize();
+            BH._engine = this._engine, BH.cameraId = null;
+            const LH = HH.Parse(BH, this._scene, "");
+            return LH ? (LH.onActivateObservable = this.onActivateObservable.clone(), LH.onSizeChangedObservable = this.onSizeChangedObservable.clone(), LH.onApplyObservable = this.onApplyObservable.clone(), LH.onBeforeRenderObservable = this.onBeforeRenderObservable.clone(), LH.onAfterRenderObservable = this.onAfterRenderObservable.clone(), LH._prePassEffectConfiguration = this._prePassEffectConfiguration, LH) : null
           }
-          static Parse(VV, eV, xV) {
-            const JV = (0, wV.c)(VV.customType);
-            if (!JV || !JV._Parse) return null;
-            const YV = eV ? eV.getCameraById(VV.cameraId) : null;
-            return JV._Parse(VV, YV, eV, xV)
+          static Parse(HH, BH, LH) {
+            const AH = (0, EH.b)(HH.customType);
+            if (!AH || !AH._Parse) return null;
+            const rH = BH ? BH.getCameraById(HH.cameraId) : null;
+            return AH._Parse(HH, rH, BH, LH)
           }
-          static _Parse(eV, xV, JV, YV) {
-            return nV.b.Parse((() => new VV(eV.name, eV.fragmentUrl, eV.parameters, eV.samplers, eV.options, xV, eV.renderTargetSamplingMode, eV._engine, eV.reusable, eV.defines, eV.textureType, eV.vertexUrl, eV.indexParameters, !1, eV.textureFormat)), eV, JV, YV)
+          static _Parse(BH, LH, AH, rH) {
+            return CH.c.Parse((() => new HH(BH.name, BH.fragmentUrl, BH.parameters, BH.samplers, BH.options, LH, BH.renderTargetSamplingMode, BH._engine, BH.reusable, BH.defines, BH.textureType, BH.vertexUrl, BH.indexParameters, !1, BH.textureFormat)), BH, AH, rH)
           }
         }, (() => {
-          const xV = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-          eV = [(0, QV.J)()], pV = [(0, QV.J)()], ZV = [(0, QV.J)()], kV = [(0, QV.J)()], bV = [(0, QV.J)()], BV = [(0, QV.s)()], jV = [(0, QV.J)()], qV = [(0, QV.J)()], tV = [(0, QV.J)()], FV = [(0, QV.J)()], TV = [(0, QV.J)()], PV = [(0, QV.J)()], AV = [(0, QV.J)()], NV = [(0, QV.J)()], XV = [(0, QV.J)("samples")], MV = [(0, QV.J)()], (0, JV.i)(VV, null, pV, {
+          const LH = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+          BH = [(0, zH.H)()], tH = [(0, zH.H)()], XH = [(0, zH.H)()], uH = [(0, zH.H)()], QH = [(0, zH.H)()], MH = [(0, zH.n)()], xH = [(0, zH.H)()], vH = [(0, zH.H)()], PH = [(0, zH.H)()], TH = [(0, zH.H)()], UH = [(0, zH.H)()], VH = [(0, zH.H)()], OH = [(0, zH.H)()], bH = [(0, zH.H)()], kH = [(0, zH.H)("samples")], mH = [(0, zH.H)()], (0, AH.g)(HH, null, tH, {
             kind: "getter",
             name: "name",
             static: !1,
             private: !1,
             access: {
-              has: VV => "name" in VV,
-              get: VV => VV.name
+              has: HH => "name" in HH,
+              get: HH => HH.name
             },
-            metadata: xV
-          }, null, zV), (0, JV.i)(VV, null, tV, {
+            metadata: LH
+          }, null, oH), (0, AH.g)(HH, null, PH, {
             kind: "getter",
             name: "alphaMode",
             static: !1,
             private: !1,
             access: {
-              has: VV => "alphaMode" in VV,
-              get: VV => VV.alphaMode
+              has: HH => "alphaMode" in HH,
+              get: HH => HH.alphaMode
             },
-            metadata: xV
-          }, null, zV), (0, JV.i)(null, null, eV, {
+            metadata: LH
+          }, null, oH), (0, AH.g)(null, null, BH, {
             kind: "field",
             name: "uniqueId",
             static: !1,
             private: !1,
             access: {
-              has: VV => "uniqueId" in VV,
-              get: VV => VV.uniqueId,
-              set: (VV, eV) => {
-                VV.uniqueId = eV
+              has: HH => "uniqueId" in HH,
+              get: HH => HH.uniqueId,
+              set: (HH, BH) => {
+                HH.uniqueId = BH
               }
             },
-            metadata: xV
-          }, GV, WV), (0, JV.i)(null, null, ZV, {
+            metadata: LH
+          }, IH, fH), (0, AH.g)(null, null, XH, {
             kind: "field",
             name: "width",
             static: !1,
             private: !1,
             access: {
-              has: VV => "width" in VV,
-              get: VV => VV.width,
-              set: (VV, eV) => {
-                VV.width = eV
+              has: HH => "width" in HH,
+              get: HH => HH.width,
+              set: (HH, BH) => {
+                HH.width = BH
               }
             },
-            metadata: xV
-          }, RV, gV), (0, JV.i)(null, null, kV, {
+            metadata: LH
+          }, lH, KH), (0, AH.g)(null, null, uH, {
             kind: "field",
             name: "height",
             static: !1,
             private: !1,
             access: {
-              has: VV => "height" in VV,
-              get: VV => VV.height,
-              set: (VV, eV) => {
-                VV.height = eV
+              has: HH => "height" in HH,
+              get: HH => HH.height,
+              set: (HH, BH) => {
+                HH.height = BH
               }
             },
-            metadata: xV
-          }, DV, iV), (0, JV.i)(null, null, bV, {
+            metadata: LH
+          }, cH, eH), (0, AH.g)(null, null, QH, {
             kind: "field",
             name: "renderTargetSamplingMode",
             static: !1,
             private: !1,
             access: {
-              has: VV => "renderTargetSamplingMode" in VV,
-              get: VV => VV.renderTargetSamplingMode,
-              set: (VV, eV) => {
-                VV.renderTargetSamplingMode = eV
+              has: HH => "renderTargetSamplingMode" in HH,
+              get: HH => HH.renderTargetSamplingMode,
+              set: (HH, BH) => {
+                HH.renderTargetSamplingMode = BH
               }
             },
-            metadata: xV
-          }, CV, aV), (0, JV.i)(null, null, BV, {
+            metadata: LH
+          }, qH, gH), (0, AH.g)(null, null, MH, {
             kind: "field",
             name: "clearColor",
             static: !1,
             private: !1,
             access: {
-              has: VV => "clearColor" in VV,
-              get: VV => VV.clearColor,
-              set: (VV, eV) => {
-                VV.clearColor = eV
+              has: HH => "clearColor" in HH,
+              get: HH => HH.clearColor,
+              set: (HH, BH) => {
+                HH.clearColor = BH
               }
             },
-            metadata: xV
-          }, oV, cV), (0, JV.i)(null, null, jV, {
+            metadata: LH
+          }, NH, RH), (0, AH.g)(null, null, xH, {
             kind: "field",
             name: "autoClear",
             static: !1,
             private: !1,
             access: {
-              has: VV => "autoClear" in VV,
-              get: VV => VV.autoClear,
-              set: (VV, eV) => {
-                VV.autoClear = eV
+              has: HH => "autoClear" in HH,
+              get: HH => HH.autoClear,
+              set: (HH, BH) => {
+                HH.autoClear = BH
               }
             },
-            metadata: xV
-          }, hV, lV), (0, JV.i)(null, null, qV, {
+            metadata: LH
+          }, jH, nH), (0, AH.g)(null, null, vH, {
             kind: "field",
             name: "forceAutoClearInAlphaMode",
             static: !1,
             private: !1,
             access: {
-              has: VV => "forceAutoClearInAlphaMode" in VV,
-              get: VV => VV.forceAutoClearInAlphaMode,
-              set: (VV, eV) => {
-                VV.forceAutoClearInAlphaMode = eV
+              has: HH => "forceAutoClearInAlphaMode" in HH,
+              get: HH => HH.forceAutoClearInAlphaMode,
+              set: (HH, BH) => {
+                HH.forceAutoClearInAlphaMode = BH
               }
             },
-            metadata: xV
-          }, LV, fV), (0, JV.i)(null, null, FV, {
+            metadata: LH
+          }, FH, DH), (0, AH.g)(null, null, TH, {
             kind: "field",
             name: "alphaConstants",
             static: !1,
             private: !1,
             access: {
-              has: VV => "alphaConstants" in VV,
-              get: VV => VV.alphaConstants,
-              set: (VV, eV) => {
-                VV.alphaConstants = eV
+              has: HH => "alphaConstants" in HH,
+              get: HH => HH.alphaConstants,
+              set: (HH, BH) => {
+                HH.alphaConstants = BH
               }
             },
-            metadata: xV
-          }, mV, KV), (0, JV.i)(null, null, TV, {
+            metadata: LH
+          }, wH, ZH), (0, AH.g)(null, null, UH, {
             kind: "field",
             name: "enablePixelPerfectMode",
             static: !1,
             private: !1,
             access: {
-              has: VV => "enablePixelPerfectMode" in VV,
-              get: VV => VV.enablePixelPerfectMode,
-              set: (VV, eV) => {
-                VV.enablePixelPerfectMode = eV
+              has: HH => "enablePixelPerfectMode" in HH,
+              get: HH => HH.enablePixelPerfectMode,
+              set: (HH, BH) => {
+                HH.enablePixelPerfectMode = BH
               }
             },
-            metadata: xV
-          }, HV, uV), (0, JV.i)(null, null, PV, {
+            metadata: LH
+          }, dH, aH), (0, AH.g)(null, null, VH, {
             kind: "field",
             name: "forceFullscreenViewport",
             static: !1,
             private: !1,
             access: {
-              has: VV => "forceFullscreenViewport" in VV,
-              get: VV => VV.forceFullscreenViewport,
-              set: (VV, eV) => {
-                VV.forceFullscreenViewport = eV
+              has: HH => "forceFullscreenViewport" in HH,
+              get: HH => HH.forceFullscreenViewport,
+              set: (HH, BH) => {
+                HH.forceFullscreenViewport = BH
               }
             },
-            metadata: xV
-          }, sV, SV), (0, JV.i)(null, null, AV, {
+            metadata: LH
+          }, sH, JH), (0, AH.g)(null, null, OH, {
             kind: "field",
             name: "scaleMode",
             static: !1,
             private: !1,
             access: {
-              has: VV => "scaleMode" in VV,
-              get: VV => VV.scaleMode,
-              set: (VV, eV) => {
-                VV.scaleMode = eV
+              has: HH => "scaleMode" in HH,
+              get: HH => HH.scaleMode,
+              set: (HH, BH) => {
+                HH.scaleMode = BH
               }
             },
-            metadata: xV
-          }, IV, dV), (0, JV.i)(null, null, NV, {
+            metadata: LH
+          }, iH, pH), (0, AH.g)(null, null, bH, {
             kind: "field",
             name: "alwaysForcePOT",
             static: !1,
             private: !1,
             access: {
-              has: VV => "alwaysForcePOT" in VV,
-              get: VV => VV.alwaysForcePOT,
-              set: (VV, eV) => {
-                VV.alwaysForcePOT = eV
+              has: HH => "alwaysForcePOT" in HH,
+              get: HH => HH.alwaysForcePOT,
+              set: (HH, BH) => {
+                HH.alwaysForcePOT = BH
               }
             },
-            metadata: xV
-          }, OV, Ve), (0, JV.i)(null, null, XV, {
+            metadata: LH
+          }, yH, HB), (0, AH.g)(null, null, kH, {
             kind: "field",
             name: "_samples",
             static: !1,
             private: !1,
             access: {
-              has: VV => "_samples" in VV,
-              get: VV => VV._samples,
-              set: (VV, eV) => {
-                VV._samples = eV
+              has: HH => "_samples" in HH,
+              get: HH => HH._samples,
+              set: (HH, BH) => {
+                HH._samples = BH
               }
             },
-            metadata: xV
-          }, ee, xe), (0, JV.i)(null, null, MV, {
+            metadata: LH
+          }, BB, LB), (0, AH.g)(null, null, mH, {
             kind: "field",
             name: "adaptScaleToCurrentViewport",
             static: !1,
             private: !1,
             access: {
-              has: VV => "adaptScaleToCurrentViewport" in VV,
-              get: VV => VV.adaptScaleToCurrentViewport,
-              set: (VV, eV) => {
-                VV.adaptScaleToCurrentViewport = eV
+              has: HH => "adaptScaleToCurrentViewport" in HH,
+              get: HH => HH.adaptScaleToCurrentViewport,
+              set: (HH, BH) => {
+                HH.adaptScaleToCurrentViewport = BH
               }
             },
-            metadata: xV
-          }, Je, Ye), xV && Object.defineProperty(VV, Symbol.metadata, {
+            metadata: LH
+          }, AB, rB), LH && Object.defineProperty(HH, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: xV
+            value: LH
           })
-        })(), VV
+        })(), HH
       })(),
-      bV = !1;
+      QH = !1;
 
-    function EV() {
-      bV || (bV = !0, ZV.d.prototype.setTextureFromPostProcess = function(VV, eV, xV) {
-        let JV = null;
-        eV && (eV._forcedOutputTexture ? JV = eV._forcedOutputTexture : eV._textures.data[eV._currentRenderTextureInd] && (JV = eV._textures.data[eV._currentRenderTextureInd])), this._bindTexture(VV, JV?.texture ?? null, xV)
-      }, ZV.d.prototype.setTextureFromPostProcessOutput = function(VV, eV, xV) {
-        this._bindTexture(VV, eV?._outputTexture?.texture ?? null, xV)
-      }, pV.c.prototype.setTextureFromPostProcess = function(VV, eV) {
-        this._engine.setTextureFromPostProcess(this._samplers[VV], eV, VV)
-      }, pV.c.prototype.setTextureFromPostProcessOutput = function(VV, eV) {
-        this._engine.setTextureFromPostProcessOutput(this._samplers[VV], eV, VV)
-      }, (0, wV.d)("BABYLON.PostProcess", kV))
+    function WH() {
+      QH || (QH = !0, XH.c.prototype.setTextureFromPostProcess = function(HH, BH, LH) {
+        let AH = null;
+        BH && (BH._forcedOutputTexture ? AH = BH._forcedOutputTexture : BH._textures.data[BH._currentRenderTextureInd] && (AH = BH._textures.data[BH._currentRenderTextureInd])), this._bindTexture(HH, AH?.texture ?? null, LH)
+      }, XH.c.prototype.setTextureFromPostProcessOutput = function(HH, BH, LH) {
+        this._bindTexture(HH, BH?._outputTexture?.texture ?? null, LH)
+      }, tH.c.prototype.setTextureFromPostProcess = function(HH, BH) {
+        this._engine.setTextureFromPostProcess(this._samplers[HH], BH, HH)
+      }, tH.c.prototype.setTextureFromPostProcessOutput = function(HH, BH) {
+        this._engine.setTextureFromPostProcessOutput(this._samplers[HH], BH, HH)
+      }, (0, EH.f)("BABYLON.PostProcess", uH))
     }
   },
-  44719: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => yV,
-      e: () => UV
+  45296: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => hH,
+      f: () => SH
     });
-    var JV = xV(44699),
-      YV = xV(38287);
-    class UV extends JV.d {
-      _gatherImports(VV, eV) {
-        VV ? (this._webGPUReady = !0, eV.push(Promise.all([xV.e(679).then((() => xV(64473)))]))) : eV.push(Promise.all([xV.e(680).then((() => xV(64476)))])), super._gatherImports(VV, eV)
+    var AH = LH(45271),
+      rH = LH(37989);
+    class SH extends AH.f {
+      _gatherImports(HH, BH) {
+        HH ? (this._webGPUReady = !0, BH.push(Promise.all([LH.e(679).then((() => LH(64293)))]))) : BH.push(Promise.all([LH.e(680).then((() => LH(64302)))])), super._gatherImports(HH, BH)
       }
-      constructor(VV) {
-        let eV = arguments.length > 2 ? arguments[2] : void 0;
-        const xV = {
-          name: VV,
-          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || YV.d.LastCreatedEngine,
+      constructor(HH) {
+        let BH = arguments.length > 2 ? arguments[2] : void 0;
+        const LH = {
+          name: HH,
+          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || rH.d.LastCreatedEngine,
           useShaderStore: !0,
           useAsPostProcess: !0,
-          fragmentShader: UV.FragmentUrl,
-          ...eV
+          fragmentShader: SH.FragmentUrl,
+          ...BH
         };
-        xV.engine || (xV.engine = YV.d.LastCreatedEngine), super(xV)
+        LH.engine || (LH.engine = rH.d.LastCreatedEngine), super(LH)
       }
     }
-    UV.FragmentUrl = "pass";
-    class yV extends JV.d {
-      _gatherImports(VV, eV) {
-        VV ? (this._webGPUReady = !0, eV.push(Promise.all([xV.e(681).then((() => xV(64482)))]))) : eV.push(Promise.all([xV.e(682).then((() => xV(64487)))])), super._gatherImports(VV, eV)
+    SH.FragmentUrl = "pass";
+    class hH extends AH.f {
+      _gatherImports(HH, BH) {
+        HH ? (this._webGPUReady = !0, BH.push(Promise.all([LH.e(681).then((() => LH(64311)))]))) : BH.push(Promise.all([LH.e(682).then((() => LH(64313)))])), super._gatherImports(HH, BH)
       }
-      constructor(VV) {
+      constructor(HH) {
         super({
           ...arguments.length > 2 ? arguments[2] : void 0,
-          name: VV,
-          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || YV.d.LastCreatedEngine,
+          name: HH,
+          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || rH.d.LastCreatedEngine,
           useShaderStore: !0,
           useAsPostProcess: !0,
-          fragmentShader: yV.FragmentUrl,
+          fragmentShader: hH.FragmentUrl,
           defines: "#define POSITIVEX"
         }), this._face = 0
       }
       get face() {
         return this._face
       }
-      set face(VV) {
-        if (!(VV < 0 || VV > 5)) switch (this._face = VV, this._face) {
+      set face(HH) {
+        if (!(HH < 0 || HH > 5)) switch (this._face = HH, this._face) {
           case 0:
             this.updateEffect("#define POSITIVEX");
             break;
@@ -2017,8 +2017,8 @@ export const modules = {
         }
       }
     }
-    yV.FragmentUrl = "passCube"
+    hH.FragmentUrl = "passCube"
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

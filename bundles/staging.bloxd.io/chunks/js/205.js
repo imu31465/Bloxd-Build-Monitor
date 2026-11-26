@@ -1,1370 +1,382 @@
 export const id = 205;
 export const ids = [205];
 export const modules = {
-  41885: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => QV,
-      i: () => pV,
-      j: () => yV
-    });
-    var JV = xV(41893),
-      YV = xV(5297),
-      UV = xV(41900);
+  38573: (HH, BH, LH) => {
+    var AH = LH(38577);
 
-    function yV(VV) {
-      return VV.payloadKind === YV.sc.Msgpack ? (0, JV.e)(VV.payload) : void 0
-    }
-
-    function pV(VV, eV) {
-      if (eV.payloadKind === YV.sc.Bytes || eV.payloadKind === YV.sc.MsgpackBin) return (0, UV.b)(VV, eV.payload)
-    }
-
-    function QV(VV) {
-      return null !== VV && "object" === typeof VV
-    }
-  },
-  41909: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => ZV,
-      f: () => vV,
-      h: () => rV,
-      l: () => wV,
-      m: () => EV
-    });
-    var JV = xV(5297),
-      YV = xV(41914);
-    const UV = new Map,
-      yV = new Set,
-      pV = new Set;
-    let QV = 0,
-      nV = 0;
-
-    function wV(VV, eV) {
-      let xV = UV.get(VV);
-      return xV || (xV = new Set, UV.set(VV, xV)), xV.add(eV), () => {
-        xV.delete(eV)
+    function rH(HH) {
+      for (var BH, LH, rH = 0, SH = HH.length, hH = 0; hH < HH.length;) {
+        for (BH = HH[hH], LH = 0; hH < SH && HH[hH] === BH;) ++hH, ++LH;
+        rH += AH.log2(LH) / 7 | 0, rH += AH.log2(BH >>> 0) / 7 | 0, rH += 2
       }
+      return rH
     }
-
-    function ZV() {
-      return 0 !== QV
-    }
-
-    function vV(VV) {
-      return yV.add(VV), () => {
-        yV.delete(VV)
+    BH.size = rH, BH.encode = function(HH, BH) {
+      BH || (BH = new Uint8Array(rH(HH)));
+      for (var LH, AH, SH = 0, hH = BH.length, tH = 0; tH < HH.length;) {
+        for (LH = HH[tH], AH = 0; tH < HH.length && HH[tH] === LH;) ++tH, ++AH;
+        for (; SH < hH && AH >= 128;) BH[SH++] = 128 + (127 & AH), AH >>>= 7;
+        if (SH >= hH) throw new Error("RLE buffer overflow");
+        for (BH[SH++] = AH, LH >>>= 0; SH < hH && LH >= 128;) BH[SH++] = 128 + (127 & LH), LH >>>= 7;
+        if (SH >= hH) throw new Error("RLE buffer overflow");
+        BH[SH++] = LH
       }
-    }
-
-    function rV(VV) {
-      return pV.add(VV), () => {
-        pV.delete(VV)
+      return BH
+    }, BH.decode = function(HH, BH) {
+      for (var LH, AH, rH, SH, hH = BH.length, tH = HH.length, zH = 0, CH = 0; CH < tH;) {
+        for (LH = 0, AH = 0; CH < tH && HH[CH] >= 128;) LH += (127 & HH[CH++]) << AH, AH += 7;
+        if (LH += HH[CH++] << AH, CH >= tH) throw new Error("RLE buffer underrun");
+        if (zH + LH > hH) throw new Error("Chunk buffer overflow");
+        for (rH = 0, AH = 0; CH < tH && HH[CH] >= 128;) rH += (127 & HH[CH++]) << AH, AH += 7;
+        if (CH >= tH) throw new Error("RLE buffer underrun");
+        for (rH += HH[CH++] << AH, SH = 0; SH < LH; ++SH) BH[zH++] = rH
       }
-    }
-    const kV = "A raw message listener threw";
-
-    function bV(VV) {
-      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yV;
-      for (const JV of eV) try {
-        JV()
-      } catch (xV) {
-        VV ? (0, YV.o)(xV, kV) : console.error(kV, xV)
-      }
-    }
-    const EV = {
-      fire: function(VV) {
-        if ("connection" === VV.type) {
-          const eV = VV.phase === JV.H.Activated && VV.conn !== QV && VV.conn > nV,
-            xV = (VV.phase === JV.H.Left || VV.phase === JV.H.Closed) && VV.conn === QV;
-          return void(eV || xV ? (QV = eV ? VV.conn : 0, bV(!0)) : VV.phase === JV.H.Resumed && 0 !== QV && VV.conn > nV && (QV = VV.conn, bV(!0, pV)))
-        }
-        const eV = UV.get(VV.yZ);
-        if (eV && VV.conn === QV && 0 !== QV)
-          for (const JV of eV) try {
-            JV(VV)
-          } catch (xV) {
-            (0, YV.o)(xV, kV)
-          }
-      },
-      close: function(VV) {
-        nV = Math.max(nV, VV, QV), 0 !== QV && (QV = 0, bV(!1))
-      }
+      return BH
     }
   },
-  41876: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => nV,
-      g: () => QV,
-      k: () => pV
-    });
-    var JV = xV(1293),
-      YV = xV(41852);
-    const UV = new TextDecoder,
-      yV = new TextEncoder;
-
-    function pV(VV, eV) {
-      const xV = VV.queries.entityName(eV);
-      if (xV === YV.Bc) return;
-      const yV = VV.memoryData(VV.scratch(), 4 + xV, 4, "entity_name's answer");
-      if (!yV) return;
-      const pV = yV.getUint32(0, !0),
-        QV = UV.decode(new Uint8Array(yV.buffer, yV.byteOffset + 4, xV));
-      return (0, JV.b)(QV, !1, pV === YV.Yd ? null : pV)
-    }
-
-    function QV(VV, eV, xV) {
-      const JV = yV.encode(xV);
-      if (JV.length > YV.yb) return !1;
-      const UV = VV.memoryView(Uint8Array, VV.scratch(), JV.length, "has_effect's name");
-      return !!UV && (UV.set(JV), 1 === VV.queries.hasEffect(eV, JV.length))
-    }
-
-    function nV(VV, eV, xV, JV) {
-      const yV = VV.queries.blockData(eV, xV, JV);
-      if (yV === YV.Bc) return;
-      const pV = VV.memoryView(Uint8Array, VV.scratch(), yV, "block_data's answer");
-      return pV ? JSON.parse(UV.decode(pV)) : void 0
-    }
-  },
-  41893: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => YV,
-      g: () => wV
-    });
-    const JV = new TextDecoder;
-
-    function YV(VV) {
-      const eV = new UV(VV),
-        xV = eV.value();
-      if (eV.at !== VV.length) throw new Error(`msgpack: ${VV.length-eV.at} bytes after the value`);
-      return xV
-    }
-    class UV {
-      constructor(VV) {
-        this.bytes = VV, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(VV.buffer, VV.byteOffset, VV.byteLength)
-      }
-      value() {
-        const VV = this.u8();
-        if (VV <= 127) return VV;
-        if (VV >= 224) return VV - 256;
-        if (VV >= 128 && VV <= 143) return this.map(15 & VV);
-        if (VV >= 144 && VV <= 159) return this.array(15 & VV);
-        if (VV >= 160 && VV <= 191) return this.str(31 & VV);
-        switch (VV) {
-          case 192:
-            return null;
-          case 194:
-            return !1;
-          case 195:
-            return !0;
-          case 196:
-            return this.bin(this.u8());
-          case 197:
-            return this.bin(this.u16());
-          case 198:
-            return this.bin(this.u32());
-          case 199:
-            return this.ext(this.u8());
-          case 200:
-            return this.ext(this.u16());
-          case 201:
-            return this.ext(this.u32());
-          case 202:
-            return this.view.getFloat32(this.take(4), !1);
-          case 203:
-            return this.view.getFloat64(this.take(8), !1);
-          case 204:
-            return this.u8();
-          case 205:
-            return this.u16();
-          case 206:
-            return this.u32();
-          case 207:
-            return this.int64(!1);
-          case 208:
-            return this.view.getInt8(this.take(1));
-          case 209:
-            return this.view.getInt16(this.take(2), !1);
-          case 210:
-            return this.view.getInt32(this.take(4), !1);
-          case 211:
-            return this.int64(!0);
-          case 212:
-            return this.ext(1);
-          case 213:
-            return this.ext(2);
-          case 214:
-            return this.ext(4);
-          case 215:
-            return this.ext(8);
-          case 216:
-            return this.ext(16);
-          case 217:
-            return this.str(this.u8());
-          case 218:
-            return this.str(this.u16());
-          case 219:
-            return this.str(this.u32());
-          case 220:
-            return this.array(this.u16());
-          case 221:
-            return this.array(this.u32());
-          case 222:
-            return this.map(this.u16());
-          case 223:
-            return this.map(this.u32());
-          default:
-            throw new Error(`msgpack: unknown byte 0x${VV.toString(16)} at ${this.at-1}`)
-        }
-      }
-      take(VV) {
-        const eV = this.at;
-        if (eV + VV > this.bytes.length) throw new Error(`msgpack: ${VV} bytes past the end at ${eV}`);
-        return this.at = eV + VV, eV
-      }
-      u8() {
-        return this.view.getUint8(this.take(1))
-      }
-      u16() {
-        return this.view.getUint16(this.take(2), !1)
-      }
-      u32() {
-        return this.view.getUint32(this.take(4), !1)
-      }
-      int64(VV) {
-        const eV = this.take(8);
-        return VV ? this.view.getBigInt64(eV, !1) : this.view.getBigUint64(eV, !1)
-      }
-      str(VV) {
-        const eV = this.take(VV),
-          xV = this.bytes;
-        if (VV < 16) {
-          let YV = "";
-          for (let UV = eV; UV < eV + VV; UV++) {
-            const yV = xV[UV];
-            if (yV >= 128) return JV.decode(xV.subarray(eV, eV + VV));
-            YV += String.fromCharCode(yV)
-          }
-          return YV
-        }
-        return JV.decode(xV.subarray(eV, eV + VV))
-      }
-      bin(VV) {
-        const eV = this.take(VV);
-        return this.bytes.subarray(eV, eV + VV)
-      }
-      enter() {
-        if (++this.depth > 512) throw new Error("msgpack: nested too deep")
-      }
-      array(VV) {
-        this.enter();
-        const eV = [];
-        for (let xV = 0; xV < VV; xV++) eV.push(this.value());
-        return this.depth--, eV
-      }
-      map(VV) {
-        this.enter();
-        const eV = {};
-        for (let xV = 0; xV < VV; xV++) {
-          const VV = this.value(),
-            xV = this.value();
-          eV["__proto__" === VV ? "__proto_" : String(VV)] = xV
-        }
-        return this.depth--, eV
-      }
-      ext(VV) {
-        const eV = this.view.getInt8(this.take(1)),
-          xV = this.take(VV);
-        if (0 !== eV) {
-          if (-1 === eV) {
-            if (1 === VV) return new Date(NaN);
-            if (4 === VV) return new Date(1e3 * this.view.getUint32(xV, !1));
-            if (8 === VV) {
-              const VV = this.view.getUint32(xV, !1),
-                eV = VV >>> 2,
-                JV = 4294967296 * (3 & VV) + this.view.getUint32(xV + 4, !1);
-              return new Date(1e3 * JV + eV / 1e6)
-            }
-            if (12 === VV) {
-              const VV = this.view.getUint32(xV, !1),
-                eV = 4294967296 * this.view.getInt32(xV + 4, !1) + this.view.getUint32(xV + 8, !1);
-              return new Date(1e3 * eV + VV / 1e6)
-            }
-          }
-          throw new Error(`msgpack: ext type ${eV} of ${VV} bytes`)
-        }
-      }
-    }
-    const yV = new TextEncoder,
-      pV = -(2n ** 63n),
-      QV = 2n ** 63n - 1n,
-      nV = 2n ** 64n - 1n;
-
-    function wV(VV) {
-      const eV = new ZV;
-      return eV.value(VV, 0), eV.bytes()
-    }
-    class ZV {
-      constructor() {
-        this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
-      }
-      bytes() {
-        return this.buf.subarray(0, this.at)
-      }
-      value(VV, eV) {
-        if (eV > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof VV) {
-          case "undefined":
-            return this.u8(212), this.u8(0), void this.u8(0);
-          case "boolean":
-            return void this.u8(VV ? 195 : 194);
-          case "number":
-            return void this.number(VV);
-          case "bigint":
-            return void this.bigint(VV);
-          case "string":
-            return void this.string(VV);
-          case "object":
-            if (null === VV) this.u8(192);
-            else if (VV instanceof Uint8Array) this.head(VV.length, 196, -1, 197, 198), this.room(VV.length), this.buf.set(VV, this.at), this.at += VV.length;
-            else if (Array.isArray(VV)) {
-              this.head(VV.length, 220, 144, 220, 221);
-              for (const xV of VV) this.value(xV, eV + 1)
-            } else {
-              var xV, JV;
-              if (Object.getPrototypeOf(VV) !== Object.prototype && null !== Object.getPrototypeOf(VV)) throw new Error(`msgpack: can't encode a ${null!==(xV=null===(JV=VV.constructor)||void 0===JV?void 0:JV.name)&&void 0!==xV?xV:"object"}`);
-              {
-                const xV = Object.keys(VV);
-                this.head(xV.length, 222, 128, 222, 223);
-                for (const JV of xV) this.string(JV), this.value(VV[JV], eV + 1)
-              }
-            }
-            return;
-          default:
-            throw new Error("msgpack: can't encode a " + typeof VV)
-        }
-      }
-      number(VV) {
-        Number.isInteger(VV) && VV >= -2147483648 && VV <= 4294967295 ? VV >= 0 ? VV < 128 ? this.u8(VV) : VV < 256 ? (this.u8(204), this.u8(VV)) : VV < 65536 ? (this.u8(205), this.u16(VV)) : (this.u8(206), this.u32(VV)) : VV >= -32 ? this.u8(VV + 256) : VV >= -128 ? (this.u8(208), this.u8(VV + 256)) : VV >= -32768 ? (this.u8(209), this.u16(VV + 65536)) : (this.u8(210), this.u32(VV >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, VV, !1), this.at += 8)
-      }
-      bigint(VV) {
-        const eV = VV >= pV && VV <= QV;
-        if (!eV && (VV < 0n || VV > nV)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(eV ? 211 : 207), this.room(8), eV ? this.view.setBigInt64(this.at, VV, !1) : this.view.setBigUint64(this.at, VV, !1), this.at += 8
-      }
-      string(VV) {
-        const eV = yV.encode(VV);
-        this.head(eV.length, 217, 160, 218, 219), this.room(eV.length), this.buf.set(eV, this.at), this.at += eV.length
-      }
-      head(VV, eV, xV, JV, YV) {
-        xV >= 0 && VV < (160 === xV ? 32 : 16) ? this.u8(xV | VV) : eV !== JV && VV < 256 ? (this.u8(eV), this.u8(VV)) : VV < 65536 ? (this.u8(JV), this.u16(VV)) : (this.u8(YV), this.u32(VV))
-      }
-      room(VV) {
-        if (this.at + VV <= this.buf.length) return;
-        let eV = 2 * this.buf.length;
-        for (; eV < this.at + VV;) eV *= 2;
-        const xV = new Uint8Array(eV);
-        xV.set(this.buf.subarray(0, this.at)), this.buf = xV, this.view = new DataView(xV.buffer)
-      }
-      u8(VV) {
-        this.room(1), this.buf[this.at++] = VV
-      }
-      u16(VV) {
-        this.room(2), this.view.setUint16(this.at, VV, !1), this.at += 2
-      }
-      u32(VV) {
-        this.room(4), this.view.setUint32(this.at, VV, !1), this.at += 4
-      }
-    }
-  },
-  41900: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => yV
-    });
-    var JV = xV(41880);
-    const YV = new TextDecoder("utf-8", {
-      ignoreBOM: !0
-    });
-    class UV {
-      constructor(VV) {
-        this.buf = VV, this.at = 0, this.view = null
-      }
-      bool() {
-        return 0 !== this.u8()
-      }
-      long() {
-        let VV = this.u8(),
-          eV = 127 & VV,
-          xV = 128;
-        for (; 128 & VV;) {
-          if (xV > 2 ** 63) throw new RangeError("avro: varint too long");
-          VV = this.u8(), eV += (127 & VV) * xV, xV *= 128
-        }
-        return eV % 2 === 1 ? -(eV + 1) / 2 : eV / 2
-      }
-      float() {
-        const VV = this.take(4);
-        return this.floats().getFloat32(VV, !0)
-      }
-      double() {
-        const VV = this.take(8);
-        return this.floats().getFloat64(VV, !0)
-      }
-      str() {
-        const VV = this.size(),
-          eV = this.take(VV),
-          xV = eV + VV;
-        if (VV <= 32) {
-          let VV = "";
-          for (let JV = eV; JV < xV; JV++) {
-            const UV = this.buf[JV];
-            if (UV >= 128) return YV.decode(this.buf.subarray(eV, xV));
-            VV += String.fromCharCode(UV)
-          }
-          return VV
-        }
-        return YV.decode(this.buf.subarray(eV, xV))
-      }
-      bytes() {
-        return this.fixed(this.size())
-      }
-      fixed(VV) {
-        const eV = this.take(VV);
-        return this.buf.slice(eV, eV + VV)
-      }
-      index(VV) {
-        const eV = this.long();
-        if (!(eV >= 0 && eV < VV)) throw new RangeError(`avro: index ${eV} of ${VV}`);
-        return eV
-      }
-      kZ(VV) {
-        const eV = [];
-        for (let xV = this.long(); 0 !== xV; xV = this.long()) {
-          xV = this.block(xV);
-          for (let JV = 0; JV < xV; JV++) eV.push(VV(this))
-        }
-        return eV
-      }
-      map(VV) {
-        const eV = {};
-        for (let xV = this.long(); 0 !== xV; xV = this.long()) {
-          xV = this.block(xV);
-          for (let JV = 0; JV < xV; JV++) {
-            eV[this.str()] = VV(this)
-          }
-        }
-        return eV
-      }
-      end() {
-        if (this.at !== this.buf.length) throw new RangeError(`avro: ${this.buf.length-this.at} bytes after the value`)
-      }
-      block(VV) {
-        let eV = VV;
-        if (eV < 0 && (eV = -eV, this.long()), eV > this.buf.length - this.at) throw new RangeError(`avro: block of ${eV} items in ${this.buf.length-this.at} bytes`);
-        return eV
-      }
-      floats() {
-        return this.view ??= new DataView(this.buf.buffer, this.buf.byteOffset, this.buf.byteLength), this.view
-      }
-      size() {
-        const VV = this.long();
-        if (VV < 0) throw new RangeError(`avro: length ${VV}`);
-        return VV
-      }
-      u8() {
-        const VV = this.buf[this.at];
-        if (void 0 === VV) throw new RangeError("avro: truncated");
-        return this.at++, VV
-      }
-      take(VV) {
-        const eV = this.at;
-        if (VV > this.buf.length - eV) throw new RangeError("avro: truncated");
-        return this.at = eV + VV, eV
-      }
-    }
-
-    function yV(VV, eV) {
-      const xV = new UV(eV),
-        YV = (0, JV.gb)(VV, xV);
-      return xV.end(), YV
-    }
-  },
-  41880: (VV, eV, xV) => {
-    xV.d(eV, {
-      $: () => qV,
-      B: () => yV,
-      F: () => MV,
-      G: () => YV,
-      J: () => pV,
-      M: () => rV,
-      O: () => NV,
-      P: () => AV,
-      Q: () => TV,
-      T: () => wV,
-      U: () => ZV,
-      Y: () => XV,
-      Z: () => kV,
-      c: () => FV,
-      d: () => EV,
-      db: () => bV,
-      eb: () => QV,
-      g: () => BV,
-      gb: () => zV,
-      k: () => jV,
-      o: () => PV,
-      s: () => JV,
-      t: () => UV,
-      v: () => tV,
-      w: () => vV,
-      y: () => nV
-    });
-    const JV = 2,
-      YV = 12,
-      UV = 27,
-      yV = 40,
-      pV = 52,
-      QV = 59,
-      nV = 63,
-      wV = 83,
-      ZV = 84,
-      vV = 89,
-      rV = 91,
-      kV = 93,
-      bV = 94,
-      EV = 95,
-      BV = 97,
-      jV = 101,
-      qV = 102,
-      tV = 73,
-      FV = 16,
-      TV = 86,
-      PV = 60,
-      AV = 17,
-      NV = 56,
-      XV = 100,
-      MV = 81;
-
-    function zV(VV, eV) {
-      switch (VV) {
-        case JV:
-          return function(VV) {
-            return {
-              mx: sV(VV),
-              ux: VV.float(),
-              Sx: VV.long()
-            }
-          }(eV);
-        case YV:
-          return function(VV) {
-            return {
-              ae: DV(VV),
-              oe: DV(VV)
-            }
-          }(eV);
-        case UV:
-          return function(VV) {
-            return {
-              ZY: VV.bool(),
-              vY: DV(VV)
-            }
-          }(eV);
-        case yV:
-          return eV.str();
-        case pV:
-          return function(VV) {
-            return {
-              id: VV.long(),
-              iJ: ye(VV)
-            }
-          }(eV);
-        case QV:
-          return function(VV) {
-            return {
-              vV: DV(VV),
-              rV: Qe(VV)
-            }
-          }(eV);
-        case nV:
-          return eV.str();
-        case wV:
-        case ZV:
-          return eV.long();
-        case vV:
-          return function(VV) {
-            return {
-              qJ: VV.long(),
-              tJ: VV.bool(),
-              FJ: VV.float()
-            }
-          }(eV);
-        case rV:
-          return eV.long();
-        case kV:
-          return function(VV) {
-            return {
-              TJ: VV.bool(),
-              PJ: Ze(VV)
-            }
-          }(eV);
-        case bV:
-          return function(VV) {
-            return {
-              id: VV.str(),
-              position: we(VV),
-              AJ: ve(VV),
-              style: hV(VV),
-              XJ: VV.bool()
-            }
-          }(eV);
-        case EV:
-          return function(VV) {
-            return {
-              id: DV(VV)
-            }
-          }(eV);
-        case BV:
-          return function(VV) {
-            return {
-              bV: VV.long(),
-              EV: VV.str(),
-              BV: Ye(VV),
-              jV: Ye(VV),
-              qV: DV(VV),
-              tV: DV(VV),
-              FV: DV(VV),
-              TV: DV(VV),
-              PV: DV(VV),
-              AV: Ye(VV),
-              NV: Ye(VV),
-              XV: DV(VV),
-              MV: DV(VV),
-              zV: DV(VV)
-            }
-          }(eV);
-        case jV:
-          return eV.str();
-        case qV:
-          return eV.long();
-        case tV:
-          return function(VV) {
-            return {
-              LU: VV.long(),
-              fU: VV.str(),
-              mU: VV.float()
-            }
-          }(eV);
-        case FV:
-          return function(VV) {
-            return {
-              Rx: VV.bool(),
-              gx: DV(VV),
-              Dx: VV.str(),
-              ix: ke(VV),
-              Cx: ke(VV),
-              ox: VV.bool(),
-              hx: VV.long(),
-              lx: be(VV)
-            }
-          }(eV);
-        case TV:
-          return function(VV) {
-            return {
-              bY: DV(VV)
-            }
-          }(eV);
-        case PV:
-          return function(VV) {
-            return {
-              bx: VV.str(),
-              Ex: VV.str(),
-              Bx: Ee(VV),
-              zx: VV.str(),
-              Gx: dV(VV),
-              Wx: VV.float()
-            }
-          }(eV);
-        case AV:
-          return function(VV) {
-            return {
-              bx: VV.str(),
-              Ex: VV.str(),
-              Bx: Ee(VV)
-            }
-          }(eV);
-        case NV:
-          return function(VV) {
-            return VV.kZ(Be)
-          }(eV);
-        case XV:
-          return function(VV) {
-            return {
-              VV: qe(VV),
-              yV: fV(VV)
-            }
-          }(eV);
-        case MV:
-          return function(VV) {
-            return {
-              LY: VV.bool(),
-              fY: DV(VV),
-              mY: Fe(VV),
-              HY: ae(VV)
-            }
-          }(eV);
-        default:
-          throw new Error(`no reader for to-client message ${VV}`)
-      }
-    }
-
-    function GV(VV) {
-      return {
-        entityName: VV.str()
-      }
-    }
-
-    function WV(VV) {
-      const eV = VV.index(4);
-      return 0 === eV ? VV.str() : 1 === eV ? VV.long() : 2 === eV ? VV.bool() : GV(VV)
-    }
-
-    function RV(VV) {
-      return 0 === VV.index(2) ? null : function(VV) {
-        return VV.map(WV)
-      }(VV)
-    }
-
-    function gV(VV) {
-      return {
-        translationKey: VV.str(),
-        params: RV(VV)
-      }
-    }
-
-    function DV(VV) {
-      return 0 === VV.index(2) ? null : VV.str()
-    }
-
-    function iV(VV) {
-      return 0 === VV.index(2) ? null : function(VV) {
-        return {
-          color: DV(VV),
-          colour: DV(VV),
-          fontSize: DV(VV)
-        }
-      }(VV)
-    }
-
-    function CV(VV) {
-      return {
-        icon: VV.str(),
-        style: iV(VV)
-      }
-    }
-
-    function aV(VV) {
-      const eV = VV.index(3);
-      return 0 === eV ? {
-        string: VV.str()
-      } : 1 === eV ? {
-        styledEntityName: GV(VV)
-      } : {
-        styledTranslatedText: gV(VV)
-      }
-    }
-
-    function oV(VV) {
-      const eV = VV.index(3);
-      return 0 === eV ? null : 1 === eV ? VV.str() : VV.long()
-    }
-
-    function cV(VV) {
-      return 0 === VV.index(2) ? null : VV.float()
-    }
-
-    function hV(VV) {
-      return 0 === VV.index(2) ? null : function(VV) {
-        return {
-          color: DV(VV),
-          colour: DV(VV),
-          fontWeight: oV(VV),
-          fontStyle: DV(VV),
-          fontSize: DV(VV),
-          opacity: cV(VV)
-        }
-      }(VV)
-    }
-
-    function lV(VV) {
-      return {
-        str: aV(VV),
-        style: hV(VV),
-        clickableUrl: DV(VV)
-      }
-    }
-
-    function LV(VV) {
-      return VV.str()
-    }
-
-    function fV(VV) {
-      return VV.kZ(LV)
-    }
-
-    function mV(VV) {
-      return 0 === VV.index(2) ? null : fV(VV)
-    }
-
-    function KV(VV) {
-      return {
-        type: VV.str(),
-        progress: VV.float(),
-        width: DV(VV),
-        height: DV(VV),
-        colours: mV(VV),
-        backgroundColour: DV(VV)
-      }
-    }
-
-    function HV(VV) {
-      return {
-        type: VV.str(),
-        action: VV.str(),
-        style: hV(VV)
-      }
-    }
-
-    function uV(VV) {
-      const eV = VV.index(7);
-      return 0 === eV ? {
-        string: VV.str()
-      } : 1 === eV ? {
-        entityName: GV(VV)
-      } : 2 === eV ? {
-        translatedText: gV(VV)
-      } : 3 === eV ? {
-        styledIcon: CV(VV)
-      } : 4 === eV ? {
-        Kx: lV(VV)
-      } : 5 === eV ? {
-        styledProgressBar: KV(VV)
-      } : {
-        styledKeyBinding: HV(VV)
-      }
-    }
-
-    function sV(VV) {
-      return VV.kZ(uV)
-    }
-    const SV = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
-
-    function IV(VV) {
-      return SV[VV.index(5)]
-    }
-
-    function dV(VV) {
-      return 0 === VV.index(2) ? null : VV.double()
-    }
-
-    function OV(VV) {
-      return 0 === VV.index(2) ? null : function(VV) {
-        return {
-          cJ: dV(VV),
-          hJ: VV.double(),
-          lJ: VV.double(),
-          LJ: VV.bool(),
-          description: sV(VV),
-          fJ: VV.str(),
-          scale: dV(VV),
-          rotation: dV(VV)
-        }
-      }(VV)
-    }
-
-    function Ve(VV) {
-      return 0 === VV.index(2) ? null : VV.bool()
-    }
-
-    function ee(VV) {
-      return 0 === VV.index(2) ? null : function(VV) {
-        return {
-          KJ: VV.double(),
-          icon: VV.str(),
-          label: sV(VV),
-          HJ: VV.bool(),
-          scale: dV(VV),
-          rotation: dV(VV),
-          uJ: Ve(VV)
-        }
-      }(VV)
-    }
-
-    function xe(VV) {
-      return 0 === VV.index(2) ? null : function(VV) {
-        return {
-          cJ: dV(VV),
-          SJ: VV.double(),
-          IJ: VV.double(),
-          dJ: VV.double(),
-          gravity: VV.double(),
-          OJ: VV.double(),
-          VY: VV.double(),
-          eY: VV.double(),
-          LJ: VV.bool(),
-          description: sV(VV),
-          icon: DV(VV)
-        }
-      }(VV)
-    }
-
-    function Je(VV) {
-      return 0 === VV.index(2) ? null : function(VV) {
-        return {
-          speed: VV.double(),
-          JY: VV.double(),
-          label: sV(VV),
-          icon: DV(VV),
-          scale: dV(VV),
-          rotation: dV(VV)
-        }
-      }(VV)
-    }
-
-    function Ye(VV) {
-      return 0 === VV.index(2) ? null : VV.long()
-    }
-
-    function Ue(VV) {
-      return 0 === VV.index(2) ? null : function(VV) {
-        return {
-          UY: VV.long(),
-          yY: VV.double(),
-          pY: VV.double(),
-          QY: Ye(VV),
-          label: sV(VV),
-          icon: DV(VV)
-        }
-      }(VV)
-    }
-
-    function ye(VV) {
-      return {
-        type: IV(VV),
-        progressBar: OV(VV),
-        timedClick: ee(VV),
-        gravityBar: xe(VV),
-        precisionBar: Je(VV),
-        rhythmClick: Ue(VV)
-      }
-    }
-    const pe = ["playerGone", "rateLimited"];
-
-    function Qe(VV) {
-      return 0 === VV.index(2) ? null : function(VV) {
-        return pe[VV.index(2)]
-      }(VV)
-    }
-
-    function ne(VV) {
-      return VV.float()
-    }
-
-    function we(VV) {
-      return VV.kZ(ne)
-    }
-
-    function Ze(VV) {
-      return 0 === VV.index(2) ? null : we(VV)
-    }
-
-    function ve(VV) {
-      return 0 === VV.index(2) ? null : sV(VV)
-    }
-
-    function re(VV) {
-      return VV.long()
-    }
-
-    function ke(VV) {
-      return 0 === VV.index(2) ? null : function(VV) {
-        return VV.kZ(re)
-      }(VV)
-    }
-
-    function be(VV) {
-      return 0 === VV.index(2) ? null : function(VV) {
-        return {
-          ze: VV.str(),
-          Ce: VV.long()
-        }
-      }(VV)
-    }
-
-    function Ee(VV) {
-      const eV = VV.index(3);
-      return 0 === eV ? null : 1 === eV ? VV.str() : gV(VV)
-    }
-
-    function Be(VV) {
-      return {
-        JJ: VV.str(),
-        YJ: VV.str(),
-        UJ: VV.str()
-      }
-    }
-
-    function je(VV) {
-      return {
-        eV: VV.str(),
-        xV: DV(VV),
-        JV: DV(VV),
-        YV: fV(VV)
-      }
-    }
-
-    function qe(VV) {
-      return VV.kZ(je)
-    }
-
-    function te(VV) {
-      return {
-        KY: VV.str(),
-        x: VV.long(),
-        y: VV.long(),
-        z: VV.long()
-      }
-    }
-
-    function Fe(VV) {
-      return VV.kZ(te)
-    }
-
-    function Te(VV) {
-      return 0 === VV.index(2) ? null : function(VV) {
-        return {
-          rU: VV.float(),
-          kU: VV.long(),
-          bU: VV.long()
-        }
-      }(VV)
-    }
-
-    function Pe(VV) {
-      return {
-        blockName: VV.str(),
-        UU: VV.bool(),
-        yU: VV.bool(),
-        pU: VV.bool(),
-        QU: VV.float(),
-        nU: VV.float(),
-        wU: VV.long(),
-        ZU: Te(VV)
-      }
-    }
-
-    function Ae(VV) {
-      return 0 === VV.index(2) ? null : function(VV) {
-        return VV.kZ(Pe)
-      }(VV)
-    }
-
-    function Ne(VV) {
-      return {
-        xU: VV.str(),
-        JU: Ae(VV)
-      }
-    }
-
-    function Xe(VV) {
-      return {
-        blockName: VV.str(),
-        frequency: VV.float()
-      }
-    }
-
-    function Me(VV) {
-      return VV.kZ(Xe)
-    }
-
-    function ze(VV) {
-      return {
-        jU: VV.str(),
-        qU: VV.str(),
-        frequency: VV.float(),
-        tU: Me(VV)
-      }
-    }
-
-    function Ge(VV) {
-      return VV.kZ(ze)
-    }
-
-    function We(VV) {
-      return {
-        blockName: VV.str(),
-        radius: VV.long(),
-        AU: VV.long(),
-        SY: VV.long(),
-        IY: VV.long(),
-        NU: VV.float()
-      }
-    }
-
-    function Re(VV) {
-      return VV.kZ(We)
-    }
-
-    function ge(VV) {
-      return {
-        SY: VV.long(),
-        IY: VV.long(),
-        dY: VV.long(),
-        OY: VV.bool(),
-        VU: Ne(VV),
-        EU: Ge(VV),
-        TU: Re(VV)
-      }
-    }
-
-    function De(VV) {
-      return VV.kZ(ge)
-    }
-
-    function ie(VV) {
-      return 0 === VV.index(2) ? null : function(VV) {
-        return {
-          name: VV.str(),
-          GU: DV(VV)
-        }
-      }(VV)
-    }
-
-    function Ce(VV) {
-      return 0 === VV.index(2) ? null : function(VV) {
-        return {
-          terrain: ie(VV),
-          WU: Re(VV)
-        }
-      }(VV)
-    }
-
-    function ae(VV) {
-      return 0 === VV.index(2) ? null : function(VV) {
-        return {
-          layers: De(VV),
-          XU: Ce(VV)
-        }
-      }(VV)
-    }
-  },
-  41867: (VV, eV, xV) => {
-    xV.d(eV, {
-      $: () => qV,
-      A: () => PV,
-      C: () => GV,
-      E: () => tV,
-      G: () => FV,
-      J: () => EV,
-      K: () => XV,
-      O: () => RV,
-      Q: () => kV,
-      U: () => DV,
-      W: () => jV,
-      Y: () => BV,
-      d: () => YV,
-      db: () => TV,
-      h: () => gV,
-      k: () => WV,
-      m: () => rV,
-      o: () => bV,
-      p: () => zV,
-      s: () => AV,
-      v: () => MV,
-      y: () => NV
-    });
-    var JV = xV(3348);
-    const YV = {
-      Chat: 49,
-      UiRequestResponded: 91,
-      CodeCollab: 89,
-      SetCustomLobbyBlock: 60,
-      UpdateBook: 56,
-      UpdateBoard: 33,
-      UpdateMyCosmetic: 45,
-      PlayEmote: 90,
-      ReqDiscordReportKey: 9,
-      UserReport: 11,
-      LobbyReport: 12,
-      CustomGameReport: 13,
-      IgnoreUser: 34,
-      ShopMenuChanged: 26,
-      GeneralCookieSet: 72,
-      CompleteTask: 69,
-      OpenIronChest: 80,
-      ChangeIronChestPasskey: 81,
-      StopSleeping: 78,
-      AnalyticsUpdate: 3,
-      UiRequestResp: 15,
-      QteResponse: 16,
-      ItemBought: 25,
-      LeaderboardRequest: 40,
-      UpdateNameTag: 53,
-      LobbyManage: 96
+  38577: (HH, BH) => {
+    function LH(HH) {
+      var BH = 32;
+      return (HH &= -HH) && BH--, 65535 & HH && (BH -= 16), 16711935 & HH && (BH -= 8), 252645135 & HH && (BH -= 4), 858993459 & HH && (BH -= 2), 1431655765 & HH && (BH -= 1), BH
+    }
+    BH.INT_BITS = 32, BH.INT_MAX = 2147483647, BH.INT_MIN = -1 << 31, BH.sign = function(HH) {
+      return (HH > 0) - (HH < 0)
+    }, BH.abs = function(HH) {
+      var BH = HH >> 31;
+      return (HH ^ BH) - BH
+    }, BH.min = function(HH, BH) {
+      return BH ^ (HH ^ BH) & -(HH < BH)
+    }, BH.max = function(HH, BH) {
+      return HH ^ (HH ^ BH) & -(HH < BH)
+    }, BH.isPow2 = function(HH) {
+      return !(HH & HH - 1) && !!HH
+    }, BH.log2 = function(HH) {
+      var BH, LH;
+      return BH = (HH > 65535) << 4, BH |= LH = ((HH >>>= BH) > 255) << 3, BH |= LH = ((HH >>>= LH) > 15) << 2, (BH |= LH = ((HH >>>= LH) > 3) << 1) | (HH >>>= LH) >> 1
+    }, BH.log10 = function(HH) {
+      return HH >= 1e9 ? 9 : HH >= 1e8 ? 8 : HH >= 1e7 ? 7 : HH >= 1e6 ? 6 : HH >= 1e5 ? 5 : HH >= 1e4 ? 4 : HH >= 1e3 ? 3 : HH >= 100 ? 2 : HH >= 10 ? 1 : 0
+    }, BH.popCount = function(HH) {
+      return 16843009 * ((HH = (858993459 & (HH -= HH >>> 1 & 1431655765)) + (HH >>> 2 & 858993459)) + (HH >>> 4) & 252645135) >>> 24
+    }, BH.countTrailingZeros = LH, BH.nextPow2 = function(HH) {
+      return HH += 0 === HH, --HH, HH |= HH >>> 1, HH |= HH >>> 2, HH |= HH >>> 4, HH |= HH >>> 8, (HH |= HH >>> 16) + 1
+    }, BH.prevPow2 = function(HH) {
+      return HH |= HH >>> 1, HH |= HH >>> 2, HH |= HH >>> 4, HH |= HH >>> 8, (HH |= HH >>> 16) - (HH >>> 1)
+    }, BH.parity = function(HH) {
+      return HH ^= HH >>> 16, HH ^= HH >>> 8, HH ^= HH >>> 4, 27030 >>> (HH &= 15) & 1
     };
-
-    function UV(VV, eV) {
-      return !ArrayBuffer.isView(VV) || VV instanceof DataView ? Array.isArray(VV) ? VV.map((VV => eV(VV))) : VV : Array.from(VV, (VV => eV(VV)))
-    }
-
-    function yV(VV) {
-      if ("string" !== typeof VV) return VV;
-      for (let eV = 0; eV < VV.length; eV++) {
-        const xV = VV.charCodeAt(eV);
-        if (xV >= 55296 && xV <= 57343) return QV.decode(pV.encode(VV))
+    var AH = new Array(256);
+    ! function(HH) {
+      for (var BH = 0; BH < 256; ++BH) {
+        var LH = BH,
+          AH = BH,
+          rH = 7;
+        for (LH >>>= 1; LH; LH >>>= 1) AH <<= 1, AH |= 1 & LH, --rH;
+        HH[BH] = AH << rH & 255
       }
-      return VV
+    }(AH), BH.reverse = function(HH) {
+      return AH[255 & HH] << 24 | AH[HH >>> 8 & 255] << 16 | AH[HH >>> 16 & 255] << 8 | AH[HH >>> 24 & 255]
+    }, BH.interleave2 = function(HH, BH) {
+      return (HH = 1431655765 & ((HH = 858993459 & ((HH = 252645135 & ((HH = 16711935 & ((HH &= 65535) | HH << 8)) | HH << 4)) | HH << 2)) | HH << 1)) | (BH = 1431655765 & ((BH = 858993459 & ((BH = 252645135 & ((BH = 16711935 & ((BH &= 65535) | BH << 8)) | BH << 4)) | BH << 2)) | BH << 1)) << 1
+    }, BH.deinterleave2 = function(HH, BH) {
+      return (HH = 65535 & ((HH = 16711935 & ((HH = 252645135 & ((HH = 858993459 & ((HH = HH >>> BH & 1431655765) | HH >>> 1)) | HH >>> 2)) | HH >>> 4)) | HH >>> 16)) << 16 >> 16
+    }, BH.interleave3 = function(HH, BH, LH) {
+      return HH = 1227133513 & ((HH = 3272356035 & ((HH = 251719695 & ((HH = 4278190335 & ((HH &= 1023) | HH << 16)) | HH << 8)) | HH << 4)) | HH << 2), (HH |= (BH = 1227133513 & ((BH = 3272356035 & ((BH = 251719695 & ((BH = 4278190335 & ((BH &= 1023) | BH << 16)) | BH << 8)) | BH << 4)) | BH << 2)) << 1) | (LH = 1227133513 & ((LH = 3272356035 & ((LH = 251719695 & ((LH = 4278190335 & ((LH &= 1023) | LH << 16)) | LH << 8)) | LH << 4)) | LH << 2)) << 2
+    }, BH.deinterleave3 = function(HH, BH) {
+      return (HH = 1023 & ((HH = 4278190335 & ((HH = 251719695 & ((HH = 3272356035 & ((HH = HH >>> BH & 1227133513) | HH >>> 2)) | HH >>> 4)) | HH >>> 8)) | HH >>> 16)) << 22 >> 22
+    }, BH.nextCombination = function(HH) {
+      var BH = HH | HH - 1;
+      return BH + 1 | (~BH & -~BH) - 1 >>> LH(HH) + 1
     }
-    const pV = new TextEncoder,
-      QV = new TextDecoder;
-
-    function nV(VV) {
-      return VV
+  },
+  41088: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      emptyColumnHeight: () => vH,
+      loadHeatmapSchematic: () => PH,
+      readSchematicBlocks: () => TH
+    });
+    var AH = LH(4121),
+      rH = LH.n(AH),
+      SH = LH(4099),
+      hH = LH(38573),
+      tH = LH(176),
+      zH = LH(9940),
+      CH = LH(40433);
+    const EH = [{
+        name: "x",
+        type: "int"
+      }, {
+        name: "y",
+        type: "int"
+      }, {
+        name: "z",
+        type: "int"
+      }],
+      XH = [{
+        name: "name",
+        type: "string"
+      }, {
+        name: "startOffset",
+        type: {
+          type: "record",
+          fields: EH
+        }
+      }, {
+        name: "dimensions",
+        type: {
+          type: "record",
+          fields: EH
+        }
+      }, {
+        name: "chunkData",
+        type: {
+          type: "array",
+          items: {
+            type: "record",
+            fields: [...EH, {
+              name: "rle",
+              type: "bytes"
+            }]
+          }
+        }
+      }],
+      GH = rH().Type.forSchema({
+        type: "record",
+        fields: XH
+      }),
+      YH = rH().Type.forSchema({
+        type: "record",
+        fields: [...XH, {
+          name: "blockData",
+          type: {
+            type: "array",
+            items: {
+              type: "record",
+              fields: [...EH, {
+                name: "data",
+                type: "bytes"
+              }]
+            }
+          }
+        }, {
+          name: "pasteOffset",
+          type: {
+            type: "record",
+            fields: EH
+          }
+        }]
+      }),
+      uH = 2,
+      QH = 6,
+      WH = 16,
+      MH = 4096,
+      xH = tH.g.xX,
+      vH = -2147483648;
+    async function PH(HH) {
+      const BH = await (0, CH.c)(),
+        LH = await TH(new Uint8Array(await HH.arrayBuffer()), (HH => BH.get(HH)));
+      return {
+        surface: LH.surface,
+        topDown: VH(LH.columnTops)
+      }
     }
-    let wV;
-
-    function ZV(VV) {
-      return null === VV || "object" !== typeof VV ? VV : [yV(VV.Fn), yV(VV.Tn)]
+    async function TH(HH, BH) {
+      var LH;
+      if (HH.byteLength < 4) throw new Error("The file is too short to be a schematic.");
+      const AH = new DataView(HH.buffer, HH.byteOffset, HH.byteLength).getUint32(0, !0);
+      if (AH > QH) throw new Error("The file isn't a schematic this version of Bloxd can read.");
+      const rH = (AH >= uH ? YH : GH).decode(SH.rX.from(HH.subarray(4)), 0).value;
+      if (!rH) throw new Error("The file isn't a schematic.");
+      if (0 === rH.chunkData.length) throw new Error("The schematic has no blocks in it.");
+      const tH = null !== (LH = rH.pasteOffset) && void 0 !== LH ? LH : {
+          x: 0,
+          y: 0,
+          z: 0
+        },
+        zH = [tH.x, tH.y, tH.z].map((HH => Math.floor(HH / xH))),
+        CH = rH.chunkData.map((HH => ({
+          x: HH.x + zH[0],
+          y: HH.y + zH[1],
+          z: HH.z + zH[2],
+          rle: HH.rle
+        }))),
+        EH = new Map;
+      for (const [SH, GH] of CH.entries()) {
+        const HH = new Uint16Array(xH ** 3);
+        hH.decode(GH.rle, HH), EH.set(`${GH.x},${GH.y},${GH.z}`, HH), SH % WH === WH - 1 && await OH()
+      }
+      const XH = (HH, BH, LH) => HH * xH * xH + BH * xH + LH,
+        MH = (HH, BH, LH) => {
+          var AH, rH;
+          const SH = Math.floor(HH / xH),
+            hH = Math.floor(BH / xH),
+            tH = Math.floor(LH / xH);
+          return null !== (AH = null === (rH = EH.get(`${SH},${hH},${tH}`)) || void 0 === rH ? void 0 : rH[XH(HH - SH * xH, BH - hH * xH, LH - tH * xH)]) && void 0 !== AH ? AH : 0
+        },
+        PH = new Map,
+        TH = [],
+        VH = [];
+      for (const [SH, hH] of CH.entries()) {
+        const HH = EH.get(`${hH.x},${hH.y},${hH.z}`),
+          LH = [hH.x * xH, hH.y * xH, hH.z * xH],
+          AH = (BH, AH, rH) => BH < 0 || AH < 0 || rH < 0 || BH >= xH || AH >= xH || rH >= xH ? MH(LH[0] + BH, LH[1] + AH, LH[2] + rH) : HH[XH(BH, AH, rH)],
+          rH = `${hH.x},${hH.z}`;
+        let tH = PH.get(rH);
+        void 0 === tH && (tH = {
+          chunkX: hH.x,
+          chunkZ: hH.z,
+          heights: new Int32Array(xH * xH).fill(vH),
+          colours: new Uint8Array(xH * xH * 3)
+        }, PH.set(rH, tH));
+        for (let SH = 0; SH < xH; SH++)
+          for (let rH = 0; rH < xH; rH++)
+            for (let hH = 0; hH < xH; hH++) {
+              const zH = HH[XH(SH, rH, hH)];
+              if (0 === zH) continue;
+              const CH = LH[0] + SH,
+                EH = LH[1] + rH,
+                GH = LH[2] + hH,
+                YH = BH(zH);
+              if (null === YH) continue;
+              const uH = hH * xH + SH;
+              EH > tH.heights[uH] && (tH.heights[uH] = EH, tH.colours.set(YH, 3 * uH));
+              !UH(zH) && (UH(AH(SH + 1, rH, hH)) || UH(AH(SH - 1, rH, hH)) || UH(AH(SH, rH + 1, hH)) || UH(AH(SH, rH - 1, hH)) || UH(AH(SH, rH, hH + 1)) || UH(AH(SH, rH, hH - 1))) && (TH.push(CH, EH, GH), VH.push(YH[0], YH[1], YH[2]))
+            }
+        SH % WH === WH - 1 && await OH()
+      }
+      if (0 === TH.length) throw new Error("The schematic has no blocks in it.");
+      return {
+        name: rH.name,
+        surface: {
+          positions: Int32Array.from(TH),
+          colours: Uint8Array.from(VH),
+          count: TH.length / 3
+        },
+        columnTops: [...PH.values()]
+      }
     }
 
-    function vV(VV) {
-      return null === VV || "object" !== typeof VV ? VV : [UV(VV.ix, nV), UV(VV.ly, nV)]
+    function UH(HH) {
+      if (0 === HH) return !0;
+      const BH = zH.g[HH];
+      return void 0 === BH || BH.UY || BH.transTex || !1 === BH.solid
     }
 
-    function rV(VV) {
-      return null === (eV = VV) || "object" !== typeof eV ? eV : [yV(eV.yZ), yV(eV.pZ)];
-      var eV
+    function VH(HH) {
+      let BH = 1 / 0,
+        LH = -1 / 0,
+        AH = 1 / 0,
+        rH = -1 / 0;
+      for (const {
+          chunkX: uH,
+          chunkZ: QH,
+          heights: WH
+        }
+        of HH) WH.forEach(((HH, SH) => {
+        if (HH === vH) return;
+        const hH = uH * xH + SH % xH,
+          tH = QH * xH + Math.floor(SH / xH);
+        BH = Math.min(BH, hH), LH = Math.max(LH, hH), AH = Math.min(AH, tH), rH = Math.max(rH, tH)
+      }));
+      const SH = LH - BH + 1,
+        hH = rH - AH + 1,
+        tH = Math.max(1, Math.ceil(SH / MH), Math.ceil(hH / MH)),
+        zH = Math.ceil(SH / tH),
+        CH = Math.ceil(hH / tH),
+        EH = document.createElement("canvas");
+      EH.width = zH, EH.height = CH;
+      const XH = EH.getContext("2d");
+      if (!XH) throw new Error("Couldn't draw the schematic from above.");
+      const GH = XH.createImageData(zH, CH),
+        YH = new Int32Array(zH * CH).fill(vH);
+      for (const {
+          chunkX: uH,
+          chunkZ: QH,
+          heights: WH,
+          colours: MH
+        }
+        of HH) WH.forEach(((HH, BH) => {
+        const rH = uH * xH + BH % xH,
+          SH = QH * xH + Math.floor(BH / xH),
+          hH = Math.floor((SH - AH) / tH) * zH + Math.floor((LH - rH) / tH);
+        HH === vH || HH <= YH[hH] || (YH[hH] = HH, GH.data.set(MH.subarray(3 * BH, 3 * BH + 3), 4 * hH), GH.data[4 * hH + 3] = 255)
+      }));
+      return XH.putImageData(GH, 0, 0), {
+        maxX: LH,
+        minZ: AH,
+        width: zH * tH,
+        depth: CH * tH,
+        canvas: EH
+      }
     }
 
-    function kV(VV) {
-      return null === (eV = VV) || "object" !== typeof eV ? eV : [eV.id, eV.Jw];
-      var eV
-    }
-
-    function bV(VV) {
-      return null === (eV = VV) || "object" !== typeof eV ? eV : [eV.bV, yV(eV.EV), eV.BV, yV(eV.tV), eV.AV, eV.NV, eV.Yn, yV(eV.Un), yV(eV.yn)];
-      var eV
-    }
-
-    function EV(VV) {
-      return null === (eV = VV) || "object" !== typeof eV ? eV : [UV(eV.Zp, nV), eV.vp];
-      var eV
-    }
-
-    function BV(VV) {
-      return null === (eV = VV) || "object" !== typeof eV ? eV : [UV(eV.Zn, (VV => yV(VV))), yV(eV.vn), eV.rn];
-      var eV
-    }
-
-    function jV(VV) {
-      return null === (eV = VV) || "object" !== typeof eV ? eV : [UV(eV.En, nV), yV(eV.Bn), eV.jn];
-      var eV
-    }
-
-    function qV(VV) {
-      return null === (eV = VV) || "object" !== typeof eV ? eV : [yV(eV.YJ), yV(eV.UJ)];
-      var eV
-    }
-
-    function tV(VV) {
-      return null === (eV = VV) || "object" !== typeof eV ? eV : [yV(eV.Py)];
-      var eV
-    }
-
-    function FV(VV) {
-      return yV(VV)
-    }
-
-    function TV(VV) {
-      return null === (eV = VV) || "object" !== typeof eV ? eV : [yV(eV.qn), yV(eV.tn), yV(eV.Fn), yV(eV.Tn)];
-      var eV
-    }
-
-    function PV(VV) {
-      return ZV(VV)
-    }
-
-    function AV(VV) {
-      return ZV(VV)
-    }
-
-    function NV(VV) {
-      return null === (eV = VV) || "object" !== typeof eV ? eV : [yV(eV.Yw)];
-      var eV
-    }
-
-    function XV(VV) {
-      return VV
-    }
-
-    function MV(VV) {
-      return null === (eV = VV) || "object" !== typeof eV ? eV : [yV(eV.jy), yV(eV.qy)];
-      var eV
-    }
-
-    function zV(VV) {
-      return yV(VV)
-    }
-
-    function GV(VV) {
-      return vV(VV)
-    }
-
-    function WV(VV) {
-      return vV(VV)
-    }
-
-    function RV(VV) {
-      return null === (eV = VV) || "object" !== typeof eV ? eV : [yV(eV.Vw)];
-      var eV
-    }
-
-    function gV(VV) {
-      return (wV ??= (0, JV.c)().map((VV => VV.name)), wV).map((eV => {
-        return "string" === typeof(xV = VV[eV]) ? yV(xV) : UV(xV, nV);
-        var xV
+    function OH() {
+      return new Promise((HH => {
+        setTimeout(HH, 0)
       }))
     }
-
-    function DV(VV) {
-      return null === (eV = VV) || "object" !== typeof eV ? eV : [eV.Ly, eV.my, eV.Ky];
-      var eV
+  },
+  40433: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => rH
+    });
+    var AH = LH(40437);
+    async function rH() {
+      const {
+        averageColors: HH
+      } = await LH.e(228).then((() => LH(35079)));
+      return new AH.c(HH)
     }
   },
-  9922: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => YV,
-      f: () => UV
+  40437: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => tH,
+      f: () => hH
     });
-    var JV = xV(9861);
-    const YV = "Air",
-      UV = Object.freeze(new JV.g(YV, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
-  },
-  40472: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => UV,
-      h: () => pV
-    });
-    var JV = xV(375),
-      YV = xV(4940);
-    const UV = new Set(YV.q),
-      yV = new Map;
-
-    function pV(VV, eV) {
-      let xV = yV.get(eV);
-      void 0 === xV && (xV = new Map, yV.set(eV, xV));
-      let YV = xV.get(VV);
-      return void 0 === YV && (YV = `${VV}${(0,JV.v)(eV)}`, xV.set(VV, YV)), YV
+    var AH = LH(9940);
+    const rH = {
+        Water: [63, 118, 228],
+        Lava: [232, 110, 30]
+      },
+      SH = [150, 150, 150],
+      hH = -2147483648;
+    class tH {
+      constructor(HH) {
+        this.averages = HH, this.byId = new Map
+      }
+      get(HH) {
+        var BH, LH, hH, tH, zH;
+        const CH = this.byId.get(HH);
+        if (void 0 !== CH) return CH;
+        const EH = null !== (BH = null === (LH = AH.g[HH]) || void 0 === LH ? void 0 : LH.name) && void 0 !== BH ? BH : "",
+          XH = EH.split("|")[0],
+          GH = null !== (hH = this.averages[EH]) && void 0 !== hH ? hH : this.averages[XH],
+          YH = null !== (tH = null !== (zH = null === GH || void 0 === GH ? void 0 : GH[0]) && void 0 !== zH ? zH : rH[XH]) && void 0 !== tH ? tH : 0 === (null === GH || void 0 === GH ? void 0 : GH.length) ? null : SH;
+        return this.byId.set(HH, YH), YH
+      }
+      getDrawnIds() {
+        const HH = new Uint8Array(65536);
+        for (let BH = 1; BH < 65536; BH++) void 0 !== AH.g[BH] && null !== this.get(BH) && (HH[BH] = 1);
+        return HH
+      }
+      drawPixel(HH, BH, LH, AH, rH, SH) {
+        const tH = function(HH, BH, LH) {
+            const AH = HH - BH + (HH - LH);
+            return Math.max(.65, Math.min(1.2, .97 + .055 * AH))
+          }(AH, rH === hH ? AH : rH, SH === hH ? AH : SH),
+          zH = this.get(LH);
+        HH[BH] = zH[0] * tH, HH[BH + 1] = zH[1] * tH, HH[BH + 2] = zH[2] * tH, HH[BH + 3] = 255
+      }
     }
+  },
+  10030: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => rH,
+      f: () => SH
+    });
+    var AH = LH(9979);
+    const rH = "Air",
+      SH = Object.freeze(new AH.f(rH, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

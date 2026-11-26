@@ -1,377 +1,377 @@
 export const id = 94;
 export const ids = [94];
 export const modules = {
-  5243: (VV, eV, xV) => {
-    xV.d(eV, {
-      A: () => kV,
-      E: () => rV,
-      I: () => vV,
-      d: () => JV,
-      h: () => yV,
-      l: () => EV,
-      n: () => bV,
-      r: () => pV,
-      v: () => YV,
-      w: () => UV
+  5218: (HH, BH, LH) => {
+    LH.d(BH, {
+      D: () => GH,
+      c: () => AH,
+      e: () => hH,
+      f: () => WH,
+      j: () => QH,
+      l: () => tH,
+      p: () => rH,
+      r: () => SH,
+      v: () => uH,
+      z: () => YH
     });
-    const JV = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+    const AH = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function YV(VV) {
+    function rH(HH) {
       try {
-        return decodeURIComponent(VV.slice(1))
+        return decodeURIComponent(HH.slice(1))
       } catch {
-        return VV.slice(1)
+        return HH.slice(1)
       }
     }
 
-    function UV(VV) {
-      return VV.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    function SH(HH) {
+      return HH.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
     }
-    const yV = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${JV.source}`, "g");
+    const hH = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${AH.source}`, "g");
 
-    function pV(VV, eV) {
-      return 2 === VV.length ? eV.replace(/^ (.*) $/, "$1") : eV
-    }
-
-    function QV(VV) {
-      return "" === VV.trim()
+    function tH(HH, BH) {
+      return 2 === HH.length ? BH.replace(/^ (.*) $/, "$1") : BH
     }
 
-    function nV(VV) {
-      const eV = [];
-      for (const xV of VV.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) eV.length > 0 && eV[eV.length - 1].endsWith("\\") ? eV[eV.length - 1] += `|${xV}` : eV.push(xV);
-      return eV.map((VV => VV.trim().replaceAll("\\|", "|")))
+    function zH(HH) {
+      return "" === HH.trim()
     }
-    const wV = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-    function ZV(VV) {
-      const eV = [],
-        xV = [{
+    function CH(HH) {
+      const BH = [];
+      for (const LH of HH.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) BH.length > 0 && BH[BH.length - 1].endsWith("\\") ? BH[BH.length - 1] += `|${LH}` : BH.push(LH);
+      return BH.map((HH => HH.trim().replaceAll("\\|", "|")))
+    }
+    const EH = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function XH(HH) {
+      const BH = [],
+        LH = [{
           indent: -1,
-          items: eV
+          items: BH
         }];
-      let JV = null;
-      for (const YV of VV) {
-        const VV = YV.match(wV);
-        if (!VV) {
-          JV && (JV.text += ` ${YV.trim()}`);
+      let AH = null;
+      for (const rH of HH) {
+        const HH = rH.match(EH);
+        if (!HH) {
+          AH && (AH.text += ` ${rH.trim()}`);
           continue
         }
-        const eV = VV[1].replace(/\t/g, "  ").length;
-        for (; eV <= xV[xV.length - 1].indent;) xV.pop();
-        JV = {
-          text: VV[3].trim(),
+        const BH = HH[1].replace(/\t/g, "  ").length;
+        for (; BH <= LH[LH.length - 1].indent;) LH.pop();
+        AH = {
+          text: HH[3].trim(),
           children: []
-        }, xV[xV.length - 1].items.push(JV), xV.push({
-          indent: eV,
-          items: JV.children
+        }, LH[LH.length - 1].items.push(AH), LH.push({
+          indent: BH,
+          items: AH.children
         })
       }
-      return eV
+      return BH
     }
 
-    function vV(VV) {
-      const eV = VV.replace(/\r\n/g, "\n").split("\n"),
-        xV = [];
-      let JV = 0;
-      for (; JV < eV.length;) {
-        const VV = eV[JV];
-        if (QV(VV)) {
-          JV++;
+    function GH(HH) {
+      const BH = HH.replace(/\r\n/g, "\n").split("\n"),
+        LH = [];
+      let AH = 0;
+      for (; AH < BH.length;) {
+        const HH = BH[AH];
+        if (zH(HH)) {
+          AH++;
           continue
         }
-        const YV = VV.match(/^\s*```\s*(\w*)\s*$/);
-        if (YV) {
-          const VV = [];
-          for (JV++; JV < eV.length && !/^\s*```\s*$/.test(eV[JV]);) VV.push(eV[JV]), JV++;
-          JV++, xV.push({
+        const rH = HH.match(/^\s*```\s*(\w*)\s*$/);
+        if (rH) {
+          const HH = [];
+          for (AH++; AH < BH.length && !/^\s*```\s*$/.test(BH[AH]);) HH.push(BH[AH]), AH++;
+          AH++, LH.push({
             kind: "code",
-            lang: YV[1] || "text",
-            code: VV.join("\n").replace(/\s+$/, "")
+            lang: rH[1] || "text",
+            code: HH.join("\n").replace(/\s+$/, "")
           });
           continue
         }
-        const yV = VV.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (yV) {
-          const VV = yV[2].trim();
-          xV.push({
+        const hH = HH.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (hH) {
+          const HH = hH[2].trim();
+          LH.push({
             kind: "heading",
-            level: yV[1].length,
-            text: VV,
-            anchor: UV(VV)
-          }), JV++;
+            level: hH[1].length,
+            text: HH,
+            anchor: SH(HH)
+          }), AH++;
           continue
         }
-        if (/^\s*(-{3,}|\*{3,})\s*$/.test(VV)) {
-          xV.push({
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(HH)) {
+          LH.push({
             kind: "rule"
-          }), JV++;
+          }), AH++;
           continue
         }
-        if (VV.trim().startsWith("|") && JV + 1 < eV.length && /^\s*\|[\s:|-]+\|\s*$/.test(eV[JV + 1])) {
-          const YV = nV(VV),
-            UV = [];
-          for (JV += 2; JV < eV.length && eV[JV].trim().startsWith("|");) UV.push(nV(eV[JV])), JV++;
-          xV.push({
+        if (HH.trim().startsWith("|") && AH + 1 < BH.length && /^\s*\|[\s:|-]+\|\s*$/.test(BH[AH + 1])) {
+          const rH = CH(HH),
+            SH = [];
+          for (AH += 2; AH < BH.length && BH[AH].trim().startsWith("|");) SH.push(CH(BH[AH])), AH++;
+          LH.push({
             kind: "table",
-            header: YV,
-            rows: UV
+            header: rH,
+            rows: SH
           });
           continue
         }
-        if (VV.startsWith(">")) {
-          const VV = [];
-          for (; JV < eV.length && eV[JV].startsWith(">");) VV.push(eV[JV].replace(/^>\s?/, "")), JV++;
-          xV.push({
+        if (HH.startsWith(">")) {
+          const HH = [];
+          for (; AH < BH.length && BH[AH].startsWith(">");) HH.push(BH[AH].replace(/^>\s?/, "")), AH++;
+          LH.push({
             kind: "quote",
-            blocks: vV(VV.join("\n"))
+            blocks: GH(HH.join("\n"))
           });
           continue
         }
-        if (wV.test(VV)) {
-          const YV = [],
-            UV = /^\s*\d+\./.test(VV);
-          for (; JV < eV.length && !QV(eV[JV]) && (wV.test(eV[JV]) || /^\s+\S/.test(eV[JV]));) YV.push(eV[JV]), JV++;
-          xV.push({
+        if (EH.test(HH)) {
+          const rH = [],
+            SH = /^\s*\d+\./.test(HH);
+          for (; AH < BH.length && !zH(BH[AH]) && (EH.test(BH[AH]) || /^\s+\S/.test(BH[AH]));) rH.push(BH[AH]), AH++;
+          LH.push({
             kind: "list",
-            ordered: UV,
-            items: ZV(YV)
+            ordered: SH,
+            items: XH(rH)
           });
           continue
         }
-        const pV = [];
-        for (; JV < eV.length && !QV(eV[JV]) && !/^\s*```/.test(eV[JV]) && !/^#{1,6}\s/.test(eV[JV]) && !eV[JV].startsWith(">") && !wV.test(eV[JV]) && (!eV[JV].trim().startsWith("|") || 0 !== pV.length);) pV.push(eV[JV].trim()), JV++;
-        0 === pV.length && (pV.push(eV[JV].trim()), JV++), xV.push({
+        const tH = [];
+        for (; AH < BH.length && !zH(BH[AH]) && !/^\s*```/.test(BH[AH]) && !/^#{1,6}\s/.test(BH[AH]) && !BH[AH].startsWith(">") && !EH.test(BH[AH]) && (!BH[AH].trim().startsWith("|") || 0 !== tH.length);) tH.push(BH[AH].trim()), AH++;
+        0 === tH.length && (tH.push(BH[AH].trim()), AH++), LH.push({
           kind: "paragraph",
-          text: pV.join(" ")
+          text: tH.join(" ")
         })
       }
-      return xV
+      return LH
     }
 
-    function rV(VV) {
-      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const xV = vV(VV);
-      let JV = "";
-      const YV = [],
-        UV = [],
-        yV = new Map;
-      for (const nV of xV) {
-        if ("heading" === nV.kind) {
-          var pV;
-          const VV = (null !== (pV = yV.get(nV.anchor)) && void 0 !== pV ? pV : 0) + 1;
-          yV.set(nV.anchor, VV), VV > 1 && (nV.anchor = `${nV.anchor}-${VV}`)
+    function YH(HH) {
+      let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const LH = GH(HH);
+      let AH = "";
+      const rH = [],
+        SH = [],
+        hH = new Map;
+      for (const CH of LH) {
+        if ("heading" === CH.kind) {
+          var tH;
+          const HH = (null !== (tH = hH.get(CH.anchor)) && void 0 !== tH ? tH : 0) + 1;
+          hH.set(CH.anchor, HH), HH > 1 && (CH.anchor = `${CH.anchor}-${HH}`)
         }
-        if ("heading" === nV.kind && 1 === nV.level && !JV) {
-          JV = nV.text;
+        if ("heading" === CH.kind && 1 === CH.level && !AH) {
+          AH = CH.text;
           continue
         }
-        if ("heading" === nV.kind && nV.level <= eV) {
-          UV.push({
-            heading: nV,
+        if ("heading" === CH.kind && CH.level <= BH) {
+          SH.push({
+            heading: CH,
             blocks: []
           });
           continue
         }
-        const VV = UV.at(-1);
-        VV ? VV.blocks.push(nV) : YV.push(nV)
+        const HH = SH.at(-1);
+        HH ? HH.blocks.push(CH) : rH.push(CH)
       }
-      const QV = VV => {
+      const zH = HH => {
         for (;
-          "rule" === (null === (eV = VV.at(-1)) || void 0 === eV ? void 0 : eV.kind);) {
-          var eV;
-          VV.pop()
+          "rule" === (null === (BH = HH.at(-1)) || void 0 === BH ? void 0 : BH.kind);) {
+          var BH;
+          HH.pop()
         }
       };
-      QV(YV);
-      for (const nV of UV) QV(nV.blocks);
+      zH(rH);
+      for (const CH of SH) zH(CH.blocks);
       return {
-        title: JV,
-        intro: YV,
-        sections: UV
+        title: AH,
+        intro: rH,
+        sections: SH
       }
     }
 
-    function kV(VV) {
+    function uH(HH) {
       return [{
         heading: null,
-        blocks: VV.intro
-      }, ...VV.sections.map((VV => ({
-        heading: VV.heading,
-        blocks: VV.blocks
+        blocks: HH.intro
+      }, ...HH.sections.map((HH => ({
+        heading: HH.heading,
+        blocks: HH.blocks
       })))]
     }
 
-    function bV(VV) {
-      return VV.flatMap((VV => "code" === VV.kind ? [VV] : "quote" === VV.kind ? bV(VV.blocks) : []))
+    function QH(HH) {
+      return HH.flatMap((HH => "code" === HH.kind ? [HH] : "quote" === HH.kind ? QH(HH.blocks) : []))
     }
 
-    function EV(VV) {
-      switch (VV.kind) {
+    function WH(HH) {
+      switch (HH.kind) {
         case "heading":
         case "paragraph":
-          return VV.text;
+          return HH.text;
         case "code":
-          return VV.code;
+          return HH.code;
         case "table":
-          return [VV.header, ...VV.rows].map((VV => VV.join(" "))).join(" ");
+          return [HH.header, ...HH.rows].map((HH => HH.join(" "))).join(" ");
         case "list": {
-          const eV = VV => VV.map((VV => `${VV.text} ${eV(VV.children)}`)).join(" ");
-          return eV(VV.items)
+          const BH = HH => HH.map((HH => `${HH.text} ${BH(HH.children)}`)).join(" ");
+          return BH(HH.items)
         }
         case "quote":
-          return VV.blocks.map(EV).join(" ");
+          return HH.blocks.map(WH).join(" ");
         case "rule":
           return ""
       }
     }
   },
-  7054: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => ZV,
-      g: () => yV,
-      k: () => pV
+  7029: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => XH,
+      h: () => hH,
+      l: () => tH
     });
-    xV(7046);
-    var JV = xV(62),
-      YV = xV(5243),
-      UV = xV(1321);
-    const yV = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    LH(7025);
+    var AH = LH(45),
+      rH = LH(5218),
+      SH = LH(1225);
+    const hH = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function pV(VV, eV) {
-      return VV === eV ? VV : `${VV} (${eV})`
+    function tH(HH, BH) {
+      return HH === BH ? HH : `${HH} (${BH})`
     }
 
-    function QV(VV) {
-      const eV = [];
-      let xV = 0;
-      for (const JV of VV.matchAll(yV)) {
-        JV.index > xV && eV.push(VV.slice(xV, JV.index));
-        const [, YV, yV, QV, nV, wV, ZV] = JV;
-        void 0 !== YV ? eV.push(pV(YV, yV)) : void 0 !== QV || void 0 !== nV ? eV.push((0, UV.jsx)("strong", {
-          children: null !== QV && void 0 !== QV ? QV : nV
-        }, JV.index)) : void 0 !== wV ? eV.push((0, UV.jsx)("em", {
-          children: wV
-        }, JV.index)) : eV.push((0, UV.jsx)("code", {
-          children: ZV
-        }, JV.index)), xV = JV.index + JV[0].length
+    function zH(HH) {
+      const BH = [];
+      let LH = 0;
+      for (const AH of HH.matchAll(hH)) {
+        AH.index > LH && BH.push(HH.slice(LH, AH.index));
+        const [, rH, hH, zH, CH, EH, XH] = AH;
+        void 0 !== rH ? BH.push(tH(rH, hH)) : void 0 !== zH || void 0 !== CH ? BH.push((0, SH.jsx)("strong", {
+          children: null !== zH && void 0 !== zH ? zH : CH
+        }, AH.index)) : void 0 !== EH ? BH.push((0, SH.jsx)("em", {
+          children: EH
+        }, AH.index)) : BH.push((0, SH.jsx)("code", {
+          children: XH
+        }, AH.index)), LH = AH.index + AH[0].length
       }
-      return xV < VV.length && eV.push(VV.slice(xV)), eV
+      return LH < HH.length && BH.push(HH.slice(LH)), BH
     }
 
-    function nV(VV, eV) {
-      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const JV = VV.map(((VV, eV) => (0, UV.jsxs)("li", {
-        children: [QV(VV.text), VV.children.length > 0 && nV(VV.children, !1)]
-      }, eV)));
-      return eV ? (0, UV.jsx)("ol", {
-        start: xV,
-        children: JV
-      }) : (0, UV.jsx)("ul", {
-        children: JV
+    function CH(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const AH = HH.map(((HH, BH) => (0, SH.jsxs)("li", {
+        children: [zH(HH.text), HH.children.length > 0 && CH(HH.children, !1)]
+      }, BH)));
+      return BH ? (0, SH.jsx)("ol", {
+        start: LH,
+        children: AH
+      }) : (0, SH.jsx)("ul", {
+        children: AH
       })
     }
 
-    function wV(VV, eV) {
-      switch (VV.kind) {
+    function EH(HH, BH) {
+      switch (HH.kind) {
         case "heading":
-          return VV.level <= 2 ? (0, UV.jsx)("h3", {
-            children: QV(VV.text)
-          }, eV) : (0, UV.jsx)("h4", {
-            children: QV(VV.text)
-          }, eV);
+          return HH.level <= 2 ? (0, SH.jsx)("h3", {
+            children: zH(HH.text)
+          }, BH) : (0, SH.jsx)("h4", {
+            children: zH(HH.text)
+          }, BH);
         case "paragraph":
-          return (0, UV.jsx)("p", {
-            children: QV(VV.text)
-          }, eV);
+          return (0, SH.jsx)("p", {
+            children: zH(HH.text)
+          }, BH);
         case "list":
-          return (0, UV.jsx)(JV.Fragment, {
-            children: nV(VV.items, VV.ordered)
-          }, eV);
+          return (0, SH.jsx)(AH.Fragment, {
+            children: CH(HH.items, HH.ordered)
+          }, BH);
         case "quote":
-          return (0, UV.jsx)("blockquote", {
-            children: VV.blocks.map(((VV, eV) => wV(VV, eV)))
-          }, eV);
+          return (0, SH.jsx)("blockquote", {
+            children: HH.blocks.map(((HH, BH) => EH(HH, BH)))
+          }, BH);
         case "code":
-          return (0, UV.jsx)("pre", {
-            children: (0, UV.jsx)("code", {
-              children: VV.code
+          return (0, SH.jsx)("pre", {
+            children: (0, SH.jsx)("code", {
+              children: HH.code
             })
-          }, eV);
+          }, BH);
         case "table":
-          return (0, UV.jsxs)("table", {
-            children: [(0, UV.jsx)("thead", {
-              children: (0, UV.jsx)("tr", {
-                children: VV.header.map(((VV, eV) => (0, UV.jsx)("th", {
-                  children: QV(VV)
-                }, eV)))
+          return (0, SH.jsxs)("table", {
+            children: [(0, SH.jsx)("thead", {
+              children: (0, SH.jsx)("tr", {
+                children: HH.header.map(((HH, BH) => (0, SH.jsx)("th", {
+                  children: zH(HH)
+                }, BH)))
               })
-            }), (0, UV.jsx)("tbody", {
-              children: VV.rows.map(((VV, eV) => (0, UV.jsx)("tr", {
-                children: VV.map(((VV, eV) => (0, UV.jsx)("td", {
-                  children: QV(VV)
-                }, eV)))
-              }, eV)))
+            }), (0, SH.jsx)("tbody", {
+              children: HH.rows.map(((HH, BH) => (0, SH.jsx)("tr", {
+                children: HH.map(((HH, BH) => (0, SH.jsx)("td", {
+                  children: zH(HH)
+                }, BH)))
+              }, BH)))
             })]
-          }, eV);
+          }, BH);
         case "rule":
-          return (0, UV.jsx)("hr", {}, eV)
+          return (0, SH.jsx)("hr", {}, BH)
       }
     }
 
-    function ZV(VV) {
+    function XH(HH) {
       let {
-        markdown: eV
-      } = VV, xV = 0;
-      return (0, UV.jsx)("div", {
+        markdown: BH
+      } = HH, LH = 0;
+      return (0, SH.jsx)("div", {
         className: "StudioAiAnswerText",
-        children: (0, YV.I)(eV).map(((VV, eV) => {
-          if ("list" !== VV.kind || !VV.ordered) return xV = 0, wV(VV, eV);
-          const YV = xV + 1;
-          return xV += VV.items.length, (0, UV.jsx)(JV.Fragment, {
-            children: nV(VV.items, !0, YV)
-          }, eV)
+        children: (0, rH.D)(BH).map(((HH, BH) => {
+          if ("list" !== HH.kind || !HH.ordered) return LH = 0, EH(HH, BH);
+          const rH = LH + 1;
+          return LH += HH.items.length, (0, SH.jsx)(AH.Fragment, {
+            children: CH(HH.items, !0, rH)
+          }, BH)
         }))
       })
     }
   },
-  7039: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => jV,
-      i: () => qV,
-      e: () => FV,
-      l: () => kV
+  7017: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => xH,
+      f: () => vH,
+      e: () => TH,
+      h: () => uH
     });
-    var JV = xV(1241),
-      YV = xV(7003),
-      UV = xV(5364);
-    const yV = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+    var AH = LH(1148),
+      rH = LH(6987),
+      SH = LH(5347);
+    const hH = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
 
-    function pV(VV) {
-      return (0, UV.h)(VV, yV, (eV => !/^my/i.test(eV[0]) || !/follow $/i.test(VV.slice(0, eV.index)))).length > 0
+    function tH(HH) {
+      return (0, SH.c)(HH, hH, (BH => !/^my/i.test(BH[0]) || !/follow $/i.test(HH.slice(0, BH.index)))).length > 0
     }
-    const QV = /\byou(?:r|'re|'ll)?\b/i,
-      nV = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      wV = 2;
+    const zH = /\byou(?:r|'re|'ll)?\b/i,
+      CH = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      EH = 2;
 
-    function ZV(VV) {
-      return function(VV) {
-        const eV = [];
-        let xV = !1;
-        for (const JV of VV.split("\n")) {
-          if (/^\s*(```|~~~)/.test(JV)) {
-            xV = !xV;
+    function XH(HH) {
+      return function(HH) {
+        const BH = [];
+        let LH = !1;
+        for (const AH of HH.split("\n")) {
+          if (/^\s*(```|~~~)/.test(AH)) {
+            LH = !LH;
             continue
           }
-          if (xV || /^\s*>/.test(JV)) continue;
-          const VV = JV.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          eV.push(...(0, YV.s)(VV))
+          if (LH || /^\s*>/.test(AH)) continue;
+          const HH = AH.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          BH.push(...(0, rH.l)(HH))
         }
-        return eV
-      }(VV).filter((VV => pV(VV) || nV.test(VV) && !QV.test(VV)))
+        return BH
+      }(HH).filter((HH => tH(HH) || CH.test(HH) && !zH.test(HH)))
     }
-    const vV = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      rV = [{
+    const GH = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      YH = [{
         name: "Qwen3.6-27B",
         temperature: .7,
         reasoningEffort: "none"
@@ -384,317 +384,317 @@ export const modules = {
         temperature: .15
       }];
 
-    function kV(VV) {
-      const eV = rV.findIndex((eV => eV.name === VV));
-      return -1 === eV ? rV.length : eV
+    function uH(HH) {
+      const BH = YH.findIndex((BH => BH.name === HH));
+      return -1 === BH ? YH.length : BH
     }
-    const bV = 2500,
-      EV = 12e4;
-    class BV extends Error {
-      constructor(VV) {
-        super(`Studio AI chat ${VV}`), this.reason = VV
+    const QH = 2500,
+      WH = 12e4;
+    class MH extends Error {
+      constructor(HH) {
+        super(`Studio AI chat ${HH}`), this.reason = HH
       }
     }
 
-    function jV(VV, eV) {
-      const xV = new AbortController,
-        JV = () => {
-          xV.abort()
+    function xH(HH, BH) {
+      const LH = new AbortController,
+        AH = () => {
+          LH.abort()
         },
-        YV = setTimeout(JV, VV);
-      return null !== eV && void 0 !== eV && eV.aborted && JV(), null === eV || void 0 === eV || eV.addEventListener("abort", JV, {
+        rH = setTimeout(AH, HH);
+      return null !== BH && void 0 !== BH && BH.aborted && AH(), null === BH || void 0 === BH || BH.addEventListener("abort", AH, {
         once: !0
       }), {
-        signal: xV.signal,
+        signal: LH.signal,
         clear: () => {
-          clearTimeout(YV), null === eV || void 0 === eV || eV.removeEventListener("abort", JV)
+          clearTimeout(rH), null === BH || void 0 === BH || BH.removeEventListener("abort", AH)
         }
       }
     }
 
-    function qV(VV, eV, xV) {
-      return new Promise(((YV, UV) => {
-        const yV = new AbortController,
-          pV = () => {
-            yV.abort(), UV((0, JV.g)(xV))
+    function vH(HH, BH, LH) {
+      return new Promise(((rH, SH) => {
+        const hH = new AbortController,
+          tH = () => {
+            hH.abort(), SH((0, AH.g)(LH))
           };
-        if (null !== xV && void 0 !== xV && xV.aborted) return void pV();
-        null === xV || void 0 === xV || xV.addEventListener("abort", pV, {
+        if (null !== LH && void 0 !== LH && LH.aborted) return void tH();
+        null === LH || void 0 === LH || LH.addEventListener("abort", tH, {
           once: !0
         });
-        const QV = rV.map((() => !1));
-        let nV = null;
-        const wV = rV.map((() => !1)),
-          ZV = rV.map((() => !1));
-        rV.forEach(((JV, vV) => {
-          const kV = jV(EV, yV.signal);
-          TV(JV, [{
+        const zH = YH.map((() => !1));
+        let CH = null;
+        const EH = YH.map((() => !1)),
+          XH = YH.map((() => !1));
+        YH.forEach(((AH, GH) => {
+          const uH = xH(WH, hH.signal);
+          UH(AH, [{
             role: "user",
-            content: VV
-          }], kV.signal).then((VV => {
-            yV.signal.aborted || ("busy" === VV || "failed" === VV ? (wV[vV] = "busy" === VV, ZV[vV] = !0) : null !== VV && (null === nV || vV < nV.rank) && (nV = {
-              rank: vV,
+            content: HH
+          }], uH.signal).then((HH => {
+            hH.signal.aborted || ("busy" === HH || "failed" === HH ? (EH[GH] = "busy" === HH, XH[GH] = !0) : null !== HH && (null === CH || GH < CH.rank) && (CH = {
+              rank: GH,
               answer: {
-                text: VV.text,
-                model: JV.name
+                text: HH.text,
+                model: AH.name
               }
-            }, eV(nV.answer)))
-          }), (VV => {
-            yV.signal.aborted || (ZV[vV] = !0, console.warn(`Studio AI: ${JV.name} couldn't be reached`, VV))
+            }, BH(CH.answer)))
+          }), (HH => {
+            hH.signal.aborted || (XH[GH] = !0, console.warn(`Studio AI: ${AH.name} couldn't be reached`, HH))
           })).finally((() => {
-            kV.clear(), QV[vV] = !0, yV.signal.aborted || (() => {
-              var VV, eV;
-              const JV = null !== (VV = null === (eV = nV) || void 0 === eV ? void 0 : eV.rank) && void 0 !== VV ? VV : rV.length;
-              QV.slice(0, JV).includes(!1) || (null === xV || void 0 === xV || xV.removeEventListener("abort", pV), yV.abort(), null !== nV ? YV({
-                ...nV.answer,
-                isFinal: !ZV.slice(0, nV.rank).includes(!0)
-              }) : UV(new BV(wV.includes(!0) ? "busy" : "failed")))
+            uH.clear(), zH[GH] = !0, hH.signal.aborted || (() => {
+              var HH, BH;
+              const AH = null !== (HH = null === (BH = CH) || void 0 === BH ? void 0 : BH.rank) && void 0 !== HH ? HH : YH.length;
+              zH.slice(0, AH).includes(!1) || (null === LH || void 0 === LH || LH.removeEventListener("abort", tH), hH.abort(), null !== CH ? rH({
+                ...CH.answer,
+                isFinal: !XH.slice(0, CH.rank).includes(!0)
+              }) : SH(new MH(EH.includes(!0) ? "busy" : "failed")))
             })()
-          })).catch((VV => {
-            console.error("Studio AI: showing an answer failed", VV)
+          })).catch((HH => {
+            console.error("Studio AI: showing an answer failed", HH)
           }))
         }))
       }))
     }
 
-    function tV(VV) {
-      var eV, xV;
-      return "length" === (null === VV || void 0 === VV || null === (eV = VV.choices) || void 0 === eV || null === (xV = eV[0]) || void 0 === xV ? void 0 : xV.finish_reason)
+    function PH(HH) {
+      var BH, LH;
+      return "length" === (null === HH || void 0 === HH || null === (BH = HH.choices) || void 0 === BH || null === (LH = BH[0]) || void 0 === LH ? void 0 : LH.finish_reason)
     }
-    async function FV(VV, eV, xV) {
-      const JV = rV.find((eV => eV.name === VV));
-      if (void 0 === JV) return "failed";
-      const YV = jV(EV, xV);
+    async function TH(HH, BH, LH) {
+      const AH = YH.find((BH => BH.name === HH));
+      if (void 0 === AH) return "failed";
+      const rH = xH(WH, LH);
       try {
-        const VV = await TV(JV, eV, YV.signal);
-        return null !== VV && "object" === typeof VV ? VV.isCutOff ? (console.warn(`Studio AI: ${JV.name}'s answer was cut off at the token limit`), null) : {
-          text: VV.text
-        } : VV
+        const HH = await UH(AH, BH, rH.signal);
+        return null !== HH && "object" === typeof HH ? HH.isCutOff ? (console.warn(`Studio AI: ${AH.name}'s answer was cut off at the token limit`), null) : {
+          text: HH.text
+        } : HH
       } finally {
-        YV.clear()
+        rH.clear()
       }
     }
-    async function TV(VV, eV, xV) {
-      const JV = await fetch(vV, {
+    async function UH(HH, BH, LH) {
+      const AH = await fetch(GH, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: VV.name,
-          messages: eV,
-          max_tokens: bV,
-          temperature: VV.temperature,
-          reasoning_effort: VV.reasoningEffort
+          model: HH.name,
+          messages: BH,
+          max_tokens: QH,
+          temperature: HH.temperature,
+          reasoning_effort: HH.reasoningEffort
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: xV
+        signal: LH
       });
-      if (429 === JV.status) return "busy";
-      if (!JV.ok) return console.warn(`Studio AI: ${VV.name} answered ${JV.status}`), "failed";
-      const YV = await JV.json().catch((() => null)),
-        UV = function(VV) {
-          var eV, xV, JV;
-          const YV = null === VV || void 0 === VV || null === (eV = VV.choices) || void 0 === eV || null === (xV = eV[0]) || void 0 === xV || null === (JV = xV.message) || void 0 === JV ? void 0 : JV.content;
-          if ("string" !== typeof YV) return null;
-          const UV = YV.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === UV ? null : UV
-        }(YV);
-      return null !== UV && function(VV) {
-        const eV = ZV(VV);
-        return eV.length >= wV || eV.some((VV => pV(VV)))
-      }(UV) ? (console.warn(`Studio AI: ${VV.name} thought out loud instead of answering`), "failed") : null === UV ? null : {
-        text: UV,
-        isCutOff: tV(YV)
+      if (429 === AH.status) return "busy";
+      if (!AH.ok) return console.warn(`Studio AI: ${HH.name} answered ${AH.status}`), "failed";
+      const rH = await AH.json().catch((() => null)),
+        SH = function(HH) {
+          var BH, LH, AH;
+          const rH = null === HH || void 0 === HH || null === (BH = HH.choices) || void 0 === BH || null === (LH = BH[0]) || void 0 === LH || null === (AH = LH.message) || void 0 === AH ? void 0 : AH.content;
+          if ("string" !== typeof rH) return null;
+          const SH = rH.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === SH ? null : SH
+        }(rH);
+      return null !== SH && function(HH) {
+        const BH = XH(HH);
+        return BH.length >= EH || BH.some((HH => tH(HH)))
+      }(SH) ? (console.warn(`Studio AI: ${HH.name} thought out loud instead of answering`), "failed") : null === SH ? null : {
+        text: SH,
+        isCutOff: PH(rH)
       }
     }
   },
-  7003: (VV, eV, xV) => {
-    xV.d(eV, {
-      C: () => tV,
-      G: () => TV,
-      H: () => EV,
-      J: () => qV,
-      K: () => FV,
-      M: () => jV,
-      N: () => ZV,
-      R: () => nV,
-      V: () => rV,
-      e: () => kV,
-      g: () => pV,
-      i: () => yV,
-      m: () => bV,
-      o: () => vV,
-      s: () => wV,
-      v: () => UV,
-      z: () => YV
+  6987: (HH, BH, LH) => {
+    LH.d(BH, {
+      C: () => TH,
+      E: () => xH,
+      F: () => XH,
+      I: () => CH,
+      L: () => YH,
+      b: () => uH,
+      d: () => tH,
+      e: () => hH,
+      f: () => QH,
+      h: () => GH,
+      l: () => EH,
+      n: () => SH,
+      p: () => rH,
+      t: () => PH,
+      u: () => UH,
+      w: () => WH,
+      y: () => vH
     });
-    var JV = xV(5364);
-    const YV = 2e3,
-      UV = 2e4;
+    var AH = LH(5347);
+    const rH = 2e3,
+      SH = 2e4;
 
-    function yV(VV) {
-      return VV.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    function hH(HH) {
+      return HH.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     }
 
-    function pV(VV) {
-      return VV.replace(/\$/g, "\\$")
+    function tH(HH) {
+      return HH.replace(/\$/g, "\\$")
     }
-    const QV = /[.!?](?=\s|\*|_|$)|\n|$/g;
+    const zH = /[.!?](?=\s|\*|_|$)|\n|$/g;
 
-    function nV(VV, eV) {
-      QV.lastIndex = eV;
-      const xV = QV.exec(VV);
-      return xV.index + xV[0].length
-    }
-
-    function wV(VV) {
-      return (0, JV.B)(VV, /\s+/g, (0, JV.w)(".!?")).flatMap((VV => VV.split("\n")))
+    function CH(HH, BH) {
+      zH.lastIndex = BH;
+      const LH = zH.exec(HH);
+      return LH.index + LH[0].length
     }
 
-    function ZV(VV, eV) {
-      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : eV;
-      const JV = [...VV.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((VV => VV.index)),
-        YV = JV.filter((VV => VV < eV)),
-        UV = JV.find((VV => VV >= xV));
-      return [0 === YV.length ? 0 : YV.at(-1) + 1, void 0 === UV ? VV.length : UV + 1]
+    function EH(HH) {
+      return (0, AH.s)(HH, /\s+/g, (0, AH.n)(".!?")).flatMap((HH => HH.split("\n")))
     }
 
-    function vV(VV, eV) {
-      const xV = VV.charCodeAt(eV - 1);
-      return VV.slice(0, eV > 0 && eV < VV.length && xV >= 55296 && xV <= 56319 ? eV - 1 : eV)
+    function XH(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : BH;
+      const AH = [...HH.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((HH => HH.index)),
+        rH = AH.filter((HH => HH < BH)),
+        SH = AH.find((HH => HH >= LH));
+      return [0 === rH.length ? 0 : rH.at(-1) + 1, void 0 === SH ? HH.length : SH + 1]
     }
 
-    function rV(VV, eV) {
-      return `${eV}${VV.replace(/\\/g,"\\\\").split(eV).join(`\\${eV}`)}${eV}`
+    function GH(HH, BH) {
+      const LH = HH.charCodeAt(BH - 1);
+      return HH.slice(0, BH > 0 && BH < HH.length && LH >= 55296 && LH <= 56319 ? BH - 1 : BH)
     }
 
-    function kV(VV) {
-      return VV.charAt(0).toUpperCase() + VV.slice(1)
+    function YH(HH, BH) {
+      return `${BH}${HH.replace(/\\/g,"\\\\").split(BH).join(`\\${BH}`)}${BH}`
     }
 
-    function bV(VV) {
-      return Math.round(VV).toLocaleString("en-US")
+    function uH(HH) {
+      return HH.charAt(0).toUpperCase() + HH.slice(1)
     }
 
-    function EV(VV) {
-      return VV.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((VV => "" !== VV))
-    }
-    const BV = 3;
-
-    function jV(VV, eV) {
-      return EV(VV).filter((VV => VV.length >= BV && !/\d/.test(VV))).map((VV => `${VV} ${eV}`))
+    function QH(HH) {
+      return Math.round(HH).toLocaleString("en-US")
     }
 
-    function qV(VV) {
-      return VV.split(/[\s:_]+/).filter((VV => "" !== VV)).map(yV).join("[`:_\\s]+")
+    function WH(HH) {
+      return HH.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((HH => "" !== HH))
+    }
+    const MH = 3;
+
+    function xH(HH, BH) {
+      return WH(HH).filter((HH => HH.length >= MH && !/\d/.test(HH))).map((HH => `${HH} ${BH}`))
     }
 
-    function tV(VV) {
-      return EV(VV.split(".").pop())
+    function vH(HH) {
+      return HH.split(/[\s:_]+/).filter((HH => "" !== HH)).map(hH).join("[`:_\\s]+")
     }
 
-    function FV(VV) {
-      return VV.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    function PH(HH) {
+      return WH(HH.split(".").pop())
     }
 
-    function TV(VV) {
-      let eV = null;
+    function TH(HH) {
+      return HH.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function UH(HH) {
+      let BH = null;
       return () => {
-        const xV = eV ??= VV();
-        return xV.catch((() => {
-          eV === xV && (eV = null)
-        })), xV
+        const LH = BH ??= HH();
+        return LH.catch((() => {
+          BH === LH && (BH = null)
+        })), LH
       }
     }
   },
-  5364: (VV, eV, xV) => {
-    function JV(VV) {
+  5347: (HH, BH, LH) => {
+    function AH(HH) {
       return {
-        notAfter: VV
+        notAfter: HH
       }
     }
-    xV.d(eV, {
-      B: () => ZV,
-      e: () => QV,
-      h: () => nV,
-      k: () => pV,
-      l: () => JV,
-      o: () => YV,
-      s: () => UV,
-      w: () => yV,
-      z: () => wV
+    LH.d(BH, {
+      b: () => zH,
+      c: () => CH,
+      g: () => tH,
+      i: () => AH,
+      j: () => rH,
+      k: () => SH,
+      n: () => hH,
+      o: () => EH,
+      s: () => XH
     });
-    const YV = JV("\\w$."),
-      UV = JV("\\w.,");
+    const rH = AH("\\w$."),
+      SH = AH("\\w.,");
 
-    function yV(VV) {
-      return eV => QV(eV, VV)
+    function hH(HH) {
+      return BH => zH(BH, HH)
     }
 
-    function pV(VV) {
-      return eV => !VV.test(eV.input.slice(0, eV.index))
+    function tH(HH) {
+      return BH => !HH.test(BH.input.slice(0, BH.index))
     }
 
-    function QV(VV, eV) {
-      return VV.index > 0 && new RegExp(`[${eV}]`).test(VV.input[VV.index - 1])
+    function zH(HH, BH) {
+      return HH.index > 0 && new RegExp(`[${BH}]`).test(HH.input[HH.index - 1])
     }
 
-    function nV(VV, eV, xV) {
-      return function(VV) {
-        return void 0 !== VV && "function" !== typeof VV
-      }(xV) ? function(VV, eV, xV) {
-        const JV = eV.flags.replace(/[gy]/g, ""),
-          YV = new RegExp(`[^${xV}](?:${eV.source})`, `${JV}g`),
-          UV = [],
-          yV = xV => {
-            const JV = xV.index + xV[0].length;
-            return ("" === xV[0] ? vV(VV, eV, JV) : JV) - 1
+    function CH(HH, BH, LH) {
+      return function(HH) {
+        return void 0 !== HH && "function" !== typeof HH
+      }(LH) ? function(HH, BH, LH) {
+        const AH = BH.flags.replace(/[gy]/g, ""),
+          rH = new RegExp(`[^${LH}](?:${BH.source})`, `${AH}g`),
+          SH = [],
+          hH = LH => {
+            const AH = LH.index + LH[0].length;
+            return ("" === LH[0] ? GH(HH, BH, AH) : AH) - 1
           },
-          pV = new RegExp(`(?:${eV.source})`, `${JV}y`).exec(VV);
-        if (pV) {
-          if (UV.push(pV), !eV.global) return UV;
-          YV.lastIndex = yV(pV)
+          tH = new RegExp(`(?:${BH.source})`, `${AH}y`).exec(HH);
+        if (tH) {
+          if (SH.push(tH), !BH.global) return SH;
+          rH.lastIndex = hH(tH)
         }
-        for (let QV = YV.exec(VV); QV; QV = YV.exec(VV)) {
-          const xV = vV(VV, eV, QV.index) - QV.index;
-          if (QV[0] = QV[0].slice(xV), QV.index += xV, UV.push(QV), !eV.global) break;
-          YV.lastIndex = yV(QV)
+        for (let zH = rH.exec(HH); zH; zH = rH.exec(HH)) {
+          const LH = GH(HH, BH, zH.index) - zH.index;
+          if (zH[0] = zH[0].slice(LH), zH.index += LH, SH.push(zH), !BH.global) break;
+          rH.lastIndex = hH(zH)
         }
-        return UV
-      }(VV, eV, xV.notAfter) : function(VV, eV, xV) {
-        const JV = new RegExp(eV.source, `${eV.flags.replace(/[gy]/g,"")}g`),
-          YV = [];
-        for (let UV = JV.exec(VV); UV; UV = JV.exec(VV))
-          if (!xV || xV(UV)) {
-            if (YV.push(UV), !eV.global) break;
-            "" === UV[0] && (JV.lastIndex = vV(VV, eV, JV.lastIndex))
-          } else JV.lastIndex = vV(VV, eV, UV.index);
-        return YV
-      }(VV, eV, xV)
+        return SH
+      }(HH, BH, LH.notAfter) : function(HH, BH, LH) {
+        const AH = new RegExp(BH.source, `${BH.flags.replace(/[gy]/g,"")}g`),
+          rH = [];
+        for (let SH = AH.exec(HH); SH; SH = AH.exec(HH))
+          if (!LH || LH(SH)) {
+            if (rH.push(SH), !BH.global) break;
+            "" === SH[0] && (AH.lastIndex = GH(HH, BH, AH.lastIndex))
+          } else AH.lastIndex = GH(HH, BH, SH.index);
+        return rH
+      }(HH, BH, LH)
     }
 
-    function wV(VV, eV, xV, JV) {
-      let YV = "",
-        UV = 0;
-      for (const yV of nV(VV, eV, xV)) YV += VV.slice(UV, yV.index) + JV(yV), UV = yV.index + yV[0].length;
-      return YV + VV.slice(UV)
+    function EH(HH, BH, LH, AH) {
+      let rH = "",
+        SH = 0;
+      for (const hH of CH(HH, BH, LH)) rH += HH.slice(SH, hH.index) + AH(hH), SH = hH.index + hH[0].length;
+      return rH + HH.slice(SH)
     }
 
-    function ZV(VV, eV, xV) {
-      const JV = [];
-      let YV = 0;
-      for (const UV of nV(VV, eV, xV)) JV.push(VV.slice(YV, UV.index)), YV = UV.index + UV[0].length;
-      return [...JV, VV.slice(YV)]
+    function XH(HH, BH, LH) {
+      const AH = [];
+      let rH = 0;
+      for (const SH of CH(HH, BH, LH)) AH.push(HH.slice(rH, SH.index)), rH = SH.index + SH[0].length;
+      return [...AH, HH.slice(rH)]
     }
 
-    function vV(VV, eV, xV) {
-      var JV;
-      return xV + (eV.unicode && (null !== (JV = VV.codePointAt(xV)) && void 0 !== JV ? JV : 0) > 65535 ? 2 : 1)
+    function GH(HH, BH, LH) {
+      var AH;
+      return LH + (BH.unicode && (null !== (AH = HH.codePointAt(LH)) && void 0 !== AH ? AH : 0) > 65535 ? 2 : 1)
     }
   },
-  7046: () => {}
+  7025: () => {}
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

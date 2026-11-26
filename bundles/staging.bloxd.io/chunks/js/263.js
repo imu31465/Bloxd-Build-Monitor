@@ -1,273 +1,284 @@
 export const id = 263;
-export const ids = [262, 263];
+export const ids = [263];
 export const modules = {
-  64284: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      RegisterShaderMaterial: () => JV.c,
-      ShaderMaterial: () => JV.n,
-      ShaderMaterialCreateFromSnippetAsync: () => JV.f,
-      ShaderMaterialParse: () => JV.l,
-      ShaderMaterialParseFromFileAsync: () => JV.g,
-      ShaderMaterialParseFromSnippetAsync: () => JV.j
+  64115: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      DEVTOOLS_SHADERS: () => SH,
+      registerDevtoolsShader: () => hH
     });
-    var JV = xV(41729);
-    (0, JV.c)()
-  },
-  38908: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => YV
-    });
-    var JV = xV(38917);
-    class YV {
-      static GetPlanes(VV) {
-        const eV = [];
-        for (let xV = 0; xV < 6; xV++) eV.push(new JV.d(0, 0, 0, 0));
-        return YV.GetPlanesToRef(VV, eV), eV
-      }
-      static GetNearPlaneToRef(VV, eV) {
-        const xV = VV.m;
-        eV.normal.x = xV[3] + xV[2], eV.normal.y = xV[7] + xV[6], eV.normal.z = xV[11] + xV[10], eV.d = xV[15] + xV[14], eV.normalize()
-      }
-      static GetFarPlaneToRef(VV, eV) {
-        const xV = VV.m;
-        eV.normal.x = xV[3] - xV[2], eV.normal.y = xV[7] - xV[6], eV.normal.z = xV[11] - xV[10], eV.d = xV[15] - xV[14], eV.normalize()
-      }
-      static GetLeftPlaneToRef(VV, eV) {
-        const xV = VV.m;
-        eV.normal.x = xV[3] + xV[0], eV.normal.y = xV[7] + xV[4], eV.normal.z = xV[11] + xV[8], eV.d = xV[15] + xV[12], eV.normalize()
-      }
-      static GetRightPlaneToRef(VV, eV) {
-        const xV = VV.m;
-        eV.normal.x = xV[3] - xV[0], eV.normal.y = xV[7] - xV[4], eV.normal.z = xV[11] - xV[8], eV.d = xV[15] - xV[12], eV.normalize()
-      }
-      static GetTopPlaneToRef(VV, eV) {
-        const xV = VV.m;
-        eV.normal.x = xV[3] - xV[1], eV.normal.y = xV[7] - xV[5], eV.normal.z = xV[11] - xV[9], eV.d = xV[15] - xV[13], eV.normalize()
-      }
-      static GetBottomPlaneToRef(VV, eV) {
-        const xV = VV.m;
-        eV.normal.x = xV[3] + xV[1], eV.normal.y = xV[7] + xV[5], eV.normal.z = xV[11] + xV[9], eV.d = xV[15] + xV[13], eV.normalize()
-      }
-      static GetPlanesToRef(VV, eV) {
-        YV.GetNearPlaneToRef(VV, eV[0]), YV.GetFarPlaneToRef(VV, eV[1]), YV.GetLeftPlaneToRef(VV, eV[2]), YV.GetRightPlaneToRef(VV, eV[3]), YV.GetTopPlaneToRef(VV, eV[4]), YV.GetBottomPlaneToRef(VV, eV[5])
-      }
-      static IsPointInFrustum(VV, eV) {
-        for (let xV = 0; xV < 6; xV++)
-          if (eV[xV].dotCoordinate(VV) < 0) return !1;
-        return !0
-      }
-    }
-  },
-  38917: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => YV
-    });
-    var JV = xV(38269);
-    class YV {
-      constructor(VV, eV, xV, YV) {
-        this.normal = new JV.o(VV, eV, xV), this.d = YV
-      }
-      WYV() {
-        return [this.normal.x, this.normal.y, this.normal.z, this.d]
-      }
-      clone() {
-        return new YV(this.normal.x, this.normal.y, this.normal.z, this.d)
-      }
-      getClassName() {
-        return "Plane"
-      }
-      getHashCode() {
-        let VV = this.normal.getHashCode();
-        return VV = 397 * VV ^ this.d, VV
-      }
-      normalize() {
-        const VV = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let eV = 0;
-        return 0 !== VV && (eV = 1 / VV), this.normal.x *= eV, this.normal.y *= eV, this.normal.z *= eV, this.d *= eV, this
-      }
-      transform(VV) {
-        const eV = YV._TmpMatrix;
-        VV.invertToRef(eV);
-        const xV = eV.m,
-          JV = this.normal.x,
-          UV = this.normal.y,
-          yV = this.normal.z,
-          pV = this.d,
-          QV = JV * xV[0] + UV * xV[1] + yV * xV[2] + pV * xV[3],
-          nV = JV * xV[4] + UV * xV[5] + yV * xV[6] + pV * xV[7],
-          wV = JV * xV[8] + UV * xV[9] + yV * xV[10] + pV * xV[11],
-          ZV = JV * xV[12] + UV * xV[13] + yV * xV[14] + pV * xV[15];
-        return new YV(QV, nV, wV, ZV)
-      }
-      dotCoordinate(VV) {
-        return this.normal.x * VV.x + this.normal.y * VV.y + this.normal.z * VV.z + this.d
-      }
-      copyFromPoints(VV, eV, xV) {
-        const JV = eV.x - VV.x,
-          YV = eV.y - VV.y,
-          UV = eV.z - VV.z,
-          yV = xV.x - VV.x,
-          pV = xV.y - VV.y,
-          QV = xV.z - VV.z,
-          nV = YV * QV - UV * pV,
-          wV = UV * yV - JV * QV,
-          ZV = JV * pV - YV * yV,
-          vV = Math.sqrt(nV * nV + wV * wV + ZV * ZV);
-        let rV;
-        return rV = 0 !== vV ? 1 / vV : 0, this.normal.x = nV * rV, this.normal.y = wV * rV, this.normal.z = ZV * rV, this.d = -(this.normal.x * VV.x + this.normal.y * VV.y + this.normal.z * VV.z), this
-      }
-      isFrontFacingTo(VV, eV) {
-        return JV.o.Dot(this.normal, VV) <= eV
-      }
-      signedDistanceTo(VV) {
-        return JV.o.Dot(VV, this.normal) + this.d
-      }
-      static FromArray(VV) {
-        return new YV(VV[0], VV[1], VV[2], VV[3])
-      }
-      static FromPoints(VV, eV, xV) {
-        const JV = new YV(0, 0, 0, 0);
-        return JV.copyFromPoints(VV, eV, xV), JV
-      }
-      static FromPositionAndNormal(VV, eV) {
-        const xV = new YV(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(VV, eV, xV)
-      }
-      static FromPositionAndNormalToRef(VV, eV, xV) {
-        return xV.normal.iG(eV), xV.normal.normalize(), xV.d = -VV.dot(xV.normal), xV
-      }
-      static SignedDistanceToPlaneFromPositionAndNormal(VV, eV, xV) {
-        const YV = -(eV.x * VV.x + eV.y * VV.y + eV.z * VV.z);
-        return JV.o.Dot(xV, eV) + YV
-      }
-    }
-    YV._TmpMatrix = JV.d.Identity()
-  },
-  39867: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => UV
-    });
-    var JV = xV(39870);
-    const YV = (VV, eV, xV) => VV ? VV.getClassName && "Mesh" === VV.getClassName() ? null : !VV.getClassName || "SubMesh" !== VV.getClassName() && "PhysicsBody" !== VV.getClassName() ? VV.clone ? VV.clone() : Array.isArray(VV) ? VV.slice() : xV && "object" === typeof VV ? {
-      ...VV
-    } : null : VV.clone(eV) : null;
-    class UV {
-      static DeepCopy(VV, eV, xV, UV) {
-        let yV = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const pV = function(VV) {
-          const eV = [];
-          do {
-            const xV = Object.getOwnPropertyNames(VV);
-            for (const VV of xV) - 1 === eV.indexOf(VV) && eV.push(VV)
-          } while (VV = Object.getPrototypeOf(VV));
-          return eV
-        }(VV);
-        for (const nV of pV) {
-          if ("_" === nV[0] && (!UV || -1 === UV.indexOf(nV))) continue;
-          if (nV.endsWith("Observable")) continue;
-          if (xV && -1 !== xV.indexOf(nV)) continue;
-          const pV = VV[nV],
-            wV = typeof pV;
-          if ("function" !== wV) try {
-            if ("object" === wV)
-              if (pV instanceof Uint8Array) eV[nV] = Uint8Array.from(pV);
-              else if (pV instanceof Array) {
-              if (eV[nV] = [], pV.length > 0)
-                if ("object" == typeof pV[0])
-                  for (let VV = 0; VV < pV.length; VV++) {
-                    const xV = YV(pV[VV], eV, yV); - 1 === eV[nV].indexOf(xV) && eV[nV].push(xV)
-                  } else eV[nV] = pV.slice(0)
-            } else eV[nV] = YV(pV, eV, yV);
-            else eV[nV] = pV
-          } catch (QV) {
-            JV.b.Warn(QV.message)
-          }
+    var AH = LH(41138),
+      rH = LH(38086);
+    const SH = {
+      devtoolsNormal: function(HH) {
+        return {
+          vertex: `\n\t\t\t${(0,rH.d)(HH,"position","vec3")}\n\t\t\t${(0,rH.d)(HH,"normal","vec3")}\n\t\t\t${(0,rH.yb)(HH,"worldViewProjection","mat4")}\n\t\t\t${(0,rH.yb)(HH,"world","mat4")}\n\t\t\t${(0,rH.Eb)(HH,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,rH.Hb)(HH,`\n\t\t\t\t${(0,rH.j)(HH)} = ${(0,rH.Cb)(HH,"worldViewProjection")} * ${(0,rH.l)(HH,"vec4",(0,rH.Lb)(HH,"position"),"1.0")};\n\t\t\t\t${(0,rH.Mb)(HH,"vNormal")} = normalize((${(0,rH.Cb)(HH,"world")} * ${(0,rH.l)(HH,"vec4",(0,rH.Lb)(HH,"normal"),"0.0")}).xyz);\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,rH.Eb)(HH,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,rH.T)(HH,`\n\t\t\t\t\n\t\t\t\t${(0,rH.C)(HH,"vec3","normalColor",`abs(${(0,rH.U)(HH,"vNormal")})`)}\n\t\t\t\t${(0,rH.P)(HH)} = ${(0,rH.l)(HH,"vec4","normalColor","1.0")};\n\t\t\t`)}\n\t\t`
+        }
+      },
+      devtoolsWhite: function(HH) {
+        return {
+          vertex: `\n\t\t\t${(0,rH.d)(HH,"position","vec3")}\n\t\t\t${(0,rH.yb)(HH,"worldViewProjection","mat4")}\n\n\t\t\t${(0,rH.Hb)(HH,`\n\t\t\t\t${(0,rH.j)(HH)} = ${(0,rH.Cb)(HH,"worldViewProjection")} * ${(0,rH.l)(HH,"vec4",(0,rH.Lb)(HH,"position"),"1.0")};\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,rH.T)(HH,`\n\t\t\t\t${(0,rH.P)(HH)} = ${(0,rH.l)(HH,"vec4","1.0","1.0","1.0","1.0")};\n\t\t\t`)}\n\t\t`
+        }
+      },
+      devtoolsDepth: function(HH) {
+        return {
+          vertex: `\n\t\t\t${(0,rH.d)(HH,"position","vec3")}\n\t\t\t${(0,rH.yb)(HH,"worldViewProjection","mat4")}\n\t\t\t${(0,rH.yb)(HH,"world","mat4")}\n\t\t\t${(0,rH.yb)(HH,"cameraPosition","vec3")}\n\t\t\t${(0,rH.Eb)(HH,"vDepth","float","mediump")}\n\n\t\t\t${(0,rH.Hb)(HH,`\n\t\t\t\t${(0,rH.j)(HH)} = ${(0,rH.Cb)(HH,"worldViewProjection")} * ${(0,rH.l)(HH,"vec4",(0,rH.Lb)(HH,"position"),"1.0")};\n\t\t\t\t${(0,rH.C)(HH,"vec3","worldPosition",`(${(0,rH.Cb)(HH,"world")} * ${(0,rH.l)(HH,"vec4",(0,rH.Lb)(HH,"position"),"1.0")}).xyz`)}\n\t\t\t\t${(0,rH.Mb)(HH,"vDepth")} = distance(worldPosition, ${(0,rH.Cb)(HH,"cameraPosition")});\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,rH.Eb)(HH,"vDepth","float","mediump")}\n\t\t\t${(0,rH.yb)(HH,"maxDepth","float")}\n\t\t\t${(0,rH.yb)(HH,"minDepth","float")}\n\n\t\t\t${(0,rH.T)(HH,`\n\t\t\t\t\n\t\t\t\t${(0,rH.C)(HH,"float","normalizedDepth",`clamp((${(0,rH.U)(HH,"vDepth")} - ${(0,rH.Cb)(HH,"minDepth")}) / (${(0,rH.Cb)(HH,"maxDepth")} - ${(0,rH.Cb)(HH,"minDepth")}), 0.0, 1.0)`)}\n\t\t\t\t${(0,rH.C)(HH,"float","gray","1.0 - normalizedDepth")}\n\t\t\t\t${(0,rH.P)(HH)} = ${(0,rH.l)(HH,"vec4","gray","gray","gray","1.0")};\n\t\t\t`)}\n\t\t`
         }
       }
+    };
+
+    function hH(HH, BH) {
+      const {
+        vertex: LH,
+        fragment: rH
+      } = SH[HH](BH), hH = AH.c.GetShadersStore(BH);
+      hH[`${HH}VertexShader`] = LH, hH[`${HH}FragmentShader`] = rH
     }
   },
-  39058: (VV, eV, xV) => {
-    function JV() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (VV => {
-        const eV = 16 * Math.random() | 0;
-        return ("x" === VV ? eV : 3 & eV | 8).toString(16)
-      }))
-    }
-    xV.d(eV, {
-      d: () => JV
-    })
-  },
-  39870: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => JV
+  38086: (HH, BH, LH) => {
+    LH.d(BH, {
+      $: () => rH,
+      C: () => EH,
+      Cb: () => IH,
+      Eb: () => WH,
+      G: () => OH,
+      Hb: () => vH,
+      J: () => lH,
+      Lb: () => kH,
+      M: () => SH,
+      Mb: () => mH,
+      P: () => eH,
+      R: () => cH,
+      T: () => PH,
+      U: () => oH,
+      V: () => fH,
+      Z: () => NH,
+      bb: () => KH,
+      c: () => AH,
+      d: () => QH,
+      eb: () => jH,
+      fb: () => FH,
+      g: () => bH,
+      ib: () => VH,
+      j: () => xH,
+      kb: () => UH,
+      l: () => zH,
+      nb: () => nH,
+      o: () => qH,
+      ob: () => DH,
+      pb: () => RH,
+      q: () => gH,
+      rb: () => TH,
+      t: () => GH,
+      ub: () => CH,
+      x: () => YH,
+      yb: () => MH,
+      z: () => XH
     });
-    class JV {
-      static _CheckLimit(VV, eV) {
-        let xV = JV._LogLimitOutputs[VV];
-        return xV ? xV.current++ : (xV = {
-          limit: eV,
-          current: 1
-        }, JV._LogLimitOutputs[VV] = xV), xV.current <= xV.limit
+    const AH = {
+      GLSL: 0,
+      WGSL: 1
+    };
+
+    function rH(HH) {
+      return HH === AH.WGSL
+    }
+
+    function SH(HH, BH, LH) {
+      return rH(HH) ? LH : BH
+    }
+    const hH = new Map([
+      ["int", "i32"],
+      ["float", "f32"],
+      ["vec2", "vec2f"],
+      ["vec3", "vec3f"],
+      ["vec4", "vec4f"],
+      ["mat2", "mat2x2f"],
+      ["mat3", "mat3x3f"],
+      ["mat4", "mat4x4f"]
+    ]);
+
+    function tH(HH, BH) {
+      if (!rH(HH)) return BH;
+      const LH = hH.get(BH);
+      if (!LH) throw new Error(`No WGSL name for shader type "${BH}"`);
+      return LH
+    }
+
+    function zH(HH, BH) {
+      for (var LH = arguments.length, AH = new Array(LH > 2 ? LH - 2 : 0), rH = 2; rH < LH; rH++) AH[rH - 2] = arguments[rH];
+      return `${tH(HH,BH)}(${AH.join(", ")})`
+    }
+
+    function CH(HH, BH) {
+      return zH(HH, "int", BH)
+    }
+
+    function EH(HH, BH, LH, AH, SH) {
+      return rH(HH) ? `var ${LH}: ${tH(HH,BH)} = ${AH};` : `${uH(HH,SH)}${BH} ${LH} = ${AH};`
+    }
+
+    function XH(HH, BH, LH) {
+      return rH(HH) ? `var ${LH}: ${tH(HH,BH)};` : `${BH} ${LH};`
+    }
+
+    function GH(HH, BH, LH, AH) {
+      return rH(HH) ? `const ${LH}: ${tH(HH,BH)} = ${AH};` : `const ${BH} ${LH} = ${AH};`
+    }
+
+    function YH(HH, BH, LH, AH, SH) {
+      if (rH(HH)) {
+        return `fn ${LH}(${AH.map((BH=>`${BH.name}: ${tH(HH,BH.type)}`)).join(", ")}) -> ${tH(HH,BH)} {${SH}}`
       }
-      static _GenerateLimitMessage(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const xV = JV._LogLimitOutputs[VV];
-        if (!xV || !JV.MessageLimitReached) return;
-        const YV = this._Levels[eV];
-        xV.current === xV.limit && JV[YV.name](JV.MessageLimitReached.replace(/%LIMIT%/g, "" + xV.limit).replace(/%TYPE%/g, YV.name ?? ""))
+      return `${BH} ${LH}(${AH.map((HH=>`${HH.type} ${HH.name}`)).join(", ")}) {${SH}}`
+    }
+
+    function uH(HH, BH) {
+      return !BH || rH(HH) ? "" : `${BH} `
+    }
+
+    function QH(HH, BH, LH, AH) {
+      return rH(HH) ? `attribute ${BH}: ${tH(HH,LH)};` : `attribute ${uH(HH,AH)}${LH} ${BH};`
+    }
+
+    function WH(HH, BH, LH, AH) {
+      return rH(HH) ? `varying ${BH}: ${tH(HH,LH)};` : `varying ${uH(HH,AH)}${LH} ${BH};`
+    }
+
+    function MH(HH, BH, LH) {
+      return rH(HH) ? `uniform ${BH}: ${tH(HH,LH)};` : `uniform ${LH} ${BH};`
+    }
+
+    function xH(HH) {
+      return rH(HH) ? "vertexOutputs.position" : "gl_Position"
+    }
+
+    function vH(HH, BH) {
+      return rH(HH) ? `@vertex\nfn main(input: VertexInputs) -> FragmentInputs {${BH}}` : `void main() {${BH}}`
+    }
+
+    function PH(HH, BH) {
+      return rH(HH) ? `@fragment\nfn main(input: FragmentInputs) -> FragmentOutputs {${BH}}` : `void main() {${BH}}`
+    }
+
+    function TH(HH, BH, LH) {
+      if (rH(HH)) {
+        return [`var ${BH}Sampler: sampler;`, `var ${BH}: ${"2dArray"===LH?"texture_2d_array<f32>":"texture_2d<f32>"};`].join("\n")
       }
-      static _AddLogEntry(VV) {
-        JV._LogCache = VV + JV._LogCache, JV.OnNewCacheEntry && JV.OnNewCacheEntry(VV)
+      return `uniform highp ${"2dArray"===LH?"sampler2DArray":"sampler2D"} ${BH};`
+    }
+
+    function UH(HH, BH, LH) {
+      return rH(HH) ? `textureSample(${BH}, ${BH}Sampler, ${LH})` : `texture2D(${BH}, ${LH})`
+    }
+
+    function VH(HH, BH, LH, AH, SH) {
+      if (rH(HH)) {
+        return `${SH?"textureSampleLevel":"textureSample"}(${BH}, ${BH}Sampler, ${LH}, ${CH(HH,`round(${AH})`)}${SH?`, ${SH}`:""})`
       }
-      static _FormatMessage(VV) {
-        const eV = VV => VV < 10 ? "0" + VV : "" + VV,
-          xV = new Date;
-        return "[" + eV(xV.getHours()) + ":" + eV(xV.getMinutes()) + ":" + eV(xV.getSeconds()) + "]: " + VV
-      }
-      static _LogDisabled(VV, eV) {}
-      static _LogEnabled() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          eV = arguments.length > 1 ? arguments[1] : void 0,
-          xV = arguments.length > 2 ? arguments[2] : void 0;
-        const YV = Array.isArray(eV) ? eV[0] : eV;
-        if (void 0 !== xV && !JV._CheckLimit(YV, xV)) return;
-        const UV = JV._FormatMessage(YV),
-          yV = this._Levels[VV],
-          pV = Array.isArray(eV) ? eV.slice(1) : [];
-        yV.logFunc && yV.logFunc("BJS - " + UV, ...pV);
-        const QV = `<div style='color:${yV.color}'>${UV}</div><br>`;
-        JV._AddLogEntry(QV), JV._GenerateLimitMessage(YV, VV)
-      }
-      static get LogCache() {
-        return JV._LogCache
-      }
-      static ClearLogCache() {
-        JV._LogCache = "", JV._LogLimitOutputs = {}, JV.errorsCount = 0
-      }
-      static set LogLevels(VV) {
-        JV.Log = JV._LogDisabled, JV.Warn = JV._LogDisabled, JV.Error = JV._LogDisabled;
-        const eV = [JV.MessageLogLevel, JV.WarningLogLevel, JV.ErrorLogLevel];
-        for (const xV of eV)
-          if ((VV & xV) === xV) {
-            const VV = this._Levels[xV];
-            JV[VV.name] = JV._LogEnabled.bind(JV, xV)
-          }
+      const hH = zH(HH, "vec3", LH, AH);
+      return SH ? `textureLod(${BH}, ${hH}, ${SH})` : `texture(${BH}, ${hH})`
+    }
+
+    function OH(HH) {
+      return rH(HH) ? "!baseColor\\=\\w+\\(diffuseSampler,diffuseSamplerSampler,fragmentInputs\\.vDiffuseUV\\+uvOffset\\);" : "!baseColor\\=\\w+\\(diffuseSampler,vDiffuseUV\\+uvOffset\\);"
+    }
+
+    function bH(HH) {
+      return rH(HH) ? {
+        "!varying vMainUV1: vec2f;": "centroid varying vMainUV1: vec2f;"
+      } : {
+        "!varying vec2 vMainUV1;": "#ifdef WEBGL2\ncentroid varying vec2 vMainUV1;\n#else\nvarying vec2 vMainUV1;\n#endif"
       }
     }
-    JV.NoneLogLevel = 0, JV.MessageLogLevel = 1, JV.WarningLogLevel = 2, JV.ErrorLogLevel = 4, JV.AllLogLevel = 7, JV.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", JV._LogCache = "", JV._LogLimitOutputs = {}, JV._Levels = [{}, {
-      color: "white",
-      logFunc: console.log,
-      name: "Log"
-    }, {
-      color: "orange",
-      logFunc: console.warn,
-      name: "Warn"
-    }, {}, {
-      color: "red",
-      logFunc: console.error,
-      name: "Error"
-    }], JV.errorsCount = 0, JV.Log = JV._LogEnabled.bind(JV, JV.MessageLogLevel), JV.Warn = JV._LogEnabled.bind(JV, JV.WarningLogLevel), JV.Error = JV._LogEnabled.bind(JV, JV.ErrorLogLevel)
+
+    function kH(HH, BH) {
+      return rH(HH) ? `vertexInputs.${BH}` : BH
+    }
+
+    function mH(HH, BH) {
+      return rH(HH) ? `vertexOutputs.${BH}` : BH
+    }
+
+    function oH(HH, BH) {
+      return rH(HH) ? `fragmentInputs.${BH}` : BH
+    }
+
+    function IH(HH, BH) {
+      return rH(HH) ? `uniforms.${BH}` : BH
+    }
+
+    function fH(HH, BH, LH) {
+      return rH(HH) ? `frame.${BH}` : LH
+    }
+
+    function lH(HH) {
+      return rH(HH) ? "scene.vEyePosition" : "vEyePosition"
+    }
+
+    function KH(HH) {
+      return rH(HH) ? "mesh.visibility" : "visibility"
+    }
+
+    function cH(HH) {
+      return rH(HH) ? "fragmentInputs.position" : "gl_FragCoord"
+    }
+
+    function eH(HH) {
+      return rH(HH) ? "fragmentOutputs.color" : "gl_FragColor"
+    }
+
+    function qH(HH, BH) {
+      return rH(HH) ? `dpdx(${BH})` : `dFdx(${BH})`
+    }
+
+    function gH(HH, BH) {
+      return rH(HH) ? `dpdy(${BH})` : `dFdy(${BH})`
+    }
+
+    function NH(HH, BH) {
+      return rH(HH) ? `inverseSqrt(${BH})` : `inversesqrt(${BH})`
+    }
+
+    function RH(HH, BH, LH, AH) {
+      return rH(HH) ? `select(${AH}, ${LH}, ${BH})` : `((${BH}) ? (${LH}) : (${AH}))`
+    }
+
+    function jH(HH, BH, LH) {
+      return rH(HH) ? `((${BH}) - (${LH}) * floor((${BH}) / (${LH})))` : `mod(${BH}, ${LH})`
+    }
+
+    function nH(HH, BH, LH) {
+      return rH(HH) ? `${BH} = vec4f(${LH}, ${BH}.a);` : `${BH}.rgb = ${LH};`
+    }
+
+    function FH(HH, BH, LH) {
+      return rH(HH) ? `${BH} = vec4f(${BH}.rgb * (${LH}), ${BH}.a);` : `${BH}.rgb *= ${LH};`
+    }
+
+    function DH(HH, BH, LH) {
+      return rH(HH) ? `${BH} = vec4f(${LH}, ${BH}.w);` : `${BH}.xyz = ${LH};`
+    }
+  },
+  41138: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => AH
+    });
+    class AH {
+      static GetShadersRepository() {
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? AH.ShadersRepository : AH.ShadersRepositoryWGSL
+      }
+      static GetShadersStore() {
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? AH.ShadersStore : AH.ShadersStoreWGSL
+      }
+      static GetIncludesShadersStore() {
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? AH.IncludesShadersStore : AH.IncludesShadersStoreWGSL
+      }
+    }
+    AH.ShadersRepository = "src/Shaders/", AH.ShadersStore = {}, AH.IncludesShadersStore = {}, AH.ShadersRepositoryWGSL = "src/ShadersWGSL/", AH.ShadersStoreWGSL = {}, AH.IncludesShadersStoreWGSL = {}
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

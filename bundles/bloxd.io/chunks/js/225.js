@@ -1,336 +1,442 @@
 export const id = 225;
 export const ids = [225];
 export const modules = {
-  44429: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV
+  35054: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => rH,
+      f: () => SH
     });
-    var JV = xV(62),
-      YV = xV(3080);
+    var AH = LH(3610);
 
-    function UV(VV, eV, xV) {
-      const UV = (0, JV.useRef)(null),
-        {
-          width: yV,
-          height: pV
-        } = (0, YV.d)(VV);
-      (0, JV.useEffect)((() => {
-        const xV = eV(VV.current);
-        return UV.current = xV, () => {
-          xV.close(), UV.current = null
-        }
-      }), [VV, eV]), (0, JV.useEffect)((() => {
-        yV <= 0 || pV <= 0 || UV.current.resize(yV, pV)
-      }), [yV, pV]), (0, JV.useEffect)((() => {
-        UV.current.show(xV)
-      }), [xV])
+    function rH() {
+      if ("undefined" === typeof BroadcastChannel) return null;
+      const HH = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      try {
+        const BH = new BroadcastChannel(AH.f);
+        BH.postMessage({
+          stored: HH
+        }), BH.close()
+      } catch {
+        return null
+      }
+      return HH
+    }
+
+    function SH(HH) {
+      const BH = "object" === typeof HH && null !== HH ? HH.stored : null;
+      return "string" === typeof BH ? BH : null
     }
   },
-  44438: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => vV,
-      g: () => ZV,
-      h: () => QV
+  35048: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => hH,
+      f: () => rH,
+      g: () => SH
     });
-    var JV = xV(38340),
-      YV = xV(39828);
+    var AH = LH(3610);
+    async function rH(HH, BH, LH) {
+      let rH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const SH = hH(await HH.getItem(AH.c, BH));
+      if (null === SH || rH()) return null;
+      const tH = await HH.getItem(AH.e, BH);
+      return rH() ? null : (await async function(HH) {
+        await Promise.all([HH.removeItem(AH.c), HH.removeItem(AH.e)])
+      }(HH).catch(LH), {
+        pack: SH,
+        source: "string" === typeof tH ? tH : null
+      })
+    }
 
-    function UV(VV, eV) {
-      let [xV, JV, YV] = VV;
-      return [0, .5, 1].map((VV => ({
-        timeFraction: VV,
-        rotation: {
-          zY: "catmull-rom-spline",
-          point: [xV, JV, YV + (.5 === VV ? eV : 0)]
-        }
+    function SH(HH) {
+      return (0, AH.o)() ? Promise.resolve(null) : rH(HH, !1, (HH => {
+        console.error("Error removing temporary texture pack: ", HH)
+      }), AH.o)
+    }
+
+    function hH(HH) {
+      if ("object" !== typeof HH || null === HH) return null;
+      const BH = HH.metaData;
+      return "object" !== typeof BH || null === BH || "string" !== typeof BH.id ? null : HH
+    }
+  },
+  54576: (HH, BH, LH) => {
+    function AH(HH) {
+      return null === HH.gameSource ? "player" : "customGame"
+    }
+    LH.d(BH, {
+      c: () => SH,
+      e: () => QH,
+      g: () => uH,
+      j: () => AH
+    });
+    const rH = /^data:[\w.+/-]*;base64,[A-Za-z0-9+/]*={0,2}$/;
+
+    function SH(HH) {
+      return "" === HH || "string" === typeof HH && rH.test(HH)
+    }
+
+    function hH(HH) {
+      return "object" === typeof HH && null !== HH && ("earth" === HH.type || Object.entries(HH).every((HH => {
+        let [BH, LH] = HH;
+        return "type" === BH || SH(LH)
       })))
     }
+    const tH = /(?:src|image|image-set|cross-fade)\(/i,
+      zH = /url\(\s*(?:"(?<doubleQuoted>[^"]*)"|'(?<singleQuoted>[^']*)'|(?<unquoted>[^"'()\s]*))\s*\)/gi,
+      CH = /url\(/gi,
+      EH = ["https://bloxd.invalid/", "http://bloxd.invalid/"],
+      XH = new Set([...EH.map((HH => new URL(HH).origin)), "https://fonts.gstatic.com"]),
+      GH = new Set(["https://i.imgur.com/MEcjBFQ.png"]);
 
-    function yV(VV, eV, xV) {
-      return {
-        PY: 3200,
-        loop: !0,
-        NY: {
-          Root: {
-            timeline: [0, .5, 1].map((VV => ({
-              timeFraction: VV,
-              position: {
-                zY: "catmull-rom-spline",
-                point: [0, .5 === VV ? .18 : 0, 0]
-              }
-            })))
-          },
-          HeadMesh: {
-            timeline: [0, .25, .75, 1].map((VV => ({
-              timeFraction: VV,
-              rotation: {
-                zY: "catmull-rom-spline",
-                point: [0, .25 === VV ? .12 : .75 === VV ? -.12 : 0, 0]
-              }
-            })))
-          },
-          ArmLeftMesh: {
-            timeline: UV(VV, xV)
-          },
-          ArmRightMesh: {
-            timeline: UV(eV, -xV)
+    function YH(HH) {
+      var BH, LH;
+      if (HH.includes("\\") || tH.test(HH)) return !0;
+      const AH = [...HH.matchAll(zH)];
+      return AH.length !== (null !== (BH = null === (LH = HH.match(CH)) || void 0 === LH ? void 0 : LH.length) && void 0 !== BH ? BH : 0) || !AH.every((HH => {
+        var BH, LH, AH;
+        let {
+          groups: rH
+        } = HH;
+        return function(HH) {
+          try {
+            return EH.every((BH => {
+              const LH = new URL(HH, BH);
+              return "data:" === LH.protocol || XH.has(LH.origin) || GH.has(LH.href)
+            }))
+          } catch {
+            return !1
           }
-        }
-      }
-    }
-    const pV = yV([0, 0, 0], [0, 0, 0], .07),
-      QV = (0, YV.b)((0, JV.e)(pV), "mobIdle"),
-      nV = yV([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
-      wV = yV([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
-      ZV = (0, YV.b)((0, JV.e)(nV), "gunReady"),
-      vV = (0, YV.b)((0, JV.e)(wV), "gunAimed")
-  },
-  39828: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => YV,
-      c: () => UV
-    });
-    const JV = new WeakMap;
-
-    function YV(VV, eV) {
-      return JV.set(VV, eV), VV
+        }(null !== (BH = null !== (LH = null !== (AH = null === rH || void 0 === rH ? void 0 : rH.doubleQuoted) && void 0 !== AH ? AH : null === rH || void 0 === rH ? void 0 : rH.singleQuoted) && void 0 !== LH ? LH : null === rH || void 0 === rH ? void 0 : rH.unquoted) && void 0 !== BH ? BH : "")
+      }))
     }
 
-    function UV(VV) {
-      var eV;
-      return null !== (eV = JV.get(VV)) && void 0 !== eV ? eV : null
+    function uH(HH) {
+      var BH, LH, AH, rH, tH, zH, CH;
+      const EH = [...Object.values(null !== (BH = HH.textureOverrides) && void 0 !== BH ? BH : {}), ...Object.values(null !== (LH = HH.modelOverrides) && void 0 !== LH ? LH : {})],
+        XH = [...Object.values(null !== (AH = null === (rH = HH.customCss) || void 0 === rH ? void 0 : rH.fontFaces) && void 0 !== AH ? AH : {}), ...Object.values(null !== (tH = null === (zH = HH.customCss) || void 0 === zH ? void 0 : zH.classStyles) && void 0 !== tH ? tH : {})].flatMap((HH => Object.values(null !== HH && void 0 !== HH ? HH : {})));
+      return !EH.every(SH) || !Object.values(null !== (CH = HH.skyBoxes) && void 0 !== CH ? CH : {}).every(hH) || XH.some((HH => "string" === typeof HH && YH(HH)))
     }
-  },
-  35343: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => yV,
-      c: () => YV,
-      g: () => wV
-    });
-    var JV = xV(1656);
 
-    function YV(VV) {
-      var eV;
-      return {
-        ...yV.store,
-        yaw: yV.store.yaw + (null !== (eV = JV.c[VV].previewYaw) && void 0 !== eV ? eV : 0)
-      }
-    }
-    const UV = {
-        yaw: .61 * Math.PI,
-        pitch: Math.PI / 2.05,
-        radius: 30,
-        target: [0, 0, 0]
-      },
-      yV = {
-        player: UV,
-        store: {
-          ...UV,
-          radius: 33,
-          target: [0, 3.9, 0]
-        }
+    function QH(HH, BH) {
+      if (null === HH || "player" === BH || !uH(HH)) return HH;
+      const LH = {
+        ...HH
       };
+      return HH.textureOverrides && (LH.textureOverrides = MH(HH.textureOverrides, SH, "texture")), HH.modelOverrides && (LH.modelOverrides = MH(HH.modelOverrides, SH, "model")), HH.skyBoxes && (LH.skyBoxes = MH(HH.skyBoxes, hH, "sky")), HH.customCss && (LH.customCss = function(HH) {
+        const BH = HH => MH(HH, (HH => "string" === typeof HH && !YH(HH)), "CSS"),
+          {
+            fontFaces: LH,
+            classStyles: AH
+          } = WH(HH) ? HH : {},
+          rH = {};
+        for (const [SH, hH] of Object.entries(WH(AH) ? AH : {})) rH[SH] = BH(hH);
+        return {
+          fontFaces: (Array.isArray(LH) ? LH : []).map(BH),
+          classStyles: rH
+        }
+      }(HH.customCss)), LH
+    }
 
-    function pV(VV, eV) {
-      VV instanceof Promise ? VV.then(eV).catch((VV => {
-        console.error("Couldn't open the preview", VV)
-      })) : eV(VV)
+    function WH(HH) {
+      return "object" === typeof HH && null !== HH && !Array.isArray(HH)
     }
-    class QV {
-      constructor(VV) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, pV(VV, (VV => {
-          this.closed ? VV.close() : (this.opened = VV, null !== this.size && VV.resize(this.size.width, this.size.height), null !== this.view && VV.show(this.view))
-        }))
+
+    function MH(HH, BH, LH) {
+      const AH = Object.entries(WH(HH) ? HH : {}),
+        rH = AH.filter((HH => {
+          let [, LH] = HH;
+          return !BH(LH)
+        }));
+      if (rH.length > 0) {
+        const HH = rH.map((HH => {
+          let [BH] = HH;
+          return BH
+        }));
+        console.warn(`Ignoring a custom game texture pack's ${LH} files that name another site: ${HH.join(", ")}`)
       }
-      show(VV) {
-        var eV;
-        this.view = VV, null === (eV = this.opened) || void 0 === eV || eV.show(VV)
-      }
-      resize(VV, eV) {
-        var xV;
-        this.size = {
-          width: VV,
-          height: eV
-        }, null === (xV = this.opened) || void 0 === xV || xV.resize(VV, eV)
-      }
-      close() {
-        var VV;
-        this.closed = !0, null === (VV = this.opened) || void 0 === VV || VV.close(), this.opened = null
-      }
+      return Object.fromEntries(AH.filter((HH => {
+        let [, LH] = HH;
+        return BH(LH)
+      })))
     }
-    class nV {
-      constructor(VV) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(VV).then((VV => VV.ready)), pV(VV, (VV => {
-          this.closed ? VV.close() : (this.opened = VV, null !== this.size && VV.resize(this.size.width, this.size.height))
-        }))
+  },
+  54579: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => uH,
+      h: () => vH,
+      l: () => xH
+    });
+    var AH = LH(1005),
+      rH = LH(2227),
+      SH = LH(3597),
+      hH = LH(3610),
+      tH = LH(35054),
+      zH = LH(35048),
+      CH = LH(54576),
+      EH = LH(42307),
+      XH = LH(42290),
+      GH = LH(5554);
+    const YH = {
+      pack: null,
+      gameSource: null
+    };
+    class uH {
+      constructor(HH) {
+        this.host = HH, this.ready = void 0, this.state = YH, this.playerPack = null, this.onGamePack = !1, this.confirmGamePack = null, this.skippedKey = null, this.ownAnnouncements = new Set, this.listeners = new Map, this.ownListeners = new Set, this.changes = 0, this.picks = 0, this.playerPicked = !1, this.ownChanges = 0, this.Mu = !1, (0, hH.h)(), this.ready = this.readStored()
       }
-      get dev() {
-        return this.opened.dev
-      }
-      isReady() {
-        var VV, eV;
-        return null !== (VV = null === (eV = this.opened) || void 0 === eV ? void 0 : eV.isReady()) && void 0 !== VV && VV
-      }
-      setCosmetic(VV, eV) {
-        var xV;
-        null === (xV = this.opened) || void 0 === xV || xV.setCosmetic(VV, eV)
-      }
-      playEmote(VV) {
-        var eV;
-        null === (eV = this.opened) || void 0 === eV || eV.playEmote(VV)
-      }
-      setOrbit(VV) {
-        var eV;
-        null === (eV = this.opened) || void 0 === eV || eV.setOrbit(VV)
-      }
-      resetCamera() {
-        var VV;
-        null === (VV = this.opened) || void 0 === VV || VV.resetCamera()
-      }
-      async untilDrawn(VV) {
-        var eV;
-        await this.ready, await (null === (eV = this.opened) || void 0 === eV ? void 0 : eV.untilDrawn(VV))
-      }
-      resize(VV, eV) {
-        var xV;
-        this.size = {
-          width: VV,
-          height: eV
-        }, null === (xV = this.opened) || void 0 === xV || xV.resize(VV, eV)
-      }
-      close() {
-        var VV;
-        this.closed = !0, null === (VV = this.opened) || void 0 === VV || VV.close(), this.opened = null
-      }
-    }
-    const wV = new class {
-      constructor() {
-        this.host = null, this.makeDefault = null
-      }
-      setHost(VV) {
-        this.host = VV
-      }
-      setDefaultHost(VV) {
-        this.makeDefault = VV
+      readyWithin(HH) {
+        return Promise.race([this.ready, new Promise((BH => {
+          setTimeout(BH, HH)
+        }))])
       }
       current() {
-        if (null === this.host) {
-          if (null === this.makeDefault) throw new Error("no preview host");
-          this.host = this.makeDefault()
+        return this.state
+      }
+      playerState() {
+        return {
+          pack: this.playerPack,
+          gameSource: null
         }
-        return this.host
       }
-      openMob(VV) {
-        return new QV(this.current().openMob(VV))
+      onPlayerPackChange(HH) {
+        return this.ownListeners.add(HH), () => {
+          this.ownListeners.delete(HH)
+        }
       }
-      openPet(VV) {
-        return new QV(this.current().openPet(VV))
+      isUsingCustomGameTexturePack(HH) {
+        return (0, XH.g)(this.state, HH)
       }
-      openMobLineup(VV) {
-        return new QV(this.current().openMobLineup(VV))
+      setGamePackConfirm(HH) {
+        this.confirmGamePack = HH
       }
-      openCharacter(VV, eV) {
-        return new nV(this.current().openCharacter(VV, eV))
+      subscribe(HH) {
+        return this.listeners.set(HH, null), this.ready.then((() => {
+          this.deliver(HH)
+        })), () => {
+          this.listeners.delete(HH)
+        }
       }
-    }
-  },
-  35337: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => JV.b,
-      f: () => JV.c,
-      h: () => JV.g
-    });
-    var JV = xV(35343);
-    class YV {
-      constructor(VV) {
-        this.load = VV, this.loaded = null, this.loading = null
+      async setPlayerPack(HH) {
+        const BH = WH(HH) ? null : HH;
+        this.picks++, this.playerPicked = !0, this.ownChanges++, this.setOwn(BH), this.change({
+          pack: BH,
+          gameSource: null
+        }, !1);
+        const LH = await this.storePlayerPack(BH);
+        return LH && this.announce(), LH
       }
-      run(VV) {
-        return null !== this.loaded ? VV(this.loaded) : (this.loading ??= this.load().then((VV => (this.loaded = VV, VV)), (VV => {
-          throw this.loading = null, VV
-        })), this.loading.then(VV))
-      }
-    }
-    class UV {
-      constructor() {
-        this.mobScene = new YV((() => Promise.all([xV.e(84), xV.e(255), xV.e(254), xV.e(279), xV.e(111), xV.e(280), xV.e(87), xV.e(277), xV.e(85), xV.e(86), xV.e(287), xV.e(281), xV.e(286), xV.e(284), xV.e(276), xV.e(302), xV.e(251), xV.e(269), xV.e(282), xV.e(285), xV.e(89), xV.e(202), xV.e(245), xV.e(109), xV.e(257), xV.e(248), xV.e(264), xV.e(223), xV.e(265), xV.e(88), xV.e(271)]).then((() => xV(42411))))), this.characterScene = new YV((() => Promise.all([xV.e(84), xV.e(255), xV.e(254), xV.e(279), xV.e(111), xV.e(280), xV.e(87), xV.e(277), xV.e(85), xV.e(86), xV.e(287), xV.e(281), xV.e(286), xV.e(284), xV.e(276), xV.e(302), xV.e(251), xV.e(269), xV.e(282), xV.e(285), xV.e(89), xV.e(202), xV.e(245), xV.e(109), xV.e(257), xV.e(248), xV.e(264), xV.e(223), xV.e(265), xV.e(88), xV.e(270)]).then((() => xV(42518)))))
-      }
-      openMob(VV) {
-        return this.mobScene.run((eV => eV.openMobPreview(VV)))
-      }
-      openPet(VV) {
-        return this.mobScene.run((eV => eV.openPetPreview(VV)))
-      }
-      openMobLineup(VV) {
-        return this.mobScene.run((eV => eV.openMobLineupPreview(VV)))
-      }
-      openCharacter(VV, eV) {
-        return this.characterScene.run((xV => xV.openCharacterPreview(VV, eV)))
-      }
-    }
-    JV.g.setDefaultHost((() => new UV))
-  },
-  44648: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      FrontlineMvpLineup: () => ZV
-    });
-    var JV = xV(62),
-      YV = xV(1146),
-      UV = xV.n(YV),
-      yV = xV(35337),
-      pV = xV(44438),
-      QV = xV(44429),
-      nV = xV(1321);
-
-    function wV(VV) {
-      return yV.h.openMobLineup(VV)
-    }
-    const ZV = (0, JV.memo)((function(VV) {
-      let {
-        players: eV,
-        className: xV
-      } = VV;
-      const YV = (0, JV.useRef)(null),
-        yV = (0, JV.useMemo)((() => eV.map((VV => {
-          let {
-            cosmetics: eV,
-            size: xV,
-            heldGun: JV
-          } = VV;
-          return {
-            cosmetics: eV,
-            size: xV,
-            JA: JV.name,
-            animation: JV.aimed ? pV.d : pV.g
-          }
-        }))), [eV]),
-        ZV = function(VV) {
-          const [eV, xV] = (0, JV.useState)([]);
-          return (0, JV.useEffect)((() => {
-            xV(VV.map((() => !1)));
-            const eV = VV.map(((VV, eV) => {
-              let {
-                showAfterMs: JV
-              } = VV;
-              return window.setTimeout((() => {
-                xV((VV => VV.map(((VV, xV) => VV || xV === eV))))
-              }), JV)
-            }));
-            return () => {
-              for (const VV of eV) window.clearTimeout(VV)
+      async packForGame(HH, BH, LH) {
+        await this.readyWithin(Math.max(0, (null !== LH && void 0 !== LH ? LH : performance.now() + EH.c) - performance.now()));
+        const rH = ++this.picks,
+          SH = (0, AH.l)(HH) ? (0, AH.q)(HH) : null;
+        if (null === SH) return void this.usePlayerPack();
+        let hH;
+        const tH = function(HH) {
+          let BH;
+          const LH = new Promise(((LH, AH) => {
+            BH = setTimeout((() => {
+              AH(new Error(`no answer in ${HH} ms`))
+            }), HH)
+          }));
+          return LH.catch((() => {})), {
+            passed: LH,
+            clear: () => {
+              clearTimeout(BH)
             }
-          }), [VV]), eV
-        }(eV),
-        vV = (0, JV.useMemo)((() => ({
-          figures: yV,
-          shown: ZV
-        })), [yV, ZV]);
-      return (0, QV.c)(YV, wV, vV), (0, nV.jsx)("div", {
-        className: UV()("MobPreview", xV),
-        ref: YV
+          }
+        }(2e4);
+        try {
+          const HH = await Promise.race([BH.packKey(SH), tH.passed]);
+          if (null !== HH && this.onGamePack && this.state.gameSource === HH) return;
+          if (null !== HH && HH === this.skippedKey) return void(this.Mu || this.picks !== rH || this.usePlayerPack());
+          hH = null === HH ? null : await Promise.race([QH(SH, HH, BH), tH.passed])
+        } catch (XH) {
+          const HH = !this.Mu && this.picks === rH && this.holdsOtherGamePack(SH);
+          return this.host.warn(`the texture pack of ${SH} didn't load: ${HH?"the player's own shows":"the pack in play stays"}`, XH), void(HH && this.usePlayerPack())
+        } finally {
+          tH.clear()
+        }
+        if (this.Mu || this.picks !== rH) return;
+        null !== hH && (0, CH.g)(hH.pack) && (this.host.warn(`the texture pack of ${SH} names files on other sites: the player's own shows`, null), hH = null);
+        const zH = null === hH || await this.confirmed(hH.pack, SH) ? null : hH.key;
+        this.Mu || this.picks !== rH || (null !== zH && (this.skippedKey = zH, hH = null), null === hH ? this.usePlayerPack() : (this.onGamePack = !0, this.change({
+          pack: hH.pack,
+          gameSource: hH.key
+        }, !0)))
+      }
+      endGamePack() {
+        this.picks++, this.usePlayerPack()
+      }
+      holdsOtherGamePack(HH) {
+        return this.onGamePack && "" !== this.state.gameSource && !this.isUsingCustomGameTexturePack(HH)
+      }
+      async confirmed(HH, BH) {
+        const LH = this.confirmGamePack;
+        if (null === LH) return !0;
+        try {
+          return await LH(HH, BH)
+        } catch (AH) {
+          return this.host.warn(`the texture pack prompt of ${BH} failed: the pack is skipped`, AH), !1
+        }
+      }
+      async readPlayerPack() {
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        if (null !== HH && this.ownAnnouncements.delete(HH)) return;
+        await this.ready;
+        const BH = this.ownChanges;
+        let LH;
+        try {
+          LH = await this.host.store.getItem(hH.b, !0)
+        } catch (rH) {
+          return void this.host.warn("the stored texture pack didn't read again: the pack in play stays", rH)
+        }
+        if (this.Mu || this.ownChanges !== BH) return;
+        const AH = MH(LH);
+        (0, GH.c)(AH, this.playerPack) || (this.ownChanges++, this.setOwn(AH), this.onGamePack || this.change({
+          pack: AH,
+          gameSource: null
+        }, !1))
+      }
+      joinedWithout() {
+        this.picks++
+      }
+      dispose() {
+        this.Mu = !0, this.listeners.clear()
+      }
+      async readStored() {
+        const {
+          store: HH,
+          warn: BH
+        } = this.host;
+        await Promise.all([!1 === this.host.oneShot ? void 0 : (0, zH.f)(HH, !0, (HH => {
+          BH("the custom game's texture pack wasn't removed from storage", HH)
+        })).then((HH => {
+          this.takeOneShot(HH)
+        }), (HH => {
+          BH("the custom game's texture pack didn't read: the player's own shows", HH)
+        })), HH.getItem(hH.b, !0).then((HH => {
+          this.takeStoredOwn(HH)
+        }), (HH => {
+          BH("the stored texture pack didn't read: the default pack shows", HH), this.takeStoredOwn(null)
+        }))]), this.update()
+      }
+      takeOneShot(HH) {
+        var BH;
+        null === HH || this.Mu || this.changes > 0 || this.picks > 0 || ((0, CH.g)(HH.pack) ? this.host.warn("the custom game's texture pack names files on other sites: the player's own shows", null) : (this.onGamePack = !0, this.state = {
+          pack: HH.pack,
+          gameSource: null !== (BH = HH.source) && void 0 !== BH ? BH : ""
+        }))
+      }
+      takeStoredOwn(HH) {
+        if (this.playerPicked || this.Mu) return;
+        if (this.ownChanges++, this.setOwn(MH(HH)), this.onGamePack) return;
+        const BH = {
+          pack: this.playerPack,
+          gameSource: null
+        };
+        0 === this.changes ? this.state = BH : this.change(BH, !1)
+      }
+      async update() {
+        const HH = this.playerPack,
+          BH = null === HH || void 0 === HH ? void 0 : HH.metaData.id;
+        if (!HH || !BH || !this.host.fetchLatest || BH === rH.e || BH === rH.l.CUSTOM) return;
+        const LH = rH.o[BH];
+        if (void 0 === LH || HH.metaData.version >= LH) return;
+        let AH;
+        try {
+          AH = MH(await this.host.fetchLatest(BH))
+        } catch (SH) {
+          return void this.host.warn(`texture pack ${BH} didn't update to version ${LH}`, SH)
+        }
+        null === AH || this.Mu || this.playerPack !== HH || (this.ownChanges++, this.setOwn(AH), this.onGamePack || this.change({
+          pack: AH,
+          gameSource: null
+        }, !1), await this.storePlayerPack(AH) && this.announce())
+      }
+      announce() {
+        const HH = (0, tH.c)();
+        null !== HH && this.ownAnnouncements.add(HH)
+      }
+      setOwn(HH) {
+        this.playerPack = HH;
+        for (const LH of [...this.ownListeners]) try {
+          LH()
+        } catch (BH) {
+          this.host.warn("a texture pack listener threw", BH)
+        }
+      }
+      usePlayerPack() {
+        this.onGamePack && this.change({
+          pack: this.playerPack,
+          gameSource: null
+        }, !1)
+      }
+      async storePlayerPack(HH) {
+        try {
+          return null === HH ? (await this.host.store.removeItem(hH.b), !0) : await this.host.store.setItem(hH.b, HH)
+        } catch (BH) {
+          return this.host.warn("the texture pack wasn't stored: it shows until the page reloads", BH), !1
+        }
+      }
+      change(HH, BH) {
+        if (!this.Mu) {
+          this.changes++, this.onGamePack = BH, this.state = HH;
+          for (const HH of [...this.listeners.keys()]) this.deliver(HH)
+        }
+      }
+      deliver(HH) {
+        if (!this.Mu && this.listeners.has(HH) && this.listeners.get(HH) !== this.state) {
+          this.listeners.set(HH, this.state);
+          try {
+            HH(this.state)
+          } catch (BH) {
+            this.host.warn("a texture pack listener threw", BH)
+          }
+        }
+      }
+    }
+    async function QH(HH, BH, LH) {
+      const AH = (0, zH.b)(await LH.fetchPack(BH));
+      if (null !== AH) return {
+        pack: AH,
+        key: BH
+      };
+      const rH = await LH.packKey(HH);
+      if (null === rH) return null;
+      const SH = (0, zH.b)(await LH.fetchPack(rH));
+      if (null === SH) throw new Error(`no texture pack at ${rH}`);
+      return {
+        pack: SH,
+        key: rH
+      }
+    }
+
+    function WH(HH) {
+      return null === HH || HH.metaData.id === rH.e
+    }
+
+    function MH(HH) {
+      const BH = (0, zH.b)(HH);
+      return WH(BH) ? null : BH
+    }
+    async function xH(HH) {
+      let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SH.d;
+      if (null === HH.pack) return null;
+      const {
+        packAssets: AH
+      } = await Promise.all([LH.e(227), LH.e(52)]).then((() => LH(64340)));
+      return AH(HH, BH)
+    }
+
+    function vH(HH) {
+      const BH = (0, hH.s)();
+      return null === BH ? () => {} : (BH.onmessage = BH => {
+        HH.readPlayerPack((0, tH.f)(BH.data))
+      }, () => {
+        BH.close()
       })
-    }))
+    }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

@@ -1,173 +1,196 @@
 export const id = 18;
 export const ids = [18];
 export const modules = {
-  37756: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => rV,
-      e: () => kV,
-      f: () => vV,
-      h: () => ZV
+  37472: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => WH,
+      e: () => MH,
+      i: () => GH,
+      k: () => XH
     });
-    var JV = xV(35300),
-      YV = xV(37762),
-      UV = xV(37771),
-      yV = xV(9335),
-      pV = xV(1542),
-      QV = xV(62),
-      nV = xV(78),
-      wV = xV(1321);
+    var AH = LH(34986),
+      rH = LH(37474),
+      SH = LH(37479),
+      hH = LH(9412),
+      tH = LH(1450),
+      zH = LH(45),
+      CH = LH(69),
+      EH = LH(1225);
 
-    function ZV() {
-      var VV;
-      return (0, pV.j)(YV.e, (0, YV.p)()), (0, wV.jsx)(wV.Fragment, {
-        children: null === (VV = (0, YV.p)()) || void 0 === VV ? void 0 : VV.content
+    function XH() {
+      var HH;
+      return (0, tH.e)(rH.b, (0, rH.p)()), (0, EH.jsx)(EH.Fragment, {
+        children: null === (HH = (0, rH.p)()) || void 0 === HH ? void 0 : HH.content
       })
     }
 
-    function vV(VV) {
-      var eV;
+    function GH(HH) {
+      var BH;
       let {
-        show: xV
-      } = VV;
-      (0, pV.j)(YV.e, (0, YV.p)());
-      const nV = null === (eV = (0, YV.p)()) || void 0 === eV ? void 0 : eV.menu;
-      return (0, QV.useEffect)((() => {
-        var VV;
-        xV || (null === nV || void 0 === nV || null === (VV = nV.onClose) || void 0 === VV || VV.call(nV), (0, UV.q)())
-      }), [xV, nV]), (0, QV.useEffect)((() => xV ? (0, yV.g)(UV.t, UV.g) : void 0), [xV]), (0, wV.jsx)(JV.c, {
-        showing: xV,
+        show: LH
+      } = HH;
+      (0, tH.e)(rH.b, (0, rH.p)());
+      const CH = null === (BH = (0, rH.p)()) || void 0 === BH ? void 0 : BH.menu;
+      return (0, zH.useEffect)((() => {
+        var HH;
+        LH || (null === CH || void 0 === CH || null === (HH = CH.onClose) || void 0 === HH || HH.call(CH), (0, SH.r)())
+      }), [LH, CH]), (0, zH.useEffect)((() => LH ? (0, hH.e)(SH.A, SH.g) : void 0), [LH]), (0, EH.jsx)(AH.e, {
+        showing: LH,
         globallyUniqueKey: "clientGameMenu",
-        children: null === nV || void 0 === nV ? void 0 : nV.content
+        children: null === CH || void 0 === CH ? void 0 : CH.content
       })
     }
+    const YH = new Map,
+      uH = new Set;
 
-    function rV(VV) {
+    function QH(HH, BH) {
+      BH ? YH.set(HH, BH) : YH.delete(HH);
+      for (const LH of uH) LH()
+    }
+
+    function WH(HH) {
       let {
-        placement: eV = "bottom"
-      } = VV;
-      return (0, wV.jsx)("div", {
-        id: `clientGameHud-${eV}`,
+        placement: BH = "bottom"
+      } = HH;
+      const LH = (0, zH.useRef)(null);
+      return (0, zH.useLayoutEffect)((() => {
+        const HH = LH.current;
+        return QH(BH, HH), () => {
+          YH.get(BH) === HH && QH(BH, null)
+        }
+      }), [BH]), (0, EH.jsx)("div", {
+        ref: LH,
+        id: `clientGameHud-${BH}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function kV(VV) {
+    function MH(HH) {
       let {
-        children: eV,
-        placement: xV = "bottom"
-      } = VV;
-      const [JV, YV] = (0, QV.useState)(null);
-      return (0, QV.useEffect)((() => {
-        YV(document.getElementById(`clientGameHud-${xV}`))
-      }), [xV]), JV ? (0, nV.createPortal)(eV, JV) : null
-    }
-  },
-  35300: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV
-    });
-    var JV = xV(5015),
-      YV = xV(5020);
-
-    function UV(VV) {
-      let {
-        children: eV,
-        showing: xV,
-        globallyUniqueKey: UV,
-        alwaysMountChildren: yV = !1,
-        doGameplayStartStopOnShow: pV = !0,
-        keepsMovement: QV = !1
-      } = VV;
-      return (0, YV.b)(!0, xV, UV, QV), (0, JV.c)(pV, xV), xV || yV ? eV : null
-    }
-  },
-  37852: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => UV,
-      f: () => yV,
-      h: () => pV,
-      i: () => QV
-    });
-    var JV = xV(62),
-      YV = xV(3528);
-    const UV = 8,
-      yV = "InGameHeaderContainer",
-      pV = "TopRightElements";
-
-    function QV(VV) {
-      const [eV] = (0, YV.e)(), [xV, QV] = (0, JV.useState)(!1);
-      return (0, JV.useLayoutEffect)((() => {
-        if (!VV) return;
-        const eV = document.querySelector(`.${yV}`),
-          xV = document.querySelector(`.${pV}`),
-          JV = () => {
-            const JV = VV.getBoundingClientRect(),
-              YV = eV ? eV.getBoundingClientRect().right : 0,
-              yV = xV ? xV.getBoundingClientRect().left : window.innerWidth,
-              pV = JV.left < YV + UV,
-              nV = JV.right > yV - UV;
-            QV(pV || nV)
-          };
-        JV();
-        const YV = new ResizeObserver(JV);
-        return YV.observe(VV), eV && YV.observe(eV), xV && YV.observe(xV), () => {
-          YV.disconnect()
+        children: BH,
+        placement: LH = "bottom"
+      } = HH;
+      const [AH, rH] = (0, zH.useState)((() => {
+        var HH;
+        return null !== (HH = YH.get(LH)) && void 0 !== HH ? HH : null
+      }));
+      return (0, zH.useEffect)((() => {
+        const HH = () => {
+          var HH;
+          rH(null !== (HH = YH.get(LH)) && void 0 !== HH ? HH : null)
+        };
+        return uH.add(HH), HH(), () => {
+          uH.delete(HH)
         }
-      }), [VV, eV]), xV
+      }), [LH]), AH ? (0, CH.createPortal)(BH, AH) : null
     }
   },
-  40659: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => yV,
-      i: () => YV,
-      l: () => UV
+  34986: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => SH
     });
-    var JV = xV(62);
+    var AH = LH(4947),
+      rH = LH(4951);
 
-    function YV(VV) {
-      return pV(VV, QV)
+    function SH(HH) {
+      let {
+        children: BH,
+        showing: LH,
+        globallyUniqueKey: SH,
+        alwaysMountChildren: hH = !1,
+        doGameplayStartStopOnShow: tH = !0,
+        keepsMovement: zH = !1
+      } = HH;
+      return (0, rH.c)(!0, LH, SH, zH), (0, AH.e)(tH, LH), LH || hH ? BH : null
+    }
+  },
+  37569: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => SH,
+      f: () => hH,
+      i: () => tH,
+      k: () => zH
+    });
+    var AH = LH(45),
+      rH = LH(3465);
+    const SH = 8,
+      hH = "InGameHeaderContainer",
+      tH = "TopRightElements";
+
+    function zH(HH) {
+      const [BH] = (0, rH.b)(), [LH, zH] = (0, AH.useState)(!1);
+      return (0, AH.useLayoutEffect)((() => {
+        if (!HH) return;
+        const BH = document.querySelector(`.${hH}`),
+          LH = document.querySelector(`.${tH}`),
+          AH = () => {
+            const AH = HH.getBoundingClientRect(),
+              rH = BH ? BH.getBoundingClientRect().right : 0,
+              hH = LH ? LH.getBoundingClientRect().left : window.innerWidth,
+              tH = AH.left < rH + SH,
+              CH = AH.right > hH - SH;
+            zH(tH || CH)
+          };
+        AH();
+        const rH = new ResizeObserver(AH);
+        return rH.observe(HH), BH && rH.observe(BH), LH && rH.observe(LH), () => {
+          rH.disconnect()
+        }
+      }), [HH, BH]), LH
+    }
+  },
+  40413: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => hH,
+      g: () => rH,
+      h: () => SH
+    });
+    var AH = LH(45);
+
+    function rH(HH) {
+      return tH(HH, zH)
     }
 
-    function UV(VV) {
-      return pV(VV, nV)
+    function SH(HH) {
+      return tH(HH, CH)
     }
 
-    function yV(VV) {
-      return `${Math.floor(VV/60)}:${String(VV%60).padStart(2,"0")}`
+    function hH(HH) {
+      return `${Math.floor(HH/60)}:${String(HH%60).padStart(2,"0")}`
     }
 
-    function pV(VV, eV) {
-      const [, xV] = (0, JV.useState)(null);
-      return (0, JV.useEffect)((() => {
-        if (0 === VV) return;
-        const JV = window.setInterval((() => {
-          const JV = eV(VV);
-          xV((eV => (null === eV || void 0 === eV ? void 0 : eV.endsAt) === VV && eV.value === JV ? eV : {
-            endsAt: VV,
-            value: JV
+    function tH(HH, BH) {
+      const [, LH] = (0, AH.useState)(null);
+      return (0, AH.useEffect)((() => {
+        if (0 === HH) return;
+        const AH = window.setInterval((() => {
+          const AH = BH(HH);
+          LH((BH => (null === BH || void 0 === BH ? void 0 : BH.endsAt) === HH && BH.value === AH ? BH : {
+            endsAt: HH,
+            value: AH
           }))
         }), 250);
         return () => {
-          window.clearInterval(JV)
+          window.clearInterval(AH)
         }
-      }), [VV, eV]), eV(VV)
+      }), [HH, BH]), BH(HH)
     }
 
-    function QV(VV) {
-      return (VV - performance.now()) / 1e3
+    function zH(HH) {
+      return (HH - performance.now()) / 1e3
     }
 
-    function nV(VV) {
-      return Math.max(0, Math.ceil(QV(VV)))
+    function CH(HH) {
+      return Math.max(0, Math.ceil(zH(HH)))
     }
   },
-  37849: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => YV
+  37565: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => rH
     });
-    const JV = [{
+    const AH = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -184,286 +207,286 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function YV(VV, eV, xV) {
-      const YV = Math.abs(VV - eV),
-        UV = Date.now() - xV;
-      for (const yV of JV)
-        if (VV < yV.maxDist) return YV >= yV.hardUpdateDist || UV > yV.timeBetweenSoftChecks && YV >= yV.softUpdateDist;
+    function rH(HH, BH, LH) {
+      const rH = Math.abs(HH - BH),
+        SH = Date.now() - LH;
+      for (const hH of AH)
+        if (HH < hH.maxDist) return rH >= hH.hardUpdateDist || SH > hH.timeBetweenSoftChecks && rH >= hH.softUpdateDist;
       return !1
     }
   },
-  9335: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV,
-      g: () => YV
+  9412: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => SH,
+      e: () => rH
     });
-    let JV = null;
-    const YV = function(VV) {
-        const eV = {
-          cycle: VV,
+    let AH = null;
+    const rH = function(HH) {
+        const BH = {
+          cycle: HH,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return JV = eV, () => {
-          JV === eV && (JV = null)
+        return AH = BH, () => {
+          AH === BH && (AH = null)
         }
       },
-      UV = () => {
-        var VV;
-        return null !== (VV = JV) && void 0 !== VV && VV.canCycle() ? JV.cycle : null
+      SH = () => {
+        var HH;
+        return null !== (HH = AH) && void 0 !== HH && HH.canCycle() ? AH.cycle : null
       }
   },
-  39693: (VV, eV, xV) => {
-    function JV(VV, eV, xV) {
-      var JV;
+  39425: (HH, BH, LH) => {
+    function AH(HH, BH, LH) {
+      var AH;
       const {
-        width: YV,
-        height: UV
-      } = xV, yV = null !== (JV = VV.text) && void 0 !== JV ? JV : VV, pV = (yV.x / 100 - .5) * YV, QV = (yV.y / 100 - .5) * UV, nV = YV / 2 - eV.x;
-      if (null !== VV.text && Math.abs(pV) <= nV && QV >= eV.top - UV / 2 && QV <= UV / 2 - eV.bottom) return {
-        x: yV.x,
-        y: yV.y
+        width: rH,
+        height: SH
+      } = LH, hH = null !== (AH = HH.text) && void 0 !== AH ? AH : HH, tH = (hH.x / 100 - .5) * rH, zH = (hH.y / 100 - .5) * SH, CH = rH / 2 - BH.x;
+      if (null !== HH.text && Math.abs(tH) <= CH && zH >= BH.top - SH / 2 && zH <= SH / 2 - BH.bottom) return {
+        x: hH.x,
+        y: hH.y
       };
-      const wV = Math.min(0 === pV ? 1 / 0 : nV / Math.abs(pV), QV > 0 ? (UV / 2 - eV.bottom) / QV : QV < 0 ? (eV.top - UV / 2) / QV : 1 / 0);
-      return !Number.isFinite(wV) || wV < 0 ? {
+      const EH = Math.min(0 === tH ? 1 / 0 : CH / Math.abs(tH), zH > 0 ? (SH / 2 - BH.bottom) / zH : zH < 0 ? (BH.top - SH / 2) / zH : 1 / 0);
+      return !Number.isFinite(EH) || EH < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + pV * wV / YV * 100,
-        y: 50 + QV * wV / UV * 100
+        x: 50 + tH * EH / rH * 100,
+        y: 50 + zH * EH / SH * 100
       }
     }
-    xV.d(eV, {
-      c: () => JV
+    LH.d(BH, {
+      e: () => AH
     })
   },
-  37771: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV,
-      g: () => bV,
-      j: () => EV,
-      m: () => pV,
-      o: () => vV,
-      q: () => BV,
-      r: () => ZV,
-      s: () => qV,
-      t: () => kV,
-      u: () => jV
+  37479: (HH, BH, LH) => {
+    LH.d(BH, {
+      A: () => uH,
+      C: () => xH,
+      c: () => SH,
+      g: () => QH,
+      j: () => WH,
+      k: () => tH,
+      n: () => GH,
+      r: () => MH,
+      t: () => XH,
+      x: () => vH
     });
-    var JV = xV(27),
-      YV = xV(32);
-    const UV = "clientGameInventoryButtonsChanged",
-      yV = new Map;
+    var AH = LH(15),
+      rH = LH(18);
+    const SH = "clientGameInventoryButtonsChanged",
+      hH = new Map;
 
-    function pV() {
-      return [...yV.values()].sort(((VV, eV) => {
-        var xV, JV;
-        return (null !== (xV = VV.order) && void 0 !== xV ? xV : 0) - (null !== (JV = eV.order) && void 0 !== JV ? JV : 0)
+    function tH() {
+      return [...hH.values()].sort(((HH, BH) => {
+        var LH, AH;
+        return (null !== (LH = HH.order) && void 0 !== LH ? LH : 0) - (null !== (AH = BH.order) && void 0 !== AH ? AH : 0)
       }))
     }
-    let QV = null;
+    let zH = null;
 
-    function nV(VV) {
-      QV = VV
+    function CH(HH) {
+      zH = HH
     }
-    let wV = !1;
+    let EH = !1;
 
-    function ZV(VV) {
-      wV = !0;
+    function XH(HH) {
+      EH = !0;
       try {
-        VV.onClick()
+        HH.onClick()
       } finally {
-        wV = !1
+        EH = !1
       }
-      VV.panel && "clientGame" === JV.b.get("openInGameMenuName") && nV(VV.id)
+      HH.panel && "clientGame" === AH.c.get("openInGameMenuName") && CH(HH.id)
     }
 
-    function vV() {
-      return wV
+    function GH() {
+      return EH
     }
 
-    function rV() {
-      return pV().filter((VV => VV.panel && !VV.disabled))
+    function YH() {
+      return tH().filter((HH => HH.panel && !HH.disabled))
     }
 
-    function kV(VV) {
-      const eV = rV(),
-        xV = eV.findIndex((VV => VV.id === QV));
-      return !(xV < 0 || eV.length < 2) && (ZV(eV[(xV + VV + eV.length) % eV.length]), !0)
+    function uH(HH) {
+      const BH = YH(),
+        LH = BH.findIndex((HH => HH.id === zH));
+      return !(LH < 0 || BH.length < 2) && (XH(BH[(LH + HH + BH.length) % BH.length]), !0)
     }
 
-    function bV() {
-      return null !== QV && rV().length > 1
+    function QH() {
+      return null !== zH && YH().length > 1
     }
 
-    function EV() {
-      nV(null)
+    function WH() {
+      CH(null)
     }
 
-    function BV() {
-      "inventory" !== JV.b.get("openInGameMenuName") && nV(null)
+    function MH() {
+      "inventory" !== AH.c.get("openInGameMenuName") && CH(null)
     }
 
-    function jV() {
-      const VV = QV;
-      return nV(null), VV
+    function xH() {
+      const HH = zH;
+      return CH(null), HH
     }
 
-    function qV(VV) {
-      return yV.set(VV.id, VV), YV.h.QZ(UV, pV(), !0), () => {
-        yV.get(VV.id) === VV && (yV.delete(VV.id), YV.h.QZ(UV, pV()))
+    function vH(HH) {
+      return hH.set(HH.id, HH), rH.k.AX(SH, tH(), !0), () => {
+        hH.get(HH.id) === HH && (hH.delete(HH.id), rH.k.AX(SH, tH()))
       }
     }
   },
-  37762: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => pV,
-      h: () => jV,
-      i: () => EV,
-      m: () => BV,
-      o: () => vV,
-      p: () => nV,
-      r: () => bV,
-      v: () => rV,
-      z: () => wV
+  37474: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => tH,
+      c: () => xH,
+      g: () => WH,
+      j: () => MH,
+      n: () => GH,
+      p: () => CH,
+      t: () => QH,
+      u: () => YH,
+      v: () => EH
     });
-    var JV = xV(27),
-      YV = xV(32),
-      UV = xV(1332),
-      yV = xV(37771);
-    const pV = "clientGameUiChanged";
-    let QV = null;
+    var AH = LH(15),
+      rH = LH(18),
+      SH = LH(1241),
+      hH = LH(37479);
+    const tH = "clientGameUiChanged";
+    let zH = null;
 
-    function nV() {
-      return QV
+    function CH() {
+      return zH
     }
 
-    function wV(VV, eV) {
-      const xV = {
-        content: VV,
-        menu: eV
+    function EH(HH, BH) {
+      const LH = {
+        content: HH,
+        menu: BH
       };
-      return QV = xV, YV.h.QZ(pV, QV, !0), () => {
-        QV === xV && (QV = null, kV = !1, EV(), YV.h.QZ(pV, null))
+      return zH = LH, rH.k.AX(tH, zH, !0), () => {
+        zH === LH && (zH = null, uH = !1, WH(), rH.k.AX(tH, null))
       }
     }
-    let ZV = null;
+    let XH = null;
 
-    function vV() {
-      return ZV
+    function GH() {
+      return XH
     }
 
-    function rV(VV) {
-      return ZV = VV, () => {
-        ZV === VV && (ZV = null)
+    function YH(HH) {
+      return XH = HH, () => {
+        XH === HH && (XH = null)
       }
     }
-    let kV = !1;
+    let uH = !1;
 
-    function bV() {
-      const VV = JV.b.get("openInGameMenuName");
-      "clientGame" !== VV && (kV = "inventory" === VV), (0, yV.o)() || (0, yV.j)(), (0, UV.p)(UV.d), JV.b.set({
+    function QH() {
+      const HH = AH.c.get("openInGameMenuName");
+      "clientGame" !== HH && (uH = "inventory" === HH), (0, hH.n)() || (0, hH.j)(), (0, SH.x)(SH.d), AH.c.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function EV() {
-      qV(!1)
+    function WH() {
+      vH(!1)
     }
 
-    function BV() {
-      qV(kV)
+    function MH() {
+      vH(uH)
     }
 
-    function jV() {
-      kV && qV(!1)
+    function xH() {
+      uH && vH(!1)
     }
 
-    function qV(VV) {
-      "clientGame" === JV.b.get("openInGameMenuName") && JV.b.set({
-        openInGameMenuName: VV ? "inventory" : null
-      }), VV || (0, yV.j)(), kV = !1
+    function vH(HH) {
+      "clientGame" === AH.c.get("openInGameMenuName") && AH.c.set({
+        openInGameMenuName: HH ? "inventory" : null
+      }), HH || (0, hH.j)(), uH = !1
     }
   },
-  40663: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => QV
+  40419: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => zH
     });
-    var JV = xV(37849),
-      YV = xV(1220),
-      UV = xV(1279),
-      yV = xV(39648),
-      pV = xV(39693);
-    class QV {
-      constructor(VV, eV) {
-        var xV;
-        this.classes = VV, this.distanceKey = eV, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var AH = LH(37565),
+      rH = LH(1123),
+      SH = LH(1194),
+      hH = LH(39370),
+      tH = LH(39425);
+    class zH {
+      constructor(HH, BH) {
+        var LH;
+        this.classes = HH, this.distanceKey = BH, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.ik = !1, this.hq = () => {
+        }, this.render = null, this.Mu = !1, this.Av = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.hq), null === (xV = window.visualViewport) || void 0 === xV || xV.addEventListener("resize", this.hq)
+        }, window.addEventListener("resize", this.Av), null === (LH = window.visualViewport) || void 0 === LH || LH.addEventListener("resize", this.Av)
       }
-      bindMarker(VV) {
-        const eV = this.refs.get(VV);
-        if (eV) return eV;
-        const xV = eV => {
-          var JV;
-          null === (JV = this.markers.get(VV)) || void 0 === JV || JV.stopObserving(), this.markers.delete(VV), eV && !this.ik ? (this.markers.set(VV, this.mount(eV)), this.refs.set(VV, xV)) : this.refs.delete(VV)
+      bindMarker(HH) {
+        const BH = this.refs.get(HH);
+        if (BH) return BH;
+        const LH = BH => {
+          var AH;
+          null === (AH = this.markers.get(HH)) || void 0 === AH || AH.stopObserving(), this.markers.delete(HH), BH && !this.Mu ? (this.markers.set(HH, this.mount(BH)), this.refs.set(HH, LH)) : this.refs.delete(HH)
         };
-        return this.refs.set(VV, xV), xV
+        return this.refs.set(HH, LH), LH
       }
       hasMarkers() {
         return this.markers.size > 0
       }
-      setRender(VV) {
-        this.render = VV
+      setRender(HH) {
+        this.render = HH
       }
-      update(VV, eV, xV, JV, YV) {
-        const UV = this.markers.get(VV);
-        UV && (UV.target ??= [0, 0, 0], UV.target[0] = eV, UV.target[1] = xV, UV.target[2] = JV, this.place(UV), this.XJ(UV, YV && Math.hypot(eV - YV[0], xV - YV[1], JV - YV[2])))
+      update(HH, BH, LH, AH, rH) {
+        const SH = this.markers.get(HH);
+        SH && (SH.target ??= [0, 0, 0], SH.target[0] = BH, SH.target[1] = LH, SH.target[2] = AH, this.place(SH), this.eA(SH, rH && Math.hypot(BH - rH[0], LH - rH[1], AH - rH[2])))
       }
       dispose() {
-        var VV;
-        this.ik = !0, window.removeEventListener("resize", this.hq), null === (VV = window.visualViewport) || void 0 === VV || VV.removeEventListener("resize", this.hq);
-        for (const eV of this.markers.values()) eV.stopObserving();
+        var HH;
+        this.Mu = !0, window.removeEventListener("resize", this.Av), null === (HH = window.visualViewport) || void 0 === HH || HH.removeEventListener("resize", this.Av);
+        for (const BH of this.markers.values()) BH.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(VV) {
+      place(HH) {
         const {
-          render: eV,
-          viewport: xV
+          render: BH,
+          viewport: LH
         } = this;
-        if (!eV || !VV.target) return;
-        const JV = (50 - eV.screenBandPct.y) / 100 * xV.height,
-          YV = {
-            x: VV.halfSize.width + 8,
-            top: VV.halfSize.height + 8,
-            bottom: VV.halfSize.height + VV.labelsBelow + JV
+        if (!BH || !HH.target) return;
+        const AH = (50 - BH.screenBandPct.y) / 100 * LH.height,
+          rH = {
+            x: HH.halfSize.width + 8,
+            top: HH.halfSize.height + 8,
+            bottom: HH.halfSize.height + HH.labelsBelow + AH
           },
-          UV = eV.projectWorldPosToViewport(VV.target),
-          QV = null !== UV && void 0 !== UV ? UV : eV.projectWorldPosToScreenPos(VV.target),
-          nV = (0, pV.c)({
-            x: QV.x,
-            y: QV.y,
-            text: UV
-          }, YV, xV);
-        (0, yV.b)(VV.root, Math.round(100 * nV.x) / 100, Math.round(100 * nV.y) / 100)
+          SH = BH.projectWorldPosToViewport(HH.target),
+          zH = null !== SH && void 0 !== SH ? SH : BH.projectWorldPosToScreenPos(HH.target),
+          CH = (0, tH.e)({
+            x: zH.x,
+            y: zH.y,
+            text: SH
+          }, rH, LH);
+        (0, hH.d)(HH.root, Math.round(100 * CH.x) / 100, Math.round(100 * CH.y) / 100)
       }
-      XJ(VV, eV) {
-        if (null === eV) return void(null !== VV.metres && (VV.metres = null, VV.distance.textContent = ""));
-        const xV = Date.now();
-        (null === VV.metres || (0, JV.e)(eV, VV.metres, VV.metresShownAt)) && (VV.metres = Math.round(eV), VV.metresShownAt = xV, VV.distance.textContent = (0, YV.u)(UV.c.get().getCurrentLanguageCode(), this.distanceKey, {
-          distance: String(VV.metres)
+      eA(HH, BH) {
+        if (null === BH) return void(null !== HH.metres && (HH.metres = null, HH.distance.textContent = ""));
+        const LH = Date.now();
+        (null === HH.metres || (0, AH.e)(BH, HH.metres, HH.metresShownAt)) && (HH.metres = Math.round(BH), HH.metresShownAt = LH, HH.distance.textContent = (0, rH.u)(SH.g.get().getCurrentLanguageCode(), this.distanceKey, {
+          distance: String(HH.metres)
         }))
       }
-      mount(VV) {
-        const eV = {
-            root: VV,
-            distance: VV.querySelector(`.${this.classes.distance}`),
+      mount(HH) {
+        const BH = {
+            root: HH,
+            distance: HH.querySelector(`.${this.classes.distance}`),
             halfSize: {
               width: 0,
               height: 0
@@ -474,35 +497,35 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          xV = VV.querySelector(`.${this.classes.labels}`),
-          JV = new ResizeObserver((() => {
-            eV.halfSize = {
-              width: Math.max(VV.offsetWidth, xV.offsetWidth) / 2,
-              height: VV.offsetHeight / 2
-            }, eV.labelsBelow = xV.offsetTop + xV.offsetHeight - VV.offsetHeight, this.place(eV)
+          LH = HH.querySelector(`.${this.classes.labels}`),
+          AH = new ResizeObserver((() => {
+            BH.halfSize = {
+              width: Math.max(HH.offsetWidth, LH.offsetWidth) / 2,
+              height: HH.offsetHeight / 2
+            }, BH.labelsBelow = LH.offsetTop + LH.offsetHeight - HH.offsetHeight, this.place(BH)
           }));
-        return JV.observe(VV, {
+        return AH.observe(HH, {
           box: "border-box"
-        }), JV.observe(xV, {
+        }), AH.observe(LH, {
           box: "border-box"
-        }), eV.stopObserving = () => {
-          JV.disconnect()
-        }, eV
+        }), BH.stopObserving = () => {
+          AH.disconnect()
+        }, BH
       }
     }
   },
-  40652: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      default: () => re
+  40411: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      default: () => YB
     });
-    const JV = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
-    var YV = xV(62),
-      UV = xV(37762),
-      yV = xV(38212),
-      pV = xV(37786),
-      QV = xV(1838),
-      nV = xV(32);
-    const wV = {
+    const AH = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes", "hat", "back"];
+    var rH = LH(45),
+      SH = LH(37474),
+      hH = LH(37912),
+      tH = LH(37496),
+      zH = LH(1789),
+      CH = LH(18);
+    const EH = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -528,284 +551,284 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const ZV = 32;
+    const XH = 32;
 
-    function vV(VV, eV, xV, JV) {
+    function GH(HH, BH, LH, AH) {
       return {
         tag: "line",
         attrs: {
-          x1: VV,
-          y1: eV,
-          x2: xV,
-          y2: JV,
+          x1: HH,
+          y1: BH,
+          x2: LH,
+          y2: AH,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function rV(VV) {
+    function YH(HH) {
       return {
         tag: "circle",
         attrs: {
-          cx: ZV,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZV,
-          r: VV,
+          cx: XH,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : XH,
+          r: HH,
           class: "Fill"
         }
       }
     }
 
-    function kV(VV, eV) {
+    function uH(HH, BH) {
       return {
         tag: "path",
         attrs: {
-          d: VV,
-          "stroke-width": eV
+          d: HH,
+          "stroke-width": BH
         }
       }
     }
 
-    function bV(VV, eV, xV) {
+    function QH(HH, BH, LH) {
       return {
         tag: "circle",
         attrs: {
-          cx: ZV,
-          cy: ZV,
-          r: VV,
-          "stroke-width": eV,
-          class: xV
+          cx: XH,
+          cy: XH,
+          r: HH,
+          "stroke-width": BH,
+          class: LH
         }
       }
     }
 
-    function EV(VV, eV, xV) {
+    function WH(HH, BH, LH) {
       return {
         tag: "text",
         attrs: {
-          x: VV,
-          y: eV,
+          x: HH,
+          y: BH,
           class: "Fill Label"
         },
-        text: xV
+        text: LH
       }
     }
-    const BV = {
-      pistol: VV => [vV(ZV, ZV - VV - 5, ZV, ZV - VV), vV(ZV - VV - 5, ZV, ZV - VV, ZV), vV(ZV + VV, ZV, ZV + VV + 5, ZV), rV(1.4)],
-      rifle: VV => [vV(ZV, ZV - VV - 8, ZV, ZV - VV), vV(ZV, ZV + VV, ZV, ZV + VV + 8), vV(ZV - VV - 8, ZV, ZV - VV, ZV), vV(ZV + VV, ZV, ZV + VV + 8, ZV), rV(1)],
-      smg: VV => {
-        const eV = Math.PI / 2,
-          xV = [];
-        for (let yV = 0; yV < 4; yV++) xV.push((YV = yV * eV + .35, UV = (yV + 1) * eV - .35, kV(`M${ZV+(JV=6+VV)*Math.cos(YV)} ${ZV+JV*Math.sin(YV)} A${JV} ${JV} 0 0 1 ${ZV+JV*Math.cos(UV)} ${ZV+JV*Math.sin(UV)}`, 2)));
-        var JV, YV, UV;
-        return [...xV, rV(1.4)]
+    const MH = {
+      pistol: HH => [GH(XH, XH - HH - 5, XH, XH - HH), GH(XH - HH - 5, XH, XH - HH, XH), GH(XH + HH, XH, XH + HH + 5, XH), YH(1.4)],
+      rifle: HH => [GH(XH, XH - HH - 8, XH, XH - HH), GH(XH, XH + HH, XH, XH + HH + 8), GH(XH - HH - 8, XH, XH - HH, XH), GH(XH + HH, XH, XH + HH + 8, XH), YH(1)],
+      smg: HH => {
+        const BH = Math.PI / 2,
+          LH = [];
+        for (let hH = 0; hH < 4; hH++) LH.push((rH = hH * BH + .35, SH = (hH + 1) * BH - .35, uH(`M${XH+(AH=6+HH)*Math.cos(rH)} ${XH+AH*Math.sin(rH)} A${AH} ${AH} 0 0 1 ${XH+AH*Math.cos(SH)} ${XH+AH*Math.sin(SH)}`, 2)));
+        var AH, rH, SH;
+        return [...LH, YH(1.4)]
       },
-      shotgun: VV => [bV(VV, 3, "Ring Outline"), bV(VV, 1.5, "Ring")],
-      marksman: VV => [kV(`M${26-VV/2} ${39+VV/2} L32 33 L${38+VV/2} ${39+VV/2}`, 2), vV(14 - VV, ZV, 24 - VV, ZV, 1.5), vV(40 + VV, ZV, 50 + VV, ZV, 1.5), vV(14 - VV, 30, 14 - VV, 34, 1.5), vV(50 + VV, 30, 50 + VV, 34, 1.5)],
-      machineGun: VV => {
-        const eV = 10 + VV,
-          xV = [];
-        for (const [JV, YV] of [
+      shotgun: HH => [QH(HH, 3, "Ring Outline"), QH(HH, 1.5, "Ring")],
+      marksman: HH => [uH(`M${26-HH/2} ${39+HH/2} L32 33 L${38+HH/2} ${39+HH/2}`, 2), GH(14 - HH, XH, 24 - HH, XH, 1.5), GH(40 + HH, XH, 50 + HH, XH, 1.5), GH(14 - HH, 30, 14 - HH, 34, 1.5), GH(50 + HH, 30, 50 + HH, 34, 1.5)],
+      machineGun: HH => {
+        const BH = 10 + HH,
+          LH = [];
+        for (const [AH, rH] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) xV.push(kV(`M${ZV+JV*eV} ${ZV+YV*(eV-5)} L${ZV+JV*eV} ${ZV+YV*eV} L${ZV+JV*(eV-5)} ${ZV+YV*eV}`, 2));
-        return [...xV, vV(ZV, 28, ZV, 36, 1.5), vV(28, ZV, 36, ZV, 1.5)]
+          ]) LH.push(uH(`M${XH+AH*BH} ${XH+rH*(BH-5)} L${XH+AH*BH} ${XH+rH*BH} L${XH+AH*(BH-5)} ${XH+rH*BH}`, 2));
+        return [...LH, GH(XH, 28, XH, 36, 1.5), GH(28, XH, 36, XH, 1.5)]
       },
-      launcher: () => [vV(14, 30, 50, 30, 1.5), vV(ZV, 24, ZV, 52, 1.5), vV(28, 38, 36, 38, 1.5), vV(29, 44, 35, 44, 1.5), vV(30, 50, 34, 50, 1.5), EV(38, 40, "100"), EV(37, 46, "200"), rV(1.4, 30)],
-      melee: () => [kV("M32 26 L38 32 L32 38 L26 32 Z", 1.5), rV(1.2)],
-      throwable: () => [rV(1.6)]
+      launcher: () => [GH(14, 30, 50, 30, 1.5), GH(XH, 24, XH, 52, 1.5), GH(28, 38, 36, 38, 1.5), GH(29, 44, 35, 44, 1.5), GH(30, 50, 34, 50, 1.5), WH(38, 40, "100"), WH(37, 46, "200"), YH(1.4, 30)],
+      melee: () => [uH("M32 26 L38 32 L32 38 L26 32 Z", 1.5), YH(1.2)],
+      throwable: () => [YH(1.6)]
     };
 
-    function jV(VV) {
+    function xH(HH) {
       let {
-        tag: eV,
-        attrs: xV,
-        text: JV
-      } = VV, YV = `<${eV}`;
-      for (const [UV, yV] of Object.entries(xV)) YV += ` ${UV}="${yV}"`;
-      return void 0 === JV ? `${YV}/>` : `${YV}>${JV}</${eV}>`
+        tag: BH,
+        attrs: LH,
+        text: AH
+      } = HH, rH = `<${BH}`;
+      for (const [SH, hH] of Object.entries(LH)) rH += ` ${SH}="${hH}"`;
+      return void 0 === AH ? `${rH}/>` : `${rH}>${AH}</${BH}>`
     }
-    class qV {
-      constructor(VV, eV) {
-        this.api = VV, this.localPlayerId = eV, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = VV => {
-          this.element = VV, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, VV && !this.enabled && (VV.style.display = "none")
+    class vH {
+      constructor(HH, BH) {
+        this.api = HH, this.localPlayerId = BH, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = HH => {
+          this.element = HH, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, HH && !this.enabled && (HH.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, QV.getRemInPx)()))
-        }, this.tokens = [nV.h.subscribe("aimingOverlay", (VV => {
-          this.sniperOverlay = "sniper" === VV
-        })), nV.h.subscribe("mouseState", (VV => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, zH.getRemInPx)()))
+        }, this.tokens = [CH.k.subscribe("aimingOverlay", (HH => {
+          this.sniperOverlay = "sniper" === HH
+        })), CH.k.subscribe("mouseState", (HH => {
           let {
-            isDown: eV
-          } = VV;
-          this.mouseDown = eV
+            isDown: BH
+          } = HH;
+          this.mouseDown = BH
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      pW(VV) {
-        VV !== this.enabled && (this.enabled = VV, this.drawnVisible = null, VV || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      vI(HH) {
+        HH !== this.enabled && (this.enabled = HH, this.drawnVisible = null, HH || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(VV, eV) {
-        var xV, JV;
+      frame(HH, BH) {
+        var LH, AH;
         if (!this.enabled) return;
         const {
-          api: YV
-        } = this, UV = YV.isAlive(this.localPlayerId) && null !== (xV = null === (JV = YV.bJV(this.localPlayerId)) || void 0 === JV ? void 0 : JV.name) && void 0 !== xV ? xV : null, yV = (pV = UV) && wV[pV] || null;
-        var pV;
-        if (this.setOwnsCrosshair(null !== yV), !this.element) return;
-        const QV = YV.getHeldGunInaccuracy(),
-          nV = null !== QV,
-          ZV = null !== yV && !this.sniperOverlay && YV.isCrosshairShown();
-        if (ZV !== this.drawnVisible && (this.drawnVisible = ZV, this.element.style.display = ZV ? "block" : "none"), !ZV) return;
-        const vV = nV ? function(VV) {
-            return "launcher" === VV || "melee" === VV || "throwable" === VV ? "none" : "shotgun" === VV ? "cone" : "offset"
-          }(yV) : "none",
-          rV = null !== QV && void 0 !== QV ? QV : 0;
-        "cone" === vV ? this.drawCone(yV, this.coneRadiusVh(rV, eV) * this.gapPerVh, VV) : (this.coneDrawn = !1, this.draw(yV, "none" === vV ? 2 : this.offsetGap(rV)));
-        const kV = !nV && this.mouseDown;
-        kV !== this.drawnPressed && (this.drawnPressed = kV, this.element.classList.toggle("Pressed", kV))
+          api: rH
+        } = this, SH = rH.isAlive(this.localPlayerId) && null !== (LH = null === (AH = rH.yLH(this.localPlayerId)) || void 0 === AH ? void 0 : AH.name) && void 0 !== LH ? LH : null, hH = (tH = SH) && EH[tH] || null;
+        var tH;
+        if (this.setOwnsCrosshair(null !== hH), !this.element) return;
+        const zH = rH.getHeldGunInaccuracy(),
+          CH = null !== zH,
+          XH = null !== hH && !this.sniperOverlay && rH.isCrosshairShown();
+        if (XH !== this.drawnVisible && (this.drawnVisible = XH, this.element.style.display = XH ? "block" : "none"), !XH) return;
+        const GH = CH ? function(HH) {
+            return "launcher" === HH || "melee" === HH || "throwable" === HH ? "none" : "shotgun" === HH ? "cone" : "offset"
+          }(hH) : "none",
+          YH = null !== zH && void 0 !== zH ? zH : 0;
+        "cone" === GH ? this.drawCone(hH, this.coneRadiusVh(YH, BH) * this.gapPerVh, HH) : (this.coneDrawn = !1, this.draw(hH, "none" === GH ? 2 : this.offsetGap(YH)));
+        const uH = !CH && this.mouseDown;
+        uH !== this.drawnPressed && (this.drawnPressed = uH, this.element.classList.toggle("Pressed", uH))
       }
       dispose() {
-        for (const VV of this.tokens) nV.h.unsubscribe(VV);
+        for (const HH of this.tokens) CH.k.unsubscribe(HH);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(VV, eV) {
-        var xV, JV;
-        VV !== this.drawnFamily ? (this.drawnFamily = VV, this.drawnGap = eV, this.element.innerHTML = function(VV, eV) {
-          return `<svg viewBox="0 0 64 64">${BV[VV](eV).map(jV).join("")}</svg>`
-        }(VV, eV), this.shapes = Array.from(null !== (xV = null === (JV = this.element.firstElementChild) || void 0 === JV ? void 0 : JV.children) && void 0 !== xV ? xV : [])) : eV !== this.drawnGap && (this.drawnGap = eV, function(VV, eV, xV) {
-          const JV = BV[eV](xV);
-          for (let YV = 0; YV < JV.length; YV++)
-            for (const [eV, xV] of Object.entries(JV[YV].attrs)) {
-              const JV = String(xV);
-              VV[YV].getAttribute(eV) !== JV && VV[YV].setAttribute(eV, JV)
+      draw(HH, BH) {
+        var LH, AH;
+        HH !== this.drawnFamily ? (this.drawnFamily = HH, this.drawnGap = BH, this.element.innerHTML = function(HH, BH) {
+          return `<svg viewBox="0 0 64 64">${MH[HH](BH).map(xH).join("")}</svg>`
+        }(HH, BH), this.shapes = Array.from(null !== (LH = null === (AH = this.element.firstElementChild) || void 0 === AH ? void 0 : AH.children) && void 0 !== LH ? LH : [])) : BH !== this.drawnGap && (this.drawnGap = BH, function(HH, BH, LH) {
+          const AH = MH[BH](LH);
+          for (let rH = 0; rH < AH.length; rH++)
+            for (const [BH, LH] of Object.entries(AH[rH].attrs)) {
+              const AH = String(LH);
+              HH[rH].getAttribute(BH) !== AH && HH[rH].setAttribute(BH, AH)
             }
-        }(this.shapes, VV, eV))
+        }(this.shapes, HH, BH))
       }
-      drawCone(VV, eV, xV) {
-        VV === this.drawnFamily && this.coneDrawn ? this.shownRadius += (eV - this.shownRadius) * (1 - Math.exp(-xV / 80)) : this.shownRadius = eV, this.coneDrawn = !0, this.draw(VV, Math.round(4 * this.shownRadius) / 4)
+      drawCone(HH, BH, LH) {
+        HH === this.drawnFamily && this.coneDrawn ? this.shownRadius += (BH - this.shownRadius) * (1 - Math.exp(-LH / 80)) : this.shownRadius = BH, this.coneDrawn = !0, this.draw(HH, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(VV, eV) {
-        if (!(eV > 0)) return 1;
-        const xV = VV * yV.h / 2;
-        return Math.max(50 * Math.tan(xV) / eV, 1)
+      coneRadiusVh(HH, BH) {
+        if (!(BH > 0)) return 1;
+        const LH = HH * hH.j / 2;
+        return Math.max(50 * Math.tan(LH) / BH, 1)
       }
-      offsetGap(VV) {
-        const eV = 2 + ((0, pV.d)(VV) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * eV) / 2)
+      offsetGap(HH) {
+        const BH = 2 + ((0, tH.d)(HH) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * BH) / 2)
       }
-      setOwnsCrosshair(VV) {
-        VV !== this.ownsCrosshair && (this.ownsCrosshair = VV, document.body.classList.toggle("FrontlineCustomCrosshair", VV))
+      setOwnsCrosshair(HH) {
+        HH !== this.ownsCrosshair && (this.ownsCrosshair = HH, document.body.classList.toggle("FrontlineCustomCrosshair", HH))
       }
     }
-    const tV = "FrontlineCustomDamage",
-      FV = .45,
-      TV = .2;
-    class PV {
-      constructor(VV, eV) {
-        this.api = VV, this.localPlayerId = eV, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+    const PH = "FrontlineCustomDamage",
+      TH = .45,
+      UH = .2;
+    class VH {
+      constructor(HH, BH) {
+        this.api = HH, this.localPlayerId = BH, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.cU = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = VV => {
-          var eV, xV;
-          this.clearHits(), this.root = VV, this.lowLayer = null !== (eV = null === VV || void 0 === VV ? void 0 : VV.querySelector(".FrontlineDamageLow")) && void 0 !== eV ? eV : null, this.arcLayer = null !== (xV = null === VV || void 0 === VV ? void 0 : VV.querySelector(".FrontlineDamageArcs")) && void 0 !== xV ? xV : null, this.showRoot(), this.drawLow()
-        }, this.token = nV.h.subscribe("damagedByOtherPlayer", (VV => {
+        }, this.maxHealth = null, this.PA = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = HH => {
+          var BH, LH;
+          this.clearHits(), this.root = HH, this.lowLayer = null !== (BH = null === HH || void 0 === HH ? void 0 : HH.querySelector(".FrontlineDamageLow")) && void 0 !== BH ? BH : null, this.arcLayer = null !== (LH = null === HH || void 0 === HH ? void 0 : HH.querySelector(".FrontlineDamageArcs")) && void 0 !== LH ? LH : null, this.showRoot(), this.drawLow()
+        }, this.token = CH.k.subscribe("damagedByOtherPlayer", (HH => {
           let {
-            direction: eV,
-            aU: xV
-          } = VV;
-          this.onHurt(eV, xV)
-        })), this.syncHealth(), document.body.classList.add(tV)
+            direction: BH,
+            xA: LH
+          } = HH;
+          this.onHurt(BH, LH)
+        })), this.syncHealth(), document.body.classList.add(PH)
       }
-      pW(VV) {
-        VV !== this.enabled && (this.enabled = VV, document.body.classList.toggle(tV, VV), VV || this.clearHits(), this.showRoot())
+      vI(HH) {
+        HH !== this.enabled && (this.enabled = HH, document.body.classList.toggle(PH, HH), HH || this.clearHits(), this.showRoot())
       }
-      frame(VV) {
-        this.syncHealth(), this.cameraHeading = VV;
-        for (const eV of this.arcs) this.drawArcAngle(eV)
+      frame(HH) {
+        this.syncHealth(), this.cameraHeading = HH;
+        for (const BH of this.arcs) this.drawArcAngle(BH)
       }
       dispose() {
-        nV.h.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(tV)
+        CH.k.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(PH)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const VV = this.api.getClientOption(this.localPlayerId, "_health"),
-          eV = this.api.getClientOption(this.localPlayerId, "_shield"),
-          xV = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(VV, this.readHealth) && Object.is(eV, this.readShield) && Object.is(xV, this.readMaxHealth)) return;
-        if (this.readHealth = VV, this.readShield = eV, this.readMaxHealth = xV, null === VV || void 0 === VV || !xV) return this.lastHealthPool = null, this.maxHealth = null, this.cU = 1, this.dead = !1, void this.drawLow();
-        const JV = VV + (null !== eV && void 0 !== eV ? eV : 0);
-        if (null !== this.lastHealthPool && JV < this.lastHealthPool) {
-          const VV = performance.now(),
-            eV = (this.lastHealthPool - JV) / xV;
-          this.lastDrop = VV - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + eV,
+        const HH = this.api.getClientOption(this.localPlayerId, "_health"),
+          BH = this.api.getClientOption(this.localPlayerId, "_shield"),
+          LH = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(HH, this.readHealth) && Object.is(BH, this.readShield) && Object.is(LH, this.readMaxHealth)) return;
+        if (this.readHealth = HH, this.readShield = BH, this.readMaxHealth = LH, null === HH || void 0 === HH || !LH) return this.lastHealthPool = null, this.maxHealth = null, this.PA = 1, this.dead = !1, void this.drawLow();
+        const AH = HH + (null !== BH && void 0 !== BH ? BH : 0);
+        if (null !== this.lastHealthPool && AH < this.lastHealthPool) {
+          const HH = performance.now(),
+            BH = (this.lastHealthPool - AH) / LH;
+          this.lastDrop = HH - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + BH,
             at: this.lastDrop.at
           } : {
-            frac: eV,
-            at: VV
+            frac: BH,
+            at: HH
           }
         }
-        this.dead = VV <= 0, this.dead && this.clearHits(), this.lastHealthPool = JV, this.maxHealth = xV, this.cU = VV > 0 ? VV / xV : 1, this.drawLow()
+        this.dead = HH <= 0, this.dead && this.clearHits(), this.lastHealthPool = AH, this.maxHealth = LH, this.PA = HH > 0 ? HH / LH : 1, this.drawLow()
       }
-      onHurt(VV, eV) {
+      onHurt(HH, BH) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const xV = Math.min(1, this.takeDamageFrac(eV) / .3);
-        null !== VV && this.showArc(VV, xV), this.flashEdge(null === VV ? null : VV - this.cameraHeading, .4 + .6 * xV)
+        const LH = Math.min(1, this.takeDamageFrac(BH) / .3);
+        null !== HH && this.showArc(HH, LH), this.flashEdge(null === HH ? null : HH - this.cameraHeading, .4 + .6 * LH)
       }
-      takeDamageFrac(VV) {
-        if (void 0 !== VV && this.maxHealth) return VV / this.maxHealth;
+      takeDamageFrac(HH) {
+        if (void 0 !== HH && this.maxHealth) return HH / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: eV
+          frac: BH
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, eV
+        }, BH
       }
       drawLow() {
         if (!this.lowLayer) return;
-        const VV = NV((FV - this.cU) / .25),
-          eV = NV((TV - this.cU) / .15000000000000002),
-          xV = this.cU < FV;
-        this.lowLayer.classList.toggle("Active", xV), this.lowLayer.classList.toggle("Critical", this.cU < TV), this.lowLayer.style.opacity = String(xV ? .55 + .3 * VV + .15 * eV : 0)
+        const HH = bH((TH - this.PA) / .25),
+          BH = bH((UH - this.PA) / .15000000000000002),
+          LH = this.PA < TH;
+        this.lowLayer.classList.toggle("Active", LH), this.lowLayer.classList.toggle("Critical", this.PA < UH), this.lowLayer.style.opacity = String(LH ? .55 + .3 * HH + .15 * BH : 0)
       }
-      showArc(VV, eV) {
-        var xV, JV;
+      showArc(HH, BH) {
+        var LH, AH;
         if (!this.arcLayer) return;
-        let YV = this.arcs.find((eV => AV(eV.direction, VV) < .6));
-        if (!YV) {
-          const eV = document.createElement("div");
-          eV.className = "FrontlineDamageArc", eV.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(eV), YV = {
-            element: eV,
-            direction: VV,
+        let rH = this.arcs.find((BH => OH(BH.direction, HH) < .6));
+        if (!rH) {
+          const BH = document.createElement("div");
+          BH.className = "FrontlineDamageArc", BH.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(BH), rH = {
+            element: BH,
+            direction: HH,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(YV)
+          }, this.arcs.push(rH)
         }
-        YV.direction = VV, this.drawArcAngle(YV);
-        const UV = YV.fade ? Number(getComputedStyle(YV.element).opacity) : 0;
-        null === (xV = YV.fade) || void 0 === xV || xV.cancel(), null === (JV = YV.pop) || void 0 === JV || JV.cancel(), YV.element.style.opacity = "1";
-        const yV = YV.element.animate([{
-          opacity: UV
+        rH.direction = HH, this.drawArcAngle(rH);
+        const SH = rH.fade ? Number(getComputedStyle(rH.element).opacity) : 0;
+        null === (LH = rH.fade) || void 0 === LH || LH.cancel(), null === (AH = rH.pop) || void 0 === AH || AH.cancel(), rH.element.style.opacity = "1";
+        const hH = rH.element.animate([{
+          opacity: SH
         }, {
           opacity: 1
         }], 144);
-        YV.fade = yV, YV.pop = YV.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * eV
+        rH.fade = hH, rH.pop = rH.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * BH
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const pV = YV;
-        yV.onfinish = () => {
-          if (pV.fade !== yV) return;
-          const VV = pV.element.animate([{
+        const tH = rH;
+        hH.onfinish = () => {
+          if (tH.fade !== hH) return;
+          const HH = tH.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -815,129 +838,129 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          VV.startTime = yV.startTime, pV.fade = VV, VV.onfinish = () => {
-            pV.fade === VV && (pV.element.remove(), XV(this.arcs, pV))
+          HH.startTime = hH.startTime, tH.fade = HH, HH.onfinish = () => {
+            tH.fade === HH && (tH.element.remove(), kH(this.arcs, tH))
           }
         }
       }
-      drawArcAngle(VV) {
-        const eV = VV.direction - this.cameraHeading;
-        (null === VV.drawnAngle || Math.abs(eV - VV.drawnAngle) > .005) && (VV.drawnAngle = eV, VV.element.style.rotate = `${eV}rad`)
+      drawArcAngle(HH) {
+        const BH = HH.direction - this.cameraHeading;
+        (null === HH.drawnAngle || Math.abs(BH - HH.drawnAngle) > .005) && (HH.drawnAngle = BH, HH.element.style.rotate = `${BH}rad`)
       }
-      flashEdge(VV, eV) {
-        var xV, JV, YV;
+      flashEdge(HH, BH) {
+        var LH, AH, rH;
         if (!this.root) return;
-        let UV = this.flashes.find((eV => null === eV.angle || null === VV ? eV.angle === VV : AV(eV.angle, VV) < .5));
-        if (!UV) {
-          const eV = document.createElement("div");
-          eV.className = "FrontlineDamageFlash";
-          const xV = eV.appendChild(document.createElement("div"));
-          xV.className = "FrontlineDamageFlashGlow", this.root.insertBefore(eV, this.arcLayer), UV = {
-            element: eV,
-            glow: xV,
-            angle: VV,
+        let SH = this.flashes.find((BH => null === BH.angle || null === HH ? BH.angle === HH : OH(BH.angle, HH) < .5));
+        if (!SH) {
+          const BH = document.createElement("div");
+          BH.className = "FrontlineDamageFlash";
+          const LH = BH.appendChild(document.createElement("div"));
+          LH.className = "FrontlineDamageFlashGlow", this.root.insertBefore(BH, this.arcLayer), SH = {
+            element: BH,
+            glow: LH,
+            angle: HH,
             level: 0,
             animation: null
-          }, this.flashes.push(UV)
+          }, this.flashes.push(SH)
         }
-        const yV = null === (xV = UV.animation) || void 0 === xV || null === (JV = xV.effect) || void 0 === JV ? void 0 : JV.getComputedTiming().progress,
-          pV = null === yV || void 0 === yV ? 0 : UV.level * (1 - yV);
-        UV.level = Math.min(1, Math.max(eV, pV + .6 * eV)), UV.angle = VV;
+        const hH = null === (LH = SH.animation) || void 0 === LH || null === (AH = LH.effect) || void 0 === AH ? void 0 : AH.getComputedTiming().progress,
+          tH = null === hH || void 0 === hH ? 0 : SH.level * (1 - hH);
+        SH.level = Math.min(1, Math.max(BH, tH + .6 * BH)), SH.angle = HH;
         const {
-          x: QV,
-          y: nV,
-          rx: wV,
-          ry: ZV
-        } = function(VV, eV) {
-          const xV = window.innerWidth,
-            JV = window.innerHeight;
-          if (null === VV) return {
-            x: xV / 2,
-            y: JV / 2,
+          x: zH,
+          y: CH,
+          rx: EH,
+          ry: XH
+        } = function(HH, BH) {
+          const LH = window.innerWidth,
+            AH = window.innerHeight;
+          if (null === HH) return {
+            x: LH / 2,
+            y: AH / 2,
             rx: 0,
             ry: 0
           };
-          const YV = Math.sin(VV),
-            UV = -Math.cos(VV),
-            yV = xV / 2 / Math.max(1e-6, Math.abs(YV)),
-            pV = JV / 2 / Math.max(1e-6, Math.abs(UV)),
-            QV = Math.min(yV, pV),
-            nV = Math.round(xV / 2 + YV * QV),
-            wV = Math.round(JV / 2 + UV * QV),
-            ZV = JV / 100 * (.85 + .25 * eV),
-            vV = yV <= pV,
-            rV = Math.round((vV ? 30 : 74) * ZV),
-            kV = Math.round((vV ? 58 : 26) * ZV);
+          const rH = Math.sin(HH),
+            SH = -Math.cos(HH),
+            hH = LH / 2 / Math.max(1e-6, Math.abs(rH)),
+            tH = AH / 2 / Math.max(1e-6, Math.abs(SH)),
+            zH = Math.min(hH, tH),
+            CH = Math.round(LH / 2 + rH * zH),
+            EH = Math.round(AH / 2 + SH * zH),
+            XH = AH / 100 * (.85 + .25 * BH),
+            GH = hH <= tH,
+            YH = Math.round((GH ? 30 : 74) * XH),
+            uH = Math.round((GH ? 58 : 26) * XH);
           return {
-            x: nV,
-            y: wV,
-            rx: rV,
-            ry: kV
+            x: CH,
+            y: EH,
+            rx: YH,
+            ry: uH
           }
-        }(VV, UV.level), {
-          style: vV
-        } = UV.glow;
-        UV.glow.classList.toggle("Everywhere", null === VV), vV.setProperty("--glowX", `${QV}px`), vV.setProperty("--glowY", `${nV}px`), vV.setProperty("--glowRx", `${wV}px`), vV.setProperty("--glowRy", `${ZV}px`), UV.element.style.transformOrigin = `${QV}px ${nV}px`, null === (YV = UV.animation) || void 0 === YV || YV.cancel();
-        const rV = UV.element.animate([{
+        }(HH, SH.level), {
+          style: GH
+        } = SH.glow;
+        SH.glow.classList.toggle("Everywhere", null === HH), GH.setProperty("--glowX", `${zH}px`), GH.setProperty("--glowY", `${CH}px`), GH.setProperty("--glowRx", `${EH}px`), GH.setProperty("--glowRy", `${XH}px`), SH.element.style.transformOrigin = `${zH}px ${CH}px`, null === (rH = SH.animation) || void 0 === rH || rH.cancel();
+        const YH = SH.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: UV.level,
+          opacity: SH.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * UV.level,
+          opacity: .8 * SH.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * UV.level
+          duration: 520 + 180 * SH.level
         });
-        UV.animation = rV;
-        const kV = UV;
-        rV.onfinish = () => {
-          kV.animation === rV && (kV.element.remove(), XV(this.flashes, kV))
+        SH.animation = YH;
+        const uH = SH;
+        YH.onfinish = () => {
+          uH.animation === YH && (uH.element.remove(), kH(this.flashes, uH))
         }
       }
       clearHits() {
-        for (const JV of this.arcs) {
-          var VV, eV;
-          null === (VV = JV.fade) || void 0 === VV || VV.cancel(), JV.fade = null, null === (eV = JV.pop) || void 0 === eV || eV.cancel(), JV.element.remove()
+        for (const AH of this.arcs) {
+          var HH, BH;
+          null === (HH = AH.fade) || void 0 === HH || HH.cancel(), AH.fade = null, null === (BH = AH.pop) || void 0 === BH || BH.cancel(), AH.element.remove()
         }
         this.arcs.length = 0;
-        for (const JV of this.flashes) {
-          var xV;
-          null === (xV = JV.animation) || void 0 === xV || xV.cancel(), JV.element.remove()
+        for (const AH of this.flashes) {
+          var LH;
+          null === (LH = AH.animation) || void 0 === LH || LH.cancel(), AH.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function AV(VV, eV) {
-      return Math.abs(Math.atan2(Math.sin(VV - eV), Math.cos(VV - eV)))
+    function OH(HH, BH) {
+      return Math.abs(Math.atan2(Math.sin(HH - BH), Math.cos(HH - BH)))
     }
 
-    function NV(VV) {
-      return Math.max(0, Math.min(1, VV))
+    function bH(HH) {
+      return Math.max(0, Math.min(1, HH))
     }
 
-    function XV(VV, eV) {
-      const xV = VV.indexOf(eV); - 1 !== xV && VV.splice(xV, 1)
+    function kH(HH, BH) {
+      const LH = HH.indexOf(BH); - 1 !== LH && HH.splice(LH, 1)
     }
-    var MV = xV(1146),
-      zV = xV.n(MV),
-      GV = xV(37756),
-      WV = xV(37852),
-      RV = xV(1220),
-      gV = xV(1542),
-      DV = xV(40659);
-    const iV = "frontlineHudChanged",
-      CV = "frontlineScoreboardChanged";
-    class aV {
+    var mH = LH(1038),
+      oH = LH.n(mH),
+      IH = LH(37472),
+      fH = LH(37569),
+      lH = LH(1123),
+      KH = LH(1450),
+      cH = LH(40413);
+    const eH = "frontlineHudChanged",
+      qH = "frontlineScoreboardChanged";
+    class gH {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -950,86 +973,86 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      RZ(VV) {
-        this.wire = VV, nV.h.QZ(iV, VV, !0)
+      kX(HH) {
+        this.wire = HH, CH.k.AX(eH, HH, !0)
       }
-      receiveScoreboard(VV) {
-        let eV = "scoreboard" === VV[0] ? performance.now() + VV[5] : 0;
-        const xV = this.scoreboard.endsAt;
-        0 !== eV && 0 !== xV && Math.abs(eV - xV) < 1e3 && (eV = xV), this.scoreboard = {
-          wire: VV,
-          endsAt: eV
-        }, nV.h.QZ(CV, this.scoreboard, !0)
+      receiveScoreboard(HH) {
+        let BH = "scoreboard" === HH[0] ? performance.now() + HH[5] : 0;
+        const LH = this.scoreboard.endsAt;
+        0 !== BH && 0 !== LH && Math.abs(BH - LH) < 1e3 && (BH = LH), this.scoreboard = {
+          wire: HH,
+          endsAt: BH
+        }, CH.k.AX(qH, this.scoreboard, !0)
       }
     }
-    var oV = xV(1321);
-    const cV = {
+    var NH = LH(1225);
+    const RH = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function hV(VV) {
+    function jH(HH) {
       let {
-        className: eV,
-        point: xV
-      } = VV;
-      const [JV, YV, UV, yV, pV, QV] = xV;
-      return (0, oV.jsxs)("div", {
-        className: zV()(eV, `Owner-${YV||"None"}`, `Leader-${yV||"None"}`, {
-          Contested: pV,
-          Here: QV
+        className: BH,
+        point: LH
+      } = HH;
+      const [AH, rH, SH, hH, tH, zH] = LH;
+      return (0, NH.jsxs)("div", {
+        className: oH()(BH, `Owner-${rH||"None"}`, `Leader-${hH||"None"}`, {
+          Contested: tH,
+          Here: zH
         }),
-        children: [(0, oV.jsx)("span", {
+        children: [(0, NH.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: JV
-        }), (0, oV.jsx)("i", {
+          children: AH
+        }), (0, NH.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${UV}%`
+            width: `${SH}%`
           }
         })]
       })
     }
-    const lV = (0, YV.memo)((function(VV) {
+    const nH = (0, rH.memo)((function(HH) {
         let {
-          points: eV,
-          markers: xV
-        } = VV;
+          points: BH,
+          markers: LH
+        } = HH;
         const {
-          t: JV
-        } = (0, RV.A)();
-        return eV ? (0, oV.jsx)("div", {
+          t: AH
+        } = (0, lH.B)();
+        return BH ? (0, NH.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: eV.map((VV => {
-            const [eV, , , , , , , YV] = VV;
-            return (0, oV.jsxs)("div", {
-              ref: xV.points.bindMarker(eV),
+          children: BH.map((HH => {
+            const [BH, , , , , , , rH] = HH;
+            return (0, NH.jsxs)("div", {
+              ref: LH.points.bindMarker(BH),
               className: "FrontlinePointMarker",
-              children: [(0, oV.jsx)(hV, {
+              children: [(0, NH.jsx)(jH, {
                 className: "FrontlinePointMarkerTile",
-                point: VV
-              }), (0, oV.jsxs)("div", {
+                point: HH
+              }), (0, NH.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [YV && (0, oV.jsx)("span", {
-                  className: zV()("FrontlinePointMarkerHomeTurf", `Team-${YV}`),
-                  children: JV("frontlineHud:homeTurf", {
-                    team: JV(cV[YV])
+                children: [rH && (0, NH.jsx)("span", {
+                  className: oH()("FrontlinePointMarkerHomeTurf", `Team-${rH}`),
+                  children: AH("frontlineHud:homeTurf", {
+                    team: AH(RH[rH])
                   })
-                }), (0, oV.jsx)("span", {
+                }), (0, NH.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, eV)
+            }, BH)
           }))
         }) : null
       })),
-      LV = {
+      FH = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      fV = {
+      DH = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -1037,269 +1060,269 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function mV(VV) {
+    function wH(HH) {
       let {
-        hud: eV,
-        crosshair: xV,
-        damage: JV,
-        markers: YV
-      } = VV;
-      const UV = (0, gV.j)(iV, eV.getWire()),
-        yV = (0, gV.j)(CV, eV.getScoreboard());
-      return (0, oV.jsxs)(oV.Fragment, {
-        children: [(0, oV.jsx)(KV, {
-          damage: JV
-        }), (0, oV.jsx)(lV, {
-          points: "scoreboard" === yV.wire[0] ? yV.wire[6] : null,
-          markers: YV
-        }), (0, oV.jsx)(uV, {
-          view: yV
-        }), (0, oV.jsx)("div", {
+        hud: BH,
+        crosshair: LH,
+        damage: AH,
+        markers: rH
+      } = HH;
+      const SH = (0, KH.e)(eH, BH.getWire()),
+        hH = (0, KH.e)(qH, BH.getScoreboard());
+      return (0, NH.jsxs)(NH.Fragment, {
+        children: [(0, NH.jsx)(ZH, {
+          damage: AH
+        }), (0, NH.jsx)(nH, {
+          points: "scoreboard" === hH.wire[0] ? hH.wire[6] : null,
+          markers: rH
+        }), (0, NH.jsx)(aH, {
+          view: hH
+        }), (0, NH.jsx)("div", {
           className: "FrontlineReticle",
-          ref: xV.bindElement
-        }), (0, oV.jsx)(GV.e, {
-          children: (0, oV.jsx)(HV, {
-            wire: UV
+          ref: LH.bindElement
+        }), (0, NH.jsx)(IH.e, {
+          children: (0, NH.jsx)(dH, {
+            wire: SH
           })
         })]
       })
     }
-    const KV = (0, YV.memo)((function(VV) {
+    const ZH = (0, rH.memo)((function(HH) {
         let {
-          damage: eV
-        } = VV;
-        return (0, oV.jsxs)("div", {
+          damage: BH
+        } = HH;
+        return (0, NH.jsxs)("div", {
           className: "FrontlineDamage",
-          ref: eV.bindElement,
-          children: [(0, oV.jsx)("div", {
+          ref: BH.bindElement,
+          children: [(0, NH.jsx)("div", {
             className: "FrontlineDamageLow",
-            children: (0, oV.jsx)("div", {
+            children: (0, NH.jsx)("div", {
               className: "FrontlineDamageShade"
             })
-          }), (0, oV.jsx)("div", {
+          }), (0, NH.jsx)("div", {
             className: "FrontlineDamageArcs"
           })]
         })
       })),
-      HV = (0, YV.memo)((function(VV) {
+      dH = (0, rH.memo)((function(HH) {
         let {
-          wire: eV
-        } = VV;
+          wire: BH
+        } = HH;
         const {
-          t: xV
-        } = (0, RV.A)();
-        if ("capture" === eV[0]) {
-          const [, VV, JV, YV, UV, yV, pV] = eV, QV = Math.round(YV / 100 * 24);
-          return (0, oV.jsxs)("div", {
-            className: zV()("FrontlinePlate", `Status-${JV}`, `Leader-${UV||"None"}`),
-            children: [(0, oV.jsx)(dV, {}), (0, oV.jsxs)("div", {
+          t: LH
+        } = (0, lH.B)();
+        if ("capture" === BH[0]) {
+          const [, HH, AH, rH, SH, hH, tH] = BH, zH = Math.round(rH / 100 * 24);
+          return (0, NH.jsxs)("div", {
+            className: oH()("FrontlinePlate", `Status-${AH}`, `Leader-${SH||"None"}`),
+            children: [(0, NH.jsx)(pH, {}), (0, NH.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, oV.jsx)("span", {
+              children: [(0, NH.jsx)("span", {
                 className: "FrontlineObjective",
-                children: VV
-              }), (0, oV.jsxs)("div", {
+                children: HH
+              }), (0, NH.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, oV.jsx)("div", {
+                children: [(0, NH.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: xV("frontlineHud:objective", {
-                    point: VV,
-                    friendly: yV,
-                    enemy: pV
+                  children: LH("frontlineHud:objective", {
+                    point: HH,
+                    friendly: hH,
+                    enemy: tH
                   })
-                }), (0, oV.jsx)("div", {
+                }), (0, NH.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: xV(LV[JV])
+                  children: LH(FH[AH])
                 })]
-              }), (0, oV.jsxs)("span", {
+              }), (0, NH.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(YV).padStart(3, "0"), (0, oV.jsx)("small", {
+                children: [String(rH).padStart(3, "0"), (0, NH.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, oV.jsx)(SV, {
+            }), (0, NH.jsx)(JH, {
               segments: 24,
-              lit: QV
+              lit: zH
             })]
           })
         }
-        if ("alert" === eV[0]) {
-          const [, VV, JV, YV] = eV;
-          return (0, oV.jsxs)("div", {
-            className: zV()("FrontlinePlate", "FrontlineAlert", `Tone-${YV}`),
-            children: [(0, oV.jsx)(dV, {}), (0, oV.jsx)("div", {
+        if ("alert" === BH[0]) {
+          const [, HH, AH, rH] = BH;
+          return (0, NH.jsxs)("div", {
+            className: oH()("FrontlinePlate", "FrontlineAlert", `Tone-${rH}`),
+            children: [(0, NH.jsx)(pH, {}), (0, NH.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: xV(fV[VV])
-            }), (0, oV.jsx)("div", {
+              children: LH(DH[HH])
+            }), (0, NH.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: JV
+              children: AH
             })]
           })
         }
         return null
       })),
-      uV = (0, YV.memo)((function(VV) {
+      aH = (0, rH.memo)((function(HH) {
         let {
-          view: eV
-        } = VV;
+          view: BH
+        } = HH;
         const {
-          t: xV
-        } = (0, RV.A)(), JV = (0, YV.useRef)(null), UV = function(VV, eV) {
-          const [xV, JV] = (0, YV.useState)(!1);
-          return (0, YV.useLayoutEffect)((() => {
-            const eV = VV.current;
-            if (!eV) return;
-            const xV = document.querySelector(`.${WV.f}`),
-              YV = document.querySelector(`.${WV.h}`),
-              UV = () => {
-                var VV;
-                const UV = eV.querySelector(".FrontlineTeamTrack"),
-                  yV = (0, QV.getRemInPx)(),
-                  pV = eV.getBoundingClientRect().width - 2 * (null !== (VV = null === UV || void 0 === UV ? void 0 : UV.getBoundingClientRect().width) && void 0 !== VV ? VV : 0),
-                  nV = window.innerWidth / 2,
-                  wV = xV ? xV.getBoundingClientRect().right : 0,
-                  ZV = YV ? YV.getBoundingClientRect().left : window.innerWidth,
-                  vV = Math.min(nV - wV, ZV - nV) - WV.d - pV / 2,
-                  rV = vV < 6 * yV,
-                  kV = rV ? (window.innerWidth - pV) / 2 - WV.d : vV;
-                eV.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(kV,14*yV)))}px`), JV(rV)
+          t: LH
+        } = (0, lH.B)(), AH = (0, rH.useRef)(null), SH = function(HH, BH) {
+          const [LH, AH] = (0, rH.useState)(!1);
+          return (0, rH.useLayoutEffect)((() => {
+            const BH = HH.current;
+            if (!BH) return;
+            const LH = document.querySelector(`.${fH.f}`),
+              rH = document.querySelector(`.${fH.i}`),
+              SH = () => {
+                var HH;
+                const SH = BH.querySelector(".FrontlineTeamTrack"),
+                  hH = (0, zH.getRemInPx)(),
+                  tH = BH.getBoundingClientRect().width - 2 * (null !== (HH = null === SH || void 0 === SH ? void 0 : SH.getBoundingClientRect().width) && void 0 !== HH ? HH : 0),
+                  CH = window.innerWidth / 2,
+                  EH = LH ? LH.getBoundingClientRect().right : 0,
+                  XH = rH ? rH.getBoundingClientRect().left : window.innerWidth,
+                  GH = Math.min(CH - EH, XH - CH) - fH.e - tH / 2,
+                  YH = GH < 6 * hH,
+                  uH = YH ? (window.innerWidth - tH) / 2 - fH.e : GH;
+                BH.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(uH,14*hH)))}px`), AH(YH)
               };
-            UV();
-            const yV = new ResizeObserver(UV);
-            for (const VV of [eV, xV, YV]) VV && yV.observe(VV);
-            return window.addEventListener("resize", UV), () => {
-              yV.disconnect(), window.removeEventListener("resize", UV)
+            SH();
+            const hH = new ResizeObserver(SH);
+            for (const HH of [BH, LH, rH]) HH && hH.observe(HH);
+            return window.addEventListener("resize", SH), () => {
+              hH.disconnect(), window.removeEventListener("resize", SH)
             }
-          }), [VV, eV]), xV
-        }(JV, "scoreboard" === eV.wire[0]);
-        if ("scoreboard" !== eV.wire[0]) return null;
-        const [, yV, pV, nV, wV, , ZV] = eV.wire, vV = "Red" === yV ? "Blue" : "Red";
-        return (0, oV.jsxs)("div", {
-          className: zV()("FrontlineScoreboardContainer", {
-            Below: UV
+          }), [HH, BH]), LH
+        }(AH, "scoreboard" === BH.wire[0]);
+        if ("scoreboard" !== BH.wire[0]) return null;
+        const [, hH, tH, CH, EH, , XH] = BH.wire, GH = "Red" === hH ? "Blue" : "Red";
+        return (0, NH.jsxs)("div", {
+          className: oH()("FrontlineScoreboardContainer", {
+            Below: SH
           }),
-          children: [(0, oV.jsxs)("div", {
-            ref: JV,
+          children: [(0, NH.jsxs)("div", {
+            ref: AH,
             className: "FrontlineScoreboard",
-            children: [(0, oV.jsx)(dV, {}), (0, oV.jsx)(sV, {
-              team: yV,
-              tickets: pV,
-              goal: wV,
+            children: [(0, NH.jsx)(pH, {}), (0, NH.jsx)(sH, {
+              team: hH,
+              tickets: tH,
+              goal: EH,
               side: "Friendly"
-            }), (0, oV.jsx)("div", {
+            }), (0, NH.jsx)("div", {
               className: "FrontlinePoints",
-              children: ZV.map((VV => (0, oV.jsx)(hV, {
+              children: XH.map((HH => (0, NH.jsx)(jH, {
                 className: "FrontlinePoint",
-                point: VV
-              }, VV[0])))
-            }), (0, oV.jsx)(sV, {
-              team: vV,
-              tickets: nV,
-              goal: wV,
+                point: HH
+              }, HH[0])))
+            }), (0, NH.jsx)(sH, {
+              team: GH,
+              tickets: CH,
+              goal: EH,
               side: "Enemy"
             })]
-          }), (0, oV.jsxs)("div", {
+          }), (0, NH.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, oV.jsx)(IV, {
-              endsAt: eV.endsAt
-            }), (0, oV.jsx)("div", {
+            children: [(0, NH.jsx)(iH, {
+              endsAt: BH.endsAt
+            }), (0, NH.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: xV("frontlineHud:ticketGoal", {
-                goal: wV
+              children: LH("frontlineHud:ticketGoal", {
+                goal: EH
               })
             })]
           })]
         })
       }));
 
-    function sV(VV) {
+    function sH(HH) {
       let {
-        team: eV,
-        tickets: xV,
-        goal: JV,
-        side: YV
-      } = VV;
+        team: BH,
+        tickets: LH,
+        goal: AH,
+        side: rH
+      } = HH;
       const {
-        t: UV
-      } = (0, RV.A)(), yV = String(xV).padStart(3, "0"), pV = yV.search(/[1-9]/), QV = -1 === pV ? yV : yV.slice(0, pV), nV = Math.min(20, Math.floor(xV / JV * 20));
-      return (0, oV.jsxs)("div", {
-        className: zV()("FrontlineTeamScore", YV, `Team-${eV}`),
-        children: [(0, oV.jsxs)("div", {
+        t: SH
+      } = (0, lH.B)(), hH = String(LH).padStart(3, "0"), tH = hH.search(/[1-9]/), zH = -1 === tH ? hH : hH.slice(0, tH), CH = Math.min(20, Math.floor(LH / AH * 20));
+      return (0, NH.jsxs)("div", {
+        className: oH()("FrontlineTeamScore", rH, `Team-${BH}`),
+        children: [(0, NH.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, oV.jsx)("span", {
+          children: [(0, NH.jsx)("span", {
             className: "Lead",
-            children: QV
-          }), -1 !== pV && yV.slice(pV)]
-        }), (0, oV.jsxs)("div", {
+            children: zH
+          }), -1 !== tH && hH.slice(tH)]
+        }), (0, NH.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, oV.jsx)("div", {
+          children: [(0, NH.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: UV(cV[eV])
-          }), (0, oV.jsx)(SV, {
+            children: SH(RH[BH])
+          }), (0, NH.jsx)(JH, {
             segments: 20,
-            lit: nV
+            lit: CH
           })]
         })]
       })
     }
 
-    function SV(VV) {
+    function JH(HH) {
       let {
-        segments: eV,
-        lit: xV
-      } = VV;
-      return (0, oV.jsx)("div", {
+        segments: BH,
+        lit: LH
+      } = HH;
+      return (0, NH.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: eV
-        }, ((VV, eV) => (0, oV.jsx)("i", {
-          className: zV()({
-            Lit: eV < xV
+          length: BH
+        }, ((HH, BH) => (0, NH.jsx)("i", {
+          className: oH()({
+            Lit: BH < LH
           })
-        }, eV)))
+        }, BH)))
       })
     }
 
-    function IV(VV) {
+    function iH(HH) {
       let {
-        endsAt: eV
-      } = VV;
-      const xV = (0, DV.l)(eV);
-      return (0, oV.jsx)("div", {
-        className: zV()("FrontlineClock", {
-          Urgent: xV <= 60
+        endsAt: BH
+      } = HH;
+      const LH = (0, cH.h)(BH);
+      return (0, NH.jsx)("div", {
+        className: oH()("FrontlineClock", {
+          Urgent: LH <= 60
         }),
-        children: (0, DV.e)(xV)
+        children: (0, cH.c)(LH)
       })
     }
 
-    function dV() {
-      return (0, oV.jsxs)(oV.Fragment, {
-        children: [(0, oV.jsx)("i", {
+    function pH() {
+      return (0, NH.jsxs)(NH.Fragment, {
+        children: [(0, NH.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, oV.jsx)("i", {
+        }), (0, NH.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var OV = xV(40663);
-    class Ve {
-      constructor(VV) {
-        this.hud = VV, this.points = new OV.d({
+    var yH = LH(40419);
+    class HB {
+      constructor(HH) {
+        this.hud = HH, this.points = new yH.b({
           labels: "FrontlinePointMarkerLabels",
           distance: "FrontlinePointMarkerDistance"
         }, "frontlineHud:markerDistance")
       }
-      frame(VV, eV) {
-        this.points.setRender(VV);
-        const xV = this.hud.getScoreboard().wire;
-        if ("scoreboard" === xV[0] && this.points.hasMarkers())
-          for (const [JV, , , , , , YV] of xV[6]) YV && this.points.update(JV, YV[0], YV[1] + 2.5, YV[2], eV)
+      frame(HH, BH) {
+        this.points.setRender(HH);
+        const LH = this.hud.getScoreboard().wire;
+        if ("scoreboard" === LH[0] && this.points.hasMarkers())
+          for (const [AH, , , , , , rH] of LH[6]) rH && this.points.update(AH, rH[0], rH[1] + 2.5, rH[2], BH)
       }
     }
-    var ee = xV(6996),
-      xe = xV(2919);
-    const Je = "frontlineRoundEndChanged";
-    class Ye {
+    var BB = LH(6981),
+      LB = LH(2864);
+    const AB = "frontlineRoundEndChanged";
+    class rB {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1310,245 +1333,245 @@ export const modules = {
       getView() {
         return this.view
       }
-      RZ(VV) {
-        const eV = "roundEnd" === VV[0] ? performance.now() + VV[5] : 0;
+      kX(HH) {
+        const BH = "roundEnd" === HH[0] ? performance.now() + HH[5] : 0;
         this.view = {
-          wire: VV,
+          wire: HH,
           key: this.view.key + 1,
-          endsAt: eV
-        }, nV.h.QZ(Je, this.view, !0)
+          endsAt: BH
+        }, CH.k.AX(AB, this.view, !0)
       }
     }
-    const Ue = (0, YV.lazy)((() => (0, xe.c)(Promise.all([xV.e(257), xV.e(225)]).then((() => xV(44648))), (VV => VV.FrontlineMvpLineup)))),
-      ye = [4800, 4e3, 3200],
-      pe = [1, 0, 2],
-      Qe = {
+    const SB = (0, rH.lazy)((() => (0, LB.d)(Promise.all([LH.e(261), LH.e(222)]).then((() => LH(45236))), (HH => HH.FrontlineMvpLineup)))),
+      hB = [4800, 4e3, 3200],
+      tB = [1, 0, 2],
+      zB = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      ne = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      CB = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function we(VV) {
+    function EB(HH) {
       let {
-        controller: eV
-      } = VV;
-      const xV = (0, gV.j)(Je, eV.getView()),
-        JV = (0, DV.i)(xV.endsAt);
-      return "roundEnd" !== xV.wire[0] || 1e3 * JV < -2e3 ? null : (0, oV.jsx)(Ze, {
-        wire: xV.wire,
-        secondsLeft: Math.max(0, Math.ceil(JV))
-      }, xV.key)
+        controller: BH
+      } = HH;
+      const LH = (0, KH.e)(AB, BH.getView()),
+        AH = (0, cH.g)(LH.endsAt);
+      return "roundEnd" !== LH.wire[0] || 1e3 * AH < -2e3 ? null : (0, NH.jsx)(XB, {
+        wire: LH.wire,
+        secondsLeft: Math.max(0, Math.ceil(AH))
+      }, LH.key)
     }
-    const Ze = (0, YV.memo)((function(VV) {
+    const XB = (0, rH.memo)((function(HH) {
       let {
-        wire: eV,
-        secondsLeft: xV
-      } = VV;
+        wire: BH,
+        secondsLeft: LH
+      } = HH;
       const {
-        t: UV
-      } = (0, RV.A)(), [, yV, pV, QV, nV, , wV, ZV] = eV, vV = (0, YV.useMemo)((() => pe.filter((VV => VV < ZV.length))), [ZV]), rV = (0, YV.useMemo)((() => vV.map((VV => {
-        const [, , , , , eV, xV] = ZV[VV];
+        t: SH
+      } = (0, lH.B)(), [, hH, tH, zH, CH, , EH, XH] = BH, GH = (0, rH.useMemo)((() => tB.filter((HH => HH < XH.length))), [XH]), YH = (0, rH.useMemo)((() => GH.map((HH => {
+        const [, , , , , BH, LH] = XH[HH];
         return {
-          cosmetics: JV.map(((VV, xV) => [VV, eV[xV]])),
-          size: 0 === VV ? 1.15 : .85,
+          cosmetics: AH.map(((HH, LH) => [HH, BH[LH]])),
+          size: 0 === HH ? 1.15 : .85,
           heldGun: {
-            name: xV,
-            aimed: 0 === VV
+            name: LH,
+            aimed: 0 === HH
           },
-          showAfterMs: ye[VV]
+          showAfterMs: hB[HH]
         }
-      }))), [ZV, vV]);
-      return (0, oV.jsxs)("div", {
-        className: zV()("FrontlineRoundEnd", `Result-${yV}`),
+      }))), [XH, GH]);
+      return (0, NH.jsxs)("div", {
+        className: oH()("FrontlineRoundEnd", `Result-${hH}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, oV.jsx)("div", {
+        children: [(0, NH.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, oV.jsxs)("div", {
+        }), (0, NH.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, oV.jsxs)("div", {
+          children: [(0, NH.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, oV.jsx)("i", {
+            children: [(0, NH.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, oV.jsx)("i", {
+            }), (0, NH.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (kV = UV(Qe[yV]), /\p{Script=Arabic}/u.test(kV) ? [kV] : (0, ee.e)(kV)).map(((VV, eV) => (0, oV.jsx)("span", {
+            }), (uH = SH(zB[hH]), /\p{Script=Arabic}/u.test(uH) ? [uH] : (0, BB.d)(uH)).map(((HH, BH) => (0, NH.jsx)("span", {
               style: {
-                "--letter": eV
+                "--letter": BH
               },
-              children: VV
-            }, eV)))]
-          }), (0, oV.jsxs)("div", {
+              children: HH
+            }, BH)))]
+          }), (0, NH.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [pV && "victory" === yV && (0, oV.jsx)("span", {
+            children: [tH && "victory" === hH && (0, NH.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: UV("frontlineRoundEnd:comeback")
-            }), (0, oV.jsxs)("span", {
+              children: SH("frontlineRoundEnd:comeback")
+            }), (0, NH.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, oV.jsx)("b", {
+              children: [(0, NH.jsx)("b", {
                 className: "Friendly",
-                children: QV
-              }), " \u2013 ", (0, oV.jsx)("b", {
+                children: zH
+              }), " \u2013 ", (0, NH.jsx)("b", {
                 className: "Enemy",
-                children: nV
+                children: CH
               })]
             })]
           })]
-        }), vV.length > 0 && (0, oV.jsxs)("div", {
+        }), GH.length > 0 && (0, NH.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": vV.length
+            "--columns": GH.length
           },
-          children: [(0, oV.jsx)(YV.Suspense, {
+          children: [(0, NH.jsx)(rH.Suspense, {
             fallback: null,
-            children: (0, oV.jsx)(Ue, {
+            children: (0, NH.jsx)(SB, {
               className: "FrontlineRoundEndLineup",
-              players: rV
+              players: YH
             })
-          }), vV.map((VV => (0, oV.jsx)(ve, {
-            mvp: ZV[VV],
-            place: VV
-          }, VV)))]
-        }), (0, oV.jsx)("div", {
+          }), GH.map((HH => (0, NH.jsx)(GB, {
+            mvp: XH[HH],
+            place: HH
+          }, HH)))]
+        }), (0, NH.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: UV("frontlineRoundEnd:nextFront", {
-            map: wV,
-            seconds: String(xV)
+          children: SH("frontlineRoundEnd:nextFront", {
+            map: EH,
+            seconds: String(LH)
           })
         })]
       });
-      var kV
+      var uH
     }));
 
-    function ve(VV) {
+    function GB(HH) {
       let {
-        mvp: eV,
-        place: xV
-      } = VV;
+        mvp: BH,
+        place: LH
+      } = HH;
       const {
-        t: JV
-      } = (0, RV.A)(), [YV, UV, yV, pV, QV] = eV, [nV, wV] = JV(function(VV, eV) {
-        return 1 === eV && "damage" !== VV ? `frontlineRoundEnd:${VV}One` : `frontlineRoundEnd:${VV}`
-      }(yV, pV), {
+        t: AH
+      } = (0, lH.B)(), [rH, SH, hH, tH, zH] = BH, [CH, EH] = AH(function(HH, BH) {
+        return 1 === BH && "damage" !== HH ? `frontlineRoundEnd:${HH}One` : `frontlineRoundEnd:${HH}`
+      }(hH, tH), {
         name: "\0",
-        count: pV.toLocaleString()
+        count: tH.toLocaleString()
       }).split("\0");
-      return (0, oV.jsxs)("div", {
-        className: zV()("FrontlineMvpCard", `Place-${xV+1}`, `Team-${UV}`),
+      return (0, NH.jsxs)("div", {
+        className: oH()("FrontlineMvpCard", `Place-${LH+1}`, `Team-${SH}`),
         style: {
-          "--revealMs": `${ye[xV]}ms`
+          "--revealMs": `${hB[LH]}ms`
         },
-        children: [(0, oV.jsx)("i", {
+        children: [(0, NH.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, oV.jsx)("i", {
+        }), (0, NH.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, oV.jsx)("div", {
+        }), (0, NH.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: JV(ne[xV])
-        }), (0, oV.jsxs)("div", {
+          children: AH(CB[LH])
+        }), (0, NH.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [nV, (0, oV.jsx)("span", {
+          children: [CH, (0, NH.jsx)("span", {
             className: "FrontlineMvpName",
-            children: YV
-          }), wV]
-        }), (0, oV.jsx)("div", {
+            children: rH
+          }), EH]
+        }), (0, NH.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: QV
+          children: zH
         })]
       })
     }
-    const re = function(VV, eV, xV, JV) {
+    const YB = function(HH, BH, LH, AH) {
       let {
-        localPlayerId: yV
-      } = JV;
-      const pV = new aV,
-        QV = new Ye;
-      let nV = null,
-        wV = null,
-        ZV = null,
-        vV = null,
-        rV = null,
-        kV = [!1, !1];
-      const bV = () => {
-        var VV, eV;
-        const [xV, JV] = kV;
-        null === (VV = wV) || void 0 === VV || VV.pW(!xV), null === (eV = ZV) || void 0 === eV || eV.pW(!JV)
+        localPlayerId: hH
+      } = AH;
+      const tH = new gH,
+        zH = new rB;
+      let CH = null,
+        EH = null,
+        XH = null,
+        GH = null,
+        YH = null,
+        uH = [!1, !1];
+      const QH = () => {
+        var HH, BH;
+        const [LH, AH] = uH;
+        null === (HH = EH) || void 0 === HH || HH.vI(!LH), null === (BH = XH) || void 0 === BH || BH.vI(!AH)
       };
       return {
-        onCreate: VV => {
-          nV = VV, wV = new qV(VV, yV), ZV = new PV(VV, yV), vV = new Ve(pV), bV(), rV = (0, UV.z)((0, YV.createElement)(YV.Fragment, null, (0, YV.createElement)(mV, {
-            hud: pV,
-            crosshair: wV,
-            damage: ZV,
-            markers: vV
-          }), (0, YV.createElement)(we, {
-            controller: QV
+        onCreate: HH => {
+          CH = HH, EH = new vH(HH, hH), XH = new VH(HH, hH), GH = new HB(tH), QH(), YH = (0, SH.v)((0, rH.createElement)(rH.Fragment, null, (0, rH.createElement)(wH, {
+            hud: tH,
+            crosshair: EH,
+            damage: XH,
+            markers: GH
+          }), (0, rH.createElement)(EB, {
+            controller: zH
           })))
         },
         onClose: () => {
-          var VV, eV, xV, JV;
-          null === (VV = rV) || void 0 === VV || VV(), null === (eV = wV) || void 0 === eV || eV.dispose(), wV = null, null === (xV = ZV) || void 0 === xV || xV.dispose(), ZV = null, null === (JV = vV) || void 0 === JV || JV.points.dispose(), vV = null, nV = null
+          var HH, BH, LH, AH;
+          null === (HH = YH) || void 0 === HH || HH(), null === (BH = EH) || void 0 === BH || BH.dispose(), EH = null, null === (LH = XH) || void 0 === LH || LH.dispose(), XH = null, null === (AH = GH) || void 0 === AH || AH.points.dispose(), GH = null, CH = null
         },
-        onAfterRender: (VV, eV) => {
-          var xV, JV, YV, UV, pV;
-          null === (xV = wV) || void 0 === xV || xV.frame(VV, eV.tanHalfFovY), null === (JV = ZV) || void 0 === JV || JV.frame(eV.cameraHeading), null === (YV = vV) || void 0 === YV || YV.frame(eV, null !== (UV = null === (pV = nV) || void 0 === pV ? void 0 : pV.getPositionView(yV)) && void 0 !== UV ? UV : null)
+        onAfterRender: (HH, BH) => {
+          var LH, AH, rH, SH, tH;
+          null === (LH = EH) || void 0 === LH || LH.frame(HH, BH.tanHalfFovY), null === (AH = XH) || void 0 === AH || AH.frame(BH.cameraHeading), null === (rH = GH) || void 0 === rH || rH.frame(BH, null !== (SH = null === (tH = CH) || void 0 === tH ? void 0 : tH.getPositionView(hH)) && void 0 !== SH ? SH : null)
         },
-        onReceivedMessageFromServer: (VV, eV) => {
-          "frontlineHud" === VV ? pV.RZ(eV) : "frontlineScoreboard" === VV ? pV.receiveScoreboard(eV) : "frontlineRoundEnd" === VV ? QV.RZ(eV) : "frontlinePrefs" === VV && (kV = eV, bV())
+        onReceivedMessageFromServer: (HH, BH) => {
+          "frontlineHud" === HH ? tH.kX(BH) : "frontlineScoreboard" === HH ? tH.receiveScoreboard(BH) : "frontlineRoundEnd" === HH ? zH.kX(BH) : "frontlinePrefs" === HH && (uH = BH, QH())
         }
       }
     }
   },
-  6996: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => YV
+  6981: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => rH
     });
-    const JV = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    const AH = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function YV(VV) {
-      return null === JV ? Array.from(VV) : Array.from(JV.segment(VV), (VV => {
+    function rH(HH) {
+      return null === AH ? Array.from(HH) : Array.from(AH.segment(HH), (HH => {
         let {
-          segment: eV
-        } = VV;
-        return eV
+          segment: BH
+        } = HH;
+        return BH
       }))
     }
   },
-  39648: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => yV,
-      f: () => UV
+  39370: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH,
+      e: () => SH
     });
-    const JV = new WeakMap;
+    const AH = new WeakMap;
 
-    function YV(VV) {
-      let eV = JV.get(VV);
-      return eV || (eV = {
-        hidden: VV.hidden,
+    function rH(HH) {
+      let BH = AH.get(HH);
+      return BH || (BH = {
+        hidden: HH.hidden,
         x: NaN,
         y: NaN
-      }, JV.set(VV, eV)), eV
+      }, AH.set(HH, BH)), BH
     }
 
-    function UV(VV, eV) {
-      const xV = YV(VV);
-      xV.hidden !== eV && (xV.hidden = eV, VV.hidden = eV)
+    function SH(HH, BH) {
+      const LH = rH(HH);
+      LH.hidden !== BH && (LH.hidden = BH, HH.hidden = BH)
     }
 
-    function yV(VV, eV, xV) {
-      const JV = YV(VV);
-      JV.x === eV && JV.y === xV || (JV.x = eV, JV.y = xV, VV.style.translate = `${eV}vw ${xV}vh`)
+    function hH(HH, BH, LH) {
+      const AH = rH(HH);
+      AH.x === BH && AH.y === LH || (AH.x = BH, AH.y = LH, HH.style.translate = `${BH}vw ${LH}vh`)
     }
   },
-  38245: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => JV
+  37941: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => AH
     });
-    const JV = {
+    const AH = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1710,4 +1733,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

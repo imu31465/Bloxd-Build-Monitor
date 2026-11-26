@@ -1,181 +1,181 @@
 export const id = 604;
 export const ids = [604];
 export const modules = {
-  44232: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => je,
-      h: () => RV,
-      ChangeSet: () => gV,
-      k: () => Ge,
-      n: () => lV,
-      q: () => De,
-      r: () => mV,
-      t: () => WV,
-      u: () => Ye,
-      x: () => le,
-      w: () => Le,
-      A: () => Ce,
-      C: () => Fe,
-      E: () => dV,
-      H: () => bV,
-      J: () => Te,
-      N: () => XV,
-      R: () => zV,
-      T: () => ie,
-      W: () => Vx,
-      Z: () => NV,
-      $: () => ex,
-      db: () => MV
+  44818: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => xB,
+      d: () => lH,
+      ChangeSet: () => KH,
+      h: () => IB,
+      i: () => nH,
+      k: () => cB,
+      l: () => wH,
+      n: () => fH,
+      p: () => rB,
+      x: () => nB,
+      t: () => FB,
+      A: () => qB,
+      B: () => TB,
+      E: () => pH,
+      F: () => QH,
+      J: () => UB,
+      N: () => kH,
+      Q: () => oH,
+      U: () => eB,
+      Y: () => HL,
+      $: () => bH,
+      db: () => BL,
+      hb: () => mH
     });
-    let JV = [],
-      YV = [];
+    let AH = [],
+      rH = [];
 
-    function UV(VV) {
-      if (VV < 768) return !1;
-      for (let eV = 0, xV = JV.length;;) {
-        let UV = eV + xV >> 1;
-        if (VV < JV[UV]) xV = UV;
+    function SH(HH) {
+      if (HH < 768) return !1;
+      for (let BH = 0, LH = AH.length;;) {
+        let SH = BH + LH >> 1;
+        if (HH < AH[SH]) LH = SH;
         else {
-          if (!(VV >= YV[UV])) return !0;
-          eV = UV + 1
+          if (!(HH >= rH[SH])) return !0;
+          BH = SH + 1
         }
-        if (eV == xV) return !1
+        if (BH == LH) return !1
       }
     }
 
-    function yV(VV) {
-      return VV >= 127462 && VV <= 127487
+    function hH(HH) {
+      return HH >= 127462 && HH <= 127487
     }(() => {
-      let VV = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((VV => VV ? parseInt(VV, 36) : 1));
-      for (let eV = 0, xV = 0; eV < VV.length; eV++)(eV % 2 ? YV : JV).push(xV += VV[eV])
+      let HH = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((HH => HH ? parseInt(HH, 36) : 1));
+      for (let BH = 0, LH = 0; BH < HH.length; BH++)(BH % 2 ? rH : AH).push(LH += HH[BH])
     })();
-    const pV = 8205;
+    const tH = 8205;
 
-    function QV(VV, eV) {
-      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? nV : wV)(VV, eV, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function zH(HH, BH) {
+      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? CH : EH)(HH, BH, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function nV(VV, eV, xV) {
-      if (eV == VV.length) return eV;
-      eV && vV(VV.charCodeAt(eV)) && rV(VV.charCodeAt(eV - 1)) && eV--;
-      let JV = ZV(VV, eV);
-      for (eV += kV(JV); eV < VV.length;) {
-        let YV = ZV(VV, eV);
-        if (JV == pV || YV == pV || xV && UV(YV)) eV += kV(YV), JV = YV;
+    function CH(HH, BH, LH) {
+      if (BH == HH.length) return BH;
+      BH && GH(HH.charCodeAt(BH)) && YH(HH.charCodeAt(BH - 1)) && BH--;
+      let AH = XH(HH, BH);
+      for (BH += uH(AH); BH < HH.length;) {
+        let rH = XH(HH, BH);
+        if (AH == tH || rH == tH || LH && SH(rH)) BH += uH(rH), AH = rH;
         else {
-          if (!yV(YV)) break;
+          if (!hH(rH)) break;
           {
-            let xV = 0,
-              JV = eV - 2;
-            for (; JV >= 0 && yV(ZV(VV, JV));) xV++, JV -= 2;
-            if (xV % 2 == 0) break;
-            eV += 2
+            let LH = 0,
+              AH = BH - 2;
+            for (; AH >= 0 && hH(XH(HH, AH));) LH++, AH -= 2;
+            if (LH % 2 == 0) break;
+            BH += 2
           }
         }
       }
-      return eV
+      return BH
     }
 
-    function wV(VV, eV, xV) {
-      for (; eV > 0;) {
-        let JV = nV(VV, eV - 2, xV);
-        if (JV < eV) return JV;
-        eV--
+    function EH(HH, BH, LH) {
+      for (; BH > 0;) {
+        let AH = CH(HH, BH - 2, LH);
+        if (AH < BH) return AH;
+        BH--
       }
       return 0
     }
 
-    function ZV(VV, eV) {
-      let xV = VV.charCodeAt(eV);
-      if (!rV(xV) || eV + 1 == VV.length) return xV;
-      let JV = VV.charCodeAt(eV + 1);
-      return vV(JV) ? JV - 56320 + (xV - 55296 << 10) + 65536 : xV
+    function XH(HH, BH) {
+      let LH = HH.charCodeAt(BH);
+      if (!YH(LH) || BH + 1 == HH.length) return LH;
+      let AH = HH.charCodeAt(BH + 1);
+      return GH(AH) ? AH - 56320 + (LH - 55296 << 10) + 65536 : LH
     }
 
-    function vV(VV) {
-      return VV >= 56320 && VV < 57344
+    function GH(HH) {
+      return HH >= 56320 && HH < 57344
     }
 
-    function rV(VV) {
-      return VV >= 55296 && VV < 56320
+    function YH(HH) {
+      return HH >= 55296 && HH < 56320
     }
 
-    function kV(VV) {
-      return VV < 65536 ? 1 : 2
+    function uH(HH) {
+      return HH < 65536 ? 1 : 2
     }
-    class bV {
-      lineAt(VV) {
-        if (VV < 0 || VV > this.length) throw new RangeError(`Invalid position ${VV} in document of length ${this.length}`);
-        return this.lineInner(VV, !1, 1, 0)
+    class QH {
+      lineAt(HH) {
+        if (HH < 0 || HH > this.length) throw new RangeError(`Invalid position ${HH} in document of length ${this.length}`);
+        return this.lineInner(HH, !1, 1, 0)
       }
-      line(VV) {
-        if (VV < 1 || VV > this.lines) throw new RangeError(`Invalid line number ${VV} in ${this.lines}-line document`);
-        return this.lineInner(VV, !0, 1, 0)
+      line(HH) {
+        if (HH < 1 || HH > this.lines) throw new RangeError(`Invalid line number ${HH} in ${this.lines}-line document`);
+        return this.lineInner(HH, !0, 1, 0)
       }
-      replace(VV, eV, xV) {
-        [VV, eV] = AV(this, VV, eV);
-        let JV = [];
-        return this.decompose(0, VV, JV, 2), xV.length && xV.decompose(0, xV.length, JV, 3), this.decompose(eV, this.length, JV, 1), BV.from(JV, this.length - (eV - VV) + xV.length)
+      replace(HH, BH, LH) {
+        [HH, BH] = OH(this, HH, BH);
+        let AH = [];
+        return this.decompose(0, HH, AH, 2), LH.length && LH.decompose(0, LH.length, AH, 3), this.decompose(BH, this.length, AH, 1), MH.from(AH, this.length - (BH - HH) + LH.length)
       }
-      append(VV) {
-        return this.replace(this.length, this.length, VV)
+      append(HH) {
+        return this.replace(this.length, this.length, HH)
       }
-      slice(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        [VV, eV] = AV(this, VV, eV);
-        let xV = [];
-        return this.decompose(VV, eV, xV, 0), BV.from(xV, eV - VV)
+      slice(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        [HH, BH] = OH(this, HH, BH);
+        let LH = [];
+        return this.decompose(HH, BH, LH, 0), MH.from(LH, BH - HH)
       }
-      eq(VV) {
-        if (VV == this) return !0;
-        if (VV.length != this.length || VV.lines != this.lines) return !1;
-        let eV = this.scanIdentical(VV, 1),
-          xV = this.length - this.scanIdentical(VV, -1),
-          JV = new tV(this),
-          YV = new tV(VV);
-        for (let UV = eV, yV = eV;;) {
-          if (JV.next(UV), YV.next(UV), UV = 0, JV.lineBreak != YV.lineBreak || JV.done != YV.done || JV.value != YV.value) return !1;
-          if (yV += JV.value.length, JV.done || yV >= xV) return !0
+      eq(HH) {
+        if (HH == this) return !0;
+        if (HH.length != this.length || HH.lines != this.lines) return !1;
+        let BH = this.scanIdentical(HH, 1),
+          LH = this.length - this.scanIdentical(HH, -1),
+          AH = new PH(this),
+          rH = new PH(HH);
+        for (let SH = BH, hH = BH;;) {
+          if (AH.next(SH), rH.next(SH), SH = 0, AH.lineBreak != rH.lineBreak || AH.done != rH.done || AH.value != rH.value) return !1;
+          if (hH += AH.value.length, AH.done || hH >= LH) return !0
         }
       }
       iter() {
-        return new tV(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
+        return new PH(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
       }
-      iterRange(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        return new FV(this, VV, eV)
+      iterRange(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        return new TH(this, HH, BH)
       }
-      iterLines(VV, eV) {
-        let xV;
-        if (null == VV) xV = this.iter();
+      iterLines(HH, BH) {
+        let LH;
+        if (null == HH) LH = this.iter();
         else {
-          null == eV && (eV = this.lines + 1);
-          let JV = this.line(VV).from;
-          xV = this.iterRange(JV, Math.max(JV, eV == this.lines + 1 ? this.length : eV <= 1 ? 0 : this.line(eV - 1).to))
+          null == BH && (BH = this.lines + 1);
+          let AH = this.line(HH).from;
+          LH = this.iterRange(AH, Math.max(AH, BH == this.lines + 1 ? this.length : BH <= 1 ? 0 : this.line(BH - 1).to))
         }
-        return new TV(xV)
+        return new UH(LH)
       }
       toString() {
         return this.sliceString(0)
       }
       toJSON() {
-        let VV = [];
-        return this.flatten(VV), VV
+        let HH = [];
+        return this.flatten(HH), HH
       }
       constructor() {}
-      static of (VV) {
-        if (0 == VV.length) throw new RangeError("A document must have at least one line");
-        return 1 != VV.length || VV[0] ? VV.length <= 32 ? new EV(VV) : BV.from(EV.split(VV, [])) : bV.empty
+      static of (HH) {
+        if (0 == HH.length) throw new RangeError("A document must have at least one line");
+        return 1 != HH.length || HH[0] ? HH.length <= 32 ? new WH(HH) : MH.from(WH.split(HH, [])) : QH.empty
       }
     }
-    class EV extends bV {
-      constructor(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(VV) {
-          let eV = -1;
-          for (let xV of VV) eV += xV.length + 1;
-          return eV
-        }(VV);
-        super(), this.text = VV, this.length = eV
+    class WH extends QH {
+      constructor(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(HH) {
+          let BH = -1;
+          for (let LH of HH) BH += LH.length + 1;
+          return BH
+        }(HH);
+        super(), this.text = HH, this.length = BH
       }
       get lines() {
         return this.text.length
@@ -183,629 +183,629 @@ export const modules = {
       get children() {
         return null
       }
-      lineInner(VV, eV, xV, JV) {
-        for (let YV = 0;; YV++) {
-          let UV = this.text[YV],
-            yV = JV + UV.length;
-          if ((eV ? xV : yV) >= VV) return new PV(JV, yV, xV, UV);
-          JV = yV + 1, xV++
+      lineInner(HH, BH, LH, AH) {
+        for (let rH = 0;; rH++) {
+          let SH = this.text[rH],
+            hH = AH + SH.length;
+          if ((BH ? LH : hH) >= HH) return new VH(AH, hH, LH, SH);
+          AH = hH + 1, LH++
         }
       }
-      decompose(VV, eV, xV, JV) {
-        let YV = VV <= 0 && eV >= this.length ? this : new EV(qV(this.text, VV, eV), Math.min(eV, this.length) - Math.max(0, VV));
-        if (1 & JV) {
-          let VV = xV.pop(),
-            eV = jV(YV.text, VV.text.slice(), 0, YV.length);
-          if (eV.length <= 32) xV.push(new EV(eV, VV.length + YV.length));
+      decompose(HH, BH, LH, AH) {
+        let rH = HH <= 0 && BH >= this.length ? this : new WH(vH(this.text, HH, BH), Math.min(BH, this.length) - Math.max(0, HH));
+        if (1 & AH) {
+          let HH = LH.pop(),
+            BH = xH(rH.text, HH.text.slice(), 0, rH.length);
+          if (BH.length <= 32) LH.push(new WH(BH, HH.length + rH.length));
           else {
-            let VV = eV.length >> 1;
-            xV.push(new EV(eV.slice(0, VV)), new EV(eV.slice(VV)))
+            let HH = BH.length >> 1;
+            LH.push(new WH(BH.slice(0, HH)), new WH(BH.slice(HH)))
           }
-        } else xV.push(YV)
+        } else LH.push(rH)
       }
-      replace(VV, eV, xV) {
-        if (!(xV instanceof EV)) return super.replace(VV, eV, xV);
-        [VV, eV] = AV(this, VV, eV);
-        let JV = jV(this.text, jV(xV.text, qV(this.text, 0, VV)), eV),
-          YV = this.length + xV.length - (eV - VV);
-        return JV.length <= 32 ? new EV(JV, YV) : BV.from(EV.split(JV, []), YV)
+      replace(HH, BH, LH) {
+        if (!(LH instanceof WH)) return super.replace(HH, BH, LH);
+        [HH, BH] = OH(this, HH, BH);
+        let AH = xH(this.text, xH(LH.text, vH(this.text, 0, HH)), BH),
+          rH = this.length + LH.length - (BH - HH);
+        return AH.length <= 32 ? new WH(AH, rH) : MH.from(WH.split(AH, []), rH)
       }
-      sliceString(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [VV, eV] = AV(this, VV, eV);
-        let JV = "";
-        for (let YV = 0, UV = 0; YV <= eV && UV < this.text.length; UV++) {
-          let yV = this.text[UV],
-            pV = YV + yV.length;
-          YV > VV && UV && (JV += xV), VV < pV && eV > YV && (JV += yV.slice(Math.max(0, VV - YV), eV - YV)), YV = pV + 1
+      sliceString(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [HH, BH] = OH(this, HH, BH);
+        let AH = "";
+        for (let rH = 0, SH = 0; rH <= BH && SH < this.text.length; SH++) {
+          let hH = this.text[SH],
+            tH = rH + hH.length;
+          rH > HH && SH && (AH += LH), HH < tH && BH > rH && (AH += hH.slice(Math.max(0, HH - rH), BH - rH)), rH = tH + 1
         }
-        return JV
+        return AH
       }
-      flatten(VV) {
-        for (let eV of this.text) VV.push(eV)
+      flatten(HH) {
+        for (let BH of this.text) HH.push(BH)
       }
       scanIdentical() {
         return 0
       }
-      static split(VV, eV) {
-        let xV = [],
-          JV = -1;
-        for (let YV of VV) xV.push(YV), JV += YV.length + 1, 32 == xV.length && (eV.push(new EV(xV, JV)), xV = [], JV = -1);
-        return JV > -1 && eV.push(new EV(xV, JV)), eV
+      static split(HH, BH) {
+        let LH = [],
+          AH = -1;
+        for (let rH of HH) LH.push(rH), AH += rH.length + 1, 32 == LH.length && (BH.push(new WH(LH, AH)), LH = [], AH = -1);
+        return AH > -1 && BH.push(new WH(LH, AH)), BH
       }
     }
-    class BV extends bV {
-      constructor(VV, eV) {
-        super(), this.children = VV, this.length = eV, this.lines = 0;
-        for (let xV of VV) this.lines += xV.lines
+    class MH extends QH {
+      constructor(HH, BH) {
+        super(), this.children = HH, this.length = BH, this.lines = 0;
+        for (let LH of HH) this.lines += LH.lines
       }
-      lineInner(VV, eV, xV, JV) {
-        for (let YV = 0;; YV++) {
-          let UV = this.children[YV],
-            yV = JV + UV.length,
-            pV = xV + UV.lines - 1;
-          if ((eV ? pV : yV) >= VV) return UV.lineInner(VV, eV, xV, JV);
-          JV = yV + 1, xV = pV + 1
+      lineInner(HH, BH, LH, AH) {
+        for (let rH = 0;; rH++) {
+          let SH = this.children[rH],
+            hH = AH + SH.length,
+            tH = LH + SH.lines - 1;
+          if ((BH ? tH : hH) >= HH) return SH.lineInner(HH, BH, LH, AH);
+          AH = hH + 1, LH = tH + 1
         }
       }
-      decompose(VV, eV, xV, JV) {
-        for (let YV = 0, UV = 0; UV <= eV && YV < this.children.length; YV++) {
-          let yV = this.children[YV],
-            pV = UV + yV.length;
-          if (VV <= pV && eV >= UV) {
-            let YV = JV & ((UV <= VV ? 1 : 0) | (pV >= eV ? 2 : 0));
-            UV >= VV && pV <= eV && !YV ? xV.push(yV) : yV.decompose(VV - UV, eV - UV, xV, YV)
+      decompose(HH, BH, LH, AH) {
+        for (let rH = 0, SH = 0; SH <= BH && rH < this.children.length; rH++) {
+          let hH = this.children[rH],
+            tH = SH + hH.length;
+          if (HH <= tH && BH >= SH) {
+            let rH = AH & ((SH <= HH ? 1 : 0) | (tH >= BH ? 2 : 0));
+            SH >= HH && tH <= BH && !rH ? LH.push(hH) : hH.decompose(HH - SH, BH - SH, LH, rH)
           }
-          UV = pV + 1
+          SH = tH + 1
         }
       }
-      replace(VV, eV, xV) {
-        if ([VV, eV] = AV(this, VV, eV), xV.lines < this.lines)
-          for (let JV = 0, YV = 0; JV < this.children.length; JV++) {
-            let UV = this.children[JV],
-              yV = YV + UV.length;
-            if (VV >= YV && eV <= yV) {
-              let pV = UV.replace(VV - YV, eV - YV, xV),
-                QV = this.lines - UV.lines + pV.lines;
-              if (pV.lines < QV >> 4 && pV.lines > QV >> 6) {
-                let YV = this.children.slice();
-                return YV[JV] = pV, new BV(YV, this.length - (eV - VV) + xV.length)
+      replace(HH, BH, LH) {
+        if ([HH, BH] = OH(this, HH, BH), LH.lines < this.lines)
+          for (let AH = 0, rH = 0; AH < this.children.length; AH++) {
+            let SH = this.children[AH],
+              hH = rH + SH.length;
+            if (HH >= rH && BH <= hH) {
+              let tH = SH.replace(HH - rH, BH - rH, LH),
+                zH = this.lines - SH.lines + tH.lines;
+              if (tH.lines < zH >> 4 && tH.lines > zH >> 6) {
+                let rH = this.children.slice();
+                return rH[AH] = tH, new MH(rH, this.length - (BH - HH) + LH.length)
               }
-              return super.replace(YV, yV, pV)
+              return super.replace(rH, hH, tH)
             }
-            YV = yV + 1
+            rH = hH + 1
           }
-        return super.replace(VV, eV, xV)
+        return super.replace(HH, BH, LH)
       }
-      sliceString(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [VV, eV] = AV(this, VV, eV);
-        let JV = "";
-        for (let YV = 0, UV = 0; YV < this.children.length && UV <= eV; YV++) {
-          let yV = this.children[YV],
-            pV = UV + yV.length;
-          UV > VV && YV && (JV += xV), VV < pV && eV > UV && (JV += yV.sliceString(VV - UV, eV - UV, xV)), UV = pV + 1
+      sliceString(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [HH, BH] = OH(this, HH, BH);
+        let AH = "";
+        for (let rH = 0, SH = 0; rH < this.children.length && SH <= BH; rH++) {
+          let hH = this.children[rH],
+            tH = SH + hH.length;
+          SH > HH && rH && (AH += LH), HH < tH && BH > SH && (AH += hH.sliceString(HH - SH, BH - SH, LH)), SH = tH + 1
         }
-        return JV
+        return AH
       }
-      flatten(VV) {
-        for (let eV of this.children) eV.flatten(VV)
+      flatten(HH) {
+        for (let BH of this.children) BH.flatten(HH)
       }
-      scanIdentical(VV, eV) {
-        if (!(VV instanceof BV)) return 0;
-        let xV = 0,
-          [JV, YV, UV, yV] = eV > 0 ? [0, 0, this.children.length, VV.children.length] : [this.children.length - 1, VV.children.length - 1, -1, -1];
-        for (;; JV += eV, YV += eV) {
-          if (JV == UV || YV == yV) return xV;
-          let pV = this.children[JV],
-            QV = VV.children[YV];
-          if (pV != QV) return xV + pV.scanIdentical(QV, eV);
-          xV += pV.length + 1
+      scanIdentical(HH, BH) {
+        if (!(HH instanceof MH)) return 0;
+        let LH = 0,
+          [AH, rH, SH, hH] = BH > 0 ? [0, 0, this.children.length, HH.children.length] : [this.children.length - 1, HH.children.length - 1, -1, -1];
+        for (;; AH += BH, rH += BH) {
+          if (AH == SH || rH == hH) return LH;
+          let tH = this.children[AH],
+            zH = HH.children[rH];
+          if (tH != zH) return LH + tH.scanIdentical(zH, BH);
+          LH += tH.length + 1
         }
       }
-      static from(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VV.reduce(((VV, eV) => VV + eV.length + 1), -1),
-          xV = 0;
-        for (let vV of VV) xV += vV.lines;
-        if (xV < 32) {
-          let xV = [];
-          for (let eV of VV) eV.flatten(xV);
-          return new EV(xV, eV)
+      static from(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : HH.reduce(((HH, BH) => HH + BH.length + 1), -1),
+          LH = 0;
+        for (let GH of HH) LH += GH.lines;
+        if (LH < 32) {
+          let LH = [];
+          for (let BH of HH) BH.flatten(LH);
+          return new WH(LH, BH)
         }
-        let JV = Math.max(32, xV >> 5),
-          YV = JV << 1,
-          UV = JV >> 1,
-          yV = [],
-          pV = 0,
-          QV = -1,
-          nV = [];
+        let AH = Math.max(32, LH >> 5),
+          rH = AH << 1,
+          SH = AH >> 1,
+          hH = [],
+          tH = 0,
+          zH = -1,
+          CH = [];
 
-        function wV(VV) {
-          let eV;
-          if (VV.lines > YV && VV instanceof BV)
-            for (let xV of VV.children) wV(xV);
-          else VV.lines > UV && (pV > UV || !pV) ? (ZV(), yV.push(VV)) : VV instanceof EV && pV && (eV = nV[nV.length - 1]) instanceof EV && VV.lines + eV.lines <= 32 ? (pV += VV.lines, QV += VV.length + 1, nV[nV.length - 1] = new EV(eV.text.concat(VV.text), eV.length + 1 + VV.length)) : (pV + VV.lines > JV && ZV(), pV += VV.lines, QV += VV.length + 1, nV.push(VV))
+        function EH(HH) {
+          let BH;
+          if (HH.lines > rH && HH instanceof MH)
+            for (let LH of HH.children) EH(LH);
+          else HH.lines > SH && (tH > SH || !tH) ? (XH(), hH.push(HH)) : HH instanceof WH && tH && (BH = CH[CH.length - 1]) instanceof WH && HH.lines + BH.lines <= 32 ? (tH += HH.lines, zH += HH.length + 1, CH[CH.length - 1] = new WH(BH.text.concat(HH.text), BH.length + 1 + HH.length)) : (tH + HH.lines > AH && XH(), tH += HH.lines, zH += HH.length + 1, CH.push(HH))
         }
 
-        function ZV() {
-          0 != pV && (yV.push(1 == nV.length ? nV[0] : BV.from(nV, QV)), QV = -1, pV = nV.length = 0)
+        function XH() {
+          0 != tH && (hH.push(1 == CH.length ? CH[0] : MH.from(CH, zH)), zH = -1, tH = CH.length = 0)
         }
-        for (let vV of VV) wV(vV);
-        return ZV(), 1 == yV.length ? yV[0] : new BV(yV, eV)
+        for (let GH of HH) EH(GH);
+        return XH(), 1 == hH.length ? hH[0] : new MH(hH, BH)
       }
     }
 
-    function jV(VV, eV) {
-      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
-      for (let YV = 0, UV = 0, yV = !0; UV < VV.length && YV <= JV; UV++) {
-        let pV = VV[UV],
-          QV = YV + pV.length;
-        QV >= xV && (QV > JV && (pV = pV.slice(0, JV - YV)), YV < xV && (pV = pV.slice(xV - YV)), yV ? (eV[eV.length - 1] += pV, yV = !1) : eV.push(pV)), YV = QV + 1
+    function xH(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
+      for (let rH = 0, SH = 0, hH = !0; SH < HH.length && rH <= AH; SH++) {
+        let tH = HH[SH],
+          zH = rH + tH.length;
+        zH >= LH && (zH > AH && (tH = tH.slice(0, AH - rH)), rH < LH && (tH = tH.slice(LH - rH)), hH ? (BH[BH.length - 1] += tH, hH = !1) : BH.push(tH)), rH = zH + 1
       }
-      return eV
+      return BH
     }
 
-    function qV(VV, eV, xV) {
-      return jV(VV, [""], eV, xV)
+    function vH(HH, BH, LH) {
+      return xH(HH, [""], BH, LH)
     }
-    bV.empty = new EV([""], 0);
-    class tV {
-      constructor(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.dir = eV, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [VV], this.offsets = [eV > 0 ? 1 : (VV instanceof EV ? VV.text.length : VV.children.length) << 1]
+    QH.empty = new WH([""], 0);
+    class PH {
+      constructor(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.dir = BH, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [HH], this.offsets = [BH > 0 ? 1 : (HH instanceof WH ? HH.text.length : HH.children.length) << 1]
       }
-      nextInner(VV, eV) {
+      nextInner(HH, BH) {
         for (this.done = this.lineBreak = !1;;) {
-          let xV = this.nodes.length - 1,
-            JV = this.nodes[xV],
-            YV = this.offsets[xV],
-            UV = YV >> 1,
-            yV = JV instanceof EV ? JV.text.length : JV.children.length;
-          if (UV == (eV > 0 ? yV : 0)) {
-            if (0 == xV) return this.done = !0, this.value = "", this;
-            eV > 0 && this.offsets[xV - 1]++, this.nodes.pop(), this.offsets.pop()
-          } else if ((1 & YV) == (eV > 0 ? 0 : 1)) {
-            if (this.offsets[xV] += eV, 0 == VV) return this.lineBreak = !0, this.value = "\n", this;
-            VV--
-          } else if (JV instanceof EV) {
-            let YV = JV.text[UV + (eV < 0 ? -1 : 0)];
-            if (this.offsets[xV] += eV, YV.length > Math.max(0, VV)) return this.value = 0 == VV ? YV : eV > 0 ? YV.slice(VV) : YV.slice(0, YV.length - VV), this;
-            VV -= YV.length
+          let LH = this.nodes.length - 1,
+            AH = this.nodes[LH],
+            rH = this.offsets[LH],
+            SH = rH >> 1,
+            hH = AH instanceof WH ? AH.text.length : AH.children.length;
+          if (SH == (BH > 0 ? hH : 0)) {
+            if (0 == LH) return this.done = !0, this.value = "", this;
+            BH > 0 && this.offsets[LH - 1]++, this.nodes.pop(), this.offsets.pop()
+          } else if ((1 & rH) == (BH > 0 ? 0 : 1)) {
+            if (this.offsets[LH] += BH, 0 == HH) return this.lineBreak = !0, this.value = "\n", this;
+            HH--
+          } else if (AH instanceof WH) {
+            let rH = AH.text[SH + (BH < 0 ? -1 : 0)];
+            if (this.offsets[LH] += BH, rH.length > Math.max(0, HH)) return this.value = 0 == HH ? rH : BH > 0 ? rH.slice(HH) : rH.slice(0, rH.length - HH), this;
+            HH -= rH.length
           } else {
-            let YV = JV.children[UV + (eV < 0 ? -1 : 0)];
-            VV > YV.length ? (VV -= YV.length, this.offsets[xV] += eV) : (eV < 0 && this.offsets[xV]--, this.nodes.push(YV), this.offsets.push(eV > 0 ? 1 : (YV instanceof EV ? YV.text.length : YV.children.length) << 1))
+            let rH = AH.children[SH + (BH < 0 ? -1 : 0)];
+            HH > rH.length ? (HH -= rH.length, this.offsets[LH] += BH) : (BH < 0 && this.offsets[LH]--, this.nodes.push(rH), this.offsets.push(BH > 0 ? 1 : (rH instanceof WH ? rH.text.length : rH.children.length) << 1))
           }
         }
       }
       next() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return VV < 0 && (this.nextInner(-VV, -this.dir), VV = this.value.length), this.nextInner(VV, this.dir)
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return HH < 0 && (this.nextInner(-HH, -this.dir), HH = this.value.length), this.nextInner(HH, this.dir)
       }
     }
-    class FV {
-      constructor(VV, eV, xV) {
-        this.value = "", this.done = !1, this.cursor = new tV(VV, eV > xV ? -1 : 1), this.pos = eV > xV ? VV.length : 0, this.from = Math.min(eV, xV), this.to = Math.max(eV, xV)
+    class TH {
+      constructor(HH, BH, LH) {
+        this.value = "", this.done = !1, this.cursor = new PH(HH, BH > LH ? -1 : 1), this.pos = BH > LH ? HH.length : 0, this.from = Math.min(BH, LH), this.to = Math.max(BH, LH)
       }
-      nextInner(VV, eV) {
-        if (eV < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
-        VV += Math.max(0, eV < 0 ? this.pos - this.to : this.from - this.pos);
-        let xV = eV < 0 ? this.pos - this.from : this.to - this.pos;
-        VV > xV && (VV = xV), xV -= VV;
+      nextInner(HH, BH) {
+        if (BH < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
+        HH += Math.max(0, BH < 0 ? this.pos - this.to : this.from - this.pos);
+        let LH = BH < 0 ? this.pos - this.from : this.to - this.pos;
+        HH > LH && (HH = LH), LH -= HH;
         let {
-          value: JV
-        } = this.cursor.next(VV);
-        return this.pos += (JV.length + VV) * eV, this.value = JV.length <= xV ? JV : eV < 0 ? JV.slice(JV.length - xV) : JV.slice(0, xV), this.done = !this.value, this
+          value: AH
+        } = this.cursor.next(HH);
+        return this.pos += (AH.length + HH) * BH, this.value = AH.length <= LH ? AH : BH < 0 ? AH.slice(AH.length - LH) : AH.slice(0, LH), this.done = !this.value, this
       }
       next() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return VV < 0 ? VV = Math.max(VV, this.from - this.pos) : VV > 0 && (VV = Math.min(VV, this.to - this.pos)), this.nextInner(VV, this.cursor.dir)
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return HH < 0 ? HH = Math.max(HH, this.from - this.pos) : HH > 0 && (HH = Math.min(HH, this.to - this.pos)), this.nextInner(HH, this.cursor.dir)
       }
       get lineBreak() {
         return this.cursor.lineBreak && "" != this.value
       }
     }
-    class TV {
-      constructor(VV) {
-        this.inner = VV, this.afterBreak = !0, this.value = "", this.done = !1
+    class UH {
+      constructor(HH) {
+        this.inner = HH, this.afterBreak = !0, this.value = "", this.done = !1
       }
       next() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
           {
-            done: eV,
-            lineBreak: xV,
-            value: JV
-          } = this.inner.next(VV);
-        return eV && this.afterBreak ? (this.value = "", this.afterBreak = !1) : eV ? (this.done = !0, this.value = "") : xV ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = JV, this.afterBreak = !1), this
+            done: BH,
+            lineBreak: LH,
+            value: AH
+          } = this.inner.next(HH);
+        return BH && this.afterBreak ? (this.value = "", this.afterBreak = !1) : BH ? (this.done = !0, this.value = "") : LH ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = AH, this.afterBreak = !1), this
       }
       get lineBreak() {
         return !1
       }
     }
-    "undefined" != typeof Symbol && (bV.prototype[Symbol.iterator] = function() {
+    "undefined" != typeof Symbol && (QH.prototype[Symbol.iterator] = function() {
       return this.iter()
-    }, tV.prototype[Symbol.iterator] = FV.prototype[Symbol.iterator] = TV.prototype[Symbol.iterator] = function() {
+    }, PH.prototype[Symbol.iterator] = TH.prototype[Symbol.iterator] = UH.prototype[Symbol.iterator] = function() {
       return this
     });
-    class PV {
-      constructor(VV, eV, xV, JV) {
-        this.from = VV, this.to = eV, this.number = xV, this.text = JV
+    class VH {
+      constructor(HH, BH, LH, AH) {
+        this.from = HH, this.to = BH, this.number = LH, this.text = AH
       }
       get length() {
         return this.to - this.from
       }
     }
 
-    function AV(VV, eV, xV) {
-      return [eV = Math.max(0, Math.min(VV.length, eV)), Math.max(eV, Math.min(VV.length, xV))]
+    function OH(HH, BH, LH) {
+      return [BH = Math.max(0, Math.min(HH.length, BH)), Math.max(BH, Math.min(HH.length, LH))]
     }
 
-    function NV(VV, eV) {
-      return QV(VV, eV, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function bH(HH, BH) {
+      return zH(HH, BH, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function XV(VV, eV) {
-      let xV = VV.charCodeAt(eV);
-      if (!((JV = xV) >= 55296 && JV < 56320) || eV + 1 == VV.length) return xV;
-      var JV;
-      let YV = VV.charCodeAt(eV + 1);
-      return function(VV) {
-        return VV >= 56320 && VV < 57344
-      }(YV) ? YV - 56320 + (xV - 55296 << 10) + 65536 : xV
+    function kH(HH, BH) {
+      let LH = HH.charCodeAt(BH);
+      if (!((AH = LH) >= 55296 && AH < 56320) || BH + 1 == HH.length) return LH;
+      var AH;
+      let rH = HH.charCodeAt(BH + 1);
+      return function(HH) {
+        return HH >= 56320 && HH < 57344
+      }(rH) ? rH - 56320 + (LH - 55296 << 10) + 65536 : LH
     }
 
-    function MV(VV) {
-      return VV <= 65535 ? String.fromCharCode(VV) : (VV -= 65536, String.fromCharCode(55296 + (VV >> 10), 56320 + (1023 & VV)))
+    function mH(HH) {
+      return HH <= 65535 ? String.fromCharCode(HH) : (HH -= 65536, String.fromCharCode(55296 + (HH >> 10), 56320 + (1023 & HH)))
     }
 
-    function zV(VV) {
-      return VV < 65536 ? 1 : 2
+    function oH(HH) {
+      return HH < 65536 ? 1 : 2
     }
-    const GV = /\r\n?|\n/;
-    var WV = function(VV) {
-      return VV[VV.Simple = 0] = "Simple", VV[VV.TrackDel = 1] = "TrackDel", VV[VV.TrackBefore = 2] = "TrackBefore", VV[VV.TrackAfter = 3] = "TrackAfter", VV
-    }(WV || (WV = {}));
-    class RV {
-      constructor(VV) {
-        this.sections = VV
+    const IH = /\r\n?|\n/;
+    var fH = function(HH) {
+      return HH[HH.Simple = 0] = "Simple", HH[HH.TrackDel = 1] = "TrackDel", HH[HH.TrackBefore = 2] = "TrackBefore", HH[HH.TrackAfter = 3] = "TrackAfter", HH
+    }(fH || (fH = {}));
+    class lH {
+      constructor(HH) {
+        this.sections = HH
       }
       get length() {
-        let VV = 0;
-        for (let eV = 0; eV < this.sections.length; eV += 2) VV += this.sections[eV];
-        return VV
+        let HH = 0;
+        for (let BH = 0; BH < this.sections.length; BH += 2) HH += this.sections[BH];
+        return HH
       }
       get newLength() {
-        let VV = 0;
-        for (let eV = 0; eV < this.sections.length; eV += 2) {
-          let xV = this.sections[eV + 1];
-          VV += xV < 0 ? this.sections[eV] : xV
+        let HH = 0;
+        for (let BH = 0; BH < this.sections.length; BH += 2) {
+          let LH = this.sections[BH + 1];
+          HH += LH < 0 ? this.sections[BH] : LH
         }
-        return VV
+        return HH
       }
       get empty() {
         return 0 == this.sections.length || 2 == this.sections.length && this.sections[1] < 0
       }
-      iterGaps(VV) {
-        for (let eV = 0, xV = 0, JV = 0; eV < this.sections.length;) {
-          let YV = this.sections[eV++],
-            UV = this.sections[eV++];
-          UV < 0 ? (VV(xV, JV, YV), JV += YV) : JV += UV, xV += YV
+      iterGaps(HH) {
+        for (let BH = 0, LH = 0, AH = 0; BH < this.sections.length;) {
+          let rH = this.sections[BH++],
+            SH = this.sections[BH++];
+          SH < 0 ? (HH(LH, AH, rH), AH += rH) : AH += SH, LH += rH
         }
       }
-      iterChangedRanges(VV) {
-        CV(this, VV, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChangedRanges(HH) {
+        qH(this, HH, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get invertedDesc() {
-        let VV = [];
-        for (let eV = 0; eV < this.sections.length;) {
-          let xV = this.sections[eV++],
-            JV = this.sections[eV++];
-          JV < 0 ? VV.push(xV, JV) : VV.push(JV, xV)
+        let HH = [];
+        for (let BH = 0; BH < this.sections.length;) {
+          let LH = this.sections[BH++],
+            AH = this.sections[BH++];
+          AH < 0 ? HH.push(LH, AH) : HH.push(AH, LH)
         }
-        return new RV(VV)
+        return new lH(HH)
       }
-      composeDesc(VV) {
-        return this.empty ? VV : VV.empty ? this : oV(this, VV)
+      composeDesc(HH) {
+        return this.empty ? HH : HH.empty ? this : NH(this, HH)
       }
-      mapDesc(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return VV.empty ? this : aV(this, VV, eV)
+      mapDesc(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return HH.empty ? this : gH(this, HH, BH)
       }
-      mapPos(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : WV.Simple,
-          JV = 0,
-          YV = 0;
-        for (let UV = 0; UV < this.sections.length;) {
-          let yV = this.sections[UV++],
-            pV = this.sections[UV++],
-            QV = JV + yV;
-          if (pV < 0) {
-            if (QV > VV) return YV + (VV - JV);
-            YV += yV
+      mapPos(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : fH.Simple,
+          AH = 0,
+          rH = 0;
+        for (let SH = 0; SH < this.sections.length;) {
+          let hH = this.sections[SH++],
+            tH = this.sections[SH++],
+            zH = AH + hH;
+          if (tH < 0) {
+            if (zH > HH) return rH + (HH - AH);
+            rH += hH
           } else {
-            if (xV != WV.Simple && QV >= VV && (xV == WV.TrackDel && JV < VV && QV > VV || xV == WV.TrackBefore && JV < VV || xV == WV.TrackAfter && QV > VV)) return null;
-            if (QV > VV || QV == VV && eV < 0 && !yV) return VV == JV || eV < 0 ? YV : YV + pV;
-            YV += pV
+            if (LH != fH.Simple && zH >= HH && (LH == fH.TrackDel && AH < HH && zH > HH || LH == fH.TrackBefore && AH < HH || LH == fH.TrackAfter && zH > HH)) return null;
+            if (zH > HH || zH == HH && BH < 0 && !hH) return HH == AH || BH < 0 ? rH : rH + tH;
+            rH += tH
           }
-          JV = QV
+          AH = zH
         }
-        if (VV > JV) throw new RangeError(`Position ${VV} is out of range for changeset of length ${JV}`);
-        return YV
+        if (HH > AH) throw new RangeError(`Position ${HH} is out of range for changeset of length ${AH}`);
+        return rH
       }
-      touchesRange(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VV;
-        for (let xV = 0, JV = 0; xV < this.sections.length && JV <= eV;) {
-          let YV = JV + this.sections[xV++];
-          if (this.sections[xV++] >= 0 && JV <= eV && YV >= VV) return !(JV < VV && YV > eV) || "cover";
-          JV = YV
+      touchesRange(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : HH;
+        for (let LH = 0, AH = 0; LH < this.sections.length && AH <= BH;) {
+          let rH = AH + this.sections[LH++];
+          if (this.sections[LH++] >= 0 && AH <= BH && rH >= HH) return !(AH < HH && rH > BH) || "cover";
+          AH = rH
         }
         return !1
       }
       toString() {
-        let VV = "";
-        for (let eV = 0; eV < this.sections.length;) {
-          let xV = this.sections[eV++],
-            JV = this.sections[eV++];
-          VV += (VV ? " " : "") + xV + (JV >= 0 ? ":" + JV : "")
+        let HH = "";
+        for (let BH = 0; BH < this.sections.length;) {
+          let LH = this.sections[BH++],
+            AH = this.sections[BH++];
+          HH += (HH ? " " : "") + LH + (AH >= 0 ? ":" + AH : "")
         }
-        return VV
+        return HH
       }
       toJSON() {
         return this.sections
       }
-      static fromJSON(VV) {
-        if (!Array.isArray(VV) || VV.length % 2 || VV.some((VV => "number" != typeof VV))) throw new RangeError("Invalid JSON representation of ChangeDesc");
-        return new RV(VV)
+      static fromJSON(HH) {
+        if (!Array.isArray(HH) || HH.length % 2 || HH.some((HH => "number" != typeof HH))) throw new RangeError("Invalid JSON representation of ChangeDesc");
+        return new lH(HH)
       }
-      static create(VV) {
-        return new RV(VV)
+      static create(HH) {
+        return new lH(HH)
       }
     }
-    class gV extends RV {
-      constructor(VV, eV) {
-        super(VV), this.inserted = eV
+    class KH extends lH {
+      constructor(HH, BH) {
+        super(HH), this.inserted = BH
       }
-      apply(VV) {
-        if (this.length != VV.length) throw new RangeError("Applying change set to a document with the wrong length");
-        return CV(this, ((eV, xV, JV, YV, UV) => VV = VV.replace(JV, JV + (xV - eV), UV)), !1), VV
+      apply(HH) {
+        if (this.length != HH.length) throw new RangeError("Applying change set to a document with the wrong length");
+        return qH(this, ((BH, LH, AH, rH, SH) => HH = HH.replace(AH, AH + (LH - BH), SH)), !1), HH
       }
-      mapDesc(VV) {
-        return aV(this, VV, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
+      mapDesc(HH) {
+        return gH(this, HH, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
       }
-      invert(VV) {
-        let eV = this.sections.slice(),
-          xV = [];
-        for (let JV = 0, YV = 0; JV < eV.length; JV += 2) {
-          let UV = eV[JV],
-            yV = eV[JV + 1];
-          if (yV >= 0) {
-            eV[JV] = yV, eV[JV + 1] = UV;
-            let pV = JV >> 1;
-            for (; xV.length < pV;) xV.push(bV.empty);
-            xV.push(UV ? VV.slice(YV, YV + UV) : bV.empty)
+      invert(HH) {
+        let BH = this.sections.slice(),
+          LH = [];
+        for (let AH = 0, rH = 0; AH < BH.length; AH += 2) {
+          let SH = BH[AH],
+            hH = BH[AH + 1];
+          if (hH >= 0) {
+            BH[AH] = hH, BH[AH + 1] = SH;
+            let tH = AH >> 1;
+            for (; LH.length < tH;) LH.push(QH.empty);
+            LH.push(SH ? HH.slice(rH, rH + SH) : QH.empty)
           }
-          YV += UV
+          rH += SH
         }
-        return new gV(eV, xV)
+        return new KH(BH, LH)
       }
-      compose(VV) {
-        return this.empty ? VV : VV.empty ? this : oV(this, VV, !0)
+      compose(HH) {
+        return this.empty ? HH : HH.empty ? this : NH(this, HH, !0)
       }
-      map(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return VV.empty ? this : aV(this, VV, eV, !0)
+      map(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return HH.empty ? this : gH(this, HH, BH, !0)
       }
-      iterChanges(VV) {
-        CV(this, VV, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChanges(HH) {
+        qH(this, HH, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get desc() {
-        return RV.create(this.sections)
+        return lH.create(this.sections)
       }
-      filter(VV) {
-        let eV = [],
-          xV = [],
-          JV = [],
-          YV = new cV(this);
-        VV: for (let UV = 0, yV = 0;;) {
-          let pV = UV == VV.length ? 1e9 : VV[UV++];
-          for (; yV < pV || yV == pV && 0 == YV.len;) {
-            if (YV.done) break VV;
-            let VV = Math.min(YV.len, pV - yV);
-            DV(JV, VV, -1);
-            let UV = -1 == YV.ins ? -1 : 0 == YV.off ? YV.ins : 0;
-            DV(eV, VV, UV), UV > 0 && iV(xV, eV, YV.text), YV.forward(VV), yV += VV
+      filter(HH) {
+        let BH = [],
+          LH = [],
+          AH = [],
+          rH = new RH(this);
+        HH: for (let SH = 0, hH = 0;;) {
+          let tH = SH == HH.length ? 1e9 : HH[SH++];
+          for (; hH < tH || hH == tH && 0 == rH.len;) {
+            if (rH.done) break HH;
+            let HH = Math.min(rH.len, tH - hH);
+            cH(AH, HH, -1);
+            let SH = -1 == rH.ins ? -1 : 0 == rH.off ? rH.ins : 0;
+            cH(BH, HH, SH), SH > 0 && eH(LH, BH, rH.text), rH.forward(HH), hH += HH
           }
-          let QV = VV[UV++];
-          for (; yV < QV;) {
-            if (YV.done) break VV;
-            let VV = Math.min(YV.len, QV - yV);
-            DV(eV, VV, -1), DV(JV, VV, -1 == YV.ins ? -1 : 0 == YV.off ? YV.ins : 0), YV.forward(VV), yV += VV
+          let zH = HH[SH++];
+          for (; hH < zH;) {
+            if (rH.done) break HH;
+            let HH = Math.min(rH.len, zH - hH);
+            cH(BH, HH, -1), cH(AH, HH, -1 == rH.ins ? -1 : 0 == rH.off ? rH.ins : 0), rH.forward(HH), hH += HH
           }
         }
         return {
-          changes: new gV(eV, xV),
-          filtered: RV.create(JV)
+          changes: new KH(BH, LH),
+          filtered: lH.create(AH)
         }
       }
       toJSON() {
-        let VV = [];
-        for (let eV = 0; eV < this.sections.length; eV += 2) {
-          let xV = this.sections[eV],
-            JV = this.sections[eV + 1];
-          JV < 0 ? VV.push(xV) : 0 == JV ? VV.push([xV]) : VV.push([xV].concat(this.inserted[eV >> 1].toJSON()))
+        let HH = [];
+        for (let BH = 0; BH < this.sections.length; BH += 2) {
+          let LH = this.sections[BH],
+            AH = this.sections[BH + 1];
+          AH < 0 ? HH.push(LH) : 0 == AH ? HH.push([LH]) : HH.push([LH].concat(this.inserted[BH >> 1].toJSON()))
         }
-        return VV
+        return HH
       }
-      static of (VV, eV, xV) {
-        let JV = [],
-          YV = [],
-          UV = 0,
-          yV = null;
+      static of (HH, BH, LH) {
+        let AH = [],
+          rH = [],
+          SH = 0,
+          hH = null;
 
-        function pV() {
-          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !JV.length) return;
-          UV < eV && DV(JV, eV - UV, -1);
-          let VV = new gV(JV, YV);
-          yV = yV ? yV.compose(VV.map(yV)) : VV, JV = [], YV = [], UV = 0
+        function tH() {
+          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !AH.length) return;
+          SH < BH && cH(AH, BH - SH, -1);
+          let HH = new KH(AH, rH);
+          hH = hH ? hH.compose(HH.map(hH)) : HH, AH = [], rH = [], SH = 0
         }
-        return function VV(QV) {
-          if (Array.isArray(QV))
-            for (let eV of QV) VV(eV);
-          else if (QV instanceof gV) {
-            if (QV.length != eV) throw new RangeError(`Mismatched change set length (got ${QV.length}, expected ${eV})`);
-            pV(), yV = yV ? yV.compose(QV.map(yV)) : QV
+        return function HH(zH) {
+          if (Array.isArray(zH))
+            for (let BH of zH) HH(BH);
+          else if (zH instanceof KH) {
+            if (zH.length != BH) throw new RangeError(`Mismatched change set length (got ${zH.length}, expected ${BH})`);
+            tH(), hH = hH ? hH.compose(zH.map(hH)) : zH
           } else {
             let {
-              from: VV,
-              to: yV = VV,
-              insert: nV
-            } = QV;
-            if (VV > yV || VV < 0 || yV > eV) throw new RangeError(`Invalid change range ${VV} to ${yV} (in doc of length ${eV})`);
-            let wV = nV ? "string" == typeof nV ? bV.of(nV.split(xV || GV)) : nV : bV.empty,
-              ZV = wV.length;
-            if (VV == yV && 0 == ZV) return;
-            VV < UV && pV(), VV > UV && DV(JV, VV - UV, -1), DV(JV, yV - VV, ZV), iV(YV, JV, wV), UV = yV
+              from: HH,
+              to: hH = HH,
+              insert: CH
+            } = zH;
+            if (HH > hH || HH < 0 || hH > BH) throw new RangeError(`Invalid change range ${HH} to ${hH} (in doc of length ${BH})`);
+            let EH = CH ? "string" == typeof CH ? QH.of(CH.split(LH || IH)) : CH : QH.empty,
+              XH = EH.length;
+            if (HH == hH && 0 == XH) return;
+            HH < SH && tH(), HH > SH && cH(AH, HH - SH, -1), cH(AH, hH - HH, XH), eH(rH, AH, EH), SH = hH
           }
-        }(VV), pV(!yV), yV
+        }(HH), tH(!hH), hH
       }
-      static empty(VV) {
-        return new gV(VV ? [VV, -1] : [], [])
+      static empty(HH) {
+        return new KH(HH ? [HH, -1] : [], [])
       }
-      static fromJSON(VV) {
-        if (!Array.isArray(VV)) throw new RangeError("Invalid JSON representation of ChangeSet");
-        let eV = [],
-          xV = [];
-        for (let JV = 0; JV < VV.length; JV++) {
-          let YV = VV[JV];
-          if ("number" == typeof YV) eV.push(YV, -1);
+      static fromJSON(HH) {
+        if (!Array.isArray(HH)) throw new RangeError("Invalid JSON representation of ChangeSet");
+        let BH = [],
+          LH = [];
+        for (let AH = 0; AH < HH.length; AH++) {
+          let rH = HH[AH];
+          if ("number" == typeof rH) BH.push(rH, -1);
           else {
-            if (!Array.isArray(YV) || "number" != typeof YV[0] || YV.some(((VV, eV) => eV && "string" != typeof VV))) throw new RangeError("Invalid JSON representation of ChangeSet");
-            if (1 == YV.length) eV.push(YV[0], 0);
+            if (!Array.isArray(rH) || "number" != typeof rH[0] || rH.some(((HH, BH) => BH && "string" != typeof HH))) throw new RangeError("Invalid JSON representation of ChangeSet");
+            if (1 == rH.length) BH.push(rH[0], 0);
             else {
-              for (; xV.length < JV;) xV.push(bV.empty);
-              xV[JV] = bV.of(YV.slice(1)), eV.push(YV[0], xV[JV].length)
+              for (; LH.length < AH;) LH.push(QH.empty);
+              LH[AH] = QH.of(rH.slice(1)), BH.push(rH[0], LH[AH].length)
             }
           }
         }
-        return new gV(eV, xV)
+        return new KH(BH, LH)
       }
-      static createSet(VV, eV) {
-        return new gV(VV, eV)
+      static createSet(HH, BH) {
+        return new KH(HH, BH)
       }
     }
 
-    function DV(VV, eV, xV) {
-      let JV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (0 == eV && xV <= 0) return;
-      let YV = VV.length - 2;
-      YV >= 0 && xV <= 0 && xV == VV[YV + 1] ? VV[YV] += eV : YV >= 0 && 0 == eV && 0 == VV[YV] ? VV[YV + 1] += xV : JV ? (VV[YV] += eV, VV[YV + 1] += xV) : VV.push(eV, xV)
+    function cH(HH, BH, LH) {
+      let AH = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (0 == BH && LH <= 0) return;
+      let rH = HH.length - 2;
+      rH >= 0 && LH <= 0 && LH == HH[rH + 1] ? HH[rH] += BH : rH >= 0 && 0 == BH && 0 == HH[rH] ? HH[rH + 1] += LH : AH ? (HH[rH] += BH, HH[rH + 1] += LH) : HH.push(BH, LH)
     }
 
-    function iV(VV, eV, xV) {
-      if (0 == xV.length) return;
-      let JV = eV.length - 2 >> 1;
-      if (JV < VV.length) VV[VV.length - 1] = VV[VV.length - 1].append(xV);
+    function eH(HH, BH, LH) {
+      if (0 == LH.length) return;
+      let AH = BH.length - 2 >> 1;
+      if (AH < HH.length) HH[HH.length - 1] = HH[HH.length - 1].append(LH);
       else {
-        for (; VV.length < JV;) VV.push(bV.empty);
-        VV.push(xV)
+        for (; HH.length < AH;) HH.push(QH.empty);
+        HH.push(LH)
       }
     }
 
-    function CV(VV, eV, xV) {
-      let JV = VV.inserted;
-      for (let YV = 0, UV = 0, yV = 0; yV < VV.sections.length;) {
-        let pV = VV.sections[yV++],
-          QV = VV.sections[yV++];
-        if (QV < 0) YV += pV, UV += pV;
+    function qH(HH, BH, LH) {
+      let AH = HH.inserted;
+      for (let rH = 0, SH = 0, hH = 0; hH < HH.sections.length;) {
+        let tH = HH.sections[hH++],
+          zH = HH.sections[hH++];
+        if (zH < 0) rH += tH, SH += tH;
         else {
-          let nV = YV,
-            wV = UV,
-            ZV = bV.empty;
-          for (; nV += pV, wV += QV, QV && JV && (ZV = ZV.append(JV[yV - 2 >> 1])), !(xV || yV == VV.sections.length || VV.sections[yV + 1] < 0);) pV = VV.sections[yV++], QV = VV.sections[yV++];
-          eV(YV, nV, UV, wV, ZV), YV = nV, UV = wV
+          let CH = rH,
+            EH = SH,
+            XH = QH.empty;
+          for (; CH += tH, EH += zH, zH && AH && (XH = XH.append(AH[hH - 2 >> 1])), !(LH || hH == HH.sections.length || HH.sections[hH + 1] < 0);) tH = HH.sections[hH++], zH = HH.sections[hH++];
+          BH(rH, CH, SH, EH, XH), rH = CH, SH = EH
         }
       }
     }
 
-    function aV(VV, eV, xV) {
-      let JV = [],
-        YV = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
-        UV = new cV(VV),
-        yV = new cV(eV),
-        pV = 0;
-      for (let QV = -1;;) {
-        if (++pV > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
-        if (UV.done && yV.len || yV.done && UV.len) throw new Error("Mismatched change set lengths");
-        if (-1 == UV.ins && -1 == yV.ins) {
-          let VV = Math.min(UV.len, yV.len);
-          DV(JV, VV, -1), UV.forward(VV), yV.forward(VV)
-        } else if (yV.ins >= 0 && (UV.ins < 0 || QV == UV.i || 0 == UV.off && (yV.len < UV.len || yV.len == UV.len && !xV))) {
-          let VV = yV.len;
-          for (DV(JV, yV.ins, -1); VV;) {
-            if (++pV > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
-            let eV = Math.min(UV.len, VV);
-            UV.ins >= 0 && QV < UV.i && UV.len <= eV && (DV(JV, 0, UV.ins), YV && iV(YV, JV, UV.text), QV = UV.i), UV.forward(eV), VV -= eV
+    function gH(HH, BH, LH) {
+      let AH = [],
+        rH = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
+        SH = new RH(HH),
+        hH = new RH(BH),
+        tH = 0;
+      for (let zH = -1;;) {
+        if (++tH > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
+        if (SH.done && hH.len || hH.done && SH.len) throw new Error("Mismatched change set lengths");
+        if (-1 == SH.ins && -1 == hH.ins) {
+          let HH = Math.min(SH.len, hH.len);
+          cH(AH, HH, -1), SH.forward(HH), hH.forward(HH)
+        } else if (hH.ins >= 0 && (SH.ins < 0 || zH == SH.i || 0 == SH.off && (hH.len < SH.len || hH.len == SH.len && !LH))) {
+          let HH = hH.len;
+          for (cH(AH, hH.ins, -1); HH;) {
+            if (++tH > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
+            let BH = Math.min(SH.len, HH);
+            SH.ins >= 0 && zH < SH.i && SH.len <= BH && (cH(AH, 0, SH.ins), rH && eH(rH, AH, SH.text), zH = SH.i), SH.forward(BH), HH -= BH
           }
-          yV.next()
+          hH.next()
         } else {
-          if (!(UV.ins >= 0)) {
-            if (UV.done && yV.done) return YV ? gV.createSet(JV, YV) : RV.create(JV);
+          if (!(SH.ins >= 0)) {
+            if (SH.done && hH.done) return rH ? KH.createSet(AH, rH) : lH.create(AH);
             throw new Error("Mismatched change set lengths")
           } {
-            let VV = 0,
-              eV = UV.len;
-            for (; eV;) {
-              if (++pV > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
-              if (-1 == yV.ins) {
-                let xV = Math.min(eV, yV.len);
-                VV += xV, eV -= xV, yV.forward(xV)
+            let HH = 0,
+              BH = SH.len;
+            for (; BH;) {
+              if (++tH > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
+              if (-1 == hH.ins) {
+                let LH = Math.min(BH, hH.len);
+                HH += LH, BH -= LH, hH.forward(LH)
               } else {
-                if (!(0 == yV.ins && yV.len < eV)) break;
-                eV -= yV.len, yV.next()
+                if (!(0 == hH.ins && hH.len < BH)) break;
+                BH -= hH.len, hH.next()
               }
             }
-            DV(JV, VV, QV < UV.i ? UV.ins : 0), YV && QV < UV.i && iV(YV, JV, UV.text), QV = UV.i, UV.forward(UV.len - eV)
+            cH(AH, HH, zH < SH.i ? SH.ins : 0), rH && zH < SH.i && eH(rH, AH, SH.text), zH = SH.i, SH.forward(SH.len - BH)
           }
         }
       }
     }
 
-    function oV(VV, eV) {
-      let xV = [],
-        JV = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
-        YV = new cV(VV),
-        UV = new cV(eV),
-        yV = 0;
-      for (let pV = !1;;) {
-        if (++yV > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
-        if (YV.done && UV.done) return JV ? gV.createSet(xV, JV) : RV.create(xV);
-        if (0 == YV.ins) DV(xV, YV.len, 0, pV), YV.next();
-        else if (0 != UV.len || UV.done) {
-          if (YV.done || UV.done) throw new Error("Mismatched change set lengths");
+    function NH(HH, BH) {
+      let LH = [],
+        AH = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
+        rH = new RH(HH),
+        SH = new RH(BH),
+        hH = 0;
+      for (let tH = !1;;) {
+        if (++hH > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
+        if (rH.done && SH.done) return AH ? KH.createSet(LH, AH) : lH.create(LH);
+        if (0 == rH.ins) cH(LH, rH.len, 0, tH), rH.next();
+        else if (0 != SH.len || SH.done) {
+          if (rH.done || SH.done) throw new Error("Mismatched change set lengths");
           {
-            let VV = Math.min(YV.len2, UV.len),
-              eV = xV.length;
-            if (-1 == YV.ins) {
-              let eV = -1 == UV.ins ? -1 : UV.off ? 0 : UV.ins;
-              DV(xV, VV, eV, pV), JV && eV && iV(JV, xV, UV.text)
-            } else - 1 == UV.ins ? (DV(xV, YV.off ? 0 : YV.len, VV, pV), JV && iV(JV, xV, YV.textBit(VV))) : (DV(xV, YV.off ? 0 : YV.len, UV.off ? 0 : UV.ins, pV), JV && !UV.off && iV(JV, xV, UV.text));
-            pV = (YV.ins > VV || UV.ins >= 0 && UV.len > VV) && (pV || xV.length > eV), YV.forward2(VV), UV.forward(VV)
+            let HH = Math.min(rH.len2, SH.len),
+              BH = LH.length;
+            if (-1 == rH.ins) {
+              let BH = -1 == SH.ins ? -1 : SH.off ? 0 : SH.ins;
+              cH(LH, HH, BH, tH), AH && BH && eH(AH, LH, SH.text)
+            } else - 1 == SH.ins ? (cH(LH, rH.off ? 0 : rH.len, HH, tH), AH && eH(AH, LH, rH.textBit(HH))) : (cH(LH, rH.off ? 0 : rH.len, SH.off ? 0 : SH.ins, tH), AH && !SH.off && eH(AH, LH, SH.text));
+            tH = (rH.ins > HH || SH.ins >= 0 && SH.len > HH) && (tH || LH.length > BH), rH.forward2(HH), SH.forward(HH)
           }
-        } else DV(xV, 0, UV.ins, pV), JV && iV(JV, xV, UV.text), UV.next()
+        } else cH(LH, 0, SH.ins, tH), AH && eH(AH, LH, SH.text), SH.next()
       }
     }
-    class cV {
-      constructor(VV) {
-        this.set = VV, this.i = 0, this.next()
+    class RH {
+      constructor(HH) {
+        this.set = HH, this.i = 0, this.next()
       }
       next() {
         let {
-          sections: VV
+          sections: HH
         } = this.set;
-        this.i < VV.length ? (this.len = VV[this.i++], this.ins = VV[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
+        this.i < HH.length ? (this.len = HH[this.i++], this.ins = HH[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
       }
       get done() {
         return -2 == this.ins
@@ -815,26 +815,26 @@ export const modules = {
       }
       get text() {
         let {
-          inserted: VV
-        } = this.set, eV = this.i - 2 >> 1;
-        return eV >= VV.length ? bV.empty : VV[eV]
+          inserted: HH
+        } = this.set, BH = this.i - 2 >> 1;
+        return BH >= HH.length ? QH.empty : HH[BH]
       }
-      textBit(VV) {
+      textBit(HH) {
         let {
-          inserted: eV
-        } = this.set, xV = this.i - 2 >> 1;
-        return xV >= eV.length && !VV ? bV.empty : eV[xV].slice(this.off, null == VV ? void 0 : this.off + VV)
+          inserted: BH
+        } = this.set, LH = this.i - 2 >> 1;
+        return LH >= BH.length && !HH ? QH.empty : BH[LH].slice(this.off, null == HH ? void 0 : this.off + HH)
       }
-      forward(VV) {
-        VV == this.len ? this.next() : (this.len -= VV, this.off += VV)
+      forward(HH) {
+        HH == this.len ? this.next() : (this.len -= HH, this.off += HH)
       }
-      forward2(VV) {
-        -1 == this.ins ? this.forward(VV) : VV == this.ins ? this.next() : (this.ins -= VV, this.off += VV)
+      forward2(HH) {
+        -1 == this.ins ? this.forward(HH) : HH == this.ins ? this.next() : (this.ins -= HH, this.off += HH)
       }
     }
-    class hV {
-      constructor(VV, eV, xV) {
-        this.from = VV, this.to = eV, this.flags = xV
+    class jH {
+      constructor(HH, BH, LH) {
+        this.from = HH, this.to = BH, this.flags = LH
       }
       get anchor() {
         return 32 & this.flags ? this.to : this.from
@@ -849,27 +849,27 @@ export const modules = {
         return 8 & this.flags ? -1 : 16 & this.flags ? 1 : 0
       }
       get bidiLevel() {
-        let VV = 7 & this.flags;
-        return 7 == VV ? null : VV
+        let HH = 7 & this.flags;
+        return 7 == HH ? null : HH
       }
       get goalColumn() {
-        let VV = this.flags >> 6;
-        return 16777215 == VV ? void 0 : VV
+        let HH = this.flags >> 6;
+        return 16777215 == HH ? void 0 : HH
       }
-      map(VV) {
-        let eV, xV, JV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return this.empty ? eV = xV = VV.mapPos(this.from, JV) : (eV = VV.mapPos(this.from, 1), xV = VV.mapPos(this.to, -1)), eV == this.from && xV == this.to ? this : new hV(eV, xV, this.flags)
+      map(HH) {
+        let BH, LH, AH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return this.empty ? BH = LH = HH.mapPos(this.from, AH) : (BH = HH.mapPos(this.from, 1), LH = HH.mapPos(this.to, -1)), BH == this.from && LH == this.to ? this : new jH(BH, LH, this.flags)
       }
-      extend(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VV,
-          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (VV <= this.anchor && eV >= this.anchor) return lV.range(VV, eV, void 0, void 0, xV);
-        let JV = Math.abs(VV - this.anchor) > Math.abs(eV - this.anchor) ? VV : eV;
-        return lV.range(this.anchor, JV, void 0, void 0, xV)
+      extend(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : HH,
+          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (HH <= this.anchor && BH >= this.anchor) return nH.range(HH, BH, void 0, void 0, LH);
+        let AH = Math.abs(HH - this.anchor) > Math.abs(BH - this.anchor) ? HH : BH;
+        return nH.range(this.anchor, AH, void 0, void 0, LH)
       }
-      eq(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.anchor == VV.anchor && this.head == VV.head && this.goalColumn == VV.goalColumn && (!eV || !this.empty || this.assoc == VV.assoc)
+      eq(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.anchor == HH.anchor && this.head == HH.head && this.goalColumn == HH.goalColumn && (!BH || !this.empty || this.assoc == HH.assoc)
       }
       toJSON() {
         return {
@@ -877,447 +877,447 @@ export const modules = {
           head: this.head
         }
       }
-      static fromJSON(VV) {
-        if (!VV || "number" != typeof VV.anchor || "number" != typeof VV.head) throw new RangeError("Invalid JSON representation for SelectionRange");
-        return lV.range(VV.anchor, VV.head)
+      static fromJSON(HH) {
+        if (!HH || "number" != typeof HH.anchor || "number" != typeof HH.head) throw new RangeError("Invalid JSON representation for SelectionRange");
+        return nH.range(HH.anchor, HH.head)
       }
-      static create(VV, eV, xV) {
-        return new hV(VV, eV, xV)
+      static create(HH, BH, LH) {
+        return new jH(HH, BH, LH)
       }
     }
-    class lV {
-      constructor(VV, eV) {
-        this.TE = VV, this.mainIndex = eV
+    class nH {
+      constructor(HH, BH) {
+        this.rW = HH, this.mainIndex = BH
       }
-      map(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return VV.empty ? this : lV.create(this.TE.map((xV => xV.map(VV, eV))), this.mainIndex)
+      map(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return HH.empty ? this : nH.create(this.rW.map((LH => LH.map(HH, BH))), this.mainIndex)
       }
-      eq(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.TE.length != VV.TE.length || this.mainIndex != VV.mainIndex) return !1;
-        for (let xV = 0; xV < this.TE.length; xV++)
-          if (!this.TE[xV].eq(VV.TE[xV], eV)) return !1;
+      eq(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.rW.length != HH.rW.length || this.mainIndex != HH.mainIndex) return !1;
+        for (let LH = 0; LH < this.rW.length; LH++)
+          if (!this.rW[LH].eq(HH.rW[LH], BH)) return !1;
         return !0
       }
       get main() {
-        return this.TE[this.mainIndex]
+        return this.rW[this.mainIndex]
       }
       asSingle() {
-        return 1 == this.TE.length ? this : new lV([this.main], 0)
+        return 1 == this.rW.length ? this : new nH([this.main], 0)
       }
-      addRange(VV) {
-        let eV = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return lV.create([VV].concat(this.TE), eV ? 0 : this.mainIndex + 1)
+      addRange(HH) {
+        let BH = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return nH.create([HH].concat(this.rW), BH ? 0 : this.mainIndex + 1)
       }
-      replaceRange(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
-          xV = this.TE.slice();
-        return xV[eV] = VV, lV.create(xV, this.mainIndex)
+      replaceRange(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
+          LH = this.rW.slice();
+        return LH[BH] = HH, nH.create(LH, this.mainIndex)
       }
       toJSON() {
         return {
-          TE: this.TE.map((VV => VV.toJSON())),
+          rW: this.rW.map((HH => HH.toJSON())),
           main: this.mainIndex
         }
       }
-      static fromJSON(VV) {
-        if (!VV || !Array.isArray(VV.TE) || "number" != typeof VV.main || VV.main >= VV.TE.length) throw new RangeError("Invalid JSON representation for EditorSelection");
-        return new lV(VV.TE.map((VV => hV.fromJSON(VV))), VV.main)
+      static fromJSON(HH) {
+        if (!HH || !Array.isArray(HH.rW) || "number" != typeof HH.main || HH.main >= HH.rW.length) throw new RangeError("Invalid JSON representation for EditorSelection");
+        return new nH(HH.rW.map((HH => jH.fromJSON(HH))), HH.main)
       }
-      static single(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VV;
-        return new lV([lV.range(VV, eV)], 0)
+      static single(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : HH;
+        return new nH([nH.range(HH, BH)], 0)
       }
-      static create(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (0 == VV.length) throw new RangeError("A selection needs at least one range");
-        for (let xV = 0, JV = 0; JV < VV.length; JV++) {
-          let YV = VV[JV];
-          if (YV.empty ? YV.from <= xV : YV.from < xV) return lV.normalized(VV.slice(), eV);
-          xV = YV.to
+      static create(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (0 == HH.length) throw new RangeError("A selection needs at least one range");
+        for (let LH = 0, AH = 0; AH < HH.length; AH++) {
+          let rH = HH[AH];
+          if (rH.empty ? rH.from <= LH : rH.from < LH) return nH.normalized(HH.slice(), BH);
+          LH = rH.to
         }
-        return new lV(VV, eV)
+        return new nH(HH, BH)
       }
-      static cursor(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          xV = arguments.length > 2 ? arguments[2] : void 0,
-          JV = arguments.length > 3 ? arguments[3] : void 0;
-        return hV.create(VV, VV, (0 == eV ? 0 : eV < 0 ? 8 : 16) | (null == xV ? 7 : Math.min(6, xV)) | (null !== JV && void 0 !== JV ? JV : 16777215) << 6)
+      static cursor(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          LH = arguments.length > 2 ? arguments[2] : void 0,
+          AH = arguments.length > 3 ? arguments[3] : void 0;
+        return jH.create(HH, HH, (0 == BH ? 0 : BH < 0 ? 8 : 16) | (null == LH ? 7 : Math.min(6, LH)) | (null !== AH && void 0 !== AH ? AH : 16777215) << 6)
       }
-      static range(VV, eV, xV, JV, YV) {
-        let UV = (null !== xV && void 0 !== xV ? xV : 16777215) << 6 | (null == JV ? 7 : Math.min(6, JV));
-        return YV || VV == eV || (YV = eV < VV ? 1 : -1), eV < VV ? hV.create(eV, VV, 48 | UV) : hV.create(VV, eV, (YV ? YV < 0 ? 8 : 16 : 0) | UV)
+      static range(HH, BH, LH, AH, rH) {
+        let SH = (null !== LH && void 0 !== LH ? LH : 16777215) << 6 | (null == AH ? 7 : Math.min(6, AH));
+        return rH || HH == BH || (rH = BH < HH ? 1 : -1), BH < HH ? jH.create(BH, HH, 48 | SH) : jH.create(HH, BH, (rH ? rH < 0 ? 8 : 16 : 0) | SH)
       }
-      static normalized(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          xV = VV[eV];
-        VV.sort(((VV, eV) => VV.from - eV.from)), eV = VV.indexOf(xV);
-        for (let JV = 1; JV < VV.length; JV++) {
-          let xV = VV[JV],
-            YV = VV[JV - 1];
-          if (xV.empty ? xV.from <= YV.to : xV.from < YV.to) {
-            let UV = YV.from,
-              yV = Math.max(xV.to, YV.to);
-            JV <= eV && eV--, VV.splice(--JV, 2, xV.anchor > xV.head ? lV.range(yV, UV) : lV.range(UV, yV))
+      static normalized(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          LH = HH[BH];
+        HH.sort(((HH, BH) => HH.from - BH.from)), BH = HH.indexOf(LH);
+        for (let AH = 1; AH < HH.length; AH++) {
+          let LH = HH[AH],
+            rH = HH[AH - 1];
+          if (LH.empty ? LH.from <= rH.to : LH.from < rH.to) {
+            let SH = rH.from,
+              hH = Math.max(LH.to, rH.to);
+            AH <= BH && BH--, HH.splice(--AH, 2, LH.anchor > LH.head ? nH.range(hH, SH) : nH.range(SH, hH))
           }
         }
-        return new lV(VV, eV)
+        return new nH(HH, BH)
       }
     }
 
-    function LV(VV, eV) {
-      for (let xV of VV.TE)
-        if (xV.to > eV) throw new RangeError("Selection points outside of document")
+    function FH(HH, BH) {
+      for (let LH of HH.rW)
+        if (LH.to > BH) throw new RangeError("Selection points outside of document")
     }
-    let fV = 0;
-    class mV {
-      constructor(VV, eV, xV, JV, YV) {
-        this.combine = VV, this.compareInput = eV, this.compare = xV, this.isStatic = JV, this.id = fV++, this.default = VV([]), this.extensions = "function" == typeof YV ? YV(this) : YV
+    let DH = 0;
+    class wH {
+      constructor(HH, BH, LH, AH, rH) {
+        this.combine = HH, this.compareInput = BH, this.compare = LH, this.isStatic = AH, this.id = DH++, this.default = HH([]), this.extensions = "function" == typeof rH ? rH(this) : rH
       }
       get reader() {
         return this
       }
       static define() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return new mV(VV.combine || (VV => VV), VV.compareInput || ((VV, eV) => VV === eV), VV.compare || (VV.combine ? (VV, eV) => VV === eV : KV), !!VV.static, VV.enables)
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        return new wH(HH.combine || (HH => HH), HH.compareInput || ((HH, BH) => HH === BH), HH.compare || (HH.combine ? (HH, BH) => HH === BH : ZH), !!HH.static, HH.enables)
       }
-      of(VV) {
-        return new HV([], this, 0, VV)
+      of(HH) {
+        return new dH([], this, 0, HH)
       }
-      compute(VV, eV) {
+      compute(HH, BH) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new HV(VV, this, 1, eV)
+        return new dH(HH, this, 1, BH)
       }
-      computeN(VV, eV) {
+      computeN(HH, BH) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new HV(VV, this, 2, eV)
+        return new dH(HH, this, 2, BH)
       }
-      from(VV, eV) {
-        return eV || (eV = VV => VV), this.compute([VV], (xV => eV(xV.field(VV))))
+      from(HH, BH) {
+        return BH || (BH = HH => HH), this.compute([HH], (LH => BH(LH.field(HH))))
       }
     }
 
-    function KV(VV, eV) {
-      return VV == eV || VV.length == eV.length && VV.every(((VV, xV) => VV === eV[xV]))
+    function ZH(HH, BH) {
+      return HH == BH || HH.length == BH.length && HH.every(((HH, LH) => HH === BH[LH]))
     }
-    class HV {
-      constructor(VV, eV, xV, JV) {
-        this.dependencies = VV, this.facet = eV, this.type = xV, this.value = JV, this.id = fV++
+    class dH {
+      constructor(HH, BH, LH, AH) {
+        this.dependencies = HH, this.facet = BH, this.type = LH, this.value = AH, this.id = DH++
       }
-      dynamicSlot(VV) {
-        var eV;
-        let xV = this.value,
-          JV = this.facet.compareInput,
-          YV = this.id,
-          UV = VV[YV] >> 1,
-          yV = 2 == this.type,
-          pV = !1,
-          QV = !1,
-          nV = [];
-        for (let wV of this.dependencies) "doc" == wV ? pV = !0 : "selection" == wV ? QV = !0 : 0 == (1 & (null !== (eV = VV[wV.id]) && void 0 !== eV ? eV : 1)) && nV.push(VV[wV.id]);
+      dynamicSlot(HH) {
+        var BH;
+        let LH = this.value,
+          AH = this.facet.compareInput,
+          rH = this.id,
+          SH = HH[rH] >> 1,
+          hH = 2 == this.type,
+          tH = !1,
+          zH = !1,
+          CH = [];
+        for (let EH of this.dependencies) "doc" == EH ? tH = !0 : "selection" == EH ? zH = !0 : 0 == (1 & (null !== (BH = HH[EH.id]) && void 0 !== BH ? BH : 1)) && CH.push(HH[EH.id]);
         return {
-          create: VV => (VV.values[UV] = xV(VV), 1),
-          update(VV, eV) {
-            if (pV && eV.docChanged || QV && (eV.docChanged || eV.selection) || sV(VV, nV)) {
-              let eV = xV(VV);
-              if (yV ? !uV(eV, VV.values[UV], JV) : !JV(eV, VV.values[UV])) return VV.values[UV] = eV, 1
+          create: HH => (HH.values[SH] = LH(HH), 1),
+          update(HH, BH) {
+            if (tH && BH.docChanged || zH && (BH.docChanged || BH.selection) || sH(HH, CH)) {
+              let BH = LH(HH);
+              if (hH ? !aH(BH, HH.values[SH], AH) : !AH(BH, HH.values[SH])) return HH.values[SH] = BH, 1
             }
             return 0
           },
-          reconfigure: (VV, eV) => {
-            let pV, QV = eV.config.address[YV];
-            if (null != QV) {
-              let YV = we(eV, QV);
-              if (this.dependencies.every((xV => xV instanceof mV ? eV.facet(xV) === VV.facet(xV) : !(xV instanceof dV) || eV.field(xV, !1) == VV.field(xV, !1))) || (yV ? uV(pV = xV(VV), YV, JV) : JV(pV = xV(VV), YV))) return VV.values[UV] = YV, 0
-            } else pV = xV(VV);
-            return VV.values[UV] = pV, 1
+          reconfigure: (HH, BH) => {
+            let tH, zH = BH.config.address[rH];
+            if (null != zH) {
+              let rH = EB(BH, zH);
+              if (this.dependencies.every((LH => LH instanceof wH ? BH.facet(LH) === HH.facet(LH) : !(LH instanceof pH) || BH.field(LH, !1) == HH.field(LH, !1))) || (hH ? aH(tH = LH(HH), rH, AH) : AH(tH = LH(HH), rH))) return HH.values[SH] = rH, 0
+            } else tH = LH(HH);
+            return HH.values[SH] = tH, 1
           }
         }
       }
     }
 
-    function uV(VV, eV, xV) {
-      if (VV.length != eV.length) return !1;
-      for (let JV = 0; JV < VV.length; JV++)
-        if (!xV(VV[JV], eV[JV])) return !1;
+    function aH(HH, BH, LH) {
+      if (HH.length != BH.length) return !1;
+      for (let AH = 0; AH < HH.length; AH++)
+        if (!LH(HH[AH], BH[AH])) return !1;
       return !0
     }
 
-    function sV(VV, eV) {
-      let xV = !1;
-      for (let JV of eV) 1 & ne(VV, JV) && (xV = !0);
-      return xV
+    function sH(HH, BH) {
+      let LH = !1;
+      for (let AH of BH) 1 & CB(HH, AH) && (LH = !0);
+      return LH
     }
 
-    function SV(VV, eV, xV) {
-      let JV = xV.map((eV => VV[eV.id])),
-        YV = xV.map((VV => VV.type)),
-        UV = JV.filter((VV => !(1 & VV))),
-        yV = VV[eV.id] >> 1;
+    function JH(HH, BH, LH) {
+      let AH = LH.map((BH => HH[BH.id])),
+        rH = LH.map((HH => HH.type)),
+        SH = AH.filter((HH => !(1 & HH))),
+        hH = HH[BH.id] >> 1;
 
-      function pV(VV) {
-        let xV = [];
-        for (let eV = 0; eV < JV.length; eV++) {
-          let UV = we(VV, JV[eV]);
-          if (2 == YV[eV])
-            for (let VV of UV) xV.push(VV);
-          else xV.push(UV)
+      function tH(HH) {
+        let LH = [];
+        for (let BH = 0; BH < AH.length; BH++) {
+          let SH = EB(HH, AH[BH]);
+          if (2 == rH[BH])
+            for (let HH of SH) LH.push(HH);
+          else LH.push(SH)
         }
-        return eV.combine(xV)
+        return BH.combine(LH)
       }
       return {
-        create(VV) {
-          for (let eV of JV) ne(VV, eV);
-          return VV.values[yV] = pV(VV), 1
+        create(HH) {
+          for (let BH of AH) CB(HH, BH);
+          return HH.values[hH] = tH(HH), 1
         },
-        update(VV, xV) {
-          if (!sV(VV, UV)) return 0;
-          let JV = pV(VV);
-          return eV.compare(JV, VV.values[yV]) ? 0 : (VV.values[yV] = JV, 1)
+        update(HH, LH) {
+          if (!sH(HH, SH)) return 0;
+          let AH = tH(HH);
+          return BH.compare(AH, HH.values[hH]) ? 0 : (HH.values[hH] = AH, 1)
         },
-        reconfigure(VV, YV) {
-          let UV = sV(VV, JV),
-            QV = YV.config.facets[eV.id],
-            nV = YV.facet(eV);
-          if (QV && !UV && KV(xV, QV)) return VV.values[yV] = nV, 0;
-          let wV = pV(VV);
-          return eV.compare(wV, nV) ? (VV.values[yV] = nV, 0) : (VV.values[yV] = wV, 1)
+        reconfigure(HH, rH) {
+          let SH = sH(HH, AH),
+            zH = rH.config.facets[BH.id],
+            CH = rH.facet(BH);
+          if (zH && !SH && ZH(LH, zH)) return HH.values[hH] = CH, 0;
+          let EH = tH(HH);
+          return BH.compare(EH, CH) ? (HH.values[hH] = CH, 0) : (HH.values[hH] = EH, 1)
         }
       }
     }
-    const IV = mV.define({
+    const iH = wH.define({
       static: !0
     });
-    class dV {
-      constructor(VV, eV, xV, JV, YV) {
-        this.id = VV, this.createF = eV, this.updateF = xV, this.compareF = JV, this.spec = YV, this.provides = void 0
+    class pH {
+      constructor(HH, BH, LH, AH, rH) {
+        this.id = HH, this.createF = BH, this.updateF = LH, this.compareF = AH, this.spec = rH, this.provides = void 0
       }
-      static define(VV) {
-        let eV = new dV(fV++, VV.create, VV.update, VV.compare || ((VV, eV) => VV === eV), VV);
-        return VV.provide && (eV.provides = VV.provide(eV)), eV
+      static define(HH) {
+        let BH = new pH(DH++, HH.create, HH.update, HH.compare || ((HH, BH) => HH === BH), HH);
+        return HH.provide && (BH.provides = HH.provide(BH)), BH
       }
-      create(VV) {
-        let eV = VV.facet(IV).find((VV => VV.field == this));
-        return ((null === eV || void 0 === eV ? void 0 : eV.create) || this.createF)(VV)
+      create(HH) {
+        let BH = HH.facet(iH).find((HH => HH.field == this));
+        return ((null === BH || void 0 === BH ? void 0 : BH.create) || this.createF)(HH)
       }
-      slot(VV) {
-        let eV = VV[this.id] >> 1;
+      slot(HH) {
+        let BH = HH[this.id] >> 1;
         return {
-          create: VV => (VV.values[eV] = this.create(VV), 1),
-          update: (VV, xV) => {
-            let JV = VV.values[eV],
-              YV = this.updateF(JV, xV);
-            return this.compareF(JV, YV) ? 0 : (VV.values[eV] = YV, 1)
+          create: HH => (HH.values[BH] = this.create(HH), 1),
+          update: (HH, LH) => {
+            let AH = HH.values[BH],
+              rH = this.updateF(AH, LH);
+            return this.compareF(AH, rH) ? 0 : (HH.values[BH] = rH, 1)
           },
-          reconfigure: (VV, xV) => {
-            let JV, YV = VV.facet(IV),
-              UV = xV.facet(IV);
-            return (JV = YV.find((VV => VV.field == this))) && JV != UV.find((VV => VV.field == this)) ? (VV.values[eV] = JV.create(VV), 1) : null != xV.config.address[this.id] ? (VV.values[eV] = xV.field(this), 0) : (VV.values[eV] = this.create(VV), 1)
+          reconfigure: (HH, LH) => {
+            let AH, rH = HH.facet(iH),
+              SH = LH.facet(iH);
+            return (AH = rH.find((HH => HH.field == this))) && AH != SH.find((HH => HH.field == this)) ? (HH.values[BH] = AH.create(HH), 1) : null != LH.config.address[this.id] ? (HH.values[BH] = LH.field(this), 0) : (HH.values[BH] = this.create(HH), 1)
           }
         }
       }
-      init(VV) {
-        return [this, IV.of({
+      init(HH) {
+        return [this, iH.of({
           field: this,
-          create: VV
+          create: HH
         })]
       }
       get extension() {
         return this
       }
     }
-    const OV = 4,
-      Ve = 3,
-      ee = 2,
-      xe = 1;
+    const yH = 4,
+      HB = 3,
+      BB = 2,
+      LB = 1;
 
-    function Je(VV) {
-      return eV => new Ue(eV, VV)
+    function AB(HH) {
+      return BH => new SB(BH, HH)
     }
-    const Ye = {
-      highest: Je(0),
-      high: Je(xe),
-      default: Je(ee),
-      low: Je(Ve),
-      lowest: Je(OV)
+    const rB = {
+      highest: AB(0),
+      high: AB(LB),
+      default: AB(BB),
+      low: AB(HB),
+      lowest: AB(yH)
     };
-    class Ue {
-      constructor(VV, eV) {
-        this.inner = VV, this.prec = eV
+    class SB {
+      constructor(HH, BH) {
+        this.inner = HH, this.prec = BH
       }
     }
-    class ye {
-      of(VV) {
-        return new pe(this, VV)
+    class hB {
+      of(HH) {
+        return new tB(this, HH)
       }
-      reconfigure(VV) {
-        return ye.reconfigure.of({
+      reconfigure(HH) {
+        return hB.reconfigure.of({
           compartment: this,
-          extension: VV
+          extension: HH
         })
       }
-      get(VV) {
-        return VV.config.compartments.get(this)
+      get(HH) {
+        return HH.config.compartments.get(this)
       }
     }
-    class pe {
-      constructor(VV, eV) {
-        this.compartment = VV, this.inner = eV
+    class tB {
+      constructor(HH, BH) {
+        this.compartment = HH, this.inner = BH
       }
     }
-    class Qe {
-      constructor(VV, eV, xV, JV, YV, UV) {
-        for (this.base = VV, this.compartments = eV, this.dynamicSlots = xV, this.address = JV, this.staticValues = YV, this.facets = UV, this.statusTemplate = []; this.statusTemplate.length < xV.length;) this.statusTemplate.push(0)
+    class zB {
+      constructor(HH, BH, LH, AH, rH, SH) {
+        for (this.base = HH, this.compartments = BH, this.dynamicSlots = LH, this.address = AH, this.staticValues = rH, this.facets = SH, this.statusTemplate = []; this.statusTemplate.length < LH.length;) this.statusTemplate.push(0)
       }
-      staticFacet(VV) {
-        let eV = this.address[VV.id];
-        return null == eV ? VV.default : this.staticValues[eV >> 1]
+      staticFacet(HH) {
+        let BH = this.address[HH.id];
+        return null == BH ? HH.default : this.staticValues[BH >> 1]
       }
-      static resolve(VV, eV, xV) {
-        let JV = [],
-          YV = Object.create(null),
-          UV = new Map;
-        for (let ZV of function(VV, eV, xV) {
-            let JV = [
+      static resolve(HH, BH, LH) {
+        let AH = [],
+          rH = Object.create(null),
+          SH = new Map;
+        for (let XH of function(HH, BH, LH) {
+            let AH = [
                 [],
                 [],
                 [],
                 [],
                 []
               ],
-              YV = new Map;
+              rH = new Map;
 
-            function UV(VV, yV) {
-              let pV = YV.get(VV);
-              if (null != pV) {
-                if (pV <= yV) return;
-                let eV = JV[pV].indexOf(VV);
-                eV > -1 && JV[pV].splice(eV, 1), VV instanceof pe && xV.delete(VV.compartment)
+            function SH(HH, hH) {
+              let tH = rH.get(HH);
+              if (null != tH) {
+                if (tH <= hH) return;
+                let BH = AH[tH].indexOf(HH);
+                BH > -1 && AH[tH].splice(BH, 1), HH instanceof tB && LH.delete(HH.compartment)
               }
-              if (YV.set(VV, yV), Array.isArray(VV))
-                for (let eV of VV) UV(eV, yV);
-              else if (VV instanceof pe) {
-                if (xV.has(VV.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
-                let JV = eV.get(VV.compartment) || VV.inner;
-                xV.set(VV.compartment, JV), UV(JV, yV)
-              } else if (VV instanceof Ue) UV(VV.inner, VV.prec);
-              else if (VV instanceof dV) JV[yV].push(VV), VV.provides && UV(VV.provides, yV);
-              else if (VV instanceof HV) JV[yV].push(VV), VV.facet.extensions && UV(VV.facet.extensions, ee);
+              if (rH.set(HH, hH), Array.isArray(HH))
+                for (let BH of HH) SH(BH, hH);
+              else if (HH instanceof tB) {
+                if (LH.has(HH.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
+                let AH = BH.get(HH.compartment) || HH.inner;
+                LH.set(HH.compartment, AH), SH(AH, hH)
+              } else if (HH instanceof SB) SH(HH.inner, HH.prec);
+              else if (HH instanceof pH) AH[hH].push(HH), HH.provides && SH(HH.provides, hH);
+              else if (HH instanceof dH) AH[hH].push(HH), HH.facet.extensions && SH(HH.facet.extensions, BB);
               else {
-                let eV = VV.extension;
-                if (!eV) throw new Error(`Unrecognized extension value in extension set (${VV}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
-                UV(eV, yV)
+                let BH = HH.extension;
+                if (!BH) throw new Error(`Unrecognized extension value in extension set (${HH}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
+                SH(BH, hH)
               }
             }
-            return UV(VV, ee), JV.reduce(((VV, eV) => VV.concat(eV)))
-          }(VV, eV, UV)) ZV instanceof dV ? JV.push(ZV) : (YV[ZV.facet.id] || (YV[ZV.facet.id] = [])).push(ZV);
-        let yV = Object.create(null),
-          pV = [],
-          QV = [];
-        for (let ZV of JV) yV[ZV.id] = QV.length << 1, QV.push((VV => ZV.slot(VV)));
-        let nV = null === xV || void 0 === xV ? void 0 : xV.config.facets;
-        for (let ZV in YV) {
-          let VV = YV[ZV],
-            eV = VV[0].facet,
-            JV = nV && nV[ZV] || [];
-          if (VV.every((VV => 0 == VV.type)))
-            if (yV[eV.id] = pV.length << 1 | 1, KV(JV, VV)) pV.push(xV.facet(eV));
+            return SH(HH, BB), AH.reduce(((HH, BH) => HH.concat(BH)))
+          }(HH, BH, SH)) XH instanceof pH ? AH.push(XH) : (rH[XH.facet.id] || (rH[XH.facet.id] = [])).push(XH);
+        let hH = Object.create(null),
+          tH = [],
+          zH = [];
+        for (let XH of AH) hH[XH.id] = zH.length << 1, zH.push((HH => XH.slot(HH)));
+        let CH = null === LH || void 0 === LH ? void 0 : LH.config.facets;
+        for (let XH in rH) {
+          let HH = rH[XH],
+            BH = HH[0].facet,
+            AH = CH && CH[XH] || [];
+          if (HH.every((HH => 0 == HH.type)))
+            if (hH[BH.id] = tH.length << 1 | 1, ZH(AH, HH)) tH.push(LH.facet(BH));
             else {
-              let JV = eV.combine(VV.map((VV => VV.value)));
-              pV.push(xV && eV.compare(JV, xV.facet(eV)) ? xV.facet(eV) : JV)
+              let AH = BH.combine(HH.map((HH => HH.value)));
+              tH.push(LH && BH.compare(AH, LH.facet(BH)) ? LH.facet(BH) : AH)
             }
           else {
-            for (let eV of VV) 0 == eV.type ? (yV[eV.id] = pV.length << 1 | 1, pV.push(eV.value)) : (yV[eV.id] = QV.length << 1, QV.push((VV => eV.dynamicSlot(VV))));
-            yV[eV.id] = QV.length << 1, QV.push((xV => SV(xV, eV, VV)))
+            for (let BH of HH) 0 == BH.type ? (hH[BH.id] = tH.length << 1 | 1, tH.push(BH.value)) : (hH[BH.id] = zH.length << 1, zH.push((HH => BH.dynamicSlot(HH))));
+            hH[BH.id] = zH.length << 1, zH.push((LH => JH(LH, BH, HH)))
           }
         }
-        let wV = QV.map((VV => VV(yV)));
-        return new Qe(VV, UV, wV, yV, pV, YV)
+        let EH = zH.map((HH => HH(hH)));
+        return new zB(HH, SH, EH, hH, tH, rH)
       }
     }
 
-    function ne(VV, eV) {
-      if (1 & eV) return 2;
-      let xV = eV >> 1,
-        JV = VV.status[xV];
-      if (4 == JV) throw new Error("Cyclic dependency between fields and/or facets");
-      if (2 & JV) return JV;
-      VV.status[xV] = 4;
-      let YV = VV.computeSlot(VV, VV.config.dynamicSlots[xV]);
-      return VV.status[xV] = 2 | YV
+    function CB(HH, BH) {
+      if (1 & BH) return 2;
+      let LH = BH >> 1,
+        AH = HH.status[LH];
+      if (4 == AH) throw new Error("Cyclic dependency between fields and/or facets");
+      if (2 & AH) return AH;
+      HH.status[LH] = 4;
+      let rH = HH.computeSlot(HH, HH.config.dynamicSlots[LH]);
+      return HH.status[LH] = 2 | rH
     }
 
-    function we(VV, eV) {
-      return 1 & eV ? VV.config.staticValues[eV >> 1] : VV.values[eV >> 1]
+    function EB(HH, BH) {
+      return 1 & BH ? HH.config.staticValues[BH >> 1] : HH.values[BH >> 1]
     }
-    const Ze = mV.define(),
-      ve = mV.define({
-        combine: VV => VV.some((VV => VV)),
+    const XB = wH.define(),
+      GB = wH.define({
+        combine: HH => HH.some((HH => HH)),
         static: !0
       }),
-      re = mV.define({
-        combine: VV => VV.length ? VV[0] : void 0,
+      YB = wH.define({
+        combine: HH => HH.length ? HH[0] : void 0,
         static: !0
       }),
-      ke = mV.define(),
-      be = mV.define(),
-      Ee = mV.define(),
-      Be = mV.define({
-        combine: VV => !!VV.length && VV[0]
+      uB = wH.define(),
+      QB = wH.define(),
+      WB = wH.define(),
+      MB = wH.define({
+        combine: HH => !!HH.length && HH[0]
       });
-    class je {
-      constructor(VV, eV) {
-        this.type = VV, this.value = eV
+    class xB {
+      constructor(HH, BH) {
+        this.type = HH, this.value = BH
       }
       static define() {
-        return new qe
+        return new vB
       }
     }
-    class qe {
-      of(VV) {
-        return new je(this, VV)
+    class vB {
+      of(HH) {
+        return new xB(this, HH)
       }
     }
-    class te {
-      constructor(VV) {
-        this.map = VV
+    class PB {
+      constructor(HH) {
+        this.map = HH
       }
-      of(VV) {
-        return new Fe(this, VV)
+      of(HH) {
+        return new TB(this, HH)
       }
     }
-    class Fe {
-      constructor(VV, eV) {
-        this.type = VV, this.value = eV
+    class TB {
+      constructor(HH, BH) {
+        this.type = HH, this.value = BH
       }
-      map(VV) {
-        let eV = this.type.map(this.value, VV);
-        return void 0 === eV ? void 0 : eV == this.value ? this : new Fe(this.type, eV)
+      map(HH) {
+        let BH = this.type.map(this.value, HH);
+        return void 0 === BH ? void 0 : BH == this.value ? this : new TB(this.type, BH)
       }
-      is(VV) {
-        return this.type == VV
+      is(HH) {
+        return this.type == HH
       }
       static define() {
-        return new te((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (VV => VV))
+        return new PB((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (HH => HH))
       }
-      static mapEffects(VV, eV) {
-        if (!VV.length) return VV;
-        let xV = [];
-        for (let JV of VV) {
-          let VV = JV.map(eV);
-          VV && xV.push(VV)
+      static mapEffects(HH, BH) {
+        if (!HH.length) return HH;
+        let LH = [];
+        for (let AH of HH) {
+          let HH = AH.map(BH);
+          HH && LH.push(HH)
         }
-        return xV
+        return LH
       }
     }
-    Fe.reconfigure = Fe.define(), Fe.appendConfig = Fe.define();
-    class Te {
-      constructor(VV, eV, xV, JV, YV, UV) {
-        this.startState = VV, this.changes = eV, this.selection = xV, this.effects = JV, this.annotations = YV, this.scrollIntoView = UV, this._doc = null, this._state = null, xV && LV(xV, eV.newLength), YV.some((VV => VV.type == Te.time)) || (this.annotations = YV.concat(Te.time.of(Date.now())))
+    TB.reconfigure = TB.define(), TB.appendConfig = TB.define();
+    class UB {
+      constructor(HH, BH, LH, AH, rH, SH) {
+        this.startState = HH, this.changes = BH, this.selection = LH, this.effects = AH, this.annotations = rH, this.scrollIntoView = SH, this._doc = null, this._state = null, LH && FH(LH, BH.newLength), rH.some((HH => HH.type == UB.time)) || (this.annotations = rH.concat(UB.time.of(Date.now())))
       }
-      static create(VV, eV, xV, JV, YV, UV) {
-        return new Te(VV, eV, xV, JV, YV, UV)
+      static create(HH, BH, LH, AH, rH, SH) {
+        return new UB(HH, BH, LH, AH, rH, SH)
       }
       get newDoc() {
         return this._doc || (this._doc = this.changes.apply(this.startState.doc))
@@ -1328,9 +1328,9 @@ export const modules = {
       get state() {
         return this._state || this.startState.applyTransaction(this), this._state
       }
-      annotation(VV) {
-        for (let eV of this.annotations)
-          if (eV.type == VV) return eV.value
+      annotation(HH) {
+        for (let BH of this.annotations)
+          if (BH.type == HH) return BH.value
       }
       get docChanged() {
         return !this.changes.empty
@@ -1338,584 +1338,584 @@ export const modules = {
       get reconfigured() {
         return this.startState.config != this.state.config
       }
-      isUserEvent(VV) {
-        let eV = this.annotation(Te.userEvent);
-        return !(!eV || !(eV == VV || eV.length > VV.length && eV.slice(0, VV.length) == VV && "." == eV[VV.length]))
+      isUserEvent(HH) {
+        let BH = this.annotation(UB.userEvent);
+        return !(!BH || !(BH == HH || BH.length > HH.length && BH.slice(0, HH.length) == HH && "." == BH[HH.length]))
       }
     }
 
-    function Pe(VV, eV) {
-      let xV = [];
-      for (let JV = 0, YV = 0;;) {
-        let UV, yV;
-        if (JV < VV.length && (YV == eV.length || eV[YV] >= VV[JV])) UV = VV[JV++], yV = VV[JV++];
+    function VB(HH, BH) {
+      let LH = [];
+      for (let AH = 0, rH = 0;;) {
+        let SH, hH;
+        if (AH < HH.length && (rH == BH.length || BH[rH] >= HH[AH])) SH = HH[AH++], hH = HH[AH++];
         else {
-          if (!(YV < eV.length)) return xV;
-          UV = eV[YV++], yV = eV[YV++]
-        }!xV.length || xV[xV.length - 1] < UV ? xV.push(UV, yV) : xV[xV.length - 1] < yV && (xV[xV.length - 1] = yV)
+          if (!(rH < BH.length)) return LH;
+          SH = BH[rH++], hH = BH[rH++]
+        }!LH.length || LH[LH.length - 1] < SH ? LH.push(SH, hH) : LH[LH.length - 1] < hH && (LH[LH.length - 1] = hH)
       }
     }
 
-    function Ae(VV, eV, xV) {
-      var JV;
-      let YV, UV, yV;
-      return xV ? (YV = eV.changes, UV = gV.empty(eV.changes.length), yV = VV.changes.compose(eV.changes)) : (YV = eV.changes.map(VV.changes), UV = VV.changes.mapDesc(eV.changes, !0), yV = VV.changes.compose(YV)), {
-        changes: yV,
-        selection: eV.selection ? eV.selection.map(UV) : null === (JV = VV.selection) || void 0 === JV ? void 0 : JV.map(YV),
-        effects: Fe.mapEffects(VV.effects, YV).concat(Fe.mapEffects(eV.effects, UV)),
-        annotations: VV.annotations.length ? VV.annotations.concat(eV.annotations) : eV.annotations,
-        scrollIntoView: VV.scrollIntoView || eV.scrollIntoView
+    function OB(HH, BH, LH) {
+      var AH;
+      let rH, SH, hH;
+      return LH ? (rH = BH.changes, SH = KH.empty(BH.changes.length), hH = HH.changes.compose(BH.changes)) : (rH = BH.changes.map(HH.changes), SH = HH.changes.mapDesc(BH.changes, !0), hH = HH.changes.compose(rH)), {
+        changes: hH,
+        selection: BH.selection ? BH.selection.map(SH) : null === (AH = HH.selection) || void 0 === AH ? void 0 : AH.map(rH),
+        effects: TB.mapEffects(HH.effects, rH).concat(TB.mapEffects(BH.effects, SH)),
+        annotations: HH.annotations.length ? HH.annotations.concat(BH.annotations) : BH.annotations,
+        scrollIntoView: HH.scrollIntoView || BH.scrollIntoView
       }
     }
 
-    function Ne(VV, eV, xV) {
-      let JV = eV.selection,
-        YV = ze(eV.annotations);
-      return eV.userEvent && (YV = YV.concat(Te.userEvent.of(eV.userEvent))), {
-        changes: eV.changes instanceof gV ? eV.changes : gV.of(eV.changes || [], xV, VV.facet(re)),
-        selection: JV && (JV instanceof lV ? JV : lV.single(JV.anchor, JV.head)),
-        effects: ze(eV.effects),
-        annotations: YV,
-        scrollIntoView: !!eV.scrollIntoView
+    function bB(HH, BH, LH) {
+      let AH = BH.selection,
+        rH = oB(BH.annotations);
+      return BH.userEvent && (rH = rH.concat(UB.userEvent.of(BH.userEvent))), {
+        changes: BH.changes instanceof KH ? BH.changes : KH.of(BH.changes || [], LH, HH.facet(YB)),
+        selection: AH && (AH instanceof nH ? AH : nH.single(AH.anchor, AH.head)),
+        effects: oB(BH.effects),
+        annotations: rH,
+        scrollIntoView: !!BH.scrollIntoView
       }
     }
 
-    function Xe(VV, eV, xV) {
-      let JV = Ne(VV, eV.length ? eV[0] : {}, VV.doc.length);
-      eV.length && !1 === eV[0].filter && (xV = !1);
-      for (let UV = 1; UV < eV.length; UV++) {
-        !1 === eV[UV].filter && (xV = !1);
-        let YV = !!eV[UV].sequential;
-        JV = Ae(JV, Ne(VV, eV[UV], YV ? JV.changes.newLength : VV.doc.length), YV)
+    function kB(HH, BH, LH) {
+      let AH = bB(HH, BH.length ? BH[0] : {}, HH.doc.length);
+      BH.length && !1 === BH[0].filter && (LH = !1);
+      for (let SH = 1; SH < BH.length; SH++) {
+        !1 === BH[SH].filter && (LH = !1);
+        let rH = !!BH[SH].sequential;
+        AH = OB(AH, bB(HH, BH[SH], rH ? AH.changes.newLength : HH.doc.length), rH)
       }
-      let YV = Te.create(VV, JV.changes, JV.selection, JV.effects, JV.annotations, JV.scrollIntoView);
-      return function(VV) {
-        let eV = VV.startState,
-          xV = eV.facet(Ee),
-          JV = VV;
-        for (let YV = xV.length - 1; YV >= 0; YV--) {
-          let UV = xV[YV](VV);
-          UV && Object.keys(UV).length && (JV = Ae(JV, Ne(eV, UV, VV.changes.newLength), !0))
+      let rH = UB.create(HH, AH.changes, AH.selection, AH.effects, AH.annotations, AH.scrollIntoView);
+      return function(HH) {
+        let BH = HH.startState,
+          LH = BH.facet(WB),
+          AH = HH;
+        for (let rH = LH.length - 1; rH >= 0; rH--) {
+          let SH = LH[rH](HH);
+          SH && Object.keys(SH).length && (AH = OB(AH, bB(BH, SH, HH.changes.newLength), !0))
         }
-        return JV == VV ? VV : Te.create(eV, VV.changes, VV.selection, JV.effects, JV.annotations, JV.scrollIntoView)
-      }(xV ? function(VV) {
-        let eV = VV.startState,
-          xV = !0;
-        for (let YV of eV.facet(ke)) {
-          let eV = YV(VV);
-          if (!1 === eV) {
-            xV = !1;
+        return AH == HH ? HH : UB.create(BH, HH.changes, HH.selection, AH.effects, AH.annotations, AH.scrollIntoView)
+      }(LH ? function(HH) {
+        let BH = HH.startState,
+          LH = !0;
+        for (let rH of BH.facet(uB)) {
+          let BH = rH(HH);
+          if (!1 === BH) {
+            LH = !1;
             break
           }
-          Array.isArray(eV) && (xV = !0 === xV ? eV : Pe(xV, eV))
+          Array.isArray(BH) && (LH = !0 === LH ? BH : VB(LH, BH))
         }
-        if (!0 !== xV) {
-          let JV, YV;
-          if (!1 === xV) YV = VV.changes.invertedDesc, JV = gV.empty(eV.doc.length);
+        if (!0 !== LH) {
+          let AH, rH;
+          if (!1 === LH) rH = HH.changes.invertedDesc, AH = KH.empty(BH.doc.length);
           else {
-            let eV = VV.changes.filter(xV);
-            JV = eV.changes, YV = eV.filtered.mapDesc(eV.changes).invertedDesc
+            let BH = HH.changes.filter(LH);
+            AH = BH.changes, rH = BH.filtered.mapDesc(BH.changes).invertedDesc
           }
-          VV = Te.create(eV, JV, VV.selection && VV.selection.map(YV), Fe.mapEffects(VV.effects, YV), VV.annotations, VV.scrollIntoView)
+          HH = UB.create(BH, AH, HH.selection && HH.selection.map(rH), TB.mapEffects(HH.effects, rH), HH.annotations, HH.scrollIntoView)
         }
-        let JV = eV.facet(be);
-        for (let YV = JV.length - 1; YV >= 0; YV--) {
-          let xV = JV[YV](VV);
-          VV = xV instanceof Te ? xV : Array.isArray(xV) && 1 == xV.length && xV[0] instanceof Te ? xV[0] : Xe(eV, ze(xV), !1)
+        let AH = BH.facet(QB);
+        for (let rH = AH.length - 1; rH >= 0; rH--) {
+          let LH = AH[rH](HH);
+          HH = LH instanceof UB ? LH : Array.isArray(LH) && 1 == LH.length && LH[0] instanceof UB ? LH[0] : kB(BH, oB(LH), !1)
         }
-        return VV
-      }(YV) : YV)
+        return HH
+      }(rH) : rH)
     }
-    Te.time = je.define(), Te.userEvent = je.define(), Te.addToHistory = je.define(), Te.remote = je.define();
-    const Me = [];
+    UB.time = xB.define(), UB.userEvent = xB.define(), UB.addToHistory = xB.define(), UB.remote = xB.define();
+    const mB = [];
 
-    function ze(VV) {
-      return null == VV ? Me : Array.isArray(VV) ? VV : [VV]
+    function oB(HH) {
+      return null == HH ? mB : Array.isArray(HH) ? HH : [HH]
     }
-    var Ge = function(VV) {
-      return VV[VV.Word = 0] = "Word", VV[VV.Space = 1] = "Space", VV[VV.Other = 2] = "Other", VV
-    }(Ge || (Ge = {}));
-    const We = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
-    let Re;
+    var IB = function(HH) {
+      return HH[HH.Word = 0] = "Word", HH[HH.Space = 1] = "Space", HH[HH.Other = 2] = "Other", HH
+    }(IB || (IB = {}));
+    const fB = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
+    let lB;
     try {
-      Re = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
-    } catch (xx) {}
+      lB = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
+    } catch (LL) {}
 
-    function ge(VV) {
-      return eV => {
-        if (!/\S/.test(eV)) return Ge.Space;
-        if (function(VV) {
-            if (Re) return Re.test(VV);
-            for (let eV = 0; eV < VV.length; eV++) {
-              let xV = VV[eV];
-              if (/\w/.test(xV) || xV > "\x80" && (xV.toUpperCase() != xV.toLowerCase() || We.test(xV))) return !0
+    function KB(HH) {
+      return BH => {
+        if (!/\S/.test(BH)) return IB.Space;
+        if (function(HH) {
+            if (lB) return lB.test(HH);
+            for (let BH = 0; BH < HH.length; BH++) {
+              let LH = HH[BH];
+              if (/\w/.test(LH) || LH > "\x80" && (LH.toUpperCase() != LH.toLowerCase() || fB.test(LH))) return !0
             }
             return !1
-          }(eV)) return Ge.Word;
-        for (let xV = 0; xV < VV.length; xV++)
-          if (eV.indexOf(VV[xV]) > -1) return Ge.Word;
-        return Ge.Other
+          }(BH)) return IB.Word;
+        for (let LH = 0; LH < HH.length; LH++)
+          if (BH.indexOf(HH[LH]) > -1) return IB.Word;
+        return IB.Other
       }
     }
-    class De {
-      constructor(VV, eV, xV, JV, YV, UV) {
-        this.config = VV, this.doc = eV, this.selection = xV, this.values = JV, this.status = VV.statusTemplate.slice(), this.computeSlot = YV, UV && (UV._state = this);
-        for (let yV = 0; yV < this.config.dynamicSlots.length; yV++) ne(this, yV << 1);
+    class cB {
+      constructor(HH, BH, LH, AH, rH, SH) {
+        this.config = HH, this.doc = BH, this.selection = LH, this.values = AH, this.status = HH.statusTemplate.slice(), this.computeSlot = rH, SH && (SH._state = this);
+        for (let hH = 0; hH < this.config.dynamicSlots.length; hH++) CB(this, hH << 1);
         this.computeSlot = null
       }
-      field(VV) {
-        let eV = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          xV = this.config.address[VV.id];
-        if (null != xV) return ne(this, xV), we(this, xV);
-        if (eV) throw new RangeError("Field is not present in this state")
+      field(HH) {
+        let BH = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          LH = this.config.address[HH.id];
+        if (null != LH) return CB(this, LH), EB(this, LH);
+        if (BH) throw new RangeError("Field is not present in this state")
       }
       update() {
-        for (var VV = arguments.length, eV = new Array(VV), xV = 0; xV < VV; xV++) eV[xV] = arguments[xV];
-        return Xe(this, eV, !0)
+        for (var HH = arguments.length, BH = new Array(HH), LH = 0; LH < HH; LH++) BH[LH] = arguments[LH];
+        return kB(this, BH, !0)
       }
-      applyTransaction(VV) {
-        let eV, xV = this.config,
+      applyTransaction(HH) {
+        let BH, LH = this.config,
           {
-            base: JV,
-            compartments: YV
-          } = xV;
-        for (let yV of VV.effects) yV.is(ye.reconfigure) ? (xV && (YV = new Map, xV.compartments.forEach(((VV, eV) => YV.set(eV, VV))), xV = null), YV.set(yV.value.compartment, yV.value.extension)) : yV.is(Fe.reconfigure) ? (xV = null, JV = yV.value) : yV.is(Fe.appendConfig) && (xV = null, JV = ze(JV).concat(yV.value));
-        if (xV) eV = VV.startState.values.slice();
+            base: AH,
+            compartments: rH
+          } = LH;
+        for (let hH of HH.effects) hH.is(hB.reconfigure) ? (LH && (rH = new Map, LH.compartments.forEach(((HH, BH) => rH.set(BH, HH))), LH = null), rH.set(hH.value.compartment, hH.value.extension)) : hH.is(TB.reconfigure) ? (LH = null, AH = hH.value) : hH.is(TB.appendConfig) && (LH = null, AH = oB(AH).concat(hH.value));
+        if (LH) BH = HH.startState.values.slice();
         else {
-          xV = Qe.resolve(JV, YV, this), eV = new De(xV, this.doc, this.selection, xV.dynamicSlots.map((() => null)), ((VV, eV) => eV.reconfigure(VV, this)), null).values
+          LH = zB.resolve(AH, rH, this), BH = new cB(LH, this.doc, this.selection, LH.dynamicSlots.map((() => null)), ((HH, BH) => BH.reconfigure(HH, this)), null).values
         }
-        let UV = VV.startState.facet(ve) ? VV.newSelection : VV.newSelection.asSingle();
-        new De(xV, VV.newDoc, UV, eV, ((eV, xV) => xV.update(eV, VV)), VV)
+        let SH = HH.startState.facet(GB) ? HH.newSelection : HH.newSelection.asSingle();
+        new cB(LH, HH.newDoc, SH, BH, ((BH, LH) => LH.update(BH, HH)), HH)
       }
-      replaceSelection(VV) {
-        return "string" == typeof VV && (VV = this.toText(VV)), this.changeByRange((eV => ({
+      replaceSelection(HH) {
+        return "string" == typeof HH && (HH = this.toText(HH)), this.changeByRange((BH => ({
           changes: {
-            from: eV.from,
-            to: eV.to,
-            insert: VV
+            from: BH.from,
+            to: BH.to,
+            insert: HH
           },
-          range: lV.cursor(eV.from + VV.length)
+          range: nH.cursor(BH.from + HH.length)
         })))
       }
-      changeByRange(VV) {
-        let eV = this.selection,
-          xV = VV(eV.TE[0]),
-          JV = this.changes(xV.changes),
-          YV = [xV.range],
-          UV = ze(xV.effects);
-        for (let yV = 1; yV < eV.TE.length; yV++) {
-          let xV = VV(eV.TE[yV]),
-            pV = this.changes(xV.changes),
-            QV = pV.map(JV);
-          for (let VV = 0; VV < yV; VV++) YV[VV] = YV[VV].map(QV);
-          let nV = JV.mapDesc(pV, !0);
-          YV.push(xV.range.map(nV)), JV = JV.compose(QV), UV = Fe.mapEffects(UV, QV).concat(Fe.mapEffects(ze(xV.effects), nV))
+      changeByRange(HH) {
+        let BH = this.selection,
+          LH = HH(BH.rW[0]),
+          AH = this.changes(LH.changes),
+          rH = [LH.range],
+          SH = oB(LH.effects);
+        for (let hH = 1; hH < BH.rW.length; hH++) {
+          let LH = HH(BH.rW[hH]),
+            tH = this.changes(LH.changes),
+            zH = tH.map(AH);
+          for (let HH = 0; HH < hH; HH++) rH[HH] = rH[HH].map(zH);
+          let CH = AH.mapDesc(tH, !0);
+          rH.push(LH.range.map(CH)), AH = AH.compose(zH), SH = TB.mapEffects(SH, zH).concat(TB.mapEffects(oB(LH.effects), CH))
         }
         return {
-          changes: JV,
-          selection: lV.create(YV, eV.mainIndex),
-          effects: UV
+          changes: AH,
+          selection: nH.create(rH, BH.mainIndex),
+          effects: SH
         }
       }
       changes() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return VV instanceof gV ? VV : gV.of(VV, this.doc.length, this.facet(De.lineSeparator))
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return HH instanceof KH ? HH : KH.of(HH, this.doc.length, this.facet(cB.lineSeparator))
       }
-      toText(VV) {
-        return bV.of(VV.split(this.facet(De.lineSeparator) || GV))
+      toText(HH) {
+        return QH.of(HH.split(this.facet(cB.lineSeparator) || IH))
       }
       sliceDoc() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
-        return this.doc.sliceString(VV, eV, this.lineBreak)
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
+        return this.doc.sliceString(HH, BH, this.lineBreak)
       }
-      facet(VV) {
-        let eV = this.config.address[VV.id];
-        return null == eV ? VV.default : (ne(this, eV), we(this, eV))
+      facet(HH) {
+        let BH = this.config.address[HH.id];
+        return null == BH ? HH.default : (CB(this, BH), EB(this, BH))
       }
-      toJSON(VV) {
-        let eV = {
+      toJSON(HH) {
+        let BH = {
           doc: this.sliceDoc(),
           selection: this.selection.toJSON()
         };
-        if (VV)
-          for (let xV in VV) {
-            let JV = VV[xV];
-            JV instanceof dV && null != this.config.address[JV.id] && (eV[xV] = JV.spec.toJSON(this.field(VV[xV]), this))
+        if (HH)
+          for (let LH in HH) {
+            let AH = HH[LH];
+            AH instanceof pH && null != this.config.address[AH.id] && (BH[LH] = AH.spec.toJSON(this.field(HH[LH]), this))
           }
-        return eV
+        return BH
       }
-      static fromJSON(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          xV = arguments.length > 2 ? arguments[2] : void 0;
-        if (!VV || "string" != typeof VV.doc) throw new RangeError("Invalid JSON representation for EditorState");
-        let JV = [];
-        if (xV)
-          for (let YV in xV)
-            if (Object.prototype.hasOwnProperty.call(VV, YV)) {
-              let eV = xV[YV],
-                UV = VV[YV];
-              JV.push(eV.init((VV => eV.spec.fromJSON(UV, VV))))
-            } return De.create({
-          doc: VV.doc,
-          selection: lV.fromJSON(VV.selection),
-          extensions: eV.extensions ? JV.concat([eV.extensions]) : JV
+      static fromJSON(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          LH = arguments.length > 2 ? arguments[2] : void 0;
+        if (!HH || "string" != typeof HH.doc) throw new RangeError("Invalid JSON representation for EditorState");
+        let AH = [];
+        if (LH)
+          for (let rH in LH)
+            if (Object.prototype.hasOwnProperty.call(HH, rH)) {
+              let BH = LH[rH],
+                SH = HH[rH];
+              AH.push(BH.init((HH => BH.spec.fromJSON(SH, HH))))
+            } return cB.create({
+          doc: HH.doc,
+          selection: nH.fromJSON(HH.selection),
+          extensions: BH.extensions ? AH.concat([BH.extensions]) : AH
         })
       }
       static create() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          eV = Qe.resolve(VV.extensions || [], new Map),
-          xV = VV.doc instanceof bV ? VV.doc : bV.of((VV.doc || "").split(eV.staticFacet(De.lineSeparator) || GV)),
-          JV = VV.selection ? VV.selection instanceof lV ? VV.selection : lV.single(VV.selection.anchor, VV.selection.head) : lV.single(0);
-        return LV(JV, xV.length), eV.staticFacet(ve) || (JV = JV.asSingle()), new De(eV, xV, JV, eV.dynamicSlots.map((() => null)), ((VV, eV) => eV.create(VV)), null)
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          BH = zB.resolve(HH.extensions || [], new Map),
+          LH = HH.doc instanceof QH ? HH.doc : QH.of((HH.doc || "").split(BH.staticFacet(cB.lineSeparator) || IH)),
+          AH = HH.selection ? HH.selection instanceof nH ? HH.selection : nH.single(HH.selection.anchor, HH.selection.head) : nH.single(0);
+        return FH(AH, LH.length), BH.staticFacet(GB) || (AH = AH.asSingle()), new cB(BH, LH, AH, BH.dynamicSlots.map((() => null)), ((HH, BH) => BH.create(HH)), null)
       }
       get tabSize() {
-        return this.facet(De.tabSize)
+        return this.facet(cB.tabSize)
       }
       get lineBreak() {
-        return this.facet(De.lineSeparator) || "\n"
+        return this.facet(cB.lineSeparator) || "\n"
       }
       get readOnly() {
-        return this.facet(Be)
+        return this.facet(MB)
       }
-      phrase(VV) {
-        for (var eV = arguments.length, xV = new Array(eV > 1 ? eV - 1 : 0), JV = 1; JV < eV; JV++) xV[JV - 1] = arguments[JV];
-        for (let YV of this.facet(De.phrases))
-          if (Object.prototype.hasOwnProperty.call(YV, VV)) {
-            VV = YV[VV];
+      phrase(HH) {
+        for (var BH = arguments.length, LH = new Array(BH > 1 ? BH - 1 : 0), AH = 1; AH < BH; AH++) LH[AH - 1] = arguments[AH];
+        for (let rH of this.facet(cB.phrases))
+          if (Object.prototype.hasOwnProperty.call(rH, HH)) {
+            HH = rH[HH];
             break
-          } return xV.length && (VV = VV.replace(/\$(\$|\d*)/g, ((VV, eV) => {
-          if ("$" == eV) return "$";
-          let JV = +(eV || 1);
-          return !JV || JV > xV.length ? VV : xV[JV - 1]
-        }))), VV
+          } return LH.length && (HH = HH.replace(/\$(\$|\d*)/g, ((HH, BH) => {
+          if ("$" == BH) return "$";
+          let AH = +(BH || 1);
+          return !AH || AH > LH.length ? HH : LH[AH - 1]
+        }))), HH
       }
-      languageDataAt(VV, eV) {
-        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          JV = [];
-        for (let YV of this.facet(Ze))
-          for (let UV of YV(this, eV, xV)) Object.prototype.hasOwnProperty.call(UV, VV) && JV.push(UV[VV]);
-        return JV
+      languageDataAt(HH, BH) {
+        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          AH = [];
+        for (let rH of this.facet(XB))
+          for (let SH of rH(this, BH, LH)) Object.prototype.hasOwnProperty.call(SH, HH) && AH.push(SH[HH]);
+        return AH
       }
-      charCategorizer(VV) {
-        let eV = this.languageDataAt("wordChars", VV);
-        return ge(eV.length ? eV[0] : "")
+      charCategorizer(HH) {
+        let BH = this.languageDataAt("wordChars", HH);
+        return KB(BH.length ? BH[0] : "")
       }
-      wordAt(VV) {
+      wordAt(HH) {
         let {
-          text: eV,
-          from: xV,
-          length: JV
-        } = this.doc.lineAt(VV), YV = this.charCategorizer(VV), UV = VV - xV, yV = VV - xV;
-        for (; UV > 0;) {
-          let VV = NV(eV, UV, !1);
-          if (YV(eV.slice(VV, UV)) != Ge.Word) break;
-          UV = VV
+          text: BH,
+          from: LH,
+          length: AH
+        } = this.doc.lineAt(HH), rH = this.charCategorizer(HH), SH = HH - LH, hH = HH - LH;
+        for (; SH > 0;) {
+          let HH = bH(BH, SH, !1);
+          if (rH(BH.slice(HH, SH)) != IB.Word) break;
+          SH = HH
         }
-        for (; yV < JV;) {
-          let VV = NV(eV, yV);
-          if (YV(eV.slice(yV, VV)) != Ge.Word) break;
-          yV = VV
+        for (; hH < AH;) {
+          let HH = bH(BH, hH);
+          if (rH(BH.slice(hH, HH)) != IB.Word) break;
+          hH = HH
         }
-        return UV == yV ? null : lV.range(UV + xV, yV + xV)
+        return SH == hH ? null : nH.range(SH + LH, hH + LH)
       }
     }
 
-    function ie(VV, eV) {
-      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        JV = {};
-      for (let YV of VV)
-        for (let VV of Object.keys(YV)) {
-          let eV = YV[VV],
-            UV = JV[VV];
-          if (void 0 === UV) JV[VV] = eV;
-          else if (UV === eV || void 0 === eV);
+    function eB(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        AH = {};
+      for (let rH of HH)
+        for (let HH of Object.keys(rH)) {
+          let BH = rH[HH],
+            SH = AH[HH];
+          if (void 0 === SH) AH[HH] = BH;
+          else if (SH === BH || void 0 === BH);
           else {
-            if (!Object.hasOwnProperty.call(xV, VV)) throw new Error("Config merge conflict for field " + VV);
-            JV[VV] = xV[VV](UV, eV)
+            if (!Object.hasOwnProperty.call(LH, HH)) throw new Error("Config merge conflict for field " + HH);
+            AH[HH] = LH[HH](SH, BH)
           }
         }
-      for (let YV in eV) void 0 === JV[YV] && (JV[YV] = eV[YV]);
-      return JV
+      for (let rH in BH) void 0 === AH[rH] && (AH[rH] = BH[rH]);
+      return AH
     }
-    De.allowMultipleSelections = ve, De.tabSize = mV.define({
-      combine: VV => VV.length ? VV[0] : 4
-    }), De.lineSeparator = re, De.readOnly = Be, De.phrases = mV.define({
-      compare(VV, eV) {
-        let xV = Object.keys(VV),
-          JV = Object.keys(eV);
-        return xV.length == JV.length && xV.every((xV => VV[xV] == eV[xV]))
+    cB.allowMultipleSelections = GB, cB.tabSize = wH.define({
+      combine: HH => HH.length ? HH[0] : 4
+    }), cB.lineSeparator = YB, cB.readOnly = MB, cB.phrases = wH.define({
+      compare(HH, BH) {
+        let LH = Object.keys(HH),
+          AH = Object.keys(BH);
+        return LH.length == AH.length && LH.every((LH => HH[LH] == BH[LH]))
       }
-    }), De.languageData = Ze, De.changeFilter = ke, De.transactionFilter = be, De.transactionExtender = Ee, ye.reconfigure = Fe.define();
-    class Ce {
-      eq(VV) {
-        return this == VV
+    }), cB.languageData = XB, cB.changeFilter = uB, cB.transactionFilter = QB, cB.transactionExtender = WB, hB.reconfigure = TB.define();
+    class qB {
+      eq(HH) {
+        return this == HH
       }
-      range(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VV;
-        return oe.create(VV, eV, this)
-      }
-    }
-
-    function ae(VV, eV) {
-      return VV == eV || VV.constructor == eV.constructor && VV.eq(eV)
-    }
-    Ce.prototype.startSide = Ce.prototype.endSide = 0, Ce.prototype.point = !1, Ce.prototype.mapMode = WV.TrackDel;
-    class oe {
-      constructor(VV, eV, xV) {
-        this.from = VV, this.to = eV, this.value = xV
-      }
-      static create(VV, eV, xV) {
-        return new oe(VV, eV, xV)
+      range(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : HH;
+        return NB.create(HH, BH, this)
       }
     }
 
-    function ce(VV, eV) {
-      return VV.from - eV.from || VV.value.startSide - eV.value.startSide
+    function gB(HH, BH) {
+      return HH == BH || HH.constructor == BH.constructor && HH.eq(BH)
     }
-    class he {
-      constructor(VV, eV, xV, JV) {
-        this.from = VV, this.to = eV, this.value = xV, this.aYV = JV
+    qB.prototype.startSide = qB.prototype.endSide = 0, qB.prototype.point = !1, qB.prototype.mapMode = fH.TrackDel;
+    class NB {
+      constructor(HH, BH, LH) {
+        this.from = HH, this.to = BH, this.value = LH
+      }
+      static create(HH, BH, LH) {
+        return new NB(HH, BH, LH)
+      }
+    }
+
+    function RB(HH, BH) {
+      return HH.from - BH.from || HH.value.startSide - BH.value.startSide
+    }
+    class jB {
+      constructor(HH, BH, LH, AH) {
+        this.from = HH, this.to = BH, this.value = LH, this.VrH = AH
       }
       get length() {
         return this.to[this.to.length - 1]
       }
-      findIndex(VV, eV, xV) {
-        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          YV = xV ? this.to : this.from;
-        for (let UV = JV, yV = YV.length;;) {
-          if (UV == yV) return UV;
-          let JV = UV + yV >> 1,
-            pV = YV[JV] - VV || (xV ? this.value[JV].endSide : this.value[JV].startSide) - eV;
-          if (JV == UV) return pV >= 0 ? UV : yV;
-          pV >= 0 ? yV = JV : UV = JV + 1
+      findIndex(HH, BH, LH) {
+        let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          rH = LH ? this.to : this.from;
+        for (let SH = AH, hH = rH.length;;) {
+          if (SH == hH) return SH;
+          let AH = SH + hH >> 1,
+            tH = rH[AH] - HH || (LH ? this.value[AH].endSide : this.value[AH].startSide) - BH;
+          if (AH == SH) return tH >= 0 ? SH : hH;
+          tH >= 0 ? hH = AH : SH = AH + 1
         }
       }
-      between(VV, eV, xV, JV) {
-        for (let YV = this.findIndex(eV, -1e9, !0), UV = this.findIndex(xV, 1e9, !1, YV); YV < UV; YV++)
-          if (!1 === JV(this.from[YV] + VV, this.to[YV] + VV, this.value[YV])) return !1
+      between(HH, BH, LH, AH) {
+        for (let rH = this.findIndex(BH, -1e9, !0), SH = this.findIndex(LH, 1e9, !1, rH); rH < SH; rH++)
+          if (!1 === AH(this.from[rH] + HH, this.to[rH] + HH, this.value[rH])) return !1
       }
-      map(VV, eV) {
-        let xV = [],
-          JV = [],
-          YV = [],
-          UV = -1,
-          yV = -1;
-        for (let pV = 0; pV < this.value.length; pV++) {
-          let QV, nV, wV = this.value[pV],
-            ZV = this.from[pV] + VV,
-            vV = this.to[pV] + VV;
-          if (ZV == vV) {
-            let VV = eV.mapPos(ZV, wV.startSide, wV.mapMode);
-            if (null == VV) continue;
-            if (QV = nV = VV, wV.startSide != wV.endSide && (nV = eV.mapPos(ZV, wV.endSide), nV < QV)) continue
-          } else if (QV = eV.mapPos(ZV, wV.startSide), nV = eV.mapPos(vV, wV.endSide), QV > nV || QV == nV && wV.startSide > 0 && wV.endSide <= 0) continue;
-          (nV - QV || wV.endSide - wV.startSide) < 0 || (UV < 0 && (UV = QV), wV.point && (yV = Math.max(yV, nV - QV)), xV.push(wV), JV.push(QV - UV), YV.push(nV - UV))
+      map(HH, BH) {
+        let LH = [],
+          AH = [],
+          rH = [],
+          SH = -1,
+          hH = -1;
+        for (let tH = 0; tH < this.value.length; tH++) {
+          let zH, CH, EH = this.value[tH],
+            XH = this.from[tH] + HH,
+            GH = this.to[tH] + HH;
+          if (XH == GH) {
+            let HH = BH.mapPos(XH, EH.startSide, EH.mapMode);
+            if (null == HH) continue;
+            if (zH = CH = HH, EH.startSide != EH.endSide && (CH = BH.mapPos(XH, EH.endSide), CH < zH)) continue
+          } else if (zH = BH.mapPos(XH, EH.startSide), CH = BH.mapPos(GH, EH.endSide), zH > CH || zH == CH && EH.startSide > 0 && EH.endSide <= 0) continue;
+          (CH - zH || EH.endSide - EH.startSide) < 0 || (SH < 0 && (SH = zH), EH.point && (hH = Math.max(hH, CH - zH)), LH.push(EH), AH.push(zH - SH), rH.push(CH - SH))
         }
         return {
-          mapped: xV.length ? new he(JV, YV, xV, yV) : null,
-          pos: UV
+          mapped: LH.length ? new jB(AH, rH, LH, hH) : null,
+          pos: SH
         }
       }
     }
-    class le {
-      constructor(VV, eV, xV, JV) {
-        this.chunkPos = VV, this.chunk = eV, this.nextLayer = xV, this.aYV = JV
+    class nB {
+      constructor(HH, BH, LH, AH) {
+        this.chunkPos = HH, this.chunk = BH, this.nextLayer = LH, this.VrH = AH
       }
-      static create(VV, eV, xV, JV) {
-        return new le(VV, eV, xV, JV)
+      static create(HH, BH, LH, AH) {
+        return new nB(HH, BH, LH, AH)
       }
       get length() {
-        let VV = this.chunk.length - 1;
-        return VV < 0 ? 0 : Math.max(this.chunkEnd(VV), this.nextLayer.length)
+        let HH = this.chunk.length - 1;
+        return HH < 0 ? 0 : Math.max(this.chunkEnd(HH), this.nextLayer.length)
       }
       get size() {
-        if (this.XZ) return 0;
-        let VV = this.nextLayer.size;
-        for (let eV of this.chunk) VV += eV.value.length;
-        return VV
+        if (this.TX) return 0;
+        let HH = this.nextLayer.size;
+        for (let BH of this.chunk) HH += BH.value.length;
+        return HH
       }
-      chunkEnd(VV) {
-        return this.chunkPos[VV] + this.chunk[VV].length
+      chunkEnd(HH) {
+        return this.chunkPos[HH] + this.chunk[HH].length
       }
-      update(VV) {
+      update(HH) {
         let {
-          add: eV = [],
-          sort: xV = !1,
-          filterFrom: JV = 0,
-          filterTo: YV = this.length
-        } = VV, UV = VV.filter;
-        if (0 == eV.length && !UV) return this;
-        if (xV && (eV = eV.slice().sort(ce)), this.XZ) return eV.length ? le.of(eV) : this;
-        let yV = new me(this, null, -1).goto(0),
-          pV = 0,
-          QV = [],
-          nV = new Le;
-        for (; yV.value || pV < eV.length;)
-          if (pV < eV.length && (yV.from - eV[pV].from || yV.startSide - eV[pV].value.startSide) >= 0) {
-            let VV = eV[pV++];
-            nV.addInner(VV.from, VV.to, VV.value) || QV.push(VV)
-          } else 1 == yV.rangeIndex && yV.chunkIndex < this.chunk.length && (pV == eV.length || this.chunkEnd(yV.chunkIndex) < eV[pV].from) && (!UV || JV > this.chunkEnd(yV.chunkIndex) || YV < this.chunkPos[yV.chunkIndex]) && nV.addChunk(this.chunkPos[yV.chunkIndex], this.chunk[yV.chunkIndex]) ? yV.nextChunk() : ((!UV || JV > yV.to || YV < yV.from || UV(yV.from, yV.to, yV.value)) && (nV.addInner(yV.from, yV.to, yV.value) || QV.push(oe.create(yV.from, yV.to, yV.value))), yV.next());
-        return nV.finishInner(this.nextLayer.XZ && !QV.length ? le.empty : this.nextLayer.update({
-          add: QV,
-          filter: UV,
-          filterFrom: JV,
-          filterTo: YV
+          add: BH = [],
+          sort: LH = !1,
+          filterFrom: AH = 0,
+          filterTo: rH = this.length
+        } = HH, SH = HH.filter;
+        if (0 == BH.length && !SH) return this;
+        if (LH && (BH = BH.slice().sort(RB)), this.TX) return BH.length ? nB.of(BH) : this;
+        let hH = new wB(this, null, -1).goto(0),
+          tH = 0,
+          zH = [],
+          CH = new FB;
+        for (; hH.value || tH < BH.length;)
+          if (tH < BH.length && (hH.from - BH[tH].from || hH.startSide - BH[tH].value.startSide) >= 0) {
+            let HH = BH[tH++];
+            CH.addInner(HH.from, HH.to, HH.value) || zH.push(HH)
+          } else 1 == hH.rangeIndex && hH.chunkIndex < this.chunk.length && (tH == BH.length || this.chunkEnd(hH.chunkIndex) < BH[tH].from) && (!SH || AH > this.chunkEnd(hH.chunkIndex) || rH < this.chunkPos[hH.chunkIndex]) && CH.addChunk(this.chunkPos[hH.chunkIndex], this.chunk[hH.chunkIndex]) ? hH.nextChunk() : ((!SH || AH > hH.to || rH < hH.from || SH(hH.from, hH.to, hH.value)) && (CH.addInner(hH.from, hH.to, hH.value) || zH.push(NB.create(hH.from, hH.to, hH.value))), hH.next());
+        return CH.finishInner(this.nextLayer.TX && !zH.length ? nB.empty : this.nextLayer.update({
+          add: zH,
+          filter: SH,
+          filterFrom: AH,
+          filterTo: rH
         }))
       }
-      map(VV) {
-        if (VV.empty || this.XZ) return this;
-        let eV = [],
-          xV = [],
-          JV = -1;
-        for (let UV = 0; UV < this.chunk.length; UV++) {
-          let YV = this.chunkPos[UV],
-            yV = this.chunk[UV],
-            pV = VV.touchesRange(YV, YV + yV.length);
-          if (!1 === pV) JV = Math.max(JV, yV.aYV), eV.push(yV), xV.push(VV.mapPos(YV));
-          else if (!0 === pV) {
+      map(HH) {
+        if (HH.empty || this.TX) return this;
+        let BH = [],
+          LH = [],
+          AH = -1;
+        for (let SH = 0; SH < this.chunk.length; SH++) {
+          let rH = this.chunkPos[SH],
+            hH = this.chunk[SH],
+            tH = HH.touchesRange(rH, rH + hH.length);
+          if (!1 === tH) AH = Math.max(AH, hH.VrH), BH.push(hH), LH.push(HH.mapPos(rH));
+          else if (!0 === tH) {
             let {
-              mapped: UV,
-              pos: pV
-            } = yV.map(YV, VV);
-            UV && (JV = Math.max(JV, UV.aYV), eV.push(UV), xV.push(pV))
+              mapped: SH,
+              pos: tH
+            } = hH.map(rH, HH);
+            SH && (AH = Math.max(AH, SH.VrH), BH.push(SH), LH.push(tH))
           }
         }
-        let YV = this.nextLayer.map(VV);
-        return 0 == eV.length ? YV : new le(xV, eV, YV || le.empty, JV)
+        let rH = this.nextLayer.map(HH);
+        return 0 == BH.length ? rH : new nB(LH, BH, rH || nB.empty, AH)
       }
-      between(VV, eV, xV) {
-        if (!this.XZ) {
-          for (let JV = 0; JV < this.chunk.length; JV++) {
-            let YV = this.chunkPos[JV],
-              UV = this.chunk[JV];
-            if (eV >= YV && VV <= YV + UV.length && !1 === UV.between(YV, VV - YV, eV - YV, xV)) return
+      between(HH, BH, LH) {
+        if (!this.TX) {
+          for (let AH = 0; AH < this.chunk.length; AH++) {
+            let rH = this.chunkPos[AH],
+              SH = this.chunk[AH];
+            if (BH >= rH && HH <= rH + SH.length && !1 === SH.between(rH, HH - rH, BH - rH, LH)) return
           }
-          this.nextLayer.between(VV, eV, xV)
+          this.nextLayer.between(HH, BH, LH)
         }
       }
       iter() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return Ke.from([this]).goto(VV)
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return ZB.from([this]).goto(HH)
       }
-      get XZ() {
+      get TX() {
         return this.nextLayer == this
       }
-      static iter(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Ke.from(VV).goto(eV)
+      static iter(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return ZB.from(HH).goto(BH)
       }
-      static compare(VV, eV, xV, JV) {
-        let YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
-          UV = VV.filter((VV => VV.aYV > 0 || !VV.XZ && VV.aYV >= YV)),
-          yV = eV.filter((VV => VV.aYV > 0 || !VV.XZ && VV.aYV >= YV)),
-          pV = fe(UV, yV, xV),
-          QV = new ue(UV, pV, YV),
-          nV = new ue(yV, pV, YV);
-        xV.iterGaps(((VV, eV, xV) => se(QV, VV, nV, eV, xV, JV))), xV.empty && 0 == xV.length && se(QV, 0, nV, 0, 0, JV)
+      static compare(HH, BH, LH, AH) {
+        let rH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
+          SH = HH.filter((HH => HH.VrH > 0 || !HH.TX && HH.VrH >= rH)),
+          hH = BH.filter((HH => HH.VrH > 0 || !HH.TX && HH.VrH >= rH)),
+          tH = DB(SH, hH, LH),
+          zH = new aB(SH, tH, rH),
+          CH = new aB(hH, tH, rH);
+        LH.iterGaps(((HH, BH, LH) => sB(zH, HH, CH, BH, LH, AH))), LH.empty && 0 == LH.length && sB(zH, 0, CH, 0, 0, AH)
       }
-      static eq(VV, eV) {
-        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          JV = arguments.length > 3 ? arguments[3] : void 0;
-        null == JV && (JV = 999999999);
-        let YV = VV.filter((VV => !VV.XZ && eV.indexOf(VV) < 0)),
-          UV = eV.filter((eV => !eV.XZ && VV.indexOf(eV) < 0));
-        if (YV.length != UV.length) return !1;
-        if (!YV.length) return !0;
-        let yV = fe(YV, UV),
-          pV = new ue(YV, yV, 0).goto(xV),
-          QV = new ue(UV, yV, 0).goto(xV);
+      static eq(HH, BH) {
+        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          AH = arguments.length > 3 ? arguments[3] : void 0;
+        null == AH && (AH = 999999999);
+        let rH = HH.filter((HH => !HH.TX && BH.indexOf(HH) < 0)),
+          SH = BH.filter((BH => !BH.TX && HH.indexOf(BH) < 0));
+        if (rH.length != SH.length) return !1;
+        if (!rH.length) return !0;
+        let hH = DB(rH, SH),
+          tH = new aB(rH, hH, 0).goto(LH),
+          zH = new aB(SH, hH, 0).goto(LH);
         for (;;) {
-          if (pV.to != QV.to || !Se(pV.active, QV.active) || pV.point && (!QV.point || !ae(pV.point, QV.point))) return !1;
-          if (pV.to > JV) return !0;
-          pV.next(), QV.next()
+          if (tH.to != zH.to || !JB(tH.active, zH.active) || tH.point && (!zH.point || !gB(tH.point, zH.point))) return !1;
+          if (tH.to > AH) return !0;
+          tH.next(), zH.next()
         }
       }
-      static spans(VV, eV, xV, JV) {
-        let YV = new ue(VV, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(eV),
-          UV = eV,
-          yV = YV.openStart;
+      static spans(HH, BH, LH, AH) {
+        let rH = new aB(HH, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(BH),
+          SH = BH,
+          hH = rH.openStart;
         for (;;) {
-          let VV = Math.min(YV.to, xV);
-          if (YV.point) {
-            let xV = YV.activeForPoint(YV.to),
-              pV = YV.pointFrom < eV ? xV.length + 1 : YV.point.startSide < 0 ? xV.length : Math.min(xV.length, yV);
-            JV.point(UV, VV, YV.point, xV, pV, YV.pointRank), yV = Math.min(YV.openEnd(VV), xV.length)
-          } else VV > UV && (JV.span(UV, VV, YV.active, yV), yV = YV.openEnd(VV));
-          if (YV.to > xV) return yV + (YV.point && YV.to > xV ? 1 : 0);
-          UV = YV.to, YV.next()
+          let HH = Math.min(rH.to, LH);
+          if (rH.point) {
+            let LH = rH.activeForPoint(rH.to),
+              tH = rH.pointFrom < BH ? LH.length + 1 : rH.point.startSide < 0 ? LH.length : Math.min(LH.length, hH);
+            AH.point(SH, HH, rH.point, LH, tH, rH.pointRank), hH = Math.min(rH.openEnd(HH), LH.length)
+          } else HH > SH && (AH.span(SH, HH, rH.active, hH), hH = rH.openEnd(HH));
+          if (rH.to > LH) return hH + (rH.point && rH.to > LH ? 1 : 0);
+          SH = rH.to, rH.next()
         }
       }
-      static of (VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          xV = new Le;
-        for (let JV of VV instanceof oe ? [VV] : eV ? function(VV) {
-            if (VV.length > 1)
-              for (let eV = VV[0], xV = 1; xV < VV.length; xV++) {
-                let JV = VV[xV];
-                if (ce(eV, JV) > 0) return VV.slice().sort(ce);
-                eV = JV
+      static of (HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          LH = new FB;
+        for (let AH of HH instanceof NB ? [HH] : BH ? function(HH) {
+            if (HH.length > 1)
+              for (let BH = HH[0], LH = 1; LH < HH.length; LH++) {
+                let AH = HH[LH];
+                if (RB(BH, AH) > 0) return HH.slice().sort(RB);
+                BH = AH
               }
-            return VV
-          }(VV) : VV) xV.add(JV.from, JV.to, JV.value);
-        return xV.finish()
+            return HH
+          }(HH) : HH) LH.add(AH.from, AH.to, AH.value);
+        return LH.finish()
       }
-      static join(VV) {
-        if (!VV.length) return le.empty;
-        let eV = VV[VV.length - 1];
-        for (let xV = VV.length - 2; xV >= 0; xV--)
-          for (let JV = VV[xV]; JV != le.empty; JV = JV.nextLayer) eV = new le(JV.chunkPos, JV.chunk, eV, Math.max(JV.aYV, eV.aYV));
-        return eV
+      static join(HH) {
+        if (!HH.length) return nB.empty;
+        let BH = HH[HH.length - 1];
+        for (let LH = HH.length - 2; LH >= 0; LH--)
+          for (let AH = HH[LH]; AH != nB.empty; AH = AH.nextLayer) BH = new nB(AH.chunkPos, AH.chunk, BH, Math.max(AH.VrH, BH.VrH));
+        return BH
       }
     }
-    le.empty = new le([], [], null, -1), le.empty.nextLayer = le.empty;
-    class Le {
-      finishChunk(VV) {
-        this.chunks.push(new he(this.from, this.to, this.value, this.aYV)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.aYV), this.aYV = -1, VV && (this.from = [], this.to = [], this.value = [])
+    nB.empty = new nB([], [], null, -1), nB.empty.nextLayer = nB.empty;
+    class FB {
+      finishChunk(HH) {
+        this.chunks.push(new jB(this.from, this.to, this.value, this.VrH)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.VrH), this.VrH = -1, HH && (this.from = [], this.to = [], this.value = [])
       }
       constructor() {
-        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.aYV = -1, this.setMaxPoint = -1, this.nextLayer = null
+        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.VrH = -1, this.setMaxPoint = -1, this.nextLayer = null
       }
-      add(VV, eV, xV) {
-        this.addInner(VV, eV, xV) || (this.nextLayer || (this.nextLayer = new Le)).add(VV, eV, xV)
+      add(HH, BH, LH) {
+        this.addInner(HH, BH, LH) || (this.nextLayer || (this.nextLayer = new FB)).add(HH, BH, LH)
       }
-      addInner(VV, eV, xV) {
-        let JV = VV - this.lastTo || xV.startSide - this.last.endSide;
-        if (JV <= 0 && (VV - this.lastFrom || xV.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
-        return !(JV < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = VV), this.from.push(VV - this.chunkStart), this.to.push(eV - this.chunkStart), this.last = xV, this.lastFrom = VV, this.lastTo = eV, this.value.push(xV), xV.point && (this.aYV = Math.max(this.aYV, eV - VV)), !0)
+      addInner(HH, BH, LH) {
+        let AH = HH - this.lastTo || LH.startSide - this.last.endSide;
+        if (AH <= 0 && (HH - this.lastFrom || LH.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
+        return !(AH < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = HH), this.from.push(HH - this.chunkStart), this.to.push(BH - this.chunkStart), this.last = LH, this.lastFrom = HH, this.lastTo = BH, this.value.push(LH), LH.point && (this.VrH = Math.max(this.VrH, BH - HH)), !0)
       }
-      addChunk(VV, eV) {
-        if ((VV - this.lastTo || eV.value[0].startSide - this.last.endSide) < 0) return !1;
-        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, eV.aYV), this.chunks.push(eV), this.chunkPos.push(VV);
-        let xV = eV.value.length - 1;
-        return this.last = eV.value[xV], this.lastFrom = eV.from[xV] + VV, this.lastTo = eV.to[xV] + VV, !0
+      addChunk(HH, BH) {
+        if ((HH - this.lastTo || BH.value[0].startSide - this.last.endSide) < 0) return !1;
+        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, BH.VrH), this.chunks.push(BH), this.chunkPos.push(HH);
+        let LH = BH.value.length - 1;
+        return this.last = BH.value[LH], this.lastFrom = BH.from[LH] + HH, this.lastTo = BH.to[LH] + HH, !0
       }
       finish() {
-        return this.finishInner(le.empty)
+        return this.finishInner(nB.empty)
       }
-      finishInner(VV) {
-        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return VV;
-        let eV = le.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(VV) : VV, this.setMaxPoint);
-        return this.from = null, eV
+      finishInner(HH) {
+        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return HH;
+        let BH = nB.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(HH) : HH, this.setMaxPoint);
+        return this.from = null, BH
       }
     }
 
-    function fe(VV, eV, xV) {
-      let JV = new Map;
-      for (let UV of VV)
-        for (let VV = 0; VV < UV.chunk.length; VV++) UV.chunk[VV].aYV <= 0 && JV.set(UV.chunk[VV], UV.chunkPos[VV]);
-      let YV = new Set;
-      for (let UV of eV)
-        for (let VV = 0; VV < UV.chunk.length; VV++) {
-          let eV = JV.get(UV.chunk[VV]);
-          null == eV || (xV ? xV.mapPos(eV) : eV) != UV.chunkPos[VV] || (null === xV || void 0 === xV ? void 0 : xV.touchesRange(eV, eV + UV.chunk[VV].length)) || YV.add(UV.chunk[VV])
+    function DB(HH, BH, LH) {
+      let AH = new Map;
+      for (let SH of HH)
+        for (let HH = 0; HH < SH.chunk.length; HH++) SH.chunk[HH].VrH <= 0 && AH.set(SH.chunk[HH], SH.chunkPos[HH]);
+      let rH = new Set;
+      for (let SH of BH)
+        for (let HH = 0; HH < SH.chunk.length; HH++) {
+          let BH = AH.get(SH.chunk[HH]);
+          null == BH || (LH ? LH.mapPos(BH) : BH) != SH.chunkPos[HH] || (null === LH || void 0 === LH ? void 0 : LH.touchesRange(BH, BH + SH.chunk[HH].length)) || rH.add(SH.chunk[HH])
         }
-      return YV
+      return rH
     }
-    class me {
-      constructor(VV, eV, xV) {
-        let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.layer = VV, this.skip = eV, this.oYV = xV, this.rank = JV
+    class wB {
+      constructor(HH, BH, LH) {
+        let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.layer = HH, this.skip = BH, this.OrH = LH, this.rank = AH
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
@@ -1923,24 +1923,24 @@ export const modules = {
       get endSide() {
         return this.value ? this.value.endSide : 0
       }
-      goto(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(VV, eV, !1), this
+      goto(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(HH, BH, !1), this
       }
-      gotoInner(VV, eV, xV) {
+      gotoInner(HH, BH, LH) {
         for (; this.chunkIndex < this.layer.chunk.length;) {
-          let eV = this.layer.chunk[this.chunkIndex];
-          if (!(this.skip && this.skip.has(eV) || this.layer.chunkEnd(this.chunkIndex) < VV || eV.aYV < this.oYV)) break;
-          this.chunkIndex++, xV = !1
+          let BH = this.layer.chunk[this.chunkIndex];
+          if (!(this.skip && this.skip.has(BH) || this.layer.chunkEnd(this.chunkIndex) < HH || BH.VrH < this.OrH)) break;
+          this.chunkIndex++, LH = !1
         }
         if (this.chunkIndex < this.layer.chunk.length) {
-          let JV = this.layer.chunk[this.chunkIndex].findIndex(VV - this.layer.chunkPos[this.chunkIndex], eV, !0);
-          (!xV || this.rangeIndex < JV) && this.setRangeIndex(JV)
+          let AH = this.layer.chunk[this.chunkIndex].findIndex(HH - this.layer.chunkPos[this.chunkIndex], BH, !0);
+          (!LH || this.rangeIndex < AH) && this.setRangeIndex(AH)
         }
         this.next()
       }
-      forward(VV, eV) {
-        (this.to - VV || this.endSide - eV) < 0 && this.gotoInner(VV, eV, !0)
+      forward(HH, BH) {
+        (this.to - HH || this.endSide - BH) < 0 && this.gotoInner(HH, BH, !0)
       }
       next() {
         for (;;) {
@@ -1948,203 +1948,203 @@ export const modules = {
             this.from = this.to = 1e9, this.value = null;
             break
           } {
-            let VV = this.layer.chunkPos[this.chunkIndex],
-              eV = this.layer.chunk[this.chunkIndex],
-              xV = VV + eV.from[this.rangeIndex];
-            if (this.from = xV, this.to = VV + eV.to[this.rangeIndex], this.value = eV.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.oYV < 0 || this.value.point && this.to - this.from >= this.oYV) break
+            let HH = this.layer.chunkPos[this.chunkIndex],
+              BH = this.layer.chunk[this.chunkIndex],
+              LH = HH + BH.from[this.rangeIndex];
+            if (this.from = LH, this.to = HH + BH.to[this.rangeIndex], this.value = BH.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.OrH < 0 || this.value.point && this.to - this.from >= this.OrH) break
           }
         }
       }
-      setRangeIndex(VV) {
-        if (VV == this.layer.chunk[this.chunkIndex].value.length) {
+      setRangeIndex(HH) {
+        if (HH == this.layer.chunk[this.chunkIndex].value.length) {
           if (this.chunkIndex++, this.skip)
             for (; this.chunkIndex < this.layer.chunk.length && this.skip.has(this.layer.chunk[this.chunkIndex]);) this.chunkIndex++;
           this.rangeIndex = 0
-        } else this.rangeIndex = VV
+        } else this.rangeIndex = HH
       }
       nextChunk() {
         this.chunkIndex++, this.rangeIndex = 0, this.next()
       }
-      compare(VV) {
-        return this.from - VV.from || this.startSide - VV.startSide || this.rank - VV.rank || this.to - VV.to || this.endSide - VV.endSide
+      compare(HH) {
+        return this.from - HH.from || this.startSide - HH.startSide || this.rank - HH.rank || this.to - HH.to || this.endSide - HH.endSide
       }
     }
-    class Ke {
-      constructor(VV) {
-        this.heap = VV
+    class ZB {
+      constructor(HH) {
+        this.heap = HH
       }
-      static from(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          JV = [];
-        for (let YV = 0; YV < VV.length; YV++)
-          for (let UV = VV[YV]; !UV.XZ; UV = UV.nextLayer) UV.aYV >= xV && JV.push(new me(UV, eV, xV, YV));
-        return 1 == JV.length ? JV[0] : new Ke(JV)
+      static from(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          AH = [];
+        for (let rH = 0; rH < HH.length; rH++)
+          for (let SH = HH[rH]; !SH.TX; SH = SH.nextLayer) SH.VrH >= LH && AH.push(new wB(SH, BH, LH, rH));
+        return 1 == AH.length ? AH[0] : new ZB(AH)
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
       }
-      goto(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        for (let xV of this.heap) xV.goto(VV, eV);
-        for (let xV = this.heap.length >> 1; xV >= 0; xV--) He(this.heap, xV);
+      goto(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        for (let LH of this.heap) LH.goto(HH, BH);
+        for (let LH = this.heap.length >> 1; LH >= 0; LH--) dB(this.heap, LH);
         return this.next(), this
       }
-      forward(VV, eV) {
-        for (let xV of this.heap) xV.forward(VV, eV);
-        for (let xV = this.heap.length >> 1; xV >= 0; xV--) He(this.heap, xV);
-        (this.to - VV || this.value.endSide - eV) < 0 && this.next()
+      forward(HH, BH) {
+        for (let LH of this.heap) LH.forward(HH, BH);
+        for (let LH = this.heap.length >> 1; LH >= 0; LH--) dB(this.heap, LH);
+        (this.to - HH || this.value.endSide - BH) < 0 && this.next()
       }
       next() {
         if (0 == this.heap.length) this.from = this.to = 1e9, this.value = null, this.rank = -1;
         else {
-          let VV = this.heap[0];
-          this.from = VV.from, this.to = VV.to, this.value = VV.value, this.rank = VV.rank, VV.value && VV.next(), He(this.heap, 0)
+          let HH = this.heap[0];
+          this.from = HH.from, this.to = HH.to, this.value = HH.value, this.rank = HH.rank, HH.value && HH.next(), dB(this.heap, 0)
         }
       }
     }
 
-    function He(VV, eV) {
-      for (let xV = VV[eV];;) {
-        let JV = 1 + (eV << 1);
-        if (JV >= VV.length) break;
-        let YV = VV[JV];
-        if (JV + 1 < VV.length && YV.compare(VV[JV + 1]) >= 0 && (YV = VV[JV + 1], JV++), xV.compare(YV) < 0) break;
-        VV[JV] = xV, VV[eV] = YV, eV = JV
+    function dB(HH, BH) {
+      for (let LH = HH[BH];;) {
+        let AH = 1 + (BH << 1);
+        if (AH >= HH.length) break;
+        let rH = HH[AH];
+        if (AH + 1 < HH.length && rH.compare(HH[AH + 1]) >= 0 && (rH = HH[AH + 1], AH++), LH.compare(rH) < 0) break;
+        HH[AH] = LH, HH[BH] = rH, BH = AH
       }
     }
-    class ue {
-      constructor(VV, eV, xV) {
-        this.oYV = xV, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = Ke.from(VV, eV, xV)
+    class aB {
+      constructor(HH, BH, LH) {
+        this.OrH = LH, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = ZB.from(HH, BH, LH)
       }
-      goto(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.cursor.goto(VV, eV), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = VV, this.endSide = eV, this.openStart = -1, this.next(), this
+      goto(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.cursor.goto(HH, BH), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = HH, this.endSide = BH, this.openStart = -1, this.next(), this
       }
-      forward(VV, eV) {
-        for (; this.minActive > -1 && (this.activeTo[this.minActive] - VV || this.active[this.minActive].endSide - eV) < 0;) this.removeActive(this.minActive);
-        this.cursor.forward(VV, eV)
+      forward(HH, BH) {
+        for (; this.minActive > -1 && (this.activeTo[this.minActive] - HH || this.active[this.minActive].endSide - BH) < 0;) this.removeActive(this.minActive);
+        this.cursor.forward(HH, BH)
       }
-      removeActive(VV) {
-        Ie(this.active, VV), Ie(this.activeTo, VV), Ie(this.activeRank, VV), this.minActive = Oe(this.active, this.activeTo)
+      removeActive(HH) {
+        iB(this.active, HH), iB(this.activeTo, HH), iB(this.activeRank, HH), this.minActive = yB(this.active, this.activeTo)
       }
-      addActive(VV) {
-        let eV = 0,
+      addActive(HH) {
+        let BH = 0,
           {
-            value: xV,
-            to: JV,
-            rank: YV
+            value: LH,
+            to: AH,
+            rank: rH
           } = this.cursor;
-        for (; eV < this.activeRank.length && (YV - this.activeRank[eV] || JV - this.activeTo[eV]) > 0;) eV++;
-        de(this.active, eV, xV), de(this.activeTo, eV, JV), de(this.activeRank, eV, YV), VV && de(VV, eV, this.cursor.from), this.minActive = Oe(this.active, this.activeTo)
+        for (; BH < this.activeRank.length && (rH - this.activeRank[BH] || AH - this.activeTo[BH]) > 0;) BH++;
+        pB(this.active, BH, LH), pB(this.activeTo, BH, AH), pB(this.activeRank, BH, rH), HH && pB(HH, BH, this.cursor.from), this.minActive = yB(this.active, this.activeTo)
       }
       next() {
-        let VV = this.to,
-          eV = this.point;
+        let HH = this.to,
+          BH = this.point;
         this.point = null;
-        let xV = this.openStart < 0 ? [] : null;
+        let LH = this.openStart < 0 ? [] : null;
         for (;;) {
-          let JV = this.minActive;
-          if (JV > -1 && (this.activeTo[JV] - this.cursor.from || this.active[JV].endSide - this.cursor.startSide) < 0) {
-            if (this.activeTo[JV] > VV) {
-              this.to = this.activeTo[JV], this.endSide = this.active[JV].endSide;
+          let AH = this.minActive;
+          if (AH > -1 && (this.activeTo[AH] - this.cursor.from || this.active[AH].endSide - this.cursor.startSide) < 0) {
+            if (this.activeTo[AH] > HH) {
+              this.to = this.activeTo[AH], this.endSide = this.active[AH].endSide;
               break
             }
-            this.removeActive(JV), xV && Ie(xV, JV)
+            this.removeActive(AH), LH && iB(LH, AH)
           } else {
             if (!this.cursor.value) {
               this.to = this.endSide = 1e9;
               break
             }
-            if (this.cursor.from > VV) {
+            if (this.cursor.from > HH) {
               this.to = this.cursor.from, this.endSide = this.cursor.startSide;
               break
             } {
-              let VV = this.cursor.value;
-              if (VV.point) {
-                if (!(eV && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
-                  this.point = VV, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = VV.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
+              let HH = this.cursor.value;
+              if (HH.point) {
+                if (!(BH && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
+                  this.point = HH, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = HH.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
                   break
                 }
                 this.cursor.next()
-              } else this.addActive(xV), this.cursor.next()
+              } else this.addActive(LH), this.cursor.next()
             }
           }
         }
-        if (xV) {
+        if (LH) {
           this.openStart = 0;
-          for (let eV = xV.length - 1; eV >= 0 && xV[eV] < VV; eV--) this.openStart++
+          for (let BH = LH.length - 1; BH >= 0 && LH[BH] < HH; BH--) this.openStart++
         }
       }
-      activeForPoint(VV) {
+      activeForPoint(HH) {
         if (!this.active.length) return this.active;
-        let eV = [];
-        for (let xV = this.active.length - 1; xV >= 0 && !(this.activeRank[xV] < this.pointRank); xV--)(this.activeTo[xV] > VV || this.activeTo[xV] == VV && this.active[xV].endSide >= this.point.endSide) && eV.push(this.active[xV]);
-        return eV.reverse()
+        let BH = [];
+        for (let LH = this.active.length - 1; LH >= 0 && !(this.activeRank[LH] < this.pointRank); LH--)(this.activeTo[LH] > HH || this.activeTo[LH] == HH && this.active[LH].endSide >= this.point.endSide) && BH.push(this.active[LH]);
+        return BH.reverse()
       }
-      openEnd(VV) {
-        let eV = 0;
-        for (let xV = this.activeTo.length - 1; xV >= 0 && this.activeTo[xV] > VV; xV--) eV++;
-        return eV
-      }
-    }
-
-    function se(VV, eV, xV, JV, YV, UV) {
-      VV.goto(eV), xV.goto(JV);
-      let yV = JV + YV,
-        pV = JV,
-        QV = JV - eV,
-        nV = !!UV.boundChange;
-      for (let wV = !1;;) {
-        let eV = VV.to + QV - xV.to,
-          JV = eV || VV.endSide - xV.endSide,
-          YV = JV < 0 ? VV.to + QV : xV.to,
-          ZV = Math.min(YV, yV);
-        if (VV.point || xV.point ? (VV.point && xV.point && ae(VV.point, xV.point) && Se(VV.activeForPoint(VV.to), xV.activeForPoint(xV.to)) || UV.comparePoint(pV, ZV, VV.point, xV.point), wV = !1) : (wV && UV.boundChange(pV), ZV > pV && !Se(VV.active, xV.active) && UV.compareRange(pV, ZV, VV.active, xV.active), nV && ZV < yV && (eV || VV.openEnd(YV) != xV.openEnd(YV)) && (wV = !0)), YV > yV) break;
-        pV = YV, JV <= 0 && VV.next(), JV >= 0 && xV.next()
+      openEnd(HH) {
+        let BH = 0;
+        for (let LH = this.activeTo.length - 1; LH >= 0 && this.activeTo[LH] > HH; LH--) BH++;
+        return BH
       }
     }
 
-    function Se(VV, eV) {
-      if (VV.length != eV.length) return !1;
-      for (let xV = 0; xV < VV.length; xV++)
-        if (VV[xV] != eV[xV] && !ae(VV[xV], eV[xV])) return !1;
+    function sB(HH, BH, LH, AH, rH, SH) {
+      HH.goto(BH), LH.goto(AH);
+      let hH = AH + rH,
+        tH = AH,
+        zH = AH - BH,
+        CH = !!SH.boundChange;
+      for (let EH = !1;;) {
+        let BH = HH.to + zH - LH.to,
+          AH = BH || HH.endSide - LH.endSide,
+          rH = AH < 0 ? HH.to + zH : LH.to,
+          XH = Math.min(rH, hH);
+        if (HH.point || LH.point ? (HH.point && LH.point && gB(HH.point, LH.point) && JB(HH.activeForPoint(HH.to), LH.activeForPoint(LH.to)) || SH.comparePoint(tH, XH, HH.point, LH.point), EH = !1) : (EH && SH.boundChange(tH), XH > tH && !JB(HH.active, LH.active) && SH.compareRange(tH, XH, HH.active, LH.active), CH && XH < hH && (BH || HH.openEnd(rH) != LH.openEnd(rH)) && (EH = !0)), rH > hH) break;
+        tH = rH, AH <= 0 && HH.next(), AH >= 0 && LH.next()
+      }
+    }
+
+    function JB(HH, BH) {
+      if (HH.length != BH.length) return !1;
+      for (let LH = 0; LH < HH.length; LH++)
+        if (HH[LH] != BH[LH] && !gB(HH[LH], BH[LH])) return !1;
       return !0
     }
 
-    function Ie(VV, eV) {
-      for (let xV = eV, JV = VV.length - 1; xV < JV; xV++) VV[xV] = VV[xV + 1];
-      VV.pop()
+    function iB(HH, BH) {
+      for (let LH = BH, AH = HH.length - 1; LH < AH; LH++) HH[LH] = HH[LH + 1];
+      HH.pop()
     }
 
-    function de(VV, eV, xV) {
-      for (let JV = VV.length - 1; JV >= eV; JV--) VV[JV + 1] = VV[JV];
-      VV[eV] = xV
+    function pB(HH, BH, LH) {
+      for (let AH = HH.length - 1; AH >= BH; AH--) HH[AH + 1] = HH[AH];
+      HH[BH] = LH
     }
 
-    function Oe(VV, eV) {
-      let xV = -1,
-        JV = 1e9;
-      for (let YV = 0; YV < eV.length; YV++)(eV[YV] - JV || VV[YV].endSide - VV[xV].endSide) < 0 && (xV = YV, JV = eV[YV]);
-      return xV
+    function yB(HH, BH) {
+      let LH = -1,
+        AH = 1e9;
+      for (let rH = 0; rH < BH.length; rH++)(BH[rH] - AH || HH[rH].endSide - HH[LH].endSide) < 0 && (LH = rH, AH = BH[rH]);
+      return LH
     }
 
-    function Vx(VV, eV) {
-      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : VV.length,
-        JV = 0;
-      for (let YV = 0; YV < xV && YV < VV.length;) 9 == VV.charCodeAt(YV) ? (JV += eV - JV % eV, YV++) : (JV++, YV = NV(VV, YV));
-      return JV
+    function HL(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : HH.length,
+        AH = 0;
+      for (let rH = 0; rH < LH && rH < HH.length;) 9 == HH.charCodeAt(rH) ? (AH += BH - AH % BH, rH++) : (AH++, rH = bH(HH, rH));
+      return AH
     }
 
-    function ex(VV, eV, xV, JV) {
-      for (let YV = 0, UV = 0;;) {
-        if (UV >= eV) return YV;
-        if (YV == VV.length) break;
-        UV += 9 == VV.charCodeAt(YV) ? xV - UV % xV : 1, YV = NV(VV, YV)
+    function BL(HH, BH, LH, AH) {
+      for (let rH = 0, SH = 0;;) {
+        if (SH >= BH) return rH;
+        if (rH == HH.length) break;
+        SH += 9 == HH.charCodeAt(rH) ? LH - SH % LH : 1, rH = bH(HH, rH)
       }
-      return !0 === JV ? -1 : VV.length
+      return !0 === AH ? -1 : HH.length
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

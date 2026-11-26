@@ -1,477 +1,477 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var VV = __webpack_require__.u,
-        eV = __webpack_require__.e,
-        xV = {},
-        JV = {};
-      __webpack_require__.u = function(eV) {
-        return VV(eV) + (xV.hasOwnProperty(eV) ? "?" + xV[eV] : "")
-      }, __webpack_require__.e = function(YV) {
-        return eV(YV).catch((function(eV) {
-          var UV = JV.hasOwnProperty(YV) ? JV[YV] : 4;
-          if (UV < 1) {
-            var yV = VV(YV);
-            if (eV.message = "Loading chunk " + YV + " failed after 4 retries.\n(" + yV + ")", eV.request = yV, xV[YV] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete JV[YV]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === eV.code) {
-              var pV = __webpack_require__.miniCssF(YV);
-              eV.message = eV.message.replace("Loading chunk", "Loading CSS chunk").replace(yV, pV), eV.request = pV
+      var HH = __webpack_require__.u,
+        BH = __webpack_require__.e,
+        LH = {},
+        AH = {};
+      __webpack_require__.u = function(BH) {
+        return HH(BH) + (LH.hasOwnProperty(BH) ? "?" + LH[BH] : "")
+      }, __webpack_require__.e = function(rH) {
+        return BH(rH).catch((function(BH) {
+          var SH = AH.hasOwnProperty(rH) ? AH[rH] : 4;
+          if (SH < 1) {
+            var hH = HH(rH);
+            if (BH.message = "Loading chunk " + rH + " failed after 4 retries.\n(" + hH + ")", BH.request = hH, LH[rH] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete AH[rH]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === BH.code) {
+              var tH = __webpack_require__.miniCssF(rH);
+              BH.message = BH.message.replace("Loading chunk", "Loading CSS chunk").replace(hH, tH), BH.request = tH
             }
-            throw eV
+            throw BH
           }
-          return new Promise((function(VV) {
-            var eV = 4 - UV + 1;
+          return new Promise((function(HH) {
+            var BH = 4 - SH + 1;
             setTimeout((function() {
-              var eV = "cache-bust=" + Date.now();
-              xV[YV] = eV, JV[YV] = UV - 1, VV(__webpack_require__.e(YV))
-            }), function(VV) {
-              return 500 * Math.pow(2, VV)
-            }(eV))
+              var BH = "cache-bust=" + Date.now();
+              LH[rH] = BH, AH[rH] = SH - 1, HH(__webpack_require__.e(rH))
+            }), function(HH) {
+              return 500 * Math.pow(2, HH)
+            }(BH))
           }))
         }))
       }
     }
   })();
 
-  function VV(VV) {
-    return VV instanceof Error ? VV.message : String(VV)
+  function HH(HH) {
+    return HH instanceof Error ? HH.message : String(HH)
   }
-  const eV = ArrayBuffer,
-    xV = Uint8Array,
-    JV = Uint16Array,
-    YV = Int16Array,
-    UV = Int32Array,
-    yV = (VV, eV, JV) => {
-      if (xV.prototype.slice) return xV.prototype.slice.call(VV, eV, JV);
-      (null == eV || eV < 0) && (eV = 0), (null == JV || JV > VV.length) && (JV = VV.length);
-      const YV = new xV(JV - eV);
-      return YV.set(VV.subarray(eV, JV)), YV
+  const BH = ArrayBuffer,
+    LH = Uint8Array,
+    AH = Uint16Array,
+    rH = Int16Array,
+    SH = Int32Array,
+    hH = (HH, BH, AH) => {
+      if (LH.prototype.slice) return LH.prototype.slice.call(HH, BH, AH);
+      (null == BH || BH < 0) && (BH = 0), (null == AH || AH > HH.length) && (AH = HH.length);
+      const rH = new LH(AH - BH);
+      return rH.set(HH.subarray(BH, AH)), rH
     },
-    pV = (VV, eV, JV, YV) => {
-      if (xV.prototype.fill) return xV.prototype.fill.call(VV, eV, JV, YV);
-      for ((null == JV || JV < 0) && (JV = 0), (null == YV || YV > VV.length) && (YV = VV.length); JV < YV; ++JV) VV[JV] = eV;
-      return VV
+    tH = (HH, BH, AH, rH) => {
+      if (LH.prototype.fill) return LH.prototype.fill.call(HH, BH, AH, rH);
+      for ((null == AH || AH < 0) && (AH = 0), (null == rH || rH > HH.length) && (rH = HH.length); AH < rH; ++AH) HH[AH] = BH;
+      return HH
     },
-    QV = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-    nV = (VV, eV, xV) => {
-      const JV = new Error(eV || QV[VV]);
-      if (JV.code = VV, Error.captureStackTrace && Error.captureStackTrace(JV, nV), !xV) throw JV;
-      return JV
+    zH = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+    CH = (HH, BH, LH) => {
+      const AH = new Error(BH || zH[HH]);
+      if (AH.code = HH, Error.captureStackTrace && Error.captureStackTrace(AH, CH), !LH) throw AH;
+      return AH
     },
-    wV = (VV, eV, xV) => {
-      let JV = 0,
-        YV = 0;
-      for (; JV < xV; ++JV) YV |= VV[eV++] << (JV << 3);
-      return YV
+    EH = (HH, BH, LH) => {
+      let AH = 0,
+        rH = 0;
+      for (; AH < LH; ++AH) rH |= HH[BH++] << (AH << 3);
+      return rH
     },
-    ZV = (VV, eV) => {
-      const JV = VV[0] | VV[1] << 8 | VV[2] << 16;
-      if (3126568 == JV && 253 == VV[3]) {
-        const JV = VV[4],
-          YV = JV >> 5 & 1,
-          yV = JV >> 2 & 1,
-          pV = 3 & JV,
-          QV = JV >> 6;
-        8 & JV && nV(0);
-        let ZV = 6 - YV;
-        const vV = 3 == pV ? 4 : pV,
-          rV = wV(VV, ZV, vV);
-        ZV += vV;
-        const kV = QV ? 1 << QV : YV,
-          bV = wV(VV, ZV, kV) + (1 == QV && 256);
-        let EV = bV;
-        if (!YV) {
-          const eV = 1 << 10 + (VV[5] >> 3);
-          EV = eV + (eV >> 3) * (7 & VV[5])
+    XH = (HH, BH) => {
+      const AH = HH[0] | HH[1] << 8 | HH[2] << 16;
+      if (3126568 == AH && 253 == HH[3]) {
+        const AH = HH[4],
+          rH = AH >> 5 & 1,
+          hH = AH >> 2 & 1,
+          tH = 3 & AH,
+          zH = AH >> 6;
+        8 & AH && CH(0);
+        let XH = 6 - rH;
+        const GH = 3 == tH ? 4 : tH,
+          YH = EH(HH, XH, GH);
+        XH += GH;
+        const uH = zH ? 1 << zH : rH,
+          QH = EH(HH, XH, uH) + (1 == zH && 256);
+        let WH = QH;
+        if (!rH) {
+          const BH = 1 << 10 + (HH[5] >> 3);
+          WH = BH + (BH >> 3) * (7 & HH[5])
         }
-        EV > 2145386496 && nV(1);
-        const BV = new xV((1 == eV ? bV || EV : eV ? 0 : EV) + 12);
-        return BV[0] = 1, BV[4] = 4, BV[8] = 8, {
-          b: ZV + kV,
+        WH > 2145386496 && CH(1);
+        const MH = new LH((1 == BH ? QH || WH : BH ? 0 : WH) + 12);
+        return MH[0] = 1, MH[4] = 4, MH[8] = 8, {
+          b: XH + uH,
           y: 0,
           l: 0,
-          d: rV,
-          w: eV && 1 != eV ? eV : BV.subarray(12),
-          e: EV,
-          o: new UV(BV.buffer, 0, 3),
-          u: bV,
-          c: yV,
-          m: Math.min(131072, EV)
+          d: YH,
+          w: BH && 1 != BH ? BH : MH.subarray(12),
+          e: WH,
+          o: new SH(MH.buffer, 0, 3),
+          u: QH,
+          c: hH,
+          m: Math.min(131072, WH)
         }
       }
-      if (25481893 == (JV >> 4 | VV[3] << 20)) return 8 + (((YV = VV)[yV = 4] | YV[yV + 1] << 8 | YV[yV + 2] << 16 | YV[yV + 3] << 24) >>> 0);
-      var YV, yV;
-      nV(0)
+      if (25481893 == (AH >> 4 | HH[3] << 20)) return 8 + (((rH = HH)[hH = 4] | rH[hH + 1] << 8 | rH[hH + 2] << 16 | rH[hH + 3] << 24) >>> 0);
+      var rH, hH;
+      CH(0)
     },
-    vV = VV => {
-      let eV = 0;
-      for (; 1 << eV <= VV; ++eV);
-      return eV - 1
+    GH = HH => {
+      let BH = 0;
+      for (; 1 << BH <= HH; ++BH);
+      return BH - 1
     },
-    rV = (VV, UV, yV) => {
-      let pV = 4 + (UV << 3);
-      const QV = 5 + (15 & VV[UV]);
-      QV > yV && nV(3);
-      const wV = 1 << QV;
-      let ZV = wV,
-        rV = -1,
-        kV = -1,
-        bV = -1,
-        EV = wV;
-      const BV = new eV(512 + (wV << 2)),
-        jV = new YV(BV, 0, 256),
-        qV = new JV(BV, 0, 256),
-        tV = new JV(BV, 512, wV),
-        FV = 512 + (wV << 1),
-        TV = new xV(BV, FV, wV),
-        PV = new xV(BV, FV + wV);
-      for (; rV < 255 && ZV > 0;) {
-        const eV = vV(ZV + 1),
-          xV = pV >> 3,
-          JV = (1 << eV + 1) - 1;
-        let YV = (VV[xV] | VV[xV + 1] << 8 | VV[xV + 2] << 16) >> (7 & pV) & JV;
-        const UV = (1 << eV) - 1,
-          yV = JV - ZV - 1,
-          QV = YV & UV;
-        if (QV < yV ? (pV += eV, YV = QV) : (pV += eV + 1, YV > UV && (YV -= yV)), jV[++rV] = --YV, -1 == YV ? (ZV += YV, TV[--EV] = rV) : ZV -= YV, !YV)
+    YH = (HH, SH, hH) => {
+      let tH = 4 + (SH << 3);
+      const zH = 5 + (15 & HH[SH]);
+      zH > hH && CH(3);
+      const EH = 1 << zH;
+      let XH = EH,
+        YH = -1,
+        uH = -1,
+        QH = -1,
+        WH = EH;
+      const MH = new BH(512 + (EH << 2)),
+        xH = new rH(MH, 0, 256),
+        vH = new AH(MH, 0, 256),
+        PH = new AH(MH, 512, EH),
+        TH = 512 + (EH << 1),
+        UH = new LH(MH, TH, EH),
+        VH = new LH(MH, TH + EH);
+      for (; YH < 255 && XH > 0;) {
+        const BH = GH(XH + 1),
+          LH = tH >> 3,
+          AH = (1 << BH + 1) - 1;
+        let rH = (HH[LH] | HH[LH + 1] << 8 | HH[LH + 2] << 16) >> (7 & tH) & AH;
+        const SH = (1 << BH) - 1,
+          hH = AH - XH - 1,
+          zH = rH & SH;
+        if (zH < hH ? (tH += BH, rH = zH) : (tH += BH + 1, rH > SH && (rH -= hH)), xH[++YH] = --rH, -1 == rH ? (XH += rH, UH[--WH] = YH) : XH -= rH, !rH)
           do {
-            const eV = pV >> 3;
-            kV = (VV[eV] | VV[eV + 1] << 8) >> (7 & pV) & 3, pV += 2, rV += kV
-          } while (3 == kV)
-      }(rV > 255 || ZV) && nV(0);
-      let AV = 0;
-      const NV = (wV >> 1) + (wV >> 3) + 3,
-        XV = wV - 1;
-      for (let eV = 0; eV <= rV; ++eV) {
-        const VV = jV[eV];
-        if (VV < 1) qV[eV] = -VV;
+            const BH = tH >> 3;
+            uH = (HH[BH] | HH[BH + 1] << 8) >> (7 & tH) & 3, tH += 2, YH += uH
+          } while (3 == uH)
+      }(YH > 255 || XH) && CH(0);
+      let OH = 0;
+      const bH = (EH >> 1) + (EH >> 3) + 3,
+        kH = EH - 1;
+      for (let BH = 0; BH <= YH; ++BH) {
+        const HH = xH[BH];
+        if (HH < 1) vH[BH] = -HH;
         else
-          for (bV = 0; bV < VV; ++bV) {
-            TV[AV] = eV;
+          for (QH = 0; QH < HH; ++QH) {
+            UH[OH] = BH;
             do {
-              AV = AV + NV & XV
-            } while (AV >= EV)
+              OH = OH + bH & kH
+            } while (OH >= WH)
           }
       }
-      for (AV && nV(0), bV = 0; bV < wV; ++bV) {
-        const VV = qV[TV[bV]]++,
-          eV = PV[bV] = QV - vV(VV);
-        tV[bV] = (VV << eV) - wV
+      for (OH && CH(0), QH = 0; QH < EH; ++QH) {
+        const HH = vH[UH[QH]]++,
+          BH = VH[QH] = zH - GH(HH);
+        PH[QH] = (HH << BH) - EH
       }
-      return [pV + 7 >> 3, {
-        b: QV,
-        s: TV,
-        n: PV,
-        t: tV
+      return [tH + 7 >> 3, {
+        b: zH,
+        s: UH,
+        n: VH,
+        t: PH
       }]
     },
-    kV = rV(new xV([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-    bV = rV(new xV([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-    EV = rV(new xV([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-    BV = (VV, eV) => {
-      const xV = VV.length,
-        JV = new UV(xV);
-      for (let YV = 0; YV < xV; ++YV) JV[YV] = eV, eV += 1 << VV[YV];
-      return JV
+    uH = YH(new LH([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+    QH = YH(new LH([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+    WH = YH(new LH([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+    MH = (HH, BH) => {
+      const LH = HH.length,
+        AH = new SH(LH);
+      for (let rH = 0; rH < LH; ++rH) AH[rH] = BH, BH += 1 << HH[rH];
+      return AH
     },
-    jV = new xV(new UV([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-    qV = BV(jV, 0),
-    tV = new xV(new UV([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-    FV = BV(tV, 3),
-    TV = (VV, eV, xV) => {
-      const JV = VV.length,
-        YV = eV.length,
-        UV = VV[JV - 1],
-        yV = (1 << xV.b) - 1,
-        pV = -xV.b;
-      UV || nV(0);
-      let QV = 0,
-        wV = xV.b,
-        ZV = (JV << 3) - 8 + vV(UV) - wV,
-        rV = -1;
-      for (; ZV > pV && rV < YV;) {
-        const JV = ZV >> 3;
-        QV = (QV << wV | (VV[JV] | VV[JV + 1] << 8 | VV[JV + 2] << 16) >> (7 & ZV)) & yV, eV[++rV] = xV.s[QV], ZV -= wV = xV.n[QV]
+    xH = new LH(new SH([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+    vH = MH(xH, 0),
+    PH = new LH(new SH([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+    TH = MH(PH, 3),
+    UH = (HH, BH, LH) => {
+      const AH = HH.length,
+        rH = BH.length,
+        SH = HH[AH - 1],
+        hH = (1 << LH.b) - 1,
+        tH = -LH.b;
+      SH || CH(0);
+      let zH = 0,
+        EH = LH.b,
+        XH = (AH << 3) - 8 + GH(SH) - EH,
+        YH = -1;
+      for (; XH > tH && YH < rH;) {
+        const AH = XH >> 3;
+        zH = (zH << EH | (HH[AH] | HH[AH + 1] << 8 | HH[AH + 2] << 16) >> (7 & XH)) & hH, BH[++YH] = LH.s[zH], XH -= EH = LH.n[zH]
       }
-      ZV == pV && rV + 1 == YV || nV(0)
+      XH == tH && YH + 1 == rH || CH(0)
     },
-    PV = (VV, eV, xV) => {
-      let JV = 6;
-      const YV = eV.length + 3 >> 2,
-        UV = YV << 1,
-        yV = YV + UV;
-      TV(VV.subarray(JV, JV += VV[0] | VV[1] << 8), eV.subarray(0, YV), xV), TV(VV.subarray(JV, JV += VV[2] | VV[3] << 8), eV.subarray(YV, UV), xV), TV(VV.subarray(JV, JV += VV[4] | VV[5] << 8), eV.subarray(UV, yV), xV), TV(VV.subarray(JV), eV.subarray(yV), xV)
+    VH = (HH, BH, LH) => {
+      let AH = 6;
+      const rH = BH.length + 3 >> 2,
+        SH = rH << 1,
+        hH = rH + SH;
+      UH(HH.subarray(AH, AH += HH[0] | HH[1] << 8), BH.subarray(0, rH), LH), UH(HH.subarray(AH, AH += HH[2] | HH[3] << 8), BH.subarray(rH, SH), LH), UH(HH.subarray(AH, AH += HH[4] | HH[5] << 8), BH.subarray(SH, hH), LH), UH(HH.subarray(AH), BH.subarray(hH), LH)
     },
-    AV = (VV, eV, YV) => {
-      let UV = eV.b;
-      const QV = VV[UV],
-        wV = QV >> 1 & 3;
-      eV.l = 1 & QV;
-      const ZV = QV >> 3 | VV[UV + 1] << 5 | VV[UV + 2] << 13,
-        BV = (UV += 3) + ZV;
-      if (1 == wV) {
-        if (UV >= VV.length) return;
-        return eV.b = UV + 1, YV ? (pV(YV, VV[UV], eV.y, eV.y += ZV), YV) : pV(new xV(ZV), VV[UV])
+    OH = (HH, BH, rH) => {
+      let SH = BH.b;
+      const zH = HH[SH],
+        EH = zH >> 1 & 3;
+      BH.l = 1 & zH;
+      const XH = zH >> 3 | HH[SH + 1] << 5 | HH[SH + 2] << 13,
+        MH = (SH += 3) + XH;
+      if (1 == EH) {
+        if (SH >= HH.length) return;
+        return BH.b = SH + 1, rH ? (tH(rH, HH[SH], BH.y, BH.y += XH), rH) : tH(new LH(XH), HH[SH])
       }
-      if (!(BV > VV.length)) {
-        if (0 == wV) return eV.b = BV, YV ? (YV.set(VV.subarray(UV, BV), eV.y), eV.y += ZV, YV) : yV(VV, UV, BV);
-        if (2 == wV) {
-          const QV = VV[UV],
-            wV = 3 & QV,
-            ZV = QV >> 2 & 3;
-          let AV = QV >> 4,
-            NV = 0,
-            XV = 0;
-          wV < 2 ? 1 & ZV ? AV |= VV[++UV] << 4 | (2 & ZV && VV[++UV] << 12) : AV = QV >> 3 : (XV = ZV, ZV < 2 ? (AV |= (63 & VV[++UV]) << 4, NV = VV[UV] >> 6 | VV[++UV] << 2) : 2 == ZV ? (AV |= VV[++UV] << 4 | (3 & VV[++UV]) << 12, NV = VV[UV] >> 2 | VV[++UV] << 6) : (AV |= VV[++UV] << 4 | (63 & VV[++UV]) << 12, NV = VV[UV] >> 6 | VV[++UV] << 2 | VV[++UV] << 10)), ++UV;
-          let MV = YV ? YV.subarray(eV.y, eV.y + eV.m) : new xV(eV.m),
-            zV = MV.length - AV;
-          if (zV < 0 && nV(0), 0 == wV) MV.set(VV.subarray(UV, UV += AV), zV);
-          else if (1 == wV) pV(MV, VV[UV++], zV);
+      if (!(MH > HH.length)) {
+        if (0 == EH) return BH.b = MH, rH ? (rH.set(HH.subarray(SH, MH), BH.y), BH.y += XH, rH) : hH(HH, SH, MH);
+        if (2 == EH) {
+          const zH = HH[SH],
+            EH = 3 & zH,
+            XH = zH >> 2 & 3;
+          let OH = zH >> 4,
+            bH = 0,
+            kH = 0;
+          EH < 2 ? 1 & XH ? OH |= HH[++SH] << 4 | (2 & XH && HH[++SH] << 12) : OH = zH >> 3 : (kH = XH, XH < 2 ? (OH |= (63 & HH[++SH]) << 4, bH = HH[SH] >> 6 | HH[++SH] << 2) : 2 == XH ? (OH |= HH[++SH] << 4 | (3 & HH[++SH]) << 12, bH = HH[SH] >> 2 | HH[++SH] << 6) : (OH |= HH[++SH] << 4 | (63 & HH[++SH]) << 12, bH = HH[SH] >> 6 | HH[++SH] << 2 | HH[++SH] << 10)), ++SH;
+          let mH = rH ? rH.subarray(BH.y, BH.y + BH.m) : new LH(BH.m),
+            oH = mH.length - OH;
+          if (oH < 0 && CH(0), 0 == EH) mH.set(HH.subarray(SH, SH += OH), oH);
+          else if (1 == EH) tH(mH, HH[SH++], oH);
           else {
-            let YV = eV.h;
-            if (2 == wV) {
-              const yV = ((VV, eV) => {
-                let YV = 0,
-                  UV = -1;
-                const yV = new xV(292),
-                  QV = VV[eV],
-                  wV = yV.subarray(0, 256),
-                  ZV = yV.subarray(256, 268),
-                  kV = new JV(yV.buffer, 268);
-                if (QV < 128) {
-                  const [xV, JV] = rV(VV, eV + 1, 6), YV = xV << 3, yV = VV[eV += QV];
-                  yV || nV(0);
-                  let pV = 0,
-                    ZV = 0,
-                    kV = JV.b,
-                    bV = kV,
-                    EV = (++eV << 3) - 8 + vV(yV);
-                  for (; UV > 254 && nV(0), EV -= kV, !(EV < YV);) {
-                    let eV = EV >> 3;
-                    if (pV += (VV[eV] | VV[eV + 1] << 8) >> (7 & EV) & (1 << kV) - 1, wV[++UV] = JV.s[pV], EV -= bV, EV < YV) break;
-                    eV = EV >> 3, ZV += (VV[eV] | VV[eV + 1] << 8) >> (7 & EV) & (1 << bV) - 1, wV[++UV] = JV.s[ZV], kV = JV.n[pV], pV = JV.t[pV], bV = JV.n[ZV], ZV = JV.t[ZV]
-                  }++UV > 255 && nV(0)
+            let rH = BH.h;
+            if (2 == EH) {
+              const hH = ((HH, BH) => {
+                let rH = 0,
+                  SH = -1;
+                const hH = new LH(292),
+                  zH = HH[BH],
+                  EH = hH.subarray(0, 256),
+                  XH = hH.subarray(256, 268),
+                  uH = new AH(hH.buffer, 268);
+                if (zH < 128) {
+                  const [LH, AH] = YH(HH, BH + 1, 6), rH = LH << 3, hH = HH[BH += zH];
+                  hH || CH(0);
+                  let tH = 0,
+                    XH = 0,
+                    uH = AH.b,
+                    QH = uH,
+                    WH = (++BH << 3) - 8 + GH(hH);
+                  for (; SH > 254 && CH(0), WH -= uH, !(WH < rH);) {
+                    let BH = WH >> 3;
+                    if (tH += (HH[BH] | HH[BH + 1] << 8) >> (7 & WH) & (1 << uH) - 1, EH[++SH] = AH.s[tH], WH -= QH, WH < rH) break;
+                    BH = WH >> 3, XH += (HH[BH] | HH[BH + 1] << 8) >> (7 & WH) & (1 << QH) - 1, EH[++SH] = AH.s[XH], uH = AH.n[tH], tH = AH.t[tH], QH = AH.n[XH], XH = AH.t[XH]
+                  }++SH > 255 && CH(0)
                 } else {
-                  for (UV = QV - 127; YV < UV; YV += 2) {
-                    const xV = VV[++eV];
-                    wV[YV] = xV >> 4, wV[YV + 1] = 15 & xV
-                  }++eV
+                  for (SH = zH - 127; rH < SH; rH += 2) {
+                    const LH = HH[++BH];
+                    EH[rH] = LH >> 4, EH[rH + 1] = 15 & LH
+                  }++BH
                 }
-                let bV = 0;
-                for (YV = 0; YV < UV; ++YV) {
-                  const VV = wV[YV];
-                  VV > 11 && nV(0), bV += VV && 1 << VV - 1
+                let QH = 0;
+                for (rH = 0; rH < SH; ++rH) {
+                  const HH = EH[rH];
+                  HH > 11 && CH(0), QH += HH && 1 << HH - 1
                 }
-                const EV = vV(bV) + 1,
-                  BV = 1 << EV,
-                  jV = BV - bV;
-                for (jV & jV - 1 && nV(0), wV[UV++] = vV(jV) + 1, YV = 0; YV < UV; ++YV) {
-                  const VV = wV[YV];
-                  ++ZV[wV[YV] = VV && EV + 1 - VV]
+                const WH = GH(QH) + 1,
+                  MH = 1 << WH,
+                  xH = MH - QH;
+                for (xH & xH - 1 && CH(0), EH[SH++] = GH(xH) + 1, rH = 0; rH < SH; ++rH) {
+                  const HH = EH[rH];
+                  ++XH[EH[rH] = HH && WH + 1 - HH]
                 }
-                const qV = new xV(BV << 1),
-                  tV = qV.subarray(0, BV),
-                  FV = qV.subarray(BV);
-                for (kV[EV] = 0, YV = EV; YV > 0; --YV) {
-                  const VV = kV[YV];
-                  pV(FV, YV, VV, kV[YV - 1] = VV + ZV[YV] * (1 << EV - YV))
+                const vH = new LH(MH << 1),
+                  PH = vH.subarray(0, MH),
+                  TH = vH.subarray(MH);
+                for (uH[WH] = 0, rH = WH; rH > 0; --rH) {
+                  const HH = uH[rH];
+                  tH(TH, rH, HH, uH[rH - 1] = HH + XH[rH] * (1 << WH - rH))
                 }
-                for (kV[0] != BV && nV(0), YV = 0; YV < UV; ++YV) {
-                  const VV = wV[YV];
-                  if (VV) {
-                    const eV = kV[VV];
-                    pV(tV, YV, eV, kV[VV] = eV + (1 << EV - VV))
+                for (uH[0] != MH && CH(0), rH = 0; rH < SH; ++rH) {
+                  const HH = EH[rH];
+                  if (HH) {
+                    const BH = uH[HH];
+                    tH(PH, rH, BH, uH[HH] = BH + (1 << WH - HH))
                   }
                 }
-                return [eV, {
-                  n: FV,
-                  b: EV,
-                  s: tV
+                return [BH, {
+                  n: TH,
+                  b: WH,
+                  s: PH
                 }]
-              })(VV, UV);
-              NV += UV - (UV = yV[0]), eV.h = YV = yV[1]
-            } else YV || nV(0);
-            (XV ? PV : TV)(VV.subarray(UV, UV += NV), MV.subarray(zV), YV)
+              })(HH, SH);
+              bH += SH - (SH = hH[0]), BH.h = rH = hH[1]
+            } else rH || CH(0);
+            (kH ? VH : UH)(HH.subarray(SH, SH += bH), mH.subarray(oH), rH)
           }
-          let GV = VV[UV++];
-          if (GV) {
-            255 == GV ? GV = 32512 + (VV[UV++] | VV[UV++] << 8) : GV > 127 && (GV = GV - 128 << 8 | VV[UV++]);
-            const pV = VV[UV++];
-            3 & pV && nV(0);
-            const QV = [bV, EV, kV];
-            for (let YV = 2; YV > -1; --YV) {
-              const yV = pV >> 2 + (YV << 1) & 3;
-              if (1 == yV) {
-                const eV = new xV([0, 0, VV[UV++]]);
-                QV[YV] = {
-                  s: eV.subarray(2, 3),
-                  n: eV.subarray(0, 1),
-                  t: new JV(eV.buffer, 0, 1),
+          let IH = HH[SH++];
+          if (IH) {
+            255 == IH ? IH = 32512 + (HH[SH++] | HH[SH++] << 8) : IH > 127 && (IH = IH - 128 << 8 | HH[SH++]);
+            const tH = HH[SH++];
+            3 & tH && CH(0);
+            const zH = [QH, WH, uH];
+            for (let rH = 2; rH > -1; --rH) {
+              const hH = tH >> 2 + (rH << 1) & 3;
+              if (1 == hH) {
+                const BH = new LH([0, 0, HH[SH++]]);
+                zH[rH] = {
+                  s: BH.subarray(2, 3),
+                  n: BH.subarray(0, 1),
+                  t: new AH(BH.buffer, 0, 1),
                   b: 0
                 }
-              } else 2 == yV ? [UV, QV[YV]] = rV(VV, UV, 9 - (1 & YV)) : 3 == yV && (eV.t || nV(0), QV[YV] = eV.t[YV])
+              } else 2 == hH ? [SH, zH[rH]] = YH(HH, SH, 9 - (1 & rH)) : 3 == hH && (BH.t || CH(0), zH[rH] = BH.t[rH])
             }
-            const [wV, ZV, TV] = eV.t = QV, PV = VV[BV - 1];
-            PV || nV(0);
-            let AV = (BV << 3) - 8 + vV(PV) - TV.b,
-              NV = AV >> 3,
-              XV = 0,
-              WV = (VV[NV] | VV[NV + 1] << 8) >> (7 & AV) & (1 << TV.b) - 1;
-            NV = (AV -= ZV.b) >> 3;
-            let RV = (VV[NV] | VV[NV + 1] << 8) >> (7 & AV) & (1 << ZV.b) - 1;
-            NV = (AV -= wV.b) >> 3;
-            let gV = (VV[NV] | VV[NV + 1] << 8) >> (7 & AV) & (1 << wV.b) - 1;
-            for (++GV; --GV;) {
-              const xV = TV.s[WV],
-                JV = TV.n[WV],
-                YV = wV.s[gV],
-                UV = wV.n[gV],
-                yV = ZV.s[RV],
-                pV = ZV.n[RV];
-              NV = (AV -= yV) >> 3;
-              const QV = 1 << yV;
-              let vV = QV + ((VV[NV] | VV[NV + 1] << 8 | VV[NV + 2] << 16 | VV[NV + 3] << 24) >>> (7 & AV) & QV - 1);
-              NV = (AV -= tV[YV]) >> 3;
-              let rV = FV[YV] + ((VV[NV] | VV[NV + 1] << 8 | VV[NV + 2] << 16) >> (7 & AV) & (1 << tV[YV]) - 1);
-              NV = (AV -= jV[xV]) >> 3;
-              const kV = qV[xV] + ((VV[NV] | VV[NV + 1] << 8 | VV[NV + 2] << 16) >> (7 & AV) & (1 << jV[xV]) - 1);
-              if ((AV < 0 || zV + kV > MV.length || XV + kV + rV > MV.length) && nV(0), NV = (AV -= JV) >> 3, WV = TV.t[WV] + ((VV[NV] | VV[NV + 1] << 8) >> (7 & AV) & (1 << JV) - 1), NV = (AV -= UV) >> 3, gV = wV.t[gV] + ((VV[NV] | VV[NV + 1] << 8) >> (7 & AV) & (1 << UV) - 1), NV = (AV -= pV) >> 3, RV = ZV.t[RV] + ((VV[NV] | VV[NV + 1] << 8) >> (7 & AV) & (1 << pV) - 1), vV > 3) eV.o[2] = eV.o[1], eV.o[1] = eV.o[0], eV.o[0] = vV -= 3;
+            const [EH, XH, UH] = BH.t = zH, VH = HH[MH - 1];
+            VH || CH(0);
+            let OH = (MH << 3) - 8 + GH(VH) - UH.b,
+              bH = OH >> 3,
+              kH = 0,
+              fH = (HH[bH] | HH[bH + 1] << 8) >> (7 & OH) & (1 << UH.b) - 1;
+            bH = (OH -= XH.b) >> 3;
+            let lH = (HH[bH] | HH[bH + 1] << 8) >> (7 & OH) & (1 << XH.b) - 1;
+            bH = (OH -= EH.b) >> 3;
+            let KH = (HH[bH] | HH[bH + 1] << 8) >> (7 & OH) & (1 << EH.b) - 1;
+            for (++IH; --IH;) {
+              const LH = UH.s[fH],
+                AH = UH.n[fH],
+                rH = EH.s[KH],
+                SH = EH.n[KH],
+                hH = XH.s[lH],
+                tH = XH.n[lH];
+              bH = (OH -= hH) >> 3;
+              const zH = 1 << hH;
+              let GH = zH + ((HH[bH] | HH[bH + 1] << 8 | HH[bH + 2] << 16 | HH[bH + 3] << 24) >>> (7 & OH) & zH - 1);
+              bH = (OH -= PH[rH]) >> 3;
+              let YH = TH[rH] + ((HH[bH] | HH[bH + 1] << 8 | HH[bH + 2] << 16) >> (7 & OH) & (1 << PH[rH]) - 1);
+              bH = (OH -= xH[LH]) >> 3;
+              const uH = vH[LH] + ((HH[bH] | HH[bH + 1] << 8 | HH[bH + 2] << 16) >> (7 & OH) & (1 << xH[LH]) - 1);
+              if ((OH < 0 || oH + uH > mH.length || kH + uH + YH > mH.length) && CH(0), bH = (OH -= AH) >> 3, fH = UH.t[fH] + ((HH[bH] | HH[bH + 1] << 8) >> (7 & OH) & (1 << AH) - 1), bH = (OH -= SH) >> 3, KH = EH.t[KH] + ((HH[bH] | HH[bH + 1] << 8) >> (7 & OH) & (1 << SH) - 1), bH = (OH -= tH) >> 3, lH = XH.t[lH] + ((HH[bH] | HH[bH + 1] << 8) >> (7 & OH) & (1 << tH) - 1), GH > 3) BH.o[2] = BH.o[1], BH.o[1] = BH.o[0], BH.o[0] = GH -= 3;
               else {
-                const VV = vV - (0 != kV);
-                VV ? (vV = 3 == VV ? eV.o[0] - 1 : eV.o[VV], VV > 1 && (eV.o[2] = eV.o[1]), eV.o[1] = eV.o[0], eV.o[0] = vV) : vV = eV.o[0]
+                const HH = GH - (0 != uH);
+                HH ? (GH = 3 == HH ? BH.o[0] - 1 : BH.o[HH], HH > 1 && (BH.o[2] = BH.o[1]), BH.o[1] = BH.o[0], BH.o[0] = GH) : GH = BH.o[0]
               }
-              for (let VV = 0; VV < kV; ++VV) MV[XV + VV] = MV[zV + VV];
-              XV += kV, zV += kV;
-              let bV = XV - vV;
-              if (bV < 0) {
-                let VV = -bV;
-                const xV = eV.e + bV;
-                xV < 0 && nV(4), VV > rV && (VV = rV);
-                for (let JV = 0; JV < VV; ++JV) MV[XV + JV] = eV.w[xV + JV];
-                XV += VV, rV -= VV, bV = 0
+              for (let HH = 0; HH < uH; ++HH) mH[kH + HH] = mH[oH + HH];
+              kH += uH, oH += uH;
+              let QH = kH - GH;
+              if (QH < 0) {
+                let HH = -QH;
+                const LH = BH.e + QH;
+                LH < 0 && CH(4), HH > YH && (HH = YH);
+                for (let AH = 0; AH < HH; ++AH) mH[kH + AH] = BH.w[LH + AH];
+                kH += HH, YH -= HH, QH = 0
               }
-              for (let VV = 0; VV < rV; ++VV) MV[XV + VV] = MV[bV + VV];
-              XV += rV
+              for (let HH = 0; HH < YH; ++HH) mH[kH + HH] = mH[QH + HH];
+              kH += YH
             }
-            if (XV != zV)
-              for (; zV < MV.length;) MV[XV++] = MV[zV++];
-            else XV = MV.length;
-            YV ? eV.y += XV : MV = yV(MV, 0, XV)
-          } else if (YV) {
-            if (eV.y += AV, zV)
-              for (let VV = 0; VV < AV; ++VV) MV[VV] = MV[zV + VV]
-          } else zV && (MV = yV(MV, zV));
-          return eV.b = BV, MV
+            if (kH != oH)
+              for (; oH < mH.length;) mH[kH++] = mH[oH++];
+            else kH = mH.length;
+            rH ? BH.y += kH : mH = hH(mH, 0, kH)
+          } else if (rH) {
+            if (BH.y += OH, oH)
+              for (let HH = 0; HH < OH; ++HH) mH[HH] = mH[oH + HH]
+          } else oH && (mH = hH(mH, oH));
+          return BH.b = MH, mH
         }
-        nV(2)
+        CH(2)
       }
     };
-  class NV {
+  class bH {
     output = null;
     decoded = 0;
     done = !1;
     st = null;
     parts = [];
-    hn = 0;
+    LX = 0;
     needed = 18;
     size;
-    constructor(VV) {
-      this.size = VV
+    constructor(HH) {
+      this.size = HH
     }
-    push(VV) {
+    push(HH) {
       if (this.done) return;
-      if (this.parts.push(VV), this.hn += VV.length, this.hn < this.needed) return;
-      const eV = ((VV, eV) => {
-        if (1 == VV.length) return VV[0];
-        const JV = new xV(eV);
-        for (let xV = 0, YV = 0; xV < VV.length; ++xV) {
-          const eV = VV[xV];
-          JV.set(eV, YV), YV += eV.length
+      if (this.parts.push(HH), this.LX += HH.length, this.LX < this.needed) return;
+      const BH = ((HH, BH) => {
+        if (1 == HH.length) return HH[0];
+        const AH = new LH(BH);
+        for (let LH = 0, rH = 0; LH < HH.length; ++LH) {
+          const BH = HH[LH];
+          AH.set(BH, rH), rH += BH.length
         }
-        return JV
-      })(this.parts, this.hn);
-      let JV = this.st;
-      if (!JV) {
-        const VV = ZV(eV, new xV(0));
-        "number" != typeof VV && VV.u === this.size || nV(0, `not a zstd frame of ${this.size} bytes`), JV = this.st = ZV(eV, 1), JV.e = 0, this.output = JV.w
+        return AH
+      })(this.parts, this.LX);
+      let AH = this.st;
+      if (!AH) {
+        const HH = XH(BH, new LH(0));
+        "number" != typeof HH && HH.u === this.size || CH(0, `not a zstd frame of ${this.size} bytes`), AH = this.st = XH(BH, 1), AH.e = 0, this.output = AH.w
       }
       for (;;) {
-        const VV = eV.length - JV.b;
-        if (VV < 3) {
+        const HH = BH.length - AH.b;
+        if (HH < 3) {
           this.needed = 3;
           break
         }
-        const xV = eV[JV.b],
-          YV = xV >> 1 & 3;
-        3 == YV && nV(2);
-        const UV = xV >> 3 | eV[JV.b + 1] << 5 | eV[JV.b + 2] << 13;
-        UV > JV.m && nV(0), 0 == YV && JV.y + UV > JV.u && nV(0);
-        const yV = 1 == YV ? 4 : 3 + UV;
-        if (VV < yV) {
-          this.needed = yV;
+        const LH = BH[AH.b],
+          rH = LH >> 1 & 3;
+        3 == rH && CH(2);
+        const SH = LH >> 3 | BH[AH.b + 1] << 5 | BH[AH.b + 2] << 13;
+        SH > AH.m && CH(0), 0 == rH && AH.y + SH > AH.u && CH(0);
+        const hH = 1 == rH ? 4 : 3 + SH;
+        if (HH < hH) {
+          this.needed = hH;
           break
         }
-        if (AV(eV, JV, JV.w) || nV(5), JV.e = JV.y, (JV.y > JV.u || JV.l && JV.y != JV.u) && nV(0), JV.l) {
+        if (OH(BH, AH, AH.w) || CH(5), AH.e = AH.y, (AH.y > AH.u || AH.l && AH.y != AH.u) && CH(0), AH.l) {
           this.done = !0;
           break
         }
       }
-      this.decoded = JV.y;
-      const YV = eV.subarray(JV.b);
-      this.parts = YV.length ? [YV] : [], this.hn = YV.length, JV.b = 0
+      this.decoded = AH.y;
+      const rH = BH.subarray(AH.b);
+      this.parts = rH.length ? [rH] : [], this.LX = rH.length, AH.b = 0
     }
   }
-  class XV {
+  class kH {
     post;
     href = "";
-    BZ = null;
+    GX = null;
     given = 0;
     stopped = !1;
-    constructor(VV) {
-      this.post = VV
+    constructor(HH) {
+      this.post = HH
     }
-    take(eV) {
+    take(BH) {
       if (!this.stopped) try {
-        this.answer(eV)
-      } catch (xV) {
-        this.stop(xV instanceof RangeError ? `out of memory decoding ${this.href}: ${VV(xV)}` : `${this.href} did not decode: ${VV(xV)}`)
+        this.answer(BH)
+      } catch (LH) {
+        this.stop(LH instanceof RangeError ? `out of memory decoding ${this.href}: ${HH(LH)}` : `${this.href} did not decode: ${HH(LH)}`)
       }
     }
-    answer(VV) {
-      if (null === this.BZ) {
-        const [eV, xV] = VV;
-        return this.href = eV, void(this.BZ = new NV(xV))
+    answer(HH) {
+      if (null === this.GX) {
+        const [BH, LH] = HH;
+        return this.href = BH, void(this.GX = new bH(LH))
       }
-      if (null === VV) return void this.stop(`${this.href} ended before its module did`);
-      const eV = this.BZ;
-      eV.push(VV);
+      if (null === HH) return void this.stop(`${this.href} ended before its module did`);
+      const BH = this.GX;
+      BH.push(HH);
       const {
-        output: xV,
-        decoded: JV
-      } = eV;
-      if (null !== xV && JV > this.given) {
-        const VV = xV.slice(this.given, JV).buffer;
-        this.given = JV, this.post(VV, [VV])
+        output: LH,
+        decoded: AH
+      } = BH;
+      if (null !== LH && AH > this.given) {
+        const HH = LH.slice(this.given, AH).buffer;
+        this.given = AH, this.post(HH, [HH])
       }
-      eV.done && this.stop(!0)
+      BH.done && this.stop(!0)
     }
-    stop(VV) {
-      this.stopped = !0, this.post(VV)
+    stop(HH) {
+      this.stopped = !0, this.post(HH)
     }
   }
-  const MV = globalThis.WorkerGlobalScope;
-  if (void 0 !== MV && globalThis instanceof MV) {
-    const VV = globalThis,
-      eV = new XV((function(eV) {
-        let xV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        VV.postMessage(eV, xV)
+  const mH = globalThis.WorkerGlobalScope;
+  if (void 0 !== mH && globalThis instanceof mH) {
+    const HH = globalThis,
+      BH = new kH((function(BH) {
+        let LH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        HH.postMessage(BH, LH)
       }));
-    VV.addEventListener("message", (VV => {
+    HH.addEventListener("message", (HH => {
       let {
-        data: xV
-      } = VV;
-      eV.take(xV)
+        data: LH
+      } = HH;
+      BH.take(LH)
     }))
   }
 })();

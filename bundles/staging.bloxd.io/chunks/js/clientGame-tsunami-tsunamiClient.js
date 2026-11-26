@@ -1,116 +1,116 @@
 export const id = 31;
 export const ids = [31];
 export const modules = {
-  40837: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      default: () => pV
+  40597: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      default: () => tH
     });
-    var JV = xV(35325);
-    const YV = 1e3 / 3;
+    var AH = LH(35008);
+    const rH = 1e3 / 3;
 
-    function UV(VV, eV, xV) {
-      if ("parenthetical-seconds" === eV) return ` (${VV}s)`;
-      const JV = `${Math.floor(VV/60)}:${(VV%60).toString().padStart(2,"0")}`;
-      return xV ? `${xV}${JV}` : JV
+    function SH(HH, BH, LH) {
+      if ("parenthetical-seconds" === BH) return ` (${HH}s)`;
+      const AH = `${Math.floor(HH/60)}:${(HH%60).toString().padStart(2,"0")}`;
+      return LH ? `${LH}${AH}` : AH
     }
 
-    function yV(VV, eV, xV, YV, UV) {
-      var yV;
-      const pV = {
-        ...YV.baseNametag
+    function hH(HH, BH, LH, rH, SH) {
+      var hH;
+      const tH = {
+        ...rH.baseNametag
       };
-      pV.content = [...null !== (yV = YV.baseNametag.content) && void 0 !== yV ? yV : [], {
+      tH.content = [...null !== (hH = rH.baseNametag.content) && void 0 !== hH ? hH : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,JV.c)(UV)}`
-      }], VV.setOtherEntitySetting(eV, xV, "nameTagInfo", pV)
+        str: `: ${(0,AH.c)(SH)}`
+      }], HH.setOtherEntitySetting(BH, LH, "nameTagInfo", tH)
     }
-    const pV = function(VV, eV, xV, JV) {
-      let pV, {
-        localPlayerId: QV
-      } = JV;
-      const nV = new Map,
-        wV = new Map;
-      let ZV = 0,
-        vV = 0;
+    const tH = function(HH, BH, LH, AH) {
+      let tH, {
+        localPlayerId: zH
+      } = AH;
+      const CH = new Map,
+        EH = new Map;
+      let XH = 0,
+        GH = 0;
       return {
-        onCreate: VV => {
-          pV = VV
+        onCreate: HH => {
+          tH = HH
         },
-        iZ: VV => {
-          const eV = Date.now();
-          for (const [JV, YV] of nV) {
-            const VV = Math.floor((eV - YV.startTime) / 1e3),
-              yV = Math.max(0, YV.remainingSeconds - VV);
-            if (yV === YV.lastRenderedSecond) continue;
-            YV.lastRenderedSecond = yV;
-            const wV = {
-                str: UV(yV, YV.format, YV.prefix),
-                style: YV.style
+        IX: HH => {
+          const BH = Date.now();
+          for (const [AH, rH] of CH) {
+            const HH = Math.floor((BH - rH.startTime) / 1e3),
+              hH = Math.max(0, rH.remainingSeconds - HH);
+            if (hH === rH.lastRenderedSecond) continue;
+            rH.lastRenderedSecond = hH;
+            const EH = {
+                str: SH(hH, rH.format, rH.prefix),
+                style: rH.style
               },
-              ZV = {
-                ...YV.baseNametag
+              XH = {
+                ...rH.baseNametag
               };
-            var xV;
-            if ("content" === YV.location) ZV.content = [...null !== (xV = YV.baseNametag.content) && void 0 !== xV ? xV : [], wV];
-            else ZV.subtitle = [wV];
-            pV.setOtherEntitySetting(QV, JV, "nameTagInfo", ZV), yV <= 0 && nV.delete(JV)
+            var LH;
+            if ("content" === rH.location) XH.content = [...null !== (LH = rH.baseNametag.content) && void 0 !== LH ? LH : [], EH];
+            else XH.subtitle = [EH];
+            tH.setOtherEntitySetting(zH, AH, "nameTagInfo", XH), hH <= 0 && CH.delete(AH)
           }
-          if (wV.size > 0 && eV - ZV >= YV) {
-            ZV = eV, vV = (vV + 1) % 3;
-            let VV = 0;
-            for (const [xV, JV] of wV) {
-              if (VV++ % 3 !== vV) continue;
-              const YV = Math.floor((eV - JV.startTime) / 1e3);
-              if (YV === JV.lastRenderedSecond) continue;
-              JV.lastRenderedSecond = YV;
-              const UV = JV.accumulatedIncome + JV.incomePerSecond * BigInt(YV);
-              yV(pV, QV, xV, JV, UV)
+          if (EH.size > 0 && BH - XH >= rH) {
+            XH = BH, GH = (GH + 1) % 3;
+            let HH = 0;
+            for (const [LH, AH] of EH) {
+              if (HH++ % 3 !== GH) continue;
+              const rH = Math.floor((BH - AH.startTime) / 1e3);
+              if (rH === AH.lastRenderedSecond) continue;
+              AH.lastRenderedSecond = rH;
+              const SH = AH.accumulatedIncome + AH.incomePerSecond * BigInt(rH);
+              hH(tH, zH, LH, AH, SH)
             }
           }
         },
-        onReceivedMessageFromServer: (VV, eV) => {
-          if ("startCountdown" === VV) nV.set(eV.eId, {
-            baseNametag: eV.baseNametag,
-            remainingSeconds: eV.remainingSeconds,
+        onReceivedMessageFromServer: (HH, BH) => {
+          if ("startCountdown" === HH) CH.set(BH.eId, {
+            baseNametag: BH.baseNametag,
+            remainingSeconds: BH.remainingSeconds,
             startTime: Date.now(),
-            format: eV.format,
-            location: eV.location,
-            prefix: eV.prefix,
-            style: eV.style,
+            format: BH.format,
+            location: BH.location,
+            prefix: BH.prefix,
+            style: BH.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === VV) nV.delete(eV.eId);
-          else if ("startIncomeTicking" === VV) {
-            const VV = {
-              baseNametag: eV.baseNametag,
-              accumulatedIncome: BigInt(eV.accumulatedIncome),
-              incomePerSecond: BigInt(eV.incomePerSecond),
+          else if ("stopCountdown" === HH) CH.delete(BH.eId);
+          else if ("startIncomeTicking" === HH) {
+            const HH = {
+              baseNametag: BH.baseNametag,
+              accumulatedIncome: BigInt(BH.accumulatedIncome),
+              incomePerSecond: BigInt(BH.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            wV.set(eV.eId, VV), yV(pV, QV, eV.eId, VV, VV.accumulatedIncome)
-          } else "stopIncomeTicking" === VV && wV.delete(eV.eId) && pV.setOtherEntitySetting(QV, eV.eId, "nameTagInfo", {
+            EH.set(BH.eId, HH), hH(tH, zH, BH.eId, HH, HH.accumulatedIncome)
+          } else "stopIncomeTicking" === HH && EH.delete(BH.eId) && tH.setOtherEntitySetting(zH, BH.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (VV, eV, xV, JV, YV, UV) => {
-          if (UV && "Mesh" === pV.getEntityType(UV)) {
-            const eV = pV.getEntityName(UV);
-            "Upgrades" === eV ? pV.openShop(VV, !1, "Upgrades") : "Items" === eV ? pV.openShop(VV, !1, "Items") : "Prestige" === eV ? pV.openShop(VV, !1, "Prestige") : "Collections" === eV ? pV.openShop(VV, !1, "Collections") : "Base Skins" === eV ? pV.openShop(VV, !1, "Base Skins") : "Gauntlet" === eV ? pV.openShop(VV, !1, "Gauntlet") : "Diamond Shop" === eV && pV.openShop(VV, !1, "Diamond Shop")
+        onPlayerAltAction: (HH, BH, LH, AH, rH, SH) => {
+          if (SH && "Mesh" === tH.getEntityType(SH)) {
+            const BH = tH.getEntityName(SH);
+            "Upgrades" === BH ? tH.openShop(HH, !1, "Upgrades") : "Items" === BH ? tH.openShop(HH, !1, "Items") : "Prestige" === BH ? tH.openShop(HH, !1, "Prestige") : "Collections" === BH ? tH.openShop(HH, !1, "Collections") : "Base Skins" === BH ? tH.openShop(HH, !1, "Base Skins") : "Gauntlet" === BH ? tH.openShop(HH, !1, "Gauntlet") : "Diamond Shop" === BH && tH.openShop(HH, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  35325: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => YV,
-      d: () => yV
+  35008: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => rH,
+      f: () => hH
     });
-    const JV = [{
+    const AH = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function YV(VV) {
-      let eV, xV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof VV) {
-        if (!Number.isFinite(VV)) return "0";
-        if (Math.abs(VV) < 100) {
-          const eV = VV < 0 ? "-" : "",
-            xV = Math.abs(VV);
-          return xV >= 10 ? `${eV}${xV.toFixed(1).replace(/\.0$/,"")}` : `${eV}${xV.toFixed(2).replace(/\.?0+$/,"")}`
+    function rH(HH) {
+      let BH, LH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof HH) {
+        if (!Number.isFinite(HH)) return "0";
+        if (Math.abs(HH) < 100) {
+          const BH = HH < 0 ? "-" : "",
+            LH = Math.abs(HH);
+          return LH >= 10 ? `${BH}${LH.toFixed(1).replace(/\.0$/,"")}` : `${BH}${LH.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        eV = BigInt(Math.floor(VV))
-      } else eV = VV;
-      const YV = eV < 0n ? -eV : eV,
-        UV = eV < 0n ? "-" : "",
-        yV = YV.toString();
-      if (yV.length <= xV) return `${UV}${yV}`;
-      const pV = 3 * Math.floor((yV.length - 1) / 3);
-      if (pV < 3) return `${UV}${yV}`;
-      if (pV > 3 * JV.length) {
-        const VV = yV[0],
-          eV = yV.slice(1, 3).replace(/0+$/, "");
-        return `${UV}${eV?`${VV}.${eV}`:VV}e${yV.length-1}`
+        BH = BigInt(Math.floor(HH))
+      } else BH = HH;
+      const rH = BH < 0n ? -BH : BH,
+        SH = BH < 0n ? "-" : "",
+        hH = rH.toString();
+      if (hH.length <= LH) return `${SH}${hH}`;
+      const tH = 3 * Math.floor((hH.length - 1) / 3);
+      if (tH < 3) return `${SH}${hH}`;
+      if (tH > 3 * AH.length) {
+        const HH = hH[0],
+          BH = hH.slice(1, 3).replace(/0+$/, "");
+        return `${SH}${BH?`${HH}.${BH}`:HH}e${hH.length-1}`
       }
       const {
-        threshold: QV,
-        suffix: nV
-      } = JV[JV.length - pV / 3], wV = YV / QV, ZV = Number(1000n * (YV % QV) / QV), vV = Number(wV) + ZV / 1e3;
-      let rV;
-      return rV = vV >= 100 ? Math.floor(vV).toString() : vV >= 10 ? vV.toFixed(1).replace(/\.0$/, "") : vV.toFixed(2).replace(/\.?0+$/, ""), `${UV}${rV}${nV}`
+        threshold: zH,
+        suffix: CH
+      } = AH[AH.length - tH / 3], EH = rH / zH, XH = Number(1000n * (rH % zH) / zH), GH = Number(EH) + XH / 1e3;
+      let YH;
+      return YH = GH >= 100 ? Math.floor(GH).toString() : GH >= 10 ? GH.toFixed(1).replace(/\.0$/, "") : GH.toFixed(2).replace(/\.?0+$/, ""), `${SH}${YH}${CH}`
     }
-    const UV = JV.map((VV => {
+    const SH = AH.map((HH => {
       let {
-        threshold: eV,
-        suffix: xV
-      } = VV;
+        threshold: BH,
+        suffix: LH
+      } = HH;
       return {
-        threshold: Number(eV),
-        suffix: xV
+        threshold: Number(BH),
+        suffix: LH
       }
-    })).filter((VV => {
+    })).filter((HH => {
       let {
-        threshold: eV
-      } = VV;
-      return Number.isFinite(eV)
+        threshold: BH
+      } = HH;
+      return Number.isFinite(BH)
     }));
 
-    function yV(VV) {
-      const eV = Math.abs(VV),
-        xV = VV < 0 ? "-" : "";
+    function hH(HH) {
+      const BH = Math.abs(HH),
+        LH = HH < 0 ? "-" : "";
       for (const {
-          threshold: JV,
-          suffix: YV
+          threshold: AH,
+          suffix: rH
         }
-        of UV)
-        if (eV >= JV) {
-          const VV = eV / JV;
-          if (VV >= 1e3) return `${xV}${eV.toExponential(2).replace("e+","e")}`;
-          let UV;
-          return UV = VV >= 100 ? Math.floor(VV).toString() : VV >= 10 ? VV.toFixed(1).replace(/\.0$/, "") : VV.toFixed(2).replace(/\.?0+$/, ""), `${xV}${UV}${YV}`
-        } return `${xV}${eV}`
+        of SH)
+        if (BH >= AH) {
+          const HH = BH / AH;
+          if (HH >= 1e3) return `${LH}${BH.toExponential(2).replace("e+","e")}`;
+          let SH;
+          return SH = HH >= 100 ? Math.floor(HH).toString() : HH >= 10 ? HH.toFixed(1).replace(/\.0$/, "") : HH.toFixed(2).replace(/\.?0+$/, ""), `${LH}${SH}${rH}`
+        } return `${LH}${BH}`
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

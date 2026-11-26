@@ -1,545 +1,560 @@
 export const id = 109;
 export const ids = [108, 109, 110];
 export const modules = {
-  37786: (VV, eV, xV) => {
-    function JV(VV, eV, xV, JV) {
-      return !(xV && !VV.aimable) && (!eV || VV.gun && "head" !== JV)
+  37496: (HH, BH, LH) => {
+    function AH(HH, BH, LH, AH) {
+      return !(LH && !HH.aimable) && (!BH || HH.gun && "head" !== AH)
     }
 
-    function YV(VV) {
-      return Math.max(.1 * VV, 1)
+    function rH(HH) {
+      return Math.max(.1 * HH, 1)
     }
 
-    function UV(VV, eV) {
-      return !VV && eV
+    function SH(HH, BH) {
+      return !HH && BH
     }
-    xV.d(eV, {
-      c: () => UV,
-      d: () => YV,
-      g: () => JV
+    LH.d(BH, {
+      b: () => SH,
+      d: () => rH,
+      f: () => AH
     })
   },
-  37790: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => pV,
-      g: () => yV
+  37504: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => tH,
+      i: () => hH
     });
-    let JV = null;
-    const YV = {
+    let AH = null;
+    const rH = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      UV = {
-        crosshairAccuracy: VV => {
-          const eV = YV.crosshairAccuracy.at(-1);
-          eV ? eV.hook(VV) : JV = VV
+      SH = {
+        crosshairAccuracy: HH => {
+          const BH = rH.crosshairAccuracy.at(-1);
+          BH ? BH.hook(HH) : AH = HH
         },
-        turnDamageIndicators: VV => {
-          var eV;
-          null === (eV = YV.turnDamageIndicators.at(-1)) || void 0 === eV || eV.hook(VV)
+        turnDamageIndicators: HH => {
+          var BH;
+          null === (BH = rH.turnDamageIndicators.at(-1)) || void 0 === BH || BH.hook(HH)
         }
       };
 
-    function yV(VV, eV) {
-      const xV = {
-          hook: eV
+    function hH(HH, BH) {
+      const LH = {
+          hook: BH
         },
-        yV = YV[VV];
-      if (yV.push(xV), "crosshairAccuracy" === VV && null !== JV) {
-        const VV = JV;
-        JV = null, UV.crosshairAccuracy(VV)
+        hH = rH[HH];
+      if (hH.push(LH), "crosshairAccuracy" === HH && null !== AH) {
+        const HH = AH;
+        AH = null, SH.crosshairAccuracy(HH)
       }
       return () => {
-        const VV = yV.indexOf(xV); - 1 !== VV && yV.splice(VV, 1)
+        const HH = hH.indexOf(LH); - 1 !== HH && hH.splice(HH, 1)
       }
     }
 
-    function pV() {
-      return UV
+    function tH() {
+      return SH
     }
   },
-  37593: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      countDecodesAs: () => ZV,
-      decodedAudio: () => vV
+  34942: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => SH,
+      g: () => rH
     });
-    var JV = xV(3297),
-      YV = xV(5353);
-    const UV = YV.Howler,
-      yV = new Map;
-    let pV = 0;
-    const QV = {
+    var AH = LH(15);
+
+    function rH(HH, BH) {
+      return HH && !BH
+    }
+
+    function SH() {
+      return rH(AH.c.get("isTouchScreen"), AH.c.get("clientEscMenuOptions").touchActionButtons)
+    }
+  },
+  37326: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      countDecodesAs: () => XH,
+      decodedAudio: () => GH
+    });
+    var AH = LH(3263),
+      rH = LH(5335);
+    const SH = rH.Howler,
+      hH = new Map;
+    let tH = 0;
+    const zH = {
         song: 0,
         sound: 0
       },
-      nV = new WeakMap,
-      wV = new WeakSet;
+      CH = new WeakMap,
+      EH = new WeakSet;
 
-    function ZV(VV, eV) {
-      return nV.set(VV, eV), VV
+    function XH(HH, BH) {
+      return CH.set(HH, BH), HH
     }
 
-    function vV() {
+    function GH() {
       return {
-        bytes: pV,
-        songsDecoded: QV.song,
-        soundsDecoded: QV.sound
+        bytes: tH,
+        songsDecoded: zH.song,
+        soundsDecoded: zH.sound
       }
     }
 
-    function rV(VV) {
-      if (wV.has(VV)) return;
-      wV.add(VV);
-      const eV = 1 === VV.decodeAudioData.length,
-        xV = VV.decodeAudioData.bind(VV);
-      VV.decodeAudioData = (VV, JV, YV) => {
-        const wV = VV => {
-          const eV = UV._howls.filter((VV => "loaded" !== VV._state));
+    function YH(HH) {
+      if (EH.has(HH)) return;
+      EH.add(HH);
+      const BH = 1 === HH.decodeAudioData.length,
+        LH = HH.decodeAudioData.bind(HH);
+      HH.decodeAudioData = (HH, AH, rH) => {
+        const EH = HH => {
+          const BH = SH._howls.filter((HH => "loaded" !== HH._state));
           try {
-            null === JV || void 0 === JV || JV(VV)
+            null === AH || void 0 === AH || AH(HH)
           } finally {
-            const xV = eV.find((VV => "loaded" === VV._state));
-            void 0 !== xV && "string" === typeof xV._src && function(VV, eV, xV) {
-              var JV;
-              pV += xV - (null !== (JV = yV.get(eV)) && void 0 !== JV ? JV : 0), yV.set(eV, xV);
-              const YV = nV.get(VV);
-              void 0 !== YV && QV[YV]++
-            }(xV, xV._src, VV.length * VV.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
+            const LH = BH.find((HH => "loaded" === HH._state));
+            void 0 !== LH && "string" === typeof LH._src && function(HH, BH, LH) {
+              var AH;
+              tH += LH - (null !== (AH = hH.get(BH)) && void 0 !== AH ? AH : 0), hH.set(BH, LH);
+              const rH = CH.get(HH);
+              void 0 !== rH && zH[rH]++
+            }(LH, LH._src, HH.length * HH.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-          return VV
+          return HH
         };
-        if (!eV) return xV(VV, wV, YV);
-        const ZV = xV(VV).then(wV);
-        return ZV.catch((VV => {
-          null === YV || void 0 === YV || YV(VV)
-        })), ZV
+        if (!BH) return LH(HH, EH, rH);
+        const XH = LH(HH).then(EH);
+        return XH.catch((HH => {
+          null === rH || void 0 === rH || rH(HH)
+        })), XH
       }
-    }(0, JV.h)(vV);
-    const kV = YV.Howl.prototype,
-      bV = kV.init;
-    kV.init = function(VV) {
-      return YV.Howler.volume(), UV.ctx && rV(UV.ctx), bV.call(this, VV)
+    }(0, AH.h)(GH);
+    const uH = rH.Howl.prototype,
+      QH = uH.init;
+    uH.init = function(HH) {
+      return rH.Howler.volume(), SH.ctx && YH(SH.ctx), QH.call(this, HH)
     };
-    const EV = kV.unload;
-    kV.unload = function() {
-      const VV = this._src,
-        eV = EV.call(this);
-      if ("string" !== typeof VV) return eV;
-      const xV = yV.get(VV);
-      return void 0 !== xV && function(VV) {
-        return !UV._howls.some((eV => eV._src === VV || "string" === typeof eV._src && VV.indexOf(eV._src) >= 0))
-      }(VV) && (yV.delete(VV), pV -= xV), eV
+    const WH = uH.unload;
+    uH.unload = function() {
+      const HH = this._src,
+        BH = WH.call(this);
+      if ("string" !== typeof HH) return BH;
+      const LH = hH.get(HH);
+      return void 0 !== LH && function(HH) {
+        return !SH._howls.some((BH => BH._src === HH || "string" === typeof BH._src && HH.indexOf(BH._src) >= 0))
+      }(HH) && (hH.delete(HH), tH -= LH), BH
     }
   },
-  37968: (VV, eV, xV) => {
-    async function JV(VV) {
-      const eV = await fetch(VV, {
+  37652: (HH, BH, LH) => {
+    async function AH(HH) {
+      const BH = await fetch(HH, {
         priority: "low"
       });
-      if (!eV.ok) throw new Error(`Fetching ${VV} failed: HTTP ${eV.status}`);
-      const xV = eV.body.getReader();
-      for (; !(await xV.read()).done;);
+      if (!BH.ok) throw new Error(`Fetching ${HH} failed: HTTP ${BH.status}`);
+      const LH = BH.body.getReader();
+      for (; !(await LH.read()).done;);
     }
-    xV.d(eV, {
-      b: () => JV
+    LH.d(BH, {
+      c: () => AH
     })
   },
-  5353: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      Howl: () => YV.Howl,
-      Howler: () => YV.Howler,
-      musicOutput: () => EV,
-      readyAudioContext: () => BV
+  5335: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      Howl: () => rH.Howl,
+      Howler: () => rH.Howler,
+      musicOutput: () => WH,
+      readyAudioContext: () => MH
     });
-    var JV, YV = xV(5357),
-      UV = xV(3886),
-      yV = xV(5137);
-    const pV = YV.Howler;
+    var AH, rH = LH(5343),
+      SH = LH(3811),
+      hH = LH(5067);
+    const tH = rH.Howler;
 
-    function QV() {
-      var VV, eV;
-      if (pV.ctx || !pV.usingWebAudio || "undefined" === typeof AudioContext || !(0, yV.i)()) return;
-      const xV = navigator.audioSession;
-      let JV;
-      "auto" === (null === xV || void 0 === xV ? void 0 : xV.type) && (xV.type = "ambient");
+    function zH() {
+      var HH, BH;
+      if (tH.ctx || !tH.usingWebAudio || "undefined" === typeof AudioContext || !(0, hH.i)()) return;
+      const LH = navigator.audioSession;
+      let AH;
+      "auto" === (null === LH || void 0 === LH ? void 0 : LH.type) && (LH.type = "ambient");
       try {
-        JV = new AudioContext({
+        AH = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const YV = JV.createGain();
-      YV.gain.setValueAtTime(pV._muted ? 0 : null !== (VV = pV._volume) && void 0 !== VV ? VV : 1, JV.currentTime), YV.connect(JV.destination), pV.ctx = JV, pV.masterGain = YV, null === (eV = pV._setup) || void 0 === eV || eV.call(pV)
+      const rH = AH.createGain();
+      rH.gain.setValueAtTime(tH._muted ? 0 : null !== (HH = tH._volume) && void 0 !== HH ? HH : 1, AH.currentTime), rH.connect(AH.destination), tH.ctx = AH, tH.masterGain = rH, null === (BH = tH._setup) || void 0 === BH || BH.call(tH)
     }
-    pV._mobileUnloaded = !0;
-    const nV = pV.volume.bind(YV.Howler);
-    pV.volume = function() {
-      return QV(), nV(...arguments)
+    tH._mobileUnloaded = !0;
+    const CH = tH.volume.bind(rH.Howler);
+    tH.volume = function() {
+      return zH(), CH(...arguments)
     };
-    const wV = pV.mute.bind(YV.Howler);
-    pV.mute = VV => (QV(), wV(VV));
-    const ZV = YV.Howl.prototype,
-      vV = ZV.init;
+    const EH = tH.mute.bind(rH.Howler);
+    tH.mute = HH => (zH(), EH(HH));
+    const XH = rH.Howl.prototype,
+      GH = XH.init;
 
-    function rV() {
-      for (; pV._html5AudioPool.length < pV.html5PoolSize;) {
-        const VV = new Audio;
-        VV._unlocked = !0, pV._releaseHtml5Audio(VV)
+    function YH() {
+      for (; tH._html5AudioPool.length < tH.html5PoolSize;) {
+        const HH = new Audio;
+        HH._unlocked = !0, tH._releaseHtml5Audio(HH)
       }
-      for (const eV of pV._howls)
-        if (!eV._webAudio)
-          for (const xV of eV._getSoundIds()) {
-            var VV;
-            const JV = null === (VV = eV._soundById(xV)) || void 0 === VV ? void 0 : VV._node;
-            JV && !JV._unlocked && (JV._unlocked = !0, JV.load())
+      for (const BH of tH._howls)
+        if (!BH._webAudio)
+          for (const LH of BH._getSoundIds()) {
+            var HH;
+            const AH = null === (HH = BH._soundById(LH)) || void 0 === HH ? void 0 : HH._node;
+            AH && !AH._unlocked && (AH._unlocked = !0, AH.load())
           }
     }
-    ZV.init = function(VV) {
-      return QV(), vV.call(this, VV)
-    }, (0, yV.i)() && (pV._unlockAudio = () => {
-      const VV = pV.ctx;
-      if (pV._audioUnlocked || !VV) return;
-      pV.autoUnlock = !1;
-      const eV = VV.createBuffer(1, 1, 22050);
-      pV._scratchBuffer = eV;
-      const xV = new AbortController;
-      let JV = "afterPaint";
-      const YV = () => {
-          var JV;
-          if (pV._audioUnlocked) return;
-          null === (JV = pV._autoResume) || void 0 === JV || JV.call(pV);
-          const YV = VV.createBufferSource();
-          YV.buffer = eV, YV.connect(VV.destination), YV.start(0), VV.resume().catch((() => {})), YV.onended = () => {
-            YV.disconnect(0), pV._audioUnlocked = !0, xV.abort();
-            for (const VV of pV._howls) VV._emit("unlock")
+    XH.init = function(HH) {
+      return zH(), GH.call(this, HH)
+    }, (0, hH.i)() && (tH._unlockAudio = () => {
+      const HH = tH.ctx;
+      if (tH._audioUnlocked || !HH) return;
+      tH.autoUnlock = !1;
+      const BH = HH.createBuffer(1, 1, 22050);
+      tH._scratchBuffer = BH;
+      const LH = new AbortController;
+      let AH = "afterPaint";
+      const rH = () => {
+          var AH;
+          if (tH._audioUnlocked) return;
+          null === (AH = tH._autoResume) || void 0 === AH || AH.call(tH);
+          const rH = HH.createBufferSource();
+          rH.buffer = BH, rH.connect(HH.destination), rH.start(0), HH.resume().catch((() => {})), rH.onended = () => {
+            rH.disconnect(0), tH._audioUnlocked = !0, LH.abort();
+            for (const HH of tH._howls) HH._emit("unlock")
           }
         },
-        QV = () => {
-          rV(), YV()
+        zH = () => {
+          YH(), rH()
         },
-        nV = eV => {
-          if (rV(), "inTap" === JV) {
-            if ("running" === VV.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), YV()
-          } else "afterPaint" === JV && (JV = "queued", (0, UV.c)(eV.timeStamp, (() => {
-            JV = "inTap", YV()
+        CH = BH => {
+          if (YH(), "inTap" === AH) {
+            if ("running" === HH.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), rH()
+          } else "afterPaint" === AH && (AH = "queued", (0, SH.c)(BH.timeStamp, (() => {
+            AH = "inTap", rH()
           })))
         };
-      for (const UV of ["touchstart", "touchend"]) document.addEventListener(UV, QV, {
+      for (const SH of ["touchstart", "touchend"]) document.addEventListener(SH, zH, {
         capture: !0,
-        signal: xV.signal
+        signal: LH.signal
       });
-      for (const UV of yV.c) document.addEventListener(UV, nV, {
+      for (const SH of hH.d) document.addEventListener(SH, CH, {
         capture: !0,
-        signal: xV.signal
+        signal: LH.signal
       })
     });
-    let kV = 0;
-    const bV = null === (JV = pV._autoSuspend) || void 0 === JV ? void 0 : JV.bind(YV.Howler);
+    let uH = 0;
+    const QH = null === (AH = tH._autoSuspend) || void 0 === AH ? void 0 : AH.bind(rH.Howler);
 
-    function EV() {
-      BV();
+    function WH() {
+      MH();
       const {
-        ctx: VV,
-        masterGain: eV
-      } = pV;
-      return VV && eV ? {
-        ctx: VV,
-        destination: eV,
-        holdAwake: VV => {
-          var eV, xV;
-          (kV += VV ? 1 : -1, VV) ? null === (eV = pV._autoResume) || void 0 === eV || eV.call(pV): null === (xV = pV._autoSuspend) || void 0 === xV || xV.call(pV)
+        ctx: HH,
+        masterGain: BH
+      } = tH;
+      return HH && BH ? {
+        ctx: HH,
+        destination: BH,
+        holdAwake: HH => {
+          var BH, LH;
+          (uH += HH ? 1 : -1, HH) ? null === (BH = tH._autoResume) || void 0 === BH || BH.call(tH): null === (LH = tH._autoSuspend) || void 0 === LH || LH.call(tH)
         },
         wake: () => {
-          var eV;
-          "running" !== VV.state && (null === (eV = pV._autoResume) || void 0 === eV || eV.call(pV), VV.resume().catch((() => {})))
+          var BH;
+          "running" !== HH.state && (null === (BH = tH._autoResume) || void 0 === BH || BH.call(tH), HH.resume().catch((() => {})))
         }
       } : null
     }
 
-    function BV() {
-      var VV;
-      (pV.volume(), pV.ctx && pV.autoUnlock) && (null === (VV = pV._unlockAudio) || void 0 === VV || VV.call(pV))
+    function MH() {
+      var HH;
+      (tH.volume(), tH.ctx && tH.autoUnlock) && (null === (HH = tH._unlockAudio) || void 0 === HH || HH.call(tH))
     }
-    bV && (pV._autoSuspend = () => kV > 0 ? YV.Howler : bV())
+    QH && (tH._autoSuspend = () => uH > 0 ? rH.Howler : QH())
   },
-  37959: (VV, eV, xV) => {
-    function JV(VV, eV) {
+  37648: (HH, BH, LH) => {
+    function AH(HH, BH) {
       let {
-        afterJoin: xV,
-        joining: JV,
-        idle: YV,
-        fetchFile: UV,
-        pJ: yV = () => !1
-      } = eV;
-      const pV = eV => {
-        eV >= VV.length || yV() || xV((() => {
-          YV((() => {
-            yV() || (JV() ? pV(eV) : UV(VV[eV]).catch((() => {})).finally((() => {
-              pV(eV + 1)
+        afterJoin: LH,
+        joining: AH,
+        idle: rH,
+        fetchFile: SH,
+        xB: hH = () => !1
+      } = BH;
+      const tH = BH => {
+        BH >= HH.length || hH() || LH((() => {
+          rH((() => {
+            hH() || (AH() ? tH(BH) : SH(HH[BH]).catch((() => {})).finally((() => {
+              tH(BH + 1)
             })))
           }))
         }))
       };
-      pV(0)
+      tH(0)
     }
-    xV.d(eV, {
-      d: () => JV
+    LH.d(BH, {
+      b: () => AH
     })
   },
-  37952: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => JV
+  37642: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => AH
     });
-    const JV = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
+    const AH = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
   },
-  37964: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => wV,
-      d: () => ZV
+  37650: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => EH,
+      i: () => XH
     });
-    var JV = xV(27),
-      YV = xV(37930),
-      UV = xV(4759),
-      yV = xV(37968),
-      pV = xV(5353),
-      QV = xV(275),
-      nV = xV(37959);
-    const wV = {
-        afterJoin: VV => {
-          (0, UV.c)(JV.b.get("gameState"), VV)
+    var AH = LH(15),
+      rH = LH(37617),
+      SH = LH(4727),
+      hH = LH(37652),
+      tH = LH(5335),
+      zH = LH(225),
+      CH = LH(37648);
+    const EH = {
+        afterJoin: HH => {
+          (0, SH.e)(AH.c.get("gameState"), HH)
         },
-        joining: () => (0, UV.f)(JV.b.get("gameState")),
-        idle: QV.e
+        joining: () => (0, SH.i)(AH.c.get("gameState")),
+        idle: zH.d
       },
-      ZV = function(VV) {
-        const eV = new Set,
-          xV = new Set,
-          JV = eV => eV.flatMap((eV => {
-            const xV = (JV = (0, YV.w)(eV).src, UV = VV.canPlay, JV.find((VV => {
-              var eV;
-              const xV = null === (eV = /\.([^.]+)$/.exec(VV.split("?", 1)[0])) || void 0 === eV ? void 0 : eV[1];
-              return void 0 !== xV && UV(xV.toLowerCase())
+      XH = function(HH) {
+        const BH = new Set,
+          LH = new Set,
+          AH = BH => BH.flatMap((BH => {
+            const LH = (AH = (0, rH.v)(BH).src, SH = HH.canPlay, AH.find((HH => {
+              var BH;
+              const LH = null === (BH = /\.([^.]+)$/.exec(HH.split("?", 1)[0])) || void 0 === BH ? void 0 : BH[1];
+              return void 0 !== LH && SH(LH.toLowerCase())
             })));
-            var JV, UV;
-            return void 0 === xV ? [] : [xV]
+            var AH, SH;
+            return void 0 === LH ? [] : [LH]
           }));
-        return UV => {
-          var yV;
-          const pV = (0, YV.n)(UV),
-            QV = [];
-          eV.has(pV) || (eV.add(pV), QV.push(...JV((0, YV.o)(pV).filter((VV => VV !== UV)))));
-          const [wV, ZV] = null !== (yV = [...YV.e].find((VV => {
-            let [, eV] = VV;
-            return eV.includes(pV)
-          }))) && void 0 !== yV ? yV : [void 0, []];
-          if (void 0 !== wV && !xV.has(wV)) {
-            xV.add(wV);
-            for (const VV of ZV) eV.has(VV) || (eV.add(VV), QV.push(...JV((0, YV.o)(VV))))
+        return SH => {
+          var hH;
+          const tH = (0, rH.o)(SH),
+            zH = [];
+          BH.has(tH) || (BH.add(tH), zH.push(...AH((0, rH.p)(tH).filter((HH => HH !== SH)))));
+          const [EH, XH] = null !== (hH = [...rH.d].find((HH => {
+            let [, BH] = HH;
+            return BH.includes(tH)
+          }))) && void 0 !== hH ? hH : [void 0, []];
+          if (void 0 !== EH && !LH.has(EH)) {
+            LH.add(EH);
+            for (const HH of XH) BH.has(HH) || (BH.add(HH), zH.push(...AH((0, rH.p)(HH))))
           }
-          QV.length > 0 && (0, nV.d)(QV, VV)
+          zH.length > 0 && (0, CH.b)(zH, HH)
         }
       }({
-        ...wV,
-        fetchFile: yV.b,
-        canPlay: VV => !!pV.Howler.codecs(VV)
+        ...EH,
+        fetchFile: hH.c,
+        canPlay: HH => !!tH.Howler.codecs(HH)
       })
   },
-  37950: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => yV,
-      d: () => YV,
-      e: () => JV
+  37640: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => hH,
+      d: () => rH,
+      e: () => AH
     });
 
-    function JV(VV) {
-      return VV.replace(/[_\-\s]*\d+$/, "") || VV
+    function AH(HH) {
+      return HH.replace(/[_\-\s]*\d+$/, "") || HH
     }
 
-    function YV(VV, eV, xV) {
-      return xV <= 0 ? 0 : VV * xV / Math.max(eV, xV)
+    function rH(HH, BH, LH) {
+      return LH <= 0 ? 0 : HH * LH / Math.max(BH, LH)
     }
 
-    function UV(VV, eV) {
-      const xV = VV.getDurationMs();
-      return xV > 0 ? VV.loudness * Math.max(0, 1 - (eV - VV.startMs) / xV) : 0
+    function SH(HH, BH) {
+      const LH = HH.getDurationMs();
+      return LH > 0 ? HH.loudness * Math.max(0, 1 - (BH - HH.startMs) / LH) : 0
     }
-    class yV {
+    class hH {
       constructor() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = VV, this.maxPerGroup = eV, this.voices = []
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = HH, this.maxPerGroup = BH, this.voices = []
       }
-      admit(VV) {
-        if (this.voices = this.voices.filter((VV => VV.isAlive())), null !== VV.group) {
-          const eV = this.voices.filter((eV => eV.group === VV.group));
-          if (eV.length >= this.maxPerGroup && !this.dropLeastWorth(eV, VV)) return !1
+      admit(HH) {
+        if (this.voices = this.voices.filter((HH => HH.isAlive())), null !== HH.group) {
+          const BH = this.voices.filter((BH => BH.group === HH.group));
+          if (BH.length >= this.maxPerGroup && !this.dropLeastWorth(BH, HH)) return !1
         }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, VV)) && (this.voices.push(VV), !0)
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, HH)) && (this.voices.push(HH), !0)
       }
-      dropLeastWorth(VV, eV) {
-        let xV = null,
-          JV = 1 / 0;
-        for (const YV of VV) {
-          if (!YV.canStop()) continue;
-          const VV = UV(YV, eV.startMs);
-          VV < JV && (xV = YV, JV = VV)
+      dropLeastWorth(HH, BH) {
+        let LH = null,
+          AH = 1 / 0;
+        for (const rH of HH) {
+          if (!rH.canStop()) continue;
+          const HH = SH(rH, BH.startMs);
+          HH < AH && (LH = rH, AH = HH)
         }
-        return !(!xV || eV.loudness < JV) && (this.voices.splice(this.voices.indexOf(xV), 1), xV.stop(), !0)
+        return !(!LH || BH.loudness < AH) && (this.voices.splice(this.voices.indexOf(LH), 1), LH.stop(), !0)
       }
     }
   },
-  37749: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => YV,
-      g: () => yV,
-      k: () => pV
+  37467: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => rH,
+      g: () => hH,
+      i: () => tH
     });
-    var JV = xV(32);
-    const YV = "touchSprintChanged";
-    let UV = !0;
+    var AH = LH(18);
+    const rH = "touchSprintChanged";
+    let SH = !0;
 
-    function yV() {
-      return UV
+    function hH() {
+      return SH
     }
 
-    function pV(VV) {
-      VV !== UV && (UV = VV, JV.h.QZ(YV, VV))
+    function tH(HH) {
+      HH !== SH && (SH = HH, AH.k.AX(rH, HH))
     }
   },
-  37985: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => UV,
-      g: () => yV,
-      i: () => JV
+  37656: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => SH,
+      d: () => hH,
+      f: () => AH
     });
-    class JV {
-      constructor(VV) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = VV
+    class AH {
+      constructor(HH) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = HH
       }
-      setMultiplierType(VV, eV) {
-        var xV;
-        this.multipliers[VV] = eV, null === (xV = this._onUpdate) || void 0 === xV || xV.call(this)
+      setMultiplierType(HH, BH) {
+        var LH;
+        this.multipliers[HH] = BH, null === (LH = this._onUpdate) || void 0 === LH || LH.call(this)
       }
-      removeMultiplier(VV) {
-        var eV;
-        delete this.multipliers[VV], null === (eV = this._onUpdate) || void 0 === eV || eV.call(this)
+      removeMultiplier(HH) {
+        var BH;
+        delete this.multipliers[HH], null === (BH = this._onUpdate) || void 0 === BH || BH.call(this)
       }
-      getMultiplierType(VV) {
-        return this.multipliers[VV]
+      getMultiplierType(HH) {
+        return this.multipliers[HH]
       }
       getTotalMultipliedVal() {
-        let VV = 1;
-        for (const eV in this.multipliers) VV *= this.multipliers[eV];
-        return VV
+        let HH = 1;
+        for (const BH in this.multipliers) HH *= this.multipliers[BH];
+        return HH
       }
     }
-    class YV {
+    class rH {
       constructor() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = VV
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = HH
       }
-      setBooleanType(VV, eV) {
-        const xV = this._getTotalBooleanVal();
-        this.booleans[VV] = !!eV;
-        const JV = this.getTotalBooleanVal();
-        var YV;
-        JV !== xV && (null === (YV = this._onUpdate) || void 0 === YV || YV.call(this, JV, this.booleans));
-        return JV
+      setBooleanType(HH, BH) {
+        const LH = this._getTotalBooleanVal();
+        this.booleans[HH] = !!BH;
+        const AH = this.getTotalBooleanVal();
+        var rH;
+        AH !== LH && (null === (rH = this._onUpdate) || void 0 === rH || rH.call(this, AH, this.booleans));
+        return AH
       }
-      removeBoolean(VV) {
-        const eV = this._getTotalBooleanVal();
-        delete this.booleans[VV];
-        const xV = this._getTotalBooleanVal();
-        var JV;
-        null !== xV && xV !== eV && (null === (JV = this._onUpdate) || void 0 === JV || JV.call(this, xV, this.booleans));
-        return null !== xV && void 0 !== xV && xV
+      removeBoolean(HH) {
+        const BH = this._getTotalBooleanVal();
+        delete this.booleans[HH];
+        const LH = this._getTotalBooleanVal();
+        var AH;
+        null !== LH && LH !== BH && (null === (AH = this._onUpdate) || void 0 === AH || AH.call(this, LH, this.booleans));
+        return null !== LH && void 0 !== LH && LH
       }
-      getBooleanType(VV) {
-        return this.booleans[VV]
+      getBooleanType(HH) {
+        return this.booleans[HH]
       }
       getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
       forceUpdate() {
-        var VV;
-        null === (VV = this._onUpdate) || void 0 === VV || VV.call(this, this.getTotalBooleanVal(), this.booleans)
+        var HH;
+        null === (HH = this._onUpdate) || void 0 === HH || HH.call(this, this.getTotalBooleanVal(), this.booleans)
       }
       _getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class UV extends YV {
+    class SH extends rH {
       getTotalBooleanVal() {
-        const VV = this._getTotalBooleanVal();
-        if (null === VV) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return VV
+        const HH = this._getTotalBooleanVal();
+        if (null === HH) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return HH
       }
       _getTotalBooleanVal() {
-        let VV = !1,
-          eV = !0;
-        for (const xV in this.booleans) VV = !0, eV &&= this.booleans[xV];
-        return VV ? eV : null
+        let HH = !1,
+          BH = !0;
+        for (const LH in this.booleans) HH = !0, BH &&= this.booleans[LH];
+        return HH ? BH : null
       }
     }
-    class yV extends YV {
+    class hH extends rH {
       getTotalBooleanVal() {
-        const VV = this._getTotalBooleanVal();
-        if (null === VV) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return VV
+        const HH = this._getTotalBooleanVal();
+        if (null === HH) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return HH
       }
       _getTotalBooleanVal() {
-        let VV = !1,
-          eV = !1;
-        for (const xV in this.booleans) VV = !0, eV ||= this.booleans[xV];
-        return VV ? eV : null
+        let HH = !1,
+          BH = !1;
+        for (const LH in this.booleans) HH = !0, BH ||= this.booleans[LH];
+        return HH ? BH : null
       }
     }
   },
-  37977: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV,
-      f: () => JV,
-      h: () => YV
+  37654: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => SH,
+      f: () => AH,
+      i: () => rH
     });
-    const JV = 15,
-      YV = 3,
-      UV = 30
+    const AH = 15,
+      rH = 3,
+      SH = 30
   },
-  7024: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => yV,
-      i: () => YV,
-      j: () => QV,
-      n: () => UV,
-      o: () => nV,
-      q: () => JV,
-      s: () => pV
+  7007: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH,
+      e: () => rH,
+      h: () => zH,
+      i: () => SH,
+      m: () => CH,
+      o: () => AH,
+      p: () => tH
     });
-    let JV = function(VV) {
-        return VV[VV.DEFAULT = 0] = "DEFAULT", VV[VV.BOAT = 1] = "BOAT", VV[VV.GLIDER = 2] = "GLIDER", VV[VV.BALLOON = 3] = "BALLOON", VV[VV.SLEEPING = 4] = "SLEEPING", VV[VV.RIDING_MOB = 5] = "RIDING_MOB", VV[VV.CAR = 6] = "CAR", VV[VV.HOVERCRAFT = 7] = "HOVERCRAFT", VV
+    let AH = function(HH) {
+        return HH[HH.DEFAULT = 0] = "DEFAULT", HH[HH.BOAT = 1] = "BOAT", HH[HH.GLIDER = 2] = "GLIDER", HH[HH.BALLOON = 3] = "BALLOON", HH[HH.SLEEPING = 4] = "SLEEPING", HH[HH.RIDING_MOB = 5] = "RIDING_MOB", HH[HH.CAR = 6] = "CAR", HH[HH.HOVERCRAFT = 7] = "HOVERCRAFT", HH
       }({}),
-      YV = function(VV) {
-        return VV[VV.WOOD = 0] = "WOOD", VV[VV.OBSIDIAN = 1] = "OBSIDIAN", VV[VV.SPEED = 2] = "SPEED", VV
+      rH = function(HH) {
+        return HH[HH.WOOD = 0] = "WOOD", HH[HH.OBSIDIAN = 1] = "OBSIDIAN", HH[HH.SPEED = 2] = "SPEED", HH
       }({}),
-      UV = function(VV) {
-        return VV[VV.WOOD = 0] = "WOOD", VV[VV.IRON = 1] = "IRON", VV[VV.GOLD = 2] = "GOLD", VV[VV.DIAMOND = 3] = "DIAMOND", VV
+      SH = function(HH) {
+        return HH[HH.WOOD = 0] = "WOOD", HH[HH.IRON = 1] = "IRON", HH[HH.GOLD = 2] = "GOLD", HH[HH.DIAMOND = 3] = "DIAMOND", HH
       }({}),
-      yV = function(VV) {
-        return VV[VV.YELLOW = 0] = "YELLOW", VV[VV.WHITE = 1] = "WHITE", VV[VV.RED = 2] = "RED", VV[VV.PURPLE = 3] = "PURPLE", VV[VV.PINK = 4] = "PINK", VV[VV.ORANGE = 5] = "ORANGE", VV[VV.MAGENTA = 6] = "MAGENTA", VV[VV.LIME = 7] = "LIME", VV[VV.LIGHT_GRAY = 8] = "LIGHT_GRAY", VV[VV.LIGHT_BLUE = 9] = "LIGHT_BLUE", VV[VV.GREEN = 10] = "GREEN", VV[VV.GRAY = 11] = "GRAY", VV[VV.CYAN = 12] = "CYAN", VV[VV.BROWN = 13] = "BROWN", VV[VV.BLUE = 14] = "BLUE", VV[VV.BLACK = 15] = "BLACK", VV
+      hH = function(HH) {
+        return HH[HH.YELLOW = 0] = "YELLOW", HH[HH.WHITE = 1] = "WHITE", HH[HH.RED = 2] = "RED", HH[HH.PURPLE = 3] = "PURPLE", HH[HH.PINK = 4] = "PINK", HH[HH.ORANGE = 5] = "ORANGE", HH[HH.MAGENTA = 6] = "MAGENTA", HH[HH.LIME = 7] = "LIME", HH[HH.LIGHT_GRAY = 8] = "LIGHT_GRAY", HH[HH.LIGHT_BLUE = 9] = "LIGHT_BLUE", HH[HH.GREEN = 10] = "GREEN", HH[HH.GRAY = 11] = "GRAY", HH[HH.CYAN = 12] = "CYAN", HH[HH.BROWN = 13] = "BROWN", HH[HH.BLUE = 14] = "BLUE", HH[HH.BLACK = 15] = "BLACK", HH
       }({}),
-      pV = function(VV) {
-        return VV[VV.ROTATION_1 = 0] = "ROTATION_1", VV[VV.ROTATION_2 = 1] = "ROTATION_2", VV[VV.ROTATION_3 = 2] = "ROTATION_3", VV[VV.ROTATION_4 = 3] = "ROTATION_4", VV
+      tH = function(HH) {
+        return HH[HH.ROTATION_1 = 0] = "ROTATION_1", HH[HH.ROTATION_2 = 1] = "ROTATION_2", HH[HH.ROTATION_3 = 2] = "ROTATION_3", HH[HH.ROTATION_4 = 3] = "ROTATION_4", HH
       }({}),
-      QV = function(VV) {
-        return VV[VV.KART = 0] = "KART", VV[VV.OFF_ROADER = 1] = "OFF_ROADER", VV[VV.CAR = 2] = "CAR", VV[VV.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", VV[VV.ARMORED_CAR = 4] = "ARMORED_CAR", VV[VV.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", VV[VV.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", VV[VV.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", VV
+      zH = function(HH) {
+        return HH[HH.KART = 0] = "KART", HH[HH.OFF_ROADER = 1] = "OFF_ROADER", HH[HH.CAR = 2] = "CAR", HH[HH.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", HH[HH.ARMORED_CAR = 4] = "ARMORED_CAR", HH[HH.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", HH[HH.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", HH[HH.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", HH
       }({});
-    JV.DEFAULT, JV.BOAT, YV.SPEED, JV.GLIDER, UV.DIAMOND, JV.BALLOON, yV.BLACK, JV.SLEEPING, pV.ROTATION_4, JV.RIDING_MOB, JV.CAR, QV.MOONSTONE_MINING_DRILL, JV.HOVERCRAFT;
-    let nV = function(VV) {
-      return VV[VV.NORMAL = 0] = "NORMAL", VV[VV.GLIDING = 1] = "GLIDING", VV[VV.FLOATING = 2] = "FLOATING", VV
+    AH.DEFAULT, AH.BOAT, rH.SPEED, AH.GLIDER, SH.DIAMOND, AH.BALLOON, hH.BLACK, AH.SLEEPING, tH.ROTATION_4, AH.RIDING_MOB, AH.CAR, zH.MOONSTONE_MINING_DRILL, AH.HOVERCRAFT;
+    let CH = function(HH) {
+      return HH[HH.NORMAL = 0] = "NORMAL", HH[HH.GLIDING = 1] = "GLIDING", HH[HH.FLOATING = 2] = "FLOATING", HH
     }({})
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

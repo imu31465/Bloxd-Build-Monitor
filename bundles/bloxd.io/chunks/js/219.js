@@ -1,1341 +1,1091 @@
 export const id = 219;
-export const ids = [218, 219];
+export const ids = [219];
 export const modules = {
-  35139: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      CAPPED_COUNTS_VISIT_CAP: () => UV,
-      reportCappedWasmFailure: () => QV,
-      reportUncappedWasmFailure: () => pV,
-      reportWasmCrash: () => YV,
-      reportWasmFailure: () => yV
+  37487: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => QH,
+      d: () => UH
     });
-    var JV = xV(3268);
-
-    function YV(VV) {
-      (0, JV.reportClientError)("wasm_load", VV.message, VV.code)
-    }
-    const UV = JV.MAX_ERRORS_PER_VISIT - 4;
-
-    function yV(VV, eV, xV, YV) {
-      (0, JV.reportClientError)(VV, eV, xV, !1, JV.MAX_ERRORS_PER_VISIT, {
-        context: YV
-      })
-    }
-
-    function pV(VV, eV, xV, YV) {
-      (0, JV.reportClientError)(VV, eV, xV, !1, 1 / 0, {
-        context: YV
-      })
-    }
-
-    function QV(VV, eV, xV, YV) {
-      (0, JV.reportClientError)(VV, eV, xV, !1, UV, {
-        context: YV
-      })
-    }
-  },
-  37418: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => FV,
-      f: () => AV,
-      g: () => NV,
-      i: () => TV
-    });
-    var JV = xV(37442),
-      YV = xV(3194),
-      UV = xV(37458),
-      yV = xV(3196),
-      pV = xV(35139),
-      QV = xV(3258),
-      nV = xV(3658),
-      wV = xV(3651),
-      ZV = xV(37422),
-      vV = xV(3268),
-      rV = xV(37429),
-      kV = xV(37437),
-      bV = xV(4122);
-    let EV = !1;
-    const BV = 40;
-    var jV = xV(2617);
-    const qV = "bloxdWasmFailureReported";
-
-    function tV() {
-      return "undefined" === typeof WebAssembly
-    }
-
-    function FV() {
-      return (0, JV.g)()
-    }
-
-    function TV() {
-      if (tV()) return "this browser has no WebAssembly";
-      const VV = (0, YV.r)();
-      return "compile" === VV || "instantiate" === VV ? `the core wasm didn't load here (${(0,YV.j)()})` : null
-    }
-    async function PV(VV) {
-      return await (0, UV.g)(UV.d, void 0, VV)
-    }
-
-    function AV() {
-      tV() || (0, jV.d)((() => {
-        PV()
-      }))
-    }
-
-    function NV() {
-      if (tV()) return async () => ((0, QV.k)("unsupported", 0), XV("unsupported", "This browser has no WebAssembly"), !1);
-      const VV = {
-        reloadFailedDownload: !0
-      };
-      return PV(VV), async () => {
-        var eV;
-        const xV = performance.now();
-        await PV(VV);
-        const JV = (performance.now() - xV) / 1e3;
-        if ((0, YV.R)()) return (0, QV.k)("ready", JV), EV || (EV = !0, (0, YV.W)((() => {
-          if ("call" !== (0, YV.r)()) return;
-          const VV = (0, YV.p)(),
-            eV = (0, ZV.j)(VV, YV.G, YV.ab),
-            xV = (0, YV.x)().buffer.byteLength,
-            JV = (0, ZV.e)(eV.kind, eV.refusedBytes),
-            UV = JV ? "alloc_failed" : eV.kind,
-            yV = (0, rV.i)(xV),
-            pV = JV ? `_r${Math.floor(Math.log2(eV.refusedBytes))}` : "",
-            QV = (0, bV.d)();
-          null === QV && console.warn("A JS client wasm call turned wasm off without naming its site: call markWasmFailedAt, not markBloxdWasmFailed");
-          const nV = new Error((0, kV.d)(VV, xV, eV));
-          if (VV instanceof Error && void 0 !== VV.stack) {
-            const eV = VV.stack.split("\n"),
-              xV = eV.length > BV ? [...eV.slice(0, BV / 2), ...eV.slice(-BV / 2)] : eV;
-            nV.stack = xV.join("\n")
-          }(0, vV.reportClientError)("wasm_load", nV, `wasm_call_${UV}_${null!==QV&&void 0!==QV?QV:"unnamed"}_m${yV}${pV}`)
-        }))), (0, yV.N)(UV.d.url()) && (0, pV.reportCappedWasmFailure)("wasm_load", nV.d.message, nV.d.code), !0;
-        const jV = wV.c[null !== (eV = (0, YV.r)()) && void 0 !== eV ? eV : "call"];
-        return (0, QV.k)(jV, JV), XV(jV, (0, YV.j)()), !1
-      }
-    }
-
-    function XV(VV, eV) {
-      (0, wV.h)(qV, `Bloxd wasm ${VV}, so the game can't start: ${eV}`, eV, VV)
-    }
-  },
-  37437: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => pV,
-      h: () => nV,
-      j: () => yV,
-      m: () => ZV
-    });
-    var JV = xV(37422),
-      YV = xV(10);
-    const UV = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
-
-    function yV(VV) {
-      if (VV instanceof WebAssembly.RuntimeError) return !0;
-      const eV = VV instanceof Error ? VV.stack : void 0;
-      return "string" === typeof eV && UV.test(eV)
-    }
-
-    function pV(VV, eV, xV) {
-      var YV;
-      const yV = VV instanceof Error ? VV.name : "thrown",
-        pV = (VV instanceof Error && null !== (YV = VV.stack) && void 0 !== YV ? YV : "").split("\n").filter((VV => UV.test(VV))).slice(0, 8).map((VV => VV.trim())),
-        QV = null === eV ? "wasm memory unknown" : `wasm memory ${Math.round(eV/2**20)} MB`,
-        nV = null === xV.panic ? "" : `, panic: ${(0,JV.i)(xV.panic)}`,
-        wV = `${yV}: ${VV instanceof Error?VV.message:String(VV)}`;
-      return `${(0,JV.l)(xV.kind,xV.refusedBytes)} ${wV} (${QV})${nV}${pV.length>0?` | ${pV.join(" < ")}`:""}`
-    }
-    const QV = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
-
-    function nV(VV) {
-      var eV;
-      let xV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
-      if (!(VV instanceof Error) || !QV.test(VV.message)) return {};
-      if (!("detached" in xV)) return {
-        arrayBufferDetached: "absent"
-      };
-      return {
-        arrayBufferDetached: (0, YV.R)(null === (eV = (0, YV.L)(xV, "detached")) || void 0 === eV ? void 0 : eV.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
-      }
-    }
-    const wV = 500;
-
-    function ZV(VV) {
-      let eV = "[object Object]";
-      try {
-        eV = String(VV)
-      } catch {}
-      if ("[object Object]" !== eV) return eV;
-      try {
-        var xV, JV;
-        return null !== (xV = null === (JV = JSON.stringify(VV)) || void 0 === JV ? void 0 : JV.slice(0, wV)) && void 0 !== xV ? xV : eV
-      } catch {
-        return eV
-      }
-    }
-  },
-  37475: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/bloxd_wasm_bg.de3bc866342b80b42882.wasm"
-  },
-  37450: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/bloxd_wasm_textures_bg.494527582f8a00d14dd8.wasm"
-  },
-  37467: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      UV: () => JV,
-      EnvelopeKind: () => YV,
-      ve: () => UV,
-      PhysicsEngine: () => yV,
-      le: () => pV,
-      tx: () => QV,
-      sx: () => nV,
-      sy: () => wV,
-      ip: () => ZV,
-      PQ: () => vV,
-      XQ: () => rV,
-      HQ: () => kV,
-      en: () => bV,
-      sw: () => EV,
-      default: () => Pe,
-      initSync: () => Te,
-      hZ: () => BV,
-      lZ: () => jV,
-      LZ: () => qV,
-      fZ: () => tV,
-      mZ: () => FV,
-      KZ: () => TV,
-      HZ: () => PV,
-      uZ: () => AV,
-      sZ: () => NV,
-      SZ: () => XV,
-      IZ: () => MV,
-      dZ: () => zV,
-      OZ: () => GV,
-      Vv: () => WV,
-      ev: () => RV
-    });
-    class JV {
-      __destroy_into_raw() {
-        const VV = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, DV.unregister(this), VV
-      }
-      free() {
-        const VV = this.__destroy_into_raw();
-        qe.zoRH(VV, 0)
-      }
-      xv() {
-        const VV = qe.LVMF(this.__wbg_ptr);
-        if (VV[2]) throw ve(VV[1]);
-        return VV[0] >>> 0
-      }
-      Jv() {
-        return qe.LG9t(this.__wbg_ptr) >>> 0
-      }
-      constructor() {
-        const VV = qe.n6vb();
-        return this.__wbg_ptr = VV, DV.register(this, this.__wbg_ptr, this), this
-      }
-      Yv() {
-        return qe.hmk0(this.__wbg_ptr) >>> 0
-      }
-      Uv(VV) {
-        const eV = qe.to0N(this.__wbg_ptr, VV);
-        if (eV[2]) throw ve(eV[1]);
-        return eV[0] >>> 0
-      }
-      yv(VV) {
-        const eV = qe.uO8t(this.__wbg_ptr, VV);
-        if (eV[2]) throw ve(eV[1]);
-        return eV[0] >>> 0
-      }
-    }
-    Symbol.dispose && (JV.prototype[Symbol.dispose] = JV.prototype.free);
-    const YV = Object.freeze({
-      Js: 0,
-      0: "Js",
-      Error: 1,
-      1: "Error",
-      LeaveRoom: 2,
-      2: "LeaveRoom",
-      RoomState: 3,
-      3: "RoomState",
-      RoomStatePatch: 4,
-      4: "RoomStatePatch",
-      RoomDataNone: 5,
-      5: "RoomDataNone",
-      RoomDataBin: 6,
-      6: "RoomDataBin",
-      RoomDataBytes: 7,
-      7: "RoomDataBytes",
-      Ignored: 8,
-      8: "Ignored",
-      StringType: 16,
-      16: "StringType"
-    });
-    class UV {
-      __destroy_into_raw() {
-        const VV = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, iV.unregister(this), VV
-      }
-      free() {
-        const VV = this.__destroy_into_raw();
-        qe.hsUl(VV, 0)
-      }
-      nv(VV, eV) {
-        const xV = qe.h4zc(this.__wbg_ptr, VV, eV);
-        if (xV[2]) throw ve(xV[1]);
-        return xV[0] >>> 0
-      }
-      wv(VV) {
-        const eV = qe.oR3a(this.__wbg_ptr, VV);
-        if (eV[2]) throw ve(eV[1]);
-        return eV[0] >>> 0
-      }
-      Zv() {
-        qe.oJit(this.__wbg_ptr)
-      }
-      static vv() {
-        return qe.lmMw() >>> 0
-      }
-      rv() {
-        return qe.ZsPY(this.__wbg_ptr) >>> 0
-      }
-      kv() {
-        const VV = qe.JCqU(this.__wbg_ptr);
-        return 0 === VV[0] ? void 0 : VV[1]
-      }
-      bv() {
-        return qe.SbNV(this.__wbg_ptr) >>> 0
-      }
-      Ev() {
-        return qe.ELDk(this.__wbg_ptr) >>> 0
-      }
-      static Qv() {
-        return qe.eGzj() >>> 0
-      }
-      constructor() {
-        const VV = qe.IBF6();
-        return this.__wbg_ptr = VV, iV.register(this, this.__wbg_ptr, this), this
-      }
-      Bv() {
-        return qe.y2OQ(this.__wbg_ptr) >>> 0
-      }
-      jv() {
-        return qe.gGgV(this.__wbg_ptr) >>> 0
-      }
-      qv() {
-        return qe.iPwt(this.__wbg_ptr) >>> 0
-      }
-      pv(VV) {
-        return qe.tcE1(this.__wbg_ptr, VV) >>> 0
-      }
-      reserve(VV, eV) {
-        const xV = qe.No3z(this.__wbg_ptr, VV, eV);
-        if (xV[1]) throw ve(xV[0])
-      }
-      Tv(VV, eV) {
-        const xV = Qe(VV, qe.ENta),
-          JV = te;
-        qe.idKL(this.__wbg_ptr, xV, JV, eV)
-      }
-      text() {
-        let VV, eV;
-        try {
-          const xV = qe.siE6(this.__wbg_ptr);
-          return VV = xV[0], eV = xV[1], IV(xV[0], xV[1])
-        } finally {
-          qe.lxMR(VV, eV, 1)
-        }
-      }
-    }
-    Symbol.dispose && (UV.prototype[Symbol.dispose] = UV.prototype.free);
-    class yV {
-      __destroy_into_raw() {
-        const VV = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, CV.unregister(this), VV
-      }
-      free() {
-        const VV = this.__destroy_into_raw();
-        qe.mbL9(VV, 0)
-      }
-      Av(VV, eV) {
-        fV(eV, JV);
-        const xV = qe.Pftq(this.__wbg_ptr, VV, eV.__wbg_ptr);
-        if (xV[2]) throw ve(xV[1]);
-        return xV[0] >>> 0
-      }
-      Nv() {
-        const VV = qe.FKhY(this.__wbg_ptr);
-        if (VV[1]) throw ve(VV[0])
-      }
-      Gv(VV, eV, xV, JV, YV, UV, yV, QV, nV, wV, ZV) {
-        fV(VV, pV);
-        const vV = qe.HhZ3(this.__wbg_ptr, VV.__wbg_ptr, eV, xV, JV, YV, UV, yV, QV, nV, wV, ZV);
-        if (vV[2]) throw ve(vV[1]);
-        return vV[0]
-      }
-      Wv() {
-        const VV = qe.Hvj9(this.__wbg_ptr);
-        var eV = mV(VV[0], VV[1]).slice();
-        return qe.lxMR(VV[0], 8 * VV[1], 8), eV
-      }
-      Rv() {
-        return qe.JPXP(this.__wbg_ptr) >>> 0
-      }
-      gv() {
-        return qe.WELG(this.__wbg_ptr) >>> 0
-      }
-      Dv() {
-        return qe.i1JO(this.__wbg_ptr) >>> 0
-      }
-      constructor(VV, eV, xV, JV, YV, UV, yV, pV) {
-        const QV = qe.zuI0(VV, eV, xV, JV, YV, UV, yV, pV);
-        if (QV[2]) throw ve(QV[1]);
-        return this.__wbg_ptr = QV[0], CV.register(this, this.__wbg_ptr, this), this
-      }
-      av(VV) {
-        fV(VV, JV);
-        const eV = qe.BCxW(this.__wbg_ptr, VV.__wbg_ptr);
-        if (eV[2]) throw ve(eV[1]);
-        return eV[0] >>> 0
-      }
-      ov(VV) {
-        const eV = qe.zUPo(this.__wbg_ptr, VV);
-        if (eV[1]) throw ve(eV[0])
-      }
-      cv() {
-        return qe.OfgE(this.__wbg_ptr) >>> 0
-      }
-      resume(VV, eV) {
-        fV(VV, pV), fV(eV, JV);
-        const xV = qe.J7EH(this.__wbg_ptr, VV.__wbg_ptr, eV.__wbg_ptr);
-        if (xV[2]) throw ve(xV[1]);
-        return xV[0] >>> 0
-      }
-      mv(VV) {
-        const eV = qe.WoQC(this.__wbg_ptr, VV);
-        if (eV[1]) throw ve(eV[0])
-      }
-      sv(VV, eV) {
-        fV(eV, JV);
-        const xV = qe.MdI7(this.__wbg_ptr, VV, eV.__wbg_ptr);
-        if (xV[1]) throw ve(xV[0])
-      }
-      Ov(VV) {
-        const eV = we(VV, qe.ENta),
-          xV = te,
-          JV = qe.rPmz(this.__wbg_ptr, eV, xV);
-        if (JV[1]) throw ve(JV[0])
-      }
-      Mv(VV, eV, xV, JV, YV, UV) {
-        const yV = qe.QemM(this.__wbg_ptr, VV, eV, xV, JV, YV, UV);
-        if (yV[1]) throw ve(yV[0])
-      }
-      zv(VV, eV, xV, JV) {
-        const YV = Qe(VV, qe.ENta),
-          UV = te,
-          yV = we(eV, qe.ENta),
-          pV = te,
-          QV = we(xV, qe.ENta),
-          nV = te,
-          wV = we(JV, qe.ENta),
-          ZV = te,
-          vV = qe.aIcP(this.__wbg_ptr, YV, UV, yV, pV, QV, nV, wV, ZV);
-        if (vV[1]) throw ve(vV[0])
-      }
-      er(VV, eV) {
-        fV(eV, JV);
-        const xV = qe.GyJM(this.__wbg_ptr, VV, eV.__wbg_ptr);
-        if (xV[1]) throw ve(xV[0])
-      }
-      Cv(VV, eV, xV) {
-        const JV = qe.Ve3z(this.__wbg_ptr, VV, eV, xV);
-        if (JV[1]) throw ve(JV[0])
-      }
-      Yr(VV, eV, xV, JV, YV, UV, yV, QV, nV, wV) {
-        fV(VV, pV);
-        return qe.Utkf(this.__wbg_ptr, VV.__wbg_ptr, eV, xV, JV, YV, UV, yV, QV, nV, wV)
-      }
-    }
-    Symbol.dispose && (yV.prototype[Symbol.dispose] = yV.prototype.free);
-    class pV {
-      static __wrap(VV) {
-        const eV = Object.create(pV.prototype);
-        return eV.__wbg_ptr = VV, aV.register(eV, eV.__wbg_ptr, eV), eV
-      }
-      __destroy_into_raw() {
-        const VV = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, aV.unregister(this), VV
-      }
-      free() {
-        const VV = this.__destroy_into_raw();
-        qe.uJ7U(VV, 0)
-      }
-      yr(VV) {
-        const eV = qe.WE9K(this.__wbg_ptr, VV);
-        if (eV[2]) throw ve(eV[1]);
-        return eV[0] >>> 0
-      }
-      Qr(VV, eV, xV) {
-        return qe.XiWD(this.__wbg_ptr, VV, eV, xV)
-      }
-      nr(VV, eV, xV) {
-        return qe.Gr2l(this.__wbg_ptr, VV, eV, xV) >>> 0
-      }
-      wr(VV, eV, xV, JV) {
-        return 0 !== qe.cT36(this.__wbg_ptr, VV, eV, xV, JV)
-      }
-      Zr() {
-        qe.q1Fi(this.__wbg_ptr)
-      }
-      vr(VV) {
-        const eV = qe.QxaI(this.__wbg_ptr, VV);
-        if (eV[3]) throw ve(eV[2]);
-        var xV = HV(eV[0], eV[1]).slice();
-        return qe.lxMR(eV[0], 1 * eV[1], 1), xV
-      }
-      evict(VV, eV) {
-        return qe.p8CK(this.__wbg_ptr, VV, eV) >>> 0
-      }
-      rr() {
-        qe.uGio(this.__wbg_ptr)
-      }
-      kr(VV, eV, xV) {
-        qe.a8A6(this.__wbg_ptr, VV, eV, xV)
-      }
-      br(VV) {
-        const eV = qe.yRPq(this.__wbg_ptr, VV);
-        if (eV[1]) throw ve(eV[0])
-      }
-      Er() {
-        return qe.nyld(this.__wbg_ptr) >>> 0
-      }
-      Br() {
-        return qe.c04e(this.__wbg_ptr) >>> 0
-      }
-      jr(VV, eV, xV) {
-        qe.rSET(this.__wbg_ptr, VV, eV, xV)
-      }
-      qr(VV, eV, xV) {
-        qe.zjkt(this.__wbg_ptr, VV, eV, xV)
-      }
-      tr() {
-        return qe.fETt(this.__wbg_ptr) >>> 0
-      }
-      Fr() {
-        return qe.HDBy(this.__wbg_ptr) >>> 0
-      }
-      constructor() {
-        const VV = qe.wE8J();
-        return this.__wbg_ptr = VV, aV.register(this, this.__wbg_ptr, this), this
-      }
-      static Tr() {
-        const VV = qe.jZOf();
-        return pV.__wrap(VV)
-      }
-      Pr() {
-        return qe.ubkj(this.__wbg_ptr) >>> 0
-      }
-      Ar() {
-        return qe.yAxm(this.__wbg_ptr) >>> 0
-      }
-      Nr(VV, eV, xV, JV) {
-        const YV = qe.AWJF(this.__wbg_ptr, VV, eV, xV, JV);
-        if (YV[1]) throw ve(YV[0])
-      }
-      Xr() {
-        return qe.IDbG(this.__wbg_ptr) >>> 0
-      }
-      Mr() {
-        return qe.o0l8(this.__wbg_ptr) >>> 0
-      }
-      zr(VV, eV, xV, JV) {
-        qe.vw9z(this.__wbg_ptr, VV, eV, xV, JV)
-      }
-      Gr(VV) {
-        qe.aIdI(this.__wbg_ptr, VV)
-      }
-      Rr(VV, eV, xV, JV, YV) {
-        const UV = ne(eV, qe.ENta),
-          yV = te,
-          pV = Qe(xV, qe.ENta),
-          QV = te,
-          nV = we(JV, qe.ENta),
-          wV = te,
-          ZV = qe.k3If(this.__wbg_ptr, VV, UV, yV, pV, QV, nV, wV, YV);
-        if (ZV[1]) throw ve(ZV[0])
-      }
-      Wr(VV, eV, xV, JV) {
-        const YV = ne(VV, qe.ENta),
-          UV = te,
-          yV = Qe(eV, qe.ENta),
-          pV = te,
-          QV = we(xV, qe.ENta),
-          nV = te,
-          wV = ne(JV, qe.ENta),
-          ZV = te,
-          vV = qe.tD9D(this.__wbg_ptr, YV, UV, yV, pV, QV, nV, wV, ZV);
-        if (vV[1]) throw ve(vV[0])
-      }
-      hr(VV) {
-        const eV = ne(VV, qe.ENta),
-          xV = te,
-          JV = qe.lVaV(this.__wbg_ptr, eV, xV);
-        if (JV[1]) throw ve(JV[0])
-      }
-      lr() {
-        return qe.weVF(this.__wbg_ptr) >>> 0
-      }
-      Lr(VV) {
-        const eV = qe.GTWz(this.__wbg_ptr, VV);
-        if (eV[2]) throw ve(eV[1]);
-        return eV[0] >>> 0
-      }
-      steer() {
-        return qe.a8rz(this.__wbg_ptr) >>> 0
-      }
-      mr() {
-        const VV = qe.WzxA(this.__wbg_ptr);
-        var eV = mV(VV[0], VV[1]).slice();
-        return qe.lxMR(VV[0], 8 * VV[1], 8), eV
-      }
-      Kr() {
-        return qe.OMf4(this.__wbg_ptr) >>> 0
-      }
-      lv() {
-        const VV = qe.CFcp(this.__wbg_ptr);
-        var eV, xV, JV = (eV = VV[0], xV = VV[1], eV >>>= 0, (null !== SV && 0 !== SV.byteLength || (SV = new Int32Array(qe.memory.buffer)), SV).subarray(eV / 4, eV / 4 + xV)).slice();
-        return qe.lxMR(VV[0], 4 * VV[1], 4), JV
-      }
-    }
-    Symbol.dispose && (pV.prototype[Symbol.dispose] = pV.prototype.free);
-    class QV {
-      __destroy_into_raw() {
-        const VV = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, oV.unregister(this), VV
-      }
-      free() {
-        const VV = this.__destroy_into_raw();
-        qe.xqnN(VV, 0)
-      }
-      NZ(VV) {
-        const eV = Qe(VV, qe.ENta),
-          xV = te,
-          JV = qe.qVGw(this.__wbg_ptr, eV, xV);
-        if (JV[1]) throw ve(JV[0])
-      }
-      Hr() {
-        return qe.Cmjt(this.__wbg_ptr) >>> 0
-      }
-      ur() {
-        return qe.b6oR(this.__wbg_ptr) >>> 0
-      }
-      constructor() {
-        const VV = qe.hQQv();
-        return this.__wbg_ptr = VV, oV.register(this, this.__wbg_ptr, this), this
-      }
-      run(VV, eV) {
-        fV(VV, pV);
-        const xV = qe.X1Wt(this.__wbg_ptr, VV.__wbg_ptr, eV);
-        if (xV[2]) throw ve(xV[1]);
-        return xV[0] >>> 0
-      }
-      sr(VV) {
-        const eV = Qe(VV, qe.ENta),
-          xV = te;
-        qe.cf7w(this.__wbg_ptr, eV, xV)
-      }
-      Sr(VV) {
-        const eV = Qe(VV, qe.ENta),
-          xV = te;
-        qe.JRIW(this.__wbg_ptr, eV, xV)
-      }
-    }
-    Symbol.dispose && (QV.prototype[Symbol.dispose] = QV.prototype.free);
-    class nV {
-      __destroy_into_raw() {
-        const VV = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, cV.unregister(this), VV
-      }
-      free() {
-        const VV = this.__destroy_into_raw();
-        qe.jSlG(VV, 0)
-      }
-      dr(VV, eV) {
-        const xV = ne(VV, qe.ENta),
-          JV = te;
-        return qe.QLCP(this.__wbg_ptr, xV, JV, eV) >>> 0
-      }
-      Or(VV, eV, xV) {
-        fV(VV, pV);
-        const JV = ne(xV, qe.ENta),
-          YV = te,
-          UV = qe.w3Ap(this.__wbg_ptr, VV.__wbg_ptr, eV, JV, YV);
-        if (UV[2]) throw ve(UV[1]);
-        return UV[0] >>> 0
-      }
-      Ir(VV) {
-        return qe.sYmc(this.__wbg_ptr, VV) >>> 0
-      }
-      constructor() {
-        const VV = qe.GD1X();
-        return this.__wbg_ptr = VV, cV.register(this, this.__wbg_ptr, this), this
-      }
-      scan(VV, eV) {
-        fV(VV, pV);
-        const xV = qe.pih3(this.__wbg_ptr, VV.__wbg_ptr, eV);
-        if (xV[2]) throw ve(xV[1]);
-        return xV[0] >>> 0
-      }
-      Jk(VV) {
-        const eV = ne(VV, qe.ENta),
-          xV = te;
-        qe.qaDl(this.__wbg_ptr, eV, xV)
-      }
-      xk() {
-        return qe.rt7n(this.__wbg_ptr) >>> 0
-      }
-      Vk() {
-        return qe.usMJ(this.__wbg_ptr) >>> 0
-      }
-    }
-    Symbol.dispose && (nV.prototype[Symbol.dispose] = nV.prototype.free);
-    class wV {
-      __destroy_into_raw() {
-        const VV = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, hV.unregister(this), VV
-      }
-      free() {
-        const VV = this.__destroy_into_raw();
-        qe.YBW9(VV, 0)
-      }
-      Uk(VV) {
-        const eV = qe.F9HB(this.__wbg_ptr, VV);
-        if (eV[2]) throw ve(eV[1]);
-        return eV[0] >>> 0
-      }
-      compute(VV, eV, xV, JV) {
-        var YV = ye(JV) ? 0 : Ze(JV, qe.ENta, qe.ysPp),
-          UV = te;
-        const yV = qe.kXjw(this.__wbg_ptr, VV, ye(eV) ? Number.MAX_SAFE_INTEGER : eV | 0, xV, YV, UV);
-        if (yV[2]) throw ve(yV[1]);
-        return yV[0] >>> 0
-      }
-      Qk(VV) {
-        const eV = Ze(VV, qe.ENta, qe.ysPp),
-          xV = te;
-        qe.jATI(this.__wbg_ptr, eV, xV)
-      }
-      nk() {
-        return qe.SFrn(this.__wbg_ptr)
-      }
-      wk(VV) {
-        return qe.TguD(this.__wbg_ptr, VV) >>> 0
-      }
-      Zk() {
-        return qe.iPgH(this.__wbg_ptr) >>> 0
-      }
-      vk() {
-        return qe.ebAU(this.__wbg_ptr) >>> 0
-      }
-      rk(VV, eV) {
-        const xV = qe.cVPI(this.__wbg_ptr, VV, eV);
-        if (xV[1]) throw ve(xV[0])
-      }
-      kk() {
-        return qe.N7zK(this.__wbg_ptr) >>> 0
-      }
-      bk() {
-        return qe.mBoq(this.__wbg_ptr) >>> 0
-      }
-      Ek() {
-        return qe.pmtn(this.__wbg_ptr) >>> 0
-      }
-      yk(VV, eV, xV) {
-        const JV = Qe(VV, qe.ENta),
-          YV = te,
-          UV = Qe(eV, qe.ENta),
-          yV = te,
-          pV = qe.NkvX(this.__wbg_ptr, JV, YV, UV, yV, xV);
-        if (pV[1]) throw ve(pV[0])
-      }
-      jk() {
-        return qe.sQCx(this.__wbg_ptr) >>> 0
-      }
-      mesh(VV, eV, xV, JV, YV) {
-        const UV = qe.mXVZ(this.__wbg_ptr, VV, eV, xV, JV, YV);
-        if (UV[2]) throw ve(UV[1]);
-        return UV[0] >>> 0
-      }
-      constructor(VV, eV, xV, JV, YV, UV, yV, pV, QV, nV, wV, ZV, vV, rV, kV, bV, EV, BV, jV, qV) {
-        const tV = pe(VV, qe.ENta),
-          FV = te,
-          TV = we(eV, qe.ENta),
-          PV = te,
-          AV = Qe(xV, qe.ENta),
-          NV = te,
-          XV = ne(JV, qe.ENta),
-          MV = te,
-          zV = ne(YV, qe.ENta),
-          GV = te,
-          WV = Qe(UV, qe.ENta),
-          RV = te,
-          gV = Qe(yV, qe.ENta),
-          DV = te,
-          iV = we(pV, qe.ENta),
-          CV = te,
-          aV = we(QV, qe.ENta),
-          oV = te,
-          cV = ne(nV, qe.ENta),
-          lV = te;
-        var LV = ye(wV) ? 0 : pe(wV, qe.ENta),
-          fV = te;
-        const mV = Qe(ZV, qe.ENta),
-          KV = te,
-          HV = ne(vV, qe.ENta),
-          uV = te;
-        var sV = ye(rV) ? 0 : ne(rV, qe.ENta),
-          SV = te;
-        const IV = we(kV, qe.ENta),
-          dV = te,
-          OV = qe.P1Ln(tV, FV, TV, PV, AV, NV, XV, MV, zV, GV, WV, RV, gV, DV, iV, CV, aV, oV, cV, lV, LV, fV, mV, KV, HV, uV, sV, SV, IV, dV, bV, EV, BV, jV, qV);
-        if (OV[2]) throw ve(OV[1]);
-        return this.__wbg_ptr = OV[0], hV.register(this, this.__wbg_ptr, this), this
-      }
-      Bk(VV, eV) {
-        const xV = Qe(VV, qe.ENta),
-          JV = te,
-          YV = qe.uROo(this.__wbg_ptr, xV, JV, eV);
-        if (YV[3]) throw ve(YV[2]);
-        var UV = HV(YV[0], YV[1]).slice();
-        return qe.lxMR(YV[0], 1 * YV[1], 1), UV
-      }
-      qk(VV) {
-        qe.C5wM(this.__wbg_ptr, ye(VV) ? 16777215 : VV)
-      }
-      tk(VV) {
-        return qe.djKU(this.__wbg_ptr, VV) >>> 0
-      }
-      Tk() {
-        return qe.KysV(this.__wbg_ptr) >>> 0
-      }
-      Fk() {
-        const VV = qe.yggE(this.__wbg_ptr);
-        if (VV[2]) throw ve(VV[1]);
-        return 0 !== VV[0]
-      }
-      Pk() {
-        return qe.kr12(this.__wbg_ptr) >>> 0
-      }
-      Ak() {
-        return qe.W8hx(this.__wbg_ptr) >>> 0
-      }
-    }
-    Symbol.dispose && (wV.prototype[Symbol.dispose] = wV.prototype.free);
-    class ZV {
-      __destroy_into_raw() {
-        const VV = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, lV.unregister(this), VV
-      }
-      free() {
-        const VV = this.__destroy_into_raw();
-        qe.CdeI(VV, 0)
-      }
-      compute(VV, eV, xV, JV) {
-        var YV = ye(JV) ? 0 : Ze(JV, qe.ENta, qe.ysPp),
-          UV = te;
-        const yV = qe.Xh5r(this.__wbg_ptr, VV, ye(eV) ? Number.MAX_SAFE_INTEGER : eV | 0, xV, YV, UV);
-        if (yV[2]) throw ve(yV[1]);
-        return yV[0] >>> 0
-      }
-      Qk(VV) {
-        const eV = Ze(VV, qe.ENta, qe.ysPp),
-          xV = te;
-        qe.YCuI(this.__wbg_ptr, eV, xV)
-      }
-      bk() {
-        return qe.oLLB(this.__wbg_ptr) >>> 0
-      }
-      Ek() {
-        return qe.fsJY(this.__wbg_ptr) >>> 0
-      }
-      Nk(VV) {
-        const eV = qe.C6vo(this.__wbg_ptr, VV);
-        if (eV[2]) throw ve(eV[1]);
-        return eV[0] >>> 0
-      }
-      constructor(VV, eV, xV, JV, YV, UV) {
-        const yV = pe(VV, qe.ENta),
-          pV = te,
-          QV = we(eV, qe.ENta),
-          nV = te,
-          wV = Qe(xV, qe.ENta),
-          ZV = te,
-          vV = ne(JV, qe.ENta),
-          rV = te,
-          kV = qe.Ruxt(yV, pV, QV, nV, wV, ZV, vV, rV, YV, UV);
-        if (kV[2]) throw ve(kV[1]);
-        return this.__wbg_ptr = kV[0], lV.register(this, this.__wbg_ptr, this), this
-      }
-      Tk() {
-        return qe.kEM8(this.__wbg_ptr) >>> 0
-      }
-      Fk() {
-        const VV = qe.h3YS(this.__wbg_ptr);
-        if (VV[2]) throw ve(VV[1]);
-        return 0 !== VV[0]
-      }
-      Pk() {
-        return qe.zlIT(this.__wbg_ptr) >>> 0
-      }
-    }
-
-    function vV() {
-      const VV = qe.w1cB();
-      var eV = KV(VV[0], VV[1]).slice();
-      return qe.lxMR(VV[0], 4 * VV[1], 4), eV
-    }
-
-    function rV(VV, eV) {
-      let xV, JV;
-      try {
-        const YV = pe(VV, qe.ENta),
-          UV = te,
-          yV = Ze(eV, qe.ENta, qe.ysPp),
-          pV = te,
-          QV = qe.Scao(YV, UV, yV, pV);
-        return xV = QV[0], JV = QV[1], IV(QV[0], QV[1])
-      } finally {
-        qe.lxMR(xV, JV, 1)
-      }
-    }
-
-    function kV() {
-      const VV = qe.f4AX();
-      var eV = KV(VV[0], VV[1]).slice();
-      return qe.lxMR(VV[0], 4 * VV[1], 4), eV
-    }
-
-    function bV(VV) {
-      return 0 !== qe.qT99(VV)
-    }
-
-    function EV(VV, eV) {
-      const xV = Ze(VV, qe.ENta, qe.ysPp),
-        JV = te,
-        YV = qe.gfKC(xV, JV, eV);
-      if (YV[1]) throw ve(YV[0])
-    }
-
-    function BV() {
-      qe.Yjra()
-    }
-
-    function jV() {
-      return qe.lg17() >>> 0
-    }
-
-    function qV(VV) {
-      return 0 !== qe.NUTp(VV)
-    }
-
-    function tV(VV) {
-      return 0 !== qe.BCFg(VV)
-    }
-
-    function FV(VV) {
-      qe.btD5(VV)
-    }
-
-    function TV() {
-      return qe.b0cD() >>> 0
-    }
-
-    function PV() {
-      return qe.bdZZ() >>> 0
-    }
-
-    function AV() {
-      return 0 !== qe.a1RV()
-    }
-
-    function NV() {
-      const VV = qe.LHZQ();
-      var eV = KV(VV[0], VV[1]).slice();
-      return qe.lxMR(VV[0], 4 * VV[1], 4), eV
-    }
-
-    function XV() {
-      const VV = qe.hXAS();
-      var eV = KV(VV[0], VV[1]).slice();
-      return qe.lxMR(VV[0], 4 * VV[1], 4), eV
-    }
-
-    function MV() {
-      const VV = qe.ssh2();
-      var eV = KV(VV[0], VV[1]).slice();
-      return qe.lxMR(VV[0], 4 * VV[1], 4), eV
-    }
-
-    function zV() {
-      return qe.tako() >>> 0
-    }
-
-    function GV() {
-      qe.Y35V()
-    }
-
-    function WV() {
-      let VV, eV;
-      try {
-        const xV = qe.UMtW();
-        return VV = xV[0], eV = xV[1], IV(xV[0], xV[1])
-      } finally {
-        qe.lxMR(VV, eV, 1)
-      }
-    }
-
-    function RV(VV) {
-      qe.WHhU(LV(VV))
-    }
-
-    function gV() {
-      return {
-        __proto__: null,
-        YE4x: {
-          __proto__: null,
-          mLQO: function(VV, eV) {
-            return LV(Error(IV(VV, eV)))
-          },
-          nuNj: function(VV, eV) {
-            throw new Error(IV(VV, eV))
-          },
-          tqsH: function(VV) {
-            Je(VV).call()
-          },
-          bJ0J: function(VV, eV) {
-            console.error(IV(VV, eV))
-          },
-          wXR8: function() {
-            return performance.now()
-          },
-          TnBF: function(VV) {
-            ve(VV)
-          }
-        }
-      }
-    }
-    Symbol.dispose && (ZV.prototype[Symbol.dispose] = ZV.prototype.free);
-    const DV = "undefined" === typeof FinalizationRegistry ? {
-        register: () => {},
-        unregister: () => {}
-      } : new FinalizationRegistry((VV => qe.zoRH(VV, 1))),
-      iV = "undefined" === typeof FinalizationRegistry ? {
-        register: () => {},
-        unregister: () => {}
-      } : new FinalizationRegistry((VV => qe.hsUl(VV, 1))),
-      CV = "undefined" === typeof FinalizationRegistry ? {
-        register: () => {},
-        unregister: () => {}
-      } : new FinalizationRegistry((VV => qe.mbL9(VV, 1))),
-      aV = "undefined" === typeof FinalizationRegistry ? {
-        register: () => {},
-        unregister: () => {}
-      } : new FinalizationRegistry((VV => qe.uJ7U(VV, 1))),
-      oV = "undefined" === typeof FinalizationRegistry ? {
-        register: () => {},
-        unregister: () => {}
-      } : new FinalizationRegistry((VV => qe.xqnN(VV, 1))),
-      cV = "undefined" === typeof FinalizationRegistry ? {
-        register: () => {},
-        unregister: () => {}
-      } : new FinalizationRegistry((VV => qe.jSlG(VV, 1))),
-      hV = "undefined" === typeof FinalizationRegistry ? {
-        register: () => {},
-        unregister: () => {}
-      } : new FinalizationRegistry((VV => qe.YBW9(VV, 1))),
-      lV = "undefined" === typeof FinalizationRegistry ? {
-        register: () => {},
-        unregister: () => {}
-      } : new FinalizationRegistry((VV => qe.CdeI(VV, 1)));
-
-    function LV(VV) {
-      Ue === Ye.length && Ye.push(Ye.length + 1);
-      const eV = Ue;
-      return Ue = Ye[eV], Ye[eV] = VV, eV
-    }
-
-    function fV(VV, eV) {
-      if (!(VV instanceof eV)) throw new Error(`expected instance of ${eV.name}`)
-    }
-
-    function mV(VV, eV) {
-      return VV >>>= 0, sV().subarray(VV / 8, VV / 8 + eV)
-    }
-
-    function KV(VV, eV) {
-      return VV >>>= 0, Ve().subarray(VV / 4, VV / 4 + eV)
-    }
-
-    function HV(VV, eV) {
-      return VV >>>= 0, xe().subarray(VV / 1, VV / 1 + eV)
-    }
-    let uV = null;
-
-    function sV() {
-      return null !== uV && 0 !== uV.byteLength || (uV = new Float64Array(qe.memory.buffer)), uV
-    }
-    let SV = null;
-
-    function IV(VV, eV) {
-      return function(VV, eV) {
-        be += eV, be >= ke && (re = new TextDecoder("utf-8", {
-          ignoreBOM: !0,
-          fatal: !0
-        }), re.decode(), be = eV);
-        return re.decode(xe().subarray(VV, VV + eV))
-      }(VV >>> 0, eV)
-    }
-    let dV = null;
-    let OV = null;
-
-    function Ve() {
-      return null !== OV && 0 !== OV.byteLength || (OV = new Uint32Array(qe.memory.buffer)), OV
-    }
-    let ee = null;
-
-    function xe() {
-      return null !== ee && 0 !== ee.byteLength || (ee = new Uint8Array(qe.memory.buffer)), ee
-    }
-
-    function Je(VV) {
-      return Ye[VV]
-    }
-    let Ye = new Array(1024).fill(void 0);
-    Ye.push(void 0, null, !0, !1);
-    let Ue = Ye.length;
-
-    function ye(VV) {
-      return void 0 === VV || null === VV
-    }
-
-    function pe(VV, eV) {
-      const xV = eV(2 * VV.length, 2) >>> 0;
-      return (null !== dV && 0 !== dV.byteLength || (dV = new Uint16Array(qe.memory.buffer)), dV).set(VV, xV / 2), te = VV.length, xV
-    }
-
-    function Qe(VV, eV) {
-      const xV = eV(4 * VV.length, 4) >>> 0;
-      return Ve().set(VV, xV / 4), te = VV.length, xV
-    }
-
-    function ne(VV, eV) {
-      const xV = eV(1 * VV.length, 1) >>> 0;
-      return xe().set(VV, xV / 1), te = VV.length, xV
-    }
-
-    function we(VV, eV) {
-      const xV = eV(8 * VV.length, 8) >>> 0;
-      return sV().set(VV, xV / 8), te = VV.length, xV
-    }
-
-    function Ze(VV, eV, xV) {
-      if (void 0 === xV) {
-        const xV = Ee.encode(VV),
-          JV = eV(xV.length, 1) >>> 0;
-        return xe().subarray(JV, JV + xV.length).set(xV), te = xV.length, JV
-      }
-      let JV = VV.length,
-        YV = eV(JV, 1) >>> 0;
-      const UV = xe();
-      let yV = 0;
-      for (; yV < JV; yV++) {
-        const eV = VV.charCodeAt(yV);
-        if (eV > 127) break;
-        UV[YV + yV] = eV
-      }
-      if (yV !== JV) {
-        0 !== yV && (VV = VV.slice(yV)), YV = xV(YV, JV, JV = yV + 3 * VV.length, 1) >>> 0;
-        const eV = xe().subarray(YV + yV, YV + JV);
-        yV += Ee.encodeInto(VV, eV).written, YV = xV(YV, JV, yV, 1) >>> 0
-      }
-      return te = yV, YV
-    }
-
-    function ve(VV) {
-      const eV = Je(VV);
-      return function(VV) {
-        VV < 1028 || (Ye[VV] = Ue, Ue = VV)
-      }(VV), eV
-    }
-    let re = new TextDecoder("utf-8", {
-      ignoreBOM: !0,
-      fatal: !0
-    });
-    re.decode();
-    const ke = 2146435072;
-    let be = 0;
-    const Ee = new TextEncoder;
-    "encodeInto" in Ee || (Ee.encodeInto = function(VV, eV) {
-      const xV = Ee.encode(VV);
-      return eV.set(xV), {
-        read: VV.length,
-        written: xV.length
-      }
-    });
-    let Be, je, qe, te = 0;
-
-    function Fe(VV, eV) {
-      return je = VV, qe = VV.exports, Be = eV, uV = null, SV = null, dV = null, OV = null, ee = null, qe.GgrN(), qe
-    }
-
-    function Te(VV) {
-      if (void 0 !== qe) return qe;
-      void 0 !== VV && (Object.getPrototypeOf(VV) === Object.prototype ? ({
-        module: VV
-      } = VV) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const eV = gV();
-      VV instanceof WebAssembly.Module || (VV = new WebAssembly.Module(VV));
-      return Fe(new WebAssembly.Instance(VV, eV), VV)
-    }
-    async function Pe(VV) {
-      if (void 0 !== qe) return qe;
-      void 0 !== VV && (Object.getPrototypeOf(VV) === Object.prototype ? ({
-        module_or_path: VV
-      } = VV) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const eV = gV();
-      ("string" === typeof VV || "function" === typeof Request && VV instanceof Request || "function" === typeof URL && VV instanceof URL) && (VV = fetch(VV));
+    LH(34960);
+    var AH = LH(45),
+      rH = LH(1450),
+      SH = LH(1998),
+      hH = LH(2051),
+      tH = LH(15),
+      zH = LH(2628),
+      CH = LH(37496),
+      EH = LH(37504),
+      XH = LH(34942),
+      GH = LH(34951),
+      YH = LH(34969),
+      uH = LH(1225);
+    const QH = (0, AH.memo)((function() {
+      var HH;
       const {
-        instance: xV,
-        module: JV
-      } = await async function(VV, eV) {
-        if ("function" === typeof Response && VV instanceof Response) {
-          if (!VV.ok) throw new Error(`failed to fetch Wasm: ${VV.status} ${VV.statusText} fetching '${VV.url}'`);
-          if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(VV, eV)
-          } catch (xV) {
-            if (! function(VV) {
-                switch (VV) {
-                  case "basic":
-                  case "cors":
-                  case "default":
-                    return !0
-                }
-                return !1
-              }(VV.type) || "application/wasm" === VV.headers.get("Content-Type")) throw xV;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", xV)
-          }
-          const JV = await VV.arrayBuffer();
-          return await WebAssembly.instantiate(JV, eV)
-        } {
-          const xV = await WebAssembly.instantiate(VV, eV);
-          return xV instanceof WebAssembly.Instance ? {
-            instance: xV,
-            module: VV
-          } : xV
-        }
-      }(await VV, eV);
-      return Fe(xV, JV)
+        isTouchScreen: BH,
+        clientEscMenuOptions: LH,
+        scriptedCameraFacing: SH,
+        crosshairShownOverride: QH,
+        crosshairGameView: MH
+      } = (0, tH.m)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), xH = (0, zH.j)("gunshotOrigin"), vH = (0, AH.useRef)(null), PH = (0, AH.useRef)(!1), [TH, VH] = (0, AH.useState)(WH);
+      (0, rH.d)("cameraZoomSet", VH), (0, AH.useEffect)((() => {
+        VH(WH())
+      }), []);
+      const OH = (0, hH.e)("heldItemAim"),
+        kH = OH.gun,
+        mH = (0, YH.g)(),
+        oH = (0, AH.useRef)(mH);
+      oH.current = mH;
+      const [IH, fH] = (0, AH.useState)(!1);
+      (0, AH.useEffect)((() => (0, EH.i)("crosshairAccuracy", UH)), []), (0, rH.d)("mouseState", (HH => {
+        let {
+          isDown: BH
+        } = HH;
+        PH.current = BH, vH.current && (vH.current.style.transform = (0, GH.c)(BH, oH.current.growOnClick)), "shapes" === oH.current.style && fH(BH)
+      }));
+      const lH = (0, XH.g)(BH, LH.touchActionButtons);
+      return (null !== (HH = (0, CH.b)(MH, QH)) && void 0 !== HH ? HH : (0, CH.f)(OH, TH > 1, lH, xH)) ? "movement" === SH || "cursor" === SH ? null : (0, uH.jsxs)(uH.Fragment, {
+        children: [kH && (0, uH.jsx)(bH, {
+          custom: mH.forGuns && "shapes" === mH.style ? mH : null,
+          touch: BH
+        }), !kH && (0, uH.jsx)(GH.b, {
+          settings: mH,
+          touch: BH,
+          pressRef: vH,
+          pressed: "shapes" === mH.style ? IH : PH.current
+        })]
+      }) : null
+    }));
+
+    function WH() {
+      return SH.gameBridge.lookup("cameraZoom", null)
+    }
+    const MH = [{
+        current: null
+      }, {
+        current: null
+      }, {
+        current: null
+      }, {
+        current: null
+      }],
+      xH = {
+        current: null
+      },
+      vH = {
+        current: null
+      };
+    let PH = 0,
+      TH = 0;
+
+    function UH(HH) {
+      TH = HH, MH[0].current || xH.current || vH.current ? OH(HH) : PH = HH
+    }
+
+    function VH(HH) {
+      return ((0, CH.d)(HH) - (0, CH.d)(0)) * window.innerHeight / 100
+    }
+
+    function OH(HH) {
+      var BH;
+      if (null === (BH = vH.current) || void 0 === BH || BH.call(vH, VH(HH)), MH[0].current) {
+        const BH = `${(0,CH.d)(HH)}vh`;
+        MH[0].current.style.transform = `translateX(calc(0px - ${BH}))`, MH[1].current.style.transform = `translateX(calc(0px + ${BH}))`, MH[2].current.style.transform = `translateY(calc(0px - ${BH}))`, MH[3].current.style.transform = `translateY(calc(0px + ${BH}))`
+      }
+      xH.current && (xH.current.style.filter = `blur(${Math.round(HH/10)}px)`)
+    }
+
+    function bH(HH) {
+      let {
+        custom: BH,
+        touch: LH
+      } = HH;
+      const SH = (0, rH.e)("aimingOverlay", "none"),
+        hH = "1.2vh",
+        tH = "0.3vh";
+      (0, AH.useEffect)((() => {
+        PH && OH(PH)
+      }), []);
+      const zH = (0, AH.useRef)(null !== BH);
+      return (0, AH.useLayoutEffect)((() => {
+        var HH;
+        BH ? null === (HH = vH.current) || void 0 === HH || HH.call(vH, VH(TH)) : zH.current && OH(TH);
+        zH.current = null !== BH
+      }), [BH]), (0, uH.jsxs)(uH.Fragment, {
+        children: ["sniper" === SH && (0, uH.jsxs)("div", {
+          ref: xH,
+          className: "GunCrosshairOverlayWrapper",
+          children: [(0, uH.jsx)("div", {
+            className: "GunCrosshairOverlay"
+          }), (0, uH.jsx)("div", {
+            className: "GunCrosshairOverlayLine1"
+          }), (0, uH.jsx)("div", {
+            className: "GunCrosshairOverlayLine2"
+          }), (0, uH.jsx)("div", {
+            className: "GunCrosshairOverlayDot"
+          })]
+        }), (0, uH.jsxs)("div", {
+          className: "GunCrosshairWrapper",
+          style: {
+            opacity: "sniper" === SH ? 0 : 1
+          },
+          children: [BH && (0, uH.jsx)(GH.b, {
+            settings: BH,
+            touch: LH,
+            spreadRef: vH
+          }), !BH && (0, uH.jsxs)(uH.Fragment, {
+            children: [(0, uH.jsx)("div", {
+              className: "GunCrosshair",
+              style: {
+                width: hH,
+                height: tH,
+                top: "49.85vh",
+                left: "calc(50vw - 0.6vh)"
+              },
+              ref: MH[0]
+            }), (0, uH.jsx)("div", {
+              className: "GunCrosshair",
+              style: {
+                width: hH,
+                height: tH,
+                top: "49.85vh",
+                left: "calc(50vw - 0.6vh)"
+              },
+              ref: MH[1]
+            }), (0, uH.jsx)("div", {
+              className: "GunCrosshair",
+              style: {
+                width: tH,
+                height: hH,
+                top: "49.4vh",
+                left: "calc(50vw - 0.15vh)"
+              },
+              ref: MH[2]
+            }), (0, uH.jsx)("div", {
+              className: "GunCrosshair",
+              style: {
+                width: tH,
+                height: hH,
+                top: "49.4vh",
+                left: "calc(50vw - 0.15vh)"
+              },
+              ref: MH[3]
+            })]
+          })]
+        })]
+      })
     }
   },
-  37458: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => yV,
-      g: () => pV,
-      k: () => QV
+  34951: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => QH,
+      c: () => uH
     });
-    var JV = xV(37467),
-      YV = xV(3194),
-      UV = xV(37469);
-    const yV = {
-      name: YV.e,
-      url: () => new xV.U(xV(37475)),
-      init: JV.default,
-      bindings: JV
+    LH(34960);
+    var AH = LH(1038),
+      rH = LH.n(AH),
+      SH = LH(45),
+      hH = LH(34946);
+
+    function tH(HH, BH) {
+      return Math.max(1, Math.round(HH * BH))
+    }
+
+    function zH(HH, BH) {
+      const LH = BH * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        AH = function(HH, BH) {
+          if (HH.lines) return tH(HH.lineThickness, BH) % 2;
+          if (HH.dot) return tH(HH.dotSize, BH) % 2;
+          return CH(HH, BH) % 2
+        }(HH, BH),
+        rH = EH(HH.lineThickness * LH, AH),
+        SH = tH(HH.lineLength, LH),
+        hH = Math.round(HH.gap * LH),
+        zH = HH.outline > 0 ? tH(HH.outline, LH) : 0,
+        GH = [];
+      if (HH.lines && (GH.push({
+          x: rH + hH,
+          y: 0,
+          w: SH,
+          h: rH,
+          arm: "right"
+        }), GH.push({
+          x: -hH - SH,
+          y: 0,
+          w: SH,
+          h: rH,
+          arm: "left"
+        }), GH.push({
+          x: 0,
+          y: rH + hH,
+          w: rH,
+          h: SH,
+          arm: "down"
+        }), HH.tStyle || GH.push({
+          x: 0,
+          y: -hH - SH,
+          w: rH,
+          h: SH,
+          arm: "up"
+        }), 0 === hH && GH.push({
+          x: 0,
+          y: 0,
+          w: rH,
+          h: rH
+        })), HH.dot) {
+        const BH = EH(HH.dotSize * LH, AH),
+          SH = HH.lines && 0 === hH && HH.dotSize > HH.lineThickness ? Math.max(BH, rH + 2) : BH,
+          tH = (rH - SH) / 2;
+        GH.push({
+          x: tH,
+          y: tH,
+          w: SH,
+          h: SH
+        })
+      }
+      const YH = GH.map((HH => ({
+        ...HH,
+        x: HH.x - zH,
+        y: HH.y - zH,
+        w: HH.w + 2 * zH,
+        h: HH.h + 2 * zH
+      })));
+      let uH = null,
+        QH = null;
+      if (HH.circle) {
+        const BH = tH(HH.circleThickness, LH),
+          SH = function(HH, BH) {
+            return HH + (HH % 2 === BH ? 0 : 1)
+          }(CH(HH, LH), AH),
+          hH = (rH - SH) / 2;
+        uH = XH(hH, SH, BH), zH > 0 && (QH = XH(hH - zH, SH + 2 * zH, BH + 2 * zH))
+      }
+      return {
+        cell: rH,
+        fills: GH,
+        outlines: zH > 0 ? YH : [],
+        ring: uH,
+        ringOutline: QH
+      }
+    }
+
+    function CH(HH, BH) {
+      return Math.round(HH.circleRadius * BH * 2 + tH(HH.circleThickness, BH))
+    }
+
+    function EH(HH, BH) {
+      return Math.max(2 - BH, 2 * Math.round((HH - BH) / 2) + BH)
+    }
+
+    function XH(HH, BH, LH) {
+      const AH = 2 * LH >= BH - 1;
+      return {
+        x: HH,
+        y: HH,
+        size: BH,
+        border: Math.min(LH, Math.floor(BH / 2)),
+        filled: AH
+      }
+    }
+    var GH = LH(1225);
+    const YH = 1.4;
+
+    function uH(HH, BH) {
+      return HH && BH ? `scale(${YH})` : "scale(1)"
+    }
+
+    function QH(HH) {
+      return "classic" === HH.settings.style ? (0, GH.jsx)(xH, {
+        ...HH
+      }) : (0, GH.jsx)(bH, {
+        ...HH
+      })
+    }
+    const WH = .125;
+
+    function MH(HH, BH) {
+      const LH = {};
+      if (HH.color !== hH.c.color && (LH.color = (0, hH.e)(HH.color)), HH.opacity !== hH.c.opacity && (LH.opacity = HH.opacity / 100), HH.outline !== hH.c.outline || HH.outlineColor !== hH.c.outlineColor) {
+        const BH = HH.outline,
+          AH = (0, hH.e)(HH.outlineColor);
+        LH.textShadow = BH > 0 ? `-${BH}px 0 ${AH}, 0 ${BH}px ${AH}, ${BH}px 0 ${AH}, 0 -${BH}px ${AH}` : "none"
+      }
+      if (HH.size !== hH.c.size) {
+        const AH = HH.size / 100;
+        LH.fontSize = BH ? `calc(max(1.3rem, 18px) * ${AH})` : `calc(1.3rem * ${AH})`, LH.marginTop = `-${WH}em`, LH.transformOrigin = `50% calc(50% + ${WH}em)`
+      }
+      return LH
+    }
+
+    function xH(HH) {
+      let {
+        settings: BH,
+        touch: LH,
+        inPreview: AH,
+        inEditor: SH,
+        pressed: hH = !1,
+        pressRef: tH
+      } = HH;
+      return (0, GH.jsx)("div", {
+        className: rH()("Crosshair", {
+          Touch: LH,
+          CrosshairInPreview: AH,
+          CrosshairInEditor: SH || AH
+        }),
+        ref: tH,
+        style: {
+          transform: uH(hH, BH.growOnClick),
+          ...MH(BH, LH)
+        },
+        children: "+"
+      })
+    }
+
+    function vH(HH, BH) {
+      return HH / BH + "px"
+    }
+
+    function PH(HH, BH, LH, AH) {
+      return {
+        ...VH(HH, BH, LH),
+        width: vH(HH.w, LH),
+        height: vH(HH.h, LH),
+        background: AH
+      }
+    }
+
+    function TH(HH, BH, LH) {
+      return {
+        left: vH(HH.x, BH),
+        top: vH(HH.y, BH),
+        width: vH(HH.size, BH),
+        height: vH(HH.size, BH),
+        borderWidth: vH(HH.border, BH),
+        borderColor: LH,
+        background: HH.filled ? LH : void 0
+      }
+    }
+    const UH = {
+      left: [-1, 0],
+      right: [1, 0],
+      up: [0, -1],
+      down: [0, 1]
     };
 
-    function pV() {
-      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yV,
-        eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yV,
-        xV = arguments.length > 2 ? arguments[2] : void 0;
-      return (0, UV.h)(VV, eV, xV)
-    }
-
-    function QV(VV) {
-      return (0, YV.L)((() => VV), JV, yV)
-    }
-  },
-  37444: (VV, eV, xV) => {
-    function JV(VV, eV) {
-      return new Error(`${VV}: ${eV instanceof Error?`${eV.name}: ${eV.message}`:String(eV)}`, {
-        cause: eV
-      })
-    }
-    xV.d(eV, {
-      d: () => JV
-    })
-  },
-  37442: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => yV,
-      g: () => QV
-    });
-    var JV = xV(3196),
-      YV = xV(7178),
-      UV = xV(37444);
-
-    function yV() {
-      return new URL(new xV.U(xV(37450)).href, globalThis.location?.href).href
-    }
-    let pV = null;
-
-    function QV() {
-      return pV ??= (async () => (0, JV.G)(new URL(yV()), (0, YV.e)("bloxd_wasm_textures")))().catch((VV => {
-        throw (0, UV.d)((0, JV.J)(VV), VV)
-      })), pV
-    }
-  },
-  37422: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => JV,
-      e: () => UV,
-      i: () => QV,
-      j: () => yV,
-      l: () => YV
-    });
-    const JV = /^alloc_failed (\d+) bytes$/;
-
-    function YV(VV, eV) {
-      return UV(VV, eV) ? `trap=alloc_failed ${eV} bytes` : `trap=${VV}`
-    }
-
-    function UV(VV, eV) {
-      return "unreachable" === VV && eV > 0
-    }
-
-    function yV(VV, eV, xV) {
-      const JV = function(VV) {
-        return VV instanceof WebAssembly.RuntimeError ? /unreachable/i.test(VV.message) ? "unreachable" : /out of bounds/i.test(VV.message) ? "out_of_bounds" : "runtime_error" : (VV instanceof RangeError || VV instanceof Error && "InternalError" === VV.name) && /call stack|recursion/i.test(VV.message) ? "stack_overflow" : "js_error"
-      }(VV);
-      if ("unreachable" !== JV) return {
-        kind: JV,
-        panic: null,
-        refusedBytes: 0
-      };
-      const YV = eV(),
-        UV = xV();
+    function VH(HH, BH, LH) {
+      const [AH, rH] = HH.arm ? UH[HH.arm] : [0, 0], SH = Math.round(BH * LH);
       return {
-        kind: JV,
-        panic: UV > 0 ? null : YV,
-        refusedBytes: UV
+        left: vH(HH.x + AH * SH, LH),
+        top: vH(HH.y + rH * SH, LH)
       }
     }
-    const pV = 300;
 
-    function QV(VV) {
-      return VV.replace(/\s*\n\s*/g, " / ").slice(0, pV)
+    function OH(HH) {
+      return HH.arm ? {
+        "data-arm": HH.arm,
+        "data-x": HH.x,
+        "data-y": HH.y
+      } : {}
     }
-  }
+
+    function bH(HH) {
+      let {
+        settings: BH,
+        inPreview: LH,
+        inEditor: AH,
+        pressed: tH = !1,
+        spread: CH,
+        spreadRef: EH
+      } = HH;
+      const XH = (0, SH.useRef)(null),
+        {
+          box: uH,
+          dpr: QH
+        } = function(HH) {
+          const [BH, LH] = (0, SH.useState)({
+            box: {
+              left: 0,
+              top: 0,
+              width: 0,
+              height: 0
+            },
+            dpr: 1
+          });
+          return (0, SH.useLayoutEffect)((() => {
+            const BH = HH.current;
+            if (!BH) return;
+            const AH = () => {
+              const HH = BH.getBoundingClientRect(),
+                AH = window.devicePixelRatio || 1;
+              LH((BH => BH.dpr === AH && BH.box.left === HH.left && BH.box.top === HH.top && BH.box.width === HH.width && BH.box.height === HH.height ? BH : {
+                box: {
+                  left: HH.left,
+                  top: HH.top,
+                  width: HH.width,
+                  height: HH.height
+                },
+                dpr: AH
+              }))
+            };
+            AH();
+            const rH = new ResizeObserver(AH);
+            return rH.observe(BH), window.addEventListener("resize", AH), window.addEventListener("scroll", AH, !0), () => {
+              rH.disconnect(), window.removeEventListener("resize", AH), window.removeEventListener("scroll", AH, !0)
+            }
+          }), [HH]), BH
+        }(XH),
+        WH = (0, SH.useRef)(QH);
+      WH.current = QH;
+      const MH = zH(BH, QH, tH && BH.growOnClick ? YH : 1),
+        xH = function(HH, BH, LH) {
+          const AH = Math.round((HH.left + HH.width / 2) * LH - BH / 2),
+            rH = Math.round((HH.top + HH.height / 2) * LH - BH / 2);
+          return {
+            x: AH / LH - HH.left,
+            y: rH / LH - HH.top
+          }
+        }(uH, MH.cell, QH),
+        vH = (0, hH.e)(BH.color),
+        UH = (0, hH.e)(BH.outlineColor),
+        bH = (0, SH.useRef)(0);
+      (0, SH.useLayoutEffect)((() => {
+        if (EH) return EH.current = HH => {
+          var BH;
+          bH.current = HH, null === (BH = XH.current) || void 0 === BH || BH.querySelectorAll("[data-arm]").forEach((BH => {
+            Object.assign(BH.style, VH(function(HH) {
+              return {
+                x: Number(HH.dataset.x),
+                y: Number(HH.dataset.y),
+                arm: HH.dataset.arm
+              }
+            }(BH), HH, WH.current))
+          }))
+        }, () => {
+          EH.current = null
+        }
+      }), [EH]);
+      const kH = null !== CH && void 0 !== CH ? CH : bH.current;
+      return (0, GH.jsx)("div", {
+        ref: XH,
+        className: rH()("CrosshairShapes", {
+          CrosshairInPreview: LH,
+          CrosshairInEditor: AH || LH,
+          CrosshairSpreads: void 0 !== EH
+        }),
+        children: (0, GH.jsx)("div", {
+          className: "CrosshairShapesOrigin",
+          style: {
+            left: xH.x,
+            top: xH.y,
+            opacity: BH.opacity / 100
+          },
+          children: (0, GH.jsxs)("div", {
+            className: "CrosshairShapesPress",
+            children: [MH.ringOutline && (0, GH.jsx)("div", {
+              className: "CrosshairRing",
+              style: TH(MH.ringOutline, QH, UH)
+            }), MH.outlines.map(((HH, BH) => (0, GH.jsx)("div", {
+              className: "CrosshairPart",
+              ...OH(HH),
+              style: PH(HH, kH, QH, UH)
+            }, `o${BH}`))), MH.ring && (0, GH.jsx)("div", {
+              className: "CrosshairRing",
+              style: TH(MH.ring, QH, vH)
+            }), MH.fills.map(((HH, BH) => (0, GH.jsx)("div", {
+              className: "CrosshairPart",
+              ...OH(HH),
+              style: PH(HH, kH, QH, vH)
+            }, `f${BH}`)))]
+          })
+        })
+      })
+    }
+  },
+  34962: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => EH,
+      f: () => WH,
+      g: () => QH
+    });
+    var AH = LH(34946);
+    const rH = "XH1-",
+      SH = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      hH = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      tH = ["color", "outlineColor"],
+      zH = 1 + 3 * tH.length + hH.length + 1,
+      CH = Math.ceil(8 * zH / Math.log2(62)),
+      EH = rH.length + CH;
+
+    function XH(HH) {
+      let BH = 90;
+      for (const LH of HH) BH = 31 * BH + LH & 255;
+      return BH
+    }
+    const GH = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      YH = BigInt(GH.length);
+
+    function uH(HH, BH) {
+      let LH = 0n;
+      for (const rH of HH) {
+        const HH = GH.indexOf(rH);
+        if (HH < 0) return null;
+        LH = LH * YH + BigInt(HH)
+      }
+      if (LH >> BigInt(8 * BH) !== 0n) return null;
+      const AH = [];
+      for (let rH = 0; rH < BH; rH++) AH.unshift(Number(0xffn & LH)), LH >>= 8n;
+      return AH
+    }
+
+    function QH(HH) {
+      let BH = "shapes" === HH.style ? 1 : 0;
+      SH.forEach(((LH, AH) => {
+        HH[LH] && (BH |= 1 << AH + 1)
+      }));
+      const LH = [BH];
+      for (const rH of tH) {
+        const BH = (0, AH.d)(rH, HH[rH]);
+        LH.push(BH >> 16 & 255, BH >> 8 & 255, 255 & BH)
+      }
+      for (const rH of hH) {
+        const {
+          min: BH,
+          step: SH
+        } = AH.b[rH];
+        LH.push(Math.round(((0, AH.d)(rH, HH[rH]) - BH) / SH))
+      }
+      return LH.push(XH(LH)), rH + function(HH, BH) {
+        let LH = 0n;
+        for (const rH of HH) LH = LH << 8n | BigInt(rH);
+        let AH = "";
+        for (let rH = 0; rH < BH; rH++) AH = GH[Number(LH % YH)] + AH, LH /= YH;
+        return AH
+      }(LH, CH)
+    }
+
+    function WH(HH) {
+      for (const BH of HH.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${CH}})`, "gi"))) {
+        const HH = MH(uH(BH[1], zH));
+        if (HH) return HH
+      }
+      return null
+    }
+
+    function MH(HH) {
+      if (!HH || HH.length !== zH || XH(HH.slice(0, -1)) !== HH[HH.length - 1]) return null;
+      const BH = HH[0],
+        LH = {
+          ...AH.c,
+          style: 1 & BH ? "shapes" : "classic"
+        };
+      SH.forEach(((HH, AH) => {
+        LH[HH] = 0 !== (BH & 1 << AH + 1)
+      }));
+      let rH = 1;
+      for (const AH of tH) LH[AH] = HH[rH] << 16 | HH[rH + 1] << 8 | HH[rH + 2], rH += 3;
+      for (const SH of hH) {
+        const {
+          min: BH,
+          step: hH
+        } = AH.b[SH];
+        LH[SH] = (0, AH.d)(SH, BH + HH[rH] * hH), rH++
+      }
+      return LH
+    }
+  },
+  34946: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => AH,
+      c: () => rH,
+      d: () => SH,
+      e: () => CH,
+      f: () => zH,
+      i: () => EH,
+      j: () => tH,
+      k: () => hH
+    });
+    const AH = {
+        opacity: {
+          min: 5,
+          max: 100,
+          step: 1
+        },
+        outline: {
+          min: 0,
+          max: 4,
+          step: .1
+        },
+        size: {
+          min: 25,
+          max: 400,
+          step: 5
+        },
+        lineLength: {
+          min: .5,
+          max: 40,
+          step: .5
+        },
+        lineThickness: {
+          min: .5,
+          max: 10,
+          step: .5
+        },
+        gap: {
+          min: 0,
+          max: 40,
+          step: .5
+        },
+        dotSize: {
+          min: .5,
+          max: 12,
+          step: .5
+        },
+        circleRadius: {
+          min: 1,
+          max: 60,
+          step: .5
+        },
+        circleThickness: {
+          min: .5,
+          max: 6,
+          step: .5
+        },
+        color: {
+          min: 0,
+          max: 16777215,
+          step: 1
+        },
+        outlineColor: {
+          min: 0,
+          max: 16777215,
+          step: 1
+        }
+      },
+      rH = Object.freeze({
+        style: "classic",
+        color: 16777215,
+        opacity: 100,
+        outline: 1.2,
+        outlineColor: 0,
+        growOnClick: !0,
+        size: 100,
+        lines: !0,
+        lineLength: 6,
+        lineThickness: 2,
+        gap: 3,
+        tStyle: !1,
+        dot: !1,
+        dotSize: 2,
+        circle: !1,
+        circleRadius: 10,
+        circleThickness: 1,
+        forGuns: !1
+      });
+
+    function SH(HH, BH) {
+      var LH;
+      const {
+        min: SH,
+        max: hH,
+        step: tH
+      } = AH[HH];
+      if (!Number.isFinite(BH)) return rH[HH];
+      const zH = (null !== (LH = String(tH).split(".")[1]) && void 0 !== LH ? LH : "").length,
+        CH = Number((Math.round(BH / tH) * tH).toFixed(zH));
+      return Math.min(hH, Math.max(SH, CH))
+    }
+
+    function hH(HH, BH, LH) {
+      const AH = "number" === typeof LH ? SH(BH, LH) : LH;
+      return {
+        ...HH,
+        [BH]: AH
+      }
+    }
+
+    function tH(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(rH).every((AH => LH.includes(AH) || HH[AH] === BH[AH]))
+    }
+
+    function zH(HH) {
+      return tH(HH, rH)
+    }
+
+    function CH(HH) {
+      return `#${HH.toString(16).padStart(6,"0")}`
+    }
+
+    function EH(HH) {
+      const BH = /^#?([0-9a-f]{6})$/i.exec(HH.trim());
+      return BH ? parseInt(BH[1], 16) : null
+    }
+  },
+  34969: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => XH,
+      g: () => GH
+    });
+    var AH = LH(45),
+      rH = LH(30),
+      SH = LH(34962),
+      hH = LH(34946);
+    const tH = "crosshairCode";
+    let zH = null;
+    const CH = new Set;
+
+    function EH() {
+      if (null === zH) {
+        var HH;
+        const BH = rH.e.getItem(tH);
+        zH = null !== (HH = "string" === typeof BH ? (0, SH.f)(BH) : null) && void 0 !== HH ? HH : hH.c
+      }
+      return zH
+    }
+
+    function XH(HH) {
+      zH = HH, (0, hH.f)(HH) ? rH.e.removeItem(tH) : rH.e.setItem(tH, (0, SH.g)(HH));
+      for (const BH of CH) BH()
+    }
+
+    function GH() {
+      const [HH, BH] = (0, AH.useState)(EH);
+      return (0, AH.useEffect)((() => {
+        const HH = () => {
+          BH(EH())
+        };
+        return HH(), LH = HH, CH.add(LH), () => {
+          CH.delete(LH)
+        };
+        var LH
+      }), []), HH
+    }
+  },
+  37633: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => SH,
+      f: () => zH,
+      g: () => hH
+    });
+    var AH = LH(619),
+      rH = LH(3038);
+
+    function SH(HH) {
+      return HH === (0, rH.c)().JBH ? (0, rH.c)().lF : HH
+    }
+
+    function hH(HH) {
+      return !(0, AH.M)(HH) && SH(HH) === (0, rH.c)().lF
+    }
+    const tH = "gravity";
+
+    function zH() {
+      return (0, rH.c)().physics[tH][1]
+    }
+  },
+  37608: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => VH
+    });
+    var AH = LH(37617),
+      rH = LH(176),
+      SH = LH(5335),
+      hH = LH(37626),
+      tH = LH(37326),
+      zH = LH(37656),
+      CH = LH(37633),
+      EH = LH(330),
+      XH = LH.n(EH),
+      GH = LH(3038),
+      YH = LH(37654),
+      uH = LH(18),
+      QH = LH(15),
+      WH = LH(37640),
+      MH = LH(37642),
+      xH = LH(37648),
+      vH = LH(37650);
+    const PH = new Set(["note"]);
+    const TH = {
+      stop: () => TH,
+      fade: () => TH,
+      rate: () => TH,
+      stopsAtOnce: () => !1,
+      isAlive: () => !1,
+      getDurationMs: () => 0,
+      getVolume: () => 0,
+      getRelativeVolume: () => 0,
+      setRelativeVolume: () => TH,
+      setPannerAttr: () => TH,
+      setPosition: () => TH
+    };
+    class UH {
+      constructor(HH) {
+        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new zH.f, this._howl = (0, tH.countDecodesAs)(new SH.Howl({
+          src: [...(0, AH.v)(HH).src],
+          pool: 15
+        }), "sound"), this._howl.once("loaderror", (() => {
+          this._loadFailed = !0
+        }))
+      }
+      play() {
+        let HH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const BH = this._howl.play(hH.b);
+        HH && this._howl.loop(!0, BH);
+        let LH = 1;
+        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), BH);
+        const AH = {
+          stop: () => {
+            var HH;
+            return null === (HH = this.liveHowl()) || void 0 === HH || HH.stop(BH), AH
+          },
+          fade: (HH, LH, rH) => {
+            var SH;
+            return null === (SH = this.liveHowl()) || void 0 === SH || SH.fade(HH, LH, rH, BH), AH
+          },
+          rate: HH => {
+            var LH;
+            return null === (LH = this.liveHowl()) || void 0 === LH || LH.rate(HH, BH), AH
+          },
+          stopsAtOnce: () => this._howl.playing(BH) && !this._howl._playLock,
+          isAlive: () => {
+            const HH = this._howl._soundById(BH);
+            return !this._loadFailed && !!HH && !HH._ended
+          },
+          getDurationMs: () => this._howl._soundById(BH) ? 1e3 * this._howl.duration(BH) / this._howl.rate(BH) : 0,
+          getVolume: () => LH * this._volumeMultiplier.getTotalMultipliedVal(),
+          getRelativeVolume: () => LH,
+          setRelativeVolume: HH => {
+            var rH;
+            if (HH > 1) throw new Error("Volume should be <= 1");
+            return LH = QH.c.get("soundOnFromAd") ? HH : 0, null === (rH = this.liveHowl()) || void 0 === rH || rH.volume(Math.min(1, LH * this._volumeMultiplier.getTotalMultipliedVal()), BH), AH
+          },
+          setPannerAttr: HH => {
+            let {
+              coneInnerAngle: LH,
+              coneOuterAngle: rH = 360,
+              coneOuterGain: SH,
+              distanceModel: hH,
+              maxDistance: tH,
+              panningModel: zH,
+              refDistance: CH,
+              rolloffFactor: EH
+            } = HH;
+            return this._setPannerAttr({
+              id: BH,
+              coneInnerAngle: LH,
+              coneOuterAngle: rH,
+              coneOuterGain: SH,
+              distanceModel: hH,
+              maxDistance: tH,
+              panningModel: zH,
+              refDistance: CH,
+              rolloffFactor: EH
+            }), AH
+          },
+          setPosition: HH => {
+            var LH;
+            return null === (LH = this.liveHowl()) || void 0 === LH || LH.pos(HH[2], HH[1], HH[0], BH), AH
+          }
+        };
+        return AH
+      }
+      liveHowl() {
+        return this._unloaded ? null : this._howl
+      }
+      loaded() {
+        return "loaded" === this._howl.state()
+      }
+      unloadOnceIdle() {
+        (0, hH.d)(this._howl, (() => {
+          this._unloaded = !0
+        }))
+      }
+      setGlobalVolume(HH) {
+        this._volumeMultiplier.setMultiplierType("globalVolume", HH), this._howl.volume(HH)
+      }
+      _setPannerAttr(HH) {
+        let {
+          id: BH,
+          coneInnerAngle: LH = 360,
+          coneOuterAngle: AH = 360,
+          coneOuterGain: rH = 0,
+          distanceModel: SH = "inverse",
+          maxDistance: hH = 1e3,
+          panningModel: tH = "HRTF",
+          refDistance: zH = YH.i,
+          rolloffFactor: CH = 1
+        } = HH;
+        const EH = this.liveHowl();
+        if (null === EH) return;
+        EH.pannerAttr({
+          coneOuterAngle: AH
+        }, BH);
+        const XH = {
+          coneInnerAngle: LH,
+          coneOuterAngle: AH,
+          coneOuterGain: rH,
+          distanceModel: SH,
+          maxDistance: hH,
+          panningModel: tH,
+          refDistance: zH,
+          rolloffFactor: CH
+        };
+        EH.pannerAttr(XH, BH)
+      }
+    }
+    const VH = new class {
+      constructor() {
+        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new WH.b, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, uH.k.subscribe("appManagerUpdated|soundVolume", (HH => {
+          const BH = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
+          for (const LH of BH) LH.setGlobalVolume(HH)
+        }))
+      }
+      play(HH, BH) {
+        var LH;
+        let SH, hH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (LH = (0, GH.c)()) || void 0 === LH ? void 0 : LH.lF,
+          tH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : YH.f,
+          zH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : YH.i,
+          EH = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        var uH;
+        (0, GH.c)() ? SH = !!Array.isArray(hH) || (0, CH.b)(hH) !== (null === (uH = (0, GH.c)()) || void 0 === uH ? void 0 : uH.lF): SH = !1;
+        const QH = (0, AH.o)(HH),
+          MH = this.loadSound(SH ? this.spatialSounds : this.stereoSounds, HH);
+        if (!SH) {
+          const HH = MH.play(EH);
+          return HH.setRelativeVolume(BH), HH
+        }
+        const xH = (0, GH.c)(),
+          vH = Array.isArray(hH) ? hH : xH.pT.hT(hH),
+          UH = xH.pT.hT(xH.lF);
+        if (!vH || XH().sqrDist(vH, UH) > tH * tH) return TH;
+        let VH;
+        if (!EH) {
+          if (!this.spatialVoices.admit({
+              group: PH.has(QH) ? null : (0, WH.e)(HH),
+              loudness: (0, WH.d)(BH, XH().Ot(vH, UH), zH),
+              startMs: performance.now(),
+              getDurationMs: () => {
+                var HH, BH;
+                return null !== (HH = null === (BH = VH) || void 0 === BH ? void 0 : BH.getDurationMs()) && void 0 !== HH ? HH : 0
+              },
+              isAlive: () => {
+                var HH, BH;
+                return null !== (HH = null === (BH = VH) || void 0 === BH ? void 0 : BH.isAlive()) && void 0 !== HH && HH
+              },
+              canStop: () => {
+                var HH, BH;
+                return null !== (HH = null === (BH = VH) || void 0 === BH ? void 0 : BH.stopsAtOnce()) && void 0 !== HH && HH
+              },
+              stop: () => {
+                var HH;
+                null === (HH = VH) || void 0 === HH || HH.stop()
+              }
+            })) return TH
+        }
+        return VH = MH.play(EH), VH.setRelativeVolume(BH), VH.setPannerAttr({
+          refDistance: zH
+        }), VH.setPosition([vH[0], vH[1] + rH.g.iW * rH.g.playerEyeToHeightRatio, vH[2]]), VH
+      }
+      preload(HH) {
+        const BH = (0, AH.s)(HH) ? [HH] : (0, AH.x)(HH);
+        if (0 === BH.length) throw new Error(`Invalid sound name ${HH} (no sound has it or starts with it)`);
+        for (const LH of BH) this.loadSound(this.stereoSounds, LH)
+      }
+      preloadAtIdle(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vH.e;
+        const LH = HH.filter((HH => !this.idlePreloads.has(HH)));
+        for (const rH of LH) this.idlePreloads.add(rH);
+        const AH = this.idlePreloadGeneration;
+        (0, xH.b)(LH, {
+          ...BH,
+          xB: () => AH !== this.idlePreloadGeneration,
+          fetchFile: HH => {
+            this.idlePreloads.delete(HH);
+            try {
+              return this.preload(HH), Promise.resolve()
+            } catch (BH) {
+              return Promise.reject(BH)
+            }
+          }
+        })
+      }
+      loadSound(HH, BH) {
+        const LH = HH[BH];
+        if (LH) return LH;
+        const rH = this.makeSound(HH, BH);
+        for (const hH of null !== (SH = (0, AH.t)(BH)) && void 0 !== SH ? SH : []) {
+          var SH;
+          HH[hH] || this.makeSound(HH, hH)
+        }
+        return rH
+      }
+      makeSound(HH, BH) {
+        (0, vH.i)(BH);
+        const LH = new UH(BH);
+        return LH.setGlobalVolume(QH.c.get("soundVolume")), HH[BH] = LH, LH
+      }
+      freeSoundsAfterGame() {
+        this.idlePreloadGeneration++, this.idlePreloads.clear(), this.freeSounds()
+      }
+      freeSounds() {
+        for (const HH of [this.stereoSounds, this.spatialSounds])
+          for (const [BH, LH] of Object.entries(HH)) !MH.d.has((0, AH.o)(BH)) && LH.loaded() && (LH.unloadOnceIdle(), delete HH[BH])
+      }
+    }
+  },
+  37694: (HH, BH, LH) => {
+    function AH(HH, BH) {
+      var LH, AH, rH, SH, hH, tH, zH, CH;
+      return HH.name === BH.name && ((null === (LH = HH.attributes) || void 0 === LH || null === (AH = LH.customAttributes) || void 0 === AH ? void 0 : AH.stackKey) === (null === (rH = BH.attributes) || void 0 === rH || null === (SH = rH.customAttributes) || void 0 === SH ? void 0 : SH.stackKey) && (!0 !== (null === (hH = HH.attributes) || void 0 === hH || null === (tH = hH.customAttributes) || void 0 === tH ? void 0 : tH.unstackable) && !0 !== (null === (zH = BH.attributes) || void 0 === zH || null === (CH = zH.customAttributes) || void 0 === CH ? void 0 : CH.unstackable)))
+    }
+    LH.d(BH, {
+      d: () => AH
+    })
+  },
+  37798: (HH, BH, LH) => {
+    function AH(HH) {
+      return HH.includes("Leaf Bed")
+    }
+
+    function rH(HH) {
+      return / Bed(?: Head)?(?:\||$)/.test(HH) && !AH(HH)
+    }
+
+    function SH(HH) {
+      return HH.includes(" Strongbed")
+    }
+
+    function hH(HH) {
+      return AH(HH) || rH(HH) || SH(HH)
+    }
+    LH.d(BH, {
+      d: () => hH,
+      h: () => AH,
+      l: () => SH,
+      m: () => rH
+    })
+  },
+  37793: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => CH
+    });
+    var AH = LH(37798),
+      rH = LH(9940);
+    const SH = [],
+      hH = [],
+      tH = [],
+      zH = [];
+    for (const EH of Object.keys(rH.l))(0, AH.h)(EH) ? SH.push(EH) : (0, AH.m)(EH) && hH.push(EH), (0, AH.l)(EH) && tH.push(EH), (EH.includes(" Bed Head") || EH.includes(" Strongbed Head")) && zH.push(EH);
+    const CH = {
+      leafBeds: SH,
+      woolBeds: hH,
+      strongBeds: tH,
+      beds: [...SH, ...hH, ...tH],
+      bedHeads: zH,
+      blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
+    }
+  },
+  34960: () => {}
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

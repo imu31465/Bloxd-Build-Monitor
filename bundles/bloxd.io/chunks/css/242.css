@@ -1,757 +1,3 @@
-.LobbyManage {
-  color: #fff;
-  display: flex;
-  flex: 1 0 1rem;
-  min-height: 0;
-  overflow: hidden;
-  pointer-events: all;
-  width: 100%;
-  z-index: 2
-}
-
-.LobbyManage .LobbyManageBody {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto
-}
-
-.LobbyManage .LobbyManageBody .LobbyManageInner {
-  box-sizing: border-box;
-  max-width: 56rem;
-  padding: 2rem 2rem calc(2rem + var(--notchBottom)) 2rem;
-  width: 100%
-}
-
-@media(max-width:700px), (orientation:portrait) {
-  .LobbyManage .LobbyManageBody .LobbyManageInner {
-    padding: 1rem
-  }
-}
-
-@media(max-height:500px) {
-  .LobbyManage .LobbyManageBody .LobbyManageInner {
-    max-width: 70rem
-  }
-}
-
-.LobbyManage .LobbyManagePage {
-  align-items: stretch;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem
-}
-
-.LobbyManage .LobbyManageLoading {
-  display: flex;
-  font-size: 2rem;
-  justify-content: center;
-  padding: 1rem
-}
-
-.LobbyManage .LobbyManageStatusRefused {
-  color: #ff8a80
-}
-
-.LobbyManage .LobbyManageBox {
-  align-items: stretch;
-  background-color: #303a59;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  display: flex;
-  flex-direction: column;
-  gap: .6rem;
-  padding: 1rem
-}
-
-.LobbyManage .LobbyManageBox .LobbyManageBoxHeading {
-  align-items: center;
-  display: flex;
-  gap: .5rem
-}
-
-.LobbyManage .LobbyManageBox .LobbyManageBoxHeading .SocialSectionTitle {
-  flex: 1 1 auto;
-  min-width: 0
-}
-
-.LobbyManage .LobbyManageBox .LobbyManageBoxHeading .LobbyManageTitleAction {
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  font-size: 1.1rem;
-  gap: .35em;
-  min-height: 2.2em;
-  padding: 0 .6em
-}
-
-@media(pointer:coarse) {
-  .LobbyManage .LobbyManageBox .LobbyManageBoxHeading .LobbyManageTitleAction {
-    box-sizing: border-box;
-    min-height: 44px;
-    min-width: 44px
-  }
-}
-
-.LobbyManage .LobbyManageBox .LobbyManageConfirm {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 1.1rem;
-  gap: .5rem;
-  justify-content: space-between
-}
-
-.LobbyManage .LobbyManageBox .LobbyManageConfirm .LobbyManageConfirmText {
-  flex: 1 1 12rem
-}
-
-.LobbyManage .LobbyManageBox .LobbyManageBoxStatus,
-.LobbyManage .LobbyManageBox .LobbyManageModeText {
-  font-size: 1.2rem
-}
-
-.LobbyManage .LobbyManageBox .LobbyManageMore .SocialSectionTitle {
-  justify-content: center
-}
-
-.LobbyManage .LobbyManageBox .LobbyManageFilter {
-  font-size: 1.2rem;
-  text-align: start
-}
-
-@media(pointer:coarse) {
-  .LobbyManage .LobbyManageBox .LobbyManageFilter {
-    box-sizing: border-box;
-    min-height: 44px;
-    min-width: 44px
-  }
-}
-
-@media(max-width:700px), (orientation:portrait) {
-  .LobbyManage .LobbyManageBox .PlayerRows:has(.LobbyManagePlayerRow) {
-    gap: 1.2rem
-  }
-}
-
-.LobbyManage .LobbyManageButtons {
-  align-items: center;
-  display: flex;
-  gap: .4rem;
-  justify-content: flex-end
-}
-
-@media(pointer:coarse) {
-  .LobbyManage .LobbyManageButtons {
-    gap: 8px
-  }
-}
-
-.LobbyManage .LobbyManageButtons .LobbyManageIconButton {
-  font-size: 1.1rem
-}
-
-@media(pointer:coarse) {
-  .LobbyManage .LobbyManageButtons .LobbyManageIconButton {
-    box-sizing: border-box;
-    min-height: 44px;
-    min-width: 44px
-  }
-}
-
-.LobbyManage .LobbyManageButtons .LobbyManageIconButton .ButtonBody {
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  gap: .35em;
-  justify-content: center;
-  min-width: 1.8em;
-  padding: .4em .6em
-}
-
-.LobbyManage .LobbyManageButtons .LobbyManageOutlineButton {
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  font-size: 1.1rem;
-  gap: .35em;
-  justify-content: center;
-  min-height: 2.2em;
-  padding: 0 .6em
-}
-
-@media(pointer:coarse) {
-  .LobbyManage .LobbyManageButtons .LobbyManageOutlineButton {
-    box-sizing: border-box;
-    min-height: 44px;
-    min-width: 44px
-  }
-}
-
-.LobbyManage .LobbyManagePlayerRow .PlayerRow .ProfilePreviewName {
-  overflow-wrap: anywhere
-}
-
-.LobbyManage .LobbyManagePlayerRow .PlayerRow .ProfilePreviewStatus {
-  color: #cfcfcf;
-  white-space: normal
-}
-
-.LobbyManage .LobbyManagePlayerRow .PlayerRow .PlayerRowActions {
-  gap: .4rem
-}
-
-@media(pointer:coarse) {
-  .LobbyManage .LobbyManagePlayerRow .PlayerRow .PlayerRowActions {
-    gap: 8px
-  }
-}
-
-.LobbyManage .LobbyManagePlayerRow .PlayerRow .PlayerRowActions .LobbyManageChoices {
-  align-items: center;
-  display: flex;
-  font-size: 1.1rem;
-  gap: .4rem
-}
-
-@media(pointer:coarse) {
-  .LobbyManage .LobbyManagePlayerRow .PlayerRow .PlayerRowActions .LobbyManageChoices {
-    gap: 8px
-  }
-}
-
-.LobbyManage .LobbyManagePlayerRow .PlayerRow .PlayerRowActions .LobbyManageChoices .Dropdown-root {
-  min-width: 0
-}
-
-.LobbyManage .LobbyManagePlayerRow .PlayerRow .PlayerRowActions .LobbyManageChoices .BloxdDropdownControl {
-  align-items: center;
-  display: flex;
-  padding: .45rem 2.2em .45rem .7rem
-}
-
-@media(pointer:coarse) {
-  .LobbyManage .LobbyManagePlayerRow .PlayerRow .PlayerRowActions .LobbyManageChoices .BloxdDropdownControl {
-    box-sizing: border-box;
-    min-height: 44px;
-    min-width: 44px
-  }
-}
-
-.LobbyManage .LobbyManagePlayerRow .PlayerRow .PlayerRowActions .LobbyManageChoices .Dropdown-placeholder {
-  overflow-x: hidden;
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 8.5rem
-}
-
-.LobbyManage .LobbyManagePlayerRow .PlayerRow .PlayerRowActions .LobbyManageChoices .LobbyManageChoiceFixed {
-  box-sizing: content-box;
-  color: #cfcfcf;
-  padding: 0 calc(2.2em + 1px) 0 calc(.7rem + 1px);
-  width: 8.5rem
-}
-
-.LobbyManage .LobbyManagePlayerRow .PlayerRow .PlayerRowActions .LobbyManageButtons {
-  min-width: 11.5rem
-}
-
-@media(max-width:700px), (orientation:portrait) {
-  .LobbyManage .LobbyManagePlayerRow .PlayerRow {
-    flex-wrap: wrap;
-    row-gap: .4rem
-  }
-
-  .LobbyManage .LobbyManagePlayerRow .PlayerRow .ProfilePreview {
-    flex: 1 1;
-    min-width: 40%
-  }
-
-  .LobbyManage .LobbyManagePlayerRow .PlayerRow .PlayerRowActions {
-    display: contents
-  }
-
-  .LobbyManage .LobbyManagePlayerRow .PlayerRow .PlayerRowActions .LobbyManageButtons {
-    margin-left: auto;
-    min-width: 0
-  }
-
-  .LobbyManage .LobbyManagePlayerRow .PlayerRow .PlayerRowActions .LobbyManageChoices {
-    flex-basis: calc(100% - 3.2rem);
-    flex-grow: 1;
-    flex-shrink: 0;
-    margin-left: 3.2rem;
-    order: 3
-  }
-
-  .LobbyManage .LobbyManagePlayerRow .PlayerRow .PlayerRowActions .LobbyManageChoices:empty {
-    display: none
-  }
-
-  .LobbyManage .LobbyManagePlayerRow .PlayerRow .PlayerRowActions .LobbyManageChoices .Dropdown-root {
-    flex-basis: calc(50% - 0.2rem);
-    flex-grow: 0;
-    flex-shrink: 1
-  }
-
-  .LobbyManage .LobbyManagePlayerRow .PlayerRow .PlayerRowActions .LobbyManageChoices .Dropdown-placeholder {
-    width: auto
-  }
-}
-
-@media(max-width:340px) {
-  .LobbyManage .LobbyManagePlayerRow .PlayerRow .LobbyManageButtonLabel {
-    display: none
-  }
-}
-
-.LobbyManage .LobbyManageListing {
-  font-size: 1.25rem;
-  gap: .8rem
-}
-
-.LobbyManage .LobbyManageListing .LobbyManageRuleRow {
-  align-items: center;
-  display: flex;
-  gap: .75rem
-}
-
-.LobbyManage .LobbyManageListing .LobbyManageRuleRow .SliderText {
-  flex: 0 0 8rem
-}
-
-.LobbyManage .LobbyManageListing .LobbyManageFieldError {
-  font-size: 1rem;
-  margin-left: 8.75rem
-}
-
-.LobbyManage .LobbyManageRuleInput {
-  align-items: center;
-  display: flex;
-  font-size: 1.1rem;
-  gap: .4rem
-}
-
-.LobbyManage .LobbyManageRuleInput .TextInput {
-  padding: .45rem .6rem;
-  text-align: start;
-  width: 9rem
-}
-
-.LobbyManage .LobbyManageRuleInput.LobbyManageRuleInputWide {
-  flex: 1 1 15rem
-}
-
-.LobbyManage .LobbyManageRuleInput.LobbyManageRuleInputWide .TextInput {
-  width: 100%
-}
-
-@media(pointer:coarse) {
-  .LobbyManage .LobbyManageRuleInput .NewButton {
-    box-sizing: border-box;
-    min-height: 44px;
-    min-width: 44px
-  }
-}
-
-.LobbyManage .LobbyManageColour {
-  background: none;
-  border: 1px solid #0f0f0f;
-  height: 2.4rem;
-  padding: 0;
-  width: 4rem
-}
-
-@media(pointer:coarse) {
-  .LobbyManage .LobbyManageColour {
-    box-sizing: border-box;
-    min-height: 44px;
-    min-width: 44px
-  }
-}
-
-.LobbyManage .LobbyManageRules {
-  font-size: 1.25rem;
-  gap: .5rem
-}
-
-.LobbyManage .LobbyManageRules .SocialSectionTitle {
-  margin-top: .8rem
-}
-
-.LobbyManage .LobbyManageRules .SettingBox {
-  background-color: #303a59;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  opacity: 1;
-  padding: 1rem
-}
-
-.LobbyManage .LobbyManageRules .SettingBox.SettingBoxWarning {
-  border: 1px solid #ffb914
-}
-
-.LobbyManage .LobbyManageRules .SettingBox.SettingBoxFeatured {
-  border-color: #ffb914
-}
-
-.LobbyManage .LobbyManageRules .SettingBox.SettingBoxDisabled {
-  opacity: .5;
-  pointer-events: none
-}
-
-.LobbyManage .LobbyManageRules .SettingBoxGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 0
-}
-
-.LobbyManage .LobbyManageRules .SettingBoxGroup>.SettingBox:first-of-type {
-  border-bottom: none;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0
-}
-
-.LobbyManage .LobbyManageRules .SettingBoxGroup>.SettingBox:not(:first-of-type):not(:last-of-type) {
-  border-bottom: none;
-  border-radius: 0;
-  border-top: none
-}
-
-.LobbyManage .LobbyManageRules .SettingBoxGroup>.SettingBox:last-of-type {
-  border-top: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0
-}
-
-.LobbyManage .LobbyManageRules .LobbyManageRuleRow {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: .75rem;
-  justify-content: space-between
-}
-
-.LobbyManage .LobbyManageRules .LobbyManageRuleRow .Dropdown-root {
-  font-size: 1.1rem
-}
-
-@media(pointer:coarse) {
-  .LobbyManage .LobbyManageRules .LobbyManageRuleRow .BloxdDropdownControl {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    min-height: 44px;
-    min-width: 44px;
-    padding-right: 2.2em
-  }
-}
-
-.LobbyManage .LobbyManageRules .LobbyManageRuleRow .LobbyManageRuleChoice {
-  display: contents
-}
-
-.LobbyManage .LobbyManageRules .LobbyManageRuleRow .Dropdown-placeholder {
-  max-width: 20rem;
-  min-width: clamp(5rem, var(--lobby-choice-chars, 0)*1ch, 20rem);
-  overflow-x: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: auto
-}
-
-.LobbyManage .LobbyManageRules .LobbyManageRuleStatus {
-  flex-basis: 100%;
-  font-size: 1rem
-}
-
-.LobbyManage .LobbyManageRules .LobbyManageNames {
-  align-items: flex-end;
-  display: flex;
-  flex-direction: column;
-  gap: .4rem
-}
-
-.LobbyManage .LobbyManageRules .LobbyManageNames .LobbyManageName {
-  align-items: center;
-  display: flex;
-  gap: .5rem
-}
-
-.LobbyManage .LobbyManageRules .LobbyManageNames .LobbyManageIconButton {
-  font-size: 1.1rem
-}
-
-@media(pointer:coarse) {
-  .LobbyManage .LobbyManageRules .LobbyManageNames .LobbyManageIconButton {
-    box-sizing: border-box;
-    min-height: 44px;
-    min-width: 44px
-  }
-}
-
-.LobbyManage .LobbyLeaderboardContainer {
-  flex: none;
-  overflow: visible;
-  overflow-x: clip;
-  padding-top: 0
-}
-
-.LobbyManage .LobbyManageBody .LobbyManageChips {
-  background-color: #2b3249;
-  box-sizing: border-box;
-  display: flex;
-  flex-shrink: 0;
-  font-size: 1.2rem;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 1rem 1rem .75rem;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1
-}
-
-.LobbyManage .LobbyManageBody .LobbyManageChips .SegmentedToggle {
-  margin: 0 auto
-}
-
-.LobbyManage .LobbyManageBody .LobbyManageChips .SegmentedToggleOption {
-  align-items: center;
-  display: flex;
-  gap: .4em;
-  white-space: nowrap
-}
-
-@media(max-width:600px) {
-  .LobbyManage .LobbyManageBody .LobbyManageChips .SegmentedToggleOption:not(.SegmentedToggleOptionSelected) .LobbyManagePageTitle {
-    display: none
-  }
-}
-
-.LobbyManage .LobbyManageBody .LobbyManageInner {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  isolation: isolate
-}
-
-.LobbyManage .LobbyManageBody .LobbyManageInner.Staging {
-  padding-bottom: 100vh
-}
-
-.LobbyManage .LobbyManageBody .LobbyManageInner .LobbyManageSection {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem
-}
-
-.LobbyManage .LobbyManageBody .LobbyManageInner .LobbyManageSection .LobbyManageRules>.SocialSectionTitle,
-.LobbyManage .LobbyManageBody .LobbyManageInner .LobbyManageSection .LobbyManageSectionHeading {
-  background-color: #2b3249
-}
-
-.LobbyManage .LobbyManageBody .LobbyManageInner .LobbyManageSection .LobbyManageSectionHeading {
-  scroll-margin-top: 0
-}
-
-.LobbyManage .LobbyManageBody .LobbyManageInner .LobbyManageSection .LobbyManageSectionHeading .SocialSectionTitle {
-  font-size: 1.2rem
-}
-
-.WhitelistTickRow {
-  cursor: pointer
-}
-
-.WhitelistTickRow .WhitelistTickRowActions {
-  display: contents
-}
-
-.WhitelistTickRow .WhitelistTickRowTick {
-  align-items: center;
-  align-self: stretch;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  padding: 0 .5rem
-}
-
-@media(pointer:coarse) {
-  .WhitelistTickRow .WhitelistTickRowTick {
-    box-sizing: border-box;
-    min-height: 44px;
-    min-width: 44px
-  }
-}
-
-.WorldSocialTiles {
-  grid-gap: .5rem;
-  display: grid;
-  gap: .5rem;
-  grid-template-columns: repeat(4, minmax(0, 1fr))
-}
-
-@media(max-width:600px)and (orientation:portrait) {
-  .WorldSocialTiles {
-    grid-template-columns: repeat(2, minmax(0, 1fr))
-  }
-}
-
-.WorldSocialTiles .WorldSocialTile {
-  align-items: center;
-  background: none;
-  background-color: rgba(57, 73, 128, .4);
-  border: 3px solid transparent;
-  border-radius: 0;
-  box-sizing: content-box;
-  box-sizing: border-box;
-  color: inherit;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  font: inherit;
-  gap: .3rem;
-  letter-spacing: inherit;
-  line-height: inherit;
-  margin: 0;
-  min-height: 2.75rem;
-  padding: .6rem .4rem;
-  text-align: inherit;
-  text-align: center;
-  text-shadow: inherit;
-  text-transform: inherit;
-  transition: border-color .2s
-}
-
-@media(pointer:coarse) {
-  .WorldSocialTiles .WorldSocialTile {
-    box-sizing: border-box;
-    min-height: 44px;
-    min-width: 44px
-  }
-}
-
-@media(hover:hover) {
-  .WorldSocialTiles .WorldSocialTile:hover {
-    background-color: rgba(57, 73, 128, .6)
-  }
-}
-
-.WorldSocialTiles .WorldSocialTile.pad-focused {
-  background-color: rgba(57, 73, 128, .6)
-}
-
-@media(hover:none) {
-  .WorldSocialTiles .WorldSocialTile:active {
-    background-color: rgba(57, 73, 128, .6)
-  }
-}
-
-.WorldSocialTiles .WorldSocialTile:focus-visible {
-  outline: 2px solid #ffb914;
-  outline-offset: 2px
-}
-
-.WorldSocialTiles .WorldSocialTile.WorldSocialTileSelected {
-  background-color: #394980;
-  border-color: #ffb914
-}
-
-.WorldSocialTiles .WorldSocialTile.WorldSocialTileSelected .WorldSocialTileIcon {
-  color: #ffb914
-}
-
-@media(max-height:500px)and (orientation:landscape), (max-width:600px)and (orientation:portrait) {
-  .WorldSocialTiles .WorldSocialTile {
-    flex-direction: row;
-    padding: .4rem .5rem;
-    text-align: left
-  }
-}
-
-.WorldSocialTiles .WorldSocialTile .WorldSocialTileIcon {
-  color: #cfcfcf;
-  font-size: 1.25rem
-}
-
-.WorldSocialTiles .WorldSocialTile .WorldSocialTileText {
-  display: flex;
-  flex-direction: column;
-  gap: .1rem;
-  min-width: 0;
-  overflow-wrap: break-word;
-  width: 100%
-}
-
-.WorldSocialTiles .WorldSocialTile .WorldSocialTileText .WorldSocialTileTitle {
-  font-weight: 700
-}
-
-.WorldSocialTiles .WorldSocialTile .WorldSocialTileText .WorldSocialTileDescription {
-  color: #cfcfcf;
-  font-size: .8rem;
-  font-weight: 700
-}
-
-.WorldSocialLinkRow {
-  align-items: center;
-  display: flex;
-  gap: .5rem;
-  min-height: 2.75rem
-}
-
-.WorldSocialLinkRow.WorldSocialLinkRowMessage {
-  background-color: rgba(57, 73, 128, .4);
-  border-radius: 0;
-  color: #cfcfcf;
-  padding: .5rem .75rem
-}
-
-.WorldSocialLinkRow .WorldSocialCodeLabel {
-  color: #cfcfcf;
-  white-space: nowrap
-}
-
-.WorldSocialLinkRow .WorldSocialLink {
-  background-color: #303a59;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  box-sizing: border-box;
-  color: #f2f2f2;
-  flex: 1 1;
-  font: inherit;
-  font-size: .95rem;
-  height: 2.75rem;
-  min-width: 0;
-  outline: none;
-  padding: 0 .6rem;
-  text-overflow: ellipsis
-}
-
-.WorldSocialLinkRow .WorldSocialLink:focus {
-  border-color: #ffb914
-}
-
-@media(pointer:coarse) {
-  .WorldSocialLinkRow .WorldSocialLink {
-    height: 44px
-  }
-}
-
-.WorldSocialLinkRow .WorldSocialCopy {
-  flex-shrink: 0;
-  white-space: nowrap
-}
-
-@media(pointer:coarse) {
-  .WorldSocialLinkRow .WorldSocialCopy {
-    box-sizing: border-box;
-    min-height: 44px;
-    min-width: 44px
-  }
-}
-
 @keyframes rainbowShimmer {
   0% {
     transform: translateX(0)
@@ -851,110 +97,159 @@
   }
 }
 
-.PlayerNameField {
+.CustomGamePlaceContainer {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  z-index: 1
+}
+
+.CustomGamePlaceContainer .BackgroundImage {
+  -ms-interpolation-mode: nearest-neighbor;
+  background-position: 50%;
+  background-repeat: repeat;
+  background-size: 128rem;
+  filter: brightness(.32);
+  image-rendering: optimizeSpeed;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1
+}
+
+.CustomGamePlaceContainer .CustomGamePlaceHeaderContainer {
   align-items: center;
   display: flex;
-  font-size: 1.2rem;
+  padding: .6rem .75rem
+}
+
+.CustomGamePlaceContainer .CustomGamePlaceHeaderContainer .BackButton {
+  font-size: 1.5rem;
+  padding-left: .3rem;
   position: relative
 }
 
-.PlayerNameField .AddFriendBodyOverlay {
-  align-items: center;
-  background-color: rgba(0, 0, 0, .75);
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  left: 0;
-  opacity: 1;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  transition: opacity .2s;
-  width: 100%;
-  z-index: 3
-}
-
-.PlayerNameField .AddFriendBodyOverlay.AddFriendBodyOverlayEnter {
-  opacity: 0;
-  pointer-events: none
-}
-
-.PlayerNameField .AddFriendBodyOverlay.AddFriendBodyOverlayLoading {
-  font-size: 2rem
-}
-
-.PlayerNameField .AddFriendBodyOverlay.AddFriendBodyOverlaySuccess {
-  color: #1dd06d;
-  font-size: 2rem
-}
-
-.PlayerNameField .AddFriendBodyOverlay.AddFriendBodyOverlayBecameFriends,
-.PlayerNameField .AddFriendBodyOverlay.AddFriendBodyOverlayError {
-  background-color: rgba(0, 0, 0, .92);
-  font-size: 1.05rem;
-  font-weight: 700;
-  line-height: 1.15;
-  padding: 0 .5rem
-}
-
-.PlayerNameField .AddFriendBodyOverlay.AddFriendBodyOverlayBecameFriends {
-  color: #1dd06d
-}
-
-.PlayerNameField .AddFriendBodyOverlay.AddFriendBodyOverlayError {
-  color: #ff8a80
-}
-
-.PlayerNameField .PlayerSearch {
-  align-items: stretch;
-  display: flex;
-  flex-grow: 1;
-  min-width: 0
-}
-
-.PlayerNameField .PlayerSearch .PlayerSearchInput {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  box-shadow: none;
-  flex: 1 1 auto;
-  font-size: 1.2rem;
-  min-width: 0
-}
-
 @media(pointer:coarse) {
-  .PlayerNameField .PlayerSearch .PlayerSearchInput {
-    box-sizing: border-box;
-    min-height: 44px;
-    min-width: 44px
+  .CustomGamePlaceContainer .CustomGamePlaceHeaderContainer .BackButton:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
   }
 }
 
-.PlayerNameField .PlayerSearch .PlayerSearchInputButton {
-  align-items: center;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  box-shadow: none;
+.CustomGamePlaceContainer .CustomGamePlaceMosaic {
+  --custom-game-place-inner-gap: 0.5rem;
+  --custom-game-place-panel-gap: 1rem;
   display: flex;
-  flex: 0 1 auto;
-  height: 2.4rem;
-  justify-content: center;
-  min-width: 0
+  flex-direction: column;
+  gap: var(--custom-game-place-panel-gap);
+  margin-inline: auto;
+  width: 100%
 }
 
-@media(pointer:coarse) {
-  .PlayerNameField .PlayerSearch .PlayerSearchInputButton {
-    box-sizing: border-box;
-    min-height: 44px;
-    min-width: 44px
+.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel {
+  align-self: start;
+  background-color: color-mix(in srgb, var(--custom-game-place-tint) 52%, #22283b);
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  min-width: 0;
+  outline: 1px solid color-mix(in srgb, var(--custom-game-place-tint) 85%, transparent);
+  padding: .5rem
+}
+
+.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelHeading {
+  font-size: inherit;
+  margin: 0
+}
+
+.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelTitle {
+  cursor: pointer;
+  gap: .25rem;
+  transition: gap .2s
+}
+
+.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelTitle .svg-inline--fa {
+  color: #ffb914;
+  flex-shrink: 0;
+  transform: rotate(90deg)
+}
+
+@media(hover:hover) {
+  .CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelTitle:hover {
+    gap: .5rem
   }
 }
 
-.PlayerNameField .PlayerSearch .PlayerSearchInputButton .ButtonBody {
+.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelTitle.pad-focused {
+  gap: .5rem
+}
+
+@media(hover:none) {
+  .CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelTitle:active {
+    gap: .5rem
+  }
+}
+
+.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelTitle {
   align-items: center;
   display: flex;
-  gap: .4rem;
-  overflow-x: hidden;
-  padding: 0 .8rem;
-  text-overflow: ellipsis;
-  white-space: nowrap
+  font-size: 1.1rem;
+  justify-content: center;
+  line-height: 1.2;
+  min-height: 2rem;
+  text-align: center
+}
+
+.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelGames {
+  grid-gap: var(--custom-game-place-inner-gap);
+  align-content: start;
+  display: grid;
+  gap: var(--custom-game-place-inner-gap)
+}
+
+.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelGames .GameCardContainer,
+.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelGames .GameThumbnailPlaceholderContainer {
+  padding: 0
+}
+
+.CustomGamePlaceContainer .CustomGamePlaceMosaic.CustomGamePlaceMosaicLandscape {
+  container-type: inline-size;
+  --custom-game-place-tile-width: calc(100cqw/7 - 1rem);
+  width: min(100%, (100dvh - 24.25rem)*2.1 + 7rem)
+}
+
+.CustomGamePlaceContainer .CustomGamePlaceMosaic.CustomGamePlaceMosaicLandscape .CustomGamePlaceRow,
+.CustomGamePlaceContainer .CustomGamePlaceMosaic.CustomGamePlaceMosaicLandscape .CustomGamePlaceUpper {
+  align-items: flex-start;
+  display: flex;
+  gap: var(--custom-game-place-panel-gap)
+}
+
+.CustomGamePlaceContainer .CustomGamePlaceMosaic.CustomGamePlaceMosaicLandscape .CustomGamePlaceMain {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: var(--custom-game-place-panel-gap)
+}
+
+.CustomGamePlaceContainer .CustomGamePlaceMosaic.CustomGamePlaceMosaicLandscape .CustomGamePlacePanel {
+  flex-shrink: 0
+}
+
+.CustomGamePlaceContainer .CustomGamePlaceMosaic.CustomGamePlaceMosaicLandscape .CustomGamePlacePanel .CustomGamePlacePanelTitle {
+  height: 2rem;
+  max-width: 100%;
+  overflow: hidden;
+  width: 100%
+}
+
+.CustomGamePlaceContainer .CustomGamePlaceMosaic.CustomGamePlaceMosaicPortrait .CustomGamePlacePanel {
+  align-self: stretch
 }

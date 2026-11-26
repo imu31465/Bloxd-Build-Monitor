@@ -1,30 +1,35 @@
 export const id = 663;
 export const ids = [663];
 export const modules = {
-  64323: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      WorldCodeAiOutOfUsage: () => UV
+  64126: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      WorldCodeAiOutOfUsage: () => tH
     });
-    var JV = xV(1551),
-      YV = xV(1321);
+    var AH = LH(1123),
+      rH = LH(2486),
+      SH = LH(1455),
+      hH = LH(1225);
 
-    function UV(VV) {
+    function tH(HH) {
       let {
-        onGetSuperRank: eV
-      } = VV;
-      return (0, YV.jsxs)("div", {
+        onGetSuperRank: BH
+      } = HH;
+      const {
+        t: LH
+      } = (0, AH.B)(), tH = (0, rH.u)(Date.now()), zH = LH(tH.nameKey);
+      return (0, hH.jsxs)("div", {
         className: "WorldCodeAiOutOfUsage",
-        children: [(0, YV.jsx)("p", {
+        children: [(0, hH.jsx)("p", {
           className: "WorldCodeAiOutOfUsageText",
-          children: "You don't have any Super Bot.xd usage left - use Bot.xd or get Super Rank for more usage!"
-        }), (0, YV.jsx)(JV.m, {
+          children: `You don't have any Super Bot.xd usage left - use Bot.xd or get ${zH} for more usage!`
+        }), (0, hH.jsx)(SH.u, {
           className: "WorldCodeAiOutOfUsageButton",
-          onClick: eV,
-          children: "Get Super Rank"
+          onClick: BH,
+          children: LH(tH.getKey)
         })]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

@@ -1,301 +1,160 @@
 export const id = 68;
 export const ids = [68];
 export const modules = {
-  37521: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => wV,
-      h: () => pV,
-      i: () => nV,
-      j: () => QV,
-      k: () => qV
-    });
-    var JV = xV(660),
-      YV = xV(1846),
-      UV = xV(5301);
-    class yV {
-      constructor(VV, eV) {
-        this.width = VV, this.Jv = eV, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(VV * eV)
-      }
-      push(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const xV = this.data,
-          JV = this.next * this.width;
-        for (let YV = 0; YV < this.width; YV++) xV[JV + YV] = VV[eV + YV];
-        this.next = (this.next + 1) % this.Jv, this.size = Math.min(this.size + 1, this.Jv)
-      }
-      rows() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
-        const xV = [],
-          JV = (this.next - this.size + this.Jv) % this.Jv;
-        for (let YV = 0; YV < this.size; YV++) {
-          const UV = (JV + YV) % this.Jv * this.width;
-          this.data[UV + VV] >= eV && xV.push(Array.from(this.data.subarray(UV, UV + this.width)))
-        }
-        return xV
-      }
-      lines() {
-        return this.rows().map((VV => VV.join(",")))
-      }
-    }
-    const pV = 10,
-      QV = {
-        idle: 0,
-        ZZ: 1,
-        ND: 2,
-        zD: 3,
-        zE: 4
-      },
-      nV = {
-        none: 0,
-        skipped: 1,
-        paced: 2,
-        drawn: 3
-      },
-      wV = {
-        lockGained: 1,
-        lockLost: 2,
-        lockError: 3,
-        visible: 4,
-        hidden: 5,
-        focus: 6,
-        blur: 7,
-        jsClient: 8,
-        wasmClient: 9,
-        droppedCopies: 10,
-        stepsLost: 11,
-        cameraSetsLost: 12
-      },
-      ZV = 12e3,
-      vV = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
-      rV = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
-      kV = ["nowMs", "dtMs", "heading", "pitch", "kind"],
-      bV = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
-      EV = ["nowMs", "change", "count"];
+  54469: (HH, BH, LH) => {
+    var AH = {
+      "./bedwars/bedwarsClient": [40245, 9],
+      "./bridgeBattle/bridgeBattleClient": [40253, 10],
+      "./buildAFactory2/buildAFactory2Client": [39354, 87, 85, 252, 270, 11],
+      "./classic/classicClient": [40259, 12],
+      "./classic/smp2Client": [40261, 13],
+      "./clutch/clutchClient": [40263, 14],
+      "./containmentBreach/containmentBreachClient": [40265, 247, 15],
+      "./cooking/cookingClient": [40403, 16],
+      "./defusal/defusalClient": [40409, 17],
+      "./frontline/frontlineClient": [40411, 87, 85, 18],
+      "./goalRush/goalRushClient": [40421, 19],
+      "./greenville/greenvilleClient": [40428, 172, 275, 20],
+      "./hideseek/hideseekClient": [40454, 21],
+      "./luckyBedwars/luckyBedwarsClient": [40463, 22],
+      "./murderMystery/murderMysteryClient": [40472, 23],
+      "./ninetyNineNights/ninetyNineNightsClient": [40476, 24],
+      "./oneBlock/oneBlockClient": [40484, 25],
+      "./plots/plotsClient": [40486, 269, 247, 26],
+      "./pvpCiv/pvpCivClient": [40571, 27],
+      "./secretSanta/secretSantaClient": [40580, 28],
+      "./skyIslands/skyIslandsClient": [40588, 29],
+      "./skyblock/skyblockClient": [39403, 87, 261, 252, 172, 241, 30],
+      "./tsunami/tsunamiClient": [40597, 31]
+    };
 
-    function BV(VV) {
-      return "js" === VV ? wV.jsClient : wV.wasmClient
+    function rH(HH) {
+      if (!LH.o(AH, HH)) return Promise.resolve().then((() => {
+        var BH = new Error("Cannot find module '" + HH + "'");
+        throw BH.code = "MODULE_NOT_FOUND", BH
+      }));
+      var BH = AH[HH],
+        rH = BH[0];
+      return Promise.all(BH.slice(1).map(LH.e)).then((() => LH(rH)))
     }
-    class jV {
-      constructor() {
-        this.steps = new yV(pV, ZV), this.events = new yV(rV.length, ZV), this.frames = new yV(kV.length, ZV), this.cameraSets = new yV(UV.i, 256), this.changes = new yV(EV.length, 256)
-      }
-    }
-    const qV = new class {
-      constructor() {
-        this.rings = null, this.sample = new Float64Array(rV.length), this.startedClient = null, this.startedAtMs = 0
-      }
-      get client() {
-        return this.startedClient
-      }
-      start(VV, eV) {
-        this.startedClient = VV, this.startedAtMs = performance.now(), null !== this.rings ? this.change(BV(VV)) : eV && this.allocate()
-      }
-      lockGained() {
-        this.allocate(), this.change(wV.lockGained)
-      }
-      allocate() {
-        null === this.rings && (this.rings = new jV, null !== this.startedClient && this.changeAt(this.startedAtMs, BV(this.startedClient), 1))
-      }
-      step(VV, eV) {
-        var xV;
-        VV[eV + 6] !== QV.zE && (null === (xV = this.rings) || void 0 === xV || xV.steps.push(VV, eV))
-      }
-      cameraSet(VV, eV) {
-        var xV;
-        null === (xV = this.rings) || void 0 === xV || xV.cameraSets.push(VV, eV)
-      }
-      mouseMove(VV, eV) {
-        const xV = this.rings;
-        if (null === xV) return;
-        const JV = this.sample;
-        JV[0] = VV.timeStamp, JV[1] = performance.now(), JV[2] = VV.movementX, JV[3] = VV.movementY, JV[4] = eV ? 1 : 0, xV.events.push(JV)
-      }
-      frame(VV, eV, xV, JV) {
-        const YV = this.rings;
-        if (null === YV || JV === nV.none) return;
-        const UV = this.sample;
-        UV[0] = performance.now(), UV[1] = VV, UV[2] = eV, UV[3] = xV, UV[4] = JV, YV.frames.push(UV)
-      }
-      change(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.changeAt(performance.now(), VV, eV)
-      }
-      changeAt(VV, eV, xV) {
-        const JV = this.rings;
-        if (null === JV) return;
-        const YV = this.sample;
-        YV[0] = VV, YV[1] = eV, YV[2] = xV, JV.changes.push(YV)
-      }
-      dumpText() {
-        var VV, eV;
-        const xV = this.rings;
-        return [`look records (${this.startedClient}): ${vV.join(",")}`, ...null !== (VV = null === xV || void 0 === xV ? void 0 : xV.steps.lines()) && void 0 !== VV ? VV : [], `mousemove events: ${rV.join(",")}`, ...null !== (eV = null === xV || void 0 === xV ? void 0 : xV.events.lines()) && void 0 !== eV ? eV : []].join("\n")
-      }
-      toJson(VV, eV) {
-        var xV;
-        const YV = VV - 6e4,
-          UV = this.rings,
-          yV = function(VV, eV) {
-            var xV;
-            let JV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-            const UV = null !== (xV = null === VV || void 0 === VV ? void 0 : VV.rows(JV, YV)) && void 0 !== xV ? xV : [];
-            return {
-              columns: eV,
-              fromMs: 0 === UV.length ? null : UV[0][JV],
-              rows: UV
-            }
-          };
-        return {
-          version: JV.e,
-          client: null !== (xV = this.startedClient) && void 0 !== xV ? xV : "not started",
-          savedAt: (new Date).toISOString(),
-          savedAtMs: VV,
-          keptMs: 6e4,
-          page: window.location.href,
-          userAgent: navigator.userAgent,
-          devicePixelRatio: window.devicePixelRatio,
-          screen: {
-            width: window.screen.width,
-            height: window.screen.height
-          },
-          YB: null !== document.pointerLockElement,
-          visibility: document.visibilityState,
-          ...eV,
-          outcomes: QV,
-          frameKinds: nV,
-          changes: wV,
-          lookSteps: yV(null === UV || void 0 === UV ? void 0 : UV.steps, vV),
-          mouseMoves: yV(null === UV || void 0 === UV ? void 0 : UV.events, rV, 1),
-          frames: yV(null === UV || void 0 === UV ? void 0 : UV.frames, kV),
-          cameraSets: yV(null === UV || void 0 === UV ? void 0 : UV.cameraSets, bV),
-          pageChanges: yV(null === UV || void 0 === UV ? void 0 : UV.changes, EV)
-        }
-      }
-      save(VV) {
-        const eV = JSON.stringify(this.toJson(performance.now(), VV));
-        (0, YV.c)(new Blob([eV], {
-          type: "application/json"
-        }), `bloxd-mouse-look-${(new Date).toISOString().replace(/[:.]/g,"-")}.json`)
-      }
-    }
+    rH.keys = () => Object.keys(AH), rH.id = 54469, HH.exports = rH
   },
-  40221: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => UV,
-      f: () => YV
+  39940: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => SH,
+      f: () => rH
     });
-    var JV = xV(32);
+    var AH = LH(18);
 
-    function YV(VV) {
-      return "refetchCode" === VV || "devDownloadJson" === VV || VV.startsWith("Plugin")
+    function rH(HH) {
+      return "refetchCode" === HH || "devDownloadJson" === HH || HH.startsWith("Plugin")
     }
 
-    function UV(VV, eV) {
-      "refetchCode" !== VV ? "Plugin|MobAiPlugin|ShowPetUi" !== VV ? Promise.all([xV.e(121), xV.e(122), xV.e(117), xV.e(119), xV.e(236)]).then((() => xV(44630))).then((xV => {
+    function SH(HH, BH) {
+      "refetchCode" !== HH ? "Plugin|MobAiPlugin|ShowPetUi" !== HH ? Promise.all([LH.e(120), LH.e(121), LH.e(116), LH.e(118), LH.e(240)]).then((() => LH(45217))).then((LH => {
         let {
-          runClientGameMessage: JV
-        } = xV;
-        JV(VV, eV)
-      })).catch((eV => {
-        console.error(`Game message ${VV} failed`, eV)
-      })) : JV.h.QZ("showPetUi", eV) : JV.h.QZ("refetchCode")
+          runClientGameMessage: AH
+        } = LH;
+        AH(HH, BH)
+      })).catch((BH => {
+        console.error(`Game message ${HH} failed`, BH)
+      })) : AH.k.AX("showPetUi", BH) : AH.k.AX("refetchCode")
     }
   },
-  53866: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => JV,
-      g: () => YV
+  54466: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => AH,
+      d: () => rH
     });
-    const JV = ["recording", "freecam", "keyframe"];
+    const AH = ["recording", "freecam", "keyframe"];
 
-    function YV() {
-      const VV = crypto.getRandomValues(new Uint32Array(2));
-      return BigInt(VV[1]) << 32n | BigInt(VV[0])
+    function rH() {
+      const HH = crypto.getRandomValues(new Uint32Array(2));
+      return BigInt(HH[1]) << 32n | BigInt(HH[0])
     }
   },
-  35240: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => pV,
-      f: () => QV
+  34908: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => tH,
+      i: () => zH
     });
-    var JV = xV(27);
-    const YV = 24,
-      UV = "farNametags",
-      yV = 1e5;
+    var AH = LH(15);
+    const rH = 24,
+      SH = "farNametags",
+      hH = 1e5;
 
-    function pV() {
-      var VV;
-      return null === (VV = JV.b.get("showDistantNametags")) || void 0 === VV || VV
+    function tH() {
+      var HH;
+      return null === (HH = AH.c.get("showDistantNametags")) || void 0 === HH || HH
     }
 
-    function QV() {
-      var VV;
-      return null !== (VV = function() {
-        const VV = new URLSearchParams(window.location.search).get(UV),
-          eV = null === VV || "" === VV ? NaN : Number(VV);
-        return Number.isFinite(eV) && eV >= 0 ? Math.min(eV, yV) : null
-      }()) && void 0 !== VV ? VV : pV() ? 0 : YV
+    function zH() {
+      var HH;
+      return null !== (HH = function() {
+        const HH = new URLSearchParams(window.location.search).get(SH),
+          BH = null === HH || "" === HH ? NaN : Number(HH);
+        return Number.isFinite(BH) && BH >= 0 ? Math.min(BH, hH) : null
+      }()) && void 0 !== HH ? HH : tH() ? 0 : rH
     }
   },
-  45460: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      blockIdOf: () => yn.c,
-      clearWasmCameraScreen: () => EY,
-      creativeItemIds: () => bJ.creativeItemIds,
-      decodeMapSettings: () => nn,
-      drainTextRerasters: () => Op.d,
-      enchantmentPerksOf: () => bJ.enchantmentPerksOf,
-      endGameHost: () => tn,
-      followCursorAim: () => Qn,
-      followMenuPrefs: () => bU,
-      loadAudio: () => bn,
-      loadClientGame: () => kn,
-      loadTextIcons: () => Op.g,
-      rasterText: () => dp.b,
-      readBoardToEdit: () => Un,
-      readDrawCensus: () => wn.f,
-      setTextHost: () => Op.i,
-      setTextLocalPlayer: () => Op.k,
-      showInCreativeInvenOf: () => bJ.showInCreativeInvenOf,
-      startGameHost: () => qn,
-      startShellAnalytics: () => xn,
-      startSkyFeed: () => FQ,
-      textChanged: () => Op.r,
-      warmText: () => dp.c,
-      wasmCameraScreen: () => bY
+  46017: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      blockIdOf: () => tC.c,
+      clearWasmCameraScreen: () => Wr,
+      creativeItemIds: () => QA.creativeItemIds,
+      decodeMapSettings: () => EC,
+      drainTextRerasters: () => Hz.c,
+      enchantmentPerksOf: () => QA.enchantmentPerksOf,
+      endGameHost: () => TC,
+      followCursorAim: () => CC,
+      followMenuPrefs: () => QS,
+      loadAudio: () => WC,
+      loadClientGame: () => QC,
+      loadTextIcons: () => Hz.e,
+      rasterText: () => yt.i,
+      readBoardToEdit: () => hC,
+      readDrawCensus: () => XC.h,
+      setTextHost: () => Hz.j,
+      setTextLocalPlayer: () => Hz.k,
+      showInCreativeInvenOf: () => QA.showInCreativeInvenOf,
+      startGameHost: () => PC,
+      startShellAnalytics: () => AC,
+      startSkyFeed: () => Uz,
+      textChanged: () => Hz.p,
+      warmText: () => yt.o,
+      wasmCameraScreen: () => Qr
     });
-    xV(37649);
-    var JV = xV(27),
-      YV = xV(38012),
-      UV = xV(40382),
-      yV = xV(32),
-      pV = xV(3842),
-      QV = xV(38003),
-      nV = xV(1332),
-      wV = xV(648),
-      ZV = xV(39367),
-      vV = xV(5297),
-      rV = xV(41914),
-      kV = xV(41852);
-    const bV = kV.Db / 4,
-      EV = kV.n.PlaySound,
-      BV = kV.n.SoundReset,
-      jV = vV.hb.ReplayFailed,
-      qV = vV.hb.RecorderEvent;
-    class tV {
-      constructor(VV, eV) {
-        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.core = VV, this.memory = eV, this.audio = xV, this.serverIds = new Int32Array(256).fill(kV.Uc), this.kinds = new Uint16Array(256), this.idStr = new Array(256).fill(null), this.indexById = new Map, this.queries = void 0, this.buffer = null, this.viewPtr = -1, this.view = new DataView(new ArrayBuffer(kV.s.BYTES)), this.renderPtr = 0, this.Jv = 0, this.renderCapacity = 0, this.render = new Float32Array(0), this.visPtr = 0, this.vis = new Uint8Array(0), this.renderBuffer = null, this.eventsBuffer = null, this.eventsPtr = 0, this.eventsLen = 0, this.events = new DataView(new ArrayBuffer(0)), this.audioView = null, this.scratchPtr = -1, this.scratchView = null, this.corruption = null, this.replay = null, this.queries = new kV.V(VV, (() => {
+    LH(37384);
+    var AH = LH(15),
+      rH = LH(37672),
+      SH = LH(40124),
+      hH = LH(18),
+      tH = LH(3768),
+      zH = LH(37667),
+      CH = LH(1241),
+      EH = LH(609),
+      XH = LH(39114),
+      GH = LH(5265),
+      YH = LH(41962),
+      uH = LH(41898);
+    const QH = uH.Pb / 4,
+      WH = uH.t.PlaySound,
+      MH = uH.t.SoundReset,
+      xH = GH.X.ReplayFailed,
+      vH = GH.X.RecorderEvent;
+    class PH {
+      constructor(HH, BH) {
+        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.core = HH, this.memory = BH, this.audio = LH, this.serverIds = new Int32Array(256).fill(uH.bd), this.kinds = new Uint16Array(256), this.idStr = new Array(256).fill(null), this.indexById = new Map, this.queries = void 0, this.buffer = null, this.viewPtr = -1, this.view = new DataView(new ArrayBuffer(uH.y.BYTES)), this.renderPtr = 0, this.aX = 0, this.renderCapacity = 0, this.render = new Float32Array(0), this.visPtr = 0, this.vis = new Uint8Array(0), this.renderBuffer = null, this.eventsBuffer = null, this.eventsPtr = 0, this.eventsLen = 0, this.events = new DataView(new ArrayBuffer(0)), this.audioView = null, this.scratchPtr = -1, this.scratchView = null, this.corruption = null, this.replay = null, this.queries = new uH._(HH, (() => {
           this.scratchPtr = -1, this.ensureViews()
         }))
       }
       scratch() {
-        return this.scratchPtr < 0 && (this.scratchPtr = this.core.cUV(), this.ensureViews()), this.scratchPtr
+        return this.scratchPtr < 0 && (this.scratchPtr = this.core.VSH(), this.ensureViews()), this.scratchPtr
       }
-      eventBytes(VV, eV) {
-        const xV = this.eventView();
-        return new Uint8Array(xV.buffer, xV.byteOffset + VV, eV)
+      eventBytes(HH, BH) {
+        const LH = this.eventView();
+        return new Uint8Array(LH.buffer, LH.byteOffset + HH, BH)
       }
       get apiView() {
         return this.ensureViews(), this.view
@@ -304,364 +163,364 @@ export const modules = {
         this.memory().buffer !== this.buffer && this.reView()
       }
       get localId() {
-        return kV.s.localId(this.apiView, 0)
+        return uH.y.localId(this.apiView, 0)
       }
       localDeaths() {
-        return kV.s.localDeaths(this.apiView, 0)
+        return uH.y.localDeaths(this.apiView, 0)
       }
       rereadDirectory() {
-        const VV = this.apiView,
-          eV = kV.s.entRenderPtr(VV, 0),
-          xV = kV.s.entVisPtr(VV, 0),
-          JV = kV.s.entCapacity(VV, 0);
-        if (eV !== this.renderPtr || xV !== this.visPtr || JV !== this.Jv || this.renderBuffer !== this.buffer) {
-          this.renderPtr = eV, this.visPtr = xV, this.Jv = JV, this.renderBuffer = this.buffer;
-          const VV = this.memoryView(Float32Array, eV, JV * bV, "the render array"),
-            YV = this.memoryView(Uint8Array, xV, JV, "the visibility array");
-          this.renderCapacity = VV && YV ? JV : 0, this.render = VV && YV ? VV : new Float32Array(0), this.vis = VV && YV ? YV : new Uint8Array(0)
+        const HH = this.apiView,
+          BH = uH.y.entRenderPtr(HH, 0),
+          LH = uH.y.entVisPtr(HH, 0),
+          AH = uH.y.entCapacity(HH, 0);
+        if (BH !== this.renderPtr || LH !== this.visPtr || AH !== this.aX || this.renderBuffer !== this.buffer) {
+          this.renderPtr = BH, this.visPtr = LH, this.aX = AH, this.renderBuffer = this.buffer;
+          const HH = this.memoryView(Float32Array, BH, AH * QH, "the render array"),
+            rH = this.memoryView(Uint8Array, LH, AH, "the visibility array");
+          this.renderCapacity = HH && rH ? AH : 0, this.render = HH && rH ? HH : new Float32Array(0), this.vis = HH && rH ? rH : new Uint8Array(0)
         }
       }
-      memoryView(VV, eV, xV, JV) {
+      memoryView(HH, BH, LH, AH) {
         try {
-          return (0, rV.r)(VV, this.memory().buffer, eV, xV, JV)
-        } catch (YV) {
-          return this.keepCorruption(YV), null
+          return (0, YH.o)(HH, this.memory().buffer, BH, LH, AH)
+        } catch (rH) {
+          return this.keepCorruption(rH), null
         }
       }
-      memoryData(VV, eV, xV, JV) {
+      memoryData(HH, BH, LH, AH) {
         try {
-          return (0, rV.g)(this.memory().buffer, VV, eV, xV, JV)
-        } catch (YV) {
-          return this.keepCorruption(YV), null
+          return (0, YH.f)(this.memory().buffer, HH, BH, LH, AH)
+        } catch (rH) {
+          return this.keepCorruption(rH), null
         }
       }
-      scratchData(VV, eV) {
-        const xV = this.scratch(),
-          JV = this.scratchView;
-        return (null === JV || void 0 === JV ? void 0 : JV.buffer) === this.memory().buffer && JV.byteOffset === xV && JV.byteLength >= VV ? JV : (this.scratchView = this.memoryData(xV, VV, 8, eV), this.scratchView)
+      scratchData(HH, BH) {
+        const LH = this.scratch(),
+          AH = this.scratchView;
+        return (null === AH || void 0 === AH ? void 0 : AH.buffer) === this.memory().buffer && AH.byteOffset === LH && AH.byteLength >= HH ? AH : (this.scratchView = this.memoryData(LH, HH, 8, BH), this.scratchView)
       }
-      reportCorruption(VV) {
-        this.keepCorruption(new rV.d(VV))
+      reportCorruption(HH) {
+        this.keepCorruption(new YH.d(HH))
       }
-      keepCorruption(VV) {
-        if (!(VV instanceof rV.d)) throw VV;
-        this.corruption ??= VV
+      keepCorruption(HH) {
+        if (!(HH instanceof YH.d)) throw HH;
+        this.corruption ??= HH
       }
       throwCorruption() {
         if (this.corruption) throw this.corruption
       }
-      walk(VV, eV, xV) {
+      walk(HH, BH, LH) {
         this.rereadDirectory(), this.throwCorruption();
         const {
-          ptr: JV,
-          len: YV
-        } = VV;
-        this.eventsPtr = JV, this.eventsLen = YV, this.eventsBuffer = null;
-        const UV = this.eventView();
-        for (let nV = 0; nV < YV;) {
-          const VV = UV.getUint32(nV, !0),
-            xV = 65535 & VV,
-            JV = VV >>> 16,
-            YV = nV + vV.db;
-          if (xV === kV.n.EntitySpawned) {
-            var yV;
-            if (JV !== kV.Kb.BYTES) throw NV(xV, nV, JV);
-            const VV = kV.Kb.serverId(UV, YV);
-            this.spawned(VV, kV.Kb.index(UV, YV), kV.Kb.kind(UV, YV)), null === (yV = eV.entityAdded) || void 0 === yV || yV.call(eV, VV)
-          } else if ((xV === kV.n.ChunkSlot || xV === kV.n.EntityInfoChanged) && !(0, kV.se)(xV, UV, YV, JV, eV)) throw NV(xV, nV, JV);
-          nV = YV + (0, vV.ze)(JV)
+          ptr: AH,
+          len: rH
+        } = HH;
+        this.eventsPtr = AH, this.eventsLen = rH, this.eventsBuffer = null;
+        const SH = this.eventView();
+        for (let CH = 0; CH < rH;) {
+          const HH = SH.getUint32(CH, !0),
+            LH = 65535 & HH,
+            AH = HH >>> 16,
+            rH = CH + GH.U;
+          if (LH === uH.t.EntitySpawned) {
+            var hH;
+            if (AH !== uH.Wb.BYTES) throw bH(LH, CH, AH);
+            const HH = uH.Wb.serverId(SH, rH);
+            this.spawned(HH, uH.Wb.index(SH, rH), uH.Wb.kind(SH, rH)), null === (hH = BH.entityAdded) || void 0 === hH || hH.call(BH, HH)
+          } else if ((LH === uH.t.ChunkSlot || LH === uH.t.EntityInfoChanged) && !(0, uH.we)(LH, SH, rH, AH, BH)) throw bH(LH, CH, AH);
+          CH = rH + (0, GH.te)(AH)
         }
         try {
-          var pV;
-          null === (pV = eV.afterPrescan) || void 0 === pV || pV.call(eV), this.throwCorruption(), !xV() && this.dispatch(VV, eV, xV) && (this.throwCorruption(), this.applyListener(), eV.afterWalk(VV.kind)), this.throwCorruption()
-        } catch (QV) {
-          throw QV instanceof rV.d && (this.corruption ??= QV), QV
+          var tH;
+          null === (tH = BH.afterPrescan) || void 0 === tH || tH.call(BH), this.throwCorruption(), !LH() && this.dispatch(HH, BH, LH) && (this.throwCorruption(), this.applyListener(), BH.afterWalk(HH.kind)), this.throwCorruption()
+        } catch (zH) {
+          throw zH instanceof YH.d && (this.corruption ??= zH), zH
         } finally {
-          xV() || null !== this.corruption || this.applyDespawns(YV, eV)
+          LH() || null !== this.corruption || this.applyDespawns(rH, BH)
         }
       }
-      applyDespawns(VV, eV) {
-        const xV = this.eventView();
-        for (let YV = 0; YV < VV;) {
-          const VV = xV.getUint32(YV, !0),
-            UV = YV + vV.db;
-          if ((65535 & VV) === kV.n.EntityDespawned && VV >>> 16 === kV.Kb.BYTES) {
-            const VV = kV.Kb.serverId(xV, UV);
-            var JV;
-            if (this.despawned(VV, kV.Kb.index(xV, UV))) null === (JV = eV.entityRemoved) || void 0 === JV || JV.call(eV, VV)
+      applyDespawns(HH, BH) {
+        const LH = this.eventView();
+        for (let rH = 0; rH < HH;) {
+          const HH = LH.getUint32(rH, !0),
+            SH = rH + GH.U;
+          if ((65535 & HH) === uH.t.EntityDespawned && HH >>> 16 === uH.Wb.BYTES) {
+            const HH = uH.Wb.serverId(LH, SH);
+            var AH;
+            if (this.despawned(HH, uH.Wb.index(LH, SH))) null === (AH = BH.entityRemoved) || void 0 === AH || AH.call(BH, HH)
           }
-          YV = UV + (0, vV.ze)(VV >>> 16)
+          rH = SH + (0, GH.te)(HH >>> 16)
         }
         this.rereadDirectory()
       }
-      dispatch(VV, eV, xV) {
+      dispatch(HH, BH, LH) {
         const {
-          len: JV,
-          net: YV,
-          netOffsets: UV
-        } = VV;
-        let yV = this.eventView(),
-          pV = 0;
-        for (let PV = 0; PV < JV;) {
-          const VV = yV.getUint32(PV, !0),
-            JV = 65535 & VV,
-            XV = VV >>> 16,
-            MV = PV + vV.db;
-          let zV = !1;
-          if (pV < YV.length && UV[pV] === PV) eV.netEvent(YV[pV]), pV++, zV = !0;
-          else if (JV === vV.hb.LocalPlayerBound) {
-            var QV;
-            if (XV !== vV.Rb) throw NV(JV, PV, XV);
-            null === (QV = eV.localPlayerBound) || void 0 === QV || QV.call(eV, yV.getInt32(MV, !0)), zV = !0
-          } else if (JV === vV.hb.LocalHurt) {
-            var nV;
-            if (XV !== vV.Pb) throw NV(JV, PV, XV);
-            null === (nV = eV.localHurt) || void 0 === nV || nV.call(eV, yV.getInt32(MV, !0), yV.getFloat32(MV + 4, !0), yV.getUint32(MV + 8, !0)), zV = !0
-          } else if (JV === vV.hb.AttackHit) {
-            var wV;
-            if (XV !== vV.e) throw NV(JV, PV, XV);
-            const VV = yV.getFloat32(MV, !0),
-              xV = yV.getFloat32(MV + 4, !0),
-              YV = yV.getFloat32(MV + 8, !0),
-              UV = yV.getUint32(MV + 12, !0);
-            null === (wV = eV.attackHit) || void 0 === wV || wV.call(eV, VV, xV, YV, 0 !== (UV & vV.l.Crit), 0 !== (UV & vV.l.HitSelf))
-          } else if (JV === vV.hb.PhysicsType) {
-            var ZV;
-            if (XV !== vV.nc) throw NV(JV, PV, XV);
-            null === (ZV = eV.physicsType) || void 0 === ZV || ZV.call(eV, yV.getUint32(MV, !0), yV.getInt32(MV + 4, !0)), zV = !0
-          } else if (JV === vV.hb.VehicleEffect) {
-            var rV;
-            const VV = AV(yV, MV, XV);
-            if (null === VV) throw NV(JV, PV, XV);
-            null === (rV = eV.vehicleEffect) || void 0 === rV || rV.call(eV, VV.op, VV.name, VV.icon, VV.level, VV.durationMs), zV = !0
-          } else if (JV === vV.hb.ZoomChanged) {
-            var bV;
-            if (XV !== vV._d) throw NV(JV, PV, XV);
-            null === (bV = eV.zoomChanged) || void 0 === bV || bV.call(eV, yV.getFloat32(MV, !0), yV.getUint8(MV + 4)), zV = !0
-          } else if (JV === vV.hb.ZoomDisabled) {
-            var tV;
-            if (0 !== XV) throw NV(JV, PV, XV);
-            null === (tV = eV.zoomDisabled) || void 0 === tV || tV.call(eV), zV = !0
-          } else if (JV === vV.hb.BhopDisabled) {
-            var FV;
-            if (0 !== XV) throw NV(JV, PV, XV);
-            null === (FV = eV.bhopDisabled) || void 0 === FV || FV.call(eV), zV = !0
-          } else if (JV === vV.hb.GameCamera) {
-            var TV;
-            null === (TV = eV.gameCamera) || void 0 === TV || TV.call(eV, new Uint8Array(yV.buffer, yV.byteOffset + MV, XV).slice()), zV = !0
-          } else if (JV === kV.n.ChunkSlot || JV === kV.n.EntityInfoChanged);
-          else if (JV >= EV && JV <= BV) {
-            if (this.audio && !this.audio.onAudioEvent(JV, yV, MV, XV)) throw NV(JV, PV, XV)
-          } else if (JV >= jV && JV <= qV) {
+          len: AH,
+          net: rH,
+          netOffsets: SH
+        } = HH;
+        let hH = this.eventView(),
+          tH = 0;
+        for (let VH = 0; VH < AH;) {
+          const HH = hH.getUint32(VH, !0),
+            AH = 65535 & HH,
+            kH = HH >>> 16,
+            mH = VH + GH.U;
+          let oH = !1;
+          if (tH < rH.length && SH[tH] === VH) BH.netEvent(rH[tH]), tH++, oH = !0;
+          else if (AH === GH.X.LocalPlayerBound) {
+            var zH;
+            if (kH !== GH.Gb) throw bH(AH, VH, kH);
+            null === (zH = BH.localPlayerBound) || void 0 === zH || zH.call(BH, hH.getInt32(mH, !0)), oH = !0
+          } else if (AH === GH.X.LocalHurt) {
+            var CH;
+            if (kH !== GH.Cb) throw bH(AH, VH, kH);
+            null === (CH = BH.localHurt) || void 0 === CH || CH.call(BH, hH.getInt32(mH, !0), hH.getFloat32(mH + 4, !0), hH.getUint32(mH + 8, !0)), oH = !0
+          } else if (AH === GH.X.AttackHit) {
+            var EH;
+            if (kH !== GH.c) throw bH(AH, VH, kH);
+            const HH = hH.getFloat32(mH, !0),
+              LH = hH.getFloat32(mH + 4, !0),
+              rH = hH.getFloat32(mH + 8, !0),
+              SH = hH.getUint32(mH + 12, !0);
+            null === (EH = BH.attackHit) || void 0 === EH || EH.call(BH, HH, LH, rH, 0 !== (SH & GH.l.Crit), 0 !== (SH & GH.l.HitSelf))
+          } else if (AH === GH.X.PhysicsType) {
+            var XH;
+            if (kH !== GH.ec) throw bH(AH, VH, kH);
+            null === (XH = BH.physicsType) || void 0 === XH || XH.call(BH, hH.getUint32(mH, !0), hH.getInt32(mH + 4, !0)), oH = !0
+          } else if (AH === GH.X.VehicleEffect) {
+            var YH;
+            const HH = OH(hH, mH, kH);
+            if (null === HH) throw bH(AH, VH, kH);
+            null === (YH = BH.vehicleEffect) || void 0 === YH || YH.call(BH, HH.op, HH.name, HH.icon, HH.level, HH.durationMs), oH = !0
+          } else if (AH === GH.X.ZoomChanged) {
+            var QH;
+            if (kH !== GH.Vd) throw bH(AH, VH, kH);
+            null === (QH = BH.zoomChanged) || void 0 === QH || QH.call(BH, hH.getFloat32(mH, !0), hH.getUint8(mH + 4)), oH = !0
+          } else if (AH === GH.X.ZoomDisabled) {
+            var PH;
+            if (0 !== kH) throw bH(AH, VH, kH);
+            null === (PH = BH.zoomDisabled) || void 0 === PH || PH.call(BH), oH = !0
+          } else if (AH === GH.X.BhopDisabled) {
+            var TH;
+            if (0 !== kH) throw bH(AH, VH, kH);
+            null === (TH = BH.bhopDisabled) || void 0 === TH || TH.call(BH), oH = !0
+          } else if (AH === GH.X.GameCamera) {
+            var UH;
+            null === (UH = BH.gameCamera) || void 0 === UH || UH.call(BH, new Uint8Array(hH.buffer, hH.byteOffset + mH, kH).slice()), oH = !0
+          } else if (AH === uH.t.ChunkSlot || AH === uH.t.EntityInfoChanged);
+          else if (AH >= WH && AH <= MH) {
+            if (this.audio && !this.audio.onAudioEvent(AH, hH, mH, kH)) throw bH(AH, VH, kH)
+          } else if (AH >= xH && AH <= vH) {
             if (this.replay) {
-              if (!this.replay.onReplayEvent(JV, yV, MV, XV)) throw NV(JV, PV, XV);
-              zV = !0
+              if (!this.replay.onReplayEvent(AH, hH, mH, kH)) throw bH(AH, VH, kH);
+              oH = !0
             }
-          } else if (JV >= kV.id && JV <= kV.md && JV !== vV.hb.EnvLighting) {
-            if (!(0, kV.se)(JV, yV, MV, XV, eV)) throw NV(JV, PV, XV);
-            zV = !0
+          } else if (AH >= uH.pd && AH <= uH.rd && AH !== GH.X.EnvLighting) {
+            if (!(0, uH.we)(AH, hH, mH, kH, BH)) throw bH(AH, VH, kH);
+            oH = !0
           }
-          if (zV) {
-            if (xV()) return !1;
-            yV = this.eventView()
+          if (oH) {
+            if (LH()) return !1;
+            hH = this.eventView()
           }
-          PV = MV + (0, vV.ze)(XV)
+          VH = mH + (0, GH.te)(kH)
         }
-        return !xV()
+        return !LH()
       }
       applyListener() {
-        var VV;
+        var HH;
         if (!this.audio) return;
-        const eV = kV.s.audioViewPtr(this.apiView, 0),
-          xV = this.memory().buffer;
-        let JV = this.audioView;
-        (null === (VV = JV) || void 0 === VV ? void 0 : VV.buffer) === xV && JV.byteOffset === eV || (JV = (0, rV.g)(xV, eV, kV.u.BYTES, 8, "the audio view"), this.audioView = JV), JV && this.audio.applyListener(JV)
+        const BH = uH.y.audioViewPtr(this.apiView, 0),
+          LH = this.memory().buffer;
+        let AH = this.audioView;
+        (null === (HH = AH) || void 0 === HH ? void 0 : HH.buffer) === LH && AH.byteOffset === BH || (AH = (0, YH.f)(LH, BH, uH.C.BYTES, 8, "the audio view"), this.audioView = AH), AH && this.audio.applyListener(AH)
       }
-      indexOf(VV) {
-        return this.indexById.get("number" === typeof VV ? VV : +VV)
+      indexOf(HH) {
+        return this.indexById.get("number" === typeof HH ? HH : +HH)
       }
-      isLocal(VV) {
-        return VV !== kV.Uc && VV === kV.s.localId(this.apiView, 0)
+      isLocal(HH) {
+        return HH !== uH.bd && HH === uH.y.localId(this.apiView, 0)
       }
-      YF(VV) {
-        const eV = [0, 0, 0];
-        return this.readPosition("number" === typeof VV ? VV : +VV, eV) ? eV : null
+      hT(HH) {
+        const BH = [0, 0, 0];
+        return this.readPosition("number" === typeof HH ? HH : +HH, BH) ? BH : null
       }
-      readPosition(VV, eV) {
-        const xV = this.apiView;
-        if (void 0 !== this.indexById.get(VV) && this.isLocal(VV)) {
-          for (let VV = 0; VV < 3; VV++) eV[VV] = kV.s.localPos(xV, 0, VV);
+      readPosition(HH, BH) {
+        const LH = this.apiView;
+        if (void 0 !== this.indexById.get(HH) && this.isLocal(HH)) {
+          for (let HH = 0; HH < 3; HH++) BH[HH] = uH.y.localPos(LH, 0, HH);
           return !0
         }
-        return this.readDrawnPosition(VV, eV)
+        return this.readDrawnPosition(HH, BH)
       }
-      readDrawnPosition(VV, eV) {
-        const xV = this.apiView,
-          JV = this.indexById.get(VV);
-        if (void 0 === JV || JV >= this.renderCapacity) return eV[0] = eV[1] = eV[2] = NaN, !1;
-        const YV = JV * bV;
-        for (let UV = 0; UV < 3; UV++) eV[UV] = this.render[YV + UV] + kV.s.origin(xV, 0, UV);
+      readDrawnPosition(HH, BH) {
+        const LH = this.apiView,
+          AH = this.indexById.get(HH);
+        if (void 0 === AH || AH >= this.renderCapacity) return BH[0] = BH[1] = BH[2] = NaN, !1;
+        const rH = AH * QH;
+        for (let SH = 0; SH < 3; SH++) BH[SH] = this.render[rH + SH] + uH.y.origin(LH, 0, SH);
         return !0
       }
-      checkValid(VV) {
-        return void 0 !== this.indexOf(VV)
+      checkValid(HH) {
+        return void 0 !== this.indexOf(HH)
       }
-      isAlive(VV) {
-        const eV = this.indexOf(VV);
-        if (void 0 === eV) return null;
-        if (this.ensureViews(), eV >= this.renderCapacity) return null;
-        const xV = this.vis[eV];
-        return 0 === xV ? null : 0 !== (xV & kV.oe.Alive)
+      isAlive(HH) {
+        const BH = this.indexOf(HH);
+        if (void 0 === BH) return null;
+        if (this.ensureViews(), BH >= this.renderCapacity) return null;
+        const LH = this.vis[BH];
+        return 0 === LH ? null : 0 !== (LH & uH.se.Alive)
       }
-      getEntityType(VV) {
-        const eV = this.indexOf(VV);
-        return void 0 === eV ? this.isLocal("number" === typeof VV ? VV : +VV) ? "Player" : null : TV(this.kinds[eV])
+      getEntityType(HH) {
+        const BH = this.indexOf(HH);
+        return void 0 === BH ? this.isLocal("number" === typeof HH ? HH : +HH) ? "Player" : null : UH(this.kinds[BH])
       }
-      spawned(VV, eV, xV) {
-        if (eV >= 1048576) throw new rV.d(`entity ${VV} spawned at index ${eV}`);
-        this.ensureIndex(eV), this.serverIds[eV] === VV && null !== this.idStr[eV] || (this.idStr[eV] = String(VV)), this.serverIds[eV] = VV, this.kinds[eV] = xV, this.indexById.set(VV, eV)
+      spawned(HH, BH, LH) {
+        if (BH >= 1048576) throw new YH.d(`entity ${HH} spawned at index ${BH}`);
+        this.ensureIndex(BH), this.serverIds[BH] === HH && null !== this.idStr[BH] || (this.idStr[BH] = String(HH)), this.serverIds[BH] = HH, this.kinds[BH] = LH, this.indexById.set(HH, BH)
       }
-      despawned(VV, eV) {
-        let xV = !1;
-        return this.indexById.get(VV) === eV && (this.indexById.delete(VV), xV = !0), eV < this.serverIds.length && this.serverIds[eV] === VV && (this.serverIds[eV] = kV.Uc, this.kinds[eV] = 0, this.idStr[eV] = null), xV
+      despawned(HH, BH) {
+        let LH = !1;
+        return this.indexById.get(HH) === BH && (this.indexById.delete(HH), LH = !0), BH < this.serverIds.length && this.serverIds[BH] === HH && (this.serverIds[BH] = uH.bd, this.kinds[BH] = 0, this.idStr[BH] = null), LH
       }
-      ensureIndex(VV) {
-        const eV = this.serverIds.length;
-        if (VV < eV) return;
-        let xV = 2 * eV;
-        for (; xV <= VV;) xV *= 2;
-        const JV = new Int32Array(xV).fill(kV.Uc);
-        JV.set(this.serverIds), this.serverIds = JV;
-        const YV = new Uint16Array(xV);
-        YV.set(this.kinds), this.kinds = YV;
-        for (let UV = eV; UV < xV; UV++) this.idStr.push(null)
+      ensureIndex(HH) {
+        const BH = this.serverIds.length;
+        if (HH < BH) return;
+        let LH = 2 * BH;
+        for (; LH <= HH;) LH *= 2;
+        const AH = new Int32Array(LH).fill(uH.bd);
+        AH.set(this.serverIds), this.serverIds = AH;
+        const rH = new Uint16Array(LH);
+        rH.set(this.kinds), this.kinds = rH;
+        for (let SH = BH; SH < LH; SH++) this.idStr.push(null)
       }
       eventView() {
-        const VV = this.memory().buffer;
-        return VV !== this.eventsBuffer && (this.eventsBuffer = VV, this.events = new DataView(VV, this.eventsPtr, this.eventsLen)), this.events
+        const HH = this.memory().buffer;
+        return HH !== this.eventsBuffer && (this.eventsBuffer = HH, this.events = new DataView(HH, this.eventsPtr, this.eventsLen)), this.events
       }
       reView() {
-        const VV = this.memory().buffer;
-        this.buffer = VV, this.viewPtr < 0 && (this.viewPtr = this.core.hUV()), this.view = new DataView(VV, this.viewPtr, kV.s.BYTES), this.rereadDirectory()
+        const HH = this.memory().buffer;
+        this.buffer = HH, this.viewPtr < 0 && (this.viewPtr = this.core.OSH()), this.view = new DataView(HH, this.viewPtr, uH.y.BYTES), this.rereadDirectory()
       }
     }
 
-    function FV(VV) {
-      return VV >>> kV.b === kV.p.Item
+    function TH(HH) {
+      return HH >>> uH.d === uH.v.Item
     }
 
-    function TV(VV) {
-      var eV, xV;
-      const JV = VV & kV.e;
-      switch (VV >>> kV.b) {
-        case kV.p.Lifeform:
-          return null !== (eV = wV.m[JV]) && void 0 !== eV ? eV : null;
-        case kV.p.Throwable:
-          return null !== (xV = ZV.l[JV]) && void 0 !== xV ? xV : null;
-        case kV.p.Mesh:
+    function UH(HH) {
+      var BH, LH;
+      const AH = HH & uH.g;
+      switch (HH >>> uH.d) {
+        case uH.v.Lifeform:
+          return null !== (BH = EH.j[AH]) && void 0 !== BH ? BH : null;
+        case uH.v.Throwable:
+          return null !== (LH = XH.m[AH]) && void 0 !== LH ? LH : null;
+        case uH.v.Mesh:
           return "Mesh";
-        case kV.p.Audio:
+        case uH.v.Audio:
           return "AudioEntity";
-        case kV.p.Item:
+        case uH.v.Item:
           return "Item";
         default:
           return null
       }
     }
-    const PV = new TextDecoder;
+    const VH = new TextDecoder;
 
-    function AV(VV, eV, xV) {
-      if (xV < vV.Id.HEAD_BYTES) return null;
-      const JV = VV.getUint32(eV, !0),
-        YV = VV.getUint32(eV + 20, !0),
-        UV = VV.getUint32(eV + 24, !0),
-        yV = vV.Id.HEAD_BYTES + (0, vV.ze)(YV);
-      if (JV !== vV.Id.UPDATE && JV !== vV.Id.REMOVE || YV > xV || yV + UV > xV) return null;
-      const pV = (xV, JV) => PV.decode(new Uint8Array(VV.buffer, VV.byteOffset + eV + xV, JV)),
-        QV = VV.getFloat64(eV + 12, !0);
+    function OH(HH, BH, LH) {
+      if (LH < GH.Ad.HEAD_BYTES) return null;
+      const AH = HH.getUint32(BH, !0),
+        rH = HH.getUint32(BH + 20, !0),
+        SH = HH.getUint32(BH + 24, !0),
+        hH = GH.Ad.HEAD_BYTES + (0, GH.te)(rH);
+      if (AH !== GH.Ad.UPDATE && AH !== GH.Ad.REMOVE || rH > LH || hH + SH > LH) return null;
+      const tH = (LH, AH) => VH.decode(new Uint8Array(HH.buffer, HH.byteOffset + BH + LH, AH)),
+        zH = HH.getFloat64(BH + 12, !0);
       return {
-        op: JV,
-        level: VV.getFloat64(eV + 4, !0),
-        durationMs: Number.isNaN(QV) ? null : QV,
-        name: pV(vV.Id.HEAD_BYTES, YV),
-        icon: pV(yV, UV)
+        op: AH,
+        level: HH.getFloat64(BH + 4, !0),
+        durationMs: Number.isNaN(zH) ? null : zH,
+        name: tH(GH.Ad.HEAD_BYTES, rH),
+        icon: tH(hH, SH)
       }
     }
 
-    function NV(VV, eV, xV) {
-      return new rV.d(`event ${VV} at ${eV} of ${xV} bytes`)
+    function bH(HH, BH, LH) {
+      return new YH.d(`event ${HH} at ${BH} of ${LH} bytes`)
     }
-    var XV = xV(7024),
-      MV = xV(375),
-      zV = xV(1252),
-      GV = xV(40379),
-      WV = xV(40221),
-      RV = xV(2070),
-      gV = xV(42322),
-      DV = xV(2014),
-      iV = xV(40405),
-      CV = xV(40432),
-      aV = xV(40419),
-      oV = xV(41893),
-      cV = xV(2663),
-      hV = xV(40397),
-      lV = xV(40427);
+    var kH = LH(7007),
+      mH = LH(317),
+      oH = LH(1168),
+      IH = LH(40120),
+      fH = LH(39940),
+      lH = LH(2018),
+      KH = LH(42330),
+      cH = LH(1962),
+      eH = LH(40140),
+      qH = LH(40174),
+      gH = LH(40155),
+      NH = LH(40135),
+      RH = LH(41946),
+      jH = LH(2605),
+      nH = LH(40169);
 
-    function LV(VV) {
-      if (!(0, lV.f)(VV)) return null;
-      const eV = Number(VV);
-      return (0 | eV) === eV ? eV : null
+    function FH(HH) {
+      if (!(0, nH.f)(HH)) return null;
+      const BH = Number(HH);
+      return (0 | BH) === BH ? BH : null
     }
-    class fV {
-      constructor(VV) {
-        this.api = VV, this.bodyHeading = 0, this.viewHeading = 0, this.defaultPose = (0, hV.l)(), this.defaultPoseRead = !1, this.defaultFov = 0, this.baseFov = 0, this.aspect = 1, this.EY = null, this.entityLive = !1, this.entityFeet = [0, 0, 0], this.entityAim = [0, 0, 0], this.entityHeading = 0, this.entityPitch = null, this.entityLookHeading = null, this.localId = kV.Uc, this.localName = String(kV.Uc)
+    class DH {
+      constructor(HH) {
+        this.api = HH, this.bodyHeading = 0, this.viewHeading = 0, this.defaultPose = (0, NH.g)(), this.defaultPoseRead = !1, this.defaultFov = 0, this.baseFov = 0, this.aspect = 1, this.vB = null, this.entityLive = !1, this.entityFeet = [0, 0, 0], this.entityAim = [0, 0, 0], this.entityHeading = 0, this.entityPitch = null, this.entityLookHeading = null, this.localId = uH.bd, this.localName = String(uH.bd)
       }
       readView() {
-        this.defaultPoseRead = !1, this.EY = null;
-        const VV = this.api.queries.directorView() >= kV.ub.BYTES ? this.api.scratchData(kV.ub.BYTES, "the director's view") : null;
-        null !== VV && (this.defaultFov = (0, DV.E)(kV.ub.fov(VV, 0)), this.baseFov = (0, DV.E)(kV.ub.baseFov(VV, 0)), this.aspect = kV.ub.aspect(VV, 0), this.bodyHeading = kV.ub.bodyHeading(VV, 0))
+        this.defaultPoseRead = !1, this.vB = null;
+        const HH = this.api.queries.directorView() >= uH.Cb.BYTES ? this.api.scratchData(uH.Cb.BYTES, "the director's view") : null;
+        null !== HH && (this.defaultFov = (0, cH.t)(uH.Cb.fov(HH, 0)), this.baseFov = (0, cH.t)(uH.Cb.baseFov(HH, 0)), this.aspect = uH.Cb.aspect(HH, 0), this.bodyHeading = uH.Cb.bodyHeading(HH, 0))
       }
       getViewHeading() {
         return this.viewHeading
       }
-      setViewHeading(VV) {
-        this.viewHeading = VV
+      setViewHeading(HH) {
+        this.viewHeading = HH
       }
       get localPlayerId() {
-        const VV = kV.s.localId(this.api.apiView, 0);
-        return VV !== this.localId && (this.localId = VV, this.localName = String(VV)), this.localName
+        const HH = uH.y.localId(this.api.apiView, 0);
+        return HH !== this.localId && (this.localId = HH, this.localName = String(HH)), this.localName
       }
-      getEntityPosition(VV) {
-        return this.readEntity(VV) ? this.entityFeet : null
+      getEntityPosition(HH) {
+        return this.readEntity(HH) ? this.entityFeet : null
       }
-      getEntityAimPoint(VV) {
-        return this.readEntity(VV) ? this.entityAim : null
+      getEntityAimPoint(HH) {
+        return this.readEntity(HH) ? this.entityAim : null
       }
-      getEntityHeading(VV) {
-        const eV = LV(VV);
-        if (null === eV) return null;
-        const xV = kV.s.localId(this.api.apiView, 0);
-        return eV === xV && xV !== kV.Uc ? this.viewHeading : this.readEntity(VV) ? this.entityHeading : null
+      getEntityHeading(HH) {
+        const BH = FH(HH);
+        if (null === BH) return null;
+        const LH = uH.y.localId(this.api.apiView, 0);
+        return BH === LH && LH !== uH.bd ? this.viewHeading : this.readEntity(HH) ? this.entityHeading : null
       }
-      getEntityPitch(VV) {
-        return this.readEntity(VV) ? this.entityPitch : null
+      getEntityPitch(HH) {
+        return this.readEntity(HH) ? this.entityPitch : null
       }
-      getEntityLookHeading(VV) {
-        return this.readEntity(VV) ? this.entityLookHeading : null
+      getEntityLookHeading(HH) {
+        return this.readEntity(HH) ? this.entityLookHeading : null
       }
-      raycastTerrain(VV, eV, xV) {
-        const JV = this.api.queries.cameraSweep(VV[0], VV[1], VV[2], eV[0], eV[1], eV[2], xV);
-        return JV < xV - 1e-6 ? JV : null
+      raycastTerrain(HH, BH, LH) {
+        const AH = this.api.queries.cameraSweep(HH[0], HH[1], HH[2], BH[0], BH[1], BH[2], LH);
+        return AH < LH - 1e-6 ? AH : null
       }
       getDefaultPose() {
         if (this.defaultPoseRead) return this.defaultPose;
         this.defaultPoseRead = !0;
-        const VV = this.defaultPose;
-        VV.fov = this.defaultFov;
-        const eV = this.api.queries.directorDefaultPose() >= kV.nb.BYTES ? this.api.scratchData(kV.nb.BYTES, "the director's default pose") : null;
-        if (null === eV) return VV;
-        for (let xV = 0; xV < 3; xV++) VV.position[xV] = kV.nb.eye(eV, 0, xV);
-        return VV.heading = kV.nb.heading(eV, 0), VV.pitch = kV.nb.pitch(eV, 0), VV
+        const HH = this.defaultPose;
+        HH.fov = this.defaultFov;
+        const BH = this.api.queries.directorDefaultPose() >= uH.ub.BYTES ? this.api.scratchData(uH.ub.BYTES, "the director's default pose") : null;
+        if (null === BH) return HH;
+        for (let LH = 0; LH < 3; LH++) HH.position[LH] = uH.ub.eye(BH, 0, LH);
+        return HH.heading = uH.ub.heading(BH, 0), HH.pitch = uH.ub.pitch(BH, 0), HH
       }
       getDefaultFov() {
         return this.defaultFov
@@ -672,365 +531,381 @@ export const modules = {
       getAspectRatio() {
         return this.aspect
       }
-      readEntity(VV) {
-        const eV = LV(VV);
-        if (null === eV) return !1;
-        if (eV === this.EY) return this.entityLive;
-        this.EY = eV;
-        const xV = this.api.queries.directorEntity(eV) >= kV.ob.BYTES ? this.api.scratchData(kV.ob.BYTES, "the director's entity") : null;
-        if (this.entityLive = null !== xV, null === xV) return !1;
-        for (let UV = 0; UV < 3; UV++) this.entityFeet[UV] = kV.ob.feet(xV, 0, UV), this.entityAim[UV] = this.entityFeet[UV];
-        this.entityAim[1] += kV.ob.eyeHeight(xV, 0), this.entityHeading = kV.ob.heading(xV, 0);
-        const JV = kV.ob.pitch(xV, 0);
-        this.entityPitch = Number.isNaN(JV) ? null : JV;
-        const YV = kV.ob.lookHeading(xV, 0);
-        return this.entityLookHeading = Number.isNaN(YV) ? null : YV, !0
+      readEntity(HH) {
+        const BH = FH(HH);
+        if (null === BH) return !1;
+        if (BH === this.vB) return this.entityLive;
+        this.vB = BH;
+        const LH = this.api.queries.directorEntity(BH) >= uH.vb.BYTES ? this.api.scratchData(uH.vb.BYTES, "the director's entity") : null;
+        if (this.entityLive = null !== LH, null === LH) return !1;
+        for (let SH = 0; SH < 3; SH++) this.entityFeet[SH] = uH.vb.feet(LH, 0, SH), this.entityAim[SH] = this.entityFeet[SH];
+        this.entityAim[1] += uH.vb.eyeHeight(LH, 0), this.entityHeading = uH.vb.heading(LH, 0);
+        const AH = uH.vb.pitch(LH, 0);
+        this.entityPitch = Number.isNaN(AH) ? null : AH;
+        const rH = uH.vb.lookHeading(LH, 0);
+        return this.entityLookHeading = Number.isNaN(rH) ? null : rH, !0
       }
     }
-    const mV = {
+    const wH = {
         mode: "default"
       },
-      KV = {
+      ZH = {
         show: () => {},
         clear: () => {}
       };
 
-    function HV() {
+    function dH() {
       return "undefined" !== typeof document && "hidden" === document.visibilityState
     }
-    class uV {
-      constructor(VV) {
-        this.options = VV, this.cZ = void 0, this.director = void 0, this.latest = mV, this.pending = void 0, this.shownSettings = null, this.facing = "movement", this.mouseTurns = "view", this.look = {
-          uR: 0,
-          eD: 0
+    class aH {
+      constructor(HH) {
+        this.options = HH, this.cX = void 0, this.director = void 0, this.latest = wH, this.pending = void 0, this.shownSettings = null, this.facing = "movement", this.mouseTurns = "view", this.look = {
+          lq: 0,
+          Fq: 0
         }, this.pointedAt = {
           heading: 0,
           pitch: 0
-        }, this.engaged = !1, this.calledThisFrame = !1, this.holding = !1, this.lastCallMs = 0, this.answeredPose = !1, this.wb = new Int32Array(3 * kV.Xd), this.centresLen = 0, this.centresUnsent = !1, this.next = new Int32Array(3 * kV.Xd), this.cZ = new fV(VV.api), this.director = new aV.c(this.cZ)
+        }, this.engaged = !1, this.calledThisFrame = !1, this.holding = !1, this.lastPose = {
+          position: [0, 0, 0],
+          heading: 0,
+          pitch: 0,
+          fovRadians: 0
+        }, this.lastAnswer = uH.qb.None, this.threw = !1, this.lastCallMs = 0, this.answeredPose = !1, this.yQ = new Int32Array(3 * uH.Zd), this.centresLen = 0, this.centresUnsent = !1, this.next = new Int32Array(3 * uH.Zd), this.cX = new DH(HH.api), this.director = new gH.d(this.cX)
       }
-      settingsChanged(VV) {
-        let eV = mV;
-        if (VV.length > 0) try {
-          eV = (0, oV.e)(VV)
+      settingsChanged(HH) {
+        let BH = wH;
+        if (HH.length > 0) try {
+          BH = (0, RH.e)(HH)
         } catch {}
-        this.latest = eV, this.pending = eV
+        this.latest = BH, this.pending = BH
       }
-      call(VV, eV, xV, JV, YV, UV) {
-        var yV, pV;
-        let QV;
+      call(HH, BH, LH, AH, rH, SH) {
+        var hH, tH;
         this.holding = !1;
+        const zH = this.answeredPose && 0 === (AH & uH.zb.Held);
+        let CH;
         try {
-          QV = this.answer(VV, eV, xV, JV, YV, UV)
-        } catch (vV) {
-          var nV, wV;
-          throw this.answeredPose = !1, null === (nV = (wV = this.options).showFacing) || void 0 === nV || nV.call(wV, null), vV
+          CH = this.answer(HH, BH, LH, AH, rH, SH), this.threw = !1
+        } catch (EH) {
+          this.options.reportError(EH);
+          CH = !this.threw && this.answeredPose && !zH ? this.sendLastPose() : uH.qb.None, this.threw = !0
         }
-        const ZV = this.answeredPose && 0 === (JV & kV.qb.Held);
-        return this.answeredPose = QV !== kV.jb.None, this.holding = this.answeredPose && !ZV, null === (yV = (pV = this.options).showFacing) || void 0 === yV || yV.call(pV, this.holding ? this.facing : null), QV
+        return this.answeredPose = CH !== uH.qb.None, this.holding = this.answeredPose && !zH, null === (hH = (tH = this.options).showFacing) || void 0 === hH || hH.call(tH, this.holding ? this.facing : null), CH
       }
       holdsView() {
         return this.holding
       }
-      answer(VV, eV, xV, JV, YV, UV) {
+      answer(HH, BH, LH, AH, rH, SH) {
         this.calledThisFrame = !0, this.engaged = !0, this.lastCallMs = this.now();
         const {
-          cZ: yV
+          cX: hH
         } = this;
-        yV.readView();
-        if (0 !== (JV & kV.qb.Held) || yV.setViewHeading((0, iV.w)(yV.bodyHeading)), void 0 !== this.pending) {
-          const VV = this.pending;
-          this.pending = void 0, this.director.setSettings(VV), this.syncShownSettings()
+        hH.readView();
+        if (0 !== (AH & uH.zb.Held) || hH.setViewHeading((0, eH.p)(hH.bodyHeading)), void 0 !== this.pending) {
+          const HH = this.pending;
+          this.pending = void 0, this.director.setSettings(HH), this.syncShownSettings()
         }
-        this.readLook((0, cV.f)(eV), (0, cV.f)(xV), JV, (0, cV.f)(YV), (0, cV.f)(UV));
-        const pV = this.director.update(VV / 1e3, this.look);
-        if (this.syncShownSettings(), this.writeCentres(this.director.getLoadingPositions()), this.hidden() || this.screen().show(this.director.getScreenFade(), this.director.getSettings()), !pV) return kV.jb.None;
-        const [QV, nV, wV] = pV.position;
-        if (0 === this.options.api.queries.directorPose(QV, nV, wV, (0, iV.w)(pV.heading), (0, iV.m)(pV.pitch), (0, DV.k)(pV.fov))) return kV.jb.None;
-        if ("default" === this.director.getSettings().mode) return kV.jb.Pose;
+        this.readLook((0, jH.f)(BH), (0, jH.f)(LH), AH, (0, jH.f)(rH), (0, jH.f)(SH));
+        const tH = this.director.update(HH / 1e3, this.look);
+        if (this.syncShownSettings(), this.writeCentres(this.director.getLoadingPositions()), this.hidden() || this.screen().show(this.director.getScreenFade(), this.director.getSettings()), !tH) return uH.qb.None;
+        const zH = this.lastPose;
+        return (0, NH.e)(tH.position, zH.position), zH.heading = (0, eH.p)(tH.heading), zH.pitch = (0, eH.i)(tH.pitch), zH.fovRadians = (0, cH.h)(tH.fov), this.lastAnswer = this.facingAnswer(), this.sendLastPose()
+      }
+      facingAnswer() {
+        if ("default" === this.director.getSettings().mode) return uH.qb.Pose;
         switch (this.facing) {
           case "camera":
-            return kV.jb.FaceCamera;
+            return uH.qb.FaceCamera;
           case "cursor":
-            return kV.jb.FaceCursor;
+            return uH.qb.FaceCursor;
           default:
-            return kV.jb.FaceMovement
+            return uH.qb.FaceMovement
         }
       }
-      afterFrame(VV) {
-        VV ? (this.calledThisFrame || (this.holding = !1, this.engaged && this.idle()), this.calledThisFrame = !1) : this.centresLen > 0 && this.hidden() && this.now() - this.lastCallMs > 1e3 && this.setCentres(0), this.centresUnsent && this.sendCentres()
+      sendLastPose() {
+        const {
+          position: HH,
+          heading: BH,
+          pitch: LH,
+          fovRadians: AH
+        } = this.lastPose;
+        return 0 === this.options.api.queries.directorPose(HH[0], HH[1], HH[2], BH, LH, AH) ? uH.qb.None : this.lastAnswer
+      }
+      afterFrame(HH) {
+        HH ? (this.calledThisFrame || (this.holding = !1, this.engaged && this.idle()), this.calledThisFrame = !1) : this.centresLen > 0 && this.hidden() && this.now() - this.lastCallMs > 1e3 && this.setCentres(0), this.centresUnsent && this.sendCentres()
       }
       reset() {
-        this.latest = mV, this.idle()
+        this.latest = wH, this.idle()
       }
       restart() {
-        const VV = this.holding;
-        this.idle(), this.holding = VV
+        const HH = this.holding;
+        this.idle(), this.holding = HH
       }
       idle() {
-        var VV, eV;
-        this.engaged && this.screen().clear(), this.engaged = !1, this.holding = !1, this.director = new aV.c(this.cZ), this.pending = this.latest, this.shownSettings = null, this.facing = "movement", this.mouseTurns = "view", this.answeredPose = !1, null === (VV = (eV = this.options).showFacing) || void 0 === VV || VV.call(eV, null), this.setCentres(0)
+        var HH, BH;
+        this.engaged && this.screen().clear(), this.engaged = !1, this.holding = !1, this.director = new gH.d(this.cX), this.pending = this.latest, this.shownSettings = null, this.facing = "movement", this.mouseTurns = "view", this.answeredPose = !1, this.threw = !1, null === (HH = (BH = this.options).showFacing) || void 0 === HH || HH.call(BH, null), this.setCentres(0)
       }
       syncShownSettings() {
-        const VV = this.director.getSettings();
-        if (VV === this.shownSettings) return;
-        this.shownSettings = VV;
-        const eV = (0, CV.i)(VV);
-        this.facing = eV.facing, this.mouseTurns = eV.mouseTurns
+        const HH = this.director.getSettings();
+        if (HH === this.shownSettings) return;
+        this.shownSettings = HH;
+        const BH = (0, qH.f)(HH);
+        this.facing = BH.facing, this.mouseTurns = BH.mouseTurns
       }
-      readLook(VV, eV, xV, JV, YV) {
-        const UV = this.look,
-          yV = 0 !== (xV & kV.qb.LookPointed);
-        if (null === this.mouseTurns && !yV) return UV.uR = 0, UV.eD = 0, void(UV.pointedAt = void 0);
-        let pV;
-        yV && (this.pointedAt.heading = JV, this.pointedAt.pitch = YV, pV = this.pointedAt);
+      readLook(HH, BH, LH, AH, rH) {
+        const SH = this.look,
+          hH = 0 !== (LH & uH.zb.LookPointed);
+        if (null === this.mouseTurns && !hH) return SH.lq = 0, SH.Fq = 0, void(SH.pointedAt = void 0);
+        let tH;
+        hH && (this.pointedAt.heading = AH, this.pointedAt.pitch = rH, tH = this.pointedAt);
         const {
-          cZ: QV
+          cX: zH
         } = this;
-        QV.setViewHeading((0, CV.e)(QV.getViewHeading(), VV, eV, pV, "look" === this.mouseTurns, UV))
+        zH.setViewHeading((0, qH.c)(zH.getViewHeading(), HH, BH, tH, "look" === this.mouseTurns, SH))
       }
-      writeCentres(VV) {
-        const eV = this.next,
-          xV = Math.min(VV.length, kV.Xd);
-        for (let JV = 0; JV < xV; JV++)
-          for (let xV = 0; xV < 3; xV++) eV[3 * JV + xV] = Math.floor(VV[JV][xV] / kV.z);
-        this.setCentres(xV)
+      writeCentres(HH) {
+        const BH = this.next,
+          LH = Math.min(HH.length, uH.Zd);
+        for (let AH = 0; AH < LH; AH++)
+          for (let LH = 0; LH < 3; LH++) BH[3 * AH + LH] = Math.floor(HH[AH][LH] / uH.H);
+        this.setCentres(LH)
       }
-      setCentres(VV) {
+      setCentres(HH) {
         const {
-          wb: eV,
-          next: xV
+          yQ: BH,
+          next: LH
         } = this;
-        let JV = VV === this.centresLen;
-        for (let YV = 0; JV && YV < 3 * VV; YV++) JV = eV[YV] === xV[YV];
-        JV || (eV.fill(0), eV.set(xV.subarray(0, 3 * VV)), this.centresLen = VV, this.centresUnsent = !0, this.sendCentres())
+        let AH = HH === this.centresLen;
+        for (let rH = 0; AH && rH < 3 * HH; rH++) AH = BH[rH] === LH[rH];
+        AH || (BH.fill(0), BH.set(LH.subarray(0, 3 * HH)), this.centresLen = HH, this.centresUnsent = !0, this.sendCentres())
       }
       sendCentres() {
-        const VV = this.options.cmd();
-        null !== VV && (0, kV.Kf)(VV, 0, this.wb, this.centresLen) && (this.centresUnsent = !1)
+        const HH = this.options.cmd();
+        null !== HH && (0, uH.Uf)(HH, 0, this.yQ, this.centresLen) && (this.centresUnsent = !1)
       }
       screen() {
-        var VV, eV, xV;
-        return null !== (VV = null === (eV = (xV = this.options).screen) || void 0 === eV ? void 0 : eV.call(xV)) && void 0 !== VV ? VV : KV
+        var HH, BH, LH;
+        return null !== (HH = null === (BH = (LH = this.options).screen) || void 0 === BH ? void 0 : BH.call(LH)) && void 0 !== HH ? HH : ZH
       }
       hidden() {
-        var VV;
-        return (null !== (VV = this.options.isPageHidden) && void 0 !== VV ? VV : HV)()
+        var HH;
+        return (null !== (HH = this.options.isPageHidden) && void 0 !== HH ? HH : dH)()
       }
       now() {
-        var VV, eV, xV;
-        return null !== (VV = null === (eV = (xV = this.options).now) || void 0 === eV ? void 0 : eV.call(xV)) && void 0 !== VV ? VV : performance.now()
+        var HH, BH, LH;
+        return null !== (HH = null === (BH = (LH = this.options).now) || void 0 === BH ? void 0 : BH.call(LH)) && void 0 !== HH ? HH : performance.now()
       }
     }
-    var sV = xV(40324),
-      SV = xV(42070);
-    const IV = kV.z * kV.z * kV.z,
-      dV = Math.log2(kV.z),
-      OV = kV.z - 1,
-      Ve = 65535,
-      ee = kV.N.BYTES / 4,
-      xe = new Uint16Array(IV);
+    var sH = LH(40048),
+      JH = LH(42106);
+    const iH = uH.H * uH.H * uH.H,
+      pH = Math.log2(uH.H),
+      yH = uH.H - 1,
+      HB = 65535,
+      BB = uH.R.BYTES / 4,
+      LB = new Uint16Array(iH);
 
-    function Je(VV, eV, xV) {
-      return VV * kV.z * kV.z + eV * kV.z + xV
+    function AB(HH, BH, LH) {
+      return HH * uH.H * uH.H + BH * uH.H + LH
     }
-    class Ye {
-      constructor(VV) {
-        this.chunk = VV
+    class rB {
+      constructor(HH) {
+        this.chunk = HH
       }
       get data() {
         return this.chunk.gameVoxels()
       }
-      index(VV, eV, xV) {
-        return Je(VV, eV, xV)
+      index(HH, BH, LH) {
+        return AB(HH, BH, LH)
       }
     }
-    class Ue {
+    class SB {
       constructor() {
         this.ids = new Map, this.cleared = new Set, this.layers = 0, this.patched = null, this.from = null
       }
     }
-    class ye {
-      constructor(VV, eV, xV, JV) {
-        this.table = VV, this.slot = eV, this.generation = xV, this.epoch = JV, this.Ur = new Ye(this), this.writes = null, this.writeCount = 0, this.shownVersion = 0, this.shownCore = -1, this.shownWrites = -1, this.data = xe, this.dataPtr = 0, this.dataBuffer = null, this.dataStamp = -1, this.version = 0, this.layers = null, this.layersVersion = -1, this.layersPtr = -1, this.staleLayers = 0
+    class hB {
+      constructor(HH, BH, LH, AH) {
+        this.table = HH, this.slot = BH, this.generation = LH, this.epoch = AH, this.aG = new rB(this), this.writes = null, this.writeCount = 0, this.shownVersion = 0, this.shownCore = -1, this.shownWrites = -1, this.data = LB, this.dataPtr = 0, this.dataBuffer = null, this.dataStamp = -1, this.version = 0, this.layers = null, this.layersVersion = -1, this.layersPtr = -1, this.staleLayers = 0
       }
-      get kb() {
+      get au() {
         return this.voxelData(), this.version === this.shownCore && this.writeCount === this.shownWrites || (this.shownCore = this.version, this.shownWrites = this.writeCount, this.shownVersion = this.table.nextVersion()), this.shownVersion
       }
-      get Yk() {
-        const VV = this.gameVoxels(),
-          eV = this.layers ??= new Uint16Array(kV.z);
+      get jY() {
+        const HH = this.gameVoxels(),
+          BH = this.layers ??= new Uint16Array(uH.H);
         this.layersVersion === this.version && this.layersPtr === this.dataPtr || (this.layersVersion = this.version, this.layersPtr = this.dataPtr, this.staleLayers = -1);
-        for (let xV = 0; 0 !== this.staleLayers; xV++) {
-          const JV = 1 << xV;
-          0 !== (this.staleLayers & JV) && (this.staleLayers &= ~JV, eV[xV] = pe(VV, xV))
+        for (let LH = 0; 0 !== this.staleLayers; LH++) {
+          const AH = 1 << LH;
+          0 !== (this.staleLayers & AH) && (this.staleLayers &= ~AH, BH[LH] = tB(HH, LH))
         }
-        return eV
+        return BH
       }
       voxelData() {
         return this.dataStamp === this.table.stamp && 0 !== this.data.length ? this.data : this.reread()
       }
       gameVoxels() {
-        const VV = this.voxelData(),
-          eV = this.writes;
-        if (null === eV || 0 === eV.ids.size) return VV;
-        if (eV.from !== VV) {
-          const xV = eV.patched ??= new Uint16Array(IV);
-          xV.set(VV);
-          for (const [VV, JV] of eV.ids) xV[VV] = JV;
-          eV.from = VV
+        const HH = this.voxelData(),
+          BH = this.writes;
+        if (null === BH || 0 === BH.ids.size) return HH;
+        if (BH.from !== HH) {
+          const LH = BH.patched ??= new Uint16Array(iH);
+          LH.set(HH);
+          for (const [HH, AH] of BH.ids) LH[HH] = AH;
+          BH.from = HH
         }
-        return eV.patched
+        return BH.patched
       }
-      written(VV) {
-        var eV;
-        return null === (eV = this.writes) || void 0 === eV ? void 0 : eV.ids.get(VV)
+      written(HH) {
+        var BH;
+        return null === (BH = this.writes) || void 0 === BH ? void 0 : BH.ids.get(HH)
       }
       hasWrites() {
         return null !== this.writes && 0 !== this.writes.ids.size
       }
-      write(VV, eV, xV) {
-        const JV = this.writes ??= new Ue;
-        JV.ids.set(VV, eV), xV && JV.cleared.add(VV), null !== JV.from && (JV.patched[VV] = eV);
-        const YV = 1 << (VV >> dV & OV);
-        JV.layers |= YV, this.staleLayers |= YV, this.writeCount++
+      write(HH, BH, LH) {
+        const AH = this.writes ??= new SB;
+        AH.ids.set(HH, BH), LH && AH.cleared.add(HH), null !== AH.from && (AH.patched[HH] = BH);
+        const rH = 1 << (HH >> pH & yH);
+        AH.layers |= rH, this.staleLayers |= rH, this.writeCount++
       }
       clearWrites() {
-        const VV = this.writes;
-        null !== VV && (this.staleLayers |= VV.layers, VV.ids.clear(), VV.cleared.clear(), VV.layers = 0, VV.from = null)
+        const HH = this.writes;
+        null !== HH && (this.staleLayers |= HH.layers, HH.ids.clear(), HH.cleared.clear(), HH.layers = 0, HH.from = null)
       }
-      dataCleared(VV) {
-        var eV;
-        return !0 === (null === (eV = this.writes) || void 0 === eV ? void 0 : eV.cleared.has(VV))
+      dataCleared(HH) {
+        var BH;
+        return !0 === (null === (BH = this.writes) || void 0 === BH ? void 0 : BH.cleared.has(HH))
       }
       reread() {
         this.dataStamp = this.table.stamp;
-        const VV = this.table.slotWords(),
-          eV = this.slot * ee;
-        if (this.epoch !== this.table.epoch || eV + ee > VV.length || 0 === VV[eV + 3] || VV[eV + 2] !== this.generation) return this.data = xe, this.dataPtr = 0, xe;
-        this.version = VV[eV + 1];
-        const xV = VV[eV + 0],
-          JV = VV.buffer;
-        return xV === this.dataPtr && JV === this.dataBuffer || (this.dataPtr = xV, this.dataBuffer = JV, this.data = this.table.voxelsAt(JV, xV)), this.data
+        const HH = this.table.slotWords(),
+          BH = this.slot * BB;
+        if (this.epoch !== this.table.epoch || BH + BB > HH.length || 0 === HH[BH + 3] || HH[BH + 2] !== this.generation) return this.data = LB, this.dataPtr = 0, LB;
+        this.version = HH[BH + 1];
+        const LH = HH[BH + 0],
+          AH = HH.buffer;
+        return LH === this.dataPtr && AH === this.dataBuffer || (this.dataPtr = LH, this.dataBuffer = AH, this.data = this.table.voxelsAt(AH, LH)), this.data
       }
     }
 
-    function pe(VV, eV) {
-      const xV = VV[eV * kV.z];
-      for (let JV = 0; JV < kV.z; JV++) {
-        const YV = Je(JV, eV, 0);
-        for (let eV = 0; eV < kV.z; eV++)
-          if (VV[YV + eV] !== xV) return Ve
+    function tB(HH, BH) {
+      const LH = HH[BH * uH.H];
+      for (let AH = 0; AH < uH.H; AH++) {
+        const rH = AB(AH, BH, 0);
+        for (let BH = 0; BH < uH.H; BH++)
+          if (HH[rH + BH] !== LH) return HB
       }
-      return xV
+      return LH
     }
-    const Qe = new Uint32Array(0);
+    const zB = new Uint32Array(0);
 
-    function ne(VV, eV, xV) {
-      return Je(VV & OV, eV & OV, xV & OV)
+    function CB(HH, BH, LH) {
+      return AB(HH & yH, BH & yH, LH & yH)
     }
-    class we {
-      constructor(VV, eV) {
-        this.memory = VV, this.apiView = eV, this.chunks = new Map, this.written = [], this.lastKey = -1, this.lastChunk = void 0, this.slotsPtr = 0, this.slotsLen = 0, this.slotsBuffer = null, this.slots = Qe, this.walkPtr = 0, this.walkLen = 0, this.walkBuffer = null, this.walk = Qe, this.epoch = 0, this.stamp = 0, this.versions = 0, this.corruption = null
+    class EB {
+      constructor(HH, BH) {
+        this.memory = HH, this.apiView = BH, this.chunks = new Map, this.written = [], this.lastKey = -1, this.lastChunk = void 0, this.slotsPtr = 0, this.slotsLen = 0, this.slotsBuffer = null, this.slots = zB, this.walkPtr = 0, this.walkLen = 0, this.walkBuffer = null, this.walk = zB, this.epoch = 0, this.stamp = 0, this.versions = 0, this.corruption = null
       }
-      apply(VV, eV, xV, JV, YV, UV) {
-        if (this.lastKey = -1, this.lastChunk = void 0, this.stamp++, UV === kV.P.ResetAll) return this.chunks.clear(), void this.epoch++;
-        if (UV !== kV.P.Stored && UV !== kV.P.Unloaded) throw new rV.d(`ChunkSlot flags ${UV}`);
-        const yV = (0, SV.d)(VV, eV, xV);
-        if (yV < 0) return;
-        if (UV === kV.P.Unloaded) return void this.chunks.delete(yV);
-        const pV = this.chunks.get(yV);
-        (null === pV || void 0 === pV ? void 0 : pV.slot) === JV && pV.generation === YV || this.chunks.set(yV, new ye(this, JV, YV, this.epoch))
+      apply(HH, BH, LH, AH, rH, SH) {
+        if (this.lastKey = -1, this.lastChunk = void 0, this.stamp++, SH === uH.T.ResetAll) return this.chunks.clear(), void this.epoch++;
+        if (SH !== uH.T.Stored && SH !== uH.T.Unloaded) throw new YH.d(`ChunkSlot flags ${SH}`);
+        const hH = (0, JH.e)(HH, BH, LH);
+        if (hH < 0) return;
+        if (SH === uH.T.Unloaded) return void this.chunks.delete(hH);
+        const tH = this.chunks.get(hH);
+        (null === tH || void 0 === tH ? void 0 : tH.slot) === AH && tH.generation === rH || this.chunks.set(hH, new hB(this, AH, rH, this.epoch))
       }
       touch() {
         this.stamp++, this.clearOverlay(), this.viewWalkThrough()
       }
       refresh() {
         if (this.stamp++, this.corruption) throw this.corruption;
-        const VV = this.apiView(),
-          eV = kV.s.chunkSlotsPtr(VV, 0),
-          xV = kV.s.chunkSlotsLen(VV, 0);
-        eV === this.slotsPtr && xV === this.slotsLen || (this.slotsPtr = eV, this.slotsLen = xV, this.slotsBuffer = null, this.slotWords()), this.viewWalkThrough(), this.clearOverlay()
+        const HH = this.apiView(),
+          BH = uH.y.chunkSlotsPtr(HH, 0),
+          LH = uH.y.chunkSlotsLen(HH, 0);
+        BH === this.slotsPtr && LH === this.slotsLen || (this.slotsPtr = BH, this.slotsLen = LH, this.slotsBuffer = null, this.slotWords()), this.viewWalkThrough(), this.clearOverlay()
       }
       viewWalkThrough() {
-        const VV = this.apiView(),
-          eV = kV.s.walkThroughPtr(VV, 0),
-          xV = kV.s.walkThroughLen(VV, 0);
-        eV === this.walkPtr && xV === this.walkLen || (this.walkPtr = eV, this.walkLen = xV, this.walkBuffer = null, this.walkWords())
+        const HH = this.apiView(),
+          BH = uH.y.walkThroughPtr(HH, 0),
+          LH = uH.y.walkThroughLen(HH, 0);
+        BH === this.walkPtr && LH === this.walkLen || (this.walkPtr = BH, this.walkLen = LH, this.walkBuffer = null, this.walkWords())
       }
       clearOverlay() {
-        for (const VV of this.written) VV.clearWrites();
+        for (const HH of this.written) HH.clearWrites();
         this.written.length = 0
       }
       nextVersion() {
         return ++this.versions
       }
       slotWords() {
-        const VV = this.memory().buffer;
-        var eV;
-        VV !== this.slotsBuffer && (this.slotsBuffer = VV, this.slots = null !== (eV = (0, rV.r)(Uint32Array, VV, this.slotsPtr, this.slotsLen * ee, "the chunk directory")) && void 0 !== eV ? eV : Qe);
+        const HH = this.memory().buffer;
+        var BH;
+        HH !== this.slotsBuffer && (this.slotsBuffer = HH, this.slots = null !== (BH = (0, YH.o)(Uint32Array, HH, this.slotsPtr, this.slotsLen * BB, "the chunk directory")) && void 0 !== BH ? BH : zB);
         return this.slots
       }
-      voxelsAt(VV, eV) {
+      voxelsAt(HH, BH) {
         try {
-          var xV;
-          return null !== (xV = (0, rV.r)(Uint16Array, VV, eV, IV, "a chunk's voxels")) && void 0 !== xV ? xV : xe
-        } catch (JV) {
-          if (!(JV instanceof rV.d)) throw JV;
-          return this.corruption ??= JV, xe
+          var LH;
+          return null !== (LH = (0, YH.o)(Uint16Array, HH, BH, iH, "a chunk's voxels")) && void 0 !== LH ? LH : LB
+        } catch (AH) {
+          if (!(AH instanceof YH.d)) throw AH;
+          return this.corruption ??= AH, LB
         }
       }
-      chunk(VV, eV, xV) {
-        var JV;
-        return null !== (JV = this.chunks.get((0, SV.d)(VV, eV, xV))) && void 0 !== JV ? JV : null
+      chunk(HH, BH, LH) {
+        var AH;
+        return null !== (AH = this.chunks.get((0, JH.e)(HH, BH, LH))) && void 0 !== AH ? AH : null
       }
-      isLoaded(VV, eV, xV) {
-        return void 0 !== this.chunkAt(Math.floor(VV), Math.floor(eV), Math.floor(xV))
+      isLoaded(HH, BH, LH) {
+        return void 0 !== this.chunkAt(Math.floor(HH), Math.floor(BH), Math.floor(LH))
       }
-      vp(VV, eV, xV) {
-        var JV;
-        const YV = Math.floor(VV),
-          UV = Math.floor(eV),
-          yV = Math.floor(xV),
-          pV = this.chunkAt(YV, UV, yV);
-        if (!pV) return 0;
-        const QV = ne(YV, UV, yV);
-        return null !== (JV = pV.written(QV)) && void 0 !== JV ? JV : pV.voxelData()[QV]
+      ph(HH, BH, LH) {
+        var AH;
+        const rH = Math.floor(HH),
+          SH = Math.floor(BH),
+          hH = Math.floor(LH),
+          tH = this.chunkAt(rH, SH, hH);
+        if (!tH) return 0;
+        const zH = CB(rH, SH, hH);
+        return null !== (AH = tH.written(zH)) && void 0 !== AH ? AH : tH.voxelData()[zH]
       }
-      setOverlay(VV, eV, xV, JV) {
-        let YV = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const UV = this.chunkAt(VV, eV, xV);
-        return !!UV && (UV.hasWrites() || this.written.push(UV), UV.write(ne(VV, eV, xV), JV, YV), !0)
+      setOverlay(HH, BH, LH, AH) {
+        let rH = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const SH = this.chunkAt(HH, BH, LH);
+        return !!SH && (SH.hasWrites() || this.written.push(SH), SH.write(CB(HH, BH, LH), AH, rH), !0)
       }
-      version(VV, eV, xV) {
-        var JV, YV;
-        return null !== (JV = null === (YV = this.chunks.get((0, SV.d)(VV, eV, xV))) || void 0 === YV ? void 0 : YV.kb) && void 0 !== JV ? JV : null
+      version(HH, BH, LH) {
+        var AH, rH;
+        return null !== (AH = null === (rH = this.chunks.get((0, JH.e)(HH, BH, LH))) || void 0 === rH ? void 0 : rH.au) && void 0 !== AH ? AH : null
       }
-      scan(VV, eV, xV, JV, YV, UV, yV, pV) {
-        const QV = kV.z;
-        let nV = 0;
-        for (let wV = Math.floor(eV / QV); wV * QV < YV; wV++) {
-          const ZV = wV * QV,
-            vV = Math.min(YV - ZV, QV);
-          for (let YV = Math.floor(VV / QV); YV * QV < JV; YV++) {
-            const rV = YV * QV,
-              kV = Math.min(JV - rV, QV);
-            for (let JV = Math.floor(xV / QV); JV * QV < UV; JV++) {
-              const bV = this.chunks.get((0, SV.d)(YV, wV, JV));
-              if (!bV) continue;
-              const EV = JV * QV,
-                BV = Math.max(xV - EV, 0),
-                jV = Math.min(UV - EV, QV),
-                qV = bV.Yk,
-                tV = bV.gameVoxels();
-              for (let xV = Math.max(eV - ZV, 0); xV < vV; xV++) {
-                const eV = qV[xV];
-                if (eV === Ve || 0 !== yV[eV]) {
-                  nV++;
-                  for (let eV = Math.max(VV - rV, 0); eV < kV; eV++) {
-                    const VV = Je(eV, xV, 0);
-                    for (let JV = BV; JV < jV; JV++) {
-                      const YV = tV[VV + JV];
-                      0 !== yV[YV] && pV.push(rV + eV, ZV + xV, EV + JV, YV)
+      scan(HH, BH, LH, AH, rH, SH, hH, tH) {
+        const zH = uH.H;
+        let CH = 0;
+        for (let EH = Math.floor(BH / zH); EH * zH < rH; EH++) {
+          const XH = EH * zH,
+            GH = Math.min(rH - XH, zH);
+          for (let rH = Math.floor(HH / zH); rH * zH < AH; rH++) {
+            const YH = rH * zH,
+              uH = Math.min(AH - YH, zH);
+            for (let AH = Math.floor(LH / zH); AH * zH < SH; AH++) {
+              const QH = this.chunks.get((0, JH.e)(rH, EH, AH));
+              if (!QH) continue;
+              const WH = AH * zH,
+                MH = Math.max(LH - WH, 0),
+                xH = Math.min(SH - WH, zH),
+                vH = QH.jY,
+                PH = QH.gameVoxels();
+              for (let LH = Math.max(BH - XH, 0); LH < GH; LH++) {
+                const BH = vH[LH];
+                if (BH === HB || 0 !== hH[BH]) {
+                  CH++;
+                  for (let BH = Math.max(HH - YH, 0); BH < uH; BH++) {
+                    const HH = AB(BH, LH, 0);
+                    for (let AH = MH; AH < xH; AH++) {
+                      const rH = PH[HH + AH];
+                      0 !== hH[rH] && tH.push(YH + BH, XH + LH, WH + AH, rH)
                     }
                   }
                 }
@@ -1038,49 +913,49 @@ export const modules = {
             }
           }
         }
-        return nV
+        return CH
       }
-      columnTops(VV, eV, xV, JV, YV, UV, yV, pV, QV) {
-        (0, sV.c)(((VV, eV, xV) => {
-          var JV;
-          return null !== (JV = this.chunks.get((0, SV.d)(VV, eV, xV))) && void 0 !== JV ? JV : null
-        }), Ve, VV, eV, xV, JV, YV, UV, yV, pV, QV)
+      columnTops(HH, BH, LH, AH, rH, SH, hH, tH, zH) {
+        (0, sH.b)(((HH, BH, LH) => {
+          var AH;
+          return null !== (AH = this.chunks.get((0, JH.e)(HH, BH, LH))) && void 0 !== AH ? AH : null
+        }), HB, HH, BH, LH, AH, rH, SH, hH, tH, zH)
       }
-      dataCleared(VV, eV, xV) {
-        var JV;
-        const YV = Math.floor(VV),
-          UV = Math.floor(eV),
-          yV = Math.floor(xV);
-        return !0 === (null === (JV = this.chunkAt(YV, UV, yV)) || void 0 === JV ? void 0 : JV.dataCleared(ne(YV, UV, yV)))
+      dataCleared(HH, BH, LH) {
+        var AH;
+        const rH = Math.floor(HH),
+          SH = Math.floor(BH),
+          hH = Math.floor(LH);
+        return !0 === (null === (AH = this.chunkAt(rH, SH, hH)) || void 0 === AH ? void 0 : AH.dataCleared(CB(rH, SH, hH)))
       }
-      isWalkThrough(VV) {
-        if (!Number.isInteger(VV) || VV < 0 || VV > 65535) return !1;
-        const eV = this.walkWords(),
-          xV = VV >>> 5;
-        return xV < eV.length && 1 === (eV[xV] >>> (31 & VV) & 1)
+      isWalkThrough(HH) {
+        if (!Number.isInteger(HH) || HH < 0 || HH > 65535) return !1;
+        const BH = this.walkWords(),
+          LH = HH >>> 5;
+        return LH < BH.length && 1 === (BH[LH] >>> (31 & HH) & 1)
       }
       walkWords() {
-        const VV = this.memory().buffer;
-        var eV;
-        VV !== this.walkBuffer && (this.walkBuffer = VV, this.walk = null !== (eV = (0, rV.r)(Uint32Array, VV, this.walkPtr, this.walkLen, "the walk-through bits")) && void 0 !== eV ? eV : Qe);
+        const HH = this.memory().buffer;
+        var BH;
+        HH !== this.walkBuffer && (this.walkBuffer = HH, this.walk = null !== (BH = (0, YH.o)(Uint32Array, HH, this.walkPtr, this.walkLen, "the walk-through bits")) && void 0 !== BH ? BH : zB);
         return this.walk
       }
-      chunkAt(VV, eV, xV) {
-        if ((0 | VV) !== VV || (0 | eV) !== eV || (0 | xV) !== xV) return;
-        const JV = (0, SV.d)(VV >> dV, eV >> dV, xV >> dV);
-        return JV !== this.lastKey && (this.lastKey = JV, this.lastChunk = this.chunks.get(JV)), this.lastChunk
+      chunkAt(HH, BH, LH) {
+        if ((0 | HH) !== HH || (0 | BH) !== BH || (0 | LH) !== LH) return;
+        const AH = (0, JH.e)(HH >> pH, BH >> pH, LH >> pH);
+        return AH !== this.lastKey && (this.lastKey = AH, this.lastChunk = this.chunks.get(AH)), this.lastChunk
       }
     }
-    var Ze = xV(39662),
-      ve = xV(38966),
-      re = xV(39343),
-      ke = xV(37977),
-      be = xV(37786),
-      Ee = xV(35268),
-      Be = xV(40328),
-      je = xV(206);
-    const qe = ["ambient", "cars", "crowd", "customGame_horror", "dig", "fire", "fishing", "gameStart", "gunMisc", "gunPistol", "gunRifle", "gunSemiAutomatic", "gunShotgun", "gunSubmachineGun", "mobBear", "mobCat", "mobCow", "mobCrone", "mobDeer", "mobDog", "mobFennec", "mobGolem", "mobGorilla", "mobHorse", "mobKnight", "mobPig", "mobReaver", "mobSheep", "mobSkeleton", "mobStag", "mobStalker", "mobWarper", "mobWraith", "mobZombie", "note", "phoneAndMoney", "police", "randomBeep", "randomCannon", "randomCash", "randomExp", "randomFallsmall", "randomFire", "randomFirecracker", "randomItems", "randomLaugh", "randomMagic", "randomSplash", "rpg", "step", "survivalFactory", "town"],
-      te = [
+    var XB = LH(39385),
+      GB = LH(38667),
+      YB = LH(39096),
+      uB = LH(37654),
+      QB = LH(37496),
+      WB = LH(34942),
+      MB = LH(40056),
+      xB = LH(176);
+    const vB = ["ambient", "cars", "crowd", "customGame_horror", "dig", "fire", "fishing", "gameStart", "gunMisc", "gunPistol", "gunRifle", "gunSemiAutomatic", "gunShotgun", "gunSubmachineGun", "mobBear", "mobCat", "mobCow", "mobCrone", "mobDeer", "mobDog", "mobFennec", "mobGolem", "mobGorilla", "mobHorse", "mobKnight", "mobPig", "mobReaver", "mobSheep", "mobSkeleton", "mobStag", "mobStalker", "mobWarper", "mobWraith", "mobZombie", "note", "phoneAndMoney", "police", "randomBeep", "randomCannon", "randomCash", "randomExp", "randomFallsmall", "randomFire", "randomFirecracker", "randomItems", "randomLaugh", "randomMagic", "randomSplash", "rpg", "step", "survivalFactory", "town"],
+      PB = [
         ["ZombieGrunt1", 33],
         ["ZombieGrunt2", 33],
         ["ZombieGrunt3", 33],
@@ -1525,23 +1400,23 @@ export const modules = {
         ["zapAccent1", 3],
         ["zapAccent2", 3]
       ],
-      Fe = te.map((VV => {
-        let [eV] = VV;
-        return eV
+      TB = PB.map((HH => {
+        let [BH] = HH;
+        return BH
       })),
-      Te = Uint8Array.from(te, (VV => {
-        let [, eV] = VV;
-        return eV
+      UB = Uint8Array.from(PB, (HH => {
+        let [, BH] = HH;
+        return BH
       })),
-      Pe = {
+      VB = {
         semi_automatic: 11,
         submachine: 13,
         rifle: 10,
         pistol: 9,
         shotgun: 12
       },
-      Ae = 8,
-      Ne = [
+      OB = 8,
+      bB = [
         [20, 3],
         [23, 3],
         [26, 2],
@@ -1584,92 +1459,92 @@ export const modules = {
         [404, 9],
         [434, 4]
       ];
-    var Xe = xV(37935),
-      Me = xV(37952),
-      ze = xV(37950),
-      Ge = xV(275);
-    class We {
-      constructor(VV, eV) {
-        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ge.e;
-        this.sound = VV, this.onError = eV, this.idle = xV, this.queue = [], this.asked = new Set, this.cancelIdle = null, this.gen = 0, this.onIdle = VV => {
+    var kB = LH(37626),
+      mB = LH(37642),
+      oB = LH(37640),
+      IB = LH(225);
+    class fB {
+      constructor(HH, BH) {
+        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : IB.d;
+        this.sound = HH, this.onError = BH, this.idle = LH, this.queue = [], this.asked = new Set, this.cancelIdle = null, this.gen = 0, this.onIdle = HH => {
           this.cancelIdle = null;
           try {
-            if (VV.timeRemaining() >= 1) {
-              let VV = this.queue.shift();
-              for (; void 0 !== VV && !this.load(VV);) VV = this.queue.shift()
+            if (HH.timeRemaining() >= 1) {
+              let HH = this.queue.shift();
+              for (; void 0 !== HH && !this.load(HH);) HH = this.queue.shift()
             }
-          } catch (eV) {
-            this.onError(eV)
+          } catch (BH) {
+            this.onError(BH)
           } finally {
             this.schedule()
           }
         }
       }
-      preload(VV) {
-        const eV = [...VV].sort(((VV, eV) => VV - eV));
-        for (const xV of eV) this.asked.has(xV) || (this.asked.add(xV), this.queue.push(xV));
+      preload(HH) {
+        const BH = [...HH].sort(((HH, BH) => HH - BH));
+        for (const LH of BH) this.asked.has(LH) || (this.asked.add(LH), this.queue.push(LH));
         this.schedule()
       }
       cancel() {
-        var VV;
-        this.queue.length = 0, this.asked.clear(), this.gen++, null === (VV = this.cancelIdle) || void 0 === VV || VV.call(this), this.cancelIdle = null
+        var HH;
+        this.queue.length = 0, this.asked.clear(), this.gen++, null === (HH = this.cancelIdle) || void 0 === HH || HH.call(this), this.cancelIdle = null
       }
       schedule() {
         null === this.cancelIdle && this.queue.length > 0 && (this.cancelIdle = this.idle(this.onIdle))
       }
-      load(VV) {
-        const eV = this.sound(VV, !1),
-          xV = this.sound(VV, !0),
-          [JV, YV] = "unloaded" === eV.state() && "unloaded" !== xV.state() ? [xV, eV] : [eV, xV],
-          UV = this.gen,
-          yV = () => {
+      load(HH) {
+        const BH = this.sound(HH, !1),
+          LH = this.sound(HH, !0),
+          [AH, rH] = "unloaded" === BH.state() && "unloaded" !== LH.state() ? [LH, BH] : [BH, LH],
+          SH = this.gen,
+          hH = () => {
             try {
-              UV === this.gen && "unloaded" === YV.state() && YV.load()
-            } catch (VV) {
-              this.onError(VV)
+              SH === this.gen && "unloaded" === rH.state() && rH.load()
+            } catch (HH) {
+              this.onError(HH)
             }
           },
-          pV = JV.state();
-        return "unloaded" === pV ? (JV.once("load", yV), JV.load(), !0) : "unloaded" === YV.state() && ("loading" === pV ? (JV.once("load", yV), !1) : (YV.load(), !0))
+          tH = AH.state();
+        return "unloaded" === tH ? (AH.once("load", hH), AH.load(), !0) : "unloaded" === rH.state() && ("loading" === tH ? (AH.once("load", hH), !1) : (rH.load(), !0))
       }
     }
-    var Re = xV(42179);
+    var lB = LH(42209);
 
-    function ge(VV) {
-      var eV;
-      const xV = function(VV) {
-        let eV = 0,
-          xV = Fe.length;
-        for (; eV < xV;) {
-          const JV = eV + xV >>> 1;
-          Fe[JV] < VV ? eV = JV + 1 : xV = JV
+    function KB(HH) {
+      var BH;
+      const LH = function(HH) {
+        let BH = 0,
+          LH = TB.length;
+        for (; BH < LH;) {
+          const AH = BH + LH >>> 1;
+          TB[AH] < HH ? BH = AH + 1 : LH = AH
         }
-        return eV
-      }(VV);
-      if ("" === VV || null === (eV = Fe[xV]) || void 0 === eV || !eV.startsWith(VV)) return null;
-      if (Fe[xV] === VV) return [xV, 1];
-      let JV = xV + 1;
-      for (; JV < Fe.length && Fe[JV].startsWith(VV);) JV++;
-      return [xV, JV - xV]
+        return BH
+      }(HH);
+      if ("" === HH || null === (BH = TB[LH]) || void 0 === BH || !BH.startsWith(HH)) return null;
+      if (TB[LH] === HH) return [LH, 1];
+      let AH = LH + 1;
+      for (; AH < TB.length && TB[AH].startsWith(HH);) AH++;
+      return [LH, AH - LH]
     }
 
-    function De(VV) {
-      let [eV, xV] = VV, JV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-      return 1 === xV ? eV : eV + Math.floor(JV() * xV)
+    function cB(HH) {
+      let [BH, LH] = HH, AH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+      return 1 === LH ? BH : BH + Math.floor(AH() * LH)
     }
 
-    function ie(VV) {
-      for (const eV of Ne)
-        if (eV[0] <= VV && VV < eV[0] + eV[1]) return eV;
+    function eB(HH) {
+      for (const BH of bB)
+        if (BH[0] <= HH && HH < BH[0] + BH[1]) return BH;
       return null
     }
 
-    function Ce(VV) {
-      const eV = [];
-      for (let xV = 0; xV < Te.length; xV++) Te[xV] === VV && eV.push(xV);
-      return eV
+    function qB(HH) {
+      const BH = [];
+      for (let LH = 0; LH < UB.length; LH++) UB[LH] === HH && BH.push(LH);
+      return BH
     }
-    const ae = {
+    const gB = {
         coneInnerAngle: 360,
         coneOuterAngle: 360,
         coneOuterGain: 0,
@@ -1678,20 +1553,20 @@ export const modules = {
         panningModel: "HRTF",
         rolloffFactor: 1
       },
-      oe = je.f.nB * je.f.playerEyeToHeightRatio,
-      ce = [0, 0, -1, 0, 1, 0],
-      he = qe.indexOf("note");
+      NB = xB.g.iW * xB.g.playerEyeToHeightRatio,
+      RB = [0, 0, -1, 0, 1, 0],
+      jB = vB.indexOf("note");
 
-    function le(VV) {
-      return VV >= 0 ? Math.min(1, VV) : 0
+    function nB(HH) {
+      return HH >= 0 ? Math.min(1, HH) : 0
     }
-    class Le {
-      constructor(VV, eV, xV, JV, YV) {
-        this.group = VV, this.loudness = eV, this.startMs = xV, this.howl = JV, this.host = YV, this.id = 0, this.direct = !1
+    class FB {
+      constructor(HH, BH, LH, AH, rH) {
+        this.group = HH, this.loudness = BH, this.startMs = LH, this.howl = AH, this.host = rH, this.id = 0, this.direct = !1
       }
       getDurationMs() {
-        const VV = this.host.alive(this.id);
-        return VV ? 1e3 * this.howl.duration(this.id) / VV.rate : 0
+        const HH = this.host.alive(this.id);
+        return HH ? 1e3 * this.howl.duration(this.id) / HH.rate : 0
       }
       isAlive() {
         return void 0 !== this.host.alive(this.id)
@@ -1703,1091 +1578,1091 @@ export const modules = {
         this.host.drop(this.id)
       }
     }
-    class fe {
-      constructor(VV, eV) {
-        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
-          JV = arguments.length > 3 ? arguments[3] : void 0;
-        this.createHowl = VV, this.listener = eV, this.now = xV, this.errors = 0, this.howls = new Map, this.live = new Map, this.core = new Map, this.level = 1, this.master = 1, this.pose = new Float64Array(9), this.nextPose = new Float64Array(9), this.posed = !1, this.loader = void 0, this.voices = new ze.b, this.failed = new Set, this.started = new Set, this.voiceHost = {
-          alive: VV => this.aliveVoice(VV),
-          started: VV => this.started.has(VV),
-          drop: VV => {
-            var eV;
-            null === (eV = this.live.get(VV)) || void 0 === eV || eV.howl.stop(VV), this.forget(VV)
+    class DB {
+      constructor(HH, BH) {
+        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
+          AH = arguments.length > 3 ? arguments[3] : void 0;
+        this.createHowl = HH, this.listener = BH, this.now = LH, this.errors = 0, this.howls = new Map, this.live = new Map, this.core = new Map, this.level = 1, this.master = 1, this.pose = new Float64Array(9), this.nextPose = new Float64Array(9), this.posed = !1, this.loader = void 0, this.voices = new oB.b, this.failed = new Set, this.started = new Set, this.voiceHost = {
+          alive: HH => this.aliveVoice(HH),
+          started: HH => this.started.has(HH),
+          drop: HH => {
+            var BH;
+            null === (BH = this.live.get(HH)) || void 0 === BH || BH.howl.stop(HH), this.forget(HH)
           }
         }, this.handlers = {
-          playSound: (VV, eV, xV, JV, YV, UV, yV, pV, QV) => {
-            if (JV >= Fe.length) return;
-            const nV = 0 !== (YV & kV.ee.Loop);
-            YV & kV.ee.TwoD ? this.start(JV, !1, yV, UV, pV, nV, ie(JV)) : this.startSpatial(JV, yV, UV, pV, nV, VV, eV, xV, QV, this.earDistSq(VV, eV, xV), ie(JV))
+          playSound: (HH, BH, LH, AH, rH, SH, hH, tH, zH) => {
+            if (AH >= TB.length) return;
+            const CH = 0 !== (rH & uH.ke.Loop);
+            rH & uH.ke.TwoD ? this.start(AH, !1, hH, SH, tH, CH, eB(AH)) : this.startSpatial(AH, hH, SH, tH, CH, HH, BH, LH, zH, this.earDistSq(HH, BH, LH), eB(AH))
           },
-          soundPos: (VV, eV, xV, JV) => {
-            const YV = this.core.get(JV);
-            var UV;
-            void 0 !== YV && (null === (UV = this.live.get(YV)) || void 0 === UV || UV.howl.pos(xV, eV, VV, YV))
+          soundPos: (HH, BH, LH, AH) => {
+            const rH = this.core.get(AH);
+            var SH;
+            void 0 !== rH && (null === (SH = this.live.get(rH)) || void 0 === SH || SH.howl.pos(LH, BH, HH, rH))
           },
-          soundSet: (VV, eV, xV, JV) => {
-            const YV = this.core.get(VV),
-              UV = void 0 === YV ? void 0 : this.live.get(YV);
-            void 0 !== YV && UV && (this.setRel(YV, eV), UV.rate = xV, UV.howl.rate(xV, YV), UV.spatial && UV.howl.pannerAttr({
-              refDistance: JV
-            }, YV))
+          soundSet: (HH, BH, LH, AH) => {
+            const rH = this.core.get(HH),
+              SH = void 0 === rH ? void 0 : this.live.get(rH);
+            void 0 !== rH && SH && (this.setRel(rH, BH), SH.rate = LH, SH.howl.rate(LH, rH), SH.spatial && SH.howl.pannerAttr({
+              refDistance: AH
+            }, rH))
           },
-          soundFade: (VV, eV, xV, JV) => {
-            const YV = this.core.get(VV);
-            void 0 !== YV && this.fade(YV, eV, xV, 0 !== (JV & kV.de.StopAfter))
+          soundFade: (HH, BH, LH, AH) => {
+            const rH = this.core.get(HH);
+            void 0 !== rH && this.fade(rH, BH, LH, 0 !== (AH & uH.ie.StopAfter))
           },
-          soundStop: VV => {
-            const eV = this.core.get(VV);
-            var xV;
-            void 0 !== eV && (null === (xV = this.live.get(eV)) || void 0 === xV || xV.howl.stop(eV), this.forget(eV))
+          soundStop: HH => {
+            const BH = this.core.get(HH);
+            var LH;
+            void 0 !== BH && (null === (LH = this.live.get(BH)) || void 0 === LH || LH.howl.stop(BH), this.forget(BH))
           },
           soundReset: () => {
             this.stopCore()
           }
-        }, this.loader = new We(((VV, eV) => this.howl(VV, eV)), (VV => {
-          this.errors++, console.error("Audio preload failed", VV)
-        }), JV)
+        }, this.loader = new fB(((HH, BH) => this.howl(HH, BH)), (HH => {
+          this.errors++, console.error("Audio preload failed", HH)
+        }), AH)
       }
-      preload(VV) {
-        this.loader.preload(VV)
+      preload(HH) {
+        this.loader.preload(HH)
       }
       cancelPreload() {
         this.loader.cancel()
       }
       freeSoundsAfterGame() {
-        for (let VV = 0; VV < Fe.length; VV++) {
-          if (Me.e.has(qe[Te[VV]])) continue;
-          const eV = [];
-          for (const xV of [!1, !0]) {
-            const JV = me(VV, xV),
-              YV = this.howls.get(JV);
-            void 0 !== YV && "loading" !== YV.state() && eV.push({
-              key: JV,
-              howl: YV
+        for (let HH = 0; HH < TB.length; HH++) {
+          if (mB.d.has(vB[UB[HH]])) continue;
+          const BH = [];
+          for (const LH of [!1, !0]) {
+            const AH = wB(HH, LH),
+              rH = this.howls.get(AH);
+            void 0 !== rH && "loading" !== rH.state() && BH.push({
+              key: AH,
+              howl: rH
             })
           }
-          if (eV.some((VV => {
+          if (BH.some((HH => {
               let {
-                howl: eV
-              } = VV;
-              return "loaded" === eV.state()
+                howl: BH
+              } = HH;
+              return "loaded" === BH.state()
             })))
             for (const {
-                key: VV,
-                howl: xV
+                key: HH,
+                howl: LH
               }
-              of eV) this.howls.delete(VV), "loaded" === xV.state() ? (0, Xe.i)(xV) : xV.unload()
+              of BH) this.howls.delete(HH), "loaded" === LH.state() ? (0, kB.d)(LH) : LH.unload()
         }
       }
-      onAudioEvent(VV, eV, xV, JV) {
-        if (VV < kV.n.PlaySound || VV > kV.n.SoundReset) return !1;
+      onAudioEvent(HH, BH, LH, AH) {
+        if (HH < uH.t.PlaySound || HH > uH.t.SoundReset) return !1;
         try {
-          return (0, kV.se)(VV, eV, xV, JV, this.handlers)
-        } catch (YV) {
-          return this.errors++, console.error("Audio event failed", YV), !0
+          return (0, uH.we)(HH, BH, LH, AH, this.handlers)
+        } catch (rH) {
+          return this.errors++, console.error("Audio event failed", rH), !0
         }
       }
-      applyListener(VV) {
-        const eV = this.nextPose;
-        for (let JV = 0; JV < 3; JV++) eV[2 - JV] = kV.u.listener(VV, 0, JV), eV[5 - JV] = kV.u.forward(VV, 0, JV), eV[8 - JV] = kV.u.up(VV, 0, JV);
-        0 === eV[3] && 0 === eV[4] && 0 === eV[5] && eV.set(this.posed ? this.pose.subarray(3) : ce, 3);
-        for (let JV = 0; JV < 9; JV++)
-          if (!Number.isFinite(eV[JV])) return;
-        const xV = this.pose;
+      applyListener(HH) {
+        const BH = this.nextPose;
+        for (let AH = 0; AH < 3; AH++) BH[2 - AH] = uH.C.listener(HH, 0, AH), BH[5 - AH] = uH.C.forward(HH, 0, AH), BH[8 - AH] = uH.C.up(HH, 0, AH);
+        0 === BH[3] && 0 === BH[4] && 0 === BH[5] && BH.set(this.posed ? this.pose.subarray(3) : RB, 3);
+        for (let AH = 0; AH < 9; AH++)
+          if (!Number.isFinite(BH[AH])) return;
+        const LH = this.pose;
         if (this.posed) {
-          let VV = !0;
-          for (let JV = 0; JV < 9 && VV; JV++) VV = eV[JV] === xV[JV];
-          if (VV) return
+          let HH = !0;
+          for (let AH = 0; AH < 9 && HH; AH++) HH = BH[AH] === LH[AH];
+          if (HH) return
         }
-        this.listener.apply(eV) && (xV.set(eV), this.posed = !0)
+        this.listener.apply(BH) && (LH.set(BH), this.posed = !0)
       }
-      playGame(VV, eV, xV, JV, YV, UV, yV) {
-        const pV = ge(VV);
-        if (null === pV) return Re.c;
-        const QV = De(pV),
-          nV = pV[1] > 1 ? pV : null;
-        if (!xV) {
+      playGame(HH, BH, LH, AH, rH, SH, hH) {
+        const tH = KB(HH);
+        if (null === tH) return lB.d;
+        const zH = cB(tH),
+          CH = tH[1] > 1 ? tH : null;
+        if (!LH) {
           const {
-            howl: VV,
-            id: xV
-          } = this.start(QV, !1, eV, 0, 1, yV, nV);
-          return this.gameSound(VV, xV, !1)
+            howl: HH,
+            id: LH
+          } = this.start(zH, !1, BH, 0, 1, hH, CH);
+          return this.gameSound(HH, LH, !1)
         }
-        const wV = xV[0],
-          ZV = xV[1] + oe,
-          vV = xV[2];
-        if (!Number.isFinite(wV) || !Number.isFinite(ZV) || !Number.isFinite(vV)) return Re.c;
-        let rV;
-        if (JV) {
-          const VV = wV - JV[0],
-            eV = ZV - JV[1],
-            xV = vV - JV[2];
-          if (rV = VV * VV + eV * eV + xV * xV, rV > YV * YV) return Re.c
-        } else rV = this.earDistSq(wV, ZV, vV);
-        const kV = this.startSpatial(QV, eV, 0, 1, yV, wV, ZV, vV, UV, rV, nV);
-        return kV ? this.gameSound(kV.howl, kV.id, !0) : Re.c
+        const EH = LH[0],
+          XH = LH[1] + NB,
+          GH = LH[2];
+        if (!Number.isFinite(EH) || !Number.isFinite(XH) || !Number.isFinite(GH)) return lB.d;
+        let YH;
+        if (AH) {
+          const HH = EH - AH[0],
+            BH = XH - AH[1],
+            LH = GH - AH[2];
+          if (YH = HH * HH + BH * BH + LH * LH, YH > rH * rH) return lB.d
+        } else YH = this.earDistSq(EH, XH, GH);
+        const uH = this.startSpatial(zH, BH, 0, 1, hH, EH, XH, GH, SH, YH, CH);
+        return uH ? this.gameSound(uH.howl, uH.id, !0) : lB.d
       }
-      setMaster(VV, eV) {
-        this.level = le(VV);
-        const xV = eV ? this.level : 0;
-        if (xV !== this.master) {
-          this.master = xV;
-          for (const [VV, eV] of this.live) eV.fadeMs = 0, eV.gain = eV.rel * this.master, eV.howl.volume(eV.gain, VV)
+      setMaster(HH, BH) {
+        this.level = nB(HH);
+        const LH = BH ? this.level : 0;
+        if (LH !== this.master) {
+          this.master = LH;
+          for (const [HH, BH] of this.live) BH.fadeMs = 0, BH.gain = BH.rel * this.master, BH.howl.volume(BH.gain, HH)
         }
       }
       stopCore() {
-        for (const eV of [...this.core.values()]) {
-          var VV;
-          null === (VV = this.live.get(eV)) || void 0 === VV || VV.howl.stop(eV)
+        for (const BH of [...this.core.values()]) {
+          var HH;
+          null === (HH = this.live.get(BH)) || void 0 === HH || HH.howl.stop(BH)
         }
         this.core.clear()
       }
       stopAll() {
         this.cancelPreload();
-        for (const [VV, eV] of [...this.live]) eV.howl.stop(VV), this.forget(VV);
+        for (const [HH, BH] of [...this.live]) BH.howl.stop(HH), this.forget(HH);
         this.core.clear()
       }
-      gameSound(VV, eV, xV) {
-        const JV = {
-          stop: () => (this.live.has(eV) && VV.stop(eV), JV),
-          fade: (VV, xV, YV) => {
-            var UV, yV;
-            const pV = this.level > 0 ? xV / this.level : xV > 0 && null !== (UV = null === (yV = this.live.get(eV)) || void 0 === yV ? void 0 : yV.rel) && void 0 !== UV ? UV : 0;
-            return this.fade(eV, pV, YV, !1), JV
+      gameSound(HH, BH, LH) {
+        const AH = {
+          stop: () => (this.live.has(BH) && HH.stop(BH), AH),
+          fade: (HH, LH, rH) => {
+            var SH, hH;
+            const tH = this.level > 0 ? LH / this.level : LH > 0 && null !== (SH = null === (hH = this.live.get(BH)) || void 0 === hH ? void 0 : hH.rel) && void 0 !== SH ? SH : 0;
+            return this.fade(BH, tH, rH, !1), AH
           },
-          rate: xV => {
-            const YV = this.live.get(eV);
-            return YV && (YV.rate = function(VV) {
-              return VV > 0 && VV < 1 / 0 ? VV : 1
-            }(xV), VV.rate(YV.rate, eV)), JV
+          rate: LH => {
+            const rH = this.live.get(BH);
+            return rH && (rH.rate = function(HH) {
+              return HH > 0 && HH < 1 / 0 ? HH : 1
+            }(LH), HH.rate(rH.rate, BH)), AH
           },
           getVolume: () => {
-            var VV, xV;
-            return (null !== (VV = null === (xV = this.live.get(eV)) || void 0 === xV ? void 0 : xV.rel) && void 0 !== VV ? VV : 0) * this.level
+            var HH, LH;
+            return (null !== (HH = null === (LH = this.live.get(BH)) || void 0 === LH ? void 0 : LH.rel) && void 0 !== HH ? HH : 0) * this.level
           },
           getRelativeVolume: () => {
-            var VV, xV;
-            return null !== (VV = null === (xV = this.live.get(eV)) || void 0 === xV ? void 0 : xV.rel) && void 0 !== VV ? VV : 0
+            var HH, LH;
+            return null !== (HH = null === (LH = this.live.get(BH)) || void 0 === LH ? void 0 : LH.rel) && void 0 !== HH ? HH : 0
           },
-          setRelativeVolume: VV => (this.setRel(eV, VV), JV),
-          setPannerAttr: YV => {
-            if (xV && this.live.has(eV)) {
-              const xV = {
-                ...ae,
-                refDistance: ke.h
+          setRelativeVolume: HH => (this.setRel(BH, HH), AH),
+          setPannerAttr: rH => {
+            if (LH && this.live.has(BH)) {
+              const LH = {
+                ...gB,
+                refDistance: uB.i
               };
-              for (const [VV, eV] of Object.entries(YV)) "number" !== typeof eV && "string" !== typeof eV || (xV[VV] = eV);
-              VV.pannerAttr({
-                coneOuterAngle: xV.coneOuterAngle
-              }, eV), VV.pannerAttr(xV, eV)
+              for (const [HH, BH] of Object.entries(rH)) "number" !== typeof BH && "string" !== typeof BH || (LH[HH] = BH);
+              HH.pannerAttr({
+                coneOuterAngle: LH.coneOuterAngle
+              }, BH), HH.pannerAttr(LH, BH)
             }
-            return JV
+            return AH
           },
-          setPosition: YV => (xV && this.live.has(eV) && Number.isFinite(YV[0] + YV[1] + YV[2]) && VV.pos(YV[2], YV[1], YV[0], eV), JV)
+          setPosition: rH => (LH && this.live.has(BH) && Number.isFinite(rH[0] + rH[1] + rH[2]) && HH.pos(rH[2], rH[1], rH[0], BH), AH)
         };
-        return JV
+        return AH
       }
-      startSpatial(VV, eV, xV, JV, YV, UV, yV, pV, QV, nV, wV) {
-        const ZV = this.howl(VV, !0);
-        let vV = null;
-        if (!YV) {
-          if (this.failed.has(ZV)) return null;
-          const xV = Te[VV] === he ? null : (0, ze.e)(Fe[VV]),
-            JV = (0, ze.d)(le(eV), Math.sqrt(nV), QV);
-          if (vV = new Le(xV, JV, this.now(), ZV, this.voiceHost), !this.voices.admit(vV)) return null
+      startSpatial(HH, BH, LH, AH, rH, SH, hH, tH, zH, CH, EH) {
+        const XH = this.howl(HH, !0);
+        let GH = null;
+        if (!rH) {
+          if (this.failed.has(XH)) return null;
+          const LH = UB[HH] === jB ? null : (0, oB.e)(TB[HH]),
+            AH = (0, oB.d)(nB(BH), Math.sqrt(CH), zH);
+          if (GH = new FB(LH, AH, this.now(), XH, this.voiceHost), !this.voices.admit(GH)) return null
         }
-        const rV = this.start(VV, !0, eV, xV, JV, YV, wV);
-        return vV && (vV.id = rV.id, vV.direct = "loaded" === ZV.state() && !ZV._playLock), ZV.pannerAttr({
+        const YH = this.start(HH, !0, BH, LH, AH, rH, EH);
+        return GH && (GH.id = YH.id, GH.direct = "loaded" === XH.state() && !XH._playLock), XH.pannerAttr({
           coneOuterAngle: 360
-        }, rV.id), ZV.pannerAttr({
-          ...ae,
-          refDistance: QV
-        }, rV.id), ZV.pos(pV, yV, UV, rV.id), rV
+        }, YH.id), XH.pannerAttr({
+          ...gB,
+          refDistance: zH
+        }, YH.id), XH.pos(tH, hH, SH, YH.id), YH
       }
-      aliveVoice(VV) {
-        const eV = this.live.get(VV);
-        if (!eV) return;
-        const xV = eV.howl._soundById(VV);
-        if (xV && !xV._ended) return eV;
-        this.forget(VV)
+      aliveVoice(HH) {
+        const BH = this.live.get(HH);
+        if (!BH) return;
+        const LH = BH.howl._soundById(HH);
+        if (LH && !LH._ended) return BH;
+        this.forget(HH)
       }
-      earDistSq(VV, eV, xV) {
+      earDistSq(HH, BH, LH) {
         if (!this.posed) return 0;
-        const JV = VV - this.pose[2],
-          YV = eV - this.pose[1],
-          UV = xV - this.pose[0];
-        return JV * JV + YV * YV + UV * UV
+        const AH = HH - this.pose[2],
+          rH = BH - this.pose[1],
+          SH = LH - this.pose[0];
+        return AH * AH + rH * rH + SH * SH
       }
-      start(VV, eV, xV, JV, YV, UV, yV) {
-        const pV = le(xV),
-          QV = this.howl(VV, eV);
-        "unloaded" === QV.state() && (QV.load(), null !== yV && this.loadPick(yV, eV));
-        const nV = QV.play(Xe.e),
-          wV = pV * this.master;
-        return QV.volume(wV, nV), this.live.set(nV, {
-          howl: QV,
-          rel: pV,
-          gain: wV,
-          fadeFrom: wV,
+      start(HH, BH, LH, AH, rH, SH, hH) {
+        const tH = nB(LH),
+          zH = this.howl(HH, BH);
+        "unloaded" === zH.state() && (zH.load(), null !== hH && this.loadPick(hH, BH));
+        const CH = zH.play(kB.b),
+          EH = tH * this.master;
+        return zH.volume(EH, CH), this.live.set(CH, {
+          howl: zH,
+          rel: tH,
+          gain: EH,
+          fadeFrom: EH,
           fadeAt: 0,
           fadeMs: 0,
-          rate: YV,
-          handle: JV,
-          spatial: eV,
+          rate: rH,
+          handle: AH,
+          spatial: BH,
           stopTimer: void 0
-        }), 0 !== JV && this.core.set(JV, nV), 1 !== YV && QV.rate(YV, nV), UV && QV.loop(!0, nV), {
-          howl: QV,
-          id: nV
+        }), 0 !== AH && this.core.set(AH, CH), 1 !== rH && zH.rate(rH, CH), SH && zH.loop(!0, CH), {
+          howl: zH,
+          id: CH
         }
       }
-      loadPick(VV, eV) {
-        let [xV, JV] = VV;
-        for (let UV = xV; UV < xV + JV; UV++) {
-          var YV;
-          const VV = this.howl(UV, eV);
-          "unloaded" === VV.state() && "loading" !== (null === (YV = this.howls.get(me(UV, !eV))) || void 0 === YV ? void 0 : YV.state()) && VV.load()
+      loadPick(HH, BH) {
+        let [LH, AH] = HH;
+        for (let SH = LH; SH < LH + AH; SH++) {
+          var rH;
+          const HH = this.howl(SH, BH);
+          "unloaded" === HH.state() && "loading" !== (null === (rH = this.howls.get(wB(SH, !BH))) || void 0 === rH ? void 0 : rH.state()) && HH.load()
         }
       }
-      howl(VV, eV) {
-        const xV = me(VV, eV);
-        let JV = this.howls.get(xV);
-        if (!JV) {
-          const YV = this.createHowl(Fe[VV], eV);
-          YV.on("end", (VV => {
-            YV.loop(VV) || this.forget(VV)
-          })), YV.on("stop", (VV => {
-            this.forget(VV)
-          })), YV.on("play", (VV => {
-            this.live.has(VV) && this.started.add(VV)
-          })), YV.on("loaderror", (VV => {
-            if ("loaded" !== YV.state()) {
-              this.failed.add(YV);
-              for (const [VV, eV] of this.live) eV.howl === YV && this.forget(VV)
-            } else "number" === typeof VV && this.forget(VV)
-          })), this.howls.set(xV, YV), JV = YV
+      howl(HH, BH) {
+        const LH = wB(HH, BH);
+        let AH = this.howls.get(LH);
+        if (!AH) {
+          const rH = this.createHowl(TB[HH], BH);
+          rH.on("end", (HH => {
+            rH.loop(HH) || this.forget(HH)
+          })), rH.on("stop", (HH => {
+            this.forget(HH)
+          })), rH.on("play", (HH => {
+            this.live.has(HH) && this.started.add(HH)
+          })), rH.on("loaderror", (HH => {
+            if ("loaded" !== rH.state()) {
+              this.failed.add(rH);
+              for (const [HH, BH] of this.live) BH.howl === rH && this.forget(HH)
+            } else "number" === typeof HH && this.forget(HH)
+          })), this.howls.set(LH, rH), AH = rH
         }
-        return JV
+        return AH
       }
-      setRel(VV, eV) {
-        const xV = this.live.get(VV);
-        xV && (Ke(xV), xV.fadeMs = 0, xV.rel = le(eV), xV.gain = xV.rel * this.master, xV.howl.volume(xV.gain, VV))
+      setRel(HH, BH) {
+        const LH = this.live.get(HH);
+        LH && (ZB(LH), LH.fadeMs = 0, LH.rel = nB(BH), LH.gain = LH.rel * this.master, LH.howl.volume(LH.gain, HH))
       }
-      fade(VV, eV, xV, JV) {
-        const YV = this.live.get(VV);
-        if (!YV) return;
-        Ke(YV);
+      fade(HH, BH, LH, AH) {
+        const rH = this.live.get(HH);
+        if (!rH) return;
+        ZB(rH);
         const {
-          howl: UV
-        } = YV, yV = this.gainNow(YV);
-        YV.rel = le(eV), YV.gain = YV.rel * this.master;
-        const pV = xV > 0 ? Math.min(xV, 65535) : 0,
-          QV = 0 === pV || yV === YV.gain;
-        YV.fadeMs = QV ? 0 : pV, QV ? UV.volume(YV.gain, VV) : (YV.fadeFrom = yV, YV.fadeAt = this.now(), UV.fade(yV, YV.gain, pV, VV)), JV && (QV ? UV.stop(VV) : YV.stopTimer = setTimeout((() => {
-          YV.stopTimer = void 0, UV.stop(VV)
-        }), pV))
+          howl: SH
+        } = rH, hH = this.gainNow(rH);
+        rH.rel = nB(BH), rH.gain = rH.rel * this.master;
+        const tH = LH > 0 ? Math.min(LH, 65535) : 0,
+          zH = 0 === tH || hH === rH.gain;
+        rH.fadeMs = zH ? 0 : tH, zH ? SH.volume(rH.gain, HH) : (rH.fadeFrom = hH, rH.fadeAt = this.now(), SH.fade(hH, rH.gain, tH, HH)), AH && (zH ? SH.stop(HH) : rH.stopTimer = setTimeout((() => {
+          rH.stopTimer = void 0, SH.stop(HH)
+        }), tH))
       }
-      gainNow(VV) {
-        if (VV.fadeMs > 0) {
-          const eV = (this.now() - VV.fadeAt) / VV.fadeMs;
-          if (eV < 1) return VV.fadeFrom + (VV.gain - VV.fadeFrom) * Math.max(0, eV);
-          VV.fadeMs = 0
+      gainNow(HH) {
+        if (HH.fadeMs > 0) {
+          const BH = (this.now() - HH.fadeAt) / HH.fadeMs;
+          if (BH < 1) return HH.fadeFrom + (HH.gain - HH.fadeFrom) * Math.max(0, BH);
+          HH.fadeMs = 0
         }
-        return VV.gain
+        return HH.gain
       }
-      forget(VV) {
-        this.started.delete(VV);
-        const eV = this.live.get(VV);
-        eV && (Ke(eV), this.live.delete(VV), 0 !== eV.handle && this.core.get(eV.handle) === VV && this.core.delete(eV.handle))
+      forget(HH) {
+        this.started.delete(HH);
+        const BH = this.live.get(HH);
+        BH && (ZB(BH), this.live.delete(HH), 0 !== BH.handle && this.core.get(BH.handle) === HH && this.core.delete(BH.handle))
       }
     }
 
-    function me(VV, eV) {
-      return 2 * VV + (eV ? 1 : 0)
+    function wB(HH, BH) {
+      return 2 * HH + (BH ? 1 : 0)
     }
 
-    function Ke(VV) {
-      void 0 !== VV.stopTimer && (clearTimeout(VV.stopTimer), VV.stopTimer = void 0)
+    function ZB(HH) {
+      void 0 !== HH.stopTimer && (clearTimeout(HH.stopTimer), HH.stopTimer = void 0)
     }
-    var He = xV(41876),
-      ue = xV(40335);
-    class se {
-      constructor(VV, eV, xV, JV) {
-        this.key = VV, this.model = eV, this.host = JV, this.Jv = void 0, this.records = void 0, this.origin = [0, 0, 0], this.count = 0, this.uUV = Number.NaN, this.sentOrigin = [Number.NaN, Number.NaN, Number.NaN], this.dirtyList = [], this.isDirty = void 0, this.tail = void 0, this.tailView = void 0, this.tailCut = new Uint8Array(0), this.made = !1, this.ik = !1, this.Jv = Math.max(1, Math.ceil(xV)), this.records = new Float32Array(this.Jv * Ze.e), this.isDirty = new Uint8Array(this.Jv), this.tail = new Uint8Array(this.Jv * kV.sc.Bytes), this.tailView = new DataView(this.tail.buffer), this.make(JV.cmd())
+    var dB = LH(41928),
+      aB = LH(40060);
+    class sB {
+      constructor(HH, BH, LH, AH) {
+        this.key = HH, this.model = BH, this.host = AH, this.aX = void 0, this.records = void 0, this.origin = [0, 0, 0], this.count = 0, this.fSH = Number.NaN, this.sentOrigin = [Number.NaN, Number.NaN, Number.NaN], this.dirtyList = [], this.isDirty = void 0, this.tail = void 0, this.tailView = void 0, this.tailCut = new Uint8Array(0), this.made = !1, this.Mu = !1, this.aX = Math.max(1, Math.ceil(LH)), this.records = new Float32Array(this.aX * XB.d), this.isDirty = new Uint8Array(this.aX), this.tail = new Uint8Array(this.aX * uH.wc.Bytes), this.tailView = new DataView(this.tail.buffer), this.make(AH.cmd())
       }
-      setOrigin(VV, eV, xV) {
-        this.origin[0] = VV, this.origin[1] = eV, this.origin[2] = xV
+      setOrigin(HH, BH, LH) {
+        this.origin[0] = HH, this.origin[1] = BH, this.origin[2] = LH
       }
-      markDirty(VV) {
-        !this.ik && VV >= 0 && VV < this.Jv && VV < kV.sc.Max && this.Jb(VV, VV + 1)
+      markDirty(HH) {
+        !this.Mu && HH >= 0 && HH < this.aX && HH < uH.wc.Max && this.gu(HH, HH + 1)
       }
-      commit(VV) {
-        if (this.ik) return;
-        (VV = Math.min(Math.max(Math.floor(VV), 0), this.Jv, kV.sc.Max)) > this.count && this.Jb(this.count, VV), this.count = VV;
+      commit(HH) {
+        if (this.Mu) return;
+        (HH = Math.min(Math.max(Math.floor(HH), 0), this.aX, uH.wc.Max)) > this.count && this.gu(this.count, HH), this.count = HH;
         const {
-          origin: eV,
-          sentOrigin: xV,
-          dirtyList: JV
-        } = this, YV = this.uUV !== VV, UV = xV[0] !== eV[0] || xV[1] !== eV[1] || xV[2] !== eV[2];
-        if (0 === JV.length && !YV && !UV) return;
-        const yV = this.host.cmd();
-        if (!yV || !this.make(yV)) return;
-        const pV = JV.length,
+          origin: BH,
+          sentOrigin: LH,
+          dirtyList: AH
+        } = this, rH = this.fSH !== HH, SH = LH[0] !== BH[0] || LH[1] !== BH[1] || LH[2] !== BH[2];
+        if (0 === AH.length && !rH && !SH) return;
+        const hH = this.host.cmd();
+        if (!hH || !this.make(hH)) return;
+        const tH = AH.length,
           {
-            records: QV,
-            tailView: nV
+            records: zH,
+            tailView: CH
           } = this;
-        for (let wV = 0; wV < pV; wV++) {
-          const VV = JV[wV],
-            eV = VV * Ze.e,
-            xV = wV * kV.sc.Bytes,
-            YV = 0 !== QV[eV + Ze.g] ? kV.sc.Hidden : 0;
-          nV.setUint32(xV, (VV | YV) >>> 0, !0), nV.setFloat32(xV + 4, QV[eV], !0), nV.setFloat32(xV + 8, QV[eV + 1], !0), nV.setFloat32(xV + 12, QV[eV + 2], !0)
+        for (let EH = 0; EH < tH; EH++) {
+          const HH = AH[EH],
+            BH = HH * XB.d,
+            LH = EH * uH.wc.Bytes,
+            rH = 0 !== zH[BH + XB.g] ? uH.wc.Hidden : 0;
+          CH.setUint32(LH, (HH | rH) >>> 0, !0), CH.setFloat32(LH + 4, zH[BH], !0), CH.setFloat32(LH + 8, zH[BH + 1], !0), CH.setFloat32(LH + 12, zH[BH + 2], !0)
         }
-        if ((0, kV.Qe)(yV, 0, this.key, VV, eV, pV, this.tailOf(pV))) {
-          for (let VV = 0; VV < pV; VV++) this.isDirty[JV[VV]] = 0;
-          JV.length = 0, this.uUV = VV, xV[0] = eV[0], xV[1] = eV[1], xV[2] = eV[2]
+        if ((0, uH.$e)(hH, 0, this.key, HH, BH, tH, this.tailOf(tH))) {
+          for (let HH = 0; HH < tH; HH++) this.isDirty[AH[HH]] = 0;
+          AH.length = 0, this.fSH = HH, LH[0] = BH[0], LH[1] = BH[1], LH[2] = BH[2]
         }
       }
-      grow(VV) {
-        (VV = Math.ceil(VV)) <= this.Jv || this.ik || (this.records = (0, ue.c)(this.records, new Float32Array(VV * Ze.e)), this.isDirty = (0, ue.c)(this.isDirty, new Uint8Array(VV)), this.tail = new Uint8Array(VV * kV.sc.Bytes), this.tailView = new DataView(this.tail.buffer), this.Jv = VV)
+      grow(HH) {
+        (HH = Math.ceil(HH)) <= this.aX || this.Mu || (this.records = (0, aB.c)(this.records, new Float32Array(HH * XB.d)), this.isDirty = (0, aB.c)(this.isDirty, new Uint8Array(HH)), this.tail = new Uint8Array(HH * uH.wc.Bytes), this.tailView = new DataView(this.tail.buffer), this.aX = HH)
       }
       dispose() {
-        this.ik || (this.ik = !0, this.host.ik(this, this.made ? this.key : null))
+        this.Mu || (this.Mu = !0, this.host.Mu(this, this.made ? this.key : null))
       }
-      make(VV) {
-        if (!this.made && VV) {
+      make(HH) {
+        if (!this.made && HH) {
           const {
-            item: eV,
-            scale: xV,
-            yaw: JV
+            item: BH,
+            scale: LH,
+            yaw: AH
           } = this.model;
-          this.made = (0, kV.Ue)(VV, 0, this.key, eV, xV, JV)
+          this.made = (0, uH.ff)(HH, 0, this.key, BH, LH, AH)
         }
         return this.made
       }
-      tailOf(VV) {
-        const eV = VV * kV.sc.Bytes;
-        return this.tailCut.buffer === this.tail.buffer && this.tailCut.length === eV || (this.tailCut = this.tail.subarray(0, eV)), this.tailCut
+      tailOf(HH) {
+        const BH = HH * uH.wc.Bytes;
+        return this.tailCut.buffer === this.tail.buffer && this.tailCut.length === BH || (this.tailCut = this.tail.subarray(0, BH)), this.tailCut
       }
-      Jb(VV, eV) {
+      gu(HH, BH) {
         const {
-          dirtyList: xV,
-          isDirty: JV
+          dirtyList: LH,
+          isDirty: AH
         } = this;
-        for (let YV = VV; YV < eV; YV++) 0 === JV[YV] && (JV[YV] = 1, xV.push(YV))
+        for (let rH = HH; rH < BH; rH++) 0 === AH[rH] && (AH[rH] = 1, LH.push(rH))
       }
     }
-    var Se = xV(654),
-      Ie = xV(45462);
-    const de = new TextEncoder,
-      Oe = new Uint8Array(0),
-      Vx = [0, 0, 0];
-    class ex {
-      constructor(VV, eV) {
+    var JB = LH(614),
+      iB = LH(46020);
+    const pB = new TextEncoder,
+      yB = new Uint8Array(0),
+      HL = [0, 0, 0];
+    class BL {
+      constructor(HH, BH) {
         this.keys = 0, this.live = new Set, this.owing = new Set, this.host = void 0, this.host = {
-          cmd: VV,
-          serverId: eV,
-          owes: VV => {
-            this.owing.add(VV)
+          cmd: HH,
+          serverId: BH,
+          owes: HH => {
+            this.owing.add(HH)
           },
-          settled: (VV, eV) => {
-            this.owing.delete(VV), eV && this.live.delete(VV)
+          settled: (HH, BH) => {
+            this.owing.delete(HH), BH && this.live.delete(HH)
           }
         }
       }
-      create(VV, eV) {
-        return xV = VV, Se.k.includes(xV) ? this.add({
-          lifeform: wV.m.indexOf(VV)
-        }, eV) : null;
-        var xV
+      create(HH, BH) {
+        return LH = HH, JB.q.includes(LH) ? this.add({
+          lifeform: EH.j.indexOf(HH)
+        }, BH) : null;
+        var LH
       }
-      createCosmetic(VV, eV) {
-        const xV = Ie.COSMETIC_MODEL_KEYS.get(VV);
-        return void 0 === xV ? null : this.add({
-          attachment: xV
-        }, eV)
+      createCosmetic(HH, BH) {
+        const LH = iB.COSMETIC_MODEL_KEYS.get(HH);
+        return void 0 === LH ? null : this.add({
+          attachment: LH
+        }, BH)
       }
-      add(VV, eV) {
-        const xV = new xx(++this.keys, VV, eV, this.host);
-        return this.live.add(xV), xV
+      add(HH, BH) {
+        const LH = new LL(++this.keys, HH, BH, this.host);
+        return this.live.add(LH), LH
       }
       disposeAll() {
-        for (const VV of [...this.live]) VV.dispose()
+        for (const HH of [...this.live]) HH.dispose()
       }
       flush() {
         if (0 === this.owing.size) return;
-        const VV = this.host.cmd();
-        for (const eV of this.owing)
-          if (!eV.sync(VV)) return
+        const HH = this.host.cmd();
+        for (const BH of this.owing)
+          if (!BH.sync(HH)) return
       }
     }
-    class xx {
-      constructor(VV, eV, xV, JV) {
-        this.key = VV, this.source = eV, this.scale = xV, this.host = JV, this.feet = [0, 0, 0], this.yaw = 0, this.visible = !1, this.clip = null, this.clipBytes = Oe, this.perch = null, this.owed = 1, this.ik = !1, this.sync()
+    class LL {
+      constructor(HH, BH, LH, AH) {
+        this.key = HH, this.source = BH, this.scale = LH, this.host = AH, this.feet = [0, 0, 0], this.yaw = 0, this.visible = !1, this.clip = null, this.clipBytes = yB, this.perch = null, this.owed = 1, this.Mu = !1, this.sync()
       }
-      setPose(VV, eV) {
-        this.ik || (this.feet[0] = VV[0], this.feet[1] = VV[1], this.feet[2] = VV[2], this.yaw = eV, this.owed |= 2, this.sync())
+      setPose(HH, BH) {
+        this.Mu || (this.feet[0] = HH[0], this.feet[1] = HH[1], this.feet[2] = HH[2], this.yaw = BH, this.owed |= 2, this.sync())
       }
-      setVisible(VV) {
-        this.ik || VV === this.visible || (this.visible = VV, this.owed |= 4, this.sync())
+      setVisible(HH) {
+        this.Mu || HH === this.visible || (this.visible = HH, this.owed |= 4, this.sync())
       }
-      setClip(VV) {
-        this.ik || VV === this.clip || (this.clip = VV, this.clipBytes = null === VV ? Oe : de.encode(VV), this.owed |= 16, this.sync())
+      setClip(HH) {
+        this.Mu || HH === this.clip || (this.clip = HH, this.clipBytes = null === HH ? yB : pB.encode(HH), this.owed |= 16, this.sync())
       }
-      setPerch(VV) {
-        this.ik || (this.perch = VV, this.owed |= 32, this.sync())
+      setPerch(HH) {
+        this.Mu || (this.perch = HH, this.owed |= 32, this.sync())
       }
       dispose() {
-        this.ik || (this.ik = !0, this.owed = 1 & this.owed ? 0 : 8, this.sync())
+        this.Mu || (this.Mu = !0, this.owed = 1 & this.owed ? 0 : 8, this.sync())
       }
       sync() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.host.cmd();
-        return this.write(VV) ? (this.host.settled(this, this.ik), !0) : (this.host.owes(this), !1)
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.host.cmd();
+        return this.write(HH) ? (this.host.settled(this, this.Mu), !0) : (this.host.owes(this), !1)
       }
-      write(VV) {
-        if (!VV) return this.owed = 0, !0;
+      write(HH) {
+        if (!HH) return this.owed = 0, !0;
         if (1 & this.owed) {
-          if (!("lifeform" in this.source ? (0, kV.cf)(VV, 0, this.key, this.source.lifeform, this.scale) : (0, kV.Ae)(VV, 0, this.key, this.source.attachment, this.scale))) return !1;
+          if (!("lifeform" in this.source ? (0, uH.nf)(HH, 0, this.key, this.source.lifeform, this.scale) : (0, uH.Fe)(HH, 0, this.key, this.source.attachment, this.scale))) return !1;
           this.owed &= -2
         }
         const {
-          owed: eV,
-          perch: xV
-        } = this, JV = (2 & eV ? kV.Lc.Pose : 0) | (4 & eV ? kV.Lc.Visible : 0) | (16 & eV ? kV.Lc.Clip : 0) | (32 & eV ? kV.Lc.Perch : 0);
-        if (0 !== JV) {
-          var YV, UV;
-          if (!(0, kV._e)(VV, 0, this.key, JV, this.visible ? 1 : 0, xV ? 1 : 0, this.feet, this.yaw, xV ? this.host.serverId(xV.EY) : 0, null !== (YV = null === xV || void 0 === xV ? void 0 : xV.offset) && void 0 !== YV ? YV : Vx, null !== (UV = null === xV || void 0 === xV ? void 0 : xV.yaw) && void 0 !== UV ? UV : 0, 16 & eV ? this.clipBytes : Oe)) return !1;
+          owed: BH,
+          perch: LH
+        } = this, AH = (2 & BH ? uH.Wc.Pose : 0) | (4 & BH ? uH.Wc.Visible : 0) | (16 & BH ? uH.Wc.Clip : 0) | (32 & BH ? uH.Wc.Perch : 0);
+        if (0 !== AH) {
+          var rH, SH;
+          if (!(0, uH.jf)(HH, 0, this.key, AH, this.visible ? 1 : 0, LH ? 1 : 0, this.feet, this.yaw, LH ? this.host.serverId(LH.vB) : 0, null !== (rH = null === LH || void 0 === LH ? void 0 : LH.offset) && void 0 !== rH ? rH : HL, null !== (SH = null === LH || void 0 === LH ? void 0 : LH.yaw) && void 0 !== SH ? SH : 0, 16 & BH ? this.clipBytes : yB)) return !1;
           this.owed &= -55
         }
         if (8 & this.owed) {
-          if (!(0, kV.We)(VV, 0, this.key)) return !1;
+          if (!(0, uH.gf)(HH, 0, this.key)) return !1;
           this.owed = 0
         }
         return !0
       }
     }
-    var Jx = xV(42305);
+    var AL = LH(42314);
 
-    function Yx(VV, eV, xV, JV) {
-      return (0, Jx.e)(), (0, kV.Lf)(VV, eV, xV, JV)
+    function rL(HH, BH, LH, AH) {
+      return (0, AL.b)(), (0, uH.Wf)(HH, BH, LH, AH)
     }
-    var Ux = xV(40357),
-      yx = xV(41867),
-      px = xV(42314);
-    const Qx = [0, 0, 0],
-      nx = [0, 0, 0],
-      wx = [0, 0, 0],
-      Zx = [0, 0, 0],
-      vx = {
+    var SL = LH(40084),
+      hL = LH(41920),
+      tL = LH(42327);
+    const zL = [0, 0, 0],
+      CL = [0, 0, 0],
+      EL = [0, 0, 0],
+      XL = [0, 0, 0],
+      GL = {
         origin: [0, 0, 0],
         direction: [0, 0, 1]
       },
-      rx = [0, 0, 0],
-      kx = [0, 0],
-      bx = [1, 1, 1],
-      Ex = 1 / 3;
-    const Bx = ve.d;
+      YL = [0, 0, 0],
+      uL = [0, 0],
+      QL = [1, 1, 1],
+      WL = 1 / 3;
+    const ML = GB.e;
 
-    function jx(VV) {
-      const eV = ve.b[VV],
-        xV = eV && ve.d[eV.mainMultiblock];
-      return xV && {
-        main: xV,
-        x: eV.compX,
-        y: eV.compY,
-        z: eV.compZ
+    function xL(HH) {
+      const BH = GB.c[HH],
+        LH = BH && GB.e[BH.mainMultiblock];
+      return LH && {
+        main: LH,
+        x: BH.compX,
+        y: BH.compY,
+        z: BH.compZ
       }
     }
 
-    function qx(VV) {
-      if (null === VV || void 0 === VV) return kV.Uc;
-      const eV = +VV;
-      return Number.isInteger(eV) && eV >= -2147483648 && eV <= 2147483647 && String(eV) === String(VV) ? eV : kV.Uc
+    function vL(HH) {
+      if (null === HH || void 0 === HH) return uH.bd;
+      const BH = +HH;
+      return Number.isInteger(BH) && BH >= -2147483648 && BH <= 2147483647 && String(BH) === String(HH) ? BH : uH.bd
     }
 
-    function tx(VV, eV, xV) {
-      return (0, kV.Sf)(VV, 0, eV, null !== xV && void 0 !== xV ? xV : Number.NaN)
+    function PL(HH, BH, LH) {
+      return (0, uH.ag)(HH, 0, BH, null !== LH && void 0 !== LH ? LH : Number.NaN)
     }
-    class Fx {
-      constructor(VV) {
-        this.deps = VV, this.api = void 0, this.live = void 0, this.chunks = void 0, this.items = void 0, this.tables = void 0, this.meshKeys = 0, this.liveMeshes = new Set, this.poolKeys = 0, this.livePools = new Set, this.cameraTurn = new Ux.c((() => this.tables.getClientOption("forcedCameraDirectionTransitionMs")), (VV => {
-          var eV, xV;
-          null === (eV = (xV = this.deps).setLocalOptions) || void 0 === eV || eV.call(xV, VV)
-        })), this.mobModels = new ex((() => this.deps.cmd()), qx), this.owedFrees = [], this.pendingStyle = void 0, this.pendingFar = void 0, this.farSet = !1, this.routeMesh = 0, this.routeOffset = 0, this.routeLook = "", this.routeSlide = {
+    class TL {
+      constructor(HH) {
+        this.deps = HH, this.api = void 0, this.live = void 0, this.chunks = void 0, this.items = void 0, this.tables = void 0, this.meshKeys = 0, this.liveMeshes = new Set, this.poolKeys = 0, this.livePools = new Set, this.cameraTurn = new SL.c((() => this.tables.getClientOption("forcedCameraDirectionTransitionMs")), (HH => {
+          var BH, LH;
+          null === (BH = (LH = this.deps).setLocalOptions) || void 0 === BH || BH.call(LH, HH)
+        })), this.mobModels = new BL((() => this.deps.cmd()), vL), this.owedFrees = [], this.pendingStyle = void 0, this.pendingFar = void 0, this.farSet = !1, this.routeMesh = 0, this.routeOffset = 0, this.routeLook = "", this.routeSlide = {
           uvOffset: [0, 0]
         }, this.poolHost = {
           cmd: () => this.deps.cmd(),
-          ik: (VV, eV) => {
-            this.livePools.delete(VV), null !== eV && (this.owedFrees.push(eV), this.flushOwed())
+          Mu: (HH, BH) => {
+            this.livePools.delete(HH), null !== BH && (this.owedFrees.push(BH), this.flushOwed())
           }
-        }, this.api = VV.api, this.live = VV.live, this.chunks = VV.chunks, this.items = VV.items, this.tables = VV.tables
+        }, this.api = HH.api, this.live = HH.live, this.chunks = HH.chunks, this.items = HH.items, this.tables = HH.tables
       }
-      isLocal(VV) {
-        return null !== VV && void 0 !== VV && +VV === this.api.localId
+      isLocal(HH) {
+        return null !== HH && void 0 !== HH && +HH === this.api.localId
       }
-      assertLocal(VV, eV) {
-        if (!this.isLocal(VV)) throw new Error(`Attempted to ${eV} for a player that is not the local player`)
+      assertLocal(HH, BH) {
+        if (!this.isLocal(HH)) throw new Error(`Attempted to ${BH} for a player that is not the local player`)
       }
-      YF(VV) {
-        const eV = this.api.YF(VV);
-        if (!eV) throw new Error(`Entity ${VV} has no replicated position`);
-        return eV
+      hT(HH) {
+        const BH = this.api.hT(HH);
+        if (!BH) throw new Error(`Entity ${HH} has no replicated position`);
+        return BH
       }
-      checkValid(VV) {
-        return !!this.deps.isSessionLive() && (null === VV || void 0 === VV || this.api.checkValid(VV))
+      checkValid(HH) {
+        return !!this.deps.isSessionLive() && (null === HH || void 0 === HH || this.api.checkValid(HH))
       }
-      isAlive(VV) {
-        return !1 !== this.api.isAlive(VV)
+      isAlive(HH) {
+        return !1 !== this.api.isAlive(HH)
       }
-      getItemStat(VV, eV, xV) {
-        return this.isLocal(VV) || null !== VV && "Player" === this.api.getEntityType(VV) ? this.tables.getItemStat(eV, xV) : this.tables.getDefaultItemStat(eV, xV)
+      getItemStat(HH, BH, LH) {
+        return this.isLocal(HH) || null !== HH && "Player" === this.api.getEntityType(HH) ? this.tables.getItemStat(BH, LH) : this.tables.getDefaultItemStat(BH, LH)
       }
-      getClientOption(VV, eV) {
-        return this.assertLocal(VV, "get a client option"), this.tables.getClientOption(eV)
+      getClientOption(HH, BH) {
+        return this.assertLocal(HH, "get a client option"), this.tables.getClientOption(BH)
       }
-      openShop(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          xV = arguments.length > 2 ? arguments[2] : void 0;
-        this.assertLocal(VV, "open shop"), yV.h.QZ("showShopFromServer", {
-          toggle: eV,
-          vY: xV
+      openShop(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          LH = arguments.length > 2 ? arguments[2] : void 0;
+        this.assertLocal(HH, "open shop"), hH.k.AX("showShopFromServer", {
+          toggle: BH,
+          qS: LH
         }, !0)
       }
-      sendMessage(VV, eV, xV) {
-        this.assertLocal(VV, "send a message");
-        const JV = "string" === typeof eV ? [{
-          str: eV,
-          style: xV
-        }] : eV;
-        yV.h.QZ("chat", {
-          content: JV
+      sendMessage(HH, BH, LH) {
+        this.assertLocal(HH, "send a message");
+        const AH = "string" === typeof BH ? [{
+          str: BH,
+          style: LH
+        }] : BH;
+        hH.k.AX("chat", {
+          content: AH
         }, !0)
       }
-      getEntityType(VV) {
-        return this.api.getEntityType(VV)
+      getEntityType(HH) {
+        return this.api.getEntityType(HH)
       }
-      getEntityName(VV) {
-        const eV = qx(VV);
-        return eV === kV.Uc ? void 0 : (0, He.k)(this.api, eV)
+      getEntityName(HH) {
+        const BH = vL(HH);
+        return BH === uH.bd ? void 0 : (0, dB.k)(this.api, BH)
       }
-      hasEffect(VV, eV) {
-        const xV = qx(VV);
-        return xV !== kV.Uc && (0, He.g)(this.api, xV, eV)
+      hasEffect(HH, BH) {
+        const LH = vL(HH);
+        return LH !== uH.bd && (0, dB.h)(this.api, LH, BH)
       }
-      getMetaInfo(VV) {
-        return this.tables.getMetaInfo(VV)
+      getMetaInfo(HH) {
+        return this.tables.getMetaInfo(HH)
       }
-      getPlayerDbId(VV) {
-        return this.assertLocal(VV, "get a DB ID"), this.deps.playerDbId()
+      getPlayerDbId(HH) {
+        return this.assertLocal(HH, "get a DB ID"), this.deps.playerDbId()
       }
-      getBlockData(VV, eV, xV) {
-        if (!this.chunks.dataCleared(VV, eV, xV)) return (0, He.c)(this.api, VV, eV, xV)
+      getBlockData(HH, BH, LH) {
+        if (!this.chunks.dataCleared(HH, BH, LH)) return (0, dB.d)(this.api, HH, BH, LH)
       }
-      gR(VV, eV, xV, JV) {
-        this.setBlockId(VV, eV, xV, this.tables.getItemId(JV))
+      oq(HH, BH, LH, AH) {
+        this.setBlockId(HH, BH, LH, this.tables.getItemId(AH))
       }
-      setOtherEntitySetting(VV, eV, xV, JV) {
-        if (!this.isLocal(VV)) throw new Error("Attempted to set an other-entity setting for a player that is not the local player");
-        if (!Object.hasOwn(kV.gd, xV)) throw new Error(`Unknown other-entity setting ${xV}`);
-        const YV = kV.gd[xV],
-          UV = qx(eV);
-        if (UV === kV.Uc || !this.deps.beforeWrite()) return;
-        const yV = (0, oV.g)(JV);
-        if (yV.length > 16384) throw new Error(`The other-entity setting ${xV}'s value is over 16384 bytes`);
-        const pV = this.api.memoryView(Uint8Array, this.api.scratch(), yV.length, "set_other_entity_setting's value");
-        pV && (pV.set(yV), this.api.queries.setOtherEntitySetting(UV, YV, yV.length))
+      setOtherEntitySetting(HH, BH, LH, AH) {
+        if (!this.isLocal(HH)) throw new Error("Attempted to set an other-entity setting for a player that is not the local player");
+        if (!Object.hasOwn(uH.md, LH)) throw new Error(`Unknown other-entity setting ${LH}`);
+        const rH = uH.md[LH],
+          SH = vL(BH);
+        if (SH === uH.bd || !this.deps.beforeWrite()) return;
+        const hH = (0, RH.g)(AH);
+        if (hH.length > 16384) throw new Error(`The other-entity setting ${LH}'s value is over 16384 bytes`);
+        const tH = this.api.memoryView(Uint8Array, this.api.scratch(), hH.length, "set_other_entity_setting's value");
+        tH && (tH.set(hH), this.api.queries.setOtherEntitySetting(SH, rH, hH.length))
       }
-      getPositionView(VV) {
-        return this.live.position(+VV)
+      getPositionView(HH) {
+        return this.live.position(+HH)
       }
-      readDrawnPosition(VV, eV) {
-        return this.api.readDrawnPosition(qx(VV), eV)
+      readDrawnPosition(HH, BH) {
+        return this.api.readDrawnPosition(vL(HH), BH)
       }
-      getDrawnHeading(VV) {
-        const eV = this.drawnEntity(VV);
-        if (!eV) return null;
-        if (1 === kV.ob.headingIsDrawn(eV, 0)) return kV.ob.heading(eV, 0);
-        const xV = this.api.apiView;
-        return this.isLocal(VV) && 0 === (kV.s.playerFlags(xV, 0) & kV.Ld.FreeCam) ? kV.s.heading(xV, 0) : null
+      getDrawnHeading(HH) {
+        const BH = this.drawnEntity(HH);
+        if (!BH) return null;
+        if (1 === uH.vb.headingIsDrawn(BH, 0)) return uH.vb.heading(BH, 0);
+        const LH = this.api.apiView;
+        return this.isLocal(HH) && 0 === (uH.y.playerFlags(LH, 0) & uH.Md.FreeCam) ? uH.y.heading(LH, 0) : null
       }
-      getDrawnEyeHeight(VV) {
-        const eV = this.drawnEntity(VV),
-          xV = eV ? kV.ob.eyeHeight(eV, 0) : 0;
-        return xV > 0 ? xV : null
+      getDrawnEyeHeight(HH) {
+        const BH = this.drawnEntity(HH),
+          LH = BH ? uH.vb.eyeHeight(BH, 0) : 0;
+        return LH > 0 ? LH : null
       }
-      drawnEntity(VV) {
-        const eV = qx(VV);
-        return eV === kV.Uc || this.api.queries.directorEntity(eV) < kV.ob.BYTES ? null : this.api.scratchData(kV.ob.BYTES, "the drawn DirectorEntity")
+      drawnEntity(HH) {
+        const BH = vL(HH);
+        return BH === uH.bd || this.api.queries.directorEntity(BH) < uH.vb.BYTES ? null : this.api.scratchData(uH.vb.BYTES, "the drawn DirectorEntity")
       }
-      isEntityDrawn(VV) {
-        const eV = qx(VV);
-        return eV !== kV.Uc && 1 === this.api.queries.entityDrawn(eV)
+      isEntityDrawn(HH) {
+        const BH = vL(HH);
+        return BH !== uH.bd && 1 === this.api.queries.entityDrawn(BH)
       }
       getPlayerIds() {
-        return px.e.ids()
+        return tL.f.ids()
       }
-      getPlayerCosmetics(VV) {
-        var eV;
-        return null !== (eV = (0, px.f)(VV)) && void 0 !== eV ? eV : null
+      getPlayerCosmetics(HH) {
+        var BH;
+        return null !== (BH = (0, tL.j)(HH)) && void 0 !== BH ? BH : null
       }
       getLocalPlayerMovement() {
-        const VV = kV.s.playerFlags(this.api.apiView, 0);
-        return 0 === (VV & kV.Ld.Replay) && this.api.readDrawnPosition(this.api.localId, wx) ? {
-          onGround: 0 !== (VV & kV.Ld.OnGround),
-          jumpHeld: 0 !== (VV & kV.Ld.JumpHeld)
+        const HH = uH.y.playerFlags(this.api.apiView, 0);
+        return 0 === (HH & uH.Md.Replay) && this.api.readDrawnPosition(this.api.localId, EL) ? {
+          onGround: 0 !== (HH & uH.Md.OnGround),
+          jumpHeld: 0 !== (HH & uH.Md.JumpHeld)
         } : null
       }
       isLocalPlayerInVehicle() {
-        return (0, re.t)(this.deps.localPhysicsType())
+        return (0, YB.v)(this.deps.localPhysicsType())
       }
-      bJV(VV) {
-        return this.isLocal(VV) ? this.items.hn() : null
+      yLH(HH) {
+        return this.isLocal(HH) ? this.items.LX() : null
       }
       getInventoryItems() {
         return this.items.playerItems()
       }
       getHeldGunInaccuracy() {
-        var VV, eV;
-        return "Gun" === (null === (VV = this.aliveHeld()) || void 0 === VV || null === (eV = VV.typeObj) || void 0 === eV ? void 0 : eV.type) ? this.items.inaccuracy : null
+        var HH, BH;
+        return "Gun" === (null === (HH = this.aliveHeld()) || void 0 === HH || null === (BH = HH.typeObj) || void 0 === BH ? void 0 : BH.type) ? this.items.inaccuracy : null
       }
       aliveHeld() {
-        return !1 === this.api.isAlive(this.api.localId) ? null : this.items.hn()
+        return !1 === this.api.isAlive(this.api.localId) ? null : this.items.LX()
       }
       isCrosshairShown() {
-        var VV, eV;
-        const xV = (0, be.c)(JV.b.get("crosshairGameView"), JV.b.get("crosshairShownOverride"));
-        if (null !== xV) return xV;
-        const YV = null === (VV = this.aliveHeld()) || void 0 === VV ? void 0 : VV.typeObj,
-          UV = "Gun" === (null === YV || void 0 === YV ? void 0 : YV.type),
-          yV = UV || !0 === (null === YV || void 0 === YV ? void 0 : YV.showsAimingUi),
-          pV = 0 === (kV.s.playerFlags(this.api.apiView, 0) & kV.Ld.ZoomFirstPerson),
-          QV = null !== (eV = this.tables.getClientOption("gunshotOrigin")) && void 0 !== eV ? eV : null;
-        return (0, be.g)({
-          gun: UV,
-          aimable: yV
-        }, pV, (0, Ee.d)(), QV)
+        var HH, BH;
+        const LH = (0, QB.b)(AH.c.get("crosshairGameView"), AH.c.get("crosshairShownOverride"));
+        if (null !== LH) return LH;
+        const rH = null === (HH = this.aliveHeld()) || void 0 === HH ? void 0 : HH.typeObj,
+          SH = "Gun" === (null === rH || void 0 === rH ? void 0 : rH.type),
+          hH = SH || !0 === (null === rH || void 0 === rH ? void 0 : rH.showsAimingUi),
+          tH = 0 === (uH.y.playerFlags(this.api.apiView, 0) & uH.Md.ZoomFirstPerson),
+          zH = null !== (BH = this.tables.getClientOption("gunshotOrigin")) && void 0 !== BH ? BH : null;
+        return (0, QB.f)({
+          gun: SH,
+          aimable: hH
+        }, tH, (0, WB.d)(), zH)
       }
-      setCrosshairShown(VV) {
-        JV.b.set({
-          crosshairShownOverride: VV
+      setCrosshairShown(HH) {
+        AH.c.set({
+          crosshairShownOverride: HH
         })
       }
-      getInventoryFreeSlotCount(VV) {
-        return this.isLocal(VV) ? this.items.freeSlots() : null
+      getInventoryFreeSlotCount(HH) {
+        return this.isLocal(HH) ? this.items.freeSlots() : null
       }
-      getSelectedInventorySlotI(VV) {
-        return this.isLocal(VV) ? this.items.selectedSlot : null
+      getSelectedInventorySlotI(HH) {
+        return this.isLocal(HH) ? this.items.selectedSlot : null
       }
-      getItemSlot(VV, eV) {
-        return this.isLocal(VV) ? this.items.slot(eV) : null
+      getItemSlot(HH, BH) {
+        return this.isLocal(HH) ? this.items.slot(BH) : null
       }
-      swapInventorySlots(VV, eV) {
-        return this.items.swap(VV, eV)
+      swapInventorySlots(HH, BH) {
+        return this.items.swap(HH, BH)
       }
-      isPlayerCrouching(VV) {
-        if (this.isLocal(VV)) return 0 !== (kV.s.playerFlags(this.api.apiView, 0) & kV.Ld.Crouching);
-        const eV = qx(VV);
-        return eV !== kV.Uc && 1 === this.api.queries.entityCrouching(eV)
+      isPlayerCrouching(HH) {
+        if (this.isLocal(HH)) return 0 !== (uH.y.playerFlags(this.api.apiView, 0) & uH.Md.Crouching);
+        const BH = vL(HH);
+        return BH !== uH.bd && 1 === this.api.queries.entityCrouching(BH)
       }
       getMiningBlock() {
         return this.live.breakingPosition()
       }
       isMining() {
-        return 0 !== (kV.s.playerFlags(this.api.apiView, 0) & kV.Ld.AttemptingBreak)
+        return 0 !== (uH.y.playerFlags(this.api.apiView, 0) & uH.Md.AttemptingBreak)
       }
       getTargetedBlock() {
-        return this.live.IeV()
+        return this.live.cBH()
       }
       getActionRay() {
-        const VV = this.api.apiView;
-        for (let eV = 0; eV < 3; eV++) vx.origin[eV] = kV.s.rxV(VV, 0, eV), vx.direction[eV] = kV.s.actionDir(VV, 0, eV);
-        return vx
+        const HH = this.api.apiView;
+        for (let BH = 0; BH < 3; BH++) GL.origin[BH] = uH.y.iBH(HH, 0, BH), GL.direction[BH] = uH.y.actionDir(HH, 0, BH);
+        return GL
       }
-      canModifyBlockAt(VV, eV, xV) {
-        return 1 === this.api.queries.canModify(VV, eV, xV)
+      canModifyBlockAt(HH, BH, LH) {
+        return 1 === this.api.queries.canModify(HH, BH, LH)
       }
-      isSolidToPlayerBlockId(VV) {
-        return this.tables.isSolidBlockId(VV) && !this.chunks.isWalkThrough(VV)
+      isSolidToPlayerBlockId(HH) {
+        return this.tables.isSolidBlockId(HH) && !this.chunks.isWalkThrough(HH)
       }
-      blockNameToBlockId(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.tables.blockNameToBlockId(VV, eV)
+      blockNameToBlockId(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.tables.blockNameToBlockId(HH, BH)
       }
-      blockIdToBlockName(VV) {
-        return this.tables.nameOfId(VV)
+      blockIdToBlockName(HH) {
+        return this.tables.nameOfId(HH)
       }
-      axV(VV, eV, xV, JV, YV) {
-        return 1 === this.api.queries.terrainBlocked(JV, VV, eV, xV, qx(null !== YV && void 0 !== YV ? YV : null))
+      PLH(HH, BH, LH, AH, rH) {
+        return 1 === this.api.queries.terrainBlocked(AH, HH, BH, LH, vL(null !== rH && void 0 !== rH ? rH : null))
       }
-      getChunkVersion(VV, eV, xV) {
-        return this.chunks.version(VV, eV, xV)
+      getChunkVersion(HH, BH, LH) {
+        return this.chunks.version(HH, BH, LH)
       }
-      scanBlocks(VV, eV, xV, JV, YV, UV, yV, pV) {
-        return this.chunks.scan(VV, eV, xV, JV, YV, UV, yV, pV)
+      scanBlocks(HH, BH, LH, AH, rH, SH, hH, tH) {
+        return this.chunks.scan(HH, BH, LH, AH, rH, SH, hH, tH)
       }
-      readColumnTops(VV, eV, xV, JV, YV, UV, yV, pV, QV) {
-        this.chunks.columnTops(VV, eV, xV, JV, YV, UV, yV, pV, QV)
+      readColumnTops(HH, BH, LH, AH, rH, SH, hH, tH, zH) {
+        this.chunks.columnTops(HH, BH, LH, AH, rH, SH, hH, tH, zH)
       }
-      isBlockInLoadedChunk(VV, eV, xV) {
-        return this.chunks.isLoaded(VV, eV, xV)
+      isBlockInLoadedChunk(HH, BH, LH) {
+        return this.chunks.isLoaded(HH, BH, LH)
       }
-      getBlockId(VV, eV, xV) {
-        return this.chunks.vp(VV, eV, xV)
+      getBlockId(HH, BH, LH) {
+        return this.chunks.ph(HH, BH, LH)
       }
-      playSound(VV, eV, xV, JV, YV) {
-        let UV = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        if (!this.isLocal(VV)) return null;
-        const yV = this.playSoundFrom(eV, xV, YV, UV);
-        return 1 === JV ? yV : yV.rate(JV)
+      playSound(HH, BH, LH, AH, rH) {
+        let SH = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        if (!this.isLocal(HH)) return null;
+        const hH = this.playSoundFrom(BH, LH, rH, SH);
+        return 1 === AH ? hH : hH.rate(AH)
       }
-      preloadSounds(VV) {
-        var eV, xV;
-        null === (eV = (xV = this.deps).preloadSounds) || void 0 === eV || eV.call(xV, VV)
+      preloadSounds(HH) {
+        var BH, LH;
+        null === (BH = (LH = this.deps).preloadSounds) || void 0 === BH || BH.call(LH, HH)
       }
-      playSoundFrom(VV, eV, xV, JV) {
-        var YV, UV;
-        const yV = this.deps.playSound;
-        if (!yV) return Re.c;
-        const pV = null === xV || void 0 === xV ? void 0 : xV.cY,
-          QV = null !== (YV = null === xV || void 0 === xV ? void 0 : xV.maxHearDist) && void 0 !== YV ? YV : ke.f,
-          nV = null !== (UV = null === xV || void 0 === xV ? void 0 : xV.refDistance) && void 0 !== UV ? UV : ke.h;
-        let wV = null;
-        if (Array.isArray(pV)) Qx[0] = pV[0], Qx[1] = pV[1], Qx[2] = pV[2], wV = Qx;
-        else if (void 0 !== pV && null !== pV) {
-          const VV = qx(pV);
-          if (!this.api.isLocal(VV)) {
-            if (!this.api.readPosition(VV, Qx)) return Re.c;
-            wV = Qx
+      playSoundFrom(HH, BH, LH, AH) {
+        var rH, SH;
+        const hH = this.deps.playSound;
+        if (!hH) return lB.d;
+        const tH = null === LH || void 0 === LH ? void 0 : LH.SH,
+          zH = null !== (rH = null === LH || void 0 === LH ? void 0 : LH.maxHearDist) && void 0 !== rH ? rH : uB.f,
+          CH = null !== (SH = null === LH || void 0 === LH ? void 0 : LH.refDistance) && void 0 !== SH ? SH : uB.i;
+        let EH = null;
+        if (Array.isArray(tH)) zL[0] = tH[0], zL[1] = tH[1], zL[2] = tH[2], EH = zL;
+        else if (void 0 !== tH && null !== tH) {
+          const HH = vL(tH);
+          if (!this.api.isLocal(HH)) {
+            if (!this.api.readPosition(HH, zL)) return lB.d;
+            EH = zL
           }
         }
-        return yV(VV, eV, wV, wV && this.ear(), QV, nV, JV)
+        return hH(HH, BH, EH, EH && this.ear(), zH, CH, AH)
       }
       ear() {
-        if (this.api.readPosition(this.api.localId, nx)) nx[1] += oe;
+        if (this.api.readPosition(this.api.localId, CL)) CL[1] += NB;
         else {
-          const VV = this.api.apiView;
-          if (0 === kV.s.viewProj(VV, 0, 3) && 0 === kV.s.viewProj(VV, 0, 7) && 0 === kV.s.viewProj(VV, 0, 11)) return null;
-          for (let eV = 0; eV < 3; eV++) nx[eV] = kV.s.eye(VV, 0, eV)
+          const HH = this.api.apiView;
+          if (0 === uH.y.viewProj(HH, 0, 3) && 0 === uH.y.viewProj(HH, 0, 7) && 0 === uH.y.viewProj(HH, 0, 11)) return null;
+          for (let BH = 0; BH < 3; BH++) CL[BH] = uH.y.eye(HH, 0, BH)
         }
-        return Number.isFinite(nx[0] + nx[1] + nx[2]) ? nx : null
+        return Number.isFinite(CL[0] + CL[1] + CL[2]) ? CL : null
       }
-      setBlockId(VV, eV, xV, JV) {
-        if (!Number.isInteger(JV) || JV < 0 || JV > 65535) throw new Error(`Invalid block id ${JV}`);
-        if (!this.deps.beforeWrite() || !this.chunks.isLoaded(VV, eV, xV)) return;
-        const YV = Math.floor(VV),
-          UV = Math.floor(eV),
-          yV = Math.floor(xV),
-          pV = this.predictedCells(YV, UV, yV, JV);
-        if (1 === this.api.queries.gR(YV, UV, yV, JV)) {
-          for (let VV = 0; VV < pV.length; VV += 5) this.chunks.setOverlay(pV[VV], pV[VV + 1], pV[VV + 2], pV[VV + 3], 1 === pV[VV + 4]);
+      setBlockId(HH, BH, LH, AH) {
+        if (!Number.isInteger(AH) || AH < 0 || AH > 65535) throw new Error(`Invalid block id ${AH}`);
+        if (!this.deps.beforeWrite() || !this.chunks.isLoaded(HH, BH, LH)) return;
+        const rH = Math.floor(HH),
+          SH = Math.floor(BH),
+          hH = Math.floor(LH),
+          tH = this.predictedCells(rH, SH, hH, AH);
+        if (1 === this.api.queries.oq(rH, SH, hH, AH)) {
+          for (let HH = 0; HH < tH.length; HH += 5) this.chunks.setOverlay(tH[HH], tH[HH + 1], tH[HH + 2], tH[HH + 3], 1 === tH[HH + 4]);
           this.live.refreshTarget()
         }
       }
       particlesEnabled() {
         return this.deps.particles.enabled()
       }
-      createParticles(VV, eV) {
-        return this.deps.particles.create(VV, eV)
+      createParticles(HH, BH) {
+        return this.deps.particles.create(HH, BH)
       }
-      playParticleEffect(VV) {
-        this.deps.particles.playEffect(VV)
+      playParticleEffect(HH) {
+        this.deps.particles.playEffect(HH)
       }
-      burstParticlePreset(VV, eV, xV) {
-        this.deps.particles.burstPreset(VV, eV, xV)
+      burstParticlePreset(HH, BH, LH) {
+        this.deps.particles.burstPreset(HH, BH, LH)
       }
-      createGameMesh(VV, eV, xV) {
-        const JV = ++this.meshKeys,
-          YV = this.deps.cmd();
-        if (!YV) return JV;
+      createGameMesh(HH, BH, LH) {
+        const AH = ++this.meshKeys,
+          rH = this.deps.cmd();
+        if (!rH) return AH;
         const {
-          look: UV,
-          colour: yV
-        } = function(VV) {
-          switch (VV.kind) {
+          look: SH,
+          colour: hH
+        } = function(HH) {
+          switch (HH.kind) {
             case void 0:
             case "flatEmissive":
-              return VV.onTop ? {
-                look: kV.ac.FlatOnTop,
-                colour: [...VV.rgb, VV.alpha]
-              } : VV.opaque ? {
-                look: kV.ac.FlatOpaque,
-                colour: [...VV.rgb, 1]
+              return HH.onTop ? {
+                look: uH.gc.FlatOnTop,
+                colour: [...HH.rgb, HH.alpha]
+              } : HH.opaque ? {
+                look: uH.gc.FlatOpaque,
+                colour: [...HH.rgb, 1]
               } : {
-                look: kV.ac.Flat,
-                colour: [...VV.rgb, VV.alpha]
+                look: uH.gc.Flat,
+                colour: [...HH.rgb, HH.alpha]
               };
             case "chevronPath":
               return {
-                look: kV.ac.Chevrons, colour: [...(0, Be.e)(VV.colour), VV.alpha]
+                look: uH.gc.Chevrons, colour: [...(0, MB.e)(HH.colour), HH.alpha]
               };
             case "furnaceFire":
               return {
-                look: kV.ac.FurnaceFire, colour: [1, 1, 1, 1]
+                look: uH.gc.FurnaceFire, colour: [1, 1, 1, 1]
               }
           }
-        }(eV), pV = Math.floor(VV.positions.length / 3), QV = function(VV, eV) {
-          const xV = Math.floor(VV.positions.length / 3),
-            JV = VV.indices.length,
-            YV = xV * (eV ? 5 : 3),
-            UV = new Uint8Array(4 * (YV + JV)),
-            yV = new DataView(UV.buffer);
-          for (let nV = 0; nV < 3 * xV; nV++) yV.setFloat32(4 * nV, VV.positions[nV], !0);
-          if (eV) {
-            var pV;
-            const eV = null !== (pV = VV.uvs) && void 0 !== pV ? pV : [];
-            for (let VV = 0; VV < 2 * xV; VV++) {
-              var QV;
-              yV.setFloat32(4 * (3 * xV + VV), null !== (QV = eV[VV]) && void 0 !== QV ? QV : 0, !0)
+        }(BH), tH = Math.floor(HH.positions.length / 3), zH = function(HH, BH) {
+          const LH = Math.floor(HH.positions.length / 3),
+            AH = HH.indices.length,
+            rH = LH * (BH ? 5 : 3),
+            SH = new Uint8Array(4 * (rH + AH)),
+            hH = new DataView(SH.buffer);
+          for (let CH = 0; CH < 3 * LH; CH++) hH.setFloat32(4 * CH, HH.positions[CH], !0);
+          if (BH) {
+            var tH;
+            const BH = null !== (tH = HH.uvs) && void 0 !== tH ? tH : [];
+            for (let HH = 0; HH < 2 * LH; HH++) {
+              var zH;
+              hH.setFloat32(4 * (3 * LH + HH), null !== (zH = BH[HH]) && void 0 !== zH ? zH : 0, !0)
             }
           }
-          for (let nV = 0; nV < JV; nV++) yV.setUint32(4 * (YV + nV), VV.indices[nV], !0);
-          return UV
-        }(VV, (0, Ze.h)(eV));
-        return (0, kV.He)(YV, 0, JV, UV, yV, xV, pV, VV.indices.length, QV) && this.liveMeshes.add(JV), JV
+          for (let CH = 0; CH < AH; CH++) hH.setUint32(4 * (rH + CH), HH.indices[CH], !0);
+          return SH
+        }(HH, (0, XB.k)(BH));
+        return (0, uH.Se)(rH, 0, AH, SH, hH, LH, tH, HH.indices.length, zH) && this.liveMeshes.add(AH), AH
       }
-      setGameMesh(VV, eV) {
-        var xV;
-        const JV = this.deps.cmd();
-        if (!JV) return;
-        let YV = 0;
-        eV.anchor && (YV |= kV.bc.Anchor, rx[0] = eV.anchor[0], rx[1] = eV.anchor[1], rx[2] = eV.anchor[2]), void 0 !== eV.visible && (YV |= kV.bc.Visible), eV.uvOffset && (YV |= kV.bc.UvOffset, kx[0] = eV.uvOffset[0], kx[1] = eV.uvOffset[1]);
-        const UV = null !== (xV = eV.visibility) && void 0 !== xV ? xV : 1;
-        void 0 !== eV.visibility && (YV |= kV.bc.Visibility), eV.scale && (YV |= kV.bc.Scale, bx[0] = eV.scale[0], bx[1] = eV.scale[1], bx[2] = eV.scale[2]), 0 !== YV && (0, kV.Ne)(JV, 0, VV, YV, eV.visible ? 1 : 0, rx, kx, UV, bx)
+      setGameMesh(HH, BH) {
+        var LH;
+        const AH = this.deps.cmd();
+        if (!AH) return;
+        let rH = 0;
+        BH.anchor && (rH |= uH.hc.Anchor, YL[0] = BH.anchor[0], YL[1] = BH.anchor[1], YL[2] = BH.anchor[2]), void 0 !== BH.visible && (rH |= uH.hc.Visible), BH.uvOffset && (rH |= uH.hc.UvOffset, uL[0] = BH.uvOffset[0], uL[1] = BH.uvOffset[1]);
+        const SH = null !== (LH = BH.visibility) && void 0 !== LH ? LH : 1;
+        void 0 !== BH.visibility && (rH |= uH.hc.Visibility), BH.scale && (rH |= uH.hc.Scale, QL[0] = BH.scale[0], QL[1] = BH.scale[1], QL[2] = BH.scale[2]), 0 !== rH && (0, uH.Ye)(AH, 0, HH, rH, BH.visible ? 1 : 0, YL, uL, SH, QL)
       }
-      disposeGameMesh(VV) {
-        const eV = this.deps.cmd();
-        eV && !(0, kV.Ke)(eV, 0, VV) || this.liveMeshes.delete(VV)
+      disposeGameMesh(HH) {
+        const BH = this.deps.cmd();
+        BH && !(0, uH.We)(BH, 0, HH) || this.liveMeshes.delete(HH)
       }
-      hasPackModel(VV) {
-        var eV, xV, JV;
-        return null !== (eV = null === (xV = (JV = this.deps).hasPackModel) || void 0 === xV ? void 0 : xV.call(JV, VV)) && void 0 !== eV && eV
+      hasPackModel(HH) {
+        var BH, LH, AH;
+        return null !== (BH = null === (LH = (AH = this.deps).hasPackModel) || void 0 === LH ? void 0 : LH.call(AH, HH)) && void 0 !== BH && BH
       }
       disposeGameOutput() {
-        const VV = VV => {
+        const HH = HH => {
           try {
-            VV()
-          } catch (eV) {
-            console.error("Error freeing client game output", eV)
+            HH()
+          } catch (BH) {
+            console.error("Error freeing client game output", BH)
           }
         };
-        for (const eV of [...this.liveMeshes]) VV((() => {
-          this.disposeGameMesh(eV)
+        for (const BH of [...this.liveMeshes]) HH((() => {
+          this.disposeGameMesh(BH)
         }));
-        for (const eV of [...this.livePools]) VV((() => {
-          eV.dispose()
+        for (const BH of [...this.livePools]) HH((() => {
+          BH.dispose()
         }));
-        VV((() => {
+        HH((() => {
           this.mobModels.disposeAll()
-        })), VV((() => {
+        })), HH((() => {
           this.setGroundArrowStyle(null)
-        })), VV((() => {
+        })), HH((() => {
           this.setRouteChevrons(null), this.routeOffset = 0, this.routeLook = ""
-        })), VV((() => {
+        })), HH((() => {
           this.setCrosshairShown(null)
-        })), VV((() => {
+        })), HH((() => {
           this.cameraTurn.dispose()
-        })), VV((() => {
+        })), HH((() => {
           this.farSet && (this.farSet = !1, this.setCameraFar(null))
         }))
       }
-      createInstancePool(VV, eV) {
-        const xV = this.tables.idOf(VV.item);
-        if (void 0 === xV) return null;
-        const JV = new se(++this.poolKeys, {
-          item: xV,
-          scale: VV.scale,
-          yaw: VV.yaw
-        }, eV, this.poolHost);
-        return this.livePools.add(JV), JV
+      createInstancePool(HH, BH) {
+        const LH = this.tables.idOf(HH.item);
+        if (void 0 === LH) return null;
+        const AH = new sB(++this.poolKeys, {
+          item: LH,
+          scale: HH.scale,
+          yaw: HH.yaw
+        }, BH, this.poolHost);
+        return this.livePools.add(AH), AH
       }
-      createMobModel(VV, eV) {
-        return this.mobModels.create(VV, eV)
+      createMobModel(HH, BH) {
+        return this.mobModels.create(HH, BH)
       }
-      createCosmeticModel(VV, eV) {
-        return this.mobModels.createCosmetic(VV, eV)
+      createCosmeticModel(HH, BH) {
+        return this.mobModels.createCosmetic(HH, BH)
       }
-      setRouteChevrons(VV) {
-        if (0 !== this.routeMesh && (this.disposeGameMesh(this.routeMesh), this.routeMesh = 0), !VV || 0 === VV.cells.length) return;
-        const eV = `${VV.colour} ${VV.alpha}`;
-        eV !== this.routeLook && (this.routeLook = eV, this.routeOffset = 0), this.routeMesh = this.createGameMesh(function(VV) {
-          const [eV, xV, JV] = VV[0].pos, YV = [], UV = [], yV = [];
-          return VV.forEach(((VV, pV) => {
+      setRouteChevrons(HH) {
+        if (0 !== this.routeMesh && (this.disposeGameMesh(this.routeMesh), this.routeMesh = 0), !HH || 0 === HH.cells.length) return;
+        const BH = `${HH.colour} ${HH.alpha}`;
+        BH !== this.routeLook && (this.routeLook = BH, this.routeOffset = 0), this.routeMesh = this.createGameMesh(function(HH) {
+          const [BH, LH, AH] = HH[0].pos, rH = [], SH = [], hH = [];
+          return HH.forEach(((HH, tH) => {
             let {
-              pos: QV,
-              way: [nV, wV]
-            } = VV;
-            const ZV = QV[0] - eV + .5,
-              vV = QV[1] - xV + .04,
-              rV = QV[2] - JV + .5,
-              [kV, bV] = [.35 * -wV, .35 * nV],
-              [EV, BV] = [pV * Ex, (pV + 1) * Ex],
-              jV = YV.length / 3;
-            YV.push(ZV - .5 * nV + kV, vV, rV - .5 * wV + bV), YV.push(ZV - .5 * nV - kV, vV, rV - .5 * wV - bV), YV.push(ZV + .5 * nV + kV, vV, rV + .5 * wV + bV), YV.push(ZV + .5 * nV - kV, vV, rV + .5 * wV - bV), UV.push(0, EV, 1, EV, 0, BV, 1, BV), yV.push(jV, jV + 1, jV + 2, jV + 1, jV + 3, jV + 2)
+              pos: zH,
+              way: [CH, EH]
+            } = HH;
+            const XH = zH[0] - BH + .5,
+              GH = zH[1] - LH + .04,
+              YH = zH[2] - AH + .5,
+              [uH, QH] = [.35 * -EH, .35 * CH],
+              [WH, MH] = [tH * WL, (tH + 1) * WL],
+              xH = rH.length / 3;
+            rH.push(XH - .5 * CH + uH, GH, YH - .5 * EH + QH), rH.push(XH - .5 * CH - uH, GH, YH - .5 * EH - QH), rH.push(XH + .5 * CH + uH, GH, YH + .5 * EH + QH), rH.push(XH + .5 * CH - uH, GH, YH + .5 * EH - QH), SH.push(0, WH, 1, WH, 0, MH, 1, MH), hH.push(xH, xH + 1, xH + 2, xH + 1, xH + 3, xH + 2)
           })), {
-            positions: YV,
-            uvs: UV,
-            indices: yV
+            positions: rH,
+            uvs: SH,
+            indices: hH
           }
-        }(VV.cells), {
+        }(HH.cells), {
           kind: "chevronPath",
-          colour: VV.colour,
-          alpha: VV.alpha
-        }, VV.cells[0].pos), this.setRouteSlide()
+          colour: HH.colour,
+          alpha: HH.alpha
+        }, HH.cells[0].pos), this.setRouteSlide()
       }
-      slideRoute(VV) {
-        0 !== this.routeMesh && (this.routeOffset = (this.routeOffset + Math.min(VV, 250) / 1e3 * 1.2 * Ex) % 1, this.setRouteSlide())
+      slideRoute(HH) {
+        0 !== this.routeMesh && (this.routeOffset = (this.routeOffset + Math.min(HH, 250) / 1e3 * 1.2 * WL) % 1, this.setRouteSlide())
       }
       setRouteSlide() {
         this.routeSlide.uvOffset[1] = -this.routeOffset, this.setGameMesh(this.routeMesh, this.routeSlide)
       }
-      setGroundArrowStyle(VV) {
-        this.pendingStyle = VV, this.flushOwed()
+      setGroundArrowStyle(HH) {
+        this.pendingStyle = HH, this.flushOwed()
       }
       flushOwed() {
         this.mobModels.flush();
-        const VV = this.owedFrees;
-        if (0 === VV.length && void 0 === this.pendingStyle && void 0 === this.pendingFar) return;
-        const eV = this.deps.cmd();
-        if (!eV) return VV.length = 0, void(this.pendingFar = void 0);
-        let xV = 0;
-        for (; xV < VV.length && (0, kV.Se)(eV, 0, VV[xV]);) xV++;
-        VV.splice(0, xV);
-        const JV = this.pendingStyle;
-        if (void 0 !== JV) {
-          (JV ? (0, kV.Wf)(eV, 0, JV.width, JV.alpha, 1, JV.endAtSolidFace ? 1 : 0) : (0, kV.Wf)(eV, 0, 0, 0, 0, 0)) && (this.pendingStyle = void 0)
+        const HH = this.owedFrees;
+        if (0 === HH.length && void 0 === this.pendingStyle && void 0 === this.pendingFar) return;
+        const BH = this.deps.cmd();
+        if (!BH) return HH.length = 0, void(this.pendingFar = void 0);
+        let LH = 0;
+        for (; LH < HH.length && (0, uH.bf)(BH, 0, HH[LH]);) LH++;
+        HH.splice(0, LH);
+        const AH = this.pendingStyle;
+        if (void 0 !== AH) {
+          (AH ? (0, uH.cg)(BH, 0, AH.width, AH.alpha, 1, AH.endAtSolidFace ? 1 : 0) : (0, uH.cg)(BH, 0, 0, 0, 0, 0)) && (this.pendingStyle = void 0)
         }
-        const YV = this.pendingFar;
-        void 0 !== YV && (0, kV.Rf)(eV, 0, null !== YV && void 0 !== YV ? YV : 0, null === YV ? 1 : 0) && (this.pendingFar = void 0)
+        const rH = this.pendingFar;
+        void 0 !== rH && (0, uH.Zf)(BH, 0, null !== rH && void 0 !== rH ? rH : 0, null === rH ? 1 : 0) && (this.pendingFar = void 0)
       }
-      setNametagOffset(VV, eV) {
-        const xV = this.deps.cmd(),
-          JV = qx(VV);
-        xV && JV !== kV.Uc && (0, kV.ag)(xV, 0, JV, eV)
+      setNametagOffset(HH, BH) {
+        const LH = this.deps.cmd(),
+          AH = vL(HH);
+        LH && AH !== uH.bd && (0, uH.ng)(LH, 0, AH, BH)
       }
-      setFacingTolerance(VV, eV) {
-        const xV = this.deps.cmd(),
-          JV = qx(VV);
-        xV && JV !== kV.Uc && tx(xV, JV, eV)
+      setFacingTolerance(HH, BH) {
+        const LH = this.deps.cmd(),
+          AH = vL(HH);
+        LH && AH !== uH.bd && PL(LH, AH, BH)
       }
-      forEachEntity(VV) {
+      forEachEntity(HH) {
         const {
-          api: eV
+          api: BH
         } = this;
-        for (let xV = 0; xV < eV.idStr.length; xV++) {
-          const JV = eV.idStr[xV];
-          null === JV || FV(eV.kinds[xV]) || VV(JV)
+        for (let LH = 0; LH < BH.idStr.length; LH++) {
+          const AH = BH.idStr[LH];
+          null === AH || TH(BH.kinds[LH]) || HH(AH)
         }
       }
-      getEntityInfo(VV) {
-        return this.deps.entityInfo.get(VV)
+      getEntityInfo(HH) {
+        return this.deps.entityInfo.get(HH)
       }
-      isEntityInteractable(VV) {
-        const eV = qx(VV);
-        return eV !== kV.Uc && 1 === this.api.queries.entityInteractable(eV)
+      isEntityInteractable(HH) {
+        const BH = vL(HH);
+        return BH !== uH.bd && 1 === this.api.queries.entityInteractable(BH)
       }
-      isLocalPlayer(VV) {
-        return this.isLocal(VV)
+      isLocalPlayer(HH) {
+        return this.isLocal(HH)
       }
-      getLineOwner(VV) {
-        var eV;
-        const xV = null === (eV = this.deps.entityInfo.get(VV)) || void 0 === eV ? void 0 : eV.meshOpts;
-        if (!xV) return null;
+      getLineOwner(HH) {
+        var BH;
+        const LH = null === (BH = this.deps.entityInfo.get(HH)) || void 0 === BH ? void 0 : BH.meshOpts;
+        if (!LH) return null;
         try {
           const {
-            lineToEId: VV
-          } = JSON.parse(xV);
-          return null !== VV && void 0 !== VV ? VV : null
+            lineToEId: HH
+          } = JSON.parse(LH);
+          return null !== HH && void 0 !== HH ? HH : null
         } catch {
           return null
         }
       }
       getCameraPosition() {
-        const VV = this.api.apiView;
-        return Zx[0] = kV.s.eye(VV, 0, 0), Zx[1] = kV.s.eye(VV, 0, 1), Zx[2] = kV.s.eye(VV, 0, 2), Zx
+        const HH = this.api.apiView;
+        return XL[0] = uH.y.eye(HH, 0, 0), XL[1] = uH.y.eye(HH, 0, 1), XL[2] = uH.y.eye(HH, 0, 2), XL
       }
       getCameraFar() {
-        return kV.s.cameraFar(this.api.apiView, 0)
+        return uH.y.cameraFar(this.api.apiView, 0)
       }
-      setCameraFar(VV) {
-        null !== VV && (this.farSet = !0), this.pendingFar = VV, this.flushOwed()
+      setCameraFar(HH) {
+        null !== HH && (this.farSet = !0), this.pendingFar = HH, this.flushOwed()
       }
-      turnCamera(VV, eV) {
-        this.cameraTurn.turn(VV, eV)
+      turnCamera(HH, BH) {
+        this.cameraTurn.turn(HH, BH)
       }
-      clearPickupDelay(VV) {
-        const eV = this.deps.cmd(),
-          xV = qx(VV);
-        eV && xV !== kV.Uc && (0, kV.we)(eV, 0, xV)
+      clearPickupDelay(HH) {
+        const BH = this.deps.cmd(),
+          LH = vL(HH);
+        BH && LH !== uH.bd && (0, uH.Be)(BH, 0, LH)
       }
-      sendChat(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const xV = this.deps.sendCmd();
-        xV && Yx(xV, 0, yx.d.Chat, (0, oV.g)((0, yx.m)({
-          yZ: VV,
-          pZ: eV
+      sendChat(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const LH = this.deps.sendCmd();
+        return null !== LH && rL(LH, 0, hL.d.Chat, (0, RH.g)((0, hL.k)({
+          kt: HH,
+          ot: BH
         })))
       }
-      sendCommand(VV) {
-        VV.length <= 119 && this.sendChat(`/${VV}`)
+      sendCommand(HH) {
+        HH.length <= 119 && this.sendChat(`/${HH}`)
       }
-      predictedCells(VV, eV, xV, JV) {
-        const YV = this.chunks,
-          UV = [],
-          yV = (VV, eV, xV, JV, YV) => {
-            UV.push(VV, eV, xV, JV, this.tables.blockRootId(YV) === this.tables.blockRootId(JV) ? 0 : 1)
+      predictedCells(HH, BH, LH, AH) {
+        const rH = this.chunks,
+          SH = [],
+          hH = (HH, BH, LH, AH, rH) => {
+            SH.push(HH, BH, LH, AH, this.tables.blockRootId(rH) === this.tables.blockRootId(AH) ? 0 : 1)
           },
-          pV = YV.vp(VV, eV, xV),
-          QV = jx(pV);
-        if (QV) {
-          const [JV, UV, nV] = [VV - QV.x, eV - QV.y, xV - QV.z], wV = Bx[YV.vp(JV, UV, nV)], ZV = null === wV || void 0 === wV ? void 0 : wV.positions.some((VV => VV.id === pV && VV.x === QV.x && VV.y === QV.y && VV.z === QV.z));
-          for (const VV of (ZV && wV ? wV : QV.main).positions) YV.vp(JV + VV.x, UV + VV.y, nV + VV.z) === VV.id && yV(JV + VV.x, UV + VV.y, nV + VV.z, 0, VV.id)
+          tH = rH.ph(HH, BH, LH),
+          zH = xL(tH);
+        if (zH) {
+          const [AH, SH, CH] = [HH - zH.x, BH - zH.y, LH - zH.z], EH = ML[rH.ph(AH, SH, CH)], XH = null === EH || void 0 === EH ? void 0 : EH.positions.some((HH => HH.id === tH && HH.x === zH.x && HH.y === zH.y && HH.z === zH.z));
+          for (const HH of (XH && EH ? EH : zH.main).positions) rH.ph(AH + HH.x, SH + HH.y, CH + HH.z) === HH.id && hH(AH + HH.x, SH + HH.y, CH + HH.z, 0, HH.id)
         }
-        const nV = jx(JV);
-        if (nV)
-          for (const ZV of nV.main.positions) {
-            const [JV, UV, pV] = [VV + ZV.x - nV.x, eV + ZV.y - nV.y, xV + ZV.z - nV.z];
-            yV(JV, UV, pV, ZV.id, YV.vp(JV, UV, pV))
-          } else yV(VV, eV, xV, JV, pV);
-        const wV = this.tables;
-        if ((0 !== wV.attachedTopOf(pV) || 0 !== wV.attachedTopOf(JV)) && YV.isLoaded(VV, eV + 1, xV)) {
-          let QV = YV.vp(VV, eV + 1, xV);
-          for (let JV = 0; JV < UV.length; JV += 5) UV[JV] === VV && UV[JV + 1] === eV + 1 && UV[JV + 2] === xV && (QV = UV[JV + 3]);
-          const nV = this.attachedTopWrite(pV, JV, QV);
-          void 0 !== nV && yV(VV, eV + 1, xV, nV, QV)
+        const CH = xL(AH);
+        if (CH)
+          for (const XH of CH.main.positions) {
+            const [AH, SH, tH] = [HH + XH.x - CH.x, BH + XH.y - CH.y, LH + XH.z - CH.z];
+            hH(AH, SH, tH, XH.id, rH.ph(AH, SH, tH))
+          } else hH(HH, BH, LH, AH, tH);
+        const EH = this.tables;
+        if ((0 !== EH.attachedTopOf(tH) || 0 !== EH.attachedTopOf(AH)) && rH.isLoaded(HH, BH + 1, LH)) {
+          let zH = rH.ph(HH, BH + 1, LH);
+          for (let AH = 0; AH < SH.length; AH += 5) SH[AH] === HH && SH[AH + 1] === BH + 1 && SH[AH + 2] === LH && (zH = SH[AH + 3]);
+          const CH = this.attachedTopWrite(tH, AH, zH);
+          void 0 !== CH && hH(HH, BH + 1, LH, CH, zH)
         }
-        return UV
+        return SH
       }
-      attachedTopWrite(VV, eV, xV) {
-        const JV = this.tables,
-          YV = JV.attachedTopOf(VV),
-          UV = JV.attachedTopOf(eV),
-          yV = 0 !== YV && 0 !== xV && JV.blockRootId(xV) === JV.blockRootId(YV);
-        return 0 !== YV && 0 !== UV && JV.blockRootId(VV) === JV.blockRootId(eV) ? yV && xV !== UV ? UV : void 0 : 0 === UV || !yV && 0 !== xV ? yV ? 0 : void 0 : UV
+      attachedTopWrite(HH, BH, LH) {
+        const AH = this.tables,
+          rH = AH.attachedTopOf(HH),
+          SH = AH.attachedTopOf(BH),
+          hH = 0 !== rH && 0 !== LH && AH.blockRootId(LH) === AH.blockRootId(rH);
+        return 0 !== rH && 0 !== SH && AH.blockRootId(HH) === AH.blockRootId(BH) ? hH && LH !== SH ? SH : void 0 : 0 === SH || !hH && 0 !== LH ? hH ? 0 : void 0 : SH
       }
     }
-    const Tx = kV.nc + kV.rc * kV.vc.BYTES,
-      Px = 2147483647,
-      Ax = new TextDecoder,
-      Nx = new TextEncoder,
-      Xx = Object.freeze({
-        Ey: 0,
-        Bw: null,
+    const UL = uH.sc + uH.uc * uH.Ec.BYTES,
+      VL = 2147483647,
+      OL = new TextDecoder,
+      bL = new TextEncoder,
+      kL = Object.freeze({
+        ZC: 0,
+        fE: null,
         amountAddedToSlot: 0
       }),
-      Mx = new Proxy({}, {
-        get: () => () => kV.ed
+      mL = new Proxy({}, {
+        get: () => () => uH.jd
       });
 
-    function zx(VV) {
-      return Number.isInteger(VV) && VV >= 0 && VV <= 65535
+    function oL(HH) {
+      return Number.isInteger(HH) && HH >= 0 && HH <= 65535
     }
 
-    function Gx(VV) {
-      return Number.isInteger(VV) && VV >= 0 && VV <= 4294967295
+    function IL(HH) {
+      return Number.isInteger(HH) && HH >= 0 && HH <= 4294967295
     }
-    class Wx {
-      constructor(VV) {
-        this.deps = VV, this.ix = [0, 0, 0], this.inaccuracy = 0, this.version = 0, this.notified = 0, this.iconChanged = !1, this.facades = new Array(kV.rc), this.ids = new Uint16Array(kV.rc), this.amounts = new Uint16Array(kV.rc), this.attrRead = new Float64Array(kV.rc).fill(-1), this.stale = new Uint16Array(kV.rc), this.staleVersion = new Uint32Array(kV.rc), this.instances = new Uint32Array(kV.rc), this.viewPtr = 0, this.viewVersion = -1, this.len = 0, this.selected = 0, this.slotIconId = 0, this.stopped = !1, this.listeners = new Set
+    class fL {
+      constructor(HH) {
+        this.deps = HH, this.OL = [0, 0, 0], this.inaccuracy = 0, this.version = 0, this.notified = 0, this.iconChanged = !1, this.facades = new Array(uH.uc), this.ids = new Uint16Array(uH.uc), this.amounts = new Uint16Array(uH.uc), this.attrRead = new Float64Array(uH.uc).fill(-1), this.stale = new Uint16Array(uH.uc), this.staleVersion = new Uint32Array(uH.uc), this.instances = new Uint32Array(uH.uc), this.viewPtr = 0, this.viewVersion = -1, this.len = 0, this.selected = 0, this.slotIconId = 0, this.stopped = !1, this.listeners = new Set
       }
       get length() {
         return this.len
@@ -2801,261 +2676,261 @@ export const modules = {
       get changes() {
         return this.version
       }
-      slot(VV) {
-        var eV;
-        return Number.isInteger(VV) && VV >= 0 && VV < this.len && 0 !== this.ids[VV] && null !== (eV = this.facades[VV]) && void 0 !== eV ? eV : null
+      slot(HH) {
+        var BH;
+        return Number.isInteger(HH) && HH >= 0 && HH < this.len && 0 !== this.ids[HH] && null !== (BH = this.facades[HH]) && void 0 !== BH ? BH : null
       }
-      hn() {
+      LX() {
         return this.slot(this.selected)
       }
       playerItems() {
-        const VV = [];
-        for (let eV = 0; eV < Math.min(kV.pd, this.len); eV++) VV.push(this.slot(eV));
-        return VV
+        const HH = [];
+        for (let BH = 0; BH < Math.min(uH.vd, this.len); BH++) HH.push(this.slot(BH));
+        return HH
       }
       freeSlots() {
-        let VV = 0;
-        for (let eV = 0; eV < Math.min(kV.pd - kV.h, this.len); eV++) 0 === this.ids[eV] && VV++;
-        return VV
+        let HH = 0;
+        for (let BH = 0; BH < Math.min(uH.vd - uH.i, this.len); BH++) 0 === this.ids[BH] && HH++;
+        return HH
       }
-      amountOf(VV) {
-        let eV = 0;
-        for (let JV = 0; JV < Math.min(kV.pd, this.len); JV++) {
-          const YV = this.slot(JV);
-          var xV;
-          if ((null === YV || void 0 === YV ? void 0 : YV.name) === VV) eV += null !== (xV = YV.amount) && void 0 !== xV ? xV : 1
+      amountOf(HH) {
+        let BH = 0;
+        for (let AH = 0; AH < Math.min(uH.vd, this.len); AH++) {
+          const rH = this.slot(AH);
+          var LH;
+          if ((null === rH || void 0 === rH ? void 0 : rH.name) === HH) BH += null !== (LH = rH.amount) && void 0 !== LH ? LH : 1
         }
-        return eV
+        return BH
       }
-      instance(VV) {
-        var eV;
-        return null !== (eV = this.instances[VV]) && void 0 !== eV ? eV : 0
+      instance(HH) {
+        var BH;
+        return null !== (BH = this.instances[HH]) && void 0 !== BH ? BH : 0
       }
-      watch(VV) {
-        return this.listeners.add(VV), () => {
-          this.listeners.delete(VV)
+      watch(HH) {
+        return this.listeners.add(HH), () => {
+          this.listeners.delete(HH)
         }
       }
       touch() {
         this.version++
       }
-      flush(VV) {
+      flush(HH) {
         if (this.version !== this.notified || this.iconChanged) {
           this.notified = this.version, this.iconChanged = !1;
-          for (const xV of [...this.listeners]) try {
-            xV()
-          } catch (eV) {
-            VV(eV)
+          for (const LH of [...this.listeners]) try {
+            LH()
+          } catch (BH) {
+            HH(BH)
           }
         }
       }
-      chestOpened(VV, eV, xV) {
-        this.ix[0] = VV, this.ix[1] = eV, this.ix[2] = xV, this.version++
+      chestOpened(HH, BH, LH) {
+        this.OL[0] = HH, this.OL[1] = BH, this.OL[2] = LH, this.version++
       }
       refresh() {
-        const VV = this.deps.api.apiView,
-          eV = kV.s.inventoryViewPtr(VV, 0),
-          xV = kV.s.inventoryVersion(VV, 0),
-          JV = kV.s.selectedSlot(VV, 0);
-        JV !== this.selected && (this.selected = JV, this.version++);
-        const YV = kV.s.slotIcon(VV, 0);
-        if (YV !== this.slotIconId && (this.slotIconId = YV, this.iconChanged = !0), eV === this.viewPtr && xV === this.viewVersion) return;
-        this.viewPtr = eV, this.viewVersion = xV;
-        const UV = this.deps.api.memoryData(eV, Tx, 4, "the inventory view"),
-          yV = UV ? Math.min(UV.getUint32(0, !0), kV.rc) : 0;
-        yV !== this.len && (this.len = yV, this.version++);
-        let pV = 0;
-        for (let QV = 0; QV < kV.rc; QV++) {
-          const VV = kV.nc + QV * kV.vc.BYTES,
-            eV = null !== UV && QV < yV ? kV.vc.item(UV, VV) : 0;
-          if (0 === eV || null === UV) {
-            0 !== this.ids[QV] && (this.ids[QV] = 0, this.attrRead[QV] = -1, this.instances[QV]++, this.version++);
+        const HH = this.deps.api.apiView,
+          BH = uH.y.inventoryViewPtr(HH, 0),
+          LH = uH.y.inventoryVersion(HH, 0),
+          AH = uH.y.selectedSlot(HH, 0);
+        AH !== this.selected && (this.selected = AH, this.version++);
+        const rH = uH.y.slotIcon(HH, 0);
+        if (rH !== this.slotIconId && (this.slotIconId = rH, this.iconChanged = !0), BH === this.viewPtr && LH === this.viewVersion) return;
+        this.viewPtr = BH, this.viewVersion = LH;
+        const SH = this.deps.api.memoryData(BH, UL, 4, "the inventory view"),
+          hH = SH ? Math.min(SH.getUint32(0, !0), uH.uc) : 0;
+        hH !== this.len && (this.len = hH, this.version++);
+        let tH = 0;
+        for (let zH = 0; zH < uH.uc; zH++) {
+          const HH = uH.sc + zH * uH.Ec.BYTES,
+            BH = null !== SH && zH < hH ? uH.Ec.item(SH, HH) : 0;
+          if (0 === BH || null === SH) {
+            0 !== this.ids[zH] && (this.ids[zH] = 0, this.attrRead[zH] = -1, this.instances[zH]++, this.version++);
             continue
           }
-          const xV = kV.vc.amount(UV, VV),
-            JV = kV.vc.attrVersion(UV, VV);
-          eV === this.ids[QV] && xV === this.amounts[QV] || this.fill(QV, eV, xV), JV !== this.attrRead[QV] && (this.stale[pV] = QV, this.staleVersion[pV] = JV, pV++)
+          const LH = uH.Ec.amount(SH, HH),
+            AH = uH.Ec.attrVersion(SH, HH);
+          BH === this.ids[zH] && LH === this.amounts[zH] || this.fill(zH, BH, LH), AH !== this.attrRead[zH] && (this.stale[tH] = zH, this.staleVersion[tH] = AH, tH++)
         }
-        pV > 0 && this.fetchAttributes(pV)
+        tH > 0 && this.fetchAttributes(tH)
       }
-      fill(VV, eV, xV) {
+      fill(HH, BH, LH) {
         const {
-          tables: JV
-        } = this.deps, YV = eV !== this.ids[VV];
-        let UV = this.facades[VV];
-        UV || (UV = {
+          tables: AH
+        } = this.deps, rH = BH !== this.ids[HH];
+        let SH = this.facades[HH];
+        SH || (SH = {
           name: "",
           amount: null,
           attributes: {
             customAttributes: {}
           },
           typeObj: null
-        }, this.facades[VV] = UV), YV && (UV.name = JV.nameOfId(eV), UV.typeObj = JV.itemType(eV), UV.attributes = {
+        }, this.facades[HH] = SH), rH && (SH.name = AH.nameOfId(BH), SH.typeObj = AH.itemType(BH), SH.attributes = {
           customAttributes: {}
-        }, this.attrRead[VV] = -1, this.instances[VV]++), UV.amount = 0 === xV ? null : xV, this.ids[VV] = eV, this.amounts[VV] = xV, this.version++
+        }, this.attrRead[HH] = -1, this.instances[HH]++), SH.amount = 0 === LH ? null : LH, this.ids[HH] = BH, this.amounts[HH] = LH, this.version++
       }
-      fetchAttributes(VV) {
+      fetchAttributes(HH) {
         const {
-          api: eV,
-          onError: xV
-        } = this.deps, JV = eV.memoryView(Uint16Array, eV.scratch(), VV, "item_attributes_batch's slots");
-        if (!JV) return void this.markRead(VV);
-        JV.set(this.stale.subarray(0, VV));
-        const YV = eV.queries.itemAttributesBatch(VV),
-          UV = 4294967295 === YV ? null : eV.memoryData(eV.scratch(), YV, 4, "item_attributes_batch's answer");
-        if (!UV) return void this.markRead(VV);
-        const yV = new Uint8Array(UV.buffer, UV.byteOffset, YV);
-        for (let QV = 0; QV + 8 <= YV;) {
-          const VV = UV.getUint16(QV, !0),
-            eV = UV.getUint32(QV + 4, !0),
-            JV = yV.subarray(QV + 8, QV + 8 + eV);
-          QV += 8 + (0, vV.ze)(eV);
-          const YV = this.facades[VV];
-          if (YV && 0 !== this.ids[VV] && 0 !== eV) {
+          api: BH,
+          onError: LH
+        } = this.deps, AH = BH.memoryView(Uint16Array, BH.scratch(), HH, "item_attributes_batch's slots");
+        if (!AH) return void this.markRead(HH);
+        AH.set(this.stale.subarray(0, HH));
+        const rH = BH.queries.itemAttributesBatch(HH),
+          SH = 4294967295 === rH ? null : BH.memoryData(BH.scratch(), rH, 4, "item_attributes_batch's answer");
+        if (!SH) return void this.markRead(HH);
+        const hH = new Uint8Array(SH.buffer, SH.byteOffset, rH);
+        for (let zH = 0; zH + 8 <= rH;) {
+          const HH = SH.getUint16(zH, !0),
+            BH = SH.getUint32(zH + 4, !0),
+            AH = hH.subarray(zH + 8, zH + 8 + BH);
+          zH += 8 + (0, GH.te)(BH);
+          const rH = this.facades[HH];
+          if (rH && 0 !== this.ids[HH] && 0 !== BH) {
             try {
-              YV.attributes = JSON.parse(Ax.decode(JV))
-            } catch (pV) {
-              xV(pV)
+              rH.attributes = JSON.parse(OL.decode(AH))
+            } catch (tH) {
+              LH(tH)
             }
             this.version++
           }
         }
-        this.markRead(VV)
+        this.markRead(HH)
       }
-      markRead(VV) {
-        for (let eV = 0; eV < VV; eV++) this.attrRead[this.stale[eV]] = this.staleVersion[eV]
+      markRead(HH) {
+        for (let BH = 0; BH < HH; BH++) this.attrRead[this.stale[BH]] = this.staleVersion[BH]
       }
-      swap(VV, eV) {
-        return zx(VV) && zx(eV) && this.settle(this.queries().invSwap(VV, eV))
+      swap(HH, BH) {
+        return oL(HH) && oL(BH) && this.settle(this.queries().invSwap(HH, BH))
       }
-      move(VV, eV, xV) {
-        return zx(VV) && zx(eV) && Gx(xV) && this.settle(this.queries().invMove(VV, eV, xV))
+      move(HH, BH, LH) {
+        return oL(HH) && oL(BH) && IL(LH) && this.settle(this.queries().invMove(HH, BH, LH))
       }
-      quickMove(VV, eV, xV, JV) {
-        var YV, UV;
-        if (!zx(VV) || !zx(eV) || !zx(xV) || null !== JV && !Gx(JV)) return null;
-        const yV = this.queries().invQuickMove(VV, eV, xV, null === JV ? -1 : Math.min(JV, Px)),
-          pV = yV === kV.ed ? kV.Hb : null !== (YV = null === (UV = this.extras()) || void 0 === UV ? void 0 : UV[1]) && void 0 !== YV ? YV : kV.Hb;
-        return this.settle(yV), pV === kV.Hb ? null : pV
+      quickMove(HH, BH, LH, AH) {
+        var rH, SH;
+        if (!oL(HH) || !oL(BH) || !oL(LH) || null !== AH && !IL(AH)) return null;
+        const hH = this.queries().invQuickMove(HH, BH, LH, null === AH ? -1 : Math.min(AH, VL)),
+          tH = hH === uH.jd ? uH.Sb : null !== (rH = null === (SH = this.extras()) || void 0 === SH ? void 0 : SH[1]) && void 0 !== rH ? rH : uH.Sb;
+        return this.settle(hH), tH === uH.Sb ? null : tH
       }
-      remove(VV, eV, xV) {
-        return zx(VV) && Gx(eV) && this.settle(this.queries().invRemove(VV, eV, xV ? 1 : 0))
+      remove(HH, BH, LH) {
+        return oL(HH) && IL(BH) && this.settle(this.queries().invRemove(HH, BH, LH ? 1 : 0))
       }
-      selectSlot(VV) {
-        return zx(VV) && this.settle(this.queries().selectSlot(VV))
+      selectSlot(HH) {
+        return oL(HH) && this.settle(this.queries().selectSlot(HH))
       }
       closeChest() {
         return this.settle(this.queries().closeChest())
       }
-      enchant(VV, eV, xV) {
-        if (!zx(VV) || !Number.isInteger(eV)) return !1;
-        const [JV, YV, UV] = xV;
-        return this.settle(this.queries().invEnchant(VV, eV, Math.floor(JV), Math.floor(YV), Math.floor(UV)))
+      enchant(HH, BH, LH) {
+        if (!oL(HH) || !Number.isInteger(BH)) return !1;
+        const [AH, rH, SH] = LH;
+        return this.settle(this.queries().invEnchant(HH, BH, Math.floor(AH), Math.floor(rH), Math.floor(SH)))
       }
-      craft(VV, eV, xV) {
-        let JV;
+      craft(HH, BH, LH) {
+        let AH;
         try {
-          JV = this.deps.tables.getItemId(VV)
+          AH = this.deps.tables.getItemId(HH)
         } catch {
-          return Xx
+          return kL
         }
-        if (!zx(eV) || null !== xV && (Number.isNaN(xV) || xV < 0)) return Xx;
-        const YV = null === xV || xV > Px ? -1 : Math.floor(xV),
-          UV = this.queries().craft(JV, eV, YV);
-        let yV = Xx;
-        const pV = UV === kV.ed ? null : this.extras();
-        if (pV) {
-          const [VV, eV, xV] = pV;
-          yV = {
-            Ey: VV,
-            Bw: eV === kV.Hb ? null : eV,
-            amountAddedToSlot: xV
+        if (!oL(BH) || null !== LH && (Number.isNaN(LH) || LH < 0)) return kL;
+        const rH = null === LH || LH > VL ? -1 : Math.floor(LH),
+          SH = this.queries().craft(AH, BH, rH);
+        let hH = kL;
+        const tH = SH === uH.jd ? null : this.extras();
+        if (tH) {
+          const [HH, BH, LH] = tH;
+          hH = {
+            ZC: HH,
+            fE: BH === uH.Sb ? null : BH,
+            amountAddedToSlot: LH
           }
         }
-        return this.settle(UV), yV
+        return this.settle(SH), hH
       }
-      salvage(VV, eV, xV) {
-        let JV;
+      salvage(HH, BH, LH) {
+        let AH;
         try {
-          JV = this.deps.tables.getItemId(eV)
+          AH = this.deps.tables.getItemId(BH)
         } catch {
           return !1
         }
-        return zx(VV) && Number.isInteger(xV) && this.settle(this.queries().salvage(VV, JV, Math.max(Math.min(xV, Px), -Px)))
+        return oL(HH) && Number.isInteger(LH) && this.settle(this.queries().salvage(HH, AH, Math.max(Math.min(LH, VL), -VL)))
       }
-      craftingView(VV, eV, xV) {
-        var JV;
+      craftingView(HH, BH, LH) {
+        var AH;
         if (this.stopped) return null;
         const {
-          api: YV,
-          onError: UV
-        } = this.deps, yV = VV ? Nx.encode(VV) : null;
-        if (null !== yV) {
-          if (yV.length > 1024) return UV(new Error(`The crafting station ${VV}'s name is over 1024 bytes`)), null;
-          const eV = YV.memoryView(Uint8Array, YV.scratch(), yV.length, "crafting_view's station");
-          if (!eV) return null;
-          eV.set(yV)
+          api: rH,
+          onError: SH
+        } = this.deps, hH = HH ? bL.encode(HH) : null;
+        if (null !== hH) {
+          if (hH.length > 1024) return SH(new Error(`The crafting station ${HH}'s name is over 1024 bytes`)), null;
+          const BH = rH.memoryView(Uint8Array, rH.scratch(), hH.length, "crafting_view's station");
+          if (!BH) return null;
+          BH.set(hH)
         }
-        const pV = zx(eV) && zx(xV),
-          QV = YV.queries.craftingView(null !== (JV = null === yV || void 0 === yV ? void 0 : yV.length) && void 0 !== JV ? JV : 0, pV ? eV : 0, pV ? xV : 0);
-        return QV < kV.gb.BYTES ? (YV.reportCorruption(`crafting_view's answer of ${QV} bytes`), null) : YV.memoryData(YV.scratch(), QV, 1, "crafting_view's answer")
+        const tH = oL(BH) && oL(LH),
+          zH = rH.queries.craftingView(null !== (AH = null === hH || void 0 === hH ? void 0 : hH.length) && void 0 !== AH ? AH : 0, tH ? BH : 0, tH ? LH : 0);
+        return zH < uH.ob.BYTES ? (rH.reportCorruption(`crafting_view's answer of ${zH} bytes`), null) : rH.memoryData(rH.scratch(), zH, 1, "crafting_view's answer")
       }
       queries() {
-        var VV, eV;
-        return !1 === (null === (VV = (eV = this.deps).beforeOp) || void 0 === VV ? void 0 : VV.call(eV)) ? (this.stopped = !0, Mx) : this.deps.api.queries
+        var HH, BH;
+        return !1 === (null === (HH = (BH = this.deps).beforeOp) || void 0 === HH ? void 0 : HH.call(BH)) ? (this.stopped = !0, mL) : this.deps.api.queries
       }
       extras() {
         const {
-          api: VV
+          api: HH
         } = this.deps;
-        return VV.memoryView(Uint32Array, VV.scratch(), 3, "a sync query's extra words")
+        return HH.memoryView(Uint32Array, HH.scratch(), 3, "a sync query's extra words")
       }
-      settle(VV) {
-        if (VV === kV.ad)(0, Jx.e)();
-        else if (VV !== kV.ed) {
-          const eV = this.deps.cmd();
-          eV && function(VV, eV, xV) {
-            return (0, Jx.e)(), (0, kV.hg)(VV, eV, xV)
-          }(eV, 0, VV) || this.deps.onError(new Error(`Sync op ${VV}'s marker didn't fit the command ring: its send goes after the next frame's commands`))
+      settle(HH) {
+        if (HH === uH.hd)(0, AL.b)();
+        else if (HH !== uH.jd) {
+          const BH = this.deps.cmd();
+          BH && function(HH, BH, LH) {
+            return (0, AL.b)(), (0, uH.yg)(HH, BH, LH)
+          }(BH, 0, HH) || this.deps.onError(new Error(`Sync op ${HH}'s marker didn't fit the command ring: its send goes after the next frame's commands`))
         }
-        return this.stopped || this.refresh(), VV !== kV.ed
+        return this.stopped || this.refresh(), HH !== uH.jd
       }
     }
-    const Rx = 1 / .6,
-      gx = [0, 1, 0],
-      Dx = [0, 0, 0],
-      ix = new Uint8Array(0),
-      Cx = 1.2 * je.f.QB,
-      ax = new TextEncoder,
-      ox = [0, 0, 0],
-      cx = [0, 0, 0],
-      hx = new Map;
+    const lL = 1 / .6,
+      KL = [0, 1, 0],
+      cL = [0, 0, 0],
+      eL = new Uint8Array(0),
+      qL = 1.2 * xB.g.JW,
+      gL = new TextEncoder,
+      NL = [0, 0, 0],
+      RL = [0, 0, 0],
+      jL = new Map;
 
-    function lx(VV) {
-      let eV = hx.get(VV);
-      return eV || (hx.size >= 64 && hx.clear(), eV = ax.encode(`{"emitRate":${VV}}`), hx.set(VV, eV)), eV
+    function nL(HH) {
+      let BH = jL.get(HH);
+      return BH || (jL.size >= 64 && jL.clear(), BH = gL.encode(`{"emitRate":${HH}}`), jL.set(HH, BH)), BH
     }
 
-    function Lx(VV) {
-      return Number.isFinite(VV) && VV > 0 ? VV : 0
+    function FL(HH) {
+      return Number.isFinite(HH) && HH > 0 ? HH : 0
     }
 
-    function fx(VV, eV) {
-      for (let xV = 0; xV < 3; xV++) {
-        const JV = Math.abs(eV[xV]);
-        ox[xV] = VV[xV] - JV, cx[xV] = 2 * JV
+    function DL(HH, BH) {
+      for (let LH = 0; LH < 3; LH++) {
+        const AH = Math.abs(BH[LH]);
+        NL[LH] = HH[LH] - AH, RL[LH] = 2 * AH
       }
-      return Number.isFinite(ox[0] + ox[1] + ox[2] + cx[0] + cx[1] + cx[2])
+      return Number.isFinite(NL[0] + NL[1] + NL[2] + RL[0] + RL[1] + RL[2])
     }
 
-    function mx(VV, eV) {
-      return "pos1" === VV || "pos2" === VV ? void 0 : eV
+    function wL(HH, BH) {
+      return "pos1" === HH || "pos2" === HH ? void 0 : BH
     }
 
-    function Kx(VV, eV, xV) {
-      return VV.length > kV.Hd.MaxOpts ? (xV(new Error(`${eV}'s particle opts are over ${kV.Hd.MaxOpts} bytes of JSON`)), null) : VV
+    function ZL(HH, BH, LH) {
+      return HH.length > uH.Id.MaxOpts ? (LH(new Error(`${BH}'s particle opts are over ${uH.Id.MaxOpts} bytes of JSON`)), null) : HH
     }
-    const Hx = {
+    const dL = {
       moveTo() {},
       setEmitRate() {},
       emit() {},
@@ -3064,9 +2939,9 @@ export const modules = {
       stop() {},
       dispose() {}
     };
-    class ux {
-      constructor(VV) {
-        this.deps = VV, this.session = 0, this.nextKey = 1, this.live = 0, this.started = !1
+    class aL {
+      constructor(HH) {
+        this.deps = HH, this.session = 0, this.nextKey = 1, this.live = 0, this.started = !1
       }
       enabled() {
         return null !== this.sink()
@@ -3074,113 +2949,113 @@ export const modules = {
       sink() {
         return this.deps.isSessionLive() ? this.deps.cmd() : null
       }
-      create(VV, eV) {
-        var xV;
-        const JV = this.sink(),
-          YV = null !== (xV = eV.half) && void 0 !== xV ? xV : Dx;
-        if (!JV || this.live >= kV.Hd.MaxLiveKeys || this.nextKey > kV.Hd.MaxKey || !fx(eV.pos, YV)) return Hx;
-        const UV = this.nextKey,
-          yV = Kx(function(VV) {
-            var eV, xV, JV;
-            const YV = JSON.stringify({
-              texture: "string" === typeof VV.texture ? VV.texture : "smokePuff",
-              Jv: VV.Jv,
-              minLifeTime: VV.minLifeTime,
-              maxLifeTime: VV.maxLifeTime,
-              minSize: VV.minSize,
-              maxSize: VV.maxSize,
-              minEmitPower: VV.minEmitPower,
-              maxEmitPower: VV.maxEmitPower,
-              emitRate: Lx(VV.emitRate),
-              gravity: null !== (eV = VV.gravity) && void 0 !== eV ? eV : Dx,
-              dir1: null !== (xV = VV.dir1) && void 0 !== xV ? xV : gx,
-              dir2: null !== (JV = VV.dir2) && void 0 !== JV ? JV : gx,
-              colorGradients: VV.colorGradients,
-              blendMode: VV.blendMode
+      create(HH, BH) {
+        var LH;
+        const AH = this.sink(),
+          rH = null !== (LH = BH.half) && void 0 !== LH ? LH : cL;
+        if (!AH || this.live >= uH.Id.MaxLiveKeys || this.nextKey > uH.Id.MaxKey || !DL(BH.pos, rH)) return dL;
+        const SH = this.nextKey,
+          hH = ZL(function(HH) {
+            var BH, LH, AH;
+            const rH = JSON.stringify({
+              texture: "string" === typeof HH.texture ? HH.texture : "smokePuff",
+              aX: HH.aX,
+              minLifeTime: HH.minLifeTime,
+              maxLifeTime: HH.maxLifeTime,
+              minSize: HH.minSize,
+              maxSize: HH.maxSize,
+              minEmitPower: HH.minEmitPower,
+              maxEmitPower: HH.maxEmitPower,
+              emitRate: FL(HH.emitRate),
+              gravity: null !== (BH = HH.gravity) && void 0 !== BH ? BH : cL,
+              dir1: null !== (LH = HH.dir1) && void 0 !== LH ? LH : KL,
+              dir2: null !== (AH = HH.dir2) && void 0 !== AH ? AH : KL,
+              colorGradients: HH.colorGradients,
+              blendMode: HH.blendMode
             });
-            return ax.encode(YV)
-          }(VV), "createParticles", this.deps.onError);
-        return yV && (0, kV.mf)(JV, 0, UV, 0, kV.Hd.PresetNone, 0, ox, cx, yV) ? (this.nextKey++, this.live++, this.started = !0, new sx(this, this.session, UV, VV, YV)) : Hx
+            return gL.encode(rH)
+          }(HH), "createParticles", this.deps.onError);
+        return hH && (0, uH.vf)(AH, 0, SH, 0, uH.Id.PresetNone, 0, NL, RL, hH) ? (this.nextKey++, this.live++, this.started = !0, new sL(this, this.session, SH, HH, rH)) : dL
       }
-      playEffect(VV) {
-        const eV = this.sink(),
+      playEffect(HH) {
+        const BH = this.sink(),
           {
-            pos1: xV,
-            pos2: JV
-          } = VV;
-        if (!eV || !xV || !JV) return;
-        for (let UV = 0; UV < 3; UV++) ox[UV] = Math.min(xV[UV], JV[UV]), cx[UV] = Math.abs(JV[UV] - xV[UV]);
-        if (!Number.isFinite(ox[0] + ox[1] + ox[2] + cx[0] + cx[1] + cx[2])) return;
-        const YV = Kx(ax.encode(JSON.stringify(VV, mx)), "playParticleEffect", this.deps.onError);
-        YV && (0, kV.hf)(eV, 0, 0, kV.Hd.PresetNone, kV.Hd.HasBox, 0, ox, cx, YV)
+            pos1: LH,
+            pos2: AH
+          } = HH;
+        if (!BH || !LH || !AH) return;
+        for (let SH = 0; SH < 3; SH++) NL[SH] = Math.min(LH[SH], AH[SH]), RL[SH] = Math.abs(AH[SH] - LH[SH]);
+        if (!Number.isFinite(NL[0] + NL[1] + NL[2] + RL[0] + RL[1] + RL[2])) return;
+        const rH = ZL(gL.encode(JSON.stringify(HH, wL)), "playParticleEffect", this.deps.onError);
+        rH && (0, uH.rf)(BH, 0, 0, uH.Id.PresetNone, uH.Id.HasBox, 0, NL, RL, rH)
       }
-      burstPreset(VV, eV, xV) {
-        const JV = this.sink(),
-          YV = Math.min(Math.floor(xV), kV.Hd.MaxBurst);
-        if (!JV || !Object.hasOwn(kV.dc, VV) || !(YV > 0)) return;
-        const UV = Cx;
-        for (let yV = 0; yV < 3; yV++) ox[yV] = eV[yV] - UV / 2, cx[yV] = UV;
-        Number.isFinite(ox[0] + ox[1] + ox[2]) && (0, kV.hf)(JV, 0, 0, kV.dc[VV], kV.Hd.HasBox, YV, ox, cx, ix)
+      burstPreset(HH, BH, LH) {
+        const AH = this.sink(),
+          rH = Math.min(Math.floor(LH), uH.Id.MaxBurst);
+        if (!AH || !Object.hasOwn(uH.jc, HH) || !(rH > 0)) return;
+        const SH = qL;
+        for (let hH = 0; hH < 3; hH++) NL[hH] = BH[hH] - SH / 2, RL[hH] = SH;
+        Number.isFinite(NL[0] + NL[1] + NL[2]) && (0, uH.rf)(AH, 0, 0, uH.jc[HH], uH.Id.HasBox, rH, NL, RL, eL)
       }
       sessionEnded() {
         this.session++;
-        const VV = this.started ? this.deps.cmd() : null;
-        return this.started = !1, this.nextKey = 1, this.live = 0, !VV || (0, kV.of)(VV, 0)
+        const HH = this.started ? this.deps.cmd() : null;
+        return this.started = !1, this.nextKey = 1, this.live = 0, !HH || (0, uH.yf)(HH, 0)
       }
-      sinkFor(VV) {
-        return VV === this.session ? this.deps.cmd() : null
+      sinkFor(HH) {
+        return HH === this.session ? this.deps.cmd() : null
       }
-      stop(VV, eV) {
-        const xV = this.sinkFor(VV);
-        xV && (0, kV.qf)(xV, 0, eV) && this.live--
+      stop(HH, BH) {
+        const LH = this.sinkFor(HH);
+        LH && (0, uH.Cf)(LH, 0, BH) && this.live--
       }
     }
-    class sx {
-      constructor(VV, eV, xV, JV, YV) {
-        this.owner = VV, this.session = eV, this.key = xV, this.half = void 0, this.rate = void 0, this.stopDelayMs = void 0, this.emitted = void 0, this.stopped = !1, this.freed = !1, this.half = [Math.abs(YV[0]), Math.abs(YV[1]), Math.abs(YV[2])], this.rate = Lx(JV.emitRate), this.emitted = this.rate > 0;
-        const UV = JV.maxLifeTime * Rx * 1e3 + 250;
-        this.stopDelayMs = UV >= 0 ? Math.min(UV, 2147483647) : 250
+    class sL {
+      constructor(HH, BH, LH, AH, rH) {
+        this.owner = HH, this.session = BH, this.key = LH, this.half = void 0, this.rate = void 0, this.stopDelayMs = void 0, this.emitted = void 0, this.stopped = !1, this.freed = !1, this.half = [Math.abs(rH[0]), Math.abs(rH[1]), Math.abs(rH[2])], this.rate = FL(AH.emitRate), this.emitted = this.rate > 0;
+        const SH = AH.maxLifeTime * lL * 1e3 + 250;
+        this.stopDelayMs = SH >= 0 ? Math.min(SH, 2147483647) : 250
       }
       sink() {
         return this.stopped ? null : this.owner.sinkFor(this.session)
       }
-      moveTo(VV, eV) {
-        const xV = this.sink();
-        if (xV) {
-          if (eV)
-            for (let VV = 0; VV < 3; VV++) this.half[VV] = Math.abs(eV[VV]);
-          fx(VV, this.half) && (0, kV.rf)(xV, 0, this.key, kV.Hd.HasBox, ox, cx, ix)
+      moveTo(HH, BH) {
+        const LH = this.sink();
+        if (LH) {
+          if (BH)
+            for (let HH = 0; HH < 3; HH++) this.half[HH] = Math.abs(BH[HH]);
+          DL(HH, this.half) && (0, uH.Df)(LH, 0, this.key, uH.Id.HasBox, NL, RL, eL)
         }
       }
-      setEmitRate(VV) {
-        const eV = this.sink(),
-          xV = Lx(VV);
-        eV && xV !== this.rate && (0, kV.rf)(eV, 0, this.key, 0, Dx, Dx, lx(xV)) && (this.rate = xV, this.emitted ||= xV > 0)
+      setEmitRate(HH) {
+        const BH = this.sink(),
+          LH = FL(HH);
+        BH && LH !== this.rate && (0, uH.Df)(BH, 0, this.key, 0, cL, cL, nL(LH)) && (this.rate = LH, this.emitted ||= LH > 0)
       }
-      emit(VV) {
-        const eV = this.sink(),
-          xV = Math.min(Math.floor(VV), kV.Hd.MaxBurst);
-        eV && xV > 0 && (0, kV.hf)(eV, 0, this.key, kV.Hd.PresetNone, 0, xV, Dx, Dx, ix) && (this.emitted = !0)
+      emit(HH) {
+        const BH = this.sink(),
+          LH = Math.min(Math.floor(HH), uH.Id.MaxBurst);
+        BH && LH > 0 && (0, uH.rf)(BH, 0, this.key, uH.Id.PresetNone, 0, LH, cL, cL, eL) && (this.emitted = !0)
       }
-      emitPoints(VV, eV, xV) {
-        const JV = this.sink(),
-          YV = Math.min(Math.floor(xV), kV.Hd.MaxPoints, Math.floor(eV.length / 4));
-        if (!JV || !(YV > 0) || !Number.isFinite(VV[0] + VV[1] + VV[2])) return;
-        const UV = new Uint8Array(eV.buffer, eV.byteOffset, YV * kV.Hd.PointBytes);
-        (0, kV.if)(JV, 0, this.key, YV, VV, UV) && (this.emitted = !0)
+      emitPoints(HH, BH, LH) {
+        const AH = this.sink(),
+          rH = Math.min(Math.floor(LH), uH.Id.MaxPoints, Math.floor(BH.length / 4));
+        if (!AH || !(rH > 0) || !Number.isFinite(HH[0] + HH[1] + HH[2])) return;
+        const SH = new Uint8Array(BH.buffer, BH.byteOffset, rH * uH.Id.PointBytes);
+        (0, uH.sf)(AH, 0, this.key, rH, HH, SH) && (this.emitted = !0)
       }
-      setDirections(VV, eV) {
-        const xV = this.sink();
-        if (!xV || !Number.isFinite(VV[0] + VV[1] + VV[2] + eV[0] + eV[1] + eV[2])) return;
-        const JV = ax.encode(JSON.stringify({
-          dir1: [VV[0], VV[1], VV[2]],
-          dir2: [eV[0], eV[1], eV[2]]
+      setDirections(HH, BH) {
+        const LH = this.sink();
+        if (!LH || !Number.isFinite(HH[0] + HH[1] + HH[2] + BH[0] + BH[1] + BH[2])) return;
+        const AH = gL.encode(JSON.stringify({
+          dir1: [HH[0], HH[1], HH[2]],
+          dir2: [BH[0], BH[1], BH[2]]
         }));
-        (0, kV.rf)(xV, 0, this.key, 0, Dx, Dx, JV)
+        (0, uH.Df)(LH, 0, this.key, 0, cL, cL, AH)
       }
       stop() {
-        const VV = this.sink();
-        this.stopped = !0, VV && (this.emitted ? (this.rate > 0 && (0, kV.rf)(VV, 0, this.key, 0, Dx, Dx, lx(0)), setTimeout((() => {
+        const HH = this.sink();
+        this.stopped = !0, HH && (this.emitted ? (this.rate > 0 && (0, uH.Df)(HH, 0, this.key, 0, cL, cL, nL(0)), setTimeout((() => {
           this.free()
         }), this.stopDelayMs)) : this.free())
       }
@@ -3191,266 +3066,266 @@ export const modules = {
         this.freed || (this.freed = !0, this.owner.stop(this.session, this.key))
       }
     }
-    const Sx = Se.l,
-      Ix = new TextDecoder;
+    const JL = JB.s,
+      iL = new TextDecoder;
 
-    function dx(VV, eV) {
+    function pL(HH, BH) {
       const {
-        serverIds: xV,
-        kinds: JV
-      } = VV;
-      let YV = 0;
-      for (let UV = 0; UV < xV.length; UV++) {
-        const VV = xV[UV];
-        if (VV !== kV.Uc && !FV(JV[UV])) {
-          if (YV === eV.length) {
-            const VV = new Int32Array(Math.max(64, 2 * YV));
-            VV.set(eV), eV = VV
+        serverIds: LH,
+        kinds: AH
+      } = HH;
+      let rH = 0;
+      for (let SH = 0; SH < LH.length; SH++) {
+        const HH = LH[SH];
+        if (HH !== uH.bd && !TH(AH[SH])) {
+          if (rH === BH.length) {
+            const HH = new Int32Array(Math.max(64, 2 * rH));
+            HH.set(BH), BH = HH
           }
-          eV[YV++] = VV
+          BH[rH++] = HH
         }
       }
       return {
-        ids: eV,
-        count: YV
+        ids: BH,
+        count: rH
       }
     }
 
-    function Ox(VV, eV) {
-      return VV.length >= eV ? VV : new Int32Array(Math.max(eV, 2 * VV.length))
+    function yL(HH, BH) {
+      return HH.length >= BH ? HH : new Int32Array(Math.max(BH, 2 * HH.length))
     }
 
-    function VJ(VV, eV, xV, JV) {
-      for (let YV = 0; YV < xV; YV += 4096) {
-        const UV = Math.min(4096, xV - YV),
-          yV = VV.memoryView(Int32Array, VV.scratch(), UV, "entity_info_batch's ids");
-        if (!yV) return !1;
-        yV.set(eV.subarray(YV, YV + UV));
-        const pV = VV.queries.entityInfoBatch(UV),
-          QV = 4294967295 === pV ? null : VV.memoryData(VV.scratch(), pV, 4, "entity_info_batch's records");
-        if (!QV) return !1;
-        for (let VV = 0; VV + kV.Sb.BYTES <= pV;) {
-          const eV = kV.Sb.len(QV, VV);
-          JV(kV.Sb.serverId(QV, VV), eJ(QV, VV, eV)), VV += kV.Sb.BYTES + (0, vV.ze)(eV)
+    function HA(HH, BH, LH, AH) {
+      for (let rH = 0; rH < LH; rH += 4096) {
+        const SH = Math.min(4096, LH - rH),
+          hH = HH.memoryView(Int32Array, HH.scratch(), SH, "entity_info_batch's ids");
+        if (!hH) return !1;
+        hH.set(BH.subarray(rH, rH + SH));
+        const tH = HH.queries.entityInfoBatch(SH),
+          zH = 4294967295 === tH ? null : HH.memoryData(HH.scratch(), tH, 4, "entity_info_batch's records");
+        if (!zH) return !1;
+        for (let HH = 0; HH + uH.$b.BYTES <= tH;) {
+          const BH = uH.$b.len(zH, HH);
+          AH(uH.$b.serverId(zH, HH), BA(zH, HH, BH)), HH += uH.$b.BYTES + (0, GH.te)(BH)
         }
       }
       return !0
     }
 
-    function eJ(VV, eV, xV) {
-      var JV, YV, UV;
-      const yV = kV.Sb.kind(VV, eV),
-        pV = 0 === yV ? null : TV(yV);
-      if (null === pV) return null;
-      const QV = kV.Sb.variation(VV, eV),
-        nV = kV.Sb.pose(VV, eV),
-        wV = kV.Sb.meta(VV, eV),
-        ZV = kV.Sb.mesh(VV, eV),
-        vV = 0 !== (kV.Sb.flags(VV, eV) & kV.Ob.HasOpts),
-        rV = Sx[pV];
+    function BA(HH, BH, LH) {
+      var AH, rH, SH;
+      const hH = uH.$b.kind(HH, BH),
+        tH = 0 === hH ? null : UH(hH);
+      if (null === tH) return null;
+      const zH = uH.$b.variation(HH, BH),
+        CH = uH.$b.pose(HH, BH),
+        EH = uH.$b.meta(HH, BH),
+        XH = uH.$b.mesh(HH, BH),
+        GH = 0 !== (uH.$b.flags(HH, BH) & uH._b.HasOpts),
+        YH = JL[tH];
       return Object.freeze({
-        type: pV,
-        variation: QV === kV.$c ? void 0 : null !== (JV = null !== (YV = null === rV || void 0 === rV ? void 0 : rV[QV]) && void 0 !== YV ? YV : null === rV || void 0 === rV ? void 0 : rV[0]) && void 0 !== JV ? JV : "default",
-        pose: nV === kV.mc ? void 0 : null !== (UV = kV.Ab[nV]) && void 0 !== UV ? UV : kV.Ab[0],
-        metaInfo: wV === kV.mc ? void 0 : kV.Jc[wV],
-        meshKind: ZV === kV.mc ? void 0 : kV.Fc[ZV],
-        meshOpts: vV ? Ix.decode(new Uint8Array(VV.buffer, VV.byteOffset + eV + kV.Sb.BYTES, xV)) : void 0
+        type: tH,
+        variation: zH === uH.gd ? void 0 : null !== (AH = null !== (rH = null === YH || void 0 === YH ? void 0 : YH[zH]) && void 0 !== rH ? rH : null === YH || void 0 === YH ? void 0 : YH[0]) && void 0 !== AH ? AH : "default",
+        pose: CH === uH.qc ? void 0 : null !== (SH = uH.Mb[CH]) && void 0 !== SH ? SH : uH.Mb[0],
+        metaInfo: EH === uH.qc ? void 0 : uH.Vc[EH],
+        meshKind: XH === uH.qc ? void 0 : uH.Uc[XH],
+        meshOpts: GH ? iL.decode(new Uint8Array(HH.buffer, HH.byteOffset + BH + uH.$b.BYTES, LH)) : void 0
       })
     }
-    const xJ = 1,
-      JJ = 2;
-    class YJ {
-      constructor(VV) {
-        this.deps = VV, this.wanted = 0, this.hn = !1, this.refused = !1
+    const LA = 1,
+      AA = 2;
+    class rA {
+      constructor(HH) {
+        this.deps = HH, this.wanted = 0, this.LX = !1, this.refused = !1
       }
       get on() {
-        return this.hn
+        return this.LX
       }
-      want(VV, eV) {
-        this.wanted = eV ? this.wanted | VV : this.wanted & ~VV;
-        const xV = 0 !== this.wanted;
-        if (xV === this.hn) return;
-        const JV = this.deps.cmd();
-        null !== JV ? (0, kV.jg)(JV, 0, xV ? 1 : 0) ? (this.hn = xV, this.refused = !1) : this.refused || (this.refused = !0, this.deps.onError(new Error("WatchEntityInfo didn't fit the command ring"))) : this.hn = !1
+      want(HH, BH) {
+        this.wanted = BH ? this.wanted | HH : this.wanted & ~HH;
+        const LH = 0 !== this.wanted;
+        if (LH === this.LX) return;
+        const AH = this.deps.cmd();
+        null !== AH ? (0, uH.Cg)(AH, 0, LH ? 1 : 0) ? (this.LX = LH, this.refused = !1) : this.refused || (this.refused = !0, this.deps.onError(new Error("WatchEntityInfo didn't fit the command ring"))) : this.LX = !1
       }
     }
-    class UJ {
-      constructor(VV) {
-        this.deps = VV, this.entries = new Map, this.complete = !1, this.refill = !1, this.midFrame = !1, this.pending = new Int32Array(64), this.pendingCount = 0, this.ids = new Int32Array(64)
+    class SA {
+      constructor(HH) {
+        this.deps = HH, this.entries = new Map, this.complete = !1, this.refill = !1, this.midFrame = !1, this.pending = new Int32Array(64), this.pendingCount = 0, this.ids = new Int32Array(64)
       }
-      get(VV) {
-        var eV;
-        return this.complete || this.fill(), null !== (eV = this.entries.get("string" === typeof VV ? VV : String(VV))) && void 0 !== eV ? eV : null
+      get(HH) {
+        var BH;
+        return this.complete || this.fill(), null !== (BH = this.entries.get("string" === typeof HH ? HH : String(HH))) && void 0 !== BH ? BH : null
       }
       inCoreCall() {
         this.midFrame = !0
       }
-      stale(VV) {
+      stale(HH) {
         if (this.complete) {
           if (this.pendingCount === this.pending.length) {
-            const VV = new Int32Array(2 * this.pending.length);
-            VV.set(this.pending), this.pending = VV
+            const HH = new Int32Array(2 * this.pending.length);
+            HH.set(this.pending), this.pending = HH
           }
-          this.pending[this.pendingCount++] = VV
+          this.pending[this.pendingCount++] = HH
         }
       }
-      removed(VV) {
-        this.entries.size > 0 && this.entries.delete(String(VV))
+      removed(HH) {
+        this.entries.size > 0 && this.entries.delete(String(HH))
       }
       refresh() {
-        const VV = this.pendingCount;
+        const HH = this.pendingCount;
         if (this.pendingCount = 0, this.midFrame = !1, !this.deps.watch.on || this.refill) return this.complete = !1, void(this.refill = !1);
-        if (VV > 0 && this.complete) {
+        if (HH > 0 && this.complete) {
           const {
-            api: eV
+            api: BH
           } = this.deps;
-          let xV = 0;
-          const JV = this.ids = Ox(this.ids, VV);
-          for (let YV = 0; YV < VV; YV++) {
-            const VV = this.pending[YV],
-              UV = eV.indexById.get(VV);
-            void 0 === UV || FV(eV.kinds[UV]) ? this.entries.delete(String(VV)) : JV[xV++] = VV
+          let LH = 0;
+          const AH = this.ids = yL(this.ids, HH);
+          for (let rH = 0; rH < HH; rH++) {
+            const HH = this.pending[rH],
+              SH = BH.indexById.get(HH);
+            void 0 === SH || TH(BH.kinds[SH]) ? this.entries.delete(String(HH)) : AH[LH++] = HH
           }
-          xV > 0 && !this.batch(JV, xV) && (this.complete = !1)
+          LH > 0 && !this.batch(AH, LH) && (this.complete = !1)
         }
       }
       sessionEnded() {
-        this.entries.clear(), this.complete = !1, this.refill = !1, this.midFrame = !1, this.pendingCount = 0, this.deps.watch.want(xJ, !1)
+        this.entries.clear(), this.complete = !1, this.refill = !1, this.midFrame = !1, this.pendingCount = 0, this.deps.watch.want(LA, !1)
       }
       fill() {
         const {
-          api: VV
+          api: HH
         } = this.deps;
         if (this.complete = !0, this.pendingCount = 0, this.entries.clear(), this.deps.isSessionLive()) {
           const {
-            watch: VV
-          } = this.deps, eV = VV.on;
-          VV.want(xJ, !0), !eV && VV.on && (this.refill = this.midFrame)
+            watch: HH
+          } = this.deps, BH = HH.on;
+          HH.want(LA, !0), !BH && HH.on && (this.refill = this.midFrame)
         }
         const {
-          ids: eV,
-          count: xV
-        } = dx(VV, this.ids);
-        this.ids = eV, xV > 0 && !this.batch(eV, xV) && (this.refill = !0)
+          ids: BH,
+          count: LH
+        } = pL(HH, this.ids);
+        this.ids = BH, LH > 0 && !this.batch(BH, LH) && (this.refill = !0)
       }
-      batch(VV, eV) {
-        return VJ(this.deps.api, VV, eV, ((VV, eV) => {
-          null === eV ? this.entries.delete(String(VV)) : this.entries.set(String(VV), eV)
+      batch(HH, BH) {
+        return HA(this.deps.api, HH, BH, ((HH, BH) => {
+          null === BH ? this.entries.delete(String(HH)) : this.entries.set(String(HH), BH)
         }))
       }
     }
-    var yJ = xV(5301);
+    var hA = LH(5268);
 
-    function pJ(VV) {
-      if ("message" !== VV.type || VV.yZ !== yJ.mc.NewClientOptions || VV.payloadKind !== vV.sc.Msgpack) return null;
-      const eV = (0, oV.e)(VV.payload);
-      if (null === eV || "object" !== typeof eV || Array.isArray(eV)) throw new Error("NewClientOptions whose body isn't an object of options");
-      return eV
+    function tA(HH) {
+      if ("message" !== HH.type || HH.kt !== hA.nc.NewClientOptions || HH.payloadKind !== GH.jc.Msgpack) return null;
+      const BH = (0, RH.e)(HH.payload);
+      if (null === BH || "object" !== typeof BH || Array.isArray(BH)) throw new Error("NewClientOptions whose body isn't an object of options");
+      return BH
     }
-    var QJ = xV(1269),
-      nJ = xV(37790);
+    var zA = LH(1182),
+      CA = LH(37504);
 
-    function wJ(VV, eV, xV, JV, YV, UV, pV) {
-      var QV, nV, wV;
-      switch (VV) {
-        case kV.he.ToggleMenu: {
-          const VV = kV.D[eV];
-          yV.h.QZ("toggleMenu", void 0 === VV ? "inventory" : `inventory|${VV}`);
+    function EA(HH, BH, LH, AH, rH, SH, tH) {
+      var zH, CH, EH;
+      switch (HH) {
+        case uH.oe.ToggleMenu: {
+          const HH = uH.K[BH];
+          hH.k.AX("toggleMenu", void 0 === HH ? "inventory" : `inventory|${HH}`);
           break
         }
-        case kV.he.EditBoard:
-          yV.h.QZ("EditBoard", {
-            pos: 0 === eV ? null : xV
+        case uH.oe.EditBoard:
+          hH.k.AX("EditBoard", {
+            pos: 0 === BH ? null : LH
           });
           break;
-        case kV.he.EditCodeBlock:
-        case kV.he.ViewCodeBlock:
-          yV.h.QZ("EditCodeBlock", {
-            pos: xV,
-            canChangePos: VV === kV.he.EditCodeBlock
+        case uH.oe.EditCodeBlock:
+        case uH.oe.ViewCodeBlock:
+          hH.k.AX("EditCodeBlock", {
+            pos: LH,
+            canChangePos: HH === uH.oe.EditCodeBlock
           });
           break;
-        case kV.he.EditCustomLobbyBlock:
-          yV.h.QZ("EditCustomLobbyBlock", {
-            pos: xV
+        case uH.oe.EditCustomLobbyBlock:
+          hH.k.AX("EditCustomLobbyBlock", {
+            pos: LH
           });
           break;
-        case kV.he.OpenIronChest:
-          yV.h.QZ("OpenIronChest", {
-            pos: xV
+        case uH.oe.OpenIronChest:
+          hH.k.AX("OpenIronChest", {
+            pos: LH
           });
           break;
-        case kV.he.EditNameTag:
-          yV.h.QZ("EditNameTag", null !== (QV = null === (nV = YV.hn()) || void 0 === nV || null === (wV = nV.attributes.customAttributes) || void 0 === wV ? void 0 : wV.text) && void 0 !== QV ? QV : "");
+        case uH.oe.EditNameTag:
+          hH.k.AX("EditNameTag", null !== (zH = null === (CH = rH.LX()) || void 0 === CH || null === (EH = CH.attributes.customAttributes) || void 0 === EH ? void 0 : EH.text) && void 0 !== zH ? zH : "");
           break;
-        case kV.he.EditBook: {
-          var ZV, vV, bV;
-          const VV = null === (ZV = YV.hn()) || void 0 === ZV ? void 0 : ZV.attributes;
-          yV.h.QZ("EditBook", {
-            pages: (0, QJ.R)(null === VV || void 0 === VV || null === (vV = VV.customAttributes) || void 0 === vV ? void 0 : vV.pages),
-            title: null !== (bV = null === VV || void 0 === VV ? void 0 : VV.customDisplayName) && void 0 !== bV ? bV : "Title",
-            isPublished: !(null === VV || void 0 === VV || !VV.customDescription)
+        case uH.oe.EditBook: {
+          var XH, GH, QH;
+          const HH = null === (XH = rH.LX()) || void 0 === XH ? void 0 : XH.attributes;
+          hH.k.AX("EditBook", {
+            pages: (0, zA.N)(null === HH || void 0 === HH || null === (GH = HH.customAttributes) || void 0 === GH ? void 0 : GH.pages),
+            title: null !== (QH = null === HH || void 0 === HH ? void 0 : HH.customDisplayName) && void 0 !== QH ? QH : "Title",
+            isPublished: !(null === HH || void 0 === HH || !HH.customDescription)
           });
           break
         }
-        case kV.he.CantChangeBlock:
-          ! function(VV, eV) {
-            const xV = eV.getClientOption("cantChangeError"),
-              JV = eV.getClientOption(VV ? "cantBuildError" : "cantBreakError"),
-              YV = VV ? xV : JV;
-            (eV.getClientOption("canChange") || YV || "You cannot modify this block" !== xV) && yV.h.QZ("showBottomMessage", {
-              message: JV || xV,
+        case uH.oe.CantChangeBlock:
+          ! function(HH, BH) {
+            const LH = BH.getClientOption("cantChangeError"),
+              AH = BH.getClientOption(HH ? "cantBuildError" : "cantBreakError"),
+              rH = HH ? LH : AH;
+            (BH.getClientOption("canChange") || rH || "You cannot modify this block" !== LH) && hH.k.AX("showBottomMessage", {
+              message: AH || LH,
               type: "Error"
             })
-          }(1 === eV, UV);
+          }(1 === BH, SH);
           break;
-        case kV.he.MiddleBarStart:
-          yV.h.QZ("middleScreenBarInitiate", {
-            duration: JV,
-            tJ: 1 === xV[0],
-            horizBarRemOffset: eV
+        case uH.oe.MiddleBarStart:
+          hH.k.AX("middleScreenBarInitiate", {
+            duration: AH,
+            NS: 1 === LH[0],
+            horizBarRemOffset: BH
           });
           break;
-        case kV.he.MiddleBarStop:
-          yV.h.QZ("middleScreenBarRemove");
+        case uH.oe.MiddleBarStop:
+          hH.k.AX("middleScreenBarRemove");
           break;
-        case kV.he.Hitmarker:
-          yV.h.QZ("localGunHitmarker", {
-            TJ: 1 === eV
+        case uH.oe.Hitmarker:
+          hH.k.AX("localGunHitmarker", {
+            aA: 1 === BH
           });
           break;
-        case kV.he.ShotsLeft:
-          yV.h.QZ("localPlayerNewShotsLeft", JV);
+        case uH.oe.ShotsLeft:
+          hH.k.AX("localPlayerNewShotsLeft", AH);
           break;
-        case kV.he.AimingOverlay:
-          yV.h.QZ("aimingOverlay", 3 === (3 & eV) ? "sniper" : "none");
+        case uH.oe.AimingOverlay:
+          hH.k.AX("aimingOverlay", 3 === (3 & BH) ? "sniper" : "none");
           break;
-        case kV.he.BottomMessage:
-          yV.h.QZ("showBottomMessage", JSON.parse(pV()));
+        case uH.oe.BottomMessage:
+          hH.k.AX("showBottomMessage", JSON.parse(tH()));
           break;
-        case kV.he.Crosshair:
-          YV.inaccuracy = (0, cV.f)(JV), (0, nJ.d)().crosshairAccuracy(YV.inaccuracy);
+        case uH.oe.Crosshair:
+          rH.inaccuracy = (0, jH.f)(AH), (0, CA.e)().crosshairAccuracy(rH.inaccuracy);
           break;
-        case kV.he.ChargeStage:
+        case uH.oe.ChargeStage:
           break;
-        case kV.he.EmoteWheelClose:
-          yV.h.QZ("requestEmoteWheelClose");
+        case uH.oe.EmoteWheelClose:
+          hH.k.AX("requestEmoteWheelClose");
           break;
-        case kV.he.BlockMined:
-          yV.h.QZ("localBlockMined");
+        case uH.oe.BlockMined:
+          hH.k.AX("localBlockMined");
           break;
         default:
-          throw new rV.d(`UiEvent of no kind: what ${VV}`)
+          throw new YH.d(`UiEvent of no kind: what ${HH}`)
       }
     }
-    var ZJ = xV(39166),
-      vJ = xV(35311),
-      rJ = xV(2094),
-      kJ = xV(37994),
-      bJ = xV(35319),
-      EJ = xV(5281);
-    const BJ = 10,
-      jJ = {
+    var XA = LH(38871),
+      GA = LH(34996),
+      YA = LH(2045),
+      uA = LH(37659),
+      QA = LH(35006),
+      WA = LH(5255);
+    const MA = 10,
+      xA = {
         player: [],
         chestOrCreative: [],
         chest: null,
@@ -3458,680 +3333,684 @@ export const modules = {
         selectedSlot: 0,
         freeSlots: 0
       },
-      qJ = {
+      vA = {
         items: [],
         ammo: 0,
         selectedSlot: 0
       },
-      tJ = {
+      PA = {
         gun: !1,
         aimable: !1,
         chargeName: null
       };
 
-    function FJ(VV, eV) {
-      let xV, JV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        YV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      const UV = () => (xV = (0, rJ.m)(xV, eV()), xV);
+    function TA(HH, BH) {
+      let LH, AH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+        rH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      const SH = () => (LH = (0, YA.r)(LH, BH()), LH);
       return {
-        current: UV,
-        watch(eV) {
-          const xV = () => {
-              eV(UV())
+        current: SH,
+        watch(BH) {
+          const LH = () => {
+              BH(SH())
             },
-            yV = [VV.watch(xV)];
-          return null !== JV && yV.push((0, rJ.q)((VV => {
-            VV.some(JV) && xV()
-          }))), null !== YV && yV.push(YV(xV)), () => {
-            for (const VV of yV) VV()
+            hH = [HH.watch(LH)];
+          return null !== AH && hH.push((0, YA.v)((HH => {
+            HH.some(AH) && LH()
+          }))), null !== rH && hH.push(rH(LH)), () => {
+            for (const HH of hH) HH()
           }
         }
       }
     }
 
-    function TJ(VV) {
-      return VV && {
-        name: VV.name,
-        amount: VV.amount,
-        attributes: VV.attributes
+    function UA(HH) {
+      return HH && {
+        name: HH.name,
+        amount: HH.amount,
+        attributes: HH.attributes
       }
     }
-    const PJ = new WeakMap;
+    const VA = new WeakMap;
 
-    function AJ(VV) {
-      let eV = PJ.get(VV);
-      return void 0 === eV && (eV = (0, bJ.creativeItemIds)().map((eV => ({
-        name: VV.nameOfId(eV),
-        amount: VV.isStackableId(eV) ? 1 : null,
-        attributes: (0, ZJ.d)("Gun" === (0, bJ.itemTypeOf)(eV) ? {
+    function OA(HH) {
+      let BH = VA.get(HH);
+      return void 0 === BH && (BH = (0, QA.creativeItemIds)().map((BH => ({
+        name: HH.nameOfId(BH),
+        amount: HH.isStackableId(BH) ? 1 : null,
+        attributes: (0, XA.d)("Gun" === (0, QA.itemTypeOf)(BH) ? {
           type: "Gun",
-          clipSize: (0, bJ.clipSizeOf)(eV)
+          clipSize: (0, QA.clipSizeOf)(BH)
         } : void 0)
-      }))), PJ.set(VV, eV)), eV
+      }))), VA.set(HH, BH)), BH
     }
 
-    function NJ(VV, eV, xV, JV) {
-      const YV = eV => (VV.flush(JV), eV),
-        UV = xV => {
-          var JV, YV, UV, yV, pV, QV, nV;
-          const wV = VV.slot(xV);
-          if (!wV) return null;
+    function bA(HH, BH, LH, AH) {
+      const rH = BH => (HH.flush(AH), BH),
+        SH = LH => {
+          var AH, rH, SH, hH, tH, zH, CH;
+          const EH = HH.slot(LH);
+          if (!EH) return null;
           const {
-            rootName: ZV,
-            metaStr: vV
-          } = eV.getMetaInfo(wV.name);
+            rootName: XH,
+            metaStr: GH
+          } = BH.getMetaInfo(EH.name);
           return {
-            name: wV.name,
-            amount: wV.amount,
-            attributes: wV.attributes,
-            instance: VV.instance(xV),
-            displayName: null !== (JV = wV.attributes.customDisplayName) && void 0 !== JV ? JV : eV.getDisplayName(ZV),
-            requiresAmmo: "RequiresAmmo" === vV,
-            clipSize: null !== (YV = null !== (UV = null === (yV = wV.attributes.customAttributes) || void 0 === yV || null === (pV = yV.gunStats) || void 0 === pV ? void 0 : pV.clipSize) && void 0 !== UV ? UV : null === (QV = eV.getGunStats(ZV)) || void 0 === QV ? void 0 : QV.clipSize) && void 0 !== YV ? YV : null === (nV = wV.typeObj) || void 0 === nV ? void 0 : nV.clipSize
+            name: EH.name,
+            amount: EH.amount,
+            attributes: EH.attributes,
+            instance: HH.instance(LH),
+            displayName: null !== (AH = EH.attributes.customDisplayName) && void 0 !== AH ? AH : BH.getDisplayName(XH),
+            requiresAmmo: "RequiresAmmo" === GH,
+            clipSize: null !== (rH = null !== (SH = null === (hH = EH.attributes.customAttributes) || void 0 === hH || null === (tH = hH.gunStats) || void 0 === tH ? void 0 : tH.clipSize) && void 0 !== SH ? SH : null === (zH = BH.getGunStats(XH)) || void 0 === zH ? void 0 : zH.clipSize) && void 0 !== rH ? rH : null === (CH = EH.typeObj) || void 0 === CH ? void 0 : CH.clipSize
           }
         },
-        pV = function(VV, eV) {
-          let xV = null,
-            JV = {
+        tH = function(HH, BH) {
+          let LH = null,
+            AH = {
               focus: null,
               recipes: [],
               detail: null
             },
-            YV = -1;
-          const UV = new Set;
+            rH = -1;
+          const SH = new Set;
           return {
             read() {
-              var UV, yV;
-              if (null === xV) return null !== JV.focus && (JV = {
-                ...JV,
+              var SH, hH;
+              if (null === LH) return null !== AH.focus && (AH = {
+                ...AH,
                 focus: null
-              }), JV;
-              if (JV.focus === xV && YV === VV.changes) return JV;
-              if (YV = VV.changes, 0 === VV.length) return JV = {
-                focus: xV,
+              }), AH;
+              if (AH.focus === LH && rH === HH.changes) return AH;
+              if (rH = HH.changes, 0 === HH.length) return AH = {
+                focus: LH,
                 recipes: [],
                 detail: null
-              }, JV;
-              let pV = 0;
-              if (null !== xV.recipe) try {
-                pV = eV.getItemId(xV.recipe.name)
+              }, AH;
+              let tH = 0;
+              if (null !== LH.recipe) try {
+                tH = BH.getItemId(LH.recipe.name)
               } catch {}
-              const QV = VV.craftingView(xV.station, pV, null !== (UV = null === (yV = xV.recipe) || void 0 === yV ? void 0 : yV.ky) && void 0 !== UV ? UV : 0);
-              return JV = null === QV ? {
-                focus: xV,
+              const zH = HH.craftingView(LH.station, tH, null !== (SH = null === (hH = LH.recipe) || void 0 === hH ? void 0 : hH.wC) && void 0 !== SH ? SH : 0);
+              return AH = null === zH ? {
+                focus: LH,
                 recipes: [],
                 detail: null
-              } : function(VV, eV, xV) {
-                let JV = kV.gb.BYTES;
-                const YV = [];
-                for (let wV = kV.gb.recipes(VV, 0); wV > 0; wV--) {
-                  const xV = kV.Y.flags(VV, JV),
-                    UV = {
-                      name: eV.nameOfId(kV.Y.item(VV, JV)),
-                      ky: kV.Y.recipe(VV, JV),
+              } : function(HH, BH, LH) {
+                let AH = uH.ob.BYTES;
+                const rH = [];
+                for (let EH = uH.ob.recipes(HH, 0); EH > 0; EH--) {
+                  const LH = uH.gb.flags(HH, AH),
+                    SH = {
+                      name: BH.nameOfId(uH.gb.item(HH, AH)),
+                      wC: uH.gb.recipe(HH, AH),
                       requires: [],
-                      produces: kV.Y.produces(VV, JV),
-                      haveIngredients: 0 !== (xV & kV.X.HaveIngredients),
-                      listed: 0 !== (xV & kV.X.Listed)
+                      produces: uH.gb.produces(HH, AH),
+                      haveIngredients: 0 !== (LH & uH.cb.HaveIngredients),
+                      listed: 0 !== (LH & uH.cb.Listed)
                     };
-                  let yV = kV.Y.requires(VV, JV);
-                  for (JV += kV.Y.BYTES; yV > 0; yV--) {
-                    const xV = kV.$.items(VV, JV);
-                    UV.requires.push({
-                      items: zJ(VV, JV + kV.$.BYTES, xV, eV),
-                      amt: kV.$.amount(VV, JV)
-                    }), JV += kV.$.BYTES + 2 * xV
+                  let hH = uH.gb.requires(HH, AH);
+                  for (AH += uH.gb.BYTES; hH > 0; hH--) {
+                    const LH = uH.jb.items(HH, AH);
+                    SH.requires.push({
+                      items: oA(HH, AH + uH.jb.BYTES, LH, BH),
+                      amt: uH.jb.amount(HH, AH)
+                    }), AH += uH.jb.BYTES + 2 * LH
                   }
-                  YV.push(UV)
+                  rH.push(SH)
                 }
-                const UV = kV.gb.flags(VV, 0);
-                if (null === xV.recipe || 0 === (UV & kV.cb.Detail)) return {
-                  focus: xV,
-                  recipes: YV,
+                const SH = uH.ob.flags(HH, 0);
+                if (null === LH.recipe || 0 === (SH & uH.nb.Detail)) return {
+                  focus: LH,
+                  recipes: rH,
                   detail: null
                 };
-                const yV = {},
-                  pV = {};
-                for (let wV = kV.gb.ingredients(VV, 0); wV > 0; wV--) {
-                  const xV = kV.W.item(VV, JV),
-                    YV = kV.W.from(VV, JV),
-                    UV = kV.W.amount(VV, JV);
-                  JV += kV.W.BYTES;
-                  const QV = YV === kV.C ? null : zJ(VV, JV, YV, eV);
-                  if (null !== QV && (JV += 2 * YV), 0 === xV) continue;
-                  const nV = eV.nameOfId(xV);
-                  yV[nV] = UV, null !== QV && (pV[nV] = QV)
+                const hH = {},
+                  tH = {};
+                for (let EH = uH.ob.ingredients(HH, 0); EH > 0; EH--) {
+                  const LH = uH.ab.item(HH, AH),
+                    rH = uH.ab.from(HH, AH),
+                    SH = uH.ab.amount(HH, AH);
+                  AH += uH.ab.BYTES;
+                  const zH = rH === uH.I ? null : oA(HH, AH, rH, BH);
+                  if (null !== zH && (AH += 2 * rH), 0 === LH) continue;
+                  const CH = BH.nameOfId(LH);
+                  hH[CH] = SH, null !== zH && (tH[CH] = zH)
                 }
                 const {
-                  name: QV,
-                  ky: nV
-                } = xV.recipe;
+                  name: zH,
+                  wC: CH
+                } = LH.recipe;
                 return {
-                  focus: xV,
-                  recipes: YV,
+                  focus: LH,
+                  recipes: rH,
                   detail: {
-                    name: QV,
-                    ky: nV,
-                    craftAllTimes: kV.gb.craftAllTimes(VV, 0),
-                    roomForOne: 0 !== (UV & kV.cb.RoomForOne),
-                    resultStackable: Boolean(eV.getItemStat(QV, "stackable")),
-                    amounts: yV,
-                    ingredientsCraftedFrom: pV
+                    name: zH,
+                    wC: CH,
+                    craftAllTimes: uH.ob.craftAllTimes(HH, 0),
+                    roomForOne: 0 !== (SH & uH.nb.RoomForOne),
+                    resultStackable: Boolean(BH.getItemStat(zH, "stackable")),
+                    amounts: hH,
+                    ingredientsCraftedFrom: tH
                   }
                 }
-              }(QV, eV, xV), JV
+              }(zH, BH, LH), AH
             },
-            setFocus(VV) {
-              xV = VV;
-              for (const eV of [...UV]) eV()
+            setFocus(HH) {
+              LH = HH;
+              for (const BH of [...SH]) BH()
             },
-            watchFocus: VV => (UV.add(VV), () => {
-              UV.delete(VV)
+            watchFocus: HH => (SH.add(HH), () => {
+              SH.delete(HH)
             })
           }
-        }(VV, eV);
+        }(HH, BH);
       return {
         states: {
-          inventory: FJ(VV, (() => {
-            const xV = VV.length;
-            if (0 === xV) return jJ;
-            const JV = [];
-            for (let eV = 0; eV < kV.pd; eV++) JV.push(TJ(VV.slot(eV)));
-            const YV = VV.slotIcon,
-              UV = JV[VV.selectedSlot];
-            0 !== YV && UV && (JV[VV.selectedSlot] = {
-              ...UV,
-              icon: eV.nameOfId(YV)
+          inventory: TA(HH, (() => {
+            const LH = HH.length;
+            if (0 === LH) return xA;
+            const AH = [];
+            for (let BH = 0; BH < uH.vd; BH++) AH.push(UA(HH.slot(BH)));
+            const rH = HH.slotIcon,
+              SH = AH[HH.selectedSlot];
+            0 !== rH && SH && (AH[HH.selectedSlot] = {
+              ...SH,
+              icon: BH.nameOfId(rH)
             });
-            const yV = !0 === eV.getClientOption("creative");
-            let pV = [],
-              QV = null;
-            if (xV > kV.pd) {
-              for (let eV = kV.pd; eV < xV; eV++) pV.push(TJ(VV.slot(eV)));
-              QV = {
+            const hH = !0 === BH.getClientOption("creative");
+            let tH = [],
+              zH = null;
+            if (LH > uH.vd) {
+              for (let BH = uH.vd; BH < LH; BH++) tH.push(UA(HH.slot(BH)));
+              zH = {
                 type: null,
-                pos: [...VV.ix],
-                numSlots: xV - kV.pd,
+                pos: [...HH.OL],
+                numSlots: LH - uH.vd,
                 ironChest: null
               }
-            } else yV && (pV = AJ(eV));
+            } else hH && (tH = OA(BH));
             return {
-              player: JV,
-              chestOrCreative: pV,
-              chest: QV,
-              creative: yV,
-              selectedSlot: VV.selectedSlot,
-              freeSlots: VV.freeSlots()
+              player: AH,
+              chestOrCreative: tH,
+              chest: zH,
+              creative: hH,
+              selectedSlot: HH.selectedSlot,
+              freeSlots: HH.freeSlots()
             }
-          }), (0, rJ.i)("creative")),
-          hotbar: FJ(VV, (() => {
-            if (0 === VV.length) return qJ;
-            const eV = [];
-            for (let VV = 0; VV < BJ; VV++) eV.push(UV(VV));
+          }), (0, YA.l)("creative")),
+          hotbar: TA(HH, (() => {
+            if (0 === HH.length) return vA;
+            const BH = [];
+            for (let HH = 0; HH < MA; HH++) BH.push(SH(HH));
             return {
-              items: eV,
-              ammo: VV.amountOf("Ammo"),
-              selectedSlot: VV.selectedSlot
+              items: BH,
+              ammo: HH.amountOf("Ammo"),
+              selectedSlot: HH.selectedSlot
             }
-          }), (0, rJ.h)("DisplayName", "GunStats")),
-          crafting: FJ(VV, pV.read, null, pV.watchFocus),
-          heldItemAim: FJ(VV, (() => {
-            var eV;
-            if (!xV()) return tJ;
-            const JV = null === (eV = VV.hn()) || void 0 === eV ? void 0 : eV.typeObj,
-              YV = "Gun" === (null === JV || void 0 === JV ? void 0 : JV.type);
+          }), (0, YA.h)("DisplayName", "GunStats")),
+          crafting: TA(HH, tH.read, null, tH.watchFocus),
+          heldItemAim: TA(HH, (() => {
+            var BH;
+            if (!LH()) return PA;
+            const AH = null === (BH = HH.LX()) || void 0 === BH ? void 0 : BH.typeObj,
+              rH = "Gun" === (null === AH || void 0 === AH ? void 0 : AH.type);
             return {
-              gun: YV,
-              aimable: YV || !0 === (null === JV || void 0 === JV ? void 0 : JV.showsAimingUi),
-              chargeName: "Chargeable" === (null === JV || void 0 === JV ? void 0 : JV.type) ? JV.name : null
+              gun: rH,
+              aimable: rH || !0 === (null === AH || void 0 === AH ? void 0 : AH.showsAimingUi),
+              chargeName: "Chargeable" === (null === AH || void 0 === AH ? void 0 : AH.type) ? AH.name : null
             }
-          }), null, (VV => function(VV, eV) {
-            let xV = VV();
-            return (0, EJ.u)((() => {
-              const JV = VV();
-              JV !== xV && (xV = JV, eV(JV))
+          }), null, (HH => function(HH, BH) {
+            let LH = HH();
+            return (0, WA.v)((() => {
+              const AH = HH();
+              AH !== LH && (LH = AH, BH(AH))
             }))
-          }(xV, VV)))
+          }(LH, HH)))
         },
         events: {
-          hotbarSlotRequested: (0, rJ.c)("setSelectedInventorySlotI"),
-          hotbarScrolled: (0, rJ.c)("ScrollInventorySlot"),
-          numberKeyPressed: (0, rJ.c)("numkeyPressed"),
-          inventoryDropRequested: (0, rJ.c)("DropInvenItem"),
-          chestToggled: (0, rJ.c)("chestToggleFromServer"),
-          chestRefreshed: (0, rJ.c)("chestRefreshedFromServer", MJ),
-          inventorySynced: (0, rJ.c)("syncedInvenFromServer", MJ),
-          enchantingTableOpened: (0, rJ.c)("enchantingTable", (VV => {
+          hotbarSlotRequested: (0, YA.b)("setSelectedInventorySlotI"),
+          hotbarScrolled: (0, YA.b)("ScrollInventorySlot"),
+          numberKeyPressed: (0, YA.b)("numkeyPressed"),
+          inventoryDropRequested: (0, YA.b)("DropInvenItem"),
+          chestToggled: (0, YA.b)("chestToggleFromServer"),
+          chestRefreshed: (0, YA.b)("chestRefreshedFromServer", mA),
+          inventorySynced: (0, YA.b)("syncedInvenFromServer", mA),
+          enchantingTableOpened: (0, YA.b)("enchantingTable", (HH => {
             let {
-              position: xV,
-              vp: JV
-            } = VV;
+              position: LH,
+              ph: AH
+            } = HH;
             return {
-              position: [...xV],
-              blockName: eV.getMetaInfo(JV).rootName
+              position: [...LH],
+              blockName: BH.getMetaInfo(AH).rootName
             }
           }))
         },
         commands: {
-          selectHotbarSlot(eV) {
-            VV.selectSlot(eV), VV.flush(JV)
+          selectHotbarSlot(BH) {
+            HH.selectSlot(BH), HH.flush(AH)
           },
-          removeInventoryItem(eV) {
+          removeInventoryItem(BH) {
             let {
-              slot: xV,
-              amount: JV,
-              drop: UV
-            } = eV;
-            return YV(VV.remove(xV, JV, UV))
+              slot: LH,
+              amount: AH,
+              drop: SH
+            } = BH;
+            return rH(HH.remove(LH, AH, SH))
           },
-          swapInventorySlots(eV) {
+          swapInventorySlots(BH) {
             let {
-              a: xV,
-              b: JV
-            } = eV;
-            return YV(VV.swap(xV, JV))
+              a: LH,
+              b: AH
+            } = BH;
+            return rH(HH.swap(LH, AH))
           },
-          moveInventoryItem(eV) {
+          moveInventoryItem(BH) {
             let {
-              from: xV,
-              to: JV,
-              amount: UV
-            } = eV;
-            return YV(VV.move(xV, JV, UV))
+              from: LH,
+              to: AH,
+              amount: SH
+            } = BH;
+            return rH(HH.move(LH, AH, SH))
           },
-          quickMoveInventoryItem(eV) {
+          quickMoveInventoryItem(BH) {
             let {
-              slot: xV,
-              start: JV,
-              end: UV,
-              amount: yV
-            } = eV;
-            return YV(VV.quickMove(xV, JV, UV, yV))
+              slot: LH,
+              start: AH,
+              end: SH,
+              amount: hH
+            } = BH;
+            return rH(HH.quickMove(LH, AH, SH, hH))
           },
           closeChest() {
-            VV.closeChest(), VV.flush(JV), yV.h.QZ("chestClosedByPlayer")
+            HH.closeChest(), HH.flush(AH), hH.k.AX("chestClosedByPlayer")
           },
-          focusCrafting(VV) {
-            pV.setFocus(VV)
+          focusCrafting(HH) {
+            tH.setFocus(HH)
           },
-          craftRecipe(eV) {
+          craftRecipe(BH) {
             let {
-              name: xV,
-              ky: JV,
-              times: UV
-            } = eV;
-            return YV(VV.craft(xV, JV, UV))
+              name: LH,
+              wC: AH,
+              times: SH
+            } = BH;
+            return rH(HH.craft(LH, AH, SH))
           },
-          salvageItem(eV) {
+          salvageItem(BH) {
             let {
-              slot: xV,
-              name: JV,
-              amount: UV
-            } = eV;
-            return YV(VV.salvage(xV, JV, UV))
+              slot: LH,
+              name: AH,
+              amount: SH
+            } = BH;
+            return rH(HH.salvage(LH, AH, SH))
           },
-          enchantItem(eV) {
+          enchantItem(BH) {
             let {
-              slot: xV,
-              level: JV,
-              tablePos: YV
-            } = eV;
-            VV.enchant(xV, JV, YV)
+              slot: LH,
+              level: AH,
+              tablePos: rH
+            } = BH;
+            HH.enchant(LH, AH, rH)
           }
         },
         queries: {
-          enchantingOffer(xV) {
+          enchantingOffer(LH) {
             let {
-              slot: JV,
-              blockName: YV
-            } = xV;
-            return function(VV, eV, xV, JV) {
-              const YV = VV.slot(xV);
-              if (!YV || !eV.getClientOption("canCraft") || !(0, vJ.q)(JV) || (0, vJ.n)(YV.attributes)) return XJ;
-              const UV = (0, bJ.enchantmentPerksOf)(eV.getItemId(YV.name));
-              if (0 === UV.length) return XJ;
-              const yV = [];
-              for (let pV = 0; pV < kJ.b; pV++) {
+              slot: AH,
+              blockName: rH
+            } = LH;
+            return function(HH, BH, LH, AH) {
+              const rH = HH.slot(LH);
+              if (!rH || !BH.getClientOption("canCraft") || !(0, GA.q)(AH) || (0, GA.o)(rH.attributes)) return kA;
+              const SH = (0, QA.enchantmentPerksOf)(BH.getItemId(rH.name));
+              if (0 === SH.length) return kA;
+              const hH = [];
+              for (let tH = 0; tH < uA.d; tH++) {
                 const {
-                  commonProb: VV,
-                  uncommonProb: eV,
-                  rareProb: xV,
-                  epicProb: YV,
-                  legendaryProb: UV,
-                  level: QV
-                } = (0, vJ.f)(JV, pV);
-                yV.push({
-                  level: QV,
-                  odds: [VV, eV, xV, YV, UV].map((VV => 100 * VV))
+                  commonProb: HH,
+                  uncommonProb: BH,
+                  rareProb: LH,
+                  epicProb: rH,
+                  legendaryProb: SH,
+                  level: zH
+                } = (0, GA.f)(AH, tH);
+                hH.push({
+                  level: zH,
+                  odds: [HH, BH, LH, rH, SH].map((HH => 100 * HH))
                 })
               }
               return {
-                perks: [...UV],
-                options: yV
+                perks: [...SH],
+                options: hH
               }
-            }(VV, eV, JV, YV)
+            }(HH, BH, AH, rH)
           }
         }
       }
     }
-    const XJ = Object.freeze({
+    const kA = Object.freeze({
       perks: [],
       options: []
     });
 
-    function MJ() {
+    function mA() {
       return null
     }
 
-    function zJ(VV, eV, xV, JV) {
-      const YV = [];
-      for (let UV = 0; UV < xV; UV++) {
-        const xV = VV.getUint16(eV + 2 * UV, !0);
-        0 !== xV && YV.push(JV.nameOfId(xV))
+    function oA(HH, BH, LH, AH) {
+      const rH = [];
+      for (let SH = 0; SH < LH; SH++) {
+        const LH = HH.getUint16(BH + 2 * SH, !0);
+        0 !== LH && rH.push(AH.nameOfId(LH))
       }
-      return YV
+      return rH
     }
-    class GJ {
-      constructor(VV) {
-        this.api = VV, this.positions = new Map, this.targeted = {
-          VVV: 0,
+    class IA {
+      constructor(HH) {
+        this.api = HH, this.positions = new Map, this.targeted = {
+          y5: 0,
           position: [0, 0, 0],
           normal: [0, 0, 0],
-          FE: [0, 0, 0]
+          AW: [0, 0, 0]
         }, this.hasTarget = !1, this.breaking = [0, 0, 0], this.isBreaking = !1
       }
-      position(VV) {
-        let eV = this.positions.get(VV);
-        return eV || (this.api.checkValid(VV) || this.api.isLocal(VV) ? (eV = [NaN, NaN, NaN], this.api.readPosition(VV, eV), this.positions.set(VV, eV), eV) : null)
+      position(HH) {
+        let BH = this.positions.get(HH);
+        return BH || (this.api.checkValid(HH) || this.api.isLocal(HH) ? (BH = [NaN, NaN, NaN], this.api.readPosition(HH, BH), this.positions.set(HH, BH), BH) : null)
       }
-      IeV() {
+      cBH() {
         return this.hasTarget ? this.targeted : null
       }
       breakingPosition() {
         return this.isBreaking ? this.breaking : null
       }
       refresh() {
-        for (const [eV, xV] of this.positions) this.api.readPosition(eV, xV) || this.api.checkValid(eV) || this.api.isLocal(eV) || this.positions.delete(eV);
-        const VV = this.api.apiView;
-        if (this.refreshTarget(), this.isBreaking = 0 !== (kV.s.playerFlags(VV, 0) & kV.Ld.Breaking) && kV.s.breakingProgress(VV, 0) >= 0, this.isBreaking)
-          for (let eV = 0; eV < 3; eV++) this.breaking[eV] = kV.s.breakingPos(VV, 0, eV)
+        for (const [BH, LH] of this.positions) this.api.readPosition(BH, LH) || this.api.checkValid(BH) || this.api.isLocal(BH) || this.positions.delete(BH);
+        const HH = this.api.apiView;
+        if (this.refreshTarget(), this.isBreaking = 0 !== (uH.y.playerFlags(HH, 0) & uH.Md.Breaking) && uH.y.breakingProgress(HH, 0) >= 0, this.isBreaking)
+          for (let BH = 0; BH < 3; BH++) this.breaking[BH] = uH.y.breakingPos(HH, 0, BH)
       }
       refreshTarget() {
-        const VV = this.api.apiView,
-          eV = kV.s.targetBlockId(VV, 0);
-        if (this.hasTarget = eV !== kV.Yc, this.hasTarget) {
-          const xV = this.targeted;
-          xV.VVV = eV;
-          for (let eV = 0; eV < 3; eV++) xV.position[eV] = kV.s.targetBlock(VV, 0, eV), xV.normal[eV] = kV.s.targetNormal(VV, 0, eV), xV.FE[eV] = kV.s.targetAdjacent(VV, 0, eV)
+        const HH = this.api.apiView,
+          BH = uH.y.targetBlockId(HH, 0);
+        if (this.hasTarget = BH !== uH.cd, this.hasTarget) {
+          const LH = this.targeted;
+          LH.y5 = BH;
+          for (let BH = 0; BH < 3; BH++) LH.position[BH] = uH.y.targetBlock(HH, 0, BH), LH.normal[BH] = uH.y.targetNormal(HH, 0, BH), LH.AW[BH] = uH.y.targetAdjacent(HH, 0, BH)
         }
       }
-      despawned(VV) {
-        const eV = this.positions.get(VV);
-        eV && !this.api.isLocal(VV) && (eV.fill(NaN), this.positions.delete(VV))
+      despawned(HH) {
+        const BH = this.positions.get(HH);
+        BH && !this.api.isLocal(HH) && (BH.fill(NaN), this.positions.delete(HH))
       }
     }
-    var WJ = xV(41900),
-      RJ = xV(41880),
-      gJ = xV(37521),
-      DJ = xV(37985);
-    const iJ = 1,
-      CJ = 2;
-    class aJ {
+    var fA = LH(41949),
+      lA = LH(41933),
+      KA = LH(37250),
+      cA = LH(37656);
+    const eA = 1,
+      qA = 2;
+    class gA {
       constructor() {
-        this.game = new DJ.g, this.client = new DJ.g, this.hn = 0, this.movesFly = null
+        this.game = new cA.d, this.client = new cA.d, this.LX = 0, this.movesFly = null
       }
-      setGame(VV) {
-        if (null === VV || "object" !== typeof VV) return !1;
+      setGame(HH) {
+        if (null === HH || "object" !== typeof HH) return !1;
         const {
-          key: eV,
-          value: xV
-        } = VV;
-        return "string" === typeof eV && (this.game.setBooleanType(eV, Boolean(xV)), !0)
+          key: BH,
+          value: LH
+        } = HH;
+        return "string" === typeof BH && (this.game.setBooleanType(BH, Boolean(LH)), !0)
       }
-      setClient(VV, eV) {
-        this.client.setBooleanType(VV, eV)
+      setClient(HH, BH) {
+        this.client.setBooleanType(HH, BH)
       }
       clearGame() {
-        this.game = new DJ.g, this.movesFly = null
+        this.game = new cA.d, this.movesFly = null
       }
-      setMovesFly(VV) {
-        this.movesFly = VV
+      setMovesFly(HH) {
+        this.movesFly = HH
       }
       perms() {
-        return (this.game._getTotalBooleanVal() ? iJ : 0) | (this.client._getTotalBooleanVal() ? CJ : 0)
+        return (this.game._getTotalBooleanVal() ? eA : 0) | (this.client._getTotalBooleanVal() ? qA : 0)
       }
-      write(VV) {
-        const eV = this.perms(),
+      write(HH) {
+        const BH = this.perms(),
           {
-            movesFly: xV
+            movesFly: LH
           } = this;
-        if (eV === this.hn && null === xV) return !0;
-        let JV = kV.Vb.Keep;
-        return null !== xV && (JV = xV ? kV.Vb.On : kV.Vb.Off), !(!VV || !(0, kV.De)(VV, 0, JV, eV, xV ? 1 : 0)) && (this.hn = eV, this.movesFly = null, !0)
+        if (BH === this.LX && null === LH) return !0;
+        let AH = uH.bc.Keep;
+        return null !== LH && (AH = LH ? uH.bc.On : uH.bc.Off), !(!HH || !(0, uH.Ne)(HH, 0, AH, BH, LH ? 1 : 0)) && (this.LX = BH, this.movesFly = null, !0)
       }
     }
-    class oJ {
-      constructor(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => 35;
-        this.api = VV, this.screenBandPct = void 0, this.clipX = 0, this.clipY = 0, this.clipW = 0, this.eye = [0, 0, 0], this.forward = [0, 0, 1], this.along = [0, 0, 0], this.screenBandPct = {
-          x: pV.d,
+    class NA {
+      constructor(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => 35;
+        this.api = HH, this.screenBandPct = void 0, this.clipX = 0, this.clipY = 0, this.clipW = 0, this.eye = [0, 0, 0], this.forward = [0, 0, 1], this.along = [0, 0, 0], this.screenBandPct = {
+          x: tH.b,
           get y() {
-            return eV()
+            return BH()
           }
         }
       }
       get hasView() {
-        const VV = this.api.apiView,
-          eV = kV.s.viewProj;
-        return 0 !== eV(VV, 0, 3) || 0 !== eV(VV, 0, 7) || 0 !== eV(VV, 0, 11) || 0 !== eV(VV, 0, 15)
+        const HH = this.api.apiView,
+          BH = uH.y.viewProj;
+        return 0 !== BH(HH, 0, 3) || 0 !== BH(HH, 0, 7) || 0 !== BH(HH, 0, 11) || 0 !== BH(HH, 0, 15)
       }
       get cameraPosition() {
-        const VV = this.api.apiView,
+        const HH = this.api.apiView,
           {
-            eye: eV
+            eye: BH
           } = this;
-        for (let xV = 0; xV < 3; xV++) eV[xV] = kV.s.eye(VV, 0, xV);
-        return eV
+        for (let LH = 0; LH < 3; LH++) BH[LH] = uH.y.eye(HH, 0, LH);
+        return BH
       }
       get cameraDirection() {
-        const VV = this.api.apiView,
-          eV = kV.s.viewProj,
-          xV = eV(VV, 0, 3),
-          JV = eV(VV, 0, 7),
-          YV = eV(VV, 0, 11),
-          UV = Math.hypot(xV, JV, YV),
+        const HH = this.api.apiView,
+          BH = uH.y.viewProj,
+          LH = BH(HH, 0, 3),
+          AH = BH(HH, 0, 7),
+          rH = BH(HH, 0, 11),
+          SH = Math.hypot(LH, AH, rH),
           {
-            forward: yV
+            forward: hH
           } = this;
-        return UV > 0 && (yV[0] = xV / UV, yV[1] = JV / UV, yV[2] = YV / UV), yV
+        return SH > 0 && (hH[0] = LH / SH, hH[1] = AH / SH, hH[2] = rH / SH), hH
       }
       get cameraHeading() {
-        return kV.s.heading(this.api.apiView, 0)
+        return uH.y.heading(this.api.apiView, 0)
       }
       get cameraPitch() {
-        return kV.s.pitch(this.api.apiView, 0)
+        return uH.y.pitch(this.api.apiView, 0)
       }
       get tanHalfFovX() {
-        return kV.s.tanHalfFovX(this.api.apiView, 0)
+        return uH.y.tanHalfFovX(this.api.apiView, 0)
       }
       get tanHalfFovY() {
-        return kV.s.tanHalfFovY(this.api.apiView, 0)
+        return uH.y.tanHalfFovY(this.api.apiView, 0)
       }
-      projectWorldPosToScreenPos(VV) {
-        this.clip(VV);
+      projectWorldPosToScreenPos(HH) {
+        this.clip(HH);
         const {
-          clipX: eV,
-          clipY: xV,
-          clipW: JV
+          clipX: BH,
+          clipY: LH,
+          clipW: AH
         } = this;
-        if (JV > 0) {
-          const VV = eV / JV * 50,
-            YV = -xV / JV * 50;
-          return Math.abs(VV) <= this.screenBandPct.x && Math.abs(YV) <= this.screenBandPct.y ? {
-            x: 50 + VV,
-            y: 50 + YV
-          } : this.clampToBand(VV, YV)
+        if (AH > 0) {
+          const HH = BH / AH * 50,
+            rH = -LH / AH * 50;
+          return Math.abs(HH) <= this.screenBandPct.x && Math.abs(rH) <= this.screenBandPct.y ? {
+            x: 50 + HH,
+            y: 50 + rH
+          } : this.clampToBand(HH, rH)
         }
-        const YV = this.cameraPosition,
-          UV = Math.hypot(VV[0] - YV[0], VV[1] - YV[1], VV[2] - YV[2]),
-          yV = this.api.apiView,
-          pV = kV.s.viewProj,
-          QV = UV > 0 ? eV / UV : 0,
-          nV = UV > 0 ? -xV / UV : 0,
-          wV = Math.hypot(pV(yV, 0, 1), pV(yV, 0, 5), pV(yV, 0, 9)),
-          ZV = QV / Math.hypot(pV(yV, 0, 0), pV(yV, 0, 4), pV(yV, 0, 8)),
-          vV = nV / wV,
-          rV = !(Math.abs(ZV) >= .001 || Math.abs(vV) >= .001);
-        return this.clampToBand(QV, rV ? -(wV || 1) : nV)
+        const rH = this.cameraPosition,
+          SH = Math.hypot(HH[0] - rH[0], HH[1] - rH[1], HH[2] - rH[2]),
+          hH = this.api.apiView,
+          tH = uH.y.viewProj,
+          zH = SH > 0 ? BH / SH : 0,
+          CH = SH > 0 ? -LH / SH : 0,
+          EH = Math.hypot(tH(hH, 0, 1), tH(hH, 0, 5), tH(hH, 0, 9)),
+          XH = zH / Math.hypot(tH(hH, 0, 0), tH(hH, 0, 4), tH(hH, 0, 8)),
+          GH = CH / EH,
+          YH = !(Math.abs(XH) >= .001 || Math.abs(GH) >= .001);
+        return this.clampToBand(zH, YH ? -(EH || 1) : CH)
       }
-      projectDirectionToScreenPos(VV) {
+      projectDirectionToScreenPos(HH) {
         if (!this.hasView) return;
-        const eV = this.cameraPosition,
-          xV = this.along;
-        for (let JV = 0; JV < 3; JV++) xV[JV] = eV[JV] + 10 * VV[JV];
-        return this.projectWorldPosToScreenPos(xV)
+        const BH = this.cameraPosition,
+          LH = this.along;
+        for (let AH = 0; AH < 3; AH++) LH[AH] = BH[AH] + 10 * HH[AH];
+        return this.projectWorldPosToScreenPos(LH)
       }
-      projectWorldPosToViewport(VV) {
-        this.clip(VV);
+      projectWorldPosToViewport(HH) {
+        this.clip(HH);
         const {
-          clipX: eV,
-          clipY: xV,
-          clipW: JV
+          clipX: BH,
+          clipY: LH,
+          clipW: AH
         } = this;
-        return JV > 0 ? {
-          x: 50 + eV / JV * 50,
-          y: 50 - xV / JV * 50
+        return AH > 0 ? {
+          x: 50 + BH / AH * 50,
+          y: 50 - LH / AH * 50
         } : null
       }
-      clip(VV) {
-        const eV = this.api.apiView,
-          xV = VV[0] - kV.s.origin(eV, 0, 0),
-          JV = VV[1] - kV.s.origin(eV, 0, 1),
-          YV = VV[2] - kV.s.origin(eV, 0, 2),
-          UV = kV.s.viewProj;
-        this.clipX = UV(eV, 0, 0) * xV + UV(eV, 0, 4) * JV + UV(eV, 0, 8) * YV + UV(eV, 0, 12), this.clipY = UV(eV, 0, 1) * xV + UV(eV, 0, 5) * JV + UV(eV, 0, 9) * YV + UV(eV, 0, 13), this.clipW = UV(eV, 0, 3) * xV + UV(eV, 0, 7) * JV + UV(eV, 0, 11) * YV + UV(eV, 0, 15)
+      clip(HH) {
+        const BH = this.api.apiView,
+          LH = HH[0] - uH.y.origin(BH, 0, 0),
+          AH = HH[1] - uH.y.origin(BH, 0, 1),
+          rH = HH[2] - uH.y.origin(BH, 0, 2),
+          SH = uH.y.viewProj;
+        this.clipX = SH(BH, 0, 0) * LH + SH(BH, 0, 4) * AH + SH(BH, 0, 8) * rH + SH(BH, 0, 12), this.clipY = SH(BH, 0, 1) * LH + SH(BH, 0, 5) * AH + SH(BH, 0, 9) * rH + SH(BH, 0, 13), this.clipW = SH(BH, 0, 3) * LH + SH(BH, 0, 7) * AH + SH(BH, 0, 11) * rH + SH(BH, 0, 15)
       }
-      clampToBand(VV, eV) {
-        return (0, pV.g)(VV, eV, this.screenBandPct.x, this.screenBandPct.y)
+      clampToBand(HH, BH) {
+        return (0, tH.e)(HH, BH, this.screenBandPct.x, this.screenBandPct.y)
       }
     }
-    var cJ = xV(5310);
-    const hJ = new TextEncoder,
-      lJ = new Uint8Array(kV.J * kV.F);
-    class LJ {
+    var RA = LH(5279);
+    const jA = new TextEncoder,
+      nA = new Uint8Array(uH.P * uH.O);
+    class FA {
       constructor() {
-        this.buttons = [], this.hn = !0
+        this.buttons = [], this.LX = !0
       }
-      set(VV) {
-        this.buttons = VV, this.hn = !1
+      set(HH) {
+        this.buttons = HH, this.LX = !1
       }
       attached() {
-        this.hn = 0 === this.buttons.length
+        this.LX = 0 === this.buttons.length
       }
-      write(VV) {
-        if (this.hn) return;
-        const eV = new Uint8Array(kV.J),
-          xV = new Uint8Array(kV.J);
-        let JV = 0,
-          YV = 0;
+      write(HH) {
+        if (this.LX) return;
+        const BH = new Uint8Array(uH.P),
+          LH = new Uint8Array(uH.P);
+        let AH = 0,
+          rH = 0;
         for (const {
-            id: UV,
-            keycode: yV
+            id: SH,
+            keycode: hH
           }
           of this.buttons) {
-          if (JV === kV.J) break;
+          if (AH === uH.P) break;
           const {
-            read: VV,
-            written: pV
-          } = hJ.encodeInto(UV, lJ.subarray(YV, YV + kV.F));
-          if (VV < UV.length) continue;
-          const QV = cJ.p[yV];
-          eV[JV] = "number" === typeof QV ? QV : 0, xV[JV] = pV, JV++, YV += pV
+            read: HH,
+            written: tH
+          } = jA.encodeInto(SH, nA.subarray(rH, rH + uH.O));
+          if (HH < SH.length) continue;
+          const zH = RA.j[hH];
+          BH[AH] = "number" === typeof zH ? zH : 0, LH[AH] = tH, AH++, rH += tH
         }
-        this.hn = (0, kV.ve)(VV, 0, JV, eV, xV, lJ.subarray(0, YV))
+        this.LX = (0, uH.xe)(HH, 0, AH, BH, LH, nA.subarray(0, rH))
       }
     }
 
-    function fJ(VV, eV, xV) {
-      const JV = hJ.encode(eV);
-      return JV.length <= kV.F && function(VV, eV, xV, JV) {
-        return (0, Jx.e)(), (0, kV.vf)(VV, eV, xV, JV)
-      }(VV, 0, xV ? 1 : 0, JV)
+    function DA(HH, BH, LH) {
+      const AH = jA.encode(BH);
+      return AH.length <= uH.O && function(HH, BH, LH, AH) {
+        return (0, AL.b)(), (0, uH.Gf)(HH, BH, LH, AH)
+      }(HH, 0, LH ? 1 : 0, AH)
     }
-    var mJ = xV(40455);
-    const KJ = new TextDecoder,
-      HJ = new TextEncoder,
-      uJ = new Uint8Array(0),
-      sJ = [0, 0, 0],
-      SJ = {
-        off: kV.Od.Off,
-        key: kV.Od.Key,
-        touch: kV.Od.Touch
+    var wA = LH(40193);
+    const ZA = new TextDecoder,
+      dA = new TextEncoder,
+      aA = new Uint8Array(0),
+      sA = [0, 0, 0],
+      JA = {
+        off: uH.Qd.Off,
+        key: uH.Qd.Key,
+        touch: uH.Qd.Touch
       };
-    class IJ {
-      constructor(VV) {
-        var eV;
-        this.options = VV, this.renderFrame = void 0, this.live = void 0, this.chunks = void 0, this.items = void 0, this.entityInfo = void 0, this.entityInfoWatch = void 0, this.particles = void 0, this.clientApi = void 0, this.scriptedCamera = void 0, this.owners = [], this.tickers = [], this.renderers = [], this.receivers = [], this.failures = [], this.vetoSet = !1, this.hooksSet = !1, this.writtenPublicLobby = !1, this.promptWatch = "off", this.promptWatchSent = "off", this.customButtons = new LJ, this.generation = 0, this.sessionLive = !1, this.boundId = 0, this.session = null, this.activeConn = 0, this.closedThrough = 0, this.openSocket = 0, this.socketLeftSinceAttach = !1, this.ticks = 0, this.zoomUnshown = !1, this.zoomHeld = !1, this.overflowGen = 0, this.resyncOwed = !1, this.zoom = 0, this.localPhysicsType = XV.q.DEFAULT, this.pendingZoom = null, this.highlight = null, this.highlightOwed = !1, this.cmd = null, this.freeCam = new aJ, this.stopped = () => !1, this.onError = void 0, this.api = void 0, this.tables = void 0, this.itemSources = null, this.fault = void 0, this.EZ = VV => {
-          if ((0, rV.j)(VV)) throw VV;
-          this.onError(VV)
-        }, this.api = VV.api, this.tables = VV.tables, this.onError = null !== (eV = VV.onError) && void 0 !== eV ? eV : VV => {
-          console.error("Error in client game callback", VV)
-        }, this.renderFrame = new oJ(this.api, VV.screenBandY), this.live = new GJ(this.api), this.chunks = new we(this.api.memory, (() => this.api.apiView)), this.items = new Wx({
+    class iA {
+      constructor(HH) {
+        var BH;
+        this.options = HH, this.renderFrame = void 0, this.live = void 0, this.chunks = void 0, this.items = void 0, this.entityInfo = void 0, this.entityInfoWatch = void 0, this.particles = void 0, this.clientApi = void 0, this.scriptedCamera = void 0, this.owners = [], this.tickers = [], this.renderers = [], this.receivers = [], this.failures = [], this.vetoSet = !1, this.hooksSet = !1, this.writtenPublicLobby = !1, this.promptWatch = "off", this.promptWatchSent = "off", this.customButtons = new FA, this.generation = 0, this.sessionLive = !1, this.boundId = 0, this.session = null, this.activeConn = 0, this.closedThrough = 0, this.openSocket = 0, this.socketLeftSinceAttach = !1, this.ticks = 0, this.zoomUnshown = !1, this.zoomHeld = !1, this.overflowGen = 0, this.resyncOwed = !1, this.zoom = 0, this.localPhysicsType = kH.o.DEFAULT, this.pendingZoom = null, this.highlight = null, this.highlightOwed = !1, this.cmd = null, this.freeCam = new gA, this.stopped = () => !1, this.onError = void 0, this.api = void 0, this.tables = void 0, this.itemSources = null, this.fault = void 0, this.XX = HH => {
+          if ((0, YH.h)(HH)) throw HH;
+          this.onError(HH)
+        }, this.api = HH.api, this.tables = HH.tables, this.onError = null !== (BH = HH.onError) && void 0 !== BH ? BH : HH => {
+          console.error("Error in client game callback", HH)
+        }, this.renderFrame = new NA(this.api, HH.screenBandY), this.live = new IA(this.api), this.chunks = new EB(this.api.memory, (() => this.api.apiView)), this.items = new fL({
           api: this.api,
-          tables: VV.tables,
+          tables: HH.tables,
           cmd: () => this.cmd,
           onError: this.onError,
-          beforeOp: VV.beforeOp
+          beforeOp: HH.beforeOp
         });
-        const xV = () => this.stopped() ? null : this.cmd,
-          JV = () => this.sessionLive;
-        this.entityInfoWatch = new YJ({
-          cmd: xV,
+        const LH = () => this.stopped() ? null : this.cmd,
+          AH = () => this.sessionLive;
+        this.entityInfoWatch = new rA({
+          cmd: LH,
           onError: this.onError
-        }), this.entityInfo = new UJ({
+        }), this.entityInfo = new SA({
           api: this.api,
           watch: this.entityInfoWatch,
-          isSessionLive: JV
-        }), this.particles = new ux({
-          cmd: xV,
-          isSessionLive: JV,
+          isSessionLive: AH
+        }), this.particles = new aL({
+          cmd: LH,
+          isSessionLive: AH,
           onError: this.onError
-        }), this.clientApi = new Fx({
+        }), this.clientApi = new TL({
           api: this.api,
           live: this.live,
           chunks: this.chunks,
           items: this.items,
           entityInfo: this.entityInfo,
           particles: this.particles,
-          tables: VV.tables,
-          cmd: xV,
+          tables: HH.tables,
+          cmd: LH,
           sendCmd: () => this.sendCmd(),
-          isSessionLive: JV,
+          isSessionLive: AH,
           beforeWrite: () => {
-            var eV;
+            var BH;
             if (this.stopped()) return !1;
-            const xV = this.generation;
-            return !1 !== (null === (eV = VV.beforeWrite) || void 0 === eV ? void 0 : eV.call(VV)) && xV === this.generation
+            const LH = this.generation;
+            return !1 !== (null === (BH = HH.beforeWrite) || void 0 === BH ? void 0 : BH.call(HH)) && LH === this.generation
           },
           playerDbId: () => {
-            const VV = this.session;
-            if (null === VV) throw new Error("No game session has started, so the local player has no DB id");
-            return VV.playerDbId
+            const HH = this.session;
+            if (null === HH) throw new Error("No game session has started, so the local player has no DB id");
+            return HH.playerDbId
           },
-          playSound: VV.playSound,
-          preloadSounds: VV.preloadSounds,
-          setLocalOptions: VV.setLocalOptions,
-          hasPackModel: VV.hasPackModel,
+          playSound: HH.playSound,
+          preloadSounds: HH.preloadSounds,
+          setLocalOptions: HH.setLocalOptions,
+          hasPackModel: HH.hasPackModel,
           localPhysicsType: () => this.localPhysicsType
-        }), this.scriptedCamera = new uV({
+        }), this.scriptedCamera = new aH({
           api: this.api,
+          reportError: BH => {
+            var LH;
+            this.XX(BH), null === (LH = HH.reportCameraFault) || void 0 === LH || LH.call(HH, BH)
+          },
           cmd: () => this.stopped() ? null : this.cmd,
-          screen: VV.cameraScreen,
-          showFacing: VV.showCameraFacing
+          screen: HH.cameraScreen,
+          showFacing: HH.showCameraFacing
         })
       }
       get itemBridgeSources() {
-        return this.itemSources ??= NJ(this.items, this.tables, (() => this.localPlayerAlive()), this.EZ), this.itemSources
+        return this.itemSources ??= bA(this.items, this.tables, (() => this.localPlayerAlive()), this.XX), this.itemSources
       }
       get isSessionLive() {
         return this.sessionLive
@@ -4145,52 +4024,52 @@ export const modules = {
       localDeaths() {
         return this.isCoreRunning ? this.api.localDeaths() : null
       }
-      clickCodeBlock(VV) {
-        const eV = this.sessionLive ? this.sendCmd() : null;
-        return null !== eV && (xV = eV, JV = 0, YV = VV[0], UV = VV[1], yV = VV[2], (0, Jx.e)(), (0, kV.ye)(xV, JV, YV, UV, yV));
-        var xV, JV, YV, UV, yV
+      clickCodeBlock(HH) {
+        const BH = this.sessionLive ? this.sendCmd() : null;
+        return null !== BH && (LH = BH, AH = 0, rH = HH[0], SH = HH[1], hH = HH[2], (0, AL.b)(), (0, uH.Ee)(LH, AH, rH, SH, hH));
+        var LH, AH, rH, SH, hH
       }
       cameraZoom() {
         return this.zoom
       }
-      setCameraZoom(VV) {
-        const eV = this.liveCmd();
-        return null === eV ? (this.pendingZoom = VV, !1) : (this.pendingZoom = null, (0, kV.eg)(eV, 0, VV, 1))
+      setCameraZoom(HH) {
+        const BH = this.liveCmd();
+        return null === BH ? (this.pendingZoom = HH, !1) : (this.pendingZoom = null, (0, uH.vg)(BH, 0, HH, 1))
       }
-      fW(VV) {
-        const eV = this.stopped() ? null : this.cmd;
-        return null !== eV && (0, kV.bg)(eV, 0, VV ? 1 : 0)
+      IK(HH) {
+        const BH = this.stopped() ? null : this.cmd;
+        return null !== BH && (0, uH.og)(BH, 0, HH ? 1 : 0)
       }
       respawn() {
-        const VV = this.sessionLive ? this.sendCmd() : null;
-        return null !== VV && (eV = VV, xV = 0, (0, Jx.e)(), (0, kV.Hf)(eV, xV));
-        var eV, xV
+        const HH = this.sessionLive ? this.sendCmd() : null;
+        return null !== HH && (BH = HH, LH = 0, (0, AL.b)(), (0, uH.Sf)(BH, LH));
+        var BH, LH
       }
-      bindCustomButtonKeys(VV) {
-        this.customButtons.set(VV)
+      bindCustomButtonKeys(HH) {
+        this.customButtons.set(HH)
       }
-      pressCustomButton(VV, eV) {
-        const xV = this.sessionLive ? this.sendCmd() : null;
-        return null !== xV && fJ(xV, VV, eV)
+      pressCustomButton(HH, BH) {
+        const LH = this.sessionLive ? this.sendCmd() : null;
+        return null !== LH && DA(LH, HH, BH)
       }
-      padMove(VV, eV, xV, JV, YV, UV) {
-        const yV = this.liveCmd();
-        return null !== yV && (0, kV.gf)(yV, 0, VV, eV, xV, JV, YV, UV)
+      padMove(HH, BH, LH, AH, rH, SH) {
+        const hH = this.liveCmd();
+        return null !== hH && (0, uH.of)(hH, 0, HH, BH, LH, AH, rH, SH)
       }
-      thirdPersonFor(VV) {
-        const eV = this.liveCmd();
-        return null !== eV && (0, kV.ig)(eV, 0, null !== VV && void 0 !== VV ? VV : 1 / 0)
+      thirdPersonFor(HH) {
+        const BH = this.liveCmd();
+        return null !== BH && (0, uH.Bg)(BH, 0, null !== HH && void 0 !== HH ? HH : 1 / 0)
       }
-      send(VV, eV) {
-        let xV = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const JV = 0 !== this.openSocket || this.sessionLive ? this.sendCmd() : null;
-        return null !== JV && Yx(JV, xV ? vV.td : 0, VV, (0, oV.g)(eV))
+      send(HH, BH) {
+        let LH = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const AH = 0 !== this.openSocket || this.sessionLive ? this.sendCmd() : null;
+        return null !== AH && rL(AH, LH ? GH.nd : 0, HH, (0, RH.g)(BH))
       }
-      socketAttached(VV) {
-        this.openSocket = VV, this.socketLeftSinceAttach = !1
+      socketAttached(HH) {
+        this.openSocket = HH, this.socketLeftSinceAttach = !1
       }
-      socketDetached(VV) {
-        this.openSocket === VV && (this.openSocket = 0)
+      socketDetached(HH) {
+        this.openSocket === HH && (this.openSocket = 0)
       }
       socketLeft() {
         this.openSocket = 0, this.socketLeftSinceAttach = !0
@@ -4201,455 +4080,455 @@ export const modules = {
       liveCmd() {
         return this.isCoreRunning ? this.cmd : null
       }
-      attach(VV) {
-        const eV = () => VV.isStopped;
-        this.stopped = eV, this.cmd = VV.rings.cmd, this.promptWatchSent = "off", this.writePromptWatch(), this.customButtons.attached(), this.writeCustomButtons();
-        const xV = this.api.apiView;
-        this.overflowGen = kV.s.eventOverflowGen(xV, 0), this.resyncOwed = 0 !== kV.s.eventOverflowMask(xV, 0), VV.setGameHost(this), VV.setEventWalker((VV => {
-          this.api.walk(VV, this, eV)
+      attach(HH) {
+        const BH = () => HH.isStopped;
+        this.stopped = BH, this.cmd = HH.rings.cmd, this.promptWatchSent = "off", this.writePromptWatch(), this.customButtons.attached(), this.writeCustomButtons();
+        const LH = this.api.apiView;
+        this.overflowGen = uH.y.eventOverflowGen(LH, 0), this.resyncOwed = 0 !== uH.y.eventOverflowMask(LH, 0), HH.setGameHost(this), HH.setEventWalker((HH => {
+          this.api.walk(HH, this, BH)
         }))
       }
-      watchPromptPick(VV) {
-        this.promptWatch = VV, this.writePromptWatch()
+      watchPromptPick(HH) {
+        this.promptWatch = HH, this.writePromptWatch()
       }
       get promptEntity() {
-        return "off" === this.promptWatch || this.stopped() ? null : dJ(kV.s.promptEntity(this.api.apiView, 0))
+        return "off" === this.promptWatch || this.stopped() ? null : pA(uH.y.promptEntity(this.api.apiView, 0))
       }
       get interactLabel() {
-        return "touch" !== this.promptWatch || this.stopped() ? kV.uc.None : kV.s.interactLabel(this.api.apiView, 0)
+        return "touch" !== this.promptWatch || this.stopped() ? uH.Ac.None : uH.y.interactLabel(this.api.apiView, 0)
       }
       get interactIcon() {
-        return "touch" !== this.promptWatch || this.stopped() ? 0 : kV.s.interactIcon(this.api.apiView, 0)
+        return "touch" !== this.promptWatch || this.stopped() ? 0 : uH.y.interactIcon(this.api.apiView, 0)
       }
       closeGame() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        (0 === VV || VV >= this.openSocket) && (this.openSocket = 0), this.closedThrough = Math.max(this.closedThrough, VV, this.activeConn), this.activeConn = 0, this.endSession(), this.endGameGrants(), this.dropGameCamera()
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        (0 === HH || HH >= this.openSocket) && (this.openSocket = 0), this.closedThrough = Math.max(this.closedThrough, HH, this.activeConn), this.activeConn = 0, this.endSession(), this.endGameGrants(), this.dropGameCamera()
       }
-      gameCamera(VV) {
-        0 !== this.activeConn && this.scriptedCamera.settingsChanged(VV)
+      gameCamera(HH) {
+        0 !== this.activeConn && this.scriptedCamera.settingsChanged(HH)
       }
-      netEvent(VV) {
-        "connection" === VV.type ? VV.phase === vV.H.Activated && VV.conn !== this.activeConn && VV.conn > this.closedThrough ? (this.endSession(), this.activeConn = VV.conn, this.endGameGrants(), this.dropGameCamera()) : VV.phase !== vV.H.Left && VV.phase !== vV.H.Closed || VV.conn !== this.activeConn ? VV.phase === vV.H.Resumed && 0 !== this.activeConn && VV.conn > this.closedThrough && (this.activeConn = VV.conn) : this.closeGame() : VV.conn === this.activeConn && 0 !== VV.conn && (VV.yZ === RJ.v ? this.gunHit(VV.payload) : VV.yZ === yJ.mc.EditItemCraftingRecipes || VV.yZ === RJ.Q ? this.items.touch() : (this.serverOptions(VV), this.gameMessage(VV)));
-        const eV = this.options.onNetEvent;
-        eV && this.guard((() => {
-          eV(VV)
+      netEvent(HH) {
+        "connection" === HH.type ? HH.phase === GH.C.Activated && HH.conn !== this.activeConn && HH.conn > this.closedThrough ? (this.endSession(), this.activeConn = HH.conn, this.endGameGrants(), this.dropGameCamera()) : HH.phase !== GH.C.Left && HH.phase !== GH.C.Closed || HH.conn !== this.activeConn ? HH.phase === GH.C.Resumed && 0 !== this.activeConn && HH.conn > this.closedThrough && (this.activeConn = HH.conn) : this.closeGame() : HH.conn === this.activeConn && 0 !== HH.conn && (HH.kt === lA.q ? this.gunHit(HH.payload) : HH.kt === hA.nc.EditItemCraftingRecipes || HH.kt === lA.R ? this.items.touch() : (this.serverOptions(HH), this.gameMessage(HH)));
+        const BH = this.options.onNetEvent;
+        BH && this.guard((() => {
+          BH(HH)
         }))
       }
-      serverOptions(VV) {
-        const eV = this.options.serverOptions,
-          xV = eV ? this.decoded(pJ, VV) : null;
-        eV && xV && this.guard((() => {
-          eV.applyNewClientOptions(xV)
+      serverOptions(HH) {
+        const BH = this.options.serverOptions,
+          LH = BH ? this.decoded(tA, HH) : null;
+        BH && LH && this.guard((() => {
+          BH.applyNewClientOptions(LH)
         }))
       }
-      gameMessage(VV) {
-        let eV = null;
+      gameMessage(HH) {
+        let BH = null;
         try {
-          eV = function(VV) {
-            if ("message" !== VV.type || VV.yZ !== yJ.mc.GameCodeMessage || VV.payloadKind !== vV.sc.Msgpack) return null;
-            const eV = (0, oV.e)(VV.payload);
-            if (null === eV || "object" !== typeof eV || "string" !== typeof eV.messageType) throw new Error("GameCodeMessage without a messageType");
-            return eV
-          }(VV)
-        } catch (xV) {
-          this.sessionLive && this.onError(xV)
+          BH = function(HH) {
+            if ("message" !== HH.type || HH.kt !== hA.nc.GameCodeMessage || HH.payloadKind !== GH.jc.Msgpack) return null;
+            const BH = (0, RH.e)(HH.payload);
+            if (null === BH || "object" !== typeof BH || "string" !== typeof BH.messageType) throw new Error("GameCodeMessage without a messageType");
+            return BH
+          }(HH)
+        } catch (LH) {
+          this.sessionLive && this.onError(LH)
         }
-        if (eV) {
+        if (BH) {
           const {
-            messageType: VV,
-            data: xV
-          } = eV;
-          if ((0, WV.f)(VV)) return void this.guard((() => {
-            (0, WV.e)(VV, xV)
+            messageType: HH,
+            data: LH
+          } = BH;
+          if ((0, fH.f)(HH)) return void this.guard((() => {
+            (0, fH.c)(HH, LH)
           }));
-          "freeCamPerms" === VV && this.freeCam.setGame(xV) && this.writeFreeCam(), this.sessionLive && this.round(this.receivers, (eV => {
-            eV.onReceivedMessageFromServer(VV, xV)
+          "freeCamPerms" === HH && this.freeCam.setGame(LH) && this.writeFreeCam(), this.sessionLive && this.round(this.receivers, (BH => {
+            BH.onReceivedMessageFromServer(HH, LH)
           }))
         }
       }
-      decoded(VV, eV) {
+      decoded(HH, BH) {
         try {
-          return VV(eV)
-        } catch (xV) {
-          return this.onError(xV), null
+          return HH(BH)
+        } catch (LH) {
+          return this.onError(LH), null
         }
       }
-      setClientFreeCameraGrant(VV, eV) {
-        this.freeCam.setClient(VV, eV), this.writeFreeCam()
+      setClientFreeCameraGrant(HH, BH) {
+        this.freeCam.setClient(HH, BH), this.writeFreeCam()
       }
       freeCameraAllowed() {
         return 0 !== this.freeCam.perms()
       }
-      setFreeCameraMovesFly(VV) {
-        this.freeCam.setMovesFly(VV), this.writeFreeCam()
+      setFreeCameraMovesFly(HH) {
+        this.freeCam.setMovesFly(HH), this.writeFreeCam()
       }
-      setBlockHighlight(VV) {
-        this.highlight = VV, this.highlightOwed = !0, this.writeOwedHighlight()
+      setBlockHighlight(HH) {
+        this.highlight = HH, this.highlightOwed = !0, this.writeOwedHighlight()
       }
       writeOwedHighlight() {
-        const VV = this.liveCmd();
-        if (null === VV || !this.highlightOwed) return;
-        const eV = this.highlight;
-        this.highlightOwed = null === eV ? !(0, kV.Pe)(VV, 0, sJ, sJ, 0) : !(0, kV.Pe)(VV, 0, eV.pos, eV.normal, 1)
+        const HH = this.liveCmd();
+        if (null === HH || !this.highlightOwed) return;
+        const BH = this.highlight;
+        this.highlightOwed = null === BH ? !(0, uH._e)(HH, 0, sA, sA, 0) : !(0, uH._e)(HH, 0, BH.pos, BH.normal, 1)
       }
-      localPlayerBound(VV) {
-        var eV, xV;
-        if (0 === this.activeConn || this.sessionLive && VV === this.boundId) return;
-        const JV = this.sessionLive;
-        let YV, UV, yV, pV;
-        this.endSession(), JV && this.restartGameCamera();
+      localPlayerBound(HH) {
+        var BH, LH;
+        if (0 === this.activeConn || this.sessionLive && HH === this.boundId) return;
+        const AH = this.sessionLive;
+        let rH, SH, hH, tH;
+        this.endSession(), AH && this.restartGameCamera();
         try {
-          var QV;
+          var zH;
           this.session = null;
-          const VV = this.options.sessionInfo(this.activeConn);
-          if (this.session = VV, !VV) return;
-          YV = VV.gameNameWithVariation, UV = null !== (QV = (0, MV.Lb)(YV)) && void 0 !== QV ? QV : void 0, yV = (0, zV.r)(VV.lobbyName), pV = (0, zV.I)(VV.lobbyName)
-        } catch (jV) {
-          return void this.onError(jV)
+          const HH = this.options.sessionInfo(this.activeConn);
+          if (this.session = HH, !HH) return;
+          rH = HH.gameNameWithVariation, SH = null !== (zH = (0, mH.Ob)(rH)) && void 0 !== zH ? zH : void 0, hH = (0, oH.v)(HH.lobbyName), tH = (0, oH.N)(HH.lobbyName)
+        } catch (xH) {
+          return void this.onError(xH)
         }
-        const nV = {
-          localPlayerId: String(VV)
+        const CH = {
+          localPlayerId: String(HH)
         };
-        let wV = {},
-          ZV = [];
+        let EH = {},
+          XH = [];
         try {
-          var vV, rV;
-          wV = null !== (vV = null === (rV = this.options.gameFactory((0, MV.Pb)(YV))) || void 0 === rV ? void 0 : rV(pV, yV, UV, nV)) && void 0 !== vV ? vV : {}
-        } catch (jV) {
-          this.EZ(jV)
+          var GH, YH;
+          EH = null !== (GH = null === (YH = this.options.gameFactory((0, mH.Wb)(rH))) || void 0 === YH ? void 0 : YH(tH, hH, SH, CH)) && void 0 !== GH ? GH : {}
+        } catch (xH) {
+          this.XX(xH)
         }
         try {
-          var kV, bV;
-          ZV = (0, GV.b)(null === (kV = (bV = this.options).defaultPlugins) || void 0 === kV ? void 0 : kV.call(bV, pV, yV, UV, nV), wV.plugins)
-        } catch (jV) {
-          this.EZ(jV)
+          var uH, QH;
+          XH = (0, IH.e)(null === (uH = (QH = this.options).defaultPlugins) || void 0 === uH ? void 0 : uH.call(QH, tH, hH, SH, CH), EH.plugins)
+        } catch (xH) {
+          this.XX(xH)
         }
-        const EV = [wV, ...ZV];
-        this.owners = EV, this.tickers = EV.filter((VV => void 0 !== VV.iZ)), this.renderers = EV.filter((VV => void 0 !== VV.onAfterRender)), this.receivers = EV.filter((VV => void 0 !== VV.onReceivedMessageFromServer)), this.writeAltVeto(EV), this.writeHooks(EV), this.writePublicLobby(pV), this.writeLocalDbId(null !== (eV = null === (xV = this.session) || void 0 === xV ? void 0 : xV.playerDbId) && void 0 !== eV ? eV : null), this.boundId = VV, this.sessionLive = !0, this.generation++, null !== this.pendingZoom && this.setCameraZoom(this.pendingZoom), this.highlightOwed ||= null !== this.highlight, this.writeOwedHighlight(), this.round(EV, (VV => {
-          var eV;
-          null === (eV = VV.onCreate) || void 0 === eV || eV.call(VV, this.clientApi)
+        const WH = [EH, ...XH];
+        this.owners = WH, this.tickers = WH.filter((HH => void 0 !== HH.IX)), this.renderers = WH.filter((HH => void 0 !== HH.onAfterRender)), this.receivers = WH.filter((HH => void 0 !== HH.onReceivedMessageFromServer)), this.writeAltVeto(WH), this.writeHooks(WH), this.writePublicLobby(tH), this.writeLocalDbId(null !== (BH = null === (LH = this.session) || void 0 === LH ? void 0 : LH.playerDbId) && void 0 !== BH ? BH : null), this.boundId = HH, this.sessionLive = !0, this.generation++, null !== this.pendingZoom && this.setCameraZoom(this.pendingZoom), this.highlightOwed ||= null !== this.highlight, this.writeOwedHighlight(), this.round(WH, (HH => {
+          var BH;
+          null === (BH = HH.onCreate) || void 0 === BH || BH.call(HH, this.clientApi)
         }));
-        const BV = this.generation;
+        const MH = this.generation;
         setTimeout((() => {
-          BV === this.generation && !0 === this.tables.getClientOption("creative") && AJ(this.tables)
+          MH === this.generation && !0 === this.tables.getClientOption("creative") && OA(this.tables)
         }), 0)
       }
-      chunkSlot(VV, eV, xV, JV, YV, UV) {
-        this.chunks.apply(VV, eV, xV, JV, YV, UV)
+      chunkSlot(HH, BH, LH, AH, rH, SH) {
+        this.chunks.apply(HH, BH, LH, AH, rH, SH)
       }
-      entityAdded(VV) {
-        var eV;
-        this.entityInfo.stale(VV), null === (eV = this.options.replayEntities) || void 0 === eV || eV.entityAdded(VV)
+      entityAdded(HH) {
+        var BH;
+        this.entityInfo.stale(HH), null === (BH = this.options.replayEntities) || void 0 === BH || BH.entityAdded(HH)
       }
-      entityInfoChanged(VV) {
-        var eV;
-        this.entityInfo.stale(VV), null === (eV = this.options.replayEntities) || void 0 === eV || eV.entityInfoChanged(VV)
+      entityInfoChanged(HH) {
+        var BH;
+        this.entityInfo.stale(HH), null === (BH = this.options.replayEntities) || void 0 === BH || BH.entityInfoChanged(HH)
       }
       afterPrescan() {
         this.items.refresh(), this.entityInfo.refresh(), this.api.rereadDirectory(), this.chunks.refresh(), this.live.refresh()
       }
       tickEnd() {
         if (this.ticks++, this.tickers.length > 0) {
-          const VV = performance.now();
-          this.round(this.tickers, OJ), (0, EJ.b)(performance.now() - VV)
+          const HH = performance.now();
+          this.round(this.tickers, yA), (0, WA.c)(performance.now() - HH)
         }
       }
-      afterWalk(VV) {
+      afterWalk(HH) {
         this.ackEventOverflow(), this.clientApi.flushOwed(), this.writeOwedHighlight();
-        const eV = this.options.replayEntities;
-        eV && this.guard((() => {
-          this.entityInfoWatch.want(JJ, eV.wantsWatch), eV.flush(this.entityInfoWatch.on)
+        const BH = this.options.replayEntities;
+        BH && this.guard((() => {
+          this.entityInfoWatch.want(AA, BH.wantsWatch), BH.flush(this.entityInfoWatch.on)
         }));
-        const xV = this.api.apiView,
-          JV = kV.s.frameMs(xV, 0);
-        gJ.k.frame(JV, kV.s.heading(xV, 0), kV.s.pitch(xV, 0), gJ.i[VV]);
-        const YV = (0, EJ.h)(VV, JV);
-        if (null !== YV) {
-          const VV = this.renderFrame;
+        const LH = this.api.apiView,
+          AH = uH.y.frameMs(LH, 0);
+        KA.f.frame(AH, uH.y.heading(LH, 0), uH.y.pitch(LH, 0), KA.d[HH]);
+        const rH = (0, WA.g)(HH, AH);
+        if (null !== rH) {
+          const HH = this.renderFrame;
           this.guard((() => {
-            (0, nJ.d)().turnDamageIndicators(VV.cameraHeading)
+            (0, CA.e)().turnDamageIndicators(HH.cameraHeading)
           })), this.guard((() => {
-            this.clientApi.slideRoute(YV)
-          })), this.round(this.renderers, (eV => {
-            eV.onAfterRender(YV, VV)
+            this.clientApi.slideRoute(rH)
+          })), this.round(this.renderers, (BH => {
+            BH.onAfterRender(rH, HH)
           }))
         }
         this.writeFreeCam();
         try {
-          this.scriptedCamera.afterFrame(null !== YV)
-        } catch (yV) {
-          this.EZ(yV)
+          this.scriptedCamera.afterFrame(null !== rH)
+        } catch (hH) {
+          this.XX(hH)
         }
-        this.showZoom(), this.items.flush(this.EZ), this.writePromptWatch(), this.writeCustomButtons();
-        const UV = this.ticks;
-        this.ticks = 0, (0, EJ.g)(UV, VV, YV, this.EZ)
+        this.showZoom(), this.items.flush(this.XX), this.writePromptWatch(), this.writeCustomButtons();
+        const SH = this.ticks;
+        this.ticks = 0, (0, WA.e)(SH, HH, rH, this.XX)
       }
-      entityRemoved(VV) {
-        this.live.despawned(VV), this.entityInfo.removed(VV)
+      entityRemoved(HH) {
+        this.live.despawned(HH), this.entityInfo.removed(HH)
       }
       ackEventOverflow() {
-        const VV = this.api.apiView,
-          eV = kV.s.eventOverflowGen(VV, 0),
-          xV = eV - this.overflowGen >>> 0;
-        if (0 === xV && !this.resyncOwed) return;
-        this.overflowGen = eV;
-        const JV = kV.s.eventOverflowMask(VV, 0),
-          YV = this.cmd;
-        0 === JV || null === YV || this.stopped() ? this.resyncOwed = !1 : this.resyncOwed = !(0, kV.Be)(YV, 0, JV);
-        const UV = this.options.onEventOverflow;
-        0 !== xV && UV && this.guard((() => {
-          UV(JV, xV)
+        const HH = this.api.apiView,
+          BH = uH.y.eventOverflowGen(HH, 0),
+          LH = BH - this.overflowGen >>> 0;
+        if (0 === LH && !this.resyncOwed) return;
+        this.overflowGen = BH;
+        const AH = uH.y.eventOverflowMask(HH, 0),
+          rH = this.cmd;
+        0 === AH || null === rH || this.stopped() ? this.resyncOwed = !1 : this.resyncOwed = !(0, uH.Je)(rH, 0, AH);
+        const SH = this.options.onEventOverflow;
+        0 !== LH && SH && this.guard((() => {
+          SH(AH, LH)
         }))
       }
-      gameCall(VV, eV, xV, JV, YV, UV, yV, pV, QV) {
-        if (VV === kV.jc.Director) try {
-          return this.scriptedCamera.call(eV, xV, JV, YV, UV, yV)
-        } catch (nV) {
-          return this.EZ(nV), kV.jb.None
+      gameCall(HH, BH, LH, AH, rH, SH, hH, tH, zH) {
+        if (HH === uH.oc.Director) try {
+          return this.scriptedCamera.call(BH, LH, AH, rH, SH, hH)
+        } catch (CH) {
+          return this.XX(CH), uH.qb.None
         }
-        if (!this.sessionLive || void 0 !== this.fault) return VV === kV.jc.AltVeto ? kV.i.Allow : 0;
+        if (!this.sessionLive || void 0 !== this.fault) return HH === uH.oc.AltVeto ? uH.m.Allow : 0;
         try {
-          return this.callGames(VV, eV, xV, JV, YV, UV, yV, pV)
-        } catch (nV) {
-          throw (0, rV.j)(nV) && (this.fault = nV), nV
+          return this.callGames(HH, BH, LH, AH, rH, SH, hH, tH)
+        } catch (CH) {
+          throw (0, YH.h)(CH) && (this.fault = CH), CH
         }
       }
       takeFault() {
-        const VV = this.fault;
-        return this.fault = void 0, VV
+        const HH = this.fault;
+        return this.fault = void 0, HH
       }
-      callGames(VV, eV, xV, JV, YV, UV, yV, pV) {
+      callGames(HH, BH, LH, AH, rH, SH, hH, tH) {
         this.api.rereadDirectory(), this.chunks.touch(), this.items.refresh(), this.live.refresh(), this.entityInfo.inCoreCall();
         const {
-          tables: QV
-        } = this.options, nV = String(this.boundId);
-        switch (VV) {
-          case kV.jc.AltVeto:
-          case kV.jc.AltAction: {
-            const pV = 0 !== yV,
-              [wV, ZV, vV] = pV ? [eV, xV, JV] : [void 0, void 0, void 0],
-              rV = pV ? QV.nameOfId(YV) : "Air",
-              bV = dJ(UV);
-            if (VV === kV.jc.AltAction) return this.first((VV => {
-              var eV;
-              return null === (eV = VV.onPlayerAltAction) || void 0 === eV ? void 0 : eV.call(VV, nV, wV, ZV, vV, rV, bV)
+          tables: zH
+        } = this.options, CH = String(this.boundId);
+        switch (HH) {
+          case uH.oc.AltVeto:
+          case uH.oc.AltAction: {
+            const tH = 0 !== hH,
+              [EH, XH, GH] = tH ? [BH, LH, AH] : [void 0, void 0, void 0],
+              YH = tH ? zH.nameOfId(rH) : "Air",
+              QH = pA(SH);
+            if (HH === uH.oc.AltAction) return this.first((HH => {
+              var BH;
+              return null === (BH = HH.onPlayerAltAction) || void 0 === BH ? void 0 : BH.call(HH, CH, EH, XH, GH, YH, QH)
             })), 0;
-            const EV = this.first((VV => {
-              var eV;
-              return null === (eV = VV.onPlayerAttemptAltAction) || void 0 === eV ? void 0 : eV.call(VV, nV, wV, ZV, vV, rV, bV)
+            const WH = this.first((HH => {
+              var BH;
+              return null === (BH = HH.onPlayerAttemptAltAction) || void 0 === BH ? void 0 : BH.call(HH, CH, EH, XH, GH, YH, QH)
             }));
-            return "preventAction" === EV ? kV.i.Prevent : "preventPlacement" === EV ? kV.i.PreventPlacement : kV.i.Allow
+            return "preventAction" === WH ? uH.m.Prevent : "preventPlacement" === WH ? uH.m.PreventPlacement : uH.m.Allow
           }
-          case kV.jc.Click: {
-            const VV = pV,
-              wV = 0 !== (VV & kV.T.Alt),
-              ZV = 0 !== (VV & kV.T.HasPos),
-              vV = ZV ? QV.nameOfId(YV) : "Air",
-              [rV, bV, EV] = ZV ? [eV, xV, JV] : [null, null, null],
-              BV = dJ(UV),
-              jV = 0 !== (VV & kV.T.Up),
-              qV = dJ(yV);
-            if (0 === (VV & kV.T.AttackOnly) && this.first((VV => {
-                var eV, xV;
-                return jV ? null === (eV = VV.onPlayerClickUp) || void 0 === eV ? void 0 : eV.call(VV, nV, wV, rV, bV, EV, vV, BV) : null === (xV = VV.onPlayerClick) || void 0 === xV ? void 0 : xV.call(VV, nV, wV, rV, bV, EV, vV, BV)
-              })), !jV && !wV && null !== qV) {
-              const VV = this.clientApi.getPositionView(qV),
-                eV = VV ? [VV[0], VV[1], VV[2]] : [0, 0, 0];
-              this.first((VV => {
-                var xV;
-                return null === (xV = VV.onPlayerAttackEntity) || void 0 === xV ? void 0 : xV.call(VV, nV, qV, eV)
+          case uH.oc.Click: {
+            const HH = tH,
+              EH = 0 !== (HH & uH.W.Alt),
+              XH = 0 !== (HH & uH.W.HasPos),
+              GH = XH ? zH.nameOfId(rH) : "Air",
+              [YH, QH, WH] = XH ? [BH, LH, AH] : [null, null, null],
+              MH = pA(SH),
+              xH = 0 !== (HH & uH.W.Up),
+              vH = pA(hH);
+            if (0 === (HH & uH.W.AttackOnly) && this.first((HH => {
+                var BH, LH;
+                return xH ? null === (BH = HH.onPlayerClickUp) || void 0 === BH ? void 0 : BH.call(HH, CH, EH, YH, QH, WH, GH, MH) : null === (LH = HH.onPlayerClick) || void 0 === LH ? void 0 : LH.call(HH, CH, EH, YH, QH, WH, GH, MH)
+              })), !xH && !EH && null !== vH) {
+              const HH = this.clientApi.getPositionView(vH),
+                BH = HH ? [HH[0], HH[1], HH[2]] : [0, 0, 0];
+              this.first((HH => {
+                var LH;
+                return null === (LH = HH.onPlayerAttackEntity) || void 0 === LH ? void 0 : LH.call(HH, CH, vH, BH)
               }))
             }
             return 0
           }
-          case kV.jc.ChangeBlock: {
-            const VV = QV.nameOfId(YV),
-              yV = QV.nameOfId(UV);
-            return this.first((YV => {
-              var UV;
-              return null === (UV = YV.onPlayerChangeBlock) || void 0 === UV ? void 0 : UV.call(YV, nV, eV, xV, JV, VV, yV)
+          case uH.oc.ChangeBlock: {
+            const HH = zH.nameOfId(rH),
+              hH = zH.nameOfId(SH);
+            return this.first((rH => {
+              var SH;
+              return null === (SH = rH.onPlayerChangeBlock) || void 0 === SH ? void 0 : SH.call(rH, CH, BH, LH, AH, HH, hH)
             })), 0
           }
-          case kV.jc.DropItem: {
-            const VV = QV.nameOfId(eV);
-            return this.first((eV => {
-              var YV;
-              return null === (YV = eV.onPlayerDropItem) || void 0 === YV ? void 0 : YV.call(eV, nV, VV, xV, JV)
+          case uH.oc.DropItem: {
+            const HH = zH.nameOfId(BH);
+            return this.first((BH => {
+              var rH;
+              return null === (rH = BH.onPlayerDropItem) || void 0 === rH ? void 0 : rH.call(BH, CH, HH, LH, AH)
             })), 0
           }
           default:
-            return this.onError(new Error(`Unknown game call kind ${VV}`)), 0
+            return this.onError(new Error(`Unknown game call kind ${HH}`)), 0
         }
       }
-      changeBlockFail(VV, eV, xV, JV, YV, UV, yV) {
-        const pV = YV === kV.Oc ? null : KJ.decode(this.api.eventBytes(UV, Math.min(YV, yV)));
+      changeBlockFail(HH, BH, LH, AH, rH, SH, hH) {
+        const tH = rH === uH.Xc ? null : ZA.decode(this.api.eventBytes(SH, Math.min(rH, hH)));
         this.failures.push({
-          RJ: [VV, eV, xV],
-          gJ: JV,
-          DJ: pV
+          sA: [HH, BH, LH],
+          JA: AH,
+          iA: tH
         })
       }
       changeBlockFailEnd() {
-        const VV = this.failures;
-        this.failures = [], this.sessionLive && this.round(this.owners, (eV => {
-          var xV;
-          null === (xV = eV.onChangeBlockFail) || void 0 === xV || xV.call(eV, VV)
-        })), this.QZ("EditBoard", {
+        const HH = this.failures;
+        this.failures = [], this.sessionLive && this.round(this.owners, (BH => {
+          var LH;
+          null === (LH = BH.onChangeBlockFail) || void 0 === LH || LH.call(BH, HH)
+        })), this.AX("blockChangeRefused", null), this.AX("EditBoard", {
           pos: null
-        }), this.QZ("EditCodeBlock", {
+        }), this.AX("EditCodeBlock", {
           pos: null,
           canChangePos: null
         })
       }
-      inventoryEvent(VV, eV, xV, JV, YV, UV) {
-        VV === kV.xc.ChestOpened ? this.items.chestOpened(xV, JV, YV) : VV !== kV.xc.Synced && VV !== kV.xc.ChestClosed && VV !== kV.xc.ChestRefreshed || this.items.touch(), this.guard((() => {
-          ! function(VV, eV, xV, JV) {
-            switch (VV) {
-              case kV.xc.Synced:
-                yV.h.QZ("syncedInvenFromServer");
+      inventoryEvent(HH, BH, LH, AH, rH, SH) {
+        HH === uH.Gc.ChestOpened ? this.items.chestOpened(LH, AH, rH) : HH !== uH.Gc.Synced && HH !== uH.Gc.ChestClosed && HH !== uH.Gc.ChestRefreshed || this.items.touch(), this.guard((() => {
+          ! function(HH, BH, LH, AH) {
+            switch (HH) {
+              case uH.Gc.Synced:
+                hH.k.AX("syncedInvenFromServer");
                 break;
-              case kV.xc.ChestOpened:
-              case kV.xc.ChestClosed:
-                yV.h.QZ("chestToggleFromServer", VV === kV.xc.ChestOpened, !0);
+              case uH.Gc.ChestOpened:
+              case uH.Gc.ChestClosed:
+                hH.k.AX("chestToggleFromServer", HH === uH.Gc.ChestOpened, !0);
                 break;
-              case kV.xc.ChestRefreshed:
-                yV.h.QZ("chestRefreshedFromServer");
+              case uH.Gc.ChestRefreshed:
+                hH.k.AX("chestRefreshedFromServer");
                 break;
-              case kV.xc.EnchantingTable:
-                yV.h.QZ("enchantingTable", {
-                  vp: JV,
-                  position: xV
+              case uH.Gc.EnchantingTable:
+                hH.k.AX("enchantingTable", {
+                  ph: AH,
+                  position: LH
                 });
                 break;
-              case kV.xc.HotbarRequest:
-                yV.h.QZ("setSelectedInventorySlotI", eV, !0);
+              case uH.Gc.HotbarRequest:
+                hH.k.AX("setSelectedInventorySlotI", BH, !0);
                 break;
-              case kV.xc.Scrolled:
-                yV.h.QZ("ScrollInventorySlot", eV);
+              case uH.Gc.Scrolled:
+                hH.k.AX("ScrollInventorySlot", BH);
                 break;
-              case kV.xc.NumberKey:
-                yV.h.QZ("numkeyPressed", eV + 1);
+              case uH.Gc.NumberKey:
+                hH.k.AX("numkeyPressed", BH + 1);
                 break;
-              case kV.xc.DropRequested:
-                yV.h.QZ("DropInvenItem", 0 !== eV);
+              case uH.Gc.DropRequested:
+                hH.k.AX("DropInvenItem", 0 !== BH);
                 break;
               default:
-                throw new rV.d(`InventoryEvent of no kind: what ${VV}`)
+                throw new YH.d(`InventoryEvent of no kind: what ${HH}`)
             }
-          }(VV, eV, [xV, JV, YV], UV)
+          }(HH, BH, [LH, AH, rH], SH)
         }))
       }
       heldItemChanged() {
         this.items.touch()
       }
-      shotDamage(VV, eV, xV, JV) {
-        this.QZ("shotPlayer", {
-          playerId: String(VV),
-          damage: eV,
-          wasCrit: 0 !== JV,
-          distance: xV
+      shotDamage(HH, BH, LH, AH) {
+        this.AX("shotPlayer", {
+          playerId: String(HH),
+          damage: BH,
+          wasCrit: 0 !== AH,
+          distance: LH
         })
       }
-      localHurt(VV, eV) {
-        this.QZ("closeShopOnDamaged", null), this.guard((() => {
-          yV.h.QZ("damagedByOtherPlayer", {
-            fU: null,
-            direction: Number.isNaN(eV) ? null : eV,
-            aU: VV
+      localHurt(HH, BH) {
+        this.AX("closeShopOnDamaged", null), this.guard((() => {
+          hH.k.AX("damagedByOtherPlayer", {
+            DS: null,
+            direction: Number.isNaN(BH) ? null : BH,
+            xA: HH
           })
         }))
       }
-      attackHit(VV, eV, xV, JV, YV) {
+      attackHit(HH, BH, LH, AH, rH) {
         this.guard((() => {
-          yV.h.QZ("yourAttackHit", {
-            TJ: JV,
-            screenPos: this.renderFrame.projectDirectionToScreenPos([VV, eV, xV]),
-            hitSelf: YV
+          hH.k.AX("yourAttackHit", {
+            aA: AH,
+            screenPos: this.renderFrame.projectDirectionToScreenPos([HH, BH, LH]),
+            hitSelf: rH
           })
         }))
       }
-      physicsType(VV) {
-        this.localPhysicsType = VV, this.QZ("PlayerPhysicsTypeUpdate", VV)
+      physicsType(HH) {
+        this.localPhysicsType = HH, this.AX("PlayerPhysicsTypeUpdate", HH)
       }
-      vehicleEffect(VV, eV, xV, JV, YV) {
+      vehicleEffect(HH, BH, LH, AH, rH) {
         this.guard((() => {
-          VV === vV.Id.UPDATE ? (0, gV.i)(eV, {
-            icon: xV,
-            level: JV,
+          HH === GH.Ad.UPDATE ? (0, KH.e)(BH, {
+            icon: LH,
+            level: AH,
             displayName: null,
-            durationMs: YV
-          }) : RV.d.remove(eV)
+            durationMs: rH
+          }) : lH.c.remove(BH)
         }))
       }
-      zoomChanged(VV) {
-        this.zoom = VV, this.zoomUnshown = !0
+      zoomChanged(HH) {
+        this.zoom = HH, this.zoomUnshown = !0
       }
       zoomDisabled() {
-        this.QZ("showBottomMessage", {
+        this.AX("showBottomMessage", {
           message: "Zoom is disabled",
           timeoutLength: 2e3,
           type: "Error"
         })
       }
       bhopDisabled() {
-        this.QZ("showBottomMessage", mJ.b)
+        this.AX("showBottomMessage", wA.d)
       }
       showZoom() {
-        const VV = this.scriptedCamera.holdsView();
-        !this.zoomUnshown || VV && this.zoomHeld || (this.zoomUnshown = !1, this.QZ("cameraZoomSet", this.zoom)), this.zoomHeld = VV
+        const HH = this.scriptedCamera.holdsView();
+        !this.zoomUnshown || HH && this.zoomHeld || (this.zoomUnshown = !1, this.AX("cameraZoomSet", this.zoom)), this.zoomHeld = HH
       }
-      gunHit(VV) {
+      gunHit(HH) {
         this.guard((() => {
           const {
-            fU: eV,
-            mU: xV
-          } = (0, WJ.b)(RJ.v, VV);
-          yV.h.QZ("damagedByOtherPlayer", {
-            fU: eV,
-            direction: xV
+            DS: BH,
+            wS: LH
+          } = (0, fA.d)(lA.q, HH);
+          hH.k.AX("damagedByOtherPlayer", {
+            DS: BH,
+            direction: LH
           })
         }))
       }
-      uiEvent(VV, eV, xV, JV, YV, UV, yV, pV) {
+      uiEvent(HH, BH, LH, AH, rH, SH, hH, tH) {
         this.guard((() => {
-          wJ(VV, eV, [xV, JV, YV], UV, this.items, this.options.tables, (() => KJ.decode(this.api.eventBytes(yV, pV))))
+          EA(HH, BH, [LH, AH, rH], SH, this.items, this.options.tables, (() => ZA.decode(this.api.eventBytes(hH, tH))))
         }))
       }
-      writeAltVeto(VV) {
-        const eV = this.cmd;
-        if (!eV) return;
-        let xV;
+      writeAltVeto(HH) {
+        const BH = this.cmd;
+        if (!BH) return;
+        let LH;
         try {
-          xV = function(VV, eV) {
-            const xV = new Set;
-            let JV = !1;
-            for (const YV of VV)
-              if (YV.onPlayerAttemptAltAction) {
-                if (JV = !0, !YV.altVetoBlocks) return {
-                  mode: kV.le.All,
+          LH = function(HH, BH) {
+            const LH = new Set;
+            let AH = !1;
+            for (const rH of HH)
+              if (rH.onPlayerAttemptAltAction) {
+                if (AH = !0, !rH.altVetoBlocks) return {
+                  mode: uH.pe.All,
                   roots: []
                 };
-                for (const VV of YV.altVetoBlocks) xV.add(eV.getMetaInfo(VV).rootId)
-              } return JV ? xV.size > kV.Dc ? {
-              mode: kV.le.All,
+                for (const HH of rH.altVetoBlocks) LH.add(BH.getMetaInfo(HH).rootId)
+              } return AH ? LH.size > uH.Rc ? {
+              mode: uH.pe.All,
               roots: []
             } : {
-              mode: kV.le.Filter,
-              roots: [...xV]
+              mode: uH.pe.Filter,
+              roots: [...LH]
             } : {
-              mode: kV.le.Off,
+              mode: uH.pe.Off,
               roots: []
             }
-          }(VV, this.options.tables)
-        } catch (YV) {
-          this.onError(YV), xV = {
-            mode: kV.le.All,
+          }(HH, this.options.tables)
+        } catch (rH) {
+          this.onError(rH), LH = {
+            mode: uH.pe.All,
             roots: []
           }
         }
-        if (xV.mode === kV.le.Off && !this.vetoSet) return;
-        const JV = new Uint8Array(new Uint32Array(xV.roots).buffer);
-        (0, kV.Pf)(eV, 0, xV.mode, xV.roots.length, JV) ? this.vetoSet = xV.mode !== kV.le.Off: this.onError(new Error("SetAltVeto didn't fit the command ring"))
+        if (LH.mode === uH.pe.Off && !this.vetoSet) return;
+        const AH = new Uint8Array(new Uint32Array(LH.roots).buffer);
+        (0, uH.Xf)(BH, 0, LH.mode, LH.roots.length, AH) ? this.vetoSet = LH.mode !== uH.pe.Off: this.onError(new Error("SetAltVeto didn't fit the command ring"))
       }
       endGameGrants() {
         this.freeCam.clearGame(), this.writeFreeCam()
@@ -4657,472 +4536,472 @@ export const modules = {
       writeFreeCam() {
         this.stopped() || this.freeCam.write(this.cmd)
       }
-      writeHooks(VV) {
-        const eV = this.cmd;
-        if (!eV) return;
-        const xV = function(VV) {
-          let eV = 0;
-          for (const xV of VV) xV.onPlayerAltAction && (eV |= 1 << kV.jc.AltAction), (xV.onPlayerClick || xV.onPlayerClickUp || xV.onPlayerAttackEntity) && (eV |= 1 << kV.jc.Click), xV.onPlayerChangeBlock && (eV |= 1 << kV.jc.ChangeBlock), xV.onPlayerDropItem && (eV |= 1 << kV.jc.DropItem);
-          return eV
-        }(VV);
-        (0 !== xV || this.hooksSet) && ((0, kV.Xf)(eV, 0, xV) ? this.hooksSet = 0 !== xV : this.onError(new Error("SetHooks didn't fit the command ring")))
+      writeHooks(HH) {
+        const BH = this.cmd;
+        if (!BH) return;
+        const LH = function(HH) {
+          let BH = 0;
+          for (const LH of HH) LH.onPlayerAltAction && (BH |= 1 << uH.oc.AltAction), (LH.onPlayerClick || LH.onPlayerClickUp || LH.onPlayerAttackEntity) && (BH |= 1 << uH.oc.Click), LH.onPlayerChangeBlock && (BH |= 1 << uH.oc.ChangeBlock), LH.onPlayerDropItem && (BH |= 1 << uH.oc.DropItem);
+          return BH
+        }(HH);
+        (0 !== LH || this.hooksSet) && ((0, uH.fg)(BH, 0, LH) ? this.hooksSet = 0 !== LH : this.onError(new Error("SetHooks didn't fit the command ring")))
       }
       writeCustomButtons() {
-        const VV = this.cmd;
-        VV && !this.stopped() && this.customButtons.write(VV)
+        const HH = this.cmd;
+        HH && !this.stopped() && this.customButtons.write(HH)
       }
       writePromptWatch() {
-        const VV = this.cmd,
-          eV = this.promptWatch;
-        eV !== this.promptWatchSent && VV && !this.stopped() && (0, kV.ng)(VV, 0, SJ[eV]) && (this.promptWatchSent = eV)
+        const HH = this.cmd,
+          BH = this.promptWatch;
+        BH !== this.promptWatchSent && HH && !this.stopped() && (0, uH.Dg)(HH, 0, JA[BH]) && (this.promptWatchSent = BH)
       }
-      writePublicLobby(VV) {
-        const eV = this.cmd;
-        eV && VV !== this.writtenPublicLobby && ((0, kV.cg)(eV, 0, VV ? 1 : 0) ? this.writtenPublicLobby = VV : this.onError(new Error("SetPublicLobby didn't fit the command ring")))
+      writePublicLobby(HH) {
+        const BH = this.cmd;
+        BH && HH !== this.writtenPublicLobby && ((0, uH.sg)(BH, 0, HH ? 1 : 0) ? this.writtenPublicLobby = HH : this.onError(new Error("SetPublicLobby didn't fit the command ring")))
       }
-      writeLocalDbId(VV) {
-        const eV = this.cmd;
-        eV && ((0, kV.Zf)(eV, 0, null === VV ? 0 : 1, null === VV ? uJ : HJ.encode(VV)) || this.onError(new Error("SetLocalDbId didn't fit the command ring")))
+      writeLocalDbId(HH) {
+        const BH = this.cmd;
+        BH && ((0, uH.jg)(BH, 0, null === HH ? 0 : 1, null === HH ? aA : dA.encode(HH)) || this.onError(new Error("SetLocalDbId didn't fit the command ring")))
       }
-      first(VV) {
-        const eV = this.generation;
-        for (const JV of this.owners) {
-          if (eV !== this.generation) break;
+      first(HH) {
+        const BH = this.generation;
+        for (const AH of this.owners) {
+          if (BH !== this.generation) break;
           try {
-            const eV = VV(JV);
-            if (void 0 !== eV) return eV
-          } catch (xV) {
-            this.EZ(xV)
+            const BH = HH(AH);
+            if (void 0 !== BH) return BH
+          } catch (LH) {
+            this.XX(LH)
           }
         }
       }
-      QZ(VV, eV) {
+      AX(HH, BH) {
         this.guard((() => {
-          yV.h.QZ(VV, eV)
+          hH.k.AX(HH, BH)
         }))
       }
       dropGameCamera() {
         try {
           this.scriptedCamera.reset()
-        } catch (VV) {
-          this.EZ(VV)
+        } catch (HH) {
+          this.XX(HH)
         }
       }
       restartGameCamera() {
         try {
           this.scriptedCamera.restart()
-        } catch (VV) {
-          this.EZ(VV)
+        } catch (HH) {
+          this.XX(HH)
         }
       }
       endSession() {
         if (!this.sessionLive) return;
-        this.sessionLive = !1, this.localPhysicsType = XV.q.DEFAULT;
-        const VV = this.owners;
-        let eV;
+        this.sessionLive = !1, this.localPhysicsType = kH.o.DEFAULT;
+        const HH = this.owners;
+        let BH;
         if (this.owners = this.tickers = this.renderers = this.receivers = [], this.generation++, !this.stopped()) try {
           this.writeAltVeto([]), this.writeHooks([]), this.writePublicLobby(!1), this.writeLocalDbId(null)
-        } catch (JV) {
-          eV = JV
+        } catch (AH) {
+          BH = AH
         }
         try {
           this.entityInfo.sessionEnded()
-        } catch (JV) {
-          eV ??= JV
+        } catch (AH) {
+          BH ??= AH
         }
-        this.round(VV, VY, !0);
+        this.round(HH, Hr, !0);
         try {
           this.particles.sessionEnded() || this.onError(new Error("ParticleStopAll didn't fit the command ring"))
-        } catch (JV) {
-          eV ??= JV
+        } catch (AH) {
+          BH ??= AH
         }
         try {
           this.clientApi.disposeGameOutput()
-        } catch (JV) {
-          eV ??= JV
+        } catch (AH) {
+          BH ??= AH
         }
-        const xV = this.options.onSessionEnd;
-        if (xV) try {
-          xV()
-        } catch (JV) {
-          this.onError(JV)
+        const LH = this.options.onSessionEnd;
+        if (LH) try {
+          LH()
+        } catch (AH) {
+          this.onError(AH)
         }
-        void 0 !== eV && this.EZ(eV)
+        void 0 !== BH && this.XX(BH)
       }
-      round(VV, eV) {
-        let xV = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const JV = this.generation;
-        for (const UV of VV) {
-          if (JV !== this.generation) break;
+      round(HH, BH) {
+        let LH = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const AH = this.generation;
+        for (const SH of HH) {
+          if (AH !== this.generation) break;
           try {
-            eV(UV)
-          } catch (YV) {
-            xV ? this.onError(YV) : this.EZ(YV)
+            BH(SH)
+          } catch (rH) {
+            LH ? this.onError(rH) : this.XX(rH)
           }
         }
       }
-      guard(VV) {
+      guard(HH) {
         try {
-          VV()
-        } catch (eV) {
-          this.EZ(eV)
+          HH()
+        } catch (BH) {
+          this.XX(BH)
         }
       }
     }
 
-    function dJ(VV) {
-      return VV === kV.Sc ? null : String(VV)
+    function pA(HH) {
+      return HH === uH.$c ? null : String(HH)
     }
 
-    function OJ(VV) {
-      VV.iZ(vV.Bd)
+    function yA(HH) {
+      HH.IX(GH.td)
     }
 
-    function VY(VV) {
-      var eV;
-      null === (eV = VV.onClose) || void 0 === eV || eV.call(VV)
+    function Hr(HH) {
+      var BH;
+      null === (BH = HH.onClose) || void 0 === BH || BH.call(HH)
     }
 
-    function eY(VV, eV) {
-      VV.watch((() => {
-        const xV = function(VV) {
-          const eV = [],
-            xV = Math.min(BJ, VV.length);
-          for (let YV = 0; YV < xV; YV++) {
-            var JV;
-            const xV = null === (JV = VV.slot(YV)) || void 0 === JV ? void 0 : JV.typeObj,
-              UV = xV ? (0, bJ.gunTypeOf)(xV.id) : void 0;
-            void 0 !== UV && eV.push(Pe[UV])
+    function Br(HH, BH) {
+      HH.watch((() => {
+        const LH = function(HH) {
+          const BH = [],
+            LH = Math.min(MA, HH.length);
+          for (let rH = 0; rH < LH; rH++) {
+            var AH;
+            const LH = null === (AH = HH.slot(rH)) || void 0 === AH ? void 0 : AH.typeObj,
+              SH = LH ? (0, QA.gunTypeOf)(LH.id) : void 0;
+            void 0 !== SH && BH.push(VB[SH])
           }
-          return eV
-        }(VV);
-        xV.length > 0 && (eV.preload(xV.flatMap((VV => Ce(VV)))), eV.preload(Ce(Ae)))
+          return BH
+        }(HH);
+        LH.length > 0 && (BH.preload(LH.flatMap((HH => qB(HH)))), BH.preload(qB(OB)))
       }))
     }
-    var xY = xV(37593),
-      JY = xV(5353),
-      YY = xV(37930),
-      UY = xV(37964);
+    var Lr = LH(37326),
+      Ar = LH(5335),
+      rr = LH(37617),
+      Sr = LH(37650);
 
-    function yY(VV) {
-      const eV = (0, xY.countDecodesAs)(new JY.Howl({
-          src: [...(0, YY.w)(VV).src],
+    function hr(HH) {
+      const BH = (0, Lr.countDecodesAs)(new Ar.Howl({
+          src: [...(0, rr.v)(HH).src],
           pool: 15,
           preload: !1
         }), "sound"),
-        xV = eV.load.bind(eV);
-      return eV.load = () => (eV._preload = !0, (0, UY.d)(VV), xV()), eV
+        LH = BH.load.bind(BH);
+      return BH.load = () => (BH._preload = !0, (0, Sr.i)(HH), LH()), BH
     }
 
-    function pY(VV, eV, xV) {
-      const JV = VV.listener;
-      if (JV.positionX) QY(JV.positionX, eV, xV, 0), QY(JV.positionY, eV, xV, 1), QY(JV.positionZ, eV, xV, 2), QY(JV.forwardX, eV, xV, 3), QY(JV.forwardY, eV, xV, 4), QY(JV.forwardZ, eV, xV, 5), QY(JV.upX, eV, xV, 6), QY(JV.upY, eV, xV, 7), QY(JV.upZ, eV, xV, 8);
+    function tr(HH, BH, LH) {
+      const AH = HH.listener;
+      if (AH.positionX) zr(AH.positionX, BH, LH, 0), zr(AH.positionY, BH, LH, 1), zr(AH.positionZ, BH, LH, 2), zr(AH.forwardX, BH, LH, 3), zr(AH.forwardY, BH, LH, 4), zr(AH.forwardZ, BH, LH, 5), zr(AH.upX, BH, LH, 6), zr(AH.upY, BH, LH, 7), zr(AH.upZ, BH, LH, 8);
       else {
-        let VV = !1;
-        for (let JV = 0; JV < 9; JV++) VV ||= eV[JV] !== xV[JV];
-        VV && (JV.setPosition(eV[0], eV[1], eV[2]), JV.setOrientation(eV[3], eV[4], eV[5], eV[6], eV[7], eV[8]), xV.set(eV))
+        let HH = !1;
+        for (let AH = 0; AH < 9; AH++) HH ||= BH[AH] !== LH[AH];
+        HH && (AH.setPosition(BH[0], BH[1], BH[2]), AH.setOrientation(BH[3], BH[4], BH[5], BH[6], BH[7], BH[8]), LH.set(BH))
       }
     }
 
-    function QY(VV, eV, xV, JV) {
-      eV[JV] !== xV[JV] && (VV.value = eV[JV], xV[JV] = eV[JV])
+    function zr(HH, BH, LH, AH) {
+      BH[AH] !== LH[AH] && (HH.value = BH[AH], LH[AH] = BH[AH])
     }
-    class nY {
+    class Cr {
       constructor() {
         this.pose = new Float64Array(9), this.written = new Float64Array(9).fill(Number.NaN), this.watchedCtx = void 0
       }
-      apply(VV) {
-        this.pose.set(VV);
-        const eV = JY.Howler.ctx;
-        return !!eV && (eV !== this.watchedCtx && (this.watchedCtx = eV, this.written.fill(Number.NaN), eV.addEventListener("statechange", (() => {
-          "running" === eV.state && pY(eV, this.pose, this.written)
-        }))), "running" === eV.state && pY(eV, VV, this.written), !0)
+      apply(HH) {
+        this.pose.set(HH);
+        const BH = Ar.Howler.ctx;
+        return !!BH && (BH !== this.watchedCtx && (this.watchedCtx = BH, this.written.fill(Number.NaN), BH.addEventListener("statechange", (() => {
+          "running" === BH.state && tr(BH, this.pose, this.written)
+        }))), "running" === BH.state && tr(BH, HH, this.written), !0)
       }
     }
-    var wY = xV(37720),
-      ZY = xV(40434);
-    let vY = null,
-      rY = null;
+    var Er = LH(37442),
+      Xr = LH(40176);
+    let Gr = null,
+      Yr = null;
 
-    function kY() {
-      return null === vY && (vY = document.createElement("div"), vY.className = "WasmCameraLayer", vY.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;pointer-events:none", document.body.append(vY)), vY
+    function ur() {
+      return null === Gr && (Gr = document.createElement("div"), Gr.className = "WasmCameraLayer", Gr.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;pointer-events:none", document.body.append(Gr)), Gr
     }
 
-    function bY() {
-      return rY ??= new ZY.c(new wY.d(kY)), rY
+    function Qr() {
+      return Yr ??= new Xr.e(new Er.e(ur)), Yr
     }
 
-    function EY() {
-      var VV;
-      null === (VV = rY) || void 0 === VV || VV.clear(), BY(null)
+    function Wr() {
+      var HH;
+      null === (HH = Yr) || void 0 === HH || HH.clear(), Mr(null)
     }
 
-    function BY(VV) {
-      JV.b.get("scriptedCameraFacing") !== VV && JV.b.set({
-        scriptedCameraFacing: VV
+    function Mr(HH) {
+      AH.c.get("scriptedCameraFacing") !== HH && AH.c.set({
+        scriptedCameraFacing: HH
       })
     }
-    var jY = xV(9922),
-      qY = xV(9861),
-      tY = xV(40472),
-      FY = xV(42344),
-      TY = xV(3719);
-    const PY = Object.entries(kV.fc).reduce(((VV, eV) => {
-      let [xV, JV] = eV;
-      return VV[JV] = xV, VV
+    var xr = LH(10030),
+      vr = LH(9979),
+      Pr = LH(40210),
+      Tr = LH(42352),
+      Ur = LH(3639);
+    const Vr = Object.entries(uH.lc).reduce(((HH, BH) => {
+      let [LH, AH] = BH;
+      return HH[AH] = LH, HH
     }), []);
 
-    function AY(VV, eV) {
-      var xV;
-      return 0 !== ((null !== (xV = VV.itemFlags[eV]) && void 0 !== xV ? xV : 0) & kV.yc.Stackable)
+    function Or(HH, BH) {
+      var LH;
+      return 0 !== ((null !== (LH = HH.itemFlags[BH]) && void 0 !== LH ? LH : 0) & uH.Ic.Stackable)
     }
-    const NY = /^(0|[1-9][0-9]*)$/,
-      XY = {
-        displayName: (VV, eV) => (0, bJ.displayNameOf)(eV),
-        description: (VV, eV) => (0, bJ.descriptionOf)(eV),
-        type: (VV, eV) => (0, bJ.itemTypeOf)(eV),
-        clipSize: (VV, eV) => (0, bJ.clipSizeOf)(eV),
-        armourReduction: (VV, eV) => (0, bJ.armourReductionOf)(eV),
-        scopeType: (VV, eV) => (0, bJ.scopeTypeOf)(eV),
-        stackable: AY,
-        harvestType: (VV, eV) => PY[VV.blockHarvestTypes[eV]],
-        harvestLevel: (VV, eV) => {
-          const xV = VV.blockHarvestLevels[eV];
-          return xV === kV.Ac ? void 0 : xV
+    const br = /^(0|[1-9][0-9]*)$/,
+      kr = {
+        displayName: (HH, BH) => (0, QA.displayNameOf)(BH),
+        description: (HH, BH) => (0, QA.descriptionOf)(BH),
+        type: (HH, BH) => (0, QA.itemTypeOf)(BH),
+        clipSize: (HH, BH) => (0, QA.clipSizeOf)(BH),
+        armourReduction: (HH, BH) => (0, QA.armourReductionOf)(BH),
+        scopeType: (HH, BH) => (0, QA.scopeTypeOf)(BH),
+        stackable: Or,
+        harvestType: (HH, BH) => Vr[HH.blockHarvestTypes[BH]],
+        harvestLevel: (HH, BH) => {
+          const LH = HH.blockHarvestLevels[BH];
+          return LH === uH.Oc ? void 0 : LH
         },
-        harvests: (VV, eV) => {
-          var xV;
-          const JV = null !== (xV = VV.itemHarvests[eV]) && void 0 !== xV ? xV : 0;
-          return 0 !== JV ? PY[JV] : void 0 === (0, bJ.harvestsNullLevelOf)(eV) ? void 0 : null
+        harvests: (HH, BH) => {
+          var LH;
+          const AH = null !== (LH = HH.itemHarvests[BH]) && void 0 !== LH ? LH : 0;
+          return 0 !== AH ? Vr[AH] : void 0 === (0, QA.harvestsNullLevelOf)(BH) ? void 0 : null
         },
-        level: (VV, eV) => {
-          var xV, JV;
-          const YV = null !== (xV = VV.itemLevels[eV]) && void 0 !== xV ? xV : kV.Ac;
-          return YV !== kV.Ac ? YV : null !== (JV = (0, bJ.harvestsNullLevelOf)(eV)) && void 0 !== JV ? JV : void 0
+        level: (HH, BH) => {
+          var LH, AH;
+          const rH = null !== (LH = HH.itemLevels[BH]) && void 0 !== LH ? LH : uH.Oc;
+          return rH !== uH.Oc ? rH : null !== (AH = (0, QA.harvestsNullLevelOf)(BH)) && void 0 !== AH ? AH : void 0
         }
       };
 
-    function MY(VV, eV, xV) {
-      return GY(new Uint8Array(Math.floor(VV.length / eV)), VV, eV, xV)
+    function mr(HH, BH, LH) {
+      return Ir(new Uint8Array(Math.floor(HH.length / BH)), HH, BH, LH)
     }
 
-    function zY(VV, eV, xV) {
-      return GY(new Uint16Array(Math.floor(VV.length / eV)), VV, eV, xV)
+    function or(HH, BH, LH) {
+      return Ir(new Uint16Array(Math.floor(HH.length / BH)), HH, BH, LH)
     }
 
-    function GY(VV, eV, xV, JV) {
-      const YV = new DataView(eV.buffer, eV.byteOffset, eV.byteLength);
-      for (let UV = 0; UV < VV.length; UV++) VV[UV] = JV(YV, UV * xV);
-      return VV
+    function Ir(HH, BH, LH, AH) {
+      const rH = new DataView(BH.buffer, BH.byteOffset, BH.byteLength);
+      for (let SH = 0; SH < HH.length; SH++) HH[SH] = AH(rH, SH * LH);
+      return HH
     }
-    class WY {
-      constructor(VV, eV) {
-        this.options = eV, this.metas = [], this.types = new Map, this.props = void 0, this.rootIdOf = VV => {
-          const eV = this.idOf(VV);
-          if (void 0 === eV) throw new Error(`No item is named ${VV}, an item's root`);
-          return eV
+    class fr {
+      constructor(HH, BH) {
+        this.options = BH, this.metas = [], this.types = new Map, this.props = void 0, this.rootIdOf = HH => {
+          const BH = this.idOf(HH);
+          if (void 0 === BH) throw new Error(`No item is named ${HH}, an item's root`);
+          return BH
         };
-        const xV = eV => {
-            const xV = eV();
-            return new Uint8Array(VV.memory().buffer, VV.scratch(), xV).slice()
+        const LH = BH => {
+            const LH = BH();
+            return new Uint8Array(HH.memory().buffer, HH.scratch(), LH).slice()
           },
-          JV = (new TextDecoder).decode(xV((() => VV.queries.itemNames()))).split("\n"),
-          YV = xV((() => VV.queries.blockProps())),
-          UV = xV((() => VV.queries.itemProps()));
+          AH = (new TextDecoder).decode(LH((() => HH.queries.itemNames()))).split("\n"),
+          rH = LH((() => HH.queries.blockProps())),
+          SH = LH((() => HH.queries.itemProps()));
         this.props = {
-          blockFlags: MY(YV, kV.w.BYTES, kV.w.flags),
-          blockHarvestTypes: MY(YV, kV.w.BYTES, kV.w.harvestType),
-          blockHarvestLevels: MY(YV, kV.w.BYTES, kV.w.harvestLevel),
-          blockAttachedTops: zY(YV, kV.w.BYTES, kV.w.attachedTop),
-          itemFlags: MY(UV, kV.zc.BYTES, kV.zc.flags),
-          itemHarvests: MY(UV, kV.zc.BYTES, kV.zc.harvests),
-          itemLevels: MY(UV, kV.zc.BYTES, kV.zc.level)
-        }, (0, TY.l)(Object.freeze(JV)), (0, FY.f)()
+          blockFlags: mr(rH, uH.G.BYTES, uH.G.flags),
+          blockHarvestTypes: mr(rH, uH.G.BYTES, uH.G.harvestType),
+          blockHarvestLevels: mr(rH, uH.G.BYTES, uH.G.harvestLevel),
+          blockAttachedTops: or(rH, uH.G.BYTES, uH.G.attachedTop),
+          itemFlags: mr(SH, uH.Kc.BYTES, uH.Kc.flags),
+          itemHarvests: mr(SH, uH.Kc.BYTES, uH.Kc.harvests),
+          itemLevels: mr(SH, uH.Kc.BYTES, uH.Kc.level)
+        }, (0, Ur.k)(Object.freeze(AH)), (0, Tr.f)()
       }
-      idOf(VV) {
-        if ("number" === typeof VV) return void 0 === (0, TY.g)(VV) ? void 0 : VV;
-        const eV = (0, TY.d)(VV);
-        return void 0 === eV && NY.test(VV) ? void 0 === (0, TY.g)(+VV) ? void 0 : +VV : eV
+      idOf(HH) {
+        if ("number" === typeof HH) return void 0 === (0, Ur.h)(HH) ? void 0 : HH;
+        const BH = (0, Ur.e)(HH);
+        return void 0 === BH && br.test(HH) ? void 0 === (0, Ur.h)(+HH) ? void 0 : +HH : BH
       }
-      getMetaInfo(VV) {
-        if (!VV || VV === jY.d) return jY.f;
-        const eV = this.idOf(VV);
-        if (void 0 === eV) throw new Error(`Item ${VV} not found in registry`);
-        return this.metaOf(eV)
+      getMetaInfo(HH) {
+        if (!HH || HH === xr.e) return xr.f;
+        const BH = this.idOf(HH);
+        if (void 0 === BH) throw new Error(`Item ${HH} not found in registry`);
+        return this.metaOf(BH)
       }
-      blockRootId(VV) {
-        return 0 !== VV && void 0 !== (0, TY.g)(VV) ? this.metaOf(VV).rootId : VV
+      blockRootId(HH) {
+        return 0 !== HH && void 0 !== (0, Ur.h)(HH) ? this.metaOf(HH).rootId : HH
       }
-      metaOf(VV) {
-        return this.metas[VV] ??= (0, qY.k)((0, TY.g)(VV), VV, this.rootIdOf, (0, bJ.rootMetaDescOf)(VV))
+      metaOf(HH) {
+        return this.metas[HH] ??= (0, vr.k)((0, Ur.h)(HH), HH, this.rootIdOf, (0, QA.rootMetaDescOf)(HH))
       }
-      getItemId(VV) {
-        if (!VV || VV === jY.d) return 0;
-        const eV = this.idOf(VV);
-        if (void 0 === eV) throw new Error(`Invalid block name. You sent ${VV}. The only valid item names are 'Air' and those contained within the blockMetadata/itemMetadata files`);
-        return eV
+      getItemId(HH) {
+        if (!HH || HH === xr.e) return 0;
+        const BH = this.idOf(HH);
+        if (void 0 === BH) throw new Error(`Invalid block name. You sent ${HH}. The only valid item names are 'Air' and those contained within the blockMetadata/itemMetadata files`);
+        return BH
       }
-      getItemName(VV) {
-        if (!VV || VV === jY.d) return jY.d;
-        const eV = this.idOf(VV);
-        if (void 0 === eV) throw new Error(`Item ${VV} not found in registry`);
-        return (0, TY.g)(eV)
+      getItemName(HH) {
+        if (!HH || HH === xr.e) return xr.e;
+        const BH = this.idOf(HH);
+        if (void 0 === BH) throw new Error(`Item ${HH} not found in registry`);
+        return (0, Ur.h)(BH)
       }
-      blockNameToBlockId(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (VV === jY.d) return 0;
-        let xV = this.idOf(VV);
-        if (void 0 === xV || !this.isBlockId(xV)) {
-          const eV = VV.indexOf("|"),
-            JV = eV > 0 ? (0, TY.d)(VV.slice(0, eV)) : void 0;
-          xV = void 0 !== JV && this.isBlockId(JV) && (0, bJ.rootMetaDescOf)(JV) === VV ? JV : void 0
+      blockNameToBlockId(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (HH === xr.e) return 0;
+        let LH = this.idOf(HH);
+        if (void 0 === LH || !this.isBlockId(LH)) {
+          const BH = HH.indexOf("|"),
+            AH = BH > 0 ? (0, Ur.e)(HH.slice(0, BH)) : void 0;
+          LH = void 0 !== AH && this.isBlockId(AH) && (0, QA.rootMetaDescOf)(AH) === HH ? AH : void 0
         }
-        if (void 0 !== xV) return xV;
-        if (!eV) throw new Error(`Invalid block name. You sent ${VV}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`);
+        if (void 0 !== LH) return LH;
+        if (!BH) throw new Error(`Invalid block name. You sent ${HH}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`);
         return null
       }
-      isBlockId(VV) {
-        return VV > 0 && VV < this.props.blockFlags.length
+      isBlockId(HH) {
+        return HH > 0 && HH < this.props.blockFlags.length
       }
-      nameOfId(VV) {
-        return 0 !== VV && (0, TY.g)(VV) || jY.d
+      nameOfId(HH) {
+        return 0 !== HH && (0, Ur.h)(HH) || xr.e
       }
-      itemType(VV) {
-        const eV = VV ? this.idOf(VV) : void 0;
-        if (!eV) return null;
-        let xV = this.types.get(eV);
-        return void 0 === xV && (xV = Object.freeze({
-          id: eV,
-          name: (0, TY.g)(eV),
-          meta: this.getMetaInfo(eV),
-          stackable: AY(this.props, eV),
-          type: (0, bJ.itemTypeNameOf)(eV),
-          clipSize: (0, bJ.clipSizeOf)(eV),
-          scopeType: (0, bJ.scopeTypeOf)(eV),
-          showsAimingUi: (0, bJ.showsAimingUi)(eV)
-        }), this.types.set(eV, xV)), xV
+      itemType(HH) {
+        const BH = HH ? this.idOf(HH) : void 0;
+        if (!BH) return null;
+        let LH = this.types.get(BH);
+        return void 0 === LH && (LH = Object.freeze({
+          id: BH,
+          name: (0, Ur.h)(BH),
+          meta: this.getMetaInfo(BH),
+          stackable: Or(this.props, BH),
+          type: (0, QA.itemTypeNameOf)(BH),
+          clipSize: (0, QA.clipSizeOf)(BH),
+          scopeType: (0, QA.scopeTypeOf)(BH),
+          showsAimingUi: (0, QA.showsAimingUi)(BH)
+        }), this.types.set(BH, LH)), LH
       }
-      getItemStat(VV, eV) {
-        if (tY.d.has(eV)) {
-          const xV = "minChargeStateToUse" === eV ? this.getMetaInfo(VV).rootName : this.getItemName(VV),
-            JV = this.options.get((0, tY.h)(xV, eV));
-          if (null !== JV && void 0 !== JV) return JV
+      getItemStat(HH, BH) {
+        if (Pr.c.has(BH)) {
+          const LH = "minChargeStateToUse" === BH ? this.getMetaInfo(HH).rootName : this.getItemName(HH),
+            AH = this.options.get((0, Pr.d)(LH, BH));
+          if (null !== AH && void 0 !== AH) return AH
         }
-        return this.defaultStat(VV, eV, this.statOf(eV))
+        return this.defaultStat(HH, BH, this.statOf(BH))
       }
-      getDisplayName(VV) {
-        return this.getItemStat(VV, "displayName")
+      getDisplayName(HH) {
+        return this.getItemStat(HH, "displayName")
       }
-      getDefaultItemStat(VV, eV) {
-        return this.defaultStat(VV, eV, this.statOf(eV))
+      getDefaultItemStat(HH, BH) {
+        return this.defaultStat(HH, BH, this.statOf(BH))
       }
-      statOf(VV) {
-        const eV = XY[VV];
-        return void 0 === eV && function(VV, eV) {
-          throw new Error(`ClientApi.${VV} is not available yet in the wasm client (${eV})`)
-        }(`getItemStat("${VV}")`, `a table of the stat: the wasm client answers ${Object.keys(XY).join(", ")}`), eV
+      statOf(HH) {
+        const BH = kr[HH];
+        return void 0 === BH && function(HH, BH) {
+          throw new Error(`ClientApi.${HH} is not available yet in the wasm client (${BH})`)
+        }(`getItemStat("${HH}")`, `a table of the stat: the wasm client answers ${Object.keys(kr).join(", ")}`), BH
       }
-      defaultStat(VV, eV, xV) {
-        const JV = this.idOf(VV),
-          YV = void 0 === JV ? void 0 : xV(this.props, JV);
-        return null !== YV && void 0 !== YV || "displayName" !== eV ? YV : this.getItemName(VV)
+      defaultStat(HH, BH, LH) {
+        const AH = this.idOf(HH),
+          rH = void 0 === AH ? void 0 : LH(this.props, AH);
+        return null !== rH && void 0 !== rH || "displayName" !== BH ? rH : this.getItemName(HH)
       }
-      getClientOption(VV) {
-        return this.options.get(VV)
+      getClientOption(HH) {
+        return this.options.get(HH)
       }
-      getGunStats(VV) {
-        return this.getClientOption(`${VV}GunStats`)
+      getGunStats(HH) {
+        return this.getClientOption(`${HH}GunStats`)
       }
-      watchClientOption(VV, eV) {
-        return this.options.subscribe(VV, eV)
+      watchClientOption(HH, BH) {
+        return this.options.subscribe(HH, BH)
       }
-      isSolidBlockId(VV) {
-        var eV;
-        return 0 !== ((null !== (eV = this.props.blockFlags[VV]) && void 0 !== eV ? eV : 0) & kV.v.Solid)
+      isSolidBlockId(HH) {
+        var BH;
+        return 0 !== ((null !== (BH = this.props.blockFlags[HH]) && void 0 !== BH ? BH : 0) & uH.F.Solid)
       }
-      isStackableId(VV) {
-        return AY(this.props, VV)
+      isStackableId(HH) {
+        return Or(this.props, HH)
       }
-      isFluidBlockId(VV) {
-        var eV;
-        return 0 !== ((null !== (eV = this.props.blockFlags[VV]) && void 0 !== eV ? eV : 0) & kV.v.Fluid)
+      isFluidBlockId(HH) {
+        var BH;
+        return 0 !== ((null !== (BH = this.props.blockFlags[HH]) && void 0 !== BH ? BH : 0) & uH.F.Fluid)
       }
-      canPlaceOverBlockId(VV) {
-        var eV;
-        return 0 !== ((null !== (eV = this.props.blockFlags[VV]) && void 0 !== eV ? eV : 0) & kV.v.PlaceOver)
+      canPlaceOverBlockId(HH) {
+        var BH;
+        return 0 !== ((null !== (BH = this.props.blockFlags[HH]) && void 0 !== BH ? BH : 0) & uH.F.PlaceOver)
       }
-      attachedTopOf(VV) {
-        var eV;
-        return null !== (eV = this.props.blockAttachedTops[VV]) && void 0 !== eV ? eV : 0
+      attachedTopOf(HH) {
+        var BH;
+        return null !== (BH = this.props.blockAttachedTops[HH]) && void 0 !== BH ? BH : 0
       }
-      isDroplessBlockId(VV) {
-        return (0, bJ.dropsNothing)(VV)
+      isDroplessBlockId(HH) {
+        return (0, QA.dropsNothing)(HH)
       }
     }
 
-    function RY(VV, eV) {
-      const xV = new Map;
-      return (JV, YV) => {
-        const UV = eV.idOf(JV),
-          yV = void 0 === UV ? null : (JV => {
-            let YV = xV.get(JV);
-            if (void 0 === YV) {
-              const UV = VV.queries.salvageRecipe(JV),
-                yV = new DataView(VV.memory().buffer, VV.scratch(), UV),
-                pV = [];
-              for (let VV = 0; VV + kV.ae.BYTES <= UV; VV += kV.ae.BYTES) pV.push(Object.freeze({
-                item: eV.nameOfId(kV.ae.item(yV, VV)),
-                amt: kV.ae.amount(yV, VV)
+    function lr(HH, BH) {
+      const LH = new Map;
+      return (AH, rH) => {
+        const SH = BH.idOf(AH),
+          hH = void 0 === SH ? null : (AH => {
+            let rH = LH.get(AH);
+            if (void 0 === rH) {
+              const SH = HH.queries.salvageRecipe(AH),
+                hH = new DataView(HH.memory().buffer, HH.scratch(), SH),
+                tH = [];
+              for (let HH = 0; HH + uH.de.BYTES <= SH; HH += uH.de.BYTES) tH.push(Object.freeze({
+                item: BH.nameOfId(uH.de.item(hH, HH)),
+                amt: uH.de.amount(hH, HH)
               }));
-              YV = 0 === pV.length ? null : Object.freeze(pV), xV.set(JV, YV)
+              rH = 0 === tH.length ? null : Object.freeze(tH), LH.set(AH, rH)
             }
-            return YV
-          })(UV);
-        if (null === yV || void 0 === YV) return yV;
-        const pV = YV <= 0 ? 1 : YV;
-        return yV.map((VV => {
+            return rH
+          })(SH);
+        if (null === hH || void 0 === rH) return hH;
+        const tH = rH <= 0 ? 1 : rH;
+        return hH.map((HH => {
           let {
-            item: eV,
-            amt: xV
-          } = VV;
+            item: BH,
+            amt: LH
+          } = HH;
           return {
-            item: eV,
-            amt: xV * pV
+            item: BH,
+            amt: LH * tH
           }
         }))
       }
     }
-    var gY = xV(42057),
-      DY = xV(38134),
-      iY = xV(38119),
-      CY = xV(38125),
-      aY = xV(35093),
-      oY = xV(41955),
-      cY = xV(53866);
-    const hY = -1,
-      lY = new Uint8Array(0),
-      LY = new TextEncoder;
+    var Kr = LH(42092),
+      cr = LH(37821),
+      er = LH(37807),
+      qr = LH(37809),
+      gr = LH(37373),
+      Nr = LH(42002),
+      Rr = LH(54466);
+    const jr = -1,
+      nr = new Uint8Array(0),
+      Fr = new TextEncoder;
 
-    function fY(VV) {
-      if (null === VV) return null;
-      const eV = LY.encode(VV);
-      return eV.byteLength < vV.Mc ? eV : eV.subarray(0, vV.Mc - 1)
+    function Dr(HH) {
+      if (null === HH) return null;
+      const BH = Fr.encode(HH);
+      return BH.byteLength < GH.Dc ? BH : BH.subarray(0, GH.Dc - 1)
     }
-    class mY {
-      constructor(VV) {
-        this.deps = VV, this.lastView = null, this.lastKeyframes = [], this.keyframesVersion = hY, this.keyframesSettled = !1, this.reloadFrom = hY
+    class wr {
+      constructor(HH) {
+        this.deps = HH, this.lastView = null, this.lastKeyframes = [], this.keyframesVersion = jr, this.keyframesSettled = !1, this.reloadFrom = jr
       }
       reloadKeyframes() {
-        var VV, eV;
-        this.keyframesVersion = hY, this.reloadFrom = null !== (VV = null === (eV = this.view()) || void 0 === eV ? void 0 : eV.version) && void 0 !== VV ? VV : hY
+        var HH, BH;
+        this.keyframesVersion = jr, this.reloadFrom = null !== (HH = null === (BH = this.view()) || void 0 === BH ? void 0 : BH.version) && void 0 !== HH ? HH : jr
       }
-      setPlayback(VV) {
-        const eV = 1 === this.deps.core.YyV(VV);
-        return eV && (this.lastView = null, this.lastKeyframes = [], this.keyframesVersion = hY, this.reloadFrom = hY), eV
+      setPlayback(HH) {
+        const BH = 1 === this.deps.core.RSH(HH);
+        return BH && (this.lastView = null, this.lastKeyframes = [], this.keyframesVersion = jr, this.reloadFrom = jr), BH
       }
-      async open(VV, eV) {
-        const xV = await this.deps.replay.open(VV, eV);
-        return "opening" === xV && (this.reloadKeyframes(), this.deps.recorder.prefetch()), xV
+      async open(HH, BH) {
+        const LH = await this.deps.replay.open(HH, BH);
+        return "opening" === LH && (this.reloadKeyframes(), this.deps.recorder.prefetch()), LH
       }
       play() {
         this.deps.replay.play()
@@ -5130,282 +5009,280 @@ export const modules = {
       pause() {
         this.deps.replay.pause()
       }
-      seek(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this.deps.replay.seek(Math.max(0, Math.floor(VV)), eV)
+      seek(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.deps.replay.seek(Math.max(0, Math.floor(HH)), BH)
       }
-      setSpeed(VV) {
-        this.deps.replay.setSpeed(VV)
+      setSpeed(HH) {
+        this.deps.replay.setSpeed(HH)
       }
-      setCameraMode(VV) {
-        this.deps.replay.setCameraMode(cY.e.indexOf(VV))
+      setCameraMode(HH) {
+        this.deps.replay.setCameraMode(Rr.b.indexOf(HH))
       }
       view() {
-        var VV;
-        const eV = kV.s.replayViewPtr(this.deps.apiView(), 0);
-        if (0 === eV) return this.lastView = null, null;
-        const xV = new DataView(this.deps.buffer(), eV, kV.Td.BYTES),
-          JV = kV.Td.version(xV, 0),
-          YV = this.lastView;
-        if (null !== YV && YV.version === JV) return YV;
-        const UV = kV.Td.markIn(xV, 0),
-          yV = {
-            version: JV,
-            state: kV.Td.state(xV, 0),
-            cameraMode: null !== (VV = cY.e[kV.Td.cameraMode(xV, 0)]) && void 0 !== VV ? VV : "recording",
-            iZ: kV.Td.iZ(xV, 0),
-            totalTicks: kV.Td.totalTicks(xV, 0),
-            speed: kV.Td.speed(xV, 0),
-            mark: UV === kV.Qd ? null : {
-              inTick: UV,
-              outTick: kV.Td.markOut(xV, 0)
+        var HH;
+        const BH = uH.y.replayViewPtr(this.deps.apiView(), 0);
+        if (0 === BH) return this.lastView = null, null;
+        const LH = new DataView(this.deps.buffer(), BH, uH.Xd.BYTES),
+          AH = uH.Xd.version(LH, 0),
+          rH = this.lastView;
+        if (null !== rH && rH.version === AH) return rH;
+        const SH = uH.Xd.markIn(LH, 0),
+          hH = {
+            version: AH,
+            state: uH.Xd.state(LH, 0),
+            cameraMode: null !== (HH = Rr.b[uH.Xd.cameraMode(LH, 0)]) && void 0 !== HH ? HH : "recording",
+            IX: uH.Xd.IX(LH, 0),
+            totalTicks: uH.Xd.totalTicks(LH, 0),
+            speed: uH.Xd.speed(LH, 0),
+            mark: SH === uH.Td ? null : {
+              inTick: SH,
+              outTick: uH.Xd.markOut(LH, 0)
             },
-            editVersion: kV.Td.editVersion(xV, 0)
+            editVersion: uH.Xd.editVersion(LH, 0)
           };
-        return this.lastView = yV, yV
+        return this.lastView = hH, hH
       }
       keyframes() {
-        const VV = this.view();
-        if (null === VV) return [];
-        VV.version !== this.reloadFrom && (this.reloadFrom = hY);
-        const eV = this.reloadFrom === hY && VV.state !== vV.qd.Cropping && VV.state !== vV.qd.None,
-          xV = eV ? VV.editVersion : VV.version;
-        if (xV === this.keyframesVersion && eV === this.keyframesSettled) return this.lastKeyframes;
+        const HH = this.view();
+        if (null === HH) return [];
+        HH.version !== this.reloadFrom && (this.reloadFrom = jr);
+        const BH = this.reloadFrom === jr && HH.state !== GH.hd.Cropping && HH.state !== GH.hd.None,
+          LH = BH ? HH.editVersion : HH.version;
+        if (LH === this.keyframesVersion && BH === this.keyframesSettled) return this.lastKeyframes;
         const {
-          core: JV
-        } = this.deps, YV = JV.UyV(), UV = JV.xB(), yV = [];
-        if (0 !== UV && YV > 0) {
-          const VV = new DataView(this.deps.buffer(), UV, YV * vV.Bc);
-          for (let eV = 0; eV < YV; eV++) {
-            const xV = eV * vV.Bc,
-              JV = eV => VV.getFloat64(xV + eV, !0);
-            yV.push({
-              iZ: VV.getUint32(xV + vV.Lc, !0),
-              position: [JV(vV.Kc), JV(vV.Kc + 8), JV(vV.Kc + 16)],
-              direction: [JV(vV.Fc), JV(vV.Fc + 8), JV(vV.Fc + 16)],
-              easing: [JV(vV.Gc), JV(vV.Gc + 8), JV(vV.Gc + 16), JV(vV.Gc + 24)]
+          core: AH
+        } = this.deps, rH = AH.jSH(), SH = AH.DW(), hH = [];
+        if (0 !== SH && rH > 0) {
+          const HH = new DataView(this.deps.buffer(), SH, rH * GH.qc);
+          for (let BH = 0; BH < rH; BH++) {
+            const LH = BH * GH.qc,
+              AH = BH => HH.getFloat64(LH + BH, !0);
+            hH.push({
+              IX: HH.getUint32(LH + GH.zc, !0),
+              position: [AH(GH.wc), AH(GH.wc + 8), AH(GH.wc + 16)],
+              direction: [AH(GH.uc), AH(GH.uc + 8), AH(GH.uc + 16)],
+              easing: [AH(GH.vc), AH(GH.vc + 8), AH(GH.vc + 16), AH(GH.vc + 24)]
             })
           }
         }
-        return this.keyframesVersion = xV, this.keyframesSettled = eV, this.lastKeyframes = yV, yV
+        return this.keyframesVersion = LH, this.keyframesSettled = BH, this.lastKeyframes = hH, hH
       }
       addKeyframe() {
-        const VV = this.deps.apiView(),
-          eV = [kV.s.eye(VV, 0, 0), kV.s.eye(VV, 0, 1), kV.s.eye(VV, 0, 2)];
-        return this.deps.replay.addKeyframe(eV, function(VV, eV) {
-          const xV = Math.cos(eV);
-          return [xV * Math.sin(VV), -Math.sin(eV), xV * Math.cos(VV)]
-        }(kV.s.heading(VV, 0), kV.s.pitch(VV, 0)))
+        const HH = this.deps.apiView(),
+          BH = [uH.y.eye(HH, 0, 0), uH.y.eye(HH, 0, 1), uH.y.eye(HH, 0, 2)];
+        return this.deps.replay.addKeyframe(BH, function(HH, BH) {
+          const LH = Math.cos(BH);
+          return [LH * Math.sin(HH), -Math.sin(BH), LH * Math.cos(HH)]
+        }(uH.y.heading(HH, 0), uH.y.pitch(HH, 0)))
       }
-      setKeyframe(VV) {
-        return this.deps.replay.setKeyframe(VV.iZ, Float64Array.from([...VV.position, ...VV.direction, ...VV.easing]))
+      setKeyframe(HH) {
+        return this.deps.replay.setKeyframe(HH.IX, Float64Array.from([...HH.position, ...HH.direction, ...HH.easing]))
       }
-      moveKeyframe(VV, eV) {
-        return this.deps.replay.moveKeyframe(VV, eV)
+      moveKeyframe(HH, BH) {
+        return this.deps.replay.moveKeyframe(HH, BH)
       }
-      deleteKeyframes(VV, eV) {
-        return this.deps.replay.deleteKeyframes(VV, eV)
+      deleteKeyframes(HH, BH) {
+        return this.deps.replay.deleteKeyframes(HH, BH)
       }
-      setMark(VV) {
-        var eV, xV;
-        return this.deps.replay.setMark(null !== (eV = null === VV || void 0 === VV ? void 0 : VV.inTick) && void 0 !== eV ? eV : -1, null !== (xV = null === VV || void 0 === VV ? void 0 : VV.outTick) && void 0 !== xV ? xV : -1)
+      setMark(HH) {
+        var BH, LH;
+        return this.deps.replay.setMark(null !== (BH = null === HH || void 0 === HH ? void 0 : HH.inTick) && void 0 !== BH ? BH : -1, null !== (LH = null === HH || void 0 === HH ? void 0 : HH.outTick) && void 0 !== LH ? LH : -1)
       }
-      crop(VV, eV) {
-        const xV = this.deps.replay.crop(VV, eV);
-        return xV && this.reloadKeyframes(), xV
+      crop(HH, BH) {
+        const LH = this.deps.replay.crop(HH, BH);
+        return LH && this.reloadKeyframes(), LH
       }
-      save(VV) {
-        return this.deps.replay.askSave(), this.deps.recorder.saveEdited(VV)
+      save(HH) {
+        return this.deps.replay.askSave(), this.deps.recorder.saveEdited(HH)
       }
-      recorderControl(VV) {
-        this.deps.recorder.control(VV)
+      recorderControl(HH) {
+        this.deps.recorder.control(HH)
       }
-      recorderPrefs(VV, eV) {
-        this.deps.recorder.prefs(VV, eV)
+      recorderPrefs(HH, BH) {
+        this.deps.recorder.prefs(HH, BH)
       }
-      recorderOption(VV, eV) {
-        const xV = this.deps.cmd();
-        return null !== xV && (0, kV.Cf)(xV, 0, VV, null === eV ? lY : LY.encode(eV))
+      recorderOption(HH, BH) {
+        const LH = this.deps.cmd();
+        return null !== LH && (0, uH.Mf)(LH, 0, HH, null === BH ? nr : Fr.encode(BH))
       }
-      recordFlyingText(VV, eV, xV, JV) {
-        const YV = this.deps.cmd(),
-          UV = Math.max(0, Math.min(4294967295, Math.round(JV)));
-        return null !== YV && (0, kV.yf)(YV, 0, eV, xV, UV, LY.encode(VV))
+      recordFlyingText(HH, BH, LH, AH) {
+        const rH = this.deps.cmd(),
+          SH = Math.max(0, Math.min(4294967295, Math.round(AH)));
+        return null !== rH && (0, uH.If)(rH, 0, BH, LH, SH, Fr.encode(HH))
       }
-      recordPlayerKilled(VV, eV, xV, JV) {
-        const YV = this.deps.cmd();
-        return null !== YV && (0, kV.Ff)(YV, 0, VV, eV, Math.max(0, xV), LY.encode(JV))
+      recordPlayerKilled(HH, BH, LH, AH) {
+        const rH = this.deps.cmd();
+        return null !== rH && (0, uH.Of)(rH, 0, HH, BH, Math.max(0, LH), Fr.encode(AH))
       }
-      recordKillfeed(VV, eV, xV) {
-        var JV, YV;
-        const UV = this.deps.cmd(),
-          yV = function(VV) {
-            const eV = VV.reduce(((VV, eV) => {
-                var xV;
-                return VV + yJ.Db + (null !== (xV = null === eV || void 0 === eV ? void 0 : eV.byteLength) && void 0 !== xV ? xV : 0)
+      recordKillfeed(HH, BH, LH) {
+        var AH, rH;
+        const SH = this.deps.cmd(),
+          hH = function(HH) {
+            const BH = HH.reduce(((HH, BH) => {
+                var LH;
+                return HH + hA.Db + (null !== (LH = null === BH || void 0 === BH ? void 0 : BH.byteLength) && void 0 !== LH ? LH : 0)
               }), 0),
-              xV = new Uint8Array(eV),
-              JV = new DataView(xV.buffer);
-            let YV = 0;
-            for (const yV of VV) {
-              var UV;
-              JV.setUint16(YV, null !== (UV = null === yV || void 0 === yV ? void 0 : yV.byteLength) && void 0 !== UV ? UV : vV.Mc, !0), YV += yJ.Db, null !== yV && (xV.set(yV, YV), YV += yV.byteLength)
+              LH = new Uint8Array(BH),
+              AH = new DataView(LH.buffer);
+            let rH = 0;
+            for (const hH of HH) {
+              var SH;
+              AH.setUint16(rH, null !== (SH = null === hH || void 0 === hH ? void 0 : hH.byteLength) && void 0 !== SH ? SH : GH.Dc, !0), rH += hA.Db, null !== hH && (LH.set(hH, rH), rH += hH.byteLength)
             }
-            return xV
-          }([fY(VV.name), fY(VV.colour), fY(eV.name), fY(eV.colour), fY(xV)]);
-        return null !== UV && (0, kV.Bf)(UV, 0, null !== (JV = VV.id) && void 0 !== JV ? JV : kV.Uc, null !== (YV = eV.id) && void 0 !== YV ? YV : kV.Uc, yV)
+            return LH
+          }([Dr(HH.name), Dr(HH.colour), Dr(BH.name), Dr(BH.colour), Dr(LH)]);
+        return null !== SH && (0, uH.Jf)(SH, 0, null !== (AH = HH.id) && void 0 !== AH ? AH : uH.bd, null !== (rH = BH.id) && void 0 !== rH ? rH : uH.bd, hH)
       }
-      recorderSession(VV, eV) {
+      recorderSession(HH, BH) {
         this.deps.recorder.session({
-          session: eV,
-          lobbyType: VV.lobbyType,
-          game: VV.gameNameWithVariation,
-          lobby: VV.lobbyName
+          session: BH,
+          lobbyType: HH.lobbyType,
+          game: HH.gameNameWithVariation,
+          lobby: HH.lobbyName
         })
       }
       recorderClose() {
-        this.deps.core.yyV()
+        this.deps.core.nSH()
       }
-      filePartDone(VV, eV) {
-        this.deps.recorder.filePartDone(VV, eV)
+      filePartDone(HH, BH) {
+        this.deps.recorder.filePartDone(HH, BH)
       }
-      fileDone(VV) {
-        this.deps.recorder.fileDone(VV)
+      fileDone(HH) {
+        this.deps.recorder.fileDone(HH)
       }
     }
-    const KY = -2147483648;
-    class HY {
-      constructor(VV) {
-        var eV;
-        this.deps = VV, this.state = {
-          recording: !1,
-          clipping: !1,
-          hasClipBuffer: !1,
-          seconds: 0
-        }, this.recordingSince = null, this.clipTickPending = !1, this.now = void 0, this.now = null !== (eV = VV.now) && void 0 !== eV ? eV : () => performance.now()
+    const Zr = -2147483648;
+    class dr {
+      constructor(HH) {
+        var BH;
+        this.deps = HH, this.state = uA.c, this.recordingSince = null, this.clipTickPending = !1, this.now = void 0, this.now = null !== (BH = HH.now) && void 0 !== BH ? BH : () => performance.now()
       }
       get current() {
         return this.state
       }
       get live() {
-        var VV, eV, xV;
-        return null === (VV = null === (eV = (xV = this.deps).live) || void 0 === eV ? void 0 : eV.call(xV)) || void 0 === VV || VV
+        var HH, BH, LH;
+        return null === (HH = null === (BH = (LH = this.deps).live) || void 0 === BH ? void 0 : BH.call(LH)) || void 0 === HH || HH
       }
-      activated(VV) {
-        var eV, xV;
-        this.live && (this.viewerShown(!0 === (null === (eV = (xV = this.deps).viewerOpen) || void 0 === eV ? void 0 : eV.call(xV))), this.deps.client.recorderSession(VV, (0, cY.g)()))
+      activated(HH) {
+        var BH, LH;
+        this.live && (this.viewerShown(!0 === (null === (BH = (LH = this.deps).viewerOpen) || void 0 === BH ? void 0 : BH.call(LH))), this.deps.client.recorderSession(HH, (0, Rr.d)()))
       }
       closed() {
         this.deps.client.recorderClose()
       }
       toggleRecording() {
-        var VV, eV;
-        this.live && (this.state.recording || !0 !== (null === (VV = (eV = this.deps).viewerOpen) || void 0 === VV ? void 0 : VV.call(eV))) ? this.deps.client.recorderControl(vV.$c.ToggleRecording) : this.deps.notify(CY.b.closeViewerFirst)
+        var HH, BH;
+        this.live && (this.state.recording || !0 !== (null === (HH = (BH = this.deps).viewerOpen) || void 0 === HH ? void 0 : HH.call(BH))) ? this.deps.client.recorderControl(GH.Sc.ToggleRecording) : this.deps.notify(qr.e.closeViewerFirst)
       }
       saveClip() {
-        this.live ? this.deps.client.recorderControl(vV.$c.SaveClip) : this.deps.notify(CY.b.clippingNotOn)
+        this.live ? this.deps.client.recorderControl(GH.Sc.SaveClip) : this.deps.notify(qr.e.clippingNotOn)
       }
-      viewerShown(VV) {
-        this.live && this.deps.client.recorderControl(VV ? vV.$c.ViewerOpened : vV.$c.ViewerClosed)
+      viewerShown(HH) {
+        this.live && this.deps.client.recorderControl(HH ? GH.Sc.ViewerOpened : GH.Sc.ViewerClosed)
       }
-      setPrefs(VV, eV) {
-        this.live && this.deps.client.recorderPrefs(VV, eV)
+      setPrefs(HH, BH) {
+        this.live && this.deps.client.recorderPrefs(HH, BH)
       }
-      setOption(VV, eV) {
-        this.live && this.deps.client.recorderOption(VV, eV)
+      setOption(HH, BH) {
+        this.live && this.deps.client.recorderOption(HH, BH)
       }
-      recordFlyingText(VV, eV, xV, JV) {
-        this.live && this.deps.client.recordFlyingText(VV, eV, xV, JV)
+      recordFlyingText(HH, BH, LH, AH) {
+        this.live && this.deps.client.recordFlyingText(HH, BH, LH, AH)
       }
-      recordPlayerKilled(VV, eV, xV, JV) {
-        this.live && this.deps.client.recordPlayerKilled(VV, eV, xV, JV)
+      recordPlayerKilled(HH, BH, LH, AH) {
+        this.live && this.deps.client.recordPlayerKilled(HH, BH, LH, AH)
       }
-      recordKillfeed(VV, eV, xV) {
-        this.live && this.deps.client.recordKillfeed(VV, eV, xV)
+      recordKillfeed(HH, BH, LH) {
+        this.live && this.deps.client.recordKillfeed(HH, BH, LH)
       }
-      iZ() {
-        let VV = this.state;
-        if (this.clipTickPending && (this.clipTickPending = !1, VV = {
-            ...VV,
+      IX() {
+        let HH = this.state;
+        if (this.clipTickPending && (this.clipTickPending = !1, HH = {
+            ...HH,
             hasClipBuffer: !0
           }), null !== this.recordingSince) {
-          const eV = Math.floor((this.now() - this.recordingSince) / 1e3);
-          eV !== VV.seconds && (VV = {
-            ...VV,
-            seconds: eV
+          const BH = Math.floor((this.now() - this.recordingSince) / 1e3);
+          BH !== HH.seconds && (HH = {
+            ...HH,
+            seconds: BH
           })
         }
-        this.set(VV)
+        this.set(HH)
       }
-      onEvent(VV) {
-        var eV, xV;
+      onEvent(HH) {
+        var BH, LH;
         const {
-          notify: JV
-        } = this.deps, YV = CY.b;
-        switch (VV.what) {
-          case vV._c.RecordingStarted:
+          notify: AH
+        } = this.deps, rH = qr.e;
+        switch (HH.what) {
+          case GH.Qc.RecordingStarted:
             this.recordingSince = this.now(), this.set({
               ...this.state,
               recording: !0,
               seconds: 0
-            }), JV(YV.recordingStarted);
+            }), AH(rH.recordingStarted);
             break;
-          case vV._c.RecordingStopped:
-            this.stopRecording(), JV(YV.recordingStopped), this.saveState(vV.hd.Recording, "saving");
+          case GH.Qc.RecordingStopped:
+            this.stopRecording(), AH(rH.recordingStopped), this.saveState(GH.cd.Recording, "saving");
             break;
-          case vV._c.RecordingDiscarded:
-            this.stopRecording(), JV(YV.recordingDiscarded);
+          case GH.Qc.RecordingDiscarded:
+            this.stopRecording(), AH(rH.recordingDiscarded);
             break;
-          case vV._c.RecordingTurnedOff:
-            this.stopRecording(), JV(YV.recordingTurnedOff);
+          case GH.Qc.RecordingTurnedOff:
+            this.stopRecording(), AH(rH.recordingTurnedOff);
             break;
-          case vV._c.LimitReached:
-            JV(YV.limitReached);
+          case GH.Qc.LimitReached:
+            AH(rH.limitReached);
             break;
-          case vV._c.ClipSaved:
-            this.saveState(vV.hd.Clip, "saving");
+          case GH.Qc.ClipSaved:
+            this.saveState(GH.cd.Clip, "saving");
             break;
-          case vV._c.ClipEmpty:
-            JV(YV.clipEmpty);
+          case GH.Qc.ClipEmpty:
+            AH(rH.clipEmpty);
             break;
-          case vV._c.ClippingNotOn:
-            JV(YV.clippingNotOn);
+          case GH.Qc.ClippingNotOn:
+            AH(rH.clippingNotOn);
             break;
-          case vV._c.Disallowed:
-            JV(YV.disallowed);
+          case GH.Qc.Disallowed:
+            AH(rH.disallowed);
             break;
-          case vV._c.ClippingOn:
+          case GH.Qc.ClippingOn:
             this.clipTickPending = !0, this.set({
               ...this.state,
               clipping: !0,
               hasClipBuffer: !1
             });
             break;
-          case vV._c.ClippingOff:
+          case GH.Qc.ClippingOff:
             this.clipTickPending = !1, this.set({
               ...this.state,
               clipping: !1,
               hasClipBuffer: !1
             });
             break;
-          case vV._c.ClipSettingsChanged:
+          case GH.Qc.ClipSettingsChanged:
             this.clipTickPending = this.state.clipping, this.set({
               ...this.state,
               hasClipBuffer: !1
             });
             break;
-          case vV._c.SaveBusy:
-            null === (eV = (xV = this.deps).onSaveState) || void 0 === eV || eV.call(xV, VV.kind, "busy"), JV(YV.saveBusy);
+          case GH.Qc.SaveBusy:
+            null === (BH = (LH = this.deps).onSaveState) || void 0 === BH || BH.call(LH, HH.kind, "busy"), AH(rH.saveBusy);
             break;
-          case vV._c.CloseViewerFirst:
-            JV(YV.closeViewerFirst)
+          case GH.Qc.CloseViewerFirst:
+            AH(rH.closeViewerFirst)
         }
       }
-      fileReady(VV, eV) {
-        this.deps.download(eV), this.saveState(VV, "done"), this.deps.notify(VV === vV.hd.Clip ? CY.b.clipSaved : CY.b.recordingSaved)
+      fileReady(HH, BH) {
+        this.deps.download(BH), this.saveState(HH, "done"), this.deps.notify(HH === GH.cd.Clip ? qr.e.clipSaved : qr.e.recordingSaved)
       }
-      failed(VV) {
-        this.saveState(VV, "failed"), this.deps.notify(VV === vV.hd.Clip ? CY.b.clipFailed : CY.b.recordingFailed)
+      failed(HH) {
+        this.saveState(HH, "failed"), this.deps.notify(HH === GH.cd.Clip ? qr.e.clipFailed : qr.e.recordingFailed)
+      }
+      stopped() {
+        this.recordingSince = null, this.clipTickPending = !1, this.set(uA.c)
       }
       stopRecording() {
         this.recordingSince = null, this.set({
@@ -5414,2330 +5291,2335 @@ export const modules = {
           seconds: 0
         })
       }
-      saveState(VV, eV) {
-        var xV, JV;
-        null === (xV = (JV = this.deps).onSaveState) || void 0 === xV || xV.call(JV, VV, eV)
+      saveState(HH, BH) {
+        var LH, AH;
+        null === (LH = (AH = this.deps).onSaveState) || void 0 === LH || LH.call(AH, HH, BH)
       }
-      set(VV) {
-        VV !== this.state && (this.state = VV, this.deps.onState(VV))
+      set(HH) {
+        HH !== this.state && (this.state = HH, this.deps.onState(HH))
       }
     }
-    const uY = new TextDecoder;
+    const ar = new TextDecoder;
 
-    function sY(VV, eV, xV, JV) {
-      const YV = [];
-      for (let UV = 0; UV < JV; UV++) {
-        if (eV + yJ.Db > xV) return null;
-        const JV = VV.getUint16(eV, !0);
-        if (eV += yJ.Db, JV !== vV.Mc) {
-          if (eV + JV > xV) return null;
-          YV.push(uY.decode(new Uint8Array(VV.buffer, VV.byteOffset + eV, JV))), eV += JV
-        } else YV.push(null)
+    function sr(HH, BH, LH, AH) {
+      const rH = [];
+      for (let SH = 0; SH < AH; SH++) {
+        if (BH + hA.Db > LH) return null;
+        const AH = HH.getUint16(BH, !0);
+        if (BH += hA.Db, AH !== GH.Dc) {
+          if (BH + AH > LH) return null;
+          rH.push(ar.decode(new Uint8Array(HH.buffer, HH.byteOffset + BH, AH))), BH += AH
+        } else rH.push(null)
       }
-      return eV === xV ? YV : null
+      return BH === LH ? rH : null
     }
 
-    function SY(VV, eV) {
-      let xV = new DataView(new ArrayBuffer(0)),
-        JV = !0;
-      const YV = {
-        replayFailed: (eV, xV, JV) => {
-          VV.replayFailed({
-            reason: eV,
-            code: xV,
-            version: JV
+    function Jr(HH, BH) {
+      let LH = new DataView(new ArrayBuffer(0)),
+        AH = !0;
+      const rH = {
+        replayFailed: (BH, LH, AH) => {
+          HH.replayFailed({
+            reason: BH,
+            code: LH,
+            version: AH
           })
         },
-        replayOption: (eV, YV, UV, yV) => {
-          const pV = function(VV, eV, xV, JV) {
-            switch (eV) {
-              case vV.ld.Cleared:
-                return 0 === JV ? null : void 0;
-              case vV.ld.Text:
-                return uY.decode(new Uint8Array(VV.buffer, VV.byteOffset + xV, JV));
-              case vV.ld.Int:
-                return JV === Int32Array.BYTES_PER_ELEMENT ? VV.getInt32(xV, !0) : void 0;
-              case vV.ld.Double:
-                return JV === Float64Array.BYTES_PER_ELEMENT ? VV.getFloat64(xV, !0) : void 0;
+        replayOption: (BH, rH, SH, hH) => {
+          const tH = function(HH, BH, LH, AH) {
+            switch (BH) {
+              case GH.ed.Cleared:
+                return 0 === AH ? null : void 0;
+              case GH.ed.Text:
+                return ar.decode(new Uint8Array(HH.buffer, HH.byteOffset + LH, AH));
+              case GH.ed.Int:
+                return AH === Int32Array.BYTES_PER_ELEMENT ? HH.getInt32(LH, !0) : void 0;
+              case GH.ed.Double:
+                return AH === Float64Array.BYTES_PER_ELEMENT ? HH.getFloat64(LH, !0) : void 0;
               default:
                 return
             }
-          }(xV, YV, UV, yV);
-          void 0 !== pV ? VV.replayOption({
-            key: eV,
-            value: pV
-          }) : JV = !1
+          }(LH, rH, SH, hH);
+          void 0 !== tH ? HH.replayOption({
+            key: BH,
+            value: tH
+          }) : AH = !1
         },
-        replayUiEvent: (eV, YV, UV, yV, pV, QV) => {
-          const nV = function(VV, eV, xV, JV, YV, UV, yV) {
-            const pV = UV + yV;
-            switch (eV) {
-              case vV.od.FlyingText: {
-                const yV = sY(VV, UV, pV, 1);
-                return null !== yV && null !== yV[0] ? {
-                  what: eV,
-                  Sx: xV,
-                  ux: JV,
-                  angle: YV,
-                  contentJson: yV[0]
+        replayUiEvent: (BH, rH, SH, hH, tH, zH) => {
+          const CH = function(HH, BH, LH, AH, rH, SH, hH) {
+            const tH = SH + hH;
+            switch (BH) {
+              case GH.gd.FlyingText: {
+                const hH = sr(HH, SH, tH, 1);
+                return null !== hH && null !== hH[0] ? {
+                  what: BH,
+                  ar: LH,
+                  dr: AH,
+                  angle: rH,
+                  contentJson: hH[0]
                 } : null
               }
-              case vV.od.PlayerKilled: {
-                const JV = sY(VV, UV, pV, 3);
-                return JV ? {
-                  what: eV,
-                  killstreak: xV,
-                  dead: JV[0],
-                  killer: JV[1],
-                  withItem: JV[2]
+              case GH.gd.PlayerKilled: {
+                const AH = sr(HH, SH, tH, 3);
+                return AH ? {
+                  what: BH,
+                  killstreak: LH,
+                  dead: AH[0],
+                  killer: AH[1],
+                  withItem: AH[2]
                 } : null
               }
-              case vV.od.Killfeed: {
-                const xV = sY(VV, UV, pV, 7);
-                return xV ? {
-                  what: eV,
-                  killerId: xV[0],
-                  killerName: xV[1],
-                  killerColour: xV[2],
-                  victimId: xV[3],
-                  victimName: xV[4],
-                  victimColour: xV[5],
-                  withItem: xV[6]
+              case GH.gd.Killfeed: {
+                const LH = sr(HH, SH, tH, 7);
+                return LH ? {
+                  what: BH,
+                  killerId: LH[0],
+                  killerName: LH[1],
+                  killerColour: LH[2],
+                  victimId: LH[3],
+                  victimName: LH[4],
+                  victimColour: LH[5],
+                  withItem: LH[6]
                 } : null
               }
               default:
                 return null
             }
-          }(xV, eV, YV, UV, yV, pV, QV);
-          null !== nV ? VV.replayUiEvent(nV) : JV = !1
+          }(LH, BH, rH, SH, hH, tH, zH);
+          null !== CH ? HH.replayUiEvent(CH) : AH = !1
         },
-        replayFilePart: (xV, YV, UV, yV) => {
-          const pV = eV();
-          UV + yV > pV.byteLength ? JV = !1 : VV.filePart(xV, YV, new Uint8Array(pV, UV, yV).slice())
+        replayFilePart: (LH, rH, SH, hH) => {
+          const tH = BH();
+          SH + hH > tH.byteLength ? AH = !1 : HH.filePart(LH, rH, new Uint8Array(tH, SH, hH).slice())
         },
-        replayFileReady: (eV, xV, JV, YV) => {
-          VV.fileReady({
-            save: eV,
-            kind: xV,
-            parts: JV,
-            bytes: YV
+        replayFileReady: (BH, LH, AH, rH) => {
+          HH.fileReady({
+            save: BH,
+            kind: LH,
+            parts: AH,
+            bytes: rH
           })
         },
-        recorderEvent: (eV, xV, JV) => {
-          VV.recorderEvent({
-            what: eV,
-            kind: xV,
-            save: JV
+        recorderEvent: (BH, LH, AH) => {
+          HH.recorderEvent({
+            what: BH,
+            kind: LH,
+            save: AH
           })
         },
-        replayOpened: (eV, JV, YV) => {
-          VV.replayOpened(uY.decode(new Uint8Array(xV.buffer, xV.byteOffset + JV, YV)))
+        replayOpened: (BH, AH, rH) => {
+          HH.replayOpened(ar.decode(new Uint8Array(LH.buffer, LH.byteOffset + AH, rH)))
         }
       };
-      return (VV, eV, UV, yV) => !(VV < vV.hb.ReplayFailed || VV > vV.hb.RecorderEvent) && (xV = eV, JV = !0, (0, kV.se)(VV, eV, UV, yV, YV) && JV)
+      return (HH, BH, SH, hH) => !(HH < GH.X.ReplayFailed || HH > GH.X.RecorderEvent) && (LH = BH, AH = !0, (0, uH.we)(HH, BH, SH, hH, rH) && AH)
     }
 
-    function IY(VV) {
-      let eV = null;
-      const xV = SY(VV, (() => {
-        if (null === eV) throw new Error("a recorder event read outside recorderEventReader's call");
-        return eV.buffer
+    function ir(HH) {
+      let BH = null;
+      const LH = Jr(HH, (() => {
+        if (null === BH) throw new Error("a recorder event read outside recorderEventReader's call");
+        return BH.buffer
       }));
-      return (VV, JV) => {
-        eV = JV;
+      return (HH, AH) => {
+        BH = AH;
         try {
-          ! function(VV, eV) {
-            const xV = VV.slice(),
-              JV = new DataView(xV.buffer);
-            for (let YV = 0; YV < xV.byteLength;) {
-              if (YV + vV.db > xV.byteLength) throw new Error(`the recorder module's events end mid-head at ${YV}`);
-              const VV = JV.getUint32(YV, !0),
-                UV = 65535 & VV,
-                yV = VV >>> 16,
-                pV = YV + vV.db;
-              if (pV + yV > xV.byteLength || !eV(UV, JV, pV, yV)) throw new Error(`the recorder module wrote a malformed event ${UV} (${yV} bytes) at ${YV}`);
-              YV = pV + (0, vV.ze)(yV)
+          ! function(HH, BH) {
+            const LH = HH.slice(),
+              AH = new DataView(LH.buffer);
+            for (let rH = 0; rH < LH.byteLength;) {
+              if (rH + GH.U > LH.byteLength) throw new Error(`the recorder module's events end mid-head at ${rH}`);
+              const HH = AH.getUint32(rH, !0),
+                SH = 65535 & HH,
+                hH = HH >>> 16,
+                tH = rH + GH.U;
+              if (tH + hH > LH.byteLength || !BH(SH, AH, tH, hH)) throw new Error(`the recorder module wrote a malformed event ${SH} (${hH} bytes) at ${rH}`);
+              rH = tH + (0, GH.te)(hH)
             }
-          }(VV, xV)
+          }(HH, LH)
         } finally {
-          eV = null
+          BH = null
         }
       }
     }
-    class dY {
-      constructor(VV, eV) {
-        this.acks = VV, this.handlers = eV, this.parts = new Map
+    class pr {
+      constructor(HH, BH) {
+        this.acks = HH, this.handlers = BH, this.parts = new Map
       }
-      onPart(VV, eV, xV) {
-        let JV = this.parts.get(VV);
-        JV || (JV = [], this.parts.set(VV, JV)), JV[eV] = xV, this.acks.filePartDone(VV, eV)
+      onPart(HH, BH, LH) {
+        let AH = this.parts.get(HH);
+        AH || (AH = [], this.parts.set(HH, AH)), AH[BH] = LH, this.acks.filePartDone(HH, BH)
       }
-      onReady(VV) {
-        var eV;
-        const xV = null !== (eV = this.parts.get(VV.save)) && void 0 !== eV ? eV : [];
-        this.parts.delete(VV.save);
-        const JV = function(VV, eV, xV) {
-          if (VV.length !== eV) return null;
-          let JV = 0;
-          for (let yV = 0; yV < eV; yV++) {
-            if (void 0 === VV[yV]) return null;
-            JV += VV[yV].byteLength
+      onReady(HH) {
+        var BH;
+        const LH = null !== (BH = this.parts.get(HH.save)) && void 0 !== BH ? BH : [];
+        this.parts.delete(HH.save);
+        const AH = function(HH, BH, LH) {
+          if (HH.length !== BH) return null;
+          let AH = 0;
+          for (let hH = 0; hH < BH; hH++) {
+            if (void 0 === HH[hH]) return null;
+            AH += HH[hH].byteLength
           }
-          if (JV !== xV) return null;
-          if (1 === eV) return VV[0];
-          const YV = new Uint8Array(xV);
-          let UV = 0;
-          for (const yV of VV) YV.set(yV, UV), UV += yV.byteLength;
-          return YV
-        }(xV, VV.parts, VV.bytes);
-        this.acks.fileDone(VV.save), null === JV ? this.handlers.fileIncomplete(VV.save, VV.kind) : this.handlers.fileReady(VV.save, VV.kind, JV)
+          if (AH !== LH) return null;
+          if (1 === BH) return HH[0];
+          const rH = new Uint8Array(LH);
+          let SH = 0;
+          for (const hH of HH) rH.set(hH, SH), SH += hH.byteLength;
+          return rH
+        }(LH, HH.parts, HH.bytes);
+        this.acks.fileDone(HH.save), null === AH ? this.handlers.fileIncomplete(HH.save, HH.kind) : this.handlers.fileReady(HH.save, HH.kind, AH)
       }
-      onDiscarded(VV) {
-        this.parts.delete(VV)
+      onDiscarded(HH) {
+        this.parts.delete(HH)
       }
     }
 
-    function OY() {
-      return xV.e(72).then((() => xV(63638)))
+    function yr() {
+      return LH.e(72).then((() => LH(64081)))
     }
-    class VU {
-      constructor(VV) {
-        this.deps = VV, this.sink = void 0, this.recorder = void 0, this.recorderEvents = void 0, this.parts = void 0, this.viewerChunk = null, this.viewer = null;
+    class HS {
+      constructor(HH) {
+        this.deps = HH, this.sink = void 0, this.recorder = void 0, this.recorderEvents = void 0, this.parts = void 0, this.viewerChunk = null, this.viewer = null;
         const {
-          client: eV
-        } = VV;
-        this.recorder = new HY({
-          client: eV,
+          client: BH
+        } = HH;
+        this.recorder = new dr({
+          client: BH,
           live: () => {
-            var VV;
-            return !0 !== (null === (VV = this.viewer) || void 0 === VV ? void 0 : VV.inPlayback)
+            var HH;
+            return !0 !== (null === (HH = this.viewer) || void 0 === HH ? void 0 : HH.inPlayback)
           },
-          viewerOpen: VV.viewerOpen,
-          notify: VV.notify,
-          download: eV => {
-            var xV;
-            null === (xV = VV.download) || void 0 === xV || xV.call(VV, eV)
+          viewerOpen: HH.viewerOpen,
+          notify: HH.notify,
+          download: BH => {
+            var LH;
+            null === (LH = HH.download) || void 0 === LH || LH.call(HH, BH)
           },
-          onState: VV.onRecorderState,
-          onSaveState: VV.onSaveState
-        }), this.parts = new dY(eV, {
-          fileReady: (VV, eV, xV) => {
-            var JV;
-            eV === vV.hd.Edited ? null === (JV = this.viewer) || void 0 === JV || JV.saveDone(xV) : this.recorder.fileReady(eV, xV)
+          onState: HH.onRecorderState,
+          onSaveState: HH.onSaveState
+        }), this.parts = new pr(BH, {
+          fileReady: (HH, BH, LH) => {
+            var AH;
+            BH === GH.cd.Edited ? null === (AH = this.viewer) || void 0 === AH || AH.saveDone(LH) : this.recorder.fileReady(BH, LH)
           },
-          fileIncomplete: (VV, eV) => {
-            this.saveFailed(eV)
+          fileIncomplete: (HH, BH) => {
+            this.saveFailed(BH)
           }
         });
-        const xV = {
-          replayFailed: VV => {
-            var eV;
-            null === (eV = this.viewer) || void 0 === eV || eV.onFailed(VV)
+        const LH = {
+          replayFailed: HH => {
+            var BH;
+            null === (BH = this.viewer) || void 0 === BH || BH.onFailed(HH)
           },
-          replayOption: eV => {
-            var xV;
-            null === (xV = VV.onReplayOption) || void 0 === xV || xV.call(VV, eV)
+          replayOption: BH => {
+            var LH;
+            null === (LH = HH.onReplayOption) || void 0 === LH || LH.call(HH, BH)
           },
-          replayUiEvent: eV => {
-            var xV;
-            null === (xV = VV.onReplayUiEvent) || void 0 === xV || xV.call(VV, eV)
+          replayUiEvent: BH => {
+            var LH;
+            null === (LH = HH.onReplayUiEvent) || void 0 === LH || LH.call(HH, BH)
           },
-          filePart: (VV, eV, xV) => {
-            this.parts.onPart(VV, eV, xV)
+          filePart: (HH, BH, LH) => {
+            this.parts.onPart(HH, BH, LH)
           },
-          fileReady: VV => {
-            this.parts.onReady(VV)
+          fileReady: HH => {
+            this.parts.onReady(HH)
           },
-          replayOpened: eV => {
-            var xV;
-            null === (xV = VV.onReplayOpened) || void 0 === xV || xV.call(VV, eV)
+          replayOpened: BH => {
+            var LH;
+            null === (LH = HH.onReplayOpened) || void 0 === LH || LH.call(HH, BH)
           },
-          recorderEvent: VV => {
-            var eV;
-            switch (VV.what) {
-              case vV._c.FileDiscarded:
-                this.parts.onDiscarded(VV.save);
+          recorderEvent: HH => {
+            var BH;
+            switch (HH.what) {
+              case GH.Qc.FileDiscarded:
+                this.parts.onDiscarded(HH.save);
                 break;
-              case vV._c.SaveFailed:
-                this.saveFailed(VV.kind);
+              case GH.Qc.SaveFailed:
+                this.saveFailed(HH.kind);
                 break;
-              case vV._c.SaveBusy:
-                if (null !== (eV = this.viewer) && void 0 !== eV && eV.savePending) {
+              case GH.Qc.SaveBusy:
+                if (null !== (BH = this.viewer) && void 0 !== BH && BH.savePending) {
                   this.viewer.saveFailed(!0);
                   break
                 }
-                this.recorder.onEvent(VV);
+                this.recorder.onEvent(HH);
                 break;
               default:
-                this.recorder.onEvent(VV)
+                this.recorder.onEvent(HH)
             }
           }
         };
-        this.sink = function(VV, eV) {
+        this.sink = function(HH, BH) {
           return {
-            onReplayEvent: SY(VV, eV)
+            onReplayEvent: Jr(HH, BH)
           }
-        }(xV, VV.buffer), this.recorderEvents = IY(xV)
+        }(LH, HH.buffer), this.recorderEvents = ir(LH)
       }
       get currentViewer() {
         return this.viewer
       }
       loadViewer() {
-        var VV;
-        return this.viewer ? Promise.resolve(this.viewer) : (this.viewerChunk ??= (null !== (VV = this.deps.loadViewer) && void 0 !== VV ? VV : OY)().catch((VV => {
-          throw this.viewerChunk = null, VV
-        })), this.viewerChunk.then((VV => (this.viewer ??= new VV.ReplayViewer({
+        var HH;
+        return this.viewer ? Promise.resolve(this.viewer) : (this.viewerChunk ??= (null !== (HH = this.deps.loadViewer) && void 0 !== HH ? HH : yr)().catch((HH => {
+          throw this.viewerChunk = null, HH
+        })), this.viewerChunk.then((HH => (this.viewer ??= new HH.ReplayViewer({
           client: this.deps.client,
           setHoldDraws: this.deps.setHoldDraws,
           meshPending: this.deps.meshPending,
           notify: this.deps.notify,
           onChange: () => {
-            var VV, eV;
-            null === (VV = (eV = this.deps).onViewerChange) || void 0 === VV || VV.call(eV)
+            var HH, BH;
+            null === (HH = (BH = this.deps).onViewerChange) || void 0 === HH || HH.call(BH)
           }
         }), this.viewer))))
       }
-      activated(VV) {
-        this.recorder.activated(VV)
+      activated(HH) {
+        this.recorder.activated(HH)
       }
-      afterFrame(VV) {
+      afterFrame(HH) {
         try {
-          VV > 0 && this.recorder.iZ()
+          HH > 0 && this.recorder.IX()
         } finally {
-          var eV;
-          null === (eV = this.viewer) || void 0 === eV || eV.afterFrame()
+          var BH;
+          null === (BH = this.viewer) || void 0 === BH || BH.afterFrame()
         }
       }
       end() {
-        var VV;
-        null === (VV = this.viewer) || void 0 === VV || VV.end()
+        var HH;
+        null === (HH = this.viewer) || void 0 === HH || HH.end()
       }
-      saveFailed(VV) {
-        var eV;
-        VV === vV.hd.Edited ? null === (eV = this.viewer) || void 0 === eV || eV.saveFailed(!1) : this.recorder.failed(VV)
+      saveFailed(HH) {
+        var BH;
+        HH === GH.cd.Edited ? null === (BH = this.viewer) || void 0 === BH || BH.saveFailed(!1) : this.recorder.failed(HH)
       }
     }
-    var eU = xV(41885),
-      xU = xV(41909),
-      JU = xV(5307),
-      YU = xV(42210);
-    class UU {
-      constructor(VV) {
-        this.deps = VV, this.analogue = [0, 0], this.keys = 0, this.unsent = !1
+    var BS = LH(41940),
+      LS = LH(41954),
+      AS = LH(5275),
+      rS = LH(42240);
+    class SS {
+      constructor(HH) {
+        this.deps = HH, this.analogue = [0, 0], this.keys = 0, this.unsent = !1
       }
-      drag(VV, eV) {
-        if (!this.deps.live() || 0 === VV && 0 === eV) return;
-        const xV = (0, cV.s)(0, performance.now()),
-          JV = this.deps.dragScale();
-        (0, YU.f)((() => {
-          (0, cV.x)(vV.Gb.MouseDown, 0, 0, 0, xV), (0, cV.x)(vV.Gb.MouseMove, 0, VV * JV, eV * JV, 0), (0, cV.x)(vV.Gb.MouseUp, 0, 0, 0, xV)
+      drag(HH, BH) {
+        if (!this.deps.live() || 0 === HH && 0 === BH) return;
+        const LH = (0, jH.u)(0, performance.now()),
+          AH = this.deps.dragScale();
+        (0, rS.h)((() => {
+          (0, jH.A)(GH.tb.MouseDown, 0, 0, 0, LH), (0, jH.A)(GH.tb.MouseMove, 0, HH * AH, BH * AH, 0), (0, jH.A)(GH.tb.MouseUp, 0, 0, 0, LH)
         }))
       }
-      move(VV) {
-        var eV, xV;
-        this.analogue[0] = null !== (eV = null === VV || void 0 === VV ? void 0 : VV.x) && void 0 !== eV ? eV : 0, this.analogue[1] = null !== (xV = null === VV || void 0 === VV ? void 0 : VV.y) && void 0 !== xV ? xV : 0, this.send()
+      move(HH) {
+        var BH, LH;
+        this.analogue[0] = null !== (BH = null === HH || void 0 === HH ? void 0 : HH.x) && void 0 !== BH ? BH : 0, this.analogue[1] = null !== (LH = null === HH || void 0 === HH ? void 0 : HH.y) && void 0 !== LH ? LH : 0, this.send()
       }
-      holdVertical(VV, eV) {
-        const xV = "freeCamUp" === VV ? kV.Zb.Up : kV.Zb.Down;
-        this.keys = eV ? this.keys | xV : this.keys & ~xV, this.send()
+      holdVertical(HH, BH) {
+        const LH = "freeCamUp" === HH ? uH.ec.Up : uH.ec.Down;
+        this.keys = BH ? this.keys | LH : this.keys & ~LH, this.send()
       }
       flush() {
         this.unsent && this.send()
       }
       send() {
-        const VV = this.deps.live() ? this.deps.cmd() : null;
-        this.unsent = null !== VV && !(0, kV.Ge)(VV, 0, this.analogue, this.keys)
+        const HH = this.deps.live() ? this.deps.cmd() : null;
+        this.unsent = null !== HH && !(0, uH.Qe)(HH, 0, this.analogue, this.keys)
       }
     }
-    var yU = xV(3992),
-      pU = xV(767),
-      QU = xV(313),
-      nU = xV(99),
-      wU = xV(35240),
-      ZU = xV(752),
-      vU = xV(37749);
+    var hS = LH(3950),
+      tS = LH(725),
+      zS = LH(257),
+      CS = LH(81),
+      ES = LH(34908),
+      XS = LH(703),
+      GS = LH(37467);
 
-    function rU() {
-      const VV = JV.b.get("clientEscMenuOptions"),
-        eV = (0, pU.r)(VV);
+    function YS() {
+      const HH = AH.c.get("clientEscMenuOptions"),
+        BH = (0, tS.q)(HH);
       return {
-        mouse: (0, nU.isMobile)() ? eV : VV.mouseSensitivity,
-        touch: eV,
-        fovPercent: VV.cameraFOV
+        mouse: (0, CS.isMobile)() ? BH : HH.mouseSensitivity,
+        touch: BH,
+        fovPercent: HH.cameraFOV
       }
     }
 
-    function kU() {
-      const VV = JV.b.get("clientEscMenuOptions"),
-        eV = JV.b.get("isTouchScreen") ? (0, pU.r)(VV) : VV.mouseSensitivity,
-        xV = rU().mouse;
-      return xV > 0 ? eV / xV : 1
+    function uS() {
+      const HH = AH.c.get("clientEscMenuOptions"),
+        BH = AH.c.get("isTouchScreen") ? (0, tS.q)(HH) : HH.mouseSensitivity,
+        LH = YS().mouse;
+      return LH > 0 ? BH / LH : 1
     }
 
-    function bU(VV) {
-      const eV = () => {
-        VV.setSoundPrefs(JV.b.get("soundVolume"), JV.b.get("soundOnFromAd"))
+    function QS(HH) {
+      const BH = () => {
+        HH.setSoundPrefs(AH.c.get("soundVolume"), AH.c.get("soundOnFromAd"))
       };
-      let xV = null;
-      const YV = () => {
+      let LH = null;
+      const rH = () => {
         const {
-          showFog: eV,
-          enableLighting: YV,
-          fogChunkDistance: UV,
-          chunkFadeIn: yV
-        } = JV.b.get("clientEscMenuOptions"), pV = {
-          showFog: eV,
-          lighting: YV,
-          fogChunks: UV,
-          chunkFade: yV,
-          cellLight: (0, yU.i)("cellLight") ? (0, yU.i)("cellLightUnlit") ? "all" : "lit" : "off"
+          showFog: BH,
+          enableLighting: rH,
+          fogChunkDistance: SH,
+          chunkFadeIn: hH
+        } = AH.c.get("clientEscMenuOptions"), tH = {
+          showFog: BH,
+          lighting: rH,
+          fogChunks: SH,
+          chunkFade: hH,
+          cellLight: (0, hS.n)("cellLight") ? (0, hS.n)("cellLightUnlit") ? "all" : "lit" : "off"
         };
-        xV && (0, vV.fe)(xV) === (0, vV.fe)(pV) && xV.fogChunks === UV || (xV = pV, VV.setEnvPrefs(xV))
+        LH && (0, GH.ae)(LH) === (0, GH.ae)(tH) && LH.fogChunks === SH || (LH = tH, HH.setEnvPrefs(LH))
       };
-      let UV = null;
-      const pV = () => {
-        const eV = function() {
-          const VV = JV.b.get("clientEscMenuOptions");
+      let SH = null;
+      const tH = () => {
+        const BH = function() {
+          const HH = AH.c.get("clientEscMenuOptions");
           return {
-            nametagsHidden: JV.b.get("areNametagsHidden"),
-            crouchToggle: VV.crouchIsToggle,
-            bhopDisabled: VV.disableBunnyHopping,
-            disableBobbing: VV.disableBobbing,
-            ezTowering: VV.ezTowering ? (0, QU.d)() : null,
-            ezBridging: VV.ezBridging,
-            showChunkBorders: VV.showChunkBorders,
-            touchWalk: !(0, vU.g)(),
-            edgeGuard: VV.touchEdgeGuard,
-            edgeGuardLong: (0, ZU.d)(),
-            nametagCutDistance: (0, wU.f)()
+            nametagsHidden: AH.c.get("areNametagsHidden"),
+            crouchToggle: HH.crouchIsToggle,
+            bhopDisabled: HH.disableBunnyHopping,
+            disableBobbing: HH.disableBobbing,
+            ezTowering: HH.ezTowering ? (0, zS.i)() : null,
+            ezBridging: HH.ezBridging,
+            showChunkBorders: HH.showChunkBorders,
+            touchWalk: !(0, GS.g)(),
+            edgeGuard: HH.touchEdgeGuard,
+            edgeGuardLong: (0, XS.b)(),
+            nametagCutDistance: (0, ES.i)()
           }
         }();
-        (0, MV.Xd)(UV, eV) || (UV = eV, VV.setUiPrefs(eV))
+        (0, mH.ne)(SH, BH) || (SH = BH, HH.setUiPrefs(BH))
       };
-      let QV = null;
-      const nV = () => {
-        const eV = rU();
-        (0, MV.Xd)(QV, eV) || (QV = eV, VV.setLookPrefs(eV))
+      let zH = null;
+      const CH = () => {
+        const BH = YS();
+        (0, mH.ne)(zH, BH) || (zH = BH, HH.setLookPrefs(BH))
       };
-      eV(), YV(), pV(), nV();
-      const wV = [(0, yV.i)("appManagerUpdated|soundVolume", eV), (0, yV.i)("appManagerUpdated|soundOnFromAd", eV), (0, yV.i)("appManagerUpdated|clientEscMenuOptions", (() => {
-        YV(), pV(), nV()
-      })), (0, yV.i)(vU.d, pV), (0, yV.i)("appManagerUpdated|enabledDebugFeatures", YV), (0, yV.i)("appManagerUpdated|areNametagsHidden", pV), (0, yV.i)("appManagerUpdated|showDistantNametags", pV)];
+      BH(), rH(), tH(), CH();
+      const EH = [(0, hH.m)("appManagerUpdated|soundVolume", BH), (0, hH.m)("appManagerUpdated|soundOnFromAd", BH), (0, hH.m)("appManagerUpdated|clientEscMenuOptions", (() => {
+        rH(), tH(), CH()
+      })), (0, hH.m)(GS.d, tH), (0, hH.m)("appManagerUpdated|enabledDebugFeatures", rH), (0, hH.m)("appManagerUpdated|areNametagsHidden", tH), (0, hH.m)("appManagerUpdated|showDistantNametags", tH)];
       return () => {
-        for (const VV of wV) VV()
+        for (const HH of EH) HH()
       }
     }
-    var EU = xV(42184),
-      BU = xV(42192);
-    var jU = (0, BU.e)("lend"),
-      qU = (0, BU.e)("starting"),
-      tU = (0, BU.e)("generation"),
-      FU = (0, BU.e)("end");
-    class TU {
-      constructor(VV) {
-        this.deps = VV, Object.defineProperty(this, FU, {
-          value: PU
-        }), Object.defineProperty(this, jU, {
+    var WS = LH(42216),
+      MS = LH(42222);
+    var xS = (0, MS.c)("lend"),
+      vS = (0, MS.c)("starting"),
+      PS = (0, MS.c)("generation"),
+      TS = (0, MS.c)("end");
+    class US {
+      constructor(HH) {
+        this.deps = HH, Object.defineProperty(this, TS, {
+          value: VS
+        }), Object.defineProperty(this, xS, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, qU, {
+        }), Object.defineProperty(this, vS, {
           writable: !0,
           value: !1
-        }), Object.defineProperty(this, tU, {
+        }), Object.defineProperty(this, PS, {
           writable: !0,
           value: 0
         })
       }
       get active() {
-        return null !== (0, EU.d)(this, jU)[jU] || (0, EU.d)(this, qU)[qU]
+        return null !== (0, WS.e)(this, xS)[xS] || (0, WS.e)(this, vS)[vS]
       }
-      async start(VV) {
+      async start(HH) {
         if (this.active) return "busy";
-        const eV = (0, EU.d)(this, tU)[tU];
-        (0, EU.d)(this, qU)[qU] = !0;
+        const BH = (0, WS.e)(this, PS)[PS];
+        (0, WS.e)(this, vS)[vS] = !0;
         try {
           if (!await this.deps.ensureLoaded()) return "refused"
         } finally {
-          (0, EU.d)(this, qU)[qU] = !1
+          (0, WS.e)(this, vS)[vS] = !1
         }
-        if (eV !== (0, EU.d)(this, tU)[tU]) return "refused";
-        const xV = this.deps.beginSave();
-        if (!xV) return "refused";
-        const JV = Number(BigInt.asUintN(32, VV)),
-          YV = Number(BigInt.asUintN(32, VV >> 32n));
-        let UV = "refused";
-        return this.deps.recorderCall(((VV, eV) => {
-          const yV = xV.editState,
-            pV = VV.stage(yV.length);
-          0 !== pV ? (new Uint8Array(eV.buffer, pV, yV.length).set(yV), VV.QyV(xV.headLen, JV, YV) && (UV = "sealing")) : UV = "tooLarge"
-        }), !0), "sealing" !== UV ? (xV.end(), UV) : ((0, EU.d)(this, jU)[jU] = xV, "sealing")
+        if (BH !== (0, WS.e)(this, PS)[PS]) return "refused";
+        const LH = this.deps.beginSave();
+        if (!LH) return "refused";
+        const AH = Number(BigInt.asUintN(32, HH)),
+          rH = Number(BigInt.asUintN(32, HH >> 32n));
+        let SH = "refused";
+        return this.deps.recorderCall(((HH, BH) => {
+          const hH = LH.editState,
+            tH = HH.stage(hH.length);
+          0 !== tH ? (new Uint8Array(BH.buffer, tH, hH.length).set(hH), HH.FSH(LH.headLen, AH, rH) && (SH = "sealing")) : SH = "tooLarge"
+        }), !0), "sealing" !== SH ? (LH.end(), SH) : ((0, WS.e)(this, xS)[xS] = LH, "sealing")
       }
       beforeRecorderStep() {
-        const VV = (0, EU.d)(this, jU)[jU];
-        if (!VV) return null;
-        let eV = -1,
-          xV = 0;
-        if (!this.deps.recorderCall((VV => {
-            eV = VV.nyV(), eV > 0 && (xV = VV.wyV())
-          }))) return (0, EU.d)(this, FU)[FU](VV, "stopped");
-        if (eV < 0) return (0, EU.d)(this, FU)[FU](VV, "read");
-        if (0 === eV) return null;
-        const JV = VV.head(xV, eV);
-        let YV = !1;
-        if (JV && this.deps.recorderCall(((VV, xV) => {
-            const UV = VV.stage(eV);
-            0 !== UV && (new Uint8Array(xV.buffer, UV, eV).set(JV), YV = !0)
-          }), !0), YV) return null;
-        const UV = VV.givenUp();
-        this.deps.recorderCall((VV => {
-          VV.ZyV()
+        const HH = (0, WS.e)(this, xS)[xS];
+        if (!HH) return null;
+        let BH = -1,
+          LH = 0;
+        if (!this.deps.recorderCall((HH => {
+            BH = HH.DSH(), BH > 0 && (LH = HH.wSH())
+          }))) return (0, WS.e)(this, TS)[TS](HH, "stopped");
+        if (BH < 0) return (0, WS.e)(this, TS)[TS](HH, "read");
+        if (0 === BH) return null;
+        const AH = HH.head(LH, BH);
+        let rH = !1;
+        if (AH && this.deps.recorderCall(((HH, LH) => {
+            const SH = HH.stage(BH);
+            0 !== SH && (new Uint8Array(LH.buffer, SH, BH).set(AH), rH = !0)
+          }), !0), rH) return null;
+        const SH = HH.givenUp();
+        this.deps.recorderCall((HH => {
+          HH.ZSH()
         }));
-        const yV = (0, EU.d)(this, FU)[FU](VV, UV ? "givenUp" : "stopped");
-        return UV && this.deps.givenUp("Reopen the replay you were editing to make your edits again, as they weren't saved when another replay opened."), yV
+        const hH = (0, WS.e)(this, TS)[TS](HH, SH ? "givenUp" : "stopped");
+        return SH && this.deps.givenUp("Reopen the replay you were editing to make your edits again, as they weren't saved when another replay opened."), hH
       }
       stop() {
-        (0, EU.d)(this, tU)[tU]++;
-        const VV = (0, EU.d)(this, jU)[jU];
-        VV && (this.deps.recorderCall((VV => {
-          VV.ZyV()
-        })), (0, EU.d)(this, FU)[FU](VV, "stopped"))
+        (0, WS.e)(this, PS)[PS]++;
+        const HH = (0, WS.e)(this, xS)[xS];
+        HH && (this.deps.recorderCall((HH => {
+          HH.ZSH()
+        })), (0, WS.e)(this, TS)[TS](HH, "stopped"))
       }
     }
 
-    function PU(VV, eV) {
-      return (0, EU.d)(this, jU)[jU] = null, VV.end(), eV
+    function VS(HH, BH) {
+      return (0, WS.e)(this, xS)[xS] = null, HH.end(), BH
     }
 
-    function AU(VV, eV) {
-      const xV = new Uint8Array(4),
-        JV = new DataView(xV.buffer);
-      return JV.setUint8(0, VV ? 1 : 0), JV.setUint16(2, Math.max(0, Math.min(65535, Math.round(eV))), !0), xV
+    function OS(HH, BH) {
+      const LH = new Uint8Array(4),
+        AH = new DataView(LH.buffer);
+      return AH.setUint8(0, HH ? 1 : 0), AH.setUint16(2, Math.max(0, Math.min(65535, Math.round(BH))), !0), LH
     }
 
-    function NU(VV, eV) {
-      return VV > function(VV) {
-        return 16777216 + 314572.8 * Math.max(0, VV)
-      }(eV) + 33554432
+    function bS(HH, BH) {
+      return HH > function(HH) {
+        return 16777216 + 314572.8 * Math.max(0, HH)
+      }(BH) + 33554432
     }
-    let XU = null;
+    let kS = null;
 
-    function MU(VV) {
-      return XU ??= async function(VV) {
-        const eV = VV.loadInFlight();
-        eV && await eV.catch((() => {}));
-        if (VV.trapped()) return "trapped";
-        if (VV.busy() || !NU(VV.memoryBytes(), VV.clipSeconds())) return "ZZ";
-        VV.unload();
-        let xV = !1;
+    function mS(HH) {
+      return kS ??= async function(HH) {
+        const BH = HH.loadInFlight();
+        BH && await BH.catch((() => {}));
+        if (HH.trapped()) return "trapped";
+        if (HH.busy() || !bS(HH.memoryBytes(), HH.clipSeconds())) return "hX";
+        HH.unload();
+        let LH = !1;
         try {
-          xV = await VV.load()
+          LH = await HH.load()
         } catch {
-          xV = !1
+          LH = !1
         }
-        if (!xV) return VV.trapped() ? "trapped" : VV.ik() ? "ik" : "failed";
+        if (!LH) return HH.trapped() ? "trapped" : HH.Mu() ? "Mu" : "failed";
         return "recycled"
-      }(VV).finally((() => {
-        XU = null
-      })), XU
+      }(HH).finally((() => {
+        kS = null
+      })), kS
     }
-    const zU = "Replay recording couldn't load, so try again.",
-      GU = new Set([vV.$c.ToggleRecording, vV.$c.SaveClip]);
-    var WU = (0, BU.e)("bindings"),
-      RU = (0, BU.e)("module"),
-      gU = (0, BU.e)("memory"),
-      DU = (0, BU.e)("trapped"),
-      iU = (0, BU.e)("ik"),
-      CU = (0, BU.e)("recycleDue"),
-      aU = (0, BU.e)("loading"),
-      oU = (0, BU.e)("generation"),
-      cU = (0, BU.e)("viewDrawn"),
-      hU = (0, BU.e)("clip"),
-      lU = (0, BU.e)("session"),
-      LU = (0, BU.e)("control"),
-      fU = (0, BU.e)("deferred"),
-      mU = (0, BU.e)("coreU8"),
-      KU = (0, BU.e)("coreU32"),
-      HU = (0, BU.e)("moduleU8"),
-      uU = (0, BU.e)("edited"),
-      sU = (0, BU.e)("sendSession"),
-      SU = (0, BU.e)("checkNotInEvents"),
-      IU = (0, BU.e)("clipping"),
-      dU = (0, BU.e)("busy"),
-      OU = (0, BU.e)("use"),
-      Vy = (0, BU.e)("ensureLoaded"),
-      ey = (0, BU.e)("loadOnce"),
-      xy = (0, BU.e)("recycleAfterStep"),
-      Jy = (0, BU.e)("settleRecycle"),
-      Yy = (0, BU.e)("load"),
-      Uy = (0, BU.e)("attach"),
-      yy = (0, BU.e)("resendHeld"),
-      py = (0, BU.e)("recycle"),
-      Qy = (0, BU.e)("send"),
-      ny = (0, BU.e)("unload"),
-      wy = (0, BU.e)("dropModule"),
-      Zy = (0, BU.e)("coreBytes"),
-      vy = (0, BU.e)("coreWords"),
-      ry = (0, BU.e)("moduleBytes"),
-      ky = (0, BU.e)("loadFailed"),
-      by = (0, BU.e)("call"),
-      Ey = (0, BU.e)("guard"),
-      By = (0, BU.e)("trapOn");
-    class jy {
-      constructor(VV) {
-        this.deps = VV, Object.defineProperty(this, By, {
-          value: Ly
-        }), Object.defineProperty(this, Ey, {
-          value: ly
-        }), Object.defineProperty(this, by, {
-          value: hy
-        }), Object.defineProperty(this, ky, {
-          value: cy
-        }), Object.defineProperty(this, ry, {
-          value: oy
-        }), Object.defineProperty(this, vy, {
-          value: ay
-        }), Object.defineProperty(this, Zy, {
-          value: Cy
-        }), Object.defineProperty(this, wy, {
-          value: iy
-        }), Object.defineProperty(this, ny, {
-          value: Dy
-        }), Object.defineProperty(this, Qy, {
-          value: gy
-        }), Object.defineProperty(this, py, {
-          value: Ry
-        }), Object.defineProperty(this, yy, {
-          value: Wy
-        }), Object.defineProperty(this, Uy, {
-          value: Gy
-        }), Object.defineProperty(this, Yy, {
-          value: zy
-        }), Object.defineProperty(this, Jy, {
-          value: My
-        }), Object.defineProperty(this, xy, {
-          value: Xy
-        }), Object.defineProperty(this, ey, {
-          value: Ny
-        }), Object.defineProperty(this, Vy, {
-          value: Ay
-        }), Object.defineProperty(this, OU, {
-          value: Py
-        }), Object.defineProperty(this, dU, {
-          value: Ty
-        }), Object.defineProperty(this, IU, {
-          value: Fy
-        }), Object.defineProperty(this, SU, {
-          value: ty
-        }), Object.defineProperty(this, sU, {
-          value: qy
-        }), Object.defineProperty(this, WU, {
+    const oS = "Replay recording couldn't load, so try again.",
+      IS = "Replay recording stopped working, so reload the page to record replays again.",
+      fS = new Set([GH.Sc.ToggleRecording, GH.Sc.SaveClip]);
+    var lS = (0, MS.c)("bindings"),
+      KS = (0, MS.c)("module"),
+      cS = (0, MS.c)("memory"),
+      eS = (0, MS.c)("trapped"),
+      qS = (0, MS.c)("Mu"),
+      gS = (0, MS.c)("recycleDue"),
+      NS = (0, MS.c)("loading"),
+      RS = (0, MS.c)("generation"),
+      jS = (0, MS.c)("viewDrawn"),
+      nS = (0, MS.c)("clip"),
+      FS = (0, MS.c)("session"),
+      DS = (0, MS.c)("control"),
+      wS = (0, MS.c)("deferred"),
+      ZS = (0, MS.c)("coreU8"),
+      dS = (0, MS.c)("coreU32"),
+      aS = (0, MS.c)("moduleU8"),
+      sS = (0, MS.c)("edited"),
+      JS = (0, MS.c)("sendSession"),
+      iS = (0, MS.c)("checkNotInEvents"),
+      pS = (0, MS.c)("clipping"),
+      yS = (0, MS.c)("busy"),
+      Hh = (0, MS.c)("use"),
+      Bh = (0, MS.c)("ensureLoaded"),
+      Lh = (0, MS.c)("loadOnce"),
+      Ah = (0, MS.c)("recycleAfterStep"),
+      rh = (0, MS.c)("settleRecycle"),
+      Sh = (0, MS.c)("load"),
+      hh = (0, MS.c)("attach"),
+      th = (0, MS.c)("resendHeld"),
+      zh = (0, MS.c)("recycle"),
+      Ch = (0, MS.c)("send"),
+      Eh = (0, MS.c)("unload"),
+      Xh = (0, MS.c)("dropModule"),
+      Gh = (0, MS.c)("coreBytes"),
+      Yh = (0, MS.c)("coreWords"),
+      uh = (0, MS.c)("moduleBytes"),
+      Qh = (0, MS.c)("loadFailed"),
+      Wh = (0, MS.c)("call"),
+      Mh = (0, MS.c)("guard"),
+      xh = (0, MS.c)("trapOn");
+    class vh {
+      constructor(HH) {
+        this.deps = HH, Object.defineProperty(this, xh, {
+          value: Dh
+        }), Object.defineProperty(this, Mh, {
+          value: Fh
+        }), Object.defineProperty(this, Wh, {
+          value: nh
+        }), Object.defineProperty(this, Qh, {
+          value: jh
+        }), Object.defineProperty(this, uh, {
+          value: Rh
+        }), Object.defineProperty(this, Yh, {
+          value: Nh
+        }), Object.defineProperty(this, Gh, {
+          value: gh
+        }), Object.defineProperty(this, Xh, {
+          value: qh
+        }), Object.defineProperty(this, Eh, {
+          value: eh
+        }), Object.defineProperty(this, Ch, {
+          value: ch
+        }), Object.defineProperty(this, zh, {
+          value: Kh
+        }), Object.defineProperty(this, th, {
+          value: lh
+        }), Object.defineProperty(this, hh, {
+          value: fh
+        }), Object.defineProperty(this, Sh, {
+          value: Ih
+        }), Object.defineProperty(this, rh, {
+          value: oh
+        }), Object.defineProperty(this, Ah, {
+          value: mh
+        }), Object.defineProperty(this, Lh, {
+          value: kh
+        }), Object.defineProperty(this, Bh, {
+          value: bh
+        }), Object.defineProperty(this, Hh, {
+          value: Oh
+        }), Object.defineProperty(this, yS, {
+          value: Vh
+        }), Object.defineProperty(this, pS, {
+          value: Uh
+        }), Object.defineProperty(this, iS, {
+          value: Th
+        }), Object.defineProperty(this, JS, {
+          value: Ph
+        }), Object.defineProperty(this, lS, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, RU, {
+        }), Object.defineProperty(this, KS, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, gU, {
+        }), Object.defineProperty(this, cS, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, DU, {
+        }), Object.defineProperty(this, eS, {
           writable: !0,
           value: !1
-        }), Object.defineProperty(this, iU, {
+        }), Object.defineProperty(this, qS, {
           writable: !0,
           value: !1
-        }), Object.defineProperty(this, CU, {
+        }), Object.defineProperty(this, gS, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, aU, {
+        }), Object.defineProperty(this, NS, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, oU, {
+        }), Object.defineProperty(this, RS, {
           writable: !0,
           value: 0
-        }), Object.defineProperty(this, cU, {
+        }), Object.defineProperty(this, jS, {
           writable: !0,
           value: !1
-        }), Object.defineProperty(this, hU, {
+        }), Object.defineProperty(this, nS, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, lU, {
+        }), Object.defineProperty(this, FS, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, LU, {
+        }), Object.defineProperty(this, DS, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, fU, {
+        }), Object.defineProperty(this, wS, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, mU, {
+        }), Object.defineProperty(this, ZS, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, KU, {
+        }), Object.defineProperty(this, dS, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, HU, {
+        }), Object.defineProperty(this, aS, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, uU, {
+        }), Object.defineProperty(this, sS, {
           writable: !0,
           value: void 0
-        }), (0, EU.d)(this, uU)[uU] = new TU({
-          ensureLoaded: () => (0, EU.d)(this, Vy)[Vy](),
-          recorderCall: (VV, eV) => {
-            eV && (0, EU.d)(this, SU)[SU]("an edited save's stage");
-            const xV = (0, EU.d)(this, by)[by](((eV, xV) => (VV(eV, xV), !0)));
-            return null !== xV && void 0 !== xV && xV
+        }), (0, WS.e)(this, sS)[sS] = new US({
+          ensureLoaded: () => (0, WS.e)(this, Bh)[Bh](),
+          recorderCall: (HH, BH) => {
+            BH && (0, WS.e)(this, iS)[iS]("an edited save's stage");
+            const LH = (0, WS.e)(this, Wh)[Wh](((BH, LH) => (HH(BH, LH), !0)));
+            return null !== LH && void 0 !== LH && LH
           },
-          beginSave: VV.beginSave,
-          givenUp: VV.givenUp
+          beginSave: HH.beginSave,
+          givenUp: HH.givenUp
         })
       }
       get active() {
-        return null !== (0, EU.d)(this, RU)[RU]
+        return null !== (0, WS.e)(this, KS)[KS]
       }
       get trapped() {
-        return (0, EU.d)(this, DU)[DU]
+        return (0, WS.e)(this, eS)[eS]
       }
       get loading() {
-        return null !== (0, EU.d)(this, aU)[aU]
+        return null !== (0, WS.e)(this, NS)[NS]
       }
       prefetch() {
-        (0, EU.d)(this, iU)[iU] || (0, EU.d)(this, DU)[DU] || (0, EU.d)(this, RU)[RU] || (0, EU.d)(this, aU)[aU] || this.deps.prefetch()
+        (0, WS.e)(this, qS)[qS] || (0, WS.e)(this, eS)[eS] || (0, WS.e)(this, KS)[KS] || (0, WS.e)(this, NS)[NS] || this.deps.prefetch()
       }
       viewDrawn() {
-        (0, EU.d)(this, cU)[cU] = !0, (0, EU.d)(this, IU)[IU]() && (0, EU.d)(this, OU)[OU]()
+        (0, WS.e)(this, jS)[jS] = !0, (0, WS.e)(this, pS)[pS]() && (0, WS.e)(this, Hh)[Hh]()
       }
-      prefs(VV, eV) {
-        (0, EU.d)(this, hU)[hU] = {
-          on: VV,
-          seconds: eV
-        }, (0, EU.d)(this, Qy)[Qy](vV.Yc.Prefs, AU(VV, eV)), VV && (0, EU.d)(this, cU)[cU] && (0, EU.d)(this, OU)[OU]()
+      prefs(HH, BH) {
+        (0, WS.e)(this, nS)[nS] = {
+          on: HH,
+          seconds: BH
+        }, (0, WS.e)(this, Ch)[Ch](GH.Mc.Prefs, OS(HH, BH)), HH && (0, WS.e)(this, jS)[jS] && (0, WS.e)(this, Hh)[Hh]()
       }
-      control(VV) {
-        const eV = function(VV) {
-          return new Uint8Array([VV, 0, 0, 0])
-        }(VV);
-        if (GU.has(VV)) return (0, EU.d)(this, RU)[RU] ? void(0, EU.d)(this, Qy)[Qy](vV.Yc.Control, eV) : ((0, EU.d)(this, LU)[LU] = eV, void(0, EU.d)(this, OU)[OU]());
-        (0, EU.d)(this, iU)[iU] || this.deps.coreCommand(vV.Yc.Control, eV)
+      control(HH) {
+        const BH = function(HH) {
+          return new Uint8Array([HH, 0, 0, 0])
+        }(HH);
+        if (fS.has(HH)) {
+          if (!(0, WS.e)(this, eS)[eS]) return (0, WS.e)(this, KS)[KS] ? void(0, WS.e)(this, Ch)[Ch](GH.Mc.Control, BH) : ((0, WS.e)(this, DS)[DS] = BH, void(0, WS.e)(this, Hh)[Hh]());
+          this.deps.failed(IS)
+        } else(0, WS.e)(this, qS)[qS] || this.deps.coreCommand(GH.Mc.Control, BH)
       }
-      session(VV) {
-        (0, EU.d)(this, lU)[lU] = VV, (0, EU.d)(this, sU)[sU](VV)
+      session(HH) {
+        (0, WS.e)(this, FS)[FS] = HH, (0, WS.e)(this, JS)[JS](HH)
       }
-      filePartDone(VV, eV) {
-        (0, EU.d)(this, Qy)[Qy](vV.Yc.FilePartDone, function(VV, eV) {
-          const xV = new Uint8Array(8),
-            JV = new DataView(xV.buffer);
-          return JV.setUint32(0, VV, !0), JV.setUint32(4, eV, !0), xV
-        }(VV, eV))
+      filePartDone(HH, BH) {
+        (0, WS.e)(this, Ch)[Ch](GH.Mc.FilePartDone, function(HH, BH) {
+          const LH = new Uint8Array(8),
+            AH = new DataView(LH.buffer);
+          return AH.setUint32(0, HH, !0), AH.setUint32(4, BH, !0), LH
+        }(HH, BH))
       }
-      fileDone(VV) {
-        return (0, EU.d)(this, Qy)[Qy](vV.Yc.FileDone, function(VV) {
-          const eV = new Uint8Array(4);
-          return new DataView(eV.buffer).setUint32(0, VV, !0), eV
-        }(VV)), (0, EU.d)(this, xy)[xy]()
+      fileDone(HH) {
+        return (0, WS.e)(this, Ch)[Ch](GH.Mc.FileDone, function(HH) {
+          const BH = new Uint8Array(4);
+          return new DataView(BH.buffer).setUint32(0, HH, !0), BH
+        }(HH)), (0, WS.e)(this, Ah)[Ah]()
       }
-      saveEdited(VV) {
-        return (0, EU.d)(this, SU)[SU]("saveEdited"), (0, EU.d)(this, uU)[uU].start(VV)
+      saveEdited(HH) {
+        return (0, WS.e)(this, iS)[iS]("saveEdited"), (0, WS.e)(this, sS)[sS].start(HH)
       }
       afterFrame() {
-        if (!(0, EU.d)(this, RU)[RU]) return;
-        "read" === (0, EU.d)(this, uU)[uU].beforeRecorderStep() && (0, EU.d)(this, xy)[xy]();
-        const VV = (0, EU.d)(this, CU)[CU];
-        (0, EU.d)(this, CU)[CU] = null;
-        const eV = (0, EU.d)(this, RU)[RU],
-          xV = (0, EU.d)(this, gU)[gU];
-        if (!eV || !xV) return void(null === VV || void 0 === VV || VV.resolve((0, EU.d)(this, DU)[DU] ? "trapped" : "ZZ"));
+        if (!(0, WS.e)(this, KS)[KS]) return;
+        "read" === (0, WS.e)(this, sS)[sS].beforeRecorderStep() && (0, WS.e)(this, Ah)[Ah]();
+        const HH = (0, WS.e)(this, gS)[gS];
+        (0, WS.e)(this, gS)[gS] = null;
+        const BH = (0, WS.e)(this, KS)[KS],
+          LH = (0, WS.e)(this, cS)[cS];
+        if (!BH || !LH) return void(null === HH || void 0 === HH || HH.resolve((0, WS.e)(this, eS)[eS] ? "trapped" : "hX"));
         const {
-          core: JV
-        } = this.deps, YV = JV.kyV(2);
-        let UV, yV, pV, QV, nV = 0,
-          wV = 0;
-        if (0 !== YV) {
-          var ZV, vV;
-          const VV = (0, EU.d)(this, vy)[vy]();
-          nV = null !== (ZV = VV[YV >>> 2]) && void 0 !== ZV ? ZV : 0, wV = null !== (vV = VV[1 + (YV >>> 2)]) && void 0 !== vV ? vV : 0
+          core: AH
+        } = this.deps, rH = AH.sSH(2);
+        let SH, hH, tH, zH, CH = 0,
+          EH = 0;
+        if (0 !== rH) {
+          var XH, GH;
+          const HH = (0, WS.e)(this, Yh)[Yh]();
+          CH = null !== (XH = HH[rH >>> 2]) && void 0 !== XH ? XH : 0, EH = null !== (GH = HH[1 + (rH >>> 2)]) && void 0 !== GH ? GH : 0
         }
         try {
-          if (wV > 0) {
-            const VV = eV.feed(wV);
-            0 !== VV && (0, EU.d)(this, ry)[ry](xV).set((0, EU.d)(this, Zy)[Zy]().subarray(nV, nV + wV), VV)
+          if (EH > 0) {
+            const HH = BH.feed(EH);
+            0 !== HH && (0, WS.e)(this, uh)[uh](LH).set((0, WS.e)(this, Gh)[Gh]().subarray(CH, CH + EH), HH)
           }
-          UV = eV.step(), yV = eV.byV(), pV = eV.EyV(), QV = eV.ByV()
-        } catch (rV) {
-          if (!(0, EU.d)(this, By)[By](rV)) throw null === VV || void 0 === VV || VV.resolve("ZZ"), rV;
-          return void(null === VV || void 0 === VV || VV.resolve("trapped"))
+          SH = BH.step(), hH = BH.JSH(), tH = BH.iSH(), zH = BH.pSH()
+        } catch (YH) {
+          if (!(0, WS.e)(this, xh)[xh](YH)) throw null === HH || void 0 === HH || HH.resolve("hX"), YH;
+          return void(null === HH || void 0 === HH || HH.resolve("trapped"))
         }
-        if (UV > 0) {
-          const VV = JV.jyV(2, UV);
-          0 !== VV && (0, EU.d)(this, Zy)[Zy]().set((0, EU.d)(this, ry)[ry](xV).subarray(yV, yV + UV), VV)
+        if (SH > 0) {
+          const HH = AH.ySH(2, SH);
+          0 !== HH && (0, WS.e)(this, Gh)[Gh]().set((0, WS.e)(this, uh)[uh](LH).subarray(hH, hH + SH), HH)
         }
-        if (pV > 0) {
-          (0, EU.d)(this, fU)[fU] = [];
+        if (tH > 0) {
+          (0, WS.e)(this, wS)[wS] = [];
           try {
-            this.deps.events(new Uint8Array(xV.buffer, QV, pV), xV)
-          } catch (rV) {
-            throw null === VV || void 0 === VV || VV.resolve("ZZ"), rV
+            this.deps.events(new Uint8Array(LH.buffer, zH, tH), LH)
+          } catch (YH) {
+            throw null === HH || void 0 === HH || HH.resolve("hX"), YH
           } finally {
-            const VV = (0, EU.d)(this, fU)[fU];
-            (0, EU.d)(this, fU)[fU] = null;
-            for (const [eV, xV] of VV)(0, EU.d)(this, Qy)[Qy](eV, xV)
+            const HH = (0, WS.e)(this, wS)[wS];
+            (0, WS.e)(this, wS)[wS] = null;
+            for (const [BH, LH] of HH)(0, WS.e)(this, Ch)[Ch](BH, LH)
           }
         }
-        if (!(0, EU.d)(this, IU)[IU]() && !(0, EU.d)(this, dU)[dU]()) return (0, EU.d)(this, ny)[ny](), void(null === VV || void 0 === VV || VV.resolve("ZZ"));
-        null === VV || void 0 === VV || VV.resolve((0, EU.d)(this, py)[py]())
+        if (!(0, WS.e)(this, pS)[pS]() && !(0, WS.e)(this, yS)[yS]()) return (0, WS.e)(this, Eh)[Eh](), void(null === HH || void 0 === HH || HH.resolve("hX"));
+        null === HH || void 0 === HH || HH.resolve((0, WS.e)(this, zh)[zh]())
       }
       dispose() {
-        (0, EU.d)(this, iU)[iU] = !0, (0, EU.d)(this, ny)[ny]()
+        (0, WS.e)(this, qS)[qS] = !0, (0, WS.e)(this, Eh)[Eh]()
       }
     }
 
-    function qy(VV) {
-      (0, EU.d)(this, Qy)[Qy](vV.Yc.Session, function(VV) {
-        const eV = new TextEncoder,
-          xV = eV.encode(VV.game).subarray(0, 65535),
-          JV = eV.encode(VV.lobby).subarray(0, 65535),
-          YV = new Uint8Array(22 + xV.length + 2 + JV.length),
-          UV = new DataView(YV.buffer);
-        UV.setFloat64(0, VV.unixMs, !0), UV.setBigUint64(8, BigInt.asUintN(64, VV.session), !0), UV.setUint8(16, VV.lobbyType);
-        let yV = 20;
-        for (const pV of [xV, JV]) UV.setUint16(yV, pV.length, !0), YV.set(pV, yV + 2), yV += 2 + pV.length;
-        return YV
+    function Ph(HH) {
+      (0, WS.e)(this, Ch)[Ch](GH.Mc.Session, function(HH) {
+        const BH = new TextEncoder,
+          LH = BH.encode(HH.game).subarray(0, 65535),
+          AH = BH.encode(HH.lobby).subarray(0, 65535),
+          rH = new Uint8Array(22 + LH.length + 2 + AH.length),
+          SH = new DataView(rH.buffer);
+        SH.setFloat64(0, HH.unixMs, !0), SH.setBigUint64(8, BigInt.asUintN(64, HH.session), !0), SH.setUint8(16, HH.lobbyType);
+        let hH = 20;
+        for (const tH of [LH, AH]) SH.setUint16(hH, tH.length, !0), rH.set(tH, hH + 2), hH += 2 + tH.length;
+        return rH
       }({
-        ...VV,
+        ...HH,
         unixMs: this.deps.unixNow()
       }))
     }
 
-    function ty(VV) {
+    function Th(HH) {
       false
     }
 
-    function Fy() {
-      var VV, eV;
-      return null !== (VV = null === (eV = (0, EU.d)(this, hU)[hU]) || void 0 === eV ? void 0 : eV.on) && void 0 !== VV && VV
+    function Uh() {
+      var HH, BH;
+      return null !== (HH = null === (BH = (0, WS.e)(this, nS)[nS]) || void 0 === BH ? void 0 : BH.on) && void 0 !== HH && HH
     }
 
-    function Ty() {
-      const VV = (0, EU.d)(this, RU)[RU];
-      let eV = !0;
-      if (VV) try {
-        eV = VV.busy()
-      } catch (xV) {
-        if (!(0, EU.d)(this, By)[By](xV)) throw xV
+    function Vh() {
+      const HH = (0, WS.e)(this, KS)[KS];
+      let BH = !0;
+      if (HH) try {
+        BH = HH.busy()
+      } catch (LH) {
+        if (!(0, WS.e)(this, xh)[xh](LH)) throw LH
       }
-      return eV || (0, EU.d)(this, uU)[uU].active
+      return BH || (0, WS.e)(this, sS)[sS].active
     }
-    async function Py() {
-      !(0, EU.d)(this, iU)[iU] && this.deps.allowed() ? await (0, EU.d)(this, Vy)[Vy]() : (0, EU.d)(this, LU)[LU] = null
+    async function Oh() {
+      !(0, WS.e)(this, qS)[qS] && this.deps.allowed() ? await (0, WS.e)(this, Bh)[Bh]() : (0, WS.e)(this, DS)[DS] = null
     }
 
-    function Ay() {
-      return (0, EU.d)(this, DU)[DU] || (0, EU.d)(this, iU)[iU] ? Promise.resolve(!1) : (0, EU.d)(this, RU)[RU] ? Promise.resolve(!0) : ((0, EU.d)(this, aU)[aU] ??= (0, EU.d)(this, ey)[ey](), (0, EU.d)(this, aU)[aU])
+    function bh() {
+      return (0, WS.e)(this, eS)[eS] || (0, WS.e)(this, qS)[qS] ? Promise.resolve(!1) : (0, WS.e)(this, KS)[KS] ? Promise.resolve(!0) : ((0, WS.e)(this, NS)[NS] ??= (0, WS.e)(this, Lh)[Lh](), (0, WS.e)(this, NS)[NS])
     }
-    async function Ny() {
-      let VV = !1;
+    async function kh() {
+      let HH = !1;
       try {
-        return VV = await (0, EU.d)(this, Yy)[Yy](), VV
+        return HH = await (0, WS.e)(this, Sh)[Sh](), HH
       } finally {
-        VV || ((0, EU.d)(this, LU)[LU] = null), (0, EU.d)(this, aU)[aU] = null
+        HH || ((0, WS.e)(this, DS)[DS] = null), (0, WS.e)(this, NS)[NS] = null
       }
     }
 
-    function Xy() {
-      if (!(0, EU.d)(this, RU)[RU]) return Promise.resolve((0, EU.d)(this, DU)[DU] ? "trapped" : "ZZ");
-      if (!(0, EU.d)(this, CU)[CU]) {
-        let VV = () => {};
-        const eV = new Promise((eV => {
-          VV = eV
+    function mh() {
+      if (!(0, WS.e)(this, KS)[KS]) return Promise.resolve((0, WS.e)(this, eS)[eS] ? "trapped" : "hX");
+      if (!(0, WS.e)(this, gS)[gS]) {
+        let HH = () => {};
+        const BH = new Promise((BH => {
+          HH = BH
         }));
-        (0, EU.d)(this, CU)[CU] = {
-          promise: eV,
-          resolve: VV
+        (0, WS.e)(this, gS)[gS] = {
+          promise: BH,
+          resolve: HH
         }
       }
-      return (0, EU.d)(this, CU)[CU].promise
+      return (0, WS.e)(this, gS)[gS].promise
     }
 
-    function My(VV) {
-      const eV = (0, EU.d)(this, CU)[CU];
-      (0, EU.d)(this, CU)[CU] = null, null === eV || void 0 === eV || eV.resolve(VV)
+    function oh(HH) {
+      const BH = (0, WS.e)(this, gS)[gS];
+      (0, WS.e)(this, gS)[gS] = null, null === BH || void 0 === BH || BH.resolve(HH)
     }
-    async function zy() {
-      let VV = (0, EU.d)(this, WU)[WU];
-      if (!VV) {
-        const eV = (0, EU.d)(this, oU)[oU];
+    async function Ih() {
+      let HH = (0, WS.e)(this, lS)[lS];
+      if (!HH) {
+        const BH = (0, WS.e)(this, RS)[RS];
         try {
-          VV = await this.deps.load()
-        } catch (xV) {
-          return eV === (0, EU.d)(this, oU)[oU] && await (0, EU.d)(this, ky)[ky](xV), !1
+          HH = await this.deps.load()
+        } catch (LH) {
+          return BH === (0, WS.e)(this, RS)[RS] && await (0, WS.e)(this, Qh)[Qh](LH), !1
         }
-        if (eV !== (0, EU.d)(this, oU)[oU]) return this.deps.unload(), !1;
-        const JV = VV,
-          YV = (0, EU.d)(this, Ey)[Ey]((() => JV.qyV()));
-        if (void 0 === YV) return !1;
-        const UV = this.deps.core.tyV();
-        if (YV !== UV) return await (0, EU.d)(this, ky)[ky](new Error(`recorder port version ${YV}, the core's ${UV}`)), !1;
-        (0, EU.d)(this, WU)[WU] = VV
+        if (BH !== (0, WS.e)(this, RS)[RS]) return this.deps.unload(), !1;
+        const AH = HH,
+          rH = (0, WS.e)(this, Mh)[Mh]((() => AH.HhH()));
+        if (void 0 === rH) return !1;
+        const SH = this.deps.core.BhH();
+        if (rH !== SH) return await (0, WS.e)(this, Qh)[Qh](new Error(`recorder port version ${rH}, the core's ${SH}`)), !1;
+        (0, WS.e)(this, lS)[lS] = HH
       }
-      const eV = VV;
+      const BH = HH;
       try {
-        if (!(0, EU.d)(this, Ey)[Ey]((() => ((0, EU.d)(this, RU)[RU] = new eV.FyV, (0, EU.d)(this, gU)[gU] = eV.vyV(), !0)))) return !1;
-        (0, EU.d)(this, yy)[yy]();
-        const VV = (0, EU.d)(this, LU)[LU];
-        return (0, EU.d)(this, LU)[LU] = null, VV && (0, EU.d)(this, Qy)[Qy](vV.Yc.Control, VV), (0, EU.d)(this, Uy)[Uy]()
-      } catch (xV) {
-        return (0, EU.d)(this, ny)[ny](), await (0, EU.d)(this, ky)[ky](xV), !1
+        if (!(0, WS.e)(this, Mh)[Mh]((() => ((0, WS.e)(this, KS)[KS] = new BH.LhH, (0, WS.e)(this, cS)[cS] = BH.dSH(), !0)))) return !1;
+        (0, WS.e)(this, th)[th]();
+        const HH = (0, WS.e)(this, DS)[DS];
+        return (0, WS.e)(this, DS)[DS] = null, HH && (0, WS.e)(this, Ch)[Ch](GH.Mc.Control, HH), (0, WS.e)(this, hh)[hh]()
+      } catch (LH) {
+        return (0, WS.e)(this, Eh)[Eh](), await (0, WS.e)(this, Qh)[Qh](LH), !1
       }
     }
 
-    function Gy() {
-      return this.deps.core.TyV(0), 1 === this.deps.core.TyV(1) || ((0, EU.d)(this, ny)[ny](), this.deps.failed(zU), !1)
+    function fh() {
+      return this.deps.core.AhH(0), 1 === this.deps.core.AhH(1) || ((0, WS.e)(this, Eh)[Eh](), this.deps.failed(oS), !1)
     }
 
-    function Wy() {
-      (0, EU.d)(this, hU)[hU] && (0, EU.d)(this, Qy)[Qy](vV.Yc.Prefs, AU((0, EU.d)(this, hU)[hU].on, (0, EU.d)(this, hU)[hU].seconds)), (0, EU.d)(this, lU)[lU] && (0, EU.d)(this, sU)[sU]((0, EU.d)(this, lU)[lU])
+    function lh() {
+      (0, WS.e)(this, nS)[nS] && (0, WS.e)(this, Ch)[Ch](GH.Mc.Prefs, OS((0, WS.e)(this, nS)[nS].on, (0, WS.e)(this, nS)[nS].seconds)), (0, WS.e)(this, FS)[FS] && (0, WS.e)(this, JS)[JS]((0, WS.e)(this, FS)[FS])
     }
 
-    function Ry() {
-      return MU({
+    function Kh() {
+      return mS({
         memoryBytes: this.deps.memoryBytes,
         clipSeconds: () => {
-          var VV, eV;
-          return null !== (VV = null === (eV = (0, EU.d)(this, hU)[hU]) || void 0 === eV ? void 0 : eV.seconds) && void 0 !== VV ? VV : 0
+          var HH, BH;
+          return null !== (HH = null === (BH = (0, WS.e)(this, nS)[nS]) || void 0 === BH ? void 0 : BH.seconds) && void 0 !== HH ? HH : 0
         },
-        trapped: () => (0, EU.d)(this, DU)[DU],
-        busy: () => (0, EU.d)(this, dU)[dU](),
-        loadInFlight: () => (0, EU.d)(this, aU)[aU],
-        ik: () => (0, EU.d)(this, iU)[iU],
+        trapped: () => (0, WS.e)(this, eS)[eS],
+        busy: () => (0, WS.e)(this, yS)[yS](),
+        loadInFlight: () => (0, WS.e)(this, NS)[NS],
+        Mu: () => (0, WS.e)(this, qS)[qS],
         unload: () => {
-          (0, EU.d)(this, ny)[ny]()
+          (0, WS.e)(this, Eh)[Eh]()
         },
-        load: () => (0, EU.d)(this, Vy)[Vy]()
+        load: () => (0, WS.e)(this, Bh)[Bh]()
       })
     }
 
-    function gy(VV, eV) {
-      (0, EU.d)(this, fU)[fU] ? (0, EU.d)(this, fU)[fU].push([VV, eV]): (0, EU.d)(this, by)[by](((xV, JV) => {
-        const YV = xV.ryV(eV.length);
-        0 !== YV && (new Uint8Array(JV.buffer, YV, eV.length).set(eV), xV.command(VV, eV.length))
+    function ch(HH, BH) {
+      (0, WS.e)(this, wS)[wS] ? (0, WS.e)(this, wS)[wS].push([HH, BH]): (0, WS.e)(this, Wh)[Wh](((LH, AH) => {
+        const rH = LH.aSH(BH.length);
+        0 !== rH && (new Uint8Array(AH.buffer, rH, BH.length).set(BH), LH.command(HH, BH.length))
       }))
     }
 
-    function Dy() {
-      (0, EU.d)(this, oU)[oU]++, (0, EU.d)(this, Jy)[Jy]("ZZ"), (0, EU.d)(this, uU)[uU].stop(), this.deps.core.TyV(0), (0, EU.d)(this, wy)[wy](), (0, EU.d)(this, DU)[DU] || ((0, EU.d)(this, WU)[WU] = null, this.deps.unload())
+    function eh() {
+      (0, WS.e)(this, RS)[RS]++, (0, WS.e)(this, rh)[rh]("hX"), (0, WS.e)(this, sS)[sS].stop(), this.deps.core.AhH(0), (0, WS.e)(this, Xh)[Xh](), (0, WS.e)(this, eS)[eS] || ((0, WS.e)(this, lS)[lS] = null, this.deps.unload())
     }
 
-    function iy() {
-      (0, EU.d)(this, by)[by]((VV => {
-        VV.free()
-      })), (0, EU.d)(this, RU)[RU] = null, (0, EU.d)(this, gU)[gU] = null, (0, EU.d)(this, HU)[HU] = null
+    function qh() {
+      (0, WS.e)(this, Wh)[Wh]((HH => {
+        HH.free()
+      })), (0, WS.e)(this, KS)[KS] = null, (0, WS.e)(this, cS)[cS] = null, (0, WS.e)(this, aS)[aS] = null
     }
 
-    function Cy() {
-      var VV;
-      const eV = this.deps.coreBuffer();
-      return (null === (VV = (0, EU.d)(this, mU)[mU]) || void 0 === VV ? void 0 : VV.buffer) !== eV && ((0, EU.d)(this, mU)[mU] = new Uint8Array(eV)), (0, EU.d)(this, mU)[mU]
+    function gh() {
+      var HH;
+      const BH = this.deps.coreBuffer();
+      return (null === (HH = (0, WS.e)(this, ZS)[ZS]) || void 0 === HH ? void 0 : HH.buffer) !== BH && ((0, WS.e)(this, ZS)[ZS] = new Uint8Array(BH)), (0, WS.e)(this, ZS)[ZS]
     }
 
-    function ay() {
-      var VV;
-      const eV = this.deps.coreBuffer();
-      return (null === (VV = (0, EU.d)(this, KU)[KU]) || void 0 === VV ? void 0 : VV.buffer) !== eV && ((0, EU.d)(this, KU)[KU] = new Uint32Array(eV, 0, eV.byteLength >>> 2)), (0, EU.d)(this, KU)[KU]
+    function Nh() {
+      var HH;
+      const BH = this.deps.coreBuffer();
+      return (null === (HH = (0, WS.e)(this, dS)[dS]) || void 0 === HH ? void 0 : HH.buffer) !== BH && ((0, WS.e)(this, dS)[dS] = new Uint32Array(BH, 0, BH.byteLength >>> 2)), (0, WS.e)(this, dS)[dS]
     }
 
-    function oy(VV) {
-      var eV;
-      const xV = VV.buffer;
-      return (null === (eV = (0, EU.d)(this, HU)[HU]) || void 0 === eV ? void 0 : eV.buffer) !== xV && ((0, EU.d)(this, HU)[HU] = new Uint8Array(xV)), (0, EU.d)(this, HU)[HU]
+    function Rh(HH) {
+      var BH;
+      const LH = HH.buffer;
+      return (null === (BH = (0, WS.e)(this, aS)[aS]) || void 0 === BH ? void 0 : BH.buffer) !== LH && ((0, WS.e)(this, aS)[aS] = new Uint8Array(LH)), (0, WS.e)(this, aS)[aS]
     }
-    async function cy(VV) {
-      await this.deps.staleOr(VV, (() => {
-        this.deps.failed(zU)
+    async function jh(HH) {
+      await this.deps.staleOr(HH, (() => {
+        this.deps.failed(oS)
       }))
     }
 
-    function hy(VV) {
-      const eV = (0, EU.d)(this, RU)[RU],
-        xV = (0, EU.d)(this, gU)[gU];
-      if (eV && xV) return (0, EU.d)(this, Ey)[Ey]((() => VV(eV, xV)))
+    function nh(HH) {
+      const BH = (0, WS.e)(this, KS)[KS],
+        LH = (0, WS.e)(this, cS)[cS];
+      if (BH && LH) return (0, WS.e)(this, Mh)[Mh]((() => HH(BH, LH)))
     }
 
-    function ly(VV) {
-      if (!(0, EU.d)(this, DU)[DU]) try {
-        return VV()
-      } catch (eV) {
-        if (!(0, EU.d)(this, By)[By](eV)) throw eV;
+    function Fh(HH) {
+      if (!(0, WS.e)(this, eS)[eS]) try {
+        return HH()
+      } catch (BH) {
+        if (!(0, WS.e)(this, xh)[xh](BH)) throw BH;
         return
       }
     }
 
-    function Ly(VV) {
-      return VV instanceof WebAssembly.RuntimeError && ((0, EU.d)(this, DU)[DU] = !0, (0, EU.d)(this, RU)[RU] = null, (0, EU.d)(this, gU)[gU] = null, (0, EU.d)(this, HU)[HU] = null, (0, EU.d)(this, WU)[WU] = null, (0, EU.d)(this, LU)[LU] = null, (0, EU.d)(this, Jy)[Jy]("trapped"), this.deps.core.TyV(0), (0, EU.d)(this, uU)[uU].stop(), this.deps.crash(this.deps.markTrapped(VV)), this.deps.failed("Replay recording stopped working, so reload the page to record replays again."), !0)
+    function Dh(HH) {
+      return HH instanceof WebAssembly.RuntimeError && ((0, WS.e)(this, eS)[eS] = !0, (0, WS.e)(this, KS)[KS] = null, (0, WS.e)(this, cS)[cS] = null, (0, WS.e)(this, aS)[aS] = null, (0, WS.e)(this, lS)[lS] = null, (0, WS.e)(this, DS)[DS] = null, (0, WS.e)(this, rh)[rh]("trapped"), this.deps.core.AhH(0), (0, WS.e)(this, sS)[sS].stop(), this.deps.crash(this.deps.markTrapped(HH)), this.deps.failed(IS), !0)
     }
-    var fy = xV(39842);
-    const my = new Map([
-      ["skyblock", () => xV.e(58).then((() => xV(39833)))]
+    var wh = LH(39568);
+    const Zh = new Map([
+      ["skyblock", () => LH.e(59).then((() => LH(39559)))]
     ]);
 
-    function Ky(VV) {
-      const eV = my.get(VV);
-      return eV ? eV().then((() => {
-        const eV = (0, fy.b)(VV);
-        if (!eV) throw new Error(`${VV}'s replay hook module registered no hook`);
-        return eV
+    function dh(HH) {
+      const BH = Zh.get(HH);
+      return BH ? BH().then((() => {
+        const BH = (0, wh.b)(HH);
+        if (!BH) throw new Error(`${HH}'s replay hook module registered no hook`);
+        return BH
       })) : null
     }
-    class Hy {
-      constructor(VV) {
-        this.deps = VV, this.game = null, this.hook = null, this.generation = 0, this.all = !1, this.pending = new Map, this.ids = new Int32Array(64)
+    class ah {
+      constructor(HH) {
+        this.deps = HH, this.game = null, this.hook = null, this.generation = 0, this.all = !1, this.pending = new Map, this.ids = new Int32Array(64)
       }
       get wantsWatch() {
         return null !== this.hook
       }
-      opened(VV) {
-        if (this.pending.clear(), VV === this.game && null !== this.hook) return void(this.all = !0);
-        const eV = ++this.generation;
-        this.game = VV, this.hook = null, this.all = !1;
-        const xV = this.deps.loadHook(VV);
-        null === xV || void 0 === xV || xV.then((VV => {
-          eV === this.generation && (this.hook = VV, this.all = !0)
-        }), (VV => {
-          eV === this.generation && this.deps.onError(VV)
+      opened(HH) {
+        if (this.pending.clear(), HH === this.game && null !== this.hook) return void(this.all = !0);
+        const BH = ++this.generation;
+        this.game = HH, this.hook = null, this.all = !1;
+        const LH = this.deps.loadHook(HH);
+        null === LH || void 0 === LH || LH.then((HH => {
+          BH === this.generation && (this.hook = HH, this.all = !0)
+        }), (HH => {
+          BH === this.generation && this.deps.onError(HH)
         }))
       }
       ended() {
         this.generation++, this.game = null, this.hook = null, this.all = !1, this.pending.clear()
       }
-      entityAdded(VV) {
-        null === this.hook || this.all || this.pending.set(VV, !0)
+      entityAdded(HH) {
+        null === this.hook || this.all || this.pending.set(HH, !0)
       }
-      entityInfoChanged(VV) {
-        null === this.hook || this.all || this.pending.has(VV) || this.pending.set(VV, !1)
+      entityInfoChanged(HH) {
+        null === this.hook || this.all || this.pending.has(HH) || this.pending.set(HH, !1)
       }
-      flush(VV) {
+      flush(HH) {
         const {
-          hook: eV
+          hook: BH
         } = this;
-        if (null === eV || !VV || !this.all && 0 === this.pending.size) return;
-        const xV = this.deps.cmd();
-        if (null === xV) return;
+        if (null === BH || !HH || !this.all && 0 === this.pending.size) return;
+        const LH = this.deps.cmd();
+        if (null === LH) return;
         const {
-          api: JV
+          api: AH
         } = this.deps;
         if (this.all) {
           this.all = !1, this.pending.clear();
           const {
-            ids: VV,
-            count: eV
-          } = dx(JV, this.ids);
-          this.ids = VV;
-          for (let xV = 0; xV < eV; xV++) this.pending.set(VV[xV], !0)
+            ids: HH,
+            count: BH
+          } = pL(AH, this.ids);
+          this.ids = HH;
+          for (let LH = 0; LH < BH; LH++) this.pending.set(HH[LH], !0)
         }
-        const YV = this.ids = Ox(this.ids, this.pending.size);
-        let UV = 0;
-        for (const nV of this.pending.keys()) YV[UV++] = nV;
-        const yV = [],
-          pV = VJ(JV, YV, UV, ((VV, eV) => {
-            null !== eV && yV.push({
-              serverId: VV,
-              info: eV,
-              spawned: !0 === this.pending.get(VV)
+        const rH = this.ids = yL(this.ids, this.pending.size);
+        let SH = 0;
+        for (const CH of this.pending.keys()) rH[SH++] = CH;
+        const hH = [],
+          tH = HA(AH, rH, SH, ((HH, BH) => {
+            null !== BH && hH.push({
+              serverId: HH,
+              info: BH,
+              spawned: !0 === this.pending.get(HH)
             })
           }));
-        if (pV) {
+        if (tH) {
           this.pending.clear();
           for (const {
-              serverId: VV,
-              info: JV,
-              spawned: YV
+              serverId: HH,
+              info: AH,
+              spawned: rH
             }
-            of yV) try {
-            eV(JV, {
-              setFacingTolerance: eV => {
-                null === eV && YV || tx(xV, VV, eV) || this.pending.set(VV, YV)
+            of hH) try {
+            BH(AH, {
+              setFacingTolerance: BH => {
+                null === BH && rH || PL(LH, HH, BH) || this.pending.set(HH, rH)
               }
             })
-          } catch (QV) {
-            this.deps.onError(QV)
+          } catch (zH) {
+            this.deps.onError(zH)
           }
         }
       }
     }
-    var uy = (0, BU.e)("bindings"),
-      sy = (0, BU.e)("module"),
-      Sy = (0, BU.e)("memory"),
-      Iy = (0, BU.e)("trapped"),
-      dy = (0, BU.e)("generation"),
-      Oy = (0, BU.e)("loading"),
-      Vp = (0, BU.e)("lend"),
-      ep = (0, BU.e)("givenUp"),
-      xp = (0, BU.e)("afterSave"),
-      Jp = (0, BU.e)("opens"),
-      Yp = (0, BU.e)("saveAskedAt"),
-      Up = (0, BU.e)("unload"),
-      yp = (0, BU.e)("dropModule"),
-      pp = (0, BU.e)("loadFailed"),
-      Qp = (0, BU.e)("saveReadsBody"),
-      np = (0, BU.e)("command"),
-      wp = (0, BU.e)("call"),
-      Zp = (0, BU.e)("guard"),
-      vp = (0, BU.e)("trapOn");
-    class rp {
-      constructor(VV) {
-        this.deps = VV, Object.defineProperty(this, vp, {
-          value: Fp
-        }), Object.defineProperty(this, Zp, {
-          value: tp
-        }), Object.defineProperty(this, wp, {
-          value: qp
-        }), Object.defineProperty(this, np, {
-          value: jp
-        }), Object.defineProperty(this, Qp, {
-          get: Bp,
+    var sh = (0, MS.c)("bindings"),
+      Jh = (0, MS.c)("module"),
+      ih = (0, MS.c)("memory"),
+      ph = (0, MS.c)("trapped"),
+      yh = (0, MS.c)("generation"),
+      Ht = (0, MS.c)("loading"),
+      Bt = (0, MS.c)("lend"),
+      Lt = (0, MS.c)("givenUp"),
+      At = (0, MS.c)("afterSave"),
+      rt = (0, MS.c)("opens"),
+      St = (0, MS.c)("saveAskedAt"),
+      ht = (0, MS.c)("unload"),
+      tt = (0, MS.c)("dropModule"),
+      zt = (0, MS.c)("loadFailed"),
+      Ct = (0, MS.c)("saveReadsBody"),
+      Et = (0, MS.c)("command"),
+      Xt = (0, MS.c)("call"),
+      Gt = (0, MS.c)("guard"),
+      Yt = (0, MS.c)("trapOn");
+    class ut {
+      constructor(HH) {
+        this.deps = HH, Object.defineProperty(this, Yt, {
+          value: Ut
+        }), Object.defineProperty(this, Gt, {
+          value: Tt
+        }), Object.defineProperty(this, Xt, {
+          value: Pt
+        }), Object.defineProperty(this, Et, {
+          value: vt
+        }), Object.defineProperty(this, Ct, {
+          get: xt,
           set: void 0
-        }), Object.defineProperty(this, pp, {
-          value: Ep
-        }), Object.defineProperty(this, yp, {
-          value: bp
-        }), Object.defineProperty(this, Up, {
-          value: kp
-        }), Object.defineProperty(this, uy, {
+        }), Object.defineProperty(this, zt, {
+          value: Mt
+        }), Object.defineProperty(this, tt, {
+          value: Wt
+        }), Object.defineProperty(this, ht, {
+          value: Qt
+        }), Object.defineProperty(this, sh, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, sy, {
+        }), Object.defineProperty(this, Jh, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, Sy, {
+        }), Object.defineProperty(this, ih, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, Iy, {
+        }), Object.defineProperty(this, ph, {
           writable: !0,
           value: !1
-        }), Object.defineProperty(this, dy, {
+        }), Object.defineProperty(this, yh, {
           writable: !0,
           value: 0
-        }), Object.defineProperty(this, Oy, {
+        }), Object.defineProperty(this, Ht, {
           writable: !0,
           value: 0
-        }), Object.defineProperty(this, Vp, {
+        }), Object.defineProperty(this, Bt, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, ep, {
+        }), Object.defineProperty(this, Lt, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, xp, {
+        }), Object.defineProperty(this, At, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, Jp, {
+        }), Object.defineProperty(this, rt, {
           writable: !0,
           value: 0
-        }), Object.defineProperty(this, Yp, {
+        }), Object.defineProperty(this, St, {
           writable: !0,
           value: null
         })
       }
       get active() {
-        return null !== (0, EU.d)(this, sy)[sy] && null === (0, EU.d)(this, xp)[xp]
+        return null !== (0, WS.e)(this, Jh)[Jh] && null === (0, WS.e)(this, At)[At]
       }
-      async open(VV, eV) {
-        if ((0, EU.d)(this, Iy)[Iy]) return vV.fd.ModuleTrap;
-        let xV = (0, EU.d)(this, uy)[uy];
-        if (!xV) {
-          const VV = (0, EU.d)(this, dy)[dy];
-          (0, EU.d)(this, Oy)[Oy]++;
+      async open(HH, BH) {
+        if ((0, WS.e)(this, ph)[ph]) return GH.$c.ModuleTrap;
+        let LH = (0, WS.e)(this, sh)[sh];
+        if (!LH) {
+          const HH = (0, WS.e)(this, yh)[yh];
+          (0, WS.e)(this, Ht)[Ht]++;
           try {
-            xV = await this.deps.load()
-          } catch (YV) {
-            return (0, EU.d)(this, Oy)[Oy]--, VV !== (0, EU.d)(this, dy)[dy] ? "stopped" : (0, EU.d)(this, pp)[pp](YV, eV)
+            LH = await this.deps.load()
+          } catch (rH) {
+            return (0, WS.e)(this, Ht)[Ht]--, HH !== (0, WS.e)(this, yh)[yh] ? "stopped" : (0, WS.e)(this, zt)[zt](rH, BH)
           }
-          if ((0, EU.d)(this, Oy)[Oy]--, VV !== (0, EU.d)(this, dy)[dy]) return (0, EU.d)(this, uy)[uy] || 0 !== (0, EU.d)(this, Oy)[Oy] || (0, EU.d)(this, Iy)[Iy] || this.deps.unload(), "stopped";
-          if ((0, EU.d)(this, Iy)[Iy]) return vV.fd.ModuleTrap;
-          const JV = xV.qyV(),
-            UV = this.deps.core.tyV();
-          if (JV !== UV) return (0, EU.d)(this, pp)[pp](new Error(`replay port version ${JV}, the core's ${UV}`), eV);
-          (0, EU.d)(this, uy)[uy] = xV
+          if ((0, WS.e)(this, Ht)[Ht]--, HH !== (0, WS.e)(this, yh)[yh]) return (0, WS.e)(this, sh)[sh] || 0 !== (0, WS.e)(this, Ht)[Ht] || (0, WS.e)(this, ph)[ph] || this.deps.unload(), "stopped";
+          if ((0, WS.e)(this, ph)[ph]) return GH.$c.ModuleTrap;
+          const AH = LH.HhH(),
+            SH = this.deps.core.BhH();
+          if (AH !== SH) return (0, WS.e)(this, zt)[zt](new Error(`replay port version ${AH}, the core's ${SH}`), BH);
+          (0, WS.e)(this, sh)[sh] = LH
         }
-        if (!(0, EU.d)(this, sy)[sy]) {
-          const VV = xV;
-          if (!(0, EU.d)(this, Zp)[Zp]((() => {
-              (0, EU.d)(this, sy)[sy] = new VV.PyV, (0, EU.d)(this, Sy)[Sy] = VV.AyV()
-            }))) return vV.fd.ModuleTrap
+        if (!(0, WS.e)(this, Jh)[Jh]) {
+          const HH = LH;
+          if (!(0, WS.e)(this, Gt)[Gt]((() => {
+              (0, WS.e)(this, Jh)[Jh] = new HH.rhH, (0, WS.e)(this, ih)[ih] = HH.ShH()
+            }))) return GH.$c.ModuleTrap
         }
-        let JV = !1;
-        return (0, EU.d)(this, wp)[wp](((eV, xV) => {
-          null !== (0, EU.d)(this, xp)[xp] && eV.step(0, 0);
-          const YV = eV.stage(VV.length);
-          0 !== YV && (new Uint8Array(xV.buffer, YV, VV.length).set(VV), eV.open(), (0, EU.d)(this, ep)[ep] = (0, EU.d)(this, Vp)[Vp], (0, EU.d)(this, xp)[xp] = null, (0, EU.d)(this, Jp)[Jp]++, JV = !0)
-        })) ? JV ? "opening" : vV.fd.TooLarge : vV.fd.ModuleTrap
+        let AH = !1;
+        return (0, WS.e)(this, Xt)[Xt](((BH, LH) => {
+          null !== (0, WS.e)(this, At)[At] && BH.step(0, 0);
+          const rH = BH.stage(HH.length);
+          0 !== rH && (new Uint8Array(LH.buffer, rH, HH.length).set(HH), BH.open(), (0, WS.e)(this, Lt)[Lt] = (0, WS.e)(this, Bt)[Bt], (0, WS.e)(this, At)[At] = null, (0, WS.e)(this, rt)[rt]++, AH = !0)
+        })) ? AH ? "opening" : GH.$c.TooLarge : GH.$c.ModuleTrap
       }
-      beforeFrame(VV) {
-        const eV = (0, EU.d)(this, sy)[sy],
-          xV = (0, EU.d)(this, Sy)[Sy];
-        if (!eV || !xV || null !== (0, EU.d)(this, xp)[xp]) return;
+      beforeFrame(HH) {
+        const BH = (0, WS.e)(this, Jh)[Jh],
+          LH = (0, WS.e)(this, ih)[ih];
+        if (!BH || !LH || null !== (0, WS.e)(this, At)[At]) return;
         const {
-          core: JV
-        } = this.deps, YV = JV.NyV(VV);
-        if (YV < 0) return;
-        const UV = Math.floor(YV);
-        let yV, pV;
+          core: AH
+        } = this.deps, rH = AH.hhH(HH);
+        if (rH < 0) return;
+        const SH = Math.floor(rH);
+        let hH, tH;
         try {
-          yV = eV.step(UV, YV - UV), pV = eV.byV()
-        } catch (nV) {
-          return void(0, EU.d)(this, vp)[vp](nV)
+          hH = BH.step(SH, rH - SH), tH = BH.JSH()
+        } catch (CH) {
+          return void(0, WS.e)(this, Yt)[Yt](CH)
         }
-        const QV = JV.jyV(1, yV);
-        if (0 === QV) {
-          const VV = (0, EU.d)(this, wp)[wp]((VV => {
-            VV.close()
+        const zH = AH.ySH(1, hH);
+        if (0 === zH) {
+          const HH = (0, WS.e)(this, Xt)[Xt]((HH => {
+            HH.close()
           }));
-          if (!VV) return;
-          return (0, EU.d)(this, Qp)[Qp] ? (0, EU.d)(this, xp)[xp] = "drop" : (0, EU.d)(this, yp)[yp](), void JV.XyV(vV.fd.Port)
+          if (!HH) return;
+          return (0, WS.e)(this, Ct)[Ct] ? (0, WS.e)(this, At)[At] = "drop" : (0, WS.e)(this, tt)[tt](), void AH.thH(GH.$c.Port)
         }
-        new Uint8Array(this.deps.coreBuffer(), QV, yV).set(new Uint8Array(xV.buffer, pV, yV))
+        new Uint8Array(this.deps.coreBuffer(), zH, hH).set(new Uint8Array(LH.buffer, tH, hH))
       }
       play() {
-        (0, EU.d)(this, np)[np]((VV => {
-          VV.play()
+        (0, WS.e)(this, Et)[Et]((HH => {
+          HH.play()
         }))
       }
       pause() {
-        (0, EU.d)(this, np)[np]((VV => {
-          VV.pause()
+        (0, WS.e)(this, Et)[Et]((HH => {
+          HH.pause()
         }))
       }
-      seek(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        (0, EU.d)(this, np)[np]((xV => {
-          xV.seek(VV, eV)
+      seek(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (0, WS.e)(this, Et)[Et]((LH => {
+          LH.seek(HH, BH)
         }))
       }
-      setMark(VV, eV) {
-        return (0, EU.d)(this, np)[np]((xV => {
-          xV.MyV(VV, eV)
+      setMark(HH, BH) {
+        return (0, WS.e)(this, Et)[Et]((LH => {
+          LH.zhH(HH, BH)
         }))
       }
-      addKeyframe(VV, eV) {
-        return (0, EU.d)(this, np)[np]((xV => {
-          xV.zyV(VV[0], VV[1], VV[2], eV[0], eV[1], eV[2])
+      addKeyframe(HH, BH) {
+        return (0, WS.e)(this, Et)[Et]((LH => {
+          LH.ChH(HH[0], HH[1], HH[2], BH[0], BH[1], BH[2])
         }))
       }
-      setKeyframe(VV, eV) {
-        return (0, EU.d)(this, np)[np]((xV => {
-          xV.GyV(VV, eV)
+      setKeyframe(HH, BH) {
+        return (0, WS.e)(this, Et)[Et]((LH => {
+          LH.EhH(HH, BH)
         }))
       }
-      moveKeyframe(VV, eV) {
-        return (0, EU.d)(this, np)[np]((xV => {
-          xV.WyV(VV, eV)
+      moveKeyframe(HH, BH) {
+        return (0, WS.e)(this, Et)[Et]((LH => {
+          LH.XhH(HH, BH)
         }))
       }
-      deleteKeyframes(VV, eV) {
-        return (0, EU.d)(this, np)[np]((xV => {
-          xV.RyV(VV, eV)
+      deleteKeyframes(HH, BH) {
+        return (0, WS.e)(this, Et)[Et]((LH => {
+          LH.GhH(HH, BH)
         }))
       }
-      crop(VV, eV) {
-        return null === (0, EU.d)(this, Vp)[Vp] && (0, EU.d)(this, np)[np]((xV => {
-          xV.crop(VV, eV)
+      crop(HH, BH) {
+        return null === (0, WS.e)(this, Bt)[Bt] && (0, WS.e)(this, Et)[Et]((LH => {
+          LH.crop(HH, BH)
         }))
       }
       beginSave() {
-        const VV = (0, EU.d)(this, Yp)[Yp];
-        if ((0, EU.d)(this, Yp)[Yp] = null, null !== VV && VV !== (0, EU.d)(this, Jp)[Jp]) return null;
-        let eV = 0,
-          xV = null;
-        if ((0, EU.d)(this, wp)[wp](((VV, JV) => {
-            eV = VV.save(), 0 !== eV && (xV = new Uint8Array(JV.buffer, VV.gyV(), VV.DyV()).slice())
-          })), 0 === eV || !xV) return null;
-        const JV = {
-          headLen: eV,
-          editState: xV,
-          givenUp: () => (0, EU.d)(this, ep)[ep] === JV,
-          head: (VV, eV) => {
-            if ((0, EU.d)(this, Vp)[Vp] !== JV || !(0, EU.d)(this, Qp)[Qp]) return null;
-            let xV = null;
-            return (0, EU.d)(this, wp)[wp](((JV, YV) => {
-              const UV = JV.iyV();
-              0 !== UV && VV >= 0 && eV >= 0 && VV + eV <= UV && (xV = new Uint8Array(YV.buffer, JV.CyV() + VV, eV))
-            })), xV
+        const HH = (0, WS.e)(this, St)[St];
+        if ((0, WS.e)(this, St)[St] = null, null !== HH && HH !== (0, WS.e)(this, rt)[rt]) return null;
+        let BH = 0,
+          LH = null;
+        if ((0, WS.e)(this, Xt)[Xt](((HH, AH) => {
+            BH = HH.save(), 0 !== BH && (LH = new Uint8Array(AH.buffer, HH.YhH(), HH.uhH()).slice())
+          })), 0 === BH || !LH) return null;
+        const AH = {
+          headLen: BH,
+          editState: LH,
+          givenUp: () => (0, WS.e)(this, Lt)[Lt] === AH,
+          head: (HH, BH) => {
+            if ((0, WS.e)(this, Bt)[Bt] !== AH || !(0, WS.e)(this, Ct)[Ct]) return null;
+            let LH = null;
+            return (0, WS.e)(this, Xt)[Xt](((AH, rH) => {
+              const SH = AH.QhH();
+              0 !== SH && HH >= 0 && BH >= 0 && HH + BH <= SH && (LH = new Uint8Array(rH.buffer, AH.WhH() + HH, BH))
+            })), LH
           },
           end: () => {
-            if ((0, EU.d)(this, Vp)[Vp] !== JV) return;
-            (0, EU.d)(this, Vp)[Vp] = null, (0, EU.d)(this, ep)[ep] = null, (0, EU.d)(this, wp)[wp]((VV => {
-              VV.ayV()
+            if ((0, WS.e)(this, Bt)[Bt] !== AH) return;
+            (0, WS.e)(this, Bt)[Bt] = null, (0, WS.e)(this, Lt)[Lt] = null, (0, WS.e)(this, Xt)[Xt]((HH => {
+              HH.MhH()
             }));
-            const VV = (0, EU.d)(this, xp)[xp];
-            (0, EU.d)(this, xp)[xp] = null, "unload" === VV ? (0, EU.d)(this, Up)[Up]() : "drop" === VV && (0, EU.d)(this, yp)[yp]()
+            const HH = (0, WS.e)(this, At)[At];
+            (0, WS.e)(this, At)[At] = null, "unload" === HH ? (0, WS.e)(this, ht)[ht]() : "drop" === HH && (0, WS.e)(this, tt)[tt]()
           }
         };
-        return (0, EU.d)(this, Vp)[Vp] = JV, JV
+        return (0, WS.e)(this, Bt)[Bt] = AH, AH
       }
       askSave() {
-        (0, EU.d)(this, Yp)[Yp] = (0, EU.d)(this, Jp)[Jp]
+        (0, WS.e)(this, St)[St] = (0, WS.e)(this, rt)[rt]
       }
-      setSpeed(VV) {
-        (0, EU.d)(this, np)[np]((eV => {
-          eV.oyV(VV)
+      setSpeed(HH) {
+        (0, WS.e)(this, Et)[Et]((BH => {
+          BH.xhH(HH)
         }))
       }
-      setCameraMode(VV) {
-        (0, EU.d)(this, np)[np]((eV => {
-          eV.cyV(VV)
+      setCameraMode(HH) {
+        (0, WS.e)(this, Et)[Et]((BH => {
+          BH.vhH(HH)
         }))
       }
       close() {
-        (0, EU.d)(this, np)[np]((VV => {
-          VV.close()
+        (0, WS.e)(this, Et)[Et]((HH => {
+          HH.close()
         }))
       }
       stop() {
-        (0, EU.d)(this, dy)[dy]++, (0, EU.d)(this, Qp)[Qp] && ((0, EU.d)(this, wp)[wp]((VV => {
-          VV.close()
-        })), (0, EU.d)(this, sy)[sy]) ? (0, EU.d)(this, xp)[xp] = "unload" : (0, EU.d)(this, Up)[Up]()
+        (0, WS.e)(this, yh)[yh]++, (0, WS.e)(this, Ct)[Ct] && ((0, WS.e)(this, Xt)[Xt]((HH => {
+          HH.close()
+        })), (0, WS.e)(this, Jh)[Jh]) ? (0, WS.e)(this, At)[At] = "unload" : (0, WS.e)(this, ht)[ht]()
       }
     }
 
-    function kp() {
-      (0, EU.d)(this, yp)[yp](), (0, EU.d)(this, Iy)[Iy] || ((0, EU.d)(this, uy)[uy] = null, this.deps.unload())
+    function Qt() {
+      (0, WS.e)(this, tt)[tt](), (0, WS.e)(this, ph)[ph] || ((0, WS.e)(this, sh)[sh] = null, this.deps.unload())
     }
 
-    function bp() {
-      (0, EU.d)(this, wp)[wp]((VV => {
-        VV.free()
-      })), (0, EU.d)(this, sy)[sy] = null, (0, EU.d)(this, Sy)[Sy] = null
+    function Wt() {
+      (0, WS.e)(this, Xt)[Xt]((HH => {
+        HH.free()
+      })), (0, WS.e)(this, Jh)[Jh] = null, (0, WS.e)(this, ih)[ih] = null
     }
-    async function Ep(VV, eV) {
-      return await this.deps.staleOr(VV, (() => {}), {
-        beforeReload: eV
-      }) ? "reloading" : vV.fd.ModuleLoad
-    }
-
-    function Bp() {
-      return null !== (0, EU.d)(this, Vp)[Vp] && (0, EU.d)(this, ep)[ep] !== (0, EU.d)(this, Vp)[Vp]
+    async function Mt(HH, BH) {
+      return await this.deps.staleOr(HH, (() => {}), {
+        beforeReload: BH
+      }) ? "reloading" : GH.$c.ModuleLoad
     }
 
-    function jp(VV) {
-      return null === (0, EU.d)(this, xp)[xp] && (0, EU.d)(this, wp)[wp](VV)
+    function xt() {
+      return null !== (0, WS.e)(this, Bt)[Bt] && (0, WS.e)(this, Lt)[Lt] !== (0, WS.e)(this, Bt)[Bt]
     }
 
-    function qp(VV) {
-      const eV = (0, EU.d)(this, sy)[sy],
-        xV = (0, EU.d)(this, Sy)[Sy];
-      return !(!eV || !xV) && (0, EU.d)(this, Zp)[Zp]((() => {
-        VV(eV, xV)
+    function vt(HH) {
+      return null === (0, WS.e)(this, At)[At] && (0, WS.e)(this, Xt)[Xt](HH)
+    }
+
+    function Pt(HH) {
+      const BH = (0, WS.e)(this, Jh)[Jh],
+        LH = (0, WS.e)(this, ih)[ih];
+      return !(!BH || !LH) && (0, WS.e)(this, Gt)[Gt]((() => {
+        HH(BH, LH)
       }))
     }
 
-    function tp(VV) {
-      if ((0, EU.d)(this, Iy)[Iy]) return !1;
+    function Tt(HH) {
+      if ((0, WS.e)(this, ph)[ph]) return !1;
       try {
-        return VV(), !0
-      } catch (eV) {
-        return (0, EU.d)(this, vp)[vp](eV), !1
+        return HH(), !0
+      } catch (BH) {
+        return (0, WS.e)(this, Yt)[Yt](BH), !1
       }
     }
 
-    function Fp(VV) {
-      if (!(VV instanceof WebAssembly.RuntimeError)) throw VV;
-      (0, EU.d)(this, Iy)[Iy] = !0, (0, EU.d)(this, sy)[sy] = null, (0, EU.d)(this, Sy)[Sy] = null, (0, EU.d)(this, uy)[uy] = null, this.deps.crash(this.deps.markTrapped(VV)), this.deps.core.XyV(vV.fd.ModuleTrap)
+    function Ut(HH) {
+      if (!(HH instanceof WebAssembly.RuntimeError)) throw HH;
+      (0, WS.e)(this, ph)[ph] = !0, (0, WS.e)(this, Jh)[Jh] = null, (0, WS.e)(this, ih)[ih] = null, (0, WS.e)(this, sh)[sh] = null, this.deps.crash(this.deps.markTrapped(HH)), this.deps.core.thH(GH.$c.ModuleTrap)
     }
-    var Tp = xV(7033),
-      Pp = xV(42334);
-    const Ap = "[bloxd-wasm-client]";
-    const Np = String(KY);
+    var Vt = LH(7014),
+      Ot = LH(42339);
+    const bt = "[bloxd-wasm-client]";
+    const kt = String(Zr);
 
-    function Xp(VV) {
-      return null === VV || VV === Np ? void 0 : VV
+    function mt(HH) {
+      return null === HH || HH === kt ? void 0 : HH
     }
 
-    function Mp(VV) {
-      var eV, xV, JV, YV, UV, pV, QV;
-      switch (VV.what) {
-        case vV.od.FlyingText: {
-          let eV;
+    function ot(HH) {
+      var BH, LH, AH, rH, SH, tH, zH;
+      switch (HH.what) {
+        case GH.gd.FlyingText: {
+          let BH;
           try {
-            eV = JSON.parse(VV.contentJson)
-          } catch (nV) {
-            return void console.warn(`${Ap} a replay's flying text isn't JSON`, nV)
+            BH = JSON.parse(HH.contentJson)
+          } catch (CH) {
+            return void console.warn(`${bt} a replay's flying text isn't JSON`, CH)
           }
-          yV.h.QZ("forceFlyingMiddleMessage", {
-            content: eV,
-            ux: VV.ux,
-            angle: VV.angle,
-            Sx: VV.Sx
+          hH.k.AX("forceFlyingMiddleMessage", {
+            content: BH,
+            dr: HH.dr,
+            angle: HH.angle,
+            ar: HH.ar
           });
           break
         }
-        case vV.od.PlayerKilled:
-          (0, Pp.h)({
+        case GH.gd.PlayerKilled:
+          (0, Ot.e)({
             kind: "killed",
             body: {
-              deadEId: null !== (eV = Xp(VV.dead)) && void 0 !== eV ? eV : "",
-              killerEId: Xp(VV.killer),
-              withItem: null !== (xV = VV.withItem) && void 0 !== xV ? xV : "",
-              killstreak: VV.killstreak
+              deadEId: null !== (BH = mt(HH.dead)) && void 0 !== BH ? BH : "",
+              killerEId: mt(HH.killer),
+              withItem: null !== (LH = HH.withItem) && void 0 !== LH ? LH : "",
+              killstreak: HH.killstreak
             }
           });
           break;
-        case vV.od.Killfeed:
-          (0, Pp.h)({
+        case GH.gd.Killfeed:
+          (0, Ot.e)({
             kind: "custom",
             body: {
               killer: {
-                eId: Xp(VV.killerId),
-                name: null !== (JV = VV.killerName) && void 0 !== JV ? JV : void 0,
-                colour: null !== (YV = VV.killerColour) && void 0 !== YV ? YV : void 0
+                eId: mt(HH.killerId),
+                name: null !== (AH = HH.killerName) && void 0 !== AH ? AH : void 0,
+                colour: null !== (rH = HH.killerColour) && void 0 !== rH ? rH : void 0
               },
               victim: {
-                eId: Xp(VV.victimId),
-                name: null !== (UV = VV.victimName) && void 0 !== UV ? UV : void 0,
-                colour: null !== (pV = VV.victimColour) && void 0 !== pV ? pV : void 0
+                eId: mt(HH.victimId),
+                name: null !== (SH = HH.victimName) && void 0 !== SH ? SH : void 0,
+                colour: null !== (tH = HH.victimColour) && void 0 !== tH ? tH : void 0
               },
-              withItem: null !== (QV = VV.withItem) && void 0 !== QV ? QV : ""
+              withItem: null !== (zH = HH.withItem) && void 0 !== zH ? zH : ""
             }
           })
       }
     }
-    const zp = "[bloxd-wasm-client]";
+    const It = "[bloxd-wasm-client]";
 
-    function Gp(VV) {
-      if (void 0 === VV || null === VV || "" === VV) return null;
-      const eV = Number(VV);
-      return Number.isInteger(eV) && eV > KY && eV <= 2147483647 ? eV : null
+    function ft(HH) {
+      if (void 0 === HH || null === HH || "" === HH) return null;
+      const BH = Number(HH);
+      return Number.isInteger(BH) && BH > Zr && BH <= 2147483647 ? BH : null
     }
 
-    function Wp(VV) {
+    function lt(HH) {
       return {
-        id: Gp(VV.eId),
-        name: "string" === typeof VV.name ? VV.name : null,
-        colour: "string" === typeof VV.colour ? VV.colour : null
+        id: ft(HH.eId),
+        name: "string" === typeof HH.name ? HH.name : null,
+        colour: "string" === typeof HH.colour ? HH.colour : null
       }
     }
 
-    function Rp(VV) {
-      const eV = (0, xU.l)(yJ.mc.PlayerKilled, (eV => {
-          var xV, JV;
-          const YV = (0, eU.j)(eV);
-          if (!(0, eU.e)(YV)) return;
+    function Kt(HH) {
+      const BH = (0, LS.k)(hA.nc.PlayerKilled, (BH => {
+          var LH, AH;
+          const rH = (0, BS.i)(BH);
+          if (!(0, BS.c)(rH)) return;
           const {
-            deadEId: UV,
-            killerEId: yV,
-            withItem: pV,
-            killstreak: QV
-          } = YV;
-          VV.recordPlayerKilled(null !== (xV = Gp(UV)) && void 0 !== xV ? xV : KY, null !== (JV = Gp(yV)) && void 0 !== JV ? JV : KY, "number" === typeof QV ? QV : 0, "string" === typeof pV ? pV : "")
+            deadEId: SH,
+            killerEId: hH,
+            withItem: tH,
+            killstreak: zH
+          } = rH;
+          HH.recordPlayerKilled(null !== (LH = ft(SH)) && void 0 !== LH ? LH : Zr, null !== (AH = ft(hH)) && void 0 !== AH ? AH : Zr, "number" === typeof zH ? zH : 0, "string" === typeof tH ? tH : "")
         })),
-        xV = (0, xU.l)(yJ.mc.CustomKillfeed, (eV => {
-          const xV = (0, eU.j)(eV);
-          if (!(0, eU.e)(xV) || !(0, eU.e)(xV.killer) || !(0, eU.e)(xV.victim)) return;
+        LH = (0, LS.k)(hA.nc.CustomKillfeed, (BH => {
+          const LH = (0, BS.i)(BH);
+          if (!(0, BS.c)(LH) || !(0, BS.c)(LH.killer) || !(0, BS.c)(LH.victim)) return;
           const {
-            killer: JV,
-            victim: YV,
-            withItem: UV
-          } = xV;
-          VV.recordKillfeed(Wp(JV), Wp(YV), "string" === typeof UV ? UV : null)
+            killer: AH,
+            victim: rH,
+            withItem: SH
+          } = LH;
+          HH.recordKillfeed(lt(AH), lt(rH), "string" === typeof SH ? SH : null)
         }));
       return () => {
-        eV(), xV()
+        BH(), LH()
       }
     }
 
-    function gp(VV) {
-      var eV;
-      return void 0 === VV || null === VV ? null : null !== (eV = JSON.stringify(VV)) && void 0 !== eV ? eV : null
+    function ct(HH) {
+      var BH;
+      return void 0 === HH || null === HH ? null : null !== (BH = JSON.stringify(HH)) && void 0 !== BH ? BH : null
     }
 
-    function Dp(VV) {
-      let eV = null;
-      const xV = () => {
+    function et(HH) {
+      let BH = null;
+      const LH = () => {
         const {
-          enableClipping: xV,
-          clipDurationSeconds: YV
-        } = JV.b.get("clientEscMenuOptions"), UV = `${xV}:${YV}`;
-        UV !== eV && (eV = UV, VV.recorder.setPrefs(xV, YV))
+          enableClipping: LH,
+          clipDurationSeconds: rH
+        } = AH.c.get("clientEscMenuOptions"), SH = `${LH}:${rH}`;
+        SH !== BH && (BH = SH, HH.recorder.setPrefs(LH, rH))
       };
-      return xV(), (0, yV.i)("appManagerUpdated|clientEscMenuOptions", xV)
+      return LH(), (0, hH.m)("appManagerUpdated|clientEscMenuOptions", LH)
     }
-    const ip = "replayModule",
-      Cp = "recorderModule";
+    const qt = "replayModule",
+      gt = "recorderModule";
 
-    function ap(VV, eV, xV) {
+    function Nt(HH, BH, LH) {
       return function() {
-        return VV.isStopped ? xV : eV(...arguments)
+        return HH.isStopped ? LH : BH(...arguments)
       }
     }
-    const op = {
-      open: () => Promise.reject(new Error(CY.b.coreStopped.text)),
+    const Rt = {
+      open: () => Promise.reject(new Error(qr.e.coreStopped.text)),
       replayKey: () => null,
       encode: () => Promise.resolve(null),
       fileHandle: () => null,
       markSaved: () => {}
     };
 
-    function cp() {
-      return xV.e(76).then((() => xV(64492)))
+    function jt() {
+      return LH.e(76).then((() => LH(64318)))
     }
 
-    function hp(VV) {
-      (0, CY.f)({
-        text: VV,
+    function nt(HH) {
+      (0, qr.i)({
+        text: HH,
         type: "Error"
       })
     }
-    class lp {
-      constructor(VV) {
-        this.deps = VV, this.runtime = void 0, this.entityHooks = void 0, this.recordedOptions = void 0, this.stops = void 0, this.activeConn = 0, this.stopped = !1, this.bench = null, this.replay = void 0, this.recorder = void 0, this.freecam = void 0, this.drawn = !1;
+    class Ft {
+      constructor(HH) {
+        this.deps = HH, this.runtime = void 0, this.entityHooks = void 0, this.recordedOptions = void 0, this.stops = void 0, this.activeConn = 0, this.stopped = !1, this.bench = null, this.replay = void 0, this.recorder = void 0, this.freecam = void 0, this.drawn = !1;
         const {
-          running: eV,
-          api: JV,
-          core: YV
-        } = VV, UV = () => VV.memory().buffer, yV = () => eV.isStopped ? null : eV.rings.cmd, pV = ap(eV, ((VV, eV) => YV.jyV(VV, eV)), 0), QV = () => YV.tyV();
-        let nV = null;
-        this.replay = new rp({
+          running: BH,
+          api: AH,
+          core: rH
+        } = HH, SH = () => HH.memory().buffer, hH = () => BH.isStopped ? null : BH.rings.cmd, tH = Nt(BH, ((HH, BH) => rH.ySH(HH, BH)), 0), zH = () => rH.BhH();
+        let CH = null;
+        this.replay = new ut({
           core: {
-            NyV: ap(eV, (VV => YV.NyV(VV)), -1),
-            jyV: pV,
-            tyV: QV,
-            XyV: ap(eV, (VV => {
-              YV.XyV(VV)
+            hhH: Nt(BH, (HH => rH.hhH(HH)), -1),
+            ySH: tH,
+            BhH: zH,
+            thH: Nt(BH, (HH => {
+              rH.thH(HH)
             }), void 0)
           },
-          coreBuffer: UV,
-          load: async () => (nV = await xV.e(77).then((() => xV(64509))), nV.loadReplayModule()),
+          coreBuffer: SH,
+          load: async () => (CH = await LH.e(77).then((() => LH(64329))), CH.loadReplayModule()),
           unload: () => {
-            var VV;
-            null === (VV = nV) || void 0 === VV || VV.unloadReplayModule()
+            var HH;
+            null === (HH = CH) || void 0 === HH || HH.unloadReplayModule()
           },
-          markTrapped: VV => nV ? nV.markReplayTrapped(VV) : new Error(String(VV)),
-          staleOr: (eV, xV, JV) => VV.staleOr(ip, eV, xV, JV),
-          crash: eV => {
-            VV.reportFault(ip, eV)
+          markTrapped: HH => CH ? CH.markReplayTrapped(HH) : new Error(String(HH)),
+          staleOr: (BH, LH, AH) => HH.staleOr(qt, BH, LH, AH),
+          crash: BH => {
+            HH.reportFault(qt, BH)
           }
         });
-        let wV = null;
-        this.recorder = new jy({
+        let EH = null;
+        this.recorder = new vh({
           core: {
-            TyV: ap(eV, (VV => YV.TyV(VV)), 0),
-            kyV: ap(eV, (VV => YV.kyV(VV)), 0),
-            jyV: pV,
-            tyV: QV
+            AhH: Nt(BH, (HH => rH.AhH(HH)), 0),
+            sSH: Nt(BH, (HH => rH.sSH(HH)), 0),
+            ySH: tH,
+            BhH: zH
           },
-          coreCommand: (VV, eV) => {
-            var xV, JV;
-            return null !== (xV = null === (JV = yV()) || void 0 === JV ? void 0 : JV.writeCmd(VV, 0, eV)) && void 0 !== xV && xV
+          coreCommand: (HH, BH) => {
+            var LH, AH;
+            return null !== (LH = null === (AH = hH()) || void 0 === AH ? void 0 : AH.writeCmd(HH, 0, BH)) && void 0 !== LH && LH
           },
-          coreBuffer: UV,
-          load: async () => (wV = await cp(), wV.loadRecorderModule()),
+          coreBuffer: SH,
+          load: async () => (EH = await jt(), EH.loadRecorderModule()),
           prefetch: () => {
-            cp().then((VV => VV.prefetchRecorderModule())).catch((VV => {
-              console.warn(`${zp} the recorder module didn't prefetch, so a save loads it:`, VV)
+            jt().then((HH => HH.prefetchRecorderModule())).catch((HH => {
+              console.warn(`${It} the recorder module didn't prefetch, so a save loads it:`, HH)
             }))
           },
           unload: () => {
-            var VV;
-            null === (VV = wV) || void 0 === VV || VV.unloadRecorderModule()
+            var HH;
+            null === (HH = EH) || void 0 === HH || HH.unloadRecorderModule()
           },
-          markTrapped: VV => wV ? wV.markRecorderTrapped(VV) : new Error(String(VV)),
+          markTrapped: HH => EH ? EH.markRecorderTrapped(HH) : new Error(String(HH)),
           memoryBytes: () => {
-            var VV, eV;
-            return null !== (VV = null === (eV = wV) || void 0 === eV ? void 0 : eV.recorderMemoryBytes()) && void 0 !== VV ? VV : 0
+            var HH, BH;
+            return null !== (HH = null === (BH = EH) || void 0 === BH ? void 0 : BH.recorderMemoryBytes()) && void 0 !== HH ? HH : 0
           },
-          staleOr: (eV, xV) => VV.staleOr(Cp, eV, xV),
-          crash: eV => {
-            VV.reportFault(Cp, eV)
+          staleOr: (BH, LH) => HH.staleOr(gt, BH, LH),
+          crash: BH => {
+            HH.reportFault(gt, BH)
           },
-          allowed: () => !0 === VV.options.get("canRecordReplays"),
-          failed: hp,
-          events: (VV, eV) => {
-            this.runtime.recorderEvents(VV, eV)
+          allowed: () => !0 === HH.options.get("canRecordReplays"),
+          failed: HH => {
+            this.runtime.recorder.stopped(), nt(HH)
+          },
+          events: (HH, BH) => {
+            this.runtime.recorderEvents(HH, BH)
           },
           beginSave: () => this.replay.beginSave(),
-          givenUp: hp,
+          givenUp: nt,
           unixNow: () => Date.now()
         });
-        const ZV = new mY({
+        const XH = new wr({
           core: {
-            YyV: ap(eV, (VV => YV.YyV(VV)), 0),
-            yyV: ap(eV, (() => {
-              YV.yyV()
+            RSH: Nt(BH, (HH => rH.RSH(HH)), 0),
+            nSH: Nt(BH, (() => {
+              rH.nSH()
             }), void 0),
-            xB: ap(eV, (() => YV.xB()), 0),
-            UyV: ap(eV, (() => YV.UyV()), 0)
+            DW: Nt(BH, (() => rH.DW()), 0),
+            jSH: Nt(BH, (() => rH.jSH()), 0)
           },
-          buffer: UV,
-          apiView: () => JV.apiView,
-          cmd: yV,
+          buffer: SH,
+          apiView: () => AH.apiView,
+          cmd: hH,
           replay: this.replay,
           recorder: this.recorder
         });
-        this.entityHooks = new Hy({
-          api: JV,
-          cmd: yV,
-          loadHook: Ky,
-          onError: VV => {
-            console.warn(`${zp} the recorded game's replay hooks:`, VV)
+        this.entityHooks = new ah({
+          api: AH,
+          cmd: hH,
+          loadHook: dh,
+          onError: HH => {
+            console.warn(`${It} the recorded game's replay hooks:`, HH)
           }
         });
-        const vV = new VU({
-          client: ZV,
-          buffer: UV,
-          setHoldDraws: VV => {
-            eV.setHoldDraws(VV)
+        const GH = new HS({
+          client: XH,
+          buffer: SH,
+          setHoldDraws: HH => {
+            BH.setHoldDraws(HH)
           },
-          notify: CY.f,
+          notify: qr.i,
           onRecorderState: () => {
-            var VV;
-            null === (VV = (0, oY.f)()) || void 0 === VV || VV.recorderChanged()
+            var HH;
+            null === (HH = (0, Nr.g)()) || void 0 === HH || HH.recorderChanged()
           },
           onViewerChange: () => {
-            var VV;
-            null === (VV = (0, oY.f)()) || void 0 === VV || VV.viewerChanged()
+            var HH;
+            null === (HH = (0, Nr.g)()) || void 0 === HH || HH.viewerChanged()
           },
-          onReplayOption: eV => {
-            ! function(VV, eV) {
-              var xV, JV;
-              const YV = yJ.Bb[eV.key];
-              if (void 0 === YV) return;
-              let UV = null !== (xV = eV.value) && void 0 !== xV ? xV : JSON.parse(JSON.stringify(null !== (JV = Tp.c[YV]) && void 0 !== JV ? JV : null));
-              if (null !== eV.value && eV.key < yJ.$b.Environment && "string" === typeof UV) try {
-                UV = JSON.parse(UV)
-              } catch (yV) {
-                return void console.warn(`${Ap} a replay's ${YV} isn't JSON`, yV)
+          onReplayOption: BH => {
+            ! function(HH, BH) {
+              var LH, AH;
+              const rH = hA.Ab[BH.key];
+              if (void 0 === rH) return;
+              let SH = null !== (LH = BH.value) && void 0 !== LH ? LH : JSON.parse(JSON.stringify(null !== (AH = Vt.d[rH]) && void 0 !== AH ? AH : null));
+              if (null !== BH.value && BH.key < hA.Xb.Environment && "string" === typeof SH) try {
+                SH = JSON.parse(SH)
+              } catch (hH) {
+                return void console.warn(`${bt} a replay's ${rH} isn't JSON`, hH)
               }
-              VV.applyNewClientOptions({
-                [YV]: UV
+              HH.applyNewClientOptions({
+                [rH]: SH
               })
-            }(VV.options, eV)
+            }(HH.options, BH)
           },
-          onReplayUiEvent: Mp,
-          onReplayOpened: eV => {
-            this.entityHooks.opened((0, MV.Pb)(eV)), VV.replayShaderPack(eV)
+          onReplayUiEvent: ot,
+          onReplayOpened: BH => {
+            this.entityHooks.opened((0, mH.Wb)(BH)), HH.replayShaderPack(BH)
           },
           meshPending: () => {
-            var VV, xV;
-            return null !== (VV = null === (xV = eV.lastHeader) || void 0 === xV ? void 0 : xV.renderPending) && void 0 !== VV ? VV : 0
+            var HH, LH;
+            return null !== (HH = null === (LH = BH.lastHeader) || void 0 === LH ? void 0 : LH.renderPending) && void 0 !== HH ? HH : 0
           },
-          viewerOpen: aY.e,
-          download: VV => {
-            (0, DY.g)(VV)
+          viewerOpen: gr.c,
+          download: HH => {
+            (0, cr.k)(HH)
           }
         });
-        this.runtime = vV, JV.replay = vV.sink, (0, oY.s)(vV);
-        const rV = new UU({
+        this.runtime = GH, AH.replay = GH.sink, (0, Nr.t)(GH);
+        const YH = new SS({
           live: () => {
-            var VV;
-            return !eV.isStopped && !0 === (null === (VV = vV.currentViewer) || void 0 === VV ? void 0 : VV.inPlayback)
+            var HH;
+            return !BH.isStopped && !0 === (null === (HH = GH.currentViewer) || void 0 === HH ? void 0 : HH.inPlayback)
           },
-          cmd: yV,
-          dragScale: kU
+          cmd: hH,
+          dragScale: uS
         });
-        this.freecam = rV, (0, oY.q)(rV), this.recordedOptions = function(VV, eV) {
-          const xV = yJ.Bb,
-            JV = xV.map(((xV, JV) => eV.subscribe(xV, (eV => {
-              VV.setOption(JV, gp(eV))
+        this.freecam = YH, (0, Nr.r)(YH), this.recordedOptions = function(HH, BH) {
+          const LH = hA.Ab,
+            AH = LH.map(((LH, AH) => BH.subscribe(LH, (BH => {
+              HH.setOption(AH, ct(BH))
             }))));
           return {
             sendAll() {
-              xV.forEach(((xV, JV) => {
-                VV.setOption(JV, gp(eV.get(xV)))
+              LH.forEach(((LH, AH) => {
+                HH.setOption(AH, ct(BH.get(LH)))
               }))
             },
             stop() {
-              for (const VV of JV) VV()
+              for (const HH of AH) HH()
             }
           }
-        }(vV.recorder, VV.options), this.stops = [(0, EJ.l)((VV => {
-          rV.flush();
+        }(GH.recorder, HH.options), this.stops = [(0, WA.k)((HH => {
+          YH.flush();
           try {
-            this.replay.beforeFrame(VV)
-          } catch (eV) {
-            this.deps.reportFault("replayFrame", eV)
+            this.replay.beforeFrame(HH)
+          } catch (BH) {
+            this.deps.reportFault("replayFrame", BH)
           }
-        })), (0, EJ.w)(((VV, eV) => {
+        })), (0, WA.z)(((HH, BH) => {
           try {
-            this.recorder.afterFrame(), eV && !this.drawn && (this.drawn = !0, this.recorder.viewDrawn())
-          } catch (xV) {
-            this.deps.reportFault("recorderFrame", xV)
+            this.recorder.afterFrame(), BH && !this.drawn && (this.drawn = !0, this.recorder.viewDrawn())
+          } catch (LH) {
+            this.deps.reportFault("recorderFrame", LH)
           }
           try {
-            vV.afterFrame(VV)
-          } catch (xV) {
-            this.deps.reportFault("replayRuntime", xV)
+            GH.afterFrame(HH)
+          } catch (LH) {
+            this.deps.reportFault("replayRuntime", LH)
           }
-        })), Dp(vV), () => {
+        })), et(GH), () => {
           this.recordedOptions.stop()
-        }, Rp(vV.recorder), (0, JU.e)((VV => {
+        }, Kt(GH.recorder), (0, AS.k)((HH => {
           let {
-            action: eV,
-            down: xV
-          } = VV;
-          var JV;
-          xV && (null === (JV = (0, oY.f)()) || void 0 === JV || JV.keyDown(eV))
+            action: BH,
+            down: LH
+          } = HH;
+          var AH;
+          LH && (null === (AH = (0, Nr.g)()) || void 0 === AH || AH.keyDown(BH))
         }))];
-        const kV = () => {
-          const VV = vV.currentViewer;
-          return !0 === (null === VV || void 0 === VV ? void 0 : VV.isOpen) ? VV : null
+        const uH = () => {
+          const HH = GH.currentViewer;
+          return !0 === (null === HH || void 0 === HH ? void 0 : HH.isOpen) ? HH : null
         };
-        (0, iY.g)({
-          open: (VV, eV) => this.open(VV, eV),
+        (0, er.h)({
+          open: (HH, BH) => this.open(HH, BH),
           replayKey: () => {
-            var VV, eV;
-            return null !== (VV = null === (eV = kV()) || void 0 === eV ? void 0 : eV.id) && void 0 !== VV ? VV : null
+            var HH, BH;
+            return null !== (HH = null === (BH = uH()) || void 0 === BH ? void 0 : BH.id) && void 0 !== HH ? HH : null
           },
           saveRefusal: () => {
-            var VV, eV;
-            return null !== (VV = null === (eV = kV()) || void 0 === eV ? void 0 : eV.saveRefusal) && void 0 !== VV ? VV : null
+            var HH, BH;
+            return null !== (HH = null === (BH = uH()) || void 0 === BH ? void 0 : BH.saveRefusal) && void 0 !== HH ? HH : null
           },
           encode: () => {
-            var VV, eV;
-            return null !== (VV = null === (eV = kV()) || void 0 === eV ? void 0 : eV.save()) && void 0 !== VV ? VV : Promise.resolve(null)
+            var HH, BH;
+            return null !== (HH = null === (BH = uH()) || void 0 === BH ? void 0 : BH.save()) && void 0 !== HH ? HH : Promise.resolve(null)
           },
           fileHandle: () => {
-            var VV, eV;
-            return null !== (VV = null === (eV = vV.currentViewer) || void 0 === eV ? void 0 : eV.fileHandle) && void 0 !== VV ? VV : null
+            var HH, BH;
+            return null !== (HH = null === (BH = GH.currentViewer) || void 0 === BH ? void 0 : BH.fileHandle) && void 0 !== HH ? HH : null
           },
-          markSaved: (VV, eV) => {
-            var xV;
-            null === (xV = vV.currentViewer) || void 0 === xV || xV.markSaved(VV, eV)
+          markSaved: (HH, BH) => {
+            var LH;
+            null === (LH = GH.currentViewer) || void 0 === LH || LH.markSaved(HH, BH)
           }
         })
       }
-      netEvent(VV) {
-        if ("connection" === VV.type)
-          if (VV.phase === vV.H.Activated) {
-            this.activeConn = VV.conn;
-            const eV = this.deps.sessionInfo(VV.conn);
-            null !== eV && (this.runtime.activated({
-              lobbyType: (0, zV.r)(eV.lobbyName),
-              gameNameWithVariation: eV.gameNameWithVariation,
-              lobbyName: eV.lobbyName
+      netEvent(HH) {
+        if ("connection" === HH.type)
+          if (HH.phase === GH.C.Activated) {
+            this.activeConn = HH.conn;
+            const BH = this.deps.sessionInfo(HH.conn);
+            null !== BH && (this.runtime.activated({
+              lobbyType: (0, oH.v)(BH.lobbyName),
+              gameNameWithVariation: BH.gameNameWithVariation,
+              lobbyName: BH.lobbyName
             }), this.recordedOptions.sendAll())
-          } else VV.phase !== vV.H.Left && VV.phase !== vV.H.Closed || VV.conn !== this.activeConn || (this.activeConn = 0, this.runtime.recorder.closed())
+          } else HH.phase !== GH.C.Left && HH.phase !== GH.C.Closed || HH.conn !== this.activeConn || (this.activeConn = 0, this.runtime.recorder.closed())
       }
       stop() {
         if (!this.stopped) {
           this.stopped = !0;
-          for (const VV of this.stops) VV();
-          this.runtime.end(), this.entityHooks.ended(), this.replay.stop(), this.recorder.dispose(), (0, oY.l)() === this.runtime && (0, oY.s)(null), (0, oY.h)() === this.freecam && (0, oY.q)(null), (0, iY.g)(op), null !== this.bench && window.wasmReplayBench === this.bench && (window.wasmReplayBench = void 0)
+          for (const HH of this.stops) HH();
+          this.runtime.end(), this.entityHooks.ended(), this.replay.stop(), this.recorder.dispose(), (0, Nr.n)() === this.runtime && (0, Nr.t)(null), (0, Nr.j)() === this.freecam && (0, Nr.r)(null), (0, er.h)(Rt), null !== this.bench && window.wasmReplayBench === this.bench && (window.wasmReplayBench = void 0)
         }
       }
-      async open(VV, eV) {
+      async open(HH, BH) {
         const {
-          running: xV
+          running: LH
         } = this.deps;
-        if (xV.isStopped) throw new Error(CY.b.coreStopped.text);
-        if (VV.byteLength > 67108864) throw new Error(CY.b.cantOpen.text);
-        let JV;
+        if (LH.isStopped) throw new Error(qr.e.coreStopped.text);
+        if (HH.byteLength > 67108864) throw new Error(qr.e.cantOpen.text);
+        let AH;
         try {
-          JV = await async function(VV) {
-            const eV = await VV.loadViewer();
-            return eV.inPlayback || (0, EJ.G)().leaveGame(null), eV
+          AH = await async function(HH) {
+            const BH = await HH.loadViewer();
+            return BH.inPlayback || (0, WA.L)().leaveGame(null), BH
           }(this.runtime)
-        } catch (YV) {
-          throw console.warn(`${zp} the replay viewer didn't load`, YV), new Error(CY.b.viewerLoadFailed.text)
+        } catch (rH) {
+          throw console.warn(`${It} the replay viewer didn't load`, rH), new Error(qr.e.viewerLoadFailed.text)
         }
-        if (xV.isStopped) throw new Error(CY.b.coreStopped.text);
-        await JV.open(VV, eV)
+        if (LH.isStopped) throw new Error(qr.e.coreStopped.text);
+        await AH.open(HH, BH)
       }
     }
-    var Lp = xV(2080);
+    var Dt = LH(2036);
 
-    function fp(VV, eV) {
+    function wt(HH, BH) {
       const {
-        aux: xV,
-        payload: JV
-      } = function(VV) {
+        aux: LH,
+        payload: AH
+      } = function(HH) {
         return {
-          aux: VV.reset ? vV.jc.ResetFirst : 0,
-          payload: Kp(VV.changes)
+          aux: HH.reset ? GH.cc.ResetFirst : 0,
+          payload: dt(HH.changes)
         }
-      }(eV);
-      VV.queueOptions(xV, JV) && (eV.reset && Lp.c.reset(), Lp.c.apply(eV.changes))
+      }(BH);
+      HH.queueOptions(LH, AH) && (BH.reset && Dt.e.reset(), Dt.e.apply(BH.changes))
     }
-    const mp = new TextEncoder;
+    const Zt = new TextEncoder;
 
-    function Kp(VV) {
-      const eV = new Hp;
-      return Sp(eV, VV), eV.bytes()
+    function dt(HH) {
+      const BH = new st;
+      return it(BH, HH), BH.bytes()
     }
-    class Hp {
+    class st {
       constructor() {
         this.buf = new Uint8Array(256), this.view = new DataView(this.buf.buffer), this.len = 0
       }
-      room(VV) {
-        if (this.len + VV <= this.buf.length) return;
-        const eV = new Uint8Array(Math.max(2 * this.buf.length, this.len + VV));
-        eV.set(this.buf.subarray(0, this.len)), this.buf = eV, this.view = new DataView(eV.buffer)
+      room(HH) {
+        if (this.len + HH <= this.buf.length) return;
+        const BH = new Uint8Array(Math.max(2 * this.buf.length, this.len + HH));
+        BH.set(this.buf.subarray(0, this.len)), this.buf = BH, this.view = new DataView(BH.buffer)
       }
-      u8(VV) {
-        this.room(1), this.buf[this.len++] = VV
+      u8(HH) {
+        this.room(1), this.buf[this.len++] = HH
       }
-      tagged(VV, eV, xV) {
-        this.room(1 + eV), this.buf[this.len++] = VV, 1 === eV ? this.view.setUint8(this.len, xV) : 2 === eV ? this.view.setUint16(this.len, xV) : this.view.setUint32(this.len, xV), this.len += eV
+      tagged(HH, BH, LH) {
+        this.room(1 + BH), this.buf[this.len++] = HH, 1 === BH ? this.view.setUint8(this.len, LH) : 2 === BH ? this.view.setUint16(this.len, LH) : this.view.setUint32(this.len, LH), this.len += BH
       }
-      signed(VV, eV, xV) {
-        this.room(1 + eV), this.buf[this.len++] = VV, 1 === eV ? this.view.setInt8(this.len, xV) : 2 === eV ? this.view.setInt16(this.len, xV) : this.view.setInt32(this.len, xV), this.len += eV
+      signed(HH, BH, LH) {
+        this.room(1 + BH), this.buf[this.len++] = HH, 1 === BH ? this.view.setInt8(this.len, LH) : 2 === BH ? this.view.setInt16(this.len, LH) : this.view.setInt32(this.len, LH), this.len += BH
       }
-      f64(VV) {
-        this.room(9), this.buf[this.len++] = 203, this.view.setFloat64(this.len, VV), this.len += 8
+      f64(HH) {
+        this.room(9), this.buf[this.len++] = 203, this.view.setFloat64(this.len, HH), this.len += 8
       }
-      raw(VV) {
-        this.room(VV.length), this.buf.set(VV, this.len), this.len += VV.length
+      raw(HH) {
+        this.room(HH.length), this.buf.set(HH, this.len), this.len += HH.length
       }
       bytes() {
         return this.buf.slice(0, this.len)
       }
     }
 
-    function sp(VV, eV, xV, JV, YV, UV, yV) {
-      eV < JV ? VV.u8(xV | eV) : null !== YV && eV < 256 ? VV.tagged(YV, 1, eV) : eV < 65536 ? VV.tagged(UV, 2, eV) : VV.tagged(yV, 4, eV)
+    function Jt(HH, BH, LH, AH, rH, SH, hH) {
+      BH < AH ? HH.u8(LH | BH) : null !== rH && BH < 256 ? HH.tagged(rH, 1, BH) : BH < 65536 ? HH.tagged(SH, 2, BH) : HH.tagged(hH, 4, BH)
     }
 
-    function Sp(VV, eV) {
-      switch (typeof eV) {
+    function it(HH, BH) {
+      switch (typeof BH) {
         case "undefined":
-          return void VV.raw(Ip);
+          return void HH.raw(pt);
         case "boolean":
-          return void VV.u8(eV ? 195 : 194);
+          return void HH.u8(BH ? 195 : 194);
         case "number":
           return void
-          function(VV, eV) {
-            eV >>> 0 === eV ? eV < 128 ? VV.u8(eV) : eV < 256 ? VV.tagged(204, 1, eV) : eV < 65536 ? VV.tagged(205, 2, eV) : VV.tagged(206, 4, eV) : (eV | 0) === eV ? eV >= -32 ? VV.u8(255 & eV) : eV >= -128 ? VV.signed(208, 1, eV) : eV >= -32768 ? VV.signed(209, 2, eV) : VV.signed(210, 4, eV) : VV.f64(eV)
-          }(VV, eV);
+          function(HH, BH) {
+            BH >>> 0 === BH ? BH < 128 ? HH.u8(BH) : BH < 256 ? HH.tagged(204, 1, BH) : BH < 65536 ? HH.tagged(205, 2, BH) : HH.tagged(206, 4, BH) : (BH | 0) === BH ? BH >= -32 ? HH.u8(255 & BH) : BH >= -128 ? HH.signed(208, 1, BH) : BH >= -32768 ? HH.signed(209, 2, BH) : HH.signed(210, 4, BH) : HH.f64(BH)
+          }(HH, BH);
         case "string": {
-          const xV = mp.encode(eV);
-          return sp(VV, xV.length, 160, 32, 217, 218, 219), void VV.raw(xV)
+          const LH = Zt.encode(BH);
+          return Jt(HH, LH.length, 160, 32, 217, 218, 219), void HH.raw(LH)
         }
         case "object":
           break;
         default:
-          return void VV.u8(192)
+          return void HH.u8(192)
       }
-      if (null === eV) VV.u8(192);
-      else if (Array.isArray(eV)) {
-        sp(VV, eV.length, 144, 16, null, 220, 221);
-        for (const xV of eV) Sp(VV, xV)
-      } else if (eV instanceof Uint8Array) sp(VV, eV.length, 0, 0, 196, 197, 198), VV.raw(eV);
+      if (null === BH) HH.u8(192);
+      else if (Array.isArray(BH)) {
+        Jt(HH, BH.length, 144, 16, null, 220, 221);
+        for (const LH of BH) it(HH, LH)
+      } else if (BH instanceof Uint8Array) Jt(HH, BH.length, 0, 0, 196, 197, 198), HH.raw(BH);
       else {
-        const xV = Object.keys(eV);
-        sp(VV, xV.length, 128, 0, null, 222, 223);
-        for (const JV of xV) Sp(VV, JV), Sp(VV, eV[JV])
+        const LH = Object.keys(BH);
+        Jt(HH, LH.length, 128, 0, null, 222, 223);
+        for (const AH of LH) it(HH, AH), it(HH, BH[AH])
       }
     }
-    const Ip = new Uint8Array([212, 0, 0]);
-    var dp = xV(53872),
-      Op = xV(53874),
-      VQ = xV(42252),
-      eQ = xV(42303),
-      xQ = xV(3196);
-    const JQ = [1e3, 3e3, 9e3];
-    class YQ {
-      constructor(VV) {
-        this.host = VV, this.sets = new Map, this.table = [], this.generation = 0, this.ik = !1
+    const pt = new Uint8Array([212, 0, 0]);
+    var yt = LH(37110),
+      Hz = LH(37157),
+      Bz = LH(42271),
+      Lz = LH(42307),
+      Az = LH(3171);
+    const rz = [1e3, 3e3, 9e3];
+    class Sz {
+      constructor(HH) {
+        this.host = HH, this.sets = new Map, this.table = [], this.generation = 0, this.Mu = !1
       }
-      onEvent(VV) {
-        const eV = function(VV) {
-          if (VV.byteLength !== vV.wd) return null;
-          const eV = new DataView(VV.buffer, VV.byteOffset, VV.byteLength);
+      onEvent(HH) {
+        const BH = function(HH) {
+          if (HH.byteLength !== GH.pd) return null;
+          const BH = new DataView(HH.buffer, HH.byteOffset, HH.byteLength);
           return {
-            want: eV.getUint16(0, !0),
-            release: eV.getUint16(2, !0)
+            want: BH.getUint16(0, !0),
+            release: BH.getUint16(2, !0)
           }
-        }(VV);
-        eV && !this.ik && (eV.release !== vV.xd && this.release(eV.release), eV.want !== vV.xd && this.want(eV.want))
+        }(HH);
+        BH && !this.Mu && (BH.release !== GH.qd && this.release(BH.release), BH.want !== GH.qd && this.want(BH.want))
       }
-      reset(VV) {
-        if (!this.ik) {
-          for (const [VV, eV] of this.sets) "ready" === eV.state && this.releaseAll(eV.distinct), this.sets.delete(VV);
-          this.table = VV, this.generation++
+      reset(HH) {
+        if (!this.Mu) {
+          for (const [HH, BH] of this.sets) "ready" === BH.state && this.releaseAll(BH.distinct), this.sets.delete(HH);
+          this.table = HH, this.generation++
         }
       }
       dispose() {
-        if (this.ik) return;
-        this.ik = !0, this.generation++, this.table = [];
-        const VV = [...this.sets.values()];
+        if (this.Mu) return;
+        this.Mu = !0, this.generation++, this.table = [];
+        const HH = [...this.sets.values()];
         this.sets.clear();
-        let eV = null;
-        for (const JV of VV)
-          for (const VV of "ready" === JV.state ? JV.distinct : []) try {
-            this.host.FYV(VV)
-          } catch (xV) {
-            eV ??= {
-              error: xV
+        let BH = null;
+        for (const AH of HH)
+          for (const HH of "ready" === AH.state ? AH.distinct : []) try {
+            this.host.zrH(HH)
+          } catch (LH) {
+            BH ??= {
+              error: LH
             }
           }
-        if (eV) throw eV.error
+        if (BH) throw BH.error
       }
-      isReady(VV) {
-        var eV;
-        return "ready" === (null === (eV = this.sets.get(VV)) || void 0 === eV ? void 0 : eV.state)
+      isReady(HH) {
+        var BH;
+        return "ready" === (null === (BH = this.sets.get(HH)) || void 0 === BH ? void 0 : BH.state)
       }
-      want(VV) {
-        const eV = this.sets.get(VV);
-        if ("loading" === (null === eV || void 0 === eV ? void 0 : eV.state)) return eV.wanted = !0, void this.capAnswer(VV, eV);
-        if ("ready" === (null === eV || void 0 === eV ? void 0 : eV.state)) return void this.host.sendReady(yQ(VV, eV.images, eV.size));
-        const xV = this.table[VV];
-        if (!xV || 1 !== xV.urls.length && xV.urls.length !== yJ.ic.CubeFaces) return this.host.sendReady(pQ(VV)), void this.host.onLoadFailed(VV, "", new Error(`no image set ${VV}`));
-        const JV = {
+      want(HH) {
+        const BH = this.sets.get(HH);
+        if ("loading" === (null === BH || void 0 === BH ? void 0 : BH.state)) return BH.wanted = !0, void this.capAnswer(HH, BH);
+        if ("ready" === (null === BH || void 0 === BH ? void 0 : BH.state)) return void this.host.sendReady(tz(HH, BH.images, BH.size));
+        const LH = this.table[HH];
+        if (!LH || 1 !== LH.urls.length && LH.urls.length !== hA.ic.CubeFaces) return this.host.sendReady(zz(HH)), void this.host.onLoadFailed(HH, "", new Error(`no image set ${HH}`));
+        const AH = {
           state: "loading",
           wanted: !0
         };
-        this.sets.set(VV, JV), this.load(VV, xV, JV, this.generation, 0), this.capAnswer(VV, JV)
+        this.sets.set(HH, AH), this.load(HH, LH, AH, this.generation, 0), this.capAnswer(HH, AH)
       }
-      capAnswer(VV, eV) {
+      capAnswer(HH, BH) {
         this.host.wait(4e3, (() => {
-          this.sets.get(VV) === eV && eV.wanted && this.host.sendReady(pQ(VV))
+          this.sets.get(HH) === BH && BH.wanted && this.host.sendReady(zz(HH))
         }))
       }
-      load(VV, eV, xV, JV, YV) {
-        const UV = [...new Set(eV.urls)];
-        Promise.allSettled(UV.map((VV => this.host.loadImage(VV, eV.orientation)))).then((yV => {
-          const pV = yV.flatMap((VV => "fulfilled" === VV.status ? [VV.value] : [])),
-            QV = JV === this.generation && this.sets.get(VV) === xV,
-            nV = yV.findIndex((VV => "rejected" === VV.status));
-          if (!QV || !xV.wanted) return this.ik ? void this.releaseAfterDispose(pV.map(UQ)) : (this.releaseAll(pV.map(UQ)), void(QV && this.sets.delete(VV)));
-          nV < 0 ? this.loaded(VV, eV, UV, pV) : (this.releaseAll(pV.map(UQ)), this.host.sendReady(pQ(VV)), YV < JQ.length ? this.host.wait(JQ[YV], (() => {
-            JV === this.generation && this.sets.get(VV) === xV && (xV.wanted ? this.load(VV, eV, xV, JV, YV + 1) : this.sets.delete(VV))
-          })) : (this.sets.delete(VV), this.host.onLoadFailed(VV, UV[nV], yV[nV].reason)))
+      load(HH, BH, LH, AH, rH) {
+        const SH = [...new Set(BH.urls)];
+        Promise.allSettled(SH.map((HH => this.host.loadImage(HH, BH.orientation)))).then((hH => {
+          const tH = hH.flatMap((HH => "fulfilled" === HH.status ? [HH.value] : [])),
+            zH = AH === this.generation && this.sets.get(HH) === LH,
+            CH = hH.findIndex((HH => "rejected" === HH.status));
+          if (!zH || !LH.wanted) return this.Mu ? void this.releaseAfterDispose(tH.map(hz)) : (this.releaseAll(tH.map(hz)), void(zH && this.sets.delete(HH)));
+          CH < 0 ? this.loaded(HH, BH, SH, tH) : (this.releaseAll(tH.map(hz)), this.host.sendReady(zz(HH)), rH < rz.length ? this.host.wait(rz[rH], (() => {
+            AH === this.generation && this.sets.get(HH) === LH && (LH.wanted ? this.load(HH, BH, LH, AH, rH + 1) : this.sets.delete(HH))
+          })) : (this.sets.delete(HH), this.host.onLoadFailed(HH, SH[CH], hH[CH].reason)))
         }))
       }
-      loaded(VV, eV, xV, JV) {
-        const [YV] = JV, UV = [YV.width, YV.height], yV = JV.every((VV => VV.width === UV[0] && VV.height === UV[1])), pV = eV.urls.length === yJ.ic.CubeFaces;
-        if (!yV || UV[0] <= 0 || UV[1] <= 0 || UV[0] > 65535 || UV[1] > 65535 || pV && UV[0] !== UV[1]) {
-          this.releaseAll(JV.map(UQ)), this.sets.delete(VV), this.host.sendReady(pQ(VV));
-          const xV = JV.map((VV => `${VV.width}x${VV.height}`));
-          return void this.host.onLoadFailed(VV, eV.urls[0], new Error(`set ${VV}'s images can't make its texture: ${xV.join(", ")}`))
+      loaded(HH, BH, LH, AH) {
+        const [rH] = AH, SH = [rH.width, rH.height], hH = AH.every((HH => HH.width === SH[0] && HH.height === SH[1])), tH = BH.urls.length === hA.ic.CubeFaces;
+        if (!hH || SH[0] <= 0 || SH[1] <= 0 || SH[0] > 65535 || SH[1] > 65535 || tH && SH[0] !== SH[1]) {
+          this.releaseAll(AH.map(hz)), this.sets.delete(HH), this.host.sendReady(zz(HH));
+          const LH = AH.map((HH => `${HH.width}x${HH.height}`));
+          return void this.host.onLoadFailed(HH, BH.urls[0], new Error(`set ${HH}'s images can't make its texture: ${LH.join(", ")}`))
         }
-        const QV = eV.urls.map((VV => JV[xV.indexOf(VV)].id)),
-          nV = JV.map(UQ);
-        this.sets.set(VV, {
+        const zH = BH.urls.map((HH => AH[LH.indexOf(HH)].id)),
+          CH = AH.map(hz);
+        this.sets.set(HH, {
           state: "ready",
-          images: QV,
-          distinct: nV,
-          size: UV
-        }), this.host.sendReady(yQ(VV, QV, UV))
+          images: zH,
+          distinct: CH,
+          size: SH
+        }), this.host.sendReady(tz(HH, zH, SH))
       }
-      release(VV) {
-        const eV = this.sets.get(VV);
-        "loading" === (null === eV || void 0 === eV ? void 0 : eV.state) ? eV.wanted = !1: "ready" === (null === eV || void 0 === eV ? void 0 : eV.state) && (this.releaseAll(eV.distinct), this.sets.delete(VV))
+      release(HH) {
+        const BH = this.sets.get(HH);
+        "loading" === (null === BH || void 0 === BH ? void 0 : BH.state) ? BH.wanted = !1: "ready" === (null === BH || void 0 === BH ? void 0 : BH.state) && (this.releaseAll(BH.distinct), this.sets.delete(HH))
       }
-      releaseAll(VV) {
-        for (const eV of VV) this.host.FYV(eV)
+      releaseAll(HH) {
+        for (const BH of HH) this.host.zrH(BH)
       }
-      releaseAfterDispose(VV) {
-        for (const eV of VV) try {
-          this.host.FYV(eV)
+      releaseAfterDispose(HH) {
+        for (const BH of HH) try {
+          this.host.zrH(BH)
         } catch {}
       }
     }
 
-    function UQ(VV) {
-      return VV.id
+    function hz(HH) {
+      return HH.id
     }
 
-    function yQ(VV, eV, xV) {
-      const JV = new Uint8Array(yJ.ic.SkyImagesReadyBytes),
-        YV = new DataView(JV.buffer);
-      return YV.setUint16(0, VV, !0), YV.setUint16(2, eV.length, !0), YV.setUint16(4, xV[0], !0), YV.setUint16(6, xV[1], !0), eV.slice(0, yJ.ic.CubeFaces).forEach(((VV, eV) => {
-        YV.setUint32(8 + 4 * eV, VV, !0)
-      })), JV
+    function tz(HH, BH, LH) {
+      const AH = new Uint8Array(hA.ic.SkyImagesReadyBytes),
+        rH = new DataView(AH.buffer);
+      return rH.setUint16(0, HH, !0), rH.setUint16(2, BH.length, !0), rH.setUint16(4, LH[0], !0), rH.setUint16(6, LH[1], !0), BH.slice(0, hA.ic.CubeFaces).forEach(((HH, BH) => {
+        rH.setUint32(8 + 4 * BH, HH, !0)
+      })), AH
     }
 
-    function pQ(VV) {
-      const eV = new Uint8Array(yJ.ic.SkyImagesReadyBytes),
-        xV = new DataView(eV.buffer);
-      return xV.setUint16(0, VV, !0), xV.setUint16(2, yJ.ic.Failed, !0), eV
+    function zz(HH) {
+      const BH = new Uint8Array(hA.ic.SkyImagesReadyBytes),
+        LH = new DataView(BH.buffer);
+      return LH.setUint16(0, HH, !0), LH.setUint16(2, hA.ic.Failed, !0), BH
     }
-    let QQ = Promise.resolve();
-    async function nQ(VV, eV) {
-      let xV;
+    let Cz = Promise.resolve();
+    async function Ez(HH, BH) {
+      let LH;
       try {
-        xV = await (0, xQ.H)(VV)
-      } catch (UV) {
-        throw new VQ.d("fetch", VV, {
-          cause: UV
+        LH = await (0, Az.M)(HH)
+      } catch (SH) {
+        throw new Bz.b("fetch", HH, {
+          cause: SH
         })
       }
-      const JV = QQ.then((() => async function(VV, eV) {
-        const xV = new Blob([VV.slice()]);
-        let JV = await createImageBitmap(xV, {
+      const AH = Cz.then((() => async function(HH, BH) {
+        const LH = new Blob([HH.slice()]);
+        let AH = await createImageBitmap(LH, {
           premultiplyAlpha: "none",
           colorSpaceConversion: "none",
-          imageOrientation: eV
+          imageOrientation: BH
         });
-        const YV = 1024 / Math.max(JV.width, JV.height);
-        if (YV < 1) {
-          const VV = JV;
+        const rH = 1024 / Math.max(AH.width, AH.height);
+        if (rH < 1) {
+          const HH = AH;
           try {
-            JV = await createImageBitmap(VV, {
-              resizeWidth: Math.max(1, Math.round(VV.width * YV)),
-              resizeHeight: Math.max(1, Math.round(VV.height * YV)),
+            AH = await createImageBitmap(HH, {
+              resizeWidth: Math.max(1, Math.round(HH.width * rH)),
+              resizeHeight: Math.max(1, Math.round(HH.height * rH)),
               resizeQuality: "high",
               premultiplyAlpha: "none",
               colorSpaceConversion: "none"
             })
           } finally {
-            VV.close()
+            HH.close()
           }
         }
-        return JV
-      }(xV, eV)));
-      let YV;
-      QQ = JV.catch((() => {}));
+        return AH
+      }(LH, BH)));
+      let rH;
+      Cz = AH.catch((() => {}));
       try {
-        YV = await JV
-      } catch (UV) {
-        throw new VQ.d("decode", VV, {
-          cause: UV
+        rH = await AH
+      } catch (SH) {
+        throw new Bz.b("decode", HH, {
+          cause: SH
         })
       }
       return {
-        id: (0, VQ.m)(YV),
-        width: YV.width,
-        height: YV.height
+        id: (0, Bz.i)(rH),
+        width: rH.width,
+        height: rH.height
       }
     }
-    var wQ = xV(2277),
-      ZQ = xV(34874),
-      vQ = xV(40446);
-    const rQ = wQ.h.length,
-      kQ = new Set([...wQ.h, "earth"]);
+    var Xz = LH(2227),
+      Gz = LH(34806),
+      Yz = LH(40184);
+    const uz = Xz.f.length,
+      Qz = new Set([...Xz.f, "earth"]);
 
-    function bQ(VV) {
-      const eV = [],
-        xV = [],
-        JV = (VV, JV) => {
-          if ("custom" === JV.type) {
-            xV.push({
-              id: VV,
-              kind: yJ.ic.KindCustom,
-              set: eV.length,
+    function Wz(HH) {
+      const BH = [],
+        LH = [],
+        AH = (HH, AH) => {
+          if ("custom" === AH.type) {
+            LH.push({
+              id: HH,
+              kind: hA.ic.KindCustom,
+              set: BH.length,
               earth: null
             });
-            const YV = [JV.px, JV.py, JV.pz, JV.nx, JV.ny, JV.nz];
-            eV.push({
-              urls: (0, vQ.d)(YV),
+            const rH = [AH.px, AH.py, AH.pz, AH.nx, AH.ny, AH.nz];
+            BH.push({
+              urls: (0, Yz.f)(rH),
               orientation: "none"
             })
-          } else xV.push({
-            id: VV,
-            kind: yJ.ic.KindEarth,
+          } else LH.push({
+            id: HH,
+            kind: hA.ic.KindEarth,
             set: 0,
-            earth: JV
+            earth: AH
           })
         };
-      wQ.h.forEach(((eV, xV) => {
-        var YV;
-        JV(xV, null !== (YV = EQ(VV[eV])) && void 0 !== YV ? YV : ZQ.m[eV])
+      Xz.f.forEach(((BH, LH) => {
+        var rH;
+        AH(LH, null !== (rH = Mz(HH[BH])) && void 0 !== rH ? rH : Gz.n[BH])
       }));
-      const YV = EQ(VV.earth);
-      "earth" === (null === YV || void 0 === YV ? void 0 : YV.type) && JV(rQ, YV);
-      const UV = new TextEncoder,
-        yV = [],
-        pV = [];
-      for (const [rV, kV] of Object.entries(VV)) {
-        const VV = kQ.has(rV) ? null : EQ(kV);
-        if (null === VV) continue;
-        const eV = UV.encode(rV);
-        eV.length > 255 ? pV.push(`Ignoring texture pack skybox ${rV}, whose name is over 255 bytes`) : yV.length === yJ.ic.MaxAdded ? pV.push(`Ignoring texture pack skybox ${rV}, past the ${yJ.ic.MaxAdded} skies a pack can add`) : (yV.push(eV), JV(yJ.ic.AddedId, VV))
+      const rH = Mz(HH.earth);
+      "earth" === (null === rH || void 0 === rH ? void 0 : rH.type) && AH(uz, rH);
+      const SH = new TextEncoder,
+        hH = [],
+        tH = [];
+      for (const [YH, uH] of Object.entries(HH)) {
+        const HH = Qz.has(YH) ? null : Mz(uH);
+        if (null === HH) continue;
+        const BH = SH.encode(YH);
+        BH.length > 255 ? tH.push(`Ignoring texture pack skybox ${YH}, whose name is over 255 bytes`) : hH.length === hA.ic.MaxAdded ? tH.push(`Ignoring texture pack skybox ${YH}, past the ${hA.ic.MaxAdded} skies a pack can add`) : (hH.push(BH), AH(hA.ic.AddedId, HH))
       }
-      const QV = eV.length;
-      eV.push({
-        urls: ZQ.g.map((VV => ZQ.i + VV)),
+      const zH = BH.length;
+      BH.push({
+        urls: Gz.h.map((HH => Gz.l + HH)),
         orientation: "none"
-      }), eV.push({
-        urls: [ZQ.k],
+      }), BH.push({
+        urls: [Gz.m],
         orientation: "flipY"
-      }), eV.push({
-        urls: [ZQ.d],
+      }), BH.push({
+        urls: [Gz.e],
         orientation: "flipY"
       });
-      const nV = yJ.ic.SkyTableHeaderBytes + xV.length * yJ.ic.SkyTableEntryBytes,
-        wV = new Uint8Array(nV + yV.reduce(((VV, eV) => VV + 1 + eV.length), 0)),
-        ZV = new DataView(wV.buffer);
-      ZV.setUint16(0, QV, !0), ZV.setUint16(2, QV + 1, !0), ZV.setUint16(4, QV + 2, !0), ZV.setUint16(6, xV.length, !0), xV.forEach(((VV, eV) => {
-        const xV = yJ.ic.SkyTableHeaderBytes + eV * yJ.ic.SkyTableEntryBytes;
-        ZV.setUint16(xV, VV.id, !0), ZV.setUint8(xV + 2, VV.kind);
-        const JV = xV + 4;
-        VV.earth ? function(VV, eV, xV) {
-          const JV = VV;
-          let YV = 0,
-            UV = 0;
-          for (const [yV, pV] of BQ) {
-            const VV = JV[yV];
-            "number" === typeof VV && Number.isFinite(VV) && (eV.setFloat32(xV + 4 * pV, VV, !0), YV |= 1 << pV)
+      const CH = hA.ic.SkyTableHeaderBytes + LH.length * hA.ic.SkyTableEntryBytes,
+        EH = new Uint8Array(CH + hH.reduce(((HH, BH) => HH + 1 + BH.length), 0)),
+        XH = new DataView(EH.buffer);
+      XH.setUint16(0, zH, !0), XH.setUint16(2, zH + 1, !0), XH.setUint16(4, zH + 2, !0), XH.setUint16(6, LH.length, !0), LH.forEach(((HH, BH) => {
+        const LH = hA.ic.SkyTableHeaderBytes + BH * hA.ic.SkyTableEntryBytes;
+        XH.setUint16(LH, HH.id, !0), XH.setUint8(LH + 2, HH.kind);
+        const AH = LH + 4;
+        HH.earth ? function(HH, BH, LH) {
+          const AH = HH;
+          let rH = 0,
+            SH = 0;
+          for (const [hH, tH] of xz) {
+            const HH = AH[hH];
+            "number" === typeof HH && Number.isFinite(HH) && (BH.setFloat32(LH + 4 * tH, HH, !0), rH |= 1 << tH)
           }
-          for (const [yV, pV, QV] of jQ) {
-            const VV = JV[yV];
-            Array.isArray(VV) && 3 === VV.length && VV.every((VV => "number" === typeof VV && Number.isFinite(VV))) && (VV.forEach(((VV, JV) => {
-              eV.setFloat32(xV + QV + 4 * JV, VV, !0)
-            })), YV |= pV)
+          for (const [hH, tH, zH] of vz) {
+            const HH = AH[hH];
+            Array.isArray(HH) && 3 === HH.length && HH.every((HH => "number" === typeof HH && Number.isFinite(HH))) && (HH.forEach(((HH, AH) => {
+              BH.setFloat32(LH + zH + 4 * AH, HH, !0)
+            })), rH |= tH)
           }
-          qQ.forEach(((VV, UV) => {
-            let [yV, pV] = VV;
-            const QV = JV[yV];
-            "number" === typeof QV && Number.isFinite(QV) && (eV.setFloat32(xV + yJ.B.CameraOffsetAt + 4 * UV, QV, !0), YV |= pV)
+          Pz.forEach(((HH, SH) => {
+            let [hH, tH] = HH;
+            const zH = AH[hH];
+            "number" === typeof zH && Number.isFinite(zH) && (BH.setFloat32(LH + hA.v.CameraOffsetAt + 4 * SH, zH, !0), rH |= tH)
           }));
-          for (const [yV, pV] of tQ) {
-            const VV = JV[yV];
-            null !== VV && void 0 !== VV && (YV |= pV, VV && (UV |= pV >>> 14))
+          for (const [hH, tH] of Tz) {
+            const HH = AH[hH];
+            null !== HH && void 0 !== HH && (rH |= tH, HH && (SH |= tH >>> 14))
           }
-          eV.setUint32(xV + yJ.B.PresentAt, YV, !0), eV.setUint8(xV + yJ.B.FlagsAt, UV)
-        }(VV.earth, ZV, JV) : ZV.setUint16(JV, VV.set, !0)
+          BH.setUint32(LH + hA.v.PresentAt, rH, !0), BH.setUint8(LH + hA.v.FlagsAt, SH)
+        }(HH.earth, XH, AH) : XH.setUint16(AH, HH.set, !0)
       }));
-      let vV = nV;
-      for (const rV of yV) wV[vV] = rV.length, wV.set(rV, vV + 1), vV += 1 + rV.length;
+      let GH = CH;
+      for (const YH of hH) EH[GH] = YH.length, EH.set(YH, GH + 1), GH += 1 + YH.length;
       return {
-        payload: wV,
-        sets: eV,
-        leftOut: pV
+        payload: EH,
+        sets: BH,
+        leftOut: tH
       }
     }
 
-    function EQ(VV) {
-      if ("object" !== typeof VV || null === VV) return null;
-      const eV = VV;
-      if ("earth" === eV.type) return VV;
-      return "custom" === eV.type && ["px", "py", "pz", "nx", "ny", "nz"].every((VV => {
-        const xV = eV[VV];
-        return "string" === typeof xV && xV.length > 0
-      })) ? VV : null
+    function Mz(HH) {
+      if ("object" !== typeof HH || null === HH) return null;
+      const BH = HH;
+      if ("earth" === BH.type) return HH;
+      return "custom" === BH.type && ["px", "py", "pz", "nx", "ny", "nz"].every((HH => {
+        const LH = BH[HH];
+        return "string" === typeof LH && LH.length > 0
+      })) ? HH : null
     }
-    const BQ = [
-        ["inclination", yJ.B.Inclination],
-        ["turbidity", yJ.B.Turbidity],
-        ["luminance", yJ.B.Luminance],
-        ["rayleigh", yJ.B.Rayleigh],
-        ["mieCoefficient", yJ.B.MieCoefficient],
-        ["mieDirectionalG", yJ.B.MieDirectionalG],
-        ["distance", yJ.B.Distance],
-        ["azimuth", yJ.B.Azimuth]
+    const xz = [
+        ["inclination", hA.v.Inclination],
+        ["turbidity", hA.v.Turbidity],
+        ["luminance", hA.v.Luminance],
+        ["rayleigh", hA.v.Rayleigh],
+        ["mieCoefficient", hA.v.MieCoefficient],
+        ["mieDirectionalG", hA.v.MieDirectionalG],
+        ["distance", hA.v.Distance],
+        ["azimuth", hA.v.Azimuth]
       ],
-      jQ = [
-        ["sunPosition", yJ.B.SunPosition, yJ.B.SunPositionAt],
-        ["up", yJ.B.Up, yJ.B.UpAt],
-        ["vertexTint", yJ.B.VertexTint, yJ.B.VertexTintAt]
+      vz = [
+        ["sunPosition", hA.v.SunPosition, hA.v.SunPositionAt],
+        ["up", hA.v.Up, hA.v.UpAt],
+        ["vertexTint", hA.v.VertexTint, hA.v.VertexTintAt]
       ],
-      qQ = [
-        ["xCameraOffset", yJ.B.CameraOffsetX],
-        ["yCameraOffset", yJ.B.CameraOffsetY],
-        ["zCameraOffset", yJ.B.CameraOffsetZ]
+      Pz = [
+        ["xCameraOffset", hA.v.CameraOffsetX],
+        ["yCameraOffset", hA.v.CameraOffsetY],
+        ["zCameraOffset", hA.v.CameraOffsetZ]
       ],
-      tQ = [
-        ["useSunPosition", yJ.B.UseSunPosition],
-        ["dithering", yJ.B.Dithering],
-        ["infiniteDistance", yJ.B.InfiniteDistance]
+      Tz = [
+        ["useSunPosition", hA.v.UseSunPosition],
+        ["dithering", hA.v.Dithering],
+        ["infiniteDistance", hA.v.InfiniteDistance]
       ];
 
-    function FQ(VV, eV, xV) {
-      const JV = new PQ({
-        writeCmd: VV,
-        warn: eV,
-        followPack: TQ(xV, eV)
+    function Uz(HH, BH, LH) {
+      const AH = new Oz({
+        writeCmd: HH,
+        warn: BH,
+        followPack: Vz(LH, BH)
       });
-      return JV.start(), JV
+      return AH.start(), AH
     }
 
-    function TQ(VV, eV) {
-      return xV => {
-        let JV = () => {};
-        const YV = VV((VV => {
-          JV(), JV = () => {}, null !== VV ? JV = VV.subscribe((VV => {
-            xV(function(VV, eV, xV) {
-              if ("object" !== typeof VV || null === VV) return null;
-              const JV = VV.skyBoxes;
-              if ("object" !== typeof JV || null === JV) return null;
-              if ("player" === eV) return JV;
-              return Object.fromEntries(Object.entries(JV).filter((VV => {
-                let [eV, JV] = VV;
-                return !! function(VV) {
-                  if ("object" !== typeof VV || null === VV) return !1;
-                  return "earth" === VV.type || Object.entries(VV).every((VV => {
-                    let [eV, xV] = VV;
-                    return "type" === eV || ("" === (JV = xV) || null !== function(VV) {
-                      var eV, xV, JV;
-                      return "string" !== typeof VV ? null : null !== (eV = null === (xV = AQ.exec(VV)) || void 0 === xV || null === (JV = xV.groups) || void 0 === JV ? void 0 : JV.base64) && void 0 !== eV ? eV : null
-                    }(JV));
-                    var JV
+    function Vz(HH, BH) {
+      return LH => {
+        let AH = () => {};
+        const rH = HH((HH => {
+          AH(), AH = () => {}, null !== HH ? AH = HH.subscribe((HH => {
+            LH(function(HH, BH, LH) {
+              if ("object" !== typeof HH || null === HH) return null;
+              const AH = HH.skyBoxes;
+              if ("object" !== typeof AH || null === AH) return null;
+              if ("player" === BH) return AH;
+              return Object.fromEntries(Object.entries(AH).filter((HH => {
+                let [BH, AH] = HH;
+                return !! function(HH) {
+                  if ("object" !== typeof HH || null === HH) return !1;
+                  return "earth" === HH.type || Object.entries(HH).every((HH => {
+                    let [BH, LH] = HH;
+                    return "type" === BH || ("" === (AH = LH) || null !== function(HH) {
+                      var BH, LH, AH;
+                      return "string" !== typeof HH ? null : null !== (BH = null === (LH = bz.exec(HH)) || void 0 === LH || null === (AH = LH.groups) || void 0 === AH ? void 0 : AH.base64) && void 0 !== BH ? BH : null
+                    }(AH));
+                    var AH
                   }))
-                }(JV) || (xV(`Ignoring texture pack skybox ${eV}, whose faces are not all data URLs`, null), !1)
+                }(AH) || (LH(`Ignoring texture pack skybox ${BH}, whose faces are not all data URLs`, null), !1)
               })))
-            }(VV.pack, null === VV.gameSource ? "player" : "customGame", eV))
-          })) : xV(null)
+            }(HH.pack, null === HH.gameSource ? "player" : "customGame", BH))
+          })) : LH(null)
         }));
         return () => {
-          YV(), JV()
+          rH(), AH()
         }
       }
     }
-    class PQ {
-      constructor(VV) {
-        var eV, xV, JV;
-        this.host = VV, this.loader = void 0, this.wait = void 0, this.queue = [], this.written = null, this.stopFollowing = () => {}, this.ik = !1, this.wait = null !== (eV = VV.wait) && void 0 !== eV ? eV : (VV, eV) => {
-          setTimeout(eV, VV)
-        }, this.loader = new YQ({
-          loadImage: null !== (xV = VV.loadImage) && void 0 !== xV ? xV : nQ,
-          FYV: null !== (JV = VV.FYV) && void 0 !== JV ? JV : VQ.q,
-          sendReady: VV => {
+    class Oz {
+      constructor(HH) {
+        var BH, LH, AH;
+        this.host = HH, this.loader = void 0, this.wait = void 0, this.queue = [], this.written = null, this.stopFollowing = () => {}, this.Mu = !1, this.wait = null !== (BH = HH.wait) && void 0 !== BH ? BH : (HH, BH) => {
+          setTimeout(BH, HH)
+        }, this.loader = new Sz({
+          loadImage: null !== (LH = HH.loadImage) && void 0 !== LH ? LH : Ez,
+          zrH: null !== (AH = HH.zrH) && void 0 !== AH ? AH : Bz.k,
+          sendReady: HH => {
             this.queue.push({
-              kind: yJ.ic.SkyImagesReady,
-              payload: VV
+              kind: hA.ic.SkyImagesReady,
+              payload: HH
             })
           },
-          onLoadFailed: (eV, xV, JV) => {
-            VV.warn(`sky image set ${eV} (${xV}) didn't load: the last sky stays`, JV)
+          onLoadFailed: (BH, LH, AH) => {
+            HH.warn(`sky image set ${BH} (${LH}) didn't load: the last sky stays`, AH)
           },
           wait: this.wait
         })
       }
       start() {
-        this.wait(eQ.c, (() => {
+        this.wait(Lz.c, (() => {
           null === this.written && this.write({})
-        })), this.stopFollowing = this.host.followPack((VV => {
-          this.write(null !== VV && void 0 !== VV ? VV : {})
+        })), this.stopFollowing = this.host.followPack((HH => {
+          this.write(null !== HH && void 0 !== HH ? HH : {})
         }))
       }
-      onEvent(VV) {
-        this.loader.onEvent(VV)
+      onEvent(HH) {
+        this.loader.onEvent(HH)
       }
       drain() {
         if (0 === this.queue.length) return;
-        let VV = 0;
-        for (; VV < this.queue.length && this.host.writeCmd(this.queue[VV].kind, 0, this.queue[VV].payload);) VV++;
-        VV > 0 && this.queue.splice(0, VV)
+        let HH = 0;
+        for (; HH < this.queue.length && this.host.writeCmd(this.queue[HH].kind, 0, this.queue[HH].payload);) HH++;
+        HH > 0 && this.queue.splice(0, HH)
       }
       dispose() {
-        this.ik = !0, this.stopFollowing(), this.queue = [], this.loader.dispose()
+        this.Mu = !0, this.stopFollowing(), this.queue = [], this.loader.dispose()
       }
-      write(VV) {
-        if (this.ik) return;
-        const eV = bQ(VV);
-        if (!(this.written && (xV = this.written, JV = eV, xV.payload.length === JV.payload.length && xV.payload.every(((VV, eV) => VV === JV.payload[eV])) && xV.sets.length === JV.sets.length && xV.sets.every(((VV, eV) => {
-            const xV = JV.sets[eV];
-            return VV.orientation === xV.orientation && VV.urls.length === xV.urls.length && VV.urls.every(((VV, eV) => VV === xV.urls[eV]))
+      write(HH) {
+        if (this.Mu) return;
+        const BH = Wz(HH);
+        if (!(this.written && (LH = this.written, AH = BH, LH.payload.length === AH.payload.length && LH.payload.every(((HH, BH) => HH === AH.payload[BH])) && LH.sets.length === AH.sets.length && LH.sets.every(((HH, BH) => {
+            const LH = AH.sets[BH];
+            return HH.orientation === LH.orientation && HH.urls.length === LH.urls.length && HH.urls.every(((HH, BH) => HH === LH.urls[BH]))
           }))))) {
-          var xV, JV;
-          for (const VV of eV.leftOut) this.host.warn(VV, null);
-          this.written = eV, this.loader.reset(eV.sets), this.queue = this.queue.filter((VV => VV.kind !== yJ.ic.SkyImagesReady)), this.queue.push({
-            kind: yJ.ic.SkyTable,
-            payload: eV.payload
+          var LH, AH;
+          for (const HH of BH.leftOut) this.host.warn(HH, null);
+          this.written = BH, this.loader.reset(BH.sets), this.queue = this.queue.filter((HH => HH.kind !== hA.ic.SkyImagesReady)), this.queue.push({
+            kind: hA.ic.SkyTable,
+            payload: BH.payload
           })
         }
       }
     }
-    const AQ = /^data:[\w.+/-]*;base64,(?<base64>[A-Za-z0-9+/]*={0,2})$/;
-    var NQ = xV(3119),
-      XQ = xV(3348),
-      MQ = xV(323),
-      zQ = xV(188),
-      GQ = xV(3125),
-      WQ = xV(3131),
-      RQ = xV(291),
-      gQ = xV(296),
-      DQ = xV(3233),
-      iQ = xV(3252),
-      CQ = xV(3264),
-      aQ = xV(115),
-      oQ = xV(3321),
-      cQ = xV(2649),
-      hQ = xV(348),
-      lQ = xV(42125);
-    class LQ {
+    const bz = /^data:[\w.+/-]*;base64,(?<base64>[A-Za-z0-9+/]*={0,2})$/;
+    var kz = LH(3064),
+      mz = LH(3310),
+      oz = LH(268),
+      Iz = LH(168),
+      fz = LH(3073),
+      lz = LH(3090),
+      Kz = LH(233),
+      cz = LH(241),
+      ez = LH(3193),
+      qz = LH(3223),
+      gz = LH(3235),
+      Nz = LH(101),
+      Rz = LH(3292),
+      jz = LH(3287),
+      nz = LH(293),
+      Fz = LH(42150);
+    class Dz {
       constructor() {
-        this.id = null, this.sentMs = null, this.roundTripMs = null, this.stopReplies = void 0, this.stopReplies = (0, xU.l)(RJ.M, (VV => {
-          this.onReply((0, eU.i)(RJ.M, VV), performance.now())
+        this.id = null, this.sentMs = null, this.roundTripMs = null, this.stopReplies = void 0, this.stopReplies = (0, LS.k)(lA.G, (HH => {
+          this.onReply((0, BS.f)(lA.G, HH), performance.now())
         }))
       }
-      onFrame(VV, eV) {
-        null === this.id ? this.id = VV : VV !== this.id && (this.id = VV, this.sentMs = document.hidden ? null : eV)
+      onFrame(HH, BH) {
+        null === this.id ? this.id = HH : HH !== this.id && (this.id = HH, this.sentMs = document.hidden ? null : BH)
       }
       onVisibilityChange() {
         this.sentMs = null
       }
-      onReply(VV, eV) {
-        VV === this.id && null !== this.sentMs && (this.roundTripMs = Math.round(eV - this.sentMs), this.sentMs = null)
+      onReply(HH, BH) {
+        HH === this.id && null !== this.sentMs && (this.roundTripMs = Math.round(BH - this.sentMs), this.sentMs = null)
       }
       take() {
-        const VV = this.roundTripMs;
-        return this.roundTripMs = null, VV
+        const HH = this.roundTripMs;
+        return this.roundTripMs = null, HH
       }
       stop() {
         this.stopReplies()
       }
     }
-    class fQ {
+    class wz {
       constructor() {
         this.sampled = 0, this.timed = 0, this.frameUs = 0, this.primed = !1, this.windowTimed = 0, this.windowUs = 0
       }
-      onFrame(VV, eV, xV, JV) {
-        const YV = VV - this.sampled >>> 0,
-          UV = eV - this.timed >>> 0,
-          yV = xV - this.frameUs >>> 0,
-          pV = this.primed;
-        return this.sampled = VV, this.timed = eV, this.frameUs = xV, this.primed = !0, !(!pV || YV > 64 || UV > 64) && (JV && yV <= 1e6 * UV && (this.windowTimed += UV, this.windowUs += yV), JV && YV > 0)
+      onFrame(HH, BH, LH, AH) {
+        const rH = HH - this.sampled >>> 0,
+          SH = BH - this.timed >>> 0,
+          hH = LH - this.frameUs >>> 0,
+          tH = this.primed;
+        return this.sampled = HH, this.timed = BH, this.frameUs = LH, this.primed = !0, !(!tH || rH > 64 || SH > 64) && (AH && hH <= 1e6 * SH && (this.windowTimed += SH, this.windowUs += hH), AH && rH > 0)
       }
       reset() {}
       snapshotAndReset() {
-        const VV = this.windowTimed > 0 ? this.windowUs / this.windowTimed / 1e3 : null;
+        const HH = this.windowTimed > 0 ? this.windowUs / this.windowTimed / 1e3 : null;
         return this.windowTimed = 0, this.windowUs = 0, {
-          passMs: VV,
+          passMs: HH,
           submitToDoneMs: null
         }
       }
     }
-    const mQ = {
+    const Zz = {
       lagP50Ms: null,
       lagP90Ms: null
     };
-    class KQ {
+    class dz {
       constructor() {
         this.samples = new Float64Array(4096), this.count = 0
       }
-      add(VV, eV) {
-        const xV = Math.min(4096, this.count + eV);
-        this.samples.fill(VV, this.count, xV), this.count = xV
+      add(HH, BH) {
+        const LH = Math.min(4096, this.count + BH);
+        this.samples.fill(HH, this.count, LH), this.count = LH
       }
       clear() {
         this.count = 0
       }
       take() {
-        const VV = this.count;
-        if (this.count = 0, VV < 30) return mQ;
-        const eV = this.samples.subarray(0, VV).sort(),
-          xV = xV => eV[Math.min(VV - 1, Math.floor(xV * VV))];
+        const HH = this.count;
+        if (this.count = 0, HH < 30) return Zz;
+        const BH = this.samples.subarray(0, HH).sort(),
+          LH = LH => BH[Math.min(HH - 1, Math.floor(LH * HH))];
         return {
-          lagP50Ms: xV(.5),
-          lagP90Ms: xV(.9)
+          lagP50Ms: LH(.5),
+          lagP90Ms: LH(.9)
         }
       }
     }
-    class HQ {
+    class az {
       constructor() {
-        this.word = 0, this.lagUs = 0, this.primed = !1, this.lags = new KQ
+        this.word = 0, this.lagUs = 0, this.primed = !1, this.lags = new dz
       }
-      onFrame(VV, eV) {
-        const xV = VV.headerWord(yJ.Q.Pacing),
-          JV = VV.headerWord(yJ.Q.PacingLagUs),
-          YV = (xV >>> yJ.gb.LagsShift) - (this.word >>> yJ.gb.LagsShift) & yJ.gb.CountMask,
-          UV = YV > 0 ? (JV - this.lagUs >>> 0) / YV / 1e3 : 0,
-          yV = this.primed && YV <= 64 && UV <= 6e4;
-        this.word = xV, this.lagUs = JV, this.primed = !0, yV && eV && YV > 0 && 0 !== (xV & yJ.gb.Defaulted) && this.lags.add(UV, YV)
+      onFrame(HH, BH) {
+        const LH = HH.headerWord(hA.I.Pacing),
+          AH = HH.headerWord(hA.I.PacingLagUs),
+          rH = (LH >>> hA.fb.LagsShift) - (this.word >>> hA.fb.LagsShift) & hA.fb.CountMask,
+          SH = rH > 0 ? (AH - this.lagUs >>> 0) / rH / 1e3 : 0,
+          hH = this.primed && rH <= 64 && SH <= 6e4;
+        this.word = LH, this.lagUs = AH, this.primed = !0, hH && BH && rH > 0 && 0 !== (LH & hA.fb.Defaulted) && this.lags.add(SH, rH)
       }
       onJoin() {
         this.lags.clear()
       }
-      snapshotAndReset(VV) {
-        return VV ? this.lags.take() : (this.lags.clear(), mQ)
+      snapshotAndReset(HH) {
+        return HH ? this.lags.take() : (this.lags.clear(), Zz)
       }
     }
-    var uQ = xV(3224),
-      sQ = xV(35249),
-      SQ = xV(3239),
-      IQ = xV(42177),
-      dQ = xV(35247),
-      OQ = xV(3139),
-      Vn = xV(3242);
-    const en = {
+    var sz = LH(3187),
+      Jz = LH(34924),
+      iz = LH(3195),
+      pz = LH(42200),
+      yz = LH(34915),
+      HC = LH(3098),
+      BC = LH(3200);
+    const LC = {
       none: !0,
       compatibility_mode: !0,
       not_requested: !1,
@@ -7748,6 +7630,7 @@ export const modules = {
       gpu_class_webgl: !1,
       gpu_wasm_arm: !1,
       safari_26: !1,
+      safari_27: !1,
       no_webgpu_api: !1,
       no_adapter: !0,
       compatibility_held: !0,
@@ -7760,494 +7643,787 @@ export const modules = {
       _unloaded: null
     };
 
-    function xn(VV) {
-      return new Jn(VV)
+    function AC(HH) {
+      return new rC(HH)
     }
-    class Jn {
-      constructor(VV) {
-        this.shell = VV, this.tracker = new WQ.e, this.gpu = new fQ, this.pacing = new HQ, this.timers = [], this.inGameAtLastFlush = !1, this.hasFlushedSinceConnect = !1, this.sendsDropped = 0, this.pendingLightFailures = 0, this.unsentPage = null, this.game = null, this.fpsSpanStartMs = -1, this.fpsFrames = 0, this.fpsOverTime = null, this.firstSpanFps = null, this.initialFps = null, this.ping = new LQ, this.pacedCpuMs = 0, this.sendsStartMs = -1, this.sendsEndMs = -1, this.frameDebug = null, this.mainStall = new uQ.e(this.tracker, ((VV, eV, xV, JV) => {
-          this.shell.mainStalled(VV, eV, xV, JV)
-        })), this.onVisibility = () => {
+    class rC {
+      constructor(HH) {
+        this.shell = HH, this.tracker = new lz.c, this.gpu = new wz, this.pacing = new az, this.timers = [], this.inGameAtLastFlush = !1, this.hasFlushedSinceConnect = !1, this.sendsDropped = 0, this.pendingLightFailures = 0, this.unsentPage = null, this.game = null, this.fpsSpanStartMs = -1, this.fpsFrames = 0, this.fpsOverTime = null, this.firstSpanFps = null, this.initialFps = null, this.ping = new Dz, this.pacedCpuMs = 0, this.sendsStartMs = -1, this.sendsEndMs = -1, this.frameDebug = null, this.mainStall = new sz.e(this.tracker, ((HH, BH, LH, AH) => {
+          this.shell.mainStalled(HH, BH, LH, AH)
+        }), (HH => this.shell.Km(HH))), this.onVisibility = () => {
           this.tracker.onVisibilityChange(), this.ping.onVisibilityChange(), this.mainStall.reset(), !document.hidden && this.fpsSpanStartMs >= 0 && (this.fpsFrames = 0, this.fpsSpanStartMs = performance.now())
         }, this.onBeforeUnload = () => {
           this.mainStall.unloading()
-        }, (0, sQ.c)(VV.backend, VV.canvas, VV.adapterVendor), this.tracker.start((() => !VV.inGame()), this.gpu, "wasm"), document.addEventListener("visibilitychange", this.onVisibility), window.addEventListener("beforeunload", this.onBeforeUnload), (0, OQ.b)("wasm", (() => {
+        }, (0, Jz.b)(HH.backend, HH.canvas, HH.adapterVendor), this.tracker.start((() => !HH.inGame()), this.gpu, "wasm"), document.addEventListener("visibilitychange", this.onVisibility), window.addEventListener("beforeunload", this.onBeforeUnload), (0, HC.c)("wasm", (() => {
           const {
-            n: eV,
-            sampleCount: xV
-          } = (0, IQ.d)();
-          return `${VV.backend}, quality steps aim at up to ${Vn.d.target.maxFps} fps, pixel n ${eV}, msaa ${xV}`
-        }), (eV => {
-          eV.setLoadCounts(VV.readLoadCounts), this.frameDebug = eV
+            n: BH,
+            sampleCount: LH
+          } = (0, pz.d)();
+          return `${HH.backend}, quality steps aim at up to ${BC.b.target.maxFps} fps, pixel n ${BH}, msaa ${LH}`
+        }), (BH => {
+          BH.setLoadCounts(HH.readLoadCounts), this.frameDebug = BH
         })), this.timers.push(setInterval((() => {
           this.flush(), this.fpsOverTime = null, this.initialFps = null
         }), 1e4), setInterval((() => {
           this.followGame() && this.shell.canSend() && (this.hasFlushedSinceConnect || (this.flush(), this.hasFlushedSinceConnect = !0))
         }), 250))
       }
-      animationFrame(VV) {
-        var eV;
-        this.mainStall.animationFrame(), this.tracker.onAnimationFrame(VV), null === (eV = this.frameDebug) || void 0 === eV || eV.animationFrame()
+      animationFrame(HH) {
+        var BH;
+        this.mainStall.animationFrame(), this.tracker.onAnimationFrame(HH), null === (BH = this.frameDebug) || void 0 === BH || BH.animationFrame()
       }
-      sendsWent(VV, eV, xV) {
-        this.ping.onFrame(VV.headerWord(yJ.Q.PingSent), eV), this.sendsStartMs = eV, this.sendsEndMs = xV
+      sendsWent(HH, BH, LH) {
+        this.ping.onFrame(HH.headerWord(hA.I.PingSent), BH), this.sendsStartMs = BH, this.sendsEndMs = LH
       }
-      frameRan(VV, eV, xV, JV) {
-        var YV;
-        this.ping.onFrame(VV.headerWord(yJ.Q.PingSent), xV);
-        const UV = this.tracker;
-        this.pacing.onFrame(VV, UV.isSampling());
-        const yV = VV.headerWord(yJ.Q.TickUs) / 1e3 + (0, EJ.J)();
-        var pV;
-        (UV.Iq(yV), null === (YV = this.frameDebug) || void 0 === YV || YV.wasmFrame(VV, eV, xV, JV, UV.isSampling(), yV), null !== this.game) && (null === (pV = this.frameDebug) || void 0 === pV || pV.inGame());
-        const QV = this.sendsStartMs >= eV ? this.sendsEndMs - this.sendsStartMs : 0,
-          nV = Math.max(0, xV - eV - yV - QV);
-        if ("drawn" !== JV) return void("paced" === JV ? (this.pacedCpuMs += nV, this.mainStall.paced()) : "skipped" === JV && this.mainStall.reset());
-        this.followGame(), this.mainStall.drawn(eV), UV.onFrameStart(eV);
-        this.gpu.onFrame(VV.headerWord(yJ.Q.GpuSampled), VV.headerWord(yJ.Q.GpuTimed), VV.headerWord(yJ.Q.GpuFrameUs), UV.isSampling()) && UV.onGpuSampleStarted(), UV.onFrameCpu(nV + this.pacedCpuMs), this.pacedCpuMs = 0, this.countFpsFrame(eV)
+      frameRan(HH, BH, LH, AH) {
+        var rH;
+        this.ping.onFrame(HH.headerWord(hA.I.PingSent), LH);
+        const SH = this.tracker;
+        this.pacing.onFrame(HH, SH.isSampling());
+        const hH = HH.headerWord(hA.I.TickUs) / 1e3 + (0, WA.P)();
+        var tH;
+        (SH.Dv(hH), null === (rH = this.frameDebug) || void 0 === rH || rH.wasmFrame(HH, BH, LH, AH, SH.isSampling(), hH), null !== this.game) && (null === (tH = this.frameDebug) || void 0 === tH || tH.inGame());
+        const zH = this.sendsStartMs >= BH ? this.sendsEndMs - this.sendsStartMs : 0,
+          CH = Math.max(0, LH - BH - hH - zH);
+        if ("drawn" !== AH) return void("paced" === AH ? (this.pacedCpuMs += CH, this.mainStall.paced()) : "skipped" === AH && this.mainStall.reset());
+        this.followGame(), this.mainStall.drawn(BH), SH.onFrameStart(BH);
+        this.gpu.onFrame(HH.headerWord(hA.I.GpuSampled), HH.headerWord(hA.I.GpuTimed), HH.headerWord(hA.I.GpuFrameUs), SH.isSampling()) && SH.onGpuSampleStarted(), SH.onFrameCpu(CH + this.pacedCpuMs), this.pacedCpuMs = 0, this.countFpsFrame(BH)
       }
       framePaced() {
-        var VV;
-        this.mainStall.paced(), null === (VV = this.frameDebug) || void 0 === VV || VV.wasmPeekPaced(this.tracker.isSampling())
+        var HH;
+        this.mainStall.paced(), null === (HH = this.frameDebug) || void 0 === HH || HH.wasmPeekPaced(this.tracker.isSampling())
       }
       stop() {
-        for (const VV of this.timers) clearInterval(VV);
+        for (const HH of this.timers) clearInterval(HH);
         this.timers.length = 0, document.removeEventListener("visibilitychange", this.onVisibility), window.removeEventListener("beforeunload", this.onBeforeUnload), this.mainStall.stop(), this.ping.stop(), this.tracker.limiterTelemetry.stop()
       }
       followGame() {
-        const VV = this.shell.joinedGame();
-        if (VV !== this.game) {
-          var eV;
-          if (this.game = VV, null !== VV) null === (eV = this.frameDebug) || void 0 === eV || eV.joined();
+        const HH = this.shell.joinedGame();
+        if (HH !== this.game) {
+          var BH;
+          if (this.game = HH, null !== HH) null === (BH = this.frameDebug) || void 0 === BH || BH.joined();
           this.tracker.snapshotAndReset(), this.pacing.onJoin(), this.hasFlushedSinceConnect = !1, this.inGameAtLastFlush = !1, this.fpsSpanStartMs = -1, this.fpsFrames = 0, this.pacedCpuMs = 0, this.firstSpanFps = null, this.fpsOverTime = null, this.initialFps = null, this.mainStall.reset()
         }
-        return null !== VV
+        return null !== HH
       }
-      countFpsFrame(VV) {
+      countFpsFrame(HH) {
         if (this.fpsSpanStartMs < 0) {
           if (!this.shell.inGame()) return;
-          this.fpsSpanStartMs = VV
+          this.fpsSpanStartMs = HH
         }
         this.fpsFrames++;
-        const eV = VV - this.fpsSpanStartMs;
-        if (!(eV < CQ.e)) {
+        const BH = HH - this.fpsSpanStartMs;
+        if (!(BH < gz.c)) {
           if (!document.hidden) {
-            const VV = 1e3 * this.fpsFrames / eV;
-            this.firstSpanFps ??= VV, this.initialFps = this.firstSpanFps, this.fpsOverTime = VV
+            const HH = 1e3 * this.fpsFrames / BH;
+            this.firstSpanFps ??= HH, this.initialFps = this.firstSpanFps, this.fpsOverTime = HH
           }
-          this.fpsFrames = 0, this.fpsSpanStartMs = VV
+          this.fpsFrames = 0, this.fpsSpanStartMs = HH
         }
       }
       flush() {
-        const VV = this.followGame(),
+        const HH = this.followGame(),
           {
-            cpuFrameMs: eV,
-            refreshHz: xV,
-            cpuBottleneck: YV,
-            frameIntervalCv: UV,
-            ...yV
+            cpuFrameMs: BH,
+            refreshHz: LH,
+            cpuBottleneck: rH,
+            frameIntervalCv: SH,
+            ...hH
           } = this.tracker.snapshotAndReset(),
-          pV = this.shell.inGame(),
-          QV = pV && this.inGameAtLastFlush,
-          nV = QV ? yV : (0, GQ.g)(yV),
-          wV = this.pacing.snapshotAndReset(QV);
-        if (this.inGameAtLastFlush = pV, this.pendingLightFailures += this.shell.takeFailedMeshJobs(), !VV || !this.shell.canSend()) return;
-        const ZV = performance.now(),
-          rV = (0, iQ.A)((0, iQ.w)(ZV), this.unsentPage),
-          bV = function(VV, eV, xV, YV, UV, yV, pV, QV) {
-            var nV, wV, ZV, vV, rV;
-            const kV = {},
+          tH = this.shell.inGame(),
+          zH = tH && this.inGameAtLastFlush,
+          CH = zH ? hH : (0, fz.d)(hH),
+          EH = this.pacing.snapshotAndReset(zH);
+        if (this.inGameAtLastFlush = tH, this.pendingLightFailures += this.shell.takeFailedMeshJobs(), !HH || !this.shell.canSend()) return;
+        const XH = performance.now(),
+          YH = (0, qz.y)((0, qz.u)(XH), this.unsentPage),
+          QH = function(HH, BH, LH, rH, SH, hH, tH, zH) {
+            var CH, EH, XH, GH, YH;
+            const uH = {},
               {
-                canvas: bV
-              } = VV,
-              EV = (0, DQ.f)({
-                refreshHz: eV.refreshHz,
-                msaa: VV.msaa(),
-                autoMsaaOff: (0, dQ.b)()
+                canvas: QH
+              } = HH,
+              WH = (0, ez.j)({
+                refreshHz: BH.refreshHz,
+                msaa: HH.msaa(),
+                autoMsaaOff: (0, yz.e)()
               });
-            for (const BV of (0, XQ.c)()) {
-              const jV = BV.name;
-              let qV;
-              if ((0, MQ.A)(jV)) qV = (0, iQ.e)(jV);
-              else if ((0, iQ.k)(jV)) qV = QV[jV];
-              else if ((0, DQ.i)(jV)) qV = EV[jV];
-              else switch (jV) {
+            for (const MH of (0, mz.c)()) {
+              const xH = MH.name;
+              let vH;
+              if ((0, oz.H)(xH)) vH = (0, qz.c)(xH);
+              else if ((0, qz.f)(xH)) vH = zH[xH];
+              else if ((0, ez.n)(xH)) vH = WH[xH];
+              else switch (xH) {
                 case "fps":
-                  qV = YV;
+                  vH = rH;
                   break;
-                case "rp":
-                  qV = UV;
+                case "yt":
+                  vH = SH;
                   break;
-                case "jp":
-                  qV = (0, SQ.B)((0, IQ.d)().n);
+                case "Sz":
+                  vH = (0, iz.G)((0, pz.d)().n);
                   break;
-                case "qp":
-                  qV = Math.max(bV.width, bV.height);
+                case "hz":
+                  vH = Math.max(QH.width, QH.height);
                   break;
-                case "tp":
-                  qV = Math.min(bV.width, bV.height);
+                case "tz":
+                  vH = Math.min(QH.width, QH.height);
                   break;
-                case "Fp":
-                  qV = navigator.hardwareConcurrency || null;
+                case "zz":
+                  vH = navigator.hardwareConcurrency || null;
                   break;
-                case "Tp":
-                  qV = (0, nU.getWebGpuSupported)();
+                case "Cz":
+                  vH = (0, CS.getWebGpuSupported)();
                   break;
-                case "Pp":
-                  qV = null === VV.fallbackReason ? null : en[VV.fallbackReason];
+                case "Ez":
+                  vH = null === HH.fallbackReason ? null : LC[HH.fallbackReason];
                   break;
-                case "Ap":
-                  qV = eV.cpuFrameMs;
+                case "Xz":
+                  vH = BH.cpuFrameMs;
                   break;
-                case "Np":
-                  qV = eV.refreshHz;
+                case "Gz":
+                  vH = BH.refreshHz;
                   break;
-                case "Xp":
-                  qV = eV.cpuBottleneck;
+                case "Yz":
+                  vH = BH.cpuBottleneck;
                   break;
-                case "Mp":
-                  qV = eV.frameIntervalCv;
+                case "uz":
+                  vH = BH.frameIntervalCv;
                   break;
-                case "zp":
-                  qV = eV.frameMs;
+                case "Qz":
+                  vH = BH.frameMs;
                   break;
-                case "Gp":
-                  qV = eV.tickMs;
+                case "Wz":
+                  vH = BH.tickMs;
                   break;
-                case "Dp":
-                  qV = eV.mainBusyShare;
+                case "Uz":
+                  vH = BH.mainBusyShare;
                   break;
-                case "Cp":
-                  qV = eV.mainProbeDelayMs;
+                case "Vz":
+                  vH = BH.mainProbeDelayMs;
                   break;
-                case "Wp":
-                  qV = eV.longAnimationFramesPerMin;
+                case "Mz":
+                  vH = BH.longAnimationFramesPerMin;
                   break;
-                case "Rp":
-                  qV = eV.longAnimationFrameTimeShare;
+                case "xz":
+                  vH = BH.longAnimationFrameTimeShare;
                   break;
-                case "gp":
-                  qV = eV.longAnimationFrameScriptShare;
+                case "vz":
+                  vH = BH.longAnimationFrameScriptShare;
                   break;
-                case "ap":
-                  qV = eV.gpuPassMs;
+                case "Pz":
+                  vH = BH.framesOver50msPerMin;
                   break;
-                case "cp":
-                  qV = eV.gpuSubmitToDoneMs;
+                case "Tz":
+                  vH = BH.framesOver100msPerMin;
                   break;
-                case "hp":
-                  qV = xV.lagP50Ms;
+                case "Oz":
+                  vH = BH.gpuPassMs;
                   break;
-                case "lp":
-                  qV = xV.lagP90Ms;
+                case "bz":
+                  vH = BH.gpuSubmitToDoneMs;
                   break;
-                case "eQ":
-                  qV = (0, NQ.h)(yV);
+                case "kz":
+                  vH = LH.lagP50Ms;
                   break;
-                case "Bp":
-                  qV = pV;
+                case "mz":
+                  vH = LH.lagP90Ms;
                   break;
-                case "Lp":
-                case "fp":
-                case "mp":
-                case "Kp":
-                case "Hp":
-                case "sp":
-                case "Sp":
-                case "Ip":
-                case "dp":
-                case "Op":
-                case "VQ":
-                case "xQ":
-                case "JQ":
-                case "YQ":
-                case "UQ":
-                  qV = null;
+                case "jz":
+                  vH = (0, kz.i)(hH);
                   break;
-                case "qQ":
-                  qV = (0, nU.getPlatformType)();
+                case "rz":
+                  vH = tH;
                   break;
-                case "tQ":
-                  qV = (0, nU.getGpuVendor)();
+                case "oz":
+                case "Iz":
+                case "fz":
+                case "lz":
+                case "Kz":
+                case "cz":
+                case "ez":
+                case "qz":
+                case "gz":
+                case "Nz":
+                case "Rz":
+                case "nz":
+                case "Fz":
+                case "Dz":
+                case "wz":
+                  vH = null;
                   break;
-                case "FQ":
-                  qV = lQ.b[VV.backend];
+                case "tC":
+                  vH = (0, CS.getPlatformType)();
                   break;
-                case "TQ":
-                  qV = (0, aQ.c)();
+                case "zC":
+                  vH = (0, CS.getGpuVendor)();
                   break;
-                case "AQ":
-                  qV = (0, nU.getOperatingSystem)();
+                case "CC":
+                  vH = Fz.b[HH.backend];
                   break;
-                case "NQ":
-                  qV = (0, nU.getTrafficSource)();
+                case "XC":
+                  vH = (0, Nz.d)();
                   break;
-                case "MQ":
-                  qV = null !== (nV = JV.b.get("gameEntrySource")) && void 0 !== nV ? nV : zQ.g;
+                case "YC":
+                  vH = (0, CS.getOperatingSystem)();
                   break;
-                case "zQ":
-                  qV = null !== (wV = eV.frameLimiter) && void 0 !== wV ? wV : zQ.g;
+                case "uC":
+                  vH = (0, CS.getTrafficSource)();
                   break;
-                case "GQ":
-                  qV = (0, RQ.i)();
+                case "QC":
+                  vH = null !== (CH = AH.c.get("gameEntrySource")) && void 0 !== CH ? CH : Iz.f;
                   break;
-                case "WQ":
-                  qV = null !== (ZV = (0, gQ.d)()) && void 0 !== ZV ? ZV : zQ.g;
+                case "WC":
+                  vH = null !== (EH = BH.frameLimiter) && void 0 !== EH ? EH : Iz.f;
                   break;
-                case "RQ":
-                  qV = (0, RQ.d)(bV.width, bV.height);
+                case "MC":
+                  vH = (0, Kz.i)();
                   break;
-                case "gQ":
-                  qV = (0, XQ.d)(-(new Date).getTimezoneOffset());
+                case "xC":
+                  vH = null !== (XH = (0, cz.e)()) && void 0 !== XH ? XH : Iz.f;
                   break;
-                case "cQ":
-                  qV = null !== (vV = VV.fallbackReason) && void 0 !== vV ? vV : zQ.g;
+                case "vC":
+                  vH = (0, Kz.d)(QH.width, QH.height);
                   break;
-                case "LQ":
-                  qV = "ready";
+                case "PC":
+                  vH = (0, mz.g)(-(new Date).getTimezoneOffset());
                   break;
-                case "fQ":
-                  qV = (0, nU.getSoftwareRenderer)();
+                case "kC":
+                  vH = null !== (GH = HH.fallbackReason) && void 0 !== GH ? GH : Iz.f;
                   break;
-                case "iQ":
-                  qV = (0, oQ.c)();
+                case "IC":
+                  vH = "ready";
                   break;
-                case "CQ":
-                  qV = (0, cQ.g)().replayState;
+                case "fC":
+                  vH = (0, CS.getSoftwareRenderer)();
                   break;
-                case "aQ":
-                  qV = (0, cQ.g)().replaySelection;
+                case "UC":
+                  vH = (0, Rz.c)();
                   break;
-                case "oQ":
-                  qV = null !== VV.shaderPackReach() ? "true" : "false";
+                case "VC":
+                  vH = (0, jz.e)().replayState;
                   break;
-                case "mQ":
-                  qV = null !== (rV = VV.shaderPackReach()) && void 0 !== rV && rV.sceneDepth ? "true" : "false";
+                case "OC":
+                  vH = (0, jz.e)().replaySelection;
                   break;
-                case "KQ": {
-                  const eV = VV.shaderPackReach();
-                  qV = null !== eV && void 0 !== eV && eV.sunShadow ? "all" : null !== eV && void 0 !== eV && eV.airShadow ? "air" : "none";
+                case "bC":
+                  vH = null !== HH.shaderPackReach() ? "true" : "false";
+                  break;
+                case "lC":
+                  vH = null !== (YH = HH.shaderPackReach()) && void 0 !== YH && YH.sceneDepth ? "true" : "false";
+                  break;
+                case "KC": {
+                  const BH = HH.shaderPackReach();
+                  vH = null !== BH && void 0 !== BH && BH.sunShadow ? "all" : null !== BH && void 0 !== BH && BH.airShadow ? "air" : "none";
                   break
                 }
-                case "uQ":
-                  qV = hQ.C;
+                case "cC":
+                  vH = nz.z;
                   break;
-                case "xn":
-                  qV = (0, iQ.o)();
+                case "nC":
+                  vH = (0, qz.j)();
                   break;
-                case "DQ": {
-                  const eV = VV.eE();
-                  qV = null === eV ? zQ.g : String(eV);
+                case "TC": {
+                  const BH = HH.KQ();
+                  vH = null === BH ? Iz.f : String(BH);
                   break
                 }
-                case "hQ":
-                case "lQ":
-                  qV = zQ.g;
+                case "mC":
+                case "oC":
+                  vH = Iz.f;
                   break;
                 default:
-                  throw new Error(`Unhandled field name: ${jV}`)
+                  throw new Error(`Unhandled field name: ${xH}`)
               }
-              if (void 0 === qV) throw new Error(`Metric ${jV} has no value`);
-              kV[jV] = qV
+              if (void 0 === vH) throw new Error(`Metric ${xH} has no value`);
+              uH[xH] = vH
             }
-            return kV
+            return uH
           }(this.shell, {
-            cpuFrameMs: eV,
-            refreshHz: xV,
-            cpuBottleneck: YV,
-            frameIntervalCv: UV,
-            ...nV
-          }, wV, this.fpsOverTime, this.initialFps, this.pendingLightFailures, this.ping.take(), rV);
-        if (! function(VV, eV, xV) {
-            return (0, Jx.e)(), VV(kV.k.Send, eV, xV)
-          }(this.shell.writeCmd, vV.td, function(VV) {
-            const eV = (0, oV.g)((0, yx.h)(VV)),
-              xV = new Uint8Array(kV.ce.BYTES + eV.length);
-            return new DataView(xV.buffer).setUint16(0, yx.d.AnalyticsUpdate, !0), xV.set(eV, kV.ce.BYTES), xV
-          }(bV))) return this.unsentPage = rV, void(0 === this.sendsDropped++ && console.warn("[wasm-client] an analytics update found the cmd ring full: dropped"));
-        this.unsentPage = null, this.pendingLightFailures -= Math.min(this.pendingLightFailures, NQ.g), (0, iQ.v)(bV, "wasm", ZV)
+            cpuFrameMs: BH,
+            refreshHz: LH,
+            cpuBottleneck: rH,
+            frameIntervalCv: SH,
+            ...CH
+          }, EH, this.fpsOverTime, this.initialFps, this.pendingLightFailures, this.ping.take(), YH);
+        if (! function(HH, BH, LH) {
+            return (0, AL.b)(), HH(uH.q.Send, BH, LH)
+          }(this.shell.writeCmd, GH.nd, function(HH) {
+            const BH = (0, RH.g)((0, hL.f)(HH)),
+              LH = new Uint8Array(uH.ge.BYTES + BH.length);
+            return new DataView(LH.buffer).setUint16(0, hL.d.AnalyticsUpdate, !0), LH.set(BH, uH.ge.BYTES), LH
+          }(QH))) return this.unsentPage = YH, void(0 === this.sendsDropped++ && console.warn("[wasm-client] an analytics update found the cmd ring full: dropped"));
+        this.unsentPage = null, this.pendingLightFailures -= Math.min(this.pendingLightFailures, kz.h), (0, qz.r)(QH, "wasm", XH)
       }
     }
-    var Yn = xV(40889);
+    var SC = LH(40657);
 
-    function Un(VV, eV, xV) {
-      const JV = new Map;
-      return (0, Yn.c)(((VV, xV, JV) => eV.vp(VV, xV, JV)), ((eV, xV, YV) => {
-        const UV = `${eV},${xV},${YV}`;
-        return JV.has(UV) || JV.set(UV, (0, He.c)(VV, eV, xV, YV)), JV.get(UV)
-      }), xV)
+    function hC(HH, BH, LH) {
+      const AH = new Map;
+      return (0, SC.d)(((HH, LH, AH) => BH.ph(HH, LH, AH)), ((BH, LH, rH) => {
+        const SH = `${BH},${LH},${rH}`;
+        return AH.has(SH) || AH.set(SH, (0, dB.d)(HH, BH, LH, rH)), AH.get(SH)
+      }), LH)
     }
-    var yn = xV(40894),
-      pn = xV(42171);
+    var tC = LH(40661),
+      zC = LH(42192);
 
-    function Qn(VV) {
-      const eV = null !== VV && 0 !== (kV.s.playerFlags(VV.api.apiView, 0) & kV.Ld.CursorAim);
-      eV !== (0, pn.l)() && (0, pn.D)(eV, null !== VV)
-    }
-
-    function nn(VV) {
-      return (0, WJ.b)(RJ.F, VV)
-    }
-    var wn = xV(42341);
-    const Zn = new UV.h((VV => xV(53877)(`./${VV}/${VV}Client`)));
-    let vn = null,
-      rn = null;
-    async function kn(VV) {
-      vn ??= xV.e(32).then((() => xV(40367))).then((VV => {
-        rn = VV.createDefaultClientPlugins
-      }), (VV => {
-        throw vn = null, VV
-      })), await Promise.all([Zn.load(VV), vn])
+    function CC(HH) {
+      const BH = null !== HH && 0 !== (uH.y.playerFlags(HH.api.apiView, 0) & uH.Md.CursorAim);
+      BH !== (0, zC.k)() && (0, zC.F)(BH, null !== HH)
     }
 
-    function bn(VV) {
-      VV.load(new fe(yY, new nY))
+    function EC(HH) {
+      return (0, fA.d)(lA.C, HH)
     }
-    let En = !1;
-    const Bn = new WeakMap;
+    var XC = LH(42343);
+    const GC = new SH.e((HH => LH(54469)(`./${HH}/${HH}Client`)));
+    let YC = null,
+      uC = null;
+    async function QC(HH) {
+      YC ??= LH.e(32).then((() => LH(40091))).then((HH => {
+        uC = HH.createDefaultClientPlugins
+      }), (HH => {
+        throw YC = null, HH
+      })), await Promise.all([GC.load(HH), YC])
+    }
 
-    function jn(VV) {
+    function WC(HH) {
+      HH.load(new DB(hr, new Cr))
+    }
+    let MC = !1;
+    const xC = new WeakMap;
+
+    function vC(HH) {
       try {
-        VV()
-      } catch (eV) {
-        console.error("[bloxd-wasm-client] a session-end step failed", eV)
+        HH()
+      } catch (BH) {
+        console.error("[bloxd-wasm-client] a session-end step failed", BH)
       }
     }
 
-    function qn(VV, eV) {
+    function PC(HH, BH) {
       ! function() {
-        var VV, eV;
-        JY.Howler.volume();
-        const xV = JY.Howler;
-        null === (VV = xV._autoResume) || void 0 === VV || VV.call(xV), null === (eV = xV._autoSuspend) || void 0 === eV || eV.call(xV)
+        var HH, BH;
+        Ar.Howler.volume();
+        const LH = Ar.Howler;
+        null === (HH = LH._autoResume) || void 0 === HH || HH.call(LH), null === (BH = LH._autoSuspend) || void 0 === BH || BH.call(LH)
       }();
-      const xV = new tV(eV.core, eV.memory, eV.audio);
-      let UV;
+      const LH = new PH(BH.core, BH.memory, BH.audio);
+      let SH;
       try {
-        UV = new WY(xV, eV.options)
-      } catch (vV) {
-        return VV.crash(gY.A, vV), null
-      }(0, QV.g)(RY(xV, UV));
-      const wV = new lp({
-        running: VV,
-        api: xV,
-        core: eV.core,
-        memory: eV.memory,
-        staleOr: eV.staleOr,
-        reportFault: eV.reportReplayFault,
-        options: eV.options,
-        sessionInfo: eV.sessionInfo,
-        replayShaderPack: eV.replayShaderPack
+        SH = new fr(LH, BH.options)
+      } catch (GH) {
+        return HH.crash(Kr.x, GH), null
+      }(0, zH.g)(lr(LH, SH));
+      const EH = new Ft({
+        running: HH,
+        api: LH,
+        core: BH.core,
+        memory: BH.memory,
+        staleOr: BH.staleOr,
+        reportFault: BH.reportReplayFault,
+        options: BH.options,
+        sessionInfo: BH.sessionInfo,
+        replayShaderPack: BH.replayShaderPack
       });
-      (0, EJ.A)();
-      const ZV = new IJ({
-        api: xV,
-        tables: UV,
-        sessionInfo: eV.sessionInfo,
-        gameFactory: VV => Zn.loadedFactory(VV),
-        defaultPlugins: (VV, eV, xV, JV) => {
-          if (null === rn) throw new Error("The default plugins started before they loaded");
-          return rn(VV, eV, xV, JV)
+      (0, WA.D)();
+      const XH = new iA({
+        api: LH,
+        tables: SH,
+        sessionInfo: BH.sessionInfo,
+        gameFactory: HH => GC.loadedFactory(HH),
+        defaultPlugins: (HH, BH, LH, AH) => {
+          if (null === uC) throw new Error("The default plugins started before they loaded");
+          return uC(HH, BH, LH, AH)
         },
-        serverOptions: eV.options,
-        onNetEvent: VV => {
-          wV.netEvent(VV), eV.onNetEvent(VV)
+        serverOptions: BH.options,
+        onNetEvent: HH => {
+          EH.netEvent(HH), BH.onNetEvent(HH)
         },
-        setLocalOptions: eV => {
-          fp(VV, {
-            changes: eV,
+        setLocalOptions: BH => {
+          wt(HH, {
+            changes: BH,
             reset: !1
           })
         },
-        playSound: (VV, xV, JV, YV, UV, yV, pV) => eV.audio.playGame(VV, xV, JV, YV, UV, yV, pV),
-        preloadSounds: VV => {
-          eV.audio.preload(function(VV) {
-            const eV = [];
-            for (const xV of VV) {
-              const VV = ge(xV);
-              if (null !== VV)
-                for (let xV = VV[0]; xV < VV[0] + VV[1]; xV++) eV.push(xV)
+        playSound: (HH, LH, AH, rH, SH, hH, tH) => BH.audio.playGame(HH, LH, AH, rH, SH, hH, tH),
+        preloadSounds: HH => {
+          BH.audio.preload(function(HH) {
+            const BH = [];
+            for (const LH of HH) {
+              const HH = KB(LH);
+              if (null !== HH)
+                for (let LH = HH[0]; LH < HH[0] + HH[1]; LH++) BH.push(LH)
             }
-            return eV
-          }(VV))
+            return BH
+          }(HH))
         },
         onSessionEnd: () => {
-          jn(YV.l), jn(EY), jn((() => {
-            JV.b.set({
+          vC(rH.i), vC(Wr), vC((() => {
+            AH.c.set({
               openInGameMenuName: null
             })
-          })), jn((() => {
-            eV.audio.endSession()
+          })), vC((() => {
+            BH.audio.endSession()
           }))
         },
-        beforeWrite: eV.beforeWrite,
-        beforeOp: eV.beforeOp,
-        cameraScreen: bY,
-        showCameraFacing: BY,
-        onEventOverflow: eV.onEventOverflow,
-        screenBandY: pV.m,
-        replayEntities: wV.entityHooks,
-        hasPackModel: eV.hasPackModel
+        beforeWrite: BH.beforeWrite,
+        beforeOp: BH.beforeOp,
+        cameraScreen: Qr,
+        showCameraFacing: Mr,
+        reportCameraFault: BH.reportCameraFault,
+        onEventOverflow: BH.onEventOverflow,
+        screenBandY: tH.k,
+        replayEntities: EH.entityHooks,
+        hasPackModel: BH.hasPackModel
       });
-      return ZV.attach(VV), Bn.set(ZV, wV), eY(ZV.items, eV.audio),
-        function(VV) {
-          VV.setClientFreeCameraGrant("isDev", !1);
-          const eV = eV => {
-            VV.setClientFreeCameraGrant("hasDeveloperRank", eV.playerHasRank("developer"))
+      return XH.attach(HH), xC.set(XH, EH), Br(XH.items, BH.audio),
+        function(HH) {
+          HH.setClientFreeCameraGrant("isDev", !1);
+          const BH = BH => {
+            HH.setClientFreeCameraGrant("hasDeveloperRank", BH.playerHasRank("developer"))
           };
-          (0, yV.i)("userContextUpdated", eV)
-        }(ZV), En || (En = !0, (0, yV.i)("appManagerUpdated|openInGameMenuName", (VV => {
-          !VV && (0, nV.k)().includes(nV.d) && (0, nV.m)(nV.d)
-        }))), ZV
+          (0, hH.m)("userContextUpdated", BH)
+        }(XH), MC || (MC = !0, (0, hH.m)("appManagerUpdated|openInGameMenuName", (HH => {
+          !HH && (0, CH.p)().includes(CH.d) && (0, CH.t)(CH.d)
+        }))), XH
     }
 
-    function tn(VV) {
+    function TC(HH) {
       try {
-        VV.closeGame()
+        HH.closeGame()
       } finally {
-        var eV;
-        null === (eV = Bn.get(VV)) || void 0 === eV || eV.stop(), Bn.delete(VV)
+        var BH;
+        null === (BH = xC.get(HH)) || void 0 === BH || BH.stop(), xC.delete(HH)
       }
     }
   },
-  53877: (VV, eV, xV) => {
-    var JV = {
-      "./bedwars/bedwarsClient": [40498, 9],
-      "./bridgeBattle/bridgeBattleClient": [40500, 10],
-      "./buildAFactory2/buildAFactory2Client": [39642, 87, 85, 248, 267, 11],
-      "./classic/classicClient": [40503, 12],
-      "./classic/smp2Client": [40509, 13],
-      "./clutch/clutchClient": [40511, 14],
-      "./containmentBreach/containmentBreachClient": [40517, 243, 15],
-      "./cooking/cookingClient": [40640, 16],
-      "./defusal/defusalClient": [40649, 17],
-      "./frontline/frontlineClient": [40652, 87, 85, 18],
-      "./goalRush/goalRushClient": [40667, 19],
-      "./greenville/greenvilleClient": [40673, 172, 273, 20],
-      "./hideseek/hideseekClient": [40699, 21],
-      "./luckyBedwars/luckyBedwarsClient": [40706, 22],
-      "./murderMystery/murderMysteryClient": [40709, 23],
-      "./ninetyNineNights/ninetyNineNightsClient": [40718, 24],
-      "./oneBlock/oneBlockClient": [40723, 25],
-      "./plots/plotsClient": [40729, 265, 243, 26],
-      "./pvpCiv/pvpCivClient": [40816, 27],
-      "./secretSanta/secretSantaClient": [40824, 28],
-      "./skyIslands/skyIslandsClient": [40833, 29],
-      "./skyblock/skyblockClient": [39671, 87, 257, 248, 172, 237, 30],
-      "./tsunami/tsunamiClient": [40837, 31]
-    };
+  37110: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => WH,
+      i: () => jH,
+      k: () => IH,
+      o: () => KH
+    });
+    var AH = LH(37146),
+      rH = LH(37112),
+      SH = LH(37120),
+      hH = LH(37127);
 
-    function YV(VV) {
-      if (!xV.o(JV, VV)) return Promise.resolve().then((() => {
-        var eV = new Error("Cannot find module '" + VV + "'");
-        throw eV.code = "MODULE_NOT_FOUND", eV
-      }));
-      var eV = JV[VV],
-        YV = eV[0];
-      return Promise.all(eV.slice(1).map(xV.e)).then((() => xV(YV)))
+    function tH(HH, BH, LH) {
+      const AH = "object" === typeof HH && null !== HH ? HH : {},
+        rH = function(HH, BH, LH) {
+          if (!Array.isArray(HH) || 0 === HH.length) return [];
+          const AH = [{
+            width: 0,
+            height: 0,
+            y: 0,
+            items: []
+          }];
+          for (const tH of (0, hH.i)(HH, hH.e.DEFAULT_FONT_SIZE, LH)) {
+            if ("text" !== tH.kind) {
+              AH[AH.length - 1].items.push({
+                content: tH,
+                chars: 1,
+                size: {
+                  x: 0,
+                  width: 0
+                }
+              });
+              continue
+            }
+            if (0 === tH.text.length) continue;
+            const HH = AH[AH.length - 1].items.reduce(((HH, BH) => HH + ("text" === BH.content.kind ? (0, SH.b)(BH.content.text) : BH.chars)), 0);
+            (0, SH.e)(tH.text, HH).forEach(((HH, BH) => {
+              BH > 0 && AH.push({
+                width: 0,
+                height: 0,
+                y: 0,
+                items: []
+              }), HH.length > 0 && AH[AH.length - 1].items.push({
+                content: {
+                  ...tH,
+                  text: HH
+                },
+                chars: HH.length,
+                size: {
+                  x: 0,
+                  width: 0
+                }
+              })
+            }))
+          }
+          let rH = hH.e.VERTICAL_PADDING / 2;
+          for (const SH of AH) {
+            if (0 === SH.items.length) continue;
+            const {
+              width: HH,
+              height: AH,
+              sizes: tH
+            } = (0, hH.h)(SH.items.map((HH => HH.content)), BH, LH);
+            SH.items.forEach(((HH, BH) => {
+              HH.size = tH[BH]
+            })), SH.width = HH, SH.height = AH, SH.y = rH, rH += AH + hH.e.LINE_SPACING
+          }
+          return AH
+        }(AH.content, BH, LH);
+      let tH = 0,
+        zH = hH.e.VERTICAL_PADDING,
+        CH = 0;
+      for (const SH of rH) {
+        tH = Math.max(tH, SH.width + 2 * hH.e.HORIZONTAL_PADDING), zH += SH.height + hH.e.LINE_SPACING;
+        for (const HH of SH.items) CH += HH.chars
+      }
+      const EH = "string" === typeof AH.backgroundColor ? AH.backgroundColor : "#22283b";
+      return {
+        width: tH,
+        height: zH,
+        chars: CH,
+        draw: (HH, BH) => {
+          const AH = [];
+          if (HH.fillStyle = EH, HH.fillRect(0, 0, tH, zH), null === BH)
+            for (const SH of rH) SH.items.length > 0 && (0, hH.t)(SH.items.map((HH => HH.content)), 0, SH.y, SH.height, HH, LH, AH);
+          else {
+            let SH = 0;
+            for (const tH of rH)
+              for (const rH of tH.items) {
+                if (SH >= BH) break;
+                const zH = "text" === rH.content.kind ? {
+                  ...rH.content,
+                  text: rH.content.text.substring(0, BH - SH)
+                } : rH.content;
+                (0, hH.p)(zH, rH.size.x, tH.y, tH.height, HH, LH, AH, rH.size.width), SH += rH.chars
+              }
+          }(0, hH.m)(AH, HH)
+        }
+      }
     }
-    YV.keys = () => Object.keys(JV), YV.id = 53877, VV.exports = YV
+    var zH = LH(37135),
+      CH = LH(37139);
+    const EH = 256,
+      XH = 1024,
+      GH = {
+        width: 1,
+        height: 7 / 8
+      };
+    var YH = LH(37149);
+    const uH = {
+      leaderboard: ""
+    };
+    var QH = LH(37157);
+    const WH = {
+        Nametag: 1,
+        MultilineText: 2,
+        Board: 3,
+        Leaderboard: 4
+      },
+      MH = 2048,
+      xH = 256,
+      vH = 10,
+      PH = 4,
+      TH = 65536,
+      UH = new TextDecoder;
+    let VH = QH.o,
+      OH = -1;
+    const bH = new Map,
+      kH = new Map;
+    let mH = 0;
+    const oH = new TextEncoder;
+
+    function IH(HH, BH) {
+      const LH = oH.encode(JSON.stringify(BH)),
+        AH = new Uint8Array(LH.length + 1);
+      return AH[0] = HH, AH.set(LH, 1), AH
+    }
+    const fH = {
+        name: "Ag",
+        info: null,
+        colour: "default",
+        ranks: [],
+        effects: [],
+        health: .5,
+        Ot: null,
+        hideNameSeed: null
+      },
+      lH = [IH(WH.Nametag, fH), IH(WH.Nametag, {
+        ...fH,
+        info: {
+          content: [{
+            str: "Ag"
+          }],
+          subtitle: ["Ag"]
+        }
+      }), IH(WH.MultilineText, {
+        box: {
+          content: ["Ag"]
+        },
+        shown: null
+      }), ...AH.c.map(((HH, BH) => IH(WH.Board, {
+        shared: {
+          text: "Ag",
+          textSize: BH
+        },
+        w: 0,
+        h: 0
+      })))];
+
+    function KH(HH) {
+      QH.h.load().then((() => {
+        if (HH()) return;
+        const BH = (0, rH.h)(1, 1, {
+          willReadFrequently: !0
+        });
+        var LH;
+        BH && (LH = BH.canvas, lH.map((HH => jH(HH, LH))))
+      }))
+    }
+    let cH = QH.q;
+
+    function eH() {
+      bH.clear(), kH.clear()
+    }
+
+    function qH(HH, BH) {
+      const LH = HH.get(BH);
+      return void 0 !== LH && (HH.delete(BH), HH.set(BH, LH)), LH
+    }
+
+    function gH(HH, BH, LH) {
+      HH.set(BH, LH), HH.size > xH && HH.delete(HH.keys().next().value)
+    }
+
+    function NH(HH, BH, LH) {
+      if (HH === WH.Nametag) {
+        let HH = qH(bH, BH);
+        return void 0 === HH && (HH = (0, zH.e)(JSON.parse(BH), LH, VH), gH(bH, BH, HH)), HH
+      }
+      if (HH === WH.MultilineText) {
+        var rH;
+        const HH = JSON.parse(BH),
+          AH = JSON.stringify(null !== (rH = HH.box) && void 0 !== rH ? rH : null),
+          SH = "number" === typeof HH.shown ? HH.shown : null;
+        let hH = qH(kH, AH);
+        void 0 === hH && (hH = tH(HH.box, LH, VH), gH(kH, AH, hH));
+        const zH = null === SH ? null : Math.min(Math.max(0, Math.floor(SH)), hH.chars),
+          CH = hH;
+        return {
+          width: CH.width,
+          height: CH.height,
+          draw: HH => {
+            CH.draw(HH, zH)
+          }
+        }
+      }
+      if (HH === WH.Board) return function(HH, BH) {
+        var LH;
+        if (!BH.canSeePlayerWrittenText) return null;
+        const {
+          shared: rH,
+          w: SH = 0,
+          h: hH = 0
+        } = HH, tH = !SH;
+        let zH;
+        if (tH) {
+          var YH, uH;
+          zH = null !== (YH = null === rH || void 0 === rH || null === (uH = rH.text) || void 0 === uH ? void 0 : uH.toString()) && void 0 !== YH ? YH : ""
+        } else {
+          if ("string" !== typeof(null === rH || void 0 === rH ? void 0 : rH.text)) return null;
+          zH = rH.text
+        }
+        if ("" === zH.trim()) return null;
+        const QH = null !== (LH = null === rH || void 0 === rH ? void 0 : rH.textSize) && void 0 !== LH ? LH : 0,
+          WH = AH.c[QH].ingameFontSize;
+        let MH = GH,
+          xH = EH;
+        tH || (zH = (0, AH.n)(zH, QH, SH, hH), MH = (0, AH.u)(SH, hH), xH = Math.min(EH, XH / Math.max(MH.width, MH.height)));
+        const vH = Math.round(xH * MH.width),
+          PH = Math.round(xH * MH.height),
+          TH = xH / EH;
+        return {
+          width: vH,
+          height: PH,
+          draw: HH => {
+            CH.d.fontSize = WH * TH, CH.d.fontWeight = "bold", CH.d.font = "'Jetbrains Mono', monospace", CH.d.drawText(HH, zH, 0, (-10 - 7 * QH) * TH, vH, PH)
+          }
+        }
+      }(JSON.parse(BH), VH);
+      if (HH === WH.Leaderboard) return function(HH, BH, LH) {
+        var AH;
+        const rH = (0, YH.f)(HH.opts, uH),
+          SH = (0, YH.d)(rH, LH),
+          hH = {
+            top: (0, YH.e)(rH, (0, YH.g)(HH.top)),
+            around: null !== (AH = HH.around) && void 0 !== AH ? AH : null,
+            showPlayerText: BH.canSeePlayerWrittenText,
+            localPlayerDbId: BH.localPlayerDbId
+          };
+        return {
+          width: SH.pixelWidth,
+          height: SH.pixelHeight,
+          draw: HH => {
+            const {
+              a: BH,
+              d: LH
+            } = HH.getTransform();
+            (0, YH.b)(HH, Math.round(SH.pixelWidth * BH), Math.round(SH.pixelHeight * LH), SH, rH, hH)
+          }
+        }
+      }(JSON.parse(BH), VH, MH);
+      throw new Error(`unknown text plane kind ${HH}`)
+    }
+    const RH = 2 ** Math.floor(Math.log2(MH));
+
+    function jH(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        AH = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      try {
+        if (HH.length < 2) return [0, 0];
+        const SH = (0, rH.d)(BH);
+        if (!SH) return [0, 0];
+        const hH = cH();
+        hH !== OH && (OH = hH, eH());
+        const [tH] = HH, zH = UH.decode(HH.subarray(1));
+        let CH;
+        tH !== WH.Board && tH !== WH.Leaderboard || !VH.canSeePlayerWrittenText || VH.glyphsShown(zH), SH.save();
+        try {
+          CH = NH(tH, zH, SH)
+        } finally {
+          SH.restore()
+        }
+        if (null === CH || !(CH.width > 0 && CH.height > 0)) return [0, 0];
+        const EH = Math.min(1, MH / CH.width, MH / CH.height),
+          XH = HH => AH ? function(HH) {
+            const BH = 2 ** Math.ceil(Math.log2(HH));
+            return Math.min(RH, BH - HH > HH - BH / 2 ? BH / 2 : BH)
+          }(HH) : Math.min(MH, Math.ceil(HH * EH)),
+          [GH, YH] = [XH(CH.width), XH(CH.height)];
+        ! function(HH, BH, LH, AH, rH) {
+          const SH = Math.max(HH.width, LH),
+            hH = Math.max(HH.height, AH),
+            tH = rH || SH * hH > Math.max(PH * LH * AH, TH),
+            [zH, CH] = tH ? [LH, AH] : [SH, hH];
+          zH === HH.width && CH === HH.height ? BH.clearRect(0, 0, zH, CH) : (HH.width = zH, HH.height = CH)
+        }(BH, SH, GH, YH, LH), SH.save();
+        try {
+          const [HH, BH] = AH ? [GH / CH.width, YH / CH.height] : [EH, EH];
+          1 === HH && 1 === BH || SH.scale(HH, BH), CH.draw(SH)
+        } finally {
+          SH.restore()
+        }
+        return [GH, YH]
+      } catch (SH) {
+        ! function(HH, BH) {
+          mH < vH && (mH++, console.warn(`[bloxd-wasm-client] ${HH}`, BH))
+        }("could not raster a text plane", SH);
+        try {
+          BH.width = 1
+        } catch {}
+        return [0, 0]
+      }
+    }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

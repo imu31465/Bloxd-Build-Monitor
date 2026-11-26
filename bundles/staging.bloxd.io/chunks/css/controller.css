@@ -535,8 +535,6 @@ html.PadOverThirdParty .PadFocusRing {
   z-index: 2147483647
 }
 
-html.PadOverThirdParty #ncmp__modal,
-html.PadOverThirdParty #ncmp__tool,
 html.PadOverThirdParty .fc-consent-root {
   z-index: 2147483646 !important
 }

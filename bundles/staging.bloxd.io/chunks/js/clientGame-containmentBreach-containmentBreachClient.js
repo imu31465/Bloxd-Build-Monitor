@@ -1,22 +1,64 @@
 export const id = 15;
 export const ids = [15];
 export const modules = {
-  39728: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => yV
+  40267: (HH, BH, LH) => {
+    var AH = {
+      "./breach-zero-uncaught.webp": 40273,
+      "./breach-zero.webp": 40279,
+      "./brood-father-uncaught.webp": 40285,
+      "./brood-father.webp": 40290,
+      "./carousel-uncaught.webp": 40296,
+      "./carousel.webp": 40304,
+      "./deadlock-uncaught.webp": 40308,
+      "./deadlock.webp": 40312,
+      "./doom-warlord-uncaught.webp": 40318,
+      "./doom-warlord.webp": 40324,
+      "./frost-revenant-uncaught.webp": 40331,
+      "./frost-revenant.webp": 40337,
+      "./hollow-choir-uncaught.webp": 40345,
+      "./hollow-choir.webp": 40352,
+      "./magma-warden-uncaught.webp": 40360,
+      "./magma-warden.webp": 40365,
+      "./patient-zero-uncaught.webp": 40373,
+      "./patient-zero.webp": 40377,
+      "./siege-engine-uncaught.webp": 40383,
+      "./siege-engine.webp": 40388,
+      "./warp-stalker-uncaught.webp": 40392,
+      "./warp-stalker.webp": 40401
+    };
+
+    function rH(HH) {
+      var BH = SH(HH);
+      return LH(BH)
+    }
+
+    function SH(HH) {
+      if (!LH.o(AH, HH)) {
+        var BH = new Error("Cannot find module '" + HH + "'");
+        throw BH.code = "MODULE_NOT_FOUND", BH
+      }
+      return AH[HH]
+    }
+    rH.keys = function() {
+      return Object.keys(AH)
+    }, rH.resolve = SH, HH.exports = rH, rH.id = 40267
+  },
+  39461: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => hH
     });
-    const JV = 4,
-      YV = 12e3,
-      UV = 1e3;
-    class yV {
+    const AH = 4,
+      rH = 12e3,
+      SH = 1e3;
+    class hH {
       constructor() {
         let {
-          limit: VV = JV,
-          windowMs: eV = YV,
-          spacingMs: xV = UV,
-          now: yV = Date.now
+          limit: HH = AH,
+          windowMs: BH = rH,
+          spacingMs: LH = SH,
+          now: hH = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = VV, this.windowMs = eV, this.spacingMs = xV, this.now = yV
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = HH, this.windowMs = BH, this.spacingMs = LH, this.now = hH
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -25,61 +67,61 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const VV of this.priority) VV.flush();
+        for (const HH of this.priority) HH.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const VV = this.now();
-        this.sent.push(VV), this.lastSentAt = VV, this.schedule(), this.notify()
+        const HH = this.now();
+        this.sent.push(HH), this.lastSentAt = HH, this.schedule(), this.notify()
       }
-      addPriority(VV) {
-        return this.priority.add(VV), () => {
-          this.priority.delete(VV)
+      addPriority(HH) {
+        return this.priority.add(HH), () => {
+          this.priority.delete(HH)
         }
       }
-      subscribe(VV) {
-        return this.listeners.add(VV), () => {
-          this.listeners.delete(VV)
+      subscribe(HH) {
+        return this.listeners.add(HH), () => {
+          this.listeners.delete(HH)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const VV of this.priority)
-          if (VV.waiting()) return !0;
+        for (const HH of this.priority)
+          if (HH.waiting()) return !0;
         return !1
       }
       prune() {
-        const VV = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= VV;) this.sent.shift()
+        const HH = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= HH;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const VV = this.now(),
-          eV = this.lastSentAt + this.spacingMs,
-          xV = Math.min(eV > VV ? eV : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        xV !== 1 / 0 && (this.timer = setTimeout((() => {
+        const HH = this.now(),
+          BH = this.lastSentAt + this.spacingMs,
+          LH = Math.min(BH > HH ? BH : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        LH !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, xV - VV)))
+        }), Math.max(0, LH - HH)))
       }
       notify() {
-        for (const VV of this.listeners) VV()
+        for (const HH of this.listeners) HH()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  39687: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => JV
+  39421: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => AH
     });
-    class JV {
-      constructor(VV, eV, xV) {
-        this.QZ = VV, this.beforeOpen = eV, this.afterClose = xV, this.open = !1, this.ik = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.ik && (this.open = !0, this.beforeOpen(this), this.emit())
+    class AH {
+      constructor(HH, BH, LH) {
+        this.AX = HH, this.beforeOpen = BH, this.afterClose = LH, this.open = !1, this.Mu = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.Mu && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -92,234 +134,234 @@ export const modules = {
       showOrRefresh() {
         this.open ? this.emit() : this.show()
       }
-      closePanel(VV) {
-        this.open = !1, this.onClosed(), this.emit(), this.afterClose(VV)
+      closePanel(HH) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(HH)
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.ik = !0
+        this.open = !1, this.emit(), this.Mu = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.ik || (this.snapshot = this.buildSnapshot(), this.QZ(this.snapshot))
+        this.Mu || (this.snapshot = this.buildSnapshot(), this.AX(this.snapshot))
       }
     }
   },
-  40517: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      default: () => wx
+  40265: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      default: () => EL
     });
-    var JV = xV(62);
-    var YV = xV(27),
-      UV = xV(2033),
-      yV = xV(32),
-      pV = xV(37762),
-      QV = xV(1146),
-      nV = xV.n(QV),
-      wV = xV(1542),
-      ZV = xV(1220),
-      vV = xV(5011),
-      rV = xV(1435),
-      kV = xV(1551),
-      bV = xV(2039),
-      EV = xV(1446),
-      BV = xV(2021),
-      jV = xV(2100),
-      qV = xV(220);
-    const tV = xV(40525),
-      FV = Object.fromEntries(tV.keys().map((VV => [VV.replace(/^\.\/(.*)\.webp$/, "$1"), tV(VV)]))),
-      TV = new Set;
+    var AH = LH(45);
+    var rH = LH(15),
+      SH = LH(1981),
+      hH = LH(18),
+      tH = LH(37474),
+      zH = LH(1038),
+      CH = LH.n(zH),
+      EH = LH(1450),
+      XH = LH(1123),
+      GH = LH(4941),
+      YH = LH(1344),
+      uH = LH(1455),
+      QH = LH(1986),
+      WH = LH(1365),
+      MH = LH(1967),
+      xH = LH(2051),
+      vH = LH(186);
+    const PH = LH(40267),
+      TH = Object.fromEntries(PH.keys().map((HH => [HH.replace(/^\.\/(.*)\.webp$/, "$1"), PH(HH)]))),
+      UH = new Set;
 
-    function PV(VV, eV) {
-      const xV = eV ? VV : `${VV}-uncaught`,
-        JV = (0, qV.b)(FV, xV);
-      return void 0 !== JV || TV.has(xV) || (TV.add(xV), console.warn(`Containment Breach has no mugshot ${xV}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), JV
+    function VH(HH, BH) {
+      const LH = BH ? HH : `${HH}-uncaught`,
+        AH = (0, vH.d)(TH, LH);
+      return void 0 !== AH || UH.has(LH) || (UH.add(LH), console.warn(`Containment Breach has no mugshot ${LH}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), AH
     }
-    var AV = xV(1321);
-    const NV = "containmentBreach",
-      XV = "Gold Coin";
+    var OH = LH(1225);
+    const bH = "containmentBreach",
+      kH = "Gold Coin";
 
-    function MV(VV) {
+    function mH(HH) {
       let {
-        open: eV,
-        onDismiss: xV,
-        title: JV,
-        className: YV,
-        decor: UV,
-        headerExtra: yV,
-        status: pV,
-        statusRefused: QV = !1,
-        children: wV
-      } = VV;
-      const ZV = `${YV}Title`;
-      return (0, AV.jsx)(vV.e, {
-        show: eV,
-        close: xV,
+        open: BH,
+        onDismiss: LH,
+        title: AH,
+        className: rH,
+        decor: SH,
+        headerExtra: hH,
+        status: tH,
+        statusRefused: zH = !1,
+        children: EH
+      } = HH;
+      const XH = `${rH}Title`;
+      return (0, OH.jsx)(GH.b, {
+        show: BH,
+        close: LH,
         togglePointerLock: !1,
         className: "ContainmentBoardOverlay",
-        children: (0, AV.jsxs)("section", {
-          className: nV()("ContainmentBoardPanel", YV),
+        children: (0, OH.jsxs)("section", {
+          className: CH()("ContainmentBoardPanel", rH),
           role: "dialog",
           "aria-modal": "true",
-          "aria-labelledby": ZV,
-          children: [UV && (0, AV.jsx)("div", {
+          "aria-labelledby": XH,
+          children: [SH && (0, OH.jsx)("div", {
             className: "BoardDecor",
             "aria-hidden": "true",
-            children: UV
-          }), (0, AV.jsxs)("header", {
+            children: SH
+          }), (0, OH.jsxs)("header", {
             className: "BoardHeader",
-            children: [(0, AV.jsx)("h2", {
-              id: ZV,
+            children: [(0, OH.jsx)("h2", {
+              id: XH,
               className: "VisuallyHidden",
-              children: JV
-            }), yV, (0, AV.jsx)(kV.k, {
-              onClick: xV
+              children: AH
+            }), hH, (0, OH.jsx)(uH.q, {
+              onClick: LH
             })]
-          }), (0, AV.jsx)("div", {
+          }), (0, OH.jsx)("div", {
             className: "BoardBody",
-            children: wV
-          }), void 0 !== pV && (0, AV.jsx)("footer", {
-            className: nV()("BoardStatus", {
-              Refused: QV
+            children: EH
+          }), void 0 !== tH && (0, OH.jsx)("footer", {
+            className: CH()("BoardStatus", {
+              Refused: zH
             }),
-            children: pV
+            children: tH
           })]
         })
       })
     }
 
-    function zV(VV) {
+    function oH(HH) {
       let {
-        itemName: eV
-      } = VV;
-      return (0, AV.jsx)(bV.e, {
-        itemName: eV,
+        itemName: BH
+      } = HH;
+      return (0, OH.jsx)(QH.e, {
+        itemName: BH,
         amount: 0
       })
     }
 
-    function GV(VV) {
+    function IH(HH) {
       let {
-        anomalyId: eV,
-        caught: xV
-      } = VV;
-      const YV = (0, JV.useRef)(null);
-      return (0, rV.e)(YV, !xV), (0, AV.jsx)("span", {
-        ref: YV,
-        className: nV()("BoardMugshot", {
-          Uncaught: !xV
+        anomalyId: BH,
+        caught: LH
+      } = HH;
+      const rH = (0, AH.useRef)(null);
+      return (0, YH.d)(rH, !LH), (0, OH.jsx)("span", {
+        ref: rH,
+        className: CH()("BoardMugshot", {
+          Uncaught: !LH
         }),
-        children: (0, AV.jsx)("img", {
-          src: PV(eV, xV),
+        children: (0, OH.jsx)("img", {
+          src: VH(BH, LH),
           alt: "",
           draggable: !1
         })
       })
     }
 
-    function WV(VV) {
+    function fH(HH) {
       let {
-        itemName: eV,
-        amount: xV,
-        hn: JV,
-        inTile: YV = !1
-      } = VV;
-      return (0, AV.jsx)(EV.d, {
+        itemName: BH,
+        amount: LH,
+        LX: AH,
+        inTile: rH = !1
+      } = HH;
+      return (0, OH.jsx)(WH.g, {
         delayShow: 200,
-        hoverOnly: YV,
+        hoverOnly: rH,
         placement: "top",
         tooltipClassName: "BoardChipTooltipBox",
-        tooltipInner: (0, AV.jsx)(gV, {
-          itemName: eV,
-          amount: xV,
-          hn: JV
+        tooltipInner: (0, OH.jsx)(KH, {
+          itemName: BH,
+          amount: LH,
+          LX: AH
         }),
-        children: (0, AV.jsxs)("span", {
-          className: nV()("BoardChip", {
-            Short: void 0 !== JV && JV < xV
+        children: (0, OH.jsxs)("span", {
+          className: CH()("BoardChip", {
+            Short: void 0 !== AH && AH < LH
           }),
-          children: [(0, AV.jsx)("span", {
+          children: [(0, OH.jsx)("span", {
             className: "BoardChipIcon",
-            children: (0, AV.jsx)(zV, {
-              itemName: eV
+            children: (0, OH.jsx)(oH, {
+              itemName: BH
             })
-          }), xV.toLocaleString()]
+          }), LH.toLocaleString()]
         })
       })
     }
-    const RV = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
+    const lH = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
 
-    function gV(VV) {
-      var eV;
+    function KH(HH) {
+      var BH;
       let {
-        itemName: xV,
-        amount: JV,
-        hn: YV
-      } = VV;
+        itemName: LH,
+        amount: AH,
+        LX: rH
+      } = HH;
       const {
-        t: UV
-      } = (0, ZV.A)(), yV = (0, jV.e)("itemInfo", (VV => VV[xV])), {
-        lore: pV,
-        droppedBy: QV
-      } = function(VV) {
-        if ("string" !== typeof VV) return {
-          lore: VV,
+        t: SH
+      } = (0, XH.B)(), hH = (0, xH.c)("itemInfo", (HH => HH[LH])), {
+        lore: tH,
+        droppedBy: zH
+      } = function(HH) {
+        if ("string" !== typeof HH) return {
+          lore: HH,
           droppedBy: null
         };
-        const eV = RV.exec(VV);
-        return null === eV ? {
-          lore: VV,
+        const BH = lH.exec(HH);
+        return null === BH ? {
+          lore: HH,
           droppedBy: null
         } : {
-          lore: "" === eV[1] ? void 0 : eV[1],
-          droppedBy: eV[2]
+          lore: "" === BH[1] ? void 0 : BH[1],
+          droppedBy: BH[2]
         }
-      }(null === yV || void 0 === yV ? void 0 : yV.description);
-      return (0, AV.jsxs)("div", {
+      }(null === hH || void 0 === hH ? void 0 : hH.description);
+      return (0, OH.jsxs)("div", {
         className: "BoardChipTooltip",
-        children: [(0, AV.jsxs)("div", {
+        children: [(0, OH.jsxs)("div", {
           className: "BoardChipTooltipHeader",
-          children: [(0, AV.jsx)("span", {
+          children: [(0, OH.jsx)("span", {
             className: "BoardChipTooltipIcon",
-            children: (0, AV.jsx)(zV, {
-              itemName: xV
+            children: (0, OH.jsx)(oH, {
+              itemName: LH
             })
-          }), (0, AV.jsx)(BV.b, {
-            text: null !== (eV = null === yV || void 0 === yV ? void 0 : yV.displayName) && void 0 !== eV ? eV : xV,
+          }), (0, OH.jsx)(MH.b, {
+            text: null !== (BH = null === hH || void 0 === hH ? void 0 : hH.displayName) && void 0 !== BH ? BH : LH,
             className: "BoardChipTooltipName"
           })]
-        }), (void 0 !== pV || null !== QV) && (0, AV.jsxs)("div", {
+        }), (void 0 !== tH || null !== zH) && (0, OH.jsxs)("div", {
           className: "BoardChipTooltipBody",
-          children: [void 0 !== pV && (0, AV.jsx)(BV.b, {
-            text: pV,
+          children: [void 0 !== tH && (0, OH.jsx)(MH.b, {
+            text: tH,
             className: "BoardChipTooltipDescription"
-          }), null !== QV && (0, AV.jsxs)("span", {
+          }), null !== zH && (0, OH.jsxs)("span", {
             className: "BoardChipTooltipSource",
-            children: [(0, AV.jsx)("span", {
+            children: [(0, OH.jsx)("span", {
               className: "BoardChipTooltipLabel",
-              children: UV(`${NV}:chipDroppedBy`)
-            }), QV]
+              children: SH(`${bH}:chipDroppedBy`)
+            }), zH]
           })]
-        }), void 0 !== YV && (0, AV.jsxs)("div", {
-          className: nV()("BoardChipTooltipHeld", {
-            Short: YV < JV
+        }), void 0 !== rH && (0, OH.jsxs)("div", {
+          className: CH()("BoardChipTooltipHeld", {
+            Short: rH < AH
           }),
-          children: [(0, AV.jsx)("span", {
+          children: [(0, OH.jsx)("span", {
             className: "BoardChipTooltipLabel",
-            children: UV(`${NV}:chipYouHave`)
-          }), (0, AV.jsxs)("span", {
+            children: SH(`${bH}:chipYouHave`)
+          }), (0, OH.jsxs)("span", {
             className: "BoardChipTooltipCount",
-            children: [(0, AV.jsx)("span", {
+            children: [(0, OH.jsx)("span", {
               className: "BoardChipTooltipHeldAmount",
-              children: YV.toLocaleString()
-            }), ` / ${JV.toLocaleString()}`]
-          }), (0, AV.jsx)("span", {
+              children: rH.toLocaleString()
+            }), ` / ${AH.toLocaleString()}`]
+          }), (0, OH.jsx)("span", {
             className: "BoardChipTooltipMeter",
-            children: (0, AV.jsx)("span", {
+            children: (0, OH.jsx)("span", {
               style: {
-                width: (JV > 0 ? 100 * Math.min(1, YV / JV) : 100) + "%"
+                width: (AH > 0 ? 100 * Math.min(1, rH / AH) : 100) + "%"
               }
             })
           })]
@@ -327,81 +369,81 @@ export const modules = {
       })
     }
 
-    function DV(VV) {
+    function cH(HH) {
       let {
-        icon: eV,
-        name: xV,
-        selected: JV,
-        locked: YV,
-        className: UV,
-        buttonRef: yV,
-        onSelect: pV,
-        children: QV
-      } = VV;
-      return (0, AV.jsxs)("button", {
-        ref: yV,
+        icon: BH,
+        name: LH,
+        selected: AH,
+        locked: rH,
+        className: SH,
+        buttonRef: hH,
+        onSelect: tH,
+        children: zH
+      } = HH;
+      return (0, OH.jsxs)("button", {
+        ref: hH,
         type: "button",
-        className: nV()("BoardTile", UV, {
-          Selected: JV,
-          Locked: YV
+        className: CH()("BoardTile", SH, {
+          Selected: AH,
+          Locked: rH
         }),
-        onClick: pV,
-        children: [(0, AV.jsx)("span", {
+        onClick: tH,
+        children: [(0, OH.jsx)("span", {
           className: "BoardTileIcon",
-          children: eV
-        }), (0, AV.jsx)("span", {
+          children: BH
+        }), (0, OH.jsx)("span", {
           className: "BoardTileName",
-          children: xV
-        }), QV]
+          children: LH
+        }), zH]
       })
     }
 
-    function iV(VV) {
+    function eH(HH) {
       let {
-        icon: eV,
-        name: xV,
-        children: JV
-      } = VV;
-      return (0, AV.jsxs)("header", {
+        icon: BH,
+        name: LH,
+        children: AH
+      } = HH;
+      return (0, OH.jsxs)("header", {
         className: "BoardDetailHeader",
-        children: [(0, AV.jsx)("span", {
+        children: [(0, OH.jsx)("span", {
           className: "BoardDetailIcon",
-          children: eV
-        }), (0, AV.jsxs)("div", {
+          children: BH
+        }), (0, OH.jsxs)("div", {
           className: "BoardDetailHeading",
-          children: [(0, AV.jsx)("h3", {
-            children: xV
-          }), (0, AV.jsx)("span", {
+          children: [(0, OH.jsx)("h3", {
+            children: LH
+          }), (0, OH.jsx)("span", {
             className: "BoardDetailStatus",
-            children: JV
+            children: AH
           })]
         })]
       })
     }
 
-    function CV(VV) {
+    function qH(HH) {
       let {
-        coins: eV,
-        children: xV
-      } = VV;
-      return (0, AV.jsxs)("div", {
+        coins: BH,
+        children: LH
+      } = HH;
+      return (0, OH.jsxs)("div", {
         className: "BoardWallet",
-        children: [(0, AV.jsx)(WV, {
-          itemName: XV,
-          amount: eV
-        }), xV]
+        children: [(0, OH.jsx)(fH, {
+          itemName: kH,
+          amount: BH
+        }), LH]
       })
     }
-    var aV = xV(39687);
-    const oV = "containmentCodexView";
-    class cV extends aV.c {
+    var gH = LH(39421);
+    const NH = "containmentCodexView";
+    class RH extends gH.b {
       constructor() {
-        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = VV => {
-          this.selectedId = VV, this.emit()
+        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = HH => {
+          this.selectedId = HH, this.emit()
         }
       }
-      RZ(VV) {
-        this.entries = VV.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
+      kX(HH) {
+        this.entries = HH.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
       }
       buildSnapshot() {
         return {
@@ -411,55 +453,55 @@ export const modules = {
         }
       }
     }
-    const hV = {
-        codexAnyDifficulty: `${NV}:codexNeedsAny`,
-        codexNormalOnly: `${NV}:codexNeedsNormal`,
-        codexHardOnly: `${NV}:codexNeedsHard`
+    const jH = {
+        codexAnyDifficulty: `${bH}:codexNeedsAny`,
+        codexNormalOnly: `${bH}:codexNeedsNormal`,
+        codexHardOnly: `${bH}:codexNeedsHard`
       },
-      lV = {
+      nH = {
         codexContained: "Contained",
         codexEncountered: "Sighted",
         codexUnidentified: "Unknown"
       },
-      LV = {
-        codexContained: `${NV}:codexContainedBadge`,
-        codexEncountered: `${NV}:codexEncounteredBadge`,
-        codexUnidentified: `${NV}:codexUnidentifiedBadge`
+      FH = {
+        codexContained: `${bH}:codexContainedBadge`,
+        codexEncountered: `${bH}:codexEncounteredBadge`,
+        codexUnidentified: `${bH}:codexUnidentifiedBadge`
       },
-      fV = ["94%", "81%", "88%", "46%", "72%"];
+      DH = ["94%", "81%", "88%", "46%", "72%"];
 
-    function mV(VV) {
+    function wH(HH) {
       let {
-        entry: eV
-      } = VV;
+        entry: BH
+      } = HH;
       const {
-        t: xV
-      } = (0, ZV.A)();
-      return (0, AV.jsx)("span", {
-        className: nV()("BoardBadge", lV[eV.codexEntryState]),
-        children: xV(LV[eV.codexEntryState])
+        t: LH
+      } = (0, XH.B)();
+      return (0, OH.jsx)("span", {
+        className: CH()("BoardBadge", nH[BH.codexEntryState]),
+        children: LH(FH[BH.codexEntryState])
       })
     }
 
-    function KV(VV) {
+    function ZH(HH) {
       const {
-        t: eV
-      } = (0, ZV.A)();
-      return "codexUnidentified" === VV.codexEntryState ? eV(`${NV}:codexUnidentifiedName`) : VV.codexEntryName
+        t: BH
+      } = (0, XH.B)();
+      return "codexUnidentified" === HH.codexEntryState ? BH(`${bH}:codexUnidentifiedName`) : HH.codexEntryName
     }
 
-    function HV(VV) {
+    function dH(HH) {
       let {
-        entry: eV
-      } = VV;
-      return "codexUnidentified" === eV.codexEntryState ? (0, AV.jsx)(zV, {
+        entry: BH
+      } = HH;
+      return "codexUnidentified" === BH.codexEntryState ? (0, OH.jsx)(oH, {
         itemName: "Book"
-      }) : (0, AV.jsxs)("span", {
+      }) : (0, OH.jsxs)("span", {
         className: "CodexPhoto",
-        children: [(0, AV.jsx)(GV, {
-          anomalyId: eV.codexEntryId,
-          caught: "codexContained" === eV.codexEntryState
-        }), (0, AV.jsx)("img", {
+        children: [(0, OH.jsx)(IH, {
+          anomalyId: BH.codexEntryId,
+          caught: "codexContained" === BH.codexEntryState
+        }), (0, OH.jsx)("img", {
           className: "CodexPaperclip",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGNggIIXb97/X7V57/+Wvtn/GZDBqs17UQTgClahScBATHrlf5ySeHWimo9NMbokCp9OkmD/oasGCaJLAAC5ZUIBS85GiAAAAABJRU5ErkJggg==",
           alt: "",
@@ -468,27 +510,27 @@ export const modules = {
       })
     }
 
-    function uV(VV) {
+    function aH(HH) {
       let {
-        entry: eV,
-        selected: xV,
-        onSelect: JV
-      } = VV;
-      const YV = "codexUnidentified" === eV.codexEntryState;
-      return (0, AV.jsxs)(DV, {
-        icon: (0, AV.jsx)(HV, {
-          entry: eV
+        entry: BH,
+        selected: LH,
+        onSelect: AH
+      } = HH;
+      const rH = "codexUnidentified" === BH.codexEntryState;
+      return (0, OH.jsxs)(cH, {
+        icon: (0, OH.jsx)(dH, {
+          entry: BH
         }),
-        name: KV(eV),
-        selected: xV,
-        locked: YV,
-        className: nV()("CodexFolder", lV[eV.codexEntryState]),
+        name: ZH(BH),
+        selected: LH,
+        locked: rH,
+        className: CH()("CodexFolder", nH[BH.codexEntryState]),
         onSelect: () => {
-          JV(eV.codexEntryId)
+          AH(BH.codexEntryId)
         },
-        children: [!YV && (0, AV.jsx)(mV, {
-          entry: eV
-        }), YV && (0, AV.jsx)("img", {
+        children: [!rH && (0, OH.jsx)(wH, {
+          entry: BH
+        }), rH && (0, OH.jsx)("img", {
           className: "CodexSeal",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAARElEQVR4nGNggIIGHp7/MAzjw+TAnMf+/mB8RkQEjOGKYZLIgsiK4AqQJZA1gBXAOHgVwCRQJJEdCVOEYj8yQPciTAEAz0hgyamUqskAAAAASUVORK5CYII=",
           alt: "",
@@ -497,176 +539,176 @@ export const modules = {
       })
     }
 
-    function sV(VV) {
+    function sH(HH) {
       let {
-        count: eV
-      } = VV;
-      const xV = [];
-      for (let JV = Math.min(eV, 25); JV > 0; JV -= 5) xV.push(Math.min(JV, 5));
-      return (0, AV.jsx)("span", {
+        count: BH
+      } = HH;
+      const LH = [];
+      for (let AH = Math.min(BH, 25); AH > 0; AH -= 5) LH.push(Math.min(AH, 5));
+      return (0, OH.jsx)("span", {
         className: "CodexTallyMarks",
         "aria-hidden": "true",
-        children: xV.map(((VV, eV) => (0, AV.jsx)("span", {
-          className: nV()("CodexTallyGroup", {
-            Gate: 5 === VV
+        children: LH.map(((HH, BH) => (0, OH.jsx)("span", {
+          className: CH()("CodexTallyGroup", {
+            Gate: 5 === HH
           }),
           children: Array.from({
-            length: Math.min(VV, 4)
-          }, ((VV, eV) => (0, AV.jsx)("span", {
+            length: Math.min(HH, 4)
+          }, ((HH, BH) => (0, OH.jsx)("span", {
             className: "CodexTallyMark"
-          }, eV)))
-        }, eV)))
+          }, BH)))
+        }, BH)))
       })
     }
 
-    function SV(VV) {
+    function JH(HH) {
       let {
-        contained: eV,
-        total: xV
-      } = VV;
+        contained: BH,
+        total: LH
+      } = HH;
       const {
-        t: JV
-      } = (0, ZV.A)();
-      return (0, AV.jsxs)("div", {
+        t: AH
+      } = (0, XH.B)();
+      return (0, OH.jsxs)("div", {
         className: "CodexProgress",
-        children: [JV(`${NV}:codexProgress`, {
-          contained: String(eV),
-          total: String(xV)
-        }), (0, AV.jsx)("span", {
+        children: [AH(`${bH}:codexProgress`, {
+          contained: String(BH),
+          total: String(LH)
+        }), (0, OH.jsx)("span", {
           className: "CodexProgressMeter",
-          children: (0, AV.jsx)("span", {
+          children: (0, OH.jsx)("span", {
             style: {
-              width: eV / xV * 100 + "%"
+              width: BH / LH * 100 + "%"
             }
           })
         })]
       })
     }
 
-    function IV(VV) {
+    function iH(HH) {
       let {
-        entry: eV,
-        fileNumber: xV
-      } = VV;
+        entry: BH,
+        fileNumber: LH
+      } = HH;
       const {
-        t: JV
-      } = (0, ZV.A)(), YV = "codexContained" === eV.codexEntryState;
-      return (0, AV.jsx)("section", {
+        t: AH
+      } = (0, XH.B)(), rH = "codexContained" === BH.codexEntryState;
+      return (0, OH.jsx)("section", {
         className: "BoardDetail",
-        children: (0, AV.jsxs)("article", {
-          className: nV()("CodexDossier", lV[eV.codexEntryState]),
-          children: [(0, AV.jsx)("span", {
+        children: (0, OH.jsxs)("article", {
+          className: CH()("CodexDossier", nH[BH.codexEntryState]),
+          children: [(0, OH.jsx)("span", {
             className: "CodexFileNumber",
-            children: JV(`${NV}:codexFileNumber`, {
-              number: String(xV).padStart(3, "0")
+            children: AH(`${bH}:codexFileNumber`, {
+              number: String(LH).padStart(3, "0")
             })
-          }), (0, AV.jsx)(iV, {
-            icon: (0, AV.jsx)(HV, {
-              entry: eV
+          }), (0, OH.jsx)(eH, {
+            icon: (0, OH.jsx)(dH, {
+              entry: BH
             }),
-            name: KV(eV),
-            children: (0, AV.jsx)(mV, {
-              entry: eV
+            name: ZH(BH),
+            children: (0, OH.jsx)(wH, {
+              entry: BH
             })
-          }), YV && (0, AV.jsxs)(AV.Fragment, {
-            children: [(0, AV.jsx)("p", {
+          }), rH && (0, OH.jsxs)(OH.Fragment, {
+            children: [(0, OH.jsx)("p", {
               className: "BoardDescription",
-              children: eV.codexEntryLore
-            }), (0, AV.jsxs)("p", {
+              children: BH.codexEntryLore
+            }), (0, OH.jsxs)("p", {
               className: "CodexTally",
-              children: [JV(`${NV}:codexContainments`, {
-                count: String(eV.codexEntryContainedCount)
-              }), (0, AV.jsx)(sV, {
-                count: eV.codexEntryContainedCount
+              children: [AH(`${bH}:codexContainments`, {
+                count: String(BH.codexEntryContainedCount)
+              }), (0, OH.jsx)(sH, {
+                count: BH.codexEntryContainedCount
               })]
-            }), (0, AV.jsx)("span", {
+            }), (0, OH.jsx)("span", {
               className: "CodexClosedStamp",
               "aria-hidden": "true",
-              children: JV(`${NV}:codexContainedBadge`)
+              children: AH(`${bH}:codexContainedBadge`)
             })]
-          }), !YV && (0, AV.jsxs)(AV.Fragment, {
-            children: [(0, AV.jsxs)("div", {
+          }), !rH && (0, OH.jsxs)(OH.Fragment, {
+            children: [(0, OH.jsxs)("div", {
               className: "CodexRedaction",
-              children: [fV.map((VV => (0, AV.jsx)("span", {
+              children: [DH.map((HH => (0, OH.jsx)("span", {
                 className: "CodexRedactedLine",
                 style: {
-                  width: VV
+                  width: HH
                 }
-              }, VV))), (0, AV.jsx)("p", {
+              }, HH))), (0, OH.jsx)("p", {
                 className: "CodexRedacted",
-                children: JV(`${NV}:codexRedacted`)
+                children: AH(`${bH}:codexRedacted`)
               })]
-            }), "" !== eV.codexEntryHint && (0, AV.jsxs)("aside", {
+            }), "" !== BH.codexEntryHint && (0, OH.jsxs)("aside", {
               className: "CodexNote",
-              children: [(0, AV.jsx)("h4", {
-                children: JV(`${NV}:codexHintLabel`)
-              }), (0, AV.jsx)("p", {
-                children: eV.codexEntryHint
+              children: [(0, OH.jsx)("h4", {
+                children: AH(`${bH}:codexHintLabel`)
+              }), (0, OH.jsx)("p", {
+                children: BH.codexEntryHint
               })]
-            }), (0, AV.jsx)("p", {
+            }), (0, OH.jsx)("p", {
               className: "CodexClearance",
-              children: JV(hV[eV.codexEntryDifficulty])
+              children: AH(jH[BH.codexEntryDifficulty])
             })]
           })]
         })
       })
     }
 
-    function dV(VV) {
+    function pH(HH) {
       let {
-        controller: eV
-      } = VV;
-      const xV = (0, wV.j)(oV, eV.getSnapshot()),
+        controller: BH
+      } = HH;
+      const LH = (0, EH.e)(NH, BH.getSnapshot()),
         {
-          t: JV
-        } = (0, ZV.A)();
-      if (0 === xV.entries.length) return null;
-      const YV = xV.entries.find((VV => VV.codexEntryId === xV.selectedId)),
-        UV = xV.entries.filter((VV => "codexContained" === VV.codexEntryState)).length,
-        yV = xV.entries.map((VV => VV.codexEntryId)).sort().indexOf(YV.codexEntryId) + 1;
-      return (0, AV.jsxs)(MV, {
-        open: xV.open,
-        onDismiss: eV.dismiss,
-        title: JV(`${NV}:codexTitle`),
+          t: AH
+        } = (0, XH.B)();
+      if (0 === LH.entries.length) return null;
+      const rH = LH.entries.find((HH => HH.codexEntryId === LH.selectedId)),
+        SH = LH.entries.filter((HH => "codexContained" === HH.codexEntryState)).length,
+        hH = LH.entries.map((HH => HH.codexEntryId)).sort().indexOf(rH.codexEntryId) + 1;
+      return (0, OH.jsxs)(mH, {
+        open: LH.open,
+        onDismiss: BH.dismiss,
+        title: AH(`${bH}:codexTitle`),
         className: "ContainmentCodexPanel",
-        headerExtra: (0, AV.jsx)(SV, {
-          contained: UV,
-          total: xV.entries.length
+        headerExtra: (0, OH.jsx)(JH, {
+          contained: SH,
+          total: LH.entries.length
         }),
-        children: [(0, AV.jsx)("div", {
+        children: [(0, OH.jsx)("div", {
           className: "BoardTiles",
-          children: xV.entries.map((VV => (0, AV.jsx)(uV, {
-            entry: VV,
-            selected: VV === YV,
-            onSelect: eV.select
-          }, VV.codexEntryId)))
-        }), (0, AV.jsx)(IV, {
-          entry: YV,
-          fileNumber: yV
+          children: LH.entries.map((HH => (0, OH.jsx)(aH, {
+            entry: HH,
+            selected: HH === rH,
+            onSelect: BH.select
+          }, HH.codexEntryId)))
+        }), (0, OH.jsx)(iH, {
+          entry: rH,
+          fileNumber: hH
         })]
       })
     }
-    var OV = xV(375);
-    class Ve extends aV.c {
-      constructor(VV, eV, xV, JV, YV, UV) {
-        super(VV, eV, xV), this.pacer = JV, this.command = YV, this.predict = UV, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = VV => {
-          this.selectedId = VV, this.emit()
-        }, this.act = (VV, eV) => {
-          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${VV} ${eV}`, this.rollBack)) return;
-          const xV = this.predict(this.board, VV, eV);
-          null !== xV && (this.board = xV.board, this.notice = xV.notice, this.emit())
+    var yH = LH(317);
+    class HB extends gH.b {
+      constructor(HH, BH, LH, AH, rH, SH) {
+        super(HH, BH, LH), this.pacer = AH, this.command = rH, this.predict = SH, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = HH => {
+          this.selectedId = HH, this.emit()
+        }, this.act = (HH, BH) => {
+          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${HH} ${BH}`, this.rollBack)) return;
+          const LH = this.predict(this.board, HH, BH);
+          null !== LH && (this.board = LH.board, this.notice = LH.notice, this.emit())
         }, this.rollBack = () => {
           this.board !== this.confirmed && (this.board = this.confirmed, this.notice = null)
-        }, this.unsubscribePacer = JV.subscribe((() => {
+        }, this.unsubscribePacer = AH.subscribe((() => {
           this.emit()
         }))
       }
-      RZ(VV) {
-        const eV = this.messageOpens(VV);
-        if (eV && this.open) return this.board === this.confirmed && (this.board = VV), this.confirmed = VV, void this.emit();
-        if (this.board = VV, this.confirmed = VV, this.pacer.onReply(), eV) return this.notice = null, this.selectedId = this.openingSelection(VV), void this.show();
-        const xV = this.messageNotice(VV);
-        null !== xV && (this.notice = xV), this.emit()
+      kX(HH) {
+        const BH = this.messageOpens(HH);
+        if (BH && this.open) return this.board === this.confirmed && (this.board = HH), this.confirmed = HH, void this.emit();
+        if (this.board = HH, this.confirmed = HH, this.pacer.onReply(), BH) return this.notice = null, this.selectedId = this.openingSelection(HH), void this.show();
+        const LH = this.messageNotice(HH);
+        null !== LH && (this.notice = LH), this.emit()
       }
       dispose() {
         this.unsubscribePacer(), super.dispose()
@@ -676,153 +718,153 @@ export const modules = {
       }
     }
 
-    function ee(VV, eV) {
-      return VV.loadoutCoins >= eV.loadoutCostCoins && eV.loadoutCostParts.every((eV => function(VV, eV) {
-        return xe(VV, eV).loadoutHeldPartAmount
-      }(VV, eV.loadoutPartCurrency) >= eV.loadoutPartAmount))
+    function BB(HH, BH) {
+      return HH.loadoutCoins >= BH.loadoutCostCoins && BH.loadoutCostParts.every((BH => function(HH, BH) {
+        return LB(HH, BH).loadoutHeldPartAmount
+      }(HH, BH.loadoutPartCurrency) >= BH.loadoutPartAmount))
     }
 
-    function xe(VV, eV) {
-      return VV.loadoutHeldParts.find((VV => VV.loadoutHeldPartCurrency === eV))
+    function LB(HH, BH) {
+      return HH.loadoutHeldParts.find((HH => HH.loadoutHeldPartCurrency === BH))
     }
 
-    function Je(VV, eV) {
-      return VV.loadoutSlots.find((VV => VV.loadoutSlotKind === eV))
+    function AB(HH, BH) {
+      return HH.loadoutSlots.find((HH => HH.loadoutSlotKind === BH))
     }
 
-    function Ye(VV) {
-      return VV.loadoutPerks.filter((VV => VV.loadoutPerkEquipped)).length >= VV.loadoutMaxPerks
+    function rB(HH) {
+      return HH.loadoutPerks.filter((HH => HH.loadoutPerkEquipped)).length >= HH.loadoutMaxPerks
     }
 
-    function Ue(VV, eV, xV) {
-      for (const YV of VV.loadoutSlots) {
-        const JV = YV.loadoutSlotOptions.find((VV => VV.loadoutOptionId === xV));
-        if (JV) return "loadoutArmour" === YV.loadoutSlotKind ? pe(VV, YV, JV, eV) : ye(VV, YV, JV, eV)
+    function SB(HH, BH, LH) {
+      for (const rH of HH.loadoutSlots) {
+        const AH = rH.loadoutSlotOptions.find((HH => HH.loadoutOptionId === LH));
+        if (AH) return "loadoutArmour" === rH.loadoutSlotKind ? tB(HH, rH, AH, BH) : hB(HH, rH, AH, BH)
       }
-      const JV = VV.loadoutPerks.find((VV => VV.loadoutPerkId === xV));
-      return JV ? function(VV, eV, xV) {
-        const JV = eV.loadoutPerkOwned,
-          YV = eV.loadoutPerkEquipped,
-          UV = eV.loadoutPerkName,
-          yV = Ye(VV);
-        if ("loadoutUnlock" === xV) {
-          if (JV || !ee(VV, eV.loadoutPerkCost)) return null;
-          const xV = {
-            ...eV,
+      const AH = HH.loadoutPerks.find((HH => HH.loadoutPerkId === LH));
+      return AH ? function(HH, BH, LH) {
+        const AH = BH.loadoutPerkOwned,
+          rH = BH.loadoutPerkEquipped,
+          SH = BH.loadoutPerkName,
+          hH = rB(HH);
+        if ("loadoutUnlock" === LH) {
+          if (AH || !BB(HH, BH.loadoutPerkCost)) return null;
+          const LH = {
+            ...BH,
             loadoutPerkOwned: !0,
-            loadoutPerkEquipped: !yV
+            loadoutPerkEquipped: !hH
           };
           return {
-            board: ne(we(VV, eV.loadoutPerkCost), xV),
-            notice: Ze(yV ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", UV)
+            board: CB(EB(HH, BH.loadoutPerkCost), LH),
+            notice: XB(hH ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", SH)
           }
         }
-        if ("loadoutUpgrade" === xV || !JV || "loadoutEquip" === xV === YV || !YV && yV) return null;
+        if ("loadoutUpgrade" === LH || !AH || "loadoutEquip" === LH === rH || !rH && hH) return null;
         return {
-          board: ne(VV, {
-            ...eV,
-            loadoutPerkEquipped: !YV
+          board: CB(HH, {
+            ...BH,
+            loadoutPerkEquipped: !rH
           }),
-          notice: Ze(YV ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", UV)
+          notice: XB(rH ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", SH)
         }
-      }(VV, JV, eV) : null
+      }(HH, AH, BH) : null
     }
 
-    function ye(VV, eV, xV, JV) {
-      const YV = xV.loadoutOptionOwnedTier,
-        UV = xV.loadoutOptionName;
-      if ("loadoutEquip" === JV) return 0 === YV ? null : {
-        board: Qe(VV, eV, xV.loadoutOptionId, null),
-        notice: Ze("loadoutNoticeEquipped", UV)
+    function hB(HH, BH, LH, AH) {
+      const rH = LH.loadoutOptionOwnedTier,
+        SH = LH.loadoutOptionName;
+      if ("loadoutEquip" === AH) return 0 === rH ? null : {
+        board: zB(HH, BH, LH.loadoutOptionId, null),
+        notice: XB("loadoutNoticeEquipped", SH)
       };
-      const yV = "loadoutUnlock" === JV;
-      if (yV && 0 !== YV || "loadoutUpgrade" === JV && (0 === YV || YV >= xV.loadoutOptionTiers.length) || "loadoutUnequip" === JV) return null;
-      const pV = xV.loadoutOptionTiers[YV].loadoutTierCost;
-      if (!ee(VV, pV)) return null;
-      const QV = {
-          ...xV,
-          loadoutOptionOwnedTier: YV + 1
+      const hH = "loadoutUnlock" === AH;
+      if (hH && 0 !== rH || "loadoutUpgrade" === AH && (0 === rH || rH >= LH.loadoutOptionTiers.length) || "loadoutUnequip" === AH) return null;
+      const tH = LH.loadoutOptionTiers[rH].loadoutTierCost;
+      if (!BB(HH, tH)) return null;
+      const zH = {
+          ...LH,
+          loadoutOptionOwnedTier: rH + 1
         },
-        nV = yV ? xV.loadoutOptionId : eV.loadoutSlotEquippedId;
+        CH = hH ? LH.loadoutOptionId : BH.loadoutSlotEquippedId;
       return {
-        board: Qe(we(VV, pV), eV, nV, QV),
-        notice: yV ? Ze("loadoutNoticeUnlocked", UV) : Ze("loadoutNoticeUpgraded", UV, YV + 1)
+        board: zB(EB(HH, tH), BH, CH, zH),
+        notice: hH ? XB("loadoutNoticeUnlocked", SH) : XB("loadoutNoticeUpgraded", SH, rH + 1)
       }
     }
 
-    function pe(VV, eV, xV, JV) {
-      const YV = xV.loadoutOptionOwnedTier > 0,
-        UV = xV.loadoutOptionName;
-      if ("loadoutEquip" === JV && YV) return {
-        board: Qe(VV, eV, xV.loadoutOptionId, null),
-        notice: Ze("loadoutNoticeEquipped", UV)
+    function tB(HH, BH, LH, AH) {
+      const rH = LH.loadoutOptionOwnedTier > 0,
+        SH = LH.loadoutOptionName;
+      if ("loadoutEquip" === AH && rH) return {
+        board: zB(HH, BH, LH.loadoutOptionId, null),
+        notice: XB("loadoutNoticeEquipped", SH)
       };
-      const yV = xV.loadoutOptionTiers[0].loadoutTierCost;
-      return "loadoutUnlock" !== JV || YV || !ee(VV, yV) ? null : {
-        board: Qe(we(VV, yV), eV, xV.loadoutOptionId, {
-          ...xV,
+      const hH = LH.loadoutOptionTiers[0].loadoutTierCost;
+      return "loadoutUnlock" !== AH || rH || !BB(HH, hH) ? null : {
+        board: zB(EB(HH, hH), BH, LH.loadoutOptionId, {
+          ...LH,
           loadoutOptionOwnedTier: 1
         }),
-        notice: Ze("loadoutNoticeUnlocked", UV)
+        notice: XB("loadoutNoticeUnlocked", SH)
       }
     }
 
-    function Qe(VV, eV, xV, JV) {
-      const YV = {
-        ...eV,
-        loadoutSlotEquippedId: xV,
-        loadoutSlotOptions: eV.loadoutSlotOptions.map((VV => null !== JV && VV.loadoutOptionId === JV.loadoutOptionId ? JV : VV))
+    function zB(HH, BH, LH, AH) {
+      const rH = {
+        ...BH,
+        loadoutSlotEquippedId: LH,
+        loadoutSlotOptions: BH.loadoutSlotOptions.map((HH => null !== AH && HH.loadoutOptionId === AH.loadoutOptionId ? AH : HH))
       };
       return {
-        ...VV,
-        loadoutSlots: VV.loadoutSlots.map((VV => VV === eV ? YV : VV))
+        ...HH,
+        loadoutSlots: HH.loadoutSlots.map((HH => HH === BH ? rH : HH))
       }
     }
 
-    function ne(VV, eV) {
+    function CB(HH, BH) {
       return {
-        ...VV,
-        loadoutPerks: VV.loadoutPerks.map((VV => VV.loadoutPerkId === eV.loadoutPerkId ? eV : VV))
+        ...HH,
+        loadoutPerks: HH.loadoutPerks.map((HH => HH.loadoutPerkId === BH.loadoutPerkId ? BH : HH))
       }
     }
 
-    function we(VV, eV) {
+    function EB(HH, BH) {
       return {
-        ...VV,
-        loadoutCoins: VV.loadoutCoins - eV.loadoutCostCoins,
-        loadoutHeldParts: VV.loadoutHeldParts.map((VV => {
-          const xV = eV.loadoutCostParts.find((eV => eV.loadoutPartCurrency === VV.loadoutHeldPartCurrency));
-          return xV ? {
-            ...VV,
-            loadoutHeldPartAmount: VV.loadoutHeldPartAmount - xV.loadoutPartAmount
-          } : VV
+        ...HH,
+        loadoutCoins: HH.loadoutCoins - BH.loadoutCostCoins,
+        loadoutHeldParts: HH.loadoutHeldParts.map((HH => {
+          const LH = BH.loadoutCostParts.find((BH => BH.loadoutPartCurrency === HH.loadoutHeldPartCurrency));
+          return LH ? {
+            ...HH,
+            loadoutHeldPartAmount: HH.loadoutHeldPartAmount - LH.loadoutPartAmount
+          } : HH
         }))
       }
     }
 
-    function Ze(VV, eV) {
+    function XB(HH, BH) {
       return {
-        loadoutNoticeKey: VV,
+        loadoutNoticeKey: HH,
         loadoutNoticeRefused: !1,
-        loadoutNoticeName: eV,
+        loadoutNoticeName: BH,
         loadoutNoticeTier: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0
       }
     }
-    const ve = "containmentLoadoutView";
-    class re extends Ve {
-      constructor(VV, eV, xV, JV) {
-        super(VV, eV, xV, JV, "loadout", Ue), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = VV => {
-          this.slot = VV, this.selectedId = ke(this.board, VV), this.emit()
+    const GB = "containmentLoadoutView";
+    class YB extends HB {
+      constructor(HH, BH, LH, AH) {
+        super(HH, BH, LH, AH, "loadout", SB), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = HH => {
+          this.slot = HH, this.selectedId = uB(this.board, HH), this.emit()
         }
       }
-      messageOpens(VV) {
-        return VV.loadoutMessageOpens
+      messageOpens(HH) {
+        return HH.loadoutMessageOpens
       }
-      messageNotice(VV) {
-        return VV.loadoutNotice
+      messageNotice(HH) {
+        return HH.loadoutNotice
       }
-      openingSelection(VV) {
-        return ke(VV, this.slot)
+      openingSelection(HH) {
+        return uB(HH, this.slot)
       }
       buildSnapshot() {
         return {
@@ -836,765 +878,765 @@ export const modules = {
       }
     }
 
-    function ke(VV, eV) {
-      if ("loadoutPerks" === eV) {
-        var xV;
-        const eV = VV.loadoutPerks;
-        return (null !== (xV = eV.find((VV => VV.loadoutPerkEquipped))) && void 0 !== xV ? xV : eV[0]).loadoutPerkId
+    function uB(HH, BH) {
+      if ("loadoutPerks" === BH) {
+        var LH;
+        const BH = HH.loadoutPerks;
+        return (null !== (LH = BH.find((HH => HH.loadoutPerkEquipped))) && void 0 !== LH ? LH : BH[0]).loadoutPerkId
       }
-      return Je(VV, eV).loadoutSlotEquippedId
+      return AB(HH, BH).loadoutSlotEquippedId
     }
-    const be = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
-    var Ee = xV(38067),
-      Be = xV(1309);
-    const je = {
-        loadoutPrimary: `${NV}:loadoutSlotPrimary`,
-        loadoutSecondary: `${NV}:loadoutSlotSecondary`,
-        loadoutOffensive: `${NV}:loadoutSlotOffensive`,
-        loadoutSelfHelp: `${NV}:loadoutSlotSelfHelp`,
-        loadoutArmour: `${NV}:loadoutSlotArmour`,
-        loadoutPerks: `${NV}:loadoutSlotPerks`
+    const QB = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
+    var WB = LH(37747),
+      MB = LH(1214);
+    const xB = {
+        loadoutPrimary: `${bH}:loadoutSlotPrimary`,
+        loadoutSecondary: `${bH}:loadoutSlotSecondary`,
+        loadoutOffensive: `${bH}:loadoutSlotOffensive`,
+        loadoutSelfHelp: `${bH}:loadoutSlotSelfHelp`,
+        loadoutArmour: `${bH}:loadoutSlotArmour`,
+        loadoutPerks: `${bH}:loadoutSlotPerks`
       },
-      qe = {
+      vB = {
         section: "right",
-        Pr: "bottom",
+        XY: "bottom",
         act: "top"
       },
-      te = (0, JV.createContext)({
+      PB = (0, AH.createContext)({
         step: null,
         targetRef: () => {}
       });
 
-    function Fe() {
+    function TB() {
       const {
-        step: VV,
-        targetRef: eV
-      } = (0, JV.useContext)(te);
-      return (xV, JV) => (null === VV || void 0 === VV ? void 0 : VV.kind) === xV && VV.id === JV ? eV : void 0
+        step: HH,
+        targetRef: BH
+      } = (0, AH.useContext)(PB);
+      return (LH, AH) => (null === HH || void 0 === HH ? void 0 : HH.kind) === LH && HH.id === AH ? BH : void 0
     }
 
-    function Te(VV, eV) {
-      const xV = eV.loadoutTargetId;
-      if ("loadoutPerks" === eV.loadoutTargetSection) {
-        const eV = VV.loadoutPerks.find((VV => VV.loadoutPerkId === xV));
+    function UB(HH, BH) {
+      const LH = BH.loadoutTargetId;
+      if ("loadoutPerks" === BH.loadoutTargetSection) {
+        const BH = HH.loadoutPerks.find((HH => HH.loadoutPerkId === LH));
         return {
-          name: eV.loadoutPerkName,
-          owned: eV.loadoutPerkOwned,
-          equipped: eV.loadoutPerkEquipped
+          name: BH.loadoutPerkName,
+          owned: BH.loadoutPerkOwned,
+          equipped: BH.loadoutPerkEquipped
         }
       }
-      const JV = Je(VV, eV.loadoutTargetSection),
-        YV = JV.loadoutSlotOptions.find((VV => VV.loadoutOptionId === xV));
+      const AH = AB(HH, BH.loadoutTargetSection),
+        rH = AH.loadoutSlotOptions.find((HH => HH.loadoutOptionId === LH));
       return {
-        name: YV.loadoutOptionName,
-        owned: YV.loadoutOptionOwnedTier > 0,
-        equipped: JV.loadoutSlotEquippedId === xV
+        name: rH.loadoutOptionName,
+        owned: rH.loadoutOptionOwnedTier > 0,
+        equipped: AH.loadoutSlotEquippedId === LH
       }
     }
 
-    function Pe(VV, eV, xV, JV) {
-      const [YV, UV] = VV(`${NV}:${eV}`, {
-        [xV]: "\x01"
+    function VB(HH, BH, LH, AH) {
+      const [rH, SH] = HH(`${bH}:${BH}`, {
+        [LH]: "\x01"
       }).split("\x01");
-      return (0, AV.jsxs)(AV.Fragment, {
-        children: [YV, (0, AV.jsx)("span", {
+      return (0, OH.jsxs)(OH.Fragment, {
+        children: [rH, (0, OH.jsx)("span", {
           className: "LoadoutWalkthroughName",
-          children: JV
-        }), UV]
+          children: AH
+        }), SH]
       })
     }
 
-    function Ae(VV) {
+    function OB(HH) {
       let {
-        view: eV,
-        onDismiss: xV,
-        children: YV
-      } = VV;
+        view: BH,
+        onDismiss: LH,
+        children: rH
+      } = HH;
       const {
-        t: UV
-      } = (0, ZV.A)(), yV = eV.loadout, pV = eV.open ? yV.loadoutWalkthrough.map((VV => ({
-        target: VV,
-        info: Te(yV, VV)
-      }))).find((VV => {
+        t: SH
+      } = (0, XH.B)(), hH = BH.loadout, tH = BH.open ? hH.loadoutWalkthrough.map((HH => ({
+        target: HH,
+        info: UB(hH, HH)
+      }))).find((HH => {
         let {
-          info: eV
-        } = VV;
-        return !eV.equipped
+          info: BH
+        } = HH;
+        return !BH.equipped
       })) : void 0;
-      let QV = null,
-        nV = null;
-      if (void 0 !== pV) {
+      let zH = null,
+        CH = null;
+      if (void 0 !== tH) {
         const {
-          target: VV,
-          info: xV
-        } = pV;
-        eV.slot !== VV.loadoutTargetSection ? (QV = {
+          target: HH,
+          info: LH
+        } = tH;
+        BH.slot !== HH.loadoutTargetSection ? (zH = {
           kind: "section",
-          id: VV.loadoutTargetSection
-        }, nV = Pe(UV, "loadoutWalkthroughSection", "section", UV(je[VV.loadoutTargetSection]))) : eV.selectedId !== VV.loadoutTargetId ? (QV = {
-          kind: "Pr",
-          id: VV.loadoutTargetId
-        }, nV = Pe(UV, "loadoutWalkthroughPick", "name", xV.name)) : (QV = {
+          id: HH.loadoutTargetSection
+        }, CH = VB(SH, "loadoutWalkthroughSection", "section", SH(xB[HH.loadoutTargetSection]))) : BH.selectedId !== HH.loadoutTargetId ? (zH = {
+          kind: "XY",
+          id: HH.loadoutTargetId
+        }, CH = VB(SH, "loadoutWalkthroughPick", "name", LH.name)) : (zH = {
           kind: "act",
-          id: VV.loadoutTargetId
-        }, nV = Pe(UV, xV.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", xV.name))
+          id: HH.loadoutTargetId
+        }, CH = VB(SH, LH.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", LH.name))
       }
-      const wV = null === QV ? null : function(VV) {
-          return `${VV.kind}:${VV.id}`
-        }(QV),
-        [vV, rV] = (0, JV.useState)(null),
-        kV = (0, JV.useCallback)((VV => {
-          rV((eV => null !== VV ? {
-            key: wV,
-            node: VV
-          } : (null === eV || void 0 === eV ? void 0 : eV.key) === wV ? null : eV))
-        }), [wV]),
-        bV = null !== wV && (null === vV || void 0 === vV ? void 0 : vV.key) === wV ? vV.node : null;
-      return (0, AV.jsxs)(te.Provider, {
+      const EH = null === zH ? null : function(HH) {
+          return `${HH.kind}:${HH.id}`
+        }(zH),
+        [GH, YH] = (0, AH.useState)(null),
+        uH = (0, AH.useCallback)((HH => {
+          YH((BH => null !== HH ? {
+            key: EH,
+            node: HH
+          } : (null === BH || void 0 === BH ? void 0 : BH.key) === EH ? null : BH))
+        }), [EH]),
+        QH = null !== EH && (null === GH || void 0 === GH ? void 0 : GH.key) === EH ? GH.node : null;
+      return (0, OH.jsxs)(PB.Provider, {
         value: {
-          step: QV,
-          targetRef: kV
+          step: zH,
+          targetRef: uH
         },
-        children: [YV, null !== QV && null !== bV && (0, AV.jsx)(Ne, {
-          target: bV,
-          placement: qe[QV.kind],
-          onDismiss: xV,
-          children: nV
-        }, wV)]
+        children: [rH, null !== zH && null !== QH && (0, OH.jsx)(bB, {
+          target: QH,
+          placement: vB[zH.kind],
+          onDismiss: LH,
+          children: CH
+        }, EH)]
       })
     }
 
-    function Ne(VV) {
+    function bB(HH) {
       let {
-        target: eV,
-        placement: xV,
-        onDismiss: YV,
-        children: UV
-      } = VV;
+        target: BH,
+        placement: LH,
+        onDismiss: rH,
+        children: SH
+      } = HH;
       const {
-        t: yV
-      } = (0, ZV.A)(), pV = (0, JV.useRef)(eV);
-      return pV.current = eV, (0, Be.s)("popup", pV, YV), (0, AV.jsxs)(Ee.h, {
-        target: eV,
-        placement: xV,
+        t: hH
+      } = (0, XH.B)(), tH = (0, AH.useRef)(BH);
+      return tH.current = BH, (0, MB.r)("popup", tH, rH), (0, OH.jsxs)(WB.g, {
+        target: BH,
+        placement: LH,
         className: "LoadoutWalkthroughStep",
         spotlightMargin: 10,
-        children: [(0, AV.jsxs)("div", {
+        children: [(0, OH.jsxs)("div", {
           className: "LoadoutWalkthroughHeader",
-          children: [(0, AV.jsx)("img", {
+          children: [(0, OH.jsx)("img", {
             className: "LoadoutWalkthroughPortrait",
-            src: be,
+            src: QB,
             alt: "",
             draggable: !1
-          }), (0, AV.jsx)("span", {
+          }), (0, OH.jsx)("span", {
             className: "LoadoutWalkthroughSpeaker",
-            children: yV(`${NV}:operatorName`)
-          }), (0, AV.jsx)(kV.k, {
-            onClick: YV,
-            ariaLabel: yV(`${NV}:loadoutWalkthroughClose`),
+            children: hH(`${bH}:operatorName`)
+          }), (0, OH.jsx)(uH.q, {
+            onClick: rH,
+            ariaLabel: hH(`${bH}:loadoutWalkthroughClose`),
             padIgnore: !0
           })]
-        }), (0, AV.jsx)("p", {
+        }), (0, OH.jsx)("p", {
           className: "LoadoutWalkthroughText",
-          children: UV
+          children: SH
         })]
       })
     }
-    const Xe = new Set(["loadoutStatReload", "loadoutStatResupply"]);
+    const kB = new Set(["loadoutStatReload", "loadoutStatResupply"]);
 
-    function Me(VV) {
+    function mB(HH) {
       let {
-        cost: eV,
-        loadout: xV
-      } = VV;
+        cost: BH,
+        loadout: LH
+      } = HH;
       const {
-        t: JV
-      } = (0, ZV.A)();
-      return eV.loadoutCostCoins <= 0 && 0 === eV.loadoutCostParts.length ? (0, AV.jsx)("span", {
+        t: AH
+      } = (0, XH.B)();
+      return BH.loadoutCostCoins <= 0 && 0 === BH.loadoutCostParts.length ? (0, OH.jsx)("span", {
         className: "LoadoutCost",
-        children: JV(`${NV}:loadoutFree`)
-      }) : (0, AV.jsxs)("span", {
+        children: AH(`${bH}:loadoutFree`)
+      }) : (0, OH.jsxs)("span", {
         className: "LoadoutCost",
-        children: [eV.loadoutCostCoins > 0 && (0, AV.jsx)(WV, {
-          itemName: XV,
-          amount: eV.loadoutCostCoins,
-          hn: xV.loadoutCoins
-        }), eV.loadoutCostParts.map((VV => {
-          const eV = xe(xV, VV.loadoutPartCurrency);
-          return (0, AV.jsx)(WV, {
-            itemName: eV.loadoutHeldPartItem,
-            amount: VV.loadoutPartAmount,
-            hn: eV.loadoutHeldPartAmount
-          }, VV.loadoutPartCurrency)
+        children: [BH.loadoutCostCoins > 0 && (0, OH.jsx)(fH, {
+          itemName: kH,
+          amount: BH.loadoutCostCoins,
+          LX: LH.loadoutCoins
+        }), BH.loadoutCostParts.map((HH => {
+          const BH = LB(LH, HH.loadoutPartCurrency);
+          return (0, OH.jsx)(fH, {
+            itemName: BH.loadoutHeldPartItem,
+            amount: HH.loadoutPartAmount,
+            LX: BH.loadoutHeldPartAmount
+          }, HH.loadoutPartCurrency)
         }))]
       })
     }
-    const ze = {
-      loadoutStatFireRate: `${NV}:loadoutUnitPerMinute`,
-      loadoutStatReload: `${NV}:loadoutUnitSeconds`,
-      loadoutStatResupply: `${NV}:loadoutUnitSeconds`
+    const oB = {
+      loadoutStatFireRate: `${bH}:loadoutUnitPerMinute`,
+      loadoutStatReload: `${bH}:loadoutUnitSeconds`,
+      loadoutStatResupply: `${bH}:loadoutUnitSeconds`
     };
 
-    function Ge(VV) {
-      return "loadoutStatPotency" === VV.loadoutStatKind ? (0, OV.O)(VV.loadoutStatValue) : String(VV.loadoutStatValue)
+    function IB(HH) {
+      return "loadoutStatPotency" === HH.loadoutStatKind ? (0, yH.T)(HH.loadoutStatValue) : String(HH.loadoutStatValue)
     }
 
-    function We(VV) {
-      var eV;
+    function fB(HH) {
+      var BH;
       let {
-        option: xV
-      } = VV;
+        option: LH
+      } = HH;
       const {
-        t: JV
-      } = (0, ZV.A)(), YV = xV.loadoutOptionTiers, UV = null === (eV = YV[0]) || void 0 === eV ? void 0 : eV.loadoutTierStats.map((VV => VV.loadoutStatKind));
-      if (!UV || 0 === UV.length) return null;
-      const yV = xV.loadoutOptionOwnedTier,
-        pV = (VV, eV) => {
-          var xV;
-          return null === (xV = YV[VV]) || void 0 === xV ? void 0 : xV.loadoutTierStats.find((VV => VV.loadoutStatKind === eV))
+        t: AH
+      } = (0, XH.B)(), rH = LH.loadoutOptionTiers, SH = null === (BH = rH[0]) || void 0 === BH ? void 0 : BH.loadoutTierStats.map((HH => HH.loadoutStatKind));
+      if (!SH || 0 === SH.length) return null;
+      const hH = LH.loadoutOptionOwnedTier,
+        tH = (HH, BH) => {
+          var LH;
+          return null === (LH = rH[HH]) || void 0 === LH ? void 0 : LH.loadoutTierStats.find((HH => HH.loadoutStatKind === BH))
         };
-      return (0, AV.jsxs)("table", {
+      return (0, OH.jsxs)("table", {
         className: "LoadoutTierTable",
-        children: [(0, AV.jsx)("thead", {
-          children: (0, AV.jsxs)("tr", {
-            children: [(0, AV.jsx)("th", {}), YV.map(((VV, eV) => (0, AV.jsx)("th", {
-              className: nV()({
-                Current: eV + 1 === yV,
-                Next: eV === yV
+        children: [(0, OH.jsx)("thead", {
+          children: (0, OH.jsxs)("tr", {
+            children: [(0, OH.jsx)("th", {}), rH.map(((HH, BH) => (0, OH.jsx)("th", {
+              className: CH()({
+                Current: BH + 1 === hH,
+                Next: BH === hH
               }),
-              children: JV(`${NV}:loadoutTier`, {
-                tier: (0, OV.O)(eV + 1)
+              children: AH(`${bH}:loadoutTier`, {
+                tier: (0, yH.T)(BH + 1)
               })
-            }, eV)))]
+            }, BH)))]
           })
-        }), (0, AV.jsx)("tbody", {
-          children: UV.map((VV => {
-            const eV = ze[VV];
-            return (0, AV.jsxs)("tr", {
-              children: [(0, AV.jsxs)("th", {
+        }), (0, OH.jsx)("tbody", {
+          children: SH.map((HH => {
+            const BH = oB[HH];
+            return (0, OH.jsxs)("tr", {
+              children: [(0, OH.jsxs)("th", {
                 scope: "row",
-                children: [JV(`${NV}:${VV}`), eV && (0, AV.jsx)("span", {
+                children: [AH(`${bH}:${HH}`), BH && (0, OH.jsx)("span", {
                   className: "LoadoutStatUnit",
-                  children: JV(eV)
+                  children: AH(BH)
                 })]
-              }), YV.map(((eV, xV) => {
-                const JV = pV(xV, VV),
-                  YV = xV > 0 ? pV(xV - 1, VV) : void 0,
-                  UV = JV && YV ? JV.loadoutStatValue - YV.loadoutStatValue : 0,
-                  QV = Xe.has(VV) ? UV < 0 : UV > 0,
-                  wV = xV === yV;
-                return (0, AV.jsxs)("td", {
-                  className: nV()({
-                    Current: xV + 1 === yV,
-                    Next: wV,
-                    Gain: QV,
-                    Owned: xV < yV
+              }), rH.map(((BH, LH) => {
+                const AH = tH(LH, HH),
+                  rH = LH > 0 ? tH(LH - 1, HH) : void 0,
+                  SH = AH && rH ? AH.loadoutStatValue - rH.loadoutStatValue : 0,
+                  zH = kB.has(HH) ? SH < 0 : SH > 0,
+                  EH = LH === hH;
+                return (0, OH.jsxs)("td", {
+                  className: CH()({
+                    Current: LH + 1 === hH,
+                    Next: EH,
+                    Gain: zH,
+                    Owned: LH < hH
                   }),
-                  children: [wV && QV && (0, AV.jsx)("span", {
+                  children: [EH && zH && (0, OH.jsx)("span", {
                     className: "LoadoutGainArrow",
                     "aria-hidden": "true",
-                    children: UV < 0 ? "\u25bc" : "\u25b2"
-                  }), JV ? Ge(JV) : "-"]
-                }, xV)
+                    children: SH < 0 ? "\u25bc" : "\u25b2"
+                  }), AH ? IB(AH) : "-"]
+                }, LH)
               }))]
-            }, VV)
+            }, HH)
           }))
         })]
       })
     }
 
-    function Re(VV) {
+    function lB(HH) {
       let {
-        view: eV,
-        controller: xV,
-        slot: JV,
-        option: YV
-      } = VV;
+        view: BH,
+        controller: LH,
+        slot: AH,
+        option: rH
+      } = HH;
       const {
-        t: UV
-      } = (0, ZV.A)(), yV = eV.loadout, pV = YV.loadoutOptionOwnedTier, QV = YV.loadoutOptionTiers.length, nV = JV.loadoutSlotEquippedId === YV.loadoutOptionId, wV = pV < QV ? YV.loadoutOptionTiers[pV].loadoutTierCost : null, vV = null !== wV && ee(yV, wV), rV = YV.loadoutOptionId, bV = Fe();
-      return (0, AV.jsxs)(AV.Fragment, {
-        children: [(0, AV.jsx)(De, {
-          icon: YV.loadoutOptionIcon,
-          name: YV.loadoutOptionName,
-          status: 0 === pV ? UV(`${NV}:loadoutLocked`) : QV > 1 ? UV(`${NV}:loadoutTier`, {
-            tier: (0, OV.O)(pV)
+        t: SH
+      } = (0, XH.B)(), hH = BH.loadout, tH = rH.loadoutOptionOwnedTier, zH = rH.loadoutOptionTiers.length, CH = AH.loadoutSlotEquippedId === rH.loadoutOptionId, EH = tH < zH ? rH.loadoutOptionTiers[tH].loadoutTierCost : null, GH = null !== EH && BB(hH, EH), YH = rH.loadoutOptionId, QH = TB();
+      return (0, OH.jsxs)(OH.Fragment, {
+        children: [(0, OH.jsx)(cB, {
+          icon: rH.loadoutOptionIcon,
+          name: rH.loadoutOptionName,
+          status: 0 === tH ? SH(`${bH}:loadoutLocked`) : zH > 1 ? SH(`${bH}:loadoutTier`, {
+            tier: (0, yH.T)(tH)
           }) : null,
-          locked: 0 === pV,
-          equipped: nV
-        }), (0, AV.jsx)("p", {
+          locked: 0 === tH,
+          equipped: CH
+        }), (0, OH.jsx)("p", {
           className: "BoardDescription",
-          children: YV.loadoutOptionDescription
-        }), (0, AV.jsx)(We, {
-          option: YV
-        }), (0, AV.jsxs)("div", {
-          ref: bV("act", rV),
+          children: rH.loadoutOptionDescription
+        }), (0, OH.jsx)(fB, {
+          option: rH
+        }), (0, OH.jsxs)("div", {
+          ref: QH("act", YH),
           className: "BoardActions",
-          children: [null !== wV && (0, AV.jsxs)("div", {
+          children: [null !== EH && (0, OH.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, AV.jsx)(Me, {
-              cost: wV,
-              loadout: yV
-            }), (0, AV.jsx)(kV.m, {
-              disabled: !vV || eV.pending,
+            children: [(0, OH.jsx)(mB, {
+              cost: EH,
+              loadout: hH
+            }), (0, OH.jsx)(uH.u, {
+              disabled: !GH || BH.pending,
               onClick: () => {
-                xV.act(0 === pV ? "loadoutUnlock" : "loadoutUpgrade", rV)
+                LH.act(0 === tH ? "loadoutUnlock" : "loadoutUpgrade", YH)
               },
-              children: 0 === pV ? UV(`${NV}:loadoutUnlock`) : UV(`${NV}:loadoutUpgrade`, {
-                tier: (0, OV.O)(pV + 1)
+              children: 0 === tH ? SH(`${bH}:loadoutUnlock`) : SH(`${bH}:loadoutUpgrade`, {
+                tier: (0, yH.T)(tH + 1)
               })
             })]
-          }), null === wV && QV > 1 && (0, AV.jsx)("span", {
+          }), null === EH && zH > 1 && (0, OH.jsx)("span", {
             className: "BoardHint",
-            children: UV(`${NV}:loadoutMaxed`)
-          }), pV > 0 && !nV && (0, AV.jsx)(kV.f, {
-            disabled: eV.pending,
+            children: SH(`${bH}:loadoutMaxed`)
+          }), tH > 0 && !CH && (0, OH.jsx)(uH.i, {
+            disabled: BH.pending,
             onClick: () => {
-              xV.act("loadoutEquip", rV)
+              LH.act("loadoutEquip", YH)
             },
-            children: UV(`${NV}:loadoutEquip`)
+            children: SH(`${bH}:loadoutEquip`)
           })]
         })]
       })
     }
 
-    function ge(VV) {
+    function KB(HH) {
       let {
-        view: eV,
-        controller: xV,
-        perk: JV
-      } = VV;
+        view: BH,
+        controller: LH,
+        perk: AH
+      } = HH;
       const {
-        t: YV
-      } = (0, ZV.A)(), UV = eV.loadout, yV = Ye(UV), pV = JV.loadoutPerkId, QV = Fe();
-      return (0, AV.jsxs)(AV.Fragment, {
-        children: [(0, AV.jsx)(De, {
-          icon: JV.loadoutPerkIcon,
-          name: JV.loadoutPerkName,
-          status: JV.loadoutPerkOwned ? null : YV(`${NV}:loadoutLocked`),
-          locked: !JV.loadoutPerkOwned,
-          equipped: JV.loadoutPerkEquipped
-        }), (0, AV.jsx)("p", {
+        t: rH
+      } = (0, XH.B)(), SH = BH.loadout, hH = rB(SH), tH = AH.loadoutPerkId, zH = TB();
+      return (0, OH.jsxs)(OH.Fragment, {
+        children: [(0, OH.jsx)(cB, {
+          icon: AH.loadoutPerkIcon,
+          name: AH.loadoutPerkName,
+          status: AH.loadoutPerkOwned ? null : rH(`${bH}:loadoutLocked`),
+          locked: !AH.loadoutPerkOwned,
+          equipped: AH.loadoutPerkEquipped
+        }), (0, OH.jsx)("p", {
           className: "BoardDescription",
-          children: JV.loadoutPerkDescription
-        }), (0, AV.jsxs)("div", {
-          ref: QV("act", pV),
+          children: AH.loadoutPerkDescription
+        }), (0, OH.jsxs)("div", {
+          ref: zH("act", tH),
           className: "BoardActions",
-          children: [!JV.loadoutPerkOwned && (0, AV.jsxs)("div", {
+          children: [!AH.loadoutPerkOwned && (0, OH.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, AV.jsx)(Me, {
-              cost: JV.loadoutPerkCost,
-              loadout: UV
-            }), (0, AV.jsx)(kV.m, {
-              disabled: !ee(UV, JV.loadoutPerkCost) || eV.pending,
+            children: [(0, OH.jsx)(mB, {
+              cost: AH.loadoutPerkCost,
+              loadout: SH
+            }), (0, OH.jsx)(uH.u, {
+              disabled: !BB(SH, AH.loadoutPerkCost) || BH.pending,
               onClick: () => {
-                xV.act("loadoutUnlock", pV)
+                LH.act("loadoutUnlock", tH)
               },
-              children: YV(`${NV}:loadoutUnlock`)
+              children: rH(`${bH}:loadoutUnlock`)
             })]
-          }), JV.loadoutPerkOwned && !JV.loadoutPerkEquipped && (0, AV.jsx)(kV.f, {
-            disabled: yV || eV.pending,
+          }), AH.loadoutPerkOwned && !AH.loadoutPerkEquipped && (0, OH.jsx)(uH.i, {
+            disabled: hH || BH.pending,
             onClick: () => {
-              xV.act("loadoutEquip", pV)
+              LH.act("loadoutEquip", tH)
             },
-            children: YV(`${NV}:loadoutEquip`)
-          }), JV.loadoutPerkOwned && !JV.loadoutPerkEquipped && yV && (0, AV.jsx)("span", {
+            children: rH(`${bH}:loadoutEquip`)
+          }), AH.loadoutPerkOwned && !AH.loadoutPerkEquipped && hH && (0, OH.jsx)("span", {
             className: "BoardHint",
-            children: YV(`${NV}:loadoutSocketsFullHint`)
-          }), JV.loadoutPerkEquipped && (0, AV.jsx)(kV.M, {
-            disabled: eV.pending,
+            children: rH(`${bH}:loadoutSocketsFullHint`)
+          }), AH.loadoutPerkEquipped && (0, OH.jsx)(uH.W, {
+            disabled: BH.pending,
             onClick: () => {
-              xV.act("loadoutUnequip", pV)
+              LH.act("loadoutUnequip", tH)
             },
-            children: YV(`${NV}:loadoutUnequip`)
+            children: rH(`${bH}:loadoutUnequip`)
           })]
         })]
       })
     }
 
-    function De(VV) {
+    function cB(HH) {
       let {
-        icon: eV,
-        name: xV,
-        status: JV,
-        locked: YV,
-        equipped: UV
-      } = VV;
+        icon: BH,
+        name: LH,
+        status: AH,
+        locked: rH,
+        equipped: SH
+      } = HH;
       const {
-        t: yV
-      } = (0, ZV.A)();
-      return (0, AV.jsxs)(iV, {
-        icon: (0, AV.jsx)(zV, {
-          itemName: eV
+        t: hH
+      } = (0, XH.B)();
+      return (0, OH.jsxs)(eH, {
+        icon: (0, OH.jsx)(oH, {
+          itemName: BH
         }),
-        name: xV,
-        children: [null !== JV && (0, AV.jsx)("span", {
-          className: nV()("LoadoutStatusText", {
-            Locked: YV
+        name: LH,
+        children: [null !== AH && (0, OH.jsx)("span", {
+          className: CH()("LoadoutStatusText", {
+            Locked: rH
           }),
-          children: JV
-        }), UV && (0, AV.jsx)("span", {
+          children: AH
+        }), SH && (0, OH.jsx)("span", {
           className: "BoardBadge",
-          children: yV(`${NV}:loadoutEquippedBadge`)
+          children: hH(`${bH}:loadoutEquippedBadge`)
         })]
       })
     }
 
-    function ie(VV) {
+    function eB(HH) {
       let {
-        view: eV,
-        controller: xV
-      } = VV;
-      const JV = eV.loadout;
-      if ("loadoutPerks" === eV.slot) {
-        const VV = JV.loadoutPerks.find((VV => VV.loadoutPerkId === eV.selectedId));
-        return (0, AV.jsx)("section", {
+        view: BH,
+        controller: LH
+      } = HH;
+      const AH = BH.loadout;
+      if ("loadoutPerks" === BH.slot) {
+        const HH = AH.loadoutPerks.find((HH => HH.loadoutPerkId === BH.selectedId));
+        return (0, OH.jsx)("section", {
           className: "BoardDetail",
-          children: VV && (0, AV.jsx)(ge, {
-            view: eV,
-            controller: xV,
-            perk: VV
+          children: HH && (0, OH.jsx)(KB, {
+            view: BH,
+            controller: LH,
+            perk: HH
           })
         })
       }
-      const YV = Je(JV, eV.slot),
-        UV = YV.loadoutSlotOptions.find((VV => VV.loadoutOptionId === eV.selectedId));
-      return (0, AV.jsx)("section", {
+      const rH = AB(AH, BH.slot),
+        SH = rH.loadoutSlotOptions.find((HH => HH.loadoutOptionId === BH.selectedId));
+      return (0, OH.jsx)("section", {
         className: "BoardDetail",
-        children: UV && (0, AV.jsx)(Re, {
-          view: eV,
-          controller: xV,
-          slot: YV,
-          option: UV
+        children: SH && (0, OH.jsx)(lB, {
+          view: BH,
+          controller: LH,
+          slot: rH,
+          option: SH
         })
       })
     }
 
-    function Ce(VV) {
+    function qB(HH) {
       let {
-        owned: eV,
-        total: xV
-      } = VV;
-      return xV <= 1 ? null : (0, AV.jsx)("span", {
+        owned: BH,
+        total: LH
+      } = HH;
+      return LH <= 1 ? null : (0, OH.jsx)("span", {
         className: "LoadoutPips",
         children: Array.from({
-          length: xV
-        }, ((VV, xV) => (0, AV.jsx)("span", {
-          className: nV()("LoadoutPip", {
-            Filled: xV < eV
+          length: LH
+        }, ((HH, LH) => (0, OH.jsx)("span", {
+          className: CH()("LoadoutPip", {
+            Filled: LH < BH
           })
-        }, xV)))
+        }, LH)))
       })
     }
 
-    function ae(VV) {
+    function gB(HH) {
       let {
-        view: eV,
-        controller: xV
-      } = VV;
+        view: BH,
+        controller: LH
+      } = HH;
       const {
-        t: JV
-      } = (0, ZV.A)(), YV = eV.loadout, UV = Fe();
-      return (0, AV.jsxs)("nav", {
+        t: AH
+      } = (0, XH.B)(), rH = BH.loadout, SH = TB();
+      return (0, OH.jsxs)("nav", {
         className: "LoadoutKit",
-        "aria-label": JV(`${NV}:loadoutKit`),
-        children: [YV.loadoutSlots.map((VV => {
-          const YV = VV.loadoutSlotOptions.find((eV => eV.loadoutOptionId === VV.loadoutSlotEquippedId));
-          return (0, AV.jsxs)("button", {
-            ref: UV("section", VV.loadoutSlotKind),
+        "aria-label": AH(`${bH}:loadoutKit`),
+        children: [rH.loadoutSlots.map((HH => {
+          const rH = HH.loadoutSlotOptions.find((BH => BH.loadoutOptionId === HH.loadoutSlotEquippedId));
+          return (0, OH.jsxs)("button", {
+            ref: SH("section", HH.loadoutSlotKind),
             type: "button",
-            className: nV()("LoadoutKitSlot", {
-              Selected: eV.slot === VV.loadoutSlotKind
+            className: CH()("LoadoutKitSlot", {
+              Selected: BH.slot === HH.loadoutSlotKind
             }),
             onClick: () => {
-              xV.selectSlot(VV.loadoutSlotKind)
+              LH.selectSlot(HH.loadoutSlotKind)
             },
-            children: [(0, AV.jsx)("span", {
+            children: [(0, OH.jsx)("span", {
               className: "LoadoutKitIcon",
-              children: YV && (0, AV.jsx)(zV, {
-                itemName: YV.loadoutOptionIcon
+              children: rH && (0, OH.jsx)(oH, {
+                itemName: rH.loadoutOptionIcon
               })
-            }), (0, AV.jsxs)("span", {
+            }), (0, OH.jsxs)("span", {
               className: "LoadoutKitText",
-              children: [(0, AV.jsxs)("span", {
+              children: [(0, OH.jsxs)("span", {
                 className: "LoadoutKitTop",
-                children: [(0, AV.jsx)("span", {
+                children: [(0, OH.jsx)("span", {
                   className: "LoadoutKitLabel",
-                  children: JV(je[VV.loadoutSlotKind])
-                }), YV && (0, AV.jsx)(Ce, {
-                  owned: YV.loadoutOptionOwnedTier,
-                  total: YV.loadoutOptionTiers.length
+                  children: AH(xB[HH.loadoutSlotKind])
+                }), rH && (0, OH.jsx)(qB, {
+                  owned: rH.loadoutOptionOwnedTier,
+                  total: rH.loadoutOptionTiers.length
                 })]
-              }), (0, AV.jsx)("span", {
+              }), (0, OH.jsx)("span", {
                 className: "LoadoutKitName",
-                children: null === YV || void 0 === YV ? void 0 : YV.loadoutOptionName
+                children: null === rH || void 0 === rH ? void 0 : rH.loadoutOptionName
               })]
             })]
-          }, VV.loadoutSlotKind)
-        })), (0, AV.jsx)(oe, {
-          view: eV,
-          controller: xV
+          }, HH.loadoutSlotKind)
+        })), (0, OH.jsx)(NB, {
+          view: BH,
+          controller: LH
         })]
       })
     }
 
-    function oe(VV) {
+    function NB(HH) {
       let {
-        view: eV,
-        controller: xV
-      } = VV;
+        view: BH,
+        controller: LH
+      } = HH;
       const {
-        t: JV
-      } = (0, ZV.A)(), YV = eV.loadout, UV = YV.loadoutPerks.filter((VV => VV.loadoutPerkEquipped)), yV = Fe();
-      return (0, AV.jsxs)("button", {
-        ref: yV("section", "loadoutPerks"),
+        t: AH
+      } = (0, XH.B)(), rH = BH.loadout, SH = rH.loadoutPerks.filter((HH => HH.loadoutPerkEquipped)), hH = TB();
+      return (0, OH.jsxs)("button", {
+        ref: hH("section", "loadoutPerks"),
         type: "button",
-        className: nV()("LoadoutKitSlot", "LoadoutPerks", {
-          Selected: "loadoutPerks" === eV.slot
+        className: CH()("LoadoutKitSlot", "LoadoutPerks", {
+          Selected: "loadoutPerks" === BH.slot
         }),
         onClick: () => {
-          xV.selectSlot("loadoutPerks")
+          LH.selectSlot("loadoutPerks")
         },
-        children: [(0, AV.jsxs)("span", {
+        children: [(0, OH.jsxs)("span", {
           className: "LoadoutKitTop",
-          children: [(0, AV.jsx)("span", {
+          children: [(0, OH.jsx)("span", {
             className: "LoadoutKitLabel",
-            children: JV(je.loadoutPerks)
-          }), (0, AV.jsx)("span", {
+            children: AH(xB.loadoutPerks)
+          }), (0, OH.jsx)("span", {
             className: "LoadoutPerkCount",
-            children: JV(`${NV}:loadoutPerkCount`, {
-              equipped: String(UV.length),
-              max: String(YV.loadoutMaxPerks)
+            children: AH(`${bH}:loadoutPerkCount`, {
+              equipped: String(SH.length),
+              max: String(rH.loadoutMaxPerks)
             })
           })]
-        }), (0, AV.jsx)("span", {
+        }), (0, OH.jsx)("span", {
           className: "LoadoutSockets",
           children: Array.from({
-            length: YV.loadoutMaxPerks
-          }, ((VV, eV) => {
-            const xV = UV[eV];
-            return (0, AV.jsxs)("span", {
-              className: nV()("LoadoutSocket", {
-                Filled: xV,
-                Empty: !xV
+            length: rH.loadoutMaxPerks
+          }, ((HH, BH) => {
+            const LH = SH[BH];
+            return (0, OH.jsxs)("span", {
+              className: CH()("LoadoutSocket", {
+                Filled: LH,
+                Empty: !LH
               }),
-              children: [(0, AV.jsx)("span", {
+              children: [(0, OH.jsx)("span", {
                 className: "LoadoutSocketWell",
-                children: xV && (0, AV.jsx)(zV, {
-                  itemName: xV.loadoutPerkIcon
+                children: LH && (0, OH.jsx)(oH, {
+                  itemName: LH.loadoutPerkIcon
                 })
-              }), (0, AV.jsx)("span", {
+              }), (0, OH.jsx)("span", {
                 className: "LoadoutSocketName",
-                children: xV ? xV.loadoutPerkName : JV(`${NV}:loadoutPerkSocketEmpty`)
+                children: LH ? LH.loadoutPerkName : AH(`${bH}:loadoutPerkSocketEmpty`)
               })]
-            }, eV)
+            }, BH)
           }))
         })]
       })
     }
 
-    function ce(VV) {
+    function RB(HH) {
       let {
-        icon: eV,
-        name: xV,
-        selected: JV,
-        equipped: YV,
-        locked: UV,
-        ownedTier: yV,
-        tiers: pV,
-        buttonRef: QV,
-        onSelect: nV
-      } = VV;
+        icon: BH,
+        name: LH,
+        selected: AH,
+        equipped: rH,
+        locked: SH,
+        ownedTier: hH,
+        tiers: tH,
+        buttonRef: zH,
+        onSelect: CH
+      } = HH;
       const {
-        t: wV
-      } = (0, ZV.A)();
-      return (0, AV.jsxs)(DV, {
-        icon: (0, AV.jsx)(zV, {
-          itemName: eV
+        t: EH
+      } = (0, XH.B)();
+      return (0, OH.jsxs)(cH, {
+        icon: (0, OH.jsx)(oH, {
+          itemName: BH
         }),
-        name: xV,
-        selected: JV,
-        locked: UV,
-        buttonRef: QV,
-        onSelect: nV,
-        children: [YV && (0, AV.jsx)("span", {
+        name: LH,
+        selected: AH,
+        locked: SH,
+        buttonRef: zH,
+        onSelect: CH,
+        children: [rH && (0, OH.jsx)("span", {
           className: "BoardBadge",
-          children: wV(`${NV}:loadoutEquippedBadge`)
-        }), UV && (0, AV.jsx)("span", {
+          children: EH(`${bH}:loadoutEquippedBadge`)
+        }), SH && (0, OH.jsx)("span", {
           className: "BoardBadge Muted",
-          children: wV(`${NV}:loadoutLocked`)
-        }), !UV && (0, AV.jsx)(Ce, {
-          owned: yV,
-          total: pV
+          children: EH(`${bH}:loadoutLocked`)
+        }), !SH && (0, OH.jsx)(qB, {
+          owned: hH,
+          total: tH
         })]
       })
     }
 
-    function he(VV) {
+    function jB(HH) {
       let {
-        view: eV,
-        controller: xV
-      } = VV;
-      const JV = eV.loadout,
-        YV = Fe();
-      if ("loadoutPerks" === eV.slot) return (0, AV.jsx)("div", {
+        view: BH,
+        controller: LH
+      } = HH;
+      const AH = BH.loadout,
+        rH = TB();
+      if ("loadoutPerks" === BH.slot) return (0, OH.jsx)("div", {
         className: "BoardTiles",
-        children: JV.loadoutPerks.map((VV => (0, AV.jsx)(ce, {
-          icon: VV.loadoutPerkIcon,
-          name: VV.loadoutPerkName,
-          selected: eV.selectedId === VV.loadoutPerkId,
-          equipped: VV.loadoutPerkEquipped,
-          locked: !VV.loadoutPerkOwned,
+        children: AH.loadoutPerks.map((HH => (0, OH.jsx)(RB, {
+          icon: HH.loadoutPerkIcon,
+          name: HH.loadoutPerkName,
+          selected: BH.selectedId === HH.loadoutPerkId,
+          equipped: HH.loadoutPerkEquipped,
+          locked: !HH.loadoutPerkOwned,
           ownedTier: 0,
           tiers: 0,
-          buttonRef: YV("Pr", VV.loadoutPerkId),
+          buttonRef: rH("XY", HH.loadoutPerkId),
           onSelect: () => {
-            xV.select(VV.loadoutPerkId)
+            LH.select(HH.loadoutPerkId)
           }
-        }, VV.loadoutPerkId)))
+        }, HH.loadoutPerkId)))
       });
-      const UV = Je(JV, eV.slot);
-      return (0, AV.jsx)("div", {
+      const SH = AB(AH, BH.slot);
+      return (0, OH.jsx)("div", {
         className: "BoardTiles",
-        children: UV.loadoutSlotOptions.map((VV => (0, AV.jsx)(ce, {
-          icon: VV.loadoutOptionIcon,
-          name: VV.loadoutOptionName,
-          selected: eV.selectedId === VV.loadoutOptionId,
-          equipped: UV.loadoutSlotEquippedId === VV.loadoutOptionId,
-          locked: 0 === VV.loadoutOptionOwnedTier,
-          ownedTier: VV.loadoutOptionOwnedTier,
-          tiers: VV.loadoutOptionTiers.length,
-          buttonRef: YV("Pr", VV.loadoutOptionId),
+        children: SH.loadoutSlotOptions.map((HH => (0, OH.jsx)(RB, {
+          icon: HH.loadoutOptionIcon,
+          name: HH.loadoutOptionName,
+          selected: BH.selectedId === HH.loadoutOptionId,
+          equipped: SH.loadoutSlotEquippedId === HH.loadoutOptionId,
+          locked: 0 === HH.loadoutOptionOwnedTier,
+          ownedTier: HH.loadoutOptionOwnedTier,
+          tiers: HH.loadoutOptionTiers.length,
+          buttonRef: rH("XY", HH.loadoutOptionId),
           onSelect: () => {
-            xV.select(VV.loadoutOptionId)
+            LH.select(HH.loadoutOptionId)
           }
-        }, VV.loadoutOptionId)))
+        }, HH.loadoutOptionId)))
       })
     }
 
-    function le(VV) {
+    function nB(HH) {
       let {
-        loadout: eV
-      } = VV;
-      return (0, AV.jsx)(CV, {
-        coins: eV.loadoutCoins,
-        children: eV.loadoutHeldParts.filter((VV => VV.loadoutHeldPartAmount > 0)).map((VV => (0, AV.jsx)(WV, {
-          itemName: VV.loadoutHeldPartItem,
-          amount: VV.loadoutHeldPartAmount
-        }, VV.loadoutHeldPartCurrency)))
+        loadout: BH
+      } = HH;
+      return (0, OH.jsx)(qH, {
+        coins: BH.loadoutCoins,
+        children: BH.loadoutHeldParts.filter((HH => HH.loadoutHeldPartAmount > 0)).map((HH => (0, OH.jsx)(fH, {
+          itemName: HH.loadoutHeldPartItem,
+          amount: HH.loadoutHeldPartAmount
+        }, HH.loadoutHeldPartCurrency)))
       })
     }
 
-    function Le(VV) {
+    function FB(HH) {
       let {
-        controller: eV
-      } = VV;
-      const xV = (0, wV.j)(ve, eV.getSnapshot()),
+        controller: BH
+      } = HH;
+      const LH = (0, EH.e)(GB, BH.getSnapshot()),
         {
-          t: JV
-        } = (0, ZV.A)();
-      if (null === xV.loadout) return null;
-      const YV = xV.notice;
-      return (0, AV.jsx)(Ae, {
-        view: xV,
-        onDismiss: eV.dismiss,
-        children: (0, AV.jsxs)(MV, {
-          open: xV.open,
-          onDismiss: eV.dismiss,
-          title: JV(`${NV}:loadoutTitle`),
+          t: AH
+        } = (0, XH.B)();
+      if (null === LH.loadout) return null;
+      const rH = LH.notice;
+      return (0, OH.jsx)(OB, {
+        view: LH,
+        onDismiss: BH.dismiss,
+        children: (0, OH.jsxs)(mH, {
+          open: LH.open,
+          onDismiss: BH.dismiss,
+          title: AH(`${bH}:loadoutTitle`),
           className: "ContainmentLoadoutPanel",
-          headerExtra: (0, AV.jsx)(le, {
-            loadout: xV.loadout
+          headerExtra: (0, OH.jsx)(nB, {
+            loadout: LH.loadout
           }),
-          statusRefused: null === YV || void 0 === YV ? void 0 : YV.loadoutNoticeRefused,
-          status: (0, AV.jsxs)(AV.Fragment, {
-            children: [(0, AV.jsx)("span", {
+          statusRefused: null === rH || void 0 === rH ? void 0 : rH.loadoutNoticeRefused,
+          status: (0, OH.jsxs)(OH.Fragment, {
+            children: [(0, OH.jsx)("span", {
               className: "LoadoutRadioBadge",
-              children: JV(`${NV}:loadoutRadioBadge`)
-            }), null !== YV && JV(`${NV}:${YV.loadoutNoticeKey}`, {
-              name: YV.loadoutNoticeName,
-              tier: (0, OV.O)(YV.loadoutNoticeTier),
-              max: String(xV.loadout.loadoutMaxPerks)
+              children: AH(`${bH}:loadoutRadioBadge`)
+            }), null !== rH && AH(`${bH}:${rH.loadoutNoticeKey}`, {
+              name: rH.loadoutNoticeName,
+              tier: (0, yH.T)(rH.loadoutNoticeTier),
+              max: String(LH.loadout.loadoutMaxPerks)
             })]
           }),
-          children: [(0, AV.jsx)(ae, {
-            view: xV,
-            controller: eV
-          }), (0, AV.jsx)(he, {
-            view: xV,
-            controller: eV
-          }), (0, AV.jsx)(ie, {
-            view: xV,
-            controller: eV
+          children: [(0, OH.jsx)(gB, {
+            view: LH,
+            controller: BH
+          }), (0, OH.jsx)(jB, {
+            view: LH,
+            controller: BH
+          }), (0, OH.jsx)(eB, {
+            view: LH,
+            controller: BH
           })]
         })
       })
     }
 
-    function fe(VV, eV, xV) {
-      const JV = VV.locatorEntries.find((VV => VV.locatorEntryId === xV));
-      if (!JV) return null;
-      const YV = JV.locatorEntryName;
-      if ("locatorDisarm" === eV) return JV.locatorEntryArmed ? {
-        board: me(VV, null),
-        notice: Ke("locatorNoticeDisarmed", YV)
+    function DB(HH, BH, LH) {
+      const AH = HH.locatorEntries.find((HH => HH.locatorEntryId === LH));
+      if (!AH) return null;
+      const rH = AH.locatorEntryName;
+      if ("locatorDisarm" === BH) return AH.locatorEntryArmed ? {
+        board: wB(HH, null),
+        notice: ZB("locatorNoticeDisarmed", rH)
       } : null;
-      if ("locatorArm" === eV) return JV.locatorEntryOwned && !JV.locatorEntryArmed ? {
-        board: me(VV, xV),
-        notice: Ke("locatorNoticeArmed", YV)
+      if ("locatorArm" === BH) return AH.locatorEntryOwned && !AH.locatorEntryArmed ? {
+        board: wB(HH, LH),
+        notice: ZB("locatorNoticeArmed", rH)
       } : null;
-      if (JV.locatorEntryOwned || VV.locatorCoins < JV.locatorEntryPrice) return null;
-      const UV = me({
-        ...VV,
-        locatorCoins: VV.locatorCoins - JV.locatorEntryPrice
-      }, xV);
+      if (AH.locatorEntryOwned || HH.locatorCoins < AH.locatorEntryPrice) return null;
+      const SH = wB({
+        ...HH,
+        locatorCoins: HH.locatorCoins - AH.locatorEntryPrice
+      }, LH);
       return {
         board: {
-          ...UV,
-          locatorEntries: UV.locatorEntries.map((VV => VV.locatorEntryId === xV ? {
-            ...VV,
+          ...SH,
+          locatorEntries: SH.locatorEntries.map((HH => HH.locatorEntryId === LH ? {
+            ...HH,
             locatorEntryOwned: !0
-          } : VV))
+          } : HH))
         },
-        notice: Ke("locatorNoticeBought", YV)
+        notice: ZB("locatorNoticeBought", rH)
       }
     }
 
-    function me(VV, eV) {
+    function wB(HH, BH) {
       return {
-        ...VV,
-        locatorEntries: VV.locatorEntries.map((VV => {
-          const xV = VV.locatorEntryId === eV;
-          return VV.locatorEntryArmed === xV ? VV : {
-            ...VV,
-            locatorEntryArmed: xV
+        ...HH,
+        locatorEntries: HH.locatorEntries.map((HH => {
+          const LH = HH.locatorEntryId === BH;
+          return HH.locatorEntryArmed === LH ? HH : {
+            ...HH,
+            locatorEntryArmed: LH
           }
         }))
       }
     }
 
-    function Ke(VV, eV) {
+    function ZB(HH, BH) {
       return {
-        locatorNoticeKey: VV,
+        locatorNoticeKey: HH,
         locatorNoticeRefused: !1,
-        locatorNoticeName: eV
+        locatorNoticeName: BH
       }
     }
-    const He = "containmentLocatorView";
-    class ue extends Ve {
-      constructor(VV, eV, xV, JV) {
-        super(VV, eV, xV, JV, "locator", fe), this.snapshot = this.buildSnapshot()
+    const dB = "containmentLocatorView";
+    class aB extends HB {
+      constructor(HH, BH, LH, AH) {
+        super(HH, BH, LH, AH, "locator", DB), this.snapshot = this.buildSnapshot()
       }
-      messageOpens(VV) {
-        return VV.locatorMessageOpens
+      messageOpens(HH) {
+        return HH.locatorMessageOpens
       }
-      messageNotice(VV) {
-        return VV.locatorNotice
+      messageNotice(HH) {
+        return HH.locatorNotice
       }
-      openingSelection(VV) {
-        var eV;
-        const xV = VV.locatorEntries;
-        return (null !== (eV = xV.find((VV => VV.locatorEntryArmed))) && void 0 !== eV ? eV : xV[0]).locatorEntryId
+      openingSelection(HH) {
+        var BH;
+        const LH = HH.locatorEntries;
+        return (null !== (BH = LH.find((HH => HH.locatorEntryArmed))) && void 0 !== BH ? BH : LH[0]).locatorEntryId
       }
       buildSnapshot() {
         return {
@@ -1606,245 +1648,245 @@ export const modules = {
         }
       }
     }
-    const se = {
-        locatorContained: `${NV}:locatorFlavourContained`,
-        locatorEncountered: `${NV}:locatorFlavourEncountered`,
-        locatorUnseen: `${NV}:locatorFlavourUnseen`
+    const sB = {
+        locatorContained: `${bH}:locatorFlavourContained`,
+        locatorEncountered: `${bH}:locatorFlavourEncountered`,
+        locatorUnseen: `${bH}:locatorFlavourUnseen`
       },
-      Se = {
+      JB = {
         codexAnyDifficulty: null,
-        codexNormalOnly: `${NV}:locatorAttunedNormal`,
-        codexHardOnly: `${NV}:locatorAttunedHard`
+        codexNormalOnly: `${bH}:locatorAttunedNormal`,
+        codexHardOnly: `${bH}:locatorAttunedHard`
       };
 
-    function Ie() {
-      return (0, AV.jsx)(AV.Fragment, {
+    function iB() {
+      return (0, OH.jsx)(OH.Fragment, {
         children: Array.from({
           length: 5
-        }, ((VV, eV) => (0, AV.jsx)("span", {
+        }, ((HH, BH) => (0, OH.jsx)("span", {
           className: "LocatorFly",
-          children: (0, AV.jsx)("img", {
+          children: (0, OH.jsx)("img", {
             src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgoBboMlb5LyUjD8YgNtHyJ6/d+Q/CILa1lz9YAbo4DCDLYxjQv3gt3AYQG90AdHkUQ/qhkjAb0BURkgcDmAQMo7sSXR7deyiGoIvDvIOsGasB+ACyBmTNACS0go3ibhumAAAAAElFTkSuQmCC",
             alt: "",
             draggable: !1
           })
-        }, eV)))
+        }, BH)))
       })
     }
 
-    function de(VV) {
+    function pB(HH) {
       let {
-        entry: eV
-      } = VV;
+        entry: BH
+      } = HH;
       const {
-        t: xV
-      } = (0, ZV.A)();
-      return eV.locatorEntryArmed ? (0, AV.jsx)("span", {
+        t: LH
+      } = (0, XH.B)();
+      return BH.locatorEntryArmed ? (0, OH.jsx)("span", {
         className: "BoardBadge Armed",
-        children: xV(`${NV}:locatorArmedBadge`)
-      }) : eV.locatorEntryOwned ? (0, AV.jsx)("span", {
+        children: LH(`${bH}:locatorArmedBadge`)
+      }) : BH.locatorEntryOwned ? (0, OH.jsx)("span", {
         className: "BoardBadge",
-        children: xV(`${NV}:locatorOwnedBadge`)
+        children: LH(`${bH}:locatorOwnedBadge`)
       }) : null
     }
 
-    function Oe(VV) {
+    function yB(HH) {
       let {
-        entry: eV,
-        coins: xV,
-        inTile: JV = !1
-      } = VV;
-      return (0, AV.jsx)(WV, {
-        itemName: XV,
-        amount: eV.locatorEntryPrice,
-        hn: xV,
-        inTile: JV
+        entry: BH,
+        coins: LH,
+        inTile: AH = !1
+      } = HH;
+      return (0, OH.jsx)(fH, {
+        itemName: kH,
+        amount: BH.locatorEntryPrice,
+        LX: LH,
+        inTile: AH
       })
     }
 
-    function Vx(VV) {
+    function HL(HH) {
       let {
-        view: eV,
-        controller: xV,
-        entry: JV
-      } = VV;
+        view: BH,
+        controller: LH,
+        entry: AH
+      } = HH;
       const {
-        t: YV
-      } = (0, ZV.A)(), UV = JV.locatorEntryId, yV = eV.locators.locatorEntries.find((VV => VV.locatorEntryArmed && VV !== JV));
-      return (0, AV.jsxs)("div", {
+        t: rH
+      } = (0, XH.B)(), SH = AH.locatorEntryId, hH = BH.locators.locatorEntries.find((HH => HH.locatorEntryArmed && HH !== AH));
+      return (0, OH.jsxs)("div", {
         className: "BoardActions",
-        children: [JV.locatorEntryArmed && (0, AV.jsx)(kV.M, {
-          disabled: eV.pending,
+        children: [AH.locatorEntryArmed && (0, OH.jsx)(uH.W, {
+          disabled: BH.pending,
           onClick: () => {
-            xV.act("locatorDisarm", UV)
+            LH.act("locatorDisarm", SH)
           },
-          children: YV(`${NV}:locatorDisarm`)
-        }), JV.locatorEntryOwned && !JV.locatorEntryArmed && (0, AV.jsx)(kV.f, {
-          disabled: eV.pending,
+          children: rH(`${bH}:locatorDisarm`)
+        }), AH.locatorEntryOwned && !AH.locatorEntryArmed && (0, OH.jsx)(uH.i, {
+          disabled: BH.pending,
           onClick: () => {
-            xV.act("locatorArm", UV)
+            LH.act("locatorArm", SH)
           },
-          children: YV(`${NV}:locatorArm`)
-        }), !JV.locatorEntryOwned && (0, AV.jsxs)("div", {
+          children: rH(`${bH}:locatorArm`)
+        }), !AH.locatorEntryOwned && (0, OH.jsxs)("div", {
           className: "LocatorBuy",
-          children: [(0, AV.jsx)(Oe, {
-            entry: JV,
-            coins: eV.locators.locatorCoins
-          }), (0, AV.jsx)(kV.m, {
-            disabled: eV.locators.locatorCoins < JV.locatorEntryPrice || eV.pending,
+          children: [(0, OH.jsx)(yB, {
+            entry: AH,
+            coins: BH.locators.locatorCoins
+          }), (0, OH.jsx)(uH.u, {
+            disabled: BH.locators.locatorCoins < AH.locatorEntryPrice || BH.pending,
             onClick: () => {
-              xV.act("locatorBuy", UV)
+              LH.act("locatorBuy", SH)
             },
-            children: YV(`${NV}:locatorBuy`)
+            children: rH(`${bH}:locatorBuy`)
           })]
-        }), yV && !JV.locatorEntryArmed && (0, AV.jsx)("span", {
+        }), hH && !AH.locatorEntryArmed && (0, OH.jsx)("span", {
           className: "BoardHint",
-          children: YV(`${NV}:locatorReplacesHint`, {
-            name: yV.locatorEntryName
+          children: rH(`${bH}:locatorReplacesHint`, {
+            name: hH.locatorEntryName
           })
         })]
       })
     }
 
-    function ex(VV) {
+    function BL(HH) {
       let {
-        entry: eV
-      } = VV;
-      return "locatorUnseen" === eV.locatorEntryStanding ? (0, AV.jsx)(zV, {
+        entry: BH
+      } = HH;
+      return "locatorUnseen" === BH.locatorEntryStanding ? (0, OH.jsx)(oH, {
         itemName: "Compass"
-      }) : (0, AV.jsx)(GV, {
-        anomalyId: eV.locatorEntryId,
-        caught: "locatorContained" === eV.locatorEntryStanding
+      }) : (0, OH.jsx)(IH, {
+        anomalyId: BH.locatorEntryId,
+        caught: "locatorContained" === BH.locatorEntryStanding
       })
     }
 
-    function xx(VV) {
+    function LL(HH) {
       let {
-        view: eV,
-        controller: xV,
-        entry: JV
-      } = VV;
+        view: BH,
+        controller: LH,
+        entry: AH
+      } = HH;
       const {
-        t: YV
-      } = (0, ZV.A)(), UV = Se[JV.locatorEntryDifficulty];
-      return (0, AV.jsxs)("section", {
+        t: rH
+      } = (0, XH.B)(), SH = JB[AH.locatorEntryDifficulty];
+      return (0, OH.jsxs)("section", {
         className: "BoardDetail",
-        children: [(0, AV.jsxs)("div", {
-          className: nV()("LocatorLabel", {
-            Armed: JV.locatorEntryArmed
+        children: [(0, OH.jsxs)("div", {
+          className: CH()("LocatorLabel", {
+            Armed: AH.locatorEntryArmed
           }),
-          children: [(0, AV.jsx)(iV, {
-            icon: (0, AV.jsx)(ex, {
-              entry: JV
+          children: [(0, OH.jsx)(eH, {
+            icon: (0, OH.jsx)(BL, {
+              entry: AH
             }),
-            name: YV(`${NV}:locatorName`, {
-              name: JV.locatorEntryName
+            name: rH(`${bH}:locatorName`, {
+              name: AH.locatorEntryName
             }),
-            children: (0, AV.jsx)(de, {
-              entry: JV
+            children: (0, OH.jsx)(pB, {
+              entry: AH
             })
-          }), (0, AV.jsx)("p", {
+          }), (0, OH.jsx)("p", {
             className: "BoardDescription",
-            children: YV(JV.locatorEntryArmed ? `${NV}:locatorFlavourArmed` : se[JV.locatorEntryStanding])
-          }), null !== UV && (0, AV.jsx)("p", {
+            children: rH(AH.locatorEntryArmed ? `${bH}:locatorFlavourArmed` : sB[AH.locatorEntryStanding])
+          }), null !== SH && (0, OH.jsx)("p", {
             className: "LocatorAttuned",
-            children: YV(UV)
-          }), (0, AV.jsx)("p", {
+            children: rH(SH)
+          }), (0, OH.jsx)("p", {
             className: "BoardDescription LocatorUsage",
-            children: YV(`${NV}:locatorUsage`)
+            children: rH(`${bH}:locatorUsage`)
           })]
-        }), (0, AV.jsx)(Vx, {
-          view: eV,
-          controller: xV,
-          entry: JV
+        }), (0, OH.jsx)(HL, {
+          view: BH,
+          controller: LH,
+          entry: AH
         })]
       })
     }
 
-    function Jx(VV) {
+    function AL(HH) {
       let {
-        controller: eV
-      } = VV;
-      const xV = (0, wV.j)(He, eV.getSnapshot()),
+        controller: BH
+      } = HH;
+      const LH = (0, EH.e)(dB, BH.getSnapshot()),
         {
-          t: JV
-        } = (0, ZV.A)(),
-        YV = xV.locators;
-      if (null === YV) return null;
-      const UV = YV.locatorEntries.find((VV => VV.locatorEntryId === xV.selectedId)),
-        yV = xV.notice;
-      return (0, AV.jsxs)(MV, {
-        open: xV.open,
-        onDismiss: eV.dismiss,
-        title: JV(`${NV}:locatorTitle`),
+          t: AH
+        } = (0, XH.B)(),
+        rH = LH.locators;
+      if (null === rH) return null;
+      const SH = rH.locatorEntries.find((HH => HH.locatorEntryId === LH.selectedId)),
+        hH = LH.notice;
+      return (0, OH.jsxs)(mH, {
+        open: LH.open,
+        onDismiss: BH.dismiss,
+        title: AH(`${bH}:locatorTitle`),
         className: "ContainmentLocatorPanel",
-        decor: (0, AV.jsx)(Ie, {}),
-        headerExtra: (0, AV.jsx)(CV, {
-          coins: YV.locatorCoins
+        decor: (0, OH.jsx)(iB, {}),
+        headerExtra: (0, OH.jsx)(qH, {
+          coins: rH.locatorCoins
         }),
-        statusRefused: null === yV || void 0 === yV ? void 0 : yV.locatorNoticeRefused,
-        status: (0, AV.jsxs)(AV.Fragment, {
-          children: [(0, AV.jsx)("span", {
+        statusRefused: null === hH || void 0 === hH ? void 0 : hH.locatorNoticeRefused,
+        status: (0, OH.jsxs)(OH.Fragment, {
+          children: [(0, OH.jsx)("span", {
             className: "LocatorKeeperBadge",
-            children: JV(`${NV}:locatorKeeperName`)
-          }), null !== yV && JV(`${NV}:${yV.locatorNoticeKey}`, {
-            name: yV.locatorNoticeName
+            children: AH(`${bH}:locatorKeeperName`)
+          }), null !== hH && AH(`${bH}:${hH.locatorNoticeKey}`, {
+            name: hH.locatorNoticeName
           })]
         }),
-        children: [(0, AV.jsx)("div", {
+        children: [(0, OH.jsx)("div", {
           className: "BoardTiles",
-          children: YV.locatorEntries.map((VV => (0, AV.jsxs)(DV, {
-            icon: (0, AV.jsx)(ex, {
-              entry: VV
+          children: rH.locatorEntries.map((HH => (0, OH.jsxs)(cH, {
+            icon: (0, OH.jsx)(BL, {
+              entry: HH
             }),
-            name: VV.locatorEntryName,
-            selected: VV === UV,
+            name: HH.locatorEntryName,
+            selected: HH === SH,
             locked: !1,
-            className: nV()("LocatorTag", {
-              Armed: VV.locatorEntryArmed
+            className: CH()("LocatorTag", {
+              Armed: HH.locatorEntryArmed
             }),
             onSelect: () => {
-              eV.select(VV.locatorEntryId)
+              BH.select(HH.locatorEntryId)
             },
-            children: [(0, AV.jsx)(de, {
-              entry: VV
-            }), !VV.locatorEntryOwned && (0, AV.jsx)(Oe, {
-              entry: VV,
-              coins: YV.locatorCoins,
+            children: [(0, OH.jsx)(pB, {
+              entry: HH
+            }), !HH.locatorEntryOwned && (0, OH.jsx)(yB, {
+              entry: HH,
+              coins: rH.locatorCoins,
               inTile: !0
             })]
-          }, VV.locatorEntryId)))
-        }), (0, AV.jsx)(xx, {
-          view: xV,
-          controller: eV,
-          entry: UV
+          }, HH.locatorEntryId)))
+        }), (0, OH.jsx)(LL, {
+          view: LH,
+          controller: BH,
+          entry: SH
         })]
       })
     }
 
-    function Yx(VV) {
+    function rL(HH) {
       let {
-        loadout: eV,
-        codex: xV,
-        locator: JV
-      } = VV;
-      return (0, AV.jsxs)(AV.Fragment, {
-        children: [(0, AV.jsx)(Le, {
-          controller: eV
-        }), (0, AV.jsx)(dV, {
-          controller: xV
-        }), (0, AV.jsx)(Jx, {
-          controller: JV
+        loadout: BH,
+        codex: LH,
+        locator: AH
+      } = HH;
+      return (0, OH.jsxs)(OH.Fragment, {
+        children: [(0, OH.jsx)(FB, {
+          controller: BH
+        }), (0, OH.jsx)(pH, {
+          controller: LH
+        }), (0, OH.jsx)(AL, {
+          controller: AH
         })]
       })
     }
-    var Ux = xV(39728);
-    class yx {
-      constructor(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.sendCommand = VV, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new Ux.c({
+    var SL = LH(39461);
+    class hL {
+      constructor(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.sendCommand = HH, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new SL.c({
           spacingMs: 0,
-          now: eV
+          now: BH
         }), this.budget.subscribe((() => {
           this.notify()
         }))
@@ -1852,17 +1894,17 @@ export const modules = {
       isPending() {
         return this.awaitingReply || this.budget.isPacing()
       }
-      send(VV, eV) {
+      send(HH, BH) {
         return !this.isPending() && (this.awaitingReply = !0, this.replyTimer = setTimeout((() => {
-          this.replyTimer = null, this.awaitingReply = !1, eV(), this.notify()
-        }), 8e3), this.budget.start(), this.sendCommand(VV), !0)
+          this.replyTimer = null, this.awaitingReply = !1, BH(), this.notify()
+        }), 8e3), this.budget.start(), this.sendCommand(HH), !0)
       }
       onReply() {
         this.awaitingReply = !1, this.clearReplyTimer()
       }
-      subscribe(VV) {
-        return this.listeners.add(VV), () => {
-          this.listeners.delete(VV)
+      subscribe(HH) {
+        return this.listeners.add(HH), () => {
+          this.listeners.delete(HH)
         }
       }
       dispose() {
@@ -1872,177 +1914,143 @@ export const modules = {
         null !== this.replyTimer && (clearTimeout(this.replyTimer), this.replyTimer = null)
       }
       notify() {
-        for (const VV of this.listeners) VV()
+        for (const HH of this.listeners) HH()
       }
     }
-    var px = xV(39714);
-    const Qx = new Map([
-      ["npc_general", be],
-      ["npc_tentacle_guy", px]
+    var tL = LH(39451);
+    const zL = new Map([
+      ["npc_general", QB],
+      ["npc_tentacle_guy", tL]
     ]);
 
-    function nx(VV) {
-      const eV = Qx.get(VV);
-      if (void 0 === eV) return null;
-      const xV = document.createElement("img");
-      return xV.src = eV, xV.alt = "", xV.draggable = !1, xV.style.imageRendering = "pixelated", xV
+    function CL(HH) {
+      const BH = zL.get(HH);
+      if (void 0 === BH) return null;
+      const LH = document.createElement("img");
+      return LH.src = BH, LH.alt = "", LH.draggable = !1, LH.style.imageRendering = "pixelated", LH
     }
-    const wx = function() {
-      let VV, eV = !1,
-        xV = null,
-        QV = null;
-      const nV = [],
-        wV = VV => {
-          for (const eV of nV) eV !== VV && eV.close();
-          (0, pV.r)()
+    const EL = function() {
+      let HH, BH = !1,
+        LH = null,
+        zH = null;
+      const CH = [],
+        EH = HH => {
+          for (const BH of CH) BH !== HH && BH.close();
+          (0, tH.t)()
         },
-        ZV = VV => {
-          VV && (0, pV.m)()
+        XH = HH => {
+          HH && (0, tH.j)()
         },
-        vV = new yx((eV => {
-          VV.sendCommand(eV)
+        GH = new hL((BH => {
+          HH.sendCommand(BH)
         })),
-        rV = new re((VV => {
-          yV.h.QZ(ve, VV, !0)
-        }), wV, ZV, vV),
-        kV = new cV((VV => {
-          yV.h.QZ(oV, VV, !0)
-        }), wV, ZV),
-        bV = new ue((VV => {
-          yV.h.QZ(He, VV, !0)
-        }), wV, ZV, vV);
-      nV.push(rV, kV, bV);
+        YH = new YB((HH => {
+          hH.k.AX(GB, HH, !0)
+        }), EH, XH, GH),
+        uH = new RH((HH => {
+          hH.k.AX(NH, HH, !0)
+        }), EH, XH),
+        QH = new aB((HH => {
+          hH.k.AX(dB, HH, !0)
+        }), EH, XH, GH);
+      CH.push(YH, uH, QH);
       return {
-        onCreate: eV => {
-          VV = eV, xV = (0, pV.z)(null, {
-            content: (0, JV.createElement)(Yx, {
-              loadout: rV,
-              codex: kV,
-              locator: bV
+        onCreate: BH => {
+          HH = BH, LH = (0, tH.v)(null, {
+            content: (0, AH.createElement)(rL, {
+              loadout: YH,
+              codex: uH,
+              locator: QH
             }),
             onClose: () => {
-              for (const VV of nV) VV.close()
+              for (const HH of CH) HH.close()
             }
-          }), QV = (0, UV.d)(nx)
+          }), zH = (0, SH.f)(CL)
         },
-        onReceivedMessageFromServer: (VV, eV) => {
-          "containmentLoadout" === VV ? rV.RZ(eV) : "containmentLoadoutClose" === VV ? rV.isOpen() && (rV.close(), (0, pV.i)()) : "containmentCodex" === VV ? kV.RZ(eV) : "containmentLocator" === VV && bV.RZ(eV)
+        onReceivedMessageFromServer: (HH, BH) => {
+          "containmentLoadout" === HH ? YH.kX(BH) : "containmentLoadoutClose" === HH ? YH.isOpen() && (YH.close(), (0, tH.g)()) : "containmentCodex" === HH ? uH.kX(BH) : "containmentLocator" === HH && QH.kX(BH)
         },
-        iZ: () => {
-          eV || YV.b.get("loadingOverlayVisible") || (eV = !0, VV.sendCommand("containmentEntered"))
+        IX: () => {
+          BH || rH.c.get("loadingOverlayVisible") || (BH = !0, HH.sendCommand("containmentEntered"))
         },
         onClose: () => {
-          var VV, eV;
-          null === (VV = xV) || void 0 === VV || VV(), xV = null, null === (eV = QV) || void 0 === eV || eV(), QV = null;
-          for (const xV of nV) xV.dispose();
-          vV.dispose()
+          var HH, BH;
+          null === (HH = LH) || void 0 === HH || HH(), LH = null, null === (BH = zH) || void 0 === BH || BH(), zH = null;
+          for (const LH of CH) LH.dispose();
+          GH.dispose()
         }
       }
     }
   },
-  40525: (VV, eV, xV) => {
-    var JV = {
-      "./breach-zero-uncaught.webp": 40528,
-      "./breach-zero.webp": 40536,
-      "./brood-father-uncaught.webp": 40539,
-      "./brood-father.webp": 40541,
-      "./carousel-uncaught.webp": 40549,
-      "./carousel.webp": 40556,
-      "./deadlock-uncaught.webp": 40565,
-      "./deadlock.webp": 40571,
-      "./frost-revenant-uncaught.webp": 40579,
-      "./frost-revenant.webp": 40584,
-      "./hollow-choir-uncaught.webp": 40589,
-      "./hollow-choir.webp": 40597,
-      "./magma-warden-uncaught.webp": 40605,
-      "./magma-warden.webp": 40611,
-      "./patient-zero-uncaught.webp": 40620,
-      "./patient-zero.webp": 40622,
-      "./siege-engine-uncaught.webp": 40627,
-      "./siege-engine.webp": 40629,
-      "./warp-stalker-uncaught.webp": 40632,
-      "./warp-stalker.webp": 40636
-    };
-
-    function YV(VV) {
-      var eV = UV(VV);
-      return xV(eV)
-    }
-
-    function UV(VV) {
-      if (!xV.o(JV, VV)) {
-        var eV = new Error("Cannot find module '" + VV + "'");
-        throw eV.code = "MODULE_NOT_FOUND", eV
-      }
-      return JV[VV]
-    }
-    YV.keys = function() {
-      return Object.keys(JV)
-    }, YV.resolve = UV, VV.exports = YV, YV.id = 40525
+  40273: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
   },
-  40528: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
+  40279: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
   },
-  40536: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
+  40285: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
   },
-  40539: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
+  40290: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/brood-father.e48391955a574c1155fa.webp"
   },
-  40541: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/brood-father.e48391955a574c1155fa.webp"
+  40296: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
   },
-  40549: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
+  40304: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
   },
-  40556: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
+  40308: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
   },
-  40565: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
+  40312: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
   },
-  40571: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
+  40318: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/doom-warlord-uncaught.b25b11d54326d386a901.webp"
   },
-  40579: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
+  40324: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/doom-warlord.d9ef07d4167ff931b0f0.webp"
   },
-  40584: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
+  40331: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
   },
-  40589: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
+  40337: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
   },
-  40597: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
+  40345: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
   },
-  40605: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
+  40352: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
   },
-  40611: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
+  40360: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
   },
-  40620: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
+  40365: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
   },
-  40622: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
+  40373: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
   },
-  40627: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
+  40377: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
   },
-  40629: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
+  40383: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
   },
-  40632: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
+  40388: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
   },
-  40636: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
+  40392: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
   },
-  39714: VV => {
-    VV.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
+  40401: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
+  },
+  39451: HH => {
+    HH.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

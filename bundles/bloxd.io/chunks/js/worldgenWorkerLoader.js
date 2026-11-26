@@ -1,28 +1,28 @@
 export const id = 83;
 export const ids = [83];
 export const modules = {
-  37560: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => YV
+  37297: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => rH
     });
-    const JV = {
-      wait: function(VV) {
-        return new Promise((eV => {
-          setTimeout(eV, VV)
+    const AH = {
+      wait: function(HH) {
+        return new Promise((BH => {
+          setTimeout(BH, HH)
         }))
       },
       stallMs: 2e4
     };
-    class YV {
-      constructor(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : JV;
-        this.url = VV, this.options = eV, this.timing = xV, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = VV
+    class rH {
+      constructor(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : AH;
+        this.url = HH, this.options = BH, this.timing = LH, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = HH
       }
       ready() {
         if (null === this.fetched) {
-          const VV = new AbortController;
-          this.fetchAbort = VV, this.fetched = this.fetchWithRetries(VV.signal).then((eV => (this.fetchAbort === VV && (this.fetchAbort = null), eV)))
+          const HH = new AbortController;
+          this.fetchAbort = HH, this.fetched = this.fetchWithRetries(HH.signal).then((BH => (this.fetchAbort === HH && (this.fetchAbort = null), BH)))
         }
         return this.fetched
       }
@@ -38,86 +38,86 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(VV) {
-        for (let eV = 0;; eV++) {
-          const xV = new URL(this.url);
-          if (eV > 0 && xV.searchParams.set("cache-bust", `${Date.now()}-${eV}`), await this.fetchWhole(xV, VV)) return this.scriptUrl = xV, !0;
-          if (eV >= 3 || VV.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** eV), VV.aborted) return !1
+      async fetchWithRetries(HH) {
+        for (let BH = 0;; BH++) {
+          const LH = new URL(this.url);
+          if (BH > 0 && LH.searchParams.set("cache-bust", `${Date.now()}-${BH}`), await this.fetchWhole(LH, HH)) return this.scriptUrl = LH, !0;
+          if (BH >= 3 || HH.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** BH), HH.aborted) return !1
         }
       }
-      async fetchWhole(VV, eV) {
-        const xV = new AbortController;
-        let JV;
-        const YV = () => {
-            clearTimeout(JV), JV = setTimeout((() => {
-              xV.abort()
+      async fetchWhole(HH, BH) {
+        const LH = new AbortController;
+        let AH;
+        const rH = () => {
+            clearTimeout(AH), AH = setTimeout((() => {
+              LH.abort()
             }), this.timing.stallMs)
           },
-          UV = () => {
-            xV.abort()
+          SH = () => {
+            LH.abort()
           };
-        eV.addEventListener("abort", UV, {
+        BH.addEventListener("abort", SH, {
           once: !0
-        }), YV();
+        }), rH();
         try {
-          var yV;
-          const eV = await fetch(VV, {
-            signal: xV.signal
+          var hH;
+          const BH = await fetch(HH, {
+            signal: LH.signal
           });
-          if (!eV.ok) return !1;
-          const JV = null === (yV = eV.body) || void 0 === yV ? void 0 : yV.getReader();
-          if (!JV) return !1;
+          if (!BH.ok) return !1;
+          const AH = null === (hH = BH.body) || void 0 === hH ? void 0 : hH.getReader();
+          if (!AH) return !1;
           for (;;) {
             const {
-              done: VV
-            } = await JV.read();
-            if (VV) return !0;
-            YV()
+              done: HH
+            } = await AH.read();
+            if (HH) return !0;
+            rH()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(JV), eV.removeEventListener("abort", UV)
+          clearTimeout(AH), BH.removeEventListener("abort", SH)
         }
       }
     }
   },
-  53996: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      createWorldgenWorker: () => wV,
-      prefetchWorldgenWorker: () => pV,
-      stopWorldgenWorkerPrefetch: () => QV,
-      worldgenWorkerReady: () => yV,
-      worldgenWorkerScriptUrl: () => nV
+  54598: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      createWorldgenWorker: () => EH,
+      prefetchWorldgenWorker: () => tH,
+      stopWorldgenWorkerPrefetch: () => zH,
+      worldgenWorkerReady: () => hH,
+      worldgenWorkerScriptUrl: () => CH
     });
-    const JV = new(xV(37560).b)(new URL(xV.p + xV.u(82), xV.b), {
+    const AH = new(LH(37297).b)(new URL(LH.p + LH.u(82), LH.b), {
       name: "worldgenWorker",
       type: "module"
     });
-    let YV = !1,
-      UV = !1;
+    let rH = !1,
+      SH = !1;
 
-    function yV() {
-      return YV = !0, JV.ready()
+    function hH() {
+      return rH = !0, AH.ready()
     }
 
-    function pV() {
-      JV.ready()
+    function tH() {
+      AH.ready()
     }
 
-    function QV() {
-      YV || UV || (UV = !0, JV.cancel())
+    function zH() {
+      rH || SH || (SH = !0, AH.cancel())
     }
 
-    function nV() {
-      return JV.href
+    function CH() {
+      return AH.href
     }
 
-    function wV() {
-      return JV.start()
+    function EH() {
+      return AH.start()
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

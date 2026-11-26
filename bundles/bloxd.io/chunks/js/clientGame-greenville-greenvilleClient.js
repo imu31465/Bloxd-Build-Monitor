@@ -1,30 +1,30 @@
 export const id = 20;
 export const ids = [20];
 export const modules = {
-  35300: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV
+  34986: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => SH
     });
-    var JV = xV(5015),
-      YV = xV(5020);
+    var AH = LH(4947),
+      rH = LH(4951);
 
-    function UV(VV) {
+    function SH(HH) {
       let {
-        children: eV,
-        showing: xV,
-        globallyUniqueKey: UV,
-        alwaysMountChildren: yV = !1,
-        doGameplayStartStopOnShow: pV = !0,
-        keepsMovement: QV = !1
-      } = VV;
-      return (0, YV.b)(!0, xV, UV, QV), (0, JV.c)(pV, xV), xV || yV ? eV : null
+        children: BH,
+        showing: LH,
+        globallyUniqueKey: SH,
+        alwaysMountChildren: hH = !1,
+        doGameplayStartStopOnShow: tH = !0,
+        keepsMovement: zH = !1
+      } = HH;
+      return (0, rH.c)(!0, LH, SH, zH), (0, AH.e)(tH, LH), LH || hH ? BH : null
     }
   },
-  37849: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => YV
+  37565: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => rH
     });
-    const JV = [{
+    const AH = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -41,58 +41,58 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function YV(VV, eV, xV) {
-      const YV = Math.abs(VV - eV),
-        UV = Date.now() - xV;
-      for (const yV of JV)
-        if (VV < yV.maxDist) return YV >= yV.hardUpdateDist || UV > yV.timeBetweenSoftChecks && YV >= yV.softUpdateDist;
+    function rH(HH, BH, LH) {
+      const rH = Math.abs(HH - BH),
+        SH = Date.now() - LH;
+      for (const hH of AH)
+        if (HH < hH.maxDist) return rH >= hH.hardUpdateDist || SH > hH.timeBetweenSoftChecks && rH >= hH.softUpdateDist;
       return !1
     }
   },
-  39645: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => yV,
-      e: () => pV
+  39361: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH,
+      h: () => tH
     });
-    var JV = xV(375),
-      YV = xV(35319),
-      UV = xV(3719);
+    var AH = LH(317),
+      rH = LH(35006),
+      SH = LH(3639);
 
-    function yV(VV) {
-      const eV = (0, UV.d)(VV);
-      return (0, JV.Sb)(VV, void 0 === eV ? void 0 : (0, YV.displayNameOf)(eV))
+    function hH(HH) {
+      const BH = (0, SH.e)(HH);
+      return (0, AH.Yb)(HH, void 0 === BH ? void 0 : (0, rH.displayNameOf)(BH))
     }
 
-    function pV(VV, eV) {
-      return VV(yV(eV))
+    function tH(HH, BH) {
+      return HH(hH(BH))
     }
   },
-  39648: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => yV,
-      f: () => UV
+  39370: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH,
+      e: () => SH
     });
-    const JV = new WeakMap;
+    const AH = new WeakMap;
 
-    function YV(VV) {
-      let eV = JV.get(VV);
-      return eV || (eV = {
-        hidden: VV.hidden,
+    function rH(HH) {
+      let BH = AH.get(HH);
+      return BH || (BH = {
+        hidden: HH.hidden,
         x: NaN,
         y: NaN
-      }, JV.set(VV, eV)), eV
+      }, AH.set(HH, BH)), BH
     }
 
-    function UV(VV, eV) {
-      const xV = YV(VV);
-      xV.hidden !== eV && (xV.hidden = eV, VV.hidden = eV)
+    function SH(HH, BH) {
+      const LH = rH(HH);
+      LH.hidden !== BH && (LH.hidden = BH, HH.hidden = BH)
     }
 
-    function yV(VV, eV, xV) {
-      const JV = YV(VV);
-      JV.x === eV && JV.y === xV || (JV.x = eV, JV.y = xV, VV.style.translate = `${eV}vw ${xV}vh`)
+    function hH(HH, BH, LH) {
+      const AH = rH(HH);
+      AH.x === BH && AH.y === LH || (AH.x = BH, AH.y = LH, HH.style.translate = `${BH}vw ${LH}vh`)
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

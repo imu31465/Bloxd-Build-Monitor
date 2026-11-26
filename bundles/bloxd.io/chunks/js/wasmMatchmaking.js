@@ -1,30 +1,30 @@
-/*! For license information please see pxmq3aq.wasmMatchmaking.f543f291.chunk.js.LICENSE.txt */
+/*! For license information please see cwj32u.wasmMatchmaking.2c92509d.chunk.js.LICENSE.txt */
 export const id = 74;
-export const ids = [74];
+export const ids = [74, 176];
 export const modules = {
-  37685: (VV, eV) => {
-    function xV(VV) {
-      if (VV && "object" === typeof VV) {
-        var eV = VV.which || VV.keyCode || VV.charCode;
-        eV && (VV = eV)
+  37424: (HH, BH) => {
+    function LH(HH) {
+      if (HH && "object" === typeof HH) {
+        var BH = HH.which || HH.keyCode || HH.charCode;
+        BH && (HH = BH)
       }
-      if ("number" === typeof VV) return yV[VV];
-      var xV, UV = String(VV);
-      return (xV = JV[UV.toLowerCase()]) ? xV : (xV = YV[UV.toLowerCase()]) || (1 === UV.length ? UV.charCodeAt(0) : void 0)
+      if ("number" === typeof HH) return hH[HH];
+      var LH, SH = String(HH);
+      return (LH = AH[SH.toLowerCase()]) ? LH : (LH = rH[SH.toLowerCase()]) || (1 === SH.length ? SH.charCodeAt(0) : void 0)
     }
-    xV.isEventKey = function(VV, eV) {
-      if (VV && "object" === typeof VV) {
-        var xV = VV.which || VV.keyCode || VV.charCode;
-        if (null === xV || void 0 === xV) return !1;
-        if ("string" === typeof eV) {
-          var UV;
-          if (UV = JV[eV.toLowerCase()]) return UV === xV;
-          if (UV = YV[eV.toLowerCase()]) return UV === xV
-        } else if ("number" === typeof eV) return eV === xV;
+    LH.isEventKey = function(HH, BH) {
+      if (HH && "object" === typeof HH) {
+        var LH = HH.which || HH.keyCode || HH.charCode;
+        if (null === LH || void 0 === LH) return !1;
+        if ("string" === typeof BH) {
+          var SH;
+          if (SH = AH[BH.toLowerCase()]) return SH === LH;
+          if (SH = rH[BH.toLowerCase()]) return SH === LH
+        } else if ("number" === typeof BH) return BH === LH;
         return !1
       }
     };
-    var JV = (eV = VV.exports = xV).code = eV.codes = {
+    var AH = (BH = HH.exports = LH).code = BH.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      YV = eV.aliases = {
+      rH = BH.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (UV = 97; UV < 123; UV++) JV[String.fromCharCode(UV)] = UV - 32;
-    for (var UV = 48; UV < 58; UV++) JV[UV - 48] = UV;
-    for (UV = 1; UV < 13; UV++) JV["f" + UV] = UV + 111;
-    for (UV = 0; UV < 10; UV++) JV["numpad " + UV] = UV + 96;
-    var yV = eV.names = eV.title = {};
-    for (UV in JV) yV[JV[UV]] = UV;
-    for (var pV in YV) JV[pV] = YV[pV]
+    for (SH = 97; SH < 123; SH++) AH[String.fromCharCode(SH)] = SH - 32;
+    for (var SH = 48; SH < 58; SH++) AH[SH - 48] = SH;
+    for (SH = 1; SH < 13; SH++) AH["f" + SH] = SH + 111;
+    for (SH = 0; SH < 10; SH++) AH["numpad " + SH] = SH + 96;
+    var hH = BH.names = BH.title = {};
+    for (SH in AH) hH[AH[SH]] = SH;
+    for (var tH in rH) AH[tH] = rH[tH]
   },
-  37860: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => yV
+  37578: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => hH
     });
-    var JV = xV(62);
-    const YV = JV.useLayoutEffect;
-    const UV = function(VV) {
-      var eV = (0, JV.useRef)(VV);
-      return YV((function() {
-        eV.current = VV
-      })), eV
+    var AH = LH(45);
+    const rH = AH.useLayoutEffect;
+    const SH = function(HH) {
+      var BH = (0, AH.useRef)(HH);
+      return rH((function() {
+        BH.current = HH
+      })), BH
     };
-    var yV = function(VV) {
-      var eV = UV(VV);
-      (0, JV.useEffect)((function() {
-        var VV = function(VV) {
-          var xV;
-          if (null != eV.current && (xV = eV.current(VV)), VV.defaultPrevented && (VV.returnValue = ""), "string" === typeof xV) return VV.returnValue = xV, xV
+    var hH = function(HH) {
+      var BH = SH(HH);
+      (0, AH.useEffect)((function() {
+        var HH = function(HH) {
+          var LH;
+          if (null != BH.current && (LH = BH.current(HH)), HH.defaultPrevented && (HH.returnValue = ""), "string" === typeof LH) return HH.returnValue = LH, LH
         };
-        return window.addEventListener("beforeunload", VV),
+        return window.addEventListener("beforeunload", HH),
           function() {
-            window.removeEventListener("beforeunload", VV)
+            window.removeEventListener("beforeunload", HH)
           }
       }), [])
     }
   },
-  37737: VV => {
-    var eV, xV = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      JV = /OS X/.test(xV),
-      YV = /Opera/.test(xV),
-      UV = !/like Gecko/.test(xV) && !YV,
-      yV = VV.exports = {
-        0: JV ? "<menu>" : "<UNK>",
+  37461: HH => {
+    var BH, LH = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      AH = /OS X/.test(LH),
+      rH = /Opera/.test(LH),
+      SH = !/like Gecko/.test(LH) && !rH,
+      hH = HH.exports = {
+        0: AH ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: JV ? "<meta>" : "<menu>",
+        93: AH ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: JV && UV ? "-" : "<volume-mute>",
+        173: AH && SH ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: YV ? "`" : "<unicode>",
+        231: rH ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,409 +234,523 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (eV = 58; eV < 65; ++eV) yV[eV] = String.fromCharCode(eV);
-    for (eV = 48; eV < 58; ++eV) yV[eV] = eV - 48 + "";
-    for (eV = 65; eV < 91; ++eV) yV[eV] = String.fromCharCode(eV);
-    for (eV = 96; eV < 106; ++eV) yV[eV] = "<num-" + (eV - 96) + ">";
-    for (eV = 112; eV < 136; ++eV) yV[eV] = "F" + (eV - 111)
+    for (BH = 58; BH < 65; ++BH) hH[BH] = String.fromCharCode(BH);
+    for (BH = 48; BH < 58; ++BH) hH[BH] = BH - 48 + "";
+    for (BH = 65; BH < 91; ++BH) hH[BH] = String.fromCharCode(BH);
+    for (BH = 96; BH < 106; ++BH) hH[BH] = "<num-" + (BH - 96) + ">";
+    for (BH = 112; BH < 136; ++BH) hH[BH] = "F" + (BH - 111)
   },
-  37756: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => rV,
-      e: () => kV,
-      f: () => vV,
-      h: () => ZV
+  37472: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => WH,
+      e: () => MH,
+      i: () => GH,
+      k: () => XH
     });
-    var JV = xV(35300),
-      YV = xV(37762),
-      UV = xV(37771),
-      yV = xV(9335),
-      pV = xV(1542),
-      QV = xV(62),
-      nV = xV(78),
-      wV = xV(1321);
+    var AH = LH(34986),
+      rH = LH(37474),
+      SH = LH(37479),
+      hH = LH(9412),
+      tH = LH(1450),
+      zH = LH(45),
+      CH = LH(69),
+      EH = LH(1225);
 
-    function ZV() {
-      var VV;
-      return (0, pV.j)(YV.e, (0, YV.p)()), (0, wV.jsx)(wV.Fragment, {
-        children: null === (VV = (0, YV.p)()) || void 0 === VV ? void 0 : VV.content
+    function XH() {
+      var HH;
+      return (0, tH.e)(rH.b, (0, rH.p)()), (0, EH.jsx)(EH.Fragment, {
+        children: null === (HH = (0, rH.p)()) || void 0 === HH ? void 0 : HH.content
       })
     }
 
-    function vV(VV) {
-      var eV;
+    function GH(HH) {
+      var BH;
       let {
-        show: xV
-      } = VV;
-      (0, pV.j)(YV.e, (0, YV.p)());
-      const nV = null === (eV = (0, YV.p)()) || void 0 === eV ? void 0 : eV.menu;
-      return (0, QV.useEffect)((() => {
-        var VV;
-        xV || (null === nV || void 0 === nV || null === (VV = nV.onClose) || void 0 === VV || VV.call(nV), (0, UV.q)())
-      }), [xV, nV]), (0, QV.useEffect)((() => xV ? (0, yV.g)(UV.t, UV.g) : void 0), [xV]), (0, wV.jsx)(JV.c, {
-        showing: xV,
+        show: LH
+      } = HH;
+      (0, tH.e)(rH.b, (0, rH.p)());
+      const CH = null === (BH = (0, rH.p)()) || void 0 === BH ? void 0 : BH.menu;
+      return (0, zH.useEffect)((() => {
+        var HH;
+        LH || (null === CH || void 0 === CH || null === (HH = CH.onClose) || void 0 === HH || HH.call(CH), (0, SH.r)())
+      }), [LH, CH]), (0, zH.useEffect)((() => LH ? (0, hH.e)(SH.A, SH.g) : void 0), [LH]), (0, EH.jsx)(AH.e, {
+        showing: LH,
         globallyUniqueKey: "clientGameMenu",
-        children: null === nV || void 0 === nV ? void 0 : nV.content
+        children: null === CH || void 0 === CH ? void 0 : CH.content
       })
     }
+    const YH = new Map,
+      uH = new Set;
 
-    function rV(VV) {
+    function QH(HH, BH) {
+      BH ? YH.set(HH, BH) : YH.delete(HH);
+      for (const LH of uH) LH()
+    }
+
+    function WH(HH) {
       let {
-        placement: eV = "bottom"
-      } = VV;
-      return (0, wV.jsx)("div", {
-        id: `clientGameHud-${eV}`,
+        placement: BH = "bottom"
+      } = HH;
+      const LH = (0, zH.useRef)(null);
+      return (0, zH.useLayoutEffect)((() => {
+        const HH = LH.current;
+        return QH(BH, HH), () => {
+          YH.get(BH) === HH && QH(BH, null)
+        }
+      }), [BH]), (0, EH.jsx)("div", {
+        ref: LH,
+        id: `clientGameHud-${BH}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function kV(VV) {
+    function MH(HH) {
       let {
-        children: eV,
-        placement: xV = "bottom"
-      } = VV;
-      const [JV, YV] = (0, QV.useState)(null);
-      return (0, QV.useEffect)((() => {
-        YV(document.getElementById(`clientGameHud-${xV}`))
-      }), [xV]), JV ? (0, nV.createPortal)(eV, JV) : null
+        children: BH,
+        placement: LH = "bottom"
+      } = HH;
+      const [AH, rH] = (0, zH.useState)((() => {
+        var HH;
+        return null !== (HH = YH.get(LH)) && void 0 !== HH ? HH : null
+      }));
+      return (0, zH.useEffect)((() => {
+        const HH = () => {
+          var HH;
+          rH(null !== (HH = YH.get(LH)) && void 0 !== HH ? HH : null)
+        };
+        return uH.add(HH), HH(), () => {
+          uH.delete(HH)
+        }
+      }), [LH]), AH ? (0, CH.createPortal)(BH, AH) : null
     }
   },
-  9335: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV,
-      g: () => YV
+  9412: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => SH,
+      e: () => rH
     });
-    let JV = null;
-    const YV = function(VV) {
-        const eV = {
-          cycle: VV,
+    let AH = null;
+    const rH = function(HH) {
+        const BH = {
+          cycle: HH,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return JV = eV, () => {
-          JV === eV && (JV = null)
+        return AH = BH, () => {
+          AH === BH && (AH = null)
         }
       },
-      UV = () => {
-        var VV;
-        return null !== (VV = JV) && void 0 !== VV && VV.canCycle() ? JV.cycle : null
+      SH = () => {
+        var HH;
+        return null !== (HH = AH) && void 0 !== HH && HH.canCycle() ? AH.cycle : null
       }
   },
-  9532: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => UV,
-      h: () => YV
+  9634: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => SH,
+      f: () => rH
     });
-    let JV = !1;
+    let AH = !1;
 
-    function YV() {
-      JV = !0
+    function rH() {
+      AH = !0
     }
 
-    function UV() {
-      return JV
+    function SH() {
+      return AH
     }
   },
-  37602: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      InGameUi: () => FV.d,
-      LobbyLeaderboard: () => TV.c,
-      loadCharacterCustomisationUI: () => PV,
-      loadCharacterPreview: () => AV,
-      matchmakeAndPlay: () => zV,
-      matchmakeForAhead: () => pV.c,
-      setUpGame: () => NV
+  37330: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      InGameUi: () => TH.e,
+      LobbyLeaderboard: () => UH.b,
+      loadCharacterCustomisationUI: () => VH,
+      loadCharacterPreview: () => OH,
+      matchmakeAndPlay: () => oH,
+      matchmakeForAhead: () => tH.d,
+      setUpGame: () => bH
     });
-    var JV = xV(1276),
-      YV = xV(165),
-      UV = xV(27),
-      yV = xV(37607),
-      pV = xV(37610),
-      QV = xV(2080),
-      nV = xV(37636);
+    var AH = LH(1188),
+      rH = LH(152),
+      SH = LH(15),
+      hH = LH(37336),
+      tH = LH(37339),
+      zH = LH(2036),
+      CH = LH(37368);
 
-    function wV() {
-      return !1 !== QV.c.get("canCustomiseChar")
+    function EH() {
+      return !1 !== zH.e.get("canCustomiseChar")
     }
-    let ZV = !1;
-    var vV = xV(1391),
-      rV = xV(1279),
-      kV = xV(275),
-      bV = xV(2617),
-      EV = xV(9532),
-      BV = xV(9530);
+    let XH = !1;
+    var GH = LH(1297),
+      YH = LH(1194),
+      uH = LH(225),
+      QH = LH(3961),
+      WH = LH(9634),
+      MH = LH(9631);
 
-    function jV() {
-      (0, EV.e)() || (0, BV.d)().catch((VV => {
-        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", VV)
+    function xH() {
+      (0, WH.c)() || (0, MH.loadWasmPlayAhead)().catch((HH => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", HH)
       }))
     }
-    var qV = xV(3886),
-      tV = xV(1850);
-    var FV = xV(37644),
-      TV = xV(38183);
+    var vH = LH(3811),
+      PH = LH(1812);
+    var TH = LH(37375),
+      UH = LH(37874);
 
-    function PV() {
-      return xV.e(239).then((() => xV(44203)))
+    function VH() {
+      return Promise.all([LH.e(170), LH.e(236)]).then((() => LH(44789)))
     }
 
-    function AV() {
-      return xV.e(601).then((() => xV(44209)))
+    function OH() {
+      return Promise.all([LH.e(170), LH.e(237)]).then((() => LH(44796)))
     }
 
-    function NV() {
-      return (0, BV.j)()
+    function bH() {
+      return (0, MH.loadWasmPreviews)()
     }
-    ZV || (ZV = !0, document.addEventListener("keydown", (VV => {
-        (0, nV.b)(VV, wV)
+    XH || (XH = !0, document.addEventListener("keydown", (HH => {
+        (0, CH.d)(HH, EH)
       }))),
-      function(VV) {
-        var eV;
-        return !0 !== (null === VV || void 0 === VV ? void 0 : VV.saveData) && !/2g$/.test(null !== (eV = null === VV || void 0 === VV ? void 0 : VV.effectiveType) && void 0 !== eV ? eV : "")
-      }(navigator.connection) && (0, bV.d)((() => {
-        (0, EV.e)() || Promise.all([xV.e(89), xV.e(103), xV.e(233), xV.e(232), xV.e(150), xV.e(153), xV.e(70)]).then((() => xV(42363))).then((async VV => {
-          if ((0, EV.e)()) return;
-          const eV = VV.startLoadAheadOfJoin({
-            joinStarted: EV.e,
-            language: rV.c.get().getCurrentLanguageCode()
+      function(HH) {
+        var BH;
+        return !0 !== (null === HH || void 0 === HH ? void 0 : HH.saveData) && !/2g$/.test(null !== (BH = null === HH || void 0 === HH ? void 0 : HH.effectiveType) && void 0 !== BH ? BH : "")
+      }(navigator.connection) && (0, QH.d)((() => {
+        (0, WH.c)() || Promise.all([LH.e(89), LH.e(103), LH.e(234), LH.e(233), LH.e(150), LH.e(155), LH.e(70)]).then((() => LH(42355))).then((async HH => {
+          if ((0, WH.c)()) return;
+          const BH = HH.startLoadAheadOfJoin({
+            joinStarted: WH.c,
+            language: YH.g.get().getCurrentLanguageCode()
           });
-          (0, kV.e)((() => {
-            (0, EV.e)() || VV.probeWebgl2AheadOfJoin()
-          })), await eV, (0, kV.e)(jV)
-        }), (VV => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", VV)
+          (0, uH.d)((() => {
+            (0, WH.c)() || HH.probeWebgl2AheadOfJoin()
+          })), await BH, (0, uH.d)(xH)
+        }), (HH => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", HH)
         }))
       }));
-    const XV = UV.b.get("router");
-    null === XV ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function VV(eV) {
-      if ((0, tV.d)(eV.state.location.pathname)) return void(0, BV.h)().catch((() => {}));
-      const xV = eV.subscribe((JV => {
-        (0, tV.d)(JV.location.pathname) && (xV(), (0, qV.f)().then((() => {
-          VV(eV)
+    const kH = SH.c.get("router");
+    null === kH ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function HH(BH) {
+      if ((0, PH.c)(BH.state.location.pathname)) return void(0, MH.loadWasmPlay)().catch((() => {}));
+      const LH = BH.subscribe((AH => {
+        (0, PH.c)(AH.location.pathname) && (LH(), (0, vH.e)().then((() => {
+          HH(BH)
         })))
       }))
-    }(XV), (0, yV.b)();
-    const MV = (0, pV.b)((async function(VV, eV) {
+    }(kH), (0, hH.b)();
+    const mH = (0, tH.b)((async function(HH, BH) {
       let {
-        place: xV,
-        userContext: UV,
-        direct: yV,
-        matchedAt: pV,
-        rematch: QV
-      } = VV;
-      const nV = yV ? 1 / 0 : pV;
-      let wV;
+        place: LH,
+        userContext: SH,
+        direct: hH,
+        matchedAt: tH,
+        rematch: zH
+      } = HH;
+      const CH = hH ? 1 / 0 : tH;
+      let EH;
       try {
-        wV = await (0, BV.h)()
-      } catch (ZV) {
-        return console.error("The wasm client did not load:", ZV), (0, vV.q)({
+        EH = await (0, MH.loadWasmPlay)()
+      } catch (XH) {
+        return console.error("The wasm client did not load:", XH), (0, GH.p)({
           websocketUrl: null
-        }), JV.e.errorWithCode(String(ZV), YV.i.CONNECT_TO_GAME_SERVER, {
-          error: ZV,
-          severity: eV.aborted ? "low" : "medium",
-          pJ: eV.aborted
+        }), AH.e.errorWithCode(String(XH), rH.h.CONNECT_TO_GAME_SERVER, {
+          error: XH,
+          severity: BH.aborted ? "low" : "medium",
+          xB: BH.aborted
         })
       }
-      return wV.playWasmGame({
-        userContext: UV,
-        place: xV,
-        matchedAt: nV,
-        rematch: QV
-      }, eV)
+      return EH.playWasmGame({
+        userContext: SH,
+        place: LH,
+        matchedAt: CH,
+        rematch: zH
+      }, BH)
     }));
 
-    function zV() {
-      return (0, BV.h)().catch((() => {})), MV(...arguments)
+    function oH() {
+      return (0, MH.loadWasmPlay)().catch((() => {})), mH(...arguments)
     }
   },
-  9530: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => rV,
-      h: () => vV,
-      j: () => kV
+  9631: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      loadWasmPlay: () => GH,
+      loadWasmPlayAhead: () => YH,
+      loadWasmPreviews: () => uH
     });
-    var JV = xV(3584),
-      YV = xV(2441),
-      UV = xV(2261),
-      yV = xV(5135),
-      pV = xV(3942),
-      QV = xV(9532);
-    let nV = null;
+    var AH = LH(3503),
+      rH = LH(2413),
+      SH = LH(2215),
+      hH = LH(5062),
+      tH = LH(3892),
+      zH = LH(9634);
+    let CH = null;
 
-    function wV() {
-      return Promise.all([xV.e(86), xV.e(89), xV.e(103), xV.e(233), xV.e(232), xV.e(174), xV.e(222), xV.e(150), xV.e(153), xV.e(101), xV.e(298), xV.e(75)]).then((() => xV(41952)))
+    function EH() {
+      return Promise.all([LH.e(86), LH.e(89), LH.e(103), LH.e(234), LH.e(233), LH.e(150), LH.e(216), LH.e(243), LH.e(155), LH.e(101), LH.e(244), LH.e(75)]).then((() => LH(42e3)))
     }
 
-    function ZV() {
-      Promise.all([xV.e(84), xV.e(87), xV.e(85), xV.e(86), xV.e(103), xV.e(100), xV.e(296), xV.e(205), xV.e(246), xV.e(272), xV.e(298), xV.e(53)]).then((() => xV(42308))).catch((() => {}))
+    function XH() {
+      Promise.all([LH.e(84), LH.e(87), LH.e(85), LH.e(86), LH.e(103), LH.e(100), LH.e(300), LH.e(207), LH.e(250), LH.e(274), LH.e(244), LH.e(54)]).then((() => LH(42318))).catch((() => {}))
     }
 
-    function vV() {
-      return yV.d.cancelDownloadForJoin(), (0, pV.c)(), (0, YV.g)(), (0, QV.h)(), (0, UV.h)(), ZV(), Promise.all([xV.e(89), xV.e(103), xV.e(233), xV.e(232), xV.e(150), xV.e(153), xV.e(70)]).then((() => xV(42363))).then((VV => {
+    function GH() {
+      return hH.b.cancelDownloadForJoin(), (0, tH.e)(), (0, rH.f)(), (0, zH.f)(), (0, SH.g)(), XH(), Promise.all([LH.e(89), LH.e(103), LH.e(234), LH.e(233), LH.e(150), LH.e(155), LH.e(70)]).then((() => LH(42355))).then((HH => {
         let {
-          startJoinLoad: eV
-        } = VV;
-        eV()
-      }), (() => {})), nV ??= wV().then((VV => (VV.startWasmPlay(), VV.followPageUiPack((VV => {
-        JV.b.showGamePack(VV)
-      })), VV)), (VV => {
-        throw nV = null, VV
-      })), nV
+          startJoinLoad: BH
+        } = HH;
+        BH()
+      }), (() => {})), CH ??= EH().then((HH => (HH.startWasmPlay(), HH.followPageUiPack((HH => {
+        AH.b.showGamePack(HH)
+      })), HH)), (HH => {
+        throw CH = null, HH
+      })), CH
     }
 
-    function rV() {
-      return ZV(), xV.e(299).then((() => xV(42371))).catch((() => {})), wV().then((() => {}))
+    function YH() {
+      return XH(), LH.e(124).then((() => LH(42361))).catch((() => {})), EH().then((() => {}))
     }
 
-    function kV() {
-      return wV().then((VV => {
-        VV.startWasmPreviews(), VV.prefetchWasmPreviews()
+    function uH() {
+      return EH().then((HH => {
+        HH.startWasmPreviews(), HH.prefetchWasmPreviews()
       }))
     }
   },
-  37620: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => vV,
-      g: () => wV,
-      k: () => rV,
-      m: () => ZV
+  37702: (HH, BH, LH) => {
+    function AH(HH) {
+      return "fetch" === HH || "timeout" === HH || "integrity" === HH ? "download" : "browser"
+    }
+    LH.d(BH, {
+      d: () => rH,
+      e: () => zH,
+      g: () => EH,
+      h: () => tH,
+      l: () => hH,
+      n: () => CH,
+      o: () => AH,
+      r: () => SH
     });
-    var JV = xV(375),
-      YV = xV(698),
-      UV = xV(705),
-      yV = xV(40);
-    const pV = {
-        idStorageKey: "playSessionId",
-        lastActivityStorageKey: "playSessionLastActivityMs",
-        expiryMs: 3e5
-      },
-      QV = "playSessionGameNameWithVariation",
-      nV = "wasMatchmakePlayer";
+    const rH = "https://discord.gg/playbloxd";
 
-    function wV() {
-      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yV.q;
-      (0, UV.h)(VV, pV)
+    function SH(HH, BH) {
+      return "download" === HH ? {
+        icon: "wifi",
+        title: "wasmScreens:downloadFailedTitle",
+        help: "wasmScreens:downloadFailedHelp",
+        helpValues: {},
+        discordLink: !1,
+        confirm: "general:tryAgain",
+        cancel: "general:back"
+      } : "memory" === HH || "noContext" === HH || "graphicsLost" === HH ? {
+        icon: "face-dizzy",
+        title: `wasmUnsupported:${HH}Title`,
+        help: `wasmUnsupported:${HH}Help${BH?"App":""}`,
+        helpValues: {},
+        discordLink: !1,
+        confirm: "general:tryAgain",
+        cancel: "general:back"
+      } : {
+        icon: "face-dizzy",
+        title: BH ? "wasmUnsupported:titleApp" : "wasmUnsupported:title",
+        help: BH ? "wasmUnsupported:helpApp" : "wasmUnsupported:" + ("noWebAssembly" === HH ? "noWebAssemblyHelp" : "help"),
+        helpValues: {},
+        discordLink: !1,
+        confirm: "general:ok",
+        cancel: null
+      }
     }
 
-    function ZV() {
-      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yV.q).setItem(nV, !0)
+    function hH(HH, BH) {
+      return {
+        ...SH(HH, BH),
+        help: BH ? "wasmUnsupported:stillBlockedHelpApp" : `wasmUnsupported:${HH}StillHelp`
+      }
     }
 
-    function vV() {
-      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yV.q;
-      return (0, UV.e)(VV, pV)
+    function tH() {
+      return {
+        icon: "face-dizzy",
+        title: "wasmScreens:noContextTitle",
+        help: "wasmScreens:noContextHelp",
+        helpValues: {},
+        discordLink: !1,
+        confirm: "general:tryAgain",
+        cancel: "general:back"
+      }
     }
 
-    function rV(VV) {
-      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yV.q;
-      const xV = (0, UV.e)(eV, pV),
-        wV = function(VV) {
-          const eV = VV.getItem(QV);
-          return "string" !== typeof eV ? null : eV
-        }(eV),
-        ZV = function() {
-          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yV.q).getItem(nV)
-        }(eV);
-      let vV;
-      return vV = null !== xV && null !== wV && (0, UV.f)(eV, pV) && function(VV, eV, xV) {
-          const YV = (0, JV.Pb)(VV),
-            UV = (0, JV.Pb)(eV),
-            yV = (0, JV.Lb)(VV),
-            pV = (0, JV.Lb)(eV);
-          return !(YV !== UV || !xV) || YV === UV && yV === pV
-        }(wV, VV, ZV) ? xV : (0, YV.c)(), (0, UV.j)(eV, pV, vV), eV.setItem(QV, VV),
-        function() {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yV.q).removeItem(nV)
-        }(eV), vV
-    }
-  },
-  37612: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => FV,
-      c: () => TV
-    });
-    var JV = xV(1099),
-      YV = xV(220),
-      UV = xV(370),
-      yV = xV(660),
-      pV = xV(375),
-      QV = xV(1108),
-      nV = xV(686),
-      wV = xV(717),
-      ZV = xV(4995),
-      vV = xV(99),
-      rV = xV(138),
-      kV = xV(1838),
-      bV = xV(115),
-      EV = xV(37620),
-      BV = xV(40),
-      jV = xV(701),
-      qV = xV(668),
-      tV = xV(37622);
-
-    function FV() {
-      var VV, eV;
-      return [...null !== (VV = navigator.languages) && void 0 !== VV ? VV : [null !== (eV = navigator.language) && void 0 !== eV ? eV : "none"], "en-Gb"]
+    function zH(HH, BH) {
+      return {
+        icon: "face-dizzy",
+        title: "wasmScreens:crashTitle",
+        help: BH ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        helpValues: {
+          code: HH.code
+        },
+        discordLink: BH,
+        confirm: "general:reload",
+        cancel: "general:back"
+      }
     }
 
-    function TV(VV, eV, xV, TV, PV) {
-      const AV = (0, JV.l)(eV) ? (0, JV.p)(eV) : null,
-        NV = VV.isLoggedIn() && void 0 !== (0, YV.b)(UV.k, rV.siteUsed) ? (0, qV.g)() : null,
-        XV = {
-          cookies: (0, kV.getAllCookiesForGameNameWithVariation)(eV),
-          isMobile: (0, vV.isMobile)(),
-          isUsingCustomGameTexturePack: null !== AV && PV(AV),
-          generalCookies: {
-            joinDiscord: !!BV.m.getItem("DiscordPressed"),
-            newGo: ZV.d,
-            ...VV.getMetricsCookies(),
-            trafficCode: TV,
-            compliance: vV.compliance
-          },
-          browserInfo: {
-            ua: window.navigator.userAgent,
-            name: (0, vV.getBrowserName)(),
-            version: (0, vV.getBrowserVersion)(),
-            platform: navigator.platform,
-            platformType: (0, vV.getPlatformType)(),
-            deviceType: (0, bV.c)()
-          },
-          isLoggedIn: VV.isLoggedIn(),
-          lobbyName: xV,
-          languages: FV(),
-          version: yV.e,
-          siteUsed: rV.siteUsed,
-          subsiteUsed: rV.subsiteUsed,
-          playSessionId: (0, EV.k)(eV),
-          visitSessionId: (0, jV.f)(),
-          clientReason: nV.s.reason,
-          budgetBasis: (0, tV.j)(),
-          ...null !== wV.o && {
-            diagClaim: wV.o.claimId
-          },
-          ...null !== NV && {
-            webGpuLoss: NV
-          }
-        };
-      return null !== AV && (0, pV.Hc)(AV) ? (XV.lobbyName = (0, JV.k)(AV, (0, JV.n)(eV), xV), {
-        roomName: `classic_${QV.g}`,
-        joinOptions: XV
-      }) : {
-        roomName: eV,
-        joinOptions: XV
+    function CH() {
+      return {
+        icon: "face-dizzy",
+        title: "wasmScreens:turnstilePageTitle",
+        help: "wasmScreens:turnstilePageHelp",
+        helpValues: {},
+        discordLink: !1,
+        confirm: "general:ok",
+        cancel: null
+      }
+    }
+
+    function EH(HH, BH, LH) {
+      return {
+        icon: "wifi",
+        title: "wasmScreens:disconnectedTitle",
+        help: LH ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        helpValues: {
+          reason: HH.reason
+        },
+        discordLink: null === HH.name,
+        confirm: BH ? "general:reconnect" : HH.requiresRefresh ? "general:reload" : "general:ok",
+        cancel: null
       }
     }
   },
-  9922: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => YV,
-      f: () => UV
+  37146: (HH, BH, LH) => {
+    LH.d(BH, {
+      C: () => uH,
+      E: () => QH,
+      F: () => MH,
+      c: () => AH,
+      e: () => XH,
+      g: () => rH,
+      h: () => GH,
+      l: () => WH,
+      n: () => EH,
+      r: () => xH,
+      u: () => zH,
+      y: () => CH,
+      z: () => YH
     });
-    var JV = xV(9861);
-    const YV = "Air",
-      UV = Object.freeze(new JV.g(YV, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    const AH = [{
+      numLines: 7,
+      charsPerLine: 16,
+      uiFontSize: 3.3,
+      ingameFontSize: 25
+    }, {
+      numLines: 5,
+      charsPerLine: 11,
+      uiFontSize: 4.6,
+      ingameFontSize: 36
+    }, {
+      numLines: 3,
+      charsPerLine: 7,
+      uiFontSize: 7.5,
+      ingameFontSize: 58
+    }];
+
+    function rH(HH, BH) {
+      const {
+        numLines: LH,
+        charsPerLine: rH
+      } = AH[BH];
+      return vH(HH, LH, rH, !1)
+    }
+    const SH = 7 / 8,
+      hH = .25,
+      tH = 8;
+
+    function zH(HH, BH) {
+      return {
+        width: Math.min(HH, tH) - 2 * hH,
+        height: Math.min(BH, tH) - 2 * hH
+      }
+    }
+
+    function CH(HH, BH, LH) {
+      const rH = zH(HH, BH),
+        {
+          numLines: hH,
+          charsPerLine: tH
+        } = AH[LH];
+      return {
+        numLines: Math.max(1, Math.floor(hH / SH * rH.height)),
+        charsPerLine: Math.max(1, Math.floor(tH * rH.width))
+      }
+    }
+
+    function EH(HH, BH, LH, AH) {
+      const {
+        numLines: rH,
+        charsPerLine: SH
+      } = CH(LH, AH, BH);
+      return vH(HH, rH, SH, !1)
+    }
+    const XH = 32e3;
+
+    function GH(HH) {
+      return HH.slice(0, XH)
+    }
+    const YH = 512e3,
+      uH = 64,
+      QH = YH;
+
+    function WH(HH, BH) {
+      const LH = Math.max(0, QH - BH),
+        AH = Math.min(YH, LH);
+      return HH.slice(0, AH)
+    }
+    const MH = {
+      book: {
+        numLines: 13,
+        charsPerLine: 19,
+        uiFontSize: 1.95
+      },
+      qh: {
+        numLines: 1,
+        charsPerLine: 19,
+        uiFontSize: 1.95
+      },
+      nameTag: {
+        numLines: 1,
+        charsPerLine: 13,
+        uiFontSize: 4.6
+      }
+    };
+
+    function xH(HH, BH) {
+      const {
+        numLines: LH,
+        charsPerLine: AH
+      } = MH[BH];
+      return vH(HH, LH, AH, !1)
+    }
+
+    function vH(HH, BH, LH, AH, rH) {
+      (rH || AH) && (HH = HH.slice(0, null !== rH && void 0 !== rH ? rH : BH * LH));
+      const SH = HH.split("\n");
+      if (SH.length > BH && SH.splice(BH, SH.length - BH), !AH)
+        for (let hH = 0; hH < SH.length; hH++) {
+          const HH = SH[hH];
+          HH.length > LH && (SH[hH] = HH.substring(0, LH), SH.length < BH && SH.splice(hH + 1, 0, HH.substring(LH)))
+        }
+      return SH.join("\n")
+    }
+  },
+  10030: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => rH,
+      f: () => SH
+    });
+    var AH = LH(9979);
+    const rH = "Air",
+      SH = Object.freeze(new AH.f(rH, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

@@ -1,329 +1,329 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var VV = __webpack_require__.u,
-        eV = __webpack_require__.e,
-        xV = {},
-        JV = {};
-      __webpack_require__.u = function(eV) {
-        return VV(eV) + (xV.hasOwnProperty(eV) ? "?" + xV[eV] : "")
-      }, __webpack_require__.e = function(YV) {
-        return eV(YV).catch((function(eV) {
-          var UV = JV.hasOwnProperty(YV) ? JV[YV] : 4;
-          if (UV < 1) {
-            var yV = VV(YV);
-            if (eV.message = "Loading chunk " + YV + " failed after 4 retries.\n(" + yV + ")", eV.request = yV, xV[YV] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete JV[YV]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === eV.code) {
-              var pV = __webpack_require__.miniCssF(YV);
-              eV.message = eV.message.replace("Loading chunk", "Loading CSS chunk").replace(yV, pV), eV.request = pV
+      var HH = __webpack_require__.u,
+        BH = __webpack_require__.e,
+        LH = {},
+        AH = {};
+      __webpack_require__.u = function(BH) {
+        return HH(BH) + (LH.hasOwnProperty(BH) ? "?" + LH[BH] : "")
+      }, __webpack_require__.e = function(rH) {
+        return BH(rH).catch((function(BH) {
+          var SH = AH.hasOwnProperty(rH) ? AH[rH] : 4;
+          if (SH < 1) {
+            var hH = HH(rH);
+            if (BH.message = "Loading chunk " + rH + " failed after 4 retries.\n(" + hH + ")", BH.request = hH, LH[rH] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete AH[rH]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === BH.code) {
+              var tH = __webpack_require__.miniCssF(rH);
+              BH.message = BH.message.replace("Loading chunk", "Loading CSS chunk").replace(hH, tH), BH.request = tH
             }
-            throw eV
+            throw BH
           }
-          return new Promise((function(VV) {
-            var eV = 4 - UV + 1;
+          return new Promise((function(HH) {
+            var BH = 4 - SH + 1;
             setTimeout((function() {
-              var eV = "cache-bust=" + Date.now();
-              xV[YV] = eV, JV[YV] = UV - 1, VV(__webpack_require__.e(YV))
-            }), function(VV) {
-              return 500 * Math.pow(2, VV)
-            }(eV))
+              var BH = "cache-bust=" + Date.now();
+              LH[rH] = BH, AH[rH] = SH - 1, HH(__webpack_require__.e(rH))
+            }), function(HH) {
+              return 500 * Math.pow(2, HH)
+            }(BH))
           }))
         }))
       }
     }
   })();
-  const VV = Math.SQRT1_2,
-    eV = Math.SQRT1_2 / 2,
-    xV = Math.sqrt(3) / 2,
-    JV = 2 * VV,
-    YV = 2 * eV + xV;
+  const HH = Math.SQRT1_2,
+    BH = Math.SQRT1_2 / 2,
+    LH = Math.sqrt(3) / 2,
+    AH = 2 * HH,
+    rH = 2 * BH + LH;
 
-  function UV(eV, xV) {
-    const JV = xV > 0 ? xV + 1 : 0,
-      UV = .6 * eV - xV / VV;
-    return Math.max(0, Math.min(UV, (eV - 2 * JV) / YV))
+  function SH(BH, LH) {
+    const AH = LH > 0 ? LH + 1 : 0,
+      SH = .6 * BH - LH / HH;
+    return Math.max(0, Math.min(SH, (BH - 2 * AH) / rH))
   }
-  const yV = [15, 15, 15],
-    pV = {
+  const hH = [15, 15, 15],
+    tH = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function QV(VV, eV, xV, yV) {
+  function zH(HH, BH, LH, hH) {
     const {
-      vertices: pV,
-      uvs: QV,
-      indices: nV,
-      shades: wV
-    } = VV, vV = function(VV, eV) {
-      const xV = UV(VV, eV),
-        yV = JV * xV,
-        pV = YV * xV;
+      vertices: tH,
+      uvs: zH,
+      indices: CH,
+      shades: EH
+    } = HH, GH = function(HH, BH) {
+      const LH = SH(HH, BH),
+        hH = AH * LH,
+        tH = rH * LH;
       return {
-        left: (VV - yV) / 2,
-        top: (VV - pV) / 2,
-        width: yV,
-        height: pV
+        left: (HH - hH) / 2,
+        top: (HH - tH) / 2,
+        width: hH,
+        height: tH
       }
-    }(xV, yV), rV = new Float32Array(pV.length);
-    for (let JV = 0; JV < pV.length; JV += 3) rV[JV] = vV.left + pV[JV] * vV.width, rV[JV + 1] = vV.top + pV[JV + 1] * vV.height, rV[JV + 2] = pV[JV + 2];
-    const kV = new Float32Array(xV * xV).fill(-1 / 0),
-      bV = new Uint8ClampedArray(xV * xV * 4),
-      EV = 255 * VV.alphaCutoff;
-    for (let JV = 0; JV < nV.length; JV += 3) {
-      const [VV, YV, UV] = [nV[JV], nV[JV + 1], nV[JV + 2]], [yV, pV, ZV] = [3 * VV, 3 * YV, 3 * UV], [vV, BV, jV, qV, tV, FV] = [rV[yV], rV[yV + 1], rV[pV], rV[pV + 1], rV[ZV], rV[ZV + 1]], TV = (jV - vV) * (FV - BV) - (tV - vV) * (qV - BV);
-      if (Math.abs(TV) < 1e-9) continue;
-      const PV = wV[JV / 3],
-        [AV, NV, XV, MV, zV, GV] = [QV[2 * VV], QV[2 * VV + 1], QV[2 * YV], QV[2 * YV + 1], QV[2 * UV], QV[2 * UV + 1]],
-        WV = Math.max(0, Math.floor(Math.min(vV, jV, tV))),
-        RV = Math.min(xV - 1, Math.ceil(Math.max(vV, jV, tV))),
-        gV = Math.max(0, Math.floor(Math.min(BV, qV, FV))),
-        DV = Math.min(xV - 1, Math.ceil(Math.max(BV, qV, FV)));
-      for (let JV = gV; JV <= DV; JV++)
-        for (let VV = WV; VV <= RV; VV++) {
-          const [YV, UV] = [VV + .5, JV + .5], QV = ((YV - vV) * (FV - BV) - (tV - vV) * (UV - BV)) / TV, nV = ((jV - vV) * (UV - BV) - (YV - vV) * (qV - BV)) / TV, wV = 1 - QV - nV;
-          if (wV < 0 || QV < 0 || nV < 0) continue;
-          const WV = wV * rV[yV + 2] + QV * rV[pV + 2] + nV * rV[ZV + 2],
-            RV = JV * xV + VV;
-          if (WV <= kV[RV]) continue;
-          const gV = Math.max(0, Math.min(eV.width - 1, Math.floor((wV * AV + QV * XV + nV * zV) * eV.width))),
-            DV = 4 * (Math.max(0, Math.min(eV.height - 1, Math.floor((wV * NV + QV * MV + nV * GV) * eV.height))) * eV.width + gV);
-          eV.pixels[DV + 3] < EV || (kV[RV] = WV, bV[4 * RV] = eV.pixels[DV] * PV, bV[4 * RV + 1] = eV.pixels[DV + 1] * PV, bV[4 * RV + 2] = eV.pixels[DV + 2] * PV, bV[4 * RV + 3] = 255)
+    }(LH, hH), YH = new Float32Array(tH.length);
+    for (let AH = 0; AH < tH.length; AH += 3) YH[AH] = GH.left + tH[AH] * GH.width, YH[AH + 1] = GH.top + tH[AH + 1] * GH.height, YH[AH + 2] = tH[AH + 2];
+    const uH = new Float32Array(LH * LH).fill(-1 / 0),
+      QH = new Uint8ClampedArray(LH * LH * 4),
+      WH = 255 * HH.alphaCutoff;
+    for (let AH = 0; AH < CH.length; AH += 3) {
+      const [HH, rH, SH] = [CH[AH], CH[AH + 1], CH[AH + 2]], [hH, tH, XH] = [3 * HH, 3 * rH, 3 * SH], [GH, MH, xH, vH, PH, TH] = [YH[hH], YH[hH + 1], YH[tH], YH[tH + 1], YH[XH], YH[XH + 1]], UH = (xH - GH) * (TH - MH) - (PH - GH) * (vH - MH);
+      if (Math.abs(UH) < 1e-9) continue;
+      const VH = EH[AH / 3],
+        [OH, bH, kH, mH, oH, IH] = [zH[2 * HH], zH[2 * HH + 1], zH[2 * rH], zH[2 * rH + 1], zH[2 * SH], zH[2 * SH + 1]],
+        fH = Math.max(0, Math.floor(Math.min(GH, xH, PH))),
+        lH = Math.min(LH - 1, Math.ceil(Math.max(GH, xH, PH))),
+        KH = Math.max(0, Math.floor(Math.min(MH, vH, TH))),
+        cH = Math.min(LH - 1, Math.ceil(Math.max(MH, vH, TH)));
+      for (let AH = KH; AH <= cH; AH++)
+        for (let HH = fH; HH <= lH; HH++) {
+          const [rH, SH] = [HH + .5, AH + .5], zH = ((rH - GH) * (TH - MH) - (PH - GH) * (SH - MH)) / UH, CH = ((xH - GH) * (SH - MH) - (rH - GH) * (vH - MH)) / UH, EH = 1 - zH - CH;
+          if (EH < 0 || zH < 0 || CH < 0) continue;
+          const fH = EH * YH[hH + 2] + zH * YH[tH + 2] + CH * YH[XH + 2],
+            lH = AH * LH + HH;
+          if (fH <= uH[lH]) continue;
+          const KH = Math.max(0, Math.min(BH.width - 1, Math.floor((EH * OH + zH * kH + CH * oH) * BH.width))),
+            cH = 4 * (Math.max(0, Math.min(BH.height - 1, Math.floor((EH * bH + zH * mH + CH * IH) * BH.height))) * BH.width + KH);
+          BH.pixels[cH + 3] < WH || (uH[lH] = fH, QH[4 * lH] = BH.pixels[cH] * VH, QH[4 * lH + 1] = BH.pixels[cH + 1] * VH, QH[4 * lH + 2] = BH.pixels[cH + 2] * VH, QH[4 * lH + 3] = 255)
         }
     }
-    return ZV(bV, xV, yV), bV
+    return XH(QH, LH, hH), QH
   }
-  let nV = NaN,
-    wV = new Int32Array(0);
+  let CH = NaN,
+    EH = new Int32Array(0);
 
-  function ZV(VV, eV, xV) {
-    let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : eV => 0 !== VV[4 * eV + 3];
-    const YV = new Uint8Array(eV * eV);
-    for (let yV = 0; yV < eV * eV; yV++) YV[yV] = JV(yV) ? 1 : 0;
-    const UV = (VV, xV) => VV >= 0 && xV >= 0 && VV < eV && xV < eV && 0 === YV[xV * eV + VV],
-      pV = new Float32Array(eV * eV).fill(1 / 0),
-      QV = function(VV) {
-        if (VV !== nV) {
-          const eV = Math.ceil(VV + 1),
-            xV = [];
-          for (let JV = -eV; JV <= eV; JV++)
-            for (let YV = -eV; YV <= eV; YV++) {
-              const eV = YV * YV + JV * JV;
-              eV > 0 && eV < (VV + 1) ** 2 && xV.push(YV, JV, eV)
+  function XH(HH, BH, LH) {
+    let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : BH => 0 !== HH[4 * BH + 3];
+    const rH = new Uint8Array(BH * BH);
+    for (let hH = 0; hH < BH * BH; hH++) rH[hH] = AH(hH) ? 1 : 0;
+    const SH = (HH, LH) => HH >= 0 && LH >= 0 && HH < BH && LH < BH && 0 === rH[LH * BH + HH],
+      tH = new Float32Array(BH * BH).fill(1 / 0),
+      zH = function(HH) {
+        if (HH !== CH) {
+          const BH = Math.ceil(HH + 1),
+            LH = [];
+          for (let AH = -BH; AH <= BH; AH++)
+            for (let rH = -BH; rH <= BH; rH++) {
+              const BH = rH * rH + AH * AH;
+              BH > 0 && BH < (HH + 1) ** 2 && LH.push(rH, AH, BH)
             }
-          nV = VV, wV = Int32Array.from(xV)
+          CH = HH, EH = Int32Array.from(LH)
         }
-        return wV
-      }(xV);
-    for (let yV = 0; yV < eV; yV++)
-      for (let VV = 0; VV < eV; VV++) {
-        if (1 === YV[yV * eV + VV] && (UV(VV - 1, yV) || UV(VV + 1, yV) || UV(VV, yV - 1) || UV(VV, yV + 1)))
-          for (let xV = 0; xV < QV.length; xV += 3) {
-            const JV = VV + QV[xV],
-              YV = yV + QV[xV + 1];
-            if (JV >= 0 && YV >= 0 && JV < eV && YV < eV) {
-              const VV = YV * eV + JV;
-              pV[VV] = Math.min(pV[VV], QV[xV + 2])
+        return EH
+      }(LH);
+    for (let hH = 0; hH < BH; hH++)
+      for (let HH = 0; HH < BH; HH++) {
+        if (1 === rH[hH * BH + HH] && (SH(HH - 1, hH) || SH(HH + 1, hH) || SH(HH, hH - 1) || SH(HH, hH + 1)))
+          for (let LH = 0; LH < zH.length; LH += 3) {
+            const AH = HH + zH[LH],
+              rH = hH + zH[LH + 1];
+            if (AH >= 0 && rH >= 0 && AH < BH && rH < BH) {
+              const HH = rH * BH + AH;
+              tH[HH] = Math.min(tH[HH], zH[LH + 2])
             }
           }
       }
-    for (let nV = 0; nV < eV * eV; nV++) 1 !== YV[nV] && pV[nV] !== 1 / 0 && (VV.set(yV, 4 * nV), VV[4 * nV + 3] = Math.round(255 * Math.min(1, xV + 1 - Math.sqrt(pV[nV]))))
+    for (let CH = 0; CH < BH * BH; CH++) 1 !== rH[CH] && tH[CH] !== 1 / 0 && (HH.set(hH, 4 * CH), HH[4 * CH + 3] = Math.round(255 * Math.min(1, LH + 1 - Math.sqrt(tH[CH]))))
   }
-  const vV = {
+  const GH = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    rV = {
+    YH = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    kV = {
+    uH = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const bV = 1e-6;
+  const QH = 1e-6;
 
-  function EV(VV, eV, xV, JV) {
+  function WH(HH, BH, LH, AH) {
     let {
-      origin: YV,
-      across: UV,
-      down: yV,
-      texture: pV,
-      rect: [QV, nV, wV, ZV],
-      shade: vV
-    } = JV;
-    const rV = UV.x * yV.y - UV.y * yV.x;
-    if (Math.abs(rV) < 1e-9) return;
-    const kV = [YV.x, YV.x + UV.x, YV.x + yV.x, YV.x + UV.x + yV.x],
-      EV = [YV.y, YV.y + UV.y, YV.y + yV.y, YV.y + UV.y + yV.y],
-      BV = Math.max(0, Math.floor(Math.min(...kV))),
-      jV = Math.min(xV - 1, Math.ceil(Math.max(...kV))),
-      qV = Math.max(0, Math.floor(Math.min(...EV))),
-      tV = Math.min(xV - 1, Math.ceil(Math.max(...EV)));
-    for (let FV = qV; FV <= tV; FV++)
-      for (let JV = BV; JV <= jV; JV++) {
-        const kV = JV + .5 - YV.x,
-          EV = FV + .5 - YV.y,
-          BV = (kV * yV.y - EV * yV.x) / rV,
-          jV = (UV.x * EV - UV.y * kV) / rV;
-        if (BV < -bV || BV > 1 + bV || jV < -bV || jV > 1 + bV) continue;
-        const qV = FV * xV + JV;
-        eV[qV] = 1;
-        const tV = QV + Math.min(Math.max(BV, 0), 1) * (wV - QV),
-          TV = nV + Math.min(Math.max(jV, 0), 1) * (ZV - nV),
-          PV = Math.min(pV.width - 1, Math.floor(tV * pV.width)),
-          AV = 4 * (Math.min(pV.height - 1, Math.floor(TV * pV.height)) * pV.width + PV),
-          NV = pV.pixels[AV + 3] / 255;
-        if (0 === NV) continue;
-        const XV = 4 * qV,
-          MV = VV[XV + 3] / 255 * (1 - NV),
-          zV = NV + MV;
-        for (let eV = 0; eV < 3; eV++) VV[XV + eV] = (pV.pixels[AV + eV] * vV * NV + VV[XV + eV] * MV) / zV;
-        VV[XV + 3] = 255 * zV
+      origin: rH,
+      across: SH,
+      down: hH,
+      texture: tH,
+      rect: [zH, CH, EH, XH],
+      shade: GH
+    } = AH;
+    const YH = SH.x * hH.y - SH.y * hH.x;
+    if (Math.abs(YH) < 1e-9) return;
+    const uH = [rH.x, rH.x + SH.x, rH.x + hH.x, rH.x + SH.x + hH.x],
+      WH = [rH.y, rH.y + SH.y, rH.y + hH.y, rH.y + SH.y + hH.y],
+      MH = Math.max(0, Math.floor(Math.min(...uH))),
+      xH = Math.min(LH - 1, Math.ceil(Math.max(...uH))),
+      vH = Math.max(0, Math.floor(Math.min(...WH))),
+      PH = Math.min(LH - 1, Math.ceil(Math.max(...WH)));
+    for (let TH = vH; TH <= PH; TH++)
+      for (let AH = MH; AH <= xH; AH++) {
+        const uH = AH + .5 - rH.x,
+          WH = TH + .5 - rH.y,
+          MH = (uH * hH.y - WH * hH.x) / YH,
+          xH = (SH.x * WH - SH.y * uH) / YH;
+        if (MH < -QH || MH > 1 + QH || xH < -QH || xH > 1 + QH) continue;
+        const vH = TH * LH + AH;
+        BH[vH] = 1;
+        const PH = zH + Math.min(Math.max(MH, 0), 1) * (EH - zH),
+          UH = CH + Math.min(Math.max(xH, 0), 1) * (XH - CH),
+          VH = Math.min(tH.width - 1, Math.floor(PH * tH.width)),
+          OH = 4 * (Math.min(tH.height - 1, Math.floor(UH * tH.height)) * tH.width + VH),
+          bH = tH.pixels[OH + 3] / 255;
+        if (0 === bH) continue;
+        const kH = 4 * vH,
+          mH = HH[kH + 3] / 255 * (1 - bH),
+          oH = bH + mH;
+        for (let BH = 0; BH < 3; BH++) HH[kH + BH] = (tH.pixels[OH + BH] * GH * bH + HH[kH + BH] * mH) / oH;
+        HH[kH + 3] = 255 * oH
       }
   }
 
-  function BV(VV, eV, xV) {
-    const JV = VV.get(eV);
-    if (void 0 === JV) throw new Error(`no ${xV} was sent for ${eV.slice(0,100)}`);
-    return JV
+  function MH(HH, BH, LH) {
+    const AH = HH.get(BH);
+    if (void 0 === AH) throw new Error(`no ${LH} was sent for ${BH.slice(0,100)}`);
+    return AH
   }
-  const jV = {
-      pixelsOf(VV) {
-        const eV = new OffscreenCanvas(VV.width, VV.height),
-          xV = eV.getContext("2d");
-        if (!xV) throw new Error("no 2D context");
-        return xV.drawImage(VV, 0, 0), VV.close(), {
-          width: eV.width,
-          height: eV.height,
-          pixels: xV.getImageData(0, 0, eV.width, eV.height).data
+  const xH = {
+      pixelsOf(HH) {
+        const BH = new OffscreenCanvas(HH.width, HH.height),
+          LH = BH.getContext("2d");
+        if (!LH) throw new Error("no 2D context");
+        return LH.drawImage(HH, 0, 0), HH.close(), {
+          width: BH.width,
+          height: BH.height,
+          pixels: LH.getImageData(0, 0, BH.width, BH.height).data
         }
       },
-      async encode(VV, eV) {
-        const xV = new OffscreenCanvas(eV, eV),
-          JV = xV.getContext("2d");
-        if (!JV) throw new Error("no 2D context");
-        JV.putImageData(new ImageData(VV, eV, eV), 0, 0);
-        const YV = await xV.convertToBlob();
-        return new Promise(((VV, eV) => {
-          const xV = new FileReader;
-          xV.onload = () => {
-            VV(xV.result)
-          }, xV.onerror = () => {
-            var VV;
-            eV(null !== (VV = xV.error) && void 0 !== VV ? VV : new Error("the icon did not encode"))
-          }, xV.readAsDataURL(YV)
+      async encode(HH, BH) {
+        const LH = new OffscreenCanvas(BH, BH),
+          AH = LH.getContext("2d");
+        if (!AH) throw new Error("no 2D context");
+        AH.putImageData(new ImageData(HH, BH, BH), 0, 0);
+        const rH = await LH.convertToBlob();
+        return new Promise(((HH, BH) => {
+          const LH = new FileReader;
+          LH.onload = () => {
+            HH(LH.result)
+          }, LH.onerror = () => {
+            var HH;
+            BH(null !== (HH = LH.error) && void 0 !== HH ? HH : new Error("the icon did not encode"))
+          }, LH.readAsDataURL(rH)
         }))
       }
     },
-    qV = globalThis.WorkerGlobalScope;
-  void 0 !== qV && globalThis instanceof qV && function(JV, YV) {
-    const yV = new Map,
-      nV = new Map,
-      wV = (VV, eV, xV) => {
+    vH = globalThis.WorkerGlobalScope;
+  void 0 !== vH && globalThis instanceof vH && function(AH, rH) {
+    const hH = new Map,
+      CH = new Map,
+      EH = (HH, BH, LH) => {
         (async () => {
           try {
-            JV.postMessage({
+            AH.postMessage({
               type: "drawn",
-              id: VV,
-              url: await YV.encode(xV(), eV)
+              id: HH,
+              url: await rH.encode(LH(), BH)
             })
-          } catch (UV) {
-            JV.postMessage({
+          } catch (SH) {
+            AH.postMessage({
               type: "failed",
-              message: String(UV)
+              message: String(SH)
             })
           }
         })()
       };
-    JV.onmessage = JV => {
+    AH.onmessage = AH => {
       let {
-        data: bV
-      } = JV;
-      if ("texture" === bV.type) yV.set(bV.url, YV.pixelsOf(bV.bitmap));
-      else if ("model" === bV.type) nV.set(bV.name, {
-        geometry: bV.geometry,
-        texture: YV.pixelsOf(bV.bitmap)
+        data: QH
+      } = AH;
+      if ("texture" === QH.type) hH.set(QH.url, rH.pixelsOf(QH.bitmap));
+      else if ("model" === QH.type) CH.set(QH.name, {
+        geometry: QH.geometry,
+        texture: rH.pixelsOf(QH.bitmap)
       });
-      else if ("draw" === bV.type) {
+      else if ("draw" === QH.type) {
         const {
-          id: JV,
-          top: YV,
-          left: QV,
-          right: nV,
-          itemType: jV,
-          size: qV,
-          outlineWidth: tV
-        } = bV;
-        wV(JV, qV, (() => function(JV, YV, yV, QV) {
-          const nV = UV(yV, QV),
-            wV = nV * VV,
-            vV = nV * eV,
-            rV = nV * xV,
-            kV = Math.max(...YV.boxes.map((VV => VV[4]))),
-            bV = yV / 2,
-            BV = vV + (yV - vV - vV - kV * rV) / 2,
-            jV = (VV, eV, xV) => ({
-              x: bV + (VV - xV) * wV,
-              y: BV - vV + (VV + xV) * vV + (kV - eV) * rV
+          id: AH,
+          top: rH,
+          left: zH,
+          right: CH,
+          itemType: xH,
+          size: vH,
+          outlineWidth: PH
+        } = QH;
+        EH(AH, vH, (() => function(AH, rH, hH, zH) {
+          const CH = SH(hH, zH),
+            EH = CH * HH,
+            GH = CH * BH,
+            YH = CH * LH,
+            uH = Math.max(...rH.boxes.map((HH => HH[4]))),
+            QH = hH / 2,
+            MH = GH + (hH - GH - GH - uH * YH) / 2,
+            xH = (HH, BH, LH) => ({
+              x: QH + (HH - LH) * EH,
+              y: MH - GH + (HH + LH) * GH + (uH - BH) * YH
             }),
-            qV = (VV, eV, xV, JV, UV, yV) => ({
-              origin: VV,
+            vH = (HH, BH, LH, AH, SH, hH) => ({
+              origin: HH,
               across: {
-                x: eV.x - VV.x,
-                y: eV.y - VV.y
+                x: BH.x - HH.x,
+                y: BH.y - HH.y
               },
               down: {
-                x: xV.x - VV.x,
-                y: xV.y - VV.y
+                x: LH.x - HH.x,
+                y: LH.y - HH.y
               },
-              texture: JV,
-              rect: YV.cropFaces ? UV : [0, 0, 1, 1],
-              shade: yV
+              texture: AH,
+              rect: rH.cropFaces ? SH : [0, 0, 1, 1],
+              shade: hH
             }),
-            tV = new Uint8ClampedArray(yV * yV * 4),
-            FV = new Uint8Array(yV * yV),
-            TV = pV;
-          for (const [VV, eV, xV, UV, pV, ZV] of YV.boxes) {
-            const YV = qV(jV(UV, pV, ZV), jV(UV, pV, xV), jV(UV, eV, ZV), JV.right, [1 - ZV, 1 - pV, 1 - xV, 1 - eV], TV.right),
-              QV = qV(jV(VV, pV, ZV), jV(UV, pV, ZV), jV(VV, eV, ZV), JV.left, [VV, 1 - pV, UV, 1 - eV], TV.left),
-              nV = qV(jV(VV, pV, xV), jV(UV, pV, xV), jV(VV, pV, ZV), JV.top, [VV, xV, UV, ZV], TV.top);
-            for (const VV of [YV, QV, nV]) EV(tV, FV, yV, VV)
+            PH = new Uint8ClampedArray(hH * hH * 4),
+            TH = new Uint8Array(hH * hH),
+            UH = tH;
+          for (const [HH, BH, LH, SH, tH, XH] of rH.boxes) {
+            const rH = vH(xH(SH, tH, XH), xH(SH, tH, LH), xH(SH, BH, XH), AH.right, [1 - XH, 1 - tH, 1 - LH, 1 - BH], UH.right),
+              zH = vH(xH(HH, tH, XH), xH(SH, tH, XH), xH(HH, BH, XH), AH.left, [HH, 1 - tH, SH, 1 - BH], UH.left),
+              CH = vH(xH(HH, tH, LH), xH(SH, tH, LH), xH(HH, tH, XH), AH.top, [HH, LH, SH, XH], UH.top);
+            for (const HH of [rH, zH, CH]) WH(PH, TH, hH, HH)
           }
-          return ZV(tV, yV, QV, (VV => 1 === FV[VV])), tV
+          return XH(PH, hH, zH, (HH => 1 === TH[HH])), PH
         }({
-          top: BV(yV, YV, "texture"),
-          left: BV(yV, QV, "texture"),
-          right: BV(yV, nV, "texture")
-        }, function(VV) {
-          return "SlabBlock" === VV ? rV : "StairsBlock" === VV ? kV : vV
-        }(jV), qV, tV)))
+          top: MH(hH, rH, "texture"),
+          left: MH(hH, zH, "texture"),
+          right: MH(hH, CH, "texture")
+        }, function(HH) {
+          return "SlabBlock" === HH ? YH : "StairsBlock" === HH ? uH : GH
+        }(xH), vH, PH)))
       } else {
         const {
-          id: VV,
-          name: eV,
-          size: xV,
-          outlineWidth: JV
-        } = bV;
-        wV(VV, xV, (() => {
+          id: HH,
+          name: BH,
+          size: LH,
+          outlineWidth: AH
+        } = QH;
+        EH(HH, LH, (() => {
           const {
-            geometry: VV,
-            texture: YV
-          } = BV(nV, eV, "model");
-          return QV(VV, YV, xV, JV)
+            geometry: HH,
+            texture: rH
+          } = MH(CH, BH, "model");
+          return zH(HH, rH, LH, AH)
         }))
       }
-    }, JV.postMessage({
+    }, AH.postMessage({
       type: "started"
     })
-  }(globalThis, jV)
+  }(globalThis, xH)
 })();

@@ -1,37 +1,66 @@
 export const id = 176;
 export const ids = [176];
 export const modules = {
-  9552: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      pageBody: () => JV
+  9634: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => SH,
+      f: () => rH
     });
-    const JV = {
-      whatIs: ["What if every sword, block and piece of armour came from a Lucky Block? Lucky Bedwars is the Bedwars mode where they do. Four teams of up to four players each get their own base and a bed to protect. Open Lucky Blocks for random weapons, armour, blocks and wild surprises, then race to break every other team's bed. You never know what you'll get, so expect lots of chaos, and every match is free to jump into from your browser."],
-      howToPlay: ["Before the match, your lobby votes on a map. You start with four Lucky Blocks. The first Basic Building and Basic Weapon blocks you open give you team wool and a weapon, so you're ready to go. Generators at your base and in the centre of the map keep the loot coming. Better armour equips itself automatically, and your compass points to the nearest enemy.", "Opening blocks, getting kills and breaking beds earns Clovers. Spend them at your Lucky Trader on the Lucky Blocks you want, or chip in 50 Clovers at a time towards team upgrades like the Bed Trap. Turn unwanted loot into Clovers in the Recycle tab. Twice a match, a random event shakes things up, and late in the game the arena starts to shrink. You can respawn as long as your bed stands, but once it's gone, dying makes you a spectator. The last team standing wins."],
-      features: ["4 Teams of up to 4 Players", "Building, Weapon, Armour and Food Lucky Blocks in Basic, Rare and Super Rarities", "Evil Lucky Blocks with Nasty Surprises", "Wild Items: Lucky Bombs, Swap Orbs, Fireballs, Iceballs, Toxin Balls and Void Nets", "Random Events: Blood Moon, Lucky Crown, Masquerade, Simon Says, Lucky Storm and Tiny Titans", "Bed Trap Team Upgrades", "4 Maps: Lucky Islands, Helicarrier, Nuclear and Turtles", "Leaderboards"],
-      tips: ["Open your four starting Lucky Blocks straight away to get wool and a weapon", "Chip in for the Bed Trap early. Evil Lucky Blocks around your bed can seal raiders in obsidian, poison them or send them home", "Save any Obsidian from Super Building blocks for your bed, because explosions can't destroy it", "Recycle loot you don't need. Anything you leave on the ground turns into Clovers after 8 seconds", "Beds can't be broken during an event, so use that time to regroup and stock up", "Stay alive until an event ends to earn bonus Clovers", "Be careful with Lucky and Unlucky Bombs, because they hit you too"],
-      similarGames: ["bedwars", "luckyTowers", "skywars"],
-      faq: [{
-        question: "What is Bloxd Lucky Bedwars?",
-        answer: "It's Bedwars with a twist: all your gear comes from Lucky Blocks. Four teams of up to four players defend their beds and try to be the last team standing."
-      }, {
-        question: "How do you play Lucky Bedwars?",
-        answer: "Open Lucky Blocks for weapons, armour and blocks, protect your bed and break the other teams' beds. You respawn while your bed stands. Without it, one death makes you a spectator."
-      }, {
-        question: "How is Lucky Bedwars different from normal Bedwars?",
-        answer: "Your loot comes from Lucky Blocks, so every match is random. You earn Clovers to buy more Lucky Blocks and team upgrades, and random events change up each game."
-      }, {
-        question: "What are Clovers in Lucky Bedwars?",
-        answer: "Clovers are the in-game currency. Earn them by opening Lucky Blocks, getting kills, breaking beds, recycling loot and surviving events. Spend them at the Lucky Trader or on team upgrades."
-      }, {
-        question: "What's inside Evil Lucky Blocks?",
-        answer: "Bad luck! The Bed Trap upgrade puts Evil Lucky Blocks around your bed. Anyone who opens one could get trapped in obsidian, dropped in lava, webbed, poisoned, blinded, chased by guard dogs or sent home."
-      }, {
-        question: "What are the Lucky Bedwars events?",
-        answer: "Twice a match a random event starts: Blood Moon, Lucky Crown, Masquerade, Simon Says, Lucky Storm or Tiny Titans. You get a 30-second warning, and beds can't be broken while an event runs."
-      }]
+    let AH = !1;
+
+    function rH() {
+      AH = !0
+    }
+
+    function SH() {
+      return AH
+    }
+  },
+  9631: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      loadWasmPlay: () => GH,
+      loadWasmPlayAhead: () => YH,
+      loadWasmPreviews: () => uH
+    });
+    var AH = LH(3503),
+      rH = LH(2413),
+      SH = LH(2215),
+      hH = LH(5062),
+      tH = LH(3892),
+      zH = LH(9634);
+    let CH = null;
+
+    function EH() {
+      return Promise.all([LH.e(86), LH.e(89), LH.e(103), LH.e(234), LH.e(233), LH.e(150), LH.e(216), LH.e(243), LH.e(155), LH.e(101), LH.e(244), LH.e(75)]).then((() => LH(42e3)))
+    }
+
+    function XH() {
+      Promise.all([LH.e(84), LH.e(87), LH.e(85), LH.e(86), LH.e(103), LH.e(100), LH.e(300), LH.e(207), LH.e(250), LH.e(274), LH.e(244), LH.e(54)]).then((() => LH(42318))).catch((() => {}))
+    }
+
+    function GH() {
+      return hH.b.cancelDownloadForJoin(), (0, tH.e)(), (0, rH.f)(), (0, zH.f)(), (0, SH.g)(), XH(), Promise.all([LH.e(89), LH.e(103), LH.e(234), LH.e(233), LH.e(150), LH.e(155), LH.e(70)]).then((() => LH(42355))).then((HH => {
+        let {
+          startJoinLoad: BH
+        } = HH;
+        BH()
+      }), (() => {})), CH ??= EH().then((HH => (HH.startWasmPlay(), HH.followPageUiPack((HH => {
+        AH.b.showGamePack(HH)
+      })), HH)), (HH => {
+        throw CH = null, HH
+      })), CH
+    }
+
+    function YH() {
+      return XH(), LH.e(124).then((() => LH(42361))).catch((() => {})), EH().then((() => {}))
+    }
+
+    function uH() {
+      return EH().then((HH => {
+        HH.startWasmPreviews(), HH.prefetchWasmPreviews()
+      }))
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

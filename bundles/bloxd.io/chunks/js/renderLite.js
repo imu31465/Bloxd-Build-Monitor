@@ -1,75 +1,75 @@
-export const id = 56;
-export const ids = [56];
+export const id = 57;
+export const ids = [57];
 export const modules = {
-  53961: (VV, eV, xV) => {
-    xV.d(eV, {
-      startRenderLite: () => NV
+  54558: (HH, BH, LH) => {
+    LH.d(BH, {
+      startRenderLite: () => bH
     });
-    var JV = xV(3194),
-      YV = xV(686),
-      UV = xV(134),
-      yV = xV(5301),
-      pV = xV(42341),
-      QV = xV(5297),
-      nV = xV(42001),
-      wV = xV(41861),
-      ZV = xV(42046),
-      vV = xV(3142),
-      rV = xV(4981),
-      kV = xV(35165);
-    const bV = new Map([
+    var AH = LH(3168),
+      rH = LH(642),
+      SH = LH(114),
+      hH = LH(5268),
+      tH = LH(42343),
+      zH = LH(5265),
+      CH = LH(42034),
+      EH = LH(41911),
+      XH = LH(42082),
+      GH = LH(3105),
+      YH = LH(4921),
+      uH = LH(34837);
+    const QH = new Map([
       ["r", " retry"],
       ["f", " fallback"]
     ]);
-    class EV {
-      constructor(VV) {
-        this.label = void 0, this.noted = void 0, this.lines = 0, this.atMs = -1 / 0, this.label = VV
+    class WH {
+      constructor(HH) {
+        this.label = void 0, this.noted = void 0, this.lines = 0, this.atMs = -1 / 0, this.label = HH
       }
-      line(VV, eV) {
-        const xV = this.lines < 10 ? 6e4 : 6e5;
-        return void 0 === VV || VV === this.noted || eV - this.atMs < xV ? null : (this.noted = VV, this.lines++, this.atMs = eV, `${this.label}: ${VV}`)
+      line(HH, BH) {
+        const LH = this.lines < 10 ? 6e4 : 6e5;
+        return void 0 === HH || HH === this.noted || BH - this.atMs < LH ? null : (this.noted = HH, this.lines++, this.atMs = BH, `${this.label}: ${HH}`)
       }
     }
-    class BV {
+    class MH {
       constructor() {
-        this.failuresLogged = 0, this.heldLogged = !1, this.links = new EV("gl links"), this.programUse = new EV("gl programs")
+        this.failuresLogged = 0, this.heldLogged = !1, this.links = new WH("gl links"), this.programUse = new WH("gl programs")
       }
-      failures(VV) {
-        const eV = VV ? VV.split(" ") : [],
-          xV = eV.slice(this.failuresLogged).map((VV => {
-            var eV;
-            const [xV, JV] = VV.split(":"), YV = null !== (eV = bV.get(xV.slice(-1))) && void 0 !== eV ? eV : "";
-            return `gl link failed: program row ${parseInt(xV)}${YV}, read ${JV} ms after issue`
+      failures(HH) {
+        const BH = HH ? HH.split(" ") : [],
+          LH = BH.slice(this.failuresLogged).map((HH => {
+            var BH;
+            const [LH, AH] = HH.split(":"), rH = null !== (BH = QH.get(LH.slice(-1))) && void 0 !== BH ? BH : "";
+            return `gl link failed: program row ${parseInt(LH)}${rH}, read ${AH} ms after issue`
           }));
-        return this.failuresLogged = eV.length, xV
+        return this.failuresLogged = BH.length, LH
       }
-      heldAtBackstop(VV) {
-        return this.heldLogged || void 0 === VV ? null : (this.heldLogged = !0, `first view by the backstop, draws held for programs ${VV}`)
+      heldAtBackstop(HH) {
+        return this.heldLogged || void 0 === HH ? null : (this.heldLogged = !0, `first view by the backstop, draws held for programs ${HH}`)
       }
-      summaryLines(VV, eV, xV, JV) {
-        const YV = this.links.line(VV, xV);
-        return [YV && `${YV}; tab ${(0,kV.f)(JV)}`, this.programUse.line(eV, xV)].filter((VV => null !== VV))
+      summaryLines(HH, BH, LH, AH) {
+        const rH = this.links.line(HH, LH);
+        return [rH && `${rH}; tab ${(0,uH.c)(AH)}`, this.programUse.line(BH, LH)].filter((HH => null !== HH))
       }
     }
-    var jV = xV(5189);
-    class qV {
+    var xH = LH(5150);
+    class vH {
       constructor() {
         this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, this.lastDrawnMs = null
       }
-      frame(VV, eV, xV) {
-        if ("none" !== eV && (this.frames++, "paced" === eV && this.paced++, "drawn" === eV)) {
-          if (this.drawn++, this.renderUs += xV, this.renderUsMax = Math.max(this.renderUsMax, xV), null !== this.lastDrawnMs) {
-            const eV = VV - this.lastDrawnMs;
-            this.gapMaxMs = Math.max(this.gapMaxMs, eV), eV >= 50 && this.longGaps++
+      frame(HH, BH, LH) {
+        if ("none" !== BH && (this.frames++, "paced" === BH && this.paced++, "drawn" === BH)) {
+          if (this.drawn++, this.renderUs += LH, this.renderUsMax = Math.max(this.renderUsMax, LH), null !== this.lastDrawnMs) {
+            const BH = HH - this.lastDrawnMs;
+            this.gapMaxMs = Math.max(this.gapMaxMs, BH), BH >= 50 && this.longGaps++
           }
-          this.lastDrawnMs = VV
+          this.lastDrawnMs = HH
         }
       }
       restart() {
         this.take(), this.lastDrawnMs = null
       }
       take() {
-        const VV = {
+        const HH = {
           frames: this.frames,
           drawn: this.drawn,
           paced: this.paced,
@@ -78,253 +78,258 @@ export const modules = {
           renderUs: this.renderUs,
           renderUsMax: this.renderUsMax
         };
-        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, VV
+        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, HH
       }
     }
 
-    function tV(VV) {
-      return (VV / 1048576).toFixed(1)
+    function PH(HH) {
+      return (HH / 1048576).toFixed(1)
     }
-    class FV {
+    class TH {
       constructor() {
         this.logged = 0, this.seen = new Set, this.unlogged = 0
       }
-      admit(VV) {
-        return this.logged >= 20 || this.seen.has(VV) ? (this.unlogged++, null) : (this.seen.add(VV), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${VV}` : VV)
+      admit(HH) {
+        return this.logged >= 20 || this.seen.has(HH) ? (this.unlogged++, null) : (this.seen.add(HH), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${HH}` : HH)
       }
       takeUnlogged() {
-        const VV = this.unlogged;
-        return this.unlogged = 0, VV
+        const HH = this.unlogged;
+        return this.unlogged = 0, HH
       }
     }
 
-    function TV(VV) {
-      (0, vV.i)("renderlite", VV)
+    function UH(HH) {
+      (0, GH.j)("renderlite", HH)
     }
-    class PV {
-      constructor(VV) {
-        this.frames = new qV, this.events = new FV, this.programLines = new BV, this.compileSummary = new EV("webgpu compiles"), this.hidden = new kV.c, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.gridLogged = !1, this.visibilityChanged = () => {
-          const VV = performance.now();
-          this.hidden.changed(VV), this.restartWindow(VV)
-        }, this.iZ = () => {
-          var VV, eV;
-          const xV = this.session,
-            YV = (0, wV.k)(),
-            UV = performance.now();
-          if (this.logLinks(UV), this.logGrid(), null === xV || xV.isStopped || !0 !== (null === YV || void 0 === YV ? void 0 : YV.isCoreRunning)) return void this.restartWindow(UV);
+    class VH {
+      constructor(HH) {
+        this.frames = new vH, this.events = new TH, this.programLines = new MH, this.compileSummary = new WH("webgpu compiles"), this.hidden = new uH.b, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.gridLogged = !1, this.visibilityChanged = () => {
+          const HH = performance.now();
+          this.hidden.changed(HH), this.restartWindow(HH)
+        }, this.IX = () => {
+          var HH, BH;
+          const LH = this.session,
+            rH = (0, EH.i)(),
+            SH = performance.now();
+          if (this.logLinks(SH), this.logGrid(), null === LH || LH.isStopped || !0 !== (null === rH || void 0 === rH ? void 0 : rH.isCoreRunning)) return void this.restartWindow(SH);
           if (document.hidden) return;
-          if (UV - this.windowStart < 2500) return;
-          if (! function(VV) {
-              return VV < 12 || (VV - 12) % 3 === 2
+          if (SH - this.windowStart < 2500) return;
+          if (! function(HH) {
+              return HH < 12 || (HH - 12) % 3 === 2
             }(this.windows++)) return;
           this.logRenderer();
-          const QV = xV.headerWord(yV.Q.GpuTimed),
-            ZV = xV.headerWord(yV.Q.GpuFrameUs),
-            vV = this.sampled === xV ? {
-              timed: QV - this.gpuTimed >>> 0,
-              us: ZV - this.gpuUs >>> 0
+          const zH = LH.headerWord(hH.I.GpuTimed),
+            XH = LH.headerWord(hH.I.GpuFrameUs),
+            GH = this.sampled === LH ? {
+              timed: zH - this.gpuTimed >>> 0,
+              us: XH - this.gpuUs >>> 0
             } : null;
-          this.sampled = xV, this.gpuTimed = QV, this.gpuUs = ZV;
-          const rV = null !== (VV = null === (eV = (0, nV.P)((0, JV.D)())) || void 0 === eV ? void 0 : eV.MYV()) && void 0 !== VV ? VV : 0;
-          TV(function(VV, eV) {
-            const xV = eV.windowMs / 1e3,
-              JV = [`${Math.round(xV)}s: ${VV.drawn} drawn (${(VV.drawn/xV).toFixed(1)}/s), ${VV.paced} paced, ${VV.frames-VV.drawn-VV.paced} skipped`, `gap max ${Math.round(VV.gapMaxMs)} ms, ${VV.longGaps} over 50 ms`, `render cpu ${VV.drawn?(VV.renderUs/VV.drawn/1e3).toFixed(2):"-"} ms mean, ${(VV.renderUsMax/1e3).toFixed(1)} max`];
-            null !== eV.gpu && JV.push(`gpu ${eV.gpu.timed?(eV.gpu.us/eV.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${eV.gpu.timed} timed`);
-            const YV = eV.census;
-            JV.push(null === YV ? "draws none yet" : `draws ${(0,pV.c)(YV)} (terrain ${YV.terrainOpaque}+${YV.terrainTransparent}, pack ${YV.terrainPack}, meshes ${YV.regular+YV.thin+YV.line+YV.text}, sky ${YV.earthSky+YV.skyMeshes}, particles ${YV.particles})`), null !== YV && YV.ringCopiesMax > 0 && JV.push(`frame rings ${YV.ringCopiesMax} copies max, ${YV.ringBusyWrites} busy writes so far`);
-            const UV = null === eV.gpuBytesBefore ? "" : ` (${eV.gpuBytes>=eV.gpuBytesBefore?"+":"-"}${tV(Math.abs(eV.gpuBytes-eV.gpuBytesBefore))})`;
-            return JV.push(`gpu mem ${tV(eV.gpuBytes)} MiB${UV}`), JV.push(`pending ${eV.pending}`, "terrain " + (eV.terrainDrawn ? "drawn" : "not drawn yet")), eV.eventsUnlogged > 0 && JV.push(`${eV.eventsUnlogged} events unlogged`), JV.join("; ")
+          this.sampled = LH, this.gpuTimed = zH, this.gpuUs = XH;
+          const YH = null !== (HH = null === (BH = (0, CH.M)((0, AH.D)())) || void 0 === BH ? void 0 : BH.urH()) && void 0 !== HH ? HH : 0;
+          UH(function(HH, BH) {
+            const LH = BH.windowMs / 1e3,
+              AH = [`${Math.round(LH)}s: ${HH.drawn} drawn (${(HH.drawn/LH).toFixed(1)}/s), ${HH.paced} paced, ${HH.frames-HH.drawn-HH.paced} skipped`, `gap max ${Math.round(HH.gapMaxMs)} ms, ${HH.longGaps} over 50 ms`, `render cpu ${HH.drawn?(HH.renderUs/HH.drawn/1e3).toFixed(2):"-"} ms mean, ${(HH.renderUsMax/1e3).toFixed(1)} max`];
+            null !== BH.gpu && AH.push(`gpu ${BH.gpu.timed?(BH.gpu.us/BH.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${BH.gpu.timed} timed`);
+            const rH = BH.census;
+            AH.push(null === rH ? "draws none yet" : `draws ${(0,tH.d)(rH)} (terrain ${rH.terrainOpaque}+${rH.terrainTransparent}, pack ${rH.terrainPack}, meshes ${rH.regular+rH.thin+rH.line+rH.text}, sky ${rH.earthSky+rH.skyMeshes}, particles ${rH.particles})`), null !== rH && rH.ringCopiesMax > 0 && AH.push(`frame rings ${rH.ringCopiesMax} copies max, ${rH.ringBusyWrites} busy writes so far`);
+            const SH = null === BH.gpuBytesBefore ? "" : ` (${BH.gpuBytes>=BH.gpuBytesBefore?"+":"-"}${PH(Math.abs(BH.gpuBytes-BH.gpuBytesBefore))})`;
+            return AH.push(`gpu mem ${PH(BH.gpuBytes)} MiB${SH}`), AH.push(`pending ${BH.pending}`, "terrain " + (BH.terrainDrawn ? "drawn" : "not drawn yet")), BH.eventsUnlogged > 0 && AH.push(`${BH.eventsUnlogged} events unlogged`), AH.join("; ")
           }(this.frames.take(), {
-            windowMs: UV - this.windowStart,
-            gpu: vV,
-            census: (0, pV.f)(YV.api),
-            gpuBytes: rV,
+            windowMs: SH - this.windowStart,
+            gpu: GH,
+            census: (0, tH.h)(rH.api),
+            gpuBytes: YH,
             gpuBytesBefore: this.gpuBytes,
-            pending: xV.headerWord(yV.Q.RenderPending),
-            terrainDrawn: 0 !== (xV.headerWord(yV.Q.LoadSteps) & yV.cb.TerrainDrawn),
+            pending: LH.headerWord(hH.I.RenderPending),
+            terrainDrawn: 0 !== (LH.headerWord(hH.I.LoadSteps) & hH.$.TerrainDrawn),
             eventsUnlogged: this.events.takeUnlogged()
-          })), this.gpuBytes = rV, this.windowStart = UV
-        }, TV(`${(0,jV.d)(VV)}; client ${YV.s.client} (${YV.s.reason})`), setInterval(this.iZ, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
+          })), this.gpuBytes = YH, this.windowStart = SH
+        }, UH(`${(0,xH.e)(HH)}; client ${rH.A.client} (${rH.A.reason})`), setInterval(this.IX, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
       }
-      frame(VV, eV, xV) {
-        this.session = VV, this.frames.frame(eV, xV, "drawn" === xV ? VV.headerWord(yV.Q.RenderUs) : 0)
+      frame(HH, BH, LH) {
+        this.session = HH, this.frames.frame(BH, LH, "drawn" === LH ? HH.headerWord(hH.I.RenderUs) : 0)
       }
-      coreErrors(VV) {
+      coreErrors(HH) {
         for (const {
-            code: JV,
-            detail: YV
+            code: AH,
+            detail: rH
           }
-          of VV) {
-          var eV, xV;
-          if (JV >= yV.s.RenderDeviceLost && JV <= yV.s.RenderSerialLinks) this.event(`render error ${(0,QV.be)(JV)}${null!==(eV=null===(xV=(0,ZV.c)(JV,YV))||void 0===xV?void 0:xV.words)&&void 0!==eV?eV:""} (detail ${YV})`)
+          of HH) {
+          var BH, LH;
+          if (AH >= hH.p.RenderDeviceLost && AH <= hH.p.RenderSerialLinks) this.event(`render error ${(0,zH.Zd)(AH)}${null!==(BH=null===(LH=(0,XH.d)(AH,rH))||void 0===LH?void 0:LH.words)&&void 0!==BH?BH:""} (detail ${rH})`)
         }
       }
-      reload(VV, eV, xV, JV) {
-        this.event(`render reload: ${VV?"webgpu":"gl"} ${xV}, losses ${eV}${void 0===JV?"":`: ${JV}`}`)
+      reload(HH, BH, LH, AH) {
+        this.event(`render reload: ${HH?"webgpu":"gl"} ${LH}, losses ${BH}${void 0===AH?"":`: ${AH}`}`)
       }
-      crashed(VV) {
+      glContextLost(HH, BH, LH) {
+        const AH = null === BH || void 0 === BH ? void 0 : BH.split(" "),
+          rH = 3 === (null === AH || void 0 === AH ? void 0 : AH.length) ? `vertex arrays ${AH[0]}, keyed draws peak ${AH[1]} (sweep floor ${AH[2]})` : "vertex arrays unnoted";
+        this.event(`gl context lost ${HH?"in game":"at home"}: ${rH}, render distance ${null!==LH&&void 0!==LH?LH:"none"}`)
+      }
+      crashed(HH) {
         let {
-          site: eV,
-          error: xV,
-          header: JV
-        } = VV;
-        const YV = null !== JV && 0 !== JV.lastError ? `, last error ${(0,QV.be)(JV.lastError)} (detail ${JV.lastErrorDetail})` : "",
-          UV = xV instanceof Error ? `${xV.name}: ${xV.message}` : null === xV || void 0 === xV ? "" : String(xV);
-        this.event(`core stopped at ${eV}${YV}${UV&&`: ${UV}`}`)
+          site: BH,
+          error: LH,
+          header: AH
+        } = HH;
+        const rH = null !== AH && 0 !== AH.lastError ? `, last error ${(0,zH.Zd)(AH.lastError)} (detail ${AH.lastErrorDetail})` : "",
+          SH = LH instanceof Error ? `${LH.name}: ${LH.message}` : null === LH || void 0 === LH ? "" : String(LH);
+        this.event(`core stopped at ${BH}${rH}${SH&&`: ${SH}`}`)
       }
-      event(VV) {
-        const eV = this.events.admit(VV);
-        null !== eV && TV(eV)
+      event(HH) {
+        const BH = this.events.admit(HH);
+        null !== BH && UH(BH)
       }
-      restartWindow(VV) {
-        this.frames.restart(), this.windowStart = VV;
-        const eV = this.session;
-        null === eV || eV.isStopped ? this.sampled = null : (this.sampled = eV, this.gpuTimed = eV.headerWord(yV.Q.GpuTimed), this.gpuUs = eV.headerWord(yV.Q.GpuFrameUs))
+      restartWindow(HH) {
+        this.frames.restart(), this.windowStart = HH;
+        const BH = this.session;
+        null === BH || BH.isStopped ? this.sampled = null : (this.sampled = BH, this.gpuTimed = BH.headerWord(hH.I.GpuTimed), this.gpuUs = BH.headerWord(hH.I.GpuFrameUs))
       }
-      logLinks(VV) {
-        const eV = window.bloxdRenderDebug;
-        for (const YV of this.programLines.failures(null === eV || void 0 === eV ? void 0 : eV.linkFailures)) this.event(YV);
-        const xV = this.programLines.heldAtBackstop(null === eV || void 0 === eV ? void 0 : eV.heldAtBackstop);
-        null !== xV && TV(xV);
-        for (const YV of this.programLines.summaryLines(null === eV || void 0 === eV ? void 0 : eV.links, null === eV || void 0 === eV ? void 0 : eV.programUse, VV, this.hidden.totals(VV))) TV(YV);
-        const JV = this.compileSummary.line(null === eV || void 0 === eV ? void 0 : eV.compiles, VV);
-        null !== JV && TV(JV)
+      logLinks(HH) {
+        const BH = window.bloxdRenderDebug;
+        for (const rH of this.programLines.failures(null === BH || void 0 === BH ? void 0 : BH.linkFailures)) this.event(rH);
+        const LH = this.programLines.heldAtBackstop(null === BH || void 0 === BH ? void 0 : BH.heldAtBackstop);
+        null !== LH && UH(LH);
+        for (const rH of this.programLines.summaryLines(null === BH || void 0 === BH ? void 0 : BH.links, null === BH || void 0 === BH ? void 0 : BH.programUse, HH, this.hidden.totals(HH))) UH(rH);
+        const AH = this.compileSummary.line(null === BH || void 0 === BH ? void 0 : BH.compiles, HH);
+        null !== AH && UH(AH)
       }
       logGrid() {
-        var VV;
-        const eV = null === (VV = window.bloxdRenderDebug) || void 0 === VV ? void 0 : VV.gridFaces;
-        this.gridLogged || void 0 === eV || (this.gridLogged = !0, TV(`gl1 grid ${eV}`))
+        var HH;
+        const BH = null === (HH = window.bloxdRenderDebug) || void 0 === HH ? void 0 : HH.gridFaces;
+        this.gridLogged || void 0 === BH || (this.gridLogged = !0, UH(`gl1 grid ${BH}`))
       }
       logRenderer() {
-        var VV, eV;
+        var HH, BH;
         if (this.rendererLogged) return;
         this.rendererLogged = !0;
-        const xV = window.bloxdRenderDebug,
-          JV = (0, UV.z)(),
-          YV = void 0 === (null === xV || void 0 === xV ? void 0 : xV.parallelCompile) ? "" : `; parallel compile ${xV.parallelCompile}`;
-        TV(`renderer gl ${JV?`${JV.vendor} / ${JV.renderer}`:"(not read)"}; terrain fetch ${null!==(VV=null===xV||void 0===xV?void 0:xV.fetch)&&void 0!==VV?VV:"(not noted)"}${YV}`), TV(`renderer caps ${null!==(eV=null===xV||void 0===xV?void 0:xV.caps)&&void 0!==eV?eV:"(not noted)"}`)
+        const LH = window.bloxdRenderDebug,
+          AH = (0, SH.z)(),
+          rH = void 0 === (null === LH || void 0 === LH ? void 0 : LH.parallelCompile) ? "" : `; parallel compile ${LH.parallelCompile}`;
+        UH(`renderer gl ${AH?`${AH.vendor} / ${AH.renderer}`:"(not read)"}; terrain fetch ${null!==(HH=null===LH||void 0===LH?void 0:LH.fetch)&&void 0!==HH?HH:"(not noted)"}${rH}`), UH(`renderer caps ${null!==(BH=null===LH||void 0===LH?void 0:LH.caps)&&void 0!==BH?BH:"(not noted)"}`)
       }
     }
-    let AV = null;
+    let OH = null;
 
-    function NV(VV) {
-      return (0, rV.f)(), AV ??= new PV(VV), AV
+    function bH(HH) {
+      return (0, YH.g)(), OH ??= new VH(HH), OH
     }
   },
-  5189: (VV, eV, xV) => {
-    function JV(VV) {
-      if (null === VV) return "backend: none picked (no renderer build)";
-      const eV = VV.adapter ? `${VV.adapter.vendor}/${VV.adapter.architecture}` : "none";
-      return `backend ${VV.backend}: reason ${VV.reason}, source ${VV.source}, adapter ${eV}`
+  5150: (HH, BH, LH) => {
+    function AH(HH) {
+      if (null === HH) return "backend: none picked (no renderer build)";
+      const BH = HH.adapter ? `${HH.adapter.vendor}/${HH.adapter.architecture}` : "none";
+      return `backend ${HH.backend}: reason ${HH.reason}, source ${HH.source}, adapter ${BH}`
     }
-    xV.d(eV, {
-      d: () => JV
+    LH.d(BH, {
+      e: () => AH
     })
   },
-  35165: (VV, eV, xV) => {
-    function JV(VV) {
-      return `hidden ${VV.changes} changes, ${Math.round(VV.hiddenMs)} ms`
+  34837: (HH, BH, LH) => {
+    function AH(HH) {
+      return `hidden ${HH.changes} changes, ${Math.round(HH.hiddenMs)} ms`
     }
-    xV.d(eV, {
-      c: () => YV,
-      f: () => JV
+    LH.d(BH, {
+      b: () => rH,
+      c: () => AH
     });
-    class YV {
+    class rH {
       constructor() {
         this.changes = 0, this.hiddenMs = 0, this.hiddenSinceMs = document.hidden ? performance.now() : -1
       }
-      changed(VV) {
-        this.changes++, document.hidden ? this.hiddenSinceMs = VV : this.hiddenSinceMs >= 0 && (this.hiddenMs += VV - this.hiddenSinceMs, this.hiddenSinceMs = -1)
+      changed(HH) {
+        this.changes++, document.hidden ? this.hiddenSinceMs = HH : this.hiddenSinceMs >= 0 && (this.hiddenMs += HH - this.hiddenSinceMs, this.hiddenSinceMs = -1)
       }
-      totals(VV) {
+      totals(HH) {
         return {
           changes: this.changes,
-          hiddenMs: this.hiddenMs + (this.hiddenSinceMs >= 0 ? VV - this.hiddenSinceMs : 0)
+          hiddenMs: this.hiddenMs + (this.hiddenSinceMs >= 0 ? HH - this.hiddenSinceMs : 0)
         }
       }
     }
   },
-  42341: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => yV,
-      f: () => UV,
-      g: () => pV
+  42343: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH,
+      h: () => SH,
+      j: () => tH
     });
-    var JV = xV(41852),
-      YV = xV(41861);
+    var AH = LH(41898),
+      rH = LH(41911);
 
-    function UV(VV) {
-      if (VV.queries.drawCensus() < JV.xb.BYTES) return null;
-      const eV = VV.memoryData(VV.scratch(), JV.xb.BYTES, 4, "the draw census");
-      return null === eV ? null : {
-        terrainOpaque: JV.xb.terrainOpaque(eV, 0),
-        terrainTransparent: JV.xb.terrainTransparent(eV, 0),
-        terrainPack: JV.xb.terrainPack(eV, 0),
-        earthSky: JV.xb.earthSky(eV, 0),
-        skyMeshes: JV.xb.skyMeshes(eV, 0),
-        regular: JV.xb.regular(eV, 0),
-        thin: JV.xb.thin(eV, 0),
-        line: JV.xb.line(eV, 0),
-        text: JV.xb.text(eV, 0),
-        particles: JV.xb.particles(eV, 0),
-        terrainParts: JV.xb.terrainParts(eV, 0),
-        terrainCompiling: JV.xb.terrainCompiling(eV, 0),
-        ringCopiesMax: JV.xb.ringCopiesMax(eV, 0),
-        ringBusyWrites: JV.xb.ringBusyWrites(eV, 0)
+    function SH(HH) {
+      if (HH.queries.drawCensus() < AH.Gb.BYTES) return null;
+      const BH = HH.memoryData(HH.scratch(), AH.Gb.BYTES, 4, "the draw census");
+      return null === BH ? null : {
+        terrainOpaque: AH.Gb.terrainOpaque(BH, 0),
+        terrainTransparent: AH.Gb.terrainTransparent(BH, 0),
+        terrainPack: AH.Gb.terrainPack(BH, 0),
+        earthSky: AH.Gb.earthSky(BH, 0),
+        skyMeshes: AH.Gb.skyMeshes(BH, 0),
+        regular: AH.Gb.regular(BH, 0),
+        thin: AH.Gb.thin(BH, 0),
+        line: AH.Gb.line(BH, 0),
+        text: AH.Gb.text(BH, 0),
+        particles: AH.Gb.particles(BH, 0),
+        terrainParts: AH.Gb.terrainParts(BH, 0),
+        terrainCompiling: AH.Gb.terrainCompiling(BH, 0),
+        ringCopiesMax: AH.Gb.ringCopiesMax(BH, 0),
+        ringBusyWrites: AH.Gb.ringBusyWrites(BH, 0)
       }
     }
 
-    function yV(VV) {
+    function hH(HH) {
       const {
-        terrainOpaque: eV,
-        terrainTransparent: xV,
-        earthSky: JV,
-        skyMeshes: YV,
-        regular: UV,
-        thin: yV,
-        line: pV,
-        text: QV,
-        particles: nV
-      } = VV;
-      return eV + xV + JV + YV + UV + yV + pV + QV + nV
+        terrainOpaque: BH,
+        terrainTransparent: LH,
+        earthSky: AH,
+        skyMeshes: rH,
+        regular: SH,
+        thin: hH,
+        line: tH,
+        text: zH,
+        particles: CH
+      } = HH;
+      return BH + LH + AH + rH + SH + hH + tH + zH + CH
     }
 
-    function pV() {
-      const VV = (0, YV.k)();
-      return !0 === (null === VV || void 0 === VV ? void 0 : VV.isCoreRunning) ? function(VV) {
-        const eV = UV(VV);
-        if (null === eV) return [];
+    function tH() {
+      const HH = (0, rH.i)();
+      return !0 === (null === HH || void 0 === HH ? void 0 : HH.isCoreRunning) ? function(HH) {
+        const BH = SH(HH);
+        if (null === BH) return [];
         const {
-          terrainOpaque: xV,
-          terrainTransparent: JV,
-          terrainPack: YV,
-          earthSky: pV,
-          skyMeshes: QV,
-          regular: nV,
-          thin: wV,
-          line: ZV,
-          text: vV,
-          particles: rV
-        } = eV;
+          terrainOpaque: LH,
+          terrainTransparent: AH,
+          terrainPack: rH,
+          earthSky: tH,
+          skyMeshes: zH,
+          regular: CH,
+          thin: EH,
+          line: XH,
+          text: GH,
+          particles: YH
+        } = BH;
         return [{
           label: "Drawn",
-          value: `${yV(eV)}`
+          value: `${hH(BH)}`
         }, {
           label: "Terrain",
-          value: `${xV} opaque / ${JV} transparent (${YV} shader pack)`
+          value: `${LH} opaque / ${AH} transparent (${rH} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${nV} / ${wV}`
+          value: `${CH} / ${EH}`
         }, {
           label: "Text / Lines",
-          value: `${vV} / ${ZV}`
+          value: `${GH} / ${XH}`
         }, {
           label: "Sky / Particles",
-          value: `${pV+QV} / ${rV}`
+          value: `${tH+zH} / ${YH}`
         }]
-      }(VV.api) : []
+      }(HH.api) : []
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

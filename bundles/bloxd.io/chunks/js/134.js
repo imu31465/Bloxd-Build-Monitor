@@ -1,11 +1,11 @@
 export const id = 134;
 export const ids = [134];
 export const modules = {
-  7033: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => JV
+  7014: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => AH
     });
-    const JV = {
+    const AH = {
       canChange: !0,
       blockReach: 6,
       ezBridging: !0,
@@ -55,6 +55,7 @@ export const modules = {
       strictFluidBuckets: !0,
       preserveProtectedFluidSources: !1,
       fillBrokenBlocksWithWater: !1,
+      fluidFlow: !1,
       canUseZoomKey: !0,
       canAltAction: !0,
       canSeeNametagsThroughWalls: !0,
@@ -160,7 +161,7 @@ export const modules = {
       _health: null,
       _tasks: null,
       _availableLeaderboards: null,
-      _shopVersion: xV(2086).e,
+      _shopVersion: LH(2043).e,
       _pendingSpawn: null,
       _totalMaxHealth: null,
       _ignoreBasicBoards: !0,
@@ -169,4 +170,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

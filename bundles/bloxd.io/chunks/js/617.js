@@ -1,467 +1,467 @@
 export const id = 617;
 export const ids = [617];
 export const modules = {
-  44690: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      _ENVTextureLoader: () => NV
+  45261: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      _ENVTextureLoader: () => bH
     });
-    var JV = xV(41190),
-      YV = xV(38269),
-      UV = xV(38303),
-      yV = xV(41248),
-      pV = xV(41077),
-      QV = xV(41252),
-      nV = (xV(41337), xV(44697)),
-      wV = xV(39870),
-      ZV = (xV(44706), xV(44723), xV(41318));
-    const vV = "image/png",
-      rV = [134, 22, 135, 150, 246, 214, 150, 54];
+    var AH = LH(41222),
+      rH = LH(37963),
+      SH = LH(38002),
+      hH = LH(41275),
+      tH = LH(41122),
+      zH = LH(41283),
+      CH = (LH(41383), LH(45266)),
+      EH = LH(39595),
+      XH = (LH(45276), LH(45299), LH(41356));
+    const GH = "image/png",
+      YH = [134, 22, 135, 150, 246, 214, 150, 54];
 
-    function kV(VV) {
-      const eV = new DataView(VV.buffer, VV.byteOffset, VV.byteLength);
-      let xV = 0;
-      for (let yV = 0; yV < rV.length; yV++)
-        if (eV.getUint8(xV++) !== rV[yV]) return wV.b.Error("Not a babylon environment map"), null;
-      let JV, YV = "";
-      for (; JV = eV.getUint8(xV++);) YV += String.fromCharCode(JV);
-      let UV = JSON.parse(YV);
-      return UV = bV(UV), UV.binaryDataPosition = xV, UV.specular && (UV.specular.lodGenerationScale = UV.specular.lodGenerationScale || .8), UV
+    function uH(HH) {
+      const BH = new DataView(HH.buffer, HH.byteOffset, HH.byteLength);
+      let LH = 0;
+      for (let hH = 0; hH < YH.length; hH++)
+        if (BH.getUint8(LH++) !== YH[hH]) return EH.e.Error("Not a babylon environment map"), null;
+      let AH, rH = "";
+      for (; AH = BH.getUint8(LH++);) rH += String.fromCharCode(AH);
+      let SH = JSON.parse(rH);
+      return SH = QH(SH), SH.binaryDataPosition = LH, SH.specular && (SH.specular.lodGenerationScale = SH.specular.lodGenerationScale || .8), SH
     }
 
-    function bV(VV) {
-      if (VV.version > 2) throw new Error(`Unsupported babylon environment map version "${VV.version}". Latest supported version is "2".`);
-      return 2 === VV.version ? VV : VV = {
-        ...VV,
+    function QH(HH) {
+      if (HH.version > 2) throw new Error(`Unsupported babylon environment map version "${HH.version}". Latest supported version is "2".`);
+      return 2 === HH.version ? HH : HH = {
+        ...HH,
         version: 2,
-        imageType: vV
+        imageType: GH
       }
     }
 
-    function EV(VV, eV) {
-      const xV = (eV = bV(eV)).specular;
-      let JV = Math.log2(eV.width);
-      if (JV = Math.round(JV) + 1, xV.mipmaps.length !== 6 * JV) throw new Error(`Unsupported specular mipmaps number "${xV.mipmaps.length}"`);
-      const YV = new Array(JV);
-      for (let UV = 0; UV < JV; UV++) {
-        YV[UV] = new Array(6);
-        for (let JV = 0; JV < 6; JV++) {
-          const yV = xV.mipmaps[6 * UV + JV];
-          YV[UV][JV] = new Uint8Array(VV.buffer, VV.byteOffset + eV.binaryDataPosition + yV.position, yV.length)
+    function WH(HH, BH) {
+      const LH = (BH = QH(BH)).specular;
+      let AH = Math.log2(BH.width);
+      if (AH = Math.round(AH) + 1, LH.mipmaps.length !== 6 * AH) throw new Error(`Unsupported specular mipmaps number "${LH.mipmaps.length}"`);
+      const rH = new Array(AH);
+      for (let SH = 0; SH < AH; SH++) {
+        rH[SH] = new Array(6);
+        for (let AH = 0; AH < 6; AH++) {
+          const hH = LH.mipmaps[6 * SH + AH];
+          rH[SH][AH] = new Uint8Array(HH.buffer, HH.byteOffset + BH.binaryDataPosition + hH.position, hH.length)
         }
       }
-      return YV
+      return rH
     }
 
-    function BV(VV, eV) {
-      eV = bV(eV);
-      const xV = new Array(6),
-        JV = eV.irradiance?.irradianceTexture;
-      if (JV) {
-        if (6 !== JV.faces.length) throw new Error(`Incorrect irradiance texture faces number "${JV.faces.length}"`);
-        for (let YV = 0; YV < 6; YV++) {
-          const UV = JV.faces[YV];
-          xV[YV] = new Uint8Array(VV.buffer, VV.byteOffset + eV.binaryDataPosition + UV.position, UV.length)
+    function MH(HH, BH) {
+      BH = QH(BH);
+      const LH = new Array(6),
+        AH = BH.irradiance?.irradianceTexture;
+      if (AH) {
+        if (6 !== AH.faces.length) throw new Error(`Incorrect irradiance texture faces number "${AH.faces.length}"`);
+        for (let rH = 0; rH < 6; rH++) {
+          const SH = AH.faces[rH];
+          LH[rH] = new Uint8Array(HH.buffer, HH.byteOffset + BH.binaryDataPosition + SH.position, SH.length)
         }
       }
-      return xV
+      return LH
     }
 
-    function jV(VV, eV, xV) {
-      const JV = (xV = bV(xV)).specular;
-      if (!JV) return Promise.resolve([]);
-      VV._lodGenerationScale = JV.lodGenerationScale;
-      const UV = [],
-        yV = EV(eV, xV);
-      UV.push(tV(VV, yV, xV.imageType));
-      const pV = xV.irradiance?.irradianceTexture;
-      if (pV) {
-        const JV = BV(eV, xV);
-        let yV = null;
-        xV.irradiance?.irradianceTexture?.dominantDirection && (yV = YV.o.FromArray(xV.irradiance.irradianceTexture.dominantDirection)), UV.push(FV(VV, JV, pV.size, xV.imageType, yV))
+    function xH(HH, BH, LH) {
+      const AH = (LH = QH(LH)).specular;
+      if (!AH) return Promise.resolve([]);
+      HH._lodGenerationScale = AH.lodGenerationScale;
+      const SH = [],
+        hH = WH(BH, LH);
+      SH.push(PH(HH, hH, LH.imageType));
+      const tH = LH.irradiance?.irradianceTexture;
+      if (tH) {
+        const AH = MH(BH, LH);
+        let hH = null;
+        LH.irradiance?.irradianceTexture?.dominantDirection && (hH = rH.o.FromArray(LH.irradiance.irradianceTexture.dominantDirection)), SH.push(TH(HH, AH, tH.size, LH.imageType, hH))
       }
-      return Promise.all(UV)
+      return Promise.all(SH)
     }
-    async function qV(VV, eV, xV, JV, YV, UV, yV, pV, QV, nV, wV) {
-      return await new Promise(((ZV, vV) => {
-        if (xV) {
-          const xV = eV.createTexture(null, !0, !0, null, 1, null, (VV => {
-            vV(VV)
-          }), VV);
-          JV?.onEffectCreatedObservable.addOnce((pV => {
-            pV.executeWhenCompiled((() => {
-              JV.externalTextureSamplerBinding = !0, JV.onApply = JV => {
-                JV._bindTexture("textureSampler", xV), JV.setFloat2("scale", 1, eV._features.needsInvertingBitmap && VV instanceof ImageBitmap ? -1 : 1)
-              }, eV.scenes.length && (eV.scenes[0].postProcessManager.directRender([JV], nV, !0, UV, yV), eV.restoreDefaultFramebuffer(), xV.dispose(), URL.revokeObjectURL(YV), ZV())
+    async function vH(HH, BH, LH, AH, rH, SH, hH, tH, zH, CH, EH) {
+      return await new Promise(((XH, GH) => {
+        if (LH) {
+          const LH = BH.createTexture(null, !0, !0, null, 1, null, (HH => {
+            GH(HH)
+          }), HH);
+          AH?.onEffectCreatedObservable.addOnce((tH => {
+            tH.executeWhenCompiled((() => {
+              AH.externalTextureSamplerBinding = !0, AH.onApply = AH => {
+                AH._bindTexture("textureSampler", LH), AH.setFloat2("scale", 1, BH._features.needsInvertingBitmap && HH instanceof ImageBitmap ? -1 : 1)
+              }, BH.scenes.length && (BH.scenes[0].postProcessManager.directRender([AH], CH, !0, SH, hH), BH.restoreDefaultFramebuffer(), LH.dispose(), URL.revokeObjectURL(rH), XH())
             }))
           }))
         } else {
-          if (eV._uploadImageToTexture(wV, VV, UV, yV), pV) {
-            const xV = QV[yV];
-            xV && eV._uploadImageToTexture(xV._texture, VV, UV, 0)
+          if (BH._uploadImageToTexture(EH, HH, SH, hH), tH) {
+            const LH = zH[hH];
+            LH && BH._uploadImageToTexture(LH._texture, HH, SH, 0)
           }
-          ZV()
+          XH()
         }
       }))
     }
-    async function tV(VV, eV) {
-      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : vV;
-      const JV = VV.sk();
-      VV.format = 5, VV.type = 0, VV.generateMipMaps = !0, VV._cachedAnisotropicFilteringLevel = null, JV.updateTextureSamplingMode(3, VV), await TV(VV, eV, !0, xV), VV.isReady = !0
+    async function PH(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : GH;
+      const AH = HH.Iu();
+      HH.format = 5, HH.type = 0, HH.generateMipMaps = !0, HH._cachedAnisotropicFilteringLevel = null, AH.updateTextureSamplingMode(3, HH), await UH(HH, BH, !0, LH), HH.isReady = !0
     }
-    async function FV(VV, eV, xV) {
-      let JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : vV,
-        YV = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-      const UV = VV.sk(),
-        yV = new pV.e(UV, 5),
-        nV = new QV.c(UV, yV);
-      VV._irradianceTexture = nV, nV._dominantDirection = YV, yV.isCube = !0, yV.format = 5, yV.type = 0, yV.generateMipMaps = !0, yV._cachedAnisotropicFilteringLevel = null, yV.generateMipMaps = !0, yV.width = xV, yV.height = xV, UV.updateTextureSamplingMode(3, yV), await TV(yV, [eV], !1, JV), UV.generateMipMapsForCubemap(yV), yV.isReady = !0
+    async function TH(HH, BH, LH) {
+      let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : GH,
+        rH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+      const SH = HH.Iu(),
+        hH = new tH.e(SH, 5),
+        CH = new zH.e(SH, hH);
+      HH._irradianceTexture = CH, CH._dominantDirection = rH, hH.isCube = !0, hH.format = 5, hH.type = 0, hH.generateMipMaps = !0, hH._cachedAnisotropicFilteringLevel = null, hH.generateMipMaps = !0, hH.width = LH, hH.height = LH, SH.updateTextureSamplingMode(3, hH), await UH(hH, [BH], !1, AH), SH.generateMipMapsForCubemap(hH), hH.isReady = !0
     }
-    async function TV(VV, eV, YV) {
-      let yV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : vV;
-      if (!(0, JV.k)(VV.width)) throw new Error("Texture size must be a power of two");
-      const wV = (0, UV.ILog2)(VV.width) + 1,
-        rV = VV.sk();
-      let kV = !1,
-        bV = !1,
-        EV = null,
-        BV = null,
-        jV = null;
-      const tV = rV.getCaps();
-      tV.textureLOD ? rV._features.supportRenderAndCopyToLodForFloatTextures ? tV.textureHalfFloatRender && tV.textureHalfFloatLinearFiltering ? (kV = !0, VV.type = 2) : tV.textureFloatRender && tV.textureFloatLinearFiltering && (kV = !0, VV.type = 1) : kV = !1 : (kV = !1, bV = YV);
-      let FV = 0;
-      if (kV) rV.isWebGPU ? (FV = 1, await xV.e(651).then((() => xV(64410)))) : await xV.e(633).then((() => xV(64417))), EV = new nV.d("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, rV, !1, void 0, VV.type, void 0, null, !1, void 0, FV), VV._isRGBD = !1, VV.invertY = !1, BV = rV.createRenderTargetCubeTexture(VV.width, {
+    async function UH(HH, BH, rH) {
+      let hH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : GH;
+      if (!(0, AH.g)(HH.width)) throw new Error("Texture size must be a power of two");
+      const EH = (0, SH.ILog2)(HH.width) + 1,
+        YH = HH.Iu();
+      let uH = !1,
+        QH = !1,
+        WH = null,
+        MH = null,
+        xH = null;
+      const PH = YH.getCaps();
+      PH.textureLOD ? YH._features.supportRenderAndCopyToLodForFloatTextures ? PH.textureHalfFloatRender && PH.textureHalfFloatLinearFiltering ? (uH = !0, HH.type = 2) : PH.textureFloatRender && PH.textureFloatLinearFiltering && (uH = !0, HH.type = 1) : uH = !1 : (uH = !1, QH = rH);
+      let TH = 0;
+      if (uH) YH.isWebGPU ? (TH = 1, await LH.e(651).then((() => LH(64229)))) : await LH.e(633).then((() => LH(64238))), WH = new CH.d("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, YH, !1, void 0, HH.type, void 0, null, !1, void 0, TH), HH._isRGBD = !1, HH.invertY = !1, MH = YH.createRenderTargetCubeTexture(HH.width, {
         generateDepthBuffer: !1,
         generateMipMaps: !0,
         generateStencilBuffer: !1,
         samplingMode: 3,
-        type: VV.type,
+        type: HH.type,
         format: 5
       });
-      else if (VV._isRGBD = !0, VV.invertY = !0, bV) {
-        const eV = 3;
-        jV = {};
-        const xV = VV._lodGenerationScale,
-          JV = VV._lodGenerationOffset;
-        for (let YV = 0; YV < eV; YV++) {
-          const UV = (wV - 1) * xV + JV,
-            yV = JV + (UV - JV) * (1 - YV / (eV - 1)),
-            nV = Math.round(Math.min(Math.max(yV, 0), UV)),
-            ZV = new pV.e(rV, 2);
-          ZV.isCube = !0, ZV.invertY = !0, ZV.generateMipMaps = !1, rV.updateTextureSamplingMode(2, ZV);
-          const vV = new QV.c(null);
-          switch (vV._isCube = !0, vV._texture = ZV, jV[nV] = vV, YV) {
+      else if (HH._isRGBD = !0, HH.invertY = !0, QH) {
+        const BH = 3;
+        xH = {};
+        const LH = HH._lodGenerationScale,
+          AH = HH._lodGenerationOffset;
+        for (let rH = 0; rH < BH; rH++) {
+          const SH = (EH - 1) * LH + AH,
+            hH = AH + (SH - AH) * (1 - rH / (BH - 1)),
+            CH = Math.round(Math.min(Math.max(hH, 0), SH)),
+            XH = new tH.e(YH, 2);
+          XH.isCube = !0, XH.invertY = !0, XH.generateMipMaps = !1, YH.updateTextureSamplingMode(2, XH);
+          const GH = new zH.e(null);
+          switch (GH._isCube = !0, GH._texture = XH, xH[CH] = GH, rH) {
             case 0:
-              VV._lodTextureLow = vV;
+              HH._lodTextureLow = GH;
               break;
             case 1:
-              VV._lodTextureMid = vV;
+              HH._lodTextureMid = GH;
               break;
             case 2:
-              VV._lodTextureHigh = vV
+              HH._lodTextureHigh = GH
           }
         }
       }
-      const TV = [];
-      for (let xV = 0; xV < eV.length; xV++)
-        for (let JV = 0; JV < 6; JV++) {
-          const YV = eV[xV][JV],
-            UV = (0, ZV.i)(YV),
-            pV = new Blob([UV], {
-              type: yV
+      const UH = [];
+      for (let LH = 0; LH < BH.length; LH++)
+        for (let AH = 0; AH < 6; AH++) {
+          const rH = BH[LH][AH],
+            SH = (0, XH.m)(rH),
+            tH = new Blob([SH], {
+              type: hH
             }),
-            QV = URL.createObjectURL(pV);
-          let nV;
-          if (rV._features.forceBitmapOverHTMLImageElement) nV = rV.createImageBitmap(pV, {
+            zH = URL.createObjectURL(tH);
+          let CH;
+          if (YH._features.forceBitmapOverHTMLImageElement) CH = YH.createImageBitmap(tH, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none"
-          }).then((async eV => await qV(eV, rV, kV, EV, QV, JV, xV, bV, jV, BV, VV)));
+          }).then((async BH => await vH(BH, YH, uH, WH, zH, AH, LH, QH, xH, MH, HH)));
           else {
-            const eV = new Image;
-            eV.src = QV, nV = new Promise(((YV, UV) => {
-              eV.onload = () => {
-                qV(eV, rV, kV, EV, QV, JV, xV, bV, jV, BV, VV).then((() => YV())).catch((VV => {
-                  UV(VV)
+            const BH = new Image;
+            BH.src = zH, CH = new Promise(((rH, SH) => {
+              BH.onload = () => {
+                vH(BH, YH, uH, WH, zH, AH, LH, QH, xH, MH, HH).then((() => rH())).catch((HH => {
+                  SH(HH)
                 }))
-              }, eV.onerror = VV => {
-                UV(VV)
+              }, BH.onerror = HH => {
+                SH(HH)
               }
             }))
           }
-          TV.push(nV)
+          UH.push(CH)
         }
-      if (await Promise.all(TV), eV.length < wV) {
-        let xV;
-        const JV = Math.pow(2, wV - 1 - eV.length),
-          YV = JV * JV * 4;
-        switch (VV.type) {
+      if (await Promise.all(UH), BH.length < EH) {
+        let LH;
+        const AH = Math.pow(2, EH - 1 - BH.length),
+          rH = AH * AH * 4;
+        switch (HH.type) {
           case 0:
-            xV = new Uint8Array(YV);
+            LH = new Uint8Array(rH);
             break;
           case 2:
-            xV = new Uint16Array(YV);
+            LH = new Uint16Array(rH);
             break;
           case 1:
-            xV = new Float32Array(YV)
+            LH = new Float32Array(rH)
         }
-        for (let UV = eV.length; UV < wV; UV++)
-          for (let eV = 0; eV < 6; eV++) rV._uploadArrayBufferViewToTexture(BV?.texture || VV, xV, eV, UV)
+        for (let SH = BH.length; SH < EH; SH++)
+          for (let BH = 0; BH < 6; BH++) YH._uploadArrayBufferViewToTexture(MH?.texture || HH, LH, BH, SH)
       }
-      if (BV) {
-        const eV = VV._irradianceTexture;
-        VV._irradianceTexture = null, rV._releaseTexture(VV), BV._swapAndDie(VV), VV._irradianceTexture = eV
+      if (MH) {
+        const BH = HH._irradianceTexture;
+        HH._irradianceTexture = null, YH._releaseTexture(HH), MH._swapAndDie(HH), HH._irradianceTexture = BH
       }
-      EV && EV.dispose(), bV && (VV._lodTextureHigh && VV._lodTextureHigh._texture && (VV._lodTextureHigh._texture.isReady = !0), VV._lodTextureMid && VV._lodTextureMid._texture && (VV._lodTextureMid._texture.isReady = !0), VV._lodTextureLow && VV._lodTextureLow._texture && (VV._lodTextureLow._texture.isReady = !0))
+      WH && WH.dispose(), QH && (HH._lodTextureHigh && HH._lodTextureHigh._texture && (HH._lodTextureHigh._texture.isReady = !0), HH._lodTextureMid && HH._lodTextureMid._texture && (HH._lodTextureMid._texture.isReady = !0), HH._lodTextureLow && HH._lodTextureLow._texture && (HH._lodTextureLow._texture.isReady = !0))
     }
 
-    function PV(VV, eV) {
-      const xV = (eV = bV(eV)).irradiance;
-      if (!xV) return;
-      const JV = new yV.f;
-      YV.o.FromArrayToRef(xV.x, 0, JV.x), YV.o.FromArrayToRef(xV.y, 0, JV.y), YV.o.FromArrayToRef(xV.z, 0, JV.z), YV.o.FromArrayToRef(xV.xx, 0, JV.xx), YV.o.FromArrayToRef(xV.yy, 0, JV.yy), YV.o.FromArrayToRef(xV.zz, 0, JV.zz), YV.o.FromArrayToRef(xV.yz, 0, JV.yz), YV.o.FromArrayToRef(xV.zx, 0, JV.zx), YV.o.FromArrayToRef(xV.xy, 0, JV.xy), VV._sphericalPolynomial = JV
+    function VH(HH, BH) {
+      const LH = (BH = QH(BH)).irradiance;
+      if (!LH) return;
+      const AH = new hH.g;
+      rH.o.FromArrayToRef(LH.x, 0, AH.x), rH.o.FromArrayToRef(LH.y, 0, AH.y), rH.o.FromArrayToRef(LH.z, 0, AH.z), rH.o.FromArrayToRef(LH.xx, 0, AH.xx), rH.o.FromArrayToRef(LH.yy, 0, AH.yy), rH.o.FromArrayToRef(LH.zz, 0, AH.zz), rH.o.FromArrayToRef(LH.yz, 0, AH.yz), rH.o.FromArrayToRef(LH.zx, 0, AH.zx), rH.o.FromArrayToRef(LH.xy, 0, AH.xy), HH._sphericalPolynomial = AH
     }
-    var AV = xV(44725);
-    class NV {
+    var OH = LH(45301);
+    class bH {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(VV, eV, xV, JV, YV) {
-        if (Array.isArray(VV)) return;
-        const UV = kV(VV);
-        if (UV) {
-          eV.width = UV.width, eV.height = UV.width;
+      loadCubeData(HH, BH, LH, AH, rH) {
+        if (Array.isArray(HH)) return;
+        const SH = uH(HH);
+        if (SH) {
+          BH.width = SH.width, BH.height = SH.width;
           try {
-            (0, AV.b)(), PV(eV, UV), jV(eV, VV, UV).then((() => {
-              eV.isReady = !0, eV.onLoadedObservable.notifyObservers(eV), eV.onLoadedObservable.clear(), JV && JV()
-            }), (VV => {
-              YV?.("Can not upload environment levels", VV)
+            (0, OH.e)(), VH(BH, SH), xH(BH, HH, SH).then((() => {
+              BH.isReady = !0, BH.onLoadedObservable.notifyObservers(BH), BH.onLoadedObservable.clear(), AH && AH()
+            }), (HH => {
+              rH?.("Can not upload environment levels", HH)
             }))
-          } catch (yV) {
-            YV?.("Can not upload environment file", yV)
+          } catch (hH) {
+            rH?.("Can not upload environment file", hH)
           }
-        } else YV && YV("Can not parse the environment file", null)
+        } else rH && rH("Can not parse the environment file", null)
       }
       loadData() {
         throw ".env not supported in 2d."
       }
     }
   },
-  44725: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => yV
+  45301: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => hH
     });
-    var JV = xV(44663),
-      YV = xV(41252);
-    let UV = !1;
+    var AH = LH(45245),
+      rH = LH(41283);
+    let SH = !1;
 
-    function yV() {
-      UV || (UV = !0, YV.c.prototype._sphericalPolynomialTargetSize = 0, YV.c.prototype.forceSphericalPolynomialsRecompute = function() {
+    function hH() {
+      SH || (SH = !0, rH.e.prototype._sphericalPolynomialTargetSize = 0, rH.e.prototype.forceSphericalPolynomialsRecompute = function() {
         this._texture && (this._texture._sphericalPolynomial = null, this._texture._sphericalPolynomialPromise = null, this._texture._sphericalPolynomialComputed = !1)
-      }, Object.defineProperty(YV.c.prototype, "sphericalPolynomial", {
+      }, Object.defineProperty(rH.e.prototype, "sphericalPolynomial", {
         get: function() {
           if (this._texture) {
             if (this._texture._sphericalPolynomial || this._texture._sphericalPolynomialComputed) return this._texture._sphericalPolynomial;
-            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = JV.b.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((VV => {
-              this._texture._sphericalPolynomial = VV, this._texture._sphericalPolynomialComputed = !0
+            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = AH.e.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((HH => {
+              this._texture._sphericalPolynomial = HH, this._texture._sphericalPolynomialComputed = !0
             }))), null
           }
           return null
         },
-        set: function(VV) {
-          this._texture && (this._texture._sphericalPolynomial = VV)
+        set: function(HH) {
+          this._texture && (this._texture._sphericalPolynomial = HH)
         },
         enumerable: !0,
         configurable: !0
       }))
     }
   },
-  44663: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => nV
+  45245: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => CH
     });
-    var JV = xV(38269),
-      YV = xV(38303),
-      UV = xV(41248),
-      yV = xV(38272),
-      pV = xV(38389);
-    class QV {
-      constructor(VV, eV, xV, JV) {
-        this.name = VV, this.worldAxisForNormal = eV, this.worldAxisForFileX = xV, this.worldAxisForFileY = JV
+    var AH = LH(37963),
+      rH = LH(38002),
+      SH = LH(41275),
+      hH = LH(37972),
+      tH = LH(38074);
+    class zH {
+      constructor(HH, BH, LH, AH) {
+        this.name = HH, this.worldAxisForNormal = BH, this.worldAxisForFileX = LH, this.worldAxisForFileY = AH
       }
     }
-    class nV {
-      static _NearestPow2Floor(VV) {
-        return VV <= 1 ? 1 : 1 << Math.floor(Math.log2(VV))
+    class CH {
+      static _NearestPow2Floor(HH) {
+        return HH <= 1 ? 1 : 1 << Math.floor(Math.log2(HH))
       }
-      static ConvertCubeMapTextureToSphericalPolynomial(VV) {
-        if (!VV.isCube) return null;
-        VV.dD()?.sk().flushFramebuffer();
-        const eV = VV.getSize().width,
-          xV = VV._sphericalPolynomialTargetSize,
-          JV = xV > 0 ? this._NearestPow2Floor(xV) : 0,
-          YV = !VV.noMipmap && !0 === VV._texture?.generateMipMaps,
-          UV = JV > 0 && JV < eV && YV,
-          yV = UV ? Math.max(0, Math.round(Math.log2(eV / JV))) : 0,
-          pV = UV ? Math.max(1, Math.floor(eV / Math.pow(2, yV))) : eV,
-          QV = VV.readPixels(0, yV, void 0, !1),
-          nV = VV.readPixels(1, yV, void 0, !1);
-        let wV, ZV;
-        VV.isRenderTarget ? (wV = VV.readPixels(3, yV, void 0, !1), ZV = VV.readPixels(2, yV, void 0, !1)) : (wV = VV.readPixels(2, yV, void 0, !1), ZV = VV.readPixels(3, yV, void 0, !1));
-        const vV = VV.readPixels(4, yV, void 0, !1),
-          rV = VV.readPixels(5, yV, void 0, !1),
-          kV = VV.gammaSpace,
-          bV = JV > 0 && JV < eV && !UV;
-        return new Promise((VV => {
-          Promise.all([nV, QV, wV, ZV, vV, rV]).then((xV => {
-            let [YV, UV, yV, QV, nV, wV] = xV, ZV = pV;
-            if (bV) {
-              const VV = 4;
-              YV = this._DownsampleFace(YV, eV, JV, VV), UV = this._DownsampleFace(UV, eV, JV, VV), yV = this._DownsampleFace(yV, eV, JV, VV), QV = this._DownsampleFace(QV, eV, JV, VV), nV = this._DownsampleFace(nV, eV, JV, VV), wV = this._DownsampleFace(wV, eV, JV, VV), ZV = JV
+      static ConvertCubeMapTextureToSphericalPolynomial(HH) {
+        if (!HH.isCube) return null;
+        HH.yN()?.Iu().flushFramebuffer();
+        const BH = HH.getSize().width,
+          LH = HH._sphericalPolynomialTargetSize,
+          AH = LH > 0 ? this._NearestPow2Floor(LH) : 0,
+          rH = !HH.noMipmap && !0 === HH._texture?.generateMipMaps,
+          SH = AH > 0 && AH < BH && rH,
+          hH = SH ? Math.max(0, Math.round(Math.log2(BH / AH))) : 0,
+          tH = SH ? Math.max(1, Math.floor(BH / Math.pow(2, hH))) : BH,
+          zH = HH.readPixels(0, hH, void 0, !1),
+          CH = HH.readPixels(1, hH, void 0, !1);
+        let EH, XH;
+        HH.isRenderTarget ? (EH = HH.readPixels(3, hH, void 0, !1), XH = HH.readPixels(2, hH, void 0, !1)) : (EH = HH.readPixels(2, hH, void 0, !1), XH = HH.readPixels(3, hH, void 0, !1));
+        const GH = HH.readPixels(4, hH, void 0, !1),
+          YH = HH.readPixels(5, hH, void 0, !1),
+          uH = HH.gammaSpace,
+          QH = AH > 0 && AH < BH && !SH;
+        return new Promise((HH => {
+          Promise.all([CH, zH, EH, XH, GH, YH]).then((LH => {
+            let [rH, SH, hH, zH, CH, EH] = LH, XH = tH;
+            if (QH) {
+              const HH = 4;
+              rH = this._DownsampleFace(rH, BH, AH, HH), SH = this._DownsampleFace(SH, BH, AH, HH), hH = this._DownsampleFace(hH, BH, AH, HH), zH = this._DownsampleFace(zH, BH, AH, HH), CH = this._DownsampleFace(CH, BH, AH, HH), EH = this._DownsampleFace(EH, BH, AH, HH), XH = AH
             }
-            const vV = {
-              size: ZV,
-              right: UV,
-              left: YV,
-              up: yV,
-              down: QV,
-              front: nV,
-              back: wV,
+            const GH = {
+              size: XH,
+              right: SH,
+              left: rH,
+              up: hH,
+              down: zH,
+              front: CH,
+              back: EH,
               format: 5,
-              type: YV instanceof Float32Array ? 1 : 0,
-              gammaSpace: kV
+              type: rH instanceof Float32Array ? 1 : 0,
+              gammaSpace: uH
             };
-            VV(this.ConvertCubeMapToSphericalPolynomial(vV))
+            HH(this.ConvertCubeMapToSphericalPolynomial(GH))
           }))
         }))
       }
-      static _AreaElement(VV, eV) {
-        return Math.atan2(VV * eV, Math.sqrt(VV * VV + eV * eV + 1))
+      static _AreaElement(HH, BH) {
+        return Math.atan2(HH * BH, Math.sqrt(HH * HH + BH * BH + 1))
       }
-      static _DownsampleFace(VV, eV, xV, JV) {
-        const YV = VV instanceof Float32Array ? VV : Float32Array.from(VV),
-          UV = xV * xV * JV,
-          yV = new Float32Array(UV),
-          pV = eV / xV,
-          QV = 1 / (pV * pV);
-        for (let wV = 0; wV < xV; wV++) {
-          const VV = Math.floor(wV * pV),
-            UV = Math.floor((wV + 1) * pV);
-          for (let nV = 0; nV < xV; nV++) {
-            const ZV = Math.floor(nV * pV),
-              vV = Math.floor((nV + 1) * pV),
-              rV = (wV * xV + nV) * JV;
-            for (let xV = 0; xV < JV; xV++) {
-              let pV = 0;
-              for (let yV = VV; yV < UV; yV++)
-                for (let VV = ZV; VV < vV; VV++) pV += YV[(yV * eV + VV) * JV + xV];
-              yV[rV + xV] = pV * QV
+      static _DownsampleFace(HH, BH, LH, AH) {
+        const rH = HH instanceof Float32Array ? HH : Float32Array.from(HH),
+          SH = LH * LH * AH,
+          hH = new Float32Array(SH),
+          tH = BH / LH,
+          zH = 1 / (tH * tH);
+        for (let EH = 0; EH < LH; EH++) {
+          const HH = Math.floor(EH * tH),
+            SH = Math.floor((EH + 1) * tH);
+          for (let CH = 0; CH < LH; CH++) {
+            const XH = Math.floor(CH * tH),
+              GH = Math.floor((CH + 1) * tH),
+              YH = (EH * LH + CH) * AH;
+            for (let LH = 0; LH < AH; LH++) {
+              let tH = 0;
+              for (let hH = HH; hH < SH; hH++)
+                for (let HH = XH; HH < GH; HH++) tH += rH[(hH * BH + HH) * AH + LH];
+              hH[YH + LH] = tH * zH
             }
           }
         }
-        if (VV instanceof Float32Array) return yV;
-        const nV = new(0, VV.constructor)(UV);
-        for (let wV = 0; wV < UV; wV++) nV[wV] = yV[wV] + .5 | 0;
-        return nV
+        if (HH instanceof Float32Array) return hH;
+        const CH = new(0, HH.constructor)(SH);
+        for (let EH = 0; EH < SH; EH++) CH[EH] = hH[EH] + .5 | 0;
+        return CH
       }
-      static ConvertCubeMapToSphericalPolynomial(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const xV = eV > 0 ? this._NearestPow2Floor(eV) : 0;
-        if (xV > 0 && VV.size > xV) {
-          const eV = 5 === VV.format ? 4 : 3,
-            JV = ["right", "left", "up", "down", "front", "back"],
-            YV = {};
-          for (const UV of JV) YV[UV] = this._DownsampleFace(VV[UV], VV.size, xV, eV);
-          VV = {
-            ...VV,
-            ...YV,
-            size: xV
+      static ConvertCubeMapToSphericalPolynomial(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const LH = BH > 0 ? this._NearestPow2Floor(BH) : 0;
+        if (LH > 0 && HH.size > LH) {
+          const BH = 5 === HH.format ? 4 : 3,
+            AH = ["right", "left", "up", "down", "front", "back"],
+            rH = {};
+          for (const SH of AH) rH[SH] = this._DownsampleFace(HH[SH], HH.size, LH, BH);
+          HH = {
+            ...HH,
+            ...rH,
+            size: LH
           }
         }
-        const JV = new UV.e;
-        let QV = 0;
-        const nV = 2 / VV.size,
-          wV = nV,
-          ZV = .5 * nV,
-          vV = ZV - 1;
-        for (let UV = 0; UV < 6; UV++) {
-          const eV = this._FileFaces[UV],
-            xV = VV[eV.name];
-          let rV = vV;
-          const kV = 5 === VV.format ? 4 : 3;
-          for (let UV = 0; UV < VV.size; UV++) {
-            let bV = vV;
-            for (let wV = 0; wV < VV.size; wV++) {
-              const vV = eV.worldAxisForFileX.scale(bV).add(eV.worldAxisForFileY.scale(rV)).add(eV.worldAxisForNormal);
-              vV.normalize();
-              const EV = this._AreaElement(bV - ZV, rV - ZV) - this._AreaElement(bV - ZV, rV + ZV) - this._AreaElement(bV + ZV, rV - ZV) + this._AreaElement(bV + ZV, rV + ZV);
-              let BV = xV[UV * VV.size * kV + wV * kV + 0],
-                jV = xV[UV * VV.size * kV + wV * kV + 1],
-                qV = xV[UV * VV.size * kV + wV * kV + 2];
-              isNaN(BV) && (BV = 0), isNaN(jV) && (jV = 0), isNaN(qV) && (qV = 0), 0 === VV.type && (BV /= 255, jV /= 255, qV /= 255), VV.gammaSpace && (BV = Math.pow((0, YV.Clamp)(BV), yV.f), jV = Math.pow((0, YV.Clamp)(jV), yV.f), qV = Math.pow((0, YV.Clamp)(qV), yV.f));
-              const tV = this.MAX_HDRI_VALUE;
+        const AH = new SH.e;
+        let zH = 0;
+        const CH = 2 / HH.size,
+          EH = CH,
+          XH = .5 * CH,
+          GH = XH - 1;
+        for (let SH = 0; SH < 6; SH++) {
+          const BH = this._FileFaces[SH],
+            LH = HH[BH.name];
+          let YH = GH;
+          const uH = 5 === HH.format ? 4 : 3;
+          for (let SH = 0; SH < HH.size; SH++) {
+            let QH = GH;
+            for (let EH = 0; EH < HH.size; EH++) {
+              const GH = BH.worldAxisForFileX.scale(QH).add(BH.worldAxisForFileY.scale(YH)).add(BH.worldAxisForNormal);
+              GH.normalize();
+              const WH = this._AreaElement(QH - XH, YH - XH) - this._AreaElement(QH - XH, YH + XH) - this._AreaElement(QH + XH, YH - XH) + this._AreaElement(QH + XH, YH + XH);
+              let MH = LH[SH * HH.size * uH + EH * uH + 0],
+                xH = LH[SH * HH.size * uH + EH * uH + 1],
+                vH = LH[SH * HH.size * uH + EH * uH + 2];
+              isNaN(MH) && (MH = 0), isNaN(xH) && (xH = 0), isNaN(vH) && (vH = 0), 0 === HH.type && (MH /= 255, xH /= 255, vH /= 255), HH.gammaSpace && (MH = Math.pow((0, rH.Clamp)(MH), hH.f), xH = Math.pow((0, rH.Clamp)(xH), hH.f), vH = Math.pow((0, rH.Clamp)(vH), hH.f));
+              const PH = this.MAX_HDRI_VALUE;
               if (this.PRESERVE_CLAMPED_COLORS) {
-                const VV = Math.max(BV, jV, qV);
-                if (VV > tV) {
-                  const eV = tV / VV;
-                  BV *= eV, jV *= eV, qV *= eV
+                const HH = Math.max(MH, xH, vH);
+                if (HH > PH) {
+                  const BH = PH / HH;
+                  MH *= BH, xH *= BH, vH *= BH
                 }
-              } else BV = (0, YV.Clamp)(BV, 0, tV), jV = (0, YV.Clamp)(jV, 0, tV), qV = (0, YV.Clamp)(qV, 0, tV);
-              const FV = new pV.d(BV, jV, qV);
-              JV.addLight(vV, FV, EV), QV += EV, bV += nV
+              } else MH = (0, rH.Clamp)(MH, 0, PH), xH = (0, rH.Clamp)(xH, 0, PH), vH = (0, rH.Clamp)(vH, 0, PH);
+              const TH = new tH.c(MH, xH, vH);
+              AH.addLight(GH, TH, WH), zH += WH, QH += CH
             }
-            rV += wV
+            YH += EH
           }
         }
-        const rV = 6 * (4 * Math.PI) / 6 / QV;
-        return JV.scaleInPlace(rV), JV.convertIncidentRadianceToIrradiance(), JV.convertIrradianceToLambertianRadiance(), UV.f.FromHarmonics(JV)
+        const YH = 6 * (4 * Math.PI) / 6 / zH;
+        return AH.scaleInPlace(YH), AH.convertIncidentRadianceToIrradiance(), AH.convertIrradianceToLambertianRadiance(), SH.g.FromHarmonics(AH)
       }
     }
-    nV._FileFaces = [new QV("right", new JV.o(1, 0, 0), new JV.o(0, 0, -1), new JV.o(0, -1, 0)), new QV("left", new JV.o(-1, 0, 0), new JV.o(0, 0, 1), new JV.o(0, -1, 0)), new QV("up", new JV.o(0, 1, 0), new JV.o(1, 0, 0), new JV.o(0, 0, 1)), new QV("down", new JV.o(0, -1, 0), new JV.o(1, 0, 0), new JV.o(0, 0, -1)), new QV("front", new JV.o(0, 0, 1), new JV.o(1, 0, 0), new JV.o(0, -1, 0)), new QV("back", new JV.o(0, 0, -1), new JV.o(-1, 0, 0), new JV.o(0, -1, 0))], nV.MAX_HDRI_VALUE = 4096, nV.PRESERVE_CLAMPED_COLORS = !1
+    CH._FileFaces = [new zH("right", new AH.o(1, 0, 0), new AH.o(0, 0, -1), new AH.o(0, -1, 0)), new zH("left", new AH.o(-1, 0, 0), new AH.o(0, 0, 1), new AH.o(0, -1, 0)), new zH("up", new AH.o(0, 1, 0), new AH.o(1, 0, 0), new AH.o(0, 0, 1)), new zH("down", new AH.o(0, -1, 0), new AH.o(1, 0, 0), new AH.o(0, 0, -1)), new zH("front", new AH.o(0, 0, 1), new AH.o(1, 0, 0), new AH.o(0, -1, 0)), new zH("back", new AH.o(0, 0, -1), new AH.o(-1, 0, 0), new AH.o(0, -1, 0))], CH.MAX_HDRI_VALUE = 4096, CH.PRESERVE_CLAMPED_COLORS = !1
   },
-  44706: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => UV
+  45276: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => SH
     });
-    var JV = xV(44697),
-      YV = xV(44714);
-    class UV {
-      static ExpandRGBDTexture(VV) {
-        const eV = VV._texture;
-        if (!eV || !VV.isRGBD) return;
-        const YV = eV.sk(),
-          UV = YV.getCaps(),
-          yV = eV.isReady;
-        let pV = !1;
-        UV.textureHalfFloatRender && UV.textureHalfFloatLinearFiltering ? (pV = !0, eV.type = 2) : UV.textureFloatRender && UV.textureFloatLinearFiltering && (pV = !0, eV.type = 1), pV && (eV.isReady = !1, eV._isRGBD = !1, eV.invertY = !1);
-        const QV = async () => {
-          const UV = YV.isWebGPU,
-            yV = UV ? 1 : 0;
-          eV.isReady = !1, UV ? await xV.e(651).then((() => xV(64410))) : await xV.e(633).then((() => xV(64417)));
-          const pV = new JV.d("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, YV, !1, void 0, eV.type, void 0, null, !1, void 0, yV);
-          pV.externalTextureSamplerBinding = !0;
-          const QV = YV.createRenderTargetTexture(eV.width, {
+    var AH = LH(45266),
+      rH = LH(45285);
+    class SH {
+      static ExpandRGBDTexture(HH) {
+        const BH = HH._texture;
+        if (!BH || !HH.isRGBD) return;
+        const rH = BH.Iu(),
+          SH = rH.getCaps(),
+          hH = BH.isReady;
+        let tH = !1;
+        SH.textureHalfFloatRender && SH.textureHalfFloatLinearFiltering ? (tH = !0, BH.type = 2) : SH.textureFloatRender && SH.textureFloatLinearFiltering && (tH = !0, BH.type = 1), tH && (BH.isReady = !1, BH._isRGBD = !1, BH.invertY = !1);
+        const zH = async () => {
+          const SH = rH.isWebGPU,
+            hH = SH ? 1 : 0;
+          BH.isReady = !1, SH ? await LH.e(651).then((() => LH(64229))) : await LH.e(633).then((() => LH(64238)));
+          const tH = new AH.d("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, rH, !1, void 0, BH.type, void 0, null, !1, void 0, hH);
+          tH.externalTextureSamplerBinding = !0;
+          const zH = rH.createRenderTargetTexture(BH.width, {
             generateDepthBuffer: !1,
             generateMipMaps: !1,
             generateStencilBuffer: !1,
-            samplingMode: eV.samplingMode,
-            type: eV.type,
+            samplingMode: BH.samplingMode,
+            type: BH.type,
             format: 5
           });
-          pV.onEffectCreatedObservable.addOnce((xV => {
-            xV.executeWhenCompiled((() => {
-              pV.onApply = VV => {
-                VV._bindTexture("textureSampler", eV), VV.setFloat2("scale", 1, 1)
-              }, VV.dD()?.postProcessManager.directRender([pV], QV, !0), YV.restoreDefaultFramebuffer(), YV._releaseTexture(eV), pV && pV.dispose(), QV._swapAndDie(eV), eV.isReady = !0
+          tH.onEffectCreatedObservable.addOnce((LH => {
+            LH.executeWhenCompiled((() => {
+              tH.onApply = HH => {
+                HH._bindTexture("textureSampler", BH), HH.setFloat2("scale", 1, 1)
+              }, HH.yN()?.postProcessManager.directRender([tH], zH, !0), rH.restoreDefaultFramebuffer(), rH._releaseTexture(BH), tH && tH.dispose(), zH._swapAndDie(BH), BH.isReady = !0
             }))
           }))
         };
-        pV && (yV ? QV() : VV.onLoadObservable.addOnce(QV))
+        tH && (hH ? zH() : HH.onLoadObservable.addOnce(zH))
       }
-      static async EncodeTextureToRGBD(VV, eV) {
-        let JV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return eV.sk().isWebGPU ? await xV.e(652).then((() => xV(64429))) : await xV.e(634).then((() => xV(64425))), await (0, YV.d)("rgbdEncode", VV, eV, JV, 1, 5)
+      static async EncodeTextureToRGBD(HH, BH) {
+        let AH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        return BH.Iu().isWebGPU ? await LH.e(652).then((() => LH(64248))) : await LH.e(634).then((() => LH(64245))), await (0, rH.d)("rgbdEncode", HH, BH, AH, 1, 5)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

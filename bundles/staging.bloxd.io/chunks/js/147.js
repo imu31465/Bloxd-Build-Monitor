@@ -1,135 +1,135 @@
 export const id = 147;
-export const ids = [147, 220];
+export const ids = [147, 214];
 export const modules = {
-  35308: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => UV
+  34993: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => SH
     });
-    var JV = xV(375),
-      YV = xV(35311);
+    var AH = LH(317),
+      rH = LH(34996);
 
-    function UV(VV, eV, xV) {
-      const UV = Object.entries(eV).sort(((VV, eV) => eV[1] - VV[1])),
-        yV = (0, JV.qb)(VV);
-      yV.push(VV ? "\n\n" : "\n");
-      for (const [YV, kV] of UV) {
-        var pV, QV, nV;
-        const VV = null !== (pV = null === xV || void 0 === xV || null === (QV = xV[YV]) || void 0 === QV ? void 0 : QV.icon) && void 0 !== pV ? pV : `${YV} Enchantment`;
-        yV.push({
-          icon: VV,
+    function SH(HH, BH, LH) {
+      const SH = Object.entries(BH).sort(((HH, BH) => BH[1] - HH[1])),
+        hH = (0, AH.pb)(HH);
+      hH.push(HH ? "\n\n" : "\n");
+      for (const [rH, uH] of SH) {
+        var tH, zH, CH;
+        const HH = null !== (tH = null === LH || void 0 === LH || null === (zH = LH[rH]) || void 0 === zH ? void 0 : zH.icon) && void 0 !== tH ? tH : `${rH} Enchantment`;
+        hH.push({
+          icon: HH,
           style: {
             fontSize: "1.5rem"
           }
-        }), yV.push({
-          str: `${YV} ${null!==(nV=(0,JV.O)(kV))&&void 0!==nV?nV:kV}\n`
+        }), hH.push({
+          str: `${rH} ${null!==(CH=(0,AH.T)(uH))&&void 0!==CH?CH:uH}\n`
         })
       }
-      yV.push({
+      hH.push({
         str: "\n"
       });
-      for (const [JV, kV] of UV) {
-        var wV, ZV, vV, rV;
-        const VV = null !== (wV = null === xV || void 0 === xV || null === (ZV = xV[JV]) || void 0 === ZV ? void 0 : ZV.icon) && void 0 !== wV ? wV : `${JV} Enchantment`,
-          eV = null !== (vV = null === xV || void 0 === xV || null === (rV = xV[JV]) || void 0 === rV ? void 0 : rV.description) && void 0 !== vV ? vV : (0, YV.k)(JV);
-        yV.push({
-          icon: VV,
+      for (const [AH, uH] of SH) {
+        var EH, XH, GH, YH;
+        const HH = null !== (EH = null === LH || void 0 === LH || null === (XH = LH[AH]) || void 0 === XH ? void 0 : XH.icon) && void 0 !== EH ? EH : `${AH} Enchantment`,
+          BH = null !== (GH = null === LH || void 0 === LH || null === (YH = LH[AH]) || void 0 === YH ? void 0 : YH.description) && void 0 !== GH ? GH : (0, rH.k)(AH);
+        hH.push({
+          icon: HH,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), yV.push({
-          str: eV,
+        }), hH.push({
+          str: BH,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), yV.push({
+        }), hH.push({
           str: "\n"
         })
       }
-      return yV
+      return hH
     }
   },
-  35317: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => nV,
-      f: () => jV,
-      j: () => EV,
-      n: () => QV,
-      q: () => BV,
-      s: () => wV,
-      u: () => vV,
-      w: () => bV,
-      z: () => ZV
+  34999: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => CH,
+      c: () => xH,
+      f: () => WH,
+      j: () => zH,
+      l: () => MH,
+      n: () => EH,
+      p: () => GH,
+      s: () => QH,
+      t: () => XH
     });
-    var JV = xV(364),
-      YV = xV(657),
-      UV = xV(375),
-      yV = xV(4632),
-      pV = xV(35308);
+    var AH = LH(304),
+      rH = LH(619),
+      SH = LH(317),
+      hH = LH(4608),
+      tH = LH(34993);
 
-    function QV(VV, eV) {
-      var xV;
+    function zH(HH, BH) {
+      var LH;
       let {
-        player: JV,
-        chestOrCreative: YV
-      } = VV;
-      var UV;
-      return eV < JV.length ? null !== (UV = JV[eV]) && void 0 !== UV ? UV : null : null !== (xV = YV[eV - JV.length]) && void 0 !== xV ? xV : null
+        player: AH,
+        chestOrCreative: rH
+      } = HH;
+      var SH;
+      return BH < AH.length ? null !== (SH = AH[BH]) && void 0 !== SH ? SH : null : null !== (LH = rH[BH - AH.length]) && void 0 !== LH ? LH : null
     }
 
-    function nV(VV) {
-      var eV;
-      return null !== (eV = VV.amount) && void 0 !== eV ? eV : 0
+    function CH(HH) {
+      var BH;
+      return null !== (BH = HH.amount) && void 0 !== BH ? BH : 0
     }
 
-    function wV(VV) {
-      return 0 === VV.button || void 0 === VV.button
+    function EH(HH) {
+      return 0 === HH.button || void 0 === HH.button
     }
 
-    function ZV(VV) {
-      return !!VV.shiftKey
+    function XH(HH) {
+      return !!HH.shiftKey
     }
 
-    function vV(VV) {
-      return "touches" in VV || "touch" === VV.pointerType || "pen" === VV.pointerType
+    function GH(HH) {
+      return "touches" in HH || "touch" === HH.pointerType || "pen" === HH.pointerType
     }
-    const rV = new Set,
-      kV = 50;
+    const YH = new Set,
+      uH = 50;
 
-    function bV(VV, eV) {
-      var xV;
-      const JV = null === (xV = VV[eV]) || void 0 === xV ? void 0 : xV.displayName;
-      return (0, YV.J)(JV) ? "string" !== typeof eV ? "" : (!rV.has(eV) && rV.size < kV && (rV.add(eV), console.warn(`No item called "${eV}", so its hover shows the name as given`)), eV) : JV
+    function QH(HH, BH) {
+      var LH;
+      const AH = null === (LH = HH[BH]) || void 0 === LH ? void 0 : LH.displayName;
+      return (0, rH.M)(AH) ? "string" !== typeof BH ? "" : (!YH.has(BH) && YH.size < uH && (YH.add(BH), console.warn(`No item called "${BH}", so its hover shows the name as given`)), BH) : AH
     }
 
-    function EV(VV, eV, xV) {
-      var QV, nV, wV, ZV, vV, rV, kV, EV, BV, jV, qV, tV, FV, TV;
-      const PV = VV.attributes,
-        AV = null !== (QV = null === (nV = eV[VV.name]) || void 0 === nV ? void 0 : nV.rootName) && void 0 !== QV ? QV : VV.name,
-        NV = null !== (wV = null !== (ZV = PV.customDisplayName) && void 0 !== ZV ? ZV : null === (vV = eV[VV.name]) || void 0 === vV ? void 0 : vV.displayName) && void 0 !== wV ? wV : bV(eV, AV);
-      let XV = NV;
-      const MV = null === (rV = PV.customAttributes) || void 0 === rV ? void 0 : rV.enchantmentTier;
-      MV && (XV = (0, UV.qb)(NV, {
-        colour: UV.kb[MV]
+    function WH(HH, BH, LH) {
+      var zH, CH, EH, XH, GH, YH, uH, WH, MH, xH, vH, PH, TH, UH;
+      const VH = HH.attributes,
+        OH = null !== (zH = null === (CH = BH[HH.name]) || void 0 === CH ? void 0 : CH.rootName) && void 0 !== zH ? zH : HH.name,
+        bH = null !== (EH = null !== (XH = VH.customDisplayName) && void 0 !== XH ? XH : null === (GH = BH[HH.name]) || void 0 === GH ? void 0 : GH.displayName) && void 0 !== EH ? EH : QH(BH, OH);
+      let kH = bH;
+      const mH = null === (YH = VH.customAttributes) || void 0 === YH ? void 0 : YH.enchantmentTier;
+      mH && (kH = (0, SH.pb)(bH, {
+        colour: SH.lb[mH]
       }));
-      const zV = null !== (kV = null !== (EV = null !== (BV = function(VV, eV) {
-        var xV;
-        if (void 0 === VV || null !== (xV = eV.customAttributes) && void 0 !== xV && xV.author) return VV;
-        const YV = (0, JV.dc)(VV);
-        return YV.every((VV => "string" === typeof VV)) ? VV : YV.map((VV => "string" === typeof VV ? VV : {
-          icon: VV.icon,
+      const oH = null !== (uH = null !== (WH = null !== (MH = function(HH, BH) {
+        var LH;
+        if (void 0 === HH || null !== (LH = BH.customAttributes) && void 0 !== LH && LH.author) return HH;
+        const rH = (0, AH.tc)(HH);
+        return rH.every((HH => "string" === typeof HH)) ? HH : rH.map((HH => "string" === typeof HH ? HH : {
+          icon: HH.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(PV.customDescription, PV)) && void 0 !== BV ? BV : null === (jV = eV[VV.name]) || void 0 === jV ? void 0 : jV.description) && void 0 !== EV ? EV : null === (qV = eV[AV]) || void 0 === qV ? void 0 : qV.description) && void 0 !== kV ? kV : "";
-      let GV = zV;
-      if (null !== (tV = PV.customAttributes) && void 0 !== tV && tV.enchantments) GV = (0, pV.d)(zV, PV.customAttributes.enchantments, PV.customAttributes.enchantmentData);
-      else if (xV[AV]) GV = (0, UV.qb)(zV), GV.push({
+      }(VH.customDescription, VH)) && void 0 !== MH ? MH : null === (xH = BH[HH.name]) || void 0 === xH ? void 0 : xH.description) && void 0 !== WH ? WH : null === (vH = BH[OH]) || void 0 === vH ? void 0 : vH.description) && void 0 !== uH ? uH : "";
+      let IH = oH;
+      if (null !== (PH = VH.customAttributes) && void 0 !== PH && PH.enchantments) IH = (0, tH.d)(oH, VH.customAttributes.enchantments, VH.customAttributes.enchantmentData);
+      else if (LH[OH]) IH = (0, SH.pb)(oH), IH.push({
         str: "\n"
-      }), GV.push({
+      }), IH.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -137,858 +137,874 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (FV = PV.customAttributes) && void 0 !== FV && FV.mobSettings) {
-        var WV, RV;
-        const VV = PV.customAttributes.mobSettings;
-        var gV, DV;
-        if (GV = [], (0, YV.J)(PV.customAttributes.health) || (GV.push({
+      else if (null !== (TH = VH.customAttributes) && void 0 !== TH && TH.mobSettings) {
+        var fH, lH;
+        const HH = VH.customAttributes.mobSettings;
+        var KH, cH;
+        if (IH = [], (0, rH.M)(VH.customAttributes.health) || (IH.push({
             str: "\n"
-          }), GV.push({
+          }), IH.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), GV.push({
+          }), IH.push({
             str: " "
-          }), GV.push({
-            str: PV.customAttributes.health.toString()
-          }), (0, YV.J)(VV.maxHealth) || (GV.push({
+          }), IH.push({
+            str: VH.customAttributes.health.toString()
+          }), (0, rH.M)(HH.maxHealth) || (IH.push({
             str: "/"
-          }), GV.push({
-            str: VV.maxHealth.toString()
-          }))), !(0, YV.J)(VV.attackDamage) && VV.attackDamage > 0 && (GV.push({
+          }), IH.push({
+            str: HH.maxHealth.toString()
+          }))), !(0, rH.M)(HH.attackDamage) && HH.attackDamage > 0 && (IH.push({
             str: "\n"
-          }), GV.push({
+          }), IH.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), GV.push({
+          }), IH.push({
             str: " "
-          }), GV.push({
-            str: VV.attackDamage.toString()
-          })), !(0, YV.J)(VV.secondaryAttackDamage) && VV.secondaryAttackDamage > 0 && (GV.push({
+          }), IH.push({
+            str: HH.attackDamage.toString()
+          })), !(0, rH.M)(HH.secondaryAttackDamage) && HH.secondaryAttackDamage > 0 && (IH.push({
             str: "\n"
-          }), GV.push({
+          }), IH.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), GV.push({
+          }), IH.push({
             str: " "
-          }), GV.push({
-            str: VV.secondaryAttackDamage.toString()
-          })), (0, YV.J)(VV.baseRunningSpeed) || (GV.push({
+          }), IH.push({
+            str: HH.secondaryAttackDamage.toString()
+          })), (0, rH.M)(HH.baseRunningSpeed) || (IH.push({
             str: "\n"
-          }), GV.push({
+          }), IH.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), GV.push({
+          }), IH.push({
             str: " "
-          }), GV.push({
-            str: VV.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === VV.metaInfo) GV.push({
+          }), IH.push({
+            str: HH.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === HH.metaInfo) IH.push({
           str: "\n"
-        }), GV.push({
+        }), IH.push({
           str: {
             translationKey: "general:has"
           }
-        }), GV.push({
+        }), IH.push({
           str: " "
-        }), GV.push({
-          icon: null !== (gV = null === (DV = VV.tameInfo) || void 0 === DV ? void 0 : DV.saddleItemName) && void 0 !== gV ? gV : "Saddle",
+        }), IH.push({
+          icon: null !== (KH = null === (cH = HH.tameInfo) || void 0 === cH ? void 0 : cH.saddleItemName) && void 0 !== KH ? KH : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (GV.push({
+        if (IH.push({
             str: "\n"
-          }), GV.push({
+          }), IH.push({
             str: "\n"
-          }), VV.petInfo && null !== (WV = VV.tameInfo) && void 0 !== WV && WV.supportsFriendship) {
-          const eV = yV.b.getIconsFromFriendshipPoints(VV.petInfo.friendshipPoints);
-          for (const VV of eV) GV.push({
-            icon: VV,
+          }), HH.petInfo && null !== (fH = HH.tameInfo) && void 0 !== fH && fH.supportsFriendship) {
+          const BH = hH.e.getIconsFromFriendshipPoints(HH.petInfo.friendshipPoints);
+          for (const HH of BH) IH.push({
+            icon: HH,
             style: {
               fontSize: "1.5em"
             }
           });
-          GV.push({
+          IH.push({
             str: "\n"
           });
-          const xV = yV.b.getMobHungerLevel(VV.petInfo.lastFedAt);
-          for (const VV of yV.b.hungerLevelIcons[xV]) GV.push({
-            icon: VV,
+          const LH = hH.e.getMobHungerLevel(HH.petInfo.lastFedAt);
+          for (const HH of hH.e.hungerLevelIcons[LH]) IH.push({
+            icon: HH,
             style: {
               fontSize: "1.5em"
             }
           });
-          GV.push({
+          IH.push({
             str: " "
-          }), GV.push({
-            str: yV.b.hungerLevelTranslations[xV],
+          }), IH.push({
+            str: hH.e.hungerLevelTranslations[LH],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (VV.tameInfo && null !== (RV = VV.tameInfo) && void 0 !== RV && RV.supportsFriendship) {
-          var iV, CV;
-          let eV = null !== (iV = VV.tameInfo.likedFoods) && void 0 !== iV ? iV : [];
-          GV.push({
+        if (HH.tameInfo && null !== (lH = HH.tameInfo) && void 0 !== lH && lH.supportsFriendship) {
+          var eH, qH;
+          let BH = null !== (eH = HH.tameInfo.likedFoods) && void 0 !== eH ? eH : [];
+          IH.push({
             str: "\n"
-          }), GV.push({
+          }), IH.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: yV.b.feedTextColours[yV.b.MobFoodType.Superliked]
+              color: hH.e.feedTextColours[hH.e.MobFoodType.Superliked]
             }
-          }), GV.push({
+          }), IH.push({
             str: " "
-          }), null !== (CV = VV.petInfo) && void 0 !== CV && CV.superlikedFoodKnown ? (GV.push({
-            icon: VV.petInfo.superlikedFood,
+          }), null !== (qH = HH.petInfo) && void 0 !== qH && qH.superlikedFoodKnown ? (IH.push({
+            icon: HH.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), eV = eV.filter((eV => eV !== VV.petInfo.superlikedFood))) : GV.push({
+          }), BH = BH.filter((BH => BH !== HH.petInfo.superlikedFood))) : IH.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), GV.push({
+          }), IH.push({
             str: "\n"
-          }), GV.push({
+          }), IH.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: yV.b.feedTextColours[yV.b.MobFoodType.Liked]
+              color: hH.e.feedTextColours[hH.e.MobFoodType.Liked]
             }
-          }), GV.push({
+          }), IH.push({
             str: " "
           });
-          for (const VV of eV) GV.push({
-            icon: VV,
+          for (const HH of BH) IH.push({
+            icon: HH,
             style: {
               fontSize: "1.5em"
             }
           });
-          GV.push({
+          IH.push({
             str: "\n"
-          }), GV.push({
+          }), IH.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: yV.b.feedTextColours[yV.b.MobFoodType.Neutral]
+              color: hH.e.feedTextColours[hH.e.MobFoodType.Neutral]
             }
-          }), GV.push({
+          }), IH.push({
             str: " "
           });
-          for (const xV of null !== (aV = VV.tameInfo.neutralFoods) && void 0 !== aV ? aV : []) {
-            var aV;
-            GV.push({
-              icon: xV,
+          for (const LH of null !== (gH = HH.tameInfo.neutralFoods) && void 0 !== gH ? gH : []) {
+            var gH;
+            IH.push({
+              icon: LH,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          GV.push({
+          IH.push({
             str: "\n"
-          }), GV.push({
+          }), IH.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: yV.b.feedTextColours[yV.b.MobFoodType.Disliked]
+              color: hH.e.feedTextColours[hH.e.MobFoodType.Disliked]
             }
-          }), GV.push({
+          }), IH.push({
             str: " "
           });
-          for (const xV of null !== (oV = VV.tameInfo.dislikedFoods) && void 0 !== oV ? oV : []) {
-            var oV;
-            GV.push({
-              icon: xV,
+          for (const LH of null !== (NH = HH.tameInfo.dislikedFoods) && void 0 !== NH ? NH : []) {
+            var NH;
+            IH.push({
+              icon: LH,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        GV.length > 0 ? (GV.shift(), GV.unshift(...(0, UV.qb)(zV))) : GV = (0, UV.qb)(zV)
+        IH.length > 0 ? (IH.shift(), IH.unshift(...(0, SH.pb)(oH))) : IH = (0, SH.pb)(oH)
       }
       return {
-        name: XV,
-        desc: GV,
-        fontStyle: null !== (TV = PV.customAttributes) && void 0 !== TV && TV.author ? "italic" : "normal"
+        name: kH,
+        desc: IH,
+        fontStyle: null !== (UH = VH.customAttributes) && void 0 !== UH && UH.author ? "italic" : "normal"
       }
     }
 
-    function BV(VV, eV, xV, JV) {
-      const YV = QV(VV, xV),
-        UV = QV(VV, JV);
-      if (!YV) return !1;
-      const yV = eV[YV.name].armourReduction,
-        pV = eV[UV.name].armourReduction;
-      if (pV === yV) {
-        var nV, wV, ZV, vV;
-        const VV = null !== (nV = null === (wV = YV.attributes.customAttributes) || void 0 === wV ? void 0 : wV.enchantmentTier) && void 0 !== nV ? nV : "Tier 0",
-          eV = null !== (ZV = null === (vV = UV.attributes.customAttributes) || void 0 === vV ? void 0 : vV.enchantmentTier) && void 0 !== ZV ? ZV : "Tier 0";
-        return parseInt(VV.replace("Tier ", "")) >= parseInt(eV.replace("Tier ", ""))
+    function MH(HH, BH, LH, AH) {
+      const rH = zH(HH, LH),
+        SH = zH(HH, AH);
+      if (!rH) return !1;
+      const hH = BH[rH.name].armourReduction,
+        tH = BH[SH.name].armourReduction;
+      if (tH === hH) {
+        var CH, EH, XH, GH;
+        const HH = null !== (CH = null === (EH = rH.attributes.customAttributes) || void 0 === EH ? void 0 : EH.enchantmentTier) && void 0 !== CH ? CH : "Tier 0",
+          BH = null !== (XH = null === (GH = SH.attributes.customAttributes) || void 0 === GH ? void 0 : GH.enchantmentTier) && void 0 !== XH ? XH : "Tier 0";
+        return parseInt(HH.replace("Tier ", "")) >= parseInt(BH.replace("Tier ", ""))
       }
-      return yV > pV
+      return hH > tH
     }
 
-    function jV(VV) {
-      let eV;
-      if ("number" === typeof VV) {
-        const xV = document.querySelector(`[data-inven-idx="${VV}"]`);
-        if (!xV) return null;
-        eV = xV.getBoundingClientRect()
-      } else eV = VV.getBoundingClientRect();
+    function xH(HH) {
+      let BH;
+      if ("number" === typeof HH) {
+        const LH = document.querySelector(`[data-inven-idx="${HH}"]`);
+        if (!LH) return null;
+        BH = LH.getBoundingClientRect()
+      } else BH = HH.getBoundingClientRect();
       return {
-        x: eV.left + eV.width / 2,
-        y: eV.top + eV.height / 2
+        x: BH.left + BH.width / 2,
+        y: BH.top + BH.height / 2
       }
     }
   },
-  9513: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => XV,
-      e: () => GV
+  9603: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => kH,
+      h: () => IH
     });
-    var JV = xV(62),
-      YV = xV(32),
-      UV = xV(2752),
-      yV = xV(3848);
-    const pV = 6,
-      QV = 4,
-      nV = ["HudMove-inventory", "HudLocked-inventory"];
+    var AH = LH(45),
+      rH = LH(18),
+      SH = LH(2680),
+      hH = LH(3770);
+    const tH = 6,
+      zH = 4,
+      CH = ["HudMove-inventory", "HudLocked-inventory"];
 
-    function wV(VV) {
+    function EH(HH) {
       let {
-        left: eV,
-        right: xV,
-        height: JV,
-        rowTop: YV,
-        besideBottom: UV,
-        obstacles: yV
-      } = VV;
-      const nV = yV.filter((VV => VV.left < xV + pV && VV.right > eV - pV));
-      let wV = UV;
-      for (let pV = 0; pV <= nV.length; pV++) {
-        const VV = nV.filter((VV => VV.top < wV + QV && VV.bottom > wV - JV - QV));
-        if (0 === VV.length) break;
-        wV = Math.min(...VV.map((VV => VV.top))) - QV
+        left: BH,
+        right: LH,
+        height: AH,
+        rowTop: rH,
+        besideBottom: SH,
+        obstacles: hH
+      } = HH;
+      const CH = hH.filter((HH => HH.left < LH + tH && HH.right > BH - tH));
+      let EH = SH;
+      for (let tH = 0; tH <= CH.length; tH++) {
+        const HH = CH.filter((HH => HH.top < EH + zH && HH.bottom > EH - AH - zH));
+        if (0 === HH.length) break;
+        EH = Math.min(...HH.map((HH => HH.top))) - zH
       }
-      return wV === UV ? null : Math.ceil(YV - wV)
+      return EH === SH ? null : Math.ceil(rH - EH)
     }
 
-    function ZV(VV) {
-      return Array.from(VV.children).filter((VV => !VV.classList.contains("HotBarRow")))
+    function XH(HH) {
+      return Array.from(HH.children).filter((HH => !HH.classList.contains("HotBarRow")))
     }
 
-    function vV(VV) {
-      return function(VV) {
-        const eV = [],
-          xV = (VV, JV) => {
-            const YV = VV.getBoundingClientRect();
-            if (YV.width > 0 && YV.height > 0) eV.push(VV);
-            else if (JV < 2)
-              for (const eV of Array.from(VV.children)) xV(eV, JV + 1)
+    function GH(HH) {
+      return function(HH) {
+        const BH = [],
+          LH = (HH, AH) => {
+            const rH = HH.getBoundingClientRect();
+            if (rH.width > 0 && rH.height > 0) BH.push(HH);
+            else if (AH < 2)
+              for (const BH of Array.from(HH.children)) LH(BH, AH + 1)
           };
-        for (const JV of VV) xV(JV, 0);
-        return eV
-      }(ZV(VV).flatMap((VV => VV.classList.contains("AuraBarWrapper") ? [] : VV.classList.contains("BottomScreenStatBarList") ? Array.from(VV.children) : [VV])))
+        for (const AH of HH) LH(AH, 0);
+        return BH
+      }(XH(HH).flatMap((HH => HH.classList.contains("AuraBarWrapper") ? [] : HH.classList.contains("BottomScreenStatBarList") ? Array.from(HH.children) : [HH])))
     }
 
-    function rV(VV, eV) {
-      var xV;
-      const JV = null === (xV = VV.querySelector(":scope > .AuraBarWrapper")) || void 0 === xV ? void 0 : xV.getBoundingClientRect();
-      return (JV && JV.height > 0 ? JV.top : eV) - QV
+    function YH(HH, BH) {
+      var LH;
+      const AH = null === (LH = HH.querySelector(":scope > .AuraBarWrapper")) || void 0 === LH ? void 0 : LH.getBoundingClientRect();
+      return (AH && AH.height > 0 ? AH.top : BH) - zH
     }
-    const kV = ".BottomScreenMessage, [role='status']";
+    const uH = ".BottomScreenMessage, [role='status']";
 
-    function bV(VV, eV, xV, JV, YV) {
-      const UV = VV => VV.map((VV => VV.getBoundingClientRect())),
-        yV = wV({
-          ...xV,
-          obstacles: UV(xV.obstacles.filter((VV => !VV.matches(kV))))
+    function QH(HH, BH, LH, AH, rH) {
+      const SH = HH => HH.map((HH => HH.getBoundingClientRect())),
+        hH = EH({
+          ...LH,
+          obstacles: SH(LH.obstacles.filter((HH => !HH.matches(uH))))
         }),
-        pV = eV.ownerDocument.defaultView,
-        QV = `${null===pV||void 0===pV?void 0:pV.innerWidth}x${null===pV||void 0===pV?void 0:pV.innerHeight}:${JV}:${Math.round(xV.rowTop)}`,
-        nV = VV.get(eV),
-        ZV = (null === nV || void 0 === nV ? void 0 : nV.at) === QV ? (vV = nV.rise, rV = yV, null === vV ? rV : null === rV ? vV : Math.max(vV, rV)) : yV;
-      var vV, rV;
-      const bV = wV({
-        ...xV,
-        besideBottom: null === ZV ? xV.besideBottom : xV.rowTop - ZV,
-        obstacles: UV(xV.obstacles)
+        tH = BH.ownerDocument.defaultView,
+        zH = `${null===tH||void 0===tH?void 0:tH.innerWidth}x${null===tH||void 0===tH?void 0:tH.innerHeight}:${AH}:${Math.round(LH.rowTop)}`,
+        CH = HH.get(BH),
+        XH = (null === CH || void 0 === CH ? void 0 : CH.at) === zH ? (GH = CH.rise, YH = hH, null === GH ? YH : null === YH ? GH : Math.max(GH, YH)) : hH;
+      var GH, YH;
+      const QH = EH({
+        ...LH,
+        besideBottom: null === XH ? LH.besideBottom : LH.rowTop - XH,
+        obstacles: SH(LH.obstacles)
       });
-      return YV && VV.set(eV, {
-        at: QV,
-        rise: ZV
-      }), null !== bV && void 0 !== bV ? bV : ZV
+      return rH && HH.set(BH, {
+        at: zH,
+        rise: XH
+      }), null !== QH && void 0 !== QH ? QH : XH
     }
 
-    function EV(VV, eV, xV, JV) {
-      VV.classList.toggle(eV, null !== JV), null === JV ? VV.style.removeProperty(xV) : VV.style.setProperty(xV, `${JV}px`)
+    function WH(HH, BH, LH, AH) {
+      HH.classList.toggle(BH, null !== AH), null === AH ? HH.style.removeProperty(LH) : HH.style.setProperty(LH, `${AH}px`)
     }
-    const BV = new WeakMap,
-      jV = new WeakMap,
-      qV = "(orientation: portrait) and (max-width: 600px)";
+    const MH = new WeakMap,
+      xH = new WeakMap,
+      vH = "(orientation: portrait) and (max-width: 600px)";
 
-    function tV(VV, eV) {
-      const xV = VV.getBoundingClientRect();
-      if (0 === xV.width) return null;
-      const JV = [xV, ...Array.from(VV.children).filter((VV => !(VV => eV.contains(VV.classList.contains("ShopKey") ? "HudMove-shop" : "HudMove-bag"))(VV))).map((VV => VV.getBoundingClientRect())).filter((VV => VV.width > 0))];
+    function PH(HH, BH) {
+      const LH = HH.getBoundingClientRect();
+      if (0 === LH.width) return null;
+      const AH = [LH, ...Array.from(HH.children).filter((HH => !(HH => BH.contains(HH.classList.contains("ShopKey") ? "HudMove-shop" : "HudMove-bag"))(HH))).map((HH => HH.getBoundingClientRect())).filter((HH => HH.width > 0))];
       return {
-        left: Math.min(...JV.map((VV => VV.left))),
-        top: Math.min(...JV.map((VV => VV.top))),
-        right: Math.max(...JV.map((VV => VV.right))),
-        bottom: Math.max(...JV.map((VV => VV.bottom)))
+        left: Math.min(...AH.map((HH => HH.left))),
+        top: Math.min(...AH.map((HH => HH.top))),
+        right: Math.max(...AH.map((HH => HH.right))),
+        bottom: Math.max(...AH.map((HH => HH.bottom)))
       }
     }
 
-    function FV(VV) {
+    function TH(HH) {
       let {
-        slotsLeft: eV,
-        slotsRight: xV,
-        width: JV,
-        zoneRight: YV
-      } = VV;
-      const UV = Math.max(0, Math.floor(xV - eV - JV));
-      return null === YV ? 0 : Math.min(UV, Math.max(0, Math.ceil(YV + pV - eV)))
+        slotsLeft: BH,
+        slotsRight: LH,
+        width: AH,
+        zoneRight: rH
+      } = HH;
+      const SH = Math.max(0, Math.floor(LH - BH - AH));
+      return null === rH ? 0 : Math.min(SH, Math.max(0, Math.ceil(rH + tH - BH)))
     }
 
-    function TV(VV) {
-      var eV;
-      const xV = VV.getBoundingClientRect();
-      if (0 === xV.width) return null;
-      const JV = null === (eV = VV.parentElement) || void 0 === eV ? void 0 : eV.getBoundingClientRect();
-      return JV && JV.width > 0 ? Math.min(xV.right, JV.left + JV.width * PV) : xV.right
+    function UH(HH) {
+      var BH;
+      const LH = HH.getBoundingClientRect();
+      if (0 === LH.width) return null;
+      const AH = null === (BH = HH.parentElement) || void 0 === BH ? void 0 : BH.getBoundingClientRect();
+      return AH && AH.width > 0 ? Math.min(LH.right, AH.left + AH.width * VH) : LH.right
     }
-    const PV = .35,
-      AV = new WeakMap,
-      NV = new WeakMap;
+    const VH = .35,
+      OH = new WeakMap,
+      bH = new WeakMap;
 
-    function XV(VV) {
-      MV(VV) && MV(VV),
-        function(VV) {
-          var eV, xV;
-          const JV = VV.documentElement.classList;
-          if (!JV.contains("TouchHotbar") || !JV.contains("TouchHotbarKeysAbove") || nV.some((VV => JV.contains(VV))) || !1 !== (null === (eV = VV.defaultView) || void 0 === eV || null === (xV = eV.matchMedia) || void 0 === xV ? void 0 : xV.call(eV, qV).matches)) return;
-          const YV = VV.querySelector(".HotBarContainer.Touch.KeysAbove .TouchInventoryKeys"),
-            UV = null === YV || void 0 === YV ? void 0 : YV.closest(".BottomMiddleElements"),
-            yV = null === YV || void 0 === YV ? void 0 : YV.parentElement;
-          if (!YV || !UV || !yV || UV.classList.contains("TouchInventoryOpen") || YV.querySelector("[data-pressing]")) return;
-          const pV = tV(YV, JV),
-            QV = yV.getBoundingClientRect().top,
-            wV = pV && bV(BV, UV, {
-              left: pV.left,
-              right: pV.right,
-              height: pV.bottom - pV.top,
-              rowTop: QV,
-              besideBottom: rV(UV, QV),
-              obstacles: vV(UV).filter((VV => !VV.classList.contains("BottomScreenMessage")))
-            }, `${Math.round(pV.left)}:${Math.round(pV.right-pV.left)}x${Math.round(pV.bottom-pV.top)}`, !0);
-          jV.has(UV) && jV.get(UV) === wV || (EV(UV, "KeysAboveUp", "--touch-keys-above-rise", wV), jV.set(UV, wV))
-        }(VV)
+    function kH(HH) {
+      mH(HH) && mH(HH),
+        function(HH) {
+          var BH, LH;
+          const AH = HH.documentElement.classList;
+          if (!AH.contains("TouchHotbar") || !AH.contains("TouchHotbarKeysAbove") || CH.some((HH => AH.contains(HH))) || !1 !== (null === (BH = HH.defaultView) || void 0 === BH || null === (LH = BH.matchMedia) || void 0 === LH ? void 0 : LH.call(BH, vH).matches)) return;
+          const rH = HH.querySelector(".HotBarContainer.Touch.KeysAbove .TouchInventoryKeys"),
+            SH = null === rH || void 0 === rH ? void 0 : rH.closest(".BottomMiddleElements"),
+            hH = null === rH || void 0 === rH ? void 0 : rH.parentElement;
+          if (!rH || !SH || !hH || SH.classList.contains("TouchInventoryOpen") || rH.querySelector("[data-pressing]")) return;
+          const tH = PH(rH, AH),
+            zH = hH.getBoundingClientRect().top,
+            EH = tH && QH(MH, SH, {
+              left: tH.left,
+              right: tH.right,
+              height: tH.bottom - tH.top,
+              rowTop: zH,
+              besideBottom: YH(SH, zH),
+              obstacles: GH(SH).filter((HH => !HH.classList.contains("BottomScreenMessage")))
+            }, `${Math.round(tH.left)}:${Math.round(tH.right-tH.left)}x${Math.round(tH.bottom-tH.top)}`, !0);
+          xH.has(SH) && xH.get(SH) === EH || (WH(SH, "KeysAboveUp", "--touch-keys-above-rise", EH), xH.set(SH, EH))
+        }(HH)
     }
 
-    function MV(VV) {
-      var eV, xV, JV, YV;
-      const UV = VV.documentElement.classList;
-      if (!UV.contains("TouchHotbar") || UV.contains("TouchHotbarKeysAbove") || nV.some((VV => UV.contains(VV))) || null === (eV = VV.defaultView) || void 0 === eV || null === (xV = eV.matchMedia) || void 0 === xV || !xV.call(eV, zV).matches) return !1;
-      const yV = VV.querySelector(".HotBarContainer.Touch .TouchInventoryKey.ShopKey"),
-        pV = null === yV || void 0 === yV ? void 0 : yV.parentElement,
-        QV = null === yV || void 0 === yV ? void 0 : yV.closest(".BottomMiddleElements"),
-        wV = null === QV || void 0 === QV ? void 0 : QV.querySelector(".HotBarContainer.Touch .HotBarGameItemsContainer");
-      if (!yV || !pV || !QV || !wV || QV.classList.contains("TouchInventoryOpen")) return !1;
-      const ZV = yV.getBoundingClientRect();
-      if (0 === ZV.width) return !1;
-      const kV = VV.querySelector(".JoystickZone"),
-        BV = wV.getBoundingClientRect(),
-        jV = pV.getBoundingClientRect().top,
-        qV = FV({
-          slotsLeft: BV.left,
-          slotsRight: BV.right,
-          width: ZV.width,
-          zoneRight: kV ? TV(kV) : null
+    function mH(HH) {
+      var BH, LH, AH, rH;
+      const SH = HH.documentElement.classList;
+      if (!SH.contains("TouchHotbar") || SH.contains("TouchHotbarKeysAbove") || CH.some((HH => SH.contains(HH))) || null === (BH = HH.defaultView) || void 0 === BH || null === (LH = BH.matchMedia) || void 0 === LH || !LH.call(BH, oH).matches) return !1;
+      const hH = HH.querySelector(".HotBarContainer.Touch .TouchInventoryKey.ShopKey"),
+        tH = null === hH || void 0 === hH ? void 0 : hH.parentElement,
+        zH = null === hH || void 0 === hH ? void 0 : hH.closest(".BottomMiddleElements"),
+        EH = null === zH || void 0 === zH ? void 0 : zH.querySelector(".HotBarContainer.Touch .HotBarGameItemsContainer");
+      if (!hH || !tH || !zH || !EH || zH.classList.contains("TouchInventoryOpen")) return !1;
+      const XH = hH.getBoundingClientRect();
+      if (0 === XH.width) return !1;
+      const uH = HH.querySelector(".JoystickZone"),
+        MH = EH.getBoundingClientRect(),
+        xH = tH.getBoundingClientRect().top,
+        vH = TH({
+          slotsLeft: MH.left,
+          slotsRight: MH.right,
+          width: XH.width,
+          zoneRight: uH ? UH(uH) : null
         }),
-        tV = AV.get(QV),
-        PV = BV.left + qV,
-        XV = {
-          shift: qV,
-          rise: bV(NV, QV, {
-            left: PV,
-            right: PV + ZV.width,
-            height: ZV.height,
-            rowTop: jV,
-            besideBottom: rV(QV, jV),
-            obstacles: vV(QV)
-          }, `${qV}:${Math.round(ZV.width)}`, (null !== (JV = null === tV || void 0 === tV ? void 0 : tV.shift) && void 0 !== JV ? JV : 0) === qV)
+        PH = OH.get(zH),
+        VH = MH.left + vH,
+        kH = {
+          shift: vH,
+          rise: QH(bH, zH, {
+            left: VH,
+            right: VH + XH.width,
+            height: XH.height,
+            rowTop: xH,
+            besideBottom: YH(zH, xH),
+            obstacles: GH(zH)
+          }, `${vH}:${Math.round(XH.width)}`, (null !== (AH = null === PH || void 0 === PH ? void 0 : PH.shift) && void 0 !== AH ? AH : 0) === vH)
         };
-      return (null === tV || void 0 === tV ? void 0 : tV.shift) !== XV.shift && QV.style.setProperty("--touch-shop-above-shift", `${XV.shift}px`), (null === tV || void 0 === tV ? void 0 : tV.rise) !== XV.rise && EV(QV, "ShopAboveUp", "--touch-shop-above-rise", XV.rise), AV.set(QV, XV), (null !== (YV = null === tV || void 0 === tV ? void 0 : tV.shift) && void 0 !== YV ? YV : 0) !== XV.shift
+      return (null === PH || void 0 === PH ? void 0 : PH.shift) !== kH.shift && zH.style.setProperty("--touch-shop-above-shift", `${kH.shift}px`), (null === PH || void 0 === PH ? void 0 : PH.rise) !== kH.rise && WH(zH, "ShopAboveUp", "--touch-shop-above-rise", kH.rise), OH.set(zH, kH), (null !== (rH = null === PH || void 0 === PH ? void 0 : PH.shift) && void 0 !== rH ? rH : 0) !== kH.shift
     }
-    const zV = "(orientation: landscape) and (max-height: 500px)";
+    const oH = "(orientation: landscape) and (max-height: 500px)";
 
-    function GV(VV, eV, xV) {
-      (0, JV.useLayoutEffect)((() => {
-        var eV;
-        const JV = null === (eV = VV.current) || void 0 === eV ? void 0 : eV.closest(".BottomMiddleElements");
-        if (!JV || xV) return;
-        const pV = new ResizeObserver((() => {
-            rV(!1)
+    function IH(HH, BH, LH) {
+      (0, AH.useLayoutEffect)((() => {
+        var BH;
+        const AH = null === (BH = HH.current) || void 0 === BH ? void 0 : BH.closest(".BottomMiddleElements");
+        if (!AH || LH) return;
+        const tH = new ResizeObserver((() => {
+            YH(!1)
           })),
-          QV = () => {
-            pV.disconnect();
-            const VV = document.querySelector(".JoystickZone");
-            for (const eV of [VV, JV, JV.querySelector(".HotBarGameItemsContainer"), ...vV(JV)]) eV && pV.observe(eV)
+          zH = () => {
+            tH.disconnect();
+            const HH = document.querySelector(".JoystickZone");
+            for (const BH of [HH, AH, AH.querySelector(".HotBarGameItemsContainer"), ...GH(AH)]) BH && tH.observe(BH)
           };
-        let nV = null,
-          wV = !1;
-        const rV = VV => {
-            wV ||= VV, nV ??= requestAnimationFrame((() => {
-              nV = null, wV && (wV = !1, QV()), XV(document)
+        let CH = null,
+          EH = !1;
+        const YH = HH => {
+            EH ||= HH, CH ??= requestAnimationFrame((() => {
+              CH = null, EH && (EH = !1, zH()), kH(document)
             }))
           },
-          kV = new MutationObserver((() => {
-            rV(!0)
+          uH = new MutationObserver((() => {
+            YH(!0)
           }));
-        kV.observe(JV, {
+        uH.observe(AH, {
           childList: !0
         });
-        for (const VV of ZV(JV)) kV.observe(VV, {
+        for (const HH of XH(AH)) uH.observe(HH, {
           childList: !0,
           subtree: !0
         });
-        XV(document), QV();
-        const bV = () => {
-            rV(!0)
+        kH(document), zH();
+        const QH = () => {
+            YH(!0)
           },
-          EV = [(0, YV.i)(UV.e, bV), (0, YV.i)(yV.b, bV)],
-          BV = new MutationObserver((() => {
-            rV(!1)
+          WH = [(0, rH.m)(SH.e, QH), (0, rH.m)(hH.b, QH)],
+          MH = new MutationObserver((() => {
+            YH(!1)
           }));
-        return VV.current && BV.observe(VV.current, {
+        return HH.current && MH.observe(HH.current, {
           attributes: !0,
           attributeFilter: ["data-pressing"],
           subtree: !0
         }), () => {
-          BV.disconnect(), null !== nV && cancelAnimationFrame(nV), pV.disconnect(), kV.disconnect();
-          for (const VV of EV) VV()
+          MH.disconnect(), null !== CH && cancelAnimationFrame(CH), tH.disconnect(), uH.disconnect();
+          for (const HH of WH) HH()
         }
-      }), [VV, eV, xV])
+      }), [HH, BH, LH])
     }
   },
-  35213: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => rV,
-      g: () => kV,
-      i: () => bV
+  34877: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => GH,
+      g: () => YH,
+      i: () => uH
     });
-    var JV = xV(1551),
-      YV = xV(62),
-      UV = xV(1382),
-      yV = xV(5011),
-      pV = xV(2514),
-      QV = xV(1220),
-      nV = xV(99),
-      wV = xV(2100),
-      ZV = xV(1408),
-      vV = xV(1321);
+    var AH = LH(45),
+      rH = LH(34870),
+      SH = LH(1287),
+      hH = LH(4941),
+      tH = LH(2515),
+      zH = LH(81),
+      CH = LH(2051),
+      EH = LH(1313),
+      XH = LH(1225);
 
-    function rV(VV) {
+    function GH(HH) {
       let {
-        show: eV,
-        onClose: xV
-      } = VV;
+        show: BH,
+        onClose: LH
+      } = HH;
       const {
-        requestedGameNameWithVariation: JV,
-        lobbyName: YV,
-        shownLobbyName: UV
-      } = (0, wV.h)("connectedGame"), QV = (0, pV.b)(JV, YV, !1);
-      return nV.featureFlags.canUseInviteLinks && (0, vV.jsx)(yV.e, {
-        show: eV,
-        close: xV,
+        requestedGameNameWithVariation: AH,
+        lobbyName: rH,
+        shownLobbyName: SH
+      } = (0, CH.e)("connectedGame"), GH = (0, tH.b)(AH, rH, !1);
+      return zH.featureFlags.canUseInviteLinks && (0, XH.jsx)(hH.b, {
+        show: BH,
+        close: LH,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, vV.jsxs)("div", {
+        children: (0, XH.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, vV.jsx)("div", {
+          children: [(0, XH.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, vV.jsxs)("div", {
+          }), (0, XH.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, vV.jsx)("div", {
+            children: [(0, XH.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === QV ? (0, vV.jsx)(ZV.d, {}) : QV, (0, vV.jsx)("br", {}), "Lobby Name: ", UV, (0, vV.jsx)("br", {}), (0, vV.jsx)("br", {}), (0, vV.jsx)("br", {}), (0, vV.jsx)("div", {
+            }), "Game: ", null === GH ? (0, XH.jsx)(EH.d, {}) : GH, (0, XH.jsx)("br", {}), "Lobby Name: ", SH, (0, XH.jsx)("br", {}), (0, XH.jsx)("br", {}), (0, XH.jsx)("br", {}), (0, XH.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, vV.jsx)(kV, {})]
+          }), (0, XH.jsx)(YH, {})]
         })
       })
     }
 
-    function kV() {
-      var VV;
-      const {
-        t: eV
-      } = (0, QV.A)(), xV = null !== (VV = bV(nV.featureFlags.canUseInviteLinks)) && void 0 !== VV ? VV : "Loading Link...", [UV, yV] = (0, YV.useState)(0), [pV, wV] = (0, YV.useReducer)((VV => VV + 1), 0);
-      return (0, YV.useEffect)((() => {
-        const VV = setTimeout((() => {
-          wV()
-        }), 1100);
-        return () => {
-          clearTimeout(VV)
-        }
-      }), [UV]), nV.featureFlags.canUseInviteLinks && (0, vV.jsxs)("div", {
-        className: "InviteLinkInnerWrapper",
-        children: [(0, vV.jsx)("div", {
-          className: "InviteLinkInner",
-          children: xV
-        }), (0, vV.jsx)(JV.f, {
-          className: "InviteLinkCopyButton",
-          onClick: () => {
-            navigator.clipboard.writeText(xV).catch((VV => {
-              console.error("Failed to copy invite link:", VV)
-            })), yV(Date.now())
-          },
-          disabled: Date.now() - UV < 1e3,
-          children: Date.now() - UV < 1e3 ? eV("general:copied") : eV("general:copy")
-        })]
+    function YH() {
+      var HH;
+      const BH = null !== (HH = uH(zH.featureFlags.canUseInviteLinks)) && void 0 !== HH ? HH : "Loading Link...";
+      return zH.featureFlags.canUseInviteLinks && (0, XH.jsx)(rH.e, {
+        text: BH
       })
     }
 
-    function bV(VV) {
-      const [eV, xV] = (0, YV.useState)(null);
-      return (0, YV.useEffect)((() => {
-        if (!VV) return;
-        let eV = !0;
-        return (0, UV.w)().then((VV => {
-          eV && xV(VV)
-        })).catch((VV => {
-          console.error("Failed to get invite link:", VV)
+    function uH(HH) {
+      const [BH, LH] = (0, AH.useState)(null);
+      return (0, AH.useEffect)((() => {
+        if (!HH) return;
+        let BH = !0;
+        return (0, SH.x)().then((HH => {
+          BH && LH(HH)
+        })).catch((HH => {
+          console.error("Failed to get invite link:", HH)
         })), () => {
-          eV = !1
+          BH = !1
         }
-      }), [VV]), eV
+      }), [HH]), BH
     }
   },
-  35296: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => nV
+  34977: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => CH
     });
-    var JV = xV(62),
-      YV = xV(1146),
-      UV = xV.n(YV),
-      yV = xV(2100),
-      pV = xV(1321);
+    var AH = LH(45),
+      rH = LH(1038),
+      SH = LH.n(rH),
+      hH = LH(2051),
+      tH = LH(1225);
 
-    function QV(VV) {
-      const eV = Math.floor(VV / 3600),
-        xV = Math.floor(VV % 3600 / 60),
-        JV = Math.floor(VV % 60),
-        YV = `${xV.toString().padStart(2,"0")}:${JV.toString().padStart(2,"0")}`;
-      return eV > 0 ? `${eV}:${YV}` : YV
+    function zH(HH) {
+      const BH = Math.floor(HH / 3600),
+        LH = Math.floor(HH % 3600 / 60),
+        AH = Math.floor(HH % 60),
+        rH = `${LH.toString().padStart(2,"0")}:${AH.toString().padStart(2,"0")}`;
+      return BH > 0 ? `${BH}:${rH}` : rH
     }
-    const nV = (0, JV.memo)((function(VV) {
+    const CH = (0, AH.memo)((function(HH) {
       let {
-        className: eV
-      } = VV;
+        className: BH
+      } = HH;
       const {
-        recording: xV,
-        seconds: JV
-      } = (0, yV.h)("replayRecorder");
-      return xV ? (0, pV.jsxs)("div", {
-        className: UV()("RecordingIndicator", eV),
-        children: [(0, pV.jsx)("span", {
+        recording: LH,
+        clipping: AH,
+        seconds: rH
+      } = (0, hH.e)("replayRecorder");
+      return LH || AH ? (0, tH.jsxs)("div", {
+        className: SH()("RecordingIndicator", {
+          RecordingIndicatorClipping: !LH
+        }, BH),
+        "data-camera-keeper": "",
+        children: [(0, tH.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, pV.jsx)("span", {
+        }), (0, tH.jsx)("span", {
           className: "RecordingIndicatorLabel",
-          children: "REC"
-        }), (0, pV.jsx)("span", {
+          children: LH ? "REC" : "CLIP"
+        }), LH && (0, tH.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: QV(JV)
+          children: zH(rH)
         })]
       }) : null
     }))
   },
-  35378: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => QV
+  35040: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => zH
     });
-    var JV = xV(1146),
-      YV = xV.n(JV),
-      UV = xV(1321);
-    const yV = 21,
-      pV = 2 * Math.PI * yV;
+    var AH = LH(1038),
+      rH = LH.n(AH),
+      SH = LH(1225);
+    const hH = 21,
+      tH = 2 * Math.PI * hH;
 
-    function QV(VV) {
+    function zH(HH) {
       let {
-        tier: eV,
-        state: xV,
-        progress: JV,
-        size: QV = "large"
-      } = VV;
-      const nV = YV()("SeasonPassTierNode", {
-        SeasonPassTierNodeSmall: "small" === QV,
-        SeasonPassTierNodeLarge: "large" === QV,
-        SeasonPassTierNodeReached: "reached" === xV,
-        SeasonPassTierNodeEarning: "earning" === xV
+        tier: BH,
+        state: LH,
+        progress: AH,
+        size: zH = "large"
+      } = HH;
+      const CH = rH()("SeasonPassTierNode", {
+        SeasonPassTierNodeSmall: "small" === zH,
+        SeasonPassTierNodeLarge: "large" === zH,
+        SeasonPassTierNodeReached: "reached" === LH,
+        SeasonPassTierNodeEarning: "earning" === LH
       });
-      if ("earning" !== xV || "large" === QV) return (0, UV.jsx)("span", {
-        className: nV,
-        children: (0, UV.jsx)("span", {
+      if ("earning" !== LH || "large" === zH) return (0, SH.jsx)("span", {
+        className: CH,
+        children: (0, SH.jsx)("span", {
           className: "SeasonPassTierNodeNumber",
-          children: eV
+          children: BH
         })
       });
-      const wV = Math.max(0, Math.min(1, JV));
-      return (0, UV.jsxs)("span", {
-        className: nV,
+      const EH = Math.max(0, Math.min(1, AH));
+      return (0, SH.jsxs)("span", {
+        className: CH,
         role: "progressbar",
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": Math.round(100 * wV),
-        children: [(0, UV.jsxs)("svg", {
+        "aria-valuenow": Math.round(100 * EH),
+        children: [(0, SH.jsxs)("svg", {
           className: "SeasonPassTierNodeRing",
           viewBox: "0 0 56 56",
           "aria-hidden": "true",
-          children: [(0, UV.jsx)("circle", {
+          children: [(0, SH.jsx)("circle", {
             className: "SeasonPassTierNodeRingEdge",
             cx: "28",
             cy: "28",
             r: "26"
-          }), (0, UV.jsx)("circle", {
+          }), (0, SH.jsx)("circle", {
             className: "SeasonPassTierNodeRingTrack",
             cx: "28",
             cy: "28",
-            r: yV
-          }), (0, UV.jsx)("circle", {
+            r: hH
+          }), (0, SH.jsx)("circle", {
             className: "SeasonPassTierNodeRingFill",
             cx: "28",
             cy: "28",
-            r: yV,
-            strokeDasharray: `${wV*pV} ${pV}`,
+            r: hH,
+            strokeDasharray: `${EH*tH} ${tH}`,
             transform: "rotate(-90 28 28)"
-          }), (0, UV.jsx)("circle", {
+          }), (0, SH.jsx)("circle", {
             className: "SeasonPassTierNodeRingCore",
             cx: "28",
             cy: "28",
             r: "16"
           })]
-        }), (0, UV.jsx)("span", {
+        }), (0, SH.jsx)("span", {
           className: "SeasonPassTierNodeNumber",
-          children: eV
+          children: BH
         })]
       })
     }
   },
-  35300: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV
+  34870: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => zH
     });
-    var JV = xV(5015),
-      YV = xV(5020);
+    var AH = LH(4740),
+      rH = LH(1123),
+      SH = LH(2924),
+      hH = LH(1455),
+      tH = LH(1225);
 
-    function UV(VV) {
+    function zH(HH) {
       let {
-        children: eV,
-        showing: xV,
-        globallyUniqueKey: UV,
-        alwaysMountChildren: yV = !1,
-        doGameplayStartStopOnShow: pV = !0,
-        keepsMovement: QV = !1
-      } = VV;
-      return (0, YV.b)(!0, xV, UV, QV), (0, JV.c)(pV, xV), xV || yV ? eV : null
+        text: BH
+      } = HH;
+      const {
+        t: LH
+      } = (0, rH.B)(), [zH, CH] = (0, SH.j)();
+      return (0, tH.jsxs)("div", {
+        className: "CopyTextRow",
+        children: [(0, tH.jsx)("div", {
+          className: "CopyTextRowText",
+          children: BH
+        }), (0, tH.jsx)(hH.i, {
+          className: "CopyTextRowButton",
+          onClick: () => {
+            (0, AH.c)(BH).catch((HH => {
+              console.error("Failed to copy text:", HH)
+            })), CH()
+          },
+          disabled: zH,
+          children: LH(zH ? "general:copied" : "general:copy")
+        })]
+      })
     }
   },
-  7147: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV
+  34986: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => SH
     });
-    var JV = xV(62),
-      YV = xV(40);
+    var AH = LH(4947),
+      rH = LH(4951);
 
-    function UV(VV, eV) {
-      var xV;
-      const [UV, yV] = (0, JV.useState)(null !== (xV = YV.m.getItem(VV)) && void 0 !== xV ? xV : eV);
-      return [UV, eV => {
-        YV.m.setItem(VV, eV), yV(eV)
+    function SH(HH) {
+      let {
+        children: BH,
+        showing: LH,
+        globallyUniqueKey: SH,
+        alwaysMountChildren: hH = !1,
+        doGameplayStartStopOnShow: tH = !0,
+        keepsMovement: zH = !1
+      } = HH;
+      return (0, rH.c)(!0, LH, SH, zH), (0, AH.e)(tH, LH), LH || hH ? BH : null
+    }
+  },
+  7138: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => SH
+    });
+    var AH = LH(45),
+      rH = LH(30);
+
+    function SH(HH, BH) {
+      var LH;
+      const [SH, hH] = (0, AH.useState)(null !== (LH = rH.e.getItem(HH)) && void 0 !== LH ? LH : BH);
+      return [SH, BH => {
+        rH.e.setItem(HH, BH), hH(BH)
       }]
     }
   },
-  9500: (VV, eV, xV) => {
-    xV.d(eV, {
-      B: () => vV,
-      E: () => nV,
-      F: () => kV,
-      I: () => UV,
-      d: () => YV,
-      g: () => pV,
-      h: () => JV,
-      l: () => bV,
-      p: () => rV,
-      q: () => wV,
-      t: () => yV,
-      u: () => EV,
-      w: () => ZV,
-      x: () => QV
+  9590: (HH, BH, LH) => {
+    LH.d(BH, {
+      C: () => GH,
+      E: () => CH,
+      G: () => uH,
+      K: () => SH,
+      d: () => rH,
+      g: () => tH,
+      h: () => AH,
+      j: () => QH,
+      n: () => YH,
+      p: () => EH,
+      r: () => hH,
+      u: () => WH,
+      w: () => XH,
+      z: () => zH
     });
-    const JV = VV => ({
-      left: VV.left,
-      top: VV.top,
-      right: VV.right,
-      bottom: VV.bottom
+    const AH = HH => ({
+      left: HH.left,
+      top: HH.top,
+      right: HH.right,
+      bottom: HH.bottom
     });
 
-    function YV(VV) {
+    function rH(HH) {
       return {
-        x: (VV.left + VV.right) / 2,
-        y: (VV.top + VV.bottom) / 2
+        x: (HH.left + HH.right) / 2,
+        y: (HH.top + HH.bottom) / 2
       }
     }
 
-    function UV(VV) {
-      return 0 === VV.length ? null : VV.reduce(((VV, eV) => ({
-        left: Math.min(VV.left, eV.left),
-        top: Math.min(VV.top, eV.top),
-        right: Math.max(VV.right, eV.right),
-        bottom: Math.max(VV.bottom, eV.bottom)
+    function SH(HH) {
+      return 0 === HH.length ? null : HH.reduce(((HH, BH) => ({
+        left: Math.min(HH.left, BH.left),
+        top: Math.min(HH.top, BH.top),
+        right: Math.max(HH.right, BH.right),
+        bottom: Math.max(HH.bottom, BH.bottom)
       })))
     }
 
-    function yV(VV, eV) {
-      const xV = Math.max(0, (eV - (VV.right - VV.left)) / 2),
-        JV = Math.max(0, (eV - (VV.bottom - VV.top)) / 2);
+    function hH(HH, BH) {
+      const LH = Math.max(0, (BH - (HH.right - HH.left)) / 2),
+        AH = Math.max(0, (BH - (HH.bottom - HH.top)) / 2);
       return {
-        left: VV.left - xV,
-        top: VV.top - JV,
-        right: VV.right + xV,
-        bottom: VV.bottom + JV
+        left: HH.left - LH,
+        top: HH.top - AH,
+        right: HH.right + LH,
+        bottom: HH.bottom + AH
       }
     }
 
-    function pV(VV, eV) {
-      return eV.x >= VV.left && eV.x <= VV.right && eV.y >= VV.top && eV.y <= VV.bottom
+    function tH(HH, BH) {
+      return BH.x >= HH.left && BH.x <= HH.right && BH.y >= HH.top && BH.y <= HH.bottom
     }
 
-    function QV(VV, eV, xV) {
-      let JV = null,
-        UV = 1 / 0;
+    function zH(HH, BH, LH) {
+      let AH = null,
+        SH = 1 / 0;
       for (const {
-          id: YV,
-          box: yV
+          id: rH,
+          box: hH
         }
-        of eV) {
-        const eV = (yV.right - yV.left) * (yV.bottom - yV.top);
-        pV(yV, VV) && eV < UV && (UV = eV, JV = YV)
+        of BH) {
+        const BH = (hH.right - hH.left) * (hH.bottom - hH.top);
+        tH(hH, HH) && BH < SH && (SH = BH, AH = rH)
       }
-      if (null !== JV) return JV;
-      let QV = 1 / 0;
+      if (null !== AH) return AH;
+      let zH = 1 / 0;
       for (const {
-          id: nV,
-          box: wV
+          id: CH,
+          box: EH
         }
-        of eV) {
-        if (!pV(yV(wV, xV), VV)) continue;
-        const eV = YV(wV),
-          UV = Math.hypot(VV.x - eV.x, VV.y - eV.y);
-        UV < QV && (QV = UV, JV = nV)
+        of BH) {
+        if (!tH(hH(EH, LH), HH)) continue;
+        const BH = rH(EH),
+          SH = Math.hypot(HH.x - BH.x, HH.y - BH.y);
+        SH < zH && (zH = SH, AH = CH)
       }
-      return JV
+      return AH
     }
 
-    function nV(VV, eV, xV) {
+    function CH(HH, BH, LH) {
       return {
-        left: xV.left,
-        top: xV.top,
-        right: VV - xV.right,
-        bottom: eV - xV.bottom
+        left: LH.left,
+        top: LH.top,
+        right: HH - LH.right,
+        bottom: BH - LH.bottom
       }
     }
 
-    function wV(VV, eV, xV, JV) {
-      const YV = (VV, eV, xV) => Math.max(Math.min(eV, 0), Math.min(Math.max(xV, 0), VV));
+    function EH(HH, BH, LH, AH) {
+      const rH = (HH, BH, LH) => Math.max(Math.min(BH, 0), Math.min(Math.max(LH, 0), HH));
       return {
-        x: YV(eV, JV.left - VV.left, JV.right - VV.right),
-        y: YV(xV, JV.top - VV.top, JV.bottom - VV.bottom)
+        x: rH(BH, AH.left - HH.left, AH.right - HH.right),
+        y: rH(LH, AH.top - HH.top, AH.bottom - HH.bottom)
       }
     }
 
-    function ZV(VV, eV, xV, JV, YV) {
-      const UV = VV.dx * JV + eV,
-        yV = VV.dy * YV + xV,
-        pV = VV => Math.max(-1, Math.min(1, VV));
+    function XH(HH, BH, LH, AH, rH) {
+      const SH = HH.dx * AH + BH,
+        hH = HH.dy * rH + LH,
+        tH = HH => Math.max(-1, Math.min(1, HH));
       return {
-        dx: pV(UV / JV),
-        dy: pV(yV / YV)
+        dx: tH(SH / AH),
+        dy: tH(hH / rH)
       }
     }
 
-    function vV(VV, eV, xV, JV) {
-      return eV <= 0 || xV <= 0 ? 1 : Math.max(.05, Math.min(1, VV / eV, JV / xV))
+    function GH(HH, BH, LH, AH) {
+      return BH <= 0 || LH <= 0 ? 1 : Math.max(.05, Math.min(1, HH / BH, AH / LH))
     }
 
-    function rV(VV, eV, xV) {
-      return Math.min(VV.right, eV.right) - Math.max(VV.left, eV.left) > xV && Math.min(VV.bottom, eV.bottom) - Math.max(VV.top, eV.top) > xV
+    function YH(HH, BH, LH) {
+      return Math.min(HH.right, BH.right) - Math.max(HH.left, BH.left) > LH && Math.min(HH.bottom, BH.bottom) - Math.max(HH.top, BH.top) > LH
     }
 
-    function kV(VV, eV) {
-      const xV = (VV, eV, xV, JV) => eV - VV > JV - xV ? xV - VV > eV - JV ? JV - eV : xV - VV : VV < xV ? xV - VV : eV > JV ? JV - eV : 0;
+    function uH(HH, BH) {
+      const LH = (HH, BH, LH, AH) => BH - HH > AH - LH ? LH - HH > BH - AH ? AH - BH : LH - HH : HH < LH ? LH - HH : BH > AH ? AH - BH : 0;
       return {
-        x: xV(VV.left, VV.right, eV.left, eV.right),
-        y: xV(VV.top, VV.bottom, eV.top, eV.bottom)
+        x: LH(HH.left, HH.right, BH.left, BH.right),
+        y: LH(HH.top, HH.bottom, BH.top, BH.bottom)
       }
     }
 
-    function bV(VV, eV, xV) {
-      return rV(VV, {
+    function QH(HH, BH, LH) {
+      return YH(HH, {
         left: 0,
         top: 0,
-        right: eV,
-        bottom: xV
+        right: BH,
+        bottom: LH
       }, 0)
     }
 
-    function EV(VV, eV) {
+    function WH(HH, BH) {
       let {
-        avoid: xV = null,
-        bounds: JV = null
-      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, YV = 0, UV = 1 / 0;
-      return VV.forEach(((VV, yV) => {
-        const pV = eV.filter((eV => rV(VV, eV, 0))).length,
-          QV = null !== JV && (VV.left < JV.left || VV.top < JV.top || VV.right > JV.right || VV.bottom > JV.bottom),
-          nV = pV + (xV && rV(VV, xV, 0) ? 1e3 : 0) + (QV ? 1e6 : 0);
-        nV < UV && (YV = yV, UV = nV)
-      })), YV
+        avoid: LH = null,
+        bounds: AH = null
+      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, rH = 0, SH = 1 / 0;
+      return HH.forEach(((HH, hH) => {
+        const tH = BH.filter((BH => YH(HH, BH, 0))).length,
+          zH = null !== AH && (HH.left < AH.left || HH.top < AH.top || HH.right > AH.right || HH.bottom > AH.bottom),
+          CH = tH + (LH && YH(HH, LH, 0) ? 1e3 : 0) + (zH ? 1e6 : 0);
+        CH < SH && (rH = hH, SH = CH)
+      })), rH
     }
   },
-  9491: (VV, eV, xV) => {
-    xV.d(eV, {
-      A: () => ZV,
-      b: () => pV,
-      f: () => tV,
-      i: () => qV,
-      j: () => jV,
-      n: () => QV,
-      o: () => kV,
-      q: () => wV,
-      r: () => TV,
-      u: () => FV,
-      x: () => nV,
-      y: () => rV,
-      z: () => vV
+  9588: (HH, BH, LH) => {
+    LH.d(BH, {
+      B: () => TH,
+      D: () => CH,
+      G: () => YH,
+      K: () => GH,
+      L: () => XH,
+      e: () => tH,
+      h: () => PH,
+      k: () => vH,
+      o: () => xH,
+      q: () => zH,
+      t: () => uH,
+      x: () => EH,
+      y: () => UH
     });
-    var JV = xV(9500),
-      YV = xV(2729);
-    const UV = {
+    var AH = LH(9590),
+      rH = LH(2659);
+    const SH = {
         sprint: "joystick",
         jump: "cluster",
         crouch: "cluster",
@@ -1000,87 +1016,87 @@ export const modules = {
         inventory: "hotbar",
         shop: "inventory",
         bag: "inventory",
-        ...Object.fromEntries(YV.G.map((VV => [VV, "menu"])))
+        ...Object.fromEntries(rH.A.map((HH => [HH, "menu"])))
       },
-      yV = VV => YV.z.filter((eV => UV[eV] === VV)),
-      pV = new Set(yV("cluster")),
-      QV = new Set(yV("inventory")),
-      nV = VV => "inventory" === VV || QV.has(VV),
-      wV = VV => {
-        const eV = UV[VV];
-        return void 0 === eV ? [] : [eV, ...wV(eV)]
+      hH = HH => rH.y.filter((BH => SH[BH] === HH)),
+      tH = new Set(hH("cluster")),
+      zH = new Set(hH("inventory")),
+      CH = HH => "inventory" === HH || zH.has(HH),
+      EH = HH => {
+        const BH = SH[HH];
+        return void 0 === BH ? [] : [BH, ...EH(BH)]
       },
-      ZV = VV => [VV, ...wV(VV)],
-      vV = (VV, eV, xV) => "shop" === VV && eV ? xV("inventory") ? ["inventory"] : xV("bag") ? [VV, "bag"] : [VV] : [VV],
-      rV = (VV, eV, xV, YV) => {
-        const UV = VV => {
-          const UV = eV[VV],
+      XH = HH => [HH, ...EH(HH)],
+      GH = (HH, BH, LH) => "shop" === HH && BH ? LH("inventory") ? ["inventory"] : LH("bag") ? [HH, "bag"] : [HH] : [HH],
+      YH = (HH, BH, LH, rH) => {
+        const SH = HH => {
+          const SH = BH[HH],
             {
-              x: yV,
-              y: pV
-            } = UV && YV(VV) ? (0, JV.F)(UV, xV) : {
+              x: hH,
+              y: tH
+            } = SH && rH(HH) ? (0, AH.G)(SH, LH) : {
               x: 0,
               y: 0
             };
-          return UV && {
-            left: UV.left + yV,
-            top: UV.top + pV,
-            right: UV.right + yV,
-            bottom: UV.bottom + pV
+          return SH && {
+            left: SH.left + hH,
+            top: SH.top + tH,
+            right: SH.right + hH,
+            bottom: SH.bottom + tH
           }
         };
-        return VV.flatMap((VV => {
-          const yV = eV[VV];
-          if ("inventory" !== VV || !yV || yV.right - yV.left <= xV.right - xV.left && yV.bottom - yV.top <= xV.bottom - xV.top) return [VV];
-          const [pV, QV] = [UV("shop"), UV("bag")];
-          return pV && QV && !(0, JV.p)(pV, QV, 0) ? ["shop", "bag"].filter(YV) : [VV]
+        return HH.flatMap((HH => {
+          const hH = BH[HH];
+          if ("inventory" !== HH || !hH || hH.right - hH.left <= LH.right - LH.left && hH.bottom - hH.top <= LH.bottom - LH.top) return [HH];
+          const [tH, zH] = [SH("shop"), SH("bag")];
+          return tH && zH && !(0, AH.n)(tH, zH, 0) ? ["shop", "bag"].filter(rH) : [HH]
         }))
       },
-      kV = new Map([
-        ["cluster", pV],
-        ["inventory", QV]
+      uH = new Map([
+        ["cluster", tH],
+        ["inventory", zH]
       ]),
-      bV = ["cluster"],
-      EV = [...bV, ...YV.z.filter((VV => !bV.includes(VV) && !UV[VV]))],
-      BV = VV => [VV, ...yV(VV).flatMap(BV)],
-      jV = EV.flatMap(BV).map((VV => ({
-        id: VV,
-        label: `hudLayout:${VV}`,
-        ...YV.y[VV],
-        parent: UV[VV]
+      QH = ["cluster"],
+      WH = [...QH, ...rH.y.filter((HH => !QH.includes(HH) && !SH[HH]))],
+      MH = HH => [HH, ...hH(HH).flatMap(MH)],
+      xH = WH.flatMap(MH).map((HH => ({
+        id: HH,
+        label: `hudLayout:${HH}`,
+        ...rH.v[HH],
+        parent: SH[HH]
       }))),
-      qV = Object.fromEntries(jV.map((VV => [VV.id, VV]))),
-      tV = "data-hud-el";
+      vH = Object.fromEntries(xH.map((HH => [HH.id, HH]))),
+      PH = "data-hud-el";
 
-    function FV(VV, eV, xV, JV) {
-      const YV = xV(function(VV, eV) {
-          return "attack" !== VV || eV ? qV[VV].label : "hudLayout:attackContext"
-        }(VV, eV)),
-        UV = JV[VV];
-      return UV ? xV("hudLayout:slotWithKey", {
-        slot: YV,
-        key: UV
-      }) : YV
+    function TH(HH, BH, LH, AH) {
+      const rH = LH(function(HH, BH) {
+          return "attack" !== HH || BH ? vH[HH].label : "hudLayout:attackContext"
+        }(HH, BH)),
+        SH = AH[HH];
+      return SH ? LH("hudLayout:slotWithKey", {
+        slot: rH,
+        key: SH
+      }) : rH
     }
 
-    function TV(VV, eV, xV, JV) {
-      return VV.map((VV => FV(VV, eV, xV, JV))).join(", ")
+    function UH(HH, BH, LH, AH) {
+      return HH.map((HH => TH(HH, BH, LH, AH))).join(", ")
     }
   },
-  9506: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => pV,
-      g: () => UV,
-      i: () => YV,
-      l: () => yV,
-      m: () => ZV,
-      n: () => wV,
-      q: () => nV,
-      u: () => QV
+  9598: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => tH,
+      c: () => SH,
+      f: () => rH,
+      i: () => hH,
+      m: () => XH,
+      q: () => EH,
+      r: () => CH,
+      u: () => zH
     });
-    var JV = xV(2729);
-    const YV = ["J", "C", "A", "P", "U", "X", "G"],
-      UV = {
+    var AH = LH(2659);
+    const rH = ["J", "C", "A", "P", "U", "X", "G"],
+      SH = {
         J: "jump",
         C: "crouch",
         A: "attack",
@@ -1090,280 +1106,280 @@ export const modules = {
         G: "game"
       };
 
-    function yV(VV) {
-      return VV ? ["X"] : ["P", "X"]
+    function hH(HH) {
+      return HH ? ["X"] : ["P", "X"]
     }
-    const pV = Object.freeze({
+    const tH = Object.freeze({
       faces: null,
       names: Object.freeze({}),
       shop: !0,
       bag: !0,
       sprint: !0,
       items: null,
-      rowIcons: JV.G,
+      rowIcons: AH.A,
       pinnedIcons: Object.freeze({
         rightOfCamera: null,
         leftEnd: null
       })
     });
 
-    function QV(VV, eV, xV) {
-      const JV = VV.querySelector(".InGameUi .TouchComponentsButtons");
-      if (!JV) return pV;
-      const UV = {},
-        yV = {};
-      for (const pV of YV) {
-        const VV = JV.querySelector(`.TouchSlot${pV} > .TouchKey`);
-        if (VV) {
-          var QV, nV;
-          UV[pV] = VV.cloneNode(!0);
-          const eV = (null !== (QV = null === (nV = VV.querySelector(".TouchKeyLabel")) || void 0 === nV ? void 0 : nV.textContent) && void 0 !== QV ? QV : "").split(/\s+/).filter((VV => !/[\d\xd7]/.test(VV))).join(" ");
-          eV && (yV[pV] = eV)
+    function zH(HH, BH, LH) {
+      const AH = HH.querySelector(".InGameUi .TouchComponentsButtons");
+      if (!AH) return tH;
+      const SH = {},
+        hH = {};
+      for (const tH of rH) {
+        const HH = AH.querySelector(`.TouchSlot${tH} > .TouchKey`);
+        if (HH) {
+          var zH, CH;
+          SH[tH] = HH.cloneNode(!0);
+          const BH = (null !== (zH = null === (CH = HH.querySelector(".TouchKeyLabel")) || void 0 === CH ? void 0 : CH.textContent) && void 0 !== zH ? zH : "").split(/\s+/).filter((HH => !/[\d\xd7]/.test(HH))).join(" ");
+          BH && (hH[tH] = BH)
         }
       }
-      const wV = eV => {
-          const xV = VV.querySelector(`.InGameUi ${eV}`);
-          return null !== xV && !xV.classList.contains("Hidden")
+      const EH = BH => {
+          const LH = HH.querySelector(`.InGameUi ${BH}`);
+          return null !== LH && !LH.classList.contains("Hidden")
         },
-        ZV = [...VV.querySelectorAll(".InGameUi .HotBarContainer.Touch .HotBarGameItemsContainer .InvenItem")].map((VV => VV.cloneNode(!0)));
+        XH = [...HH.querySelectorAll(".InGameUi .HotBarContainer.Touch .HotBarGameItemsContainer .InvenItem")].map((HH => HH.cloneNode(!0)));
       return {
-        faces: Object.keys(UV).length > 0 ? UV : null,
-        names: yV,
-        shop: wV(".TouchInventoryKey.ShopKey"),
-        bag: wV(".TouchInventoryKey.BagKey"),
-        sprint: wV(".TouchSprintHit"),
-        items: ZV.length > 0 ? ZV : null,
-        rowIcons: eV,
-        pinnedIcons: xV
+        faces: Object.keys(SH).length > 0 ? SH : null,
+        names: hH,
+        shop: EH(".TouchInventoryKey.ShopKey"),
+        bag: EH(".TouchInventoryKey.BagKey"),
+        sprint: EH(".TouchSprintHit"),
+        items: XH.length > 0 ? XH : null,
+        rowIcons: BH,
+        pinnedIcons: LH
       }
     }
 
-    function nV(VV, eV) {
-      const xV = {};
-      for (const JV of [...yV(eV), "G"]) {
-        const eV = VV.names[JV];
-        eV && (xV[UV[JV]] = eV)
+    function CH(HH, BH) {
+      const LH = {};
+      for (const AH of [...hH(BH), "G"]) {
+        const BH = HH.names[AH];
+        BH && (LH[SH[AH]] = BH)
       }
-      return xV
+      return LH
     }
 
-    function wV(VV, eV) {
+    function EH(HH, BH) {
       const {
-        faces: xV
-      } = VV;
-      if (null === xV) return [];
-      const JV = new Set(Object.keys(xV).map((VV => UV[VV])));
-      return yV(eV).filter((VV => !JV.has(UV[VV])))
+        faces: LH
+      } = HH;
+      if (null === LH) return [];
+      const AH = new Set(Object.keys(LH).map((HH => SH[HH])));
+      return hH(BH).filter((HH => !AH.has(SH[HH])))
     }
 
-    function ZV(VV, eV) {
-      VV.replaceChildren(...[...eV.childNodes].map((VV => VV.cloneNode(!0))))
+    function XH(HH, BH) {
+      HH.replaceChildren(...[...BH.childNodes].map((HH => HH.cloneNode(!0))))
     }
   },
-  9503: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => pV,
-      c: () => nV
+  9592: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => tH,
+      g: () => CH
     });
-    var JV = xV(9500),
-      YV = xV(9491),
-      UV = xV(2729),
-      yV = xV(2736);
-    const pV = 2,
-      QV = (VV, eV, xV) => {
-        const JV = (0, YV.q)(eV).includes(VV) ? VV : (0, YV.q)(VV).includes(eV) ? eV : null;
-        if (null === JV || "joystick" === JV) return !1;
-        const pV = JV === VV ? eV : VV;
-        if ("menu" === JV) return (0, yV.v)(pV, xV.hudElements[pV]);
-        if ("hotbar" !== JV || !(0, YV.x)(pV)) return !0;
-        if ((0, UV.Q)(xV.hudElements[pV]) || (0, UV.Q)(xV.hudElements.inventory)) return !1;
-        return !(xV.hudLocked.includes(pV) || xV.hudLocked.includes("inventory")) || (0, UV.P)(xV.hudElements.hotbar)
+    var AH = LH(9590),
+      rH = LH(9588),
+      SH = LH(2659),
+      hH = LH(2661);
+    const tH = 2,
+      zH = (HH, BH, LH) => {
+        const AH = (0, rH.x)(BH).includes(HH) ? HH : (0, rH.x)(HH).includes(BH) ? BH : null;
+        if (null === AH || "joystick" === AH) return !1;
+        const tH = AH === HH ? BH : HH;
+        if ("menu" === AH) return (0, hH.t)(tH, LH.hudElements[tH]);
+        if ("hotbar" !== AH || !(0, rH.D)(tH)) return !0;
+        if ((0, SH.G)(LH.hudElements[tH]) || (0, SH.G)(LH.hudElements.inventory)) return !1;
+        return !(LH.hudLocked.includes(tH) || LH.hudLocked.includes("inventory")) || (0, SH.F)(LH.hudElements.hotbar)
       };
 
-    function nV(VV, eV, xV, nV) {
-      const wV = VV => (0, YV.A)(VV).some((VV => (0, UV.v)(xV.hudElements, VV) || (0, yV.t)(VV, xV, nV)));
-      if (wV(VV)) return [];
-      const ZV = VV => {
-          var eV, JV;
-          return "bag" === VV && 1 !== (null !== (eV = null === (JV = xV.hudElements.shop) || void 0 === JV ? void 0 : JV[2]) && void 0 !== eV ? eV : 1) || (0, YV.A)(VV).some((VV => void 0 !== xV.hudElements[VV]))
+    function CH(HH, BH, LH, CH) {
+      const EH = HH => (0, rH.L)(HH).some((HH => (0, SH.s)(LH.hudElements, HH) || (0, hH.s)(HH, LH, CH)));
+      if (EH(HH)) return [];
+      const XH = HH => {
+          var BH, AH;
+          return "bag" === HH && 1 !== (null !== (BH = null === (AH = LH.hudElements.shop) || void 0 === AH ? void 0 : AH[2]) && void 0 !== BH ? BH : 1) || (0, rH.L)(HH).some((HH => void 0 !== LH.hudElements[HH]))
         },
-        vV = YV.o.get(VV),
-        rV = eV.filter((eV => {
+        GH = rH.t.get(HH),
+        YH = BH.filter((BH => {
           let {
-            id: xV
-          } = eV;
-          return vV ? vV.has(xV) && !wV(xV) : xV === VV
+            id: LH
+          } = BH;
+          return GH ? GH.has(LH) && !EH(LH) : LH === HH
         })),
-        kV = new Set;
-      for (const YV of eV) YV.id === VV || null !== vV && void 0 !== vV && vV.has(YV.id) || kV.has(YV.id) || wV(YV.id) || rV.some((VV => {
+        uH = new Set;
+      for (const rH of BH) rH.id === HH || null !== GH && void 0 !== GH && GH.has(rH.id) || uH.has(rH.id) || EH(rH.id) || YH.some((HH => {
         let {
-          id: eV,
-          box: UV
-        } = VV;
-        return !QV(eV, YV.id, xV) && (ZV(eV) || ZV(YV.id)) && (0, JV.p)(UV, YV.box, pV)
-      })) && kV.add(YV.id);
-      return [...kV]
+          id: BH,
+          box: SH
+        } = HH;
+        return !zH(BH, rH.id, LH) && (XH(BH) || XH(rH.id)) && (0, AH.n)(SH, rH.box, tH)
+      })) && uH.add(rH.id);
+      return [...uH]
     }
   },
-  35225: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => YV,
-      d: () => JV
+  34890: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => rH,
+      f: () => AH
     });
-    const JV = "image/jpeg",
-      YV = "jpg"
+    const AH = "image/jpeg",
+      rH = "jpg"
   },
-  35232: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => QV,
-      f: () => nV,
-      h: () => wV
+  34898: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => zH,
+      f: () => CH,
+      h: () => EH
     });
-    var JV = xV(1781),
-      YV = xV(3630),
-      UV = xV(99),
-      yV = xV(1846),
-      pV = xV(35225);
+    var AH = LH(1714),
+      rH = LH(3562),
+      SH = LH(81),
+      hH = LH(1807),
+      tH = LH(34890);
 
-    function QV() {
-      return !(0, UV.isMobileApp)() || JV.b.supports("photos")
+    function zH() {
+      return !(0, SH.isMobileApp)() || AH.b.supports("photos")
     }
-    async function nV(VV) {
-      var eV, xV;
-      if ((0, UV.isMobileApp)()) {
+    async function CH(HH) {
+      var BH, LH;
+      if ((0, SH.isMobileApp)()) {
         const {
-          saved: eV
-        } = await JV.b.request("photos.save", {
-          data: await (0, YV.e)(VV),
-          mimeType: pV.d
+          saved: BH
+        } = await AH.b.request("photos.save", {
+          data: await (0, rH.h)(HH),
+          mimeType: tH.f
         });
-        return eV ? "saved" : "denied"
+        return BH ? "saved" : "denied"
       }
-      return (0, UV.isIOS)() && null !== (eV = (xV = navigator).canShare) && void 0 !== eV && eV.call(xV, {
-        files: [VV]
-      }) ? wV(VV) : ((0, yV.c)(VV, VV.name), "saved")
+      return (0, SH.isIOS)() && null !== (BH = (LH = navigator).canShare) && void 0 !== BH && BH.call(LH, {
+        files: [HH]
+      }) ? EH(HH) : ((0, hH.e)(HH, HH.name), "saved")
     }
-    async function wV(VV) {
+    async function EH(HH) {
       try {
         return await navigator.share({
-          files: [VV]
+          files: [HH]
         }), "shared"
-      } catch (eV) {
-        if (eV instanceof DOMException && "AbortError" === eV.name) return "pJ";
-        if (eV instanceof DOMException && "NotAllowedError" === eV.name) return "needsTap";
-        throw eV
+      } catch (BH) {
+        if (BH instanceof DOMException && "AbortError" === BH.name) return "xB";
+        if (BH instanceof DOMException && "NotAllowedError" === BH.name) return "needsTap";
+        throw BH
       }
     }
   },
-  35218: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => nV,
-      e: () => wV,
-      h: () => ZV
+  34883: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => CH,
+      g: () => EH,
+      k: () => XH
     });
-    var JV = xV(27),
-      YV = xV(35189),
-      UV = xV(1725),
-      yV = xV(35225);
-    const pV = 8294400,
-      QV = .92;
+    var AH = LH(15),
+      rH = LH(34856),
+      SH = LH(1659),
+      hH = LH(34890);
+    const tH = 8294400,
+      zH = .92;
 
-    function nV() {
-      (0, UV.h)(), JV.b.set({
+    function CH() {
+      (0, SH.g)(), AH.c.set({
         screenshotMode: !0
       })
     }
 
-    function wV() {
-      JV.b.set({
+    function EH() {
+      AH.c.set({
         screenshotMode: !1
       })
     }
-    async function ZV() {
+    async function XH() {
       const {
-        width: VV,
-        height: eV,
-        scale: xV
-      } = function(VV, eV, xV) {
-        const JV = Math.max(1, VV),
-          YV = Math.max(1, eV),
-          UV = Math.min(Math.max(1, xV), Math.sqrt(pV / (JV * YV)));
+        width: HH,
+        height: BH,
+        scale: LH
+      } = function(HH, BH, LH) {
+        const AH = Math.max(1, HH),
+          rH = Math.max(1, BH),
+          SH = Math.min(Math.max(1, LH), Math.sqrt(tH / (AH * rH)));
         return {
-          width: Math.round(JV * UV),
-          height: Math.round(YV * UV),
-          scale: UV
+          width: Math.round(AH * SH),
+          height: Math.round(rH * SH),
+          scale: SH
         }
       }(window.innerWidth, window.innerHeight, window.devicePixelRatio), {
-        blob: JV
-      } = await YV.devTools.capturePhoto(VV, eV, {
-        scale: xV,
-        type: yV.d,
-        quality: QV
+        blob: AH
+      } = await rH.devTools.capturePhoto(HH, BH, {
+        scale: LH,
+        type: hH.f,
+        quality: zH
       });
-      return new File([JV], function(VV) {
-        const eV = VV => String(VV).padStart(2, "0"),
-          xV = `${VV.getFullYear()}${eV(VV.getMonth()+1)}${eV(VV.getDate())}`,
-          JV = `${eV(VV.getHours())}${eV(VV.getMinutes())}${eV(VV.getSeconds())}`;
-        return `bloxd-${xV}-${JV}.${yV.b}`
+      return new File([AH], function(HH) {
+        const BH = HH => String(HH).padStart(2, "0"),
+          LH = `${HH.getFullYear()}${BH(HH.getMonth()+1)}${BH(HH.getDate())}`,
+          AH = `${BH(HH.getHours())}${BH(HH.getMinutes())}${BH(HH.getSeconds())}`;
+        return `bloxd-${LH}-${AH}.${hH.d}`
       }(new Date), {
-        type: yV.d
+        type: hH.f
       })
     }
   },
-  9293: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => YV,
-      f: () => JV
+  9361: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => rH,
+      e: () => AH
     });
-    const JV = "controllerOpenKeyboard",
-      YV = "controllerKeyboardVisible"
+    const AH = "controllerOpenKeyboard",
+      rH = "controllerKeyboardVisible"
   },
-  35197: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => JV
+  34861: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => AH
     });
-    const JV = new Set(["chunkBorders"])
+    const AH = new Set(["chunkBorders"])
   },
-  35189: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      ALL_DEV_TOOLS: () => yV,
-      coreDevTools: () => nV,
-      devTools: () => QV
+  34856: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      ALL_DEV_TOOLS: () => hH,
+      coreDevTools: () => CH,
+      devTools: () => zH
     });
-    var JV = xV(686),
-      YV = xV(1348),
-      UV = xV(35197);
-    const yV = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function pV() {
+    var AH = LH(642),
+      rH = LH(1253),
+      SH = LH(34861);
+    const hH = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function tH() {
       const {
-        noaDevTools: VV
-      } = await xV.e(260).then((() => xV(42389)));
-      return VV
+        noaDevTools: HH
+      } = await LH.e(264).then((() => LH(42369)));
+      return HH
     }
-    const QV = new class {
+    const zH = new class {
         constructor() {
-          this.loadHost = pV, this.tools = yV
+          this.loadHost = tH, this.tools = hH
         }
-        setHost(VV) {
-          this.tools = null === VV ? yV : VV.tools, this.loadHost = null === VV ? pV : async () => VV
+        setHost(HH) {
+          this.tools = null === HH ? hH : HH.tools, this.loadHost = null === HH ? tH : async () => HH
         }
-        supports(VV) {
-          return this.tools.has(VV)
+        supports(HH) {
+          return this.tools.has(HH)
         }
-        async downloadScene(VV, eV) {
-          const xV = await this.loadHost();
-          await xV.downloadScene(VV, eV)
+        async downloadScene(HH, BH) {
+          const LH = await this.loadHost();
+          await LH.downloadScene(HH, BH)
         }
-        async setAmbientLightIntensity(VV) {
-          const eV = await this.loadHost();
-          await eV.setAmbientLightIntensity(VV)
+        async setAmbientLightIntensity(HH) {
+          const BH = await this.loadHost();
+          await BH.setAmbientLightIntensity(HH)
         }
-        async capturePhoto(VV, eV, xV) {
-          return (await this.loadHost()).capturePhoto(VV, eV, xV)
+        async capturePhoto(HH, BH, LH) {
+          return (await this.loadHost()).capturePhoto(HH, BH, LH)
         }
       },
-      nV = {
-        tools: UV.e,
+      CH = {
+        tools: SH.c,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -1374,121 +1390,121 @@ export const modules = {
           throw new Error("No game is drawing yet")
         }
       };
-    JV.I && QV.setHost(nV), (0, YV.C)((() => {
-      QV.setHost(nV)
+    AH.K && zH.setHost(CH), (0, rH.C)((() => {
+      zH.setHost(CH)
     }))
   },
-  35343: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => yV,
-      c: () => YV,
-      g: () => wV
+  35018: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH,
+      h: () => rH,
+      j: () => EH
     });
-    var JV = xV(1656);
+    var AH = LH(1565);
 
-    function YV(VV) {
-      var eV;
+    function rH(HH) {
+      var BH;
       return {
-        ...yV.store,
-        yaw: yV.store.yaw + (null !== (eV = JV.c[VV].previewYaw) && void 0 !== eV ? eV : 0)
+        ...hH.store,
+        yaw: hH.store.yaw + (null !== (BH = AH.c[HH].previewYaw) && void 0 !== BH ? BH : 0)
       }
     }
-    const UV = {
+    const SH = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      yV = {
-        player: UV,
+      hH = {
+        player: SH,
         store: {
-          ...UV,
+          ...SH,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function pV(VV, eV) {
-      VV instanceof Promise ? VV.then(eV).catch((VV => {
-        console.error("Couldn't open the preview", VV)
-      })) : eV(VV)
+    function tH(HH, BH) {
+      HH instanceof Promise ? HH.then(BH).catch((HH => {
+        console.error("Couldn't open the preview", HH)
+      })) : BH(HH)
     }
-    class QV {
-      constructor(VV) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, pV(VV, (VV => {
-          this.closed ? VV.close() : (this.opened = VV, null !== this.size && VV.resize(this.size.width, this.size.height), null !== this.view && VV.show(this.view))
+    class zH {
+      constructor(HH) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, tH(HH, (HH => {
+          this.closed ? HH.close() : (this.opened = HH, null !== this.size && HH.resize(this.size.width, this.size.height), null !== this.view && HH.show(this.view))
         }))
       }
-      show(VV) {
-        var eV;
-        this.view = VV, null === (eV = this.opened) || void 0 === eV || eV.show(VV)
+      show(HH) {
+        var BH;
+        this.view = HH, null === (BH = this.opened) || void 0 === BH || BH.show(HH)
       }
-      resize(VV, eV) {
-        var xV;
+      resize(HH, BH) {
+        var LH;
         this.size = {
-          width: VV,
-          height: eV
-        }, null === (xV = this.opened) || void 0 === xV || xV.resize(VV, eV)
+          width: HH,
+          height: BH
+        }, null === (LH = this.opened) || void 0 === LH || LH.resize(HH, BH)
       }
       close() {
-        var VV;
-        this.closed = !0, null === (VV = this.opened) || void 0 === VV || VV.close(), this.opened = null
+        var HH;
+        this.closed = !0, null === (HH = this.opened) || void 0 === HH || HH.close(), this.opened = null
       }
     }
-    class nV {
-      constructor(VV) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(VV).then((VV => VV.ready)), pV(VV, (VV => {
-          this.closed ? VV.close() : (this.opened = VV, null !== this.size && VV.resize(this.size.width, this.size.height))
+    class CH {
+      constructor(HH) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(HH).then((HH => HH.ready)), tH(HH, (HH => {
+          this.closed ? HH.close() : (this.opened = HH, null !== this.size && HH.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var VV, eV;
-        return null !== (VV = null === (eV = this.opened) || void 0 === eV ? void 0 : eV.isReady()) && void 0 !== VV && VV
+        var HH, BH;
+        return null !== (HH = null === (BH = this.opened) || void 0 === BH ? void 0 : BH.isReady()) && void 0 !== HH && HH
       }
-      setCosmetic(VV, eV) {
-        var xV;
-        null === (xV = this.opened) || void 0 === xV || xV.setCosmetic(VV, eV)
+      setCosmetic(HH, BH) {
+        var LH;
+        null === (LH = this.opened) || void 0 === LH || LH.setCosmetic(HH, BH)
       }
-      playEmote(VV) {
-        var eV;
-        null === (eV = this.opened) || void 0 === eV || eV.playEmote(VV)
+      playEmote(HH) {
+        var BH;
+        null === (BH = this.opened) || void 0 === BH || BH.playEmote(HH)
       }
-      setOrbit(VV) {
-        var eV;
-        null === (eV = this.opened) || void 0 === eV || eV.setOrbit(VV)
+      setOrbit(HH) {
+        var BH;
+        null === (BH = this.opened) || void 0 === BH || BH.setOrbit(HH)
       }
       resetCamera() {
-        var VV;
-        null === (VV = this.opened) || void 0 === VV || VV.resetCamera()
+        var HH;
+        null === (HH = this.opened) || void 0 === HH || HH.resetCamera()
       }
-      async untilDrawn(VV) {
-        var eV;
-        await this.ready, await (null === (eV = this.opened) || void 0 === eV ? void 0 : eV.untilDrawn(VV))
+      async untilDrawn(HH) {
+        var BH;
+        await this.ready, await (null === (BH = this.opened) || void 0 === BH ? void 0 : BH.untilDrawn(HH))
       }
-      resize(VV, eV) {
-        var xV;
+      resize(HH, BH) {
+        var LH;
         this.size = {
-          width: VV,
-          height: eV
-        }, null === (xV = this.opened) || void 0 === xV || xV.resize(VV, eV)
+          width: HH,
+          height: BH
+        }, null === (LH = this.opened) || void 0 === LH || LH.resize(HH, BH)
       }
       close() {
-        var VV;
-        this.closed = !0, null === (VV = this.opened) || void 0 === VV || VV.close(), this.opened = null
+        var HH;
+        this.closed = !0, null === (HH = this.opened) || void 0 === HH || HH.close(), this.opened = null
       }
     }
-    const wV = new class {
+    const EH = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(VV) {
-        this.host = VV
+      setHost(HH) {
+        this.host = HH
       }
-      setDefaultHost(VV) {
-        this.makeDefault = VV
+      setDefaultHost(HH) {
+        this.makeDefault = HH
       }
       current() {
         if (null === this.host) {
@@ -1497,78 +1513,78 @@ export const modules = {
         }
         return this.host
       }
-      openMob(VV) {
-        return new QV(this.current().openMob(VV))
+      openMob(HH) {
+        return new zH(this.current().openMob(HH))
       }
-      openPet(VV) {
-        return new QV(this.current().openPet(VV))
+      openPet(HH) {
+        return new zH(this.current().openPet(HH))
       }
-      openMobLineup(VV) {
-        return new QV(this.current().openMobLineup(VV))
+      openMobLineup(HH) {
+        return new zH(this.current().openMobLineup(HH))
       }
-      openCharacter(VV, eV) {
-        return new nV(this.current().openCharacter(VV, eV))
+      openCharacter(HH, BH) {
+        return new CH(this.current().openCharacter(HH, BH))
       }
     }
   },
-  35337: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => JV.b,
-      f: () => JV.c,
-      h: () => JV.g
+  35016: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => AH.d,
+      g: () => AH.h,
+      h: () => AH.j
     });
-    var JV = xV(35343);
-    class YV {
-      constructor(VV) {
-        this.load = VV, this.loaded = null, this.loading = null
+    var AH = LH(35018);
+    class rH {
+      constructor(HH) {
+        this.load = HH, this.loaded = null, this.loading = null
       }
-      run(VV) {
-        return null !== this.loaded ? VV(this.loaded) : (this.loading ??= this.load().then((VV => (this.loaded = VV, VV)), (VV => {
-          throw this.loading = null, VV
-        })), this.loading.then(VV))
+      run(HH) {
+        return null !== this.loaded ? HH(this.loaded) : (this.loading ??= this.load().then((HH => (this.loaded = HH, HH)), (HH => {
+          throw this.loading = null, HH
+        })), this.loading.then(HH))
       }
     }
-    class UV {
+    class SH {
       constructor() {
-        this.mobScene = new YV((() => Promise.all([xV.e(84), xV.e(255), xV.e(254), xV.e(279), xV.e(111), xV.e(280), xV.e(87), xV.e(277), xV.e(85), xV.e(86), xV.e(287), xV.e(281), xV.e(286), xV.e(284), xV.e(276), xV.e(302), xV.e(251), xV.e(269), xV.e(282), xV.e(285), xV.e(89), xV.e(202), xV.e(245), xV.e(109), xV.e(257), xV.e(248), xV.e(264), xV.e(223), xV.e(265), xV.e(88), xV.e(271)]).then((() => xV(42411))))), this.characterScene = new YV((() => Promise.all([xV.e(84), xV.e(255), xV.e(254), xV.e(279), xV.e(111), xV.e(280), xV.e(87), xV.e(277), xV.e(85), xV.e(86), xV.e(287), xV.e(281), xV.e(286), xV.e(284), xV.e(276), xV.e(302), xV.e(251), xV.e(269), xV.e(282), xV.e(285), xV.e(89), xV.e(202), xV.e(245), xV.e(109), xV.e(257), xV.e(248), xV.e(264), xV.e(223), xV.e(265), xV.e(88), xV.e(270)]).then((() => xV(42518)))))
+        this.mobScene = new rH((() => Promise.all([LH.e(84), LH.e(259), LH.e(258), LH.e(283), LH.e(111), LH.e(284), LH.e(87), LH.e(281), LH.e(85), LH.e(86), LH.e(291), LH.e(285), LH.e(290), LH.e(288), LH.e(280), LH.e(303), LH.e(255), LH.e(272), LH.e(286), LH.e(289), LH.e(89), LH.e(249), LH.e(204), LH.e(109), LH.e(261), LH.e(252), LH.e(268), LH.e(219), LH.e(269), LH.e(88), LH.e(273)]).then((() => LH(42386))))), this.characterScene = new rH((() => Promise.all([LH.e(84), LH.e(259), LH.e(258), LH.e(283), LH.e(111), LH.e(284), LH.e(87), LH.e(281), LH.e(85), LH.e(86), LH.e(291), LH.e(285), LH.e(290), LH.e(288), LH.e(280), LH.e(303), LH.e(255), LH.e(272), LH.e(286), LH.e(289), LH.e(89), LH.e(249), LH.e(204), LH.e(109), LH.e(261), LH.e(252), LH.e(268), LH.e(219), LH.e(269), LH.e(88), LH.e(218)]).then((() => LH(42476)))))
       }
-      openMob(VV) {
-        return this.mobScene.run((eV => eV.openMobPreview(VV)))
+      openMob(HH) {
+        return this.mobScene.run((BH => BH.openMobPreview(HH)))
       }
-      openPet(VV) {
-        return this.mobScene.run((eV => eV.openPetPreview(VV)))
+      openPet(HH) {
+        return this.mobScene.run((BH => BH.openPetPreview(HH)))
       }
-      openMobLineup(VV) {
-        return this.mobScene.run((eV => eV.openMobLineupPreview(VV)))
+      openMobLineup(HH) {
+        return this.mobScene.run((BH => BH.openMobLineupPreview(HH)))
       }
-      openCharacter(VV, eV) {
-        return this.characterScene.run((xV => xV.openCharacterPreview(VV, eV)))
+      openCharacter(HH, BH) {
+        return this.characterScene.run((LH => LH.openCharacterPreview(HH, BH)))
       }
     }
-    JV.g.setDefaultHost((() => new UV))
+    AH.j.setDefaultHost((() => new SH))
   },
-  7216: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => YV,
-      f: () => UV
+  7209: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => rH,
+      e: () => SH
     });
-    var JV = xV(40);
-    const YV = "shaderPack";
-    async function UV() {
-      var VV;
-      let eV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (VV = await JV.i.getItem(YV, eV)) && void 0 !== VV ? VV : null
+    var AH = LH(30);
+    const rH = "shaderPack";
+    async function SH() {
+      var HH;
+      let BH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (HH = await AH.c.getItem(rH, BH)) && void 0 !== HH ? HH : null
     }
   },
-  9477: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => pV,
-      g: () => QV
+  9577: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => tH,
+      g: () => zH
     });
-    var JV = xV(27),
-      YV = xV(1391),
-      UV = xV(99);
-    const yV = {
+    var AH = LH(15),
+      rH = LH(1297),
+      SH = LH(81);
+    const hH = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -1611,61 +1627,61 @@ export const modules = {
       }
     };
 
-    function pV() {
-      return (0, UV.isMobile)() && "function" === typeof navigator.vibrate
+    function tH() {
+      return (0, SH.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const QV = new class {
-      constructor(VV) {
-        this.deps = VV, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const zH = new class {
+      constructor(HH) {
+        this.deps = HH, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(VV, eV) {
-        var xV;
+      play(HH, BH) {
+        var LH;
         if (!this.deps.enabled()) return;
-        const JV = yV[VV],
-          YV = null !== eV && void 0 !== eV ? eV : JV.pattern;
-        if (null === YV) return void console.warn("No vibration pattern for", VV);
-        const UV = this.deps.now();
-        UV - this.lastAnyAt < 40 && JV.priority < this.playingPriority || UV - (null !== (xV = this.lastAt.get(VV)) && void 0 !== xV ? xV : -1 / 0) < JV.minGapMs || UV < this.playingUntil && JV.priority < this.playingPriority || (this.lastAt.set(VV, UV), this.lastAnyAt = UV, this.playingUntil = UV + YV.reduce(((VV, eV) => VV + eV), 0), this.playingPriority = JV.priority, this.deps.vibrate(YV))
+        const AH = hH[HH],
+          rH = null !== BH && void 0 !== BH ? BH : AH.pattern;
+        if (null === rH) return void console.warn("No vibration pattern for", HH);
+        const SH = this.deps.now();
+        SH - this.lastAnyAt < 40 && AH.priority < this.playingPriority || SH - (null !== (LH = this.lastAt.get(HH)) && void 0 !== LH ? LH : -1 / 0) < AH.minGapMs || SH < this.playingUntil && AH.priority < this.playingPriority || (this.lastAt.set(HH, SH), this.lastAnyAt = SH, this.playingUntil = SH + rH.reduce(((HH, BH) => HH + BH), 0), this.playingPriority = AH.priority, this.deps.vibrate(rH))
       }
     }({
-      vibrate: VV => {
-        navigator.vibrate([...VV])
+      vibrate: HH => {
+        navigator.vibrate([...HH])
       },
       now: () => performance.now(),
-      enabled: () => pV() && JV.b.get("isTouchScreen") && JV.b.get("clientEscMenuOptions").vibration && !(0, YV.f)()
+      enabled: () => tH() && AH.c.get("isTouchScreen") && AH.c.get("clientEscMenuOptions").vibration && !(0, rH.d)()
     })
   },
-  9403: (VV, eV, xV) => {
-    function JV(VV, eV) {
-      return !VV.hidden && (eV || !VV.isRewardedAd)
+  9475: (HH, BH, LH) => {
+    function AH(HH, BH) {
+      return !HH.hidden && (BH || !HH.isRewardedAd)
     }
 
-    function YV(VV) {
-      return "object" === typeof VV ? VV.option : VV
+    function rH(HH) {
+      return "object" === typeof HH ? HH.option : HH
     }
 
-    function UV(VV, eV) {
-      var xV;
-      if ("dropdown" === (null === (xV = VV.userInput) || void 0 === xV ? void 0 : xV.type) && "object" === typeof VV.userInput.dropdownOptions[0]) {
-        for (const xV of VV.userInput.dropdownOptions)
-          if (YV(xV) === eV) return "object" === typeof xV ? xV.cost : VV.cost;
-        console.error("Didn't find matching option for dropdown item. Item:", VV, "input:", eV)
+    function SH(HH, BH) {
+      var LH;
+      if ("dropdown" === (null === (LH = HH.userInput) || void 0 === LH ? void 0 : LH.type) && "object" === typeof HH.userInput.dropdownOptions[0]) {
+        for (const LH of HH.userInput.dropdownOptions)
+          if (rH(LH) === BH) return "object" === typeof LH ? LH.cost : HH.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", HH, "input:", BH)
       }
-      return VV.cost
+      return HH.cost
     }
 
-    function yV(VV, eV, xV) {
-      var JV;
-      const YV = null !== (JV = xV.excludedPlayers) && void 0 !== JV ? JV : [eV];
-      return VV.filter((VV => !YV.includes(VV)))
+    function hH(HH, BH, LH) {
+      var AH;
+      const rH = null !== (AH = LH.excludedPlayers) && void 0 !== AH ? AH : [BH];
+      return HH.filter((HH => !rH.includes(HH)))
     }
-    xV.d(eV, {
-      e: () => UV,
-      h: () => YV,
-      l: () => yV,
-      p: () => JV
+    LH.d(BH, {
+      c: () => SH,
+      f: () => rH,
+      g: () => hH,
+      i: () => AH
     })
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

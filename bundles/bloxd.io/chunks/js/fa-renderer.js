@@ -1,128 +1,128 @@
-/*! For license information please see pxmq3aq.fa-renderer.95c54cc8.chunk.js.LICENSE.txt */
-export const id = 37;
-export const ids = [37];
+/*! For license information please see cwj32u.fa-renderer.ff4c28e6.chunk.js.LICENSE.txt */
+export const id = 38;
+export const ids = [38];
 export const modules = {
-  7318: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      FontAwesomeIcon: () => AV
+  7303: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      FontAwesomeIcon: () => OH
     });
-    var JV = xV(7314),
-      YV = xV(5453),
-      UV = xV.n(YV),
-      yV = xV(62);
+    var AH = LH(7298),
+      rH = LH(5450),
+      SH = LH.n(rH),
+      hH = LH(45);
 
-    function pV(VV, eV) {
-      (null == eV || eV > VV.length) && (eV = VV.length);
-      for (var xV = 0, JV = Array(eV); xV < eV; xV++) JV[xV] = VV[xV];
-      return JV
+    function tH(HH, BH) {
+      (null == BH || BH > HH.length) && (BH = HH.length);
+      for (var LH = 0, AH = Array(BH); LH < BH; LH++) AH[LH] = HH[LH];
+      return AH
     }
 
-    function QV(VV, eV, xV) {
-      return (eV = function(VV) {
-        var eV = function(VV, eV) {
-          if ("object" != typeof VV || !VV) return VV;
-          var xV = VV[Symbol.toPrimitive];
-          if (void 0 !== xV) {
-            var JV = xV.call(VV, eV || "default");
-            if ("object" != typeof JV) return JV;
+    function zH(HH, BH, LH) {
+      return (BH = function(HH) {
+        var BH = function(HH, BH) {
+          if ("object" != typeof HH || !HH) return HH;
+          var LH = HH[Symbol.toPrimitive];
+          if (void 0 !== LH) {
+            var AH = LH.call(HH, BH || "default");
+            if ("object" != typeof AH) return AH;
             throw new TypeError("@@toPrimitive must return a primitive value.")
           }
-          return ("string" === eV ? String : Number)(VV)
-        }(VV, "string");
-        return "symbol" == typeof eV ? eV : eV + ""
-      }(eV)) in VV ? Object.defineProperty(VV, eV, {
-        value: xV,
+          return ("string" === BH ? String : Number)(HH)
+        }(HH, "string");
+        return "symbol" == typeof BH ? BH : BH + ""
+      }(BH)) in HH ? Object.defineProperty(HH, BH, {
+        value: LH,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : VV[eV] = xV, VV
+      }) : HH[BH] = LH, HH
     }
 
-    function nV(VV, eV) {
-      var xV = Object.keys(VV);
+    function CH(HH, BH) {
+      var LH = Object.keys(HH);
       if (Object.getOwnPropertySymbols) {
-        var JV = Object.getOwnPropertySymbols(VV);
-        eV && (JV = JV.filter((function(eV) {
-          return Object.getOwnPropertyDescriptor(VV, eV).enumerable
-        }))), xV.push.apply(xV, JV)
+        var AH = Object.getOwnPropertySymbols(HH);
+        BH && (AH = AH.filter((function(BH) {
+          return Object.getOwnPropertyDescriptor(HH, BH).enumerable
+        }))), LH.push.apply(LH, AH)
       }
-      return xV
+      return LH
     }
 
-    function wV(VV) {
-      for (var eV = 1; eV < arguments.length; eV++) {
-        var xV = null != arguments[eV] ? arguments[eV] : {};
-        eV % 2 ? nV(Object(xV), !0).forEach((function(eV) {
-          QV(VV, eV, xV[eV])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(VV, Object.getOwnPropertyDescriptors(xV)) : nV(Object(xV)).forEach((function(eV) {
-          Object.defineProperty(VV, eV, Object.getOwnPropertyDescriptor(xV, eV))
+    function EH(HH) {
+      for (var BH = 1; BH < arguments.length; BH++) {
+        var LH = null != arguments[BH] ? arguments[BH] : {};
+        BH % 2 ? CH(Object(LH), !0).forEach((function(BH) {
+          zH(HH, BH, LH[BH])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(HH, Object.getOwnPropertyDescriptors(LH)) : CH(Object(LH)).forEach((function(BH) {
+          Object.defineProperty(HH, BH, Object.getOwnPropertyDescriptor(LH, BH))
         }))
       }
-      return VV
+      return HH
     }
 
-    function ZV(VV, eV) {
-      return function(VV) {
-        if (Array.isArray(VV)) return VV
-      }(VV) || function(VV, eV) {
-        var xV = null == VV ? null : "undefined" != typeof Symbol && VV[Symbol.iterator] || VV["@@iterator"];
-        if (null != xV) {
-          var JV, YV, UV, yV, pV = [],
-            QV = !0,
-            nV = !1;
+    function XH(HH, BH) {
+      return function(HH) {
+        if (Array.isArray(HH)) return HH
+      }(HH) || function(HH, BH) {
+        var LH = null == HH ? null : "undefined" != typeof Symbol && HH[Symbol.iterator] || HH["@@iterator"];
+        if (null != LH) {
+          var AH, rH, SH, hH, tH = [],
+            zH = !0,
+            CH = !1;
           try {
-            if (UV = (xV = xV.call(VV)).next, 0 === eV) {
-              if (Object(xV) !== xV) return;
-              QV = !1
+            if (SH = (LH = LH.call(HH)).next, 0 === BH) {
+              if (Object(LH) !== LH) return;
+              zH = !1
             } else
-              for (; !(QV = (JV = UV.call(xV)).done) && (pV.push(JV.value), pV.length !== eV); QV = !0);
-          } catch (VV) {
-            nV = !0, YV = VV
+              for (; !(zH = (AH = SH.call(LH)).done) && (tH.push(AH.value), tH.length !== BH); zH = !0);
+          } catch (HH) {
+            CH = !0, rH = HH
           } finally {
             try {
-              if (!QV && null != xV.return && (yV = xV.return(), Object(yV) !== yV)) return
+              if (!zH && null != LH.return && (hH = LH.return(), Object(hH) !== hH)) return
             } finally {
-              if (nV) throw YV
+              if (CH) throw rH
             }
           }
-          return pV
+          return tH
         }
-      }(VV, eV) || kV(VV, eV) || function() {
+      }(HH, BH) || uH(HH, BH) || function() {
         throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }()
     }
 
-    function vV(VV) {
-      return function(VV) {
-        if (Array.isArray(VV)) return pV(VV)
-      }(VV) || function(VV) {
-        if ("undefined" != typeof Symbol && null != VV[Symbol.iterator] || null != VV["@@iterator"]) return Array.from(VV)
-      }(VV) || kV(VV) || function() {
+    function GH(HH) {
+      return function(HH) {
+        if (Array.isArray(HH)) return tH(HH)
+      }(HH) || function(HH) {
+        if ("undefined" != typeof Symbol && null != HH[Symbol.iterator] || null != HH["@@iterator"]) return Array.from(HH)
+      }(HH) || uH(HH) || function() {
         throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }()
     }
 
-    function rV(VV) {
-      return rV = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(VV) {
-        return typeof VV
-      } : function(VV) {
-        return VV && "function" == typeof Symbol && VV.constructor === Symbol && VV !== Symbol.prototype ? "symbol" : typeof VV
-      }, rV(VV)
+    function YH(HH) {
+      return YH = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(HH) {
+        return typeof HH
+      } : function(HH) {
+        return HH && "function" == typeof Symbol && HH.constructor === Symbol && HH !== Symbol.prototype ? "symbol" : typeof HH
+      }, YH(HH)
     }
 
-    function kV(VV, eV) {
-      if (VV) {
-        if ("string" == typeof VV) return pV(VV, eV);
-        var xV = {}.toString.call(VV).slice(8, -1);
-        return "Object" === xV && VV.constructor && (xV = VV.constructor.name), "Map" === xV || "Set" === xV ? Array.from(VV) : "Arguments" === xV || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(xV) ? pV(VV, eV) : void 0
+    function uH(HH, BH) {
+      if (HH) {
+        if ("string" == typeof HH) return tH(HH, BH);
+        var LH = {}.toString.call(HH).slice(8, -1);
+        return "Object" === LH && HH.constructor && (LH = HH.constructor.name), "Map" === LH || "Set" === LH ? Array.from(HH) : "Arguments" === LH || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(LH) ? tH(HH, BH) : void 0
       }
     }
-    var bV;
+    var QH;
     try {
-      var EV = xV(7324);
-      bV = EV.version
-    } catch (XV) {
-      bV = "undefined" !== typeof process && {
+      var WH = LH(7310);
+      QH = WH.version
+    } catch (kH) {
+      QH = "undefined" !== typeof process && {
         NODE_ENV: "production",
         PUBLIC_URL: "",
         WDS_SOCKET_HOST: void 0,
@@ -133,95 +133,95 @@ export const modules = {
       }.FA_VERSION || "7.0.0"
     }
 
-    function BV(VV) {
-      var eV = VV.beat,
-        xV = VV.fade,
-        JV = VV.beatFade,
-        YV = VV.bounce,
-        UV = VV.shake,
-        yV = VV.flash,
-        pV = VV.spin,
-        nV = VV.spinPulse,
-        wV = VV.spinReverse,
-        vV = VV.pulse,
-        rV = VV.fixedWidth,
-        kV = VV.inverse,
-        EV = VV.border,
-        BV = VV.listItem,
-        jV = VV.flip,
-        qV = VV.size,
-        tV = VV.rotation,
-        FV = VV.pull,
-        TV = VV.swapOpacity,
-        PV = VV.rotateBy,
-        AV = VV.widthAuto,
-        NV = function(VV, eV) {
-          for (var xV = ZV(VV.split("-"), 2), JV = xV[0], YV = xV[1], UV = ZV(eV.split("-"), 2), yV = UV[0], pV = UV[1], QV = JV.split("."), nV = yV.split("."), wV = 0; wV < Math.max(QV.length, nV.length); wV++) {
-            var vV = QV[wV] || "0",
-              rV = nV[wV] || "0",
-              kV = parseInt(vV, 10),
-              bV = parseInt(rV, 10);
-            if (kV !== bV) return kV > bV
+    function MH(HH) {
+      var BH = HH.beat,
+        LH = HH.fade,
+        AH = HH.beatFade,
+        rH = HH.bounce,
+        SH = HH.shake,
+        hH = HH.flash,
+        tH = HH.spin,
+        CH = HH.spinPulse,
+        EH = HH.spinReverse,
+        GH = HH.pulse,
+        YH = HH.fixedWidth,
+        uH = HH.inverse,
+        WH = HH.border,
+        MH = HH.listItem,
+        xH = HH.flip,
+        vH = HH.size,
+        PH = HH.rotation,
+        TH = HH.pull,
+        UH = HH.swapOpacity,
+        VH = HH.rotateBy,
+        OH = HH.widthAuto,
+        bH = function(HH, BH) {
+          for (var LH = XH(HH.split("-"), 2), AH = LH[0], rH = LH[1], SH = XH(BH.split("-"), 2), hH = SH[0], tH = SH[1], zH = AH.split("."), CH = hH.split("."), EH = 0; EH < Math.max(zH.length, CH.length); EH++) {
+            var GH = zH[EH] || "0",
+              YH = CH[EH] || "0",
+              uH = parseInt(GH, 10),
+              QH = parseInt(YH, 10);
+            if (uH !== QH) return uH > QH
           }
-          for (var EV = 0; EV < Math.max(QV.length, nV.length); EV++) {
-            var BV = QV[EV] || "0",
-              jV = nV[EV] || "0";
-            if (BV !== jV && BV.length !== jV.length) return BV.length < jV.length
+          for (var WH = 0; WH < Math.max(zH.length, CH.length); WH++) {
+            var MH = zH[WH] || "0",
+              xH = CH[WH] || "0";
+            if (MH !== xH && MH.length !== xH.length) return MH.length < xH.length
           }
-          return !(YV && !pV)
-        }(bV, "7.0.0"),
-        XV = QV(QV(QV(QV(QV(QV({
-          "fa-beat": eV,
-          "fa-fade": xV,
-          "fa-beat-fade": JV,
-          "fa-bounce": YV,
-          "fa-shake": UV,
-          "fa-flash": yV,
-          "fa-spin": pV,
-          "fa-spin-reverse": wV,
-          "fa-spin-pulse": nV,
-          "fa-pulse": vV,
-          "fa-fw": rV,
-          "fa-inverse": kV,
-          "fa-border": EV,
-          "fa-li": BV,
-          "fa-flip": !0 === jV,
-          "fa-flip-horizontal": "horizontal" === jV || "both" === jV,
-          "fa-flip-vertical": "vertical" === jV || "both" === jV
-        }, "fa-".concat(qV), "undefined" !== typeof qV && null !== qV), "fa-rotate-".concat(tV), "undefined" !== typeof tV && null !== tV && 0 !== tV), "fa-pull-".concat(FV), "undefined" !== typeof FV && null !== FV), "fa-swap-opacity", TV), "fa-rotate-by", NV && PV), "fa-width-auto", NV && AV);
-      return Object.keys(XV).map((function(VV) {
-        return XV[VV] ? VV : null
-      })).filter((function(VV) {
-        return VV
+          return !(rH && !tH)
+        }(QH, "7.0.0"),
+        kH = zH(zH(zH(zH(zH(zH({
+          "fa-beat": BH,
+          "fa-fade": LH,
+          "fa-beat-fade": AH,
+          "fa-bounce": rH,
+          "fa-shake": SH,
+          "fa-flash": hH,
+          "fa-spin": tH,
+          "fa-spin-reverse": EH,
+          "fa-spin-pulse": CH,
+          "fa-pulse": GH,
+          "fa-fw": YH,
+          "fa-inverse": uH,
+          "fa-border": WH,
+          "fa-li": MH,
+          "fa-flip": !0 === xH,
+          "fa-flip-horizontal": "horizontal" === xH || "both" === xH,
+          "fa-flip-vertical": "vertical" === xH || "both" === xH
+        }, "fa-".concat(vH), "undefined" !== typeof vH && null !== vH), "fa-rotate-".concat(PH), "undefined" !== typeof PH && null !== PH && 0 !== PH), "fa-pull-".concat(TH), "undefined" !== typeof TH && null !== TH), "fa-swap-opacity", UH), "fa-rotate-by", bH && VH), "fa-width-auto", bH && OH);
+      return Object.keys(kH).map((function(HH) {
+        return kH[HH] ? HH : null
+      })).filter((function(HH) {
+        return HH
       }))
     }
 
-    function jV(VV) {
-      return eV = VV, (eV -= 0) === eV ? VV : (VV = VV.replace(/[\-_\s]+(.)?/g, (function(VV, eV) {
-        return eV ? eV.toUpperCase() : ""
-      }))).substr(0, 1).toLowerCase() + VV.substr(1);
-      var eV
+    function xH(HH) {
+      return BH = HH, (BH -= 0) === BH ? HH : (HH = HH.replace(/[\-_\s]+(.)?/g, (function(HH, BH) {
+        return BH ? BH.toUpperCase() : ""
+      }))).substr(0, 1).toLowerCase() + HH.substr(1);
+      var BH
     }
-    var qV = ["style"];
-    var tV = !1;
+    var vH = ["style"];
+    var PH = !1;
     try {
-      tV = !0
-    } catch (XV) {}
+      PH = !0
+    } catch (kH) {}
 
-    function FV(VV) {
-      return VV && "object" === rV(VV) && VV.prefix && VV.iconName && VV.icon ? VV : JV.parse.icon ? JV.parse.icon(VV) : null === VV ? null : VV && "object" === rV(VV) && VV.prefix && VV.iconName ? VV : Array.isArray(VV) && 2 === VV.length ? {
-        prefix: VV[0],
-        iconName: VV[1]
-      } : "string" === typeof VV ? {
+    function TH(HH) {
+      return HH && "object" === YH(HH) && HH.prefix && HH.iconName && HH.icon ? HH : AH.parse.icon ? AH.parse.icon(HH) : null === HH ? null : HH && "object" === YH(HH) && HH.prefix && HH.iconName ? HH : Array.isArray(HH) && 2 === HH.length ? {
+        prefix: HH[0],
+        iconName: HH[1]
+      } : "string" === typeof HH ? {
         prefix: "fas",
-        iconName: VV
+        iconName: HH
       } : void 0
     }
 
-    function TV(VV, eV) {
-      return Array.isArray(eV) && eV.length > 0 || !Array.isArray(eV) && eV ? QV({}, VV, eV) : {}
+    function UH(HH, BH) {
+      return Array.isArray(BH) && BH.length > 0 || !Array.isArray(BH) && BH ? zH({}, HH, BH) : {}
     }
-    var PV = {
+    var VH = {
         border: !1,
         className: "",
         mask: null,
@@ -251,369 +251,369 @@ export const modules = {
         swapOpacity: !1,
         widthAuto: !1
       },
-      AV = yV.forwardRef((function(VV, eV) {
-        var xV = wV(wV({}, PV), VV),
-          YV = xV.icon,
-          UV = xV.mask,
-          yV = xV.symbol,
-          pV = xV.className,
-          QV = xV.title,
-          nV = xV.titleId,
-          ZV = xV.maskId,
-          rV = FV(YV),
-          kV = TV("classes", [].concat(vV(BV(xV)), vV((pV || "").split(" ")))),
-          bV = TV("transform", "string" === typeof xV.transform ? JV.parse.transform(xV.transform) : xV.transform),
-          EV = TV("mask", FV(UV)),
-          jV = (0, JV.icon)(rV, wV(wV(wV(wV({}, kV), bV), EV), {}, {
-            symbol: yV,
-            title: QV,
-            titleId: nV,
-            maskId: ZV
+      OH = hH.forwardRef((function(HH, BH) {
+        var LH = EH(EH({}, VH), HH),
+          rH = LH.icon,
+          SH = LH.mask,
+          hH = LH.symbol,
+          tH = LH.className,
+          zH = LH.title,
+          CH = LH.titleId,
+          XH = LH.maskId,
+          YH = TH(rH),
+          uH = UH("classes", [].concat(GH(MH(LH)), GH((tH || "").split(" ")))),
+          QH = UH("transform", "string" === typeof LH.transform ? AH.parse.transform(LH.transform) : LH.transform),
+          WH = UH("mask", TH(SH)),
+          xH = (0, AH.icon)(YH, EH(EH(EH(EH({}, uH), QH), WH), {}, {
+            symbol: hH,
+            title: zH,
+            titleId: CH,
+            maskId: XH
           }));
-        if (!jV) return function() {
-          var VV;
-          !tV && console && "function" === typeof console.error && (VV = console).error.apply(VV, arguments)
-        }("Could not find icon", rV), null;
-        var qV = jV.abstract,
-          AV = {
-            ref: eV
+        if (!xH) return function() {
+          var HH;
+          !PH && console && "function" === typeof console.error && (HH = console).error.apply(HH, arguments)
+        }("Could not find icon", YH), null;
+        var vH = xH.abstract,
+          OH = {
+            ref: BH
           };
-        return Object.keys(xV).forEach((function(VV) {
-          PV.hasOwnProperty(VV) || (AV[VV] = xV[VV])
-        })), NV(qV[0], AV)
+        return Object.keys(LH).forEach((function(HH) {
+          VH.hasOwnProperty(HH) || (OH[HH] = LH[HH])
+        })), bH(vH[0], OH)
       }));
-    AV.displayName = "FontAwesomeIcon", AV.propTypes = {
-      beat: UV().bool,
-      border: UV().bool,
-      beatFade: UV().bool,
-      bounce: UV().bool,
-      className: UV().string,
-      fade: UV().bool,
-      flash: UV().bool,
-      mask: UV().oneOfType([UV().object, UV().array, UV().string]),
-      maskId: UV().string,
-      fixedWidth: UV().bool,
-      inverse: UV().bool,
-      flip: UV().oneOf([!0, !1, "horizontal", "vertical", "both"]),
-      icon: UV().oneOfType([UV().object, UV().array, UV().string]),
-      listItem: UV().bool,
-      pull: UV().oneOf(["right", "left"]),
-      pulse: UV().bool,
-      rotation: UV().oneOf([0, 90, 180, 270]),
-      rotateBy: UV().bool,
-      shake: UV().bool,
-      size: UV().oneOf(["2xs", "xs", "sm", "lg", "xl", "2xl", "1x", "2x", "3x", "4x", "5x", "6x", "7x", "8x", "9x", "10x"]),
-      spin: UV().bool,
-      spinPulse: UV().bool,
-      spinReverse: UV().bool,
-      symbol: UV().oneOfType([UV().bool, UV().string]),
-      title: UV().string,
-      titleId: UV().string,
-      transform: UV().oneOfType([UV().string, UV().object]),
-      swapOpacity: UV().bool,
-      widthAuto: UV().bool
+    OH.displayName = "FontAwesomeIcon", OH.propTypes = {
+      beat: SH().bool,
+      border: SH().bool,
+      beatFade: SH().bool,
+      bounce: SH().bool,
+      className: SH().string,
+      fade: SH().bool,
+      flash: SH().bool,
+      mask: SH().oneOfType([SH().object, SH().array, SH().string]),
+      maskId: SH().string,
+      fixedWidth: SH().bool,
+      inverse: SH().bool,
+      flip: SH().oneOf([!0, !1, "horizontal", "vertical", "both"]),
+      icon: SH().oneOfType([SH().object, SH().array, SH().string]),
+      listItem: SH().bool,
+      pull: SH().oneOf(["right", "left"]),
+      pulse: SH().bool,
+      rotation: SH().oneOf([0, 90, 180, 270]),
+      rotateBy: SH().bool,
+      shake: SH().bool,
+      size: SH().oneOf(["2xs", "xs", "sm", "lg", "xl", "2xl", "1x", "2x", "3x", "4x", "5x", "6x", "7x", "8x", "9x", "10x"]),
+      spin: SH().bool,
+      spinPulse: SH().bool,
+      spinReverse: SH().bool,
+      symbol: SH().oneOfType([SH().bool, SH().string]),
+      title: SH().string,
+      titleId: SH().string,
+      transform: SH().oneOfType([SH().string, SH().object]),
+      swapOpacity: SH().bool,
+      widthAuto: SH().bool
     };
-    var NV = function VV(eV, xV) {
-      var JV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      if ("string" === typeof xV) return xV;
-      var YV = (xV.children || []).map((function(xV) {
-          return VV(eV, xV)
+    var bH = function HH(BH, LH) {
+      var AH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      if ("string" === typeof LH) return LH;
+      var rH = (LH.children || []).map((function(LH) {
+          return HH(BH, LH)
         })),
-        UV = Object.keys(xV.attributes || {}).reduce((function(VV, eV) {
-          var JV = xV.attributes[eV];
-          switch (eV) {
+        SH = Object.keys(LH.attributes || {}).reduce((function(HH, BH) {
+          var AH = LH.attributes[BH];
+          switch (BH) {
             case "class":
-              VV.attrs.className = JV, delete xV.attributes.class;
+              HH.attrs.className = AH, delete LH.attributes.class;
               break;
             case "style":
-              VV.attrs.style = JV.split(";").map((function(VV) {
-                return VV.trim()
-              })).filter((function(VV) {
-                return VV
-              })).reduce((function(VV, eV) {
-                var xV, JV = eV.indexOf(":"),
-                  YV = jV(eV.slice(0, JV)),
-                  UV = eV.slice(JV + 1).trim();
-                return YV.startsWith("webkit") ? VV[(xV = YV, xV.charAt(0).toUpperCase() + xV.slice(1))] = UV : VV[YV] = UV, VV
+              HH.attrs.style = AH.split(";").map((function(HH) {
+                return HH.trim()
+              })).filter((function(HH) {
+                return HH
+              })).reduce((function(HH, BH) {
+                var LH, AH = BH.indexOf(":"),
+                  rH = xH(BH.slice(0, AH)),
+                  SH = BH.slice(AH + 1).trim();
+                return rH.startsWith("webkit") ? HH[(LH = rH, LH.charAt(0).toUpperCase() + LH.slice(1))] = SH : HH[rH] = SH, HH
               }), {});
               break;
             default:
-              0 === eV.indexOf("aria-") || 0 === eV.indexOf("data-") ? VV.attrs[eV.toLowerCase()] = JV : VV.attrs[jV(eV)] = JV
+              0 === BH.indexOf("aria-") || 0 === BH.indexOf("data-") ? HH.attrs[BH.toLowerCase()] = AH : HH.attrs[xH(BH)] = AH
           }
-          return VV
+          return HH
         }), {
           attrs: {}
         }),
-        yV = JV.style,
-        pV = void 0 === yV ? {} : yV,
-        QV = function(VV, eV) {
-          if (null == VV) return {};
-          var xV, JV, YV = function(VV, eV) {
-            if (null == VV) return {};
-            var xV = {};
-            for (var JV in VV)
-              if ({}.hasOwnProperty.call(VV, JV)) {
-                if (-1 !== eV.indexOf(JV)) continue;
-                xV[JV] = VV[JV]
-              } return xV
-          }(VV, eV);
+        hH = AH.style,
+        tH = void 0 === hH ? {} : hH,
+        zH = function(HH, BH) {
+          if (null == HH) return {};
+          var LH, AH, rH = function(HH, BH) {
+            if (null == HH) return {};
+            var LH = {};
+            for (var AH in HH)
+              if ({}.hasOwnProperty.call(HH, AH)) {
+                if (-1 !== BH.indexOf(AH)) continue;
+                LH[AH] = HH[AH]
+              } return LH
+          }(HH, BH);
           if (Object.getOwnPropertySymbols) {
-            var UV = Object.getOwnPropertySymbols(VV);
-            for (JV = 0; JV < UV.length; JV++) xV = UV[JV], -1 === eV.indexOf(xV) && {}.propertyIsEnumerable.call(VV, xV) && (YV[xV] = VV[xV])
+            var SH = Object.getOwnPropertySymbols(HH);
+            for (AH = 0; AH < SH.length; AH++) LH = SH[AH], -1 === BH.indexOf(LH) && {}.propertyIsEnumerable.call(HH, LH) && (rH[LH] = HH[LH])
           }
-          return YV
-        }(JV, qV);
-      return UV.attrs.style = wV(wV({}, UV.attrs.style), pV), eV.apply(void 0, [xV.tag, wV(wV({}, UV.attrs), QV)].concat(vV(YV)))
-    }.bind(null, yV.createElement)
+          return rH
+        }(AH, vH);
+      return SH.attrs.style = EH(EH({}, SH.attrs.style), tH), BH.apply(void 0, [LH.tag, EH(EH({}, SH.attrs), zH)].concat(GH(rH)))
+    }.bind(null, hH.createElement)
   },
-  5461: (VV, eV, xV) => {
-    var JV = xV(5469);
+  5454: (HH, BH, LH) => {
+    var AH = LH(5462);
 
-    function YV() {}
+    function rH() {}
 
-    function UV() {}
-    UV.resetWarningCache = YV, VV.exports = function() {
-      function VV(VV, eV, xV, YV, UV, yV) {
-        if (yV !== JV) {
-          var pV = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw pV.name = "Invariant Violation", pV
+    function SH() {}
+    SH.resetWarningCache = rH, HH.exports = function() {
+      function HH(HH, BH, LH, rH, SH, hH) {
+        if (hH !== AH) {
+          var tH = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw tH.name = "Invariant Violation", tH
         }
       }
 
-      function eV() {
-        return VV
+      function BH() {
+        return HH
       }
-      VV.isRequired = VV;
-      var xV = {
-        array: VV,
-        bigint: VV,
-        bool: VV,
-        func: VV,
-        number: VV,
-        object: VV,
-        string: VV,
-        symbol: VV,
-        any: VV,
-        arrayOf: eV,
-        element: VV,
-        elementType: VV,
-        instanceOf: eV,
-        node: VV,
-        objectOf: eV,
-        oneOf: eV,
-        oneOfType: eV,
-        shape: eV,
-        exact: eV,
-        checkPropTypes: UV,
-        resetWarningCache: YV
+      HH.isRequired = HH;
+      var LH = {
+        array: HH,
+        bigint: HH,
+        bool: HH,
+        func: HH,
+        number: HH,
+        object: HH,
+        string: HH,
+        symbol: HH,
+        any: HH,
+        arrayOf: BH,
+        element: HH,
+        elementType: HH,
+        instanceOf: BH,
+        node: HH,
+        objectOf: BH,
+        oneOf: BH,
+        oneOfType: BH,
+        shape: BH,
+        exact: BH,
+        checkPropTypes: SH,
+        resetWarningCache: rH
       };
-      return xV.PropTypes = xV, xV
+      return LH.PropTypes = LH, LH
     }
   },
-  5453: (VV, eV, xV) => {
-    VV.exports = xV(5461)()
+  5450: (HH, BH, LH) => {
+    HH.exports = LH(5454)()
   },
-  5469: VV => {
-    VV.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  5462: HH => {
+    HH.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  7314: (VV, eV, xV) => {
-    function JV(VV, eV) {
-      (null == eV || eV > VV.length) && (eV = VV.length);
-      for (var xV = 0, JV = Array(eV); xV < eV; xV++) JV[xV] = VV[xV];
-      return JV
+  7298: (HH, BH, LH) => {
+    function AH(HH, BH) {
+      (null == BH || BH > HH.length) && (BH = HH.length);
+      for (var LH = 0, AH = Array(BH); LH < BH; LH++) AH[LH] = HH[LH];
+      return AH
     }
 
-    function YV(VV, eV) {
-      for (var xV = 0; xV < eV.length; xV++) {
-        var JV = eV[xV];
-        JV.enumerable = JV.enumerable || !1, JV.configurable = !0, "value" in JV && (JV.writable = !0), Object.defineProperty(VV, ZV(JV.key), JV)
+    function rH(HH, BH) {
+      for (var LH = 0; LH < BH.length; LH++) {
+        var AH = BH[LH];
+        AH.enumerable = AH.enumerable || !1, AH.configurable = !0, "value" in AH && (AH.writable = !0), Object.defineProperty(HH, XH(AH.key), AH)
       }
     }
 
-    function UV(VV, eV) {
-      var xV = "undefined" != typeof Symbol && VV[Symbol.iterator] || VV["@@iterator"];
-      if (!xV) {
-        if (Array.isArray(VV) || (xV = rV(VV)) || eV && VV && "number" == typeof VV.length) {
-          xV && (VV = xV);
-          var JV = 0,
-            YV = function() {};
+    function SH(HH, BH) {
+      var LH = "undefined" != typeof Symbol && HH[Symbol.iterator] || HH["@@iterator"];
+      if (!LH) {
+        if (Array.isArray(HH) || (LH = YH(HH)) || BH && HH && "number" == typeof HH.length) {
+          LH && (HH = LH);
+          var AH = 0,
+            rH = function() {};
           return {
-            s: YV,
+            s: rH,
             n: function() {
-              return JV >= VV.length ? {
+              return AH >= HH.length ? {
                 done: !0
               } : {
                 done: !1,
-                value: VV[JV++]
+                value: HH[AH++]
               }
             },
-            e: function(VV) {
-              throw VV
+            e: function(HH) {
+              throw HH
             },
-            f: YV
+            f: rH
           }
         }
         throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }
-      var UV, yV = !0,
-        pV = !1;
+      var SH, hH = !0,
+        tH = !1;
       return {
         s: function() {
-          xV = xV.call(VV)
+          LH = LH.call(HH)
         },
         n: function() {
-          var VV = xV.next();
-          return yV = VV.done, VV
+          var HH = LH.next();
+          return hH = HH.done, HH
         },
-        e: function(VV) {
-          pV = !0, UV = VV
+        e: function(HH) {
+          tH = !0, SH = HH
         },
         f: function() {
           try {
-            yV || null == xV.return || xV.return()
+            hH || null == LH.return || LH.return()
           } finally {
-            if (pV) throw UV
+            if (tH) throw SH
           }
         }
       }
     }
 
-    function yV(VV, eV, xV) {
-      return (eV = ZV(eV)) in VV ? Object.defineProperty(VV, eV, {
-        value: xV,
+    function hH(HH, BH, LH) {
+      return (BH = XH(BH)) in HH ? Object.defineProperty(HH, BH, {
+        value: LH,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : VV[eV] = xV, VV
+      }) : HH[BH] = LH, HH
     }
 
-    function pV(VV, eV) {
-      var xV = Object.keys(VV);
+    function tH(HH, BH) {
+      var LH = Object.keys(HH);
       if (Object.getOwnPropertySymbols) {
-        var JV = Object.getOwnPropertySymbols(VV);
-        eV && (JV = JV.filter((function(eV) {
-          return Object.getOwnPropertyDescriptor(VV, eV).enumerable
-        }))), xV.push.apply(xV, JV)
+        var AH = Object.getOwnPropertySymbols(HH);
+        BH && (AH = AH.filter((function(BH) {
+          return Object.getOwnPropertyDescriptor(HH, BH).enumerable
+        }))), LH.push.apply(LH, AH)
       }
-      return xV
+      return LH
     }
 
-    function QV(VV) {
-      for (var eV = 1; eV < arguments.length; eV++) {
-        var xV = null != arguments[eV] ? arguments[eV] : {};
-        eV % 2 ? pV(Object(xV), !0).forEach((function(eV) {
-          yV(VV, eV, xV[eV])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(VV, Object.getOwnPropertyDescriptors(xV)) : pV(Object(xV)).forEach((function(eV) {
-          Object.defineProperty(VV, eV, Object.getOwnPropertyDescriptor(xV, eV))
+    function zH(HH) {
+      for (var BH = 1; BH < arguments.length; BH++) {
+        var LH = null != arguments[BH] ? arguments[BH] : {};
+        BH % 2 ? tH(Object(LH), !0).forEach((function(BH) {
+          hH(HH, BH, LH[BH])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(HH, Object.getOwnPropertyDescriptors(LH)) : tH(Object(LH)).forEach((function(BH) {
+          Object.defineProperty(HH, BH, Object.getOwnPropertyDescriptor(LH, BH))
         }))
       }
-      return VV
+      return HH
     }
 
-    function nV(VV, eV) {
-      return function(VV) {
-        if (Array.isArray(VV)) return VV
-      }(VV) || function(VV, eV) {
-        var xV = null == VV ? null : "undefined" != typeof Symbol && VV[Symbol.iterator] || VV["@@iterator"];
-        if (null != xV) {
-          var JV, YV, UV, yV, pV = [],
-            QV = !0,
-            nV = !1;
+    function CH(HH, BH) {
+      return function(HH) {
+        if (Array.isArray(HH)) return HH
+      }(HH) || function(HH, BH) {
+        var LH = null == HH ? null : "undefined" != typeof Symbol && HH[Symbol.iterator] || HH["@@iterator"];
+        if (null != LH) {
+          var AH, rH, SH, hH, tH = [],
+            zH = !0,
+            CH = !1;
           try {
-            if (UV = (xV = xV.call(VV)).next, 0 === eV) {
-              if (Object(xV) !== xV) return;
-              QV = !1
+            if (SH = (LH = LH.call(HH)).next, 0 === BH) {
+              if (Object(LH) !== LH) return;
+              zH = !1
             } else
-              for (; !(QV = (JV = UV.call(xV)).done) && (pV.push(JV.value), pV.length !== eV); QV = !0);
-          } catch (VV) {
-            nV = !0, YV = VV
+              for (; !(zH = (AH = SH.call(LH)).done) && (tH.push(AH.value), tH.length !== BH); zH = !0);
+          } catch (HH) {
+            CH = !0, rH = HH
           } finally {
             try {
-              if (!QV && null != xV.return && (yV = xV.return(), Object(yV) !== yV)) return
+              if (!zH && null != LH.return && (hH = LH.return(), Object(hH) !== hH)) return
             } finally {
-              if (nV) throw YV
+              if (CH) throw rH
             }
           }
-          return pV
+          return tH
         }
-      }(VV, eV) || rV(VV, eV) || function() {
+      }(HH, BH) || YH(HH, BH) || function() {
         throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }()
     }
 
-    function wV(VV) {
-      return function(VV) {
-        if (Array.isArray(VV)) return JV(VV)
-      }(VV) || function(VV) {
-        if ("undefined" != typeof Symbol && null != VV[Symbol.iterator] || null != VV["@@iterator"]) return Array.from(VV)
-      }(VV) || rV(VV) || function() {
+    function EH(HH) {
+      return function(HH) {
+        if (Array.isArray(HH)) return AH(HH)
+      }(HH) || function(HH) {
+        if ("undefined" != typeof Symbol && null != HH[Symbol.iterator] || null != HH["@@iterator"]) return Array.from(HH)
+      }(HH) || YH(HH) || function() {
         throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }()
     }
 
-    function ZV(VV) {
-      var eV = function(VV, eV) {
-        if ("object" != typeof VV || !VV) return VV;
-        var xV = VV[Symbol.toPrimitive];
-        if (void 0 !== xV) {
-          var JV = xV.call(VV, eV || "default");
-          if ("object" != typeof JV) return JV;
+    function XH(HH) {
+      var BH = function(HH, BH) {
+        if ("object" != typeof HH || !HH) return HH;
+        var LH = HH[Symbol.toPrimitive];
+        if (void 0 !== LH) {
+          var AH = LH.call(HH, BH || "default");
+          if ("object" != typeof AH) return AH;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === eV ? String : Number)(VV)
-      }(VV, "string");
-      return "symbol" == typeof eV ? eV : eV + ""
+        return ("string" === BH ? String : Number)(HH)
+      }(HH, "string");
+      return "symbol" == typeof BH ? BH : BH + ""
     }
 
-    function vV(VV) {
-      return vV = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(VV) {
-        return typeof VV
-      } : function(VV) {
-        return VV && "function" == typeof Symbol && VV.constructor === Symbol && VV !== Symbol.prototype ? "symbol" : typeof VV
-      }, vV(VV)
+    function GH(HH) {
+      return GH = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(HH) {
+        return typeof HH
+      } : function(HH) {
+        return HH && "function" == typeof Symbol && HH.constructor === Symbol && HH !== Symbol.prototype ? "symbol" : typeof HH
+      }, GH(HH)
     }
 
-    function rV(VV, eV) {
-      if (VV) {
-        if ("string" == typeof VV) return JV(VV, eV);
-        var xV = {}.toString.call(VV).slice(8, -1);
-        return "Object" === xV && VV.constructor && (xV = VV.constructor.name), "Map" === xV || "Set" === xV ? Array.from(VV) : "Arguments" === xV || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(xV) ? JV(VV, eV) : void 0
+    function YH(HH, BH) {
+      if (HH) {
+        if ("string" == typeof HH) return AH(HH, BH);
+        var LH = {}.toString.call(HH).slice(8, -1);
+        return "Object" === LH && HH.constructor && (LH = HH.constructor.name), "Map" === LH || "Set" === LH ? Array.from(HH) : "Arguments" === LH || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(LH) ? AH(HH, BH) : void 0
       }
     }
-    xV.r(eV), xV.d(eV, {
-      api: () => Sx,
-      config: () => xY,
-      counter: () => ZY,
-      dom: () => YY,
-      findIconDefinition: () => yY,
-      icon: () => QY,
-      layer: () => nY,
-      library: () => JY,
-      noAuto: () => eY,
-      parse: () => UY,
-      text: () => wY,
-      toHtml: () => pY
+    LH.r(BH), LH.d(BH, {
+      api: () => JL,
+      config: () => Lr,
+      counter: () => Xr,
+      dom: () => rr,
+      findIconDefinition: () => hr,
+      icon: () => zr,
+      layer: () => Cr,
+      library: () => Ar,
+      noAuto: () => Br,
+      parse: () => Sr,
+      text: () => Er,
+      toHtml: () => tr
     });
-    var kV = function() {},
-      bV = {},
-      EV = {},
-      BV = null,
-      jV = {
-        mark: kV,
-        measure: kV
+    var uH = function() {},
+      QH = {},
+      WH = {},
+      MH = null,
+      xH = {
+        mark: uH,
+        measure: uH
       };
     try {
-      "undefined" !== typeof window && (bV = window), "undefined" !== typeof document && (EV = document), "undefined" !== typeof MutationObserver && (BV = MutationObserver), "undefined" !== typeof performance && (jV = performance)
-    } catch (fV) {}
-    var qV, tV, FV = (bV.navigator || {}).userAgent,
-      TV = void 0 === FV ? "" : FV,
-      PV = bV,
-      AV = EV,
-      NV = BV,
-      XV = jV,
-      MV = (PV.document, !!AV.documentElement && !!AV.head && "function" === typeof AV.addEventListener && "function" === typeof AV.createElement),
-      zV = ~TV.indexOf("MSIE") || ~TV.indexOf("Trident/"),
-      GV = {
+      "undefined" !== typeof window && (QH = window), "undefined" !== typeof document && (WH = document), "undefined" !== typeof MutationObserver && (MH = MutationObserver), "undefined" !== typeof performance && (xH = performance)
+    } catch (DH) {}
+    var vH, PH, TH = (QH.navigator || {}).userAgent,
+      UH = void 0 === TH ? "" : TH,
+      VH = QH,
+      OH = WH,
+      bH = MH,
+      kH = xH,
+      mH = (VH.document, !!OH.documentElement && !!OH.head && "function" === typeof OH.addEventListener && "function" === typeof OH.createElement),
+      oH = ~UH.indexOf("MSIE") || ~UH.indexOf("Trident/"),
+      IH = {
         classic: {
           fa: "solid",
           fas: "solid",
@@ -722,28 +722,28 @@ export const modules = {
           faufsb: "semibold"
         }
       },
-      WV = ["fa-classic", "fa-duotone", "fa-sharp", "fa-sharp-duotone", "fa-thumbprint", "fa-whiteboard", "fa-notdog", "fa-notdog-duo", "fa-chisel", "fa-etch", "fa-graphite", "fa-jelly", "fa-jelly-fill", "fa-jelly-duo", "fa-slab", "fa-slab-press", "fa-utility", "fa-utility-duo", "fa-utility-fill"],
-      RV = "classic",
-      gV = "duotone",
-      DV = "sharp",
-      iV = "sharp-duotone",
-      CV = "chisel",
-      aV = "etch",
-      oV = "graphite",
-      cV = "jelly",
-      hV = "jelly-duo",
-      lV = "jelly-fill",
-      LV = "notdog",
-      fV = "notdog-duo",
-      mV = "slab",
-      KV = "slab-press",
-      HV = "thumbprint",
-      uV = "utility",
-      sV = "utility-duo",
-      SV = "utility-fill",
-      IV = "whiteboard",
-      dV = [RV, gV, DV, iV, CV, aV, oV, cV, hV, lV, LV, fV, mV, KV, HV, uV, sV, SV, IV],
-      OV = (yV(yV(yV(yV(yV(yV(yV(yV(yV(yV(qV = {}, RV, "Classic"), gV, "Duotone"), DV, "Sharp"), iV, "Sharp Duotone"), CV, "Chisel"), aV, "Etch"), oV, "Graphite"), cV, "Jelly"), hV, "Jelly Duo"), lV, "Jelly Fill"), yV(yV(yV(yV(yV(yV(yV(yV(yV(qV, LV, "Notdog"), fV, "Notdog Duo"), mV, "Slab"), KV, "Slab Press"), HV, "Thumbprint"), uV, "Utility"), sV, "Utility Duo"), SV, "Utility Fill"), IV, "Whiteboard"), new Map([
+      fH = ["fa-classic", "fa-duotone", "fa-sharp", "fa-sharp-duotone", "fa-thumbprint", "fa-whiteboard", "fa-notdog", "fa-notdog-duo", "fa-chisel", "fa-etch", "fa-graphite", "fa-jelly", "fa-jelly-fill", "fa-jelly-duo", "fa-slab", "fa-slab-press", "fa-utility", "fa-utility-duo", "fa-utility-fill"],
+      lH = "classic",
+      KH = "duotone",
+      cH = "sharp",
+      eH = "sharp-duotone",
+      qH = "chisel",
+      gH = "etch",
+      NH = "graphite",
+      RH = "jelly",
+      jH = "jelly-duo",
+      nH = "jelly-fill",
+      FH = "notdog",
+      DH = "notdog-duo",
+      wH = "slab",
+      ZH = "slab-press",
+      dH = "thumbprint",
+      aH = "utility",
+      sH = "utility-duo",
+      JH = "utility-fill",
+      iH = "whiteboard",
+      pH = [lH, KH, cH, eH, qH, gH, NH, RH, jH, nH, FH, DH, wH, ZH, dH, aH, sH, JH, iH],
+      yH = (hH(hH(hH(hH(hH(hH(hH(hH(hH(hH(vH = {}, lH, "Classic"), KH, "Duotone"), cH, "Sharp"), eH, "Sharp Duotone"), qH, "Chisel"), gH, "Etch"), NH, "Graphite"), RH, "Jelly"), jH, "Jelly Duo"), nH, "Jelly Fill"), hH(hH(hH(hH(hH(hH(hH(hH(hH(vH, FH, "Notdog"), DH, "Notdog Duo"), wH, "Slab"), ZH, "Slab Press"), dH, "Thumbprint"), aH, "Utility"), sH, "Utility Duo"), JH, "Utility Fill"), iH, "Whiteboard"), new Map([
         ["classic", {
           defaultShortPrefixId: "fas",
           defaultStyleId: "solid",
@@ -878,26 +878,26 @@ export const modules = {
           defaultFontWeight: 600
         }]
       ])),
-      Ve = ["fak", "fa-kit", "fakd", "fa-kit-duotone"],
-      ee = {
+      HB = ["fak", "fa-kit", "fakd", "fa-kit-duotone"],
+      BB = {
         fak: "kit",
         "fa-kit": "kit"
       },
-      xe = {
+      LB = {
         fakd: "kit-duotone",
         "fa-kit-duotone": "kit-duotone"
       },
-      Je = (yV(yV({}, "kit", "Kit"), "kit-duotone", "Kit Duotone"), {
+      AB = (hH(hH({}, "kit", "Kit"), "kit-duotone", "Kit Duotone"), {
         kit: "fak"
       }),
-      Ye = {
+      rB = {
         "kit-duotone": "fakd"
       },
-      Ue = "duotone-group",
-      ye = "swap-opacity",
-      pe = "primary",
-      Qe = "secondary",
-      ne = (yV(yV(yV(yV(yV(yV(yV(yV(yV(yV(tV = {}, "classic", "Classic"), "duotone", "Duotone"), "sharp", "Sharp"), "sharp-duotone", "Sharp Duotone"), "chisel", "Chisel"), "etch", "Etch"), "graphite", "Graphite"), "jelly", "Jelly"), "jelly-duo", "Jelly Duo"), "jelly-fill", "Jelly Fill"), yV(yV(yV(yV(yV(yV(yV(yV(yV(tV, "notdog", "Notdog"), "notdog-duo", "Notdog Duo"), "slab", "Slab"), "slab-press", "Slab Press"), "thumbprint", "Thumbprint"), "utility", "Utility"), "utility-duo", "Utility Duo"), "utility-fill", "Utility Fill"), "whiteboard", "Whiteboard"), yV(yV({}, "kit", "Kit"), "kit-duotone", "Kit Duotone"), {
+      SB = "duotone-group",
+      hB = "swap-opacity",
+      tB = "primary",
+      zB = "secondary",
+      CB = (hH(hH(hH(hH(hH(hH(hH(hH(hH(hH(PH = {}, "classic", "Classic"), "duotone", "Duotone"), "sharp", "Sharp"), "sharp-duotone", "Sharp Duotone"), "chisel", "Chisel"), "etch", "Etch"), "graphite", "Graphite"), "jelly", "Jelly"), "jelly-duo", "Jelly Duo"), "jelly-fill", "Jelly Fill"), hH(hH(hH(hH(hH(hH(hH(hH(hH(PH, "notdog", "Notdog"), "notdog-duo", "Notdog Duo"), "slab", "Slab"), "slab-press", "Slab Press"), "thumbprint", "Thumbprint"), "utility", "Utility"), "utility-duo", "Utility Duo"), "utility-fill", "Utility Fill"), "whiteboard", "Whiteboard"), hH(hH({}, "kit", "Kit"), "kit-duotone", "Kit Duotone"), {
         classic: {
           fab: "fa-brands",
           fad: "fa-duotone",
@@ -969,10 +969,10 @@ export const modules = {
           faufsb: "fa-semibold"
         }
       }),
-      we = ["fa", "fas", "far", "fal", "fat", "fad", "fadr", "fadl", "fadt", "fab", "fass", "fasr", "fasl", "fast", "fasds", "fasdr", "fasdl", "fasdt", "faslr", "faslpr", "fawsb", "fatl", "fans", "fands", "faes", "fagt", "fajr", "fajfr", "fajdr", "facr", "fausb", "faudsb", "faufsb"].concat(["fa-classic", "fa-duotone", "fa-sharp", "fa-sharp-duotone", "fa-thumbprint", "fa-whiteboard", "fa-notdog", "fa-notdog-duo", "fa-chisel", "fa-etch", "fa-graphite", "fa-jelly", "fa-jelly-fill", "fa-jelly-duo", "fa-slab", "fa-slab-press", "fa-utility", "fa-utility-duo", "fa-utility-fill"], ["fa-solid", "fa-regular", "fa-light", "fa-thin", "fa-duotone", "fa-brands", "fa-semibold"]),
-      Ze = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-      ve = Ze.concat([11, 12, 13, 14, 15, 16, 17, 18, 19, 20]),
-      re = [].concat(wV(Object.keys({
+      EB = ["fa", "fas", "far", "fal", "fat", "fad", "fadr", "fadl", "fadt", "fab", "fass", "fasr", "fasl", "fast", "fasds", "fasdr", "fasdl", "fasdt", "faslr", "faslpr", "fawsb", "fatl", "fans", "fands", "faes", "fagt", "fajr", "fajfr", "fajdr", "facr", "fausb", "faudsb", "faufsb"].concat(["fa-classic", "fa-duotone", "fa-sharp", "fa-sharp-duotone", "fa-thumbprint", "fa-whiteboard", "fa-notdog", "fa-notdog-duo", "fa-chisel", "fa-etch", "fa-graphite", "fa-jelly", "fa-jelly-fill", "fa-jelly-duo", "fa-slab", "fa-slab-press", "fa-utility", "fa-utility-duo", "fa-utility-fill"], ["fa-solid", "fa-regular", "fa-light", "fa-thin", "fa-duotone", "fa-brands", "fa-semibold"]),
+      XB = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      GB = XB.concat([11, 12, 13, 14, 15, 16, 17, 18, 19, 20]),
+      YB = [].concat(EH(Object.keys({
         classic: ["fas", "far", "fal", "fat", "fad"],
         duotone: ["fadr", "fadl", "fadt"],
         sharp: ["fass", "fasr", "fasl", "fast"],
@@ -992,41 +992,41 @@ export const modules = {
         utility: ["fausb"],
         "utility-duo": ["faudsb"],
         "utility-fill": ["faufsb"]
-      })), ["solid", "regular", "light", "thin", "duotone", "brands", "semibold"], ["aw", "fw", "pull-left", "pull-right"], ["2xs", "xs", "sm", "lg", "xl", "2xl", "beat", "border", "fade", "beat-fade", "bounce", "flip-both", "flip-horizontal", "flip-vertical", "flip", "inverse", "layers", "layers-bottom-left", "layers-bottom-right", "layers-counter", "layers-text", "layers-top-left", "layers-top-right", "li", "pull-end", "pull-start", "pulse", "rotate-180", "rotate-270", "rotate-90", "rotate-by", "shake", "spin-pulse", "spin-reverse", "spin", "stack-1x", "stack-2x", "stack", "ul", "width-auto", "width-fixed", Ue, ye, pe, Qe]).concat(Ze.map((function(VV) {
-        return "".concat(VV, "x")
-      }))).concat(ve.map((function(VV) {
-        return "w-".concat(VV)
+      })), ["solid", "regular", "light", "thin", "duotone", "brands", "semibold"], ["aw", "fw", "pull-left", "pull-right"], ["2xs", "xs", "sm", "lg", "xl", "2xl", "beat", "border", "fade", "beat-fade", "bounce", "flip-both", "flip-horizontal", "flip-vertical", "flip", "inverse", "layers", "layers-bottom-left", "layers-bottom-right", "layers-counter", "layers-text", "layers-top-left", "layers-top-right", "li", "pull-end", "pull-start", "pulse", "rotate-180", "rotate-270", "rotate-90", "rotate-by", "shake", "spin-pulse", "spin-reverse", "spin", "stack-1x", "stack-2x", "stack", "ul", "width-auto", "width-fixed", SB, hB, tB, zB]).concat(XB.map((function(HH) {
+        return "".concat(HH, "x")
+      }))).concat(GB.map((function(HH) {
+        return "w-".concat(HH)
       }))),
-      ke = "___FONT_AWESOME___",
-      be = "svg-inline--fa",
-      Ee = "data-fa-i2svg",
-      Be = "data-fa-pseudo-element",
-      je = "data-prefix",
-      qe = "data-icon",
-      te = "fontawesome-i2svg",
-      Fe = ["HTML", "HEAD", "STYLE", "SCRIPT"],
-      Te = ["::before", "::after", ":before", ":after"],
-      Pe = function() {
+      uB = "___FONT_AWESOME___",
+      QB = "svg-inline--fa",
+      WB = "data-fa-i2svg",
+      MB = "data-fa-pseudo-element",
+      xB = "data-prefix",
+      vB = "data-icon",
+      PB = "fontawesome-i2svg",
+      TB = ["HTML", "HEAD", "STYLE", "SCRIPT"],
+      UB = ["::before", "::after", ":before", ":after"],
+      VB = function() {
         try {
           return !0
-        } catch (VV) {
+        } catch (HH) {
           return !1
         }
       }();
 
-    function Ae(VV) {
-      return new Proxy(VV, {
-        get: function(VV, eV) {
-          return eV in VV ? VV[eV] : VV[RV]
+    function OB(HH) {
+      return new Proxy(HH, {
+        get: function(HH, BH) {
+          return BH in HH ? HH[BH] : HH[lH]
         }
       })
     }
-    var Ne = QV({}, GV);
-    Ne[RV] = QV(QV(QV(QV({}, {
+    var bB = zH({}, IH);
+    bB[lH] = zH(zH(zH(zH({}, {
       "fa-duotone": "duotone"
-    }), GV[RV]), ee), xe);
-    var Xe = Ae(Ne),
-      Me = QV({}, {
+    }), IH[lH]), BB), LB);
+    var kB = OB(bB),
+      mB = zH({}, {
         chisel: {
           regular: "facr"
         },
@@ -1098,16 +1098,16 @@ export const modules = {
           semibold: "fawsb"
         }
       });
-    Me[RV] = QV(QV(QV(QV({}, {
+    mB[lH] = zH(zH(zH(zH({}, {
       duotone: "fad"
-    }), Me[RV]), Je), Ye);
-    var ze = Ae(Me),
-      Ge = QV({}, ne);
-    Ge[RV] = QV(QV({}, Ge[RV]), {
+    }), mB[lH]), AB), rB);
+    var oB = OB(mB),
+      IB = zH({}, CB);
+    IB[lH] = zH(zH({}, IB[lH]), {
       fak: "fa-kit"
     });
-    var We = Ae(Ge),
-      Re = QV({}, {
+    var fB = OB(IB),
+      lB = zH({}, {
         classic: {
           "fa-brands": "fab",
           "fa-duotone": "fad",
@@ -1179,14 +1179,14 @@ export const modules = {
           "fa-semibold": "faufsb"
         }
       });
-    Re[RV] = QV(QV({}, Re[RV]), {
+    lB[lH] = zH(zH({}, lB[lH]), {
       "fa-kit": "fak"
     });
-    Ae(Re);
-    var ge = /fa(k|kd|s|r|l|t|d|dr|dl|dt|b|slr|slpr|wsb|tl|ns|nds|es|gt|jr|jfr|jdr|usb|ufsb|udsb|cr|ss|sr|sl|st|sds|sdr|sdl|sdt)?[\-\ ]/,
-      De = "fa-layers-text",
-      ie = /Font ?Awesome ?([567 ]*)(Solid|Regular|Light|Thin|Duotone|Brands|Free|Pro|Sharp Duotone|Sharp|Kit|Notdog Duo|Notdog|Chisel|Etch|Graphite|Thumbprint|Jelly Fill|Jelly Duo|Jelly|Utility|Utility Fill|Utility Duo|Slab Press|Slab|Whiteboard)?.*/i,
-      Ce = (Ae(QV({}, {
+    OB(lB);
+    var KB = /fa(k|kd|s|r|l|t|d|dr|dl|dt|b|slr|slpr|wsb|tl|ns|nds|es|gt|jr|jfr|jdr|usb|ufsb|udsb|cr|ss|sr|sl|st|sds|sdr|sdl|sdt)?[\-\ ]/,
+      cB = "fa-layers-text",
+      eB = /Font ?Awesome ?([567 ]*)(Solid|Regular|Light|Thin|Duotone|Brands|Free|Pro|Sharp Duotone|Sharp|Kit|Notdog Duo|Notdog|Chisel|Etch|Graphite|Thumbprint|Jelly Fill|Jelly Duo|Jelly|Utility|Utility Fill|Utility Duo|Slab Press|Slab|Whiteboard)?.*/i,
+      qB = (OB(zH({}, {
         classic: {
           900: "fas",
           400: "far",
@@ -1258,15 +1258,15 @@ export const modules = {
           600: "faufsb"
         }
       })), ["class", "data-prefix", "data-icon", "data-fa-transform", "data-fa-mask"]),
-      ae = {
+      gB = {
         GROUP: "duotone-group",
         SWAP_OPACITY: "swap-opacity",
         PRIMARY: "primary",
         SECONDARY: "secondary"
       },
-      oe = [].concat(wV(["kit"]), wV(re)),
-      ce = PV.FontAwesomeConfig || {};
-    if (AV && "function" === typeof AV.querySelector) {
+      NB = [].concat(EH(["kit"]), EH(YB)),
+      RB = VH.FontAwesomeConfig || {};
+    if (OH && "function" === typeof OH.querySelector) {
       [
         ["data-family-prefix", "familyPrefix"],
         ["data-css-prefix", "cssPrefix"],
@@ -1283,24 +1283,24 @@ export const modules = {
         ["data-keep-original-source", "keepOriginalSource"],
         ["data-measure-performance", "measurePerformance"],
         ["data-show-missing-icons", "showMissingIcons"]
-      ].forEach((function(VV) {
-        var eV = nV(VV, 2),
-          xV = eV[0],
-          JV = eV[1],
-          YV = function(VV) {
-            return "" === VV || "false" !== VV && ("true" === VV || VV)
-          }(function(VV) {
-            var eV = AV.querySelector("script[" + VV + "]");
-            if (eV) return eV.getAttribute(VV)
-          }(xV));
-        void 0 !== YV && null !== YV && (ce[JV] = YV)
+      ].forEach((function(HH) {
+        var BH = CH(HH, 2),
+          LH = BH[0],
+          AH = BH[1],
+          rH = function(HH) {
+            return "" === HH || "false" !== HH && ("true" === HH || HH)
+          }(function(HH) {
+            var BH = OH.querySelector("script[" + HH + "]");
+            if (BH) return BH.getAttribute(HH)
+          }(LH));
+        void 0 !== rH && null !== rH && (RB[AH] = rH)
       }))
     }
-    var he = {
+    var jB = {
       styleDefault: "solid",
-      familyDefault: RV,
+      familyDefault: lH,
       cssPrefix: "fa",
-      replacementClass: be,
+      replacementClass: QB,
       autoReplaceSvg: !0,
       autoAddCss: !0,
       searchPseudoElements: !1,
@@ -1312,36 +1312,36 @@ export const modules = {
       measurePerformance: !1,
       showMissingIcons: !0
     };
-    ce.familyPrefix && (ce.cssPrefix = ce.familyPrefix);
-    var le = QV(QV({}, he), ce);
-    le.autoReplaceSvg || (le.observeMutations = !1);
-    var Le = {};
-    Object.keys(he).forEach((function(VV) {
-      Object.defineProperty(Le, VV, {
+    RB.familyPrefix && (RB.cssPrefix = RB.familyPrefix);
+    var nB = zH(zH({}, jB), RB);
+    nB.autoReplaceSvg || (nB.observeMutations = !1);
+    var FB = {};
+    Object.keys(jB).forEach((function(HH) {
+      Object.defineProperty(FB, HH, {
         enumerable: !0,
-        set: function(eV) {
-          le[VV] = eV, fe.forEach((function(VV) {
-            return VV(Le)
+        set: function(BH) {
+          nB[HH] = BH, DB.forEach((function(HH) {
+            return HH(FB)
           }))
         },
         get: function() {
-          return le[VV]
+          return nB[HH]
         }
       })
-    })), Object.defineProperty(Le, "familyPrefix", {
+    })), Object.defineProperty(FB, "familyPrefix", {
       enumerable: !0,
-      set: function(VV) {
-        le.cssPrefix = VV, fe.forEach((function(VV) {
-          return VV(Le)
+      set: function(HH) {
+        nB.cssPrefix = HH, DB.forEach((function(HH) {
+          return HH(FB)
         }))
       },
       get: function() {
-        return le.cssPrefix
+        return nB.cssPrefix
       }
-    }), PV.FontAwesomeConfig = Le;
-    var fe = [];
-    var me = 16,
-      Ke = {
+    }), VH.FontAwesomeConfig = FB;
+    var DB = [];
+    var wB = 16,
+      ZB = {
         size: 16,
         x: 0,
         y: 0,
@@ -1350,369 +1350,369 @@ export const modules = {
         flipY: !1
       };
 
-    function He() {
-      for (var VV = 12, eV = ""; VV-- > 0;) eV += "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" [62 * Math.random() | 0];
-      return eV
+    function dB() {
+      for (var HH = 12, BH = ""; HH-- > 0;) BH += "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" [62 * Math.random() | 0];
+      return BH
     }
 
-    function ue(VV) {
-      for (var eV = [], xV = (VV || []).length >>> 0; xV--;) eV[xV] = VV[xV];
-      return eV
+    function aB(HH) {
+      for (var BH = [], LH = (HH || []).length >>> 0; LH--;) BH[LH] = HH[LH];
+      return BH
     }
 
-    function se(VV) {
-      return VV.classList ? ue(VV.classList) : (VV.getAttribute("class") || "").split(" ").filter((function(VV) {
-        return VV
+    function sB(HH) {
+      return HH.classList ? aB(HH.classList) : (HH.getAttribute("class") || "").split(" ").filter((function(HH) {
+        return HH
       }))
     }
 
-    function Se(VV) {
-      return "".concat(VV).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    function JB(HH) {
+      return "".concat(HH).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
     }
 
-    function Ie(VV) {
-      return Object.keys(VV || {}).reduce((function(eV, xV) {
-        return eV + "".concat(xV, ": ").concat(VV[xV].trim(), ";")
+    function iB(HH) {
+      return Object.keys(HH || {}).reduce((function(BH, LH) {
+        return BH + "".concat(LH, ": ").concat(HH[LH].trim(), ";")
       }), "")
     }
 
-    function de(VV) {
-      return VV.size !== Ke.size || VV.x !== Ke.x || VV.y !== Ke.y || VV.rotate !== Ke.rotate || VV.flipX || VV.flipY
+    function pB(HH) {
+      return HH.size !== ZB.size || HH.x !== ZB.x || HH.y !== ZB.y || HH.rotate !== ZB.rotate || HH.flipX || HH.flipY
     }
 
-    function Oe() {
-      var VV = "fa",
-        eV = be,
-        xV = Le.cssPrefix,
-        JV = Le.replacementClass,
-        YV = ":root, :host {\n  --fa-font-solid: normal 900 1em/1 'Font Awesome 7 Free';\n  --fa-font-regular: normal 400 1em/1 'Font Awesome 7 Free';\n  --fa-font-light: normal 300 1em/1 'Font Awesome 7 Pro';\n  --fa-font-thin: normal 100 1em/1 'Font Awesome 7 Pro';\n  --fa-font-duotone: normal 900 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-regular: normal 400 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-light: normal 300 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-thin: normal 100 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-brands: normal 400 1em/1 'Font Awesome 7 Brands';\n  --fa-font-sharp-solid: normal 900 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-regular: normal 400 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-light: normal 300 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-thin: normal 100 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-duotone-solid: normal 900 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-regular: normal 400 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-light: normal 300 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-thin: normal 100 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-slab-regular: normal 400 1em/1 'Font Awesome 7 Slab';\n  --fa-font-slab-press-regular: normal 400 1em/1 'Font Awesome 7 Slab Press';\n  --fa-font-whiteboard-semibold: normal 600 1em/1 'Font Awesome 7 Whiteboard';\n  --fa-font-thumbprint-light: normal 300 1em/1 'Font Awesome 7 Thumbprint';\n  --fa-font-notdog-solid: normal 900 1em/1 'Font Awesome 7 Notdog';\n  --fa-font-notdog-duo-solid: normal 900 1em/1 'Font Awesome 7 Notdog Duo';\n  --fa-font-etch-solid: normal 900 1em/1 'Font Awesome 7 Etch';\n  --fa-font-graphite-thin: normal 100 1em/1 'Font Awesome 7 Graphite';\n  --fa-font-jelly-regular: normal 400 1em/1 'Font Awesome 7 Jelly';\n  --fa-font-jelly-fill-regular: normal 400 1em/1 'Font Awesome 7 Jelly Fill';\n  --fa-font-jelly-duo-regular: normal 400 1em/1 'Font Awesome 7 Jelly Duo';\n  --fa-font-chisel-regular: normal 400 1em/1 'Font Awesome 7 Chisel';\n  --fa-font-utility-semibold: normal 600 1em/1 'Font Awesome 7 Utility';\n  --fa-font-utility-duo-semibold: normal 600 1em/1 'Font Awesome 7 Utility Duo';\n  --fa-font-utility-fill-semibold: normal 600 1em/1 'Font Awesome 7 Utility Fill';\n}\n\n.svg-inline--fa {\n  box-sizing: content-box;\n  display: var(--fa-display, inline-block);\n  height: 1em;\n  overflow: visible;\n  vertical-align: -0.125em;\n  width: var(--fa-width, 1.25em);\n}\n.svg-inline--fa.fa-2xs {\n  vertical-align: 0.1em;\n}\n.svg-inline--fa.fa-xs {\n  vertical-align: 0em;\n}\n.svg-inline--fa.fa-sm {\n  vertical-align: -0.0714285714em;\n}\n.svg-inline--fa.fa-lg {\n  vertical-align: -0.2em;\n}\n.svg-inline--fa.fa-xl {\n  vertical-align: -0.25em;\n}\n.svg-inline--fa.fa-2xl {\n  vertical-align: -0.3125em;\n}\n.svg-inline--fa.fa-pull-left,\n.svg-inline--fa .fa-pull-start {\n  float: inline-start;\n  margin-inline-end: var(--fa-pull-margin, 0.3em);\n}\n.svg-inline--fa.fa-pull-right,\n.svg-inline--fa .fa-pull-end {\n  float: inline-end;\n  margin-inline-start: var(--fa-pull-margin, 0.3em);\n}\n.svg-inline--fa.fa-li {\n  width: var(--fa-li-width, 2em);\n  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));\n  inset-block-start: 0.25em; /* syncing vertical alignment with Web Font rendering */\n}\n\n.fa-layers-counter, .fa-layers-text {\n  display: inline-block;\n  position: absolute;\n  text-align: center;\n}\n\n.fa-layers {\n  display: inline-block;\n  height: 1em;\n  position: relative;\n  text-align: center;\n  vertical-align: -0.125em;\n  width: var(--fa-width, 1.25em);\n}\n.fa-layers .svg-inline--fa {\n  inset: 0;\n  margin: auto;\n  position: absolute;\n  transform-origin: center center;\n}\n\n.fa-layers-text {\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  transform-origin: center center;\n}\n\n.fa-layers-counter {\n  background-color: var(--fa-counter-background-color, #ff253a);\n  border-radius: var(--fa-counter-border-radius, 1em);\n  box-sizing: border-box;\n  color: var(--fa-inverse, #fff);\n  line-height: var(--fa-counter-line-height, 1);\n  max-width: var(--fa-counter-max-width, 5em);\n  min-width: var(--fa-counter-min-width, 1.5em);\n  overflow: hidden;\n  padding: var(--fa-counter-padding, 0.25em 0.5em);\n  right: var(--fa-right, 0);\n  text-overflow: ellipsis;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-counter-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-bottom-right {\n  bottom: var(--fa-bottom, 0);\n  right: var(--fa-right, 0);\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom right;\n}\n\n.fa-layers-bottom-left {\n  bottom: var(--fa-bottom, 0);\n  left: var(--fa-left, 0);\n  right: auto;\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom left;\n}\n\n.fa-layers-top-right {\n  top: var(--fa-top, 0);\n  right: var(--fa-right, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-top-left {\n  left: var(--fa-left, 0);\n  right: auto;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top left;\n}\n\n.fa-1x {\n  font-size: 1em;\n}\n\n.fa-2x {\n  font-size: 2em;\n}\n\n.fa-3x {\n  font-size: 3em;\n}\n\n.fa-4x {\n  font-size: 4em;\n}\n\n.fa-5x {\n  font-size: 5em;\n}\n\n.fa-6x {\n  font-size: 6em;\n}\n\n.fa-7x {\n  font-size: 7em;\n}\n\n.fa-8x {\n  font-size: 8em;\n}\n\n.fa-9x {\n  font-size: 9em;\n}\n\n.fa-10x {\n  font-size: 10em;\n}\n\n.fa-2xs {\n  font-size: calc(10 / 16 * 1em); /* converts a 10px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 10 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 10 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-xs {\n  font-size: calc(12 / 16 * 1em); /* converts a 12px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 12 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 12 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-sm {\n  font-size: calc(14 / 16 * 1em); /* converts a 14px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 14 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 14 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-lg {\n  font-size: calc(20 / 16 * 1em); /* converts a 20px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 20 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 20 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-xl {\n  font-size: calc(24 / 16 * 1em); /* converts a 24px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 24 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 24 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-2xl {\n  font-size: calc(32 / 16 * 1em); /* converts a 32px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 32 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 32 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-width-auto {\n  --fa-width: auto;\n}\n\n.fa-fw,\n.fa-width-fixed {\n  --fa-width: 1.25em;\n}\n\n.fa-ul {\n  list-style-type: none;\n  margin-inline-start: var(--fa-li-margin, 2.5em);\n  padding-inline-start: 0;\n}\n.fa-ul > li {\n  position: relative;\n}\n\n.fa-li {\n  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));\n  position: absolute;\n  text-align: center;\n  width: var(--fa-li-width, 2em);\n  line-height: inherit;\n}\n\n/* Heads Up: Bordered Icons will not be supported in the future!\n  - This feature will be deprecated in the next major release of Font Awesome (v8)!\n  - You may continue to use it in this version *v7), but it will not be supported in Font Awesome v8.\n*/\n/* Notes:\n* --@{v.$css-prefix}-border-width = 1/16 by default (to render as ~1px based on a 16px default font-size)\n* --@{v.$css-prefix}-border-padding =\n  ** 3/16 for vertical padding (to give ~2px of vertical whitespace around an icon considering it's vertical alignment)\n  ** 4/16 for horizontal padding (to give ~4px of horizontal whitespace around an icon)\n*/\n.fa-border {\n  border-color: var(--fa-border-color, #eee);\n  border-radius: var(--fa-border-radius, 0.1em);\n  border-style: var(--fa-border-style, solid);\n  border-width: var(--fa-border-width, 0.0625em);\n  box-sizing: var(--fa-border-box-sizing, content-box);\n  padding: var(--fa-border-padding, 0.1875em 0.25em);\n}\n\n.fa-pull-left,\n.fa-pull-start {\n  float: inline-start;\n  margin-inline-end: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-pull-right,\n.fa-pull-end {\n  float: inline-end;\n  margin-inline-start: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-beat {\n  animation-name: fa-beat;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-bounce {\n  animation-name: fa-bounce;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));\n}\n\n.fa-fade {\n  animation-name: fa-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-beat-fade {\n  animation-name: fa-beat-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-flip {\n  animation-name: fa-flip;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-shake {\n  animation-name: fa-shake;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin {\n  animation-name: fa-spin;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 2s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin-reverse {\n  --fa-animation-direction: reverse;\n}\n\n.fa-pulse,\n.fa-spin-pulse {\n  animation-name: fa-spin;\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, steps(8));\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .fa-beat,\n  .fa-bounce,\n  .fa-fade,\n  .fa-beat-fade,\n  .fa-flip,\n  .fa-pulse,\n  .fa-shake,\n  .fa-spin,\n  .fa-spin-pulse {\n    animation: none !important;\n    transition: none !important;\n  }\n}\n@keyframes fa-beat {\n  0%, 90% {\n    transform: scale(1);\n  }\n  45% {\n    transform: scale(var(--fa-beat-scale, 1.25));\n  }\n}\n@keyframes fa-bounce {\n  0% {\n    transform: scale(1, 1) translateY(0);\n  }\n  10% {\n    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);\n  }\n  30% {\n    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));\n  }\n  50% {\n    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);\n  }\n  57% {\n    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));\n  }\n  64% {\n    transform: scale(1, 1) translateY(0);\n  }\n  100% {\n    transform: scale(1, 1) translateY(0);\n  }\n}\n@keyframes fa-fade {\n  50% {\n    opacity: var(--fa-fade-opacity, 0.4);\n  }\n}\n@keyframes fa-beat-fade {\n  0%, 100% {\n    opacity: var(--fa-beat-fade-opacity, 0.4);\n    transform: scale(1);\n  }\n  50% {\n    opacity: 1;\n    transform: scale(var(--fa-beat-fade-scale, 1.125));\n  }\n}\n@keyframes fa-flip {\n  50% {\n    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));\n  }\n}\n@keyframes fa-shake {\n  0% {\n    transform: rotate(-15deg);\n  }\n  4% {\n    transform: rotate(15deg);\n  }\n  8%, 24% {\n    transform: rotate(-18deg);\n  }\n  12%, 28% {\n    transform: rotate(18deg);\n  }\n  16% {\n    transform: rotate(-22deg);\n  }\n  20% {\n    transform: rotate(22deg);\n  }\n  32% {\n    transform: rotate(-12deg);\n  }\n  36% {\n    transform: rotate(12deg);\n  }\n  40%, 100% {\n    transform: rotate(0deg);\n  }\n}\n@keyframes fa-spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.fa-rotate-90 {\n  transform: rotate(90deg);\n}\n\n.fa-rotate-180 {\n  transform: rotate(180deg);\n}\n\n.fa-rotate-270 {\n  transform: rotate(270deg);\n}\n\n.fa-flip-horizontal {\n  transform: scale(-1, 1);\n}\n\n.fa-flip-vertical {\n  transform: scale(1, -1);\n}\n\n.fa-flip-both,\n.fa-flip-horizontal.fa-flip-vertical {\n  transform: scale(-1, -1);\n}\n\n.fa-rotate-by {\n  transform: rotate(var(--fa-rotate-angle, 0));\n}\n\n.svg-inline--fa .fa-primary {\n  fill: var(--fa-primary-color, currentColor);\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa .fa-secondary {\n  fill: var(--fa-secondary-color, currentColor);\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-primary {\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-secondary {\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa mask .fa-primary,\n.svg-inline--fa mask .fa-secondary {\n  fill: black;\n}\n\n.svg-inline--fa.fa-inverse {\n  fill: var(--fa-inverse, #fff);\n}\n\n.fa-stack {\n  display: inline-block;\n  height: 2em;\n  line-height: 2em;\n  position: relative;\n  vertical-align: middle;\n  width: 2.5em;\n}\n\n.fa-inverse {\n  color: var(--fa-inverse, #fff);\n}\n\n.svg-inline--fa.fa-stack-1x {\n  --fa-width: 1.25em;\n  height: 1em;\n  width: var(--fa-width);\n}\n.svg-inline--fa.fa-stack-2x {\n  --fa-width: 2.5em;\n  height: 2em;\n  width: var(--fa-width);\n}\n\n.fa-stack-1x,\n.fa-stack-2x {\n  inset: 0;\n  margin: auto;\n  position: absolute;\n  z-index: var(--fa-stack-z-index, auto);\n}";
-      if (xV !== VV || JV !== eV) {
-        var UV = new RegExp("\\.".concat(VV, "\\-"), "g"),
-          yV = new RegExp("\\--".concat(VV, "\\-"), "g"),
-          pV = new RegExp("\\.".concat(eV), "g");
-        YV = YV.replace(UV, ".".concat(xV, "-")).replace(yV, "--".concat(xV, "-")).replace(pV, ".".concat(JV))
+    function yB() {
+      var HH = "fa",
+        BH = QB,
+        LH = FB.cssPrefix,
+        AH = FB.replacementClass,
+        rH = ":root, :host {\n  --fa-font-solid: normal 900 1em/1 'Font Awesome 7 Free';\n  --fa-font-regular: normal 400 1em/1 'Font Awesome 7 Free';\n  --fa-font-light: normal 300 1em/1 'Font Awesome 7 Pro';\n  --fa-font-thin: normal 100 1em/1 'Font Awesome 7 Pro';\n  --fa-font-duotone: normal 900 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-regular: normal 400 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-light: normal 300 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-thin: normal 100 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-brands: normal 400 1em/1 'Font Awesome 7 Brands';\n  --fa-font-sharp-solid: normal 900 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-regular: normal 400 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-light: normal 300 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-thin: normal 100 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-duotone-solid: normal 900 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-regular: normal 400 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-light: normal 300 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-thin: normal 100 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-slab-regular: normal 400 1em/1 'Font Awesome 7 Slab';\n  --fa-font-slab-press-regular: normal 400 1em/1 'Font Awesome 7 Slab Press';\n  --fa-font-whiteboard-semibold: normal 600 1em/1 'Font Awesome 7 Whiteboard';\n  --fa-font-thumbprint-light: normal 300 1em/1 'Font Awesome 7 Thumbprint';\n  --fa-font-notdog-solid: normal 900 1em/1 'Font Awesome 7 Notdog';\n  --fa-font-notdog-duo-solid: normal 900 1em/1 'Font Awesome 7 Notdog Duo';\n  --fa-font-etch-solid: normal 900 1em/1 'Font Awesome 7 Etch';\n  --fa-font-graphite-thin: normal 100 1em/1 'Font Awesome 7 Graphite';\n  --fa-font-jelly-regular: normal 400 1em/1 'Font Awesome 7 Jelly';\n  --fa-font-jelly-fill-regular: normal 400 1em/1 'Font Awesome 7 Jelly Fill';\n  --fa-font-jelly-duo-regular: normal 400 1em/1 'Font Awesome 7 Jelly Duo';\n  --fa-font-chisel-regular: normal 400 1em/1 'Font Awesome 7 Chisel';\n  --fa-font-utility-semibold: normal 600 1em/1 'Font Awesome 7 Utility';\n  --fa-font-utility-duo-semibold: normal 600 1em/1 'Font Awesome 7 Utility Duo';\n  --fa-font-utility-fill-semibold: normal 600 1em/1 'Font Awesome 7 Utility Fill';\n}\n\n.svg-inline--fa {\n  box-sizing: content-box;\n  display: var(--fa-display, inline-block);\n  height: 1em;\n  overflow: visible;\n  vertical-align: -0.125em;\n  width: var(--fa-width, 1.25em);\n}\n.svg-inline--fa.fa-2xs {\n  vertical-align: 0.1em;\n}\n.svg-inline--fa.fa-xs {\n  vertical-align: 0em;\n}\n.svg-inline--fa.fa-sm {\n  vertical-align: -0.0714285714em;\n}\n.svg-inline--fa.fa-lg {\n  vertical-align: -0.2em;\n}\n.svg-inline--fa.fa-xl {\n  vertical-align: -0.25em;\n}\n.svg-inline--fa.fa-2xl {\n  vertical-align: -0.3125em;\n}\n.svg-inline--fa.fa-pull-left,\n.svg-inline--fa .fa-pull-start {\n  float: inline-start;\n  margin-inline-end: var(--fa-pull-margin, 0.3em);\n}\n.svg-inline--fa.fa-pull-right,\n.svg-inline--fa .fa-pull-end {\n  float: inline-end;\n  margin-inline-start: var(--fa-pull-margin, 0.3em);\n}\n.svg-inline--fa.fa-li {\n  width: var(--fa-li-width, 2em);\n  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));\n  inset-block-start: 0.25em; /* syncing vertical alignment with Web Font rendering */\n}\n\n.fa-layers-counter, .fa-layers-text {\n  display: inline-block;\n  position: absolute;\n  text-align: center;\n}\n\n.fa-layers {\n  display: inline-block;\n  height: 1em;\n  position: relative;\n  text-align: center;\n  vertical-align: -0.125em;\n  width: var(--fa-width, 1.25em);\n}\n.fa-layers .svg-inline--fa {\n  inset: 0;\n  margin: auto;\n  position: absolute;\n  transform-origin: center center;\n}\n\n.fa-layers-text {\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  transform-origin: center center;\n}\n\n.fa-layers-counter {\n  background-color: var(--fa-counter-background-color, #ff253a);\n  border-radius: var(--fa-counter-border-radius, 1em);\n  box-sizing: border-box;\n  color: var(--fa-inverse, #fff);\n  line-height: var(--fa-counter-line-height, 1);\n  max-width: var(--fa-counter-max-width, 5em);\n  min-width: var(--fa-counter-min-width, 1.5em);\n  overflow: hidden;\n  padding: var(--fa-counter-padding, 0.25em 0.5em);\n  right: var(--fa-right, 0);\n  text-overflow: ellipsis;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-counter-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-bottom-right {\n  bottom: var(--fa-bottom, 0);\n  right: var(--fa-right, 0);\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom right;\n}\n\n.fa-layers-bottom-left {\n  bottom: var(--fa-bottom, 0);\n  left: var(--fa-left, 0);\n  right: auto;\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom left;\n}\n\n.fa-layers-top-right {\n  top: var(--fa-top, 0);\n  right: var(--fa-right, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-top-left {\n  left: var(--fa-left, 0);\n  right: auto;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top left;\n}\n\n.fa-1x {\n  font-size: 1em;\n}\n\n.fa-2x {\n  font-size: 2em;\n}\n\n.fa-3x {\n  font-size: 3em;\n}\n\n.fa-4x {\n  font-size: 4em;\n}\n\n.fa-5x {\n  font-size: 5em;\n}\n\n.fa-6x {\n  font-size: 6em;\n}\n\n.fa-7x {\n  font-size: 7em;\n}\n\n.fa-8x {\n  font-size: 8em;\n}\n\n.fa-9x {\n  font-size: 9em;\n}\n\n.fa-10x {\n  font-size: 10em;\n}\n\n.fa-2xs {\n  font-size: calc(10 / 16 * 1em); /* converts a 10px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 10 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 10 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-xs {\n  font-size: calc(12 / 16 * 1em); /* converts a 12px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 12 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 12 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-sm {\n  font-size: calc(14 / 16 * 1em); /* converts a 14px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 14 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 14 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-lg {\n  font-size: calc(20 / 16 * 1em); /* converts a 20px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 20 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 20 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-xl {\n  font-size: calc(24 / 16 * 1em); /* converts a 24px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 24 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 24 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-2xl {\n  font-size: calc(32 / 16 * 1em); /* converts a 32px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 32 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 32 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-width-auto {\n  --fa-width: auto;\n}\n\n.fa-fw,\n.fa-width-fixed {\n  --fa-width: 1.25em;\n}\n\n.fa-ul {\n  list-style-type: none;\n  margin-inline-start: var(--fa-li-margin, 2.5em);\n  padding-inline-start: 0;\n}\n.fa-ul > li {\n  position: relative;\n}\n\n.fa-li {\n  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));\n  position: absolute;\n  text-align: center;\n  width: var(--fa-li-width, 2em);\n  line-height: inherit;\n}\n\n/* Heads Up: Bordered Icons will not be supported in the future!\n  - This feature will be deprecated in the next major release of Font Awesome (v8)!\n  - You may continue to use it in this version *v7), but it will not be supported in Font Awesome v8.\n*/\n/* Notes:\n* --@{v.$css-prefix}-border-width = 1/16 by default (to render as ~1px based on a 16px default font-size)\n* --@{v.$css-prefix}-border-padding =\n  ** 3/16 for vertical padding (to give ~2px of vertical whitespace around an icon considering it's vertical alignment)\n  ** 4/16 for horizontal padding (to give ~4px of horizontal whitespace around an icon)\n*/\n.fa-border {\n  border-color: var(--fa-border-color, #eee);\n  border-radius: var(--fa-border-radius, 0.1em);\n  border-style: var(--fa-border-style, solid);\n  border-width: var(--fa-border-width, 0.0625em);\n  box-sizing: var(--fa-border-box-sizing, content-box);\n  padding: var(--fa-border-padding, 0.1875em 0.25em);\n}\n\n.fa-pull-left,\n.fa-pull-start {\n  float: inline-start;\n  margin-inline-end: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-pull-right,\n.fa-pull-end {\n  float: inline-end;\n  margin-inline-start: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-beat {\n  animation-name: fa-beat;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-bounce {\n  animation-name: fa-bounce;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));\n}\n\n.fa-fade {\n  animation-name: fa-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-beat-fade {\n  animation-name: fa-beat-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-flip {\n  animation-name: fa-flip;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-shake {\n  animation-name: fa-shake;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin {\n  animation-name: fa-spin;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 2s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin-reverse {\n  --fa-animation-direction: reverse;\n}\n\n.fa-pulse,\n.fa-spin-pulse {\n  animation-name: fa-spin;\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, steps(8));\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .fa-beat,\n  .fa-bounce,\n  .fa-fade,\n  .fa-beat-fade,\n  .fa-flip,\n  .fa-pulse,\n  .fa-shake,\n  .fa-spin,\n  .fa-spin-pulse {\n    animation: none !important;\n    transition: none !important;\n  }\n}\n@keyframes fa-beat {\n  0%, 90% {\n    transform: scale(1);\n  }\n  45% {\n    transform: scale(var(--fa-beat-scale, 1.25));\n  }\n}\n@keyframes fa-bounce {\n  0% {\n    transform: scale(1, 1) translateY(0);\n  }\n  10% {\n    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);\n  }\n  30% {\n    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));\n  }\n  50% {\n    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);\n  }\n  57% {\n    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));\n  }\n  64% {\n    transform: scale(1, 1) translateY(0);\n  }\n  100% {\n    transform: scale(1, 1) translateY(0);\n  }\n}\n@keyframes fa-fade {\n  50% {\n    opacity: var(--fa-fade-opacity, 0.4);\n  }\n}\n@keyframes fa-beat-fade {\n  0%, 100% {\n    opacity: var(--fa-beat-fade-opacity, 0.4);\n    transform: scale(1);\n  }\n  50% {\n    opacity: 1;\n    transform: scale(var(--fa-beat-fade-scale, 1.125));\n  }\n}\n@keyframes fa-flip {\n  50% {\n    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));\n  }\n}\n@keyframes fa-shake {\n  0% {\n    transform: rotate(-15deg);\n  }\n  4% {\n    transform: rotate(15deg);\n  }\n  8%, 24% {\n    transform: rotate(-18deg);\n  }\n  12%, 28% {\n    transform: rotate(18deg);\n  }\n  16% {\n    transform: rotate(-22deg);\n  }\n  20% {\n    transform: rotate(22deg);\n  }\n  32% {\n    transform: rotate(-12deg);\n  }\n  36% {\n    transform: rotate(12deg);\n  }\n  40%, 100% {\n    transform: rotate(0deg);\n  }\n}\n@keyframes fa-spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.fa-rotate-90 {\n  transform: rotate(90deg);\n}\n\n.fa-rotate-180 {\n  transform: rotate(180deg);\n}\n\n.fa-rotate-270 {\n  transform: rotate(270deg);\n}\n\n.fa-flip-horizontal {\n  transform: scale(-1, 1);\n}\n\n.fa-flip-vertical {\n  transform: scale(1, -1);\n}\n\n.fa-flip-both,\n.fa-flip-horizontal.fa-flip-vertical {\n  transform: scale(-1, -1);\n}\n\n.fa-rotate-by {\n  transform: rotate(var(--fa-rotate-angle, 0));\n}\n\n.svg-inline--fa .fa-primary {\n  fill: var(--fa-primary-color, currentColor);\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa .fa-secondary {\n  fill: var(--fa-secondary-color, currentColor);\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-primary {\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-secondary {\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa mask .fa-primary,\n.svg-inline--fa mask .fa-secondary {\n  fill: black;\n}\n\n.svg-inline--fa.fa-inverse {\n  fill: var(--fa-inverse, #fff);\n}\n\n.fa-stack {\n  display: inline-block;\n  height: 2em;\n  line-height: 2em;\n  position: relative;\n  vertical-align: middle;\n  width: 2.5em;\n}\n\n.fa-inverse {\n  color: var(--fa-inverse, #fff);\n}\n\n.svg-inline--fa.fa-stack-1x {\n  --fa-width: 1.25em;\n  height: 1em;\n  width: var(--fa-width);\n}\n.svg-inline--fa.fa-stack-2x {\n  --fa-width: 2.5em;\n  height: 2em;\n  width: var(--fa-width);\n}\n\n.fa-stack-1x,\n.fa-stack-2x {\n  inset: 0;\n  margin: auto;\n  position: absolute;\n  z-index: var(--fa-stack-z-index, auto);\n}";
+      if (LH !== HH || AH !== BH) {
+        var SH = new RegExp("\\.".concat(HH, "\\-"), "g"),
+          hH = new RegExp("\\--".concat(HH, "\\-"), "g"),
+          tH = new RegExp("\\.".concat(BH), "g");
+        rH = rH.replace(SH, ".".concat(LH, "-")).replace(hH, "--".concat(LH, "-")).replace(tH, ".".concat(AH))
       }
-      return YV
+      return rH
     }
-    var Vx = !1;
+    var HL = !1;
 
-    function ex() {
-      Le.autoAddCss && !Vx && (! function(VV) {
-        if (VV && MV) {
-          var eV = AV.createElement("style");
-          eV.setAttribute("type", "text/css"), eV.innerHTML = VV;
-          for (var xV = AV.head.childNodes, JV = null, YV = xV.length - 1; YV > -1; YV--) {
-            var UV = xV[YV],
-              yV = (UV.tagName || "").toUpperCase();
-            ["STYLE", "LINK"].indexOf(yV) > -1 && (JV = UV)
+    function BL() {
+      FB.autoAddCss && !HL && (! function(HH) {
+        if (HH && mH) {
+          var BH = OH.createElement("style");
+          BH.setAttribute("type", "text/css"), BH.innerHTML = HH;
+          for (var LH = OH.head.childNodes, AH = null, rH = LH.length - 1; rH > -1; rH--) {
+            var SH = LH[rH],
+              hH = (SH.tagName || "").toUpperCase();
+            ["STYLE", "LINK"].indexOf(hH) > -1 && (AH = SH)
           }
-          AV.head.insertBefore(eV, JV)
+          OH.head.insertBefore(BH, AH)
         }
-      }(Oe()), Vx = !0)
+      }(yB()), HL = !0)
     }
-    var xx = {
+    var LL = {
         mixout: function() {
           return {
             dom: {
-              css: Oe,
-              insertCss: ex
+              css: yB,
+              insertCss: BL
             }
           }
         },
         hooks: function() {
           return {
             beforeDOMElementCreation: function() {
-              ex()
+              BL()
             },
             beforeI2svg: function() {
-              ex()
+              BL()
             }
           }
         }
       },
-      Jx = PV || {};
-    Jx[ke] || (Jx[ke] = {}), Jx[ke].styles || (Jx[ke].styles = {}), Jx[ke].hooks || (Jx[ke].hooks = {}), Jx[ke].shims || (Jx[ke].shims = []);
-    var Yx = Jx[ke],
-      Ux = [],
-      yx = function() {
-        AV.removeEventListener("DOMContentLoaded", yx), px = 1, Ux.map((function(VV) {
-          return VV()
+      AL = VH || {};
+    AL[uB] || (AL[uB] = {}), AL[uB].styles || (AL[uB].styles = {}), AL[uB].hooks || (AL[uB].hooks = {}), AL[uB].shims || (AL[uB].shims = []);
+    var rL = AL[uB],
+      SL = [],
+      hL = function() {
+        OH.removeEventListener("DOMContentLoaded", hL), tL = 1, SL.map((function(HH) {
+          return HH()
         }))
       },
-      px = !1;
+      tL = !1;
 
-    function Qx(VV) {
-      var eV = VV.tag,
-        xV = VV.attributes,
-        JV = void 0 === xV ? {} : xV,
-        YV = VV.children,
-        UV = void 0 === YV ? [] : YV;
-      return "string" === typeof VV ? Se(VV) : "<".concat(eV, " ").concat(function(VV) {
-        return Object.keys(VV || {}).reduce((function(eV, xV) {
-          return eV + "".concat(xV, '="').concat(Se(VV[xV]), '" ')
+    function zL(HH) {
+      var BH = HH.tag,
+        LH = HH.attributes,
+        AH = void 0 === LH ? {} : LH,
+        rH = HH.children,
+        SH = void 0 === rH ? [] : rH;
+      return "string" === typeof HH ? JB(HH) : "<".concat(BH, " ").concat(function(HH) {
+        return Object.keys(HH || {}).reduce((function(BH, LH) {
+          return BH + "".concat(LH, '="').concat(JB(HH[LH]), '" ')
         }), "").trim()
-      }(JV), ">").concat(UV.map(Qx).join(""), "</").concat(eV, ">")
+      }(AH), ">").concat(SH.map(zL).join(""), "</").concat(BH, ">")
     }
 
-    function nx(VV, eV, xV) {
-      if (VV && VV[eV] && VV[eV][xV]) return {
-        prefix: eV,
-        iconName: xV,
-        icon: VV[eV][xV]
+    function CL(HH, BH, LH) {
+      if (HH && HH[BH] && HH[BH][LH]) return {
+        prefix: BH,
+        iconName: LH,
+        icon: HH[BH][LH]
       }
     }
-    MV && ((px = (AV.documentElement.doScroll ? /^loaded|^c/ : /^loaded|^i|^c/).test(AV.readyState)) || AV.addEventListener("DOMContentLoaded", yx));
-    var wx = function(VV, eV, xV, JV) {
-      var YV, UV, yV, pV = Object.keys(VV),
-        QV = pV.length,
-        nV = void 0 !== JV ? function(VV, eV) {
-          return function(xV, JV, YV, UV) {
-            return VV.call(eV, xV, JV, YV, UV)
+    mH && ((tL = (OH.documentElement.doScroll ? /^loaded|^c/ : /^loaded|^i|^c/).test(OH.readyState)) || OH.addEventListener("DOMContentLoaded", hL));
+    var EL = function(HH, BH, LH, AH) {
+      var rH, SH, hH, tH = Object.keys(HH),
+        zH = tH.length,
+        CH = void 0 !== AH ? function(HH, BH) {
+          return function(LH, AH, rH, SH) {
+            return HH.call(BH, LH, AH, rH, SH)
           }
-        }(eV, JV) : eV;
-      for (void 0 === xV ? (YV = 1, yV = VV[pV[0]]) : (YV = 0, yV = xV); YV < QV; YV++) yV = nV(yV, VV[UV = pV[YV]], UV, VV);
-      return yV
+        }(BH, AH) : BH;
+      for (void 0 === LH ? (rH = 1, hH = HH[tH[0]]) : (rH = 0, hH = LH); rH < zH; rH++) hH = CH(hH, HH[SH = tH[rH]], SH, HH);
+      return hH
     };
 
-    function Zx(VV) {
-      return 1 !== wV(VV).length ? null : VV.codePointAt(0).toString(16)
+    function XL(HH) {
+      return 1 !== EH(HH).length ? null : HH.codePointAt(0).toString(16)
     }
 
-    function vx(VV) {
-      return Object.keys(VV).reduce((function(eV, xV) {
-        var JV = VV[xV];
-        return !!JV.icon ? eV[JV.iconName] = JV.icon : eV[xV] = JV, eV
+    function GL(HH) {
+      return Object.keys(HH).reduce((function(BH, LH) {
+        var AH = HH[LH];
+        return !!AH.icon ? BH[AH.iconName] = AH.icon : BH[LH] = AH, BH
       }), {})
     }
 
-    function rx(VV, eV) {
-      var xV = (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}).skipHooks,
-        JV = void 0 !== xV && xV,
-        YV = vx(eV);
-      "function" !== typeof Yx.hooks.addPack || JV ? Yx.styles[VV] = QV(QV({}, Yx.styles[VV] || {}), YV) : Yx.hooks.addPack(VV, vx(eV)), "fas" === VV && rx("fa", eV)
+    function YL(HH, BH) {
+      var LH = (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}).skipHooks,
+        AH = void 0 !== LH && LH,
+        rH = GL(BH);
+      "function" !== typeof rL.hooks.addPack || AH ? rL.styles[HH] = zH(zH({}, rL.styles[HH] || {}), rH) : rL.hooks.addPack(HH, GL(BH)), "fas" === HH && YL("fa", BH)
     }
-    var kx = Yx.styles,
-      bx = Yx.shims,
-      Ex = Object.keys(We),
-      Bx = Ex.reduce((function(VV, eV) {
-        return VV[eV] = Object.keys(We[eV]), VV
+    var uL = rL.styles,
+      QL = rL.shims,
+      WL = Object.keys(fB),
+      ML = WL.reduce((function(HH, BH) {
+        return HH[BH] = Object.keys(fB[BH]), HH
       }), {}),
-      jx = null,
-      qx = {},
-      tx = {},
-      Fx = {},
-      Tx = {},
-      Px = {};
+      xL = null,
+      vL = {},
+      PL = {},
+      TL = {},
+      UL = {},
+      VL = {};
 
-    function Ax(VV, eV) {
-      var xV, JV = eV.split("-"),
-        YV = JV[0],
-        UV = JV.slice(1).join("-");
-      return YV !== VV || "" === UV || (xV = UV, ~oe.indexOf(xV)) ? null : UV
+    function OL(HH, BH) {
+      var LH, AH = BH.split("-"),
+        rH = AH[0],
+        SH = AH.slice(1).join("-");
+      return rH !== HH || "" === SH || (LH = SH, ~NB.indexOf(LH)) ? null : SH
     }
-    var Nx, Xx = function() {
-      var VV = function(VV) {
-        return wx(kx, (function(eV, xV, JV) {
-          return eV[JV] = wx(xV, VV, {}), eV
+    var bL, kL = function() {
+      var HH = function(HH) {
+        return EL(uL, (function(BH, LH, AH) {
+          return BH[AH] = EL(LH, HH, {}), BH
         }), {})
       };
-      qx = VV((function(VV, eV, xV) {
-        (eV[3] && (VV[eV[3]] = xV), eV[2]) && eV[2].filter((function(VV) {
-          return "number" === typeof VV
-        })).forEach((function(eV) {
-          VV[eV.toString(16)] = xV
+      vL = HH((function(HH, BH, LH) {
+        (BH[3] && (HH[BH[3]] = LH), BH[2]) && BH[2].filter((function(HH) {
+          return "number" === typeof HH
+        })).forEach((function(BH) {
+          HH[BH.toString(16)] = LH
         }));
-        return VV
-      })), tx = VV((function(VV, eV, xV) {
-        (VV[xV] = xV, eV[2]) && eV[2].filter((function(VV) {
-          return "string" === typeof VV
-        })).forEach((function(eV) {
-          VV[eV] = xV
+        return HH
+      })), PL = HH((function(HH, BH, LH) {
+        (HH[LH] = LH, BH[2]) && BH[2].filter((function(HH) {
+          return "string" === typeof HH
+        })).forEach((function(BH) {
+          HH[BH] = LH
         }));
-        return VV
-      })), Px = VV((function(VV, eV, xV) {
-        var JV = eV[2];
-        return VV[xV] = xV, JV.forEach((function(eV) {
-          VV[eV] = xV
-        })), VV
+        return HH
+      })), VL = HH((function(HH, BH, LH) {
+        var AH = BH[2];
+        return HH[LH] = LH, AH.forEach((function(BH) {
+          HH[BH] = LH
+        })), HH
       }));
-      var eV = "far" in kx || Le.autoFetchSvg,
-        xV = wx(bx, (function(VV, xV) {
-          var JV = xV[0],
-            YV = xV[1],
-            UV = xV[2];
-          return "far" !== YV || eV || (YV = "fas"), "string" === typeof JV && (VV.names[JV] = {
-            prefix: YV,
-            iconName: UV
-          }), "number" === typeof JV && (VV.unicodes[JV.toString(16)] = {
-            prefix: YV,
-            iconName: UV
-          }), VV
+      var BH = "far" in uL || FB.autoFetchSvg,
+        LH = EL(QL, (function(HH, LH) {
+          var AH = LH[0],
+            rH = LH[1],
+            SH = LH[2];
+          return "far" !== rH || BH || (rH = "fas"), "string" === typeof AH && (HH.names[AH] = {
+            prefix: rH,
+            iconName: SH
+          }), "number" === typeof AH && (HH.unicodes[AH.toString(16)] = {
+            prefix: rH,
+            iconName: SH
+          }), HH
         }), {
           names: {},
           unicodes: {}
         });
-      Fx = xV.names, Tx = xV.unicodes, jx = Rx(Le.styleDefault, {
-        family: Le.familyDefault
+      TL = LH.names, UL = LH.unicodes, xL = lL(FB.styleDefault, {
+        family: FB.familyDefault
       })
     };
 
-    function Mx(VV, eV) {
-      return (qx[VV] || {})[eV]
+    function mL(HH, BH) {
+      return (vL[HH] || {})[BH]
     }
 
-    function zx(VV, eV) {
-      return (Px[VV] || {})[eV]
+    function oL(HH, BH) {
+      return (VL[HH] || {})[BH]
     }
 
-    function Gx(VV) {
-      return Fx[VV] || {
+    function IL(HH) {
+      return TL[HH] || {
         prefix: null,
         iconName: null
       }
     }
 
-    function Wx() {
-      return jx
+    function fL() {
+      return xL
     }
-    Nx = function(VV) {
-      jx = Rx(VV.styleDefault, {
-        family: Le.familyDefault
+    bL = function(HH) {
+      xL = lL(HH.styleDefault, {
+        family: FB.familyDefault
       })
-    }, fe.push(Nx), Xx();
+    }, DB.push(bL), kL();
 
-    function Rx(VV) {
-      var eV = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).family,
-        xV = void 0 === eV ? RV : eV,
-        JV = Xe[xV][VV];
-      if (xV === gV && !VV) return "fad";
-      var YV = ze[xV][VV] || ze[xV][JV],
-        UV = VV in Yx.styles ? VV : null;
-      return YV || UV || null
+    function lL(HH) {
+      var BH = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).family,
+        LH = void 0 === BH ? lH : BH,
+        AH = kB[LH][HH];
+      if (LH === KH && !HH) return "fad";
+      var rH = oB[LH][HH] || oB[LH][AH],
+        SH = HH in rL.styles ? HH : null;
+      return rH || SH || null
     }
 
-    function gx(VV) {
-      return VV.sort().filter((function(VV, eV, xV) {
-        return xV.indexOf(VV) === eV
+    function KL(HH) {
+      return HH.sort().filter((function(HH, BH, LH) {
+        return LH.indexOf(HH) === BH
       }))
     }
-    var Dx = we.concat(Ve);
+    var cL = EB.concat(HB);
 
-    function ix(VV) {
-      var eV = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).skipLookups,
-        xV = void 0 !== eV && eV,
-        JV = null,
-        YV = gx(VV.filter((function(VV) {
-          return Dx.includes(VV)
+    function eL(HH) {
+      var BH = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).skipLookups,
+        LH = void 0 !== BH && BH,
+        AH = null,
+        rH = KL(HH.filter((function(HH) {
+          return cL.includes(HH)
         }))),
-        UV = gx(VV.filter((function(VV) {
-          return !Dx.includes(VV)
+        SH = KL(HH.filter((function(HH) {
+          return !cL.includes(HH)
         }))),
-        yV = nV(YV.filter((function(VV) {
-          return JV = VV, !WV.includes(VV)
+        hH = CH(rH.filter((function(HH) {
+          return AH = HH, !fH.includes(HH)
         })), 1)[0],
-        pV = void 0 === yV ? null : yV,
-        wV = function(VV) {
-          var eV = RV,
-            xV = Ex.reduce((function(VV, eV) {
-              return VV[eV] = "".concat(Le.cssPrefix, "-").concat(eV), VV
+        tH = void 0 === hH ? null : hH,
+        EH = function(HH) {
+          var BH = lH,
+            LH = WL.reduce((function(HH, BH) {
+              return HH[BH] = "".concat(FB.cssPrefix, "-").concat(BH), HH
             }), {});
-          return dV.forEach((function(JV) {
-            (VV.includes(xV[JV]) || VV.some((function(VV) {
-              return Bx[JV].includes(VV)
-            }))) && (eV = JV)
-          })), eV
-        }(YV),
-        ZV = QV(QV({}, function(VV) {
-          var eV = [],
-            xV = null;
-          return VV.forEach((function(VV) {
-            var JV = Ax(Le.cssPrefix, VV);
-            JV ? xV = JV : VV && eV.push(VV)
+          return pH.forEach((function(AH) {
+            (HH.includes(LH[AH]) || HH.some((function(HH) {
+              return ML[AH].includes(HH)
+            }))) && (BH = AH)
+          })), BH
+        }(rH),
+        XH = zH(zH({}, function(HH) {
+          var BH = [],
+            LH = null;
+          return HH.forEach((function(HH) {
+            var AH = OL(FB.cssPrefix, HH);
+            AH ? LH = AH : HH && BH.push(HH)
           })), {
-            iconName: xV,
-            rest: eV
+            iconName: LH,
+            rest: BH
           }
-        }(UV)), {}, {
-          prefix: Rx(pV, {
-            family: wV
+        }(SH)), {}, {
+          prefix: lL(tH, {
+            family: EH
           })
         });
-      return QV(QV(QV({}, ZV), function(VV) {
-        var eV = VV.values,
-          xV = VV.family,
-          JV = VV.canonical,
-          YV = VV.givenPrefix,
-          UV = void 0 === YV ? "" : YV,
-          yV = VV.styles,
-          pV = void 0 === yV ? {} : yV,
-          QV = VV.config,
-          nV = void 0 === QV ? {} : QV,
-          wV = xV === gV,
-          ZV = eV.includes("fa-duotone") || eV.includes("fad"),
-          vV = "duotone" === nV.familyDefault,
-          rV = "fad" === JV.prefix || "fa-duotone" === JV.prefix;
-        !wV && (ZV || vV || rV) && (JV.prefix = "fad");
-        (eV.includes("fa-brands") || eV.includes("fab")) && (JV.prefix = "fab");
-        if (!JV.prefix && Cx.includes(xV)) {
-          if (Object.keys(pV).find((function(VV) {
-              return ax.includes(VV)
-            })) || nV.autoFetchSvg) {
-            var kV = OV.get(xV).defaultShortPrefixId;
-            JV.prefix = kV, JV.iconName = zx(JV.prefix, JV.iconName) || JV.iconName
+      return zH(zH(zH({}, XH), function(HH) {
+        var BH = HH.values,
+          LH = HH.family,
+          AH = HH.canonical,
+          rH = HH.givenPrefix,
+          SH = void 0 === rH ? "" : rH,
+          hH = HH.styles,
+          tH = void 0 === hH ? {} : hH,
+          zH = HH.config,
+          CH = void 0 === zH ? {} : zH,
+          EH = LH === KH,
+          XH = BH.includes("fa-duotone") || BH.includes("fad"),
+          GH = "duotone" === CH.familyDefault,
+          YH = "fad" === AH.prefix || "fa-duotone" === AH.prefix;
+        !EH && (XH || GH || YH) && (AH.prefix = "fad");
+        (BH.includes("fa-brands") || BH.includes("fab")) && (AH.prefix = "fab");
+        if (!AH.prefix && qL.includes(LH)) {
+          if (Object.keys(tH).find((function(HH) {
+              return gL.includes(HH)
+            })) || CH.autoFetchSvg) {
+            var uH = yH.get(LH).defaultShortPrefixId;
+            AH.prefix = uH, AH.iconName = oL(AH.prefix, AH.iconName) || AH.iconName
           }
         }
-        "fa" !== JV.prefix && "fa" !== UV || (JV.prefix = Wx() || "fas");
-        return JV
+        "fa" !== AH.prefix && "fa" !== SH || (AH.prefix = fL() || "fas");
+        return AH
       }({
-        values: VV,
-        family: wV,
-        styles: kx,
-        config: Le,
-        canonical: ZV,
-        givenPrefix: JV
-      })), function(VV, eV, xV) {
-        var JV = xV.prefix,
-          YV = xV.iconName;
-        if (VV || !JV || !YV) return {
-          prefix: JV,
-          iconName: YV
+        values: HH,
+        family: EH,
+        styles: uL,
+        config: FB,
+        canonical: XH,
+        givenPrefix: AH
+      })), function(HH, BH, LH) {
+        var AH = LH.prefix,
+          rH = LH.iconName;
+        if (HH || !AH || !rH) return {
+          prefix: AH,
+          iconName: rH
         };
-        var UV = "fa" === eV ? Gx(YV) : {},
-          yV = zx(JV, YV);
-        YV = UV.iconName || yV || YV, "far" !== (JV = UV.prefix || JV) || kx.far || !kx.fas || Le.autoFetchSvg || (JV = "fas");
+        var SH = "fa" === BH ? IL(rH) : {},
+          hH = oL(AH, rH);
+        rH = SH.iconName || hH || rH, "far" !== (AH = SH.prefix || AH) || uL.far || !uL.fas || FB.autoFetchSvg || (AH = "fas");
         return {
-          prefix: JV,
-          iconName: YV
+          prefix: AH,
+          iconName: rH
         }
-      }(xV, JV, ZV))
+      }(LH, AH, XH))
     }
-    var Cx = dV.filter((function(VV) {
-        return VV !== RV || VV !== gV
+    var qL = pH.filter((function(HH) {
+        return HH !== lH || HH !== KH
       })),
-      ax = Object.keys(ne).filter((function(VV) {
-        return VV !== RV
-      })).map((function(VV) {
-        return Object.keys(ne[VV])
+      gL = Object.keys(CB).filter((function(HH) {
+        return HH !== lH
+      })).map((function(HH) {
+        return Object.keys(CB[HH])
       })).flat();
-    var ox = function() {
-        return function(VV, eV, xV) {
-          return eV && YV(VV.prototype, eV), xV && YV(VV, xV), Object.defineProperty(VV, "prototype", {
+    var NL = function() {
+        return function(HH, BH, LH) {
+          return BH && rH(HH.prototype, BH), LH && rH(HH, LH), Object.defineProperty(HH, "prototype", {
             writable: !1
-          }), VV
-        }((function VV() {
-          ! function(VV, eV) {
-            if (!(VV instanceof eV)) throw new TypeError("Cannot call a class as a function")
-          }(this, VV), this.definitions = {}
+          }), HH
+        }((function HH() {
+          ! function(HH, BH) {
+            if (!(HH instanceof BH)) throw new TypeError("Cannot call a class as a function")
+          }(this, HH), this.definitions = {}
         }), [{
           key: "add",
           value: function() {
-            for (var VV = this, eV = arguments.length, xV = new Array(eV), JV = 0; JV < eV; JV++) xV[JV] = arguments[JV];
-            var YV = xV.reduce(this._pullDefinitions, {});
-            Object.keys(YV).forEach((function(eV) {
-              VV.definitions[eV] = QV(QV({}, VV.definitions[eV] || {}), YV[eV]), rx(eV, YV[eV]);
-              var xV = We[RV][eV];
-              xV && rx(xV, YV[eV]), Xx()
+            for (var HH = this, BH = arguments.length, LH = new Array(BH), AH = 0; AH < BH; AH++) LH[AH] = arguments[AH];
+            var rH = LH.reduce(this._pullDefinitions, {});
+            Object.keys(rH).forEach((function(BH) {
+              HH.definitions[BH] = zH(zH({}, HH.definitions[BH] || {}), rH[BH]), YL(BH, rH[BH]);
+              var LH = fB[lH][BH];
+              LH && YL(LH, rH[BH]), kL()
             }))
           }
         }, {
@@ -1722,201 +1722,201 @@ export const modules = {
           }
         }, {
           key: "_pullDefinitions",
-          value: function(VV, eV) {
-            var xV = eV.prefix && eV.iconName && eV.icon ? {
-              0: eV
-            } : eV;
-            return Object.keys(xV).map((function(eV) {
-              var JV = xV[eV],
-                YV = JV.prefix,
-                UV = JV.iconName,
-                yV = JV.icon,
-                pV = yV[2];
-              VV[YV] || (VV[YV] = {}), pV.length > 0 && pV.forEach((function(eV) {
-                "string" === typeof eV && (VV[YV][eV] = yV)
-              })), VV[YV][UV] = yV
-            })), VV
+          value: function(HH, BH) {
+            var LH = BH.prefix && BH.iconName && BH.icon ? {
+              0: BH
+            } : BH;
+            return Object.keys(LH).map((function(BH) {
+              var AH = LH[BH],
+                rH = AH.prefix,
+                SH = AH.iconName,
+                hH = AH.icon,
+                tH = hH[2];
+              HH[rH] || (HH[rH] = {}), tH.length > 0 && tH.forEach((function(BH) {
+                "string" === typeof BH && (HH[rH][BH] = hH)
+              })), HH[rH][SH] = hH
+            })), HH
           }
         }])
       }(),
-      cx = [],
-      hx = {},
-      lx = {},
-      Lx = Object.keys(lx);
+      RL = [],
+      jL = {},
+      nL = {},
+      FL = Object.keys(nL);
 
-    function fx(VV, eV) {
-      for (var xV = arguments.length, JV = new Array(xV > 2 ? xV - 2 : 0), YV = 2; YV < xV; YV++) JV[YV - 2] = arguments[YV];
-      return (hx[VV] || []).forEach((function(VV) {
-        eV = VV.apply(null, [eV].concat(JV))
-      })), eV
+    function DL(HH, BH) {
+      for (var LH = arguments.length, AH = new Array(LH > 2 ? LH - 2 : 0), rH = 2; rH < LH; rH++) AH[rH - 2] = arguments[rH];
+      return (jL[HH] || []).forEach((function(HH) {
+        BH = HH.apply(null, [BH].concat(AH))
+      })), BH
     }
 
-    function mx(VV) {
-      for (var eV = arguments.length, xV = new Array(eV > 1 ? eV - 1 : 0), JV = 1; JV < eV; JV++) xV[JV - 1] = arguments[JV];
-      (hx[VV] || []).forEach((function(VV) {
-        VV.apply(null, xV)
+    function wL(HH) {
+      for (var BH = arguments.length, LH = new Array(BH > 1 ? BH - 1 : 0), AH = 1; AH < BH; AH++) LH[AH - 1] = arguments[AH];
+      (jL[HH] || []).forEach((function(HH) {
+        HH.apply(null, LH)
       }))
     }
 
-    function Kx() {
-      var VV = arguments[0],
-        eV = Array.prototype.slice.call(arguments, 1);
-      return lx[VV] ? lx[VV].apply(null, eV) : void 0
+    function ZL() {
+      var HH = arguments[0],
+        BH = Array.prototype.slice.call(arguments, 1);
+      return nL[HH] ? nL[HH].apply(null, BH) : void 0
     }
 
-    function Hx(VV) {
-      "fa" === VV.prefix && (VV.prefix = "fas");
-      var eV = VV.iconName,
-        xV = VV.prefix || Wx();
-      if (eV) return eV = zx(xV, eV) || eV, nx(ux.definitions, xV, eV) || nx(Yx.styles, xV, eV)
+    function dL(HH) {
+      "fa" === HH.prefix && (HH.prefix = "fas");
+      var BH = HH.iconName,
+        LH = HH.prefix || fL();
+      if (BH) return BH = oL(LH, BH) || BH, CL(aL.definitions, LH, BH) || CL(rL.styles, LH, BH)
     }
-    var ux = new ox,
-      sx = {
+    var aL = new NL,
+      sL = {
         i2svg: function() {
-          var VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return MV ? (mx("beforeI2svg", VV), Kx("pseudoElements2svg", VV), Kx("i2svg", VV)) : Promise.reject(new Error("Operation requires a DOM of some kind."))
+          var HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          return mH ? (wL("beforeI2svg", HH), ZL("pseudoElements2svg", HH), ZL("i2svg", HH)) : Promise.reject(new Error("Operation requires a DOM of some kind."))
         },
         watch: function() {
-          var VV, eV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            xV = eV.autoReplaceSvgRoot;
-          !1 === Le.autoReplaceSvg && (Le.autoReplaceSvg = !0), Le.observeMutations = !0, VV = function() {
-            Ix({
-              autoReplaceSvgRoot: xV
-            }), mx("watch", eV)
-          }, MV && (px ? setTimeout(VV, 0) : Ux.push(VV))
+          var HH, BH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            LH = BH.autoReplaceSvgRoot;
+          !1 === FB.autoReplaceSvg && (FB.autoReplaceSvg = !0), FB.observeMutations = !0, HH = function() {
+            iL({
+              autoReplaceSvgRoot: LH
+            }), wL("watch", BH)
+          }, mH && (tL ? setTimeout(HH, 0) : SL.push(HH))
         }
       },
-      Sx = {
+      JL = {
         noAuto: function() {
-          Le.autoReplaceSvg = !1, Le.observeMutations = !1, mx("noAuto")
+          FB.autoReplaceSvg = !1, FB.observeMutations = !1, wL("noAuto")
         },
-        config: Le,
-        dom: sx,
+        config: FB,
+        dom: sL,
         parse: {
-          icon: function(VV) {
-            if (null === VV) return null;
-            if ("object" === vV(VV) && VV.prefix && VV.iconName) return {
-              prefix: VV.prefix,
-              iconName: zx(VV.prefix, VV.iconName) || VV.iconName
+          icon: function(HH) {
+            if (null === HH) return null;
+            if ("object" === GH(HH) && HH.prefix && HH.iconName) return {
+              prefix: HH.prefix,
+              iconName: oL(HH.prefix, HH.iconName) || HH.iconName
             };
-            if (Array.isArray(VV) && 2 === VV.length) {
-              var eV = 0 === VV[1].indexOf("fa-") ? VV[1].slice(3) : VV[1],
-                xV = Rx(VV[0]);
+            if (Array.isArray(HH) && 2 === HH.length) {
+              var BH = 0 === HH[1].indexOf("fa-") ? HH[1].slice(3) : HH[1],
+                LH = lL(HH[0]);
               return {
-                prefix: xV,
-                iconName: zx(xV, eV) || eV
+                prefix: LH,
+                iconName: oL(LH, BH) || BH
               }
             }
-            if ("string" === typeof VV && (VV.indexOf("".concat(Le.cssPrefix, "-")) > -1 || VV.match(ge))) {
-              var JV = ix(VV.split(" "), {
+            if ("string" === typeof HH && (HH.indexOf("".concat(FB.cssPrefix, "-")) > -1 || HH.match(KB))) {
+              var AH = eL(HH.split(" "), {
                 skipLookups: !0
               });
               return {
-                prefix: JV.prefix || Wx(),
-                iconName: zx(JV.prefix, JV.iconName) || JV.iconName
+                prefix: AH.prefix || fL(),
+                iconName: oL(AH.prefix, AH.iconName) || AH.iconName
               }
             }
-            if ("string" === typeof VV) {
-              var YV = Wx();
+            if ("string" === typeof HH) {
+              var rH = fL();
               return {
-                prefix: YV,
-                iconName: zx(YV, VV) || VV
+                prefix: rH,
+                iconName: oL(rH, HH) || HH
               }
             }
           }
         },
-        library: ux,
-        findIconDefinition: Hx,
-        toHtml: Qx
+        library: aL,
+        findIconDefinition: dL,
+        toHtml: zL
       },
-      Ix = function() {
-        var VV = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).autoReplaceSvgRoot,
-          eV = void 0 === VV ? AV : VV;
-        (Object.keys(Yx.styles).length > 0 || Le.autoFetchSvg) && MV && Le.autoReplaceSvg && Sx.dom.i2svg({
-          node: eV
+      iL = function() {
+        var HH = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).autoReplaceSvgRoot,
+          BH = void 0 === HH ? OH : HH;
+        (Object.keys(rL.styles).length > 0 || FB.autoFetchSvg) && mH && FB.autoReplaceSvg && JL.dom.i2svg({
+          node: BH
         })
       };
 
-    function dx(VV, eV) {
-      return Object.defineProperty(VV, "abstract", {
-        get: eV
-      }), Object.defineProperty(VV, "html", {
+    function pL(HH, BH) {
+      return Object.defineProperty(HH, "abstract", {
+        get: BH
+      }), Object.defineProperty(HH, "html", {
         get: function() {
-          return VV.abstract.map((function(VV) {
-            return Qx(VV)
+          return HH.abstract.map((function(HH) {
+            return zL(HH)
           }))
         }
-      }), Object.defineProperty(VV, "node", {
+      }), Object.defineProperty(HH, "node", {
         get: function() {
-          if (MV) {
-            var eV = AV.createElement("div");
-            return eV.innerHTML = VV.html, eV.children
+          if (mH) {
+            var BH = OH.createElement("div");
+            return BH.innerHTML = HH.html, BH.children
           }
         }
-      }), VV
+      }), HH
     }
 
-    function Ox(VV) {
-      var eV = VV.icons,
-        xV = eV.main,
-        JV = eV.mask,
-        YV = VV.prefix,
-        UV = VV.iconName,
-        yV = VV.transform,
-        pV = VV.symbol,
-        nV = VV.maskId,
-        wV = VV.extra,
-        ZV = VV.watchable,
-        vV = void 0 !== ZV && ZV,
-        rV = JV.found ? JV : xV,
-        kV = rV.width,
-        bV = rV.height,
-        EV = [Le.replacementClass, UV ? "".concat(Le.cssPrefix, "-").concat(UV) : ""].filter((function(VV) {
-          return -1 === wV.classes.indexOf(VV)
-        })).filter((function(VV) {
-          return "" !== VV || !!VV
-        })).concat(wV.classes).join(" "),
-        BV = {
+    function yL(HH) {
+      var BH = HH.icons,
+        LH = BH.main,
+        AH = BH.mask,
+        rH = HH.prefix,
+        SH = HH.iconName,
+        hH = HH.transform,
+        tH = HH.symbol,
+        CH = HH.maskId,
+        EH = HH.extra,
+        XH = HH.watchable,
+        GH = void 0 !== XH && XH,
+        YH = AH.found ? AH : LH,
+        uH = YH.width,
+        QH = YH.height,
+        WH = [FB.replacementClass, SH ? "".concat(FB.cssPrefix, "-").concat(SH) : ""].filter((function(HH) {
+          return -1 === EH.classes.indexOf(HH)
+        })).filter((function(HH) {
+          return "" !== HH || !!HH
+        })).concat(EH.classes).join(" "),
+        MH = {
           children: [],
-          attributes: QV(QV({}, wV.attributes), {}, {
-            "data-prefix": YV,
-            "data-icon": UV,
-            class: EV,
-            role: wV.attributes.role || "img",
-            viewBox: "0 0 ".concat(kV, " ").concat(bV)
+          attributes: zH(zH({}, EH.attributes), {}, {
+            "data-prefix": rH,
+            "data-icon": SH,
+            class: WH,
+            role: EH.attributes.role || "img",
+            viewBox: "0 0 ".concat(uH, " ").concat(QH)
           })
         };
-      (function(VV) {
-        return ["aria-label", "aria-labelledby", "title", "role"].some((function(eV) {
-          return eV in VV
+      (function(HH) {
+        return ["aria-label", "aria-labelledby", "title", "role"].some((function(BH) {
+          return BH in HH
         }))
-      })(wV.attributes) || wV.attributes["aria-hidden"] || (BV.attributes["aria-hidden"] = "true"), vV && (BV.attributes[Ee] = "");
-      var jV = QV(QV({}, BV), {}, {
-          prefix: YV,
-          iconName: UV,
-          main: xV,
-          mask: JV,
-          maskId: nV,
-          transform: yV,
-          symbol: pV,
-          styles: QV({}, wV.styles)
+      })(EH.attributes) || EH.attributes["aria-hidden"] || (MH.attributes["aria-hidden"] = "true"), GH && (MH.attributes[WB] = "");
+      var xH = zH(zH({}, MH), {}, {
+          prefix: rH,
+          iconName: SH,
+          main: LH,
+          mask: AH,
+          maskId: CH,
+          transform: hH,
+          symbol: tH,
+          styles: zH({}, EH.styles)
         }),
-        qV = JV.found && xV.found ? Kx("generateAbstractMask", jV) || {
+        vH = AH.found && LH.found ? ZL("generateAbstractMask", xH) || {
           children: [],
           attributes: {}
-        } : Kx("generateAbstractIcon", jV) || {
+        } : ZL("generateAbstractIcon", xH) || {
           children: [],
           attributes: {}
         },
-        tV = qV.children,
-        FV = qV.attributes;
-      return jV.children = tV, jV.attributes = FV, pV ? function(VV) {
-        var eV = VV.prefix,
-          xV = VV.iconName,
-          JV = VV.children,
-          YV = VV.attributes,
-          UV = VV.symbol,
-          yV = !0 === UV ? "".concat(eV, "-").concat(Le.cssPrefix, "-").concat(xV) : UV;
+        PH = vH.children,
+        TH = vH.attributes;
+      return xH.children = PH, xH.attributes = TH, tH ? function(HH) {
+        var BH = HH.prefix,
+          LH = HH.iconName,
+          AH = HH.children,
+          rH = HH.attributes,
+          SH = HH.symbol,
+          hH = !0 === SH ? "".concat(BH, "-").concat(FB.cssPrefix, "-").concat(LH) : SH;
         return [{
           tag: "svg",
           attributes: {
@@ -1924,267 +1924,267 @@ export const modules = {
           },
           children: [{
             tag: "symbol",
-            attributes: QV(QV({}, YV), {}, {
-              id: yV
+            attributes: zH(zH({}, rH), {}, {
+              id: hH
             }),
-            children: JV
+            children: AH
           }]
         }]
-      }(jV) : function(VV) {
-        var eV = VV.children,
-          xV = VV.main,
-          JV = VV.mask,
-          YV = VV.attributes,
-          UV = VV.styles,
-          yV = VV.transform;
-        if (de(yV) && xV.found && !JV.found) {
-          var pV = {
-            x: xV.width / xV.height / 2,
+      }(xH) : function(HH) {
+        var BH = HH.children,
+          LH = HH.main,
+          AH = HH.mask,
+          rH = HH.attributes,
+          SH = HH.styles,
+          hH = HH.transform;
+        if (pB(hH) && LH.found && !AH.found) {
+          var tH = {
+            x: LH.width / LH.height / 2,
             y: .5
           };
-          YV.style = Ie(QV(QV({}, UV), {}, {
-            "transform-origin": "".concat(pV.x + yV.x / 16, "em ").concat(pV.y + yV.y / 16, "em")
+          rH.style = iB(zH(zH({}, SH), {}, {
+            "transform-origin": "".concat(tH.x + hH.x / 16, "em ").concat(tH.y + hH.y / 16, "em")
           }))
         }
         return [{
           tag: "svg",
-          attributes: YV,
-          children: eV
+          attributes: rH,
+          children: BH
         }]
-      }(jV)
+      }(xH)
     }
 
-    function VJ(VV) {
-      var eV = VV.content,
-        xV = VV.width,
-        JV = VV.height,
-        YV = VV.transform,
-        UV = VV.extra,
-        yV = VV.watchable,
-        pV = void 0 !== yV && yV,
-        nV = QV(QV({}, UV.attributes), {}, {
-          class: UV.classes.join(" ")
+    function HA(HH) {
+      var BH = HH.content,
+        LH = HH.width,
+        AH = HH.height,
+        rH = HH.transform,
+        SH = HH.extra,
+        hH = HH.watchable,
+        tH = void 0 !== hH && hH,
+        CH = zH(zH({}, SH.attributes), {}, {
+          class: SH.classes.join(" ")
         });
-      pV && (nV[Ee] = "");
-      var wV = QV({}, UV.styles);
-      de(YV) && (wV.transform = function(VV) {
-        var eV = VV.transform,
-          xV = VV.width,
-          JV = void 0 === xV ? 16 : xV,
-          YV = VV.height,
-          UV = void 0 === YV ? 16 : YV,
-          yV = VV.startCentered,
-          pV = void 0 !== yV && yV,
-          QV = "";
-        return QV += pV && zV ? "translate(".concat(eV.x / me - JV / 2, "em, ").concat(eV.y / me - UV / 2, "em) ") : pV ? "translate(calc(-50% + ".concat(eV.x / me, "em), calc(-50% + ").concat(eV.y / me, "em)) ") : "translate(".concat(eV.x / me, "em, ").concat(eV.y / me, "em) "), QV += "scale(".concat(eV.size / me * (eV.flipX ? -1 : 1), ", ").concat(eV.size / me * (eV.flipY ? -1 : 1), ") "), QV + "rotate(".concat(eV.rotate, "deg) ")
+      tH && (CH[WB] = "");
+      var EH = zH({}, SH.styles);
+      pB(rH) && (EH.transform = function(HH) {
+        var BH = HH.transform,
+          LH = HH.width,
+          AH = void 0 === LH ? 16 : LH,
+          rH = HH.height,
+          SH = void 0 === rH ? 16 : rH,
+          hH = HH.startCentered,
+          tH = void 0 !== hH && hH,
+          zH = "";
+        return zH += tH && oH ? "translate(".concat(BH.x / wB - AH / 2, "em, ").concat(BH.y / wB - SH / 2, "em) ") : tH ? "translate(calc(-50% + ".concat(BH.x / wB, "em), calc(-50% + ").concat(BH.y / wB, "em)) ") : "translate(".concat(BH.x / wB, "em, ").concat(BH.y / wB, "em) "), zH += "scale(".concat(BH.size / wB * (BH.flipX ? -1 : 1), ", ").concat(BH.size / wB * (BH.flipY ? -1 : 1), ") "), zH + "rotate(".concat(BH.rotate, "deg) ")
       }({
-        transform: YV,
+        transform: rH,
         startCentered: !0,
-        width: xV,
-        height: JV
-      }), wV["-webkit-transform"] = wV.transform);
-      var ZV = Ie(wV);
-      ZV.length > 0 && (nV.style = ZV);
-      var vV = [];
-      return vV.push({
+        width: LH,
+        height: AH
+      }), EH["-webkit-transform"] = EH.transform);
+      var XH = iB(EH);
+      XH.length > 0 && (CH.style = XH);
+      var GH = [];
+      return GH.push({
         tag: "span",
-        attributes: nV,
-        children: [eV]
-      }), vV
+        attributes: CH,
+        children: [BH]
+      }), GH
     }
-    var eJ = Yx.styles;
+    var BA = rL.styles;
 
-    function xJ(VV) {
-      var eV = VV[0],
-        xV = VV[1],
-        JV = nV(VV.slice(4), 1)[0];
+    function LA(HH) {
+      var BH = HH[0],
+        LH = HH[1],
+        AH = CH(HH.slice(4), 1)[0];
       return {
         found: !0,
-        width: eV,
-        height: xV,
-        icon: Array.isArray(JV) ? {
+        width: BH,
+        height: LH,
+        icon: Array.isArray(AH) ? {
           tag: "g",
           attributes: {
-            class: "".concat(Le.cssPrefix, "-").concat(ae.GROUP)
+            class: "".concat(FB.cssPrefix, "-").concat(gB.GROUP)
           },
           children: [{
             tag: "path",
             attributes: {
-              class: "".concat(Le.cssPrefix, "-").concat(ae.SECONDARY),
+              class: "".concat(FB.cssPrefix, "-").concat(gB.SECONDARY),
               fill: "currentColor",
-              d: JV[0]
+              d: AH[0]
             }
           }, {
             tag: "path",
             attributes: {
-              class: "".concat(Le.cssPrefix, "-").concat(ae.PRIMARY),
+              class: "".concat(FB.cssPrefix, "-").concat(gB.PRIMARY),
               fill: "currentColor",
-              d: JV[1]
+              d: AH[1]
             }
           }]
         } : {
           tag: "path",
           attributes: {
             fill: "currentColor",
-            d: JV
+            d: AH
           }
         }
       }
     }
-    var JJ = {
+    var AA = {
       found: !1,
       width: 512,
       height: 512
     };
 
-    function YJ(VV, eV) {
-      var xV = eV;
-      return "fa" === eV && null !== Le.styleDefault && (eV = Wx()), new Promise((function(JV, YV) {
-        if ("fa" === xV) {
-          var UV = Gx(VV) || {};
-          VV = UV.iconName || VV, eV = UV.prefix || eV
+    function rA(HH, BH) {
+      var LH = BH;
+      return "fa" === BH && null !== FB.styleDefault && (BH = fL()), new Promise((function(AH, rH) {
+        if ("fa" === LH) {
+          var SH = IL(HH) || {};
+          HH = SH.iconName || HH, BH = SH.prefix || BH
         }
-        if (VV && eV && eJ[eV] && eJ[eV][VV]) return JV(xJ(eJ[eV][VV]));
-        ! function(VV, eV) {
-          Pe || Le.showMissingIcons || !VV || console.error('Icon with name "'.concat(VV, '" and prefix "').concat(eV, '" is missing.'))
-        }(VV, eV), JV(QV(QV({}, JJ), {}, {
-          icon: Le.showMissingIcons && VV && Kx("missingIconAbstract") || {}
+        if (HH && BH && BA[BH] && BA[BH][HH]) return AH(LA(BA[BH][HH]));
+        ! function(HH, BH) {
+          VB || FB.showMissingIcons || !HH || console.error('Icon with name "'.concat(HH, '" and prefix "').concat(BH, '" is missing.'))
+        }(HH, BH), AH(zH(zH({}, AA), {}, {
+          icon: FB.showMissingIcons && HH && ZL("missingIconAbstract") || {}
         }))
       }))
     }
-    var UJ = function() {},
-      yJ = Le.measurePerformance && XV && XV.mark && XV.measure ? XV : {
-        mark: UJ,
-        measure: UJ
+    var SA = function() {},
+      hA = FB.measurePerformance && kH && kH.mark && kH.measure ? kH : {
+        mark: SA,
+        measure: SA
       },
-      pJ = 'FA "7.2.0"',
-      QJ = function(VV) {
-        yJ.mark("".concat(pJ, " ").concat(VV, " ends")), yJ.measure("".concat(pJ, " ").concat(VV), "".concat(pJ, " ").concat(VV, " begins"), "".concat(pJ, " ").concat(VV, " ends"))
+      tA = 'FA "7.2.0"',
+      zA = function(HH) {
+        hA.mark("".concat(tA, " ").concat(HH, " ends")), hA.measure("".concat(tA, " ").concat(HH), "".concat(tA, " ").concat(HH, " begins"), "".concat(tA, " ").concat(HH, " ends"))
       },
-      nJ = function(VV) {
-        return yJ.mark("".concat(pJ, " ").concat(VV, " begins")),
+      CA = function(HH) {
+        return hA.mark("".concat(tA, " ").concat(HH, " begins")),
           function() {
-            return QJ(VV)
+            return zA(HH)
           }
       },
-      wJ = function() {};
+      EA = function() {};
 
-    function ZJ(VV) {
-      return "string" === typeof(VV.getAttribute ? VV.getAttribute(Ee) : null)
+    function XA(HH) {
+      return "string" === typeof(HH.getAttribute ? HH.getAttribute(WB) : null)
     }
 
-    function vJ(VV) {
-      return AV.createElementNS("http://www.w3.org/2000/svg", VV)
+    function GA(HH) {
+      return OH.createElementNS("http://www.w3.org/2000/svg", HH)
     }
 
-    function rJ(VV) {
-      return AV.createElement(VV)
+    function YA(HH) {
+      return OH.createElement(HH)
     }
 
-    function kJ(VV) {
-      var eV = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).ceFn,
-        xV = void 0 === eV ? "svg" === VV.tag ? vJ : rJ : eV;
-      if ("string" === typeof VV) return AV.createTextNode(VV);
-      var JV = xV(VV.tag);
-      return Object.keys(VV.attributes || []).forEach((function(eV) {
-        JV.setAttribute(eV, VV.attributes[eV])
-      })), (VV.children || []).forEach((function(VV) {
-        JV.appendChild(kJ(VV, {
-          ceFn: xV
+    function uA(HH) {
+      var BH = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).ceFn,
+        LH = void 0 === BH ? "svg" === HH.tag ? GA : YA : BH;
+      if ("string" === typeof HH) return OH.createTextNode(HH);
+      var AH = LH(HH.tag);
+      return Object.keys(HH.attributes || []).forEach((function(BH) {
+        AH.setAttribute(BH, HH.attributes[BH])
+      })), (HH.children || []).forEach((function(HH) {
+        AH.appendChild(uA(HH, {
+          ceFn: LH
         }))
-      })), JV
+      })), AH
     }
-    var bJ = {
-      replace: function(VV) {
-        var eV = VV[0];
-        if (eV.parentNode)
-          if (VV[1].forEach((function(VV) {
-              eV.parentNode.insertBefore(kJ(VV), eV)
-            })), null === eV.getAttribute(Ee) && Le.keepOriginalSource) {
-            var xV = AV.createComment(function(VV) {
-              var eV = " ".concat(VV.outerHTML, " ");
-              return "".concat(eV, "Font Awesome fontawesome.com ")
-            }(eV));
-            eV.parentNode.replaceChild(xV, eV)
-          } else eV.remove()
+    var QA = {
+      replace: function(HH) {
+        var BH = HH[0];
+        if (BH.parentNode)
+          if (HH[1].forEach((function(HH) {
+              BH.parentNode.insertBefore(uA(HH), BH)
+            })), null === BH.getAttribute(WB) && FB.keepOriginalSource) {
+            var LH = OH.createComment(function(HH) {
+              var BH = " ".concat(HH.outerHTML, " ");
+              return "".concat(BH, "Font Awesome fontawesome.com ")
+            }(BH));
+            BH.parentNode.replaceChild(LH, BH)
+          } else BH.remove()
       },
-      nest: function(VV) {
-        var eV = VV[0],
-          xV = VV[1];
-        if (~se(eV).indexOf(Le.replacementClass)) return bJ.replace(VV);
-        var JV = new RegExp("".concat(Le.cssPrefix, "-.*"));
-        if (delete xV[0].attributes.id, xV[0].attributes.class) {
-          var YV = xV[0].attributes.class.split(" ").reduce((function(VV, eV) {
-            return eV === Le.replacementClass || eV.match(JV) ? VV.toSvg.push(eV) : VV.toNode.push(eV), VV
+      nest: function(HH) {
+        var BH = HH[0],
+          LH = HH[1];
+        if (~sB(BH).indexOf(FB.replacementClass)) return QA.replace(HH);
+        var AH = new RegExp("".concat(FB.cssPrefix, "-.*"));
+        if (delete LH[0].attributes.id, LH[0].attributes.class) {
+          var rH = LH[0].attributes.class.split(" ").reduce((function(HH, BH) {
+            return BH === FB.replacementClass || BH.match(AH) ? HH.toSvg.push(BH) : HH.toNode.push(BH), HH
           }), {
             toNode: [],
             toSvg: []
           });
-          xV[0].attributes.class = YV.toSvg.join(" "), 0 === YV.toNode.length ? eV.removeAttribute("class") : eV.setAttribute("class", YV.toNode.join(" "))
+          LH[0].attributes.class = rH.toSvg.join(" "), 0 === rH.toNode.length ? BH.removeAttribute("class") : BH.setAttribute("class", rH.toNode.join(" "))
         }
-        var UV = xV.map((function(VV) {
-          return Qx(VV)
+        var SH = LH.map((function(HH) {
+          return zL(HH)
         })).join("\n");
-        eV.setAttribute(Ee, ""), eV.innerHTML = UV
+        BH.setAttribute(WB, ""), BH.innerHTML = SH
       }
     };
 
-    function EJ(VV) {
-      VV()
+    function WA(HH) {
+      HH()
     }
 
-    function BJ(VV, eV) {
-      var xV = "function" === typeof eV ? eV : wJ;
-      if (0 === VV.length) xV();
+    function MA(HH, BH) {
+      var LH = "function" === typeof BH ? BH : EA;
+      if (0 === HH.length) LH();
       else {
-        var JV = EJ;
-        "async" === Le.mutateApproach && (JV = PV.requestAnimationFrame || EJ), JV((function() {
-          var eV = !0 === Le.autoReplaceSvg ? bJ.replace : bJ[Le.autoReplaceSvg] || bJ.replace,
-            JV = nJ("mutate");
-          VV.map(eV), JV(), xV()
+        var AH = WA;
+        "async" === FB.mutateApproach && (AH = VH.requestAnimationFrame || WA), AH((function() {
+          var BH = !0 === FB.autoReplaceSvg ? QA.replace : QA[FB.autoReplaceSvg] || QA.replace,
+            AH = CA("mutate");
+          HH.map(BH), AH(), LH()
         }))
       }
     }
-    var jJ = !1;
+    var xA = !1;
 
-    function qJ() {
-      jJ = !0
+    function vA() {
+      xA = !0
     }
 
-    function tJ() {
-      jJ = !1
+    function PA() {
+      xA = !1
     }
-    var FJ = null;
+    var TA = null;
 
-    function TJ(VV) {
-      if (NV && Le.observeMutations) {
-        var eV = VV.treeCallback,
-          xV = void 0 === eV ? wJ : eV,
-          JV = VV.nodeCallback,
-          YV = void 0 === JV ? wJ : JV,
-          UV = VV.pseudoElementsCallback,
-          yV = void 0 === UV ? wJ : UV,
-          pV = VV.observeMutationsRoot,
-          QV = void 0 === pV ? AV : pV;
-        FJ = new NV((function(VV) {
-          if (!jJ) {
-            var eV = Wx();
-            ue(VV).forEach((function(VV) {
-              if ("childList" === VV.type && VV.addedNodes.length > 0 && !ZJ(VV.addedNodes[0]) && (Le.searchPseudoElements && yV(VV.target), xV(VV.target)), "attributes" === VV.type && VV.target.parentNode && Le.searchPseudoElements && yV([VV.target], !0), "attributes" === VV.type && ZJ(VV.target) && ~Ce.indexOf(VV.attributeName))
-                if ("class" === VV.attributeName && function(VV) {
-                    var eV = VV.getAttribute ? VV.getAttribute(je) : null,
-                      xV = VV.getAttribute ? VV.getAttribute(qe) : null;
-                    return eV && xV
-                  }(VV.target)) {
-                  var JV = ix(se(VV.target)),
-                    UV = JV.prefix,
-                    pV = JV.iconName;
-                  VV.target.setAttribute(je, UV || eV), pV && VV.target.setAttribute(qe, pV)
-                } else(QV = VV.target) && QV.classList && QV.classList.contains && QV.classList.contains(Le.replacementClass) && YV(VV.target);
-              var QV
+    function UA(HH) {
+      if (bH && FB.observeMutations) {
+        var BH = HH.treeCallback,
+          LH = void 0 === BH ? EA : BH,
+          AH = HH.nodeCallback,
+          rH = void 0 === AH ? EA : AH,
+          SH = HH.pseudoElementsCallback,
+          hH = void 0 === SH ? EA : SH,
+          tH = HH.observeMutationsRoot,
+          zH = void 0 === tH ? OH : tH;
+        TA = new bH((function(HH) {
+          if (!xA) {
+            var BH = fL();
+            aB(HH).forEach((function(HH) {
+              if ("childList" === HH.type && HH.addedNodes.length > 0 && !XA(HH.addedNodes[0]) && (FB.searchPseudoElements && hH(HH.target), LH(HH.target)), "attributes" === HH.type && HH.target.parentNode && FB.searchPseudoElements && hH([HH.target], !0), "attributes" === HH.type && XA(HH.target) && ~qB.indexOf(HH.attributeName))
+                if ("class" === HH.attributeName && function(HH) {
+                    var BH = HH.getAttribute ? HH.getAttribute(xB) : null,
+                      LH = HH.getAttribute ? HH.getAttribute(vB) : null;
+                    return BH && LH
+                  }(HH.target)) {
+                  var AH = eL(sB(HH.target)),
+                    SH = AH.prefix,
+                    tH = AH.iconName;
+                  HH.target.setAttribute(xB, SH || BH), tH && HH.target.setAttribute(vB, tH)
+                } else(zH = HH.target) && zH.classList && zH.classList.contains && zH.classList.contains(FB.replacementClass) && rH(HH.target);
+              var zH
             }))
           }
-        })), MV && FJ.observe(QV, {
+        })), mH && TA.observe(zH, {
           childList: !0,
           attributes: !0,
           characterData: !0,
@@ -2193,42 +2193,42 @@ export const modules = {
       }
     }
 
-    function PJ(VV) {
-      var eV, xV, JV = VV.getAttribute("data-prefix"),
-        YV = VV.getAttribute("data-icon"),
-        UV = void 0 !== VV.innerText ? VV.innerText.trim() : "",
-        yV = ix(se(VV));
-      return yV.prefix || (yV.prefix = Wx()), JV && YV && (yV.prefix = JV, yV.iconName = YV), yV.iconName && yV.prefix || (yV.prefix && UV.length > 0 && (yV.iconName = (eV = yV.prefix, xV = VV.innerText, (tx[eV] || {})[xV] || Mx(yV.prefix, Zx(VV.innerText)))), !yV.iconName && Le.autoFetchSvg && VV.firstChild && VV.firstChild.nodeType === Node.TEXT_NODE && (yV.iconName = VV.firstChild.data)), yV
+    function VA(HH) {
+      var BH, LH, AH = HH.getAttribute("data-prefix"),
+        rH = HH.getAttribute("data-icon"),
+        SH = void 0 !== HH.innerText ? HH.innerText.trim() : "",
+        hH = eL(sB(HH));
+      return hH.prefix || (hH.prefix = fL()), AH && rH && (hH.prefix = AH, hH.iconName = rH), hH.iconName && hH.prefix || (hH.prefix && SH.length > 0 && (hH.iconName = (BH = hH.prefix, LH = HH.innerText, (PL[BH] || {})[LH] || mL(hH.prefix, XL(HH.innerText)))), !hH.iconName && FB.autoFetchSvg && HH.firstChild && HH.firstChild.nodeType === Node.TEXT_NODE && (hH.iconName = HH.firstChild.data)), hH
     }
 
-    function AJ(VV) {
-      var eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function OA(HH) {
+      var BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           styleParser: !0
         },
-        xV = PJ(VV),
-        JV = xV.iconName,
-        YV = xV.prefix,
-        UV = xV.rest,
-        yV = function(VV) {
-          return ue(VV.attributes).reduce((function(VV, eV) {
-            return "class" !== VV.name && "style" !== VV.name && (VV[eV.name] = eV.value), VV
+        LH = VA(HH),
+        AH = LH.iconName,
+        rH = LH.prefix,
+        SH = LH.rest,
+        hH = function(HH) {
+          return aB(HH.attributes).reduce((function(HH, BH) {
+            return "class" !== HH.name && "style" !== HH.name && (HH[BH.name] = BH.value), HH
           }), {})
-        }(VV),
-        pV = fx("parseNodeAttributes", {}, VV),
-        nV = eV.styleParser ? function(VV) {
-          var eV = VV.getAttribute("style"),
-            xV = [];
-          return eV && (xV = eV.split(";").reduce((function(VV, eV) {
-            var xV = eV.split(":"),
-              JV = xV[0],
-              YV = xV.slice(1);
-            return JV && YV.length > 0 && (VV[JV] = YV.join(":").trim()), VV
-          }), {})), xV
-        }(VV) : [];
-      return QV({
-        iconName: JV,
-        prefix: YV,
-        transform: Ke,
+        }(HH),
+        tH = DL("parseNodeAttributes", {}, HH),
+        CH = BH.styleParser ? function(HH) {
+          var BH = HH.getAttribute("style"),
+            LH = [];
+          return BH && (LH = BH.split(";").reduce((function(HH, BH) {
+            var LH = BH.split(":"),
+              AH = LH[0],
+              rH = LH.slice(1);
+            return AH && rH.length > 0 && (HH[AH] = rH.join(":").trim()), HH
+          }), {})), LH
+        }(HH) : [];
+      return zH({
+        iconName: AH,
+        prefix: rH,
+        transform: ZB,
         mask: {
           iconName: null,
           prefix: null,
@@ -2237,271 +2237,271 @@ export const modules = {
         maskId: null,
         symbol: !1,
         extra: {
-          classes: UV,
-          styles: nV,
-          attributes: yV
+          classes: SH,
+          styles: CH,
+          attributes: hH
         }
-      }, pV)
+      }, tH)
     }
-    var NJ = Yx.styles;
+    var bA = rL.styles;
 
-    function XJ(VV) {
-      var eV = "nest" === Le.autoReplaceSvg ? AJ(VV, {
+    function kA(HH) {
+      var BH = "nest" === FB.autoReplaceSvg ? OA(HH, {
         styleParser: !1
-      }) : AJ(VV);
-      return ~eV.extra.classes.indexOf(De) ? Kx("generateLayersText", VV, eV) : Kx("generateSvgReplacementMutation", VV, eV)
+      }) : OA(HH);
+      return ~BH.extra.classes.indexOf(cB) ? ZL("generateLayersText", HH, BH) : ZL("generateSvgReplacementMutation", HH, BH)
     }
 
-    function MJ(VV) {
-      var eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      if (!MV) return Promise.resolve();
-      var xV = AV.documentElement.classList,
-        JV = function(VV) {
-          return xV.add("".concat(te, "-").concat(VV))
+    function mA(HH) {
+      var BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      if (!mH) return Promise.resolve();
+      var LH = OH.documentElement.classList,
+        AH = function(HH) {
+          return LH.add("".concat(PB, "-").concat(HH))
         },
-        YV = function(VV) {
-          return xV.remove("".concat(te, "-").concat(VV))
+        rH = function(HH) {
+          return LH.remove("".concat(PB, "-").concat(HH))
         },
-        UV = Le.autoFetchSvg ? [].concat(wV(Ve), wV(we)) : WV.concat(Object.keys(NJ));
-      UV.includes("fa") || UV.push("fa");
-      var yV = [".".concat(De, ":not([").concat(Ee, "])")].concat(UV.map((function(VV) {
-        return ".".concat(VV, ":not([").concat(Ee, "])")
+        SH = FB.autoFetchSvg ? [].concat(EH(HB), EH(EB)) : fH.concat(Object.keys(bA));
+      SH.includes("fa") || SH.push("fa");
+      var hH = [".".concat(cB, ":not([").concat(WB, "])")].concat(SH.map((function(HH) {
+        return ".".concat(HH, ":not([").concat(WB, "])")
       }))).join(", ");
-      if (0 === yV.length) return Promise.resolve();
-      var pV = [];
+      if (0 === hH.length) return Promise.resolve();
+      var tH = [];
       try {
-        pV = ue(VV.querySelectorAll(yV))
-      } catch (ZV) {}
-      if (!(pV.length > 0)) return Promise.resolve();
-      JV("pending"), YV("complete");
-      var QV = nJ("onTree"),
-        nV = pV.reduce((function(VV, eV) {
+        tH = aB(HH.querySelectorAll(hH))
+      } catch (XH) {}
+      if (!(tH.length > 0)) return Promise.resolve();
+      AH("pending"), rH("complete");
+      var zH = CA("onTree"),
+        CH = tH.reduce((function(HH, BH) {
           try {
-            var xV = XJ(eV);
-            xV && VV.push(xV)
-          } catch (ZV) {
-            Pe || "MissingIcon" === ZV.name && console.error(ZV)
+            var LH = kA(BH);
+            LH && HH.push(LH)
+          } catch (XH) {
+            VB || "MissingIcon" === XH.name && console.error(XH)
           }
-          return VV
+          return HH
         }), []);
-      return new Promise((function(VV, xV) {
-        Promise.all(nV).then((function(xV) {
-          BJ(xV, (function() {
-            JV("active"), JV("complete"), YV("pending"), "function" === typeof eV && eV(), QV(), VV()
+      return new Promise((function(HH, LH) {
+        Promise.all(CH).then((function(LH) {
+          MA(LH, (function() {
+            AH("active"), AH("complete"), rH("pending"), "function" === typeof BH && BH(), zH(), HH()
           }))
-        })).catch((function(VV) {
-          QV(), xV(VV)
+        })).catch((function(HH) {
+          zH(), LH(HH)
         }))
       }))
     }
 
-    function zJ(VV) {
-      var eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      XJ(VV).then((function(VV) {
-        VV && BJ([VV], eV)
+    function oA(HH) {
+      var BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      kA(HH).then((function(HH) {
+        HH && MA([HH], BH)
       }))
     }
-    var GJ = function(VV) {
-        var eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          xV = eV.transform,
-          JV = void 0 === xV ? Ke : xV,
-          YV = eV.symbol,
-          UV = void 0 !== YV && YV,
-          yV = eV.mask,
-          pV = void 0 === yV ? null : yV,
-          nV = eV.maskId,
-          wV = void 0 === nV ? null : nV,
-          ZV = eV.classes,
-          vV = void 0 === ZV ? [] : ZV,
-          rV = eV.attributes,
-          kV = void 0 === rV ? {} : rV,
-          bV = eV.styles,
-          EV = void 0 === bV ? {} : bV;
-        if (VV) {
-          var BV = VV.prefix,
-            jV = VV.iconName,
-            qV = VV.icon;
-          return dx(QV({
+    var IA = function(HH) {
+        var BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          LH = BH.transform,
+          AH = void 0 === LH ? ZB : LH,
+          rH = BH.symbol,
+          SH = void 0 !== rH && rH,
+          hH = BH.mask,
+          tH = void 0 === hH ? null : hH,
+          CH = BH.maskId,
+          EH = void 0 === CH ? null : CH,
+          XH = BH.classes,
+          GH = void 0 === XH ? [] : XH,
+          YH = BH.attributes,
+          uH = void 0 === YH ? {} : YH,
+          QH = BH.styles,
+          WH = void 0 === QH ? {} : QH;
+        if (HH) {
+          var MH = HH.prefix,
+            xH = HH.iconName,
+            vH = HH.icon;
+          return pL(zH({
             type: "icon"
-          }, VV), (function() {
-            return mx("beforeDOMElementCreation", {
-              iconDefinition: VV,
-              params: eV
-            }), Ox({
+          }, HH), (function() {
+            return wL("beforeDOMElementCreation", {
+              iconDefinition: HH,
+              params: BH
+            }), yL({
               icons: {
-                main: xJ(qV),
-                mask: pV ? xJ(pV.icon) : {
+                main: LA(vH),
+                mask: tH ? LA(tH.icon) : {
                   found: !1,
                   width: null,
                   height: null,
                   icon: {}
                 }
               },
-              prefix: BV,
-              iconName: jV,
-              transform: QV(QV({}, Ke), JV),
-              symbol: UV,
-              maskId: wV,
+              prefix: MH,
+              iconName: xH,
+              transform: zH(zH({}, ZB), AH),
+              symbol: SH,
+              maskId: EH,
               extra: {
-                attributes: kV,
-                styles: EV,
-                classes: vV
+                attributes: uH,
+                styles: WH,
+                classes: GH
               }
             })
           }))
         }
       },
-      WJ = {
+      fA = {
         mixout: function() {
           return {
-            icon: (VV = GJ, function(eV) {
-              var xV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                JV = (eV || {}).icon ? eV : Hx(eV || {}),
-                YV = xV.mask;
-              return YV && (YV = (YV || {}).icon ? YV : Hx(YV || {})), VV(JV, QV(QV({}, xV), {}, {
-                mask: YV
+            icon: (HH = IA, function(BH) {
+              var LH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                AH = (BH || {}).icon ? BH : dL(BH || {}),
+                rH = LH.mask;
+              return rH && (rH = (rH || {}).icon ? rH : dL(rH || {})), HH(AH, zH(zH({}, LH), {}, {
+                mask: rH
               }))
             })
           };
-          var VV
+          var HH
         },
         hooks: function() {
           return {
-            mutationObserverCallbacks: function(VV) {
-              return VV.treeCallback = MJ, VV.nodeCallback = zJ, VV
+            mutationObserverCallbacks: function(HH) {
+              return HH.treeCallback = mA, HH.nodeCallback = oA, HH
             }
           }
         },
-        provides: function(VV) {
-          VV.i2svg = function(VV) {
-            var eV = VV.node,
-              xV = void 0 === eV ? AV : eV,
-              JV = VV.callback;
-            return MJ(xV, void 0 === JV ? function() {} : JV)
-          }, VV.generateSvgReplacementMutation = function(VV, eV) {
-            var xV = eV.iconName,
-              JV = eV.prefix,
-              YV = eV.transform,
-              UV = eV.symbol,
-              yV = eV.mask,
-              pV = eV.maskId,
-              QV = eV.extra;
-            return new Promise((function(eV, wV) {
-              Promise.all([YJ(xV, JV), yV.iconName ? YJ(yV.iconName, yV.prefix) : Promise.resolve({
+        provides: function(HH) {
+          HH.i2svg = function(HH) {
+            var BH = HH.node,
+              LH = void 0 === BH ? OH : BH,
+              AH = HH.callback;
+            return mA(LH, void 0 === AH ? function() {} : AH)
+          }, HH.generateSvgReplacementMutation = function(HH, BH) {
+            var LH = BH.iconName,
+              AH = BH.prefix,
+              rH = BH.transform,
+              SH = BH.symbol,
+              hH = BH.mask,
+              tH = BH.maskId,
+              zH = BH.extra;
+            return new Promise((function(BH, EH) {
+              Promise.all([rA(LH, AH), hH.iconName ? rA(hH.iconName, hH.prefix) : Promise.resolve({
                 found: !1,
                 width: 512,
                 height: 512,
                 icon: {}
-              })]).then((function(yV) {
-                var wV = nV(yV, 2),
-                  ZV = wV[0],
-                  vV = wV[1];
-                eV([VV, Ox({
+              })]).then((function(hH) {
+                var EH = CH(hH, 2),
+                  XH = EH[0],
+                  GH = EH[1];
+                BH([HH, yL({
                   icons: {
-                    main: ZV,
-                    mask: vV
+                    main: XH,
+                    mask: GH
                   },
-                  prefix: JV,
-                  iconName: xV,
-                  transform: YV,
-                  symbol: UV,
-                  maskId: pV,
-                  extra: QV,
+                  prefix: AH,
+                  iconName: LH,
+                  transform: rH,
+                  symbol: SH,
+                  maskId: tH,
+                  extra: zH,
                   watchable: !0
                 })])
-              })).catch(wV)
+              })).catch(EH)
             }))
-          }, VV.generateAbstractIcon = function(VV) {
-            var eV, xV = VV.children,
-              JV = VV.attributes,
-              YV = VV.main,
-              UV = VV.transform,
-              yV = Ie(VV.styles);
-            return yV.length > 0 && (JV.style = yV), de(UV) && (eV = Kx("generateAbstractTransformGrouping", {
-              main: YV,
-              transform: UV,
-              containerWidth: YV.width,
-              iconWidth: YV.width
-            })), xV.push(eV || YV.icon), {
-              children: xV,
-              attributes: JV
+          }, HH.generateAbstractIcon = function(HH) {
+            var BH, LH = HH.children,
+              AH = HH.attributes,
+              rH = HH.main,
+              SH = HH.transform,
+              hH = iB(HH.styles);
+            return hH.length > 0 && (AH.style = hH), pB(SH) && (BH = ZL("generateAbstractTransformGrouping", {
+              main: rH,
+              transform: SH,
+              containerWidth: rH.width,
+              iconWidth: rH.width
+            })), LH.push(BH || rH.icon), {
+              children: LH,
+              attributes: AH
             }
           }
         }
       },
-      RJ = {
+      lA = {
         mixout: function() {
           return {
-            layer: function(VV) {
-              var eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                xV = eV.classes,
-                JV = void 0 === xV ? [] : xV;
-              return dx({
+            layer: function(HH) {
+              var BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                LH = BH.classes,
+                AH = void 0 === LH ? [] : LH;
+              return pL({
                 type: "layer"
               }, (function() {
-                mx("beforeDOMElementCreation", {
-                  assembler: VV,
-                  params: eV
+                wL("beforeDOMElementCreation", {
+                  assembler: HH,
+                  params: BH
                 });
-                var xV = [];
-                return VV((function(VV) {
-                  Array.isArray(VV) ? VV.map((function(VV) {
-                    xV = xV.concat(VV.abstract)
-                  })) : xV = xV.concat(VV.abstract)
+                var LH = [];
+                return HH((function(HH) {
+                  Array.isArray(HH) ? HH.map((function(HH) {
+                    LH = LH.concat(HH.abstract)
+                  })) : LH = LH.concat(HH.abstract)
                 })), [{
                   tag: "span",
                   attributes: {
-                    class: ["".concat(Le.cssPrefix, "-layers")].concat(wV(JV)).join(" ")
+                    class: ["".concat(FB.cssPrefix, "-layers")].concat(EH(AH)).join(" ")
                   },
-                  children: xV
+                  children: LH
                 }]
               }))
             }
           }
         }
       },
-      gJ = {
+      KA = {
         mixout: function() {
           return {
-            counter: function(VV) {
-              var eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                xV = eV.title,
-                JV = void 0 === xV ? null : xV,
-                YV = eV.classes,
-                UV = void 0 === YV ? [] : YV,
-                yV = eV.attributes,
-                pV = void 0 === yV ? {} : yV,
-                nV = eV.styles,
-                ZV = void 0 === nV ? {} : nV;
-              return dx({
+            counter: function(HH) {
+              var BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                LH = BH.title,
+                AH = void 0 === LH ? null : LH,
+                rH = BH.classes,
+                SH = void 0 === rH ? [] : rH,
+                hH = BH.attributes,
+                tH = void 0 === hH ? {} : hH,
+                CH = BH.styles,
+                XH = void 0 === CH ? {} : CH;
+              return pL({
                 type: "counter",
-                content: VV
+                content: HH
               }, (function() {
-                return mx("beforeDOMElementCreation", {
-                    content: VV,
-                    params: eV
+                return wL("beforeDOMElementCreation", {
+                    content: HH,
+                    params: BH
                   }),
-                  function(VV) {
-                    var eV = VV.content,
-                      xV = VV.extra,
-                      JV = QV(QV({}, xV.attributes), {}, {
-                        class: xV.classes.join(" ")
+                  function(HH) {
+                    var BH = HH.content,
+                      LH = HH.extra,
+                      AH = zH(zH({}, LH.attributes), {}, {
+                        class: LH.classes.join(" ")
                       }),
-                      YV = Ie(xV.styles);
-                    YV.length > 0 && (JV.style = YV);
-                    var UV = [];
-                    return UV.push({
+                      rH = iB(LH.styles);
+                    rH.length > 0 && (AH.style = rH);
+                    var SH = [];
+                    return SH.push({
                       tag: "span",
-                      attributes: JV,
-                      children: [eV]
-                    }), UV
+                      attributes: AH,
+                      children: [BH]
+                    }), SH
                   }({
-                    content: VV.toString(),
-                    title: JV,
+                    content: HH.toString(),
+                    title: AH,
                     extra: {
-                      attributes: pV,
-                      styles: ZV,
-                      classes: ["".concat(Le.cssPrefix, "-layers-counter")].concat(wV(UV))
+                      attributes: tH,
+                      styles: XH,
+                      classes: ["".concat(FB.cssPrefix, "-layers-counter")].concat(EH(SH))
                     }
                   })
               }))
@@ -2509,64 +2509,64 @@ export const modules = {
           }
         }
       },
-      DJ = {
+      cA = {
         mixout: function() {
           return {
-            text: function(VV) {
-              var eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                xV = eV.transform,
-                JV = void 0 === xV ? Ke : xV,
-                YV = eV.classes,
-                UV = void 0 === YV ? [] : YV,
-                yV = eV.attributes,
-                pV = void 0 === yV ? {} : yV,
-                nV = eV.styles,
-                ZV = void 0 === nV ? {} : nV;
-              return dx({
+            text: function(HH) {
+              var BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                LH = BH.transform,
+                AH = void 0 === LH ? ZB : LH,
+                rH = BH.classes,
+                SH = void 0 === rH ? [] : rH,
+                hH = BH.attributes,
+                tH = void 0 === hH ? {} : hH,
+                CH = BH.styles,
+                XH = void 0 === CH ? {} : CH;
+              return pL({
                 type: "text",
-                content: VV
+                content: HH
               }, (function() {
-                return mx("beforeDOMElementCreation", {
-                  content: VV,
-                  params: eV
-                }), VJ({
-                  content: VV,
-                  transform: QV(QV({}, Ke), JV),
+                return wL("beforeDOMElementCreation", {
+                  content: HH,
+                  params: BH
+                }), HA({
+                  content: HH,
+                  transform: zH(zH({}, ZB), AH),
                   extra: {
-                    attributes: pV,
-                    styles: ZV,
-                    classes: ["".concat(Le.cssPrefix, "-layers-text")].concat(wV(UV))
+                    attributes: tH,
+                    styles: XH,
+                    classes: ["".concat(FB.cssPrefix, "-layers-text")].concat(EH(SH))
                   }
                 })
               }))
             }
           }
         },
-        provides: function(VV) {
-          VV.generateLayersText = function(VV, eV) {
-            var xV = eV.transform,
-              JV = eV.extra,
-              YV = null,
-              UV = null;
-            if (zV) {
-              var yV = parseInt(getComputedStyle(VV).fontSize, 10),
-                pV = VV.getBoundingClientRect();
-              YV = pV.width / yV, UV = pV.height / yV
+        provides: function(HH) {
+          HH.generateLayersText = function(HH, BH) {
+            var LH = BH.transform,
+              AH = BH.extra,
+              rH = null,
+              SH = null;
+            if (oH) {
+              var hH = parseInt(getComputedStyle(HH).fontSize, 10),
+                tH = HH.getBoundingClientRect();
+              rH = tH.width / hH, SH = tH.height / hH
             }
-            return Promise.resolve([VV, VJ({
-              content: VV.innerHTML,
-              width: YV,
-              height: UV,
-              transform: xV,
-              extra: JV,
+            return Promise.resolve([HH, HA({
+              content: HH.innerHTML,
+              width: rH,
+              height: SH,
+              transform: LH,
+              extra: AH,
               watchable: !0
             })])
           }
         }
       },
-      iJ = new RegExp('"', "ug"),
-      CJ = [1105920, 1112319],
-      aJ = QV(QV(QV(QV({}, {
+      eA = new RegExp('"', "ug"),
+      qA = [1105920, 1112319],
+      gA = zH(zH(zH(zH({}, {
         FontAwesome: {
           normal: "fas",
           400: "fas"
@@ -2696,70 +2696,70 @@ export const modules = {
           normal: "fakd"
         }
       }),
-      oJ = Object.keys(aJ).reduce((function(VV, eV) {
-        return VV[eV.toLowerCase()] = aJ[eV], VV
+      NA = Object.keys(gA).reduce((function(HH, BH) {
+        return HH[BH.toLowerCase()] = gA[BH], HH
       }), {}),
-      cJ = Object.keys(oJ).reduce((function(VV, eV) {
-        var xV = oJ[eV];
-        return VV[eV] = xV[900] || wV(Object.entries(xV))[0][1], VV
+      RA = Object.keys(NA).reduce((function(HH, BH) {
+        var LH = NA[BH];
+        return HH[BH] = LH[900] || EH(Object.entries(LH))[0][1], HH
       }), {});
 
-    function hJ(VV, eV) {
-      var xV = "".concat("data-fa-pseudo-element-pending").concat(eV.replace(":", "-"));
-      return new Promise((function(JV, YV) {
-        if (null !== VV.getAttribute(xV)) return JV();
-        var UV = ue(VV.children).filter((function(VV) {
-            return VV.getAttribute(Be) === eV
+    function jA(HH, BH) {
+      var LH = "".concat("data-fa-pseudo-element-pending").concat(BH.replace(":", "-"));
+      return new Promise((function(AH, rH) {
+        if (null !== HH.getAttribute(LH)) return AH();
+        var SH = aB(HH.children).filter((function(HH) {
+            return HH.getAttribute(MB) === BH
           }))[0],
-          yV = PV.getComputedStyle(VV, eV),
-          pV = yV.getPropertyValue("font-family"),
-          nV = pV.match(ie),
-          ZV = yV.getPropertyValue("font-weight"),
-          vV = yV.getPropertyValue("content");
-        if (UV && !nV) return VV.removeChild(UV), JV();
-        if (nV && "none" !== vV && "" !== vV) {
-          var rV = yV.getPropertyValue("content"),
-            kV = function(VV, eV) {
-              var xV = VV.replace(/^['"]|['"]$/g, "").toLowerCase(),
-                JV = parseInt(eV),
-                YV = isNaN(JV) ? "normal" : JV;
-              return (oJ[xV] || {})[YV] || cJ[xV]
-            }(pV, ZV),
-            bV = function(VV) {
-              return Zx(wV(VV.replace(iJ, ""))[0] || "")
-            }(rV),
-            EV = nV[0].startsWith("FontAwesome"),
-            BV = function(VV) {
-              var eV = VV.getPropertyValue("font-feature-settings").includes("ss01"),
-                xV = VV.getPropertyValue("content").replace(iJ, ""),
-                JV = xV.codePointAt(0),
-                YV = JV >= CJ[0] && JV <= CJ[1],
-                UV = 2 === xV.length && xV[0] === xV[1];
-              return YV || UV || eV
-            }(yV),
-            jV = Mx(kV, bV),
-            qV = jV;
-          if (EV) {
-            var tV = function(VV) {
-              var eV = Tx[VV],
-                xV = Mx("fas", VV);
-              return eV || (xV ? {
+          hH = VH.getComputedStyle(HH, BH),
+          tH = hH.getPropertyValue("font-family"),
+          CH = tH.match(eB),
+          XH = hH.getPropertyValue("font-weight"),
+          GH = hH.getPropertyValue("content");
+        if (SH && !CH) return HH.removeChild(SH), AH();
+        if (CH && "none" !== GH && "" !== GH) {
+          var YH = hH.getPropertyValue("content"),
+            uH = function(HH, BH) {
+              var LH = HH.replace(/^['"]|['"]$/g, "").toLowerCase(),
+                AH = parseInt(BH),
+                rH = isNaN(AH) ? "normal" : AH;
+              return (NA[LH] || {})[rH] || RA[LH]
+            }(tH, XH),
+            QH = function(HH) {
+              return XL(EH(HH.replace(eA, ""))[0] || "")
+            }(YH),
+            WH = CH[0].startsWith("FontAwesome"),
+            MH = function(HH) {
+              var BH = HH.getPropertyValue("font-feature-settings").includes("ss01"),
+                LH = HH.getPropertyValue("content").replace(eA, ""),
+                AH = LH.codePointAt(0),
+                rH = AH >= qA[0] && AH <= qA[1],
+                SH = 2 === LH.length && LH[0] === LH[1];
+              return rH || SH || BH
+            }(hH),
+            xH = mL(uH, QH),
+            vH = xH;
+          if (WH) {
+            var PH = function(HH) {
+              var BH = UL[HH],
+                LH = mL("fas", HH);
+              return BH || (LH ? {
                 prefix: "fas",
-                iconName: xV
+                iconName: LH
               } : null) || {
                 prefix: null,
                 iconName: null
               }
-            }(bV);
-            tV.iconName && tV.prefix && (jV = tV.iconName, kV = tV.prefix)
+            }(QH);
+            PH.iconName && PH.prefix && (xH = PH.iconName, uH = PH.prefix)
           }
-          if (!jV || BV || UV && UV.getAttribute(je) === kV && UV.getAttribute(qe) === qV) JV();
+          if (!xH || MH || SH && SH.getAttribute(xB) === uH && SH.getAttribute(vB) === vH) AH();
           else {
-            VV.setAttribute(xV, qV), UV && VV.removeChild(UV);
-            var FV = {
+            HH.setAttribute(LH, vH), SH && HH.removeChild(SH);
+            var TH = {
                 iconName: null,
                 prefix: null,
-                transform: Ke,
+                transform: ZB,
                 symbol: !1,
                 mask: {
                   iconName: null,
@@ -2773,181 +2773,181 @@ export const modules = {
                   attributes: {}
                 }
               },
-              TV = FV.extra;
-            TV.attributes[Be] = eV, YJ(jV, kV).then((function(YV) {
-              var UV = Ox(QV(QV({}, FV), {}, {
+              UH = TH.extra;
+            UH.attributes[MB] = BH, rA(xH, uH).then((function(rH) {
+              var SH = yL(zH(zH({}, TH), {}, {
                   icons: {
-                    main: YV,
+                    main: rH,
                     mask: {
                       prefix: null,
                       iconName: null,
                       rest: []
                     }
                   },
-                  prefix: kV,
-                  iconName: qV,
-                  extra: TV,
+                  prefix: uH,
+                  iconName: vH,
+                  extra: UH,
                   watchable: !0
                 })),
-                yV = AV.createElementNS("http://www.w3.org/2000/svg", "svg");
-              "::before" === eV ? VV.insertBefore(yV, VV.firstChild) : VV.appendChild(yV), yV.outerHTML = UV.map((function(VV) {
-                return Qx(VV)
-              })).join("\n"), VV.removeAttribute(xV), JV()
-            })).catch(YV)
+                hH = OH.createElementNS("http://www.w3.org/2000/svg", "svg");
+              "::before" === BH ? HH.insertBefore(hH, HH.firstChild) : HH.appendChild(hH), hH.outerHTML = SH.map((function(HH) {
+                return zL(HH)
+              })).join("\n"), HH.removeAttribute(LH), AH()
+            })).catch(rH)
           }
-        } else JV()
+        } else AH()
       }))
     }
 
-    function lJ(VV) {
-      return Promise.all([hJ(VV, "::before"), hJ(VV, "::after")])
+    function nA(HH) {
+      return Promise.all([jA(HH, "::before"), jA(HH, "::after")])
     }
 
-    function LJ(VV) {
-      return VV.parentNode !== document.head && !~Fe.indexOf(VV.tagName.toUpperCase()) && !VV.getAttribute(Be) && (!VV.parentNode || "svg" !== VV.parentNode.tagName)
+    function FA(HH) {
+      return HH.parentNode !== document.head && !~TB.indexOf(HH.tagName.toUpperCase()) && !HH.getAttribute(MB) && (!HH.parentNode || "svg" !== HH.parentNode.tagName)
     }
-    var fJ = function(VV) {
-        return !!VV && Te.some((function(eV) {
-          return VV.includes(eV)
+    var DA = function(HH) {
+        return !!HH && UB.some((function(BH) {
+          return HH.includes(BH)
         }))
       },
-      mJ = function(VV) {
-        if (!VV) return [];
-        var eV = new Set,
-          xV = VV.split(/,(?![^()]*\))/).map((function(VV) {
-            return VV.trim()
+      wA = function(HH) {
+        if (!HH) return [];
+        var BH = new Set,
+          LH = HH.split(/,(?![^()]*\))/).map((function(HH) {
+            return HH.trim()
           }));
-        xV = xV.flatMap((function(VV) {
-          return VV.includes("(") ? VV : VV.split(",").map((function(VV) {
-            return VV.trim()
+        LH = LH.flatMap((function(HH) {
+          return HH.includes("(") ? HH : HH.split(",").map((function(HH) {
+            return HH.trim()
           }))
         }));
-        var JV, YV = UV(xV);
+        var AH, rH = SH(LH);
         try {
-          for (YV.s(); !(JV = YV.n()).done;) {
-            var yV = JV.value;
-            if (fJ(yV)) {
-              var pV = Te.reduce((function(VV, eV) {
-                return VV.replace(eV, "")
-              }), yV);
-              "" !== pV && "*" !== pV && eV.add(pV)
+          for (rH.s(); !(AH = rH.n()).done;) {
+            var hH = AH.value;
+            if (DA(hH)) {
+              var tH = UB.reduce((function(HH, BH) {
+                return HH.replace(BH, "")
+              }), hH);
+              "" !== tH && "*" !== tH && BH.add(tH)
             }
           }
-        } catch (QV) {
-          YV.e(QV)
+        } catch (zH) {
+          rH.e(zH)
         } finally {
-          YV.f()
+          rH.f()
         }
-        return eV
+        return BH
       };
 
-    function KJ(VV) {
-      if (MV) {
-        var eV;
-        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) eV = VV;
-        else if (Le.searchPseudoElementsFullScan) eV = VV.querySelectorAll("*");
+    function ZA(HH) {
+      if (mH) {
+        var BH;
+        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) BH = HH;
+        else if (FB.searchPseudoElementsFullScan) BH = HH.querySelectorAll("*");
         else {
-          var xV, JV = new Set,
-            YV = UV(document.styleSheets);
+          var LH, AH = new Set,
+            rH = SH(document.styleSheets);
           try {
-            for (YV.s(); !(xV = YV.n()).done;) {
-              var yV = xV.value;
+            for (rH.s(); !(LH = rH.n()).done;) {
+              var hH = LH.value;
               try {
-                var pV, QV = UV(yV.cssRules);
+                var tH, zH = SH(hH.cssRules);
                 try {
-                  for (QV.s(); !(pV = QV.n()).done;) {
-                    var nV, wV = pV.value,
-                      ZV = UV(mJ(wV.selectorText));
+                  for (zH.s(); !(tH = zH.n()).done;) {
+                    var CH, EH = tH.value,
+                      XH = SH(wA(EH.selectorText));
                     try {
-                      for (ZV.s(); !(nV = ZV.n()).done;) {
-                        var vV = nV.value;
-                        JV.add(vV)
+                      for (XH.s(); !(CH = XH.n()).done;) {
+                        var GH = CH.value;
+                        AH.add(GH)
                       }
-                    } catch (kV) {
-                      ZV.e(kV)
+                    } catch (uH) {
+                      XH.e(uH)
                     } finally {
-                      ZV.f()
+                      XH.f()
                     }
                   }
-                } catch (kV) {
-                  QV.e(kV)
+                } catch (uH) {
+                  zH.e(uH)
                 } finally {
-                  QV.f()
+                  zH.f()
                 }
-              } catch (bV) {
-                Le.searchPseudoElementsWarnings && console.warn("Font Awesome: cannot parse stylesheet: ".concat(yV.href, " (").concat(bV.message, ')\nIf it declares any Font Awesome CSS pseudo-elements, they will not be rendered as SVG icons. Add crossorigin="anonymous" to the <link>, enable searchPseudoElementsFullScan for slower but more thorough DOM parsing, or suppress this warning by setting searchPseudoElementsWarnings to false.'))
+              } catch (QH) {
+                FB.searchPseudoElementsWarnings && console.warn("Font Awesome: cannot parse stylesheet: ".concat(hH.href, " (").concat(QH.message, ')\nIf it declares any Font Awesome CSS pseudo-elements, they will not be rendered as SVG icons. Add crossorigin="anonymous" to the <link>, enable searchPseudoElementsFullScan for slower but more thorough DOM parsing, or suppress this warning by setting searchPseudoElementsWarnings to false.'))
               }
             }
-          } catch (kV) {
-            YV.e(kV)
+          } catch (uH) {
+            rH.e(uH)
           } finally {
-            YV.f()
+            rH.f()
           }
-          if (!JV.size) return;
-          var rV = Array.from(JV).join(", ");
+          if (!AH.size) return;
+          var YH = Array.from(AH).join(", ");
           try {
-            eV = VV.querySelectorAll(rV)
-          } catch (EV) {}
+            BH = HH.querySelectorAll(YH)
+          } catch (WH) {}
         }
-        return new Promise((function(VV, xV) {
-          var JV = ue(eV).filter(LJ).map(lJ),
-            YV = nJ("searchPseudoElements");
-          qJ(), Promise.all(JV).then((function() {
-            YV(), tJ(), VV()
+        return new Promise((function(HH, LH) {
+          var AH = aB(BH).filter(FA).map(nA),
+            rH = CA("searchPseudoElements");
+          vA(), Promise.all(AH).then((function() {
+            rH(), PA(), HH()
           })).catch((function() {
-            YV(), tJ(), xV()
+            rH(), PA(), LH()
           }))
         }))
       }
     }
-    var HJ = {
+    var dA = {
         hooks: function() {
           return {
-            mutationObserverCallbacks: function(VV) {
-              return VV.pseudoElementsCallback = KJ, VV
+            mutationObserverCallbacks: function(HH) {
+              return HH.pseudoElementsCallback = ZA, HH
             }
           }
         },
-        provides: function(VV) {
-          VV.pseudoElements2svg = function(VV) {
-            var eV = VV.node,
-              xV = void 0 === eV ? AV : eV;
-            Le.searchPseudoElements && KJ(xV)
+        provides: function(HH) {
+          HH.pseudoElements2svg = function(HH) {
+            var BH = HH.node,
+              LH = void 0 === BH ? OH : BH;
+            FB.searchPseudoElements && ZA(LH)
           }
         }
       },
-      uJ = !1,
-      sJ = function(VV) {
-        return VV.toLowerCase().split(" ").reduce((function(VV, eV) {
-          var xV = eV.toLowerCase().split("-"),
-            JV = xV[0],
-            YV = xV.slice(1).join("-");
-          if (JV && "h" === YV) return VV.flipX = !0, VV;
-          if (JV && "v" === YV) return VV.flipY = !0, VV;
-          if (YV = parseFloat(YV), isNaN(YV)) return VV;
-          switch (JV) {
+      aA = !1,
+      sA = function(HH) {
+        return HH.toLowerCase().split(" ").reduce((function(HH, BH) {
+          var LH = BH.toLowerCase().split("-"),
+            AH = LH[0],
+            rH = LH.slice(1).join("-");
+          if (AH && "h" === rH) return HH.flipX = !0, HH;
+          if (AH && "v" === rH) return HH.flipY = !0, HH;
+          if (rH = parseFloat(rH), isNaN(rH)) return HH;
+          switch (AH) {
             case "grow":
-              VV.size = VV.size + YV;
+              HH.size = HH.size + rH;
               break;
             case "shrink":
-              VV.size = VV.size - YV;
+              HH.size = HH.size - rH;
               break;
             case "left":
-              VV.x = VV.x - YV;
+              HH.x = HH.x - rH;
               break;
             case "right":
-              VV.x = VV.x + YV;
+              HH.x = HH.x + rH;
               break;
             case "up":
-              VV.y = VV.y - YV;
+              HH.y = HH.y - rH;
               break;
             case "down":
-              VV.y = VV.y + YV;
+              HH.y = HH.y + rH;
               break;
             case "rotate":
-              VV.rotate = VV.rotate + YV
+              HH.rotate = HH.rotate + rH
           }
-          return VV
+          return HH
         }), {
           size: 16,
           x: 0,
@@ -2957,244 +2957,244 @@ export const modules = {
           rotate: 0
         })
       },
-      SJ = {
+      JA = {
         mixout: function() {
           return {
             parse: {
-              transform: function(VV) {
-                return sJ(VV)
+              transform: function(HH) {
+                return sA(HH)
               }
             }
           }
         },
         hooks: function() {
           return {
-            parseNodeAttributes: function(VV, eV) {
-              var xV = eV.getAttribute("data-fa-transform");
-              return xV && (VV.transform = sJ(xV)), VV
+            parseNodeAttributes: function(HH, BH) {
+              var LH = BH.getAttribute("data-fa-transform");
+              return LH && (HH.transform = sA(LH)), HH
             }
           }
         },
-        provides: function(VV) {
-          VV.generateAbstractTransformGrouping = function(VV) {
-            var eV = VV.main,
-              xV = VV.transform,
-              JV = VV.containerWidth,
-              YV = VV.iconWidth,
-              UV = {
-                transform: "translate(".concat(JV / 2, " 256)")
+        provides: function(HH) {
+          HH.generateAbstractTransformGrouping = function(HH) {
+            var BH = HH.main,
+              LH = HH.transform,
+              AH = HH.containerWidth,
+              rH = HH.iconWidth,
+              SH = {
+                transform: "translate(".concat(AH / 2, " 256)")
               },
-              yV = "translate(".concat(32 * xV.x, ", ").concat(32 * xV.y, ") "),
-              pV = "scale(".concat(xV.size / 16 * (xV.flipX ? -1 : 1), ", ").concat(xV.size / 16 * (xV.flipY ? -1 : 1), ") "),
-              nV = "rotate(".concat(xV.rotate, " 0 0)"),
-              wV = {
-                outer: UV,
+              hH = "translate(".concat(32 * LH.x, ", ").concat(32 * LH.y, ") "),
+              tH = "scale(".concat(LH.size / 16 * (LH.flipX ? -1 : 1), ", ").concat(LH.size / 16 * (LH.flipY ? -1 : 1), ") "),
+              CH = "rotate(".concat(LH.rotate, " 0 0)"),
+              EH = {
+                outer: SH,
                 inner: {
-                  transform: "".concat(yV, " ").concat(pV, " ").concat(nV)
+                  transform: "".concat(hH, " ").concat(tH, " ").concat(CH)
                 },
                 path: {
-                  transform: "translate(".concat(YV / 2 * -1, " -256)")
+                  transform: "translate(".concat(rH / 2 * -1, " -256)")
                 }
               };
             return {
               tag: "g",
-              attributes: QV({}, wV.outer),
+              attributes: zH({}, EH.outer),
               children: [{
                 tag: "g",
-                attributes: QV({}, wV.inner),
+                attributes: zH({}, EH.inner),
                 children: [{
-                  tag: eV.icon.tag,
-                  children: eV.icon.children,
-                  attributes: QV(QV({}, eV.icon.attributes), wV.path)
+                  tag: BH.icon.tag,
+                  children: BH.icon.children,
+                  attributes: zH(zH({}, BH.icon.attributes), EH.path)
                 }]
               }]
             }
           }
         }
       },
-      IJ = {
+      iA = {
         x: 0,
         y: 0,
         width: "100%",
         height: "100%"
       };
 
-    function dJ(VV) {
-      var eV = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      return VV.attributes && (VV.attributes.fill || eV) && (VV.attributes.fill = "black"), VV
+    function pA(HH) {
+      var BH = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      return HH.attributes && (HH.attributes.fill || BH) && (HH.attributes.fill = "black"), HH
     }
-    var OJ = {
+    var yA = {
         hooks: function() {
           return {
-            parseNodeAttributes: function(VV, eV) {
-              var xV = eV.getAttribute("data-fa-mask"),
-                JV = xV ? ix(xV.split(" ").map((function(VV) {
-                  return VV.trim()
+            parseNodeAttributes: function(HH, BH) {
+              var LH = BH.getAttribute("data-fa-mask"),
+                AH = LH ? eL(LH.split(" ").map((function(HH) {
+                  return HH.trim()
                 }))) : {
                   prefix: null,
                   iconName: null,
                   rest: []
                 };
-              return JV.prefix || (JV.prefix = Wx()), VV.mask = JV, VV.maskId = eV.getAttribute("data-fa-mask-id"), VV
+              return AH.prefix || (AH.prefix = fL()), HH.mask = AH, HH.maskId = BH.getAttribute("data-fa-mask-id"), HH
             }
           }
         },
-        provides: function(VV) {
-          VV.generateAbstractMask = function(VV) {
-            var eV, xV = VV.children,
-              JV = VV.attributes,
-              YV = VV.main,
-              UV = VV.mask,
-              yV = VV.maskId,
-              pV = VV.transform,
-              nV = YV.width,
-              wV = YV.icon,
-              ZV = UV.width,
-              vV = UV.icon,
-              rV = function(VV) {
-                var eV = VV.transform,
-                  xV = VV.containerWidth,
-                  JV = VV.iconWidth,
-                  YV = {
-                    transform: "translate(".concat(xV / 2, " 256)")
+        provides: function(HH) {
+          HH.generateAbstractMask = function(HH) {
+            var BH, LH = HH.children,
+              AH = HH.attributes,
+              rH = HH.main,
+              SH = HH.mask,
+              hH = HH.maskId,
+              tH = HH.transform,
+              CH = rH.width,
+              EH = rH.icon,
+              XH = SH.width,
+              GH = SH.icon,
+              YH = function(HH) {
+                var BH = HH.transform,
+                  LH = HH.containerWidth,
+                  AH = HH.iconWidth,
+                  rH = {
+                    transform: "translate(".concat(LH / 2, " 256)")
                   },
-                  UV = "translate(".concat(32 * eV.x, ", ").concat(32 * eV.y, ") "),
-                  yV = "scale(".concat(eV.size / 16 * (eV.flipX ? -1 : 1), ", ").concat(eV.size / 16 * (eV.flipY ? -1 : 1), ") "),
-                  pV = "rotate(".concat(eV.rotate, " 0 0)");
+                  SH = "translate(".concat(32 * BH.x, ", ").concat(32 * BH.y, ") "),
+                  hH = "scale(".concat(BH.size / 16 * (BH.flipX ? -1 : 1), ", ").concat(BH.size / 16 * (BH.flipY ? -1 : 1), ") "),
+                  tH = "rotate(".concat(BH.rotate, " 0 0)");
                 return {
-                  outer: YV,
+                  outer: rH,
                   inner: {
-                    transform: "".concat(UV, " ").concat(yV, " ").concat(pV)
+                    transform: "".concat(SH, " ").concat(hH, " ").concat(tH)
                   },
                   path: {
-                    transform: "translate(".concat(JV / 2 * -1, " -256)")
+                    transform: "translate(".concat(AH / 2 * -1, " -256)")
                   }
                 }
               }({
-                transform: pV,
-                containerWidth: ZV,
-                iconWidth: nV
+                transform: tH,
+                containerWidth: XH,
+                iconWidth: CH
               }),
-              kV = {
+              uH = {
                 tag: "rect",
-                attributes: QV(QV({}, IJ), {}, {
+                attributes: zH(zH({}, iA), {}, {
                   fill: "white"
                 })
               },
-              bV = wV.children ? {
-                children: wV.children.map(dJ)
+              QH = EH.children ? {
+                children: EH.children.map(pA)
               } : {},
-              EV = {
+              WH = {
                 tag: "g",
-                attributes: QV({}, rV.inner),
-                children: [dJ(QV({
-                  tag: wV.tag,
-                  attributes: QV(QV({}, wV.attributes), rV.path)
-                }, bV))]
+                attributes: zH({}, YH.inner),
+                children: [pA(zH({
+                  tag: EH.tag,
+                  attributes: zH(zH({}, EH.attributes), YH.path)
+                }, QH))]
               },
-              BV = {
+              MH = {
                 tag: "g",
-                attributes: QV({}, rV.outer),
-                children: [EV]
+                attributes: zH({}, YH.outer),
+                children: [WH]
               },
-              jV = "mask-".concat(yV || He()),
-              qV = "clip-".concat(yV || He()),
-              tV = {
+              xH = "mask-".concat(hH || dB()),
+              vH = "clip-".concat(hH || dB()),
+              PH = {
                 tag: "mask",
-                attributes: QV(QV({}, IJ), {}, {
-                  id: jV,
+                attributes: zH(zH({}, iA), {}, {
+                  id: xH,
                   maskUnits: "userSpaceOnUse",
                   maskContentUnits: "userSpaceOnUse"
                 }),
-                children: [kV, BV]
+                children: [uH, MH]
               },
-              FV = {
+              TH = {
                 tag: "defs",
                 children: [{
                   tag: "clipPath",
                   attributes: {
-                    id: qV
+                    id: vH
                   },
-                  children: (eV = vV, "g" === eV.tag ? eV.children : [eV])
-                }, tV]
+                  children: (BH = GH, "g" === BH.tag ? BH.children : [BH])
+                }, PH]
               };
-            return xV.push(FV, {
+            return LH.push(TH, {
               tag: "rect",
-              attributes: QV({
+              attributes: zH({
                 fill: "currentColor",
-                "clip-path": "url(#".concat(qV, ")"),
-                mask: "url(#".concat(jV, ")")
-              }, IJ)
+                "clip-path": "url(#".concat(vH, ")"),
+                mask: "url(#".concat(xH, ")")
+              }, iA)
             }), {
-              children: xV,
-              attributes: JV
+              children: LH,
+              attributes: AH
             }
           }
         }
       },
-      VY = {
-        provides: function(VV) {
-          var eV = !1;
-          PV.matchMedia && (eV = PV.matchMedia("(prefers-reduced-motion: reduce)").matches), VV.missingIconAbstract = function() {
-            var VV = [],
-              xV = {
+      Hr = {
+        provides: function(HH) {
+          var BH = !1;
+          VH.matchMedia && (BH = VH.matchMedia("(prefers-reduced-motion: reduce)").matches), HH.missingIconAbstract = function() {
+            var HH = [],
+              LH = {
                 fill: "currentColor"
               },
-              JV = {
+              AH = {
                 attributeType: "XML",
                 repeatCount: "indefinite",
                 dur: "2s"
               };
-            VV.push({
+            HH.push({
               tag: "path",
-              attributes: QV(QV({}, xV), {}, {
+              attributes: zH(zH({}, LH), {}, {
                 d: "M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z"
               })
             });
-            var YV = QV(QV({}, JV), {}, {
+            var rH = zH(zH({}, AH), {}, {
                 attributeName: "opacity"
               }),
-              UV = {
+              SH = {
                 tag: "circle",
-                attributes: QV(QV({}, xV), {}, {
+                attributes: zH(zH({}, LH), {}, {
                   cx: "256",
                   cy: "364",
                   r: "28"
                 }),
                 children: []
               };
-            return eV || UV.children.push({
+            return BH || SH.children.push({
               tag: "animate",
-              attributes: QV(QV({}, JV), {}, {
+              attributes: zH(zH({}, AH), {}, {
                 attributeName: "r",
                 values: "28;14;28;28;14;28;"
               })
             }, {
               tag: "animate",
-              attributes: QV(QV({}, YV), {}, {
+              attributes: zH(zH({}, rH), {}, {
                 values: "1;0;1;1;0;1;"
               })
-            }), VV.push(UV), VV.push({
+            }), HH.push(SH), HH.push({
               tag: "path",
-              attributes: QV(QV({}, xV), {}, {
+              attributes: zH(zH({}, LH), {}, {
                 opacity: "1",
                 d: "M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z"
               }),
-              children: eV ? [] : [{
+              children: BH ? [] : [{
                 tag: "animate",
-                attributes: QV(QV({}, YV), {}, {
+                attributes: zH(zH({}, rH), {}, {
                   values: "1;0;0;0;0;1;"
                 })
               }]
-            }), eV || VV.push({
+            }), BH || HH.push({
               tag: "path",
-              attributes: QV(QV({}, xV), {}, {
+              attributes: zH(zH({}, LH), {}, {
                 opacity: "0",
                 d: "M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z"
               }),
               children: [{
                 tag: "animate",
-                attributes: QV(QV({}, YV), {}, {
+                attributes: zH(zH({}, rH), {}, {
                   values: "0;0;1;1;0;0;"
                 })
               }]
@@ -3203,35 +3203,35 @@ export const modules = {
               attributes: {
                 class: "missing"
               },
-              children: VV
+              children: HH
             }
           }
         }
       };
-    ! function(VV, eV) {
-      var xV = eV.mixoutsTo;
-      cx = VV, hx = {}, Object.keys(lx).forEach((function(VV) {
-        -1 === Lx.indexOf(VV) && delete lx[VV]
-      })), cx.forEach((function(VV) {
-        var eV = VV.mixout ? VV.mixout() : {};
-        if (Object.keys(eV).forEach((function(VV) {
-            "function" === typeof eV[VV] && (xV[VV] = eV[VV]), "object" === vV(eV[VV]) && Object.keys(eV[VV]).forEach((function(JV) {
-              xV[VV] || (xV[VV] = {}), xV[VV][JV] = eV[VV][JV]
+    ! function(HH, BH) {
+      var LH = BH.mixoutsTo;
+      RL = HH, jL = {}, Object.keys(nL).forEach((function(HH) {
+        -1 === FL.indexOf(HH) && delete nL[HH]
+      })), RL.forEach((function(HH) {
+        var BH = HH.mixout ? HH.mixout() : {};
+        if (Object.keys(BH).forEach((function(HH) {
+            "function" === typeof BH[HH] && (LH[HH] = BH[HH]), "object" === GH(BH[HH]) && Object.keys(BH[HH]).forEach((function(AH) {
+              LH[HH] || (LH[HH] = {}), LH[HH][AH] = BH[HH][AH]
             }))
-          })), VV.hooks) {
-          var JV = VV.hooks();
-          Object.keys(JV).forEach((function(VV) {
-            hx[VV] || (hx[VV] = []), hx[VV].push(JV[VV])
+          })), HH.hooks) {
+          var AH = HH.hooks();
+          Object.keys(AH).forEach((function(HH) {
+            jL[HH] || (jL[HH] = []), jL[HH].push(AH[HH])
           }))
         }
-        VV.provides && VV.provides(lx)
+        HH.provides && HH.provides(nL)
       }))
-    }([xx, WJ, RJ, gJ, DJ, HJ, {
+    }([LL, fA, lA, KA, cA, dA, {
       mixout: function() {
         return {
           dom: {
             unwatch: function() {
-              qJ(), uJ = !0
+              vA(), aA = !0
             }
           }
         }
@@ -3239,47 +3239,47 @@ export const modules = {
       hooks: function() {
         return {
           bootstrap: function() {
-            TJ(fx("mutationObserverCallbacks", {}))
+            UA(DL("mutationObserverCallbacks", {}))
           },
           noAuto: function() {
-            FJ && FJ.disconnect()
+            TA && TA.disconnect()
           },
-          watch: function(VV) {
-            var eV = VV.observeMutationsRoot;
-            uJ ? tJ() : TJ(fx("mutationObserverCallbacks", {
-              observeMutationsRoot: eV
+          watch: function(HH) {
+            var BH = HH.observeMutationsRoot;
+            aA ? PA() : UA(DL("mutationObserverCallbacks", {
+              observeMutationsRoot: BH
             }))
           }
         }
       }
-    }, SJ, OJ, VY, {
+    }, JA, yA, Hr, {
       hooks: function() {
         return {
-          parseNodeAttributes: function(VV, eV) {
-            var xV = eV.getAttribute("data-fa-symbol"),
-              JV = null !== xV && ("" === xV || xV);
-            return VV.symbol = JV, VV
+          parseNodeAttributes: function(HH, BH) {
+            var LH = BH.getAttribute("data-fa-symbol"),
+              AH = null !== LH && ("" === LH || LH);
+            return HH.symbol = AH, HH
           }
         }
       }
     }], {
-      mixoutsTo: Sx
+      mixoutsTo: JL
     });
-    var eY = Sx.noAuto,
-      xY = Sx.config,
-      JY = Sx.library,
-      YY = Sx.dom,
-      UY = Sx.parse,
-      yY = Sx.findIconDefinition,
-      pY = Sx.toHtml,
-      QY = Sx.icon,
-      nY = Sx.layer,
-      wY = Sx.text,
-      ZY = Sx.counter
+    var Br = JL.noAuto,
+      Lr = JL.config,
+      Ar = JL.library,
+      rr = JL.dom,
+      Sr = JL.parse,
+      hr = JL.findIconDefinition,
+      tr = JL.toHtml,
+      zr = JL.icon,
+      Cr = JL.layer,
+      Er = JL.text,
+      Xr = JL.counter
   },
-  7324: VV => {
-    VV.exports = JSON.parse('{"description":"The iconic font, CSS, and SVG framework","keywords":["font","awesome","fontawesome","icon","svg","bootstrap"],"homepage":"https://fontawesome.com","bugs":{"url":"https://github.com/FortAwesome/Font-Awesome/issues"},"author":"The Font Awesome Team (https://github.com/orgs/FortAwesome/people)","repository":{"type":"git","url":"https://github.com/FortAwesome/Font-Awesome"},"engines":{"node":">=6"},"dependencies":{"@fortawesome/fontawesome-common-types":"7.2.0"},"version":"7.2.0","name":"@fortawesome/fontawesome-svg-core","main":"index.js","module":"index.mjs","jsnext:main":"index.mjs","style":"styles.css","license":"MIT","types":"./index.d.ts","exports":{".":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","style":"./styles.css","default":"./index.js"},"./index":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","default":"./index.js"},"./index.js":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","default":"./index.js"},"./plugins":{"types":"./index.d.ts","module":"./plugins.mjs","import":"./plugins.mjs","default":"./plugins.mjs"},"./import.macro":"./import.macro.js","./import.macro.js":"./import.macro.js","./styles":"./styles.css","./styles.css":"./styles.css","./package.json":"./package.json"},"sideEffects":["./index.js","./index.mjs","./styles.css"]}')
+  7310: HH => {
+    HH.exports = JSON.parse('{"description":"The iconic font, CSS, and SVG framework","keywords":["font","awesome","fontawesome","icon","svg","bootstrap"],"homepage":"https://fontawesome.com","bugs":{"url":"https://github.com/FortAwesome/Font-Awesome/issues"},"author":"The Font Awesome Team (https://github.com/orgs/FortAwesome/people)","repository":{"type":"git","url":"https://github.com/FortAwesome/Font-Awesome"},"engines":{"node":">=6"},"dependencies":{"@fortawesome/fontawesome-common-types":"7.2.0"},"version":"7.2.0","name":"@fortawesome/fontawesome-svg-core","main":"index.js","module":"index.mjs","jsnext:main":"index.mjs","style":"styles.css","license":"MIT","types":"./index.d.ts","exports":{".":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","style":"./styles.css","default":"./index.js"},"./index":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","default":"./index.js"},"./index.js":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","default":"./index.js"},"./plugins":{"types":"./index.d.ts","module":"./plugins.mjs","import":"./plugins.mjs","default":"./plugins.mjs"},"./import.macro":"./import.macro.js","./import.macro.js":"./import.macro.js","./styles":"./styles.css","./styles.css":"./styles.css","./package.json":"./package.json"},"sideEffects":["./index.js","./index.mjs","./styles.css"]}')
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

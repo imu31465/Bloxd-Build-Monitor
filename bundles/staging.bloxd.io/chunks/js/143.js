@@ -1,203 +1,203 @@
 export const id = 143;
 export const ids = [143];
 export const modules = {
-  7135: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => pV
+  7121: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => tH
     });
-    var JV = xV(1146),
-      YV = xV.n(JV),
-      UV = xV(1220),
-      yV = xV(1321);
+    var AH = LH(1038),
+      rH = LH.n(AH),
+      SH = LH(1123),
+      hH = LH(1225);
 
-    function pV(VV) {
+    function tH(HH) {
       let {
-        item: eV,
-        className: xV
-      } = VV;
+        item: BH,
+        className: LH
+      } = HH;
       const {
-        t: JV
-      } = (0, UV.A)();
-      return null === eV.renderId || eV.previewsOutdated ? (0, yV.jsx)("div", {
-        className: YV()("ShaderPackPreviewsNotice", xV),
-        children: (0, yV.jsx)("span", {
-          children: JV(null === eV.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
+        t: AH
+      } = (0, SH.B)();
+      return null === BH.renderId || BH.previewsOutdated ? (0, hH.jsx)("div", {
+        className: rH()("ShaderPackPreviewsNotice", LH),
+        children: (0, hH.jsx)("span", {
+          children: AH(null === BH.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
         })
       }) : null
     }
   },
-  7154: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => nV
+  7141: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => CH
     });
-    var JV = xV(1146),
-      YV = xV.n(JV),
-      UV = xV(7132),
-      yV = xV(1220),
-      pV = xV(7130),
-      QV = xV(1321);
+    var AH = LH(1038),
+      rH = LH.n(AH),
+      SH = LH(7114),
+      hH = LH(1123),
+      tH = LH(7111),
+      zH = LH(1225);
 
-    function nV(VV) {
+    function CH(HH) {
       let {
-        selected: eV,
-        onSelect: xV,
-        imageUrl: JV
-      } = VV;
+        selected: BH,
+        onSelect: LH,
+        imageUrl: AH
+      } = HH;
       const {
-        t: nV
-      } = (0, yV.A)();
-      return (0, QV.jsx)("div", {
+        t: CH
+      } = (0, hH.B)();
+      return (0, zH.jsx)("div", {
         className: "ShaderPackViewPicker",
-        children: UV.L.map((VV => {
-          const UV = JV(VV);
-          return (0, QV.jsxs)("button", {
+        children: SH.L.map((HH => {
+          const SH = AH(HH);
+          return (0, zH.jsxs)("button", {
             type: "button",
-            "aria-pressed": VV === eV,
-            className: YV()("ShaderPackViewOption", {
-              Selected: VV === eV
+            "aria-pressed": HH === BH,
+            className: rH()("ShaderPackViewOption", {
+              Selected: HH === BH
             }),
             onClick: () => {
-              xV(VV)
+              LH(HH)
             },
-            children: [null !== UV && (0, QV.jsx)("img", {
-              src: UV,
+            children: [null !== SH && (0, zH.jsx)("img", {
+              src: SH,
               alt: "",
               loading: "lazy",
               draggable: !1
-            }), (0, QV.jsx)("span", {
+            }), (0, zH.jsx)("span", {
               className: "SmallTextBold",
-              children: nV(pV.mb[VV])
+              children: CH(tH._[HH])
             })]
-          }, VV)
+          }, HH)
         }))
       })
     }
   },
-  7141: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => vV,
-      g: () => rV,
-      j: () => ZV,
-      n: () => kV
+  7129: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => GH,
+      g: () => YH,
+      i: () => XH,
+      k: () => uH
     });
-    var JV = xV(62),
-      YV = xV(7132),
-      UV = xV(1603),
-      yV = xV(7130),
-      pV = xV(7147),
-      QV = xV(1168);
-    const nV = "shaderPackListingView",
-      wV = "shaderPackListingFilterOpen";
+    var AH = LH(45),
+      rH = LH(7114),
+      SH = LH(1502),
+      hH = LH(7111),
+      tH = LH(7138),
+      zH = LH(1061);
+    const CH = "shaderPackListingView",
+      EH = "shaderPackListingFilterOpen";
 
-    function ZV() {
-      var VV;
-      const [eV, xV] = (0, pV.c)(nV, YV.L[0]);
-      return [null !== (VV = YV.L.find((VV => VV === eV))) && void 0 !== VV ? VV : YV.L[0], xV]
+    function XH() {
+      var HH;
+      const [BH, LH] = (0, tH.b)(CH, rH.L[0]);
+      return [null !== (HH = rH.L.find((HH => HH === BH))) && void 0 !== HH ? HH : rH.L[0], LH]
     }
 
-    function vV() {
-      (0, JV.useEffect)((() => () => {
-        window.location.pathname.startsWith(yV.Y) || (0, yV.g)()
+    function GH() {
+      (0, AH.useEffect)((() => () => {
+        window.location.pathname.startsWith(hH.P) || (0, hH.k)()
       }), [])
     }
 
-    function rV() {
-      return (0, pV.c)(wV, !1)
+    function YH() {
+      return (0, tH.b)(EH, !1)
     }
 
-    function kV() {
+    function uH() {
       const {
-        userContext: VV,
-        isUserContextUpdating: eV
-      } = (0, QV.d)(), [xV, YV] = (0, JV.useState)(null), yV = (0, JV.useRef)(new Set);
+        userContext: HH,
+        isUserContextUpdating: BH
+      } = (0, zH.e)(), [LH, rH] = (0, AH.useState)(null), hH = (0, AH.useRef)(new Set);
 
-      function pV(VV, eV) {
-        YV((xV => {
-          const JV = new Set(xV);
-          return eV ? JV.add(VV) : JV.delete(VV), JV
+      function tH(HH, BH) {
+        rH((LH => {
+          const AH = new Set(LH);
+          return BH ? AH.add(HH) : AH.delete(HH), AH
         }))
       }
-      return (0, JV.useEffect)((() => {
-        if (eV) return;
-        let xV = !1;
-        return UV.b.getFavouriteShaderPacks(VV).then((VV => {
-          xV || YV(new Set(VV))
-        })).catch((VV => {
-          console.error("Failed to get favourite shader packs", VV), xV || YV(new Set)
+      return (0, AH.useEffect)((() => {
+        if (BH) return;
+        let LH = !1;
+        return SH.d.getFavouriteShaderPacks(HH).then((HH => {
+          LH || rH(new Set(HH))
+        })).catch((HH => {
+          console.error("Failed to get favourite shader packs", HH), LH || rH(new Set)
         })), () => {
-          xV = !0
+          LH = !0
         }
-      }), [VV, eV]), {
-        isFavourite: VV => null === xV ? null : xV.has(VV),
-        toggle: function(eV) {
-          if (null === xV || yV.current.has(eV)) return;
-          yV.current.add(eV);
-          const JV = !xV.has(eV);
-          pV(eV, JV), (JV ? UV.b.favouriteShaderPack(VV, eV) : UV.b.unfavouriteShaderPack(VV, eV)).catch((VV => {
-            console.error("Failed to change a favourite shader pack", VV), pV(eV, !JV)
+      }), [HH, BH]), {
+        isFavourite: HH => null === LH ? null : LH.has(HH),
+        toggle: function(BH) {
+          if (null === LH || hH.current.has(BH)) return;
+          hH.current.add(BH);
+          const AH = !LH.has(BH);
+          tH(BH, AH), (AH ? SH.d.favouriteShaderPack(HH, BH) : SH.d.unfavouriteShaderPack(HH, BH)).catch((HH => {
+            console.error("Failed to change a favourite shader pack", HH), tH(BH, !AH)
           })).finally((() => {
-            yV.current.delete(eV)
+            hH.current.delete(BH)
           }))
         }
       }
     }
   },
-  7130: (VV, eV, xV) => {
-    xV.d(eV, {
-      $: () => aV,
-      A: () => kV,
-      E: () => BV,
-      I: () => MV,
-      K: () => wV,
-      O: () => GV,
-      Q: () => bV,
-      T: () => oV,
-      V: () => CV,
-      Y: () => yV,
-      b: () => jV,
-      d: () => NV,
-      db: () => QV,
-      e: () => EV,
-      g: () => vV,
-      hb: () => pV,
-      jb: () => DV,
-      k: () => ZV,
-      mb: () => iV,
-      nb: () => qV,
-      o: () => WV,
-      qb: () => zV,
-      r: () => rV,
-      t: () => RV,
-      x: () => cV
+  7111: (HH, BH, LH) => {
+    LH.d(BH, {
+      B: () => mH,
+      F: () => EH,
+      I: () => IH,
+      L: () => QH,
+      M: () => NH,
+      N: () => qH,
+      P: () => hH,
+      R: () => gH,
+      S: () => zH,
+      T: () => tH,
+      X: () => cH,
+      _: () => eH,
+      ab: () => vH,
+      bb: () => oH,
+      e: () => xH,
+      h: () => bH,
+      j: () => WH,
+      k: () => GH,
+      m: () => XH,
+      n: () => fH,
+      p: () => YH,
+      q: () => lH,
+      s: () => RH,
+      w: () => uH,
+      z: () => MH
     });
-    var JV = xV(7132),
-      YV = xV(165),
-      UV = xV(5037);
-    const yV = "/shader-packs",
-      pV = `${yV}/publish`;
+    var AH = LH(7114),
+      rH = LH(152),
+      SH = LH(4969);
+    const hH = "/shader-packs",
+      tH = `${hH}/publish`;
 
-    function QV(VV) {
-      return `${yV}/${encodeURIComponent(VV)}`
+    function zH(HH) {
+      return `${hH}/${encodeURIComponent(HH)}`
     }
-    let nV = null;
+    let CH = null;
 
-    function wV(VV) {
-      nV = VV
-    }
-
-    function ZV() {
-      return nV
+    function EH(HH) {
+      CH = HH
     }
 
-    function vV() {
-      nV = null
+    function XH() {
+      return CH
     }
 
-    function rV(VV) {
-      return VV.playerHasRank("developer") || VV.playerHasRank("admin")
+    function GH() {
+      CH = null
     }
-    const kV = ["terrain", "water", "models", "sunShadows", "strict"],
-      bV = {
+
+    function YH(HH) {
+      return HH.playerHasRank("developer") || HH.playerHasRank("admin")
+    }
+    const uH = ["terrain", "water", "models", "sunShadows", "strict"],
+      QH = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -205,89 +205,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function EV(VV, eV) {
-      return VV.withFeatures.includes(eV) ? "with" : VV.withoutFeatures.includes(eV) ? "without" : null
+    function WH(HH, BH) {
+      return HH.withFeatures.includes(BH) ? "with" : HH.withoutFeatures.includes(BH) ? "without" : null
     }
 
-    function BV(VV) {
-      return null === VV ? "with" : "with" === VV ? "without" : null
+    function MH(HH) {
+      return null === HH ? "with" : "with" === HH ? "without" : null
     }
 
-    function jV(VV) {
-      return "with" === VV ? "only" : null === VV ? "include" : void 0
+    function xH(HH) {
+      return "with" === HH ? "only" : null === HH ? "include" : void 0
     }
 
-    function qV(VV, eV) {
-      const xV = EV(VV, eV),
-        JV = VV => VV.filter((VV => VV !== eV));
+    function vH(HH, BH) {
+      const LH = WH(HH, BH),
+        AH = HH => HH.filter((HH => HH !== BH));
       return {
-        withFeatures: null === xV ? [...VV.withFeatures, eV] : JV(VV.withFeatures),
-        withoutFeatures: "with" === xV ? [...VV.withoutFeatures, eV] : JV(VV.withoutFeatures)
+        withFeatures: null === LH ? [...HH.withFeatures, BH] : AH(HH.withFeatures),
+        withoutFeatures: "with" === LH ? [...HH.withoutFeatures, BH] : AH(HH.withoutFeatures)
       }
     }
-    const tV = "section",
-      FV = "sort",
-      TV = "filters",
-      PV = "q",
-      AV = "banned",
-      NV = "popular",
-      XV = "strict";
+    const PH = "section",
+      TH = "sort",
+      UH = "filters",
+      VH = "q",
+      OH = "banned",
+      bH = "popular",
+      kH = "strict";
 
-    function MV(VV) {
-      var eV, xV, YV;
-      const yV = VV.get(tV),
-        pV = (null !== (eV = VV.get(TV)) && void 0 !== eV ? eV : XV).split(","),
-        QV = VV.get(AV);
+    function mH(HH) {
+      var BH, LH, rH;
+      const hH = HH.get(PH),
+        tH = (null !== (BH = HH.get(UH)) && void 0 !== BH ? BH : kH).split(","),
+        zH = HH.get(OH);
       return {
-        section: "favourites" === yV || "mine" === yV ? yV : "explore",
-        sort: null !== (xV = JV.B.find((eV => eV === VV.get(FV)))) && void 0 !== xV ? xV : NV,
-        withFeatures: kV.filter((VV => pV.includes(VV) && !pV.includes(`-${VV}`))),
-        withoutFeatures: kV.filter((VV => pV.includes(`-${VV}`))),
-        searchQuery: (null === (YV = VV.get(PV)) || void 0 === YV ? void 0 : YV.slice(0, JV.P)) || null,
-        pageNumber: (0, UV.g)(VV.get(UV.d)),
-        banned: "only" === QV ? "with" : "include" === QV ? null : "without"
+        section: "favourites" === hH || "mine" === hH ? hH : "explore",
+        sort: null !== (LH = AH.B.find((BH => BH === HH.get(TH)))) && void 0 !== LH ? LH : bH,
+        withFeatures: uH.filter((HH => tH.includes(HH) && !tH.includes(`-${HH}`))),
+        withoutFeatures: uH.filter((HH => tH.includes(`-${HH}`))),
+        searchQuery: (null === (rH = HH.get(VH)) || void 0 === rH ? void 0 : rH.slice(0, AH.P)) || null,
+        pageNumber: (0, SH.g)(HH.get(SH.c)),
+        banned: "only" === zH ? "with" : "include" === zH ? null : "without"
       }
     }
 
-    function zV(VV, eV) {
-      var xV;
-      const JV = gV(eV);
-      (0, UV.k)(VV, tV, "explore" === eV.section ? null : eV.section), (0, UV.k)(VV, FV, eV.sort === NV ? null : eV.sort), (0, UV.k)(VV, TV, JV === XV ? null : JV), (0, UV.k)(VV, PV, eV.searchQuery), (0, UV.k)(VV, AV, null !== (xV = jV(eV.banned)) && void 0 !== xV ? xV : null), (0, UV.l)(VV, eV.pageNumber)
+    function oH(HH, BH) {
+      var LH;
+      const AH = KH(BH);
+      (0, SH.j)(HH, PH, "explore" === BH.section ? null : BH.section), (0, SH.j)(HH, TH, BH.sort === bH ? null : BH.sort), (0, SH.j)(HH, UH, AH === kH ? null : AH), (0, SH.j)(HH, VH, BH.searchQuery), (0, SH.j)(HH, OH, null !== (LH = xH(BH.banned)) && void 0 !== LH ? LH : null), (0, SH.m)(HH, BH.pageNumber)
     }
 
-    function GV(VV) {
-      const eV = new URLSearchParams;
-      return zV(eV, {
+    function IH(HH) {
+      const BH = new URLSearchParams;
+      return oH(BH, {
         section: "explore",
-        sort: NV,
-        withFeatures: "strict" === VV ? [VV] : [VV, "strict"],
+        sort: bH,
+        withFeatures: "strict" === HH ? [HH] : [HH, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${yV}?${eV.toString()}`
+      }), `${hH}?${BH.toString()}`
     }
 
-    function WV(VV) {
-      return gV(VV) === XV
+    function fH(HH) {
+      return KH(HH) === kH
     }
 
-    function RV(VV) {
-      return null !== VV.searchQuery || "with" === VV.banned || gV(VV) !== XV
+    function lH(HH) {
+      return null !== HH.searchQuery || "with" === HH.banned || KH(HH) !== kH
     }
 
-    function gV(VV) {
-      return kV.flatMap((eV => {
-        const xV = EV(VV, eV);
-        return "with" === xV ? [eV] : "without" === xV ? [`-${eV}`] : []
+    function KH(HH) {
+      return uH.flatMap((BH => {
+        const LH = WH(HH, BH);
+        return "with" === LH ? [BH] : "without" === LH ? [`-${BH}`] : []
       })).join(",")
     }
-    const DV = {
+    const cH = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      iV = {
+      eH = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -295,94 +295,94 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function CV(VV) {
-      return Math.round(100 * Math.max(0, 1 - 1 / VV))
+    function qH(HH) {
+      return Math.round(100 * Math.max(0, 1 - 1 / HH))
     }
 
-    function aV(VV, eV, xV, YV) {
-      const UV = [];
-      VV.isBanned && UV.push({
+    function gH(HH, BH, LH, rH) {
+      const SH = [];
+      HH.isBanned && SH.push({
         tone: "warning",
-        text: YV("shaderPackListing:ownerBanned"),
+        text: rH("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: yV
-      } = VV;
-      if (null === VV.brokenError || yV && !yV.error || UV.push({
+        pending: hH
+      } = HH;
+      if (null === HH.brokenError || hH && !hH.error || SH.push({
           tone: "warning",
-          text: YV("shaderPackListing:ownerBroken"),
-          detail: VV.brokenError
-        }), null !== yV && void 0 !== yV && yV.error) UV.push({
+          text: rH("shaderPackListing:ownerBroken"),
+          detail: HH.brokenError
+        }), null !== hH && void 0 !== hH && hH.error) SH.push({
         tone: "warning",
-        text: YV(eV ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, JV.n)(yV.error) ? null : yV.error
+        text: rH(BH ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, AH.o)(hH.error) ? null : hH.error
       });
-      else if (yV) {
-        const VV = null === yV.renderNotBefore ? 0 : yV.renderNotBefore - xV,
-          JV = String(Math.ceil(VV / 6e4)),
-          pV = YV(eV ? VV > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : VV > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: JV
+      else if (hH) {
+        const HH = null === hH.renderNotBefore ? 0 : hH.renderNotBefore - LH,
+          AH = String(Math.ceil(HH / 6e4)),
+          tH = rH(BH ? HH > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : HH > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: AH
           });
-        UV.push({
+        SH.push({
           tone: "info",
-          text: pV,
+          text: tH,
           detail: null
         })
       }
-      return VV.listed || UV.push({
+      return HH.listed || SH.push({
         tone: "info",
-        text: YV("shaderPackListing:ownerUnlisted"),
+        text: rH("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), UV
+      }), SH
     }
 
-    function oV(VV) {
-      return Math.max(1, Math.round(VV / 1024))
+    function NH(HH) {
+      return Math.max(1, Math.round(HH / 1024))
     }
 
-    function cV(VV, eV, xV) {
-      return VV instanceof YV.b && VV.errorMessageForUser ? VV.errorMessageForUser : eV(xV)
+    function RH(HH, BH, LH) {
+      return HH instanceof rH.e && HH.errorMessageForUser ? HH.errorMessageForUser : BH(LH)
     }
   },
-  7147: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV
+  7138: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => SH
     });
-    var JV = xV(62),
-      YV = xV(40);
+    var AH = LH(45),
+      rH = LH(30);
 
-    function UV(VV, eV) {
-      var xV;
-      const [UV, yV] = (0, JV.useState)(null !== (xV = YV.m.getItem(VV)) && void 0 !== xV ? xV : eV);
-      return [UV, eV => {
-        YV.m.setItem(VV, eV), yV(eV)
+    function SH(HH, BH) {
+      var LH;
+      const [SH, hH] = (0, AH.useState)(null !== (LH = rH.e.getItem(HH)) && void 0 !== LH ? LH : BH);
+      return [SH, BH => {
+        rH.e.setItem(HH, BH), hH(BH)
       }]
     }
   },
-  7132: (VV, eV, xV) => {
-    xV.d(eV, {
-      B: () => UV,
-      D: () => pV,
-      H: () => yV,
-      L: () => JV,
-      O: () => vV,
-      P: () => wV,
-      S: () => tV,
-      V: () => ZV,
-      X: () => nV,
-      d: () => kV,
-      g: () => EV,
-      h: () => bV,
-      k: () => rV,
-      n: () => qV,
-      q: () => TV,
-      s: () => QV,
-      w: () => YV,
-      x: () => FV
+  7114: (HH, BH, LH) => {
+    LH.d(BH, {
+      B: () => SH,
+      F: () => tH,
+      H: () => hH,
+      L: () => AH,
+      M: () => GH,
+      P: () => EH,
+      Q: () => PH,
+      R: () => XH,
+      V: () => CH,
+      d: () => uH,
+      g: () => WH,
+      i: () => QH,
+      m: () => YH,
+      o: () => vH,
+      s: () => UH,
+      v: () => zH,
+      w: () => rH,
+      x: () => TH
     });
-    const JV = ["forest", "desert", "water", "night", "cave"];
-    const YV = {
+    const AH = ["forest", "desert", "water", "night", "cave"];
+    const rH = {
         full: {
           width: 3840,
           height: 2160
@@ -396,49 +396,49 @@ export const modules = {
           height: 360
         }
       },
-      UV = ["popular", "updated", "newest"],
-      yV = 3,
-      pV = 32,
-      QV = 300;
+      SH = ["popular", "updated", "newest"],
+      hH = 3,
+      tH = 32,
+      zH = 300;
 
-    function nV(VV, eV) {
-      return VV.slice(0, eV).replace(/[\uD800-\uDBFF]$/, "")
+    function CH(HH, BH) {
+      return HH.slice(0, BH).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const wV = 64,
-      ZV = 512,
-      vV = 18e5;
+    const EH = 64,
+      XH = 512,
+      GH = 18e5;
 
-    function rV(VV) {
-      const eV = VV,
-        xV = null === eV || void 0 === eV ? void 0 : eV.files;
-      return "number" === typeof(null === eV || void 0 === eV ? void 0 : eV.apiVersion) && "string" === typeof eV.name && (null === eV.author || "string" === typeof eV.author) && (void 0 === eV.keepCircleShadows || "boolean" === typeof eV.keepCircleShadows) && "object" === typeof xV && null !== xV && Object.values(xV).every((VV => "string" === typeof VV))
+    function YH(HH) {
+      const BH = HH,
+        LH = null === BH || void 0 === BH ? void 0 : BH.files;
+      return "number" === typeof(null === BH || void 0 === BH ? void 0 : BH.apiVersion) && "string" === typeof BH.name && (null === BH.author || "string" === typeof BH.author) && (void 0 === BH.keepCircleShadows || "boolean" === typeof BH.keepCircleShadows) && "object" === typeof LH && null !== LH && Object.values(LH).every((HH => "string" === typeof HH))
     }
-    const kV = "Bloxdhub",
-      bV = "https://bloxdhub.com/shaders";
+    const uH = "Bloxdhub",
+      QH = "https://bloxdhub.com/shaders";
 
-    function EV(VV) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(VV)}`
+    function WH(HH) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(HH)}`
     }
-    const BV = "Screenshot generation failed.",
-      jV = "Its screenshots couldn't be generated:";
+    const MH = "Screenshot generation failed.",
+      xH = "Its screenshots couldn't be generated:";
 
-    function qV(VV) {
-      var eV;
-      return VV === BV || null !== (eV = null === VV || void 0 === VV ? void 0 : VV.startsWith(jV)) && void 0 !== eV && eV
-    }
-
-    function tV(VV, eV) {
-      return `shaderPacks/${VV}/${eV}.json`
+    function vH(HH) {
+      var BH;
+      return HH === MH || null !== (BH = null === HH || void 0 === HH ? void 0 : HH.startsWith(xH)) && void 0 !== BH && BH
     }
 
-    function FV(VV, eV, xV, JV) {
-      return null === eV.renderId ? TV(VV, eV.baselineVersion, xV, JV) : `${VV}/${function(VV,eV,xV,JV){return`shaderPacks/${VV}/${eV}/${xV}-${JV}.webp`}(eV.packId,eV.renderId,xV,JV)}`
+    function PH(HH, BH) {
+      return `shaderPacks/${HH}/${BH}.json`
     }
 
-    function TV(VV, eV, xV, JV) {
-      return `${VV}/${function(VV,eV,xV){return`shaderPacks/baseline/${VV}/${eV}-${xV}.webp`}(eV,xV,JV)}`
+    function TH(HH, BH, LH, AH) {
+      return null === BH.renderId ? UH(HH, BH.baselineVersion, LH, AH) : `${HH}/${function(HH,BH,LH,AH){return`shaderPacks/${HH}/${BH}/${LH}-${AH}.webp`}(BH.packId,BH.renderId,LH,AH)}`
+    }
+
+    function UH(HH, BH, LH, AH) {
+      return `${HH}/${function(HH,BH,LH){return`shaderPacks/baseline/${HH}/${BH}-${LH}.webp`}(BH,LH,AH)}`
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

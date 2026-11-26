@@ -1,582 +1,582 @@
 export const id = 624;
 export const ids = [624];
 export const modules = {
-  44744: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      ReadExrDataAsync: () => Ze,
-      _ExrTextureLoader: () => we
+  45326: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      ReadExrDataAsync: () => XB,
+      _ExrTextureLoader: () => EB
     });
-    var JV = xV(39870),
-      YV = xV(38303),
-      UV = xV(41323);
-    const yV = 4,
-      pV = 4,
-      QV = 1,
-      nV = 2,
-      wV = 8,
-      ZV = 65536,
-      vV = ZV >> 3,
-      rV = 14,
-      kV = 65537,
-      bV = 1 << rV,
-      EV = bV - 1,
-      BV = 59,
-      jV = 63,
-      qV = 2 + jV - BV;
-    var tV, FV;
+    var AH = LH(39595),
+      rH = LH(38002),
+      SH = LH(41364);
+    const hH = 4,
+      tH = 4,
+      zH = 1,
+      CH = 2,
+      EH = 8,
+      XH = 65536,
+      GH = XH >> 3,
+      YH = 14,
+      uH = 65537,
+      QH = 1 << YH,
+      WH = QH - 1,
+      MH = 59,
+      xH = 63,
+      vH = 2 + xH - MH;
+    var PH, TH;
 
-    function TV(VV, eV) {
-      const xV = new Uint8Array(VV);
-      let JV = 0;
-      for (; 0 != xV[eV.value + JV];) JV += 1;
-      const YV = (new TextDecoder).decode(xV.slice(eV.value, eV.value + JV));
-      return eV.value = eV.value + JV + 1, YV
+    function UH(HH, BH) {
+      const LH = new Uint8Array(HH);
+      let AH = 0;
+      for (; 0 != LH[BH.value + AH];) AH += 1;
+      const rH = (new TextDecoder).decode(LH.slice(BH.value, BH.value + AH));
+      return BH.value = BH.value + AH + 1, rH
     }
 
-    function PV(VV, eV) {
-      const xV = VV.getInt32(eV.value, !0);
-      return eV.value += yV, xV
+    function VH(HH, BH) {
+      const LH = HH.getInt32(BH.value, !0);
+      return BH.value += hH, LH
     }
 
-    function AV(VV, eV) {
-      const xV = VV.getUint32(eV.value, !0);
-      return eV.value += yV, xV
+    function OH(HH, BH) {
+      const LH = HH.getUint32(BH.value, !0);
+      return BH.value += hH, LH
     }
 
-    function NV(VV, eV) {
-      const xV = VV.getUint8(eV.value);
-      return eV.value += QV, xV
+    function bH(HH, BH) {
+      const LH = HH.getUint8(BH.value);
+      return BH.value += zH, LH
     }
 
-    function XV(VV, eV) {
-      const xV = VV.getUint16(eV.value, !0);
-      return eV.value += nV, xV
+    function kH(HH, BH) {
+      const LH = HH.getUint16(BH.value, !0);
+      return BH.value += CH, LH
     }
 
-    function MV(VV, eV) {
-      const xV = VV[eV.value];
-      return eV.value += QV, xV
+    function mH(HH, BH) {
+      const LH = HH[BH.value];
+      return BH.value += zH, LH
     }
 
-    function zV(VV, eV) {
-      let xV;
-      return xV = "getBigInt64" in DataView.prototype ? Number(VV.getBigInt64(eV.value, !0)) : VV.getUint32(eV.value + 4, !0) + Number(VV.getUint32(eV.value, !0) << 32), eV.value += wV, xV
+    function oH(HH, BH) {
+      let LH;
+      return LH = "getBigInt64" in DataView.prototype ? Number(HH.getBigInt64(BH.value, !0)) : HH.getUint32(BH.value + 4, !0) + Number(HH.getUint32(BH.value, !0) << 32), BH.value += EH, LH
     }
 
-    function GV(VV, eV) {
-      const xV = VV.getFloat32(eV.value, !0);
-      return eV.value += pV, xV
+    function IH(HH, BH) {
+      const LH = HH.getFloat32(BH.value, !0);
+      return BH.value += tH, LH
     }
 
-    function WV(VV, eV) {
-      return (0, UV.c)(XV(VV, eV))
+    function fH(HH, BH) {
+      return (0, SH.d)(kH(HH, BH))
     }
 
-    function RV(VV, eV) {
-      return (0, UV.j)((0, YV.Clamp)(GV(VV, eV), -UV.f, UV.f))
+    function lH(HH, BH) {
+      return (0, SH.f)((0, rH.Clamp)(IH(HH, BH), -SH.e, SH.e))
     }
 
-    function gV(VV, eV, xV, JV) {
-      switch (xV) {
+    function KH(HH, BH, LH, AH) {
+      switch (LH) {
         case "string":
         case "stringvector":
         case "iccProfile":
-          return function(VV, eV, xV) {
-            const JV = (new TextDecoder).decode(new Uint8Array(VV).slice(eV.value, eV.value + xV));
-            return eV.value = eV.value + xV, JV
-          }(VV.buffer, eV, JV);
+          return function(HH, BH, LH) {
+            const AH = (new TextDecoder).decode(new Uint8Array(HH).slice(BH.value, BH.value + LH));
+            return BH.value = BH.value + LH, AH
+          }(HH.buffer, BH, AH);
         case "chlist":
-          return function(VV, eV, xV) {
-            const JV = eV.value,
-              YV = [];
-            for (; eV.value < JV + xV - 1;) {
-              const xV = TV(VV.buffer, eV),
-                JV = PV(VV, eV),
-                UV = NV(VV, eV);
-              eV.value += 3;
-              const yV = PV(VV, eV),
-                pV = PV(VV, eV);
-              YV.push({
-                name: xV,
-                pixelType: JV,
-                pLinear: UV,
-                xSampling: yV,
-                ySampling: pV
+          return function(HH, BH, LH) {
+            const AH = BH.value,
+              rH = [];
+            for (; BH.value < AH + LH - 1;) {
+              const LH = UH(HH.buffer, BH),
+                AH = VH(HH, BH),
+                SH = bH(HH, BH);
+              BH.value += 3;
+              const hH = VH(HH, BH),
+                tH = VH(HH, BH);
+              rH.push({
+                name: LH,
+                pixelType: AH,
+                pLinear: SH,
+                xSampling: hH,
+                ySampling: tH
               })
             }
-            return eV.value += 1, YV
-          }(VV, eV, JV);
+            return BH.value += 1, rH
+          }(HH, BH, AH);
         case "chromaticities":
-          return function(VV, eV) {
+          return function(HH, BH) {
             return {
-              redX: GV(VV, eV),
-              redY: GV(VV, eV),
-              greenX: GV(VV, eV),
-              greenY: GV(VV, eV),
-              blueX: GV(VV, eV),
-              blueY: GV(VV, eV),
-              whiteX: GV(VV, eV),
-              whiteY: GV(VV, eV)
+              redX: IH(HH, BH),
+              redY: IH(HH, BH),
+              greenX: IH(HH, BH),
+              greenY: IH(HH, BH),
+              blueX: IH(HH, BH),
+              blueY: IH(HH, BH),
+              whiteX: IH(HH, BH),
+              whiteY: IH(HH, BH)
             }
-          }(VV, eV);
+          }(HH, BH);
         case "compression":
-          return function(VV, eV) {
-            return NV(VV, eV)
-          }(VV, eV);
+          return function(HH, BH) {
+            return bH(HH, BH)
+          }(HH, BH);
         case "box2i":
-          return function(VV, eV) {
+          return function(HH, BH) {
             return {
-              xMin: PV(VV, eV),
-              yMin: PV(VV, eV),
-              xMax: PV(VV, eV),
-              yMax: PV(VV, eV)
+              xMin: VH(HH, BH),
+              yMin: VH(HH, BH),
+              xMax: VH(HH, BH),
+              yMax: VH(HH, BH)
             }
-          }(VV, eV);
+          }(HH, BH);
         case "lineOrder":
-          return function(VV, eV) {
-            const xV = NV(VV, eV);
-            return FV[xV]
-          }(VV, eV);
+          return function(HH, BH) {
+            const LH = bH(HH, BH);
+            return TH[LH]
+          }(HH, BH);
         case "float":
-          return GV(VV, eV);
+          return IH(HH, BH);
         case "v2f":
-          return function(VV, eV) {
-            return [GV(VV, eV), GV(VV, eV)]
-          }(VV, eV);
+          return function(HH, BH) {
+            return [IH(HH, BH), IH(HH, BH)]
+          }(HH, BH);
         case "v3f":
-          return function(VV, eV) {
-            return [GV(VV, eV), GV(VV, eV), GV(VV, eV)]
-          }(VV, eV);
+          return function(HH, BH) {
+            return [IH(HH, BH), IH(HH, BH), IH(HH, BH)]
+          }(HH, BH);
         case "int":
-          return PV(VV, eV);
+          return VH(HH, BH);
         case "rational":
-          return function(VV, eV) {
-            return [PV(VV, eV), AV(VV, eV)]
-          }(VV, eV);
+          return function(HH, BH) {
+            return [VH(HH, BH), OH(HH, BH)]
+          }(HH, BH);
         case "timecode":
-          return function(VV, eV) {
-            return [AV(VV, eV), AV(VV, eV)]
-          }(VV, eV);
+          return function(HH, BH) {
+            return [OH(HH, BH), OH(HH, BH)]
+          }(HH, BH);
         case "preview":
-          return eV.value += JV, "skipped";
+          return BH.value += AH, "skipped";
         default:
-          return void(eV.value += JV)
+          return void(BH.value += AH)
       }
     }
 
-    function DV(VV) {
-      for (let eV = 1; eV < VV.length; eV++) {
-        const xV = VV[eV - 1] + VV[eV] - 128;
-        VV[eV] = xV
+    function cH(HH) {
+      for (let BH = 1; BH < HH.length; BH++) {
+        const LH = HH[BH - 1] + HH[BH] - 128;
+        HH[BH] = LH
       }
     }
 
-    function iV(VV, eV) {
-      let xV = 0,
-        JV = Math.floor((VV.length + 1) / 2),
-        YV = 0;
-      const UV = VV.length - 1;
-      for (; !(YV > UV) && (eV[YV++] = VV[xV++], !(YV > UV));) eV[YV++] = VV[JV++]
-    }! function(VV) {
-      VV[VV.NO_COMPRESSION = 0] = "NO_COMPRESSION", VV[VV.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", VV[VV.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", VV[VV.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", VV[VV.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", VV[VV.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
-    }(tV || (tV = {})),
-    function(VV) {
-      VV[VV.INCREASING_Y = 0] = "INCREASING_Y", VV[VV.DECREASING_Y = 1] = "DECREASING_Y"
-    }(FV || (FV = {}));
-    const CV = 20000630;
+    function eH(HH, BH) {
+      let LH = 0,
+        AH = Math.floor((HH.length + 1) / 2),
+        rH = 0;
+      const SH = HH.length - 1;
+      for (; !(rH > SH) && (BH[rH++] = HH[LH++], !(rH > SH));) BH[rH++] = HH[AH++]
+    }! function(HH) {
+      HH[HH.NO_COMPRESSION = 0] = "NO_COMPRESSION", HH[HH.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", HH[HH.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", HH[HH.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", HH[HH.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", HH[HH.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
+    }(PH || (PH = {})),
+    function(HH) {
+      HH[HH.INCREASING_Y = 0] = "INCREASING_Y", HH[HH.DECREASING_Y = 1] = "DECREASING_Y"
+    }(TH || (TH = {}));
+    const qH = 20000630;
 
-    function aV(VV, eV) {
-      if (VV.getUint32(0, !0) != CV) throw new Error("Incorrect OpenEXR format");
-      const xV = VV.getUint8(4),
-        YV = VV.getUint8(5),
-        UV = {
-          singleTile: !!(2 & YV),
-          longName: !!(4 & YV),
-          deepFormat: !!(8 & YV),
-          multiPart: !!(16 & YV)
+    function gH(HH, BH) {
+      if (HH.getUint32(0, !0) != qH) throw new Error("Incorrect OpenEXR format");
+      const LH = HH.getUint8(4),
+        rH = HH.getUint8(5),
+        SH = {
+          singleTile: !!(2 & rH),
+          longName: !!(4 & rH),
+          deepFormat: !!(8 & rH),
+          multiPart: !!(16 & rH)
         };
-      eV.value = 8;
-      const yV = {};
-      let pV = !0;
-      for (; pV;) {
-        const xV = TV(VV.buffer, eV);
-        if (xV) {
-          const YV = TV(VV.buffer, eV),
-            UV = gV(VV, eV, YV, AV(VV, eV));
-          void 0 === UV ? JV.b.Warn(`Unknown header attribute type ${YV}'.`) : yV[xV] = UV
-        } else pV = !1
+      BH.value = 8;
+      const hH = {};
+      let tH = !0;
+      for (; tH;) {
+        const LH = UH(HH.buffer, BH);
+        if (LH) {
+          const rH = UH(HH.buffer, BH),
+            SH = KH(HH, BH, rH, OH(HH, BH));
+          void 0 === SH ? AH.e.Warn(`Unknown header attribute type ${rH}'.`) : hH[LH] = SH
+        } else tH = !1
       }
-      if (0 != (-5 & YV)) throw new Error("Unsupported file format");
+      if (0 != (-5 & rH)) throw new Error("Unsupported file format");
       return {
-        version: xV,
-        spec: UV,
-        ...yV
-      }
-    }
-    const oV = 32768,
-      cV = 65535;
-
-    function hV(VV, eV, xV, JV, YV) {
-      for (; xV < VV;) eV = eV << 8 | MV(JV, YV), xV += 8;
-      return {
-        l: eV >> (xV -= VV) & (1 << VV) - 1,
-        c: eV,
-        lc: xV
+        version: LH,
+        spec: SH,
+        ...hH
       }
     }
+    const NH = 32768,
+      RH = 65535;
 
-    function lV(VV, eV, xV, JV) {
+    function jH(HH, BH, LH, AH, rH) {
+      for (; LH < HH;) BH = BH << 8 | mH(AH, rH), LH += 8;
       return {
-        c: VV = VV << 8 | MV(xV, JV),
-        lc: eV += 8
+        l: BH >> (LH -= HH) & (1 << HH) - 1,
+        c: BH,
+        lc: LH
       }
     }
 
-    function LV(VV, eV, xV, JV, YV, UV, yV, pV, QV) {
-      if (VV == eV) {
-        if (JV < 8) {
-          const VV = lV(xV, JV, YV, UV);
-          xV = VV.c, JV = VV.lc
+    function nH(HH, BH, LH, AH) {
+      return {
+        c: HH = HH << 8 | mH(LH, AH),
+        lc: BH += 8
+      }
+    }
+
+    function FH(HH, BH, LH, AH, rH, SH, hH, tH, zH) {
+      if (HH == BH) {
+        if (AH < 8) {
+          const HH = nH(LH, AH, rH, SH);
+          LH = HH.c, AH = HH.lc
         }
-        let VV = xV >> (JV -= 8);
-        if (VV = new Uint8Array([VV])[0], pV.value + VV > QV) return null;
-        const eV = yV[pV.value - 1];
-        for (; VV-- > 0;) yV[pV.value++] = eV
+        let HH = LH >> (AH -= 8);
+        if (HH = new Uint8Array([HH])[0], tH.value + HH > zH) return null;
+        const BH = hH[tH.value - 1];
+        for (; HH-- > 0;) hH[tH.value++] = BH
       } else {
-        if (!(pV.value < QV)) return null;
-        yV[pV.value++] = VV
+        if (!(tH.value < zH)) return null;
+        hH[tH.value++] = HH
       }
       return {
-        c: xV,
-        lc: JV
+        c: LH,
+        lc: AH
       }
     }
-    const fV = new Array(59);
+    const DH = new Array(59);
 
-    function mV(VV, eV, xV, JV, YV, UV) {
-      const yV = eV;
-      let pV = 0,
-        QV = 0;
-      for (; JV <= YV; JV++) {
-        if (yV.value - eV.value > xV) return;
-        let nV = hV(6, pV, QV, VV, yV);
-        const wV = nV.l;
-        if (pV = nV.c, QV = nV.lc, UV[JV] = wV, wV == jV) {
-          if (yV.value - eV.value > xV) throw new Error("Error in HufUnpackEncTable");
-          nV = hV(8, pV, QV, VV, yV);
-          let wV = nV.l + qV;
-          if (pV = nV.c, QV = nV.lc, JV + wV > YV + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; wV--;) UV[JV++] = 0;
-          JV--
-        } else if (wV >= BV) {
-          let VV = wV - BV + 2;
-          if (JV + VV > YV + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; VV--;) UV[JV++] = 0;
-          JV--
+    function wH(HH, BH, LH, AH, rH, SH) {
+      const hH = BH;
+      let tH = 0,
+        zH = 0;
+      for (; AH <= rH; AH++) {
+        if (hH.value - BH.value > LH) return;
+        let CH = jH(6, tH, zH, HH, hH);
+        const EH = CH.l;
+        if (tH = CH.c, zH = CH.lc, SH[AH] = EH, EH == xH) {
+          if (hH.value - BH.value > LH) throw new Error("Error in HufUnpackEncTable");
+          CH = jH(8, tH, zH, HH, hH);
+          let EH = CH.l + vH;
+          if (tH = CH.c, zH = CH.lc, AH + EH > rH + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; EH--;) SH[AH++] = 0;
+          AH--
+        } else if (EH >= MH) {
+          let HH = EH - MH + 2;
+          if (AH + HH > rH + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; HH--;) SH[AH++] = 0;
+          AH--
         }
-      }! function(VV) {
-        for (let xV = 0; xV <= 58; ++xV) fV[xV] = 0;
-        for (let xV = 0; xV < kV; ++xV) fV[VV[xV]] += 1;
-        let eV = 0;
-        for (let xV = 58; xV > 0; --xV) {
-          const VV = eV + fV[xV] >> 1;
-          fV[xV] = eV, eV = VV
+      }! function(HH) {
+        for (let LH = 0; LH <= 58; ++LH) DH[LH] = 0;
+        for (let LH = 0; LH < uH; ++LH) DH[HH[LH]] += 1;
+        let BH = 0;
+        for (let LH = 58; LH > 0; --LH) {
+          const HH = BH + DH[LH] >> 1;
+          DH[LH] = BH, BH = HH
         }
-        for (let xV = 0; xV < kV; ++xV) {
-          const eV = VV[xV];
-          eV > 0 && (VV[xV] = eV | fV[eV]++ << 6)
+        for (let LH = 0; LH < uH; ++LH) {
+          const BH = HH[LH];
+          BH > 0 && (HH[LH] = BH | DH[BH]++ << 6)
         }
-      }(UV)
+      }(SH)
     }
 
-    function KV(VV) {
-      return 63 & VV
+    function ZH(HH) {
+      return 63 & HH
     }
 
-    function HV(VV) {
-      return VV >> 6
+    function dH(HH) {
+      return HH >> 6
     }
 
-    function uV(VV, eV, xV, JV, YV, UV) {
-      const yV = xV.value,
-        pV = AV(eV, xV),
-        QV = AV(eV, xV);
-      xV.value += 4;
-      const nV = AV(eV, xV);
-      if (xV.value += 4, pV < 0 || pV >= kV || QV < 0 || QV >= kV) throw new Error("Wrong HUF_ENCSIZE");
-      const wV = new Array(kV),
-        ZV = new Array(bV);
-      ! function(VV) {
-        for (let eV = 0; eV < bV; eV++) VV[eV] = {}, VV[eV].len = 0, VV[eV].lit = 0, VV[eV].p = null
-      }(ZV);
-      if (mV(VV, xV, JV - (xV.value - yV), pV, QV, wV), nV > 8 * (JV - (xV.value - yV))) throw new Error("Wrong hufUncompress");
-      ! function(VV, eV, xV, JV) {
-        for (; eV <= xV; eV++) {
-          const xV = HV(VV[eV]),
-            YV = KV(VV[eV]);
-          if (xV >> YV) throw new Error("Invalid table entry");
-          if (YV > rV) {
-            const VV = JV[xV >> YV - rV];
-            if (VV.len) throw new Error("Invalid table entry");
-            if (VV.lit++, VV.p) {
-              const eV = VV.p;
-              VV.p = new Array(VV.lit);
-              for (let xV = 0; xV < VV.lit - 1; ++xV) VV.p[xV] = eV[xV]
-            } else VV.p = new Array(1);
-            VV.p[VV.lit - 1] = eV
-          } else if (YV) {
-            let VV = 0;
-            for (let UV = 1 << rV - YV; UV > 0; UV--) {
-              const UV = JV[(xV << rV - YV) + VV];
-              if (UV.len || UV.p) throw new Error("Invalid table entry");
-              UV.len = YV, UV.lit = eV, VV++
+    function aH(HH, BH, LH, AH, rH, SH) {
+      const hH = LH.value,
+        tH = OH(BH, LH),
+        zH = OH(BH, LH);
+      LH.value += 4;
+      const CH = OH(BH, LH);
+      if (LH.value += 4, tH < 0 || tH >= uH || zH < 0 || zH >= uH) throw new Error("Wrong HUF_ENCSIZE");
+      const EH = new Array(uH),
+        XH = new Array(QH);
+      ! function(HH) {
+        for (let BH = 0; BH < QH; BH++) HH[BH] = {}, HH[BH].len = 0, HH[BH].lit = 0, HH[BH].p = null
+      }(XH);
+      if (wH(HH, LH, AH - (LH.value - hH), tH, zH, EH), CH > 8 * (AH - (LH.value - hH))) throw new Error("Wrong hufUncompress");
+      ! function(HH, BH, LH, AH) {
+        for (; BH <= LH; BH++) {
+          const LH = dH(HH[BH]),
+            rH = ZH(HH[BH]);
+          if (LH >> rH) throw new Error("Invalid table entry");
+          if (rH > YH) {
+            const HH = AH[LH >> rH - YH];
+            if (HH.len) throw new Error("Invalid table entry");
+            if (HH.lit++, HH.p) {
+              const BH = HH.p;
+              HH.p = new Array(HH.lit);
+              for (let LH = 0; LH < HH.lit - 1; ++LH) HH.p[LH] = BH[LH]
+            } else HH.p = new Array(1);
+            HH.p[HH.lit - 1] = BH
+          } else if (rH) {
+            let HH = 0;
+            for (let SH = 1 << YH - rH; SH > 0; SH--) {
+              const SH = AH[(LH << YH - rH) + HH];
+              if (SH.len || SH.p) throw new Error("Invalid table entry");
+              SH.len = rH, SH.lit = BH, HH++
             }
           }
         }
-      }(wV, pV, QV, ZV),
-      function(VV, eV, xV, JV, YV, UV, yV, pV, QV) {
-        let nV = 0,
-          wV = 0;
-        const ZV = yV,
-          vV = Math.trunc(JV.value + (YV + 7) / 8);
-        for (; JV.value < vV;) {
-          let YV = lV(nV, wV, xV, JV);
-          for (nV = YV.c, wV = YV.lc; wV >= rV;) {
-            const yV = eV[nV >> wV - rV & EV];
-            if (yV.len) {
-              wV -= yV.len;
-              const VV = LV(yV.lit, UV, nV, wV, xV, JV, pV, QV, ZV);
-              VV && (nV = VV.c, wV = VV.lc)
+      }(EH, tH, zH, XH),
+      function(HH, BH, LH, AH, rH, SH, hH, tH, zH) {
+        let CH = 0,
+          EH = 0;
+        const XH = hH,
+          GH = Math.trunc(AH.value + (rH + 7) / 8);
+        for (; AH.value < GH;) {
+          let rH = nH(CH, EH, LH, AH);
+          for (CH = rH.c, EH = rH.lc; EH >= YH;) {
+            const hH = BH[CH >> EH - YH & WH];
+            if (hH.len) {
+              EH -= hH.len;
+              const HH = FH(hH.lit, SH, CH, EH, LH, AH, tH, zH, XH);
+              HH && (CH = HH.c, EH = HH.lc)
             } else {
-              if (!yV.p) throw new Error("hufDecode issues");
-              let eV;
-              for (eV = 0; eV < yV.lit; eV++) {
-                const rV = KV(VV[yV.p[eV]]);
-                for (; wV < rV && JV.value < vV;) YV = lV(nV, wV, xV, JV), nV = YV.c, wV = YV.lc;
-                if (wV >= rV && HV(VV[yV.p[eV]]) == (nV >> wV - rV & (1 << rV) - 1)) {
-                  wV -= rV;
-                  const VV = LV(yV.p[eV], UV, nV, wV, xV, JV, pV, QV, ZV);
-                  VV && (nV = VV.c, wV = VV.lc);
+              if (!hH.p) throw new Error("hufDecode issues");
+              let BH;
+              for (BH = 0; BH < hH.lit; BH++) {
+                const YH = ZH(HH[hH.p[BH]]);
+                for (; EH < YH && AH.value < GH;) rH = nH(CH, EH, LH, AH), CH = rH.c, EH = rH.lc;
+                if (EH >= YH && dH(HH[hH.p[BH]]) == (CH >> EH - YH & (1 << YH) - 1)) {
+                  EH -= YH;
+                  const HH = FH(hH.p[BH], SH, CH, EH, LH, AH, tH, zH, XH);
+                  HH && (CH = HH.c, EH = HH.lc);
                   break
                 }
               }
-              if (eV == yV.lit) throw new Error("HufDecode issues")
+              if (BH == hH.lit) throw new Error("HufDecode issues")
             }
           }
         }
-        const kV = 8 - YV & 7;
-        for (nV >>= kV, wV -= kV; wV > 0;) {
-          const VV = eV[nV << rV - wV & EV];
-          if (!VV.len) throw new Error("HufDecode issues");
+        const uH = 8 - rH & 7;
+        for (CH >>= uH, EH -= uH; EH > 0;) {
+          const HH = BH[CH << YH - EH & WH];
+          if (!HH.len) throw new Error("HufDecode issues");
           {
-            wV -= VV.len;
-            const eV = LV(VV.lit, UV, nV, wV, xV, JV, pV, QV, ZV);
-            eV && (nV = eV.c, wV = eV.lc)
+            EH -= HH.len;
+            const BH = FH(HH.lit, SH, CH, EH, LH, AH, tH, zH, XH);
+            BH && (CH = BH.c, EH = BH.lc)
           }
         }
-      }(wV, ZV, VV, xV, nV, QV, UV, YV, {
+      }(EH, XH, HH, LH, CH, zH, SH, rH, {
         value: 0
       })
     }
 
-    function sV(VV) {
-      return 65535 & VV
+    function sH(HH) {
+      return 65535 & HH
     }
 
-    function SV(VV) {
-      const eV = sV(VV);
-      return eV > 32767 ? eV - 65536 : eV
+    function JH(HH) {
+      const BH = sH(HH);
+      return BH > 32767 ? BH - 65536 : BH
     }
 
-    function IV(VV, eV) {
-      const xV = SV(VV),
-        JV = SV(eV),
-        YV = xV + (1 & JV) + (JV >> 1);
+    function iH(HH, BH) {
+      const LH = JH(HH),
+        AH = JH(BH),
+        rH = LH + (1 & AH) + (AH >> 1);
       return {
-        a: YV,
-        b: YV - JV
+        a: rH,
+        b: rH - AH
       }
     }
 
-    function dV(VV, eV) {
-      const xV = sV(VV),
-        JV = sV(eV),
-        YV = xV - (JV >> 1) & cV;
+    function pH(HH, BH) {
+      const LH = sH(HH),
+        AH = sH(BH),
+        rH = LH - (AH >> 1) & RH;
       return {
-        a: JV + YV - oV & cV,
-        b: YV
+        a: AH + rH - NH & RH,
+        b: rH
       }
     }
 
-    function OV(VV, eV, xV, JV, YV, UV, yV) {
-      const pV = yV < 16384,
-        QV = xV > YV ? YV : xV;
-      let nV, wV, ZV = 1;
-      for (; ZV <= QV;) ZV <<= 1;
-      for (ZV >>= 1, nV = ZV, ZV >>= 1; ZV >= 1;) {
-        wV = 0;
-        const yV = wV + UV * (YV - nV),
-          QV = UV * ZV,
-          vV = UV * nV,
-          rV = JV * ZV,
-          kV = JV * nV;
-        let bV, EV, BV, jV;
-        for (; wV <= yV; wV += vV) {
-          let YV = wV;
-          const UV = wV + JV * (xV - nV);
-          for (; YV <= UV; YV += kV) {
-            const xV = YV + rV,
-              JV = YV + QV,
-              UV = JV + rV;
-            if (pV) {
-              let yV = IV(VV[YV + eV], VV[JV + eV]);
-              bV = yV.a, BV = yV.b, yV = IV(VV[xV + eV], VV[UV + eV]), EV = yV.a, jV = yV.b, yV = IV(bV, EV), VV[YV + eV] = yV.a, VV[xV + eV] = yV.b, yV = IV(BV, jV), VV[JV + eV] = yV.a, VV[UV + eV] = yV.b
+    function yH(HH, BH, LH, AH, rH, SH, hH) {
+      const tH = hH < 16384,
+        zH = LH > rH ? rH : LH;
+      let CH, EH, XH = 1;
+      for (; XH <= zH;) XH <<= 1;
+      for (XH >>= 1, CH = XH, XH >>= 1; XH >= 1;) {
+        EH = 0;
+        const hH = EH + SH * (rH - CH),
+          zH = SH * XH,
+          GH = SH * CH,
+          YH = AH * XH,
+          uH = AH * CH;
+        let QH, WH, MH, xH;
+        for (; EH <= hH; EH += GH) {
+          let rH = EH;
+          const SH = EH + AH * (LH - CH);
+          for (; rH <= SH; rH += uH) {
+            const LH = rH + YH,
+              AH = rH + zH,
+              SH = AH + YH;
+            if (tH) {
+              let hH = iH(HH[rH + BH], HH[AH + BH]);
+              QH = hH.a, MH = hH.b, hH = iH(HH[LH + BH], HH[SH + BH]), WH = hH.a, xH = hH.b, hH = iH(QH, WH), HH[rH + BH] = hH.a, HH[LH + BH] = hH.b, hH = iH(MH, xH), HH[AH + BH] = hH.a, HH[SH + BH] = hH.b
             } else {
-              let yV = dV(VV[YV + eV], VV[JV + eV]);
-              bV = yV.a, BV = yV.b, yV = dV(VV[xV + eV], VV[UV + eV]), EV = yV.a, jV = yV.b, yV = dV(bV, EV), VV[YV + eV] = yV.a, VV[xV + eV] = yV.b, yV = dV(BV, jV), VV[JV + eV] = yV.a, VV[UV + eV] = yV.b
+              let hH = pH(HH[rH + BH], HH[AH + BH]);
+              QH = hH.a, MH = hH.b, hH = pH(HH[LH + BH], HH[SH + BH]), WH = hH.a, xH = hH.b, hH = pH(QH, WH), HH[rH + BH] = hH.a, HH[LH + BH] = hH.b, hH = pH(MH, xH), HH[AH + BH] = hH.a, HH[SH + BH] = hH.b
             }
           }
-          if (xV & ZV) {
-            const xV = YV + QV;
-            let JV;
-            JV = pV ? IV(VV[YV + eV], VV[xV + eV]) : dV(VV[YV + eV], VV[xV + eV]), bV = JV.a, VV[xV + eV] = JV.b, VV[YV + eV] = bV
+          if (LH & XH) {
+            const LH = rH + zH;
+            let AH;
+            AH = tH ? iH(HH[rH + BH], HH[LH + BH]) : pH(HH[rH + BH], HH[LH + BH]), QH = AH.a, HH[LH + BH] = AH.b, HH[rH + BH] = QH
           }
         }
-        if (YV & ZV) {
-          let YV = wV;
-          const UV = wV + JV * (xV - nV);
-          for (; YV <= UV; YV += kV) {
-            const xV = YV + rV;
-            let JV;
-            JV = pV ? IV(VV[YV + eV], VV[xV + eV]) : dV(VV[YV + eV], VV[xV + eV]), bV = JV.a, VV[xV + eV] = JV.b, VV[YV + eV] = bV
+        if (rH & XH) {
+          let rH = EH;
+          const SH = EH + AH * (LH - CH);
+          for (; rH <= SH; rH += uH) {
+            const LH = rH + YH;
+            let AH;
+            AH = tH ? iH(HH[rH + BH], HH[LH + BH]) : pH(HH[rH + BH], HH[LH + BH]), QH = AH.a, HH[LH + BH] = AH.b, HH[rH + BH] = QH
           }
         }
-        nV = ZV, ZV >>= 1
+        CH = XH, XH >>= 1
       }
-      return wV
+      return EH
     }
 
-    function Ve(VV) {
-      return new DataView(VV.array.buffer, VV.offset.value, VV.size)
+    function HB(HH) {
+      return new DataView(HH.array.buffer, HH.offset.value, HH.size)
     }
 
-    function ee(VV) {
-      const eV = VV.viewer.buffer.slice(VV.offset.value, VV.offset.value + VV.size),
-        xV = new Uint8Array(function(VV) {
-          let eV = VV.byteLength;
-          const xV = [];
-          let JV = 0;
-          const YV = new DataView(VV);
-          for (; eV > 0;) {
-            const VV = YV.getInt8(JV++);
-            if (VV < 0) {
-              const UV = -VV;
-              eV -= UV + 1;
-              for (let VV = 0; VV < UV; VV++) xV.push(YV.getUint8(JV++))
+    function BB(HH) {
+      const BH = HH.viewer.buffer.slice(HH.offset.value, HH.offset.value + HH.size),
+        LH = new Uint8Array(function(HH) {
+          let BH = HH.byteLength;
+          const LH = [];
+          let AH = 0;
+          const rH = new DataView(HH);
+          for (; BH > 0;) {
+            const HH = rH.getInt8(AH++);
+            if (HH < 0) {
+              const SH = -HH;
+              BH -= SH + 1;
+              for (let HH = 0; HH < SH; HH++) LH.push(rH.getUint8(AH++))
             } else {
-              const UV = VV;
-              eV -= 2;
-              const yV = YV.getUint8(JV++);
-              for (let VV = 0; VV < UV + 1; VV++) xV.push(yV)
+              const SH = HH;
+              BH -= 2;
+              const hH = rH.getUint8(AH++);
+              for (let HH = 0; HH < SH + 1; HH++) LH.push(hH)
             }
           }
-          return xV
-        }(eV)),
-        JV = new Uint8Array(xV.length);
-      return DV(xV), iV(xV, JV), new DataView(JV.buffer)
+          return LH
+        }(BH)),
+        AH = new Uint8Array(LH.length);
+      return cH(LH), eH(LH, AH), new DataView(AH.buffer)
     }
 
-    function xe(VV) {
-      const eV = VV.array.slice(VV.offset.value, VV.offset.value + VV.size),
-        xV = fflate.unzlibSync(eV),
-        JV = new Uint8Array(xV.length);
-      return DV(xV), iV(xV, JV), new DataView(JV.buffer)
+    function LB(HH) {
+      const BH = HH.array.slice(HH.offset.value, HH.offset.value + HH.size),
+        LH = fflate.unzlibSync(BH),
+        AH = new Uint8Array(LH.length);
+      return cH(LH), eH(LH, AH), new DataView(AH.buffer)
     }
 
-    function Je(VV) {
-      const eV = VV.array.slice(VV.offset.value, VV.offset.value + VV.size),
-        xV = fflate.unzlibSync(eV),
-        JV = VV.lines * VV.channels * VV.width,
-        YV = 1 == VV.type ? new Uint16Array(JV) : new Uint32Array(JV);
-      let UV = 0,
-        yV = 0;
-      const pV = new Array(4);
-      for (let QV = 0; QV < VV.lines; QV++)
-        for (let eV = 0; eV < VV.channels; eV++) {
-          let eV = 0;
-          switch (VV.type) {
+    function AB(HH) {
+      const BH = HH.array.slice(HH.offset.value, HH.offset.value + HH.size),
+        LH = fflate.unzlibSync(BH),
+        AH = HH.lines * HH.channels * HH.width,
+        rH = 1 == HH.type ? new Uint16Array(AH) : new Uint32Array(AH);
+      let SH = 0,
+        hH = 0;
+      const tH = new Array(4);
+      for (let zH = 0; zH < HH.lines; zH++)
+        for (let BH = 0; BH < HH.channels; BH++) {
+          let BH = 0;
+          switch (HH.type) {
             case 1:
-              pV[0] = UV, pV[1] = pV[0] + VV.width, UV = pV[1] + VV.width;
-              for (let JV = 0; JV < VV.width; ++JV) {
-                eV += xV[pV[0]++] << 8 | xV[pV[1]++], YV[yV] = eV, yV++
+              tH[0] = SH, tH[1] = tH[0] + HH.width, SH = tH[1] + HH.width;
+              for (let AH = 0; AH < HH.width; ++AH) {
+                BH += LH[tH[0]++] << 8 | LH[tH[1]++], rH[hH] = BH, hH++
               }
               break;
             case 2:
-              pV[0] = UV, pV[1] = pV[0] + VV.width, pV[2] = pV[1] + VV.width, UV = pV[2] + VV.width;
-              for (let JV = 0; JV < VV.width; ++JV) {
-                eV += xV[pV[0]++] << 24 | xV[pV[1]++] << 16 | xV[pV[2]++] << 8, YV[yV] = eV, yV++
+              tH[0] = SH, tH[1] = tH[0] + HH.width, tH[2] = tH[1] + HH.width, SH = tH[2] + HH.width;
+              for (let AH = 0; AH < HH.width; ++AH) {
+                BH += LH[tH[0]++] << 24 | LH[tH[1]++] << 16 | LH[tH[2]++] << 8, rH[hH] = BH, hH++
               }
           }
         }
-      return new DataView(YV.buffer)
+      return new DataView(rH.buffer)
     }
 
-    function Ye(VV) {
-      const eV = VV.viewer,
-        xV = {
-          value: VV.offset.value
+    function rB(HH) {
+      const BH = HH.viewer,
+        LH = {
+          value: HH.offset.value
         },
-        JV = new Uint16Array(VV.width * VV.scanlineBlockSize * (VV.channels * VV.type)),
-        YV = new Uint8Array(vV);
-      let UV = 0;
-      const yV = new Array(VV.channels);
-      for (let nV = 0; nV < VV.channels; nV++) yV[nV] = {}, yV[nV].start = UV, yV[nV].end = yV[nV].start, yV[nV].nx = VV.width, yV[nV].ny = VV.lines, yV[nV].size = VV.type, UV += yV[nV].nx * yV[nV].ny * yV[nV].size;
-      const pV = XV(eV, xV),
-        QV = XV(eV, xV);
-      if (QV >= vV) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
-      if (pV <= QV)
-        for (let nV = 0; nV < QV - pV + 1; nV++) YV[nV + pV] = NV(eV, xV);
-      const wV = new Uint16Array(ZV),
-        rV = function(VV, eV) {
-          let xV = 0;
-          for (let YV = 0; YV < ZV; ++YV)(0 == YV || VV[YV >> 3] & 1 << (7 & YV)) && (eV[xV++] = YV);
-          const JV = xV - 1;
-          for (; xV < ZV;) eV[xV++] = 0;
-          return JV
-        }(YV, wV),
-        kV = AV(eV, xV);
-      uV(VV.array, eV, xV, kV, JV, UV);
-      for (let nV = 0; nV < VV.channels; ++nV) {
-        const VV = yV[nV];
-        for (let eV = 0; eV < yV[nV].size; ++eV) OV(JV, VV.start + eV, VV.nx, VV.size, VV.ny, VV.nx * VV.size, rV)
-      }! function(VV, eV, xV) {
-        for (let JV = 0; JV < xV; ++JV) eV[JV] = VV[eV[JV]]
-      }(wV, JV, UV);
-      let bV = 0;
-      const EV = new Uint8Array(JV.buffer.byteLength);
-      for (let ZV = 0; ZV < VV.lines; ZV++)
-        for (let eV = 0; eV < VV.channels; eV++) {
-          const VV = yV[eV],
-            xV = VV.nx * VV.size,
-            YV = new Uint8Array(JV.buffer, VV.end * nV, xV * nV);
-          EV.set(YV, bV), bV += xV * nV, VV.end += xV
+        AH = new Uint16Array(HH.width * HH.scanlineBlockSize * (HH.channels * HH.type)),
+        rH = new Uint8Array(GH);
+      let SH = 0;
+      const hH = new Array(HH.channels);
+      for (let CH = 0; CH < HH.channels; CH++) hH[CH] = {}, hH[CH].start = SH, hH[CH].end = hH[CH].start, hH[CH].nx = HH.width, hH[CH].ny = HH.lines, hH[CH].size = HH.type, SH += hH[CH].nx * hH[CH].ny * hH[CH].size;
+      const tH = kH(BH, LH),
+        zH = kH(BH, LH);
+      if (zH >= GH) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
+      if (tH <= zH)
+        for (let CH = 0; CH < zH - tH + 1; CH++) rH[CH + tH] = bH(BH, LH);
+      const EH = new Uint16Array(XH),
+        YH = function(HH, BH) {
+          let LH = 0;
+          for (let rH = 0; rH < XH; ++rH)(0 == rH || HH[rH >> 3] & 1 << (7 & rH)) && (BH[LH++] = rH);
+          const AH = LH - 1;
+          for (; LH < XH;) BH[LH++] = 0;
+          return AH
+        }(rH, EH),
+        uH = OH(BH, LH);
+      aH(HH.array, BH, LH, uH, AH, SH);
+      for (let CH = 0; CH < HH.channels; ++CH) {
+        const HH = hH[CH];
+        for (let BH = 0; BH < hH[CH].size; ++BH) yH(AH, HH.start + BH, HH.nx, HH.size, HH.ny, HH.nx * HH.size, YH)
+      }! function(HH, BH, LH) {
+        for (let AH = 0; AH < LH; ++AH) BH[AH] = HH[BH[AH]]
+      }(EH, AH, SH);
+      let QH = 0;
+      const WH = new Uint8Array(AH.buffer.byteLength);
+      for (let XH = 0; XH < HH.lines; XH++)
+        for (let BH = 0; BH < HH.channels; BH++) {
+          const HH = hH[BH],
+            LH = HH.nx * HH.size,
+            rH = new Uint8Array(AH.buffer, HH.end * CH, LH * CH);
+          WH.set(rH, QH), QH += LH * CH, HH.end += LH
         }
-      return new DataView(EV.buffer)
+      return new DataView(WH.buffer)
     }
-    var Ue, ye = xV(41341);
-    ! function(VV) {
-      VV[VV.Float = 0] = "Float", VV[VV.HalfFloat = 1] = "HalfFloat"
-    }(Ue || (Ue = {}));
-    class pe {}
-    async function Qe(VV, eV, xV, JV) {
-      const YV = {
+    var SB, hB = LH(41387);
+    ! function(HH) {
+      HH[HH.Float = 0] = "Float", HH[HH.HalfFloat = 1] = "HalfFloat"
+    }(SB || (SB = {}));
+    class tB {}
+    async function zB(HH, BH, LH, AH) {
+      const rH = {
         size: 0,
-        viewer: eV,
-        array: new Uint8Array(eV.buffer),
-        offset: xV,
-        width: VV.dataWindow.xMax - VV.dataWindow.xMin + 1,
-        height: VV.dataWindow.yMax - VV.dataWindow.yMin + 1,
-        channels: VV.channels.length,
+        viewer: BH,
+        array: new Uint8Array(BH.buffer),
+        offset: LH,
+        width: HH.dataWindow.xMax - HH.dataWindow.xMin + 1,
+        height: HH.dataWindow.yMax - HH.dataWindow.yMin + 1,
+        channels: HH.channels.length,
         channelLineOffsets: {},
         scanOrder: () => 0,
         bytesPerLine: 0,
@@ -595,174 +595,174 @@ export const modules = {
         linearSpace: !1,
         textureType: 0
       };
-      switch (VV.compression) {
-        case tV.NO_COMPRESSION:
-          YV.lines = 1, YV.uncompress = Ve;
+      switch (HH.compression) {
+        case PH.NO_COMPRESSION:
+          rH.lines = 1, rH.uncompress = HB;
           break;
-        case tV.RLE_COMPRESSION:
-          YV.lines = 1, YV.uncompress = ee;
+        case PH.RLE_COMPRESSION:
+          rH.lines = 1, rH.uncompress = BB;
           break;
-        case tV.ZIPS_COMPRESSION:
-          YV.lines = 1, YV.uncompress = xe, await ye.j.LoadScriptAsync(pe.FFLATEUrl);
+        case PH.ZIPS_COMPRESSION:
+          rH.lines = 1, rH.uncompress = LB, await hB.i.LoadScriptAsync(tB.FFLATEUrl);
           break;
-        case tV.ZIP_COMPRESSION:
-          YV.lines = 16, YV.uncompress = xe, await ye.j.LoadScriptAsync(pe.FFLATEUrl);
+        case PH.ZIP_COMPRESSION:
+          rH.lines = 16, rH.uncompress = LB, await hB.i.LoadScriptAsync(tB.FFLATEUrl);
           break;
-        case tV.PIZ_COMPRESSION:
-          YV.lines = 32, YV.uncompress = Ye;
+        case PH.PIZ_COMPRESSION:
+          rH.lines = 32, rH.uncompress = rB;
           break;
-        case tV.PXR24_COMPRESSION:
-          YV.lines = 16, YV.uncompress = Je, await ye.j.LoadScriptAsync(pe.FFLATEUrl);
+        case PH.PXR24_COMPRESSION:
+          rH.lines = 16, rH.uncompress = AB, await hB.i.LoadScriptAsync(tB.FFLATEUrl);
           break;
         default:
-          throw new Error(tV[VV.compression] + " is unsupported")
+          throw new Error(PH[HH.compression] + " is unsupported")
       }
-      YV.scanlineBlockSize = YV.lines;
-      const UV = {};
-      for (const pV of VV.channels) switch (pV.name) {
+      rH.scanlineBlockSize = rH.lines;
+      const SH = {};
+      for (const tH of HH.channels) switch (tH.name) {
         case "R":
         case "G":
         case "B":
         case "A":
         case "Y":
-          UV[pV.name] = !0, YV.type = pV.pixelType
+          SH[tH.name] = !0, rH.type = tH.pixelType
       }
-      let yV = !1;
-      if (UV.R && UV.G && UV.B && UV.A) YV.outputChannels = 4, YV.decodeChannels = {
+      let hH = !1;
+      if (SH.R && SH.G && SH.B && SH.A) rH.outputChannels = 4, rH.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (UV.R && UV.G && UV.B) yV = !0, YV.outputChannels = 4, YV.decodeChannels = {
+      else if (SH.R && SH.G && SH.B) hH = !0, rH.outputChannels = 4, rH.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (UV.R && UV.G) YV.outputChannels = 2, YV.decodeChannels = {
+      else if (SH.R && SH.G) rH.outputChannels = 2, rH.decodeChannels = {
         R: 0,
         G: 1
       };
-      else if (UV.R) YV.outputChannels = 1, YV.decodeChannels = {
+      else if (SH.R) rH.outputChannels = 1, rH.decodeChannels = {
         R: 0
       };
       else {
-        if (!UV.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
-        YV.outputChannels = 1, YV.decodeChannels = {
+        if (!SH.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
+        rH.outputChannels = 1, rH.decodeChannels = {
           Y: 0
         }
       }
-      if (1 === YV.type) switch (JV) {
-        case Ue.Float:
-          YV.getter = WV, YV.inputSize = nV;
+      if (1 === rH.type) switch (AH) {
+        case SB.Float:
+          rH.getter = fH, rH.inputSize = CH;
           break;
-        case Ue.HalfFloat:
-          YV.getter = XV, YV.inputSize = nV
+        case SB.HalfFloat:
+          rH.getter = kH, rH.inputSize = CH
       } else {
-        if (2 !== YV.type) throw new Error("Unsupported pixelType " + YV.type + " for " + VV.compression);
-        switch (JV) {
-          case Ue.Float:
-            YV.getter = GV, YV.inputSize = pV;
+        if (2 !== rH.type) throw new Error("Unsupported pixelType " + rH.type + " for " + HH.compression);
+        switch (AH) {
+          case SB.Float:
+            rH.getter = IH, rH.inputSize = tH;
             break;
-          case Ue.HalfFloat:
-            YV.getter = RV, YV.inputSize = pV
+          case SB.HalfFloat:
+            rH.getter = lH, rH.inputSize = tH
         }
       }
-      YV.blockCount = YV.height / YV.scanlineBlockSize;
-      for (let pV = 0; pV < YV.blockCount; pV++) zV(eV, xV);
-      const QV = YV.width * YV.height * YV.outputChannels;
-      switch (JV) {
-        case Ue.Float:
-          YV.byteArray = new Float32Array(QV), YV.textureType = 1, yV && YV.byteArray.fill(1, 0, QV);
+      rH.blockCount = rH.height / rH.scanlineBlockSize;
+      for (let tH = 0; tH < rH.blockCount; tH++) oH(BH, LH);
+      const zH = rH.width * rH.height * rH.outputChannels;
+      switch (AH) {
+        case SB.Float:
+          rH.byteArray = new Float32Array(zH), rH.textureType = 1, hH && rH.byteArray.fill(1, 0, zH);
           break;
-        case Ue.HalfFloat:
-          YV.byteArray = new Uint16Array(QV), YV.textureType = 2, yV && YV.byteArray.fill(15360, 0, QV);
+        case SB.HalfFloat:
+          rH.byteArray = new Uint16Array(zH), rH.textureType = 2, hH && rH.byteArray.fill(15360, 0, zH);
           break;
         default:
-          throw new Error("Unsupported type: " + JV)
+          throw new Error("Unsupported type: " + AH)
       }
-      let wV = 0;
-      for (const pV of VV.channels) void 0 !== YV.decodeChannels[pV.name] && (YV.channelLineOffsets[pV.name] = wV * YV.width), wV += 2 * pV.pixelType;
-      return YV.bytesPerLine = YV.width * wV, YV.outLineWidth = YV.width * YV.outputChannels, "INCREASING_Y" === VV.lineOrder ? YV.scanOrder = VV => VV : YV.scanOrder = VV => YV.height - 1 - VV, 4 == YV.outputChannels ? (YV.format = 5, YV.linearSpace = !0) : (YV.format = 6, YV.linearSpace = !1), YV
+      let EH = 0;
+      for (const tH of HH.channels) void 0 !== rH.decodeChannels[tH.name] && (rH.channelLineOffsets[tH.name] = EH * rH.width), EH += 2 * tH.pixelType;
+      return rH.bytesPerLine = rH.width * EH, rH.outLineWidth = rH.width * rH.outputChannels, "INCREASING_Y" === HH.lineOrder ? rH.scanOrder = HH => HH : rH.scanOrder = HH => rH.height - 1 - HH, 4 == rH.outputChannels ? (rH.format = 5, rH.linearSpace = !0) : (rH.format = 6, rH.linearSpace = !1), rH
     }
 
-    function ne(VV, eV, xV, JV) {
-      const YV = {
+    function CB(HH, BH, LH, AH) {
+      const rH = {
         value: 0
       };
-      for (let UV = 0; UV < VV.height / VV.scanlineBlockSize; UV++) {
-        const yV = PV(xV, JV) - eV.dataWindow.yMin;
-        VV.size = AV(xV, JV), VV.lines = yV + VV.scanlineBlockSize > VV.height ? VV.height - yV : VV.scanlineBlockSize;
-        const pV = VV.size < VV.lines * VV.bytesPerLine && VV.uncompress ? VV.uncompress(VV) : Ve(VV);
-        JV.value += VV.size;
-        for (let xV = 0; xV < VV.scanlineBlockSize; xV++) {
-          const JV = UV * VV.scanlineBlockSize,
-            yV = xV + VV.scanOrder(JV);
-          if (yV >= VV.height) continue;
-          const QV = xV * VV.bytesPerLine,
-            nV = (VV.height - 1 - yV) * VV.outLineWidth;
-          for (let xV = 0; xV < VV.channels; xV++) {
-            const JV = eV.channels[xV].name,
-              UV = VV.channelLineOffsets[JV],
-              yV = VV.decodeChannels[JV];
-            if (void 0 !== yV) {
-              YV.value = QV + UV;
-              for (let eV = 0; eV < VV.width; eV++) {
-                const xV = nV + eV * VV.outputChannels + yV;
-                VV.byteArray && (VV.byteArray[xV] = VV.getter(pV, YV))
+      for (let SH = 0; SH < HH.height / HH.scanlineBlockSize; SH++) {
+        const hH = VH(LH, AH) - BH.dataWindow.yMin;
+        HH.size = OH(LH, AH), HH.lines = hH + HH.scanlineBlockSize > HH.height ? HH.height - hH : HH.scanlineBlockSize;
+        const tH = HH.size < HH.lines * HH.bytesPerLine && HH.uncompress ? HH.uncompress(HH) : HB(HH);
+        AH.value += HH.size;
+        for (let LH = 0; LH < HH.scanlineBlockSize; LH++) {
+          const AH = SH * HH.scanlineBlockSize,
+            hH = LH + HH.scanOrder(AH);
+          if (hH >= HH.height) continue;
+          const zH = LH * HH.bytesPerLine,
+            CH = (HH.height - 1 - hH) * HH.outLineWidth;
+          for (let LH = 0; LH < HH.channels; LH++) {
+            const AH = BH.channels[LH].name,
+              SH = HH.channelLineOffsets[AH],
+              hH = HH.decodeChannels[AH];
+            if (void 0 !== hH) {
+              rH.value = zH + SH;
+              for (let BH = 0; BH < HH.width; BH++) {
+                const LH = CH + BH * HH.outputChannels + hH;
+                HH.byteArray && (HH.byteArray[LH] = HH.getter(tH, rH))
               }
             }
           }
         }
       }
     }
-    pe.DefaultOutputType = Ue.HalfFloat, pe.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
-    class we {
+    tB.DefaultOutputType = SB.HalfFloat, tB.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
+    class EB {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(VV, eV, xV, JV, YV) {
+      loadCubeData(HH, BH, LH, AH, rH) {
         throw ".exr not supported in Cube."
       }
-      loadData(VV, eV, xV) {
-        const YV = new DataView(VV.buffer),
-          UV = {
+      loadData(HH, BH, LH) {
+        const rH = new DataView(HH.buffer),
+          SH = {
             value: 0
           },
-          yV = aV(YV, UV);
-        Qe(yV, YV, UV, pe.DefaultOutputType).then((VV => {
-          ne(VV, yV, YV, UV);
-          const JV = yV.dataWindow.xMax - yV.dataWindow.xMin + 1,
-            pV = yV.dataWindow.yMax - yV.dataWindow.yMin + 1;
-          xV(JV, pV, eV.generateMipMaps, !1, (() => {
-            const xV = eV.sk();
-            eV.format = yV.format, eV.type = VV.textureType, eV.invertY = !1, eV._gammaSpace = !yV.linearSpace, VV.byteArray && xV._uploadDataToTextureDirectly(eV, VV.byteArray, 0, 0, void 0, !0)
+          hH = gH(rH, SH);
+        zB(hH, rH, SH, tB.DefaultOutputType).then((HH => {
+          CB(HH, hH, rH, SH);
+          const AH = hH.dataWindow.xMax - hH.dataWindow.xMin + 1,
+            tH = hH.dataWindow.yMax - hH.dataWindow.yMin + 1;
+          LH(AH, tH, BH.generateMipMaps, !1, (() => {
+            const LH = BH.Iu();
+            BH.format = hH.format, BH.type = HH.textureType, BH.invertY = !1, BH._gammaSpace = !hH.linearSpace, HH.byteArray && LH._uploadDataToTextureDirectly(BH, HH.byteArray, 0, 0, void 0, !0)
           }))
-        })).catch((VV => {
-          JV.b.Error("Failed to load EXR texture: ", VV)
+        })).catch((HH => {
+          AH.e.Error("Failed to load EXR texture: ", HH)
         }))
       }
     }
-    async function Ze(VV) {
-      const eV = new DataView(VV),
-        xV = {
+    async function XB(HH) {
+      const BH = new DataView(HH),
+        LH = {
           value: 0
         },
-        YV = aV(eV, xV);
+        rH = gH(BH, LH);
       try {
-        const VV = await Qe(YV, eV, xV, Ue.Float);
-        return ne(VV, YV, eV, xV), VV.byteArray ? {
-          width: YV.dataWindow.xMax - YV.dataWindow.xMin + 1,
-          height: YV.dataWindow.yMax - YV.dataWindow.yMin + 1,
-          data: new Float32Array(VV.byteArray)
-        } : (JV.b.Error("Failed to decode EXR data: No byte array available."), {
+        const HH = await zB(rH, BH, LH, SB.Float);
+        return CB(HH, rH, BH, LH), HH.byteArray ? {
+          width: rH.dataWindow.xMax - rH.dataWindow.xMin + 1,
+          height: rH.dataWindow.yMax - rH.dataWindow.yMin + 1,
+          data: new Float32Array(HH.byteArray)
+        } : (AH.e.Error("Failed to decode EXR data: No byte array available."), {
           width: 0,
           height: 0,
           data: null
         })
-      } catch (UV) {
-        JV.b.Error("Failed to load EXR data: ", UV)
+      } catch (SH) {
+        AH.e.Error("Failed to load EXR data: ", SH)
       }
       return {
         width: 0,
@@ -773,4 +773,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

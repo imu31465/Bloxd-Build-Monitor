@@ -114,14 +114,6 @@
   }
 }
 
-@media(pointer:coarse) {
-  .MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .GenericPopupExitButton .NewButton {
-    box-sizing: border-box;
-    min-height: 44px;
-    min-width: 44px
-  }
-}
-
 .MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding {
   display: flex;
   flex-direction: column;
@@ -141,7 +133,6 @@
   flex: none;
   font-size: 3rem;
   font-weight: 700;
-  margin-right: 5rem;
   padding-bottom: 1.5rem;
   text-align: left
 }

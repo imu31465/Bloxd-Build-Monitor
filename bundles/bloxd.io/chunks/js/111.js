@@ -1,897 +1,897 @@
-/*! For license information please see pxmq3aq.111.f4e2818c.chunk.js.LICENSE.txt */
+/*! For license information please see cwj32u.111.6d2e18e9.chunk.js.LICENSE.txt */
 export const id = 111;
 export const ids = [111];
 export const modules = {
-  5357: (VV, eV, xV) => {
-    var JV;
+  5343: (HH, BH, LH) => {
+    var AH;
     ! function() {
-      var YV = function() {
+      var rH = function() {
         this.init()
       };
-      YV.prototype = {
+      rH.prototype = {
         init: function() {
-          var VV = this || UV;
-          return VV._counter = 1e3, VV._html5AudioPool = [], VV.html5PoolSize = 10, VV._codecs = {}, VV._howls = [], VV._muted = !1, VV._volume = 1, VV._canPlayEvent = "canplaythrough", VV._navigator = "undefined" !== typeof window && window.navigator ? window.navigator : null, VV.masterGain = null, VV.noAudio = !1, VV.usingWebAudio = !0, VV.autoSuspend = !0, VV.ctx = null, VV.autoUnlock = !0, VV._setup(), VV
+          var HH = this || SH;
+          return HH._counter = 1e3, HH._html5AudioPool = [], HH.html5PoolSize = 10, HH._codecs = {}, HH._howls = [], HH._muted = !1, HH._volume = 1, HH._canPlayEvent = "canplaythrough", HH._navigator = "undefined" !== typeof window && window.navigator ? window.navigator : null, HH.masterGain = null, HH.noAudio = !1, HH.usingWebAudio = !0, HH.autoSuspend = !0, HH.ctx = null, HH.autoUnlock = !0, HH._setup(), HH
         },
-        volume: function(VV) {
-          var eV = this || UV;
-          if (VV = parseFloat(VV), eV.ctx || rV(), "undefined" !== typeof VV && VV >= 0 && VV <= 1) {
-            if (eV._volume = VV, eV._muted) return eV;
-            eV.usingWebAudio && eV.masterGain.gain.setValueAtTime(VV, UV.ctx.currentTime);
-            for (var xV = 0; xV < eV._howls.length; xV++)
-              if (!eV._howls[xV]._webAudio)
-                for (var JV = eV._howls[xV]._getSoundIds(), YV = 0; YV < JV.length; YV++) {
-                  var yV = eV._howls[xV]._soundById(JV[YV]);
-                  yV && yV._node && (yV._node.volume = yV._volume * VV)
+        volume: function(HH) {
+          var BH = this || SH;
+          if (HH = parseFloat(HH), BH.ctx || YH(), "undefined" !== typeof HH && HH >= 0 && HH <= 1) {
+            if (BH._volume = HH, BH._muted) return BH;
+            BH.usingWebAudio && BH.masterGain.gain.setValueAtTime(HH, SH.ctx.currentTime);
+            for (var LH = 0; LH < BH._howls.length; LH++)
+              if (!BH._howls[LH]._webAudio)
+                for (var AH = BH._howls[LH]._getSoundIds(), rH = 0; rH < AH.length; rH++) {
+                  var hH = BH._howls[LH]._soundById(AH[rH]);
+                  hH && hH._node && (hH._node.volume = hH._volume * HH)
                 }
-            return eV
+            return BH
           }
-          return eV._volume
+          return BH._volume
         },
-        mute: function(VV) {
-          var eV = this || UV;
-          eV.ctx || rV(), eV._muted = VV, eV.usingWebAudio && eV.masterGain.gain.setValueAtTime(VV ? 0 : eV._volume, UV.ctx.currentTime);
-          for (var xV = 0; xV < eV._howls.length; xV++)
-            if (!eV._howls[xV]._webAudio)
-              for (var JV = eV._howls[xV]._getSoundIds(), YV = 0; YV < JV.length; YV++) {
-                var yV = eV._howls[xV]._soundById(JV[YV]);
-                yV && yV._node && (yV._node.muted = !!VV || yV._muted)
+        mute: function(HH) {
+          var BH = this || SH;
+          BH.ctx || YH(), BH._muted = HH, BH.usingWebAudio && BH.masterGain.gain.setValueAtTime(HH ? 0 : BH._volume, SH.ctx.currentTime);
+          for (var LH = 0; LH < BH._howls.length; LH++)
+            if (!BH._howls[LH]._webAudio)
+              for (var AH = BH._howls[LH]._getSoundIds(), rH = 0; rH < AH.length; rH++) {
+                var hH = BH._howls[LH]._soundById(AH[rH]);
+                hH && hH._node && (hH._node.muted = !!HH || hH._muted)
               }
-          return eV
+          return BH
         },
         stop: function() {
-          for (var VV = this || UV, eV = 0; eV < VV._howls.length; eV++) VV._howls[eV].stop();
-          return VV
+          for (var HH = this || SH, BH = 0; BH < HH._howls.length; BH++) HH._howls[BH].stop();
+          return HH
         },
         unload: function() {
-          for (var VV = this || UV, eV = VV._howls.length - 1; eV >= 0; eV--) VV._howls[eV].unload();
-          return VV.usingWebAudio && VV.ctx && "undefined" !== typeof VV.ctx.close && (VV.ctx.close(), VV.ctx = null, rV()), VV
+          for (var HH = this || SH, BH = HH._howls.length - 1; BH >= 0; BH--) HH._howls[BH].unload();
+          return HH.usingWebAudio && HH.ctx && "undefined" !== typeof HH.ctx.close && (HH.ctx.close(), HH.ctx = null, YH()), HH
         },
-        codecs: function(VV) {
-          return (this || UV)._codecs[VV.replace(/^x-/, "")]
+        codecs: function(HH) {
+          return (this || SH)._codecs[HH.replace(/^x-/, "")]
         },
         _setup: function() {
-          var VV = this || UV;
-          if (VV.state = VV.ctx && VV.ctx.state || "suspended", VV._autoSuspend(), !VV.usingWebAudio)
+          var HH = this || SH;
+          if (HH.state = HH.ctx && HH.ctx.state || "suspended", HH._autoSuspend(), !HH.usingWebAudio)
             if ("undefined" !== typeof Audio) try {
-              "undefined" === typeof(new Audio).oncanplaythrough && (VV._canPlayEvent = "canplay")
-            } catch (eV) {
-              VV.noAudio = !0
-            } else VV.noAudio = !0;
+              "undefined" === typeof(new Audio).oncanplaythrough && (HH._canPlayEvent = "canplay")
+            } catch (BH) {
+              HH.noAudio = !0
+            } else HH.noAudio = !0;
           try {
-            (new Audio).muted && (VV.noAudio = !0)
-          } catch (eV) {}
-          return VV.noAudio || VV._setupCodecs(), VV
+            (new Audio).muted && (HH.noAudio = !0)
+          } catch (BH) {}
+          return HH.noAudio || HH._setupCodecs(), HH
         },
         _setupCodecs: function() {
-          var VV = this || UV,
-            eV = null;
+          var HH = this || SH,
+            BH = null;
           try {
-            eV = "undefined" !== typeof Audio ? new Audio : null
-          } catch (wV) {
-            return VV
+            BH = "undefined" !== typeof Audio ? new Audio : null
+          } catch (EH) {
+            return HH
           }
-          if (!eV || "function" !== typeof eV.canPlayType) return VV;
-          var xV = eV.canPlayType("audio/mpeg;").replace(/^no$/, ""),
-            JV = VV._navigator ? VV._navigator.userAgent : "",
-            YV = JV.match(/OPR\/([0-6].)/g),
-            yV = YV && parseInt(YV[0].split("/")[1], 10) < 33,
-            pV = -1 !== JV.indexOf("Safari") && -1 === JV.indexOf("Chrome"),
-            QV = JV.match(/Version\/(.*?) /),
-            nV = pV && QV && parseInt(QV[1], 10) < 15;
-          return VV._codecs = {
-            mp3: !(yV || !xV && !eV.canPlayType("audio/mp3;").replace(/^no$/, "")),
-            mpeg: !!xV,
-            opus: !!eV.canPlayType('audio/ogg; codecs="opus"').replace(/^no$/, ""),
-            ogg: !!eV.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ""),
-            oga: !!eV.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ""),
-            wav: !!(eV.canPlayType('audio/wav; codecs="1"') || eV.canPlayType("audio/wav")).replace(/^no$/, ""),
-            aac: !!eV.canPlayType("audio/aac;").replace(/^no$/, ""),
-            caf: !!eV.canPlayType("audio/x-caf;").replace(/^no$/, ""),
-            m4a: !!(eV.canPlayType("audio/x-m4a;") || eV.canPlayType("audio/m4a;") || eV.canPlayType("audio/aac;")).replace(/^no$/, ""),
-            m4b: !!(eV.canPlayType("audio/x-m4b;") || eV.canPlayType("audio/m4b;") || eV.canPlayType("audio/aac;")).replace(/^no$/, ""),
-            mp4: !!(eV.canPlayType("audio/x-mp4;") || eV.canPlayType("audio/mp4;") || eV.canPlayType("audio/aac;")).replace(/^no$/, ""),
-            weba: !(nV || !eV.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, "")),
-            webm: !(nV || !eV.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, "")),
-            dolby: !!eV.canPlayType('audio/mp4; codecs="ec-3"').replace(/^no$/, ""),
-            flac: !!(eV.canPlayType("audio/x-flac;") || eV.canPlayType("audio/flac;")).replace(/^no$/, "")
-          }, VV
+          if (!BH || "function" !== typeof BH.canPlayType) return HH;
+          var LH = BH.canPlayType("audio/mpeg;").replace(/^no$/, ""),
+            AH = HH._navigator ? HH._navigator.userAgent : "",
+            rH = AH.match(/OPR\/([0-6].)/g),
+            hH = rH && parseInt(rH[0].split("/")[1], 10) < 33,
+            tH = -1 !== AH.indexOf("Safari") && -1 === AH.indexOf("Chrome"),
+            zH = AH.match(/Version\/(.*?) /),
+            CH = tH && zH && parseInt(zH[1], 10) < 15;
+          return HH._codecs = {
+            mp3: !(hH || !LH && !BH.canPlayType("audio/mp3;").replace(/^no$/, "")),
+            mpeg: !!LH,
+            opus: !!BH.canPlayType('audio/ogg; codecs="opus"').replace(/^no$/, ""),
+            ogg: !!BH.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ""),
+            oga: !!BH.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ""),
+            wav: !!(BH.canPlayType('audio/wav; codecs="1"') || BH.canPlayType("audio/wav")).replace(/^no$/, ""),
+            aac: !!BH.canPlayType("audio/aac;").replace(/^no$/, ""),
+            caf: !!BH.canPlayType("audio/x-caf;").replace(/^no$/, ""),
+            m4a: !!(BH.canPlayType("audio/x-m4a;") || BH.canPlayType("audio/m4a;") || BH.canPlayType("audio/aac;")).replace(/^no$/, ""),
+            m4b: !!(BH.canPlayType("audio/x-m4b;") || BH.canPlayType("audio/m4b;") || BH.canPlayType("audio/aac;")).replace(/^no$/, ""),
+            mp4: !!(BH.canPlayType("audio/x-mp4;") || BH.canPlayType("audio/mp4;") || BH.canPlayType("audio/aac;")).replace(/^no$/, ""),
+            weba: !(CH || !BH.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, "")),
+            webm: !(CH || !BH.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, "")),
+            dolby: !!BH.canPlayType('audio/mp4; codecs="ec-3"').replace(/^no$/, ""),
+            flac: !!(BH.canPlayType("audio/x-flac;") || BH.canPlayType("audio/flac;")).replace(/^no$/, "")
+          }, HH
         },
         _unlockAudio: function() {
-          var VV = this || UV;
-          if (!VV._audioUnlocked && VV.ctx) {
-            VV._audioUnlocked = !1, VV.autoUnlock = !1, VV._mobileUnloaded || 44100 === VV.ctx.sampleRate || (VV._mobileUnloaded = !0, VV.unload()), VV._scratchBuffer = VV.ctx.createBuffer(1, 1, 22050);
-            var eV = function(xV) {
-              for (; VV._html5AudioPool.length < VV.html5PoolSize;) try {
-                var JV = new Audio;
-                JV._unlocked = !0, VV._releaseHtml5Audio(JV)
-              } catch (xV) {
-                VV.noAudio = !0;
+          var HH = this || SH;
+          if (!HH._audioUnlocked && HH.ctx) {
+            HH._audioUnlocked = !1, HH.autoUnlock = !1, HH._mobileUnloaded || 44100 === HH.ctx.sampleRate || (HH._mobileUnloaded = !0, HH.unload()), HH._scratchBuffer = HH.ctx.createBuffer(1, 1, 22050);
+            var BH = function(LH) {
+              for (; HH._html5AudioPool.length < HH.html5PoolSize;) try {
+                var AH = new Audio;
+                AH._unlocked = !0, HH._releaseHtml5Audio(AH)
+              } catch (LH) {
+                HH.noAudio = !0;
                 break
               }
-              for (var YV = 0; YV < VV._howls.length; YV++)
-                if (!VV._howls[YV]._webAudio)
-                  for (var UV = VV._howls[YV]._getSoundIds(), yV = 0; yV < UV.length; yV++) {
-                    var pV = VV._howls[YV]._soundById(UV[yV]);
-                    pV && pV._node && !pV._node._unlocked && (pV._node._unlocked = !0, pV._node.load())
+              for (var rH = 0; rH < HH._howls.length; rH++)
+                if (!HH._howls[rH]._webAudio)
+                  for (var SH = HH._howls[rH]._getSoundIds(), hH = 0; hH < SH.length; hH++) {
+                    var tH = HH._howls[rH]._soundById(SH[hH]);
+                    tH && tH._node && !tH._node._unlocked && (tH._node._unlocked = !0, tH._node.load())
                   }
-              VV._autoResume();
-              var QV = VV.ctx.createBufferSource();
-              QV.buffer = VV._scratchBuffer, QV.connect(VV.ctx.destination), "undefined" === typeof QV.start ? QV.noteOn(0) : QV.start(0), "function" === typeof VV.ctx.resume && VV.ctx.resume(), QV.onended = function() {
-                QV.disconnect(0), VV._audioUnlocked = !0, document.removeEventListener("touchstart", eV, !0), document.removeEventListener("touchend", eV, !0), document.removeEventListener("click", eV, !0), document.removeEventListener("keydown", eV, !0);
-                for (var xV = 0; xV < VV._howls.length; xV++) VV._howls[xV]._emit("unlock")
+              HH._autoResume();
+              var zH = HH.ctx.createBufferSource();
+              zH.buffer = HH._scratchBuffer, zH.connect(HH.ctx.destination), "undefined" === typeof zH.start ? zH.noteOn(0) : zH.start(0), "function" === typeof HH.ctx.resume && HH.ctx.resume(), zH.onended = function() {
+                zH.disconnect(0), HH._audioUnlocked = !0, document.removeEventListener("touchstart", BH, !0), document.removeEventListener("touchend", BH, !0), document.removeEventListener("click", BH, !0), document.removeEventListener("keydown", BH, !0);
+                for (var LH = 0; LH < HH._howls.length; LH++) HH._howls[LH]._emit("unlock")
               }
             };
-            return document.addEventListener("touchstart", eV, !0), document.addEventListener("touchend", eV, !0), document.addEventListener("click", eV, !0), document.addEventListener("keydown", eV, !0), VV
+            return document.addEventListener("touchstart", BH, !0), document.addEventListener("touchend", BH, !0), document.addEventListener("click", BH, !0), document.addEventListener("keydown", BH, !0), HH
           }
         },
         _obtainHtml5Audio: function() {
-          var VV = this || UV;
-          if (VV._html5AudioPool.length) return VV._html5AudioPool.pop();
-          var eV = (new Audio).play();
-          return eV && "undefined" !== typeof Promise && (eV instanceof Promise || "function" === typeof eV.then) && eV.catch((function() {
+          var HH = this || SH;
+          if (HH._html5AudioPool.length) return HH._html5AudioPool.pop();
+          var BH = (new Audio).play();
+          return BH && "undefined" !== typeof Promise && (BH instanceof Promise || "function" === typeof BH.then) && BH.catch((function() {
             console.warn("HTML5 Audio pool exhausted, returning potentially locked audio object.")
           })), new Audio
         },
-        _releaseHtml5Audio: function(VV) {
-          var eV = this || UV;
-          return VV._unlocked && eV._html5AudioPool.push(VV), eV
+        _releaseHtml5Audio: function(HH) {
+          var BH = this || SH;
+          return HH._unlocked && BH._html5AudioPool.push(HH), BH
         },
         _autoSuspend: function() {
-          var VV = this;
-          if (VV.autoSuspend && VV.ctx && "undefined" !== typeof VV.ctx.suspend && UV.usingWebAudio) {
-            for (var eV = 0; eV < VV._howls.length; eV++)
-              if (VV._howls[eV]._webAudio)
-                for (var xV = 0; xV < VV._howls[eV]._sounds.length; xV++)
-                  if (!VV._howls[eV]._sounds[xV].DZ) return VV;
-            return VV._suspendTimer && clearTimeout(VV._suspendTimer), VV._suspendTimer = setTimeout((function() {
-              if (VV.autoSuspend) {
-                VV._suspendTimer = null, VV.state = "suspending";
-                var eV = function() {
-                  VV.state = "suspended", VV._resumeAfterSuspend && (delete VV._resumeAfterSuspend, VV._autoResume())
+          var HH = this;
+          if (HH.autoSuspend && HH.ctx && "undefined" !== typeof HH.ctx.suspend && SH.usingWebAudio) {
+            for (var BH = 0; BH < HH._howls.length; BH++)
+              if (HH._howls[BH]._webAudio)
+                for (var LH = 0; LH < HH._howls[BH]._sounds.length; LH++)
+                  if (!HH._howls[BH]._sounds[LH].oX) return HH;
+            return HH._suspendTimer && clearTimeout(HH._suspendTimer), HH._suspendTimer = setTimeout((function() {
+              if (HH.autoSuspend) {
+                HH._suspendTimer = null, HH.state = "suspending";
+                var BH = function() {
+                  HH.state = "suspended", HH._resumeAfterSuspend && (delete HH._resumeAfterSuspend, HH._autoResume())
                 };
-                VV.ctx.suspend().then(eV, eV)
+                HH.ctx.suspend().then(BH, BH)
               }
-            }), 3e4), VV
+            }), 3e4), HH
           }
         },
         _autoResume: function() {
-          var VV = this;
-          if (VV.ctx && "undefined" !== typeof VV.ctx.resume && UV.usingWebAudio) return "running" === VV.state && "interrupted" !== VV.ctx.state && VV._suspendTimer ? (clearTimeout(VV._suspendTimer), VV._suspendTimer = null) : "suspended" === VV.state || "running" === VV.state && "interrupted" === VV.ctx.state ? (VV.ctx.resume().then((function() {
-            VV.state = "running";
-            for (var eV = 0; eV < VV._howls.length; eV++) VV._howls[eV]._emit("resume")
-          })), VV._suspendTimer && (clearTimeout(VV._suspendTimer), VV._suspendTimer = null)) : "suspending" === VV.state && (VV._resumeAfterSuspend = !0), VV
+          var HH = this;
+          if (HH.ctx && "undefined" !== typeof HH.ctx.resume && SH.usingWebAudio) return "running" === HH.state && "interrupted" !== HH.ctx.state && HH._suspendTimer ? (clearTimeout(HH._suspendTimer), HH._suspendTimer = null) : "suspended" === HH.state || "running" === HH.state && "interrupted" === HH.ctx.state ? (HH.ctx.resume().then((function() {
+            HH.state = "running";
+            for (var BH = 0; BH < HH._howls.length; BH++) HH._howls[BH]._emit("resume")
+          })), HH._suspendTimer && (clearTimeout(HH._suspendTimer), HH._suspendTimer = null)) : "suspending" === HH.state && (HH._resumeAfterSuspend = !0), HH
         }
       };
-      var UV = new YV,
-        yV = function(VV) {
-          VV.src && 0 !== VV.src.length ? this.init(VV) : console.error("An array of source files must be passed with any new Howl.")
+      var SH = new rH,
+        hH = function(HH) {
+          HH.src && 0 !== HH.src.length ? this.init(HH) : console.error("An array of source files must be passed with any new Howl.")
         };
-      yV.prototype = {
-        init: function(VV) {
-          var eV = this;
-          return UV.ctx || rV(), eV._autoplay = VV.autoplay || !1, eV._format = "string" !== typeof VV.format ? VV.format : [VV.format], eV._html5 = VV.html5 || !1, eV._muted = VV.mute || !1, eV._loop = VV.loop || !1, eV._pool = VV.pool || 5, eV._preload = "boolean" !== typeof VV.preload && "metadata" !== VV.preload || VV.preload, eV._rate = VV.rate || 1, eV._sprite = VV.sprite || {}, eV._src = "string" !== typeof VV.src ? VV.src : [VV.src], eV._volume = void 0 !== VV.volume ? VV.volume : 1, eV._xhr = {
-            method: VV.xhr && VV.xhr.method ? VV.xhr.method : "GET",
-            headers: VV.xhr && VV.xhr.headers ? VV.xhr.headers : null,
-            withCredentials: !(!VV.xhr || !VV.xhr.withCredentials) && VV.xhr.withCredentials
-          }, eV._duration = 0, eV._state = "unloaded", eV._sounds = [], eV._endTimers = {}, eV._queue = [], eV._playLock = !1, eV._onend = VV.onend ? [{
-            bZ: VV.onend
-          }] : [], eV._onfade = VV.onfade ? [{
-            bZ: VV.onfade
-          }] : [], eV._onload = VV.onload ? [{
-            bZ: VV.onload
-          }] : [], eV._onloaderror = VV.onloaderror ? [{
-            bZ: VV.onloaderror
-          }] : [], eV._onplayerror = VV.onplayerror ? [{
-            bZ: VV.onplayerror
-          }] : [], eV._onpause = VV.onpause ? [{
-            bZ: VV.onpause
-          }] : [], eV._onplay = VV.onplay ? [{
-            bZ: VV.onplay
-          }] : [], eV._onstop = VV.onstop ? [{
-            bZ: VV.onstop
-          }] : [], eV._onmute = VV.onmute ? [{
-            bZ: VV.onmute
-          }] : [], eV._onvolume = VV.onvolume ? [{
-            bZ: VV.onvolume
-          }] : [], eV._onrate = VV.onrate ? [{
-            bZ: VV.onrate
-          }] : [], eV._onseek = VV.onseek ? [{
-            bZ: VV.onseek
-          }] : [], eV._onunlock = VV.onunlock ? [{
-            bZ: VV.onunlock
-          }] : [], eV._onresume = [], eV._webAudio = UV.usingWebAudio && !eV._html5, "undefined" !== typeof UV.ctx && UV.ctx && UV.autoUnlock && UV._unlockAudio(), UV._howls.push(eV), eV._autoplay && eV._queue.push({
+      hH.prototype = {
+        init: function(HH) {
+          var BH = this;
+          return SH.ctx || YH(), BH._autoplay = HH.autoplay || !1, BH._format = "string" !== typeof HH.format ? HH.format : [HH.format], BH._html5 = HH.html5 || !1, BH._muted = HH.mute || !1, BH._loop = HH.loop || !1, BH._pool = HH.pool || 5, BH._preload = "boolean" !== typeof HH.preload && "metadata" !== HH.preload || HH.preload, BH._rate = HH.rate || 1, BH._sprite = HH.sprite || {}, BH._src = "string" !== typeof HH.src ? HH.src : [HH.src], BH._volume = void 0 !== HH.volume ? HH.volume : 1, BH._xhr = {
+            method: HH.xhr && HH.xhr.method ? HH.xhr.method : "GET",
+            headers: HH.xhr && HH.xhr.headers ? HH.xhr.headers : null,
+            withCredentials: !(!HH.xhr || !HH.xhr.withCredentials) && HH.xhr.withCredentials
+          }, BH._duration = 0, BH._state = "unloaded", BH._sounds = [], BH._endTimers = {}, BH._queue = [], BH._playLock = !1, BH._onend = HH.onend ? [{
+            EX: HH.onend
+          }] : [], BH._onfade = HH.onfade ? [{
+            EX: HH.onfade
+          }] : [], BH._onload = HH.onload ? [{
+            EX: HH.onload
+          }] : [], BH._onloaderror = HH.onloaderror ? [{
+            EX: HH.onloaderror
+          }] : [], BH._onplayerror = HH.onplayerror ? [{
+            EX: HH.onplayerror
+          }] : [], BH._onpause = HH.onpause ? [{
+            EX: HH.onpause
+          }] : [], BH._onplay = HH.onplay ? [{
+            EX: HH.onplay
+          }] : [], BH._onstop = HH.onstop ? [{
+            EX: HH.onstop
+          }] : [], BH._onmute = HH.onmute ? [{
+            EX: HH.onmute
+          }] : [], BH._onvolume = HH.onvolume ? [{
+            EX: HH.onvolume
+          }] : [], BH._onrate = HH.onrate ? [{
+            EX: HH.onrate
+          }] : [], BH._onseek = HH.onseek ? [{
+            EX: HH.onseek
+          }] : [], BH._onunlock = HH.onunlock ? [{
+            EX: HH.onunlock
+          }] : [], BH._onresume = [], BH._webAudio = SH.usingWebAudio && !BH._html5, "undefined" !== typeof SH.ctx && SH.ctx && SH.autoUnlock && SH._unlockAudio(), SH._howls.push(BH), BH._autoplay && BH._queue.push({
             event: "play",
             action: function() {
-              eV.play()
+              BH.play()
             }
-          }), eV._preload && "none" !== eV._preload && eV.load(), eV
+          }), BH._preload && "none" !== BH._preload && BH.load(), BH
         },
         load: function() {
-          var VV = this,
-            eV = null;
-          if (UV.noAudio) VV._emit("loaderror", null, "No audio support.");
+          var HH = this,
+            BH = null;
+          if (SH.noAudio) HH._emit("loaderror", null, "No audio support.");
           else {
-            "string" === typeof VV._src && (VV._src = [VV._src]);
-            for (var xV = 0; xV < VV._src.length; xV++) {
-              var JV, YV;
-              if (VV._format && VV._format[xV]) JV = VV._format[xV];
+            "string" === typeof HH._src && (HH._src = [HH._src]);
+            for (var LH = 0; LH < HH._src.length; LH++) {
+              var AH, rH;
+              if (HH._format && HH._format[LH]) AH = HH._format[LH];
               else {
-                if ("string" !== typeof(YV = VV._src[xV])) {
-                  VV._emit("loaderror", null, "Non-string found in selected audio sources - ignoring.");
+                if ("string" !== typeof(rH = HH._src[LH])) {
+                  HH._emit("loaderror", null, "Non-string found in selected audio sources - ignoring.");
                   continue
-                }(JV = /^data:audio\/([^;,]+);/i.exec(YV)) || (JV = /\.([^.]+)$/.exec(YV.split("?", 1)[0])), JV && (JV = JV[1].toLowerCase())
+                }(AH = /^data:audio\/([^;,]+);/i.exec(rH)) || (AH = /\.([^.]+)$/.exec(rH.split("?", 1)[0])), AH && (AH = AH[1].toLowerCase())
               }
-              if (JV || console.warn('No file extension was found. Consider using the "format" property or specify an extension.'), JV && UV.codecs(JV)) {
-                eV = VV._src[xV];
+              if (AH || console.warn('No file extension was found. Consider using the "format" property or specify an extension.'), AH && SH.codecs(AH)) {
+                BH = HH._src[LH];
                 break
               }
             }
-            if (eV) return VV._src = eV, VV._state = "loading", "https:" === window.location.protocol && "http:" === eV.slice(0, 5) && (VV._html5 = !0, VV._webAudio = !1), new pV(VV), VV._webAudio && nV(VV), VV;
-            VV._emit("loaderror", null, "No codec support for selected audio sources.")
+            if (BH) return HH._src = BH, HH._state = "loading", "https:" === window.location.protocol && "http:" === BH.slice(0, 5) && (HH._html5 = !0, HH._webAudio = !1), new tH(HH), HH._webAudio && CH(HH), HH;
+            HH._emit("loaderror", null, "No codec support for selected audio sources.")
           }
         },
-        play: function(VV, eV) {
-          var xV = this,
-            JV = null;
-          if ("number" === typeof VV) JV = VV, VV = null;
+        play: function(HH, BH) {
+          var LH = this,
+            AH = null;
+          if ("number" === typeof HH) AH = HH, HH = null;
           else {
-            if ("string" === typeof VV && "loaded" === xV._state && !xV._sprite[VV]) return null;
-            if ("undefined" === typeof VV && (VV = "__default", !xV._playLock)) {
-              for (var YV = 0, yV = 0; yV < xV._sounds.length; yV++) xV._sounds[yV].DZ && !xV._sounds[yV]._ended && (YV++, JV = xV._sounds[yV]._id);
-              1 === YV ? VV = null : JV = null
+            if ("string" === typeof HH && "loaded" === LH._state && !LH._sprite[HH]) return null;
+            if ("undefined" === typeof HH && (HH = "__default", !LH._playLock)) {
+              for (var rH = 0, hH = 0; hH < LH._sounds.length; hH++) LH._sounds[hH].oX && !LH._sounds[hH]._ended && (rH++, AH = LH._sounds[hH]._id);
+              1 === rH ? HH = null : AH = null
             }
           }
-          var pV = JV ? xV._soundById(JV) : xV._inactiveSound();
-          if (!pV) return null;
-          if (JV && !VV && (VV = pV._sprite || "__default"), "loaded" !== xV._state) {
-            pV._sprite = VV, pV._ended = !1;
-            var QV = pV._id;
-            return xV._queue.push({
+          var tH = AH ? LH._soundById(AH) : LH._inactiveSound();
+          if (!tH) return null;
+          if (AH && !HH && (HH = tH._sprite || "__default"), "loaded" !== LH._state) {
+            tH._sprite = HH, tH._ended = !1;
+            var zH = tH._id;
+            return LH._queue.push({
               event: "play",
               action: function() {
-                xV.play(QV)
+                LH.play(zH)
               }
-            }), QV
+            }), zH
           }
-          if (JV && !pV.DZ) return eV || xV._loadQueue("play"), pV._id;
-          xV._webAudio && UV._autoResume();
-          var nV = Math.max(0, pV._seek > 0 ? pV._seek : xV._sprite[VV][0] / 1e3),
-            wV = Math.max(0, (xV._sprite[VV][0] + xV._sprite[VV][1]) / 1e3 - nV),
-            ZV = 1e3 * wV / Math.abs(pV._rate),
-            vV = xV._sprite[VV][0] / 1e3,
-            rV = (xV._sprite[VV][0] + xV._sprite[VV][1]) / 1e3;
-          pV._sprite = VV, pV._ended = !1;
-          var kV = function() {
-            pV.DZ = !1, pV._seek = nV, pV._start = vV, pV._stop = rV, pV._loop = !(!pV._loop && !xV._sprite[VV][2])
+          if (AH && !tH.oX) return BH || LH._loadQueue("play"), tH._id;
+          LH._webAudio && SH._autoResume();
+          var CH = Math.max(0, tH._seek > 0 ? tH._seek : LH._sprite[HH][0] / 1e3),
+            EH = Math.max(0, (LH._sprite[HH][0] + LH._sprite[HH][1]) / 1e3 - CH),
+            XH = 1e3 * EH / Math.abs(tH._rate),
+            GH = LH._sprite[HH][0] / 1e3,
+            YH = (LH._sprite[HH][0] + LH._sprite[HH][1]) / 1e3;
+          tH._sprite = HH, tH._ended = !1;
+          var uH = function() {
+            tH.oX = !1, tH._seek = CH, tH._start = GH, tH._stop = YH, tH._loop = !(!tH._loop && !LH._sprite[HH][2])
           };
-          if (!(nV >= rV)) {
-            var bV = pV._node;
-            if (xV._webAudio) {
-              var EV = function() {
-                xV._playLock = !1, kV(), xV._refreshBuffer(pV);
-                var VV = pV._muted || xV._muted ? 0 : pV._volume;
-                bV.gain.setValueAtTime(VV, UV.ctx.currentTime), pV._playStart = UV.ctx.currentTime, "undefined" === typeof bV.bufferSource.start ? pV._loop ? bV.bufferSource.noteGrainOn(0, nV, 86400) : bV.bufferSource.noteGrainOn(0, nV, wV) : pV._loop ? bV.bufferSource.start(0, nV, 86400) : bV.bufferSource.start(0, nV, wV), ZV !== 1 / 0 && (xV._endTimers[pV._id] = setTimeout(xV._ended.bind(xV, pV), ZV)), eV || setTimeout((function() {
-                  xV._emit("play", pV._id), xV._loadQueue()
+          if (!(CH >= YH)) {
+            var QH = tH._node;
+            if (LH._webAudio) {
+              var WH = function() {
+                LH._playLock = !1, uH(), LH._refreshBuffer(tH);
+                var HH = tH._muted || LH._muted ? 0 : tH._volume;
+                QH.gain.setValueAtTime(HH, SH.ctx.currentTime), tH._playStart = SH.ctx.currentTime, "undefined" === typeof QH.bufferSource.start ? tH._loop ? QH.bufferSource.noteGrainOn(0, CH, 86400) : QH.bufferSource.noteGrainOn(0, CH, EH) : tH._loop ? QH.bufferSource.start(0, CH, 86400) : QH.bufferSource.start(0, CH, EH), XH !== 1 / 0 && (LH._endTimers[tH._id] = setTimeout(LH._ended.bind(LH, tH), XH)), BH || setTimeout((function() {
+                  LH._emit("play", tH._id), LH._loadQueue()
                 }), 0)
               };
-              "running" === UV.state && "interrupted" !== UV.ctx.state ? EV() : (xV._playLock = !0, xV.once("resume", EV), xV._clearTimer(pV._id))
+              "running" === SH.state && "interrupted" !== SH.ctx.state ? WH() : (LH._playLock = !0, LH.once("resume", WH), LH._clearTimer(tH._id))
             } else {
-              var BV = function() {
-                bV.currentTime = nV, bV.muted = pV._muted || xV._muted || UV._muted || bV.muted, bV.volume = pV._volume * UV.volume(), bV.playbackRate = pV._rate;
+              var MH = function() {
+                QH.currentTime = CH, QH.muted = tH._muted || LH._muted || SH._muted || QH.muted, QH.volume = tH._volume * SH.volume(), QH.playbackRate = tH._rate;
                 try {
-                  var JV = bV.play();
-                  if (JV && "undefined" !== typeof Promise && (JV instanceof Promise || "function" === typeof JV.then) ? (xV._playLock = !0, kV(), JV.then((function() {
-                      xV._playLock = !1, bV._unlocked = !0, eV ? xV._loadQueue() : xV._emit("play", pV._id)
+                  var AH = QH.play();
+                  if (AH && "undefined" !== typeof Promise && (AH instanceof Promise || "function" === typeof AH.then) ? (LH._playLock = !0, uH(), AH.then((function() {
+                      LH._playLock = !1, QH._unlocked = !0, BH ? LH._loadQueue() : LH._emit("play", tH._id)
                     })).catch((function() {
-                      xV._playLock = !1, xV._emit("playerror", pV._id, "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction."), pV._ended = !0, pV.DZ = !0
-                    }))) : eV || (xV._playLock = !1, kV(), xV._emit("play", pV._id)), bV.playbackRate = pV._rate, bV.paused) return void xV._emit("playerror", pV._id, "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction.");
-                  "__default" !== VV || pV._loop ? xV._endTimers[pV._id] = setTimeout(xV._ended.bind(xV, pV), ZV) : (xV._endTimers[pV._id] = function() {
-                    xV._ended(pV), bV.removeEventListener("ended", xV._endTimers[pV._id], !1)
-                  }, bV.addEventListener("ended", xV._endTimers[pV._id], !1))
-                } catch (YV) {
-                  xV._emit("playerror", pV._id, YV)
+                      LH._playLock = !1, LH._emit("playerror", tH._id, "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction."), tH._ended = !0, tH.oX = !0
+                    }))) : BH || (LH._playLock = !1, uH(), LH._emit("play", tH._id)), QH.playbackRate = tH._rate, QH.paused) return void LH._emit("playerror", tH._id, "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction.");
+                  "__default" !== HH || tH._loop ? LH._endTimers[tH._id] = setTimeout(LH._ended.bind(LH, tH), XH) : (LH._endTimers[tH._id] = function() {
+                    LH._ended(tH), QH.removeEventListener("ended", LH._endTimers[tH._id], !1)
+                  }, QH.addEventListener("ended", LH._endTimers[tH._id], !1))
+                } catch (rH) {
+                  LH._emit("playerror", tH._id, rH)
                 }
               };
-              "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA" === bV.src && (bV.src = xV._src, bV.load());
-              var jV = window && window.ejecta || !bV.readyState && UV._navigator.isCocoonJS;
-              if (bV.readyState >= 3 || jV) BV();
+              "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA" === QH.src && (QH.src = LH._src, QH.load());
+              var xH = window && window.ejecta || !QH.readyState && SH._navigator.isCocoonJS;
+              if (QH.readyState >= 3 || xH) MH();
               else {
-                xV._playLock = !0, xV._state = "loading";
-                var qV = function() {
-                  xV._state = "loaded", BV(), bV.removeEventListener(UV._canPlayEvent, qV, !1)
+                LH._playLock = !0, LH._state = "loading";
+                var vH = function() {
+                  LH._state = "loaded", MH(), QH.removeEventListener(SH._canPlayEvent, vH, !1)
                 };
-                bV.addEventListener(UV._canPlayEvent, qV, !1), xV._clearTimer(pV._id)
+                QH.addEventListener(SH._canPlayEvent, vH, !1), LH._clearTimer(tH._id)
               }
             }
-            return pV._id
+            return tH._id
           }
-          xV._ended(pV)
+          LH._ended(tH)
         },
-        pause: function(VV) {
-          var eV = this;
-          if ("loaded" !== eV._state || eV._playLock) return eV._queue.push({
+        pause: function(HH) {
+          var BH = this;
+          if ("loaded" !== BH._state || BH._playLock) return BH._queue.push({
             event: "pause",
             action: function() {
-              eV.pause(VV)
+              BH.pause(HH)
             }
-          }), eV;
-          for (var xV = eV._getSoundIds(VV), JV = 0; JV < xV.length; JV++) {
-            eV._clearTimer(xV[JV]);
-            var YV = eV._soundById(xV[JV]);
-            if (YV && !YV.DZ && (YV._seek = eV.seek(xV[JV]), YV._rateSeek = 0, YV.DZ = !0, eV._stopFade(xV[JV]), YV._node))
-              if (eV._webAudio) {
-                if (!YV._node.bufferSource) continue;
-                "undefined" === typeof YV._node.bufferSource.stop ? YV._node.bufferSource.noteOff(0) : YV._node.bufferSource.stop(0), eV._cleanBuffer(YV._node)
-              } else isNaN(YV._node.duration) && YV._node.duration !== 1 / 0 || YV._node.pause();
-            arguments[1] || eV._emit("pause", YV ? YV._id : null)
+          }), BH;
+          for (var LH = BH._getSoundIds(HH), AH = 0; AH < LH.length; AH++) {
+            BH._clearTimer(LH[AH]);
+            var rH = BH._soundById(LH[AH]);
+            if (rH && !rH.oX && (rH._seek = BH.seek(LH[AH]), rH._rateSeek = 0, rH.oX = !0, BH._stopFade(LH[AH]), rH._node))
+              if (BH._webAudio) {
+                if (!rH._node.bufferSource) continue;
+                "undefined" === typeof rH._node.bufferSource.stop ? rH._node.bufferSource.noteOff(0) : rH._node.bufferSource.stop(0), BH._cleanBuffer(rH._node)
+              } else isNaN(rH._node.duration) && rH._node.duration !== 1 / 0 || rH._node.pause();
+            arguments[1] || BH._emit("pause", rH ? rH._id : null)
           }
-          return eV
+          return BH
         },
-        stop: function(VV, eV) {
-          var xV = this;
-          if ("loaded" !== xV._state || xV._playLock) return xV._queue.push({
+        stop: function(HH, BH) {
+          var LH = this;
+          if ("loaded" !== LH._state || LH._playLock) return LH._queue.push({
             event: "stop",
             action: function() {
-              xV.stop(VV)
+              LH.stop(HH)
             }
-          }), xV;
-          for (var JV = xV._getSoundIds(VV), YV = 0; YV < JV.length; YV++) {
-            xV._clearTimer(JV[YV]);
-            var UV = xV._soundById(JV[YV]);
-            UV && (UV._seek = UV._start || 0, UV._rateSeek = 0, UV.DZ = !0, UV._ended = !0, xV._stopFade(JV[YV]), UV._node && (xV._webAudio ? UV._node.bufferSource && ("undefined" === typeof UV._node.bufferSource.stop ? UV._node.bufferSource.noteOff(0) : UV._node.bufferSource.stop(0), xV._cleanBuffer(UV._node)) : isNaN(UV._node.duration) && UV._node.duration !== 1 / 0 || (UV._node.currentTime = UV._start || 0, UV._node.pause(), UV._node.duration === 1 / 0 && xV._clearSound(UV._node))), eV || xV._emit("stop", UV._id))
+          }), LH;
+          for (var AH = LH._getSoundIds(HH), rH = 0; rH < AH.length; rH++) {
+            LH._clearTimer(AH[rH]);
+            var SH = LH._soundById(AH[rH]);
+            SH && (SH._seek = SH._start || 0, SH._rateSeek = 0, SH.oX = !0, SH._ended = !0, LH._stopFade(AH[rH]), SH._node && (LH._webAudio ? SH._node.bufferSource && ("undefined" === typeof SH._node.bufferSource.stop ? SH._node.bufferSource.noteOff(0) : SH._node.bufferSource.stop(0), LH._cleanBuffer(SH._node)) : isNaN(SH._node.duration) && SH._node.duration !== 1 / 0 || (SH._node.currentTime = SH._start || 0, SH._node.pause(), SH._node.duration === 1 / 0 && LH._clearSound(SH._node))), BH || LH._emit("stop", SH._id))
           }
-          return xV
+          return LH
         },
-        mute: function(VV, eV) {
-          var xV = this;
-          if ("loaded" !== xV._state || xV._playLock) return xV._queue.push({
+        mute: function(HH, BH) {
+          var LH = this;
+          if ("loaded" !== LH._state || LH._playLock) return LH._queue.push({
             event: "mute",
             action: function() {
-              xV.mute(VV, eV)
+              LH.mute(HH, BH)
             }
-          }), xV;
-          if ("undefined" === typeof eV) {
-            if ("boolean" !== typeof VV) return xV._muted;
-            xV._muted = VV
+          }), LH;
+          if ("undefined" === typeof BH) {
+            if ("boolean" !== typeof HH) return LH._muted;
+            LH._muted = HH
           }
-          for (var JV = xV._getSoundIds(eV), YV = 0; YV < JV.length; YV++) {
-            var yV = xV._soundById(JV[YV]);
-            yV && (yV._muted = VV, yV._interval && xV._stopFade(yV._id), xV._webAudio && yV._node ? yV._node.gain.setValueAtTime(VV ? 0 : yV._volume, UV.ctx.currentTime) : yV._node && (yV._node.muted = !!UV._muted || VV), xV._emit("mute", yV._id))
+          for (var AH = LH._getSoundIds(BH), rH = 0; rH < AH.length; rH++) {
+            var hH = LH._soundById(AH[rH]);
+            hH && (hH._muted = HH, hH._interval && LH._stopFade(hH._id), LH._webAudio && hH._node ? hH._node.gain.setValueAtTime(HH ? 0 : hH._volume, SH.ctx.currentTime) : hH._node && (hH._node.muted = !!SH._muted || HH), LH._emit("mute", hH._id))
           }
-          return xV
+          return LH
         },
         volume: function() {
-          var VV, eV, xV, JV = this,
-            YV = arguments;
-          if (0 === YV.length) return JV._volume;
-          if (1 === YV.length || 2 === YV.length && "undefined" === typeof YV[1] ? JV._getSoundIds().indexOf(YV[0]) >= 0 ? eV = parseInt(YV[0], 10) : VV = parseFloat(YV[0]) : YV.length >= 2 && (VV = parseFloat(YV[0]), eV = parseInt(YV[1], 10)), !("undefined" !== typeof VV && VV >= 0 && VV <= 1)) return (xV = eV ? JV._soundById(eV) : JV._sounds[0]) ? xV._volume : 0;
-          if ("loaded" !== JV._state || JV._playLock) return JV._queue.push({
+          var HH, BH, LH, AH = this,
+            rH = arguments;
+          if (0 === rH.length) return AH._volume;
+          if (1 === rH.length || 2 === rH.length && "undefined" === typeof rH[1] ? AH._getSoundIds().indexOf(rH[0]) >= 0 ? BH = parseInt(rH[0], 10) : HH = parseFloat(rH[0]) : rH.length >= 2 && (HH = parseFloat(rH[0]), BH = parseInt(rH[1], 10)), !("undefined" !== typeof HH && HH >= 0 && HH <= 1)) return (LH = BH ? AH._soundById(BH) : AH._sounds[0]) ? LH._volume : 0;
+          if ("loaded" !== AH._state || AH._playLock) return AH._queue.push({
             event: "volume",
             action: function() {
-              JV.volume.apply(JV, YV)
+              AH.volume.apply(AH, rH)
             }
-          }), JV;
-          "undefined" === typeof eV && (JV._volume = VV), eV = JV._getSoundIds(eV);
-          for (var yV = 0; yV < eV.length; yV++)(xV = JV._soundById(eV[yV])) && (xV._volume = VV, YV[2] || JV._stopFade(eV[yV]), JV._webAudio && xV._node && !xV._muted ? xV._node.gain.setValueAtTime(VV, UV.ctx.currentTime) : xV._node && !xV._muted && (xV._node.volume = VV * UV.volume()), JV._emit("volume", xV._id));
-          return JV
+          }), AH;
+          "undefined" === typeof BH && (AH._volume = HH), BH = AH._getSoundIds(BH);
+          for (var hH = 0; hH < BH.length; hH++)(LH = AH._soundById(BH[hH])) && (LH._volume = HH, rH[2] || AH._stopFade(BH[hH]), AH._webAudio && LH._node && !LH._muted ? LH._node.gain.setValueAtTime(HH, SH.ctx.currentTime) : LH._node && !LH._muted && (LH._node.volume = HH * SH.volume()), AH._emit("volume", LH._id));
+          return AH
         },
-        fade: function(VV, eV, xV, JV) {
-          var YV = this;
-          if ("loaded" !== YV._state || YV._playLock) return YV._queue.push({
+        fade: function(HH, BH, LH, AH) {
+          var rH = this;
+          if ("loaded" !== rH._state || rH._playLock) return rH._queue.push({
             event: "fade",
             action: function() {
-              YV.fade(VV, eV, xV, JV)
+              rH.fade(HH, BH, LH, AH)
             }
-          }), YV;
-          VV = Math.min(Math.max(0, parseFloat(VV)), 1), eV = Math.min(Math.max(0, parseFloat(eV)), 1), xV = parseFloat(xV), YV.volume(VV, JV);
-          for (var yV = YV._getSoundIds(JV), pV = 0; pV < yV.length; pV++) {
-            var QV = YV._soundById(yV[pV]);
-            if (QV) {
-              if (JV || YV._stopFade(yV[pV]), YV._webAudio && !QV._muted) {
-                var nV = UV.ctx.currentTime,
-                  wV = nV + xV / 1e3;
-                QV._volume = VV, QV._node.gain.setValueAtTime(VV, nV), QV._node.gain.linearRampToValueAtTime(eV, wV)
+          }), rH;
+          HH = Math.min(Math.max(0, parseFloat(HH)), 1), BH = Math.min(Math.max(0, parseFloat(BH)), 1), LH = parseFloat(LH), rH.volume(HH, AH);
+          for (var hH = rH._getSoundIds(AH), tH = 0; tH < hH.length; tH++) {
+            var zH = rH._soundById(hH[tH]);
+            if (zH) {
+              if (AH || rH._stopFade(hH[tH]), rH._webAudio && !zH._muted) {
+                var CH = SH.ctx.currentTime,
+                  EH = CH + LH / 1e3;
+                zH._volume = HH, zH._node.gain.setValueAtTime(HH, CH), zH._node.gain.linearRampToValueAtTime(BH, EH)
               }
-              YV._startFadeInterval(QV, VV, eV, xV, yV[pV], "undefined" === typeof JV)
+              rH._startFadeInterval(zH, HH, BH, LH, hH[tH], "undefined" === typeof AH)
             }
           }
-          return YV
+          return rH
         },
-        _startFadeInterval: function(VV, eV, xV, JV, YV, UV) {
-          var yV = this,
-            pV = eV,
-            QV = xV - eV,
-            nV = Math.abs(QV / .01),
-            wV = Math.max(4, nV > 0 ? JV / nV : JV),
-            ZV = Date.now();
-          VV._fadeTo = xV, VV._interval = setInterval((function() {
-            var YV = (Date.now() - ZV) / JV;
-            ZV = Date.now(), pV += QV * YV, pV = Math.round(100 * pV) / 100, pV = QV < 0 ? Math.max(xV, pV) : Math.min(xV, pV), yV._webAudio ? VV._volume = pV : yV.volume(pV, VV._id, !0), UV && (yV._volume = pV), (xV < eV && pV <= xV || xV > eV && pV >= xV) && (clearInterval(VV._interval), VV._interval = null, VV._fadeTo = null, yV.volume(xV, VV._id), yV._emit("fade", VV._id))
-          }), wV)
+        _startFadeInterval: function(HH, BH, LH, AH, rH, SH) {
+          var hH = this,
+            tH = BH,
+            zH = LH - BH,
+            CH = Math.abs(zH / .01),
+            EH = Math.max(4, CH > 0 ? AH / CH : AH),
+            XH = Date.now();
+          HH._fadeTo = LH, HH._interval = setInterval((function() {
+            var rH = (Date.now() - XH) / AH;
+            XH = Date.now(), tH += zH * rH, tH = Math.round(100 * tH) / 100, tH = zH < 0 ? Math.max(LH, tH) : Math.min(LH, tH), hH._webAudio ? HH._volume = tH : hH.volume(tH, HH._id, !0), SH && (hH._volume = tH), (LH < BH && tH <= LH || LH > BH && tH >= LH) && (clearInterval(HH._interval), HH._interval = null, HH._fadeTo = null, hH.volume(LH, HH._id), hH._emit("fade", HH._id))
+          }), EH)
         },
-        _stopFade: function(VV) {
-          var eV = this,
-            xV = eV._soundById(VV);
-          return xV && xV._interval && (eV._webAudio && xV._node.gain.cancelScheduledValues(UV.ctx.currentTime), clearInterval(xV._interval), xV._interval = null, eV.volume(xV._fadeTo, VV), xV._fadeTo = null, eV._emit("fade", VV)), eV
+        _stopFade: function(HH) {
+          var BH = this,
+            LH = BH._soundById(HH);
+          return LH && LH._interval && (BH._webAudio && LH._node.gain.cancelScheduledValues(SH.ctx.currentTime), clearInterval(LH._interval), LH._interval = null, BH.volume(LH._fadeTo, HH), LH._fadeTo = null, BH._emit("fade", HH)), BH
         },
         loop: function() {
-          var VV, eV, xV, JV = this,
-            YV = arguments;
-          if (0 === YV.length) return JV._loop;
-          if (1 === YV.length) {
-            if ("boolean" !== typeof YV[0]) return !!(xV = JV._soundById(parseInt(YV[0], 10))) && xV._loop;
-            VV = YV[0], JV._loop = VV
-          } else 2 === YV.length && (VV = YV[0], eV = parseInt(YV[1], 10));
-          for (var UV = JV._getSoundIds(eV), yV = 0; yV < UV.length; yV++)(xV = JV._soundById(UV[yV])) && (xV._loop = VV, JV._webAudio && xV._node && xV._node.bufferSource && (xV._node.bufferSource.loop = VV, VV && (xV._node.bufferSource.loopStart = xV._start || 0, xV._node.bufferSource.loopEnd = xV._stop, JV.playing(UV[yV]) && (JV.pause(UV[yV], !0), JV.play(UV[yV], !0)))));
-          return JV
+          var HH, BH, LH, AH = this,
+            rH = arguments;
+          if (0 === rH.length) return AH._loop;
+          if (1 === rH.length) {
+            if ("boolean" !== typeof rH[0]) return !!(LH = AH._soundById(parseInt(rH[0], 10))) && LH._loop;
+            HH = rH[0], AH._loop = HH
+          } else 2 === rH.length && (HH = rH[0], BH = parseInt(rH[1], 10));
+          for (var SH = AH._getSoundIds(BH), hH = 0; hH < SH.length; hH++)(LH = AH._soundById(SH[hH])) && (LH._loop = HH, AH._webAudio && LH._node && LH._node.bufferSource && (LH._node.bufferSource.loop = HH, HH && (LH._node.bufferSource.loopStart = LH._start || 0, LH._node.bufferSource.loopEnd = LH._stop, AH.playing(SH[hH]) && (AH.pause(SH[hH], !0), AH.play(SH[hH], !0)))));
+          return AH
         },
         rate: function() {
-          var VV, eV, xV, JV = this,
-            YV = arguments;
-          if (0 === YV.length) eV = JV._sounds[0]._id;
-          else if (1 === YV.length) {
-            JV._getSoundIds().indexOf(YV[0]) >= 0 ? eV = parseInt(YV[0], 10) : VV = parseFloat(YV[0])
-          } else 2 === YV.length && (VV = parseFloat(YV[0]), eV = parseInt(YV[1], 10));
-          if ("number" !== typeof VV) return (xV = JV._soundById(eV)) ? xV._rate : JV._rate;
-          if ("loaded" !== JV._state || JV._playLock) return JV._queue.push({
+          var HH, BH, LH, AH = this,
+            rH = arguments;
+          if (0 === rH.length) BH = AH._sounds[0]._id;
+          else if (1 === rH.length) {
+            AH._getSoundIds().indexOf(rH[0]) >= 0 ? BH = parseInt(rH[0], 10) : HH = parseFloat(rH[0])
+          } else 2 === rH.length && (HH = parseFloat(rH[0]), BH = parseInt(rH[1], 10));
+          if ("number" !== typeof HH) return (LH = AH._soundById(BH)) ? LH._rate : AH._rate;
+          if ("loaded" !== AH._state || AH._playLock) return AH._queue.push({
             event: "rate",
             action: function() {
-              JV.rate.apply(JV, YV)
+              AH.rate.apply(AH, rH)
             }
-          }), JV;
-          "undefined" === typeof eV && (JV._rate = VV), eV = JV._getSoundIds(eV);
-          for (var yV = 0; yV < eV.length; yV++)
-            if (xV = JV._soundById(eV[yV])) {
-              JV.playing(eV[yV]) && (xV._rateSeek = JV.seek(eV[yV]), xV._playStart = JV._webAudio ? UV.ctx.currentTime : xV._playStart), xV._rate = VV, JV._webAudio && xV._node && xV._node.bufferSource ? xV._node.bufferSource.playbackRate.setValueAtTime(VV, UV.ctx.currentTime) : xV._node && (xV._node.playbackRate = VV);
-              var pV = JV.seek(eV[yV]),
-                QV = 1e3 * ((JV._sprite[xV._sprite][0] + JV._sprite[xV._sprite][1]) / 1e3 - pV) / Math.abs(xV._rate);
-              !JV._endTimers[eV[yV]] && xV.DZ || (JV._clearTimer(eV[yV]), JV._endTimers[eV[yV]] = setTimeout(JV._ended.bind(JV, xV), QV)), JV._emit("rate", xV._id)
-            } return JV
+          }), AH;
+          "undefined" === typeof BH && (AH._rate = HH), BH = AH._getSoundIds(BH);
+          for (var hH = 0; hH < BH.length; hH++)
+            if (LH = AH._soundById(BH[hH])) {
+              AH.playing(BH[hH]) && (LH._rateSeek = AH.seek(BH[hH]), LH._playStart = AH._webAudio ? SH.ctx.currentTime : LH._playStart), LH._rate = HH, AH._webAudio && LH._node && LH._node.bufferSource ? LH._node.bufferSource.playbackRate.setValueAtTime(HH, SH.ctx.currentTime) : LH._node && (LH._node.playbackRate = HH);
+              var tH = AH.seek(BH[hH]),
+                zH = 1e3 * ((AH._sprite[LH._sprite][0] + AH._sprite[LH._sprite][1]) / 1e3 - tH) / Math.abs(LH._rate);
+              !AH._endTimers[BH[hH]] && LH.oX || (AH._clearTimer(BH[hH]), AH._endTimers[BH[hH]] = setTimeout(AH._ended.bind(AH, LH), zH)), AH._emit("rate", LH._id)
+            } return AH
         },
         seek: function() {
-          var VV, eV, xV = this,
-            JV = arguments;
-          if (0 === JV.length) xV._sounds.length && (eV = xV._sounds[0]._id);
-          else if (1 === JV.length) {
-            xV._getSoundIds().indexOf(JV[0]) >= 0 ? eV = parseInt(JV[0], 10) : xV._sounds.length && (eV = xV._sounds[0]._id, VV = parseFloat(JV[0]))
-          } else 2 === JV.length && (VV = parseFloat(JV[0]), eV = parseInt(JV[1], 10));
-          if ("undefined" === typeof eV) return 0;
-          if ("number" === typeof VV && ("loaded" !== xV._state || xV._playLock)) return xV._queue.push({
+          var HH, BH, LH = this,
+            AH = arguments;
+          if (0 === AH.length) LH._sounds.length && (BH = LH._sounds[0]._id);
+          else if (1 === AH.length) {
+            LH._getSoundIds().indexOf(AH[0]) >= 0 ? BH = parseInt(AH[0], 10) : LH._sounds.length && (BH = LH._sounds[0]._id, HH = parseFloat(AH[0]))
+          } else 2 === AH.length && (HH = parseFloat(AH[0]), BH = parseInt(AH[1], 10));
+          if ("undefined" === typeof BH) return 0;
+          if ("number" === typeof HH && ("loaded" !== LH._state || LH._playLock)) return LH._queue.push({
             event: "seek",
             action: function() {
-              xV.seek.apply(xV, JV)
+              LH.seek.apply(LH, AH)
             }
-          }), xV;
-          var YV = xV._soundById(eV);
-          if (YV) {
-            if (!("number" === typeof VV && VV >= 0)) {
-              if (xV._webAudio) {
-                var yV = xV.playing(eV) ? UV.ctx.currentTime - YV._playStart : 0,
-                  pV = YV._rateSeek ? YV._rateSeek - YV._seek : 0;
-                return YV._seek + (pV + yV * Math.abs(YV._rate))
+          }), LH;
+          var rH = LH._soundById(BH);
+          if (rH) {
+            if (!("number" === typeof HH && HH >= 0)) {
+              if (LH._webAudio) {
+                var hH = LH.playing(BH) ? SH.ctx.currentTime - rH._playStart : 0,
+                  tH = rH._rateSeek ? rH._rateSeek - rH._seek : 0;
+                return rH._seek + (tH + hH * Math.abs(rH._rate))
               }
-              return YV._node.currentTime
+              return rH._node.currentTime
             }
-            var QV = xV.playing(eV);
-            QV && xV.pause(eV, !0), YV._seek = VV, YV._ended = !1, xV._clearTimer(eV), xV._webAudio || !YV._node || isNaN(YV._node.duration) || (YV._node.currentTime = VV);
-            var nV = function() {
-              QV && xV.play(eV, !0), xV._emit("seek", eV)
+            var zH = LH.playing(BH);
+            zH && LH.pause(BH, !0), rH._seek = HH, rH._ended = !1, LH._clearTimer(BH), LH._webAudio || !rH._node || isNaN(rH._node.duration) || (rH._node.currentTime = HH);
+            var CH = function() {
+              zH && LH.play(BH, !0), LH._emit("seek", BH)
             };
-            if (QV && !xV._webAudio) {
-              var wV = function() {
-                xV._playLock ? setTimeout(wV, 0) : nV()
+            if (zH && !LH._webAudio) {
+              var EH = function() {
+                LH._playLock ? setTimeout(EH, 0) : CH()
               };
-              setTimeout(wV, 0)
-            } else nV()
+              setTimeout(EH, 0)
+            } else CH()
           }
-          return xV
+          return LH
         },
-        playing: function(VV) {
-          var eV = this;
-          if ("number" === typeof VV) {
-            var xV = eV._soundById(VV);
-            return !!xV && !xV.DZ
+        playing: function(HH) {
+          var BH = this;
+          if ("number" === typeof HH) {
+            var LH = BH._soundById(HH);
+            return !!LH && !LH.oX
           }
-          for (var JV = 0; JV < eV._sounds.length; JV++)
-            if (!eV._sounds[JV].DZ) return !0;
+          for (var AH = 0; AH < BH._sounds.length; AH++)
+            if (!BH._sounds[AH].oX) return !0;
           return !1
         },
-        duration: function(VV) {
-          var eV = this,
-            xV = eV._duration,
-            JV = eV._soundById(VV);
-          return JV && (xV = eV._sprite[JV._sprite][1] / 1e3), xV
+        duration: function(HH) {
+          var BH = this,
+            LH = BH._duration,
+            AH = BH._soundById(HH);
+          return AH && (LH = BH._sprite[AH._sprite][1] / 1e3), LH
         },
         state: function() {
           return this._state
         },
         unload: function() {
-          for (var VV = this, eV = VV._sounds, xV = 0; xV < eV.length; xV++) eV[xV].DZ || VV.stop(eV[xV]._id), VV._webAudio || (VV._clearSound(eV[xV]._node), eV[xV]._node.removeEventListener("error", eV[xV]._errorFn, !1), eV[xV]._node.removeEventListener(UV._canPlayEvent, eV[xV]._loadFn, !1), eV[xV]._node.removeEventListener("ended", eV[xV]._endFn, !1), UV._releaseHtml5Audio(eV[xV]._node)), delete eV[xV]._node, VV._clearTimer(eV[xV]._id);
-          var JV = UV._howls.indexOf(VV);
-          JV >= 0 && UV._howls.splice(JV, 1);
-          var YV = !0;
-          for (xV = 0; xV < UV._howls.length; xV++)
-            if (UV._howls[xV]._src === VV._src || VV._src.indexOf(UV._howls[xV]._src) >= 0) {
-              YV = !1;
+          for (var HH = this, BH = HH._sounds, LH = 0; LH < BH.length; LH++) BH[LH].oX || HH.stop(BH[LH]._id), HH._webAudio || (HH._clearSound(BH[LH]._node), BH[LH]._node.removeEventListener("error", BH[LH]._errorFn, !1), BH[LH]._node.removeEventListener(SH._canPlayEvent, BH[LH]._loadFn, !1), BH[LH]._node.removeEventListener("ended", BH[LH]._endFn, !1), SH._releaseHtml5Audio(BH[LH]._node)), delete BH[LH]._node, HH._clearTimer(BH[LH]._id);
+          var AH = SH._howls.indexOf(HH);
+          AH >= 0 && SH._howls.splice(AH, 1);
+          var rH = !0;
+          for (LH = 0; LH < SH._howls.length; LH++)
+            if (SH._howls[LH]._src === HH._src || HH._src.indexOf(SH._howls[LH]._src) >= 0) {
+              rH = !1;
               break
-            } return QV && YV && delete QV[VV._src], UV.noAudio = !1, VV._state = "unloaded", VV._sounds = [], VV = null, null
+            } return zH && rH && delete zH[HH._src], SH.noAudio = !1, HH._state = "unloaded", HH._sounds = [], HH = null, null
         },
-        on: function(VV, eV, xV, JV) {
-          var YV = this["_on" + VV];
-          return "function" === typeof eV && YV.push(JV ? {
-            id: xV,
-            bZ: eV,
-            once: JV
+        on: function(HH, BH, LH, AH) {
+          var rH = this["_on" + HH];
+          return "function" === typeof BH && rH.push(AH ? {
+            id: LH,
+            EX: BH,
+            once: AH
           } : {
-            id: xV,
-            bZ: eV
+            id: LH,
+            EX: BH
           }), this
         },
-        off: function(VV, eV, xV) {
-          var JV = this,
-            YV = JV["_on" + VV],
-            UV = 0;
-          if ("number" === typeof eV && (xV = eV, eV = null), eV || xV)
-            for (UV = 0; UV < YV.length; UV++) {
-              var yV = xV === YV[UV].id;
-              if (eV === YV[UV].bZ && yV || !eV && yV) {
-                YV.splice(UV, 1);
+        off: function(HH, BH, LH) {
+          var AH = this,
+            rH = AH["_on" + HH],
+            SH = 0;
+          if ("number" === typeof BH && (LH = BH, BH = null), BH || LH)
+            for (SH = 0; SH < rH.length; SH++) {
+              var hH = LH === rH[SH].id;
+              if (BH === rH[SH].EX && hH || !BH && hH) {
+                rH.splice(SH, 1);
                 break
               }
-            } else if (VV) JV["_on" + VV] = [];
+            } else if (HH) AH["_on" + HH] = [];
             else {
-              var pV = Object.keys(JV);
-              for (UV = 0; UV < pV.length; UV++) 0 === pV[UV].indexOf("_on") && Array.isArray(JV[pV[UV]]) && (JV[pV[UV]] = [])
-            } return JV
+              var tH = Object.keys(AH);
+              for (SH = 0; SH < tH.length; SH++) 0 === tH[SH].indexOf("_on") && Array.isArray(AH[tH[SH]]) && (AH[tH[SH]] = [])
+            } return AH
         },
-        once: function(VV, eV, xV) {
-          return this.on(VV, eV, xV, 1), this
+        once: function(HH, BH, LH) {
+          return this.on(HH, BH, LH, 1), this
         },
-        _emit: function(VV, eV, xV) {
-          for (var JV = this, YV = JV["_on" + VV], UV = YV.length - 1; UV >= 0; UV--) YV[UV].id && YV[UV].id !== eV && "load" !== VV || (setTimeout(function(VV) {
-            VV.call(this, eV, xV)
-          }.bind(JV, YV[UV].bZ), 0), YV[UV].once && JV.off(VV, YV[UV].bZ, YV[UV].id));
-          return JV._loadQueue(VV), JV
+        _emit: function(HH, BH, LH) {
+          for (var AH = this, rH = AH["_on" + HH], SH = rH.length - 1; SH >= 0; SH--) rH[SH].id && rH[SH].id !== BH && "load" !== HH || (setTimeout(function(HH) {
+            HH.call(this, BH, LH)
+          }.bind(AH, rH[SH].EX), 0), rH[SH].once && AH.off(HH, rH[SH].EX, rH[SH].id));
+          return AH._loadQueue(HH), AH
         },
-        _loadQueue: function(VV) {
-          var eV = this;
-          if (eV._queue.length > 0) {
-            var xV = eV._queue[0];
-            xV.event === VV && (eV._queue.shift(), eV._loadQueue()), VV || xV.action()
+        _loadQueue: function(HH) {
+          var BH = this;
+          if (BH._queue.length > 0) {
+            var LH = BH._queue[0];
+            LH.event === HH && (BH._queue.shift(), BH._loadQueue()), HH || LH.action()
           }
-          return eV
+          return BH
         },
-        _ended: function(VV) {
-          var eV = this,
-            xV = VV._sprite;
-          if (!eV._webAudio && VV._node && !VV._node.paused && !VV._node.ended && VV._node.currentTime < VV._stop) return setTimeout(eV._ended.bind(eV, VV), 100), eV;
-          var JV = !(!VV._loop && !eV._sprite[xV][2]);
-          if (eV._emit("end", VV._id), !eV._webAudio && JV && eV.stop(VV._id, !0).play(VV._id), eV._webAudio && JV) {
-            eV._emit("play", VV._id), VV._seek = VV._start || 0, VV._rateSeek = 0, VV._playStart = UV.ctx.currentTime;
-            var YV = 1e3 * (VV._stop - VV._start) / Math.abs(VV._rate);
-            eV._endTimers[VV._id] = setTimeout(eV._ended.bind(eV, VV), YV)
+        _ended: function(HH) {
+          var BH = this,
+            LH = HH._sprite;
+          if (!BH._webAudio && HH._node && !HH._node.paused && !HH._node.ended && HH._node.currentTime < HH._stop) return setTimeout(BH._ended.bind(BH, HH), 100), BH;
+          var AH = !(!HH._loop && !BH._sprite[LH][2]);
+          if (BH._emit("end", HH._id), !BH._webAudio && AH && BH.stop(HH._id, !0).play(HH._id), BH._webAudio && AH) {
+            BH._emit("play", HH._id), HH._seek = HH._start || 0, HH._rateSeek = 0, HH._playStart = SH.ctx.currentTime;
+            var rH = 1e3 * (HH._stop - HH._start) / Math.abs(HH._rate);
+            BH._endTimers[HH._id] = setTimeout(BH._ended.bind(BH, HH), rH)
           }
-          return eV._webAudio && !JV && (VV.DZ = !0, VV._ended = !0, VV._seek = VV._start || 0, VV._rateSeek = 0, eV._clearTimer(VV._id), eV._cleanBuffer(VV._node), UV._autoSuspend()), eV._webAudio || JV || eV.stop(VV._id, !0), eV
+          return BH._webAudio && !AH && (HH.oX = !0, HH._ended = !0, HH._seek = HH._start || 0, HH._rateSeek = 0, BH._clearTimer(HH._id), BH._cleanBuffer(HH._node), SH._autoSuspend()), BH._webAudio || AH || BH.stop(HH._id, !0), BH
         },
-        _clearTimer: function(VV) {
-          var eV = this;
-          if (eV._endTimers[VV]) {
-            if ("function" !== typeof eV._endTimers[VV]) clearTimeout(eV._endTimers[VV]);
+        _clearTimer: function(HH) {
+          var BH = this;
+          if (BH._endTimers[HH]) {
+            if ("function" !== typeof BH._endTimers[HH]) clearTimeout(BH._endTimers[HH]);
             else {
-              var xV = eV._soundById(VV);
-              xV && xV._node && xV._node.removeEventListener("ended", eV._endTimers[VV], !1)
+              var LH = BH._soundById(HH);
+              LH && LH._node && LH._node.removeEventListener("ended", BH._endTimers[HH], !1)
             }
-            delete eV._endTimers[VV]
+            delete BH._endTimers[HH]
           }
-          return eV
+          return BH
         },
-        _soundById: function(VV) {
-          for (var eV = this, xV = 0; xV < eV._sounds.length; xV++)
-            if (VV === eV._sounds[xV]._id) return eV._sounds[xV];
+        _soundById: function(HH) {
+          for (var BH = this, LH = 0; LH < BH._sounds.length; LH++)
+            if (HH === BH._sounds[LH]._id) return BH._sounds[LH];
           return null
         },
         _inactiveSound: function() {
-          var VV = this;
-          VV._drain();
-          for (var eV = 0; eV < VV._sounds.length; eV++)
-            if (VV._sounds[eV]._ended) return VV._sounds[eV].reset();
-          return new pV(VV)
+          var HH = this;
+          HH._drain();
+          for (var BH = 0; BH < HH._sounds.length; BH++)
+            if (HH._sounds[BH]._ended) return HH._sounds[BH].reset();
+          return new tH(HH)
         },
         _drain: function() {
-          var VV = this,
-            eV = VV._pool,
-            xV = 0,
-            JV = 0;
-          if (!(VV._sounds.length < eV)) {
-            for (JV = 0; JV < VV._sounds.length; JV++) VV._sounds[JV]._ended && xV++;
-            for (JV = VV._sounds.length - 1; JV >= 0; JV--) {
-              if (xV <= eV) return;
-              VV._sounds[JV]._ended && (VV._webAudio && VV._sounds[JV]._node && VV._sounds[JV]._node.disconnect(0), VV._sounds.splice(JV, 1), xV--)
+          var HH = this,
+            BH = HH._pool,
+            LH = 0,
+            AH = 0;
+          if (!(HH._sounds.length < BH)) {
+            for (AH = 0; AH < HH._sounds.length; AH++) HH._sounds[AH]._ended && LH++;
+            for (AH = HH._sounds.length - 1; AH >= 0; AH--) {
+              if (LH <= BH) return;
+              HH._sounds[AH]._ended && (HH._webAudio && HH._sounds[AH]._node && HH._sounds[AH]._node.disconnect(0), HH._sounds.splice(AH, 1), LH--)
             }
           }
         },
-        _getSoundIds: function(VV) {
-          if ("undefined" === typeof VV) {
-            for (var eV = [], xV = 0; xV < this._sounds.length; xV++) eV.push(this._sounds[xV]._id);
-            return eV
+        _getSoundIds: function(HH) {
+          if ("undefined" === typeof HH) {
+            for (var BH = [], LH = 0; LH < this._sounds.length; LH++) BH.push(this._sounds[LH]._id);
+            return BH
           }
-          return [VV]
+          return [HH]
         },
-        _refreshBuffer: function(VV) {
-          return VV._node.bufferSource = UV.ctx.createBufferSource(), VV._node.bufferSource.buffer = QV[this._src], VV._panner ? VV._node.bufferSource.connect(VV._panner) : VV._node.bufferSource.connect(VV._node), VV._node.bufferSource.loop = VV._loop, VV._loop && (VV._node.bufferSource.loopStart = VV._start || 0, VV._node.bufferSource.loopEnd = VV._stop || 0), VV._node.bufferSource.playbackRate.setValueAtTime(VV._rate, UV.ctx.currentTime), this
+        _refreshBuffer: function(HH) {
+          return HH._node.bufferSource = SH.ctx.createBufferSource(), HH._node.bufferSource.buffer = zH[this._src], HH._panner ? HH._node.bufferSource.connect(HH._panner) : HH._node.bufferSource.connect(HH._node), HH._node.bufferSource.loop = HH._loop, HH._loop && (HH._node.bufferSource.loopStart = HH._start || 0, HH._node.bufferSource.loopEnd = HH._stop || 0), HH._node.bufferSource.playbackRate.setValueAtTime(HH._rate, SH.ctx.currentTime), this
         },
-        _cleanBuffer: function(VV) {
-          var eV = UV._navigator && UV._navigator.vendor.indexOf("Apple") >= 0;
-          if (UV._scratchBuffer && VV.bufferSource && (VV.bufferSource.onended = null, VV.bufferSource.disconnect(0), eV)) try {
-            VV.bufferSource.buffer = UV._scratchBuffer
-          } catch (xV) {}
-          return VV.bufferSource = null, this
+        _cleanBuffer: function(HH) {
+          var BH = SH._navigator && SH._navigator.vendor.indexOf("Apple") >= 0;
+          if (SH._scratchBuffer && HH.bufferSource && (HH.bufferSource.onended = null, HH.bufferSource.disconnect(0), BH)) try {
+            HH.bufferSource.buffer = SH._scratchBuffer
+          } catch (LH) {}
+          return HH.bufferSource = null, this
         },
-        _clearSound: function(VV) {
-          /MSIE |Trident\//.test(UV._navigator && UV._navigator.userAgent) || (VV.src = "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA")
+        _clearSound: function(HH) {
+          /MSIE |Trident\//.test(SH._navigator && SH._navigator.userAgent) || (HH.src = "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA")
         }
       };
-      var pV = function(VV) {
-        this._parent = VV, this.init()
+      var tH = function(HH) {
+        this._parent = HH, this.init()
       };
-      pV.prototype = {
+      tH.prototype = {
         init: function() {
-          var VV = this,
-            eV = VV._parent;
-          return VV._muted = eV._muted, VV._loop = eV._loop, VV._volume = eV._volume, VV._rate = eV._rate, VV._seek = 0, VV.DZ = !0, VV._ended = !0, VV._sprite = "__default", VV._id = ++UV._counter, eV._sounds.push(VV), VV.create(), VV
+          var HH = this,
+            BH = HH._parent;
+          return HH._muted = BH._muted, HH._loop = BH._loop, HH._volume = BH._volume, HH._rate = BH._rate, HH._seek = 0, HH.oX = !0, HH._ended = !0, HH._sprite = "__default", HH._id = ++SH._counter, BH._sounds.push(HH), HH.create(), HH
         },
         create: function() {
-          var VV = this,
-            eV = VV._parent,
-            xV = UV._muted || VV._muted || VV._parent._muted ? 0 : VV._volume;
-          return eV._webAudio ? (VV._node = "undefined" === typeof UV.ctx.createGain ? UV.ctx.createGainNode() : UV.ctx.createGain(), VV._node.gain.setValueAtTime(xV, UV.ctx.currentTime), VV._node.paused = !0, VV._node.connect(UV.masterGain)) : UV.noAudio || (VV._node = UV._obtainHtml5Audio(), VV._errorFn = VV._errorListener.bind(VV), VV._node.addEventListener("error", VV._errorFn, !1), VV._loadFn = VV._loadListener.bind(VV), VV._node.addEventListener(UV._canPlayEvent, VV._loadFn, !1), VV._endFn = VV._endListener.bind(VV), VV._node.addEventListener("ended", VV._endFn, !1), VV._node.src = eV._src, VV._node.preload = !0 === eV._preload ? "auto" : eV._preload, VV._node.volume = xV * UV.volume(), VV._node.load()), VV
+          var HH = this,
+            BH = HH._parent,
+            LH = SH._muted || HH._muted || HH._parent._muted ? 0 : HH._volume;
+          return BH._webAudio ? (HH._node = "undefined" === typeof SH.ctx.createGain ? SH.ctx.createGainNode() : SH.ctx.createGain(), HH._node.gain.setValueAtTime(LH, SH.ctx.currentTime), HH._node.paused = !0, HH._node.connect(SH.masterGain)) : SH.noAudio || (HH._node = SH._obtainHtml5Audio(), HH._errorFn = HH._errorListener.bind(HH), HH._node.addEventListener("error", HH._errorFn, !1), HH._loadFn = HH._loadListener.bind(HH), HH._node.addEventListener(SH._canPlayEvent, HH._loadFn, !1), HH._endFn = HH._endListener.bind(HH), HH._node.addEventListener("ended", HH._endFn, !1), HH._node.src = BH._src, HH._node.preload = !0 === BH._preload ? "auto" : BH._preload, HH._node.volume = LH * SH.volume(), HH._node.load()), HH
         },
         reset: function() {
-          var VV = this,
-            eV = VV._parent;
-          return VV._muted = eV._muted, VV._loop = eV._loop, VV._volume = eV._volume, VV._rate = eV._rate, VV._seek = 0, VV._rateSeek = 0, VV.DZ = !0, VV._ended = !0, VV._sprite = "__default", VV._id = ++UV._counter, VV
+          var HH = this,
+            BH = HH._parent;
+          return HH._muted = BH._muted, HH._loop = BH._loop, HH._volume = BH._volume, HH._rate = BH._rate, HH._seek = 0, HH._rateSeek = 0, HH.oX = !0, HH._ended = !0, HH._sprite = "__default", HH._id = ++SH._counter, HH
         },
         _errorListener: function() {
-          var VV = this;
-          VV._parent._emit("loaderror", VV._id, VV._node.error ? VV._node.error.code : 0), VV._node.removeEventListener("error", VV._errorFn, !1)
+          var HH = this;
+          HH._parent._emit("loaderror", HH._id, HH._node.error ? HH._node.error.code : 0), HH._node.removeEventListener("error", HH._errorFn, !1)
         },
         _loadListener: function() {
-          var VV = this,
-            eV = VV._parent;
-          eV._duration = Math.ceil(10 * VV._node.duration) / 10, 0 === Object.keys(eV._sprite).length && (eV._sprite = {
-            __default: [0, 1e3 * eV._duration]
-          }), "loaded" !== eV._state && (eV._state = "loaded", eV._emit("load"), eV._loadQueue()), VV._node.removeEventListener(UV._canPlayEvent, VV._loadFn, !1)
+          var HH = this,
+            BH = HH._parent;
+          BH._duration = Math.ceil(10 * HH._node.duration) / 10, 0 === Object.keys(BH._sprite).length && (BH._sprite = {
+            __default: [0, 1e3 * BH._duration]
+          }), "loaded" !== BH._state && (BH._state = "loaded", BH._emit("load"), BH._loadQueue()), HH._node.removeEventListener(SH._canPlayEvent, HH._loadFn, !1)
         },
         _endListener: function() {
-          var VV = this,
-            eV = VV._parent;
-          eV._duration === 1 / 0 && (eV._duration = Math.ceil(10 * VV._node.duration) / 10, eV._sprite.__default[1] === 1 / 0 && (eV._sprite.__default[1] = 1e3 * eV._duration), eV._ended(VV)), VV._node.removeEventListener("ended", VV._endFn, !1)
+          var HH = this,
+            BH = HH._parent;
+          BH._duration === 1 / 0 && (BH._duration = Math.ceil(10 * HH._node.duration) / 10, BH._sprite.__default[1] === 1 / 0 && (BH._sprite.__default[1] = 1e3 * BH._duration), BH._ended(HH)), HH._node.removeEventListener("ended", HH._endFn, !1)
         }
       };
-      var QV = {},
-        nV = function(VV) {
-          var eV = VV._src;
-          if (QV[eV]) return VV._duration = QV[eV].duration, void vV(VV);
-          if (/^data:[^;]+;base64,/.test(eV)) {
-            for (var xV = atob(eV.split(",")[1]), JV = new Uint8Array(xV.length), YV = 0; YV < xV.length; ++YV) JV[YV] = xV.charCodeAt(YV);
-            ZV(JV.buffer, VV)
+      var zH = {},
+        CH = function(HH) {
+          var BH = HH._src;
+          if (zH[BH]) return HH._duration = zH[BH].duration, void GH(HH);
+          if (/^data:[^;]+;base64,/.test(BH)) {
+            for (var LH = atob(BH.split(",")[1]), AH = new Uint8Array(LH.length), rH = 0; rH < LH.length; ++rH) AH[rH] = LH.charCodeAt(rH);
+            XH(AH.buffer, HH)
           } else {
-            var UV = new XMLHttpRequest;
-            UV.open(VV._xhr.method, eV, !0), UV.withCredentials = VV._xhr.withCredentials, UV.responseType = "arraybuffer", VV._xhr.headers && Object.keys(VV._xhr.headers).forEach((function(eV) {
-              UV.setRequestHeader(eV, VV._xhr.headers[eV])
-            })), UV.onload = function() {
-              var eV = (UV.status + "")[0];
-              "0" === eV || "2" === eV || "3" === eV ? ZV(UV.response, VV) : VV._emit("loaderror", null, "Failed loading audio file with status: " + UV.status + ".")
-            }, UV.onerror = function() {
-              VV._webAudio && (VV._html5 = !0, VV._webAudio = !1, VV._sounds = [], delete QV[eV], VV.load())
-            }, wV(UV)
+            var SH = new XMLHttpRequest;
+            SH.open(HH._xhr.method, BH, !0), SH.withCredentials = HH._xhr.withCredentials, SH.responseType = "arraybuffer", HH._xhr.headers && Object.keys(HH._xhr.headers).forEach((function(BH) {
+              SH.setRequestHeader(BH, HH._xhr.headers[BH])
+            })), SH.onload = function() {
+              var BH = (SH.status + "")[0];
+              "0" === BH || "2" === BH || "3" === BH ? XH(SH.response, HH) : HH._emit("loaderror", null, "Failed loading audio file with status: " + SH.status + ".")
+            }, SH.onerror = function() {
+              HH._webAudio && (HH._html5 = !0, HH._webAudio = !1, HH._sounds = [], delete zH[BH], HH.load())
+            }, EH(SH)
           }
         },
-        wV = function(VV) {
+        EH = function(HH) {
           try {
-            VV.send()
-          } catch (eV) {
-            VV.onerror()
+            HH.send()
+          } catch (BH) {
+            HH.onerror()
           }
         },
-        ZV = function(VV, eV) {
-          var xV = function() {
-              eV._emit("loaderror", null, "Decoding audio data failed.")
+        XH = function(HH, BH) {
+          var LH = function() {
+              BH._emit("loaderror", null, "Decoding audio data failed.")
             },
-            JV = function(VV) {
-              VV && eV._sounds.length > 0 ? (QV[eV._src] = VV, vV(eV, VV)) : xV()
+            AH = function(HH) {
+              HH && BH._sounds.length > 0 ? (zH[BH._src] = HH, GH(BH, HH)) : LH()
             };
-          "undefined" !== typeof Promise && 1 === UV.ctx.decodeAudioData.length ? UV.ctx.decodeAudioData(VV).then(JV).catch(xV) : UV.ctx.decodeAudioData(VV, JV, xV)
+          "undefined" !== typeof Promise && 1 === SH.ctx.decodeAudioData.length ? SH.ctx.decodeAudioData(HH).then(AH).catch(LH) : SH.ctx.decodeAudioData(HH, AH, LH)
         },
-        vV = function(VV, eV) {
-          eV && !VV._duration && (VV._duration = eV.duration), 0 === Object.keys(VV._sprite).length && (VV._sprite = {
-            __default: [0, 1e3 * VV._duration]
-          }), "loaded" !== VV._state && (VV._state = "loaded", VV._emit("load"), VV._loadQueue())
+        GH = function(HH, BH) {
+          BH && !HH._duration && (HH._duration = BH.duration), 0 === Object.keys(HH._sprite).length && (HH._sprite = {
+            __default: [0, 1e3 * HH._duration]
+          }), "loaded" !== HH._state && (HH._state = "loaded", HH._emit("load"), HH._loadQueue())
         },
-        rV = function() {
-          if (UV.usingWebAudio) {
+        YH = function() {
+          if (SH.usingWebAudio) {
             try {
-              "undefined" !== typeof AudioContext ? UV.ctx = new AudioContext : "undefined" !== typeof webkitAudioContext ? UV.ctx = new webkitAudioContext : UV.usingWebAudio = !1
-            } catch (YV) {
-              UV.usingWebAudio = !1
+              "undefined" !== typeof AudioContext ? SH.ctx = new AudioContext : "undefined" !== typeof webkitAudioContext ? SH.ctx = new webkitAudioContext : SH.usingWebAudio = !1
+            } catch (rH) {
+              SH.usingWebAudio = !1
             }
-            UV.ctx || (UV.usingWebAudio = !1);
-            var VV = /iP(hone|od|ad)/.test(UV._navigator && UV._navigator.platform),
-              eV = UV._navigator && UV._navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/),
-              xV = eV ? parseInt(eV[1], 10) : null;
-            if (VV && xV && xV < 9) {
-              var JV = /safari/.test(UV._navigator && UV._navigator.userAgent.toLowerCase());
-              UV._navigator && !JV && (UV.usingWebAudio = !1)
+            SH.ctx || (SH.usingWebAudio = !1);
+            var HH = /iP(hone|od|ad)/.test(SH._navigator && SH._navigator.platform),
+              BH = SH._navigator && SH._navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/),
+              LH = BH ? parseInt(BH[1], 10) : null;
+            if (HH && LH && LH < 9) {
+              var AH = /safari/.test(SH._navigator && SH._navigator.userAgent.toLowerCase());
+              SH._navigator && !AH && (SH.usingWebAudio = !1)
             }
-            UV.usingWebAudio && (UV.masterGain = "undefined" === typeof UV.ctx.createGain ? UV.ctx.createGainNode() : UV.ctx.createGain(), UV.masterGain.gain.setValueAtTime(UV._muted ? 0 : UV._volume, UV.ctx.currentTime), UV.masterGain.connect(UV.ctx.destination)), UV._setup()
+            SH.usingWebAudio && (SH.masterGain = "undefined" === typeof SH.ctx.createGain ? SH.ctx.createGainNode() : SH.ctx.createGain(), SH.masterGain.gain.setValueAtTime(SH._muted ? 0 : SH._volume, SH.ctx.currentTime), SH.masterGain.connect(SH.ctx.destination)), SH._setup()
           }
         };
-      void 0 === (JV = function() {
+      void 0 === (AH = function() {
         return {
-          Howler: UV,
-          Howl: yV
+          Howler: SH,
+          Howl: hH
         }
-      }.apply(eV, [])) || (VV.exports = JV), eV.Howler = UV, eV.Howl = yV, "undefined" !== typeof xV.g ? (xV.g.HowlerGlobal = YV, xV.g.Howler = UV, xV.g.Howl = yV, xV.g.Sound = pV) : "undefined" !== typeof window && (window.HowlerGlobal = YV, window.Howler = UV, window.Howl = yV, window.Sound = pV)
+      }.apply(BH, [])) || (HH.exports = AH), BH.Howler = SH, BH.Howl = hH, "undefined" !== typeof LH.g ? (LH.g.HowlerGlobal = rH, LH.g.Howler = SH, LH.g.Howl = hH, LH.g.Sound = tH) : "undefined" !== typeof window && (window.HowlerGlobal = rH, window.Howler = SH, window.Howl = hH, window.Sound = tH)
     }(),
     function() {
-      var VV;
-      HowlerGlobal.prototype._pos = [0, 0, 0], HowlerGlobal.prototype._orientation = [0, 0, -1, 0, 1, 0], HowlerGlobal.prototype.stereo = function(VV) {
-        var eV = this;
-        if (!eV.ctx || !eV.ctx.listener) return eV;
-        for (var xV = eV._howls.length - 1; xV >= 0; xV--) eV._howls[xV].stereo(VV);
-        return eV
-      }, HowlerGlobal.prototype.pos = function(VV, eV, xV) {
-        var JV = this;
-        return JV.ctx && JV.ctx.listener ? (eV = "number" !== typeof eV ? JV._pos[1] : eV, xV = "number" !== typeof xV ? JV._pos[2] : xV, "number" !== typeof VV ? JV._pos : (JV._pos = [VV, eV, xV], "undefined" !== typeof JV.ctx.listener.positionX ? (JV.ctx.listener.positionX.setTargetAtTime(JV._pos[0], Howler.ctx.currentTime, .1), JV.ctx.listener.positionY.setTargetAtTime(JV._pos[1], Howler.ctx.currentTime, .1), JV.ctx.listener.positionZ.setTargetAtTime(JV._pos[2], Howler.ctx.currentTime, .1)) : JV.ctx.listener.setPosition(JV._pos[0], JV._pos[1], JV._pos[2]), JV)) : JV
-      }, HowlerGlobal.prototype.orientation = function(VV, eV, xV, JV, YV, UV) {
-        var yV = this;
-        if (!yV.ctx || !yV.ctx.listener) return yV;
-        var pV = yV._orientation;
-        return eV = "number" !== typeof eV ? pV[1] : eV, xV = "number" !== typeof xV ? pV[2] : xV, JV = "number" !== typeof JV ? pV[3] : JV, YV = "number" !== typeof YV ? pV[4] : YV, UV = "number" !== typeof UV ? pV[5] : UV, "number" !== typeof VV ? pV : (yV._orientation = [VV, eV, xV, JV, YV, UV], "undefined" !== typeof yV.ctx.listener.forwardX ? (yV.ctx.listener.forwardX.setTargetAtTime(VV, Howler.ctx.currentTime, .1), yV.ctx.listener.forwardY.setTargetAtTime(eV, Howler.ctx.currentTime, .1), yV.ctx.listener.forwardZ.setTargetAtTime(xV, Howler.ctx.currentTime, .1), yV.ctx.listener.upX.setTargetAtTime(JV, Howler.ctx.currentTime, .1), yV.ctx.listener.upY.setTargetAtTime(YV, Howler.ctx.currentTime, .1), yV.ctx.listener.upZ.setTargetAtTime(UV, Howler.ctx.currentTime, .1)) : yV.ctx.listener.setOrientation(VV, eV, xV, JV, YV, UV), yV)
-      }, Howl.prototype.init = (VV = Howl.prototype.init, function(eV) {
-        var xV = this;
-        return xV._orientation = eV.orientation || [1, 0, 0], xV._stereo = eV.stereo || null, xV._pos = eV.pos || null, xV._pannerAttr = {
-          coneInnerAngle: "undefined" !== typeof eV.coneInnerAngle ? eV.coneInnerAngle : 360,
-          coneOuterAngle: "undefined" !== typeof eV.coneOuterAngle ? eV.coneOuterAngle : 360,
-          coneOuterGain: "undefined" !== typeof eV.coneOuterGain ? eV.coneOuterGain : 0,
-          distanceModel: "undefined" !== typeof eV.distanceModel ? eV.distanceModel : "inverse",
-          maxDistance: "undefined" !== typeof eV.maxDistance ? eV.maxDistance : 1e4,
-          panningModel: "undefined" !== typeof eV.panningModel ? eV.panningModel : "HRTF",
-          refDistance: "undefined" !== typeof eV.refDistance ? eV.refDistance : 1,
-          rolloffFactor: "undefined" !== typeof eV.rolloffFactor ? eV.rolloffFactor : 1
-        }, xV._onstereo = eV.onstereo ? [{
-          bZ: eV.onstereo
-        }] : [], xV._onpos = eV.onpos ? [{
-          bZ: eV.onpos
-        }] : [], xV._onorientation = eV.onorientation ? [{
-          bZ: eV.onorientation
-        }] : [], VV.call(this, eV)
-      }), Howl.prototype.stereo = function(VV, xV) {
-        var JV = this;
-        if (!JV._webAudio) return JV;
-        if ("loaded" !== JV._state) return JV._queue.push({
+      var HH;
+      HowlerGlobal.prototype._pos = [0, 0, 0], HowlerGlobal.prototype._orientation = [0, 0, -1, 0, 1, 0], HowlerGlobal.prototype.stereo = function(HH) {
+        var BH = this;
+        if (!BH.ctx || !BH.ctx.listener) return BH;
+        for (var LH = BH._howls.length - 1; LH >= 0; LH--) BH._howls[LH].stereo(HH);
+        return BH
+      }, HowlerGlobal.prototype.pos = function(HH, BH, LH) {
+        var AH = this;
+        return AH.ctx && AH.ctx.listener ? (BH = "number" !== typeof BH ? AH._pos[1] : BH, LH = "number" !== typeof LH ? AH._pos[2] : LH, "number" !== typeof HH ? AH._pos : (AH._pos = [HH, BH, LH], "undefined" !== typeof AH.ctx.listener.positionX ? (AH.ctx.listener.positionX.setTargetAtTime(AH._pos[0], Howler.ctx.currentTime, .1), AH.ctx.listener.positionY.setTargetAtTime(AH._pos[1], Howler.ctx.currentTime, .1), AH.ctx.listener.positionZ.setTargetAtTime(AH._pos[2], Howler.ctx.currentTime, .1)) : AH.ctx.listener.setPosition(AH._pos[0], AH._pos[1], AH._pos[2]), AH)) : AH
+      }, HowlerGlobal.prototype.orientation = function(HH, BH, LH, AH, rH, SH) {
+        var hH = this;
+        if (!hH.ctx || !hH.ctx.listener) return hH;
+        var tH = hH._orientation;
+        return BH = "number" !== typeof BH ? tH[1] : BH, LH = "number" !== typeof LH ? tH[2] : LH, AH = "number" !== typeof AH ? tH[3] : AH, rH = "number" !== typeof rH ? tH[4] : rH, SH = "number" !== typeof SH ? tH[5] : SH, "number" !== typeof HH ? tH : (hH._orientation = [HH, BH, LH, AH, rH, SH], "undefined" !== typeof hH.ctx.listener.forwardX ? (hH.ctx.listener.forwardX.setTargetAtTime(HH, Howler.ctx.currentTime, .1), hH.ctx.listener.forwardY.setTargetAtTime(BH, Howler.ctx.currentTime, .1), hH.ctx.listener.forwardZ.setTargetAtTime(LH, Howler.ctx.currentTime, .1), hH.ctx.listener.upX.setTargetAtTime(AH, Howler.ctx.currentTime, .1), hH.ctx.listener.upY.setTargetAtTime(rH, Howler.ctx.currentTime, .1), hH.ctx.listener.upZ.setTargetAtTime(SH, Howler.ctx.currentTime, .1)) : hH.ctx.listener.setOrientation(HH, BH, LH, AH, rH, SH), hH)
+      }, Howl.prototype.init = (HH = Howl.prototype.init, function(BH) {
+        var LH = this;
+        return LH._orientation = BH.orientation || [1, 0, 0], LH._stereo = BH.stereo || null, LH._pos = BH.pos || null, LH._pannerAttr = {
+          coneInnerAngle: "undefined" !== typeof BH.coneInnerAngle ? BH.coneInnerAngle : 360,
+          coneOuterAngle: "undefined" !== typeof BH.coneOuterAngle ? BH.coneOuterAngle : 360,
+          coneOuterGain: "undefined" !== typeof BH.coneOuterGain ? BH.coneOuterGain : 0,
+          distanceModel: "undefined" !== typeof BH.distanceModel ? BH.distanceModel : "inverse",
+          maxDistance: "undefined" !== typeof BH.maxDistance ? BH.maxDistance : 1e4,
+          panningModel: "undefined" !== typeof BH.panningModel ? BH.panningModel : "HRTF",
+          refDistance: "undefined" !== typeof BH.refDistance ? BH.refDistance : 1,
+          rolloffFactor: "undefined" !== typeof BH.rolloffFactor ? BH.rolloffFactor : 1
+        }, LH._onstereo = BH.onstereo ? [{
+          EX: BH.onstereo
+        }] : [], LH._onpos = BH.onpos ? [{
+          EX: BH.onpos
+        }] : [], LH._onorientation = BH.onorientation ? [{
+          EX: BH.onorientation
+        }] : [], HH.call(this, BH)
+      }), Howl.prototype.stereo = function(HH, LH) {
+        var AH = this;
+        if (!AH._webAudio) return AH;
+        if ("loaded" !== AH._state) return AH._queue.push({
           event: "stereo",
           action: function() {
-            JV.stereo(VV, xV)
+            AH.stereo(HH, LH)
           }
-        }), JV;
-        var YV = "undefined" === typeof Howler.ctx.createStereoPanner ? "spatial" : "stereo";
-        if ("undefined" === typeof xV) {
-          if ("number" !== typeof VV) return JV._stereo;
-          JV._stereo = VV, JV._pos = [VV, 0, 0]
+        }), AH;
+        var rH = "undefined" === typeof Howler.ctx.createStereoPanner ? "spatial" : "stereo";
+        if ("undefined" === typeof LH) {
+          if ("number" !== typeof HH) return AH._stereo;
+          AH._stereo = HH, AH._pos = [HH, 0, 0]
         }
-        for (var UV = JV._getSoundIds(xV), yV = 0; yV < UV.length; yV++) {
-          var pV = JV._soundById(UV[yV]);
-          if (pV) {
-            if ("number" !== typeof VV) return pV._stereo;
-            pV._stereo = VV, pV._pos = [VV, 0, 0], pV._node && (pV._pannerAttr.panningModel = "equalpower", pV._panner && pV._panner.pan || eV(pV, YV), "spatial" === YV ? "undefined" !== typeof pV._panner.positionX ? (pV._panner.positionX.setValueAtTime(VV, Howler.ctx.currentTime), pV._panner.positionY.setValueAtTime(0, Howler.ctx.currentTime), pV._panner.positionZ.setValueAtTime(0, Howler.ctx.currentTime)) : pV._panner.setPosition(VV, 0, 0) : pV._panner.pan.setValueAtTime(VV, Howler.ctx.currentTime)), JV._emit("stereo", pV._id)
+        for (var SH = AH._getSoundIds(LH), hH = 0; hH < SH.length; hH++) {
+          var tH = AH._soundById(SH[hH]);
+          if (tH) {
+            if ("number" !== typeof HH) return tH._stereo;
+            tH._stereo = HH, tH._pos = [HH, 0, 0], tH._node && (tH._pannerAttr.panningModel = "equalpower", tH._panner && tH._panner.pan || BH(tH, rH), "spatial" === rH ? "undefined" !== typeof tH._panner.positionX ? (tH._panner.positionX.setValueAtTime(HH, Howler.ctx.currentTime), tH._panner.positionY.setValueAtTime(0, Howler.ctx.currentTime), tH._panner.positionZ.setValueAtTime(0, Howler.ctx.currentTime)) : tH._panner.setPosition(HH, 0, 0) : tH._panner.pan.setValueAtTime(HH, Howler.ctx.currentTime)), AH._emit("stereo", tH._id)
           }
         }
-        return JV
-      }, Howl.prototype.pos = function(VV, xV, JV, YV) {
-        var UV = this;
-        if (!UV._webAudio) return UV;
-        if ("loaded" !== UV._state) return UV._queue.push({
+        return AH
+      }, Howl.prototype.pos = function(HH, LH, AH, rH) {
+        var SH = this;
+        if (!SH._webAudio) return SH;
+        if ("loaded" !== SH._state) return SH._queue.push({
           event: "pos",
           action: function() {
-            UV.pos(VV, xV, JV, YV)
+            SH.pos(HH, LH, AH, rH)
           }
-        }), UV;
-        if (xV = "number" !== typeof xV ? 0 : xV, JV = "number" !== typeof JV ? -.5 : JV, "undefined" === typeof YV) {
-          if ("number" !== typeof VV) return UV._pos;
-          UV._pos = [VV, xV, JV]
+        }), SH;
+        if (LH = "number" !== typeof LH ? 0 : LH, AH = "number" !== typeof AH ? -.5 : AH, "undefined" === typeof rH) {
+          if ("number" !== typeof HH) return SH._pos;
+          SH._pos = [HH, LH, AH]
         }
-        for (var yV = UV._getSoundIds(YV), pV = 0; pV < yV.length; pV++) {
-          var QV = UV._soundById(yV[pV]);
-          if (QV) {
-            if ("number" !== typeof VV) return QV._pos;
-            QV._pos = [VV, xV, JV], QV._node && (QV._panner && !QV._panner.pan || eV(QV, "spatial"), "undefined" !== typeof QV._panner.positionX ? (QV._panner.positionX.setValueAtTime(VV, Howler.ctx.currentTime), QV._panner.positionY.setValueAtTime(xV, Howler.ctx.currentTime), QV._panner.positionZ.setValueAtTime(JV, Howler.ctx.currentTime)) : QV._panner.setPosition(VV, xV, JV)), UV._emit("pos", QV._id)
+        for (var hH = SH._getSoundIds(rH), tH = 0; tH < hH.length; tH++) {
+          var zH = SH._soundById(hH[tH]);
+          if (zH) {
+            if ("number" !== typeof HH) return zH._pos;
+            zH._pos = [HH, LH, AH], zH._node && (zH._panner && !zH._panner.pan || BH(zH, "spatial"), "undefined" !== typeof zH._panner.positionX ? (zH._panner.positionX.setValueAtTime(HH, Howler.ctx.currentTime), zH._panner.positionY.setValueAtTime(LH, Howler.ctx.currentTime), zH._panner.positionZ.setValueAtTime(AH, Howler.ctx.currentTime)) : zH._panner.setPosition(HH, LH, AH)), SH._emit("pos", zH._id)
           }
         }
-        return UV
-      }, Howl.prototype.orientation = function(VV, xV, JV, YV) {
-        var UV = this;
-        if (!UV._webAudio) return UV;
-        if ("loaded" !== UV._state) return UV._queue.push({
+        return SH
+      }, Howl.prototype.orientation = function(HH, LH, AH, rH) {
+        var SH = this;
+        if (!SH._webAudio) return SH;
+        if ("loaded" !== SH._state) return SH._queue.push({
           event: "orientation",
           action: function() {
-            UV.orientation(VV, xV, JV, YV)
+            SH.orientation(HH, LH, AH, rH)
           }
-        }), UV;
-        if (xV = "number" !== typeof xV ? UV._orientation[1] : xV, JV = "number" !== typeof JV ? UV._orientation[2] : JV, "undefined" === typeof YV) {
-          if ("number" !== typeof VV) return UV._orientation;
-          UV._orientation = [VV, xV, JV]
+        }), SH;
+        if (LH = "number" !== typeof LH ? SH._orientation[1] : LH, AH = "number" !== typeof AH ? SH._orientation[2] : AH, "undefined" === typeof rH) {
+          if ("number" !== typeof HH) return SH._orientation;
+          SH._orientation = [HH, LH, AH]
         }
-        for (var yV = UV._getSoundIds(YV), pV = 0; pV < yV.length; pV++) {
-          var QV = UV._soundById(yV[pV]);
-          if (QV) {
-            if ("number" !== typeof VV) return QV._orientation;
-            QV._orientation = [VV, xV, JV], QV._node && (QV._panner || (QV._pos || (QV._pos = UV._pos || [0, 0, -.5]), eV(QV, "spatial")), "undefined" !== typeof QV._panner.orientationX ? (QV._panner.orientationX.setValueAtTime(VV, Howler.ctx.currentTime), QV._panner.orientationY.setValueAtTime(xV, Howler.ctx.currentTime), QV._panner.orientationZ.setValueAtTime(JV, Howler.ctx.currentTime)) : QV._panner.setOrientation(VV, xV, JV)), UV._emit("orientation", QV._id)
+        for (var hH = SH._getSoundIds(rH), tH = 0; tH < hH.length; tH++) {
+          var zH = SH._soundById(hH[tH]);
+          if (zH) {
+            if ("number" !== typeof HH) return zH._orientation;
+            zH._orientation = [HH, LH, AH], zH._node && (zH._panner || (zH._pos || (zH._pos = SH._pos || [0, 0, -.5]), BH(zH, "spatial")), "undefined" !== typeof zH._panner.orientationX ? (zH._panner.orientationX.setValueAtTime(HH, Howler.ctx.currentTime), zH._panner.orientationY.setValueAtTime(LH, Howler.ctx.currentTime), zH._panner.orientationZ.setValueAtTime(AH, Howler.ctx.currentTime)) : zH._panner.setOrientation(HH, LH, AH)), SH._emit("orientation", zH._id)
           }
         }
-        return UV
+        return SH
       }, Howl.prototype.pannerAttr = function() {
-        var VV, xV, JV, YV = this,
-          UV = arguments;
-        if (!YV._webAudio) return YV;
-        if (0 === UV.length) return YV._pannerAttr;
-        if (1 === UV.length) {
-          if ("object" !== typeof UV[0]) return (JV = YV._soundById(parseInt(UV[0], 10))) ? JV._pannerAttr : YV._pannerAttr;
-          VV = UV[0], "undefined" === typeof xV && (VV.pannerAttr || (VV.pannerAttr = {
-            coneInnerAngle: VV.coneInnerAngle,
-            coneOuterAngle: VV.coneOuterAngle,
-            coneOuterGain: VV.coneOuterGain,
-            distanceModel: VV.distanceModel,
-            maxDistance: VV.maxDistance,
-            refDistance: VV.refDistance,
-            rolloffFactor: VV.rolloffFactor,
-            panningModel: VV.panningModel
-          }), YV._pannerAttr = {
-            coneInnerAngle: "undefined" !== typeof VV.pannerAttr.coneInnerAngle ? VV.pannerAttr.coneInnerAngle : YV._coneInnerAngle,
-            coneOuterAngle: "undefined" !== typeof VV.pannerAttr.coneOuterAngle ? VV.pannerAttr.coneOuterAngle : YV._coneOuterAngle,
-            coneOuterGain: "undefined" !== typeof VV.pannerAttr.coneOuterGain ? VV.pannerAttr.coneOuterGain : YV._coneOuterGain,
-            distanceModel: "undefined" !== typeof VV.pannerAttr.distanceModel ? VV.pannerAttr.distanceModel : YV._distanceModel,
-            maxDistance: "undefined" !== typeof VV.pannerAttr.maxDistance ? VV.pannerAttr.maxDistance : YV._maxDistance,
-            refDistance: "undefined" !== typeof VV.pannerAttr.refDistance ? VV.pannerAttr.refDistance : YV._refDistance,
-            rolloffFactor: "undefined" !== typeof VV.pannerAttr.rolloffFactor ? VV.pannerAttr.rolloffFactor : YV._rolloffFactor,
-            panningModel: "undefined" !== typeof VV.pannerAttr.panningModel ? VV.pannerAttr.panningModel : YV._panningModel
+        var HH, LH, AH, rH = this,
+          SH = arguments;
+        if (!rH._webAudio) return rH;
+        if (0 === SH.length) return rH._pannerAttr;
+        if (1 === SH.length) {
+          if ("object" !== typeof SH[0]) return (AH = rH._soundById(parseInt(SH[0], 10))) ? AH._pannerAttr : rH._pannerAttr;
+          HH = SH[0], "undefined" === typeof LH && (HH.pannerAttr || (HH.pannerAttr = {
+            coneInnerAngle: HH.coneInnerAngle,
+            coneOuterAngle: HH.coneOuterAngle,
+            coneOuterGain: HH.coneOuterGain,
+            distanceModel: HH.distanceModel,
+            maxDistance: HH.maxDistance,
+            refDistance: HH.refDistance,
+            rolloffFactor: HH.rolloffFactor,
+            panningModel: HH.panningModel
+          }), rH._pannerAttr = {
+            coneInnerAngle: "undefined" !== typeof HH.pannerAttr.coneInnerAngle ? HH.pannerAttr.coneInnerAngle : rH._coneInnerAngle,
+            coneOuterAngle: "undefined" !== typeof HH.pannerAttr.coneOuterAngle ? HH.pannerAttr.coneOuterAngle : rH._coneOuterAngle,
+            coneOuterGain: "undefined" !== typeof HH.pannerAttr.coneOuterGain ? HH.pannerAttr.coneOuterGain : rH._coneOuterGain,
+            distanceModel: "undefined" !== typeof HH.pannerAttr.distanceModel ? HH.pannerAttr.distanceModel : rH._distanceModel,
+            maxDistance: "undefined" !== typeof HH.pannerAttr.maxDistance ? HH.pannerAttr.maxDistance : rH._maxDistance,
+            refDistance: "undefined" !== typeof HH.pannerAttr.refDistance ? HH.pannerAttr.refDistance : rH._refDistance,
+            rolloffFactor: "undefined" !== typeof HH.pannerAttr.rolloffFactor ? HH.pannerAttr.rolloffFactor : rH._rolloffFactor,
+            panningModel: "undefined" !== typeof HH.pannerAttr.panningModel ? HH.pannerAttr.panningModel : rH._panningModel
           })
-        } else 2 === UV.length && (VV = UV[0], xV = parseInt(UV[1], 10));
-        for (var yV = YV._getSoundIds(xV), pV = 0; pV < yV.length; pV++)
-          if (JV = YV._soundById(yV[pV])) {
-            var QV = JV._pannerAttr;
-            QV = {
-              coneInnerAngle: "undefined" !== typeof VV.coneInnerAngle ? VV.coneInnerAngle : QV.coneInnerAngle,
-              coneOuterAngle: "undefined" !== typeof VV.coneOuterAngle ? VV.coneOuterAngle : QV.coneOuterAngle,
-              coneOuterGain: "undefined" !== typeof VV.coneOuterGain ? VV.coneOuterGain : QV.coneOuterGain,
-              distanceModel: "undefined" !== typeof VV.distanceModel ? VV.distanceModel : QV.distanceModel,
-              maxDistance: "undefined" !== typeof VV.maxDistance ? VV.maxDistance : QV.maxDistance,
-              refDistance: "undefined" !== typeof VV.refDistance ? VV.refDistance : QV.refDistance,
-              rolloffFactor: "undefined" !== typeof VV.rolloffFactor ? VV.rolloffFactor : QV.rolloffFactor,
-              panningModel: "undefined" !== typeof VV.panningModel ? VV.panningModel : QV.panningModel
+        } else 2 === SH.length && (HH = SH[0], LH = parseInt(SH[1], 10));
+        for (var hH = rH._getSoundIds(LH), tH = 0; tH < hH.length; tH++)
+          if (AH = rH._soundById(hH[tH])) {
+            var zH = AH._pannerAttr;
+            zH = {
+              coneInnerAngle: "undefined" !== typeof HH.coneInnerAngle ? HH.coneInnerAngle : zH.coneInnerAngle,
+              coneOuterAngle: "undefined" !== typeof HH.coneOuterAngle ? HH.coneOuterAngle : zH.coneOuterAngle,
+              coneOuterGain: "undefined" !== typeof HH.coneOuterGain ? HH.coneOuterGain : zH.coneOuterGain,
+              distanceModel: "undefined" !== typeof HH.distanceModel ? HH.distanceModel : zH.distanceModel,
+              maxDistance: "undefined" !== typeof HH.maxDistance ? HH.maxDistance : zH.maxDistance,
+              refDistance: "undefined" !== typeof HH.refDistance ? HH.refDistance : zH.refDistance,
+              rolloffFactor: "undefined" !== typeof HH.rolloffFactor ? HH.rolloffFactor : zH.rolloffFactor,
+              panningModel: "undefined" !== typeof HH.panningModel ? HH.panningModel : zH.panningModel
             };
-            var nV = JV._panner;
-            nV ? (nV.coneInnerAngle = QV.coneInnerAngle, nV.coneOuterAngle = QV.coneOuterAngle, nV.coneOuterGain = QV.coneOuterGain, nV.distanceModel = QV.distanceModel, nV.maxDistance = QV.maxDistance, nV.refDistance = QV.refDistance, nV.rolloffFactor = QV.rolloffFactor, nV.panningModel = QV.panningModel) : (JV._pos || (JV._pos = YV._pos || [0, 0, -.5]), eV(JV, "spatial"))
-          } return YV
-      }, Sound.prototype.init = function(VV) {
+            var CH = AH._panner;
+            CH ? (CH.coneInnerAngle = zH.coneInnerAngle, CH.coneOuterAngle = zH.coneOuterAngle, CH.coneOuterGain = zH.coneOuterGain, CH.distanceModel = zH.distanceModel, CH.maxDistance = zH.maxDistance, CH.refDistance = zH.refDistance, CH.rolloffFactor = zH.rolloffFactor, CH.panningModel = zH.panningModel) : (AH._pos || (AH._pos = rH._pos || [0, 0, -.5]), BH(AH, "spatial"))
+          } return rH
+      }, Sound.prototype.init = function(HH) {
         return function() {
-          var eV = this,
-            xV = eV._parent;
-          eV._orientation = xV._orientation, eV._stereo = xV._stereo, eV._pos = xV._pos, eV._pannerAttr = xV._pannerAttr, VV.call(this), eV._stereo ? xV.stereo(eV._stereo) : eV._pos && xV.pos(eV._pos[0], eV._pos[1], eV._pos[2], eV._id)
+          var BH = this,
+            LH = BH._parent;
+          BH._orientation = LH._orientation, BH._stereo = LH._stereo, BH._pos = LH._pos, BH._pannerAttr = LH._pannerAttr, HH.call(this), BH._stereo ? LH.stereo(BH._stereo) : BH._pos && LH.pos(BH._pos[0], BH._pos[1], BH._pos[2], BH._id)
         }
-      }(Sound.prototype.init), Sound.prototype.reset = function(VV) {
+      }(Sound.prototype.init), Sound.prototype.reset = function(HH) {
         return function() {
-          var eV = this,
-            xV = eV._parent;
-          return eV._orientation = xV._orientation, eV._stereo = xV._stereo, eV._pos = xV._pos, eV._pannerAttr = xV._pannerAttr, eV._stereo ? xV.stereo(eV._stereo) : eV._pos ? xV.pos(eV._pos[0], eV._pos[1], eV._pos[2], eV._id) : eV._panner && (eV._panner.disconnect(0), eV._panner = void 0, xV._refreshBuffer(eV)), VV.call(this)
+          var BH = this,
+            LH = BH._parent;
+          return BH._orientation = LH._orientation, BH._stereo = LH._stereo, BH._pos = LH._pos, BH._pannerAttr = LH._pannerAttr, BH._stereo ? LH.stereo(BH._stereo) : BH._pos ? LH.pos(BH._pos[0], BH._pos[1], BH._pos[2], BH._id) : BH._panner && (BH._panner.disconnect(0), BH._panner = void 0, LH._refreshBuffer(BH)), HH.call(this)
         }
       }(Sound.prototype.reset);
-      var eV = function(VV, eV) {
-        "spatial" === (eV = eV || "spatial") ? (VV._panner = Howler.ctx.createPanner(), VV._panner.coneInnerAngle = VV._pannerAttr.coneInnerAngle, VV._panner.coneOuterAngle = VV._pannerAttr.coneOuterAngle, VV._panner.coneOuterGain = VV._pannerAttr.coneOuterGain, VV._panner.distanceModel = VV._pannerAttr.distanceModel, VV._panner.maxDistance = VV._pannerAttr.maxDistance, VV._panner.refDistance = VV._pannerAttr.refDistance, VV._panner.rolloffFactor = VV._pannerAttr.rolloffFactor, VV._panner.panningModel = VV._pannerAttr.panningModel, "undefined" !== typeof VV._panner.positionX ? (VV._panner.positionX.setValueAtTime(VV._pos[0], Howler.ctx.currentTime), VV._panner.positionY.setValueAtTime(VV._pos[1], Howler.ctx.currentTime), VV._panner.positionZ.setValueAtTime(VV._pos[2], Howler.ctx.currentTime)) : VV._panner.setPosition(VV._pos[0], VV._pos[1], VV._pos[2]), "undefined" !== typeof VV._panner.orientationX ? (VV._panner.orientationX.setValueAtTime(VV._orientation[0], Howler.ctx.currentTime), VV._panner.orientationY.setValueAtTime(VV._orientation[1], Howler.ctx.currentTime), VV._panner.orientationZ.setValueAtTime(VV._orientation[2], Howler.ctx.currentTime)) : VV._panner.setOrientation(VV._orientation[0], VV._orientation[1], VV._orientation[2])) : (VV._panner = Howler.ctx.createStereoPanner(), VV._panner.pan.setValueAtTime(VV._stereo, Howler.ctx.currentTime)), VV._panner.connect(VV._node), VV.DZ || VV._parent.pause(VV._id, !0).play(VV._id, !0)
+      var BH = function(HH, BH) {
+        "spatial" === (BH = BH || "spatial") ? (HH._panner = Howler.ctx.createPanner(), HH._panner.coneInnerAngle = HH._pannerAttr.coneInnerAngle, HH._panner.coneOuterAngle = HH._pannerAttr.coneOuterAngle, HH._panner.coneOuterGain = HH._pannerAttr.coneOuterGain, HH._panner.distanceModel = HH._pannerAttr.distanceModel, HH._panner.maxDistance = HH._pannerAttr.maxDistance, HH._panner.refDistance = HH._pannerAttr.refDistance, HH._panner.rolloffFactor = HH._pannerAttr.rolloffFactor, HH._panner.panningModel = HH._pannerAttr.panningModel, "undefined" !== typeof HH._panner.positionX ? (HH._panner.positionX.setValueAtTime(HH._pos[0], Howler.ctx.currentTime), HH._panner.positionY.setValueAtTime(HH._pos[1], Howler.ctx.currentTime), HH._panner.positionZ.setValueAtTime(HH._pos[2], Howler.ctx.currentTime)) : HH._panner.setPosition(HH._pos[0], HH._pos[1], HH._pos[2]), "undefined" !== typeof HH._panner.orientationX ? (HH._panner.orientationX.setValueAtTime(HH._orientation[0], Howler.ctx.currentTime), HH._panner.orientationY.setValueAtTime(HH._orientation[1], Howler.ctx.currentTime), HH._panner.orientationZ.setValueAtTime(HH._orientation[2], Howler.ctx.currentTime)) : HH._panner.setOrientation(HH._orientation[0], HH._orientation[1], HH._orientation[2])) : (HH._panner = Howler.ctx.createStereoPanner(), HH._panner.pan.setValueAtTime(HH._stereo, Howler.ctx.currentTime)), HH._panner.connect(HH._node), HH.oX || HH._parent.pause(HH._id, !0).play(HH._id, !0)
       }
     }()
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

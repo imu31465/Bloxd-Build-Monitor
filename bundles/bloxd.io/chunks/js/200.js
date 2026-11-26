@@ -1,37 +1,40 @@
 export const id = 200;
 export const ids = [200];
 export const modules = {
-  9681: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      pageBody: () => JV
+  9766: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      pageBody: () => AH
     });
-    const JV = {
-      whatIs: ["You might not be the only one checking in. Bloxd Horror Hotel sends you down an infinite hallway of hotel rooms, collecting items so you can level up and decorate a room of your own. Anyone can play for free, straight from a browser tab. Just be careful what's waiting behind the doors..."],
-      howToPlay: ["Your stay starts in a tiny room, so first things first: go and complain to the manager. The first upgrade is free. After that, upgrades cost items, beginning with a red bed you'll have to \"borrow\" from someone else's room. Head down the corridor to find what you need. Some doors open into bedrooms with strange guests. Others lead to forests, mines, mazes and buried treasure.", "Got the items? Use the home button on the left to fast travel back. You can keep upgrading all the way to level 22, change your room colours and invite friends round. You also get to decide whether PvP, visitors and editors are allowed in your room. Play nicely, though. Take down too many players in a row and the Angry Hotel Manager steps in, and you won't like what happens next. Oh, and if you hear a sudden spooky sound, there might be a skinwalker close by."],
-      features: ["An Infinite Hallway of Hotel Rooms to Explore", "Forest, Mining, Maze and Buried Treasure Rooms", "Quirky Guests Who Need Your Help", "Upgrade Your Room All the Way to Level 22", "Pick from a Range of Room Colours", "Invite Friends and Control PvP, Visitors and Editors", "A Creepy Skinwalker and a Secret Room to Find"],
-      tips: ["Talk to the manager first and grab your free room upgrade", "Check what your next upgrade costs, then go looking for those items in other rooms", "Help guests with their requests, like the thirsty guest in the desert room", "Use the home button on the left to fast travel back to your room", "Friends need a high enough room level before you can invite them", "Don't go on a streak of attacking other players, or the Angry Hotel Manager will definately step in", "Keep exploring. There's always another room further down the hall"],
-      similarGames: ["ninetyNineNights", "containmentBreach", "backrooms", "murderMystery"],
+    const AH = {
+      whatIs: ["Can your team last 99 nights of darkness? Bloxd Escape the Forest is a co-op horror survival game for teams of up to 6, and you can jump in for free straight from your browser. Make camp, keep the fire going, search for the missing children and watch out for whatever comes out after sunset. Get through all 99 nights, then find your way out."],
+      howToPlay: ["Your team starts around the campfire. During the day you'll gather wood, hunt Pigs and Cows for meat and explore the landmarks dotted around the forest. Throw fuel into the fire to level it up. Each new level unlocks crafting recipes and helps you find the lost kids. Bring back Monster Hearts to push the fire even higher.", 'When "Night Approaches" pops up, head back to camp. Monsters are scared of fire, but some nights the Horde attacks, the Monster wakes up or the Warper rises. If you go down, a teammate can revive you with a Revive Splash Potion.', "Every lost kid you find adds days to your count, which gets you closer to 99. Do quests for the Travelling Trader, then follow Maverick the wizard's guidance to the frozen forest. Collect the portal keystones, open the portal and send the kids home."],
+      features: ["Co-op with Up to 6 Players", "Survive 99 Nights, Then See How Much Longer You Can Last", "Level Up the Campfire to Unlock New Recipes", "Rescue the Lost Kids and Send Them Home", "Quests from the Travelling Trader and Maverick the Wizard", "Explore Landmarks like the Graveyard, Frozen Lagoon, Molten Gorge and Mount Doomrock", "Night Attacks from the Horde, the Monster and the Warper", "Revive Teammates and Repair the Respawn Pod", "Show Your Best Score on Your Nametag and Earn Aura XP", "Inferno Mode with a Day Multiplier"],
+      tips: ["Keep the fire fuelled. It's your best protection at night", "Cook Raw Morsels and Steak on the fire before you eat them", 'Get back to camp as soon as you see "Night Approaches"', "Bring Monster Hearts to the fire to reach the higher levels", "Place your Radar near the fire", "Throw a Decoy to distract monsters, or throw an Invisibility Potion to hide", "Fire a Call for Help flare if you go down", "Bring armour, ideally enchanted, before you go hunting for portal keystones"],
+      similarGames: ["horrorHotel", "containmentBreach", "classic_survivalDayNight", "backrooms"],
       faq: [{
-        question: "What is Bloxd Horror Hotel?",
-        answer: "A spooky exploration game. You wander an endless hotel, collect items from other rooms and use them to upgrade and decorate your own."
+        question: "What is Bloxd Escape the Forest?",
+        answer: "A co-op horror survival mode for up to 6 players. You team up, survive 99 nights, rescue the lost kids and send them home through the portal."
       }, {
-        question: "Does Horror Hotel really have infinite rooms?",
-        answer: "It does. The hallway just keeps going, with bedrooms, forests, mines, mazes and buried treasure rooms to find. There's even a secret room hidden somewhere."
+        question: "In Escape the Forest, how do you survive 99 nights?",
+        answer: "Keep the campfire fuelled and stay close to it at night, because monsters are scared of fire. Level the fire up, cook your food and stick with your team."
       }, {
-        question: "How do I upgrade my room in Horror Hotel?",
-        answer: "Talk to the manager. The first upgrade's free, then each level costs items you find around the hotel, starting with a red bed."
+        question: "How many players can team up in Escape the Forest?",
+        answer: "Up to 6 in each game, and others can join to spectate."
       }, {
-        question: "What is the max room level in Horror Hotel?",
-        answer: "Level 22. Once you hit it, your room is maxed out."
+        question: "Where are the lost kids?",
+        answer: "Out in the forest. Level up your fire to find more of them, then go searching. Every kid you find adds to your day count."
       }, {
-        question: "Can friends visit my hotel room?",
-        answer: "Yes, as long as their room level is high enough. You can also choose whether to allow visitors, editors and PvP."
+        question: "What happens if you go down?",
+        answer: "A teammate can revive you with a Revive Splash Potion. You can fire a Call for Help flare too, and the Respawn Pod can bring back players who die."
       }, {
-        question: "Is Horror Hotel scary?",
-        answer: "A bit! It's spooky, with odd guests, eerie sounds and a skinwalker lurking about. It's creepy rather than gory, and you can explore at your own pace."
+        question: "How do you escape the forest?",
+        answer: "Follow Maverick the wizard's guidance to the frozen forest, collect the portal keystones, open the portal and send the kids home."
+      }, {
+        question: "Is there anything after night 99?",
+        answer: "You've beaten the challenge by then, but how much longer can you survive? Your best number of nights survived shows on your nametag."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

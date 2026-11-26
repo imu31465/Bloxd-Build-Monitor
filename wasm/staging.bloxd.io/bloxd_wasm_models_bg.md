@@ -1,175 +1,160 @@
 # WASM module: `bloxd_wasm_models_bg`
 
-> environment **staging.bloxd.io** · build `pxmq3aq.c63b303d` · analyzed 2026-11-26T17:59:16+09:00
-> source: https://staging.bloxd.io/static/media/bloxd_wasm_models_bg.d897fc9b9fa0d1538289.wasm
-> 311,549 bytes (304.2 KB) · sha256 `ef6a73a4745ccf7e…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **staging.bloxd.io** · build `cwj32u.ae3e40c2` · analyzed 2026-11-27T00:59:42+09:00
+> source: https://staging.bloxd.io/static/media/bloxd_wasm_models_bg.75ba595cf1465bb9af8f.wasm
+> 478,484 bytes (467.3 KB) · sha256 `dafa53585131db41…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
 
 ## Changes since the previous archived build
 
-- name-section module id `cb8c4682c8c60e15.1165` → `37e65ecfb39fc7fe.1165` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- size 311,549 → 478,484 bytes (+166,935)
+- defined functions 220 → 290
+- imported functions 27 → 5
+- code bytes 249,657 → 399,466
+- data bytes 58,757 → 76,035
+- name-section module id `37e65ecfb39fc7fe.1165` → `5124ccbbffa5589b.893`
+- import signatures: -1 × `(i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)`; -15 × `(i32) -> (i32)`; -1 × `(i32 i32 i32) -> ()`
 - export identifiers rotated by the obfuscator: 1/23 names kept (identifier names are randomly assigned per build; compare signatures instead)
+- new embedded strings: `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `9I?KSCA;=U{23456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`ab`; `Attribute seam right-swing traversal did not terminateAttrib`; `Bit stream end position overflowBit stream size too largeBit`
+- removed embedded strings: `                                `; ` index out of bounds: the len is `; `!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!""""""""""""""""""""""""""""`; `" out of range for slice of length `; `################################`; `#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQR`
 
 ## Overview
 
 | Metric | Value |
 |---|---|
-| Functions defined / imported | 220 / 27 |
-| Exports / imports | 23 / 27 |
-| Code bytes (function bodies) | 249,657 (243.8 KB) |
-| Total local variables | 1,679 |
-| Instructions (scanable bodies) | 117,665 |
-| Data segments / bytes | 195 / 58,757 |
-| Element segments / entries | 1 / 69 |
+| Functions defined / imported | 290 / 5 |
+| Exports / imports | 22 / 5 |
+| Code bytes (function bodies) | 399,466 (390.1 KB) |
+| Total local variables | 2,166 |
+| Instructions (scanable bodies) | 189,066 |
+| Data segments / bytes | 195 / 76,035 |
+| Element segments / entries | 1 / 46 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `37e65ecfb39fc7fe.1165` |
+| name-section module id | `5124ccbbffa5589b.893` |
 | Sections | 12 |
 
 ## Sections
 
 | id | Section | Bytes | Items |
 |---|---|---:|---:|
-| 1 | type | 231 | 32 |
-| 2 | import | 325 | 27 |
-| 3 | function | 222 | 220 |
+| 1 | type | 209 | 29 |
+| 2 | import | 61 | 5 |
+| 3 | function | 292 | 290 |
 | 4 | table | 5 | 1 |
 | 5 | memory | 3 | 1 |
 | 6 | global | 25 | 3 |
-| 7 | export | 181 | 23 |
-| 9 | element | 136 | 1 |
+| 7 | export | 173 | 22 |
+| 9 | element | 90 | 1 |
 | 12 | datacount | 2 | — |
-| 10 | code | 250,005 | 220 |
-| 11 | data | 60,344 | 195 |
-| 0 | custom:name | 29 | — |
+| 10 | code | 399,934 | 290 |
+| 11 | data | 77,623 | 195 |
+| 0 | custom:name | 28 | — |
 
 ## Types
 
-32 function types; top shapes: `(i32 i32) -> ()` ×1, `(i32) -> ()` ×1, `(i32 i32) -> (i32)` ×1, `(i32 i32 i32) -> ()` ×1, `(i32 i32 i32) -> (i32)` ×1, `(i32) -> (i32)` ×1, `(i32 i32 i32 i32 i32) -> ()` ×1, `(i32 i32 i32 i32) -> ()` ×1
+29 function types; top shapes: `(i32) -> ()` ×1, `(i32 i32) -> ()` ×1, `(i32 i32) -> (i32)` ×1, `(i32 i32 i32) -> (i32)` ×1, `(i32 i32 i32) -> ()` ×1, `(i32) -> (i32)` ×1, `(i32 i32 i32 i32) -> ()` ×1, `() -> (i32)` ×1
 
 ## Imports
 
-27 imported items (JS callbacks and shared state):
+5 imported items (JS callbacks and shared state):
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `eHtD.KAq5` | func | `(i32) -> ()` |
-| 1 | `eHtD.Ufsd` | func | `(i32) -> ()` |
-| 2 | `eHtD.D1us` | func | `(i32 i32) -> ()` |
-| 3 | `eHtD.YPgj` | func | `(i32 i32) -> (i32)` |
-| 4 | `eHtD.tssL` | func | `(i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
-| 5 | `eHtD.SrIJ` | func | `(i32) -> (i32)` |
-| 6 | `eHtD.yqdC` | func | `(i32 i32) -> (i32)` |
-| 7 | `eHtD.G4Y5` | func | `(i32 i32) -> ()` |
-| 8 | `eHtD.UEfh` | func | `(i32) -> (i32)` |
-| 9 | `eHtD.GYXA` | func | `(i32) -> (i32)` |
-| 10 | `eHtD.WEk3` | func | `(i32) -> (i32)` |
-| 11 | `eHtD.egeG` | func | `(i32) -> (i32)` |
-| 12 | `eHtD.RSbs` | func | `(i32) -> (i32)` |
-| 13 | `eHtD.Gn6Y` | func | `(i32) -> ()` |
-| 14 | `eHtD.XvcI` | func | `(i32) -> (i32)` |
-| 15 | `eHtD.PB66` | func | `(i32 i32 i32) -> ()` |
-| 16 | `eHtD.V3sO` | func | `(i32 i32) -> (i32)` |
-| 17 | `eHtD.V7TU` | func | `(i32) -> (i32)` |
-| 18 | `eHtD.PJvv` | func | `(i32) -> (i32)` |
-| 19 | `eHtD.fcFh` | func | `(i32) -> (i32)` |
-| 20 | `eHtD.XjVj` | func | `(i32) -> (i32)` |
-| 21 | `eHtD.Cd7H` | func | `(i32) -> (i32)` |
-| 22 | `eHtD.Dstj` | func | `(i32) -> (i32)` |
-| 23 | `eHtD.ipRN` | func | `(i32) -> (i32)` |
-| 24 | `eHtD.UQzq` | func | `(i32) -> (i32)` |
-| 25 | `eHtD.lnlt` | func | `(i32 i32) -> ()` |
-| 26 | `eHtD.jADm` | func | `(i32 i32) -> (i32)` |
+| 0 | `aKSR.BKjh` | func | `(i32) -> ()` |
+| 1 | `aKSR.Oawr` | func | `(i32) -> ()` |
+| 2 | `aKSR.vlcw` | func | `(i32 i32) -> ()` |
+| 3 | `aKSR.tlhT` | func | `(i32 i32) -> (i32)` |
+| 4 | `aKSR.bCSp` | func | `(i32 i32) -> ()` |
 
 ## Exports
 
-23 exported items — the API surface consumed by the JS glue:
+22 exported items — the API surface consumed by the JS glue:
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `ayRJ` | global | 1 | `` |
-| `SQxh` | global | 2 | `` |
-| `i2n2` | func | 138 | `() -> (i32)` |
-| `x5Vo` | func | 201 | `(i32 i32) -> (i32)` |
-| `RjJf` | func | 62 | `() -> (i32)` |
-| `OCj0` | func | 243 | `(i32) -> ()` |
-| `WGbk` | func | 245 | `() -> (i32)` |
-| `BHZh` | func | 200 | `() -> ()` |
 | `memory` | memory | 0 | `` |
-| `paD4` | func | 202 | `(i32 i32 i32 i32) -> (i32)` |
-| `AnGf` | func | 226 | `(i32 i32 i32) -> ()` |
-| `F810` | func | 83 | `() -> (i32)` |
-| `bznn` | func | 173 | `(i32) -> (i32)` |
-| `FMh5` | func | 208 | `(i32 i32 i32) -> (i32 i32)` |
-| `f92d` | func | 200 | `() -> ()` |
-| `v0ne` | func | 230 | `(i32) -> ()` |
-| `xTcJ` | func | 97 | `() -> (i32)` |
-| `DWcm` | func | 220 | `() -> (i32)` |
-| `je1l` | func | 177 | `(i32) -> ()` |
-| `t7Ns` | func | 242 | `(i32) -> (i32)` |
-| `SGBC` | func | 206 | `(i32 i32 i32 i32) -> (i32 i32)` |
-| `Fxu0` | func | 210 | `() -> (i32 i32)` |
-| `D7fu` | func | 128 | `(i32 i32) -> ()` |
+| `KRNz` | func | 213 | `(i32) -> (i32)` |
+| `hBxT` | func | 258 | `() -> (i32 i32)` |
+| `vJc1` | func | 290 | `(i32) -> (i32)` |
+| `Bipb` | func | 291 | `(i32) -> ()` |
+| `XEwI` | func | 49 | `() -> (i32)` |
+| `Pxmq` | global | 1 | `` |
+| `nxcV` | func | 256 | `(i32 i32 i32) -> (i32 i32)` |
+| `QPYJ` | func | 246 | `(i32 i32) -> (i32)` |
+| `nbty` | func | 248 | `(i32 i32 i32 i32) -> (i32)` |
+| `jL6Z` | func | 245 | `() -> ()` |
+| `Hd21` | func | 245 | `() -> ()` |
+| `saVX` | func | 267 | `() -> (i32)` |
+| `dJ42` | func | 273 | `(i32 i32 i32) -> ()` |
+| `xTuM` | func | 252 | `(i32 i32 i32 i32) -> (i32 i32)` |
+| `r2e0` | global | 2 | `` |
+| `Rm8j` | func | 93 | `() -> (i32)` |
+| `X8jq` | func | 137 | `(i32 i32) -> ()` |
+| `sh9H` | func | 293 | `() -> (i32)` |
+| `VDFQ` | func | 220 | `(i32) -> ()` |
+| `Md7l` | func | 152 | `() -> (i32)` |
+| `CCTi` | func | 74 | `() -> (i32)` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 
 ## Memory, tables, globals
 
-- memory 0: min 17 pages · max ∞ · shared=False
-- table 0: funcref · min 70 · max 70
-- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1113200, `i32` = i32.const 1113424
+- memory 0: min 18 pages · max ∞ · shared=False
+- table 0: funcref · min 47 · max 47
+- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1130480, `i32` = i32.const 1130700
 
 ## Functions
 
-- 220 bodies · 249,657 code bytes · avg 1.1 KB
-- instruction scan: 220 bodies fully decoded, 0 degraded (unknown/extension opcodes)
+- 290 bodies · 399,466 code bytes · avg 1.3 KB
+- instruction scan: 290 bodies fully decoded, 0 degraded (unknown/extension opcodes)
 
 | Body size | Functions |
 |---|---:|
-| <= 32 bytes | 44 |
-| <= 64 bytes | 8 |
-| <= 128 bytes | 45 |
-| <= 256 bytes | 33 |
-| <= 512 bytes | 26 |
-| <= 1024 bytes | 27 |
-| <= 2048 bytes | 18 |
-| <= 4096 bytes | 11 |
-| <= 8192 bytes | 6 |
+| <= 32 bytes | 33 |
+| <= 64 bytes | 15 |
+| <= 128 bytes | 71 |
+| <= 256 bytes | 52 |
+| <= 512 bytes | 39 |
+| <= 1024 bytes | 36 |
+| <= 2048 bytes | 20 |
+| <= 4096 bytes | 12 |
+| <= 8192 bytes | 8 |
 | <= 16384 bytes | 1 |
-| > 16384 bytes | 1 |
+| > 16384 bytes | 3 |
 
 Largest functions:
 
 | # | type | locals | body bytes | instructions | dominant opcodes |
 |---:|---|---:|---:|---:|---|
-| 0 | `(i32 i32 i32 i32 i32) -> ()` | 78 | 10,097 | 5,033 | local.get×1420, i32.const×605, local.set×348, local.tee×314, i32.load×297 |
-| 1 | `(i32 i32) -> ()` | 33 | 7,753 | 4,082 | local.get×1044, i32.const×407, local.set×303, i64.const×219, end×203 |
-| 2 | `(i32 i32 i32) -> ()` | 20 | 6,274 | 3,081 | local.get×935, i32.const×508, i32.load×276, i32.add×225, local.set×196 |
-| 3 | `(i32 i32 i32 i32) -> ()` | 69 | 6,977 | 3,208 | local.get×996, i32.const×310, i32.load×175, local.tee×174, local.set×166 |
-| 4 | `(i32 i32 i32 i32) -> ()` | 63 | 6,028 | 3,095 | local.get×872, i32.const×392, local.set×265, i32.add×175, local.tee×165 |
-| 5 | `(i32 f64) -> ()` | 37 | 6,275 | 2,908 | local.get×655, i32.const×373, local.set×241, i32.add×178, local.tee×151 |
-| 6 | `(i32) -> (i32)` | 9 | 4,899 | 2,140 | local.get×498, i32.const×447, i32.store×201, local.tee×154, i32.load×103 |
-| 7 | `(i32 i32 i32 i32) -> ()` | 10 | 3,837 | 2,049 | local.get×559, i32.const×241, local.set×149, local.tee×136, end×133 |
-| 8 | `(i32 i32 i32) -> ()` | 26 | 3,561 | 1,846 | local.get×491, i32.const×276, local.set×156, i32.add×151, i32.load×109 |
-| 9 | `(i32 i32 i32 i32 i32 i32 i32) -> ()` | 15 | 3,591 | 1,685 | local.get×475, i32.const×254, local.set×105, i32.load×99, end×85 |
-| 10 | `(i32 i32 i32) -> ()` | 53 | 3,891 | 1,642 | local.get×490, i32.const×173, local.set×128, i64.store×90, i64.load×69 |
-| 11 | `(i32 i32 i32 i32 i32 i32) -> ()` | 15 | 2,801 | 1,501 | local.get×464, i32.const×169, local.tee×135, i32.add×116, i32.load×111 |
-| 12 | `(i32 i32 i32 i32 i32 i32) -> ()` | 15 | 2,678 | 1,453 | local.get×461, i32.const×171, i32.add×115, local.tee×114, local.set×81 |
-| 13 | `(i32 i32) -> ()` | 31 | 3,028 | 1,428 | local.get×423, i32.const×190, local.set×88, i32.add×78, i32.load×75 |
-| 14 | `(i32 i32 i32) -> ()` | 45 | 2,993 | 1,402 | local.get×448, i32.const×156, local.tee×105, i32.add×60, local.set×59 |
-| 15 | `(i32 i32 i32) -> ()` | 16 | 2,939 | 1,478 | local.get×429, i32.const×127, local.set×95, end×80, local.tee×70 |
-| 16 | `(i32 i32 i32 i32) -> ()` | 11 | 3,492 | 1,302 | local.get×588, i64.store×217, i64.load×188, i32.const×66, i32.load×44 |
-| 17 | `(i32 i32 i32) -> ()` | 21 | 2,049 | 1,080 | local.get×285, i32.const×153, local.set×100, end×71, local.tee×54 |
-| 18 | `(i32 i32 i32) -> (i32)` | 14 | 1,936 | 989 | local.get×265, i32.const×135, br_if×75, local.set×72, i32.load×70 |
-| 19 | `(i32 i32) -> ()` | 27 | 1,964 | 958 | local.get×296, i32.const×127, local.set×82, i32.add×48, end×42 |
-| 20 | `(i32 i32 i32) -> ()` | 21 | 1,778 | 910 | local.get×248, i32.const×90, local.set×86, end×57, local.tee×50 |
-| 21 | `(i32 i32) -> ()` | 12 | 1,774 | 878 | local.get×277, i32.const×125, i32.load×85, local.set×69, local.tee×47 |
-| 22 | `(i32 i32 i32 i32 i32) -> ()` | 21 | 1,341 | 743 | local.get×203, i32.const×104, local.tee×51, local.set×48, i32.add×43 |
-| 23 | `(i32 i32 i32 i32 i32) -> ()` | 21 | 1,317 | 734 | local.get×205, i32.const×102, local.set×50, local.tee×48, i32.add×44 |
-| 25 | `(i32 i32) -> ()` | 8 | 1,345 | 657 | local.get×224, i32.const×97, local.set×65, i32.load×62, i32.add×44 |
-| 26 | `(i32 i32) -> ()` | 11 | 1,326 | 656 | local.get×193, i32.const×50, local.set×47, i32.load×34, local.tee×32 |
-| 27 | `(i32 i32) -> ()` | 12 | 1,379 | 643 | local.get×159, i32.const×93, end×49, local.set×37, block×32 |
-| 28 | `(i32 i32 i32) -> ()` | 13 | 1,348 | 626 | local.get×167, i32.const×73, end×46, br_if×44, local.tee×41 |
-| 35 | `() -> (i32)` | 14 | 1,236 | 620 | local.get×173, i32.const×99, i32.add×39, local.set×36, local.tee×29 |
-| 179 | `(i32 i32 i32 i32) -> (i32 i32)` | 145 | 100,393 | 44,764 | local.get×13638, i32.const×5407, local.set×2657, i32.add×2127, i32.load×1891 |
+| 0 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)` | 55 | 28,762 | 13,565 | local.get×3772, i32.const×1948, i32.add×682, local.tee×675, local.set×619 |
+| 1 | `(i32 i32 i32 i32 i32) -> ()` | 78 | 10,097 | 5,033 | local.get×1420, i32.const×605, local.set×348, local.tee×314, i32.load×297 |
+| 2 | `(i32 i32 i32 i32) -> (i32)` | 31 | 7,875 | 3,897 | local.get×1115, i32.const×496, local.set×306, i32.load×194, end×183 |
+| 3 | `(i32 i32 i32) -> ()` | 26 | 7,866 | 3,770 | local.get×1198, i32.const×524, i32.add×254, local.tee×207, local.set×199 |
+| 4 | `(i32 i32) -> ()` | 33 | 7,753 | 4,082 | local.get×1044, i32.const×407, local.set×303, i64.const×219, end×203 |
+| 5 | `(i32 i32 i32) -> ()` | 20 | 6,275 | 3,081 | local.get×935, i32.const×508, i32.load×276, i32.add×225, local.set×196 |
+| 6 | `(i32 i32 i32 i32) -> ()` | 69 | 6,977 | 3,208 | local.get×996, i32.const×310, i32.load×175, local.tee×174, local.set×166 |
+| 7 | `(i32 i32 i32 i32) -> ()` | 63 | 6,030 | 3,095 | local.get×872, i32.const×392, local.set×265, i32.add×175, local.tee×165 |
+| 8 | `(i32 f64) -> ()` | 37 | 6,275 | 2,908 | local.get×655, i32.const×373, local.set×241, i32.add×178, local.tee×151 |
+| 9 | `(i32) -> (i32)` | 9 | 4,901 | 2,140 | local.get×498, i32.const×447, i32.store×201, local.tee×154, i32.load×103 |
+| 10 | `(i32 i32 i32 i32) -> ()` | 10 | 3,837 | 2,049 | local.get×559, i32.const×241, local.set×149, local.tee×136, end×133 |
+| 11 | `(i32 i32 i32 i32 i32 i32 i32) -> ()` | 103 | 85,172 | 40,199 | local.get×11216, i32.const×5899, i32.add×2050, local.tee×2011, i32.load×1960 |
+| 12 | `(i32 i32 i32) -> ()` | 26 | 3,561 | 1,846 | local.get×491, i32.const×276, local.set×156, i32.add×151, i32.load×109 |
+| 13 | `(i32 i32 i32) -> ()` | 53 | 3,891 | 1,642 | local.get×490, i32.const×173, local.set×128, i64.store×90, i64.load×69 |
+| 14 | `(i32 i32 i32 i32 i32 i32) -> ()` | 15 | 2,806 | 1,502 | local.get×464, i32.const×170, local.tee×135, i32.add×116, i32.load×111 |
+| 15 | `(i32 i32 i32 i32 i32 i32) -> ()` | 15 | 2,683 | 1,454 | local.get×461, i32.const×172, i32.add×115, local.tee×114, local.set×81 |
+| 16 | `(i32 i32) -> ()` | 31 | 3,028 | 1,428 | local.get×423, i32.const×190, local.set×88, i32.add×78, i32.load×75 |
+| 17 | `(i32 i32 i32) -> ()` | 45 | 2,993 | 1,402 | local.get×448, i32.const×156, local.tee×105, i32.add×60, local.set×59 |
+| 18 | `(i32 i32 i32) -> ()` | 16 | 2,939 | 1,478 | local.get×429, i32.const×127, local.set×95, end×80, local.tee×70 |
+| 19 | `(i32 i32 i32 i32) -> ()` | 11 | 3,502 | 1,302 | local.get×588, i64.store×217, i64.load×188, i32.const×66, i32.load×44 |
+| 20 | `(i32 i32 i32 i32 i32) -> ()` | 25 | 2,447 | 1,247 | local.get×353, i32.const×177, local.set×81, end×69, i32.add×66 |
+| 21 | `(i32 i32 i32) -> ()` | 21 | 2,049 | 1,080 | local.get×285, i32.const×153, local.set×100, end×71, local.tee×54 |
+| 22 | `(i32 i32 i32) -> (i32)` | 14 | 1,936 | 989 | local.get×265, i32.const×135, br_if×75, local.set×72, i32.load×70 |
+| 23 | `(i32 i32) -> ()` | 27 | 1,964 | 958 | local.get×296, i32.const×127, local.set×82, i32.add×48, end×42 |
+| 24 | `(i32 i32 i32) -> ()` | 21 | 1,778 | 910 | local.get×248, i32.const×90, local.set×86, end×57, local.tee×50 |
+| 25 | `(i32 i32) -> ()` | 12 | 1,774 | 878 | local.get×277, i32.const×125, i32.load×85, local.set×69, local.tee×47 |
+| 30 | `(i32 i32) -> (i32)` | 16 | 2,087 | 1,091 | local.get×310, i32.const×166, i32.add×78, local.tee×66, local.set×58 |
+| 31 | `(i32) -> ()` | 8 | 1,379 | 668 | local.get×139, i32.const×84, i32.load×72, local.set×66, end×57 |
+| 33 | `(i32 i32) -> ()` | 12 | 1,379 | 643 | local.get×159, i32.const×93, end×49, local.set×37, block×32 |
+| 247 | `(i32 i32 i32 i32) -> (i32 i32)` | 145 | 100,270 | 44,667 | local.get×13612, i32.const×5390, local.set×2655, i32.add×2123, i32.load×1880 |
 
 ## Embedded strings (data segments)
 
@@ -178,61 +163,61 @@ Largest functions:
 ```
 alliumaspen_saplingattached_banana_stemattached_banana_stem_wrapperattached_melon_stemattached_melon_stem_wrapperautumn_fernazure_bluetbanana_stembeetroot_plant_stage0beetroot_plant_stage1beetroot_pla
 ````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZYYYYYYYY
+Failed to start valence main-symbol bit decodingFailed to start start-face bit decodingFailed to read traversal decoder typeFailed to read num_encoded_verticesFailed to read num_facesFailed to read at
+Unexpected number of faces at endstart face configInvalid left_most_corner for vert_xMore faces than expected in start face configUnexpected number of vertices after first passTOPOLOGY_CDegenerate fac
+Failed to allocate corner tableAttribute byte range overflowFailed to allocate mesh facesMetadata entry data size too largeStream ends before the prediction transform typeFailed to decode the entropy-
+Edgebreaker predictive traversal decode support is disabledFailed to start attribute seam decoding for valenceFailed to start seam decodingEdgebreaker predictive traversal decode is not supportedEdgeb
+Parallelogram prediction requires corner tableMultiParallelogram prediction is disabledTexCoordsDeprecated prediction is disabledConstrainedMultiParallelogram prediction requires corner tablePosition 
+Invalid attribute component countData-to-corner map references an invalid vertexData-to-corner map references an invalid cornerSymbol decode needs at least one componentBuffer ran out reading the symb
 `````````^^^^^^^^^]]]]]]]]]\\\\\\\\\[[[[[[[[[ZZZZZZZZZYYYYYYYYYXXXXXXXXXRRRRRRRRRWWWWWWWWW_________QQQQQQQQQVVVVVVVVVUUUUUUUUUTTTTTTTTTSSSSSSSSS<<<<<<<<<=========>>>>>>>>>?????????@@@@@@@@@AAAAAAAAABB
 ?bloxdProcessedassetextensionsUsedextensionsRequiredbuffersbufferViewsaccessorsscenescenesnodesmeshesmaterialstexturessamplersimagesanimationsskinsindextexCoordextensionsnameprimitivesweightsextraschi
+Portable texture-coordinate prediction value count overflowentry-to-point mapposition parentGeneral errorIO errorInvalid parameterUnsupported versionUnknown versionUnsupported featureBitstream version
 OPAQUEMASKBLENDbufferbyteOffsetbyteLengthbyteStridebufferViewoffsetversionminVersionurimimeTypemagFilterminFilterwrapSwrapTsamplersourcecomponentTypenormalizedcounttypeminmaxsparseJPEGWebPKTX2non-PNG2
-==000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798
+Invalid number of attributesEdgebreaker decoder did not provide corner tableSequential connectivity index overflowSequential connectivity index underflowInvalid Edgebreaker attribute seam opposite cor
+called `Option::unwrap()` on a `None` value0001020304050607080910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777
+Stream ends before the raw correction byte widthDecoded values do not fit the portable attributeDecoded values do not fit the destination attributeFailed to decode prediction methodInteger attribute d
+NoneUndefinedDifferenceMeshPredictionParallelogramMeshPredictionMultiParallelogramMeshPredictionTexCoordsDeprecatedMeshPredictionConstrainedMultiParallelogramMeshPredictionTexCoordsPortableMeshPredict
 attempted to take ownership of Rust value while it was borrowedresumesteerdepenetrationRisechunkHashmeshLightchunkIngestblockEditsmovementTicknetReadnetSendcoreFramereplaySteplightCompute
 POSITIONNORMALTEXCOORD_0TEXCOORD_1COLOR_0KHR_texture_transformKHR_materials_unlitbaseColorFactormetallicFactorroughnessFactorbaseColorTextureKHR_draco_mesh_compressionNorthEastSouthWest
-9I?KSCA;=U23456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dmnopqrstuvwxyz{|}~
- !"";<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[<<==>>??@@AABBCCDDEEFFGGHHIIJJKK\\]]^^__``aabbccddeeffgghhiijjkk#$lmm@%AB&nopq'()**C+rr,,stD-E./0123uvwxyz{45|}~
-!"!#$#%&%'('))**++,,--..//0011223344556677889:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYYZ[\]]^^__``aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz{{||}}~~
-HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-null pointer passed to rustrecursive use of an object detected which would lead to unsafe aliasing in rust
-0x0123456789ABCDEFRefCell already mutably borrowedRefCell already borrowedHash table capacity overflow
-attempt to divide by zerouser-provided comparison function does not correctly implement a total order
- !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWWXYZ[\]^_`abcdeeffgghhijklmnopqrstuvwxyz{|}~
-/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/sort/shared/smallsort.rs
-/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/sort/stable/quicksort.rs
- !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
-/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/sys/sync/rwlock/no_threads.rs
+Edgebreaker point assignment traversal did not terminateInconsistent corner table for attribute traversalPoint cloud decode support is disabledfacesdecoded attribute bytes
+9I?KSCA;=U{23456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dRV[_dmnopqrstuvwxyz{|}~
 ```
 
 ## Opcode histogram (aggregated)
 
 | opcode | count |
 |---|---:|
-| `local.get` | 34,169 |
-| `i32.const` | 14,866 |
-| `local.set` | 7,015 |
-| `local.tee` | 5,839 |
-| `i32.add` | 5,686 |
-| `i32.load` | 5,147 |
-| `end` | 5,061 |
-| `br_if` | 3,446 |
-| `i32.store` | 3,269 |
-| `i64.store` | 2,556 |
-| `i64.load` | 2,186 |
-| `block` | 2,097 |
-| `call` | 2,072 |
-| `if` | 2,019 |
-| `i32.sub` | 1,653 |
-| `br` | 1,482 |
-| `i32.eqz` | 1,160 |
-| `i64.const` | 1,061 |
-| `i32.shl` | 987 |
-| `i32.and` | 825 |
-| `select` | 824 |
-| `i32.load8_u` | 792 |
-| `i32.eq` | 773 |
-| `i32.ne` | 748 |
-| `loop` | 725 |
+| `local.get` | 54,144 |
+| `i32.const` | 25,222 |
+| `local.set` | 10,403 |
+| `local.tee` | 9,487 |
+| `i32.add` | 9,419 |
+| `end` | 8,400 |
+| `i32.load` | 8,284 |
+| `i32.store` | 5,534 |
+| `br_if` | 5,371 |
+| `i64.store` | 4,335 |
+| `call` | 4,079 |
+| `if` | 3,597 |
+| `block` | 3,499 |
+| `i64.load` | 3,485 |
+| `i32.sub` | 2,811 |
+| `br` | 2,684 |
+| `i32.shl` | 1,847 |
+| `i32.eqz` | 1,794 |
+| `i64.const` | 1,750 |
+| `select` | 1,237 |
+| `i32.eq` | 1,152 |
+| `i32.and` | 1,118 |
+| `i32.load8_u` | 1,066 |
+| `i32.ne` | 1,046 |
+| `loop` | 1,014 |
 
 ## Custom sections
 
-- `name` · 24 bytes
+- `name` · 23 bytes
 
 ## Analysis quality
 
 - sections consumed: 12, structural errors: 0
-- bodies fully decoded: 220/220 (degraded: 0)
+- bodies fully decoded: 290/290 (degraded: 0)

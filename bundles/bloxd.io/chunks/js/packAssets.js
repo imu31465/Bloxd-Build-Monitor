@@ -1,286 +1,291 @@
-export const id = 51;
-export const ids = [51, 229];
+export const id = 52;
+export const ids = [52, 226];
 export const modules = {
-  35402: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      packDisplayName: () => kV,
-      packModelMessage: () => bV,
-      packModelSummary: () => BV,
-      refusedPackModels: () => EV
+  35061: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      packDisplayName: () => QH,
+      packModelMessage: () => WH,
+      packModelSummary: () => xH,
+      refusedPackModels: () => MH
     });
-    var JV = xV(35408),
-      YV = xV(35415);
-    const UV = "DRACO",
-      yV = 0,
-      pV = 1,
-      QV = 0,
-      nV = 1,
-      wV = 32768;
+    var AH = LH(35067),
+      rH = LH(35071);
+    const SH = "DRACO",
+      hH = 0,
+      tH = 1,
+      zH = 0,
+      CH = 1,
+      EH = 32768;
 
-    function ZV(VV) {
-      const eV = new DataView(VV.buffer, VV.byteOffset, VV.byteLength);
-      let xV = 0;
-      const JV = () => {
-          if (xV >= VV.byteLength) throw new RangeError("past the stream");
-          return VV[xV++]
+    function XH(HH) {
+      const BH = new DataView(HH.buffer, HH.byteOffset, HH.byteLength);
+      let LH = 0;
+      const AH = () => {
+          if (LH >= HH.byteLength) throw new RangeError("past the stream");
+          return HH[LH++]
         },
-        YV = () => {
-          if (xV + 4 > VV.byteLength) throw new RangeError("past the stream");
-          const JV = eV.getUint32(xV, !0);
-          return xV += 4, JV
+        rH = () => {
+          if (LH + 4 > HH.byteLength) throw new RangeError("past the stream");
+          const AH = BH.getUint32(LH, !0);
+          return LH += 4, AH
         },
-        ZV = () => {
-          let VV = 0;
-          for (let eV = 0; eV < 35; eV += 7) {
-            const xV = JV();
-            if (VV += (127 & xV) * 2 ** eV, 0 === (128 & xV)) return VV
+        XH = () => {
+          let HH = 0;
+          for (let BH = 0; BH < 35; BH += 7) {
+            const LH = AH();
+            if (HH += (127 & LH) * 2 ** BH, 0 === (128 & LH)) return HH
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let VV = 0; VV < UV.length; VV++)
-          if (JV() !== UV.charCodeAt(VV)) return null;
-        const eV = JV(),
-          vV = JV(),
-          rV = JV(),
-          kV = JV(),
-          bV = JV() | JV() << 8;
-        if (2 !== eV) return null;
-        0 !== (bV & wV) && function(VV, eV, xV) {
-          const JV = () => {
-              eV(xV())
+        for (let HH = 0; HH < SH.length; HH++)
+          if (AH() !== SH.charCodeAt(HH)) return null;
+        const BH = AH(),
+          GH = AH(),
+          YH = AH(),
+          uH = AH(),
+          QH = AH() | AH() << 8;
+        if (2 !== BH) return null;
+        0 !== (QH & EH) && function(HH, BH, LH) {
+          const AH = () => {
+              BH(LH())
             },
-            YV = () => {
-              let xV = 1,
-                YV = !0;
-              for (; xV > 0;) {
-                xV--, YV || JV(), YV = !1;
-                const UV = VV();
-                for (let xV = 0; xV < UV; xV++) JV(), eV(VV());
-                xV += VV()
+            rH = () => {
+              let LH = 1,
+                rH = !0;
+              for (; LH > 0;) {
+                LH--, rH || AH(), rH = !1;
+                const SH = HH();
+                for (let LH = 0; LH < SH; LH++) AH(), BH(HH());
+                LH += HH()
               }
             },
-            UV = VV();
-          for (let yV = 0; yV < UV; yV++) VV(), YV();
-          YV()
-        }(ZV, (eV => {
-          if (xV + eV > VV.byteLength) throw new RangeError("past the stream");
-          xV += eV
-        }), JV);
-        const EV = vV < 2 ? YV : ZV;
-        if (rV === yV) return {
+            SH = HH();
+          for (let hH = 0; hH < SH; hH++) HH(), rH();
+          rH()
+        }(XH, (BH => {
+          if (LH + BH > HH.byteLength) throw new RangeError("past the stream");
+          LH += BH
+        }), AH);
+        const WH = GH < 2 ? rH : XH;
+        if (YH === hH) return {
           faces: 0,
-          vertices: YV()
+          vertices: rH(),
+          minor: GH
         };
-        if (rV !== pV) return null;
-        if (kV === QV) {
+        if (YH !== tH) return null;
+        if (uH === zH) {
           return {
-            faces: EV(),
-            vertices: EV()
+            faces: WH(),
+            vertices: WH(),
+            minor: GH
           }
         }
-        if (kV !== nV) return null;
-        JV(), vV < 2 && ZV();
-        const BV = ZV();
+        if (uH !== CH) return null;
+        AH(), GH < 2 && XH();
+        const MH = XH();
         return {
-          faces: ZV(),
-          vertices: BV
+          faces: XH(),
+          vertices: MH,
+          minor: GH
         }
       } catch {
         return null
       }
     }
 
-    function vV(VV, eV, xV) {
-      var JV, YV;
-      if (null === (JV = null === (YV = VV.extensionsUsed) || void 0 === YV ? void 0 : YV.includes("KHR_draco_mesh_compression")) || void 0 === JV || !JV) return null;
-      for (const kV of null !== (UV = VV.meshes) && void 0 !== UV ? UV : []) {
-        var UV;
-        for (const JV of kV.primitives) {
-          var yV, pV, QV, nV, wV, vV;
-          const YV = null === (yV = JV.extensions) || void 0 === yV ? void 0 : yV.KHR_draco_mesh_compression;
-          if ("object" !== typeof YV || null === YV) continue;
-          const UV = null === (pV = VV.bufferViews) || void 0 === pV ? void 0 : pV[YV.bufferView];
-          if (null === eV || void 0 === UV) return rV;
-          const kV = null !== (QV = UV.byteOffset) && void 0 !== QV ? QV : 0,
-            bV = ZV(eV.subarray(kV, kV + UV.byteLength));
-          if (null === bV && !xV) continue;
-          const EV = null !== (nV = VV.accessors) && void 0 !== nV ? nV : [],
-            BV = null === (wV = EV[JV.attributes.POSITION]) || void 0 === wV ? void 0 : wV.count,
-            jV = void 0 === JV.indices ? 0 : null === (vV = EV[JV.indices]) || void 0 === vV ? void 0 : vV.count;
-          if (null === bV || void 0 === BV || void 0 === jV || 3 * bV.faces !== jV || bV.vertices > BV) return rV
+    function GH(HH, BH, LH) {
+      var AH, rH;
+      if (null === (AH = null === (rH = HH.extensionsUsed) || void 0 === rH ? void 0 : rH.includes("KHR_draco_mesh_compression")) || void 0 === AH || !AH) return null;
+      for (const QH of null !== (SH = HH.meshes) && void 0 !== SH ? SH : []) {
+        var SH;
+        for (const AH of QH.primitives) {
+          var hH, tH, zH, CH, EH, GH;
+          const rH = null === (hH = AH.extensions) || void 0 === hH ? void 0 : hH.KHR_draco_mesh_compression;
+          if ("object" !== typeof rH || null === rH) continue;
+          const SH = null === (tH = HH.bufferViews) || void 0 === tH ? void 0 : tH[rH.bufferView];
+          if (null === BH || void 0 === SH) return YH;
+          const QH = null !== (zH = SH.byteOffset) && void 0 !== zH ? zH : 0,
+            WH = XH(BH.subarray(QH, QH + SH.byteLength));
+          if (null === WH && !LH) continue;
+          const MH = null !== (CH = HH.accessors) && void 0 !== CH ? CH : [],
+            xH = null === (EH = MH[AH.attributes.POSITION]) || void 0 === EH ? void 0 : EH.count,
+            vH = void 0 === AH.indices ? 0 : null === (GH = MH[AH.indices]) || void 0 === GH ? void 0 : GH.count;
+          if (null === WH || void 0 === xH || void 0 === vH || 3 * WH.faces !== vH || WH.vertices > xH) return YH;
+          if (LH && WH.minor < 2) return uH
         }
       }
       return null
     }
-    const rV = "has a Draco stream whose counts don't match its accessors";
+    const YH = "has a Draco stream whose counts don't match its accessors",
+      uH = "has a Draco stream too old to decode: export it again";
 
-    function kV(VV) {
-      var eV;
-      return null !== (eV = VV.name) && void 0 !== eV ? eV : VV.fromFolderName || VV.id
+    function QH(HH) {
+      var BH;
+      return null !== (BH = HH.name) && void 0 !== BH ? BH : HH.fromFolderName || HH.id
     }
 
-    function bV(VV, eV, xV) {
-      return `Texture pack "${VV}": model "${eV}" was not loaded because it ${xV}. The default model is used instead.`
+    function WH(HH, BH, LH) {
+      return `Texture pack "${HH}": model "${BH}" was not loaded because it ${LH}. The default model is used instead.`
     }
 
-    function EV(VV, eV, xV) {
+    function MH(HH, BH, LH) {
       let {
-        strictDraco: UV = !1
+        strictDraco: SH = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const yV = {};
-      for (const [pV, QV] of Object.entries(eV)) {
-        let eV;
-        if (QV.startsWith("data:")) try {
-          const VV = new Uint8Array((0, YV.o)(QV));
-          if (eV = (0, JV.d)(VV), null === eV) {
+      const hH = {};
+      for (const [tH, zH] of Object.entries(BH)) {
+        let BH;
+        if (zH.startsWith("data:")) try {
+          const HH = new Uint8Array((0, rH.q)(zH));
+          if (BH = (0, AH.b)(HH), null === BH) {
             const {
-              json: xV,
-              bin: JV
-            } = (0, YV.v)(VV);
-            eV = vV(xV, JV, UV)
+              json: LH,
+              bin: AH
+            } = (0, rH.z)(HH);
+            BH = GH(LH, AH, SH)
           }
         } catch {
-          eV = "is not a binary glTF 2.0 file"
-        } else eV = "loads data from outside the file";
-        eV && (yV[pV] = eV, xV && console.warn(bV(VV, pV, eV)))
+          BH = "is not a binary glTF 2.0 file"
+        } else BH = "loads data from outside the file";
+        BH && (hH[tH] = BH, LH && console.warn(WH(HH, tH, BH)))
       }
-      return yV
+      return hH
     }
 
-    function BV(VV, eV) {
-      const xV = Object.keys(eV);
-      if (0 === xV.length) return null;
-      if (1 === xV.length) return bV(VV, xV[0], eV[xV[0]]);
-      const JV = xV.map((VV => `"${VV}" ${eV[VV]}`)).join("; ");
-      return `Texture pack "${VV}": ${xV.length} models were not loaded (${JV}). The default models are used instead.`
+    function xH(HH, BH) {
+      const LH = Object.keys(BH);
+      if (0 === LH.length) return null;
+      if (1 === LH.length) return WH(HH, LH[0], BH[LH[0]]);
+      const AH = LH.map((HH => `"${HH}" ${BH[HH]}`)).join("; ");
+      return `Texture pack "${HH}": ${LH.length} models were not loaded (${AH}). The default models are used instead.`
     }
   },
-  64525: (VV, eV, xV) => {
-    xV.d(eV, {
-      packAssets: () => BV
+  64340: (HH, BH, LH) => {
+    LH.d(BH, {
+      packAssets: () => MH
     });
-    var JV = xV(2277),
-      YV = xV(2261),
-      UV = xV(35402),
-      yV = xV(3636),
-      pV = xV(3673);
+    var AH = LH(2227),
+      rH = LH(2215),
+      SH = LH(35061),
+      hH = LH(3569),
+      tH = LH(3597);
 
-    function QV(VV, eV, xV, JV) {
-      const YV = `${(0,yV.b)(VV,eV)}|sheets${xV}`;
-      return JV === pV.e ? YV : `${YV}|layers${JV}`
+    function zH(HH, BH, LH, AH) {
+      const rH = `${(0,hH.c)(HH,BH)}|sheets${LH}`;
+      return AH === tH.d ? rH : `${rH}|layers${AH}`
     }
-    var nV = xV(3676),
-      wV = xV(3612),
-      ZV = xV(3594),
-      vV = xV(3644);
-    var rV = xV(53977);
-    const kV = 256;
-    let bV = null,
-      EV = null;
+    var CH = LH(3606),
+      EH = LH(3533),
+      XH = LH(3519),
+      GH = LH(3575);
+    var YH = LH(54576);
+    const uH = 256;
+    let QH = null,
+      WH = null;
 
-    function BV(VV) {
-      var eV;
-      let xV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pV.e;
-      if ((null === (eV = bV) || void 0 === eV ? void 0 : eV.pack) === VV.pack && bV.maxLayerWidth === xV) return bV.assets;
-      const BV = (0, rV.f)(VV.pack, (0, rV.i)(VV));
-      if (null === BV || !(0, YV.f)(BV)) return Promise.resolve(null);
-      const qV = async function(VV, eV, xV) {
-        var rV;
-        const bV = null !== (rV = VV.textureOverrides) && void 0 !== rV ? rV : {},
+    function MH(HH) {
+      var BH;
+      let LH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tH.d;
+      if ((null === (BH = QH) || void 0 === BH ? void 0 : BH.pack) === HH.pack && QH.maxLayerWidth === LH) return QH.assets;
+      const MH = (0, YH.e)(HH.pack, (0, YH.j)(HH));
+      if (null === MH || !(0, rH.d)(MH)) return Promise.resolve(null);
+      const vH = async function(HH, BH, LH) {
+        var YH;
+        const QH = null !== (YH = HH.textureOverrides) && void 0 !== YH ? YH : {},
           {
-            id: BV,
-            version: qV
-          } = VV.metaData,
-          tV = eV && BV !== JV.r.CUSTOM,
-          FV = {};
-        tV && (EV = FV);
-        let TV, PV, AV = tV ? await async function(VV, eV, xV, JV) {
-          const YV = QV(VV, eV, xV, pV.e),
-            UV = QV(VV, eV, xV, JV),
-            nV = await (0, yV.f)((VV => VV === YV || VV === UV));
-          return null !== nV && (JV === pV.e || nV.blockAtlasWidth <= JV) ? nV : null
-        }(BV, qV, kV, xV): null;
-        if (null === AV) {
+            id: MH,
+            version: vH
+          } = HH.metaData,
+          PH = BH && MH !== AH.l.CUSTOM,
+          TH = {};
+        PH && (WH = TH);
+        let UH, VH, OH = PH ? await async function(HH, BH, LH, AH) {
+          const rH = zH(HH, BH, LH, tH.d),
+            SH = zH(HH, BH, LH, AH),
+            CH = await (0, hH.h)((HH => HH === rH || HH === SH));
+          return null !== CH && (AH === tH.d || CH.blockAtlasWidth <= AH) ? CH : null
+        }(MH, vH, uH, LH): null;
+        if (null === OH) {
           const {
-            blockMetadata: VV,
-            getDefaultTexture: eV,
-            textureNameToIndex: UV
-          } = await (0, YV.j)(), pV = (0, wV.b)(VV, ((VV, xV) => ({
-            url: jV(bV, eV, VV, "block" === xV ? ZV.e.BLOCK : ZV.e.ITEM)
-          }))), nV = await
-          function(VV, eV, xV, JV, YV, UV) {
-            return (0, vV.d)((yV => yV.WasmTextureWorker.generateRequired(VV, eV, xV, JV, YV, UV)))
-          }(VV, UV, pV, BV === JV.e, xV, kV), rV = nV.assets;
-          AV = {
-            ...rV,
+            blockMetadata: HH,
+            getDefaultTexture: BH,
+            textureNameToIndex: SH
+          } = await (0, rH.i)(), tH = (0, EH.c)(HH, ((HH, LH) => ({
+            url: xH(QH, BH, HH, "block" === LH ? XH.g.BLOCK : XH.g.ITEM)
+          }))), CH = await
+          function(HH, BH, LH, AH, rH, SH) {
+            return (0, GH.c)((hH => hH.WasmTextureWorker.generateRequired(HH, BH, LH, AH, rH, SH)))
+          }(HH, SH, tH, MH === AH.e, LH, uH), YH = CH.assets;
+          OH = {
+            ...YH,
             averageColors: {}
-          }, TV = nV.averageColors(), tV && (PV = TV.then((async VV => {
-            null !== VV && EV === FV && await
-            function(VV, eV, xV, JV, YV) {
-              return (0, yV.k)(QV(VV, eV, JV, YV), xV)
-            }(BV, qV, {
-              ...rV,
-              averageColors: VV
-            }, kV, nV.layerCap)
+          }, UH = CH.averageColors(), PH && (VH = UH.then((async HH => {
+            null !== HH && WH === TH && await
+            function(HH, BH, LH, AH, rH) {
+              return (0, hH.o)(zH(HH, BH, AH, rH), LH)
+            }(MH, vH, {
+              ...YH,
+              averageColors: HH
+            }, uH, CH.layerCap)
           })))
         }
-        return function(VV, eV) {
-          var xV, JV;
-          let YV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((pV = VV.averageColors, 0 === Object.keys(null !== pV && void 0 !== pV ? pV : {}).length ? null : VV.averageColors)),
-            yV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
-          var pV;
-          const QV = null !== (xV = eV.textureOverrides) && void 0 !== xV ? xV : {},
-            wV = null !== (JV = eV.modelOverrides) && void 0 !== JV ? JV : {},
-            ZV = 0 === Object.keys(wV).length ? {} : (0, UV.refusedPackModels)((0, UV.packDisplayName)(eV.metaData), wV, !0, {
+        return function(HH, BH) {
+          var LH, AH;
+          let rH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((tH = HH.averageColors, 0 === Object.keys(null !== tH && void 0 !== tH ? tH : {}).length ? null : HH.averageColors)),
+            hH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
+          var tH;
+          const zH = null !== (LH = BH.textureOverrides) && void 0 !== LH ? LH : {},
+            EH = null !== (AH = BH.modelOverrides) && void 0 !== AH ? AH : {},
+            XH = 0 === Object.keys(EH).length ? {} : (0, SH.refusedPackModels)((0, SH.packDisplayName)(BH.metaData), EH, !0, {
               strictDraco: !0
             }),
             {
-              animatedBlockTextures: vV,
-              rotatedBlockTextures: rV
-            } = VV,
-            kV = VV => {
-              var eV, xV;
-              return null !== (eV = null !== (xV = vV[VV]) && void 0 !== xV ? xV : rV[VV]) && void 0 !== eV ? eV : null
+              animatedBlockTextures: GH,
+              rotatedBlockTextures: YH
+            } = HH,
+            uH = HH => {
+              var BH, LH;
+              return null !== (BH = null !== (LH = GH[HH]) && void 0 !== LH ? LH : YH[HH]) && void 0 !== BH ? BH : null
             };
           return {
             terrain: {
-              atlasSheets: VV.blockAtlasArr,
-              texture: kV
+              atlasSheets: HH.blockAtlasArr,
+              texture: uH
             },
-            sheetPixels: [...VV.blockAtlasPixels],
-            heldUntil: yV,
-            sheetLayout: VV.imagesPerAtlas,
-            sheetWidth: VV.blockAtlasWidth,
-            armourAtlasUrl: VV.armourAtlas,
-            texture: VV => {
-              var eV, xV;
-              return null !== (eV = null !== (xV = kV(VV)) && void 0 !== xV ? xV : (0, nV.c)(QV, VV)) && void 0 !== eV ? eV : null
+            sheetPixels: [...HH.blockAtlasPixels],
+            heldUntil: hH,
+            sheetLayout: HH.imagesPerAtlas,
+            sheetWidth: HH.blockAtlasWidth,
+            armourAtlasUrl: HH.armourAtlas,
+            texture: HH => {
+              var BH, LH;
+              return null !== (BH = null !== (LH = uH(HH)) && void 0 !== LH ? LH : (0, CH.c)(zH, HH)) && void 0 !== BH ? BH : null
             },
-            model: VV => void 0 === ZV[VV] && wV[VV] || null,
-            averageColours: YV
+            model: HH => void 0 === XH[HH] && EH[HH] || null,
+            averageColours: rH
           }
-        }(AV, VV, TV, PV)
-      }(BV, null === VV.gameSource, xV), tV = {
-        pack: VV.pack,
-        maxLayerWidth: xV,
-        assets: qV
+        }(OH, HH, UH, VH)
+      }(MH, null === HH.gameSource, LH), PH = {
+        pack: HH.pack,
+        maxLayerWidth: LH,
+        assets: vH
       };
-      return bV = tV, qV.catch((() => {
-        bV === tV && (bV = null)
-      })), qV
+      return QH = PH, vH.catch((() => {
+        QH === PH && (QH = null)
+      })), vH
     }
 
-    function jV(VV, eV, JV, YV) {
-      const UV = (0, nV.c)(VV, JV);
-      if (UV) return UV;
+    function xH(HH, BH, AH, rH) {
+      const SH = (0, CH.c)(HH, AH);
+      if (SH) return SH;
       try {
-        return eV(JV, YV).url
+        return BH(AH, rH).url
       } catch {
-        return xV(3732)
+        return LH(3660)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

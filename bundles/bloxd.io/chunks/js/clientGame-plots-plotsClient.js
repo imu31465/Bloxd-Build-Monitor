@@ -1,225 +1,248 @@
 export const id = 26;
 export const ids = [26];
 export const modules = {
-  37756: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => rV,
-      e: () => kV,
-      f: () => vV,
-      h: () => ZV
+  37472: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => WH,
+      e: () => MH,
+      i: () => GH,
+      k: () => XH
     });
-    var JV = xV(35300),
-      YV = xV(37762),
-      UV = xV(37771),
-      yV = xV(9335),
-      pV = xV(1542),
-      QV = xV(62),
-      nV = xV(78),
-      wV = xV(1321);
+    var AH = LH(34986),
+      rH = LH(37474),
+      SH = LH(37479),
+      hH = LH(9412),
+      tH = LH(1450),
+      zH = LH(45),
+      CH = LH(69),
+      EH = LH(1225);
 
-    function ZV() {
-      var VV;
-      return (0, pV.j)(YV.e, (0, YV.p)()), (0, wV.jsx)(wV.Fragment, {
-        children: null === (VV = (0, YV.p)()) || void 0 === VV ? void 0 : VV.content
+    function XH() {
+      var HH;
+      return (0, tH.e)(rH.b, (0, rH.p)()), (0, EH.jsx)(EH.Fragment, {
+        children: null === (HH = (0, rH.p)()) || void 0 === HH ? void 0 : HH.content
       })
     }
 
-    function vV(VV) {
-      var eV;
+    function GH(HH) {
+      var BH;
       let {
-        show: xV
-      } = VV;
-      (0, pV.j)(YV.e, (0, YV.p)());
-      const nV = null === (eV = (0, YV.p)()) || void 0 === eV ? void 0 : eV.menu;
-      return (0, QV.useEffect)((() => {
-        var VV;
-        xV || (null === nV || void 0 === nV || null === (VV = nV.onClose) || void 0 === VV || VV.call(nV), (0, UV.q)())
-      }), [xV, nV]), (0, QV.useEffect)((() => xV ? (0, yV.g)(UV.t, UV.g) : void 0), [xV]), (0, wV.jsx)(JV.c, {
-        showing: xV,
+        show: LH
+      } = HH;
+      (0, tH.e)(rH.b, (0, rH.p)());
+      const CH = null === (BH = (0, rH.p)()) || void 0 === BH ? void 0 : BH.menu;
+      return (0, zH.useEffect)((() => {
+        var HH;
+        LH || (null === CH || void 0 === CH || null === (HH = CH.onClose) || void 0 === HH || HH.call(CH), (0, SH.r)())
+      }), [LH, CH]), (0, zH.useEffect)((() => LH ? (0, hH.e)(SH.A, SH.g) : void 0), [LH]), (0, EH.jsx)(AH.e, {
+        showing: LH,
         globallyUniqueKey: "clientGameMenu",
-        children: null === nV || void 0 === nV ? void 0 : nV.content
+        children: null === CH || void 0 === CH ? void 0 : CH.content
       })
     }
+    const YH = new Map,
+      uH = new Set;
 
-    function rV(VV) {
+    function QH(HH, BH) {
+      BH ? YH.set(HH, BH) : YH.delete(HH);
+      for (const LH of uH) LH()
+    }
+
+    function WH(HH) {
       let {
-        placement: eV = "bottom"
-      } = VV;
-      return (0, wV.jsx)("div", {
-        id: `clientGameHud-${eV}`,
+        placement: BH = "bottom"
+      } = HH;
+      const LH = (0, zH.useRef)(null);
+      return (0, zH.useLayoutEffect)((() => {
+        const HH = LH.current;
+        return QH(BH, HH), () => {
+          YH.get(BH) === HH && QH(BH, null)
+        }
+      }), [BH]), (0, EH.jsx)("div", {
+        ref: LH,
+        id: `clientGameHud-${BH}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function kV(VV) {
+    function MH(HH) {
       let {
-        children: eV,
-        placement: xV = "bottom"
-      } = VV;
-      const [JV, YV] = (0, QV.useState)(null);
-      return (0, QV.useEffect)((() => {
-        YV(document.getElementById(`clientGameHud-${xV}`))
-      }), [xV]), JV ? (0, nV.createPortal)(eV, JV) : null
-    }
-  },
-  35300: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV
-    });
-    var JV = xV(5015),
-      YV = xV(5020);
-
-    function UV(VV) {
-      let {
-        children: eV,
-        showing: xV,
-        globallyUniqueKey: UV,
-        alwaysMountChildren: yV = !1,
-        doGameplayStartStopOnShow: pV = !0,
-        keepsMovement: QV = !1
-      } = VV;
-      return (0, YV.b)(!0, xV, UV, QV), (0, JV.c)(pV, xV), xV || yV ? eV : null
-    }
-  },
-  37852: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => UV,
-      f: () => yV,
-      h: () => pV,
-      i: () => QV
-    });
-    var JV = xV(62),
-      YV = xV(3528);
-    const UV = 8,
-      yV = "InGameHeaderContainer",
-      pV = "TopRightElements";
-
-    function QV(VV) {
-      const [eV] = (0, YV.e)(), [xV, QV] = (0, JV.useState)(!1);
-      return (0, JV.useLayoutEffect)((() => {
-        if (!VV) return;
-        const eV = document.querySelector(`.${yV}`),
-          xV = document.querySelector(`.${pV}`),
-          JV = () => {
-            const JV = VV.getBoundingClientRect(),
-              YV = eV ? eV.getBoundingClientRect().right : 0,
-              yV = xV ? xV.getBoundingClientRect().left : window.innerWidth,
-              pV = JV.left < YV + UV,
-              nV = JV.right > yV - UV;
-            QV(pV || nV)
-          };
-        JV();
-        const YV = new ResizeObserver(JV);
-        return YV.observe(VV), eV && YV.observe(eV), xV && YV.observe(xV), () => {
-          YV.disconnect()
+        children: BH,
+        placement: LH = "bottom"
+      } = HH;
+      const [AH, rH] = (0, zH.useState)((() => {
+        var HH;
+        return null !== (HH = YH.get(LH)) && void 0 !== HH ? HH : null
+      }));
+      return (0, zH.useEffect)((() => {
+        const HH = () => {
+          var HH;
+          rH(null !== (HH = YH.get(LH)) && void 0 !== HH ? HH : null)
+        };
+        return uH.add(HH), HH(), () => {
+          uH.delete(HH)
         }
-      }), [VV, eV]), xV
+      }), [LH]), AH ? (0, CH.createPortal)(BH, AH) : null
     }
   },
-  9335: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV,
-      g: () => YV
+  34986: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => SH
     });
-    let JV = null;
-    const YV = function(VV) {
-        const eV = {
-          cycle: VV,
+    var AH = LH(4947),
+      rH = LH(4951);
+
+    function SH(HH) {
+      let {
+        children: BH,
+        showing: LH,
+        globallyUniqueKey: SH,
+        alwaysMountChildren: hH = !1,
+        doGameplayStartStopOnShow: tH = !0,
+        keepsMovement: zH = !1
+      } = HH;
+      return (0, rH.c)(!0, LH, SH, zH), (0, AH.e)(tH, LH), LH || hH ? BH : null
+    }
+  },
+  37569: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => SH,
+      f: () => hH,
+      i: () => tH,
+      k: () => zH
+    });
+    var AH = LH(45),
+      rH = LH(3465);
+    const SH = 8,
+      hH = "InGameHeaderContainer",
+      tH = "TopRightElements";
+
+    function zH(HH) {
+      const [BH] = (0, rH.b)(), [LH, zH] = (0, AH.useState)(!1);
+      return (0, AH.useLayoutEffect)((() => {
+        if (!HH) return;
+        const BH = document.querySelector(`.${hH}`),
+          LH = document.querySelector(`.${tH}`),
+          AH = () => {
+            const AH = HH.getBoundingClientRect(),
+              rH = BH ? BH.getBoundingClientRect().right : 0,
+              hH = LH ? LH.getBoundingClientRect().left : window.innerWidth,
+              tH = AH.left < rH + SH,
+              CH = AH.right > hH - SH;
+            zH(tH || CH)
+          };
+        AH();
+        const rH = new ResizeObserver(AH);
+        return rH.observe(HH), BH && rH.observe(BH), LH && rH.observe(LH), () => {
+          rH.disconnect()
+        }
+      }), [HH, BH]), LH
+    }
+  },
+  9412: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => SH,
+      e: () => rH
+    });
+    let AH = null;
+    const rH = function(HH) {
+        const BH = {
+          cycle: HH,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return JV = eV, () => {
-          JV === eV && (JV = null)
+        return AH = BH, () => {
+          AH === BH && (AH = null)
         }
       },
-      UV = () => {
-        var VV;
-        return null !== (VV = JV) && void 0 !== VV && VV.canCycle() ? JV.cycle : null
+      SH = () => {
+        var HH;
+        return null !== (HH = AH) && void 0 !== HH && HH.canCycle() ? AH.cycle : null
       }
   },
-  39669: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => yV,
-      f: () => pV,
-      g: () => QV
+  39396: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH,
+      g: () => tH,
+      h: () => zH
     });
-    const JV = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
-      YV = [0, 1, 2, 0, 2, 3],
-      UV = [4, 5];
+    const AH = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
+      rH = [0, 1, 2, 0, 2, 3],
+      SH = [4, 5];
 
-    function yV(VV, eV, xV, JV, YV) {
-      for (let yV = 0; yV < 6; yV++) UV.includes(yV) === YV && nV(VV, eV, xV, JV, yV)
+    function hH(HH, BH, LH, AH, rH) {
+      for (let hH = 0; hH < 6; hH++) SH.includes(hH) === rH && CH(HH, BH, LH, AH, hH)
     }
 
-    function pV(VV, eV, xV, JV) {
-      for (let YV = 0; YV < 6; YV++) nV(VV, eV, xV, JV, YV)
+    function tH(HH, BH, LH, AH) {
+      for (let rH = 0; rH < 6; rH++) CH(HH, BH, LH, AH, rH)
     }
 
-    function QV(VV, eV, xV, UV, yV) {
-      for (let pV = 0; pV < 6; pV++)
-        for (const QV of [0, 1]) {
-          const [nV, wV, ZV] = [QV + 2, QV + 1, (QV + 3) % 4], vV = VV.length / 3;
-          for (const [eV, YV] of [
-              [QV, wV],
-              [nV, wV],
-              [nV, ZV],
-              [QV, ZV]
+    function zH(HH, BH, LH, SH, hH) {
+      for (let tH = 0; tH < 6; tH++)
+        for (const zH of [0, 1]) {
+          const [CH, EH, XH] = [zH + 2, zH + 1, (zH + 3) % 4], GH = HH.length / 3;
+          for (const [BH, rH] of [
+              [zH, EH],
+              [CH, EH],
+              [CH, XH],
+              [zH, XH]
             ])
-            for (let QV = 0; QV < 3; QV++) {
-              const nV = JV[3 * (4 * pV + eV) + QV],
-                wV = JV[3 * (4 * pV + YV) + QV];
-              VV.push((nV + (wV - nV) * yV) * UV / 2 + xV[QV])
+            for (let zH = 0; zH < 3; zH++) {
+              const CH = AH[3 * (4 * tH + BH) + zH],
+                EH = AH[3 * (4 * tH + rH) + zH];
+              HH.push((CH + (EH - CH) * hH) * SH / 2 + LH[zH])
             }
-          for (const VV of YV) eV.push(vV + VV)
+          for (const HH of rH) BH.push(GH + HH)
         }
     }
 
-    function nV(VV, eV, xV, UV, yV) {
-      let [pV, QV, nV] = xV, [wV, ZV, vV] = UV;
-      const rV = VV.length / 3;
-      for (let YV = 4 * yV; YV < 4 * yV + 4; YV++) VV.push(JV[3 * YV] * wV / 2 + pV, JV[3 * YV + 1] * ZV / 2 + QV, JV[3 * YV + 2] * vV / 2 + nV);
-      for (const JV of YV) eV.push(rV + JV)
+    function CH(HH, BH, LH, SH, hH) {
+      let [tH, zH, CH] = LH, [EH, XH, GH] = SH;
+      const YH = HH.length / 3;
+      for (let rH = 4 * hH; rH < 4 * hH + 4; rH++) HH.push(AH[3 * rH] * EH / 2 + tH, AH[3 * rH + 1] * XH / 2 + zH, AH[3 * rH + 2] * GH / 2 + CH);
+      for (const AH of rH) BH.push(YH + AH)
     }
   },
-  40729: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      default: () => XJ
+  40486: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      default: () => kA
     });
-    const JV = [0, 90, 180, 270],
-      YV = "plotsblueprint";
-    var UV = xV(62),
-      yV = xV(37762),
-      pV = xV(27),
-      QV = xV(1542),
-      nV = xV(2116),
-      wV = xV(1220),
-      ZV = xV(1146),
-      vV = xV.n(ZV),
-      rV = xV(1725),
-      kV = xV(35097),
-      bV = xV(37756),
-      EV = xV(1414),
-      BV = xV(2039),
-      jV = xV(2109),
-      qV = xV(3853),
-      tV = xV(1838);
+    const AH = [0, 90, 180, 270],
+      rH = "plotsblueprint";
+    var SH = LH(45),
+      hH = LH(37474),
+      tH = LH(15),
+      zH = LH(1450),
+      CH = LH(2064),
+      EH = LH(1123),
+      XH = LH(1038),
+      GH = LH.n(XH),
+      YH = LH(1659),
+      uH = LH(40495),
+      QH = LH(37472),
+      WH = LH(1315),
+      MH = LH(1986),
+      xH = LH(2059),
+      vH = LH(3779),
+      PH = LH(1789);
 
-    function FV() {}
-    const TV = (0, UV.createContext)({
+    function TH() {}
+    const UH = (0, SH.createContext)({
       hint: null,
-      journalRef: FV,
-      placementCardRef: FV,
-      buildRef: FV
+      journalRef: TH,
+      placementCardRef: TH,
+      buildRef: TH
     });
-    var PV = xV(32);
-    const AV = [
+    var VH = LH(18);
+    const OH = [
         ["farm_hut", "farm_house", "farm_barn"],
         ["rusticHome_tent", "rusticHome_cabin", "rusticHome_house"],
         ["market_stand", "market_stall", "market_shop"],
         ["castle_wall", "castle_gate", "castle_tower"]
       ],
-      NV = {
+      bH = {
         farm_hut: {
           displayName: {
             translationKey: "plotsGame:blueprintFarmHut"
@@ -293,18 +316,18 @@ export const modules = {
           tier: "large"
         }
       },
-      XV = ["small", "medium", "large"].flatMap((VV => AV.flat().filter((eV => NV[eV].tier === VV))));
+      kH = ["small", "medium", "large"].flatMap((HH => OH.flat().filter((BH => bH[BH].tier === HH))));
 
-    function MV(VV) {
-      return NV[VV]
+    function mH(HH) {
+      return bH[HH]
     }
-    const zV = new Map(AV.flatMap((VV => VV.slice(1).map(((eV, xV) => [eV, VV[xV]])))));
+    const oH = new Map(OH.flatMap((HH => HH.slice(1).map(((BH, LH) => [BH, HH[LH]])))));
 
-    function GV(VV) {
-      var eV;
-      return null !== (eV = zV.get(VV)) && void 0 !== eV ? eV : null
+    function IH(HH) {
+      var BH;
+      return null !== (BH = oH.get(HH)) && void 0 !== BH ? BH : null
     }
-    const WV = {
+    const fH = {
       farm_hut: {
         key: "plotsGame:journalNoteFarmHut",
         firstBuild: !0
@@ -327,110 +350,110 @@ export const modules = {
       }
     };
 
-    function RV(VV, eV) {
-      const xV = new Set(VV),
-        JV = function(VV) {
-          const eV = new Set(VV);
-          return new Set(XV.filter((VV => {
-            const xV = GV(VV);
-            return null === xV || eV.has(xV)
+    function lH(HH, BH) {
+      const LH = new Set(HH),
+        AH = function(HH) {
+          const BH = new Set(HH);
+          return new Set(kH.filter((HH => {
+            const LH = IH(HH);
+            return null === LH || BH.has(LH)
           })))
-        }(xV);
-      return XV.map((VV => {
-        const YV = VV === eV;
-        if (xV.has(VV)) return {
-          id: VV,
-          active: YV,
+        }(LH);
+      return kH.map((HH => {
+        const rH = HH === BH;
+        if (LH.has(HH)) return {
+          id: HH,
+          active: rH,
           note: null,
           state: "completed",
           unlockedBy: null
         };
-        const UV = WV[VV],
-          yV = void 0 === UV || UV.firstBuild && xV.size > 0 ? null : UV.key;
-        return JV.has(VV) ? {
-          id: VV,
-          active: YV,
-          note: yV,
+        const SH = fH[HH],
+          hH = void 0 === SH || SH.firstBuild && LH.size > 0 ? null : SH.key;
+        return AH.has(HH) ? {
+          id: HH,
+          active: rH,
+          note: hH,
           state: "open",
           unlockedBy: null
         } : {
-          id: VV,
-          active: YV,
-          note: yV,
+          id: HH,
+          active: rH,
+          note: hH,
           state: "locked",
-          unlockedBy: GV(VV)
+          unlockedBy: IH(HH)
         }
       }))
     }
-    const gV = "plotsJournalChanged";
-    class DV {
-      constructor(VV, eV) {
-        this.api = VV, this.placement = eV, this.pages = null, this.openRequested = null, this.openedOffered = !1, this.reported = new Set, this.onOpened = () => {
-          this.placement.stop(), this.EZ(this.openedOffered ? "journal_offered" : "journal_opened"), this.openedOffered = !1
-        }, this.build = VV => {
-          this.placement.start(VV), (0, yV.i)()
+    const KH = "plotsJournalChanged";
+    class cH {
+      constructor(HH, BH) {
+        this.api = HH, this.placement = BH, this.pages = null, this.openRequested = null, this.openedOffered = !1, this.reported = new Set, this.onOpened = () => {
+          this.placement.stop(), this.XX(this.openedOffered ? "journal_offered" : "journal_opened"), this.openedOffered = !1
+        }, this.build = HH => {
+          this.placement.start(HH), (0, hH.g)()
         }, this.putAway = () => {
-          this.api.sendCommand(`${YV} cancel`)
+          this.api.sendCommand(`${rH} cancel`)
         }
       }
       getPages() {
         return this.pages
       }
-      RZ(VV) {
-        let [, eV, xV] = VV;
-        this.pages = RV(eV, xV), PV.h.QZ(gV, this.pages, !0)
+      kX(HH) {
+        let [, BH, LH] = HH;
+        this.pages = lH(BH, LH), VH.k.AX(KH, this.pages, !0)
       }
-      openFromServer(VV) {
-        let [, eV] = VV;
-        this.openRequested = eV, this.iZ()
+      openFromServer(HH) {
+        let [, BH] = HH;
+        this.openRequested = BH, this.IX()
       }
-      iZ() {
-        const VV = this.openRequested;
-        null === VV || pV.b.get("loadingOverlayVisible") || (this.openRequested = null, null === this.pages || (0, rV.n)() || (0, tV.isTypingInInput)() || null !== this.placement.getView() || (this.openedOffered = VV, (0, yV.r)()))
+      IX() {
+        const HH = this.openRequested;
+        null === HH || tH.c.get("loadingOverlayVisible") || (this.openRequested = null, null === this.pages || (0, YH.t)() || (0, PH.isTypingInInput)() || null !== this.placement.getView() || (this.openedOffered = HH, (0, hH.t)()))
       }
-      EZ(VV) {
-        this.reported.has(VV) || (this.reported.add(VV), this.api.sendCommand(`${YV} report ${VV}`))
+      XX(HH) {
+        this.reported.has(HH) || (this.reported.add(HH), this.api.sendCommand(`${rH} report ${HH}`))
       }
     }
-    var iV = xV(1321);
-    const CV = "KeyJ";
+    var eH = LH(1225);
+    const qH = "KeyJ";
 
-    function aV(VV) {
+    function gH(HH) {
       let {
-        journal: eV
-      } = VV;
-      const xV = (0, QV.j)(gV, eV.getPages()),
+        journal: BH
+      } = HH;
+      const LH = (0, zH.e)(KH, BH.getPages()),
         {
-          isTouchScreen: JV
-        } = (0, pV.l)(["isTouchScreen"]),
+          isTouchScreen: AH
+        } = (0, tH.m)(["isTouchScreen"]),
         {
-          t: YV
-        } = (0, wV.A)(),
-        nV = (0, UV.useContext)(TV),
-        ZV = null !== xV;
-      return (0, UV.useEffect)((() => ZV ? (0, kV.b)(CV) : void 0), [ZV]), (0, qV.d)((VV => ZV && VV.code === CV && !VV.repeat && !(0, tV.isTypingInInput)()), (VV => {
-        (0, rV.x)(VV, !0, yV.r)
-      })), null === xV ? null : (0, iV.jsx)(bV.e, {
+          t: rH
+        } = (0, EH.B)(),
+        CH = (0, SH.useContext)(UH),
+        XH = null !== LH;
+      return (0, SH.useEffect)((() => XH ? (0, uH.b)(qH) : void 0), [XH]), (0, vH.c)((HH => XH && HH.code === qH && !HH.repeat && !(0, PH.isTypingInInput)()), (HH => {
+        (0, YH.H)(HH, !0, hH.t)
+      })), null === LH ? null : (0, eH.jsx)(QH.e, {
         placement: "topRight",
-        children: (0, iV.jsx)("div", {
+        children: (0, eH.jsx)("div", {
           className: "PlotsJournalButtonContainer",
-          children: (0, iV.jsxs)("button", {
-            ref: nV.journalRef,
+          children: (0, eH.jsxs)("button", {
+            ref: CH.journalRef,
             type: "button",
-            className: vV()("PlotsJournalButton SmallTextBold", {
-              Touch: JV
+            className: GH()("PlotsJournalButton SmallTextBold", {
+              Touch: AH
             }),
-            onClick: yV.r,
-            children: [(0, iV.jsx)("span", {
+            onClick: hH.t,
+            children: [(0, eH.jsx)("span", {
               className: "PlotsJournalButtonIcon",
-              children: (0, iV.jsx)(BV.e, {
+              children: (0, eH.jsx)(MH.e, {
                 itemName: "Book",
                 amount: 0
               })
-            }), YV("plotsGame:journalButton"), !JV && (0, iV.jsx)(jV.d, {
+            }), rH("plotsGame:journalButton"), !AH && (0, eH.jsx)(xH.b, {
               className: "PlotsJournalButtonKey",
-              keyCode: CV
-            }), "openJournal" === nV.hint && (0, iV.jsx)(EV.b, {
+              keyCode: qH
+            }), "openJournal" === CH.hint && (0, eH.jsx)(WH.c, {
               name: "hand-point-left",
               className: "SmallTextBold TouchTutorialIcon HandLeftAnim PlotsJournalButtonHand"
             })]
@@ -438,114 +461,114 @@ export const modules = {
         })
       })
     }
-    var oV = xV(9820);
-    const cV = [0, 90, 180, 270],
-      hV = /^(meta\|rot\d)\|([lrud]+)$/,
-      lV = "nesw",
-      LV = /^meta\|([nesw]*)\|?(Stacked)?$/,
-      fV = function(VV) {
-        const eV = new WeakMap;
-        return (xV, JV) => {
-          let YV = eV.get(xV);
-          return void 0 === YV && (YV = VV(xV, JV), eV.set(xV, YV)), YV
+    var NH = LH(9940);
+    const RH = [0, 90, 180, 270],
+      jH = /^(meta\|rot\d)\|([lrud]+)$/,
+      nH = "nesw",
+      FH = /^meta\|([nesw]*)\|?(Stacked)?$/,
+      DH = function(HH) {
+        const BH = new WeakMap;
+        return (LH, AH) => {
+          let rH = BH.get(LH);
+          return void 0 === rH && (rH = HH(LH, AH), BH.set(LH, rH)), rH
         }
-      }((VV => new mV(VV)));
-    class mV {
-      constructor(VV) {
-        this.blockMetadata = VV, this.blockIdMappings = new Map, this.maxBlockId = void 0;
-        const eV = new Set(Object.keys(VV).map((eV => VV[eV].id)));
-        eV.add(0), this.maxBlockId = Math.max(...eV)
+      }((HH => new wH(HH)));
+    class wH {
+      constructor(HH) {
+        this.blockMetadata = HH, this.blockIdMappings = new Map, this.maxBlockId = void 0;
+        const BH = new Set(Object.keys(HH).map((BH => HH[BH].id)));
+        BH.add(0), this.maxBlockId = Math.max(...BH)
       }
       static
-      for (VV) {
-        return fV(VV)
+      for (HH) {
+        return DH(HH)
       }
-      getBlockIdMapping(VV, eV) {
-        const xV = this.getBlockIdMappingKey(VV, eV);
-        let JV = this.blockIdMappings.get(xV);
-        return void 0 === JV && cV.includes(VV) && (JV = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, VV, eV), this.blockIdMappings.set(xV, JV)), JV
+      getBlockIdMapping(HH, BH) {
+        const LH = this.getBlockIdMappingKey(HH, BH);
+        let AH = this.blockIdMappings.get(LH);
+        return void 0 === AH && RH.includes(HH) && (AH = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, HH, BH), this.blockIdMappings.set(LH, AH)), AH
       }
-      turnBlockId(VV, eV, xV) {
-        return this.mapBlockId(this.blockMetadata[VV], eV, this.getRotationMapping(eV, xV), xV)
+      turnBlockId(HH, BH, LH) {
+        return this.mapBlockId(this.blockMetadata[HH], BH, this.getRotationMapping(BH, LH), LH)
       }
-      getBlockIdMappingKey(VV, eV) {
-        return `r${VV}|m${Number(eV)}`
+      getBlockIdMappingKey(HH, BH) {
+        return `r${HH}|m${Number(BH)}`
       }
-      createBlockIdMapping(VV, eV, xV, JV) {
-        const YV = new Uint16Array(eV + 1),
-          UV = this.getRotationMapping(xV, JV);
-        for (const yV in VV) {
-          const eV = VV[yV];
-          YV[eV.id] = this.mapBlockId(eV, xV, UV, JV)
+      createBlockIdMapping(HH, BH, LH, AH) {
+        const rH = new Uint16Array(BH + 1),
+          SH = this.getRotationMapping(LH, AH);
+        for (const hH in HH) {
+          const BH = HH[hH];
+          rH[BH.id] = this.mapBlockId(BH, LH, SH, AH)
         }
-        return YV
+        return rH
       }
-      getRotationMapping(VV, eV) {
-        const xV = Math.round(VV / 90),
-          JV = new Uint8Array(4);
-        for (let YV = 0; YV < 4; YV++) JV[YV] = (4 + YV - xV) % 4;
-        if (eV) {
-          let VV = JV[0];
-          JV[0] = JV[1], JV[1] = VV, VV = JV[2], JV[2] = JV[3], JV[3] = VV
+      getRotationMapping(HH, BH) {
+        const LH = Math.round(HH / 90),
+          AH = new Uint8Array(4);
+        for (let rH = 0; rH < 4; rH++) AH[rH] = (4 + rH - LH) % 4;
+        if (BH) {
+          let HH = AH[0];
+          AH[0] = AH[1], AH[1] = HH, HH = AH[2], AH[2] = AH[3], AH[3] = HH
         }
-        return JV
+        return AH
       }
-      mapBlockId(VV, eV, xV, JV) {
-        var YV;
+      mapBlockId(HH, BH, LH, AH) {
+        var rH;
         const {
-          blockMetadata: UV
-        } = this, yV = Math.round(eV / 90), {
-          id: pV,
-          meta: QV
-        } = VV, {
-          rot: nV,
-          rootName: wV,
-          metaStr: ZV
-        } = QV;
-        let vV;
-        const [, rV, kV] = null !== (YV = LV.exec(ZV)) && void 0 !== YV ? YV : [];
-        if (void 0 !== rV) {
-          var bV, EV;
-          vV = null !== (bV = null === (EV = UV[`${wV}|meta|${[lV.split("").filter(((VV,eV)=>rV.split("").some((VV=>{const xV=lV.indexOf(VV);return((JV?3-xV:xV)+yV)%4===eV})))).join(""),kV].filter(Boolean).join("|")}`]) || void 0 === EV ? void 0 : EV.id) && void 0 !== bV ? bV : pV
-        } else if (null === nV) vV = pV;
+          blockMetadata: SH
+        } = this, hH = Math.round(BH / 90), {
+          id: tH,
+          meta: zH
+        } = HH, {
+          rot: CH,
+          rootName: EH,
+          metaStr: XH
+        } = zH;
+        let GH;
+        const [, YH, uH] = null !== (rH = FH.exec(XH)) && void 0 !== rH ? rH : [];
+        if (void 0 !== YH) {
+          var QH, WH;
+          GH = null !== (QH = null === (WH = SH[`${EH}|meta|${[nH.split("").filter(((HH,BH)=>YH.split("").some((HH=>{const LH=nH.indexOf(HH);return((AH?3-LH:LH)+hH)%4===BH})))).join(""),uH].filter(Boolean).join("|")}`]) || void 0 === WH ? void 0 : WH.id) && void 0 !== QH ? QH : tH
+        } else if (null === CH) GH = tH;
         else {
-          var BV, jV;
-          const VV = xV[nV - 1] + 1;
-          let eV = ZV.replace(`rot${nV}`, `rot${VV}`);
-          JV && QV.stairsCorner && (eV = eV.replace(/(Left|Right)$/, (VV => "Left" === VV ? "Right" : "Left"))), JV && "Chest" === wV && (eV = eV.replace(/\|(left|right)$/, ((VV, eV) => "left" === eV ? "|right" : "|left")));
-          const YV = hV.exec(eV);
-          if (JV && null !== YV) {
-            const VV = "lrud".split("").filter((VV => YV[2].includes("l" === VV ? "r" : "r" === VV ? "l" : VV)));
-            eV = `${YV[1]}|${VV.join("")}`
+          var MH, xH;
+          const HH = LH[CH - 1] + 1;
+          let BH = XH.replace(`rot${CH}`, `rot${HH}`);
+          AH && zH.stairsCorner && (BH = BH.replace(/(Left|Right)$/, (HH => "Left" === HH ? "Right" : "Left"))), AH && "Chest" === EH && (BH = BH.replace(/\|(left|right)$/, ((HH, BH) => "left" === BH ? "|right" : "|left")));
+          const rH = jH.exec(BH);
+          if (AH && null !== rH) {
+            const HH = "lrud".split("").filter((HH => rH[2].includes("l" === HH ? "r" : "r" === HH ? "l" : HH)));
+            BH = `${rH[1]}|${HH.join("")}`
           }
-          const yV = `${wV}|${eV}`;
-          if (vV = null !== (BV = null === (jV = UV[yV]) || void 0 === jV ? void 0 : jV.id) && void 0 !== BV ? BV : null, null === vV) {
-            const VV = UV[wV];
-            vV = VV.rootMetaDesc === yV ? VV.id : pV
+          const hH = `${EH}|${BH}`;
+          if (GH = null !== (MH = null === (xH = SH[hH]) || void 0 === xH ? void 0 : xH.id) && void 0 !== MH ? MH : null, null === GH) {
+            const HH = SH[EH];
+            GH = HH.rootMetaDesc === hH ? HH.id : tH
           }
         }
-        return vV
+        return GH
       }
     }
 
-    function KV(VV, eV, xV) {
+    function ZH(HH, BH, LH) {
       let {
-        xRotationMappedOrigin: JV,
-        shouldSwapXZ: YV
-      } = xV;
-      const UV = YV ? eV : VV;
-      return null === JV ? UV : JV - UV
+        xRotationMappedOrigin: AH,
+        shouldSwapXZ: rH
+      } = LH;
+      const SH = rH ? BH : HH;
+      return null === AH ? SH : AH - SH
     }
 
-    function HV(VV, eV, xV) {
+    function dH(HH, BH, LH) {
       let {
-        zRotationMappedOrigin: JV,
-        shouldSwapXZ: YV
-      } = xV;
-      const UV = YV ? VV : eV;
-      return null === JV ? UV : JV - UV
+        zRotationMappedOrigin: AH,
+        shouldSwapXZ: rH
+      } = LH;
+      const SH = rH ? HH : BH;
+      return null === AH ? SH : AH - SH
     }
-    const uV = {
+    const aH = {
         farm_hut: {
           size: [7, 7, 7],
           palette: ["Aspen Wood Planks", "Messy Stone", "Barkless Aspen Log", "Red Planks", "Glass", "Barkless Pine Log", "Maple Wood Planks", "Smooth Stone"],
@@ -607,304 +630,304 @@ export const modules = {
           layers: ["aaaaaaaaa accccccca accccccca accccccca accccccca accccccca accccccca accccccca aaaaaaaaa", "bbbb.bbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbb.bbba b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b abbbbbbba", "bbbbabbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbbbbbb b.......b b.......b b.......b b...d...b b.......b b.......b b.......b bbbbbbbbb", "ab.bbb.ba b.......b ......... b.......b b...d...b b.......b ......... b.......b ab.bbb.ba", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....a.... ......... ......... ......... ........."]
         }
       },
-      sV = new Map;
+      sH = new Map;
 
-    function SV(VV, eV) {
-      const xV = `${VV}|${eV}`;
-      let JV = sV.get(xV);
-      if (void 0 === JV) {
+    function JH(HH, BH) {
+      const LH = `${HH}|${BH}`;
+      let AH = sH.get(LH);
+      if (void 0 === AH) {
         const {
-          size: YV,
-          palette: UV,
-          layers: yV
-        } = uV[VV], pV = 90 === eV || 270 === eV, [QV, nV] = pV ? [YV[2], YV[0]] : [YV[0], YV[2]], wV = function(VV, eV, xV) {
-          let JV = null,
-            YV = null,
-            UV = !1;
-          switch (VV) {
+          size: rH,
+          palette: SH,
+          layers: hH
+        } = aH[HH], tH = 90 === BH || 270 === BH, [zH, CH] = tH ? [rH[2], rH[0]] : [rH[0], rH[2]], EH = function(HH, BH, LH) {
+          let AH = null,
+            rH = null,
+            SH = !1;
+          switch (HH) {
             case 0:
               break;
             case 90:
-              JV = eV - 1, UV = !0;
+              AH = BH - 1, SH = !0;
               break;
             case 180:
-              JV = eV - 1, YV = xV - 1;
+              AH = BH - 1, rH = LH - 1;
               break;
             case 270:
-              YV = xV - 1, UV = !0;
+              rH = LH - 1, SH = !0;
               break;
             default:
-              throw new Error(`Invalid rotation: ${VV}`)
+              throw new Error(`Invalid rotation: ${HH}`)
           }
           return {
-            xRotationMappedOrigin: JV,
-            zRotationMappedOrigin: YV,
-            shouldSwapXZ: UV
+            xRotationMappedOrigin: AH,
+            zRotationMappedOrigin: rH,
+            shouldSwapXZ: SH
           }
-        }(eV, QV, nV), ZV = mV.for(oV.k), vV = UV.map((VV => (0, oV.g)(ZV.turnBlockId((0, oV.n)(VV), eV, !1)))), rV = [];
-        yV.forEach(((VV, eV) => {
-          VV.split(" ").forEach(((VV, xV) => {
-            for (let JV = 0; JV < VV.length; JV++)
-              if ("." !== VV[JV]) {
-                const YV = [KV(JV, xV, wV), eV, HV(JV, xV, wV)];
-                rV.push({
-                  offset: YV,
-                  block: vV[VV.charCodeAt(JV) - "a".charCodeAt(0)]
+        }(BH, zH, CH), XH = wH.for(NH.g), GH = SH.map((HH => (0, NH.d)(XH.turnBlockId((0, NH.h)(HH), BH, !1)))), YH = [];
+        hH.forEach(((HH, BH) => {
+          HH.split(" ").forEach(((HH, LH) => {
+            for (let AH = 0; AH < HH.length; AH++)
+              if ("." !== HH[AH]) {
+                const rH = [ZH(AH, LH, EH), BH, dH(AH, LH, EH)];
+                YH.push({
+                  offset: rH,
+                  block: GH[HH.charCodeAt(AH) - "a".charCodeAt(0)]
                 })
               }
           }))
-        })), JV = {
-          size: [QV, YV[1], nV],
-          cells: rV
-        }, sV.set(xV, JV)
+        })), AH = {
+          size: [zH, rH[1], CH],
+          cells: YH
+        }, sH.set(LH, AH)
       }
-      return JV
+      return AH
     }
-    const IV = "plotsBuildProgressChanged",
-      dV = new Map;
+    const iH = "plotsBuildProgressChanged",
+      pH = new Map;
 
-    function OV(VV, eV, xV) {
-      let JV = 0,
-        YV = 0;
-      return function(VV) {
-        let eV = dV.get(VV);
-        if (void 0 === eV) {
-          const JV = [];
+    function yH(HH, BH, LH) {
+      let AH = 0,
+        rH = 0;
+      return function(HH) {
+        let BH = pH.get(HH);
+        if (void 0 === BH) {
+          const AH = [];
           for (const {
-              offset: eV
+              offset: BH
             }
-            of SV(VV, 0).cells) {
-            var xV;
-            JV[eV[1]] = (null !== (xV = JV[eV[1]]) && void 0 !== xV ? xV : 0) + 1
+            of JH(HH, 0).cells) {
+            var LH;
+            AH[BH[1]] = (null !== (LH = AH[BH[1]]) && void 0 !== LH ? LH : 0) + 1
           }
-          eV = JV, dV.set(VV, eV)
+          BH = AH, pH.set(HH, BH)
         }
-        return eV
-      }(VV).forEach(((VV, xV) => {
-        JV += VV, xV > eV && (YV += VV)
+        return BH
+      }(HH).forEach(((HH, LH) => {
+        AH += HH, LH > BH && (rH += HH)
       })), {
-        id: VV,
-        filled: JV - YV - xV,
-        total: JV
+        id: HH,
+        filled: AH - rH - LH,
+        total: AH
       }
     }
-    class Ve {
+    class HB {
       constructor() {
         this.shown = null, this.topOpen = 0, this.progress = null
       }
       get() {
         return this.progress
       }
-      show(VV) {
-        this.shown = VV, this.topOpen = 0, null === VV && this.QZ(null)
+      show(HH) {
+        this.shown = HH, this.topOpen = 0, null === HH && this.AX(null)
       }
-      update(VV, eV, xV) {
-        const JV = this.shown;
-        null !== JV && (VV >= eV && (this.topOpen = xV), this.QZ(OV(JV.id, eV - JV.y, VV >= eV ? xV : this.topOpen + xV)))
+      update(HH, BH, LH) {
+        const AH = this.shown;
+        null !== AH && (HH >= BH && (this.topOpen = LH), this.AX(yH(AH.id, BH - AH.y, HH >= BH ? LH : this.topOpen + LH)))
       }
-      QZ(VV) {
-        const eV = this.progress;
-        (null === VV || void 0 === VV ? void 0 : VV.id) === (null === eV || void 0 === eV ? void 0 : eV.id) && (null === VV || void 0 === VV ? void 0 : VV.filled) === (null === eV || void 0 === eV ? void 0 : eV.filled) && (null === VV || void 0 === VV ? void 0 : VV.total) === (null === eV || void 0 === eV ? void 0 : eV.total) || (this.progress = VV, PV.h.QZ(IV, VV, !0))
+      AX(HH) {
+        const BH = this.progress;
+        (null === HH || void 0 === HH ? void 0 : HH.id) === (null === BH || void 0 === BH ? void 0 : BH.id) && (null === HH || void 0 === HH ? void 0 : HH.filled) === (null === BH || void 0 === BH ? void 0 : BH.filled) && (null === HH || void 0 === HH ? void 0 : HH.total) === (null === BH || void 0 === BH ? void 0 : BH.total) || (this.progress = HH, VH.k.AX(iH, HH, !0))
       }
     }
-    const ee = "plotsPlotChanged",
-      xe = "plotsGuideChanged",
-      Je = "plotsGuideDone";
-    class Ye {
+    const BB = "plotsPlotChanged",
+      LB = "plotsGuideChanged",
+      AB = "plotsGuideDone";
+    class rB {
       constructor() {
         this.plot = ["none"], this.guide = ["none"]
       }
       getPlot() {
         return this.plot
       }
-      receivePlot(VV) {
-        this.plot = VV, PV.h.QZ(ee, VV, !0)
+      receivePlot(HH) {
+        this.plot = HH, VH.k.AX(BB, HH, !0)
       }
       getGuide() {
         return this.guide
       }
-      receiveGuide(VV) {
-        this.guide = VV, PV.h.QZ(xe, VV, !0)
+      receiveGuide(HH) {
+        this.guide = HH, VH.k.AX(LB, HH, !0)
       }
       receiveGuideDone() {
-        PV.h.QZ(Je, void 0, !0)
+        VH.k.AX(AB, void 0, !0)
       }
     }
-    var Ue = xV(1309),
-      ye = xV(39705),
-      pe = xV(38067),
-      Qe = xV(1578);
+    var SB = LH(1214),
+      hB = LH(39448),
+      tB = LH(37747),
+      zB = LH(1471);
 
-    function ne(VV) {
+    function CB(HH) {
       let {
-        onSkip: eV,
-        className: xV
-      } = VV;
+        onSkip: BH,
+        className: LH
+      } = HH;
       const {
-        t: JV
-      } = (0, wV.A)();
-      return (0, iV.jsx)("button", {
+        t: AH
+      } = (0, EH.B)();
+      return (0, eH.jsx)("button", {
         type: "button",
-        className: vV()("PlotsGuideSkipButton", xV),
-        ...(0, Qe.e)(eV, "pointerup"),
-        children: JV("tutorial:skip")
+        className: GH()("PlotsGuideSkipButton", LH),
+        ...(0, zB.c)(BH, "pointerup"),
+        children: AH("tutorial:skip")
       })
     }
 
-    function we(VV) {
+    function EB(HH) {
       let {
-        target: eV,
-        placement: xV,
-        spotlight: JV = null,
-        children: YV
-      } = VV;
+        target: BH,
+        placement: LH,
+        spotlight: AH = null,
+        children: rH
+      } = HH;
       const {
-        t: yV
-      } = (0, wV.A)(), pV = (0, UV.useRef)(eV);
-      return pV.current = eV, (0, Ue.s)("popup", pV, null === JV ? null : JV.onSkip, null !== JV, null, "controller:menusSkipTutorial"), (0, iV.jsxs)(pe.h, {
-        target: eV,
-        placement: xV,
-        className: vV()("PlotsGuideBubble", {
-          Passive: null === JV
+        t: hH
+      } = (0, EH.B)(), tH = (0, SH.useRef)(BH);
+      return tH.current = BH, (0, SB.r)("popup", tH, null === AH ? null : AH.onSkip, null !== AH, null, "controller:menusSkipTutorial"), (0, eH.jsxs)(tB.g, {
+        target: BH,
+        placement: LH,
+        className: GH()("PlotsGuideBubble", {
+          Passive: null === AH
         }),
-        spotlight: null !== JV,
+        spotlight: null !== AH,
         spotlightMargin: 30,
-        children: [(0, iV.jsxs)("div", {
+        children: [(0, eH.jsxs)("div", {
           className: "PlotsGuideBubbleHeader",
-          children: [(0, iV.jsx)("img", {
+          children: [(0, eH.jsx)("img", {
             className: "PlotsGuideBubblePortrait",
-            src: ye,
+            src: hB,
             alt: "",
             draggable: !1
-          }), (0, iV.jsx)("span", {
+          }), (0, eH.jsx)("span", {
             className: "PlotsGuideBubbleSpeaker",
-            children: yV("plotsGame:maverickName")
-          }), null !== JV && (0, iV.jsx)(ne, {
-            onSkip: JV.onSkip
+            children: hH("plotsGame:maverickName")
+          }), null !== AH && (0, eH.jsx)(CB, {
+            onSkip: AH.onSkip
           })]
-        }), (0, iV.jsx)("p", {
+        }), (0, eH.jsx)("p", {
           className: "PlotsGuideBubbleText",
-          children: YV
+          children: rH
         })]
       })
     }
 
-    function Ze(VV) {
+    function XB(HH) {
       let {
-        className: eV,
-        icon: xV,
-        title: JV,
-        children: YV
-      } = VV;
-      return (0, iV.jsxs)("div", {
-        className: vV()("PlotsCard", eV),
+        className: BH,
+        icon: LH,
+        title: AH,
+        children: rH
+      } = HH;
+      return (0, eH.jsxs)("div", {
+        className: GH()("PlotsCard", BH),
         role: "status",
-        children: [(0, iV.jsx)("span", {
+        children: [(0, eH.jsx)("span", {
           className: "PlotsCardIcon",
-          children: (0, iV.jsx)(EV.b, {
-            name: xV
+          children: (0, eH.jsx)(WH.c, {
+            name: LH
           })
-        }), (0, iV.jsxs)("div", {
+        }), (0, eH.jsxs)("div", {
           className: "PlotsCardBody",
-          children: [(0, iV.jsx)("div", {
+          children: [(0, eH.jsx)("div", {
             className: "PlotsCardTitle SmallTextBold",
-            children: JV
-          }), YV]
+            children: AH
+          }), rH]
         })]
       })
     }
 
-    function ve(VV) {
+    function GB(HH) {
       let {
-        progress: eV,
-        goal: xV
-      } = VV;
-      const JV = Math.min(eV, xV);
-      return (0, iV.jsxs)("div", {
+        progress: BH,
+        goal: LH
+      } = HH;
+      const AH = Math.min(BH, LH);
+      return (0, eH.jsxs)("div", {
         className: "PlotsProgress",
-        children: [(0, iV.jsx)("div", {
+        children: [(0, eH.jsx)("div", {
           className: "PlotsProgressBar",
           role: "progressbar",
           "aria-valuemin": 0,
-          "aria-valuemax": xV,
-          "aria-valuenow": JV,
-          children: (0, iV.jsx)("div", {
+          "aria-valuemax": LH,
+          "aria-valuenow": AH,
+          children: (0, eH.jsx)("div", {
             className: "PlotsProgressBarFill",
             style: {
-              transform: `scaleX(${JV/xV})`
+              transform: `scaleX(${AH/LH})`
             }
           })
-        }), (0, iV.jsxs)("span", {
+        }), (0, eH.jsxs)("span", {
           className: "PlotsProgressCount",
-          children: [JV, "/", xV]
+          children: [AH, "/", LH]
         })]
       })
     }
 
-    function re(VV) {
+    function YB(HH) {
       let {
-        progress: eV,
-        guide: xV
-      } = VV;
+        progress: BH,
+        guide: LH
+      } = HH;
       const {
-        t: JV
-      } = (0, wV.A)(), {
-        isTouchScreen: YV
-      } = (0, pV.l)(["isTouchScreen"]), UV = eV.filled < 5;
-      return (0, iV.jsxs)(iV.Fragment, {
-        children: [(UV || eV.total - eV.filled <= 5) && (0, iV.jsx)("div", {
+        t: AH
+      } = (0, EH.B)(), {
+        isTouchScreen: rH
+      } = (0, tH.m)(["isTouchScreen"]), SH = BH.filled < 5;
+      return (0, eH.jsxs)(eH.Fragment, {
+        children: [(SH || BH.total - BH.filled <= 5) && (0, eH.jsx)("div", {
           className: "PlotsGuideHandLayer",
-          children: (0, iV.jsx)("div", {
-            ref: xV.bindHand,
+          children: (0, eH.jsx)("div", {
+            ref: LH.bindHand,
             className: "PlotsGuideHand",
-            children: (0, iV.jsx)(EV.b, {
+            children: (0, eH.jsx)(WH.c, {
               name: "hand-point-left",
               className: "SmallTextBold TouchTutorialIcon"
             })
           })
-        }), (0, iV.jsx)(bV.e, {
+        }), (0, eH.jsx)(QH.e, {
           placement: "bottom",
-          children: (0, iV.jsxs)(Ze, {
+          children: (0, eH.jsxs)(XB, {
             icon: "hammer",
-            title: JV(MV(eV.id).displayName.translationKey),
-            children: [UV && (0, iV.jsx)("div", {
+            title: AH(mH(BH.id).displayName.translationKey),
+            children: [SH && (0, eH.jsx)("div", {
               className: "PlotsCardHint SmallTextLight",
-              children: YV ? JV("plotsGame:guideBuildTouch") : ke(JV)
-            }), (0, iV.jsx)(ve, {
-              progress: eV.filled,
-              goal: eV.total
+              children: rH ? AH("plotsGame:guideBuildTouch") : uB(AH)
+            }), (0, eH.jsx)(GB, {
+              progress: BH.filled,
+              goal: BH.total
             })]
           })
         })]
       })
     }
 
-    function ke(VV) {
-      const eV = nV.t["alt-fire"][0];
-      return "Mouse3" === eV ? VV("plotsGame:guideBuildRightClick") : VV("plotsGame:guideBuildKeys", {
-        key: (0, nV.l)(eV)
+    function uB(HH) {
+      const BH = CH.w["alt-fire"][0];
+      return "Mouse3" === BH ? HH("plotsGame:guideBuildRightClick") : HH("plotsGame:guideBuildKeys", {
+        key: (0, CH.p)(BH)
       })
     }
 
-    function be() {
-      return (0, iV.jsx)("div", {
+    function QB() {
+      return (0, eH.jsx)("div", {
         className: "PlotsGuideDragHand",
-        children: (0, iV.jsx)(EV.b, {
+        children: (0, eH.jsx)(WH.c, {
           name: "hand-back-point-up",
           className: "SmallTextBold TouchTutorialIcon"
         })
       })
     }
-    var Ee = xV(1332),
-      Be = xV(2880),
-      je = xV(39562),
-      qe = xV(39313),
-      te = xV(38112),
-      Fe = xV(9848),
-      Te = xV(9865),
-      Pe = xV(375),
-      Ae = xV(38966);
-    const Ne = new Map([
+    var WB = LH(1241),
+      MB = LH(2817),
+      xB = LH(39279),
+      vB = LH(39058),
+      PB = LH(37793),
+      TB = LH(9965),
+      UB = LH(9982),
+      VB = LH(317),
+      OB = LH(38667);
+    const bB = new Map([
         ["Aspen Wood Planks", [.78, .706, .502]],
         ["Barkless Aspen Log", [.792, .718, .518]],
         ["Barkless Pine Log", [.49, .353, .275]],
@@ -924,450 +947,450 @@ export const modules = {
         ["Stone Bricks", [.522, .545, .573]],
         ["White Wool", [.98, .98, .98]]
       ]),
-      Xe = [...te.b.blockRemoveActionRoots, ...qe.c, ...Fe.h, "Board", "Code Block", "Custom Lobby Block"],
-      Me = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
-    let ze = null;
+      kB = [...PB.d.blockRemoveActionRoots, ...vB.d, ...TB.j, "Board", "Code Block", "Custom Lobby Block"],
+      mB = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
+    let oB = null;
 
-    function Ge() {
-      return ze ??= function() {
-        const VV = We(),
-          eV = Math.max(...VV.map((VV => oV.k[VV].id))) + 1,
-          xV = new Int32Array(eV),
-          JV = new Int32Array(eV),
-          YV = new Uint8Array(eV).fill(1),
-          UV = new Uint8Array(eV),
-          yV = new Uint8Array(eV),
-          pV = new Array(eV).fill("Air"),
-          QV = new Map,
-          nV = VV => {
-            let eV = QV.get(VV);
-            return void 0 === eV && (eV = QV.size + 1, QV.set(VV, eV)), eV
+    function IB() {
+      return oB ??= function() {
+        const HH = fB(),
+          BH = Math.max(...HH.map((HH => NH.g[HH].id))) + 1,
+          LH = new Int32Array(BH),
+          AH = new Int32Array(BH),
+          rH = new Uint8Array(BH).fill(1),
+          SH = new Uint8Array(BH),
+          hH = new Uint8Array(BH),
+          tH = new Array(BH).fill("Air"),
+          zH = new Map,
+          CH = HH => {
+            let BH = zH.get(HH);
+            return void 0 === BH && (BH = zH.size + 1, zH.set(HH, BH)), BH
           },
-          wV = new Set(Xe);
-        for (const vV of VV) {
-          var ZV;
+          EH = new Set(kB);
+        for (const GH of HH) {
+          var XH;
           const {
-            id: VV,
-            meta: eV,
-            altActionable: QV,
-            canBePlacedOver: rV
-          } = oV.k[vV];
-          xV[VV] = nV(Re(vV));
-          const kV = eV.stairsCorner;
-          if (null === kV) JV[VV] = xV[VV];
+            id: HH,
+            meta: BH,
+            altActionable: zH,
+            canBePlacedOver: YH
+          } = NH.g[GH];
+          LH[HH] = CH(lB(GH));
+          const uH = BH.stairsCorner;
+          if (null === uH) AH[HH] = LH[HH];
           else {
-            const xV = kV.endsWith("Right");
-            JV[VV] = nV(`${eV.rootName}|rot${xV?eV.rot%4+1:eV.rot}|${eV.halfblockPlacement}|${kV.replace("Right","Left")}`)
+            const LH = uH.endsWith("Right");
+            AH[HH] = CH(`${BH.rootName}|rot${LH?BH.rot%4+1:BH.rot}|${BH.halfblockPlacement}|${uH.replace("Right","Left")}`)
           }
-          YV[VV] = rV ? 1 : 0, UV[VV] = QV || null !== eV.open || vV in Ae.b || wV.has(eV.rootName) || void 0 !== (0, qe.d)(eV.rootName) ? 1 : 0;
+          rH[HH] = YH ? 1 : 0, SH[HH] = zH || null !== BH.open || GH in OB.c || EH.has(BH.rootName) || void 0 !== (0, vB.h)(BH.rootName) ? 1 : 0;
           const {
-            rootName: bV
-          } = eV;
-          yV[VV] = null !== eV.open || qe.c.includes(bV) || bV.includes("Bookshelf") || bV.includes("Mailbox") ? 1 : 0, pV[VV] = null !== (ZV = (0, je.f)(VV)) && void 0 !== ZV ? ZV : bV
+            rootName: QH
+          } = BH;
+          hH[HH] = null !== BH.open || vB.d.includes(QH) || QH.includes("Bookshelf") || QH.includes("Mailbox") ? 1 : 0, tH[HH] = null !== (XH = (0, xB.e)(HH)) && void 0 !== XH ? XH : QH
         }
         return {
-          kinds: xV,
-          shapes: JV,
-          empty: YV,
-          inUse: UV,
-          ownAltActionMessage: yV,
-          placingItems: pV
+          kinds: LH,
+          shapes: AH,
+          empty: rH,
+          inUse: SH,
+          ownAltActionMessage: hH,
+          placingItems: tH
         }
-      }(), ze
+      }(), oB
     }
 
-    function We() {
-      return Object.keys(oV.k).filter((VV => oV.k[VV].name === VV))
+    function fB() {
+      return Object.keys(NH.g).filter((HH => NH.g[HH].name === HH))
     }
 
-    function Re(VV) {
-      var eV;
-      const xV = oV.k[VV],
+    function lB(HH) {
+      var BH;
+      const LH = NH.g[HH],
         {
-          rootName: JV,
-          rot: YV
-        } = xV.meta,
-        [, ...UV] = (null !== (eV = xV.rootMetaDesc) && void 0 !== eV ? eV : VV).split("|"),
-        yV = UV.filter((VV => !("meta" === VV || Me.test(VV) || (0, Te.E)(xV) && /^[nesw]+$/.test(VV) || Fe.h.includes(JV) && /^[lrud]+$/.test(VV) || Pe.B.includes(JV) && /^(left|right)$/.test(VV))));
-      return [JV, ...yV].map((VV => "fenceGate" === xV.model && VV === `rot${YV}` ? "rot" + ((YV - 1) % 2 + 1) : VV)).join("|")
+          rootName: AH,
+          rot: rH
+        } = LH.meta,
+        [, ...SH] = (null !== (BH = LH.rootMetaDesc) && void 0 !== BH ? BH : HH).split("|"),
+        hH = SH.filter((HH => !("meta" === HH || mB.test(HH) || (0, UB.H)(LH) && /^[nesw]+$/.test(HH) || TB.j.includes(AH) && /^[lrud]+$/.test(HH) || VB.J.includes(AH) && /^(left|right)$/.test(HH))));
+      return [AH, ...hH].map((HH => "fenceGate" === LH.model && HH === `rot${rH}` ? "rot" + ((rH - 1) % 2 + 1) : HH)).join("|")
     }
 
-    function ge(VV, eV) {
+    function KB(HH, BH) {
       const {
-        kinds: xV,
-        shapes: JV
-      } = Ge();
-      return xV[VV] === xV[eV] || JV[VV] === JV[eV]
+        kinds: LH,
+        shapes: AH
+      } = IB();
+      return LH[HH] === LH[BH] || AH[HH] === AH[BH]
     }
 
-    function De(VV) {
-      return 1 === Ge().empty[VV]
+    function cB(HH) {
+      return 1 === IB().empty[HH]
     }
 
-    function ie(VV) {
-      return Ge().placingItems[VV]
+    function eB(HH) {
+      return IB().placingItems[HH]
     }
 
-    function Ce(VV) {
-      return Ne.get(oV.k[VV].meta.rootName)
+    function qB(HH) {
+      return bB.get(NH.g[HH].meta.rootName)
     }
-    var ae = xV(9845),
-      oe = xV(9861);
-    const ce = [0, 0, 0, 1, 1, 1],
-      he = (0, ae.c)([
+    var gB = LH(9957),
+      NB = LH(9979);
+    const RB = [0, 0, 0, 1, 1, 1],
+      jB = (0, gB.b)([
         [2, 0, 2, 6, 6, 6]
       ]),
-      le = (0, ae.c)([
+      nB = (0, gB.b)([
         [3, 0, 3, 5, 5, 5]
       ]),
-      Le = (0, ae.c)([
+      FB = (0, gB.b)([
         [3, 3, 3, 5, 8, 5]
       ]),
-      fe = [0, 1, 2, 3].map((VV => (0, ae.c)((0, ae.n)([
+      DB = [0, 1, 2, 3].map((HH => (0, gB.b)((0, gB.l)([
         [3, 2, 0, 5, 7, 3]
-      ], VV))));
+      ], HH))));
 
-    function me(VV) {
+    function wB(HH) {
       const {
-        PE: eV,
-        model: xV,
-        blockModel: JV,
-        meta: YV
-      } = oV.k[VV];
-      return void 0 !== eV ? eV : "CentreCross" === xV ? he : null !== JV && void 0 !== JV && JV.startsWith("torch") ? YV.halfblockPlacement === oe.e.side ? fe[YV.rot - 1] : YV.halfblockPlacement === oe.e.top ? Le : le : ce
+        hW: BH,
+        model: LH,
+        blockModel: AH,
+        meta: rH
+      } = NH.g[HH];
+      return void 0 !== BH ? BH : "CentreCross" === LH ? jB : null !== AH && void 0 !== AH && AH.startsWith("torch") ? rH.halfblockPlacement === NB.c.side ? DB[rH.rot - 1] : rH.halfblockPlacement === NB.c.top ? FB : nB : RB
     }
-    var Ke = xV(206);
-    class He {
-      constructor(VV) {
-        this.api = VV, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
+    var ZB = LH(176);
+    class dB {
+      constructor(HH) {
+        this.api = HH, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
       }
-      watch(VV) {
-        const eV = Ke.f.PZ;
+      watch(HH) {
+        const BH = ZB.g.xX;
         this.chunks = [];
-        for (let xV = 0; xV < VV.length; xV += 3) {
-          const JV = Math.floor(VV[xV] / eV),
-            YV = Math.floor(VV[xV + 1] / eV),
-            UV = Math.floor(VV[xV + 2] / eV);
-          this.watches(JV, YV, UV) || this.chunks.push(JV, YV, UV)
+        for (let LH = 0; LH < HH.length; LH += 3) {
+          const AH = Math.floor(HH[LH] / BH),
+            rH = Math.floor(HH[LH + 1] / BH),
+            SH = Math.floor(HH[LH + 2] / BH);
+          this.watches(AH, rH, SH) || this.chunks.push(AH, rH, SH)
         }
         this.versions = [], this.lastCheckMs = -1 / 0, this.changed()
       }
       changed() {
-        const VV = performance.now();
-        if (VV - this.lastCheckMs < 100) return !1;
-        this.lastCheckMs = VV;
-        let eV = !1;
-        for (let xV = 0; xV < this.chunks.length; xV += 3) {
-          const VV = this.api.getChunkVersion(this.chunks[xV], this.chunks[xV + 1], this.chunks[xV + 2]);
-          this.versions[xV / 3] !== VV && (this.versions[xV / 3] = VV, eV = !0)
+        const HH = performance.now();
+        if (HH - this.lastCheckMs < 100) return !1;
+        this.lastCheckMs = HH;
+        let BH = !1;
+        for (let LH = 0; LH < this.chunks.length; LH += 3) {
+          const HH = this.api.getChunkVersion(this.chunks[LH], this.chunks[LH + 1], this.chunks[LH + 2]);
+          this.versions[LH / 3] !== HH && (this.versions[LH / 3] = HH, BH = !0)
         }
-        return eV
+        return BH
       }
-      watches(VV, eV, xV) {
-        for (let JV = 0; JV < this.chunks.length; JV += 3)
-          if (this.chunks[JV] === VV && this.chunks[JV + 1] === eV && this.chunks[JV + 2] === xV) return !0;
+      watches(HH, BH, LH) {
+        for (let AH = 0; AH < this.chunks.length; AH += 3)
+          if (this.chunks[AH] === HH && this.chunks[AH + 1] === BH && this.chunks[AH + 2] === LH) return !0;
         return !1
       }
     }
-    var ue = xV(39669);
-    const se = .35,
-      Se = {
+    var aB = LH(39396);
+    const sB = .35,
+      JB = {
         size: .9,
         alpha: .35,
         crossed: !1
       },
-      Ie = {
+      iB = {
         size: 1.04,
         alpha: .45,
         crossed: !0
       },
-      de = [.95, .2, .15];
-    class Oe {
+      pB = [.95, .2, .15];
+    class yB {
       constructor() {
         this.groups = []
       }
-      add(VV, eV, xV, JV, YV) {
-        let UV = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : ce;
-        for (const yV of this.groups)
-          if (xx(yV, JV, YV)) return yV.cells.push(VV, eV, xV), void yV.boxes.push(UV);
+      add(HH, BH, LH, AH, rH) {
+        let SH = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : RB;
+        for (const hH of this.groups)
+          if (LL(hH, AH, rH)) return hH.cells.push(HH, BH, LH), void hH.boxes.push(SH);
         this.groups.push({
-          rgb: JV,
-          look: YV,
-          cells: [VV, eV, xV],
-          boxes: [UV]
+          rgb: AH,
+          look: rH,
+          cells: [HH, BH, LH],
+          boxes: [SH]
         })
       }
       toArray() {
         return this.groups
       }
     }
-    class Vx {
-      constructor(VV) {
-        this.api = VV, this.shown = []
+    class HL {
+      constructor(HH) {
+        this.api = HH, this.shown = []
       }
-      show(VV) {
-        const eV = [];
-        for (const xV of VV) {
-          const VV = this.shown.findIndex((VV => {
+      show(HH) {
+        const BH = [];
+        for (const LH of HH) {
+          const HH = this.shown.findIndex((HH => {
             let {
-              group: eV
-            } = VV;
-            return xx(eV, xV.rgb, xV.look) && Jx(eV, xV)
-          })); - 1 === VV ? eV.push(this.build(xV)) : (eV.push(this.shown[VV]), this.shown.splice(VV, 1))
+              group: BH
+            } = HH;
+            return LL(BH, LH.rgb, LH.look) && AL(BH, LH)
+          })); - 1 === HH ? BH.push(this.build(LH)) : (BH.push(this.shown[HH]), this.shown.splice(HH, 1))
         }
-        this.dispose(), this.shown = eV
+        this.dispose(), this.shown = BH
       }
       dispose() {
         for (const {
-            meshes: VV
+            meshes: HH
           }
           of this.shown)
-          for (const eV of VV) this.api.disposeGameMesh(eV);
+          for (const BH of HH) this.api.disposeGameMesh(BH);
         this.shown = []
       }
-      build(VV) {
+      build(HH) {
         const {
-          rgb: eV,
-          look: xV,
-          boxes: JV
-        } = VV, YV = [eV[0] + (1 - eV[0]) * se, eV[1] + (1 - eV[1]) * se, eV[2] + (1 - eV[2]) * se], UV = [this.buildMesh(VV.cells, eV, xV.alpha, ((VV, eV, YV, UV) => {
-          ex(VV, eV, YV, JV[UV], xV.size, !1)
-        })), this.buildMesh(VV.cells, YV, xV.alpha, ((VV, eV, YV, UV) => {
-          ex(VV, eV, YV, JV[UV], xV.size, !0)
+          rgb: BH,
+          look: LH,
+          boxes: AH
+        } = HH, rH = [BH[0] + (1 - BH[0]) * sB, BH[1] + (1 - BH[1]) * sB, BH[2] + (1 - BH[2]) * sB], SH = [this.buildMesh(HH.cells, BH, LH.alpha, ((HH, BH, rH, SH) => {
+          BL(HH, BH, rH, AH[SH], LH.size, !1)
+        })), this.buildMesh(HH.cells, rH, LH.alpha, ((HH, BH, rH, SH) => {
+          BL(HH, BH, rH, AH[SH], LH.size, !0)
         }))];
-        return xV.crossed && UV.push(this.buildMesh(VV.cells, eV, .9, ((VV, eV, JV) => {
-          (0, ue.g)(VV, eV, JV, xV.size + .01, .12)
+        return LH.crossed && SH.push(this.buildMesh(HH.cells, BH, .9, ((HH, BH, AH) => {
+          (0, aB.h)(HH, BH, AH, LH.size + .01, .12)
         }))), {
-          group: VV,
-          meshes: UV
+          group: HH,
+          meshes: SH
         }
       }
-      buildMesh(VV, eV, xV, JV) {
-        const YV = [VV[0], VV[1], VV[2]],
-          UV = [],
-          yV = [];
-        for (let pV = 0; pV < VV.length; pV += 3) JV(UV, yV, [VV[pV] - YV[0] + .5, VV[pV + 1] - YV[1] + .5, VV[pV + 2] - YV[2] + .5], pV / 3);
+      buildMesh(HH, BH, LH, AH) {
+        const rH = [HH[0], HH[1], HH[2]],
+          SH = [],
+          hH = [];
+        for (let tH = 0; tH < HH.length; tH += 3) AH(SH, hH, [HH[tH] - rH[0] + .5, HH[tH + 1] - rH[1] + .5, HH[tH + 2] - rH[2] + .5], tH / 3);
         return this.api.createGameMesh({
-          positions: UV,
-          indices: yV
+          positions: SH,
+          indices: hH
         }, {
-          rgb: [eV[0], eV[1], eV[2]],
-          alpha: xV
-        }, YV)
+          rgb: [BH[0], BH[1], BH[2]],
+          alpha: LH
+        }, rH)
       }
     }
 
-    function ex(VV, eV, xV, JV, YV, UV) {
-      for (let yV = 0; yV < JV.length; yV += 6) {
-        const pV = [0, 0, 0],
-          QV = [0, 0, 0];
-        for (let VV = 0; VV < 3; VV++) pV[VV] = xV[VV] + ((JV[yV + VV] + JV[yV + VV + 3]) / 2 - .5) * YV, QV[VV] = (JV[yV + VV + 3] - JV[yV + VV]) * YV;
-        (0, ue.d)(VV, eV, pV, QV, UV)
+    function BL(HH, BH, LH, AH, rH, SH) {
+      for (let hH = 0; hH < AH.length; hH += 6) {
+        const tH = [0, 0, 0],
+          zH = [0, 0, 0];
+        for (let HH = 0; HH < 3; HH++) tH[HH] = LH[HH] + ((AH[hH + HH] + AH[hH + HH + 3]) / 2 - .5) * rH, zH[HH] = (AH[hH + HH + 3] - AH[hH + HH]) * rH;
+        (0, aB.d)(HH, BH, tH, zH, SH)
       }
     }
 
-    function xx(VV, eV, xV) {
-      return VV.rgb[0] === eV[0] && VV.rgb[1] === eV[1] && VV.rgb[2] === eV[2] && VV.look === xV
+    function LL(HH, BH, LH) {
+      return HH.rgb[0] === BH[0] && HH.rgb[1] === BH[1] && HH.rgb[2] === BH[2] && HH.look === LH
     }
 
-    function Jx(VV, eV) {
-      if (VV.cells.length !== eV.cells.length) return !1;
-      for (let xV = 0; xV < VV.cells.length; xV++)
-        if (VV.cells[xV] !== eV.cells[xV]) return !1;
-      return VV.boxes.every(((VV, xV) => VV === eV.boxes[xV]))
+    function AL(HH, BH) {
+      if (HH.cells.length !== BH.cells.length) return !1;
+      for (let LH = 0; LH < HH.cells.length; LH++)
+        if (HH.cells[LH] !== BH.cells[LH]) return !1;
+      return HH.boxes.every(((HH, LH) => HH === BH.boxes[LH]))
     }
 
-    function Yx(VV, eV, xV, JV, YV) {
-      if (!VV.isBlockInLoadedChunk(eV, JV - 6, xV) || !VV.isBlockInLoadedChunk(eV, JV + 6 + YV, xV) || !VV.canModifyBlockAt(eV, JV, xV)) return NaN;
-      let UV = JV - 1;
-      if (0 !== VV.getBlockId(eV, UV, xV)) {
-        for (; UV < JV + 6 && 0 !== VV.getBlockId(eV, UV + 1, xV);) UV++;
-        return UV
+    function rL(HH, BH, LH, AH, rH) {
+      if (!HH.isBlockInLoadedChunk(BH, AH - 6, LH) || !HH.isBlockInLoadedChunk(BH, AH + 6 + rH, LH) || !HH.canModifyBlockAt(BH, AH, LH)) return NaN;
+      let SH = AH - 1;
+      if (0 !== HH.getBlockId(BH, SH, LH)) {
+        for (; SH < AH + 6 && 0 !== HH.getBlockId(BH, SH + 1, LH);) SH++;
+        return SH
       }
-      for (; UV > JV - 6;)
-        if (UV--, 0 !== VV.getBlockId(eV, UV, xV)) return UV;
+      for (; SH > AH - 6;)
+        if (SH--, 0 !== HH.getBlockId(BH, SH, LH)) return SH;
       return NaN
     }
 
-    function Ux(VV, eV, xV, JV, YV) {
-      let UV = 0;
-      for (let yV = JV + 1; yV <= JV + YV; yV++) 0 !== VV.getBlockId(eV, yV, xV) && UV++;
-      return UV
+    function SL(HH, BH, LH, AH, rH) {
+      let SH = 0;
+      for (let hH = AH + 1; hH <= AH + rH; hH++) 0 !== HH.getBlockId(BH, hH, LH) && SH++;
+      return SH
     }
 
-    function yx(VV) {
-      const eV = new Map;
-      for (const yV of VV) {
-        var xV;
-        if (Number.isNaN(yV)) return null;
-        eV.set(yV, (null !== (xV = eV.get(yV)) && void 0 !== xV ? xV : 0) + 1)
+    function hL(HH) {
+      const BH = new Map;
+      for (const hH of HH) {
+        var LH;
+        if (Number.isNaN(hH)) return null;
+        BH.set(hH, (null !== (LH = BH.get(hH)) && void 0 !== LH ? LH : 0) + 1)
       }
-      let JV = NaN,
-        YV = 0;
-      for (const [yV, pV] of eV)(pV > YV || pV === YV && yV < JV) && (JV = yV, YV = pV);
-      let UV = 0;
-      for (const yV of VV) UV += Math.abs(yV - JV);
-      return UV
+      let AH = NaN,
+        rH = 0;
+      for (const [hH, tH] of BH)(tH > rH || tH === rH && hH < AH) && (AH = hH, rH = tH);
+      let SH = 0;
+      for (const hH of HH) SH += Math.abs(hH - AH);
+      return SH
     }
 
-    function px(VV, eV, xV, JV) {
+    function tL(HH, BH, LH, AH) {
       const {
-        eye: YV,
-        forward: UV,
-        tanHalfFovX: yV,
-        tanHalfFovY: pV
-      } = VV, [QV, nV] = function(VV) {
-        let [eV, xV, JV] = VV;
-        const YV = Math.hypot(eV, JV),
-          [UV, yV] = [JV / YV, -eV / YV];
+        eye: rH,
+        forward: SH,
+        tanHalfFovX: hH,
+        tanHalfFovY: tH
+      } = HH, [zH, CH] = function(HH) {
+        let [BH, LH, AH] = HH;
+        const rH = Math.hypot(BH, AH),
+          [SH, hH] = [AH / rH, -BH / rH];
         return [
-          [UV, 0, yV],
-          [xV * yV, JV * UV - eV * yV, -xV * UV]
+          [SH, 0, hH],
+          [LH * hH, AH * SH - BH * hH, -LH * SH]
         ]
-      }(UV), [wV, ZV] = [eV * yV, xV * pV], vV = UV[0] + wV * QV[0] + ZV * nV[0], rV = UV[1] + ZV * nV[1], kV = UV[2] + wV * QV[2] + ZV * nV[2], bV = (JV - YV[1]) / rV;
-      return bV > 0 && bV < 1 / 0 ? [YV[0] + bV * vV, YV[2] + bV * kV] : null
+      }(SH), [EH, XH] = [BH * hH, LH * tH], GH = SH[0] + EH * zH[0] + XH * CH[0], YH = SH[1] + XH * CH[1], uH = SH[2] + EH * zH[2] + XH * CH[2], QH = (AH - rH[1]) / YH;
+      return QH > 0 && QH < 1 / 0 ? [rH[0] + QH * GH, rH[2] + QH * uH] : null
     }
-    const Qx = "plotsBlueprintPlacementChanged",
-      nx = {
+    const zL = "plotsBlueprintPlacementChanged",
+      CL = {
         size: .9,
         alpha: .2,
         crossed: !1
       };
-    class wx {
-      constructor(VV, eV) {
-        this.api = VV, this.localPlayerId = eV, this.placing = null, this.view = null, this.camera = {
+    class EL {
+      constructor(HH, BH) {
+        this.api = HH, this.localPlayerId = BH, this.placing = null, this.view = null, this.camera = {
           eye: [0, 0, 0],
           forward: [0, 0, 1],
           tanHalfFovX: 1,
           tanHalfFovY: 1
-        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = VV => {
-          var eV, xV, JV, UV;
-          const yV = null !== (eV = null === (xV = this.placing) || void 0 === xV ? void 0 : xV.rotation) && void 0 !== eV ? eV : 0,
+        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = HH => {
+          var BH, LH, AH, SH;
+          const hH = null !== (BH = null === (LH = this.placing) || void 0 === LH ? void 0 : LH.rotation) && void 0 !== BH ? BH : 0,
             {
-              size: pV
-            } = SV(VV, yV),
-            QV = this.api.YF(this.localPlayerId),
-            [nV, wV] = null !== (JV = null !== (UV = function(VV, eV, xV, JV) {
-              const [YV, UV, yV] = eV, [pV, QV, nV] = [Math.floor(xV[0]), Math.floor(xV[1]), Math.floor(xV[2])], wV = 6 + Math.max(YV, yV) / 2, [ZV, vV] = [Math.ceil(wV + YV / 2), Math.ceil(wV + yV / 2)], [rV, kV] = [pV - ZV, nV - vV], [bV, EV] = [2 * ZV + 1, 2 * vV + 1], BV = new Float64Array(bV * EV), jV = new Uint16Array(bV * EV);
-              for (let PV = 0; PV < bV; PV++)
-                for (let eV = 0; eV < EV; eV++) {
-                  const xV = Yx(VV, rV + PV, kV + eV, QV, UV);
-                  BV[PV * EV + eV] = xV, Number.isNaN(xV) || (jV[PV * EV + eV] = Ux(VV, rV + PV, kV + eV, xV, UV))
+              size: tH
+            } = JH(HH, hH),
+            zH = this.api.hT(this.localPlayerId),
+            [CH, EH] = null !== (AH = null !== (SH = function(HH, BH, LH, AH) {
+              const [rH, SH, hH] = BH, [tH, zH, CH] = [Math.floor(LH[0]), Math.floor(LH[1]), Math.floor(LH[2])], EH = 6 + Math.max(rH, hH) / 2, [XH, GH] = [Math.ceil(EH + rH / 2), Math.ceil(EH + hH / 2)], [YH, uH] = [tH - XH, CH - GH], [QH, WH] = [2 * XH + 1, 2 * GH + 1], MH = new Float64Array(QH * WH), xH = new Uint16Array(QH * WH);
+              for (let VH = 0; VH < QH; VH++)
+                for (let BH = 0; BH < WH; BH++) {
+                  const LH = rL(HH, YH + VH, uH + BH, zH, SH);
+                  MH[VH * WH + BH] = LH, Number.isNaN(LH) || (xH[VH * WH + BH] = SL(HH, YH + VH, uH + BH, LH, SH))
                 }
-              const qV = Math.hypot(JV[0], JV[2]),
-                tV = [];
-              let FV = null,
-                TV = 1 / 0;
-              for (let PV = 0; PV + YV <= bV; PV++)
-                for (let VV = 0; VV + yV <= EV; VV++) {
-                  const [eV, UV] = [rV + PV, kV + VV], [QV, ZV] = [eV + YV / 2 - xV[0], UV + yV / 2 - xV[2]], vV = Math.hypot(QV, ZV);
-                  if (vV > wV || pV >= eV - 2 && pV < eV + YV + 2 && nV >= UV - 2 && nV < UV + yV + 2) continue;
-                  tV.length = 0;
-                  let bV = 0;
-                  for (let xV = 0; xV < YV; xV++)
-                    for (let eV = 0; eV < yV; eV++) tV.push(BV[(PV + xV) * EV + VV + eV]), bV += jV[(PV + xV) * EV + VV + eV];
-                  const AV = yx(tV);
-                  if (null === AV) continue;
-                  const NV = vV + 3 * (AV + bV) + (1 - (0 === qV ? 1 : (QV * JV[0] + ZV * JV[2]) / (vV * qV))) / 2 * 6;
-                  NV < TV && (TV = NV, FV = [eV, UV])
+              const vH = Math.hypot(AH[0], AH[2]),
+                PH = [];
+              let TH = null,
+                UH = 1 / 0;
+              for (let VH = 0; VH + rH <= QH; VH++)
+                for (let HH = 0; HH + hH <= WH; HH++) {
+                  const [BH, SH] = [YH + VH, uH + HH], [zH, XH] = [BH + rH / 2 - LH[0], SH + hH / 2 - LH[2]], GH = Math.hypot(zH, XH);
+                  if (GH > EH || tH >= BH - 2 && tH < BH + rH + 2 && CH >= SH - 2 && CH < SH + hH + 2) continue;
+                  PH.length = 0;
+                  let QH = 0;
+                  for (let LH = 0; LH < rH; LH++)
+                    for (let BH = 0; BH < hH; BH++) PH.push(MH[(VH + LH) * WH + HH + BH]), QH += xH[(VH + LH) * WH + HH + BH];
+                  const OH = hL(PH);
+                  if (null === OH) continue;
+                  const bH = GH + 3 * (OH + QH) + (1 - (0 === vH ? 1 : (zH * AH[0] + XH * AH[2]) / (GH * vH))) / 2 * 6;
+                  bH < UH && (UH = bH, TH = [BH, SH])
                 }
-              return FV
-            }(this.api, pV, QV, this.camera.forward)) && void 0 !== UV ? UV : this.cornerOnTarget(pV)) && void 0 !== JV ? JV : [Math.floor(QV[0]) + 2, Math.floor(QV[2])];
+              return TH
+            }(this.api, tH, zH, this.camera.forward)) && void 0 !== SH ? SH : this.cornerOnTarget(tH)) && void 0 !== AH ? AH : [Math.floor(zH[0]) + 2, Math.floor(zH[2])];
           this.placing = {
-            id: VV,
-            rotation: yV,
-            corner: [nV, this.playerLevel(), wV],
+            id: HH,
+            rotation: hH,
+            corner: [CH, this.playerLevel(), EH],
             sent: null,
             refusals: 0,
             hover: null,
             drag: null,
             moved: !1,
             stillSinceMs: performance.now()
-          }, this.update(), this.api.sendCommand(`${YV} preview`)
+          }, this.update(), this.api.sendCommand(`${rH} preview`)
         }, this.rotate = () => {
           const {
-            id: VV,
-            rotation: eV,
-            corner: xV
-          } = this.placing, YV = JV[(JV.indexOf(eV) + 1) % JV.length], [UV, , yV] = SV(VV, eV).size, [pV, , QV] = SV(VV, YV).size;
-          this.moveTo(xV[0] + Math.floor(UV / 2) - Math.floor(pV / 2), xV[2] + Math.floor(yV / 2) - Math.floor(QV / 2), YV)
-        }, this.hoverAt = (VV, eV) => {
-          this.placing.hover = [VV, eV], this.moveCentreTo(this.camera, VV, eV)
+            id: HH,
+            rotation: BH,
+            corner: LH
+          } = this.placing, rH = AH[(AH.indexOf(BH) + 1) % AH.length], [SH, , hH] = JH(HH, BH).size, [tH, , zH] = JH(HH, rH).size;
+          this.moveTo(LH[0] + Math.floor(SH / 2) - Math.floor(tH / 2), LH[2] + Math.floor(hH / 2) - Math.floor(zH / 2), rH)
+        }, this.hoverAt = (HH, BH) => {
+          this.placing.hover = [HH, BH], this.moveCentreTo(this.camera, HH, BH)
         }, this.endHover = () => {
           this.placing.hover = null
-        }, this.beginDrag = (VV, eV) => {
-          const xV = this.placing,
+        }, this.beginDrag = (HH, BH) => {
+          const LH = this.placing,
             {
-              eye: JV,
-              forward: YV,
-              tanHalfFovX: UV,
-              tanHalfFovY: yV
+              eye: AH,
+              forward: rH,
+              tanHalfFovX: SH,
+              tanHalfFovY: hH
             } = this.camera,
-            pV = {
-              eye: [JV[0], JV[1], JV[2]],
-              forward: [YV[0], YV[1], YV[2]],
-              tanHalfFovX: UV,
-              tanHalfFovY: yV
+            tH = {
+              eye: [AH[0], AH[1], AH[2]],
+              forward: [rH[0], rH[1], rH[2]],
+              tanHalfFovX: SH,
+              tanHalfFovY: hH
             },
-            QV = xV.corner[1],
-            nV = px(pV, VV, eV, QV);
-          xV.hover = null, xV.drag = nV && {
-            view: pV,
-            ground: nV,
-            corner: [xV.corner[0], xV.corner[2]],
-            level: QV
+            zH = LH.corner[1],
+            CH = tL(tH, HH, BH, zH);
+          LH.hover = null, LH.drag = CH && {
+            view: tH,
+            ground: CH,
+            corner: [LH.corner[0], LH.corner[2]],
+            level: zH
           }
-        }, this.dragTo = (VV, eV) => {
-          const xV = this.placing.drag,
-            JV = xV && px(xV.view, VV, eV, xV.level);
-          null !== xV && null !== JV && this.moveTo(xV.corner[0] + Math.round(JV[0] - xV.ground[0]), xV.corner[1] + Math.round(JV[1] - xV.ground[1]))
+        }, this.dragTo = (HH, BH) => {
+          const LH = this.placing.drag,
+            AH = LH && tL(LH.view, HH, BH, LH.level);
+          null !== LH && null !== AH && this.moveTo(LH.corner[0] + Math.round(AH[0] - LH.ground[0]), LH.corner[1] + Math.round(AH[1] - LH.ground[1]))
         }, this.endDrag = () => {
           this.placing.drag = null
         }, this.tap = () => {
-          const VV = this.view;
-          VV.waiting || (VV.blocked ? this.QZ({
-            ...VV,
+          const HH = this.view;
+          HH.waiting || (HH.blocked ? this.AX({
+            ...HH,
             refusals: ++this.placing.refusals
           }) : this.build())
         }, this.build = () => {
-          const VV = this.placing,
+          const HH = this.placing,
             {
-              id: eV,
-              rotation: xV,
-              corner: JV
-            } = VV;
-          this.api.sendCommand(`${YV} place ${eV} ${JV.join(" ")} ${xV}`), VV.sent = {
+              id: BH,
+              rotation: LH,
+              corner: AH
+            } = HH;
+          this.api.sendCommand(`${rH} place ${BH} ${AH.join(" ")} ${LH}`), HH.sent = {
             atMs: performance.now(),
-            corner: [...JV],
-            rotation: xV,
+            corner: [...AH],
+            rotation: LH,
             timedOut: !1
           }, this.update()
         }, this.stop = () => {
-          null !== this.placing && (this.close(), this.api.sendCommand(`${YV} preview off`))
-        }, this.chunkWatch = new He(VV), this.meshes = new Vx(VV)
+          null !== this.placing && (this.close(), this.api.sendCommand(`${rH} preview off`))
+        }, this.chunkWatch = new dB(HH), this.meshes = new HL(HH)
       }
       getView() {
         return this.view
       }
-      iZ() {
-        const VV = this.placing;
-        null !== VV && (null !== VV.sent && !VV.sent.timedOut && performance.now() - VV.sent.atMs > 3e3 ? (VV.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(VV) || this.chunkWatch.changed() || this.view.settled !== Zx(VV, this.view.blocked)) && this.update())
+      IX() {
+        const HH = this.placing;
+        null !== HH && (null !== HH.sent && !HH.sent.timedOut && performance.now() - HH.sent.atMs > 3e3 ? (HH.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(HH) || this.chunkWatch.changed() || this.view.settled !== XL(HH, this.view.blocked)) && this.update())
       }
-      afterRender(VV) {
-        ! function(VV, eV) {
-          for (let xV = 0; xV < 3; xV++) eV.eye[xV] = VV.cameraPosition[xV], eV.forward[xV] = VV.cameraDirection[xV];
-          eV.tanHalfFovX = VV.tanHalfFovX, eV.tanHalfFovY = VV.tanHalfFovY
-        }(VV, this.camera);
-        const eV = this.placing;
-        null !== eV && null !== eV.hover && this.moveCentreTo(this.camera, eV.hover[0], eV.hover[1])
+      afterRender(HH) {
+        ! function(HH, BH) {
+          for (let LH = 0; LH < 3; LH++) BH.eye[LH] = HH.cameraPosition[LH], BH.forward[LH] = HH.cameraDirection[LH];
+          BH.tanHalfFovX = HH.tanHalfFovX, BH.tanHalfFovY = HH.tanHalfFovY
+        }(HH, this.camera);
+        const BH = this.placing;
+        null !== BH && null !== BH.hover && this.moveCentreTo(this.camera, BH.hover[0], BH.hover[1])
       }
-      RZ(VV) {
-        const eV = this.placing;
-        if (null === eV || null === eV.sent || "active" !== VV[0]) return;
+      kX(HH) {
+        const BH = this.placing;
+        if (null === BH || null === BH.sent || "active" !== HH[0]) return;
         const {
-          sent: xV
-        } = eV, [, JV, YV, UV, yV, pV, QV] = VV;
-        YV && JV === eV.id && QV === xV.rotation && UV === xV.corner[0] && yV === xV.corner[1] && pV === xV.corner[2] && this.close()
+          sent: LH
+        } = BH, [, AH, rH, SH, hH, tH, zH] = HH;
+        rH && AH === BH.id && zH === LH.rotation && SH === LH.corner[0] && hH === LH.corner[1] && tH === LH.corner[2] && this.close()
       }
       endFromServer() {
         null !== this.placing && this.close()
@@ -1375,1237 +1398,1237 @@ export const modules = {
       dispose() {
         this.meshes.dispose()
       }
-      cornerOnTarget(VV) {
-        let [eV, , xV] = VV;
-        const JV = this.api.getTargetedBlock();
-        if (null === JV) return null;
-        const [YV, , UV] = JV.position;
-        return [YV - Math.floor(eV / 2), UV - Math.floor(xV / 2)]
+      cornerOnTarget(HH) {
+        let [BH, , LH] = HH;
+        const AH = this.api.getTargetedBlock();
+        if (null === AH) return null;
+        const [rH, , SH] = AH.position;
+        return [rH - Math.floor(BH / 2), SH - Math.floor(LH / 2)]
       }
       playerLevel() {
-        var VV;
-        const [eV, xV, JV] = this.api.YF(this.localPlayerId);
-        if (null !== (VV = this.api.getLocalPlayerMovement()) && void 0 !== VV && VV.onGround) return Math.ceil(xV - .01);
-        const [YV, UV, yV] = [Math.floor(eV), Math.floor(xV), Math.floor(JV)];
-        for (let pV = UV; pV >= UV - 2; pV--)
-          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(YV, pV, yV))) return pV + 1;
-        return UV
+        var HH;
+        const [BH, LH, AH] = this.api.hT(this.localPlayerId);
+        if (null !== (HH = this.api.getLocalPlayerMovement()) && void 0 !== HH && HH.onGround) return Math.ceil(LH - .01);
+        const [rH, SH, hH] = [Math.floor(BH), Math.floor(LH), Math.floor(AH)];
+        for (let tH = SH; tH >= SH - 2; tH--)
+          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(rH, tH, hH))) return tH + 1;
+        return SH
       }
-      followPlayerLevel(VV) {
-        if (vx(VV)) return !1;
-        const eV = this.playerLevel();
-        return eV !== VV.corner[1] && (VV.corner[1] = eV, !0)
+      followPlayerLevel(HH) {
+        if (GL(HH)) return !1;
+        const BH = this.playerLevel();
+        return BH !== HH.corner[1] && (HH.corner[1] = BH, !0)
       }
-      moveCentreTo(VV, eV, xV) {
-        const JV = this.placing,
-          YV = px(VV, eV, xV, JV.corner[1]);
-        if (null !== YV) {
-          const [VV, , eV] = SV(JV.id, JV.rotation).size;
-          this.moveTo(Math.round(YV[0] - VV / 2), Math.round(YV[1] - eV / 2))
+      moveCentreTo(HH, BH, LH) {
+        const AH = this.placing,
+          rH = tL(HH, BH, LH, AH.corner[1]);
+        if (null !== rH) {
+          const [HH, , BH] = JH(AH.id, AH.rotation).size;
+          this.moveTo(Math.round(rH[0] - HH / 2), Math.round(rH[1] - BH / 2))
         }
       }
-      moveTo(VV, eV) {
-        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
-        const JV = this.placing;
-        if (vx(JV)) return;
-        const [YV, UV, yV] = JV.corner;
-        if (this.centreOnPlot(YV, yV) && !this.centreOnPlot(VV, eV, xV))
-          if (this.centreOnPlot(VV, yV, xV)) eV = yV;
+      moveTo(HH, BH) {
+        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+        const AH = this.placing;
+        if (GL(AH)) return;
+        const [rH, SH, hH] = AH.corner;
+        if (this.centreOnPlot(rH, hH) && !this.centreOnPlot(HH, BH, LH))
+          if (this.centreOnPlot(HH, hH, LH)) BH = hH;
           else {
-            if (!this.centreOnPlot(YV, eV, xV)) return;
-            VV = YV
-          } VV === YV && eV === yV && xV === JV.rotation || (JV.rotation = xV, JV.corner = [VV, UV, eV], JV.moved = !0, JV.stillSinceMs = performance.now(), this.update())
+            if (!this.centreOnPlot(rH, BH, LH)) return;
+            HH = rH
+          } HH === rH && BH === hH && LH === AH.rotation || (AH.rotation = LH, AH.corner = [HH, SH, BH], AH.moved = !0, AH.stillSinceMs = performance.now(), this.update())
       }
-      centreOnPlot(VV, eV) {
-        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+      centreOnPlot(HH, BH) {
+        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
         const {
-          id: JV,
-          corner: YV
-        } = this.placing, [UV, , yV] = SV(JV, xV).size;
-        return this.api.canModifyBlockAt(VV + Math.floor(UV / 2), YV[1], eV + Math.floor(yV / 2))
+          id: AH,
+          corner: rH
+        } = this.placing, [SH, , hH] = JH(AH, LH).size;
+        return this.api.canModifyBlockAt(HH + Math.floor(SH / 2), rH[1], BH + Math.floor(hH / 2))
       }
       close() {
-        this.placing = null, this.meshes.dispose(), this.QZ(null)
+        this.placing = null, this.meshes.dispose(), this.AX(null)
       }
       update() {
         const {
-          id: VV,
-          rotation: eV,
-          corner: xV,
-          refusals: JV
-        } = this.placing, YV = new Oe, UV = [];
-        let yV = !1,
-          pV = 0;
+          id: HH,
+          rotation: BH,
+          corner: LH,
+          refusals: AH
+        } = this.placing, rH = new yB, SH = [];
+        let hH = !1,
+          tH = 0;
         for (const {
-            offset: ZV,
-            block: vV
+            offset: XH,
+            block: GH
           }
-          of SV(VV, eV).cells) {
-          const [VV, eV, JV] = [xV[0] + ZV[0], xV[1] + ZV[1], xV[2] + ZV[2]];
-          UV.push(VV, eV, JV);
-          const QV = !this.api.canModifyBlockAt(VV, eV, JV),
-            nV = this.api.getBlockId(VV, eV, JV),
-            wV = !De(nV) && !ge(this.api.blockNameToBlockId(vV), nV);
-          yV ||= QV, pV += wV ? 1 : 0, QV || wV ? YV.add(VV, eV, JV, de, Ie) : YV.add(VV, eV, JV, Ce(vV), nx, me(vV))
+          of JH(HH, BH).cells) {
+          const [HH, BH, AH] = [LH[0] + XH[0], LH[1] + XH[1], LH[2] + XH[2]];
+          SH.push(HH, BH, AH);
+          const zH = !this.api.canModifyBlockAt(HH, BH, AH),
+            CH = this.api.getBlockId(HH, BH, AH),
+            EH = !cB(CH) && !KB(this.api.blockNameToBlockId(GH), CH);
+          hH ||= zH, tH += EH ? 1 : 0, zH || EH ? rH.add(HH, BH, AH, pB, iB) : rH.add(HH, BH, AH, qB(GH), CL, wB(GH))
         }
-        this.chunkWatch.watch(UV), this.meshes.show(YV.toArray());
-        const QV = this.view,
-          nV = vx(this.placing),
-          wV = Zx(this.placing, yV);
-        (null === QV || void 0 === QV ? void 0 : QV.id) === VV && QV.blocked === yV && QV.toClear === pV && QV.waiting === nV && QV.refusals === JV && QV.settled === wV || this.QZ({
-          id: VV,
-          blocked: yV,
-          toClear: pV,
-          waiting: nV,
-          refusals: JV,
-          settled: wV
+        this.chunkWatch.watch(SH), this.meshes.show(rH.toArray());
+        const zH = this.view,
+          CH = GL(this.placing),
+          EH = XL(this.placing, hH);
+        (null === zH || void 0 === zH ? void 0 : zH.id) === HH && zH.blocked === hH && zH.toClear === tH && zH.waiting === CH && zH.refusals === AH && zH.settled === EH || this.AX({
+          id: HH,
+          blocked: hH,
+          toClear: tH,
+          waiting: CH,
+          refusals: AH,
+          settled: EH
         })
       }
-      QZ(VV) {
-        this.view = VV, PV.h.QZ(Qx, VV, !0)
+      AX(HH) {
+        this.view = HH, VH.k.AX(zL, HH, !0)
       }
     }
 
-    function Zx(VV, eV) {
+    function XL(HH, BH) {
       let {
-        moved: xV,
-        stillSinceMs: JV
-      } = VV;
-      return !eV && performance.now() - JV >= (xV ? 1500 : 6e3)
+        moved: LH,
+        stillSinceMs: AH
+      } = HH;
+      return !BH && performance.now() - AH >= (LH ? 1500 : 6e3)
     }
 
-    function vx(VV) {
+    function GL(HH) {
       let {
-        sent: eV
-      } = VV;
-      return null !== eV && !eV.timedOut
+        sent: BH
+      } = HH;
+      return null !== BH && !BH.timedOut
     }
-    var rx = xV(5020);
-    class kx {
-      constructor(VV) {
-        this.placement = VV, this.press = null
+    var YL = LH(4951);
+    class uL {
+      constructor(HH) {
+        this.placement = HH, this.press = null
       }
-      down(VV) {
+      down(HH) {
         if (null !== this.press) return !1;
         const {
-          id: eV,
-          mouse: xV,
-          x: JV,
-          y: YV,
-          atMs: UV
-        } = VV;
+          id: BH,
+          mouse: LH,
+          x: AH,
+          y: rH,
+          atMs: SH
+        } = HH;
         return this.press = {
-          id: eV,
-          mouse: xV,
-          x: JV,
-          y: YV,
-          atMs: UV,
+          id: BH,
+          mouse: LH,
+          x: AH,
+          y: rH,
+          atMs: SH,
           moved: !1
-        }, xV || this.placement.beginDrag(VV.ndcX, VV.ndcY), !0
+        }, LH || this.placement.beginDrag(HH.ndcX, HH.ndcY), !0
       }
-      move(VV) {
-        const eV = this.press;
-        null !== eV && eV.id === VV.id && (eV.moved ||= Math.hypot(VV.x - eV.x, VV.y - eV.y) > 8), VV.mouse ? this.placement.hoverAt(VV.ndcX, VV.ndcY) : (null === eV || void 0 === eV ? void 0 : eV.id) === VV.id && this.placement.dragTo(VV.ndcX, VV.ndcY)
+      move(HH) {
+        const BH = this.press;
+        null !== BH && BH.id === HH.id && (BH.moved ||= Math.hypot(HH.x - BH.x, HH.y - BH.y) > 8), HH.mouse ? this.placement.hoverAt(HH.ndcX, HH.ndcY) : (null === BH || void 0 === BH ? void 0 : BH.id) === HH.id && this.placement.dragTo(HH.ndcX, HH.ndcY)
       }
-      up(VV) {
-        const eV = this.press;
-        (null === eV || void 0 === eV ? void 0 : eV.id) === VV.id && (this.move(VV), this.end(), !eV.moved && (eV.mouse || VV.atMs - eV.atMs <= 250) && this.placement.tap())
+      up(HH) {
+        const BH = this.press;
+        (null === BH || void 0 === BH ? void 0 : BH.id) === HH.id && (this.move(HH), this.end(), !BH.moved && (BH.mouse || HH.atMs - BH.atMs <= 250) && this.placement.tap())
       }
-      cancel(VV) {
-        var eV;
-        (null === (eV = this.press) || void 0 === eV ? void 0 : eV.id) === VV && this.end()
+      cancel(HH) {
+        var BH;
+        (null === (BH = this.press) || void 0 === BH ? void 0 : BH.id) === HH && this.end()
       }
-      leave(VV) {
+      leave(HH) {
         let {
-          id: eV,
-          mouse: xV
-        } = VV;
-        xV && this.placement.endHover(), this.cancel(eV)
+          id: BH,
+          mouse: LH
+        } = HH;
+        LH && this.placement.endHover(), this.cancel(BH)
       }
       end() {
         this.press.mouse || this.placement.endDrag(), this.press = null
       }
     }
-    const bx = "PlotsPlacementLayer";
+    const QL = "PlotsPlacementLayer";
 
-    function Ex(VV) {
+    function WL(HH) {
       let {
-        placement: eV
-      } = VV;
-      return null === (0, QV.j)(Qx, eV.getView()) ? null : (0, iV.jsx)(Bx, {
-        placement: eV
+        placement: BH
+      } = HH;
+      return null === (0, zH.e)(zL, BH.getView()) ? null : (0, eH.jsx)(ML, {
+        placement: BH
       })
     }
 
-    function Bx(VV) {
+    function ML(HH) {
       let {
-        placement: eV
-      } = VV;
-      (0, rx.b)(!0, !0, bx);
-      const xV = (0, UV.useMemo)((() => new kx(eV)), [eV]);
-      return (0, iV.jsx)("div", {
+        placement: BH
+      } = HH;
+      (0, YL.c)(!0, !0, QL);
+      const LH = (0, SH.useMemo)((() => new uL(BH)), [BH]);
+      return (0, eH.jsx)("div", {
         className: "PlotsPlacementLayer",
-        onPointerDown: VV => {
-          "mouse" === VV.pointerType && 0 !== VV.button || !xV.down(jx(VV)) || VV.currentTarget.setPointerCapture(VV.pointerId)
+        onPointerDown: HH => {
+          "mouse" === HH.pointerType && 0 !== HH.button || !LH.down(xL(HH)) || HH.currentTarget.setPointerCapture(HH.pointerId)
         },
-        onPointerMove: VV => {
-          xV.move(jx(VV))
+        onPointerMove: HH => {
+          LH.move(xL(HH))
         },
-        onPointerUp: VV => {
-          xV.up(jx(VV))
+        onPointerUp: HH => {
+          LH.up(xL(HH))
         },
-        onPointerCancel: VV => {
-          xV.cancel(VV.pointerId)
+        onPointerCancel: HH => {
+          LH.cancel(HH.pointerId)
         },
-        onLostPointerCapture: VV => {
-          xV.cancel(VV.pointerId)
+        onLostPointerCapture: HH => {
+          LH.cancel(HH.pointerId)
         },
-        onPointerLeave: VV => {
-          xV.leave(jx(VV))
+        onPointerLeave: HH => {
+          LH.leave(xL(HH))
         },
         "aria-hidden": !0
       })
     }
 
-    function jx(VV) {
+    function xL(HH) {
       const {
-        left: eV,
-        top: xV,
-        width: JV,
-        height: YV
-      } = VV.currentTarget.getBoundingClientRect();
+        left: BH,
+        top: LH,
+        width: AH,
+        height: rH
+      } = HH.currentTarget.getBoundingClientRect();
       return {
-        id: VV.pointerId,
-        mouse: "mouse" === VV.pointerType,
-        x: VV.clientX,
-        y: VV.clientY,
-        ndcX: (VV.clientX - eV) / JV * 2 - 1,
-        ndcY: 1 - (VV.clientY - xV) / YV * 2,
-        atMs: VV.timeStamp
+        id: HH.pointerId,
+        mouse: "mouse" === HH.pointerType,
+        x: HH.clientX,
+        y: HH.clientY,
+        ndcX: (HH.clientX - BH) / AH * 2 - 1,
+        ndcY: 1 - (HH.clientY - LH) / rH * 2,
+        atMs: HH.timeStamp
       }
     }
 
-    function qx() {
-      return (0, Ee.k)().some((VV => VV !== Ee.d && VV !== bx))
+    function vL() {
+      return (0, WB.p)().some((HH => HH !== WB.d && HH !== QL))
     }
-    const tx = 2500;
+    const PL = 2500;
 
-    function Fx(VV) {
+    function TL(HH) {
       let {
-        hud: eV,
-        guide: xV,
-        tracker: JV,
-        placement: YV,
-        children: yV
-      } = VV;
+        hud: BH,
+        guide: LH,
+        tracker: AH,
+        placement: rH,
+        children: hH
+      } = HH;
       const {
-        t: ZV
-      } = (0, wV.A)(), {
-        isTouchScreen: vV
-      } = (0, pV.l)(["isTouchScreen"]), rV = (0, QV.j)(xe, eV.getGuide()), kV = (0, QV.j)(ee, eV.getPlot()), bV = (0, QV.j)(IV, JV.get()), EV = function(VV) {
+        t: XH
+      } = (0, EH.B)(), {
+        isTouchScreen: GH
+      } = (0, tH.m)(["isTouchScreen"]), YH = (0, zH.e)(LB, BH.getGuide()), uH = (0, zH.e)(BB, BH.getPlot()), QH = (0, zH.e)(iH, AH.get()), WH = function(HH) {
         const {
-          openInGameMenuName: eV,
-          openEverythingMenuName: xV,
-          loadingOverlayVisible: JV
-        } = (0, pV.l)(["openInGameMenuName", "openEverythingMenuName", "loadingOverlayVisible"]), YV = (0, Be.b)(), [yV, nV] = (0, UV.useState)(qx);
-        (0, UV.useEffect)((() => {
-          const VV = () => {
-            nV(qx())
+          openInGameMenuName: BH,
+          openEverythingMenuName: LH,
+          loadingOverlayVisible: AH
+        } = (0, tH.m)(["openInGameMenuName", "openEverythingMenuName", "loadingOverlayVisible"]), rH = (0, MB.b)(), [hH, CH] = (0, SH.useState)(vL);
+        (0, SH.useEffect)((() => {
+          const HH = () => {
+            CH(vL())
           };
-          VV();
-          const eV = (0, Ee.i)(VV),
-            xV = (0, Ee.h)(VV);
+          HH();
+          const BH = (0, WB.l)(HH),
+            LH = (0, WB.j)(HH);
           return () => {
-            eV(), xV()
+            BH(), LH()
           }
         }), []);
-        const wV = (0, QV.j)(Qx, VV.getView()),
-          ZV = "clientGame" === eV;
+        const EH = (0, zH.e)(zL, HH.getView()),
+          XH = "clientGame" === BH;
         return {
-          hudHidden: YV || JV,
-          journalOpen: ZV,
-          covered: yV || null !== xV || null !== eV && !ZV,
-          placing: null === wV ? null : wV.settled ? "placeBuild" : "placeSpot"
+          hudHidden: rH || AH,
+          journalOpen: XH,
+          covered: hH || null !== LH || null !== BH && !XH,
+          placing: null === EH ? null : EH.settled ? "placeBuild" : "placeSpot"
         }
-      }(YV), BV = function(VV, eV, xV) {
-        return "none" === VV[0] || xV.hudHidden || xV.journalOpen || xV.covered ? null : null !== xV.placing ? xV.placing : null !== eV ? "build" : "choose" === VV[1] ? "openJournal" : null
-      }(rV, null === bV ? null : bV.id, EV), jV = function() {
-        const [VV, eV] = (0, UV.useState)(null), [xV, JV] = (0, UV.useState)(!1);
-        return (0, QV.g)(Je, (() => {
-          eV(performance.now())
-        })), (0, UV.useEffect)((() => {
-          if (null === VV) return;
-          const eV = window.setTimeout((() => {
-              JV(!0)
-            }), tx),
-            xV = window.setTimeout((() => {
-              JV(!1)
+      }(rH), MH = function(HH, BH, LH) {
+        return "none" === HH[0] || LH.hudHidden || LH.journalOpen || LH.covered ? null : null !== LH.placing ? LH.placing : null !== BH ? "build" : "choose" === HH[1] ? "openJournal" : null
+      }(YH, null === QH ? null : QH.id, WH), xH = function() {
+        const [HH, BH] = (0, SH.useState)(null), [LH, AH] = (0, SH.useState)(!1);
+        return (0, zH.d)(AB, (() => {
+          BH(performance.now())
+        })), (0, SH.useEffect)((() => {
+          if (null === HH) return;
+          const BH = window.setTimeout((() => {
+              AH(!0)
+            }), PL),
+            LH = window.setTimeout((() => {
+              AH(!1)
             }), 7500);
           return () => {
-            window.clearTimeout(eV), window.clearTimeout(xV)
+            window.clearTimeout(BH), window.clearTimeout(LH)
           }
-        }), [VV]), xV
-      }() && !EV.hudHidden && !EV.covered && !EV.journalOpen && null === EV.placing, [qV, tV] = (0, UV.useState)(!1);
-      (0, UV.useEffect)((() => {
-        EV.journalOpen && tV(!0)
-      }), [EV.journalOpen]);
-      const [FV, PV] = (0, UV.useState)(null), [AV, NV] = (0, UV.useState)(null), [XV, MV] = (0, UV.useState)(null), zV = (0, UV.useMemo)((() => ({
-        hint: BV,
-        journalRef: PV,
-        placementCardRef: NV,
-        buildRef: MV
-      })), [BV]), GV = "plot" === kV[0] && "own" === kV[5], WV = vV && !qV && GV ? {
-        onSkip: xV.skip
+        }), [HH]), LH
+      }() && !WH.hudHidden && !WH.covered && !WH.journalOpen && null === WH.placing, [vH, PH] = (0, SH.useState)(!1);
+      (0, SH.useEffect)((() => {
+        WH.journalOpen && PH(!0)
+      }), [WH.journalOpen]);
+      const [TH, VH] = (0, SH.useState)(null), [OH, bH] = (0, SH.useState)(null), [kH, mH] = (0, SH.useState)(null), oH = (0, SH.useMemo)((() => ({
+        hint: MH,
+        journalRef: VH,
+        placementCardRef: bH,
+        buildRef: mH
+      })), [MH]), IH = "plot" === uH[0] && "own" === uH[5], fH = GH && !vH && IH ? {
+        onSkip: LH.skip
       } : null;
-      return (0, iV.jsxs)(TV.Provider, {
-        value: zV,
-        children: [yV, "openJournal" === BV && null !== FV && (0, iV.jsx)(we, {
-          target: FV,
+      return (0, eH.jsxs)(UH.Provider, {
+        value: oH,
+        children: [hH, "openJournal" === MH && null !== TH && (0, eH.jsx)(EB, {
+          target: TH,
           placement: "left",
-          spotlight: WV,
-          children: vV ? ZV("plotsGame:guideOpenJournal") : ZV("plotsGame:guideOpenJournalKeys", {
-            key: (0, nV.l)(CV)
+          spotlight: fH,
+          children: GH ? XH("plotsGame:guideOpenJournal") : XH("plotsGame:guideOpenJournalKeys", {
+            key: (0, CH.p)(qH)
           })
-        }), "placeSpot" === BV && null !== AV && (0, iV.jsxs)(iV.Fragment, {
-          children: [vV && (0, iV.jsx)(be, {}), (0, iV.jsx)(we, {
-            target: AV,
+        }), "placeSpot" === MH && null !== OH && (0, eH.jsxs)(eH.Fragment, {
+          children: [GH && (0, eH.jsx)(QB, {}), (0, eH.jsx)(EB, {
+            target: OH,
             placement: "top",
-            children: ZV(vV ? "plotsGame:guidePlaceSpotTouch" : "plotsGame:guidePlaceSpotMouse")
+            children: XH(GH ? "plotsGame:guidePlaceSpotTouch" : "plotsGame:guidePlaceSpotMouse")
           })]
-        }), "placeBuild" === BV && null !== XV && null !== AV && (0, iV.jsx)(we, {
-          target: vV ? XV : AV,
+        }), "placeBuild" === MH && null !== kH && null !== OH && (0, eH.jsx)(EB, {
+          target: GH ? kH : OH,
           placement: "top",
-          children: ZV(vV ? "plotsGame:guidePlaceBuildTouch" : "plotsGame:guidePlaceBuildMouse")
-        }), "build" === BV && null !== bV && (0, iV.jsx)(re, {
-          progress: bV,
-          guide: xV
-        }), jV && null !== FV && (0, iV.jsx)(we, {
-          target: FV,
+          children: XH(GH ? "plotsGame:guidePlaceBuildTouch" : "plotsGame:guidePlaceBuildMouse")
+        }), "build" === MH && null !== QH && (0, eH.jsx)(YB, {
+          progress: QH,
+          guide: LH
+        }), xH && null !== TH && (0, eH.jsx)(EB, {
+          target: TH,
           placement: "left",
-          children: ZV("plotsGame:guideMoreBuilds")
+          children: XH("plotsGame:guideMoreBuilds")
         })]
       })
     }
-    var Tx = xV(39648),
-      Px = xV(39651);
-    class Ax {
-      constructor(VV, eV, xV) {
-        this.api = VV, this.localPlayerId = eV, this.nextCell = xV, this.hand = null, this.skip = () => {
+    var UL = LH(39370),
+      VL = LH(39374);
+    class OL {
+      constructor(HH, BH, LH) {
+        this.api = HH, this.localPlayerId = BH, this.nextCell = LH, this.hand = null, this.skip = () => {
           this.api.sendCommand("plotsguide skip")
-        }, this.bindHand = VV => {
-          this.hand = VV
+        }, this.bindHand = HH => {
+          this.hand = HH
         }
       }
-      afterRender(VV) {
-        const eV = this.hand;
-        if (null === eV) return;
-        const xV = this.nextCell.get();
-        if (null === xV) return void(0, Tx.f)(eV, !0);
-        const JV = (0, Px.d)(eV, VV, this.api.getPositionView(this.localPlayerId), xV, 1, 40);
-        null !== JV && (0, Tx.b)(eV, Math.round(100 * JV.x) / 100, Math.round(100 * JV.y) / 100)
+      afterRender(HH) {
+        const BH = this.hand;
+        if (null === BH) return;
+        const LH = this.nextCell.get();
+        if (null === LH) return void(0, UL.e)(BH, !0);
+        const AH = (0, VL.e)(BH, HH, this.api.getPositionView(this.localPlayerId), LH, 1, 40);
+        null !== AH && (0, UL.d)(BH, Math.round(100 * AH.x) / 100, Math.round(100 * AH.y) / 100)
       }
     }
-    var Nx = xV(1551),
-      Xx = xV(5011),
-      Mx = xV(1159);
-    const zx = {
-        farm_hut: xV.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
-        farm_house: xV.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
-        farm_barn: xV.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
-        rusticHome_tent: xV.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
-        rusticHome_cabin: xV.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
-        rusticHome_house: xV.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
-        market_stand: xV.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
-        market_stall: xV.p + "static/media/market_stall.9a562807f9dff591618a.webp",
-        market_shop: xV.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
-        castle_wall: xV.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
-        castle_gate: xV.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
-        castle_tower: xV.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
+    var bL = LH(1455),
+      kL = LH(4941),
+      mL = LH(1056);
+    const oL = {
+        farm_hut: LH.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
+        farm_house: LH.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
+        farm_barn: LH.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
+        rusticHome_tent: LH.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
+        rusticHome_cabin: LH.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
+        rusticHome_house: LH.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
+        market_stand: LH.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
+        market_stall: LH.p + "static/media/market_stall.9a562807f9dff591618a.webp",
+        market_shop: LH.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
+        castle_wall: LH.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
+        castle_gate: LH.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
+        castle_tower: LH.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
       },
-      Gx = ["plotsGame:guideEffortQuick", "plotsGame:guideEffortMedium", "plotsGame:guideEffortBigger"],
-      Wx = ["market_stand", "rusticHome_tent", "farm_hut"].map((VV => ({
-        id: VV,
-        blocks: SV(VV, 0).cells.length
-      }))).sort(((VV, eV) => VV.blocks - eV.blocks)).map(((VV, eV) => ({
-        ...VV,
-        effortKey: Gx[eV]
+      IL = ["plotsGame:guideEffortQuick", "plotsGame:guideEffortMedium", "plotsGame:guideEffortBigger"],
+      fL = ["market_stand", "rusticHome_tent", "farm_hut"].map((HH => ({
+        id: HH,
+        blocks: JH(HH, 0).cells.length
+      }))).sort(((HH, BH) => HH.blocks - BH.blocks)).map(((HH, BH) => ({
+        ...HH,
+        effortKey: IL[BH]
       })));
 
-    function Rx(VV) {
+    function lL(HH) {
       let {
-        onBuild: eV
-      } = VV;
+        onBuild: BH
+      } = HH;
       const {
-        t: xV
-      } = (0, wV.A)();
-      return (0, iV.jsx)("div", {
+        t: LH
+      } = (0, EH.B)();
+      return (0, eH.jsx)("div", {
         className: "PlotsJournalBookPages PlotsGuideChooserCover",
-        children: (0, iV.jsxs)("div", {
+        children: (0, eH.jsxs)("div", {
           className: "PlotsGuideChooser",
-          children: [(0, iV.jsx)("h3", {
+          children: [(0, eH.jsx)("h3", {
             className: "PlotsGuideChooserTitle",
-            children: xV("plotsGame:guidePickTitle")
-          }), (0, iV.jsxs)("p", {
+            children: LH("plotsGame:guidePickTitle")
+          }), (0, eH.jsxs)("p", {
             className: "PlotsGuideChooserNote",
-            children: [(0, iV.jsx)("img", {
-              src: ye,
+            children: [(0, eH.jsx)("img", {
+              src: hB,
               alt: "",
               draggable: !1
-            }), xV("plotsGame:guidePickNote")]
-          }), (0, iV.jsx)("div", {
+            }), LH("plotsGame:guidePickNote")]
+          }), (0, eH.jsx)("div", {
             className: "PlotsGuideChooserStarters",
-            children: Wx.map((VV => {
+            children: fL.map((HH => {
               let {
-                id: JV,
-                blocks: YV,
-                effortKey: UV
-              } = VV;
-              return (0, iV.jsxs)("article", {
+                id: AH,
+                blocks: rH,
+                effortKey: SH
+              } = HH;
+              return (0, eH.jsxs)("article", {
                 className: "PlotsGuideStarter",
-                children: [(0, iV.jsx)("button", {
+                children: [(0, eH.jsx)("button", {
                   type: "button",
                   className: "PlotsGuideStarterSketch",
                   tabIndex: -1,
                   "aria-hidden": !0,
                   "data-pad-ignore": !0,
                   onClick: () => {
-                    eV(JV)
+                    BH(AH)
                   },
-                  children: (0, iV.jsx)("img", {
-                    src: zx[JV],
+                  children: (0, eH.jsx)("img", {
+                    src: oL[AH],
                     alt: "",
                     draggable: !1
                   })
-                }), (0, iV.jsxs)("div", {
+                }), (0, eH.jsxs)("div", {
                   className: "PlotsGuideStarterInfo",
-                  children: [(0, iV.jsxs)("span", {
+                  children: [(0, eH.jsxs)("span", {
                     className: "PlotsGuideStarterText",
-                    children: [(0, iV.jsx)("span", {
+                    children: [(0, eH.jsx)("span", {
                       className: "PlotsGuideStarterName",
-                      children: xV(MV(JV).displayName.translationKey)
-                    }), (0, iV.jsx)("span", {
+                      children: LH(mH(AH).displayName.translationKey)
+                    }), (0, eH.jsx)("span", {
                       className: "PlotsGuideStarterEffort",
-                      children: xV(UV)
-                    }), (0, iV.jsx)("span", {
+                      children: LH(SH)
+                    }), (0, eH.jsx)("span", {
                       className: "PlotsGuideStarterBlocks",
-                      children: xV("plotsGame:journalBlocks", {
-                        blocks: String(YV)
+                      children: LH("plotsGame:journalBlocks", {
+                        blocks: String(rH)
                       })
                     })]
-                  }), (0, iV.jsx)(Nx.m, {
+                  }), (0, eH.jsx)(bL.u, {
                     onClick: () => {
-                      eV(JV)
+                      BH(AH)
                     },
-                    children: xV("plotsGame:placementBuild")
+                    children: LH("plotsGame:placementBuild")
                   })]
                 })]
-              }, JV)
+              }, AH)
             }))
           })]
         })
       })
     }
 
-    function gx(VV) {
+    function KL(HH) {
       let {
-        direction: eV,
-        disabled: xV,
-        onTurn: JV
-      } = VV;
+        direction: BH,
+        disabled: LH,
+        onTurn: AH
+      } = HH;
       const {
-        t: YV
-      } = (0, wV.A)();
-      return (0, iV.jsx)("div", {
-        className: vV()("PlotsJournalArrow", eV),
-        children: (0, iV.jsx)(Nx.f, {
-          disabled: xV,
-          ariaLabel: YV("Forward" === eV ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
+        t: rH
+      } = (0, EH.B)();
+      return (0, eH.jsx)("div", {
+        className: GH()("PlotsJournalArrow", BH),
+        children: (0, eH.jsx)(bL.i, {
+          disabled: LH,
+          ariaLabel: rH("Forward" === BH ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
           onClick: () => {
-            JV(eV)
+            AH(BH)
           },
-          children: (0, iV.jsx)(EV.b, {
+          children: (0, eH.jsx)(WH.c, {
             name: "angle-up"
           })
         })
       })
     }
-    const Dx = {
+    const cL = {
       small: "plotsGame:journalTierSmall",
       medium: "plotsGame:journalTierMedium",
       large: "plotsGame:journalTierLarge"
     };
 
-    function ix(VV) {
+    function eL(HH) {
       let {
-        page: eV,
-        building: xV,
-        onBuild: JV,
-        onPutAway: YV
-      } = VV;
+        page: BH,
+        building: LH,
+        onBuild: AH,
+        onPutAway: rH
+      } = HH;
       const {
-        t: UV
-      } = (0, wV.A)(), {
-        displayName: yV,
-        tier: pV
-      } = MV(eV.id), QV = SV(eV.id, 0).cells.length, nV = "locked" === eV.state, ZV = xV ? Nx.f : Nx.m;
-      return (0, iV.jsxs)("article", {
-        className: vV()("PlotsJournalPage", {
-          Locked: nV
+        t: SH
+      } = (0, EH.B)(), {
+        displayName: hH,
+        tier: tH
+      } = mH(BH.id), zH = JH(BH.id, 0).cells.length, CH = "locked" === BH.state, XH = LH ? bL.i : bL.u;
+      return (0, eH.jsxs)("article", {
+        className: GH()("PlotsJournalPage", {
+          Locked: CH
         }),
-        children: [(0, iV.jsx)("h3", {
+        children: [(0, eH.jsx)("h3", {
           className: "PlotsJournalPageName",
-          children: UV(yV.translationKey)
-        }), (0, iV.jsxs)("div", {
+          children: SH(hH.translationKey)
+        }), (0, eH.jsxs)("div", {
           className: "PlotsJournalPageMeta",
-          children: [UV(Dx[pV]), " \xb7 ", UV("plotsGame:journalBlocks", {
-            blocks: String(QV)
+          children: [SH(cL[tH]), " \xb7 ", SH("plotsGame:journalBlocks", {
+            blocks: String(zH)
           })]
-        }), (0, iV.jsxs)("div", {
+        }), (0, eH.jsxs)("div", {
           className: "PlotsJournalSketch",
-          children: [XV.map((VV => (0, iV.jsx)("img", {
-            className: vV()({
-              Shown: VV === eV.id
+          children: [kH.map((HH => (0, eH.jsx)("img", {
+            className: GH()({
+              Shown: HH === BH.id
             }),
-            src: zx[VV],
+            src: oL[HH],
             alt: "",
             draggable: !1
-          }, VV))), "completed" === eV.state && (0, iV.jsx)("span", {
+          }, HH))), "completed" === BH.state && (0, eH.jsx)("span", {
             className: "PlotsJournalStamp",
-            children: UV("plotsGame:journalBuilt")
-          }), nV && (0, iV.jsx)("span", {
+            children: SH("plotsGame:journalBuilt")
+          }), CH && (0, eH.jsx)("span", {
             className: "PlotsJournalLock",
-            children: (0, iV.jsx)(EV.b, {
+            children: (0, eH.jsx)(WH.c, {
               name: "lock"
             })
           })]
-        }), null !== eV.note && (0, iV.jsx)("p", {
+        }), null !== BH.note && (0, eH.jsx)("p", {
           className: "PlotsJournalNote",
-          children: UV(eV.note)
-        }), (0, iV.jsxs)("div", {
+          children: SH(BH.note)
+        }), (0, eH.jsxs)("div", {
           className: "PlotsJournalPageAction",
-          children: ["locked" === eV.state && (0, iV.jsx)("p", {
+          children: ["locked" === BH.state && (0, eH.jsx)("p", {
             className: "PlotsJournalHint",
-            children: UV("plotsGame:journalLocked", {
-              name: UV(MV(eV.unlockedBy).displayName.translationKey)
+            children: SH("plotsGame:journalLocked", {
+              name: SH(mH(BH.unlockedBy).displayName.translationKey)
             })
-          }), eV.active && (0, iV.jsxs)(iV.Fragment, {
-            children: [(0, iV.jsx)("p", {
+          }), BH.active && (0, eH.jsxs)(eH.Fragment, {
+            children: [(0, eH.jsx)("p", {
               className: "PlotsJournalHint Building",
-              children: UV("plotsGame:journalBuilding")
-            }), (0, iV.jsx)(Nx.j, {
-              onClick: YV,
-              children: UV("plotsGame:journalPutAway")
+              children: SH("plotsGame:journalBuilding")
+            }), (0, eH.jsx)(bL.m, {
+              onClick: rH,
+              children: SH("plotsGame:journalPutAway")
             })]
-          }), !nV && !eV.active && (0, iV.jsx)(ZV, {
+          }), !CH && !BH.active && (0, eH.jsx)(XH, {
             onClick: () => {
-              JV(eV.id)
+              AH(BH.id)
             },
-            children: UV("plotsGame:placementBuild")
+            children: SH("plotsGame:placementBuild")
           })]
         })]
       })
     }
 
-    function Cx(VV) {
+    function qL(HH) {
       let {
-        className: eV,
-        page: xV,
-        hidden: JV,
-        building: YV,
-        journal: UV
-      } = VV;
-      return (0, iV.jsxs)("div", {
-        ref: VV => {
-          null !== VV && (VV.inert = JV)
+        className: BH,
+        page: LH,
+        hidden: AH,
+        building: rH,
+        journal: SH
+      } = HH;
+      return (0, eH.jsxs)("div", {
+        ref: HH => {
+          null !== HH && (HH.inert = AH)
         },
-        className: vV()("PlotsJournalSide", eV),
-        children: [void 0 !== xV && (0, iV.jsx)(ix, {
-          page: xV,
-          building: YV,
-          onBuild: UV.build,
-          onPutAway: UV.putAway
-        }), void 0 === xV && (0, iV.jsx)("div", {
+        className: GH()("PlotsJournalSide", BH),
+        children: [void 0 !== LH && (0, eH.jsx)(eL, {
+          page: LH,
+          building: rH,
+          onBuild: SH.build,
+          onPutAway: SH.putAway
+        }), void 0 === LH && (0, eH.jsx)("div", {
           className: "PlotsJournalPage"
         })]
       })
     }
-    var ax = xV(2014);
+    var gL = LH(1962);
 
-    function ox(VV) {
-      return Math.cos((0, ax.k)(VV))
+    function NL(HH) {
+      return Math.cos((0, gL.h)(HH))
     }
 
-    function cx(VV) {
-      return (0, ax.E)(Math.acos(Pe.b.clamp(VV, -1, 1)))
+    function RL(HH) {
+      return (0, gL.t)(Math.acos(VB.d.clamp(HH, -1, 1)))
     }
 
-    function hx(VV, eV, xV, JV, YV) {
-      const UV = Math.abs(eV - VV),
-        yV = (0, ax.E)(YV / (xV * Math.abs(Math.sin((0, ax.k)(VV))))),
-        pV = 450 * Math.min(1, UV / JV),
-        QV = yV > 0 ? 3 * UV / yV : 1 / 0;
-      return Math.round(Math.max(120, Math.min(pV, QV)))
+    function jL(HH, BH, LH, AH, rH) {
+      const SH = Math.abs(BH - HH),
+        hH = (0, gL.t)(rH / (LH * Math.abs(Math.sin((0, gL.h)(HH))))),
+        tH = 450 * Math.min(1, SH / AH),
+        zH = hH > 0 ? 3 * SH / hH : 1 / 0;
+      return Math.round(Math.max(120, Math.min(tH, zH)))
     }
-    class lx {
+    class nL {
       constructor() {
         this.samples = []
       }
-      add(VV, eV) {
+      add(HH, BH) {
         for (this.samples.push({
-            x: VV,
-            at: eV
-          }); eV - this.samples[0].at > 100;) this.samples.shift()
+            x: HH,
+            at: BH
+          }); BH - this.samples[0].at > 100;) this.samples.shift()
       }
       get() {
-        const VV = this.samples[0],
-          eV = this.samples[this.samples.length - 1];
-        return eV.at > VV.at ? (eV.x - VV.x) / (eV.at - VV.at) : 0
+        const HH = this.samples[0],
+          BH = this.samples[this.samples.length - 1];
+        return BH.at > HH.at ? (BH.x - HH.x) / (BH.at - HH.at) : 0
       }
     }
 
-    function Lx(VV) {
-      return cx(new DOMMatrixReadOnly(getComputedStyle(VV).transform).m11)
+    function FL(HH) {
+      return RL(new DOMMatrixReadOnly(getComputedStyle(HH).transform).m11)
     }
 
-    function fx(VV, eV) {
-      VV.style.transform = `rotateY(${-eV}deg)`, VV.classList.add("Turning")
+    function DL(HH, BH) {
+      HH.style.transform = `rotateY(${-BH}deg)`, HH.classList.add("Turning")
     }
 
-    function mx(VV, eV, xV) {
-      const [JV, YV] = (0, UV.useState)(xV), yV = (0, UV.useRef)(null), pV = (0, UV.useRef)(null), QV = (0, UV.useRef)({
+    function wL(HH, BH, LH) {
+      const [AH, rH] = (0, SH.useState)(LH), hH = (0, SH.useRef)(null), tH = (0, SH.useRef)(null), zH = (0, SH.useRef)({
         Forward: null,
         Back: null
-      }), nV = eV ? 2 : 1, wV = eV ? 180 : 90, ZV = JV - JV % nV, vV = ZV > 0, rV = ZV + nV < VV, kV = (0, UV.useCallback)((() => {
-        const VV = pV.current;
-        return null === VV ? ZV : (pV.current = null, VV.animation.cancel(), (eV = QV.current[VV.direction]).style.transform = "", eV.classList.remove("Turning"), null === VV.next ? ZV : (YV(VV.next), VV.next));
-        var eV
-      }), [ZV]), bV = (0, UV.useCallback)(((VV, eV, xV, JV) => {
-        const YV = QV.current[VV],
-          UV = Lx(YV),
-          yV = eV === ("Forward" === VV) ? wV : 0;
-        fx(YV, yV);
-        const ZV = YV.animate([{
-          transform: `rotateY(${-UV}deg)`
+      }), CH = BH ? 2 : 1, EH = BH ? 180 : 90, XH = AH - AH % CH, GH = XH > 0, YH = XH + CH < HH, uH = (0, SH.useCallback)((() => {
+        const HH = tH.current;
+        return null === HH ? XH : (tH.current = null, HH.animation.cancel(), (BH = zH.current[HH.direction]).style.transform = "", BH.classList.remove("Turning"), null === HH.next ? XH : (rH(HH.next), HH.next));
+        var BH
+      }), [XH]), QH = (0, SH.useCallback)(((HH, BH, LH, AH) => {
+        const rH = zH.current[HH],
+          SH = FL(rH),
+          hH = BH === ("Forward" === HH) ? EH : 0;
+        DL(rH, hH);
+        const XH = rH.animate([{
+          transform: `rotateY(${-SH}deg)`
         }, {
-          transform: `rotateY(${-yV}deg)`
+          transform: `rotateY(${-hH}deg)`
         }], {
-          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : hx(UV, yV, YV.offsetWidth, wV, yV > UV ? -xV : xV),
+          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : jL(SH, hH, rH.offsetWidth, EH, hH > SH ? -LH : LH),
           easing: "cubic-bezier(0.25, 0.75, 0.5, 1)"
         });
-        pV.current = {
-          direction: VV,
-          animation: ZV,
-          next: eV ? JV + ("Forward" === VV ? nV : -nV) : null
-        }, ZV.onfinish = () => {
-          var VV;
-          (null === (VV = pV.current) || void 0 === VV ? void 0 : VV.animation) === ZV && kV()
+        tH.current = {
+          direction: HH,
+          animation: XH,
+          next: BH ? AH + ("Forward" === HH ? CH : -CH) : null
+        }, XH.onfinish = () => {
+          var HH;
+          (null === (HH = tH.current) || void 0 === HH ? void 0 : HH.animation) === XH && uH()
         }
-      }), [nV, wV, kV]), EV = (0, UV.useCallback)((eV => {
-        if (null !== yV.current) return;
-        const xV = kV();
-        ("Forward" === eV ? xV + nV < VV : xV > 0) && bV(eV, !0, 0, xV)
-      }), [kV, bV, nV, VV]);
-      (0, UV.useEffect)((() => () => {
-        var VV;
-        null === (VV = pV.current) || void 0 === VV || VV.animation.cancel()
-      }), []), (0, UV.useEffect)((() => {
-        const VV = VV => {
-          var eV;
-          VV.pointerId !== (null === (eV = yV.current) || void 0 === eV ? void 0 : eV.pointerId) || yV.current.following || (yV.current = null)
+      }), [CH, EH, uH]), WH = (0, SH.useCallback)((BH => {
+        if (null !== hH.current) return;
+        const LH = uH();
+        ("Forward" === BH ? LH + CH < HH : LH > 0) && QH(BH, !0, 0, LH)
+      }), [uH, QH, CH, HH]);
+      (0, SH.useEffect)((() => () => {
+        var HH;
+        null === (HH = tH.current) || void 0 === HH || HH.animation.cancel()
+      }), []), (0, SH.useEffect)((() => {
+        const HH = HH => {
+          var BH;
+          HH.pointerId !== (null === (BH = hH.current) || void 0 === BH ? void 0 : BH.pointerId) || hH.current.following || (hH.current = null)
         };
-        return window.addEventListener("pointerup", VV), () => {
-          window.removeEventListener("pointerup", VV)
+        return window.addEventListener("pointerup", HH), () => {
+          window.removeEventListener("pointerup", HH)
         }
       }), []);
-      const BV = (VV, eV, xV) => {
-          const JV = function(VV, eV, xV, JV) {
-            return (VV < 0 ? xV : JV) ? Pe.b.clampAbs(VV, eV) : Math.sign(VV) * eV * (1 - 1 / (.55 * Math.abs(VV) / eV + 1))
-          }(VV.base + xV, nV * VV.width, rV, vV);
-          return "Forward" === eV ? Math.min(JV, 0) : Math.max(JV, 0)
+      const MH = (HH, BH, LH) => {
+          const AH = function(HH, BH, LH, AH) {
+            return (HH < 0 ? LH : AH) ? VB.d.clampAbs(HH, BH) : Math.sign(HH) * BH * (1 - 1 / (.55 * Math.abs(HH) / BH + 1))
+          }(HH.base + LH, CH * HH.width, YH, GH);
+          return "Forward" === BH ? Math.min(AH, 0) : Math.max(AH, 0)
         },
-        jV = (VV, eV) => {
-          const xV = yV.current;
-          if (yV.current = null, null === xV.direction) return;
-          xV.speed.add(VV, eV);
-          const JV = xV.speed.get(),
-            YV = BV(xV, xV.direction, VV - xV.x);
-          bV(xV.direction, null !== function(VV, eV, xV, JV, YV) {
-            if (Math.abs(eV) >= .3 ? Math.sign(eV) !== Math.sign(VV) : Math.abs(VV) < .5 * xV) return null;
-            const UV = VV < 0 ? "Forward" : "Back";
-            return ("Forward" === UV ? JV : YV) ? UV : null
-          }(YV, JV, nV * xV.width, rV, vV), JV, ZV)
+        xH = (HH, BH) => {
+          const LH = hH.current;
+          if (hH.current = null, null === LH.direction) return;
+          LH.speed.add(HH, BH);
+          const AH = LH.speed.get(),
+            rH = MH(LH, LH.direction, HH - LH.x);
+          QH(LH.direction, null !== function(HH, BH, LH, AH, rH) {
+            if (Math.abs(BH) >= .3 ? Math.sign(BH) !== Math.sign(HH) : Math.abs(HH) < .5 * LH) return null;
+            const SH = HH < 0 ? "Forward" : "Back";
+            return ("Forward" === SH ? AH : rH) ? SH : null
+          }(rH, AH, CH * LH.width, YH, GH), AH, XH)
         },
-        qV = {
-          onPointerDown: VV => {
-            var eV;
-            if (!VV.isPrimary || 0 !== VV.button || null !== pV.current && null !== VV.target.closest("button")) return;
-            const xV = new lx;
-            xV.add(VV.clientX, VV.timeStamp);
-            const JV = QV.current.Forward.offsetWidth,
-              YV = pV.current;
-            pV.current = null;
-            let UV = 0;
-            if (null !== YV) {
-              const eV = QV.current[YV.direction],
-                xV = Lx(eV);
-              YV.animation.cancel(), fx(eV, xV), UV = function(VV, eV, xV, JV) {
-                return (VV < 0 ? xV : JV) ? VV : Math.sign(VV) * eV * (1 / (1 - Math.min(Math.abs(VV) / eV, .99)) - 1) / .55
-              }(function(VV, eV, xV, JV) {
-                return xV * (ox(eV) - ox("Forward" === VV ? 0 : JV))
-              }(YV.direction, xV, JV, wV), nV * JV, rV, vV), VV.currentTarget.setPointerCapture(VV.pointerId)
+        vH = {
+          onPointerDown: HH => {
+            var BH;
+            if (!HH.isPrimary || 0 !== HH.button || null !== tH.current && null !== HH.target.closest("button")) return;
+            const LH = new nL;
+            LH.add(HH.clientX, HH.timeStamp);
+            const AH = zH.current.Forward.offsetWidth,
+              rH = tH.current;
+            tH.current = null;
+            let SH = 0;
+            if (null !== rH) {
+              const BH = zH.current[rH.direction],
+                LH = FL(BH);
+              rH.animation.cancel(), DL(BH, LH), SH = function(HH, BH, LH, AH) {
+                return (HH < 0 ? LH : AH) ? HH : Math.sign(HH) * BH * (1 / (1 - Math.min(Math.abs(HH) / BH, .99)) - 1) / .55
+              }(function(HH, BH, LH, AH) {
+                return LH * (NL(BH) - NL("Forward" === HH ? 0 : AH))
+              }(rH.direction, LH, AH, EH), CH * AH, YH, GH), HH.currentTarget.setPointerCapture(HH.pointerId)
             }
-            yV.current = {
-              pointerId: VV.pointerId,
-              x: VV.clientX,
-              y: VV.clientY,
-              base: UV,
-              width: JV,
-              following: null !== YV,
-              direction: null !== (eV = null === YV || void 0 === YV ? void 0 : YV.direction) && void 0 !== eV ? eV : null,
-              speed: xV
+            hH.current = {
+              pointerId: HH.pointerId,
+              x: HH.clientX,
+              y: HH.clientY,
+              base: SH,
+              width: AH,
+              following: null !== rH,
+              direction: null !== (BH = null === rH || void 0 === rH ? void 0 : rH.direction) && void 0 !== BH ? BH : null,
+              speed: LH
             }
           },
-          onPointerMove: VV => {
-            const eV = yV.current;
-            if (null === eV || VV.pointerId !== eV.pointerId) return;
-            if (0 === VV.buttons) return void jV(VV.clientX, VV.timeStamp);
-            const xV = VV.clientX - eV.x;
-            !eV.following && function(VV, eV) {
-              return Math.abs(VV) > 8 && Math.abs(VV) > Math.abs(eV)
-            }(xV, VV.clientY - eV.y) && (eV.following = !0, eV.direction = xV < 0 ? "Forward" : "Back", VV.currentTarget.setPointerCapture(VV.pointerId)), null !== eV.direction && (eV.speed.add(VV.clientX, VV.timeStamp), fx(QV.current[eV.direction], function(VV, eV, xV, JV) {
-              const YV = xV * ox("Forward" === VV ? 0 : JV) + eV;
-              return Pe.b.clamp(cx(YV / xV), 0, JV)
-            }(eV.direction, BV(eV, eV.direction, xV), eV.width, wV)))
+          onPointerMove: HH => {
+            const BH = hH.current;
+            if (null === BH || HH.pointerId !== BH.pointerId) return;
+            if (0 === HH.buttons) return void xH(HH.clientX, HH.timeStamp);
+            const LH = HH.clientX - BH.x;
+            !BH.following && function(HH, BH) {
+              return Math.abs(HH) > 8 && Math.abs(HH) > Math.abs(BH)
+            }(LH, HH.clientY - BH.y) && (BH.following = !0, BH.direction = LH < 0 ? "Forward" : "Back", HH.currentTarget.setPointerCapture(HH.pointerId)), null !== BH.direction && (BH.speed.add(HH.clientX, HH.timeStamp), DL(zH.current[BH.direction], function(HH, BH, LH, AH) {
+              const rH = LH * NL("Forward" === HH ? 0 : AH) + BH;
+              return VB.d.clamp(RL(rH / LH), 0, AH)
+            }(BH.direction, MH(BH, BH.direction, LH), BH.width, EH)))
           },
-          onPointerUp: VV => {
-            var eV;
-            VV.pointerId === (null === (eV = yV.current) || void 0 === eV ? void 0 : eV.pointerId) && jV(VV.clientX, VV.timeStamp)
+          onPointerUp: HH => {
+            var BH;
+            HH.pointerId === (null === (BH = hH.current) || void 0 === BH ? void 0 : BH.pointerId) && xH(HH.clientX, HH.timeStamp)
           },
-          onPointerCancel: VV => {
-            const eV = yV.current;
-            VV.pointerId === (null === eV || void 0 === eV ? void 0 : eV.pointerId) && (yV.current = null, null !== eV.direction && bV(eV.direction, !1, 0, ZV))
+          onPointerCancel: HH => {
+            const BH = hH.current;
+            HH.pointerId === (null === BH || void 0 === BH ? void 0 : BH.pointerId) && (hH.current = null, null !== BH.direction && QH(BH.direction, !1, 0, XH))
           }
         };
       return {
-        first: ZV,
-        step: nV,
-        canGoBack: vV,
-        canGoForward: rV,
-        turnPage: EV,
-        leaves: QV,
-        pagesHandlers: qV
+        first: XH,
+        step: CH,
+        canGoBack: GH,
+        canGoForward: YH,
+        turnPage: WH,
+        leaves: zH,
+        pagesHandlers: vH
       }
     }
 
-    function Kx(VV, eV) {
-      return VV > eV && VV >= 600
+    function ZL(HH, BH) {
+      return HH > BH && HH >= 600
     }
 
-    function Hx(VV) {
+    function dL(HH) {
       let {
-        journal: eV,
-        hud: xV,
-        guide: JV
-      } = VV;
+        journal: BH,
+        hud: LH,
+        guide: AH
+      } = HH;
       const {
-        t: YV
-      } = (0, wV.A)(), pV = (0, QV.j)(gV, eV.getPages()), nV = (0, QV.j)(xe, xV.getGuide()), ZV = pV.find((VV => VV.active)), rV = (kV = nV, bV = void 0 === ZV ? null : ZV.id, "active" === kV[0] && null === bV);
-      var kV, bV;
-      const EV = (0, Mx.n)(Kx),
+        t: rH
+      } = (0, EH.B)(), tH = (0, zH.e)(KH, BH.getPages()), CH = (0, zH.e)(LB, LH.getGuide()), XH = tH.find((HH => HH.active)), YH = (uH = CH, QH = void 0 === XH ? null : XH.id, "active" === uH[0] && null === QH);
+      var uH, QH;
+      const WH = (0, mL.n)(ZL),
         {
-          first: BV,
-          step: jV,
-          canGoBack: FV,
-          canGoForward: TV,
-          turnPage: PV,
-          leaves: AV,
-          pagesHandlers: NV
-        } = mx(pV.length, EV, (() => function(VV) {
-          const eV = VV.findIndex((VV => VV.active));
-          return -1 !== eV ? eV : Math.max(0, VV.findIndex((VV => "open" === VV.state)))
-        }(pV)));
-      (0, UV.useEffect)((() => {
-        eV.onOpened()
-      }), [eV]), (0, qV.d)((VV => !rV && ("ArrowLeft" === VV.code || "ArrowRight" === VV.code) && !(0, tV.isTypingInInput)()), (VV => {
-        VV.stopPropagation(), PV("ArrowLeft" === VV.code ? "Back" : "Forward")
+          first: MH,
+          step: xH,
+          canGoBack: TH,
+          canGoForward: UH,
+          turnPage: VH,
+          leaves: OH,
+          pagesHandlers: bH
+        } = wL(tH.length, WH, (() => function(HH) {
+          const BH = HH.findIndex((HH => HH.active));
+          return -1 !== BH ? BH : Math.max(0, HH.findIndex((HH => "open" === HH.state)))
+        }(tH)));
+      (0, SH.useEffect)((() => {
+        BH.onOpened()
+      }), [BH]), (0, vH.c)((HH => !YH && ("ArrowLeft" === HH.code || "ArrowRight" === HH.code) && !(0, PH.isTypingInInput)()), (HH => {
+        HH.stopPropagation(), VH("ArrowLeft" === HH.code ? "Back" : "Forward")
       }));
-      const XV = void 0 !== ZV,
-        MV = (VV, xV, JV) => (0, iV.jsx)(Cx, {
-          className: VV,
-          page: xV >= 0 && xV < pV.length ? pV[xV] : void 0,
-          hidden: JV,
-          building: XV,
-          journal: eV
+      const kH = void 0 !== XH,
+        mH = (HH, LH, AH) => (0, eH.jsx)(qL, {
+          className: HH,
+          page: LH >= 0 && LH < tH.length ? tH[LH] : void 0,
+          hidden: AH,
+          building: kH,
+          journal: BH
         });
-      return (0, iV.jsx)(Xx.e, {
-        close: yV.m,
+      return (0, eH.jsx)(kL.b, {
+        close: hH.j,
         togglePointerLock: !1,
         className: "PlotsJournalOverlay",
-        children: (0, iV.jsxs)("section", {
-          className: vV()("PlotsJournal", {
-            Spread: EV
+        children: (0, eH.jsxs)("section", {
+          className: GH()("PlotsJournal", {
+            Spread: WH
           }),
           role: "dialog",
           "aria-modal": "true",
-          "aria-label": YV("plotsGame:journalTitle"),
-          children: [(0, iV.jsx)(Nx.k, {
+          "aria-label": rH("plotsGame:journalTitle"),
+          children: [(0, eH.jsx)(bL.q, {
             className: "PlotsJournalClose",
-            onClick: yV.m
-          }), "active" === nV[0] && (0, iV.jsx)(ne, {
+            onClick: hH.j
+          }), "active" === CH[0] && (0, eH.jsx)(CB, {
             className: "PlotsJournalGuideSkip",
-            onSkip: JV.skip
-          }), rV && (0, iV.jsx)(Rx, {
-            onBuild: eV.build
-          }), !rV && (0, iV.jsx)(gx, {
+            onSkip: AH.skip
+          }), YH && (0, eH.jsx)(lL, {
+            onBuild: BH.build
+          }), !YH && (0, eH.jsx)(KL, {
             direction: "Back",
-            disabled: !FV,
-            onTurn: PV
-          }), (0, iV.jsx)("div", {
-            hidden: rV,
+            disabled: !TH,
+            onTurn: VH
+          }), (0, eH.jsx)("div", {
+            hidden: YH,
             className: "PlotsJournalBookPages",
-            ...NV,
-            children: (0, iV.jsxs)("div", {
+            ...bH,
+            children: (0, eH.jsxs)("div", {
               className: "PlotsJournalSheet",
-              children: [EV && MV("Left", BV - 2, !0), MV("Right", BV + 2 * jV - 1, !0), (0, iV.jsxs)("div", {
-                ref: VV => {
-                  AV.current.Back = VV
+              children: [WH && mH("Left", MH - 2, !0), mH("Right", MH + 2 * xH - 1, !0), (0, eH.jsxs)("div", {
+                ref: HH => {
+                  OH.current.Back = HH
                 },
                 className: "PlotsJournalLeaf Back",
-                children: [MV("Recto", BV - 1, !0), EV && MV("Verso", BV, !1)]
-              }), (0, iV.jsxs)("div", {
-                ref: VV => {
-                  AV.current.Forward = VV
+                children: [mH("Recto", MH - 1, !0), WH && mH("Verso", MH, !1)]
+              }), (0, eH.jsxs)("div", {
+                ref: HH => {
+                  OH.current.Forward = HH
                 },
                 className: "PlotsJournalLeaf Forward",
-                children: [MV("Recto", BV + jV - 1, !1), EV && MV("Verso", BV + jV, !0)]
+                children: [mH("Recto", MH + xH - 1, !1), WH && mH("Verso", MH + xH, !0)]
               })]
             })
-          }), !rV && (0, iV.jsx)(gx, {
+          }), !YH && (0, eH.jsx)(KL, {
             direction: "Forward",
-            disabled: !TV,
-            onTurn: PV
+            disabled: !UH,
+            onTurn: VH
           })]
         })
       })
     }
 
-    function ux(VV, eV, xV, JV, YV) {
-      const UV = Math.hypot(...eV.dir);
-      if (!Number.isFinite(UV) || 0 === UV) return -1;
+    function aL(HH, BH, LH, AH, rH) {
+      const SH = Math.hypot(...BH.dir);
+      if (!Number.isFinite(SH) || 0 === SH) return -1;
       const {
-        from: yV,
-        reach: pV,
-        solid: QV
-      } = eV, nV = [eV.dir[0] / UV, eV.dir[1] / UV, eV.dir[2] / UV], wV = null === QV ? pV : Math.min(pV, function(VV, eV, xV) {
-        const JV = sx(VV, eV, xV);
-        if (JV !== 1 / 0) return JV;
-        return (xV[0] + .5 - VV[0]) * eV[0] + (xV[1] + .5 - VV[1]) * eV[1] + (xV[2] + .5 - VV[2]) * eV[2]
-      }(yV, nV, QV) + .75);
-      let ZV = -1,
-        vV = 1 / 0,
-        rV = 1 / 0;
-      for (let kV = 0; kV < VV.length; kV += 4) {
-        const eV = [VV[kV], VV[kV + 1], VV[kV + 2]],
-          UV = YV(kV) ? pV : wV;
-        let QV = -1,
-          bV = sx(yV, nV, eV);
-        if (bV > UV) {
-          const VV = [eV[0] + .5 - yV[0], eV[1] + .5 - yV[1], eV[2] + .5 - yV[2]];
-          if (bV = VV[0] * nV[0] + VV[1] * nV[1] + VV[2] * nV[2], bV <= 0 || bV > UV) continue;
-          if (QV = Math.hypot(VV[0] - bV * nV[0], VV[1] - bV * nV[1], VV[2] - bV * nV[2]), QV > .7 || !JV(kV)) continue
-        }(QV < vV || QV === vV && bV < rV) && xV(kV) && (ZV = kV, vV = QV, rV = bV)
+        from: hH,
+        reach: tH,
+        solid: zH
+      } = BH, CH = [BH.dir[0] / SH, BH.dir[1] / SH, BH.dir[2] / SH], EH = null === zH ? tH : Math.min(tH, function(HH, BH, LH) {
+        const AH = sL(HH, BH, LH);
+        if (AH !== 1 / 0) return AH;
+        return (LH[0] + .5 - HH[0]) * BH[0] + (LH[1] + .5 - HH[1]) * BH[1] + (LH[2] + .5 - HH[2]) * BH[2]
+      }(hH, CH, zH) + .75);
+      let XH = -1,
+        GH = 1 / 0,
+        YH = 1 / 0;
+      for (let uH = 0; uH < HH.length; uH += 4) {
+        const BH = [HH[uH], HH[uH + 1], HH[uH + 2]],
+          SH = rH(uH) ? tH : EH;
+        let zH = -1,
+          QH = sL(hH, CH, BH);
+        if (QH > SH) {
+          const HH = [BH[0] + .5 - hH[0], BH[1] + .5 - hH[1], BH[2] + .5 - hH[2]];
+          if (QH = HH[0] * CH[0] + HH[1] * CH[1] + HH[2] * CH[2], QH <= 0 || QH > SH) continue;
+          if (zH = Math.hypot(HH[0] - QH * CH[0], HH[1] - QH * CH[1], HH[2] - QH * CH[2]), zH > .7 || !AH(uH)) continue
+        }(zH < GH || zH === GH && QH < YH) && LH(uH) && (XH = uH, GH = zH, YH = QH)
       }
-      return ZV
+      return XH
     }
 
-    function sx(VV, eV, xV) {
-      let JV = 0,
-        YV = 1 / 0;
-      for (let UV = 0; UV < 3; UV++) {
-        const yV = xV[UV] - VV[UV];
-        if (0 === eV[UV]) {
-          if (yV > 0 || yV + 1 < 0) return 1 / 0;
+    function sL(HH, BH, LH) {
+      let AH = 0,
+        rH = 1 / 0;
+      for (let SH = 0; SH < 3; SH++) {
+        const hH = LH[SH] - HH[SH];
+        if (0 === BH[SH]) {
+          if (hH > 0 || hH + 1 < 0) return 1 / 0;
           continue
         }
-        const pV = yV / eV[UV],
-          QV = (yV + 1) / eV[UV];
-        JV = Math.max(JV, Math.min(pV, QV)), YV = Math.min(YV, Math.max(pV, QV))
+        const tH = hH / BH[SH],
+          zH = (hH + 1) / BH[SH];
+        AH = Math.max(AH, Math.min(tH, zH)), rH = Math.min(rH, Math.max(tH, zH))
       }
-      return JV <= YV ? JV : 1 / 0
+      return AH <= rH ? AH : 1 / 0
     }
-    var Sx = xV(38080),
-      Ix = xV(39211);
-    const dx = [1, 1, 1];
-    class Ox {
-      constructor(VV) {
-        this.api = VV, this.meshes = null, this.shown = null
+    var JL = LH(37761),
+      iL = LH(38935);
+    const pL = [1, 1, 1];
+    class yL {
+      constructor(HH) {
+        this.api = HH, this.meshes = null, this.shown = null
       }
-      show(VV) {
-        if (!(0, Sx.h)(VV, this.shown))
-          if (this.shown = null === VV ? null : [VV[0], VV[1], VV[2]], null !== this.meshes)
-            for (const eV of this.meshes) this.api.setGameMesh(eV, null === VV ? {
+      show(HH) {
+        if (!(0, JL.g)(HH, this.shown))
+          if (this.shown = null === HH ? null : [HH[0], HH[1], HH[2]], null !== this.meshes)
+            for (const BH of this.meshes) this.api.setGameMesh(BH, null === HH ? {
               visible: !1
             } : {
-              anchor: VV,
+              anchor: HH,
               visible: !0
             });
-          else if (null !== VV) {
-          const eV = [Ix.i, Ix.i, Ix.i, 0, 0, 0];
-          this.meshes = [this.build([eV], Ix.m, VV), this.build((0, Ix.e)(), Ix.s, VV)]
+          else if (null !== HH) {
+          const BH = [iL.d, iL.d, iL.d, 0, 0, 0];
+          this.meshes = [this.build([BH], iL.g, HH), this.build((0, iL.c)(), iL.l, HH)]
         }
       }
       dispose() {
-        for (const eV of null !== (VV = this.meshes) && void 0 !== VV ? VV : []) {
-          var VV;
-          this.api.disposeGameMesh(eV)
+        for (const BH of null !== (HH = this.meshes) && void 0 !== HH ? HH : []) {
+          var HH;
+          this.api.disposeGameMesh(BH)
         }
         this.meshes = null, this.shown = null
       }
-      build(VV, eV, xV) {
-        const JV = [],
-          YV = [];
-        for (const [UV, yV, pV, QV, nV, wV] of VV)(0, ue.f)(JV, YV, [QV + .5, nV + .5, wV + .5], [UV, yV, pV]);
+      build(HH, BH, LH) {
+        const AH = [],
+          rH = [];
+        for (const [SH, hH, tH, zH, CH, EH] of HH)(0, aB.g)(AH, rH, [zH + .5, CH + .5, EH + .5], [SH, hH, tH]);
         return this.api.createGameMesh({
-          positions: JV,
-          indices: YV
+          positions: AH,
+          indices: rH
         }, {
-          rgb: dx,
-          alpha: eV,
+          rgb: pL,
+          alpha: BH,
           onTop: !0
-        }, xV)
+        }, LH)
       }
     }
 
-    function VJ(VV, eV) {
-      const xV = Ke.f.QB / 2;
-      return VV[0] < eV[0] + xV && VV[0] + 1 > eV[0] - xV && VV[1] < eV[1] + Ke.f.nB && VV[1] + 1 > eV[1] && VV[2] < eV[2] + xV && VV[2] + 1 > eV[2] - xV
+    function HA(HH, BH) {
+      const LH = ZB.g.JW / 2;
+      return HH[0] < BH[0] + LH && HH[0] + 1 > BH[0] - LH && HH[1] < BH[1] + ZB.g.iW && HH[1] + 1 > BH[1] && HH[2] < BH[2] + LH && HH[2] + 1 > BH[2] - LH
     }
 
-    function eJ(VV, eV) {
-      return VV.getClientOption(eV, "blockReach") + 1
+    function BA(HH, BH) {
+      return HH.getClientOption(BH, "blockReach") + 1
     }
-    class xJ {
-      constructor(VV, eV, xV) {
-        this.api = VV, this.localPlayerId = eV, this.foreseen = xV, this.cells = [], this.playerCells = [], this.next = null
+    class LA {
+      constructor(HH, BH, LH) {
+        this.api = HH, this.localPlayerId = BH, this.foreseen = LH, this.cells = [], this.playerCells = [], this.next = null
       }
       get() {
         return this.next
       }
-      setCells(VV) {
-        this.cells = VV
+      setCells(HH) {
+        this.cells = HH
       }
       playerMoved() {
-        return JJ(this.api.getPositionView(this.localPlayerId)).some(((VV, eV) => VV !== this.playerCells[eV]))
+        return AA(this.api.getPositionView(this.localPlayerId)).some(((HH, BH) => HH !== this.playerCells[BH]))
       }
-      Pr(VV) {
-        const eV = this.api.getPositionView(this.localPlayerId);
-        return this.playerCells.splice(0, 1 / 0, ...JJ(eV)), this.next = this.pickFrom(null === VV ? [eV[0], eV[1] + 1, eV[2]] : (0, Sx.d)(VV), (() => !1)), this.next
+      XY(HH) {
+        const BH = this.api.getPositionView(this.localPlayerId);
+        return this.playerCells.splice(0, 1 / 0, ...AA(BH)), this.next = this.pickFrom(null === HH ? [BH[0], BH[1] + 1, BH[2]] : (0, JL.e)(HH), (() => !1)), this.next
       }
-      pickFrom(VV, eV) {
-        const xV = this.api.getPositionView(this.localPlayerId),
-          JV = [xV[0], xV[1] + Ke.f.nB * Ke.f.playerEyeToHeightRatio, xV[2]],
-          YV = eJ(this.api, this.localPlayerId),
+      pickFrom(HH, BH) {
+        const LH = this.api.getPositionView(this.localPlayerId),
+          AH = [LH[0], LH[1] + ZB.g.iW * ZB.g.playerEyeToHeightRatio, LH[2]],
+          rH = BA(this.api, this.localPlayerId),
           {
-            cells: UV
+            cells: SH
           } = this,
-          yV = VV => [UV[VV], UV[VV + 1], UV[VV + 2]],
-          pV = function(VV, eV, xV, JV, YV, UV) {
-            let yV = -1,
-              pV = -1,
-              QV = 1 / 0;
-            for (let nV = 0; nV < VV.length; nV += eV) {
-              const eV = (UV(nV) ? 2 : 0) + (JV(nV) ? 1 : 0);
-              if (eV < pV || YV(nV)) continue;
-              const wV = (VV[nV] + .5 - xV[0]) ** 2 + (VV[nV + 1] + .5 - xV[1]) ** 2 + (VV[nV + 2] + .5 - xV[2]) ** 2;
-              (eV > pV || wV < QV) && (yV = nV, pV = eV, QV = wV)
+          hH = HH => [SH[HH], SH[HH + 1], SH[HH + 2]],
+          tH = function(HH, BH, LH, AH, rH, SH) {
+            let hH = -1,
+              tH = -1,
+              zH = 1 / 0;
+            for (let CH = 0; CH < HH.length; CH += BH) {
+              const BH = (SH(CH) ? 2 : 0) + (AH(CH) ? 1 : 0);
+              if (BH < tH || rH(CH)) continue;
+              const EH = (HH[CH] + .5 - LH[0]) ** 2 + (HH[CH + 1] + .5 - LH[1]) ** 2 + (HH[CH + 2] + .5 - LH[2]) ** 2;
+              (BH > tH || EH < zH) && (hH = CH, tH = BH, zH = EH)
             }
-            return yV
-          }(UV, 4, VV, (VV => 1 === UV[VV + 3]), (VV => {
-            const JV = yV(VV);
-            return VJ(JV, xV) || this.foreseen.has(JV.join()) || eV(JV)
-          }), (VV => function(VV, eV, xV) {
-            return (eV[0] + .5 - VV[0]) ** 2 + (eV[1] + .5 - VV[1]) ** 2 + (eV[2] + .5 - VV[2]) ** 2 <= xV ** 2
-          }(JV, yV(VV), YV)));
-        return -1 === pV ? null : yV(pV)
+            return hH
+          }(SH, 4, HH, (HH => 1 === SH[HH + 3]), (HH => {
+            const AH = hH(HH);
+            return HA(AH, LH) || this.foreseen.has(AH.join()) || BH(AH)
+          }), (HH => function(HH, BH, LH) {
+            return (BH[0] + .5 - HH[0]) ** 2 + (BH[1] + .5 - HH[1]) ** 2 + (BH[2] + .5 - HH[2]) ** 2 <= LH ** 2
+          }(AH, hH(HH), rH)));
+        return -1 === tH ? null : hH(tH)
       }
     }
 
-    function JJ(VV) {
-      let [eV, xV, JV] = VV;
-      const YV = Ke.f.QB / 2;
-      return [Math.floor(eV), Math.floor(xV), Math.floor(JV), Math.floor(eV - YV), Math.floor(eV + YV), Math.floor(xV + Ke.f.nB), Math.floor(JV - YV), Math.floor(JV + YV)]
+    function AA(HH) {
+      let [BH, LH, AH] = HH;
+      const rH = ZB.g.JW / 2;
+      return [Math.floor(BH), Math.floor(LH), Math.floor(AH), Math.floor(BH - rH), Math.floor(BH + rH), Math.floor(LH + ZB.g.iW), Math.floor(AH - rH), Math.floor(AH + rH)]
     }
-    class YJ {
-      constructor(VV, eV, xV) {
-        this.api = VV, this.localPlayerId = eV, this.pickNext = xV, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
+    class rA {
+      constructor(HH, BH, LH) {
+        this.api = HH, this.localPlayerId = BH, this.pickNext = LH, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
       }
-      look(VV) {
-        const [eV, , xV] = VV.cameraDirection, JV = Math.hypot(eV, xV);
-        JV > .001 && (this.heading = [eV / JV, xV / JV])
+      look(HH) {
+        const [BH, , LH] = HH.cameraDirection, AH = Math.hypot(BH, LH);
+        AH > .001 && (this.heading = [BH / AH, LH / AH])
       }
-      tapped(VV, eV, xV) {
-        const JV = eJ(this.api, this.localPlayerId),
+      tapped(HH, BH, LH) {
+        const AH = BA(this.api, this.localPlayerId),
           {
-            origin: YV,
-            direction: UV
+            origin: rH,
+            direction: SH
           } = this.api.getActionRay(),
-          yV = [...YV],
-          pV = [
-            [yV, [yV[0] + UV[0] * JV, yV[1] + UV[1] * JV, yV[2] + UV[2] * JV]]
+          hH = [...rH],
+          tH = [
+            [hH, [hH[0] + SH[0] * AH, hH[1] + SH[1] * AH, hH[2] + SH[2] * AH]]
           ];
-        null !== VV && pV.push([yV, (0, Sx.d)(VV)]), this.tap = {
-          lines: pV,
-          next: eV,
-          ms: xV
+        null !== HH && tH.push([hH, (0, JL.e)(HH)]), this.tap = {
+          lines: tH,
+          next: BH,
+          ms: LH
         }
       }
-      filled(VV, eV) {
-        this.tap = null, this.turnFrom(VV, eV), this.retry(eV)
+      filled(HH, BH) {
+        this.tap = null, this.turnFrom(HH, BH), this.retry(BH)
       }
-      arrived(VV, eV) {
+      arrived(HH, BH) {
         const {
-          tap: xV
+          tap: LH
         } = this;
-        if (null === xV || eV - xV.ms > 1500) return null;
-        const JV = (0, Sx.d)(VV);
-        return (0, Sx.h)(xV.next, VV) || xV.lines.some((VV => {
-          let [eV, xV] = VV;
-          return function(VV, eV, xV) {
-            const JV = [xV[0] - eV[0], xV[1] - eV[1], xV[2] - eV[2]],
-              YV = [VV[0] - eV[0], VV[1] - eV[1], VV[2] - eV[2]],
-              UV = JV[0] ** 2 + JV[1] ** 2 + JV[2] ** 2,
-              yV = 0 === UV ? 0 : Math.min(1, Math.max(0, (YV[0] * JV[0] + YV[1] * JV[1] + YV[2] * JV[2]) / UV));
-            return Math.hypot(YV[0] - JV[0] * yV, YV[1] - JV[1] * yV, YV[2] - JV[2] * yV)
-          }(JV, eV, xV) <= .9
-        })) ? (this.tap = null, this.turnFrom(VV, eV), xV.ms) : null
+        if (null === LH || BH - LH.ms > 1500) return null;
+        const AH = (0, JL.e)(HH);
+        return (0, JL.g)(LH.next, HH) || LH.lines.some((HH => {
+          let [BH, LH] = HH;
+          return function(HH, BH, LH) {
+            const AH = [LH[0] - BH[0], LH[1] - BH[1], LH[2] - BH[2]],
+              rH = [HH[0] - BH[0], HH[1] - BH[1], HH[2] - BH[2]],
+              SH = AH[0] ** 2 + AH[1] ** 2 + AH[2] ** 2,
+              hH = 0 === SH ? 0 : Math.min(1, Math.max(0, (rH[0] * AH[0] + rH[1] * AH[1] + rH[2] * AH[2]) / SH));
+            return Math.hypot(rH[0] - AH[0] * hH, rH[1] - AH[1] * hH, rH[2] - AH[2] * hH)
+          }(AH, BH, LH) <= .9
+        })) ? (this.tap = null, this.turnFrom(HH, BH), LH.ms) : null
       }
-      turnFrom(VV, eV) {
+      turnFrom(HH, BH) {
         this.pending = {
-          from: VV,
-          ms: eV,
-          turnMs: Math.max(50, Math.min(250, eV - this.lastFillMs))
-        }, this.lastFillMs = eV
+          from: HH,
+          ms: BH,
+          turnMs: Math.max(50, Math.min(250, BH - this.lastFillMs))
+        }, this.lastFillMs = BH
       }
-      retry(VV) {
+      retry(HH) {
         const {
-          pending: eV
+          pending: BH
         } = this;
-        if (null === eV) return;
-        if (VV - eV.ms > 1500) return void(this.pending = null);
-        const xV = this.pickNext((0, Sx.d)(eV.from), (VV => (0, Sx.h)(VV, eV.from)));
-        if (null === xV) return;
+        if (null === BH) return;
+        if (HH - BH.ms > 1500) return void(this.pending = null);
+        const LH = this.pickNext((0, JL.e)(BH.from), (HH => (0, JL.g)(HH, BH.from)));
+        if (null === LH) return;
         this.pending = null;
         const {
-          turning: JV
+          turning: AH
         } = this;
-        if (null !== JV && VV < JV.endMs && (0, Sx.h)(JV.to, xV)) return;
-        const YV = this.api.getActionRay().origin,
-          UV = [xV[0] + .5 - YV[0], xV[1] + .5 - YV[1], xV[2] + .5 - YV[2]],
-          yV = Math.hypot(UV[0], UV[2]);
-        if (yV < .3) {
-          const VV = Math.max(yV, .001);
-          UV[0] = this.heading[0] * VV, UV[2] = this.heading[1] * VV
+        if (null !== AH && HH < AH.endMs && (0, JL.g)(AH.to, LH)) return;
+        const rH = this.api.getActionRay().origin,
+          SH = [LH[0] + .5 - rH[0], LH[1] + .5 - rH[1], LH[2] + .5 - rH[2]],
+          hH = Math.hypot(SH[0], SH[2]);
+        if (hH < .3) {
+          const HH = Math.max(hH, .001);
+          SH[0] = this.heading[0] * HH, SH[2] = this.heading[1] * HH
         }
-        this.api.turnCamera(UV, eV.turnMs), this.turning = {
-          to: xV,
-          endMs: VV + eV.turnMs
+        this.api.turnCamera(SH, BH.turnMs), this.turning = {
+          to: LH,
+          endMs: HH + BH.turnMs
         }
       }
     }
-    class UJ {
-      constructor(VV, eV, xV, JV) {
-        this.api = VV, this.localPlayerId = eV, this.juice = xV, this.tracker = JV, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.lastFilled = null, this.lastSeenFilled = null, this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = void 0, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new He(VV), this.meshes = new Vx(VV), this.outline = new Ox(VV), this.nextCell = new xJ(VV, eV, this.foreseen), this.turn = new YJ(VV, eV, ((VV, eV) => this.nextCell.pickFrom(VV, eV)))
+    class SA {
+      constructor(HH, BH, LH, AH) {
+        this.api = HH, this.localPlayerId = BH, this.juice = LH, this.tracker = AH, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.lastFilled = null, this.lastSeenFilled = null, this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = void 0, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new dB(HH), this.meshes = new HL(HH), this.outline = new yL(HH), this.nextCell = new LA(HH, BH, this.foreseen), this.turn = new rA(HH, BH, ((HH, BH) => this.nextCell.pickFrom(HH, BH)))
       }
-      RZ(VV) {
-        const eV = "active" === VV[0] ? `${VV[1]}|${VV[3]}|${VV[4]}|${VV[5]}|${VV[6]}` : "";
-        if ("active" !== VV[0]) "built" === VV[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
+      kX(HH) {
+        const BH = "active" === HH[0] ? `${HH[1]}|${HH[3]}|${HH[4]}|${HH[5]}|${HH[6]}` : "";
+        if ("active" !== HH[0]) "built" === HH[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
         else {
-          const [, , , , , , , xV, JV, YV, UV] = VV;
-          eV !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = xV) : xV === this.layerY ? this.burstUnlisted(JV) : xV > this.layerY && this.finishLayer(xV), this.layerY = xV, this.layerCells.has(xV) || this.layerCells.set(xV, JV.filter(yJ)), this.ghostCells = JV, this.palette = YV, this.occupiedCells = UV
+          const [, , , , , , , LH, AH, rH, SH] = HH;
+          BH !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = LH) : LH === this.layerY ? this.burstUnlisted(AH) : LH > this.layerY && this.finishLayer(LH), this.layerY = LH, this.layerCells.has(LH) || this.layerCells.set(LH, AH.filter(hA)), this.ghostCells = AH, this.palette = rH, this.occupiedCells = SH
         }
-        eV !== this.blueprint && (this.tracker.show("active" === VV[0] && VV[2] ? {
-          id: VV[1],
-          y: VV[4]
-        } : null), this.blueprint = eV, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((VV => this.api.blockNameToBlockId(VV))), this.chunkWatch.watch([...this.ghostCells.filter(yJ), ...this.occupiedCells]), this.refresh()
+        BH !== this.blueprint && (this.tracker.show("active" === HH[0] && HH[2] ? {
+          id: HH[1],
+          y: HH[4]
+        } : null), this.blueprint = BH, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((HH => this.api.blockNameToBlockId(HH))), this.chunkWatch.watch([...this.ghostCells.filter(hA), ...this.occupiedCells]), this.refresh()
       }
-      finishLayer(VV) {
-        this.burstUnlisted([]), VV > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = VV)
+      finishLayer(HH) {
+        this.burstUnlisted([]), HH > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = HH)
       }
-      iZ() {
+      IX() {
         if (this.chunkWatch.changed()) return void this.refresh();
-        const VV = performance.now();
-        let eV = !1;
-        for (const [JV, YV] of this.foreseen) {
-          var xV;
-          if (VV - YV > 1e3) this.foreseen.delete(JV), eV = !0, (null === (xV = this.lastFilled) || void 0 === xV ? void 0 : xV.join()) === JV && (this.lastFilled = this.lastSeenFilled)
-        }(eV || this.nextCell.playerMoved()) && this.showNext()
+        const HH = performance.now();
+        let BH = !1;
+        for (const [AH, rH] of this.foreseen) {
+          var LH;
+          if (HH - rH > 1e3) this.foreseen.delete(AH), BH = !0, (null === (LH = this.lastFilled) || void 0 === LH ? void 0 : LH.join()) === AH && (this.lastFilled = this.lastSeenFilled)
+        }(BH || this.nextCell.playerMoved()) && this.showNext()
       }
       dispose() {
         this.meshes.dispose(), this.outline.dispose()
       }
-      burstUnlisted(VV) {
-        const eV = new Set;
-        for (let YV = 0; YV < VV.length; YV += 4) eV.add(`${VV[YV]},${VV[YV+1]},${VV[YV+2]}`);
-        const xV = [],
+      burstUnlisted(HH) {
+        const BH = new Set;
+        for (let rH = 0; rH < HH.length; rH += 4) BH.add(`${HH[rH]},${HH[rH+1]},${HH[rH+2]}`);
+        const LH = [],
           {
-            ghostCells: JV
+            ghostCells: AH
           } = this;
-        for (let YV = 0; YV < JV.length; YV += 4) {
-          const VV = `${JV[YV]},${JV[YV+1]},${JV[YV+2]}`;
-          !eV.has(VV) && this.open.delete(VV) && xV.push(this.filledCell(YV))
+        for (let rH = 0; rH < AH.length; rH += 4) {
+          const HH = `${AH[rH]},${AH[rH+1]},${AH[rH+2]}`;
+          !BH.has(HH) && this.open.delete(HH) && LH.push(this.filledCell(rH))
         }
-        this.burst(xV)
+        this.burst(LH)
       }
       refresh() {
         const {
-          ghostCells: VV,
-          palette: eV,
-          occupiedCells: xV
-        } = this, JV = new Oe, YV = new Set, UV = [], yV = [];
-        let pV = 0;
-        for (let QV = 0; QV < VV.length; QV += 4) {
-          const [xV, nV, wV, ZV] = [VV[QV], VV[QV + 1], VV[QV + 2], VV[QV + 3]], vV = this.api.getBlockId(xV, nV, wV), rV = `${xV},${nV},${wV}`, kV = ge(this.blockIds[ZV], vV);
-          !kV && De(vV) ? JV.add(xV, nV, wV, Ce(eV[ZV]), Se, me(eV[ZV])) : kV ? this.open.has(rV) && UV.push(this.filledCell(QV)) : JV.add(xV, nV, wV, de, Ie), kV || pV++, !kV && this.api.isBlockInLoadedChunk(xV, nV, wV) && (YV.add(rV), yV.push(xV, nV, wV, De(vV) ? 0 : 1))
+          ghostCells: HH,
+          palette: BH,
+          occupiedCells: LH
+        } = this, AH = new yB, rH = new Set, SH = [], hH = [];
+        let tH = 0;
+        for (let zH = 0; zH < HH.length; zH += 4) {
+          const [LH, CH, EH, XH] = [HH[zH], HH[zH + 1], HH[zH + 2], HH[zH + 3]], GH = this.api.getBlockId(LH, CH, EH), YH = `${LH},${CH},${EH}`, uH = KB(this.blockIds[XH], GH);
+          !uH && cB(GH) ? AH.add(LH, CH, EH, qB(BH[XH]), JB, wB(BH[XH])) : uH ? this.open.has(YH) && SH.push(this.filledCell(zH)) : AH.add(LH, CH, EH, pB, iB), uH || tH++, !uH && this.api.isBlockInLoadedChunk(LH, CH, EH) && (rH.add(YH), hH.push(LH, CH, EH, cB(GH) ? 0 : 1))
         }
-        this.open = YV, this.nextCell.setCells(yV), this.tracker.update(this.layerY, this.topLayerY, pV);
-        for (let QV = 0; QV < xV.length; QV += 3) {
-          const [VV, eV, YV] = [xV[QV], xV[QV + 1], xV[QV + 2]];
-          De(this.api.getBlockId(VV, eV, YV)) || JV.add(VV, eV, YV, de, Ie)
+        this.open = rH, this.nextCell.setCells(hH), this.tracker.update(this.layerY, this.topLayerY, tH);
+        for (let zH = 0; zH < LH.length; zH += 3) {
+          const [HH, BH, rH] = [LH[zH], LH[zH + 1], LH[zH + 2]];
+          cB(this.api.getBlockId(HH, BH, rH)) || AH.add(HH, BH, rH, pB, iB)
         }
-        this.meshes.show(JV.toArray()), this.burst(UV), this.showNext(), this.turn.retry(performance.now())
+        this.meshes.show(AH.toArray()), this.burst(SH), this.showNext(), this.turn.retry(performance.now())
       }
-      burst(VV) {
-        const eV = performance.now(),
-          xV = [];
-        for (const [YV, UV, yV] of VV) {
-          const VV = [YV, UV, yV];
-          this.lastSeenFilled = VV, this.foreseen.delete(VV.join()) || xV.push(VV)
+      burst(HH) {
+        const BH = performance.now(),
+          LH = [];
+        for (const [rH, SH, hH] of HH) {
+          const HH = [rH, SH, hH];
+          this.lastSeenFilled = HH, this.foreseen.delete(HH.join()) || LH.push(HH)
         }
-        const JV = this.isHolding(eV);
-        for (const YV of xV) {
-          if (this.lastFilled = YV, JV && this.pressFilled) {
-            this.turn.filled(YV, eV);
+        const AH = this.isHolding(BH);
+        for (const rH of LH) {
+          if (this.lastFilled = rH, AH && this.pressFilled) {
+            this.turn.filled(rH, BH);
             continue
           }
-          const VV = this.turn.arrived(YV, eV);
-          if (null !== VV) {
-            this.pressFilled = JV;
-            for (const [eV, xV] of this.foreseen) xV <= VV && this.foreseen.delete(eV)
+          const HH = this.turn.arrived(rH, BH);
+          if (null !== HH) {
+            this.pressFilled = AH;
+            for (const [BH, LH] of this.foreseen) LH <= HH && this.foreseen.delete(BH)
           }
         }
-        this.juice.filled(VV)
+        this.juice.filled(HH)
       }
       showNext() {
-        var VV;
-        this.outline.show(null !== (VV = this.aimed) && void 0 !== VV ? VV : this.nextCell.Pr(this.lastFilled))
+        var HH;
+        this.outline.show(null !== (HH = this.aimed) && void 0 !== HH ? HH : this.nextCell.XY(this.lastFilled))
       }
-      afterRender(VV) {
-        var eV;
-        this.turn.look(VV);
-        const xV = this.api.getTargetedBlock();
-        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === xV ? null : xV.position), this.outline.show(null !== (eV = this.aimed) && void 0 !== eV ? eV : this.nextCell.get())
+      afterRender(HH) {
+        var BH;
+        this.turn.look(HH);
+        const LH = this.api.getTargetedBlock();
+        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === LH ? null : LH.position), this.outline.show(null !== (BH = this.aimed) && void 0 !== BH ? BH : this.nextCell.get())
       }
-      isHolding(VV) {
-        return null !== this.altMs && VV - this.altMs <= 500
+      isHolding(HH) {
+        return null !== this.altMs && HH - this.altMs <= 500
       }
-      attemptAltAction(VV) {
-        const eV = performance.now();
-        if (this.isHolding(eV) || (this.pressFilled = !1), this.altMs = eV, this.pressFilled) return "preventPlacement";
-        const xV = this.findAimed(VV);
-        if (null !== xV) return this.foreseen.set(xV.join(), eV), this.lastFilled = xV, this.aimed = null, this.showNext(), this.turn.filled(xV, eV), this.pressFilled = !0, "preventPlacement";
+      attemptAltAction(HH) {
+        const BH = performance.now();
+        if (this.isHolding(BH) || (this.pressFilled = !1), this.altMs = BH, this.pressFilled) return "preventPlacement";
+        const LH = this.findAimed(HH);
+        if (null !== LH) return this.foreseen.set(LH.join(), BH), this.lastFilled = LH, this.aimed = null, this.showNext(), this.turn.filled(LH, BH), this.pressFilled = !0, "preventPlacement";
         {
-          const xV = this.nextCell.get();
-          null !== xV && this.turn.tapped(VV, xV, eV)
+          const LH = this.nextCell.get();
+          null !== LH && this.turn.tapped(HH, LH, BH)
         }
       }
       holdPressOnEntity() {
-        const VV = performance.now();
-        this.pressFilled && this.isHolding(VV) && (this.altMs = VV)
+        const HH = performance.now();
+        this.pressFilled && this.isHolding(HH) && (this.altMs = HH)
       }
-      findAimed(VV) {
-        return function(VV, eV, xV, JV, YV, UV, yV) {
-          const pV = VV.bJV(eV),
-            QV = null === pV || null === VV.blockNameToBlockId(pV.name, !0) ? null : pV.name,
-            nV = VV.getPositionView(eV),
+      findAimed(HH) {
+        return function(HH, BH, LH, AH, rH, SH, hH) {
+          const tH = HH.yLH(BH),
+            zH = null === tH || null === HH.blockNameToBlockId(tH.name, !0) ? null : tH.name,
+            CH = HH.getPositionView(BH),
             {
-              origin: wV,
-              direction: ZV
-            } = VV.getActionRay(),
-            vV = ux(JV, {
-              from: wV,
-              dir: ZV,
-              reach: eJ(VV, eV),
-              solid: xV
-            }, (eV => {
-              const xV = [JV[eV], JV[eV + 1], JV[eV + 2]];
-              return !ge(YV[JV[eV + 3]], VV.getBlockId(...xV)) && !yV.has(xV.join()) && VV.isBlockInLoadedChunk(...xV) && !VJ(xV, nV)
-            }), (VV => null === QV || QV === ie(YV[JV[VV + 3]])), (VV => null !== UV && JV[VV] === UV[0] && JV[VV + 1] === UV[1] && JV[VV + 2] === UV[2]));
-          return -1 === vV ? null : [JV[vV], JV[vV + 1], JV[vV + 2]]
-        }(this.api, this.localPlayerId, VV, this.ghostCells, this.blockIds, this.nextCell.get(), this.foreseen)
+              origin: EH,
+              direction: XH
+            } = HH.getActionRay(),
+            GH = aL(AH, {
+              from: EH,
+              dir: XH,
+              reach: BA(HH, BH),
+              solid: LH
+            }, (BH => {
+              const LH = [AH[BH], AH[BH + 1], AH[BH + 2]];
+              return !KB(rH[AH[BH + 3]], HH.getBlockId(...LH)) && !hH.has(LH.join()) && HH.isBlockInLoadedChunk(...LH) && !HA(LH, CH)
+            }), (HH => null === zH || zH === eB(rH[AH[HH + 3]])), (HH => null !== SH && AH[HH] === SH[0] && AH[HH + 1] === SH[1] && AH[HH + 2] === SH[2]));
+          return -1 === GH ? null : [AH[GH], AH[GH + 1], AH[GH + 2]]
+        }(this.api, this.localPlayerId, HH, this.ghostCells, this.blockIds, this.nextCell.get(), this.foreseen)
       }
       endPress() {
         this.altMs = null, this.pressFilled = !1
       }
-      filledCell(VV) {
+      filledCell(HH) {
         const {
-          ghostCells: eV
-        } = this, [xV, JV, YV] = Ce(this.palette[eV[VV + 3]]);
-        return [eV[VV], eV[VV + 1], eV[VV + 2], xV, JV, YV]
+          ghostCells: BH
+        } = this, [LH, AH, rH] = qB(this.palette[BH[HH + 3]]);
+        return [BH[HH], BH[HH + 1], BH[HH + 2], LH, AH, rH]
       }
     }
 
-    function yJ(VV, eV) {
-      return eV % 4 !== 3
+    function hA(HH, BH) {
+      return BH % 4 !== 3
     }
-    class pJ {
-      constructor(VV) {
-        this.api = VV, this.sent = !1
+    class tA {
+      constructor(HH) {
+        this.api = HH, this.sent = !1
       }
-      iZ() {
-        this.sent || pV.b.get("loadingOverlayVisible") || (this.sent = !0, this.api.sendCommand("plotsentered"))
+      IX() {
+        this.sent || tH.c.get("loadingOverlayVisible") || (this.sent = !0, this.api.sendCommand("plotsentered"))
       }
     }
-    var QJ = xV(4642),
-      nJ = xV(40370);
+    var zA = LH(4617),
+      CA = LH(40100);
 
-    function wJ(VV, eV, xV) {
-      const JV = [255 * VV, 255 * eV, 255 * xV],
-        [YV, UV, yV] = JV.map((VV => VV + .4 * (255 - VV)));
+    function EA(HH, BH, LH) {
+      const AH = [255 * HH, 255 * BH, 255 * LH],
+        [rH, SH, hH] = AH.map((HH => HH + .4 * (255 - HH)));
       return {
         texture: "square_particle",
-        Jv: 48,
-        minLifeTime: .3 / nJ.c,
-        maxLifeTime: .55 / nJ.c,
+        aX: 48,
+        minLifeTime: .3 / CA.b,
+        maxLifeTime: .55 / CA.b,
         minSize: .07,
         maxSize: .14,
         minEmitPower: 1,
         maxEmitPower: 1,
         emitRate: 0,
-        gravity: [0, -14 * nJ.c * nJ.c, 0],
+        gravity: [0, -14 * CA.b * CA.b, 0],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [...JV, 1],
-          maxColor: [YV, UV, yV, 1]
+          minColor: [...AH, 1],
+          maxColor: [rH, SH, hH, 1]
         }, {
           timeFraction: 1,
-          minColor: [...JV, 0],
-          maxColor: [YV, UV, yV, 0]
+          minColor: [...AH, 0],
+          maxColor: [rH, SH, hH, 0]
         }],
-        blendMode: QJ.g.Standard
+        blendMode: zA.f.Standard
       }
     }
-    const ZJ = {
+    const XA = {
       texture: "glint",
       mipmaps: !1,
-      Jv: 96,
-      minLifeTime: .5 / nJ.c,
-      maxLifeTime: .9 / nJ.c,
+      aX: 96,
+      minLifeTime: .5 / CA.b,
+      maxLifeTime: .9 / CA.b,
       minSize: .15,
       maxSize: .3,
       minEmitPower: 1,
       maxEmitPower: 1,
       emitRate: 0,
-      gravity: [0, 2 * nJ.c * nJ.c, 0],
+      gravity: [0, 2 * CA.b * CA.b, 0],
       colorGradients: [{
         timeFraction: 0,
         minColor: [255, 224, 97, 1],
@@ -2614,112 +2637,112 @@ export const modules = {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }],
-      blendMode: QJ.g.OneOne
+      blendMode: zA.f.OneOne
     };
-    class vJ {
-      constructor(VV, eV) {
-        this.api = VV, this.localPlayerId = eV, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
+    class GA {
+      constructor(HH, BH) {
+        this.api = HH, this.localPlayerId = BH, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
       }
-      filled(VV) {
+      filled(HH) {
         if (this.api.particlesEnabled())
-          for (const [eV, xV, JV, YV, UV, yV] of VV.slice(0, 3)) {
-            const VV = `${YV},${UV},${yV}`;
-            let pV = this.chips.get(VV);
-            void 0 === pV && (pV = this.api.createParticles(wJ(YV, UV, yV), {
-              pos: [eV + .5, xV + .5, JV + .5]
-            }), this.chips.set(VV, pV));
-            for (let eV = 0; eV < 8; eV++) this.setPoint(eV, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
-            pV.emitPoints([eV + .5, xV + .5, JV + .5], this.points, 8)
+          for (const [BH, LH, AH, rH, SH, hH] of HH.slice(0, 3)) {
+            const HH = `${rH},${SH},${hH}`;
+            let tH = this.chips.get(HH);
+            void 0 === tH && (tH = this.api.createParticles(EA(rH, SH, hH), {
+              pos: [BH + .5, LH + .5, AH + .5]
+            }), this.chips.set(HH, tH));
+            for (let BH = 0; BH < 8; BH++) this.setPoint(BH, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
+            tH.emitPoints([BH + .5, LH + .5, AH + .5], this.points, 8)
           }
       }
-      layerDone(VV) {
+      layerDone(HH) {
         this.api.playSound(this.localPlayerId, "magicAccent2", .7, 1.1);
-        const eV = VV.length / 3;
-        if (0 === eV || !this.api.particlesEnabled()) return;
-        const xV = Math.min(eV, 48),
-          [JV, YV, UV] = [VV[0] + .5, VV[1] + 1, VV[2] + .5];
-        let yV = 0;
-        for (let pV = 0; pV < xV; pV++) {
-          const QV = 3 * Math.floor(pV * eV / xV);
-          for (let eV = 0; eV < 2; eV++) this.setPoint(yV++, VV[QV] + Math.random() - JV, VV[QV + 1] + 1 - YV, VV[QV + 2] + Math.random() - UV, .6 + .8 * Math.random())
+        const BH = HH.length / 3;
+        if (0 === BH || !this.api.particlesEnabled()) return;
+        const LH = Math.min(BH, 48),
+          [AH, rH, SH] = [HH[0] + .5, HH[1] + 1, HH[2] + .5];
+        let hH = 0;
+        for (let tH = 0; tH < LH; tH++) {
+          const zH = 3 * Math.floor(tH * BH / LH);
+          for (let BH = 0; BH < 2; BH++) this.setPoint(hH++, HH[zH] + Math.random() - AH, HH[zH + 1] + 1 - rH, HH[zH + 2] + Math.random() - SH, .6 + .8 * Math.random())
         }
-        this.sparkles ??= this.api.createParticles(ZJ, {
-          pos: [JV, YV, UV]
-        }), this.sparkles.emitPoints([JV, YV, UV], this.points, yV)
+        this.sparkles ??= this.api.createParticles(XA, {
+          pos: [AH, rH, SH]
+        }), this.sparkles.emitPoints([AH, rH, SH], this.points, hH)
       }
       dispose() {
-        var VV;
-        for (const eV of this.chips.values()) eV.stop();
-        this.chips.clear(), null === (VV = this.sparkles) || void 0 === VV || VV.stop(), this.sparkles = null
+        var HH;
+        for (const BH of this.chips.values()) BH.stop();
+        this.chips.clear(), null === (HH = this.sparkles) || void 0 === HH || HH.stop(), this.sparkles = null
       }
-      setPoint(VV, eV, xV, JV, YV) {
-        const UV = 4 * VV;
-        this.points[UV] = eV, this.points[UV + 1] = xV, this.points[UV + 2] = JV, this.points[UV + 3] = YV
+      setPoint(HH, BH, LH, AH, rH) {
+        const SH = 4 * HH;
+        this.points[SH] = BH, this.points[SH + 1] = LH, this.points[SH + 2] = AH, this.points[SH + 3] = rH
       }
     }
-    const rJ = "SpecialAction1",
-      kJ = "KeyY",
-      bJ = "KeyX";
+    const YA = "SpecialAction1",
+      uA = "KeyY",
+      QA = "KeyX";
 
-    function EJ(VV) {
+    function WA(HH) {
       let {
-        placement: eV
-      } = VV;
-      const xV = (0, QV.j)(Qx, eV.getView()),
+        placement: BH
+      } = HH;
+      const LH = (0, zH.e)(zL, BH.getView()),
         {
-          t: JV
-        } = (0, wV.A)(),
+          t: AH
+        } = (0, EH.B)(),
         {
-          isTouchScreen: YV
-        } = (0, pV.l)(["isTouchScreen"]),
-        yV = (0, UV.useContext)(TV),
-        ZV = null !== xV,
-        kV = ZV && !xV.blocked && !xV.waiting;
-      if ((0, qV.d)((VV => ZV && !VV.repeat && !(0, tV.isTypingInInput)() && !(0, rV.n)() && !YV), (VV => {
-          const xV = function(VV, eV, xV) {
-            if (VV === bJ) return eV.stop;
-            if (VV === kJ) return xV ? eV.build : jJ;
-            return nV.t[rJ].includes(VV) ? eV.rotate : null
-          }(VV.code, eV, kV);
-          null !== xV && (VV.stopPropagation(), xV())
-        })), !ZV) return null;
-      let EV = YV ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
-      return xV.blocked ? EV = "plotsGame:placementOffPlot" : xV.toClear > 0 ? EV = "plotsGame:placementClear" : "placeSpot" !== yV.hint && "placeBuild" !== yV.hint || (EV = null), (0, iV.jsx)(bV.e, {
+          isTouchScreen: rH
+        } = (0, tH.m)(["isTouchScreen"]),
+        hH = (0, SH.useContext)(UH),
+        XH = null !== LH,
+        uH = XH && !LH.blocked && !LH.waiting;
+      if ((0, vH.c)((HH => XH && !HH.repeat && !(0, PH.isTypingInInput)() && !(0, YH.t)() && !rH), (HH => {
+          const LH = function(HH, BH, LH) {
+            if (HH === QA) return BH.stop;
+            if (HH === uA) return LH ? BH.build : xA;
+            return CH.w[YA].includes(HH) ? BH.rotate : null
+          }(HH.code, BH, uH);
+          null !== LH && (HH.stopPropagation(), LH())
+        })), !XH) return null;
+      let WH = rH ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
+      return LH.blocked ? WH = "plotsGame:placementOffPlot" : LH.toClear > 0 ? WH = "plotsGame:placementClear" : "placeSpot" !== hH.hint && "placeBuild" !== hH.hint || (WH = null), (0, eH.jsx)(QH.e, {
         placement: "bottom",
-        children: (0, iV.jsxs)("div", {
-          ref: yV.placementCardRef,
+        children: (0, eH.jsxs)("div", {
+          ref: hH.placementCardRef,
           className: "PlotsPlacementCard",
-          children: [(0, iV.jsx)("div", {
+          children: [(0, eH.jsx)("div", {
             className: "PlotsPlacementCardTitle SmallTextBold",
-            children: JV(MV(xV.id).displayName.translationKey)
-          }), null !== EV && (0, iV.jsx)("div", {
-            className: vV()("PlotsPlacementCardHint SmallTextLight", {
-              Nudge: xV.refusals > 0
+            children: AH(mH(LH.id).displayName.translationKey)
+          }), null !== WH && (0, eH.jsx)("div", {
+            className: GH()("PlotsPlacementCardHint SmallTextLight", {
+              Nudge: LH.refusals > 0
             }),
-            children: JV(EV)
-          }, xV.refusals), (0, iV.jsxs)("div", {
+            children: AH(WH)
+          }, LH.refusals), (0, eH.jsxs)("div", {
             className: "PlotsPlacementCardButtons",
-            children: [(0, iV.jsxs)(Nx.f, {
-              onClick: eV.rotate,
-              children: [(0, iV.jsx)(BJ, {
-                noaAction: rJ
-              }), JV("plotsGame:placementRotate")]
-            }), (0, iV.jsxs)(Nx.E, {
-              onClick: eV.stop,
-              children: [(0, iV.jsx)(BJ, {
-                keyCode: bJ
-              }), JV("general:cancel")]
-            }), (0, iV.jsx)("span", {
-              ref: yV.buildRef,
-              className: vV()("PlotsPlacementBuild", {
-                Pulse: "placeBuild" === yV.hint && kV && YV
+            children: [(0, eH.jsxs)(bL.i, {
+              onClick: BH.rotate,
+              children: [(0, eH.jsx)(MA, {
+                noaAction: YA
+              }), AH("plotsGame:placementRotate")]
+            }), (0, eH.jsxs)(bL.O, {
+              onClick: BH.stop,
+              children: [(0, eH.jsx)(MA, {
+                keyCode: QA
+              }), AH("general:cancel")]
+            }), (0, eH.jsx)("span", {
+              ref: hH.buildRef,
+              className: GH()("PlotsPlacementBuild", {
+                Pulse: "placeBuild" === hH.hint && uH && rH
               }),
-              children: (0, iV.jsxs)(Nx.m, {
-                disabled: !kV,
-                onClick: eV.build,
-                children: [(0, iV.jsx)(BJ, {
-                  keyCode: kJ
-                }), JV("plotsGame:placementBuild")]
+              children: (0, eH.jsxs)(bL.u, {
+                disabled: !uH,
+                onClick: BH.build,
+                children: [(0, eH.jsx)(MA, {
+                  keyCode: uA
+                }), AH("plotsGame:placementBuild")]
               })
             })]
           })]
@@ -2727,353 +2750,353 @@ export const modules = {
       })
     }
 
-    function BJ(VV) {
-      return (0, iV.jsx)(jV.d, {
+    function MA(HH) {
+      return (0, eH.jsx)(xH.b, {
         className: "PlotsPlacementKey",
-        ...VV
+        ...HH
       })
     }
 
-    function jJ() {}
-    var qJ = xV(2524),
-      tJ = xV(37852),
-      FJ = xV(2100),
-      TJ = xV(1290);
-    const PJ = {
+    function xA() {}
+    var vA = LH(2530),
+      PA = LH(37569),
+      TA = LH(2051),
+      UA = LH(1204);
+    const VA = {
       own: "crown",
       shared: "user-group",
       other: "house"
     };
 
-    function AJ(VV) {
+    function OA(HH) {
       let {
-        hud: eV
-      } = VV;
-      const xV = (0, QV.j)(ee, eV.getPlot()),
-        [JV, YV] = (0, UV.useState)(null),
-        yV = (0, tJ.i)(JV);
-      if ("none" === xV[0]) return null;
-      const [, pV, nV, wV, ZV, rV] = xV;
-      return (0, iV.jsx)("div", {
-        className: vV()("PlotsPlotBannerContainer", {
-          Below: yV
+        hud: BH
+      } = HH;
+      const LH = (0, zH.e)(BB, BH.getPlot()),
+        [AH, rH] = (0, SH.useState)(null),
+        hH = (0, PA.k)(AH);
+      if ("none" === LH[0]) return null;
+      const [, tH, CH, EH, XH, YH] = LH;
+      return (0, eH.jsx)("div", {
+        className: GH()("PlotsPlotBannerContainer", {
+          Below: hH
         }),
-        children: (0, iV.jsx)(NJ, {
-          plotX: pV,
-          plotZ: nV,
-          ownerName: wV,
-          ownerId: ZV,
-          relation: rV,
-          plaqueRef: YV
-        }, `${pV},${nV}`)
+        children: (0, eH.jsx)(bA, {
+          plotX: tH,
+          plotZ: CH,
+          ownerName: EH,
+          ownerId: XH,
+          relation: YH,
+          plaqueRef: rH
+        }, `${tH},${CH}`)
       })
     }
 
-    function NJ(VV) {
-      var eV, xV;
+    function bA(HH) {
+      var BH, LH;
       let {
-        plotX: JV,
-        plotZ: YV,
-        ownerName: UV,
-        ownerId: yV,
-        relation: pV,
-        plaqueRef: QV
-      } = VV;
+        plotX: AH,
+        plotZ: rH,
+        ownerName: SH,
+        ownerId: hH,
+        relation: tH,
+        plaqueRef: zH
+      } = HH;
       const {
-        t: nV
-      } = (0, wV.A)(), ZV = (0, FJ.h)("hiddenPlayerNames"), rV = (0, FJ.h)("players"), kV = null === yV ? null : null !== (eV = null === (xV = rV.byId[yV]) || void 0 === xV ? void 0 : xV.cosmetics) && void 0 !== eV ? eV : null, bV = nV("plotsGame:plotBannerCoords", {
-        x: JV,
-        z: YV
-      }), BV = "own" === pV || null !== UV;
-      return (0, iV.jsxs)("div", {
-        ref: QV,
-        className: vV()("PlotsPlotBanner", {
-          Own: "own" === pV,
-          Shared: "shared" === pV
+        t: CH
+      } = (0, EH.B)(), XH = (0, TA.e)("hiddenPlayerNames"), YH = (0, TA.e)("players"), uH = null === hH ? null : null !== (BH = null === (LH = YH.byId[hH]) || void 0 === LH ? void 0 : LH.cosmetics) && void 0 !== BH ? BH : null, QH = CH("plotsGame:plotBannerCoords", {
+        x: AH,
+        z: rH
+      }), MH = "own" === tH || null !== SH;
+      return (0, eH.jsxs)("div", {
+        ref: zH,
+        className: GH()("PlotsPlotBanner", {
+          Own: "own" === tH,
+          Shared: "shared" === tH
         }),
         role: "status",
-        children: [(0, iV.jsxs)("span", {
-          className: vV()("PlotsPlotBannerSeal", {
-            Face: null !== kV
+        children: [(0, eH.jsxs)("span", {
+          className: GH()("PlotsPlotBannerSeal", {
+            Face: null !== uH
           }),
-          children: [null !== kV && (0, iV.jsx)(qJ.e, {
-            cosmetics: kV
-          }), null === kV && (0, iV.jsx)(EV.b, {
-            name: PJ[pV]
+          children: [null !== uH && (0, eH.jsx)(vA.c, {
+            cosmetics: uH
+          }), null === uH && (0, eH.jsx)(WH.c, {
+            name: VA[tH]
           })]
-        }), (0, iV.jsxs)("div", {
+        }), (0, eH.jsxs)("div", {
           className: "PlotsPlotBannerText",
-          children: [(0, iV.jsxs)("div", {
+          children: [(0, eH.jsxs)("div", {
             className: "PlotsPlotBannerTitle SmallTextBold",
-            children: ["own" === pV && nV("plotsGame:plotBannerYours"), "own" !== pV && null !== UV && nV("plotsGame:plotBannerOwner", {
-              name: (0, TJ.g)(UV, ZV)
-            }), !BV && bV]
-          }), BV && (0, iV.jsxs)("div", {
+            children: ["own" === tH && CH("plotsGame:plotBannerYours"), "own" !== tH && null !== SH && CH("plotsGame:plotBannerOwner", {
+              name: (0, UA.f)(SH, XH)
+            }), !MH && QH]
+          }), MH && (0, eH.jsxs)("div", {
             className: "PlotsPlotBannerCoords SmallTextLight",
-            children: [bV, "shared" === pV && (0, iV.jsx)("span", {
+            children: [QH, "shared" === tH && (0, eH.jsx)("span", {
               className: "PlotsPlotBannerBadge",
-              children: nV("plotsGame:plotBannerShared")
+              children: CH("plotsGame:plotBannerShared")
             })]
           })]
         })]
       })
     }
-    const XJ = function(VV, eV, xV, JV) {
+    const kA = function(HH, BH, LH, AH) {
       let {
-        localPlayerId: YV
-      } = JV;
-      const pV = new Ye;
-      let QV = null,
-        nV = null,
-        wV = null,
-        ZV = null,
-        vV = null,
-        rV = null;
-      const kV = [];
+        localPlayerId: rH
+      } = AH;
+      const tH = new rB;
+      let zH = null,
+        CH = null,
+        EH = null,
+        XH = null,
+        GH = null,
+        YH = null;
+      const uH = [];
       return {
-        onCreate: VV => {
-          QV = new vJ(VV, YV);
-          const eV = new Ve;
-          nV = new UJ(VV, YV, QV, eV), wV = new wx(VV, YV), ZV = new DV(VV, wV), vV = new Ax(VV, YV, nV.nextCell), rV = new pJ(VV), kV.push((0, yV.z)((0, UV.createElement)(Fx, {
-            hud: pV,
-            guide: vV,
-            tracker: eV,
-            placement: wV
-          }, (0, UV.createElement)(AJ, {
-            hud: pV
-          }), (0, UV.createElement)(aV, {
-            journal: ZV
-          }), (0, UV.createElement)(Ex, {
-            placement: wV
-          }), (0, UV.createElement)(EJ, {
-            placement: wV
+        onCreate: HH => {
+          zH = new GA(HH, rH);
+          const BH = new HB;
+          CH = new SA(HH, rH, zH, BH), EH = new EL(HH, rH), XH = new cH(HH, EH), GH = new OL(HH, rH, CH.nextCell), YH = new tA(HH), uH.push((0, hH.v)((0, SH.createElement)(TL, {
+            hud: tH,
+            guide: GH,
+            tracker: BH,
+            placement: EH
+          }, (0, SH.createElement)(OA, {
+            hud: tH
+          }), (0, SH.createElement)(gH, {
+            journal: XH
+          }), (0, SH.createElement)(WL, {
+            placement: EH
+          }), (0, SH.createElement)(WA, {
+            placement: EH
           })), {
-            content: (0, UV.createElement)(Hx, {
-              journal: ZV,
-              hud: pV,
-              guide: vV
+            content: (0, SH.createElement)(dL, {
+              journal: XH,
+              hud: tH,
+              guide: GH
             })
           }))
         },
-        iZ: () => {
-          rV.iZ(), nV.iZ(), wV.iZ(), ZV.iZ()
+        IX: () => {
+          YH.IX(), CH.IX(), EH.IX(), XH.IX()
         },
-        onPlayerAttemptAltAction: (VV, eV, xV, JV, YV, UV) => {
-          if (null !== UV) return void nV.holdPressOnEntity();
-          const yV = void 0 === eV ? null : [eV, xV, JV];
-          return nV.attemptAltAction(yV)
+        onPlayerAttemptAltAction: (HH, BH, LH, AH, rH, SH) => {
+          if (null !== SH) return void CH.holdPressOnEntity();
+          const hH = void 0 === BH ? null : [BH, LH, AH];
+          return CH.attemptAltAction(hH)
         },
         onPlayerClickUp: () => {
-          nV.endPress()
+          CH.endPress()
         },
-        onAfterRender: (VV, eV) => {
-          wV.afterRender(eV), nV.afterRender(eV), vV.afterRender(eV)
+        onAfterRender: (HH, BH) => {
+          EH.afterRender(BH), CH.afterRender(BH), GH.afterRender(BH)
         },
         onClose: () => {
-          for (const VV of kV) VV();
-          QV.dispose(), nV.dispose(), wV.dispose(), QV = null, nV = null, wV = null, ZV = null, vV = null, rV = null
+          for (const HH of uH) HH();
+          zH.dispose(), CH.dispose(), EH.dispose(), zH = null, CH = null, EH = null, XH = null, GH = null, YH = null
         },
-        onReceivedMessageFromServer: (VV, eV) => {
-          if ("plotsPlot" === VV) pV.receivePlot(eV);
-          else if ("plotsBlueprint" === VV) {
-            const VV = eV;
-            nV.RZ(VV), wV.RZ(VV)
-          } else "plotsJournal" === VV ? ZV.RZ(eV) : "plotsJournalOpen" === VV ? ZV.openFromServer(eV) : "plotsPreviewEnd" === VV ? wV.endFromServer() : "plotsGuide" === VV ? pV.receiveGuide(eV) : "plotsGuideDone" === VV && pV.receiveGuideDone()
+        onReceivedMessageFromServer: (HH, BH) => {
+          if ("plotsPlot" === HH) tH.receivePlot(BH);
+          else if ("plotsBlueprint" === HH) {
+            const HH = BH;
+            CH.kX(HH), EH.kX(HH)
+          } else "plotsJournal" === HH ? XH.kX(BH) : "plotsJournalOpen" === HH ? XH.openFromServer(BH) : "plotsPreviewEnd" === HH ? EH.endFromServer() : "plotsGuide" === HH ? tH.receiveGuide(BH) : "plotsGuideDone" === HH && tH.receiveGuideDone()
         }
       }
     }
   },
-  39651: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => pV
+  39374: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => tH
     });
-    var JV = xV(39648);
-    const YV = 5,
-      UV = [0, 0, 0],
-      yV = {
+    var AH = LH(39370);
+    const rH = 5,
+      SH = [0, 0, 0],
+      hH = {
         x: 0,
         y: 0,
         distSq: 0
       };
 
-    function pV(VV, eV, xV, pV, QV, nV) {
-      let [wV, ZV, vV] = pV;
-      const rV = (wV + .5 - xV[0]) ** 2 + (ZV - xV[1]) ** 2 + (vV + .5 - xV[2]) ** 2;
-      let kV = null;
-      rV <= nV ** 2 && (UV[0] = wV + .5, UV[1] = ZV + QV, UV[2] = vV + .5, kV = eV.projectWorldPosToViewport(UV));
-      const bV = null !== kV && kV.x > -YV && kV.x < 100 + YV && kV.y > -YV && kV.y < 100 + YV;
-      return (0, JV.f)(VV, !bV), bV ? (yV.x = kV.x, yV.y = kV.y, yV.distSq = rV, yV) : null
+    function tH(HH, BH, LH, tH, zH, CH) {
+      let [EH, XH, GH] = tH;
+      const YH = (EH + .5 - LH[0]) ** 2 + (XH - LH[1]) ** 2 + (GH + .5 - LH[2]) ** 2;
+      let uH = null;
+      YH <= CH ** 2 && (SH[0] = EH + .5, SH[1] = XH + zH, SH[2] = GH + .5, uH = BH.projectWorldPosToViewport(SH));
+      const QH = null !== uH && uH.x > -rH && uH.x < 100 + rH && uH.y > -rH && uH.y < 100 + rH;
+      return (0, AH.e)(HH, !QH), QH ? (hH.x = uH.x, hH.y = uH.y, hH.distSq = YH, hH) : null
     }
   },
-  40370: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => JV,
-      f: () => UV
+  40100: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => AH,
+      d: () => SH
     });
-    const JV = 1 / .6,
-      YV = {
+    const AH = 1 / .6,
+      rH = {
         kind: "smokePuff"
       };
-    class UV {
-      constructor(VV, eV, xV) {
-        this.style = VV, this.Jv = eV, this.half = xV, this.particles = null, this.lastFrame = -1
+    class SH {
+      constructor(HH, BH, LH) {
+        this.style = HH, this.aX = BH, this.half = LH, this.particles = null, this.lastFrame = -1
       }
-      emit(VV, eV, xV) {
-        let UV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return xV !== this.lastFrame && (this.lastFrame = xV, this.particles || (this.particles = VV.createParticles(function(VV, eV) {
+      emit(HH, BH, LH) {
+        let SH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return LH !== this.lastFrame && (this.lastFrame = LH, this.particles || (this.particles = HH.createParticles(function(HH, BH) {
           const [
-            [xV, UV, yV],
-            [pV, QV, nV]
-          ] = VV.colours;
+            [LH, SH, hH],
+            [tH, zH, CH]
+          ] = HH.colours;
           return {
-            texture: VV.soft ? YV : "square_particle",
-            Jv: eV,
-            minLifeTime: VV.life[0] / JV,
-            maxLifeTime: VV.life[1] / JV,
-            minEmitPower: VV.power[0] * JV,
-            maxEmitPower: VV.power[1] * JV,
-            minSize: VV.size[0],
-            maxSize: VV.size[1],
+            texture: HH.soft ? rH : "square_particle",
+            aX: BH,
+            minLifeTime: HH.life[0] / AH,
+            maxLifeTime: HH.life[1] / AH,
+            minEmitPower: HH.power[0] * AH,
+            maxEmitPower: HH.power[1] * AH,
+            minSize: HH.size[0],
+            maxSize: HH.size[1],
             emitRate: 0,
-            gravity: [0, VV.lift * JV * JV, 0],
-            dir1: [-VV.spread, 1, -VV.spread],
-            dir2: [VV.spread, 1, VV.spread],
+            gravity: [0, HH.lift * AH * AH, 0],
+            dir1: [-HH.spread, 1, -HH.spread],
+            dir2: [HH.spread, 1, HH.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [xV, UV, yV, VV.alpha],
-              maxColor: [pV, QV, nV, VV.alpha]
+              minColor: [LH, SH, hH, HH.alpha],
+              maxColor: [tH, zH, CH, HH.alpha]
             }, {
               timeFraction: 1,
-              minColor: [xV, UV, yV, 0],
-              maxColor: [pV, QV, nV, 0]
+              minColor: [LH, SH, hH, 0],
+              maxColor: [tH, zH, CH, 0]
             }],
-            blendMode: VV.blendMode
+            blendMode: HH.blendMode
           }
-        }(this.style, this.Jv), {
-          pos: eV,
+        }(this.style, this.aX), {
+          pos: BH,
           half: this.half
-        })), this.particles.moveTo(eV, this.half), this.particles.emit(UV), !0)
+        })), this.particles.moveTo(BH, this.half), this.particles.emit(SH), !0)
       }
       dispose() {
-        var VV;
-        null === (VV = this.particles) || void 0 === VV || VV.stop(), this.particles = null
+        var HH;
+        null === (HH = this.particles) || void 0 === HH || HH.stop(), this.particles = null
       }
     }
   },
-  35097: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => yV,
-      f: () => pV,
-      h: () => QV
+  40495: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => hH,
+      e: () => tH,
+      f: () => zH
     });
-    const JV = new Map,
-      YV = [];
+    const AH = new Map,
+      rH = [];
 
-    function UV() {
-      for (const VV of YV) VV()
+    function SH() {
+      for (const HH of rH) HH()
     }
 
-    function yV(VV) {
-      var eV;
-      return JV.set(VV, (null !== (eV = JV.get(VV)) && void 0 !== eV ? eV : 0) + 1), UV(), () => {
-        const eV = JV.get(VV) - 1;
-        0 === eV ? JV.delete(VV) : JV.set(VV, eV), UV()
+    function hH(HH) {
+      var BH;
+      return AH.set(HH, (null !== (BH = AH.get(HH)) && void 0 !== BH ? BH : 0) + 1), SH(), () => {
+        const BH = AH.get(HH) - 1;
+        0 === BH ? AH.delete(HH) : AH.set(HH, BH), SH()
       }
     }
 
-    function pV() {
-      return [...JV.keys()]
+    function tH() {
+      return [...AH.keys()]
     }
 
-    function QV(VV) {
-      YV.push(VV)
+    function zH(HH) {
+      rH.push(HH)
     }
   },
-  39648: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => yV,
-      f: () => UV
+  39370: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH,
+      e: () => SH
     });
-    const JV = new WeakMap;
+    const AH = new WeakMap;
 
-    function YV(VV) {
-      let eV = JV.get(VV);
-      return eV || (eV = {
-        hidden: VV.hidden,
+    function rH(HH) {
+      let BH = AH.get(HH);
+      return BH || (BH = {
+        hidden: HH.hidden,
         x: NaN,
         y: NaN
-      }, JV.set(VV, eV)), eV
+      }, AH.set(HH, BH)), BH
     }
 
-    function UV(VV, eV) {
-      const xV = YV(VV);
-      xV.hidden !== eV && (xV.hidden = eV, VV.hidden = eV)
+    function SH(HH, BH) {
+      const LH = rH(HH);
+      LH.hidden !== BH && (LH.hidden = BH, HH.hidden = BH)
     }
 
-    function yV(VV, eV, xV) {
-      const JV = YV(VV);
-      JV.x === eV && JV.y === xV || (JV.x = eV, JV.y = xV, VV.style.translate = `${eV}vw ${xV}vh`)
+    function hH(HH, BH, LH) {
+      const AH = rH(HH);
+      AH.x === BH && AH.y === LH || (AH.x = BH, AH.y = LH, HH.style.translate = `${BH}vw ${LH}vh`)
     }
   },
-  38080: (VV, eV, xV) => {
-    function JV(VV, eV) {
-      return null === VV || null === eV ? VV === eV : VV[0] === eV[0] && VV[1] === eV[1] && VV[2] === eV[2]
+  37761: (HH, BH, LH) => {
+    function AH(HH, BH) {
+      return null === HH || null === BH ? HH === BH : HH[0] === BH[0] && HH[1] === BH[1] && HH[2] === BH[2]
     }
 
-    function YV(VV) {
-      return [VV[0] + .5, VV[1] + .5, VV[2] + .5]
+    function rH(HH) {
+      return [HH[0] + .5, HH[1] + .5, HH[2] + .5]
     }
-    xV.d(eV, {
-      d: () => YV,
-      h: () => JV
+    LH.d(BH, {
+      e: () => rH,
+      g: () => AH
     })
   },
-  38114: (VV, eV, xV) => {
-    function JV(VV) {
-      return VV.includes("Leaf Bed")
+  37798: (HH, BH, LH) => {
+    function AH(HH) {
+      return HH.includes("Leaf Bed")
     }
 
-    function YV(VV) {
-      return / Bed(?: Head)?(?:\||$)/.test(VV) && !JV(VV)
+    function rH(HH) {
+      return / Bed(?: Head)?(?:\||$)/.test(HH) && !AH(HH)
     }
 
-    function UV(VV) {
-      return VV.includes(" Strongbed")
+    function SH(HH) {
+      return HH.includes(" Strongbed")
     }
 
-    function yV(VV) {
-      return JV(VV) || YV(VV) || UV(VV)
+    function hH(HH) {
+      return AH(HH) || rH(HH) || SH(HH)
     }
-    xV.d(eV, {
-      d: () => yV,
-      e: () => JV,
-      f: () => UV,
-      j: () => YV
+    LH.d(BH, {
+      d: () => hH,
+      h: () => AH,
+      l: () => SH,
+      m: () => rH
     })
   },
-  38112: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => nV
+  37793: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => CH
     });
-    var JV = xV(38114),
-      YV = xV(9820);
-    const UV = [],
-      yV = [],
-      pV = [],
-      QV = [];
-    for (const wV of Object.keys(YV.p))(0, JV.e)(wV) ? UV.push(wV) : (0, JV.j)(wV) && yV.push(wV), (0, JV.f)(wV) && pV.push(wV), (wV.includes(" Bed Head") || wV.includes(" Strongbed Head")) && QV.push(wV);
-    const nV = {
-      leafBeds: UV,
-      woolBeds: yV,
-      strongBeds: pV,
-      beds: [...UV, ...yV, ...pV],
-      bedHeads: QV,
+    var AH = LH(37798),
+      rH = LH(9940);
+    const SH = [],
+      hH = [],
+      tH = [],
+      zH = [];
+    for (const EH of Object.keys(rH.l))(0, AH.h)(EH) ? SH.push(EH) : (0, AH.m)(EH) && hH.push(EH), (0, AH.l)(EH) && tH.push(EH), (EH.includes(" Bed Head") || EH.includes(" Strongbed Head")) && zH.push(EH);
+    const CH = {
+      leafBeds: SH,
+      woolBeds: hH,
+      strongBeds: tH,
+      beds: [...SH, ...hH, ...tH],
+      bedHeads: zH,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  39705: VV => {
-    VV.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg=="
+  39448: HH => {
+    HH.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg=="
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

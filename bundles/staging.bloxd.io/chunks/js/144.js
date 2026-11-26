@@ -1,40 +1,40 @@
 export const id = 144;
 export const ids = [144];
 export const modules = {
-  42398: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      ShaderPackCategory: () => RV
+  42378: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      ShaderPackCategory: () => lH
     });
-    var JV = xV(62),
-      YV = xV(1625),
-      UV = xV(1551),
-      yV = xV(1612),
-      pV = xV(1220),
-      QV = xV(99),
-      nV = xV(27),
-      wV = xV(1725),
-      ZV = xV(7176),
-      vV = xV(348),
-      rV = xV(7212),
-      kV = xV(7208),
-      bV = xV(7216),
-      EV = xV(7130),
-      BV = xV(5500),
-      jV = xV(5548),
-      qV = xV(7174),
-      tV = xV(3911);
+    var AH = LH(45),
+      rH = LH(1520),
+      SH = LH(1455),
+      hH = LH(1509),
+      tH = LH(1123),
+      zH = LH(81),
+      CH = LH(15),
+      EH = LH(1659),
+      XH = LH(7165),
+      GH = LH(293),
+      YH = LH(7201),
+      uH = LH(7196),
+      QH = LH(7209),
+      WH = LH(7111),
+      MH = LH(5478),
+      xH = LH(5520),
+      vH = LH(7161),
+      PH = LH(3835);
 
-    function FV(VV, eV) {
-      const xV = (0, rV.storedPackOutcome)(VV, eV);
-      return "none" !== xV.kind || "noCompiler" === xV.reason
+    function TH(HH, BH) {
+      const LH = (0, YH.storedPackOutcome)(HH, BH);
+      return "none" !== LH.kind || "noCompiler" === LH.reason
     }
-    var TV = xV(1146),
-      PV = xV.n(TV),
-      AV = xV(5556),
-      NV = xV(1414),
-      XV = xV(7169),
-      MV = xV(1321);
-    const zV = {
+    var UH = LH(1038),
+      VH = LH.n(UH),
+      OH = LH(5523),
+      bH = LH(1315),
+      kH = LH(7155),
+      mH = LH(1225);
+    const oH = {
       ready: "shaderPack:statusReady",
       readyAfterReload: "shaderPack:statusReadyAfterReload",
       noWebGpu: "shaderPack:statusNoWebGpu",
@@ -47,249 +47,249 @@ export const modules = {
       noCompiler: "shaderPack:statusNoCompiler"
     };
 
-    function GV(VV, eV) {
-      return "failedRecheck" === VV && eV.listing ? "shaderPack:statusFailedRecheckListed" : zV[VV]
+    function IH(HH, BH) {
+      return "failedRecheck" === HH && BH.listing ? "shaderPack:statusFailedRecheckListed" : oH[HH]
     }
 
-    function WV(VV) {
+    function fH(HH) {
       let {
-        stored: eV,
-        checking: xV,
-        webGpuUsable: JV,
-        changePending: YV,
-        compiler: UV,
-        t: yV
-      } = VV;
-      const pV = function(VV, eV, xV, JV, YV) {
-          const UV = (0, rV.storedPackOutcome)(VV, YV);
-          return "none" === UV.kind ? "noCompiler" === UV.reason ? eV ? "checking" : "noCompiler" : "otherApiVersion" === UV.reason ? "wrongApiVersion" : "failed" : (0, tV.f)() ? "harnessBuild" : "blocked" === UV.kind ? (0, rV.shaderPackNeedsCheck)(VV, YV) ? eV ? "checking" : !1 === xV ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === xV ? "offNoWebGpu" : JV ? "readyAfterReload" : "ready"
-        }(eV, xV, JV, YV, UV),
-        QV = "failed" === pV || "failedRecheck" === pV,
-        nV = QV || "wrongApiVersion" === pV || "noCompiler" === pV,
-        wV = "ready" === pV || "readyAfterReload" === pV ? eV.validation.offInStrict : [];
-      return (0, MV.jsxs)(MV.Fragment, {
-        children: [(0, MV.jsxs)("div", {
-          className: PV()("ShaderPackStatus", {
-            Ready: "ready" === pV,
-            Failed: nV
+        stored: BH,
+        checking: LH,
+        webGpuUsable: AH,
+        changePending: rH,
+        compiler: SH,
+        t: hH
+      } = HH;
+      const tH = function(HH, BH, LH, AH, rH) {
+          const SH = (0, YH.storedPackOutcome)(HH, rH);
+          return "none" === SH.kind ? "noCompiler" === SH.reason ? BH ? "checking" : "noCompiler" : "otherApiVersion" === SH.reason ? "wrongApiVersion" : "failed" : (0, PH.i)() ? "harnessBuild" : "blocked" === SH.kind ? (0, YH.shaderPackNeedsCheck)(HH, rH) ? BH ? "checking" : !1 === LH ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === LH ? "offNoWebGpu" : AH ? "readyAfterReload" : "ready"
+        }(BH, LH, AH, rH, SH),
+        zH = "failed" === tH || "failedRecheck" === tH,
+        CH = zH || "wrongApiVersion" === tH || "noCompiler" === tH,
+        EH = "ready" === tH || "readyAfterReload" === tH ? BH.validation.offInStrict : [];
+      return (0, mH.jsxs)(mH.Fragment, {
+        children: [(0, mH.jsxs)("div", {
+          className: VH()("ShaderPackStatus", {
+            Ready: "ready" === tH,
+            Failed: CH
           }),
-          children: ["ready" === pV && (0, MV.jsx)(NV.b, {
+          children: ["ready" === tH && (0, mH.jsx)(bH.c, {
             name: "circle-check"
-          }), nV && (0, MV.jsx)(NV.b, {
+          }), CH && (0, mH.jsx)(bH.c, {
             name: "triangle-exclamation"
-          }), "harnessBuild" === pV ? (0, tV.d)() : yV(GV(pV, eV), {
-            packVersion: String(eV.manifest.apiVersion),
-            version: String(AV.d)
+          }), "harnessBuild" === tH ? (0, PH.e)() : hH(IH(tH, BH), {
+            packVersion: String(BH.manifest.apiVersion),
+            version: String(OH.b)
           })]
-        }), QV && (0, MV.jsx)(XV.d, {
-          diagnostics: eV.validation.errors,
-          more: eV.validation.moreErrors,
-          t: yV
-        }), wV.length > 0 && (0, MV.jsxs)(MV.Fragment, {
-          children: [(0, MV.jsxs)("div", {
+        }), zH && (0, mH.jsx)(kH.d, {
+          diagnostics: BH.validation.errors,
+          more: BH.validation.moreErrors,
+          t: hH
+        }), EH.length > 0 && (0, mH.jsxs)(mH.Fragment, {
+          children: [(0, mH.jsxs)("div", {
             className: "ShaderPackStatus OffInStrict",
-            children: [(0, MV.jsx)(NV.b, {
+            children: [(0, mH.jsx)(bH.c, {
               name: "triangle-exclamation"
-            }), yV("shaderPack:offInStrict")]
-          }), (0, MV.jsx)(XV.d, {
-            diagnostics: wV,
-            t: yV
+            }), hH("shaderPack:offInStrict")]
+          }), (0, mH.jsx)(kH.d, {
+            diagnostics: EH,
+            t: hH
           })]
         })]
       })
     }
 
-    function RV(VV) {
+    function lH(HH) {
       let {
-        setApplySettingsCallback: eV
-      } = VV;
+        setApplySettingsCallback: BH
+      } = HH;
       const {
-        t: xV
-      } = (0, pV.A)(), [YV, yV] = (0, JV.useState)(null), [nV, wV] = (0, JV.useState)(null), [tV, TV] = (0, JV.useState)(null), [PV] = (0, JV.useState)(vV.l), [AV, NV] = (0, JV.useState)(!0), [XV, zV] = (0, JV.useState)(!1), {
-        loading: GV,
-        error: RV,
-        setError: DV,
-        onFiles: iV
-      } = (0, qV.c)((async VV => {
-        const eV = await (0, ZV.loadPageShaderPackCompiler)();
-        if (!eV) return void DV(xV("shaderPack:compilerUnavailable"));
-        wV(eV);
-        const JV = (0, rV.toStoredShaderPack)(VV, await (0, kV.d)(eV, VV.files));
-        await (0, rV.saveShaderPack)(JV, eV) ? (yV(JV), CV(YV, JV, eV)) : DV(xV("shaderPack:saveFailed"))
+        t: LH
+      } = (0, tH.B)(), [rH, hH] = (0, AH.useState)(null), [CH, EH] = (0, AH.useState)(null), [PH, UH] = (0, AH.useState)(null), [VH] = (0, AH.useState)(GH.l), [OH, bH] = (0, AH.useState)(!0), [kH, oH] = (0, AH.useState)(!1), {
+        loading: IH,
+        error: lH,
+        setError: cH,
+        onFiles: eH
+      } = (0, vH.f)((async HH => {
+        const BH = await (0, XH.loadPageShaderPackCompiler)();
+        if (!BH) return void cH(LH("shaderPack:compilerUnavailable"));
+        EH(BH);
+        const AH = (0, YH.toStoredShaderPack)(HH, await (0, uH.d)(BH, HH.files));
+        await (0, YH.saveShaderPack)(AH, BH) ? (hH(AH), qH(rH, AH, BH)) : cH(LH("shaderPack:saveFailed"))
       }));
 
-      function CV(VV, xV, JV) {
-        (function(VV, eV, xV, JV) {
-          return xV || FV(VV, JV) || FV(eV, JV)
-        })(VV, xV, (0, rV.isShaderPackChangePending)(), JV) && ((0, rV.markShaderPackChangePending)(), eV((() => BV.q)))
+      function qH(HH, LH, AH) {
+        (function(HH, BH, LH, AH) {
+          return LH || TH(HH, AH) || TH(BH, AH)
+        })(HH, LH, (0, YH.isShaderPackChangePending)(), AH) && ((0, YH.markShaderPackChangePending)(), BH((() => MH.i)))
       }
-      return (0, JV.useEffect)((() => {
-        let VV = !1;
+      return (0, AH.useEffect)((() => {
+        let HH = !1;
         return async function() {
-          const eV = (0, QV.hasUsableWebGpuAdapter)(),
-            xV = await (0, bV.f)();
-          if (VV) return;
-          yV(xV), zV(!0), NV(!1);
-          const JV = null !== xV ? (0, ZV.loadPageShaderPackCompiler)() : null,
-            YV = await eV;
-          if (VV) return;
-          TV(YV);
-          const UV = await JV;
-          if (!VV && (wV(UV), null !== xV && YV && null !== UV && (0, rV.shaderPackNeedsCheck)(xV, UV))) {
-            const eV = await (0, kV.b)(xV, UV);
-            VV || yV((VV => VV === xV ? eV : VV))
+          const BH = (0, zH.hasUsableWebGpuAdapter)(),
+            LH = await (0, QH.e)();
+          if (HH) return;
+          hH(LH), oH(!0), bH(!1);
+          const AH = null !== LH ? (0, XH.loadPageShaderPackCompiler)() : null,
+            rH = await BH;
+          if (HH) return;
+          UH(rH);
+          const SH = await AH;
+          if (!HH && (EH(SH), null !== LH && rH && null !== SH && (0, YH.shaderPackNeedsCheck)(LH, SH))) {
+            const BH = await (0, uH.b)(LH, SH);
+            HH || hH((HH => HH === LH ? BH : HH))
           }
-        }().catch((eV => {
-          console.error("Failed to load the stored shader pack", eV), VV || DV(xV("shaderPack:unexpectedError"))
+        }().catch((BH => {
+          console.error("Failed to load the stored shader pack", BH), HH || cH(LH("shaderPack:unexpectedError"))
         })).finally((() => {
-          VV || (NV(!1), zV(!1))
+          HH || (bH(!1), oH(!1))
         })), () => {
-          VV = !0
+          HH = !0
         }
-      }), []), (0, MV.jsxs)("div", {
+      }), []), (0, mH.jsxs)("div", {
         className: "ShaderPackCategory SettingsMenuRightInner",
-        children: [(0, MV.jsx)("div", {
+        children: [(0, mH.jsx)("div", {
           className: "ShaderPackIntro",
-          children: xV("shaderPack:intro")
-        }), (0, MV.jsx)(gV, {
-          to: EV.Y,
+          children: LH("shaderPack:intro")
+        }), (0, mH.jsx)(KH, {
+          to: WH.P,
           className: "ShaderPackBrowseLink",
-          children: (0, MV.jsx)(UV.m, {
+          children: (0, mH.jsx)(SH.u, {
             className: "ShaderPackBrowseButton",
-            children: xV("shaderPackListing:browse")
+            children: LH("shaderPackListing:browse")
           })
-        }), !1 === tV && (0, MV.jsx)("div", {
+        }), !1 === PH && (0, mH.jsx)("div", {
           className: "SettingsBoxWarning",
-          children: xV(PV ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), null !== RV && (0, MV.jsxs)("div", {
+          children: LH(VH ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), null !== lH && (0, mH.jsxs)("div", {
           className: "ShaderPackCategoryError",
-          children: [xV("general:error"), ": ", RV]
-        }), YV && (0, MV.jsxs)("div", {
+          children: [LH("general:error"), ": ", lH]
+        }), rH && (0, mH.jsxs)("div", {
           className: "SettingBox ShaderPackSummary",
-          children: [(0, MV.jsxs)("div", {
+          children: [(0, mH.jsxs)("div", {
             className: "ShaderPackSummaryHeader",
-            children: [(0, MV.jsxs)("div", {
-              children: [(0, MV.jsx)("div", {
+            children: [(0, mH.jsxs)("div", {
+              children: [(0, mH.jsx)("div", {
                 className: "ShaderPackName",
-                children: YV.manifest.name
-              }), YV.manifest.author && (0, MV.jsx)("div", {
+                children: rH.manifest.name
+              }), rH.manifest.author && (0, mH.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, jV.h)(xV, "shaderPack:byAuthor", {
-                  author: YV.manifest.author
+                children: (0, xH.i)(LH, "shaderPack:byAuthor", {
+                  author: rH.manifest.author
                 })
-              }), YV.manifest.description && (0, MV.jsx)("div", {
+              }), rH.manifest.description && (0, mH.jsx)("div", {
                 className: "ShaderPackDescription",
-                children: YV.manifest.description
-              }), YV.listing && (0, MV.jsx)("div", {
+                children: rH.manifest.description
+              }), rH.listing && (0, mH.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, MV.jsx)(gV, {
-                  to: (0, EV.db)(YV.listing.packId),
+                children: (0, mH.jsx)(KH, {
+                  to: (0, WH.S)(rH.listing.packId),
                   className: "ShaderPackListingLink",
-                  children: xV("shaderPackListing:openPackPage")
+                  children: LH("shaderPackListing:openPackPage")
                 })
               })]
-            }), (0, MV.jsx)(UV.G, {
-              disabled: AV || GV,
+            }), (0, mH.jsx)(SH.S, {
+              disabled: OH || IH,
               onClick: async function() {
-                NV(!0), DV(null), await (0, rV.removeShaderPack)(), yV(null), NV(!1), CV(YV, null, nV)
+                bH(!0), cH(null), await (0, YH.removeShaderPack)(), hH(null), bH(!1), qH(rH, null, CH)
               },
-              children: xV("shaderPack:removePack")
+              children: LH("shaderPack:removePack")
             })]
-          }), (0, MV.jsx)(WV, {
-            stored: YV,
-            checking: XV,
-            webGpuUsable: tV,
-            changePending: (0, rV.isShaderPackChangePending)(),
-            compiler: nV,
-            t: xV
+          }), (0, mH.jsx)(fH, {
+            stored: rH,
+            checking: kH,
+            webGpuUsable: PH,
+            changePending: (0, YH.isShaderPackChangePending)(),
+            compiler: CH,
+            t: LH
           })]
-        }), (0, MV.jsx)(qV.b, {
-          busy: AV || GV || XV,
-          disabled: AV || GV || XV || !0 !== tV,
-          onFiles: iV
+        }), (0, mH.jsx)(vH.b, {
+          busy: OH || IH || kH,
+          disabled: OH || IH || kH || !0 !== PH,
+          onFiles: eH
         })]
       })
     }
 
-    function gV(VV) {
+    function KH(HH) {
       let {
-        to: eV,
-        className: xV,
-        children: JV
-      } = VV;
+        to: BH,
+        className: LH,
+        children: AH
+      } = HH;
       const {
-        gameState: UV
-      } = (0, nV.l)(["gameState"]), {
-        pathname: pV,
-        search: QV
-      } = (0, YV.r)(), ZV = "landingPage" !== UV && "studio" !== UV;
-      return (0, MV.jsx)(yV.LinkPreserveSearch, {
-        to: eV,
-        className: xV,
-        target: ZV ? "_blank" : void 0,
+        gameState: SH
+      } = (0, CH.m)(["gameState"]), {
+        pathname: tH,
+        search: zH
+      } = (0, rH.s)(), XH = "landingPage" !== SH && "studio" !== SH;
+      return (0, mH.jsx)(hH.LinkPreserveSearch, {
+        to: BH,
+        className: LH,
+        target: XH ? "_blank" : void 0,
         onClick: () => {
-          ZV || ((0, EV.K)(`${pV}${QV}`), (0, wV.h)())
+          XH || ((0, WH.F)(`${tH}${zH}`), (0, EH.g)())
         },
-        children: JV
+        children: AH
       })
     }
   },
-  7130: (VV, eV, xV) => {
-    xV.d(eV, {
-      $: () => aV,
-      A: () => kV,
-      E: () => BV,
-      I: () => MV,
-      K: () => wV,
-      O: () => GV,
-      Q: () => bV,
-      T: () => oV,
-      V: () => CV,
-      Y: () => yV,
-      b: () => jV,
-      d: () => NV,
-      db: () => QV,
-      e: () => EV,
-      g: () => vV,
-      hb: () => pV,
-      jb: () => DV,
-      k: () => ZV,
-      mb: () => iV,
-      nb: () => qV,
-      o: () => WV,
-      qb: () => zV,
-      r: () => rV,
-      t: () => RV,
-      x: () => cV
+  7111: (HH, BH, LH) => {
+    LH.d(BH, {
+      B: () => mH,
+      F: () => EH,
+      I: () => IH,
+      L: () => QH,
+      M: () => NH,
+      N: () => qH,
+      P: () => hH,
+      R: () => gH,
+      S: () => zH,
+      T: () => tH,
+      X: () => cH,
+      _: () => eH,
+      ab: () => vH,
+      bb: () => oH,
+      e: () => xH,
+      h: () => bH,
+      j: () => WH,
+      k: () => GH,
+      m: () => XH,
+      n: () => fH,
+      p: () => YH,
+      q: () => lH,
+      s: () => RH,
+      w: () => uH,
+      z: () => MH
     });
-    var JV = xV(7132),
-      YV = xV(165),
-      UV = xV(5037);
-    const yV = "/shader-packs",
-      pV = `${yV}/publish`;
+    var AH = LH(7114),
+      rH = LH(152),
+      SH = LH(4969);
+    const hH = "/shader-packs",
+      tH = `${hH}/publish`;
 
-    function QV(VV) {
-      return `${yV}/${encodeURIComponent(VV)}`
+    function zH(HH) {
+      return `${hH}/${encodeURIComponent(HH)}`
     }
-    let nV = null;
+    let CH = null;
 
-    function wV(VV) {
-      nV = VV
-    }
-
-    function ZV() {
-      return nV
+    function EH(HH) {
+      CH = HH
     }
 
-    function vV() {
-      nV = null
+    function XH() {
+      return CH
     }
 
-    function rV(VV) {
-      return VV.playerHasRank("developer") || VV.playerHasRank("admin")
+    function GH() {
+      CH = null
     }
-    const kV = ["terrain", "water", "models", "sunShadows", "strict"],
-      bV = {
+
+    function YH(HH) {
+      return HH.playerHasRank("developer") || HH.playerHasRank("admin")
+    }
+    const uH = ["terrain", "water", "models", "sunShadows", "strict"],
+      QH = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -297,89 +297,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function EV(VV, eV) {
-      return VV.withFeatures.includes(eV) ? "with" : VV.withoutFeatures.includes(eV) ? "without" : null
+    function WH(HH, BH) {
+      return HH.withFeatures.includes(BH) ? "with" : HH.withoutFeatures.includes(BH) ? "without" : null
     }
 
-    function BV(VV) {
-      return null === VV ? "with" : "with" === VV ? "without" : null
+    function MH(HH) {
+      return null === HH ? "with" : "with" === HH ? "without" : null
     }
 
-    function jV(VV) {
-      return "with" === VV ? "only" : null === VV ? "include" : void 0
+    function xH(HH) {
+      return "with" === HH ? "only" : null === HH ? "include" : void 0
     }
 
-    function qV(VV, eV) {
-      const xV = EV(VV, eV),
-        JV = VV => VV.filter((VV => VV !== eV));
+    function vH(HH, BH) {
+      const LH = WH(HH, BH),
+        AH = HH => HH.filter((HH => HH !== BH));
       return {
-        withFeatures: null === xV ? [...VV.withFeatures, eV] : JV(VV.withFeatures),
-        withoutFeatures: "with" === xV ? [...VV.withoutFeatures, eV] : JV(VV.withoutFeatures)
+        withFeatures: null === LH ? [...HH.withFeatures, BH] : AH(HH.withFeatures),
+        withoutFeatures: "with" === LH ? [...HH.withoutFeatures, BH] : AH(HH.withoutFeatures)
       }
     }
-    const tV = "section",
-      FV = "sort",
-      TV = "filters",
-      PV = "q",
-      AV = "banned",
-      NV = "popular",
-      XV = "strict";
+    const PH = "section",
+      TH = "sort",
+      UH = "filters",
+      VH = "q",
+      OH = "banned",
+      bH = "popular",
+      kH = "strict";
 
-    function MV(VV) {
-      var eV, xV, YV;
-      const yV = VV.get(tV),
-        pV = (null !== (eV = VV.get(TV)) && void 0 !== eV ? eV : XV).split(","),
-        QV = VV.get(AV);
+    function mH(HH) {
+      var BH, LH, rH;
+      const hH = HH.get(PH),
+        tH = (null !== (BH = HH.get(UH)) && void 0 !== BH ? BH : kH).split(","),
+        zH = HH.get(OH);
       return {
-        section: "favourites" === yV || "mine" === yV ? yV : "explore",
-        sort: null !== (xV = JV.B.find((eV => eV === VV.get(FV)))) && void 0 !== xV ? xV : NV,
-        withFeatures: kV.filter((VV => pV.includes(VV) && !pV.includes(`-${VV}`))),
-        withoutFeatures: kV.filter((VV => pV.includes(`-${VV}`))),
-        searchQuery: (null === (YV = VV.get(PV)) || void 0 === YV ? void 0 : YV.slice(0, JV.P)) || null,
-        pageNumber: (0, UV.g)(VV.get(UV.d)),
-        banned: "only" === QV ? "with" : "include" === QV ? null : "without"
+        section: "favourites" === hH || "mine" === hH ? hH : "explore",
+        sort: null !== (LH = AH.B.find((BH => BH === HH.get(TH)))) && void 0 !== LH ? LH : bH,
+        withFeatures: uH.filter((HH => tH.includes(HH) && !tH.includes(`-${HH}`))),
+        withoutFeatures: uH.filter((HH => tH.includes(`-${HH}`))),
+        searchQuery: (null === (rH = HH.get(VH)) || void 0 === rH ? void 0 : rH.slice(0, AH.P)) || null,
+        pageNumber: (0, SH.g)(HH.get(SH.c)),
+        banned: "only" === zH ? "with" : "include" === zH ? null : "without"
       }
     }
 
-    function zV(VV, eV) {
-      var xV;
-      const JV = gV(eV);
-      (0, UV.k)(VV, tV, "explore" === eV.section ? null : eV.section), (0, UV.k)(VV, FV, eV.sort === NV ? null : eV.sort), (0, UV.k)(VV, TV, JV === XV ? null : JV), (0, UV.k)(VV, PV, eV.searchQuery), (0, UV.k)(VV, AV, null !== (xV = jV(eV.banned)) && void 0 !== xV ? xV : null), (0, UV.l)(VV, eV.pageNumber)
+    function oH(HH, BH) {
+      var LH;
+      const AH = KH(BH);
+      (0, SH.j)(HH, PH, "explore" === BH.section ? null : BH.section), (0, SH.j)(HH, TH, BH.sort === bH ? null : BH.sort), (0, SH.j)(HH, UH, AH === kH ? null : AH), (0, SH.j)(HH, VH, BH.searchQuery), (0, SH.j)(HH, OH, null !== (LH = xH(BH.banned)) && void 0 !== LH ? LH : null), (0, SH.m)(HH, BH.pageNumber)
     }
 
-    function GV(VV) {
-      const eV = new URLSearchParams;
-      return zV(eV, {
+    function IH(HH) {
+      const BH = new URLSearchParams;
+      return oH(BH, {
         section: "explore",
-        sort: NV,
-        withFeatures: "strict" === VV ? [VV] : [VV, "strict"],
+        sort: bH,
+        withFeatures: "strict" === HH ? [HH] : [HH, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${yV}?${eV.toString()}`
+      }), `${hH}?${BH.toString()}`
     }
 
-    function WV(VV) {
-      return gV(VV) === XV
+    function fH(HH) {
+      return KH(HH) === kH
     }
 
-    function RV(VV) {
-      return null !== VV.searchQuery || "with" === VV.banned || gV(VV) !== XV
+    function lH(HH) {
+      return null !== HH.searchQuery || "with" === HH.banned || KH(HH) !== kH
     }
 
-    function gV(VV) {
-      return kV.flatMap((eV => {
-        const xV = EV(VV, eV);
-        return "with" === xV ? [eV] : "without" === xV ? [`-${eV}`] : []
+    function KH(HH) {
+      return uH.flatMap((BH => {
+        const LH = WH(HH, BH);
+        return "with" === LH ? [BH] : "without" === LH ? [`-${BH}`] : []
       })).join(",")
     }
-    const DV = {
+    const cH = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      iV = {
+      eH = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -387,79 +387,79 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function CV(VV) {
-      return Math.round(100 * Math.max(0, 1 - 1 / VV))
+    function qH(HH) {
+      return Math.round(100 * Math.max(0, 1 - 1 / HH))
     }
 
-    function aV(VV, eV, xV, YV) {
-      const UV = [];
-      VV.isBanned && UV.push({
+    function gH(HH, BH, LH, rH) {
+      const SH = [];
+      HH.isBanned && SH.push({
         tone: "warning",
-        text: YV("shaderPackListing:ownerBanned"),
+        text: rH("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: yV
-      } = VV;
-      if (null === VV.brokenError || yV && !yV.error || UV.push({
+        pending: hH
+      } = HH;
+      if (null === HH.brokenError || hH && !hH.error || SH.push({
           tone: "warning",
-          text: YV("shaderPackListing:ownerBroken"),
-          detail: VV.brokenError
-        }), null !== yV && void 0 !== yV && yV.error) UV.push({
+          text: rH("shaderPackListing:ownerBroken"),
+          detail: HH.brokenError
+        }), null !== hH && void 0 !== hH && hH.error) SH.push({
         tone: "warning",
-        text: YV(eV ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, JV.n)(yV.error) ? null : yV.error
+        text: rH(BH ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, AH.o)(hH.error) ? null : hH.error
       });
-      else if (yV) {
-        const VV = null === yV.renderNotBefore ? 0 : yV.renderNotBefore - xV,
-          JV = String(Math.ceil(VV / 6e4)),
-          pV = YV(eV ? VV > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : VV > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: JV
+      else if (hH) {
+        const HH = null === hH.renderNotBefore ? 0 : hH.renderNotBefore - LH,
+          AH = String(Math.ceil(HH / 6e4)),
+          tH = rH(BH ? HH > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : HH > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: AH
           });
-        UV.push({
+        SH.push({
           tone: "info",
-          text: pV,
+          text: tH,
           detail: null
         })
       }
-      return VV.listed || UV.push({
+      return HH.listed || SH.push({
         tone: "info",
-        text: YV("shaderPackListing:ownerUnlisted"),
+        text: rH("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), UV
+      }), SH
     }
 
-    function oV(VV) {
-      return Math.max(1, Math.round(VV / 1024))
+    function NH(HH) {
+      return Math.max(1, Math.round(HH / 1024))
     }
 
-    function cV(VV, eV, xV) {
-      return VV instanceof YV.b && VV.errorMessageForUser ? VV.errorMessageForUser : eV(xV)
+    function RH(HH, BH, LH) {
+      return HH instanceof rH.e && HH.errorMessageForUser ? HH.errorMessageForUser : BH(LH)
     }
   },
-  7132: (VV, eV, xV) => {
-    xV.d(eV, {
-      B: () => UV,
-      D: () => pV,
-      H: () => yV,
-      L: () => JV,
-      O: () => vV,
-      P: () => wV,
-      S: () => tV,
-      V: () => ZV,
-      X: () => nV,
-      d: () => kV,
-      g: () => EV,
-      h: () => bV,
-      k: () => rV,
-      n: () => qV,
-      q: () => TV,
-      s: () => QV,
-      w: () => YV,
-      x: () => FV
+  7114: (HH, BH, LH) => {
+    LH.d(BH, {
+      B: () => SH,
+      F: () => tH,
+      H: () => hH,
+      L: () => AH,
+      M: () => GH,
+      P: () => EH,
+      Q: () => PH,
+      R: () => XH,
+      V: () => CH,
+      d: () => uH,
+      g: () => WH,
+      i: () => QH,
+      m: () => YH,
+      o: () => vH,
+      s: () => UH,
+      v: () => zH,
+      w: () => rH,
+      x: () => TH
     });
-    const JV = ["forest", "desert", "water", "night", "cave"];
-    const YV = {
+    const AH = ["forest", "desert", "water", "night", "cave"];
+    const rH = {
         full: {
           width: 3840,
           height: 2160
@@ -473,49 +473,49 @@ export const modules = {
           height: 360
         }
       },
-      UV = ["popular", "updated", "newest"],
-      yV = 3,
-      pV = 32,
-      QV = 300;
+      SH = ["popular", "updated", "newest"],
+      hH = 3,
+      tH = 32,
+      zH = 300;
 
-    function nV(VV, eV) {
-      return VV.slice(0, eV).replace(/[\uD800-\uDBFF]$/, "")
+    function CH(HH, BH) {
+      return HH.slice(0, BH).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const wV = 64,
-      ZV = 512,
-      vV = 18e5;
+    const EH = 64,
+      XH = 512,
+      GH = 18e5;
 
-    function rV(VV) {
-      const eV = VV,
-        xV = null === eV || void 0 === eV ? void 0 : eV.files;
-      return "number" === typeof(null === eV || void 0 === eV ? void 0 : eV.apiVersion) && "string" === typeof eV.name && (null === eV.author || "string" === typeof eV.author) && (void 0 === eV.keepCircleShadows || "boolean" === typeof eV.keepCircleShadows) && "object" === typeof xV && null !== xV && Object.values(xV).every((VV => "string" === typeof VV))
+    function YH(HH) {
+      const BH = HH,
+        LH = null === BH || void 0 === BH ? void 0 : BH.files;
+      return "number" === typeof(null === BH || void 0 === BH ? void 0 : BH.apiVersion) && "string" === typeof BH.name && (null === BH.author || "string" === typeof BH.author) && (void 0 === BH.keepCircleShadows || "boolean" === typeof BH.keepCircleShadows) && "object" === typeof LH && null !== LH && Object.values(LH).every((HH => "string" === typeof HH))
     }
-    const kV = "Bloxdhub",
-      bV = "https://bloxdhub.com/shaders";
+    const uH = "Bloxdhub",
+      QH = "https://bloxdhub.com/shaders";
 
-    function EV(VV) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(VV)}`
+    function WH(HH) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(HH)}`
     }
-    const BV = "Screenshot generation failed.",
-      jV = "Its screenshots couldn't be generated:";
+    const MH = "Screenshot generation failed.",
+      xH = "Its screenshots couldn't be generated:";
 
-    function qV(VV) {
-      var eV;
-      return VV === BV || null !== (eV = null === VV || void 0 === VV ? void 0 : VV.startsWith(jV)) && void 0 !== eV && eV
-    }
-
-    function tV(VV, eV) {
-      return `shaderPacks/${VV}/${eV}.json`
+    function vH(HH) {
+      var BH;
+      return HH === MH || null !== (BH = null === HH || void 0 === HH ? void 0 : HH.startsWith(xH)) && void 0 !== BH && BH
     }
 
-    function FV(VV, eV, xV, JV) {
-      return null === eV.renderId ? TV(VV, eV.baselineVersion, xV, JV) : `${VV}/${function(VV,eV,xV,JV){return`shaderPacks/${VV}/${eV}/${xV}-${JV}.webp`}(eV.packId,eV.renderId,xV,JV)}`
+    function PH(HH, BH) {
+      return `shaderPacks/${HH}/${BH}.json`
     }
 
-    function TV(VV, eV, xV, JV) {
-      return `${VV}/${function(VV,eV,xV){return`shaderPacks/baseline/${VV}/${eV}-${xV}.webp`}(eV,xV,JV)}`
+    function TH(HH, BH, LH, AH) {
+      return null === BH.renderId ? UH(HH, BH.baselineVersion, LH, AH) : `${HH}/${function(HH,BH,LH,AH){return`shaderPacks/${HH}/${BH}/${LH}-${AH}.webp`}(BH.packId,BH.renderId,LH,AH)}`
+    }
+
+    function UH(HH, BH, LH, AH) {
+      return `${HH}/${function(HH,BH,LH){return`shaderPacks/baseline/${HH}/${BH}-${LH}.webp`}(BH,LH,AH)}`
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

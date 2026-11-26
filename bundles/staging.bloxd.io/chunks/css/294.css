@@ -218,6 +218,12 @@
   color: #ff8a80
 }
 
+.StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplayListItem .StudioReplayListItemTags .StudioReplayTag.StudioReplayTag-neverMoved,
+.StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplayListItem .StudioReplayListItemTags .StudioReplayTag.StudioReplayTag-quickQuit,
+.StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplayListItem .StudioReplayListItemTags .StudioReplayTag.StudioReplayTag-unboundKeys {
+  color: #fcd373
+}
+
 .StudioReplaysTab .StudioReplaysBody .StudioReplayViewer {
   background-color: #22283b;
   border: 1px solid #0f0f0f;

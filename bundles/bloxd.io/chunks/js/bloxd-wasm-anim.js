@@ -1,271 +1,271 @@
 export const id = 5;
 export const ids = [5];
 export const modules = {
-  53924: (VV, eV, xV) => {
-    VV.exports = xV.p + "static/media/bloxd_wasm_anim_bg.6179f928de4459d74d9f.wasm"
+  54523: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/bloxd_wasm_anim_bg.e5e945593b3735e46b1d.wasm"
   },
-  53922: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      BloxdAnimWasmError: () => iV,
-      compileAnimationPackInWasm: () => cV
+  54514: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      BloxdAnimWasmError: () => eH,
+      compileAnimationPackInWasm: () => RH
     });
-    var JV = {};
+    var AH = {};
 
-    function YV(VV, eV, xV, JV, YV, UV) {
-      const yV = jV(VV, MV.fRTy),
-        pV = zV,
-        QV = jV(eV, MV.fRTy),
-        nV = zV,
-        wV = jV(xV, MV.fRTy),
-        ZV = zV,
-        vV = jV(JV, MV.fRTy),
-        kV = zV,
-        bV = jV(YV, MV.fRTy),
-        EV = zV;
-      var qV = BV(UV) ? 0 : function(VV, eV) {
-          const xV = eV(1 * VV.length, 1) >>> 0;
-          return rV().set(VV, xV / 1), zV = VV.length, xV
-        }(UV, MV.fRTy),
-        FV = zV;
-      const TV = MV.OiVz(yV, pV, QV, nV, wV, ZV, vV, kV, bV, EV, qV, FV);
-      if (TV[3]) throw tV(TV[2]);
-      var PV, AV, NV = (PV = TV[0], AV = TV[1], PV >>>= 0, rV().subarray(PV / 1, PV / 1 + AV)).slice();
-      return MV.Lgq9(TV[0], 1 * TV[1], 1), NV
+    function rH(HH, BH, LH, AH, rH, SH) {
+      const hH = xH(HH, mH.fj4T),
+        tH = oH,
+        zH = xH(BH, mH.fj4T),
+        CH = oH,
+        EH = xH(LH, mH.fj4T),
+        XH = oH,
+        GH = xH(AH, mH.fj4T),
+        uH = oH,
+        QH = xH(rH, mH.fj4T),
+        WH = oH;
+      var vH = MH(SH) ? 0 : function(HH, BH) {
+          const LH = BH(1 * HH.length, 1) >>> 0;
+          return YH().set(HH, LH / 1), oH = HH.length, LH
+        }(SH, mH.fj4T),
+        TH = oH;
+      const UH = mH.Qfkv(hH, tH, zH, CH, EH, XH, GH, uH, QH, WH, vH, TH);
+      if (UH[3]) throw PH(UH[2]);
+      var VH, OH, bH = (VH = UH[0], OH = UH[1], VH >>>= 0, YH().subarray(VH / 1, VH / 1 + OH)).slice();
+      return mH.VmYL(UH[0], 1 * UH[1], 1), bH
     }
 
-    function UV(VV, eV) {
-      const xV = qV(VV, MV.fRTy, MV.TdLt),
-        JV = zV,
-        YV = MV.ekgY(xV, JV, eV);
-      if (YV[1]) throw tV(YV[0])
+    function SH(HH, BH) {
+      const LH = vH(HH, mH.fj4T, mH.QyXH),
+        AH = oH,
+        rH = mH.orv7(LH, AH, BH);
+      if (rH[1]) throw PH(rH[0])
     }
 
-    function yV() {
-      MV.V2Pj()
+    function hH() {
+      mH.fUtg()
     }
 
-    function pV() {
+    function tH() {
       return {
         __proto__: null,
-        F2jg: {
+        phGC: {
           __proto__: null,
-          Hvcs: function(VV, eV) {
-            return QV(Error(ZV(VV, eV)))
+          ZrJ5: function(HH, BH) {
+            return zH(Error(XH(HH, BH)))
           },
-          TeTw: function(VV, eV) {
-            const xV = kV(eV),
-              JV = "string" === typeof xV ? xV : void 0;
-            var YV = BV(JV) ? 0 : qV(JV, MV.fRTy, MV.TdLt),
-              UV = zV;
-            wV().setInt32(VV + 4, UV, !0), wV().setInt32(VV + 0, YV, !0)
+          N2Ik: function(HH, BH) {
+            const LH = uH(BH),
+              AH = "string" === typeof LH ? LH : void 0;
+            var rH = MH(AH) ? 0 : vH(AH, mH.fj4T, mH.QyXH),
+              SH = oH;
+            EH().setInt32(HH + 4, SH, !0), EH().setInt32(HH + 0, rH, !0)
           },
-          Cf9c: function(VV, eV) {
-            throw new Error(ZV(VV, eV))
+          v7cC: function(HH, BH) {
+            throw new Error(XH(HH, BH))
           },
-          nmLo: function(VV, eV) {
-            console.error(ZV(VV, eV))
+          tMGH: function(HH, BH) {
+            console.error(XH(HH, BH))
           },
-          sP9s: function(VV) {
-            tV(VV)
+          NyhK: function(HH) {
+            PH(HH)
           }
         }
       }
     }
 
-    function QV(VV) {
-      EV === bV.length && bV.push(bV.length + 1);
-      const eV = EV;
-      return EV = bV[eV], bV[eV] = VV, eV
+    function zH(HH) {
+      WH === QH.length && QH.push(QH.length + 1);
+      const BH = WH;
+      return WH = QH[BH], QH[BH] = HH, BH
     }
-    xV.r(JV), xV.d(JV, {
-      wQV: () => YV,
-      sw: () => UV,
-      default: () => RV,
-      initSync: () => WV,
-      hZ: () => yV
+    LH.r(AH), LH.d(AH, {
+      DtH: () => rH,
+      qt: () => SH,
+      default: () => lH,
+      initSync: () => fH,
+      LC: () => hH
     });
-    let nV = null;
+    let CH = null;
 
-    function wV() {
-      return null !== nV && nV.buffer === MV.memory.buffer || (nV = new DataView(MV.memory.buffer)), nV
+    function EH() {
+      return null !== CH && CH.buffer === mH.memory.buffer || (CH = new DataView(mH.memory.buffer)), CH
     }
 
-    function ZV(VV, eV) {
-      return function(VV, eV) {
-        PV += eV, PV >= TV && (FV = new TextDecoder("utf-8", {
+    function XH(HH, BH) {
+      return function(HH, BH) {
+        VH += BH, VH >= UH && (TH = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), FV.decode(), PV = eV);
-        return FV.decode(rV().subarray(VV, VV + eV))
-      }(VV >>> 0, eV)
+        }), TH.decode(), VH = BH);
+        return TH.decode(YH().subarray(HH, HH + BH))
+      }(HH >>> 0, BH)
     }
-    let vV = null;
+    let GH = null;
 
-    function rV() {
-      return null !== vV && 0 !== vV.byteLength || (vV = new Uint8Array(MV.memory.buffer)), vV
-    }
-
-    function kV(VV) {
-      return bV[VV]
-    }
-    let bV = new Array(1024).fill(void 0);
-    bV.push(void 0, null, !0, !1);
-    let EV = bV.length;
-
-    function BV(VV) {
-      return void 0 === VV || null === VV
+    function YH() {
+      return null !== GH && 0 !== GH.byteLength || (GH = new Uint8Array(mH.memory.buffer)), GH
     }
 
-    function jV(VV, eV) {
-      const xV = eV(4 * VV.length, 4) >>> 0,
-        JV = wV();
-      for (let YV = 0; YV < VV.length; YV++) JV.setUint32(xV + 4 * YV, QV(VV[YV]), !0);
-      return zV = VV.length, xV
+    function uH(HH) {
+      return QH[HH]
+    }
+    let QH = new Array(1024).fill(void 0);
+    QH.push(void 0, null, !0, !1);
+    let WH = QH.length;
+
+    function MH(HH) {
+      return void 0 === HH || null === HH
     }
 
-    function qV(VV, eV, xV) {
-      if (void 0 === xV) {
-        const xV = AV.encode(VV),
-          JV = eV(xV.length, 1) >>> 0;
-        return rV().subarray(JV, JV + xV.length).set(xV), zV = xV.length, JV
+    function xH(HH, BH) {
+      const LH = BH(4 * HH.length, 4) >>> 0,
+        AH = EH();
+      for (let rH = 0; rH < HH.length; rH++) AH.setUint32(LH + 4 * rH, zH(HH[rH]), !0);
+      return oH = HH.length, LH
+    }
+
+    function vH(HH, BH, LH) {
+      if (void 0 === LH) {
+        const LH = OH.encode(HH),
+          AH = BH(LH.length, 1) >>> 0;
+        return YH().subarray(AH, AH + LH.length).set(LH), oH = LH.length, AH
       }
-      let JV = VV.length,
-        YV = eV(JV, 1) >>> 0;
-      const UV = rV();
-      let yV = 0;
-      for (; yV < JV; yV++) {
-        const eV = VV.charCodeAt(yV);
-        if (eV > 127) break;
-        UV[YV + yV] = eV
+      let AH = HH.length,
+        rH = BH(AH, 1) >>> 0;
+      const SH = YH();
+      let hH = 0;
+      for (; hH < AH; hH++) {
+        const BH = HH.charCodeAt(hH);
+        if (BH > 127) break;
+        SH[rH + hH] = BH
       }
-      if (yV !== JV) {
-        0 !== yV && (VV = VV.slice(yV)), YV = xV(YV, JV, JV = yV + 3 * VV.length, 1) >>> 0;
-        const eV = rV().subarray(YV + yV, YV + JV);
-        yV += AV.encodeInto(VV, eV).written, YV = xV(YV, JV, yV, 1) >>> 0
+      if (hH !== AH) {
+        0 !== hH && (HH = HH.slice(hH)), rH = LH(rH, AH, AH = hH + 3 * HH.length, 1) >>> 0;
+        const BH = YH().subarray(rH + hH, rH + AH);
+        hH += OH.encodeInto(HH, BH).written, rH = LH(rH, AH, hH, 1) >>> 0
       }
-      return zV = yV, YV
+      return oH = hH, rH
     }
 
-    function tV(VV) {
-      const eV = kV(VV);
-      return function(VV) {
-        VV < 1028 || (bV[VV] = EV, EV = VV)
-      }(VV), eV
+    function PH(HH) {
+      const BH = uH(HH);
+      return function(HH) {
+        HH < 1028 || (QH[HH] = WH, WH = HH)
+      }(HH), BH
     }
-    let FV = new TextDecoder("utf-8", {
+    let TH = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    FV.decode();
-    const TV = 2146435072;
-    let PV = 0;
-    const AV = new TextEncoder;
-    "encodeInto" in AV || (AV.encodeInto = function(VV, eV) {
-      const xV = AV.encode(VV);
-      return eV.set(xV), {
-        read: VV.length,
-        written: xV.length
+    TH.decode();
+    const UH = 2146435072;
+    let VH = 0;
+    const OH = new TextEncoder;
+    "encodeInto" in OH || (OH.encodeInto = function(HH, BH) {
+      const LH = OH.encode(HH);
+      return BH.set(LH), {
+        read: HH.length,
+        written: LH.length
       }
     });
-    let NV, XV, MV, zV = 0;
+    let bH, kH, mH, oH = 0;
 
-    function GV(VV, eV) {
-      return XV = VV, MV = VV.exports, NV = eV, nV = null, vV = null, MV.Ovll(), MV
+    function IH(HH, BH) {
+      return kH = HH, mH = HH.exports, bH = BH, CH = null, GH = null, mH.UarT(), mH
     }
 
-    function WV(VV) {
-      if (void 0 !== MV) return MV;
-      void 0 !== VV && (Object.getPrototypeOf(VV) === Object.prototype ? ({
-        module: VV
-      } = VV) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const eV = pV();
-      VV instanceof WebAssembly.Module || (VV = new WebAssembly.Module(VV));
-      return GV(new WebAssembly.Instance(VV, eV), VV)
+    function fH(HH) {
+      if (void 0 !== mH) return mH;
+      void 0 !== HH && (Object.getPrototypeOf(HH) === Object.prototype ? ({
+        module: HH
+      } = HH) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const BH = tH();
+      HH instanceof WebAssembly.Module || (HH = new WebAssembly.Module(HH));
+      return IH(new WebAssembly.Instance(HH, BH), HH)
     }
-    async function RV(VV) {
-      if (void 0 !== MV) return MV;
-      void 0 !== VV && (Object.getPrototypeOf(VV) === Object.prototype ? ({
-        module_or_path: VV
-      } = VV) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const eV = pV();
-      ("string" === typeof VV || "function" === typeof Request && VV instanceof Request || "function" === typeof URL && VV instanceof URL) && (VV = fetch(VV));
+    async function lH(HH) {
+      if (void 0 !== mH) return mH;
+      void 0 !== HH && (Object.getPrototypeOf(HH) === Object.prototype ? ({
+        module_or_path: HH
+      } = HH) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const BH = tH();
+      ("string" === typeof HH || "function" === typeof Request && HH instanceof Request || "function" === typeof URL && HH instanceof URL) && (HH = fetch(HH));
       const {
-        instance: xV,
-        module: JV
-      } = await async function(VV, eV) {
-        if ("function" === typeof Response && VV instanceof Response) {
-          if (!VV.ok) throw new Error(`failed to fetch Wasm: ${VV.status} ${VV.statusText} fetching '${VV.url}'`);
+        instance: LH,
+        module: AH
+      } = await async function(HH, BH) {
+        if ("function" === typeof Response && HH instanceof Response) {
+          if (!HH.ok) throw new Error(`failed to fetch Wasm: ${HH.status} ${HH.statusText} fetching '${HH.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(VV, eV)
-          } catch (xV) {
-            if (! function(VV) {
-                switch (VV) {
+            return await WebAssembly.instantiateStreaming(HH, BH)
+          } catch (LH) {
+            if (! function(HH) {
+                switch (HH) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(VV.type) || "application/wasm" === VV.headers.get("Content-Type")) throw xV;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", xV)
+              }(HH.type) || "application/wasm" === HH.headers.get("Content-Type")) throw LH;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", LH)
           }
-          const JV = await VV.arrayBuffer();
-          return await WebAssembly.instantiate(JV, eV)
+          const AH = await HH.arrayBuffer();
+          return await WebAssembly.instantiate(AH, BH)
         } {
-          const xV = await WebAssembly.instantiate(VV, eV);
-          return xV instanceof WebAssembly.Instance ? {
-            instance: xV,
-            module: VV
-          } : xV
+          const LH = await WebAssembly.instantiate(HH, BH);
+          return LH instanceof WebAssembly.Instance ? {
+            instance: LH,
+            module: HH
+          } : LH
         }
-      }(await VV, eV);
-      return GV(xV, JV)
+      }(await HH, BH);
+      return IH(LH, AH)
     }
-    var gV = xV(3196),
-      DV = xV(7178);
-    class iV extends Error {
+    var KH = LH(3171),
+      cH = LH(7172);
+    class eH extends Error {
       stage;
-      constructor(VV, eV) {
-        super((0, gV.D)(VV, eV), {
-          cause: eV
-        }), this.name = "BloxdAnimWasmError", this.stage = VV
+      constructor(HH, BH) {
+        super((0, KH.F)(HH, BH), {
+          cause: BH
+        }), this.name = "BloxdAnimWasmError", this.stage = HH
       }
     }
-    let CV = null,
-      aV = null;
+    let qH = null,
+      gH = null;
 
-    function oV() {
-      if (aV) throw aV
+    function NH() {
+      if (gH) throw gH
     }
-    async function cV(VV, eV, YV) {
-      oV();
-      const UV = await (CV ??= (async () => {
-        let VV;
+    async function RH(HH, BH, rH) {
+      NH();
+      const SH = await (qH ??= (async () => {
+        let HH;
         try {
-          VV = await (0, gV.G)(new xV.U(xV(53924)), (0, DV.e)("bloxd_wasm_anim"))
-        } catch (eV) {
-          throw new iV((0, gV.J)(eV), eV)
+          HH = await (0, KH.J)(new LH.U(LH(54523)), (0, cH.c)("bloxd_wasm_anim"))
+        } catch (BH) {
+          throw new eH((0, KH.O)(BH), BH)
         }
         try {
-          await RV({
-            module_or_path: VV
+          await lH({
+            module_or_path: HH
           })
-        } catch (eV) {
-          throw new iV("instantiate", eV)
+        } catch (BH) {
+          throw new eH("instantiate", BH)
         }
-        return JV
-      })(), CV.catch((() => {
-        CV = null
-      })), CV);
-      oV();
+        return AH
+      })(), qH.catch((() => {
+        qH = null
+      })), qH);
+      NH();
       try {
-        return UV.wQV(Object.entries(VV).flat(), [...eV.mobTypes], [...eV.vehicleTypes], [...eV.mobAiStates], [...eV.playerPoses], "builtIns" in YV ? YV.builtIns : void 0)
-      } catch (yV) {
-        const VV = new iV("call", yV);
-        throw yV instanceof WebAssembly.RuntimeError && (aV = VV), VV
+        return SH.DtH(Object.entries(HH).flat(), [...BH.mobTypes], [...BH.vehicleTypes], [...BH.mobAiStates], [...BH.playerPoses], "builtIns" in rH ? rH.builtIns : void 0)
+      } catch (hH) {
+        const HH = new eH("call", hH);
+        throw hH instanceof WebAssembly.RuntimeError && (gH = HH), HH
       }
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

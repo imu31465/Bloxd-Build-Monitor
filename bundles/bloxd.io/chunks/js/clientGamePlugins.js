@@ -1,68 +1,68 @@
 export const id = 32;
 export const ids = [32];
 export const modules = {
-  40373: (VV, eV, xV) => {
-    function JV(VV) {
-      return void 0 === VV ? void 0 : [VV[0], VV[1], VV[2]]
+  40108: (HH, BH, LH) => {
+    function AH(HH) {
+      return void 0 === HH ? void 0 : [HH[0], HH[1], HH[2]]
     }
 
-    function YV(VV) {
-      const eV = VV.particles;
+    function rH(HH) {
+      const BH = HH.particles;
       return {
         opts: {
-          texture: eV.texture,
-          Jv: eV.Jv,
-          minLifeTime: eV.minLifeTime,
-          maxLifeTime: eV.maxLifeTime,
-          minSize: eV.minSize,
-          maxSize: eV.maxSize,
-          minEmitPower: eV.minEmitPower,
-          maxEmitPower: eV.maxEmitPower,
-          emitRate: eV.emitRate,
-          gravity: JV(eV.gravity),
-          dir1: JV(eV.dir1),
-          dir2: JV(eV.dir2),
-          colorGradients: eV.colorGradients,
-          blendMode: eV.blendMode
+          texture: BH.texture,
+          aX: BH.aX,
+          minLifeTime: BH.minLifeTime,
+          maxLifeTime: BH.maxLifeTime,
+          minSize: BH.minSize,
+          maxSize: BH.maxSize,
+          minEmitPower: BH.minEmitPower,
+          maxEmitPower: BH.maxEmitPower,
+          emitRate: BH.emitRate,
+          gravity: AH(BH.gravity),
+          dir1: AH(BH.dir1),
+          dir2: AH(BH.dir2),
+          colorGradients: BH.colorGradients,
+          blendMode: BH.blendMode
         },
-        half: [eV.width / 2, eV.height / 2, eV.depth / 2]
+        half: [BH.width / 2, BH.height / 2, BH.depth / 2]
       }
     }
-    xV.d(eV, {
-      d: () => YV
+    LH.d(BH, {
+      b: () => rH
     })
   },
-  40342: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV,
-      f: () => nV,
-      h: () => QV,
-      k: () => yV
+  40066: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => SH,
+      d: () => CH,
+      h: () => zH,
+      i: () => hH
     });
-    var JV = xV(220);
-    const YV = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
-      UV = "PetRoot";
-    let yV = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
-      pV = YV;
+    var AH = LH(186);
+    const rH = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
+      SH = "PetRoot";
+    let hH = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
+      tH = rH;
     new Map, new Map;
 
-    function QV(VV) {
-      var eV;
-      return null !== (eV = (0, JV.b)(yV, VV)) && void 0 !== eV ? eV : null
+    function zH(HH) {
+      var BH;
+      return null !== (BH = (0, AH.d)(hH, HH)) && void 0 !== BH ? BH : null
     }
 
-    function nV(VV) {
-      var eV;
-      return null !== (eV = (0, JV.b)(pV, VV)) && void 0 !== eV ? eV : null
+    function CH(HH) {
+      var BH;
+      return null !== (BH = (0, AH.d)(tH, HH)) && void 0 !== BH ? BH : null
     }
   },
-  40375: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => JV,
-      e: () => YV,
-      g: () => UV
+  40117: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => AH,
+      c: () => rH,
+      g: () => SH
     });
-    class JV {
+    class AH {
       constructor() {
         this.pose = {
           pos: [0, 0, 0],
@@ -70,355 +70,355 @@ export const modules = {
           mode: "flying",
           seated: !1,
           clip: void 0
-        }, this.ME = [0, 0, 0], this.lastFeet = [0, 0, 0], this.target = [0, 0, 0], this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0
+        }, this.EW = [0, 0, 0], this.lastFeet = [0, 0, 0], this.target = [0, 0, 0], this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0
       }
-      step(VV) {
-        var eV;
+      step(HH) {
+        var BH;
         const {
-          feet: xV,
-          heading: JV,
-          tuning: yV
-        } = VV, pV = Math.min(Math.max(VV.dt, 0), .1), {
-          pose: QV,
-          ME: nV,
-          target: wV
+          feet: LH,
+          heading: AH,
+          tuning: hH
+        } = HH, tH = Math.min(Math.max(HH.dt, 0), .1), {
+          pose: zH,
+          EW: CH,
+          target: EH
         } = this;
-        if (this.started && pV > 0) {
-          const VV = Math.hypot(xV[0] - this.lastFeet[0], xV[1] - this.lastFeet[1], xV[2] - this.lastFeet[2]);
-          this.speed += (VV / pV - this.speed) * Math.min(pV / .15, 1)
+        if (this.started && tH > 0) {
+          const HH = Math.hypot(LH[0] - this.lastFeet[0], LH[1] - this.lastFeet[1], LH[2] - this.lastFeet[2]);
+          this.speed += (HH / tH - this.speed) * Math.min(tH / .15, 1)
         }
-        this.lastFeet[0] = xV[0], this.lastFeet[1] = xV[1], this.lastFeet[2] = xV[2], this.stillS = this.speed > .3 ? 0 : this.stillS + pV;
-        const ZV = this.stillS >= .6 ? "perched" : "flying";
-        "flying" === ZV && "perched" === QV.mode && (this.sinceTakeOffS = 0, this.perchLocked = !1), this.sinceTakeOffS += pV, QV.mode = ZV;
-        const vV = Math.sin(JV),
-          rV = Math.cos(JV);
-        "perched" === ZV ? (UV(wV, xV, yV.perchOffset, vV, rV), wV[1] += VV.headTopY - xV[1]) : (UV(wV, xV, yV.followOffset, vV, rV), wV[1] += YV(yV, VV.timeS));
+        this.lastFeet[0] = LH[0], this.lastFeet[1] = LH[1], this.lastFeet[2] = LH[2], this.stillS = this.speed > .3 ? 0 : this.stillS + tH;
+        const XH = this.stillS >= .6 ? "perched" : "flying";
+        "flying" === XH && "perched" === zH.mode && (this.sinceTakeOffS = 0, this.perchLocked = !1), this.sinceTakeOffS += tH, zH.mode = XH;
+        const GH = Math.sin(AH),
+          YH = Math.cos(AH);
+        "perched" === XH ? (SH(EH, LH, hH.perchOffset, GH, YH), EH[1] += HH.headTopY - LH[1]) : (SH(EH, LH, hH.followOffset, GH, YH), EH[1] += rH(hH, HH.timeS));
         const {
-          pos: kV
-        } = QV, bV = Math.hypot(wV[0] - kV[0], wV[1] - kV[1], wV[2] - kV[2]);
-        if (!this.started || bV > 8 || "perched" === ZV && (this.perchLocked || bV < .05)) this.perchLocked = this.started && "perched" === ZV, kV[0] = wV[0], kV[1] = wV[1], kV[2] = wV[2], nV[0] = nV[1] = nV[2] = 0;
+          pos: uH
+        } = zH, QH = Math.hypot(EH[0] - uH[0], EH[1] - uH[1], EH[2] - uH[2]);
+        if (!this.started || QH > 8 || "perched" === XH && (this.perchLocked || QH < .05)) this.perchLocked = this.started && "perched" === XH, uH[0] = EH[0], uH[1] = EH[1], uH[2] = EH[2], CH[0] = CH[1] = CH[2] = 0;
         else {
-          const VV = yV.followStiffness;
-          for (let eV = 0; eV < 3; eV++) nV[eV] += (VV * VV * (wV[eV] - kV[eV]) - 2 * VV * nV[eV]) * pV, kV[eV] += nV[eV] * pV
+          const HH = hH.followStiffness;
+          for (let BH = 0; BH < 3; BH++) CH[BH] += (HH * HH * (EH[BH] - uH[BH]) - 2 * HH * CH[BH]) * tH, uH[BH] += CH[BH] * tH
         }
-        const EV = JV + yV.yawOffset;
-        var BV;
-        return this.started ? QV.yaw += ((BV = EV - QV.yaw) - 2 * Math.PI * Math.round(BV / (2 * Math.PI))) * Math.min(8 * pV, 1) : QV.yaw = EV, this.started = !0, QV.seated = "perched" === ZV && this.perchLocked, QV.clip = null === (eV = yV.clips) || void 0 === eV ? void 0 : eV[this.tY(ZV)], QV
+        const WH = AH + hH.yawOffset;
+        var MH;
+        return this.started ? zH.yaw += ((MH = WH - zH.yaw) - 2 * Math.PI * Math.round(MH / (2 * Math.PI))) * Math.min(8 * tH, 1) : zH.yaw = WH, this.started = !0, zH.seated = "perched" === XH && this.perchLocked, zH.clip = null === (BH = hH.clips) || void 0 === BH ? void 0 : BH[this.VB(XH)], zH
       }
       reset() {
         this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0, this.pose.mode = "flying", this.pose.seated = !1
       }
-      tY(VV) {
-        return "perched" === VV ? this.perchLocked ? "perch" : "land" : this.sinceTakeOffS < .4 ? "takeOff" : "fly"
+      VB(HH) {
+        return "perched" === HH ? this.perchLocked ? "perch" : "land" : this.sinceTakeOffS < .4 ? "takeOff" : "fly"
       }
     }
 
-    function YV(VV, eV) {
-      return VV.bobAmplitude * Math.sin(2 * Math.PI * VV.bobHz * eV)
+    function rH(HH, BH) {
+      return HH.bobAmplitude * Math.sin(2 * Math.PI * HH.bobHz * BH)
     }
 
-    function UV(VV, eV, xV, JV, YV) {
-      const [UV, yV, pV] = xV;
-      VV[0] = eV[0] + UV * YV + pV * JV, VV[1] = eV[1] + yV, VV[2] = eV[2] - UV * JV + pV * YV
+    function SH(HH, BH, LH, AH, rH) {
+      const [SH, hH, tH] = LH;
+      HH[0] = BH[0] + SH * rH + tH * AH, HH[1] = BH[1] + hH, HH[2] = BH[2] - SH * AH + tH * rH
     }
   },
-  5339: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => DV,
-      g: () => gV
+  5319: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => cH,
+      d: () => KH
     });
-    var JV = xV(5342),
-      YV = xV(364);
-    const UV = 120,
-      yV = 260,
-      pV = 1.15,
-      QV = 1.2,
-      nV = 2,
-      wV = 1.08,
-      ZV = .8,
-      vV = .95,
-      rV = 8,
-      kV = "[\"')\\]\u300d\u300f\uff09]*",
-      bV = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${kV}$`),
-      EV = new RegExp(`[?\uff1f]${kV}$`),
-      BV = new RegExp(`[!\uff01]${kV}$`),
-      jV = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      qV = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      tV = new RegExp(`[${qV}]`),
-      FV = new RegExp(`[${qV}]|[^${qV}]+`, "g"),
-      TV = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var AH = LH(5325),
+      rH = LH(304);
+    const SH = 120,
+      hH = 260,
+      tH = 1.15,
+      zH = 1.2,
+      CH = 2,
+      EH = 1.08,
+      XH = .8,
+      GH = .95,
+      YH = 8,
+      uH = "[\"')\\]\u300d\u300f\uff09]*",
+      QH = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${uH}$`),
+      WH = new RegExp(`[?\uff1f]${uH}$`),
+      MH = new RegExp(`[!\uff01]${uH}$`),
+      xH = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      vH = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      PH = new RegExp(`[${vH}]`),
+      TH = new RegExp(`[${vH}]|[^${vH}]+`, "g"),
+      UH = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function PV(VV) {
-      let eV = 2166136261;
-      for (let xV = 0; xV < VV.length; xV++) eV ^= VV.charCodeAt(xV), eV = Math.imul(eV, 16777619);
-      return (eV >>> 0) / 4294967295 * 2 - 1
+    function VH(HH) {
+      let BH = 2166136261;
+      for (let LH = 0; LH < HH.length; LH++) BH ^= HH.charCodeAt(LH), BH = Math.imul(BH, 16777619);
+      return (BH >>> 0) / 4294967295 * 2 - 1
     }
 
-    function AV(VV) {
-      var eV;
-      if (tV.test(VV)) return 1;
-      const xV = VV.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        JV = xV.replace(/[^0-9]/g, "");
-      if (JV.length > 0 && !/\p{L}/u.test(xV)) return Math.min(JV.length, 4);
-      const YV = null !== (eV = xV.match(TV)) && void 0 !== eV ? eV : [];
-      if (0 === YV.length) {
-        var UV, yV;
-        const VV = null !== (UV = null === (yV = xV.match(/\p{L}/gu)) || void 0 === yV ? void 0 : yV.length) && void 0 !== UV ? UV : 0;
-        return 0 === VV ? 0 : Math.min(Math.max(1, Math.round(VV / 2.5)), rV)
+    function OH(HH) {
+      var BH;
+      if (PH.test(HH)) return 1;
+      const LH = HH.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        AH = LH.replace(/[^0-9]/g, "");
+      if (AH.length > 0 && !/\p{L}/u.test(LH)) return Math.min(AH.length, 4);
+      const rH = null !== (BH = LH.match(UH)) && void 0 !== BH ? BH : [];
+      if (0 === rH.length) {
+        var SH, hH;
+        const HH = null !== (SH = null === (hH = LH.match(/\p{L}/gu)) || void 0 === hH ? void 0 : hH.length) && void 0 !== SH ? SH : 0;
+        return 0 === HH ? 0 : Math.min(Math.max(1, Math.round(HH / 2.5)), YH)
       }
-      const pV = xV.replace(/[^\p{L}]/gu, ""),
-        QV = YV.length > 1 && "e" === YV.at(-1) && pV.endsWith("e") && !pV.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(VV.replace(/[^\p{L}]/gu, ""));
-      return Math.min(YV.length - (QV ? 1 : 0), rV)
+      const tH = LH.replace(/[^\p{L}]/gu, ""),
+        zH = rH.length > 1 && "e" === rH.at(-1) && tH.endsWith("e") && !tH.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(HH.replace(/[^\p{L}]/gu, ""));
+      return Math.min(rH.length - (zH ? 1 : 0), YH)
     }
 
-    function NV(VV) {
-      return VV.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function bH(HH) {
+      return HH.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function XV(VV) {
-      const eV = VV.replace(/[^\p{L}]/gu, "");
-      return eV.length >= 2 && eV === eV.toUpperCase() && eV !== eV.toLowerCase()
+    function kH(HH) {
+      const BH = HH.replace(/[^\p{L}]/gu, "");
+      return BH.length >= 2 && BH === BH.toUpperCase() && BH !== BH.toLowerCase()
     }
 
-    function MV(VV, eV) {
-      var xV;
-      const rV = eV && (0, JV.j)(eV),
-        kV = null !== (xV = null === rV || void 0 === rV ? void 0 : rV.syllableMs) && void 0 !== xV ? xV : JV.e,
-        qV = function(VV) {
-          const eV = [];
-          for (const JV of (0, YV.dc)(VV))
-            if ("string" === typeof JV)
-              for (const VV of JV.split(/(\s+)/)) {
-                if ("" === VV) continue;
-                if (/^\s+$/.test(VV)) {
-                  eV.push({
+    function mH(HH, BH) {
+      var LH;
+      const YH = BH && (0, AH.k)(BH),
+        uH = null !== (LH = null === YH || void 0 === YH ? void 0 : YH.syllableMs) && void 0 !== LH ? LH : AH.e,
+        vH = function(HH) {
+          const BH = [];
+          for (const AH of (0, rH.tc)(HH))
+            if ("string" === typeof AH)
+              for (const HH of AH.split(/(\s+)/)) {
+                if ("" === HH) continue;
+                if (/^\s+$/.test(HH)) {
+                  BH.push({
                     kind: "space",
-                    text: VV
+                    text: HH
                   });
                   continue
                 }
-                if (!tV.test(VV)) {
-                  eV.push({
+                if (!PH.test(HH)) {
+                  BH.push({
                     kind: "word",
-                    text: VV,
+                    text: HH,
                     delayMs: 0
                   });
                   continue
                 }
-                let JV = !0;
-                for (const YV of null !== (xV = VV.match(FV)) && void 0 !== xV ? xV : []) {
-                  var xV;
-                  const VV = eV.at(-1);
-                  JV || "word" !== (null === VV || void 0 === VV ? void 0 : VV.kind) || tV.test(YV) || /[\p{L}\p{N}]/u.test(YV) ? (JV || eV.push({
+                let AH = !0;
+                for (const rH of null !== (LH = HH.match(TH)) && void 0 !== LH ? LH : []) {
+                  var LH;
+                  const HH = BH.at(-1);
+                  AH || "word" !== (null === HH || void 0 === HH ? void 0 : HH.kind) || PH.test(rH) || /[\p{L}\p{N}]/u.test(rH) ? (AH || BH.push({
                     kind: "space",
                     text: "\u200b"
-                  }), eV.push({
+                  }), BH.push({
                     kind: "word",
-                    text: YV,
+                    text: rH,
                     delayMs: 0
-                  }), JV = !1) : VV.text += YV
+                  }), AH = !1) : HH.text += rH
                 }
-              } else eV.push({
+              } else BH.push({
                 kind: "icon",
-                text: JV.icon,
+                text: AH.icon,
                 delayMs: 0
               });
-          return eV
-        }(VV),
-        TV = [];
-      let MV = [];
-      for (const JV of qV) "space" !== JV.kind && (MV.push(JV), bV.test(JV.text) && (TV.push(MV), MV = []));
-      TV.push(MV);
-      const zV = [];
-      let GV = 0;
-      for (const JV of TV) {
-        var WV, RV;
-        const VV = null !== (WV = null === (RV = JV.at(-1)) || void 0 === RV ? void 0 : RV.text) && void 0 !== WV ? WV : "",
-          eV = EV.test(VV),
-          xV = BV.test(VV),
-          YV = JV.map((VV => "word" === VV.kind ? AV(VV.text) : 1)),
-          qV = YV.findLastIndex((VV => VV > 0));
-        for (const [EV, BV] of JV.entries()) {
-          const VV = "word" === BV.kind,
-            JV = YV[EV];
-          BV.delayMs = GV;
-          for (let YV = 0; rV && YV < JV; YV++) {
+          return BH
+        }(HH),
+        UH = [];
+      let mH = [];
+      for (const AH of vH) "space" !== AH.kind && (mH.push(AH), QH.test(AH.text) && (UH.push(mH), mH = []));
+      UH.push(mH);
+      const oH = [];
+      let IH = 0;
+      for (const AH of UH) {
+        var fH, lH;
+        const HH = null !== (fH = null === (lH = AH.at(-1)) || void 0 === lH ? void 0 : lH.text) && void 0 !== fH ? fH : "",
+          BH = WH.test(HH),
+          LH = MH.test(HH),
+          rH = AH.map((HH => "word" === HH.kind ? OH(HH.text) : 1)),
+          vH = rH.findLastIndex((HH => HH > 0));
+        for (const [WH, MH] of AH.entries()) {
+          const HH = "word" === MH.kind,
+            AH = rH[WH];
+          MH.delayMs = IH;
+          for (let rH = 0; YH && rH < AH; rH++) {
             const {
-              intonation: UV
-            } = rV;
-            let yV = qV > 0 ? -UV.declineSemitones * (EV / qV) : 0;
-            yV += PV(`${NV(BV.text)}|${YV}`) * UV.variationSemitones;
-            const bV = Math.min(1, UV.variationSemitones);
-            let jV = rV.glideSemitones,
-              tV = 1;
-            xV && (yV += UV.exclaimLiftSemitones, tV *= pV), eV && EV === qV && (yV += UV.questionRiseSemitones * (JV > 1 ? .5 + .5 * YV / (JV - 1) : 1), YV === JV - 1 && (jV = Math.abs(jV) + UV.questionRiseSemitones / 2)), VV && XV(BV.text) && (yV += nV * bV, tV *= QV), JV > 1 && 0 === YV && (yV += ZV * bV, tV *= wV), zV.push({
-              atMs: GV + YV * kV,
-              semitones: yV,
-              glideSemitones: jV,
-              durationMs: YV < JV - 1 ? Math.min(rV.durationMs, kV * vV) : rV.durationMs,
-              level: tV
+              intonation: SH
+            } = YH;
+            let hH = vH > 0 ? -SH.declineSemitones * (WH / vH) : 0;
+            hH += VH(`${bH(MH.text)}|${rH}`) * SH.variationSemitones;
+            const QH = Math.min(1, SH.variationSemitones);
+            let xH = YH.glideSemitones,
+              PH = 1;
+            LH && (hH += SH.exclaimLiftSemitones, PH *= tH), BH && WH === vH && (hH += SH.questionRiseSemitones * (AH > 1 ? .5 + .5 * rH / (AH - 1) : 1), rH === AH - 1 && (xH = Math.abs(xH) + SH.questionRiseSemitones / 2)), HH && kH(MH.text) && (hH += CH * QH, PH *= zH), AH > 1 && 0 === rH && (hH += XH * QH, PH *= EH), oH.push({
+              atMs: IH + rH * uH,
+              semitones: hH,
+              glideSemitones: xH,
+              durationMs: rH < AH - 1 ? Math.min(YH.durationMs, uH * GH) : YH.durationMs,
+              level: PH
             })
           }
-          GV += JV * kV + (bV.test(BV.text) ? yV : jV.test(BV.text) ? UV : 0)
+          IH += AH * uH + (QH.test(MH.text) ? hH : xH.test(MH.text) ? SH : 0)
         }
       }
       return {
-        pieces: qV.map((VV => "space" === VV.kind ? VV : "icon" === VV.kind ? {
+        pieces: vH.map((HH => "space" === HH.kind ? HH : "icon" === HH.kind ? {
           kind: "icon",
-          icon: VV.text,
-          delayMs: VV.delayMs
+          icon: HH.text,
+          delayMs: HH.delayMs
         } : {
           kind: "word",
-          text: VV.text,
-          delayMs: VV.delayMs
+          text: HH.text,
+          delayMs: HH.delayMs
         })),
-        blips: zV
+        blips: oH
       }
     }
-    var zV = xV(1220),
-      GV = xV(1279),
-      WV = xV(2059);
+    var oH = LH(1123),
+      IH = LH(1194),
+      fH = LH(2003);
 
-    function RV(VV) {
-      if ("string" === typeof VV) return VV;
-      const eV = GV.c.get().getCurrentLanguageCode();
-      return (0, zV.r)(eV, VV.translationKey, (0, zV.p)(VV.params, WV.e.shown))
+    function lH(HH) {
+      if ("string" === typeof HH) return HH;
+      const BH = IH.g.get().getCurrentLanguageCode();
+      return (0, oH.r)(BH, HH.translationKey, (0, oH.q)(HH.params, fH.c.shown))
     }
 
-    function gV(VV) {
-      const eV = void 0 === VV.voice ? null : (0, JV.n)(VV.voice),
-        xV = eV && (0, JV.j)(eV);
+    function KH(HH) {
+      const BH = void 0 === HH.voice ? null : (0, AH.l)(HH.voice),
+        LH = BH && (0, AH.k)(BH);
       return {
-        plan: MV(RV(VV.line), xV),
-        synth: xV
+        plan: mH(lH(HH.line), LH),
+        synth: LH
       }
     }
 
-    function DV(VV) {
-      const eV = [];
-      let xV = [];
-      for (const [YV, UV] of VV.entries()) {
-        var JV;
-        "space" === UV.kind && (" " !== UV.text || "icon" !== (null === (JV = VV[YV + 1]) || void 0 === JV ? void 0 : JV.kind)) ? (xV.length > 0 && eV.push(xV), eV.push([UV]), xV = []) : xV.push(UV)
+    function cH(HH) {
+      const BH = [];
+      let LH = [];
+      for (const [rH, SH] of HH.entries()) {
+        var AH;
+        "space" === SH.kind && (" " !== SH.text || "icon" !== (null === (AH = HH[rH + 1]) || void 0 === AH ? void 0 : AH.kind)) ? (LH.length > 0 && BH.push(LH), BH.push([SH]), LH = []) : LH.push(SH)
       }
-      return xV.length > 0 && eV.push(xV), eV
+      return LH.length > 0 && BH.push(LH), BH
     }
   },
-  5351: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => wV,
-      g: () => ZV
+  5333: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => EH,
+      f: () => XH
     });
-    var JV = xV(5353),
-      YV = xV(27);
-    const UV = .25,
-      yV = .85,
-      pV = .02,
-      QV = .01;
+    var AH = LH(5335),
+      rH = LH(15);
+    const SH = .25,
+      hH = .85,
+      tH = .02,
+      zH = .01;
 
-    function nV(VV, eV, xV, JV, YV, UV, pV) {
+    function CH(HH, BH, LH, AH, rH, SH, tH) {
       const {
-        waveform: QV,
-        pitchHz: nV,
-        attackMs: wV,
-        releaseMs: ZV,
-        lowpassHz: vV
-      } = xV, rV = YV + JV.durationMs / 1e3, kV = nV * 2 ** (JV.semitones / 12), bV = VV.createOscillator();
-      bV.type = QV, bV.frequency.setValueAtTime(kV, YV), bV.frequency.exponentialRampToValueAtTime(kV * 2 ** (JV.glideSemitones / 12), rV);
-      const EV = YV + Math.min(wV, JV.durationMs) / 1e3,
-        BV = VV.createGain();
-      BV.gain.setValueAtTime(0, YV), BV.gain.linearRampToValueAtTime(UV, EV), BV.gain.linearRampToValueAtTime(UV * yV, Math.max(EV, rV - ZV / 1e3)), BV.gain.linearRampToValueAtTime(0, rV);
-      const jV = [bV];
-      if (null !== vV) {
-        const eV = VV.createBiquadFilter();
-        eV.type = "lowpass", eV.frequency.value = vV, jV.push(eV)
+        waveform: zH,
+        pitchHz: CH,
+        attackMs: EH,
+        releaseMs: XH,
+        lowpassHz: GH
+      } = LH, YH = rH + AH.durationMs / 1e3, uH = CH * 2 ** (AH.semitones / 12), QH = HH.createOscillator();
+      QH.type = zH, QH.frequency.setValueAtTime(uH, rH), QH.frequency.exponentialRampToValueAtTime(uH * 2 ** (AH.glideSemitones / 12), YH);
+      const WH = rH + Math.min(EH, AH.durationMs) / 1e3,
+        MH = HH.createGain();
+      MH.gain.setValueAtTime(0, rH), MH.gain.linearRampToValueAtTime(SH, WH), MH.gain.linearRampToValueAtTime(SH * hH, Math.max(WH, YH - XH / 1e3)), MH.gain.linearRampToValueAtTime(0, YH);
+      const xH = [QH];
+      if (null !== GH) {
+        const BH = HH.createBiquadFilter();
+        BH.type = "lowpass", BH.frequency.value = GH, xH.push(BH)
       }
-      jV.push(BV, eV);
-      for (let yV = 1; yV < jV.length; yV++) jV[yV - 1].connect(jV[yV]);
-      return bV.onended = () => {
-        for (const VV of jV.slice(0, -1)) VV.disconnect();
-        pV()
-      }, bV.start(YV), bV.stop(rV), bV
+      xH.push(MH, BH);
+      for (let hH = 1; hH < xH.length; hH++) xH[hH - 1].connect(xH[hH]);
+      return QH.onended = () => {
+        for (const HH of xH.slice(0, -1)) HH.disconnect();
+        tH()
+      }, QH.start(rH), QH.stop(YH), QH
     }
 
-    function wV(VV, eV, xV, JV, YV, yV) {
-      if (0 === JV.length) return yV(), () => {};
-      const wV = UV * xV.volume * YV,
-        ZV = VV.createGain();
-      ZV.connect(eV);
-      const vV = VV.currentTime + pV,
-        rV = new Set;
-      for (const UV of JV) {
-        const eV = nV(VV, ZV, xV, UV, vV + UV.atMs / 1e3, wV * UV.level, (() => {
-          rV.delete(eV), 0 === rV.size && (ZV.disconnect(), yV())
+    function EH(HH, BH, LH, AH, rH, hH) {
+      if (0 === AH.length) return hH(), () => {};
+      const EH = SH * LH.volume * rH,
+        XH = HH.createGain();
+      XH.connect(BH);
+      const GH = HH.currentTime + tH,
+        YH = new Set;
+      for (const SH of AH) {
+        const BH = CH(HH, XH, LH, SH, GH + SH.atMs / 1e3, EH * SH.level, (() => {
+          YH.delete(BH), 0 === YH.size && (XH.disconnect(), hH())
         }));
-        rV.add(eV)
+        YH.add(BH)
       }
       return () => {
-        const eV = VV.currentTime;
-        ZV.gain.setTargetAtTime(0, eV, QV);
-        for (const VV of rV) try {
-          VV.stop(eV + 5 * QV)
+        const BH = HH.currentTime;
+        XH.gain.setTargetAtTime(0, BH, zH);
+        for (const HH of YH) try {
+          HH.stop(BH + 5 * zH)
         } catch {}
       }
     }
 
-    function ZV(VV, eV) {
-      var xV;
-      const UV = JV.Howler.ctx,
-        yV = JV.Howler.masterGain;
-      if (!UV || !yV || !YV.b.get("soundOnFromAd")) return () => {};
-      const pV = JV.Howler;
-      return null === (xV = pV._autoResume) || void 0 === xV || xV.call(pV), wV(UV, yV, VV, eV, YV.b.get("soundVolume"), (() => {
-        var VV;
-        null === (VV = pV._autoSuspend) || void 0 === VV || VV.call(pV)
+    function XH(HH, BH) {
+      var LH;
+      const SH = AH.Howler.ctx,
+        hH = AH.Howler.masterGain;
+      if (!SH || !hH || !rH.c.get("soundOnFromAd")) return () => {};
+      const tH = AH.Howler;
+      return null === (LH = tH._autoResume) || void 0 === LH || LH.call(tH), EH(SH, hH, HH, BH, rH.c.get("soundVolume"), (() => {
+        var HH;
+        null === (HH = tH._autoSuspend) || void 0 === HH || HH.call(tH)
       }))
     }
   },
-  40367: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      closeClientGame: () => dV,
-      createDefaultClientPlugins: () => IV
+  40091: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      closeClientGame: () => XB,
+      createDefaultClientPlugins: () => EB
     });
-    var JV = xV(375);
+    var AH = LH(317);
 
-    function YV() {
-      let VV;
+    function rH() {
+      let HH;
       return {
-        onCreate(eV) {
-          VV = eV
+        onCreate(BH) {
+          HH = BH
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(eV, xV, YV, UV, yV, pV) {
-          var QV, nV;
-          if ("Iron Chest" !== VV.getMetaInfo(yV).rootName) return;
-          if (!VV.hasEffect(eV, "Thief")) return;
-          const wV = VV.getBlockData(xV, YV, UV);
-          return VV.getPlayerDbId(eV) !== (null === wV || void 0 === wV || null === (QV = wV.persisted) || void 0 === QV || null === (nV = QV.shared) || void 0 === nV ? void 0 : nV.ownerDbId) ? (VV.sendMessage(eV, [{
+        onPlayerAttemptAltAction(BH, LH, rH, SH, hH, tH) {
+          var zH, CH;
+          if ("Iron Chest" !== HH.getMetaInfo(hH).rootName) return;
+          if (!HH.hasEffect(BH, "Thief")) return;
+          const EH = HH.getBlockData(LH, rH, SH);
+          return HH.getPlayerDbId(BH) !== (null === EH || void 0 === EH || null === (zH = EH.persisted) || void 0 === zH || null === (CH = zH.shared) || void 0 === CH ? void 0 : CH.ownerDbId) ? (HH.sendMessage(BH, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: JV.E.redUiText
+              color: AH.K.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var UV = xV(4642),
-      yV = xV(1269);
-    const pV = 8.4,
-      QV = 1e-4,
-      nV = .15,
-      wV = .04,
-      ZV = [.12, .04, .12],
-      vV = 26,
-      rV = {
+    var SH = LH(4617),
+      hH = LH(1182);
+    const tH = 8.4,
+      zH = 1e-4,
+      CH = .15,
+      EH = .04,
+      XH = [.12, .04, .12],
+      GH = 26,
+      YH = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        Jv: 1,
-        minLifeTime: QV,
-        maxLifeTime: QV,
+        aX: 1,
+        minLifeTime: zH,
+        maxLifeTime: zH,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -431,19 +431,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: UV.g.Standard
+        blendMode: SH.f.Standard
       },
-      kV = {
+      uH = {
         texture: "bubble",
         mipmaps: !1,
-        Jv: 96,
+        aX: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: vV,
+        emitRate: GH,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -457,159 +457,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: UV.g.Standard
+        blendMode: SH.f.Standard
       },
-      bV = [0, 0, 0],
-      EV = [0, 0, 0];
+      QH = [0, 0, 0],
+      WH = [0, 0, 0];
 
-    function BV(VV) {
-      const eV = new Map;
-      let xV = null;
+    function MH(HH) {
+      const BH = new Map;
+      let LH = null;
 
-      function JV(VV) {
-        var eV, xV;
-        null === (eV = VV.bubbles) || void 0 === eV || eV.stop(), null === (xV = VV.fish) || void 0 === xV || xV.stop()
+      function AH(HH) {
+        var BH, LH;
+        null === (BH = HH.bubbles) || void 0 === BH || BH.stop(), null === (LH = HH.fish) || void 0 === LH || LH.stop()
       }
 
-      function YV(xV) {
-        if (!xV.readDrawnPosition(VV, EV)) {
-          for (const VV of eV.values()) {
-            var JV;
-            null === (JV = VV.bubbles) || void 0 === JV || JV.setEmitRate(0)
+      function rH(LH) {
+        if (!LH.readDrawnPosition(HH, WH)) {
+          for (const HH of BH.values()) {
+            var AH;
+            null === (AH = HH.bubbles) || void 0 === AH || AH.setEmitRate(0)
           }
           return
         }
-        const YV = performance.now();
-        for (const [VV, yV] of eV) {
-          var UV;
-          if (null === (UV = yV.bubbles) || void 0 === UV || UV.setEmitRate(0), !xV.readDrawnPosition(VV, bV)) continue;
-          if (!((bV[0] - EV[0]) ** 2 + (bV[1] - EV[1]) ** 2 + (bV[2] - EV[2]) ** 2 < 900)) continue;
-          const eV = Math.max(0, yV.biteAt - YV),
-            JV = yV.approachDurationMs > 0 ? Math.min(1, 1 - eV / yV.approachDurationMs) : 1,
-            QV = (yV.approachDurationMs - eV) / 1e3,
-            BV = yV.phase + .25 * Math.sin(1.7 * QV + yV.phase),
-            jV = Math.min(yV.approachDurationMs / 3e3 * 2.8, pV) * (1 - JV) * (1 + .15 * Math.sin(2.1 * QV + yV.phase)),
-            qV = Math.min(1, 4 * (1 - JV)),
-            tV = (.45 * Math.sin(4.1 * QV + yV.phase) + .18 * Math.sin(9.7 * QV + 2 * yV.phase)) * qV,
-            FV = bV[0] + Math.cos(BV) * jV - Math.sin(BV) * tV,
-            TV = Math.ceil(yV.surfaceY),
-            PV = bV[2] + Math.sin(BV) * jV + Math.cos(BV) * tV,
+        const rH = performance.now();
+        for (const [HH, hH] of BH) {
+          var SH;
+          if (null === (SH = hH.bubbles) || void 0 === SH || SH.setEmitRate(0), !LH.readDrawnPosition(HH, QH)) continue;
+          if (!((QH[0] - WH[0]) ** 2 + (QH[1] - WH[1]) ** 2 + (QH[2] - WH[2]) ** 2 < 900)) continue;
+          const BH = Math.max(0, hH.biteAt - rH),
+            AH = hH.approachDurationMs > 0 ? Math.min(1, 1 - BH / hH.approachDurationMs) : 1,
+            zH = (hH.approachDurationMs - BH) / 1e3,
+            MH = hH.phase + .25 * Math.sin(1.7 * zH + hH.phase),
+            xH = Math.min(hH.approachDurationMs / 3e3 * 2.8, tH) * (1 - AH) * (1 + .15 * Math.sin(2.1 * zH + hH.phase)),
+            vH = Math.min(1, 4 * (1 - AH)),
+            PH = (.45 * Math.sin(4.1 * zH + hH.phase) + .18 * Math.sin(9.7 * zH + 2 * hH.phase)) * vH,
+            TH = QH[0] + Math.cos(MH) * xH - Math.sin(MH) * PH,
+            UH = Math.ceil(hH.surfaceY),
+            VH = QH[2] + Math.sin(MH) * xH + Math.cos(MH) * PH,
             {
-              fishAt: AV,
-              bubblesAt: NV
-            } = yV;
-          AV[0] = NV[0] = FV, AV[1] = TV + nV, NV[1] = TV + wV, AV[2] = NV[2] = PV, yV.fish ??= xV.createParticles(rV, {
-            pos: AV
-          }), yV.fish.moveTo(AV), yV.fish.emit(1), yV.bubbles ??= xV.createParticles(kV, {
-            pos: NV,
-            half: ZV
-          }), yV.bubbles.moveTo(NV), yV.bubbles.setEmitRate(vV + 32 * (.5 + .5 * Math.sin(9 * QV + yV.phase)) ** 4 + 13 * JV)
+              fishAt: OH,
+              bubblesAt: bH
+            } = hH;
+          OH[0] = bH[0] = TH, OH[1] = UH + CH, bH[1] = UH + EH, OH[2] = bH[2] = VH, hH.fish ??= LH.createParticles(YH, {
+            pos: OH
+          }), hH.fish.moveTo(OH), hH.fish.emit(1), hH.bubbles ??= LH.createParticles(uH, {
+            pos: bH,
+            half: XH
+          }), hH.bubbles.moveTo(bH), hH.bubbles.setEmitRate(GH + 32 * (.5 + .5 * Math.sin(9 * zH + hH.phase)) ** 4 + 13 * AH)
         }
       }
       return {
-        onCreate(VV) {
-          xV = VV
+        onCreate(HH) {
+          LH = HH
         },
         onAfterRender() {
-          xV && YV(xV)
+          LH && rH(LH)
         },
         onClose() {
-          for (const VV of eV.values()) JV(VV);
-          eV.clear(), xV = null
+          for (const HH of BH.values()) AH(HH);
+          BH.clear(), LH = null
         },
-        onReceivedMessageFromServer(VV, xV) {
-          if (VV !== yV.C) return;
+        onReceivedMessageFromServer(HH, LH) {
+          if (HH !== hH.y) return;
           const {
-            hookId: YV,
-            waiting: UV
-          } = xV;
-          if (UV) eV.has(YV) || eV.set(YV, {
+            hookId: rH,
+            waiting: SH
+          } = LH;
+          if (SH) BH.has(rH) || BH.set(rH, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + UV.remainingMs,
-            approachDurationMs: UV.durationMs,
-            surfaceY: UV.surfaceY,
+            biteAt: performance.now() + SH.remainingMs,
+            approachDurationMs: SH.durationMs,
+            surfaceY: SH.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const VV = eV.get(YV);
-            VV && JV(VV), eV.delete(YV)
+            const HH = BH.get(rH);
+            HH && AH(HH), BH.delete(rH)
           }
         }
       }
     }
-    var jV = xV(5351),
-      qV = xV(5339);
+    var xH = LH(5333),
+      vH = LH(5319);
 
-    function tV(VV) {
-      let eV, xV = null,
-        JV = null;
-      const YV = () => {
-        var VV;
-        null === (VV = JV) || void 0 === VV || VV(), JV = null
+    function PH(HH) {
+      let BH, LH = null,
+        AH = null;
+      const rH = () => {
+        var HH;
+        null === (HH = AH) || void 0 === HH || HH(), AH = null
       };
       return {
-        onCreate(JV) {
-          eV = JV, xV = eV.getClientOption(VV, "dialogue")
+        onCreate(AH) {
+          BH = AH, LH = BH.getClientOption(HH, "dialogue")
         },
         onAfterRender() {
-          if (!eV) return;
-          const UV = eV.getClientOption(VV, "dialogue");
-          if (UV === xV) return;
-          if (xV = UV, YV(), !UV || !1 === UV.animateIn) return;
+          if (!BH) return;
+          const SH = BH.getClientOption(HH, "dialogue");
+          if (SH === LH) return;
+          if (LH = SH, rH(), !SH || !1 === SH.animateIn) return;
           const {
-            plan: yV,
-            synth: pV
-          } = (0, qV.g)(UV);
-          pV && (JV = (0, jV.g)(pV, yV.blips))
+            plan: hH,
+            synth: tH
+          } = (0, vH.d)(SH);
+          tH && (AH = (0, xH.f)(tH, hH.blips))
         },
-        onClose: YV
+        onClose: rH
       }
     }
-    var FV = xV(40370);
-    const TV = [
+    var TH = LH(40100);
+    const UH = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      PV = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      AV = [0, 1, 2, 0, 2, 3];
+      VH = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      OH = [0, 1, 2, 0, 2, 3];
 
-    function NV(VV, eV, xV) {
-      var JV;
-      let [YV, UV, yV] = eV;
-      if (VV.hasPackModel("Furnace")) return null;
-      const pV = ((null !== (JV = VV.getMetaInfo(xV).rot) && void 0 !== JV ? JV : 1) - 1) * Math.PI / 2,
-        QV = Math.PI + pV,
-        nV = Math.cos(QV),
-        wV = Math.sin(QV),
-        ZV = [];
-      for (const [kV, bV] of TV) ZV.push(kV * nV, bV, -kV * wV);
-      const vV = {
-          positions: ZV,
-          indices: AV,
-          uvs: PV
+    function bH(HH, BH, LH) {
+      var AH;
+      let [rH, SH, hH] = BH;
+      if (HH.hasPackModel("Furnace")) return null;
+      const tH = ((null !== (AH = HH.getMetaInfo(LH).rot) && void 0 !== AH ? AH : 1) - 1) * Math.PI / 2,
+        zH = Math.PI + tH,
+        CH = Math.cos(zH),
+        EH = Math.sin(zH),
+        XH = [];
+      for (const [uH, QH] of UH) XH.push(uH * CH, QH, -uH * EH);
+      const GH = {
+          positions: XH,
+          indices: OH,
+          uvs: VH
         },
-        rV = [YV + .5 + .51 * Math.sin(pV), UV + .375, yV + .5 + .51 * Math.cos(pV)];
-      return VV.createGameMesh(vV, {
+        YH = [rH + .5 + .51 * Math.sin(tH), SH + .375, hH + .5 + .51 * Math.cos(tH)];
+      return HH.createGameMesh(GH, {
         kind: "furnaceFire"
-      }, rV)
+      }, YH)
     }
 
-    function XV(VV) {
-      return Math.floor(VV / 200) % 3
+    function kH(HH) {
+      return Math.floor(HH / 200) % 3
     }
 
-    function MV(VV, eV, xV) {
-      VV.setGameMesh(eV, {
-        uvOffset: [0, xV / 3]
+    function mH(HH, BH, LH) {
+      HH.setGameMesh(BH, {
+        uvOffset: [0, LH / 3]
       })
     }
-    const zV = [.12, .025, .12],
-      GV = [{
+    const oH = [.12, .025, .12],
+      IH = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -622,7 +622,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: UV.g.Standard,
+          blendMode: SH.f.Standard,
           soft: !0
         },
         perSecond: 7
@@ -639,140 +639,140 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: UV.g.Add,
+          blendMode: SH.f.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class WV {
+    class fH {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(VV, eV) {
-        const xV = VV.getBlockId(eV[0], eV[1], eV[2]);
-        if ("Furnace" !== VV.getMetaInfo(xV).rootName) return;
-        const JV = performance.now();
-        let YV = this.smokes.find((VV => VV.pos[0] === eV[0] && VV.pos[1] === eV[1] && VV.pos[2] === eV[2] && VV.vp === xV));
-        if (YV || (YV = {
-            pos: [eV[0], eV[1], eV[2]],
-            vp: xV,
-            endMs: JV,
+      start(HH, BH) {
+        const LH = HH.getBlockId(BH[0], BH[1], BH[2]);
+        if ("Furnace" !== HH.getMetaInfo(LH).rootName) return;
+        const AH = performance.now();
+        let rH = this.smokes.find((HH => HH.pos[0] === BH[0] && HH.pos[1] === BH[1] && HH.pos[2] === BH[2] && HH.ph === LH));
+        if (rH || (rH = {
+            pos: [BH[0], BH[1], BH[2]],
+            ph: LH,
+            endMs: AH,
             lastBurstMs: -1 / 0,
-            pending: new Array(GV.length).fill(0),
-            fire: NV(VV, eV, xV)
-          }, this.smokes.push(YV), null !== YV.fire && (MV(VV, YV.fire, XV(JV)), this.shownFireFrame = -1)), YV.endMs = JV + 6e3, this.smokes.length > 4) {
-          const eV = this.smokes.reduce(((VV, eV) => eV.endMs < VV.endMs ? eV : VV));
-          RV(VV, eV), this.smokes.splice(this.smokes.indexOf(eV), 1)
+            pending: new Array(IH.length).fill(0),
+            fire: bH(HH, BH, LH)
+          }, this.smokes.push(rH), null !== rH.fire && (mH(HH, rH.fire, kH(AH)), this.shownFireFrame = -1)), rH.endMs = AH + 6e3, this.smokes.length > 4) {
+          const BH = this.smokes.reduce(((HH, BH) => BH.endMs < HH.endMs ? BH : HH));
+          lH(HH, BH), this.smokes.splice(this.smokes.indexOf(BH), 1)
         }
-        JV - YV.lastBurstMs >= 300 && (YV.lastBurstMs = JV, GV.forEach(((VV, eV) => {
-          YV.pending[eV] += VV.style.count
+        AH - rH.lastBurstMs >= 300 && (rH.lastBurstMs = AH, IH.forEach(((HH, BH) => {
+          rH.pending[BH] += HH.style.count
         })))
       }
-      onAfterRender(VV, eV) {
+      onAfterRender(HH, BH) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const xV = performance.now();
-        this.smokes = this.smokes.filter((eV => {
-          const [JV, YV, UV] = eV.pos, yV = xV < eV.endMs && VV.getBlockId(JV, YV, UV) === eV.vp;
-          return yV || RV(VV, eV), yV
+        const LH = performance.now();
+        this.smokes = this.smokes.filter((BH => {
+          const [AH, rH, SH] = BH.pos, hH = LH < BH.endMs && HH.getBlockId(AH, rH, SH) === BH.ph;
+          return hH || lH(HH, BH), hH
         }));
-        const JV = XV(xV);
-        if (JV !== this.shownFireFrame) {
-          this.shownFireFrame = JV;
-          for (const eV of this.smokes) null !== eV.fire && MV(VV, eV.fire, JV)
+        const AH = kH(LH);
+        if (AH !== this.shownFireFrame) {
+          this.shownFireFrame = AH;
+          for (const BH of this.smokes) null !== BH.fire && mH(HH, BH.fire, AH)
         }
-        if (!VV.particlesEnabled()) {
-          for (const VV of this.smokes) VV.pending.fill(0);
+        if (!HH.particlesEnabled()) {
+          for (const HH of this.smokes) HH.pending.fill(0);
           return
         }
-        const YV = Math.min(eV, 250) / 1e3;
-        for (const UV of this.smokes) {
-          const [eV, JV, yV] = UV.pos;
-          if (0 !== VV.getBlockId(eV, JV + 1, yV)) {
-            UV.pending.fill(0);
+        const rH = Math.min(BH, 250) / 1e3;
+        for (const SH of this.smokes) {
+          const [BH, AH, hH] = SH.pos;
+          if (0 !== HH.getBlockId(BH, AH + 1, hH)) {
+            SH.pending.fill(0);
             continue
           }
-          const pV = (UV.endMs - xV) / 6e3,
-            QV = this.centre;
-          QV[0] = eV + .5, QV[1] = JV + 1.275, QV[2] = yV + .5, GV.forEach(((eV, xV) => {
-            UV.pending[xV] += eV.perSecond * pV * YV;
-            const JV = Math.floor(UV.pending[xV]);
-            JV > 0 && this.emit(VV, xV, QV, JV) && (UV.pending[xV] -= JV)
+          const tH = (SH.endMs - LH) / 6e3,
+            zH = this.centre;
+          zH[0] = BH + .5, zH[1] = AH + 1.275, zH[2] = hH + .5, IH.forEach(((BH, LH) => {
+            SH.pending[LH] += BH.perSecond * tH * rH;
+            const AH = Math.floor(SH.pending[LH]);
+            AH > 0 && this.emit(HH, LH, zH, AH) && (SH.pending[LH] -= AH)
           }))
         }
       }
-      dispose(VV) {
-        for (const xV of this.smokes) RV(VV, xV);
+      dispose(HH) {
+        for (const LH of this.smokes) lH(HH, LH);
         this.smokes = [];
-        for (const xV of null !== (eV = this.puffers) && void 0 !== eV ? eV : []) {
-          var eV;
-          xV.dispose()
+        for (const LH of null !== (BH = this.puffers) && void 0 !== BH ? BH : []) {
+          var BH;
+          LH.dispose()
         }
         this.puffers = null
       }
-      emit(VV, eV, xV, JV) {
-        return this.puffers ??= GV.map((VV => {
+      emit(HH, BH, LH, AH) {
+        return this.puffers ??= IH.map((HH => {
           let {
-            style: eV,
-            perSecond: xV
-          } = VV;
-          const JV = (eV.count / .3 + xV) * eV.life[1];
-          return new FV.f(eV, Math.ceil(4 * JV), zV)
-        })), this.puffers[eV].emit(VV, xV, this.renderFrame, JV)
+            style: BH,
+            perSecond: LH
+          } = HH;
+          const AH = (BH.count / .3 + LH) * BH.life[1];
+          return new TH.d(BH, Math.ceil(4 * AH), oH)
+        })), this.puffers[BH].emit(HH, LH, this.renderFrame, AH)
       }
     }
 
-    function RV(VV, eV) {
-      null !== eV.fire && (VV.disposeGameMesh(eV.fire), eV.fire = null)
+    function lH(HH, BH) {
+      null !== BH.fire && (HH.disposeGameMesh(BH.fire), BH.fire = null)
     }
 
-    function gV() {
-      let VV;
-      const eV = new WV;
+    function KH() {
+      let HH;
+      const BH = new fH;
       return {
-        onCreate(eV) {
-          VV = eV
+        onCreate(BH) {
+          HH = BH
         },
-        onReceivedMessageFromServer(xV, JV) {
-          xV === yV.G && eV.start(VV, JV)
+        onReceivedMessageFromServer(LH, AH) {
+          LH === hH.z && BH.start(HH, AH)
         },
-        onAfterRender(xV) {
-          eV.onAfterRender(VV, xV)
+        onAfterRender(LH) {
+          BH.onAfterRender(HH, LH)
         },
         onClose() {
-          eV.dispose(VV)
+          BH.dispose(HH)
         }
       }
     }
-    var DV = xV(206),
-      iV = xV(40342),
-      CV = xV(40373),
-      aV = xV(40375);
-    class oV {
-      constructor(VV, eV, xV) {
-        this.api = VV, this.wearer = eV, this.name = xV, this.model = null, this.madeFrom = null, this.perchedWith = null, this.motion = new aV.c, this.shown = !1, this.raised = 0
+    var cH = LH(176),
+      eH = LH(40066),
+      qH = LH(40108),
+      gH = LH(40117);
+    class NH {
+      constructor(HH, BH, LH) {
+        this.api = HH, this.wearer = BH, this.name = LH, this.model = null, this.madeFrom = null, this.perchedWith = null, this.motion = new gH.b, this.shown = !1, this.raised = 0
       }
-      update(VV) {
-        var eV;
-        const xV = (0, iV.h)(this.name);
-        if (!xV) return void this.dispose();
-        if (!this.madeFrom || this.madeFrom.model === xV.model && this.madeFrom.scale === xV.scale || this.freeModel(), !this.model && (this.model = this.api.createCosmeticModel(xV.model, xV.scale), this.madeFrom = xV, !this.model)) return void this.raiseNametag(0);
-        if (!(VV.drawn && !VV.ownFirstPerson)) return this.setShown(!1), this.raiseNametag(0), void this.motion.reset();
-        const JV = this.motion.step({
-          dt: VV.dt,
-          feet: VV.feet,
-          heading: VV.heading,
-          headTopY: VV.headTopY,
-          tuning: xV,
-          timeS: VV.timeS
+      update(HH) {
+        var BH;
+        const LH = (0, eH.h)(this.name);
+        if (!LH) return void this.dispose();
+        if (!this.madeFrom || this.madeFrom.model === LH.model && this.madeFrom.scale === LH.scale || this.freeModel(), !this.model && (this.model = this.api.createCosmeticModel(LH.model, LH.scale), this.madeFrom = LH, !this.model)) return void this.raiseNametag(0);
+        if (!(HH.drawn && !HH.ownFirstPerson)) return this.setShown(!1), this.raiseNametag(0), void this.motion.reset();
+        const AH = this.motion.step({
+          dt: HH.dt,
+          feet: HH.feet,
+          heading: HH.heading,
+          headTopY: HH.headTopY,
+          tuning: LH,
+          timeS: HH.timeS
         });
-        this.model.setPose(JV.pos, JV.yaw + Math.PI), this.model.setClip(null !== (eV = JV.clip) && void 0 !== eV ? eV : null);
-        const YV = JV.seated ? xV : null;
-        YV !== this.perchedWith && (this.perchedWith = YV, this.model.setPerch(YV && {
-          EY: this.wearer,
-          offset: YV.perchOffset,
-          yaw: YV.yawOffset
-        })), this.setShown(!0), this.raiseNametag(xV.nametagRaise)
+        this.model.setPose(AH.pos, AH.yaw + Math.PI), this.model.setClip(null !== (BH = AH.clip) && void 0 !== BH ? BH : null);
+        const rH = AH.seated ? LH : null;
+        rH !== this.perchedWith && (this.perchedWith = rH, this.model.setPerch(rH && {
+          vB: this.wearer,
+          offset: rH.perchOffset,
+          yaw: rH.yawOffset
+        })), this.setShown(!0), this.raiseNametag(LH.nametagRaise)
       }
       refreshNametag() {
         0 !== this.raised && this.api.setNametagOffset(this.wearer, this.raised)
@@ -780,66 +780,66 @@ export const modules = {
       dispose() {
         this.freeModel(), this.raiseNametag(0)
       }
-      raiseNametag(VV) {
-        VV !== this.raised && (this.raised = VV, this.api.setNametagOffset(this.wearer, VV))
+      raiseNametag(HH) {
+        HH !== this.raised && (this.raised = HH, this.api.setNametagOffset(this.wearer, HH))
       }
       freeModel() {
-        var VV;
-        null === (VV = this.model) || void 0 === VV || VV.dispose(), this.model = null, this.madeFrom = null, this.perchedWith = null, this.shown = !1, this.motion.reset()
+        var HH;
+        null === (HH = this.model) || void 0 === HH || HH.dispose(), this.model = null, this.madeFrom = null, this.perchedWith = null, this.shown = !1, this.motion.reset()
       }
-      setShown(VV) {
-        this.model && VV !== this.shown && (this.shown = VV, this.model.setVisible(VV))
+      setShown(HH) {
+        this.model && HH !== this.shown && (this.shown = HH, this.model.setVisible(HH))
       }
     }
-    class cV {
-      constructor(VV, eV) {
-        this.api = VV, this.name = eV, this.particles = null, this.madeFrom = null, this.half = [0, 0, 0], this.emitting = !0, this.centre = [0, 0, 0]
+    class RH {
+      constructor(HH, BH) {
+        this.api = HH, this.name = BH, this.particles = null, this.madeFrom = null, this.half = [0, 0, 0], this.emitting = !0, this.centre = [0, 0, 0]
       }
-      update(VV) {
-        const eV = (0, iV.f)(this.name);
-        if (eV !== this.madeFrom && this.stop(), !eV) return;
-        const xV = VV.ownFirstPerson ? eV.ownInFirstPerson : VV.drawn;
-        if (xV) {
+      update(HH) {
+        const BH = (0, eH.d)(this.name);
+        if (BH !== this.madeFrom && this.stop(), !BH) return;
+        const LH = HH.ownFirstPerson ? BH.ownInFirstPerson : HH.drawn;
+        if (LH) {
           const {
-            centre: xV
+            centre: LH
           } = this;
-          if ((0, aV.g)(xV, VV.feet, eV.offset, Math.sin(VV.heading), Math.cos(VV.heading)), this.particles) this.particles.moveTo(xV, this.half);
+          if ((0, gH.g)(LH, HH.feet, BH.offset, Math.sin(HH.heading), Math.cos(HH.heading)), this.particles) this.particles.moveTo(LH, this.half);
           else {
-            const VV = (0, CV.d)(eV);
-            this.half = VV.half, this.particles = this.api.createParticles(VV.opts, {
-              pos: xV,
-              half: VV.half
-            }), this.madeFrom = eV, this.emitting = !0
+            const HH = (0, qH.b)(BH);
+            this.half = HH.half, this.particles = this.api.createParticles(HH.opts, {
+              pos: LH,
+              half: HH.half
+            }), this.madeFrom = BH, this.emitting = !0
           }
         }
-        this.particles && xV !== this.emitting && (this.emitting = xV, this.particles.setEmitRate(xV ? eV.particles.emitRate : 0))
+        this.particles && LH !== this.emitting && (this.emitting = LH, this.particles.setEmitRate(LH ? BH.particles.emitRate : 0))
       }
       stop() {
-        var VV;
-        null === (VV = this.particles) || void 0 === VV || VV.stop(), this.particles = null, this.madeFrom = null
+        var HH;
+        null === (HH = this.particles) || void 0 === HH || HH.stop(), this.particles = null, this.madeFrom = null
       }
     }
-    const hV = .25,
-      lV = 48,
-      LV = 4,
-      fV = 24,
-      mV = 12,
-      KV = .6,
-      HV = 1 / DV.f.playerEyeToHeightRatio;
+    const jH = .25,
+      nH = 48,
+      FH = 4,
+      DH = 24,
+      wH = 12,
+      ZH = .6,
+      dH = 1 / cH.g.playerEyeToHeightRatio;
 
-    function uV(VV, eV, xV) {
-      const JV = VV.filter((VV => VV[eV] <= lV));
-      return JV.sort(((VV, xV) => VV[eV] - xV[eV])), new Set(JV.slice(0, xV).map((VV => VV.id)))
+    function aH(HH, BH, LH) {
+      const AH = HH.filter((HH => HH[BH] <= nH));
+      return AH.sort(((HH, LH) => HH[BH] - LH[BH])), new Set(AH.slice(0, LH).map((HH => HH.id)))
     }
 
-    function sV() {
-      let VV;
-      const eV = new Map;
-      let xV = 0,
-        JV = 0;
-      const YV = [0, 0, 0],
-        UV = {
-          feet: YV,
+    function sH() {
+      let HH;
+      const BH = new Map;
+      let LH = 0,
+        AH = 0;
+      const rH = [0, 0, 0],
+        SH = {
+          feet: rH,
           heading: 0,
           headTopY: 0,
           drawn: !1,
@@ -848,180 +848,315 @@ export const modules = {
           timeS: 0
         };
 
-      function yV(VV) {
-        var eV, xV;
-        null === (eV = VV.pet) || void 0 === eV || eV.dispose(), null === (xV = VV.aura) || void 0 === xV || xV.stop()
+      function hH(HH) {
+        var BH, LH;
+        null === (BH = HH.pet) || void 0 === BH || BH.dispose(), null === (LH = HH.aura) || void 0 === LH || LH.stop()
       }
 
-      function pV(eV, xV) {
-        var JV, yV;
+      function tH(BH, LH) {
+        var AH, hH;
         const {
-          id: pV
-        } = eV, QV = VV.readDrawnPosition(pV, YV) ? VV.getDrawnHeading(pV) : null, nV = null === QV ? null : VV.getDrawnEyeHeight(pV);
-        if (null === QV || null === nV) UV.drawn = !1, UV.ownFirstPerson = !1;
+          id: tH
+        } = BH, zH = HH.readDrawnPosition(tH, rH) ? HH.getDrawnHeading(tH) : null, CH = null === zH ? null : HH.getDrawnEyeHeight(tH);
+        if (null === zH || null === CH) SH.drawn = !1, SH.ownFirstPerson = !1;
         else {
-          const eV = xV.cameraPosition;
-          UV.heading = QV, UV.headTopY = YV[1] + nV * HV, UV.drawn = VV.isAlive(pV) && VV.isEntityDrawn(pV), UV.ownFirstPerson = VV.isLocalPlayer(pV) && VV.isAlive(pV) && Math.hypot(eV[0] - YV[0], eV[1] - YV[1] - nV, eV[2] - YV[2]) < KV
+          const BH = LH.cameraPosition;
+          SH.heading = zH, SH.headTopY = rH[1] + CH * dH, SH.drawn = HH.isAlive(tH) && HH.isEntityDrawn(tH), SH.ownFirstPerson = HH.isLocalPlayer(tH) && HH.isAlive(tH) && Math.hypot(BH[0] - rH[0], BH[1] - rH[1] - CH, BH[2] - rH[2]) < ZH
         }
-        null === (JV = eV.pet) || void 0 === JV || JV.update(UV), null === (yV = eV.aura) || void 0 === yV || yV.update(UV)
+        null === (AH = BH.pet) || void 0 === AH || AH.update(SH), null === (hH = BH.aura) || void 0 === hH || hH.update(SH)
       }
       return {
-        onCreate(eV) {
-          VV = eV
+        onCreate(BH) {
+          HH = BH
         },
-        onAfterRender(QV, nV) {
-          const wV = QV / 1e3;
-          JV += wV, xV -= wV, xV <= 0 && (xV = hV, function(xV) {
-            const JV = [];
-            for (const yV of VV.getPlayerIds()) {
-              const UV = VV.getPlayerCosmetics(yV),
-                pV = void 0 !== (null === UV || void 0 === UV ? void 0 : UV.pet) && (0, iV.h)(UV.pet) ? UV.pet : null,
-                QV = void 0 !== (null === UV || void 0 === UV ? void 0 : UV.aura) && (0, iV.f)(UV.aura) ? UV.aura : null;
-              if (null === pV && null === QV || !VV.readDrawnPosition(yV, YV)) continue;
-              const nV = Math.hypot(YV[0] - xV[0], YV[1] - xV[1], YV[2] - xV[2]),
-                wV = eV.get(yV);
-              JV.push({
-                id: yV,
-                pet: pV,
-                aura: QV,
-                petDist: null === pV ? 1 / 0 : nV - (null !== wV && void 0 !== wV && wV.pet ? LV : 0),
-                auraDist: null === QV ? 1 / 0 : nV - (null !== wV && void 0 !== wV && wV.aura ? LV : 0)
+        onAfterRender(zH, CH) {
+          const EH = zH / 1e3;
+          AH += EH, LH -= EH, LH <= 0 && (LH = jH, function(LH) {
+            const AH = [];
+            for (const hH of HH.getPlayerIds()) {
+              const SH = HH.getPlayerCosmetics(hH),
+                tH = void 0 !== (null === SH || void 0 === SH ? void 0 : SH.pet) && (0, eH.h)(SH.pet) ? SH.pet : null,
+                zH = void 0 !== (null === SH || void 0 === SH ? void 0 : SH.aura) && (0, eH.d)(SH.aura) ? SH.aura : null;
+              if (null === tH && null === zH || !HH.readDrawnPosition(hH, rH)) continue;
+              const CH = Math.hypot(rH[0] - LH[0], rH[1] - LH[1], rH[2] - LH[2]),
+                EH = BH.get(hH);
+              AH.push({
+                id: hH,
+                pet: tH,
+                aura: zH,
+                petDist: null === tH ? 1 / 0 : CH - (null !== EH && void 0 !== EH && EH.pet ? FH : 0),
+                auraDist: null === zH ? 1 / 0 : CH - (null !== EH && void 0 !== EH && EH.aura ? FH : 0)
               })
             }
-            const UV = uV(JV, "petDist", fV),
-              pV = VV.particlesEnabled() ? uV(JV, "auraDist", mV) : new Set,
-              QV = new Set;
+            const SH = aH(AH, "petDist", DH),
+              tH = HH.particlesEnabled() ? aH(AH, "auraDist", wH) : new Set,
+              zH = new Set;
             for (const {
-                id: YV,
-                pet: yV,
-                aura: bV
+                id: rH,
+                pet: hH,
+                aura: QH
               }
-              of JV) {
-              var nV, wV, ZV;
-              const xV = null !== (nV = eV.get(YV)) && void 0 !== nV ? nV : {
-                  id: YV,
+              of AH) {
+              var CH, EH, XH;
+              const LH = null !== (CH = BH.get(rH)) && void 0 !== CH ? CH : {
+                  id: rH,
                   pet: null,
                   aura: null
                 },
-                JV = UV.has(YV) ? yV : null,
-                EV = pV.has(YV) ? bV : null;
-              var vV, rV, kV;
-              (null === (wV = xV.pet) || void 0 === wV ? void 0 : wV.name) !== JV ? (null === (vV = xV.pet) || void 0 === vV || vV.dispose(), xV.pet = null === JV ? null : new oV(VV, YV, JV)) : null === (rV = xV.pet) || void 0 === rV || rV.refreshNametag(), (null === (ZV = xV.aura) || void 0 === ZV ? void 0 : ZV.name) !== EV && (null === (kV = xV.aura) || void 0 === kV || kV.stop(), xV.aura = null === EV ? null : new cV(VV, EV)), (xV.pet || xV.aura) && (eV.set(YV, xV), QV.add(YV))
+                AH = SH.has(rH) ? hH : null,
+                WH = tH.has(rH) ? QH : null;
+              var GH, YH, uH;
+              (null === (EH = LH.pet) || void 0 === EH ? void 0 : EH.name) !== AH ? (null === (GH = LH.pet) || void 0 === GH || GH.dispose(), LH.pet = null === AH ? null : new NH(HH, rH, AH)) : null === (YH = LH.pet) || void 0 === YH || YH.refreshNametag(), (null === (XH = LH.aura) || void 0 === XH ? void 0 : XH.name) !== WH && (null === (uH = LH.aura) || void 0 === uH || uH.stop(), LH.aura = null === WH ? null : new RH(HH, WH)), (LH.pet || LH.aura) && (BH.set(rH, LH), zH.add(rH))
             }
-            for (const [VV, YV] of eV) QV.has(VV) || (yV(YV), eV.delete(VV))
-          }(nV.cameraPosition)), UV.dt = wV, UV.timeS = JV;
-          for (const VV of eV.values()) pV(VV, nV)
+            for (const [HH, rH] of BH) zH.has(HH) || (hH(rH), BH.delete(HH))
+          }(CH.cameraPosition)), SH.dt = EH, SH.timeS = AH;
+          for (const HH of BH.values()) tH(HH, CH)
         },
         onClose() {
-          for (const VV of eV.values()) yV(VV);
-          eV.clear()
+          for (const HH of BH.values()) hH(HH);
+          BH.clear()
         }
       }
     }
-    var SV = xV(9340);
+    var JH = LH(9426);
+    const iH = "skyblockLoot",
+      pH = "autoPickupClick";
+    var yH = LH(1689);
 
-    function IV(VV, eV, xV, JV) {
-      return {
-        cosmeticCompanions: sV(),
-        dialogue: tV(JV.localPlayerId),
-        fishing: BV(JV.localPlayerId),
-        furnaceSmoke: gV(),
-        ironChest: YV(),
-        localBlockBroken: (0, SV.b)()
-      }
+    function HB(HH, BH) {
+      return [{
+        timeFraction: 0,
+        minColor: [255 * HH[0], 255 * HH[1], 255 * HH[2], 1],
+        maxColor: [255 * BH[0], 255 * BH[1], 255 * BH[2], 1]
+      }, {
+        timeFraction: 1,
+        minColor: [0, 0, 0, 1]
+      }]
     }
-
-    function dV(VV, eV) {
-      for (const YV of [VV, ...null !== eV && void 0 !== eV ? eV : []]) try {
-        var xV;
-        null === YV || void 0 === YV || null === (xV = YV.onClose) || void 0 === xV || xV.call(YV)
-      } catch (JV) {
-        console.error("Error in client onClose callback", JV)
-      }
-    }
-  },
-  9340: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => UV,
-      d: () => YV
-    });
-    var JV = xV(32);
-    const YV = "localBlockBroken";
-
-    function UV() {
-      return {
-        onPlayerChangeBlock(VV, eV, xV, UV, yV, pV) {
-          "Air" === pV && JV.h.QZ(YV)
-        }
-      }
-    }
-  },
-  40370: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => JV,
-      f: () => UV
-    });
-    const JV = 1 / .6,
-      YV = {
-        kind: "smokePuff"
+    const BB = [0, 0, 0],
+      LB = {
+        texture: "glint",
+        mipmaps: !1,
+        aX: 24,
+        minLifeTime: .18,
+        maxLifeTime: .35,
+        minSize: .07,
+        maxSize: .14,
+        minEmitPower: 0,
+        maxEmitPower: 0,
+        emitRate: 12,
+        dir1: BB,
+        dir2: BB,
+        blendMode: SH.f.OneOne
+      },
+      AB = {
+        ...LB,
+        colorGradients: HB([1, .88, .38], [1, .65, .15])
+      },
+      rB = {
+        ...LB,
+        colorGradients: HB([.55, .95, 1], [.9, 1, 1])
+      },
+      SB = [.5, .5, .5],
+      hB = {
+        texture: "glint",
+        mipmaps: !1,
+        aX: 24,
+        minLifeTime: .2,
+        maxLifeTime: .4,
+        minSize: .12,
+        maxSize: .22,
+        minEmitPower: .5,
+        maxEmitPower: 1.5,
+        emitRate: 0,
+        colorGradients: HB([1, .12, .12], [1, .35, .2]),
+        blendMode: SH.f.OneOne
       };
-    class UV {
-      constructor(VV, eV, xV) {
-        this.style = VV, this.Jv = eV, this.half = xV, this.particles = null, this.lastFrame = -1
+    class tB {
+      constructor() {
+        this.drops = new Map
       }
-      emit(VV, eV, xV) {
-        let UV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return xV !== this.lastFrame && (this.lastFrame = xV, this.particles || (this.particles = VV.createParticles(function(VV, eV) {
-          const [
-            [xV, UV, yV],
-            [pV, QV, nV]
-          ] = VV.colours;
-          return {
-            texture: VV.soft ? YV : "square_particle",
-            Jv: eV,
-            minLifeTime: VV.life[0] / JV,
-            maxLifeTime: VV.life[1] / JV,
-            minEmitPower: VV.power[0] * JV,
-            maxEmitPower: VV.power[1] * JV,
-            minSize: VV.size[0],
-            maxSize: VV.size[1],
-            emitRate: 0,
-            gravity: [0, VV.lift * JV * JV, 0],
-            dir1: [-VV.spread, 1, -VV.spread],
-            dir2: [VV.spread, 1, VV.spread],
-            colorGradients: [{
-              timeFraction: 0,
-              minColor: [xV, UV, yV, VV.alpha],
-              maxColor: [pV, QV, nV, VV.alpha]
-            }, {
-              timeFraction: 1,
-              minColor: [xV, UV, yV, 0],
-              maxColor: [pV, QV, nV, 0]
-            }],
-            blendMode: VV.blendMode
+      kX(HH, BH) {
+        if ("overflowFlash" === BH.kind) {
+          const [LH, AH, rH] = BH.position, SH = HH.createParticles(hB, {
+            pos: [LH, AH, rH],
+            half: SB
+          });
+          return SH.emit(18), void SH.stop()
+        }
+        this.drops.has(BH.itemId) || this.drops.set(BH.itemId, {
+          owner: BH.owner,
+          cosmetic: BH.cosmetic,
+          pickupDelayCleared: !1,
+          seen: !1,
+          markedAt: performance.now(),
+          lastMovingAt: 0,
+          lastPosition: [0, 0, 0],
+          particles: null
+        })
+      }
+      IX(HH) {
+        if (0 === this.drops.size) return;
+        const BH = performance.now(),
+          LH = HH.getCameraPosition();
+        let AH = 0;
+        for (const SH of this.drops.values()) null !== SH.particles && AH++;
+        for (const [SH, hH] of this.drops) {
+          const tH = HH.getPositionView(SH);
+          if (null === tH) {
+            var rH;
+            if (hH.seen || BH - hH.markedAt > 5e3) null !== hH.particles && AH--, null === (rH = hH.particles) || void 0 === rH || rH.stop(), this.drops.delete(SH);
+            continue
           }
-        }(this.style, this.Jv), {
-          pos: eV,
-          half: this.half
-        })), this.particles.moveTo(eV, this.half), this.particles.emit(UV), !0)
+          hH.cosmetic || !HH.isLocalPlayer(hH.owner) || hH.pickupDelayCleared || (HH.clearPickupDelay(SH), hH.pickupDelayCleared = !0);
+          const zH = hH.lastPosition,
+            CH = hH.seen && (tH[0] - zH[0]) ** 2 + (tH[1] - zH[1]) ** 2 + (tH[2] - zH[2]) ** 2 > 4e-4,
+            EH = (tH[0] - LH[0]) ** 2 + (tH[1] - LH[1]) ** 2 + (tH[2] - LH[2]) ** 2 < 2025;
+          hH.seen = !0, zH[0] = tH[0], zH[1] = tH[1], zH[2] = tH[2], CH && (hH.lastMovingAt = BH), null !== hH.particles && (!EH || BH - hH.lastMovingAt > 500) && (hH.particles.stop(), hH.particles = null, AH--), CH && EH && null === hH.particles && AH < 32 && (hH.particles = HH.createParticles(hH.cosmetic ? rB : AB, {
+            pos: tH
+          }), AH++), null !== hH.particles && (hH.particles.moveTo(tH), hH.particles.setEmitRate(CH ? 12 : 0)), !CH && null === hH.particles && BH - Math.max(hH.lastMovingAt, hH.markedAt) > 2e3 && this.drops.delete(SH)
+        }
       }
       dispose() {
-        var VV;
-        null === (VV = this.particles) || void 0 === VV || VV.stop(), this.particles = null
+        for (const BH of this.drops.values()) {
+          var HH;
+          null === (HH = BH.particles) || void 0 === HH || HH.stop()
+        }
+        this.drops.clear()
+      }
+    }
+    const zB = new Set;
+
+    function CB() {
+      let HH;
+      const BH = new tB;
+      return {
+        onCreate(BH) {
+          HH = BH
+        },
+        onReceivedMessageFromServer(LH, AH) {
+          if (LH === iH) BH.kX(HH, AH);
+          else if (LH === pH) {
+            const HH = AH,
+              BH = `${HH.id}|${HH.value}`;
+            zB.has(BH) || (zB.add(BH), (0, yH.f)({
+              id: HH.id,
+              value: HH.value
+            }))
+          }
+        },
+        IX() {
+          BH.IX(HH)
+        },
+        onClose() {
+          BH.dispose()
+        }
+      }
+    }
+
+    function EB(HH, BH, LH, AH) {
+      return {
+        cosmeticCompanions: sH(),
+        dialogue: PH(AH.localPlayerId),
+        fishing: MH(AH.localPlayerId),
+        furnaceSmoke: KH(),
+        ironChest: rH(),
+        localBlockBroken: (0, JH.d)(),
+        magnetLoot: CB()
+      }
+    }
+
+    function XB(HH, BH) {
+      for (const rH of [HH, ...null !== BH && void 0 !== BH ? BH : []]) try {
+        var LH;
+        null === rH || void 0 === rH || null === (LH = rH.onClose) || void 0 === LH || LH.call(rH)
+      } catch (AH) {
+        console.error("Error in client onClose callback", AH)
       }
     }
   },
-  5342: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => YV,
-      g: () => JV,
-      i: () => UV,
-      j: () => QV,
-      n: () => yV
+  9426: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => SH,
+      g: () => rH
     });
-    const JV = ["sine", "triangle", "square", "sawtooth"],
-      YV = 55,
-      UV = {
+    var AH = LH(18);
+    const rH = "localBlockBroken";
+
+    function SH() {
+      return {
+        onPlayerChangeBlock(HH, BH, LH, SH, hH, tH) {
+          "Air" === tH && AH.k.AX(rH)
+        }
+      }
+    }
+  },
+  40100: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => AH,
+      d: () => SH
+    });
+    const AH = 1 / .6,
+      rH = {
+        kind: "smokePuff"
+      };
+    class SH {
+      constructor(HH, BH, LH) {
+        this.style = HH, this.aX = BH, this.half = LH, this.particles = null, this.lastFrame = -1
+      }
+      emit(HH, BH, LH) {
+        let SH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return LH !== this.lastFrame && (this.lastFrame = LH, this.particles || (this.particles = HH.createParticles(function(HH, BH) {
+          const [
+            [LH, SH, hH],
+            [tH, zH, CH]
+          ] = HH.colours;
+          return {
+            texture: HH.soft ? rH : "square_particle",
+            aX: BH,
+            minLifeTime: HH.life[0] / AH,
+            maxLifeTime: HH.life[1] / AH,
+            minEmitPower: HH.power[0] * AH,
+            maxEmitPower: HH.power[1] * AH,
+            minSize: HH.size[0],
+            maxSize: HH.size[1],
+            emitRate: 0,
+            gravity: [0, HH.lift * AH * AH, 0],
+            dir1: [-HH.spread, 1, -HH.spread],
+            dir2: [HH.spread, 1, HH.spread],
+            colorGradients: [{
+              timeFraction: 0,
+              minColor: [LH, SH, hH, HH.alpha],
+              maxColor: [tH, zH, CH, HH.alpha]
+            }, {
+              timeFraction: 1,
+              minColor: [LH, SH, hH, 0],
+              maxColor: [tH, zH, CH, 0]
+            }],
+            blendMode: HH.blendMode
+          }
+        }(this.style, this.aX), {
+          pos: BH,
+          half: this.half
+        })), this.particles.moveTo(BH, this.half), this.particles.emit(SH), !0)
+      }
+      dispose() {
+        var HH;
+        null === (HH = this.particles) || void 0 === HH || HH.stop(), this.particles = null
+      }
+    }
+  },
+  5325: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => rH,
+      g: () => AH,
+      i: () => SH,
+      k: () => zH,
+      l: () => hH
+    });
+    const AH = ["sine", "triangle", "square", "sawtooth"],
+      rH = 55,
+      SH = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1160,39 +1295,39 @@ export const modules = {
         }
       };
 
-    function yV(VV) {
-      return "string" !== typeof VV ? VV : Object.hasOwn(UV, VV) ? UV[VV] : null
+    function hH(HH) {
+      return "string" !== typeof HH ? HH : Object.hasOwn(SH, HH) ? SH[HH] : null
     }
 
-    function pV(VV, eV, xV) {
-      return Math.min(xV, Math.max(eV, VV))
+    function tH(HH, BH, LH) {
+      return Math.min(LH, Math.max(BH, HH))
     }
 
-    function QV(VV) {
-      const eV = pV(VV.durationMs, 10, 500),
-        xV = pV(VV.attackMs, 0, eV),
+    function zH(HH) {
+      const BH = tH(HH.durationMs, 10, 500),
+        LH = tH(HH.attackMs, 0, BH),
         {
-          intonation: YV
-        } = VV;
+          intonation: rH
+        } = HH;
       return {
-        waveform: JV.includes(VV.waveform) ? VV.waveform : "sine",
-        pitchHz: pV(VV.pitchHz, 20, 4e3),
-        glideSemitones: pV(VV.glideSemitones, -24, 24),
-        durationMs: eV,
-        attackMs: xV,
-        releaseMs: pV(VV.releaseMs, 0, eV - xV),
-        lowpassHz: null === VV.lowpassHz ? null : pV(VV.lowpassHz, 20, 2e4),
-        volume: pV(VV.volume, 0, 2),
+        waveform: AH.includes(HH.waveform) ? HH.waveform : "sine",
+        pitchHz: tH(HH.pitchHz, 20, 4e3),
+        glideSemitones: tH(HH.glideSemitones, -24, 24),
+        durationMs: BH,
+        attackMs: LH,
+        releaseMs: tH(HH.releaseMs, 0, BH - LH),
+        lowpassHz: null === HH.lowpassHz ? null : tH(HH.lowpassHz, 20, 2e4),
+        volume: tH(HH.volume, 0, 2),
         intonation: {
-          variationSemitones: pV(YV.variationSemitones, 0, 6),
-          declineSemitones: pV(YV.declineSemitones, 0, 12),
-          questionRiseSemitones: pV(YV.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: pV(YV.exclaimLiftSemitones, 0, 12)
+          variationSemitones: tH(rH.variationSemitones, 0, 6),
+          declineSemitones: tH(rH.declineSemitones, 0, 12),
+          questionRiseSemitones: tH(rH.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: tH(rH.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: pV(VV.syllableMs, 25, 200)
+        syllableMs: tH(HH.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

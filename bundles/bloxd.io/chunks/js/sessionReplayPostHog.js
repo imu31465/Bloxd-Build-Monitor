@@ -1,103 +1,161 @@
 export const id = 61;
 export const ids = [61];
 export const modules = {
-  35120: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      ReplayPostHog: () => ie
+  40805: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      ReplayPostHog: () => HL
     });
-    var JV = xV(660),
-      YV = xV(5589),
-      UV = xV(35129),
-      yV = xV(35103);
-    const pV = new Set(["partycode", "lobby", "vm", "invite", "invitecode", "code", "token", "access_token", "id_token", "refresh_token", "auth", "key", "state", "ticket", "jointicket", "secret", "password", "sig", "signature"]),
-      QV = new Set(["gclid", "gclsrc", "dclid", "gbraid", "wbraid", "fbclid", "msclkid", "twclid", "li_fat_id", "igshid", "ttclid", "rdt_cid", "epik", "qclid", "sccid", "oppref", "bfcid", "irclid", "_kx"]),
-      nV = "redacted",
-      wV = /([?&#])([^=&#?\s"']+)=([^&#?\s"'<>\\]*)/g,
-      ZV = /(\/play\/[^/?#\s"'<>\\]+\/)[^/?#\s"'<>\\]+/gi,
-      vV = /\/play\//i,
-      rV = /lobby|party/i;
+    var AH = LH(3761),
+      rH = LH(40809),
+      SH = LH(40792);
+    const hH = new Set(["partycode", "lobby", "vm", "invite", "invitecode", "code", "token", "access_token", "id_token", "refresh_token", "auth", "key", "state", "ticket", "jointicket", "secret", "password", "sig", "signature"]),
+      tH = new Set(["gclid", "gclsrc", "dclid", "gbraid", "wbraid", "fbclid", "msclkid", "twclid", "li_fat_id", "igshid", "ttclid", "rdt_cid", "epik", "qclid", "sccid", "oppref", "bfcid", "irclid", "_kx", "_gl", "yclid", "srsltid", "mc_eid", "s_kwcid", "ef_id", "_hsenc", "mkt_tok"]),
+      zH = "redacted",
+      CH = /([?&#])([^=&#?\s"']+)=([^&#?\s"'<>\\]*)/g,
+      EH = /(\/play\/[^/?#\s"'<>\\]+\/)[^/?#\s"'<>\\]+/gi,
+      XH = /\/play\//i,
+      GH = /lobby|party/i;
 
-    function kV(VV) {
+    function YH(HH) {
       try {
-        return decodeURIComponent(VV)
+        return decodeURIComponent(HH)
       } catch {
         return null
       }
     }
 
-    function bV(VV) {
-      const eV = VV.includes("%") ? kV(VV) : null;
-      if (null === eV || eV === VV) return VV;
-      let xV = EV(`?${eV}`).slice(1);
-      return xV === eV && (xV = bV(eV)), xV === eV ? VV : encodeURIComponent(xV)
+    function uH(HH) {
+      const BH = HH.includes("%") ? YH(HH) : null;
+      if (null === BH || BH === HH) return HH;
+      let LH = QH(`?${BH}`).slice(1);
+      return LH === BH && (LH = uH(BH)), LH === BH ? HH : encodeURIComponent(LH)
     }
 
-    function EV(VV) {
-      return VV.includes("=") || vV.test(VV) ? VV.replace(wV, ((VV, eV, xV, JV) => {
-        var YV;
-        const UV = (null !== (YV = kV(xV)) && void 0 !== YV ? YV : xV).toLowerCase();
-        if (pV.has(UV) || QV.has(UV) && "" !== JV) return `${eV}${xV}=${nV}`;
-        const yV = bV(JV);
-        return yV === JV ? VV : `${eV}${xV}=${yV}`
-      })).replace(ZV, `$1${nV}`) : VV
+    function QH(HH) {
+      return HH.includes("=") || XH.test(HH) ? HH.replace(CH, ((HH, BH, LH, AH) => {
+        var rH;
+        const SH = (null !== (rH = YH(LH)) && void 0 !== rH ? rH : LH).toLowerCase();
+        if (hH.has(SH)) return `${BH}${LH}=${zH}`;
+        if (tH.has(SH) && "" !== AH) return `${BH}${LH}=<masked>`;
+        const CH = uH(AH);
+        return CH === AH ? HH : `${BH}${LH}=${CH}`
+      })).replace(EH, `$1${zH}`) : HH
     }
-    const BV = new Set(["href", "src", "srcset", "action", "formaction", "poster", "xlink:href"]);
+    const WH = new Set(["href", "src", "srcset", "action", "formaction", "poster", "xlink:href"]);
 
-    function jV(VV, eV) {
-      return BV.has(VV.toLowerCase()) ? EV(eV) : eV
-    }
-
-    function qV(VV) {
-      return rV.test(VV) ? nV : EV(VV)
+    function MH(HH, BH) {
+      return WH.has(HH.toLowerCase()) ? QH(BH) : BH
     }
 
-    function tV(VV) {
-      if (VV)
-        for (const [eV, xV] of Object.entries(VV)) "string" === typeof xV && (VV[eV] = EV(xV))
+    function xH(HH) {
+      return GH.test(HH) ? zH : QH(HH)
     }
 
-    function FV(VV) {
-      var eV;
-      Array.isArray(VV.payload) && (VV.payload = (eV = VV.payload).some((VV => "string" === typeof VV && rV.test(VV))) ? [JSON.stringify(nV)] : eV.map((VV => "string" === typeof VV ? EV(VV) : VV))), Array.isArray(VV.trace) && (VV.trace = VV.trace.map((VV => "string" === typeof VV ? EV(VV) : VV)))
+    function vH(HH) {
+      if (HH)
+        for (const [BH, LH] of Object.entries(HH)) "string" === typeof LH && (HH[BH] = QH(LH))
     }
 
-    function TV(VV) {
-      if (null === VV) return null;
-      const eV = VV.properties.$snapshot_data;
-      return tV(VV.properties), tV(VV.properties.$set), tV(VV.properties.$set_once), tV(VV.$set), tV(VV.$set_once),
-        function(VV) {
-          if (Array.isArray(VV))
-            for (const eV of VV) {
-              const VV = null === eV || void 0 === eV ? void 0 : eV.data;
-              if (!VV || "object" !== typeof VV) continue;
-              "string" === typeof VV.href && (VV.href = EV(VV.href));
-              const xV = VV.payload;
-              xV && "object" === typeof xV && (eV.type === YV.d.Plugin && "string" === typeof VV.plugin && VV.plugin.includes("console") ? FV(xV) : tV(xV))
+    function PH(HH) {
+      var BH;
+      Array.isArray(HH.payload) && (HH.payload = (BH = HH.payload).some((HH => "string" === typeof HH && GH.test(HH))) ? [JSON.stringify(zH)] : BH.map((HH => "string" === typeof HH ? QH(HH) : HH))), Array.isArray(HH.trace) && (HH.trace = HH.trace.map((HH => "string" === typeof HH ? QH(HH) : HH)))
+    }
+
+    function TH(HH) {
+      if (null === HH) return null;
+      const BH = HH.properties.$snapshot_data;
+      return vH(HH.properties), vH(HH.properties.$set), vH(HH.properties.$set_once), vH(HH.$set), vH(HH.$set_once),
+        function(HH) {
+          if (Array.isArray(HH))
+            for (const BH of HH) {
+              const HH = null === BH || void 0 === BH ? void 0 : BH.data;
+              if (!HH || "object" !== typeof HH) continue;
+              "string" === typeof HH.href && (HH.href = QH(HH.href));
+              const LH = HH.payload;
+              LH && "object" === typeof LH && (BH.type === AH.c.Plugin && "string" === typeof HH.plugin && HH.plugin.includes("console") ? PH(LH) : vH(LH))
             }
-        }(eV), VV
+        }(BH), HH
     }
-    const PV = `.${YV.i}`,
-      AV = ["iframe", "script", 'link:not([rel~="stylesheet"])', ".AdBannerContainer > [id]", "#GenericVideoInner", "ins.adsbygoogle", '[id^="google_ads_"]', "[data-replay-hidden]"],
-      NV = [".PartyCode", ".InviteLinkInner", ".InviteLinkBoxDescription", ".InGameHeaderLobbyName", ".RecentlyPlayedLobby", ".ProfilePreviewStatus", ".PartyJoinLocationText", ".PadKeyboardPreviewText", ".PadKeyboardPhraseRow"].join(", ");
+    const UH = new Set(["class", "id", "rel", "type", "role", "tabindex", "width", "height", "dir", "lang", "disabled", "hidden", "checked", "selected", "readonly", "draggable", "media", "charset", "crossorigin", "aria-hidden", "aria-expanded", "aria-selected", "aria-pressed", "aria-checked", "aria-disabled", "xmlns", "viewbox", "d", "fill", "stroke", "stroke-width", "transform", "x", "y", "cx", "cy", "r", "points", "x1", "y1", "x2", "y2", "rx", "ry", "opacity", "fill-rule", "clip-rule", "stroke-linecap", "stroke-linejoin", "preserveaspectratio", "xmlns:xlink", "colspan", "rowspan"]),
+      VH = new Set(["_csstext", "rr_width", "rr_height", "rr_left", "rr_top", "rr_position", "rr_transform", "rr_display", "rr_scrollleft", "rr_scrolltop", "rr_mediastate", "rr_open_mode"]),
+      OH = new Set(["data-pad-key", "data-pad-repeat"]),
+      bH = new Set(["href", "src", "srcset", "xlink:href"]),
+      kH = new Set(["title", "$title", "message", "detail", "game_display_name"]),
+      mH = "img, picture, video";
 
-    function XV(VV, eV) {
-      return null !== eV && void 0 !== eV && eV.closest(PV) ? VV : "*".repeat(VV.length)
+    function oH(HH, BH, LH) {
+      const AH = HH.toLowerCase();
+      return "style" === AH ? BH.replace(/url\((?:"[^"]*"|'[^']*'|[^)]*)\)/gi, "none") : bH.has(AH) && "A" !== LH.tagName ? MH(HH, BH) : UH.has(AH) || VH.has(AH) || AH.startsWith("data-pad-") && !OH.has(AH) ? BH : BH.replace(/\S/g, "*")
     }
 
-    function MV(VV) {
+    function IH(HH) {
+      if (!/^(https?:\/\/|\/)/i.test(HH)) return HH;
+      let BH;
+      try {
+        BH = new URL(HH, "https://bloxd.invalid")
+      } catch {
+        return HH
+      }
+      const [LH = "", ...AH] = BH.pathname.split("/").slice(1), rH = `/${LH}${AH.some((HH=>""!==HH))?"/*":""}`;
+      return HH.startsWith("/") ? rH : `${BH.origin}${rH}`
+    }
+
+    function fH(HH) {
+      if (HH)
+        for (const [BH, LH] of Object.entries(HH)) kH.has(BH) ? delete HH[BH] : "string" === typeof LH && (HH[BH] = IH(LH))
+    }
+
+    function lH(HH) {
+      ! function(HH) {
+        if (Array.isArray(HH))
+          for (const BH of HH) {
+            const HH = null === BH || void 0 === BH ? void 0 : BH.data;
+            HH && "object" === typeof HH && ("string" === typeof HH.href && (HH.href = IH(HH.href)), HH.payload && "object" === typeof HH.payload && fH(HH.payload))
+          }
+      }(HH.properties.$snapshot_data), fH(HH.properties), "$screen" === HH.event && String(HH.properties.$screen_name).startsWith("custom: ") && (HH.properties.$screen_name = `custom: ${String(HH.properties.game_analytics_id)}`), fH(HH.properties.$set), fH(HH.properties.$set_once), fH(HH.$set), fH(HH.$set_once)
+    }
+    const KH = AH.i.map((HH => `.${HH}`)).join(", "),
+      cH = ["iframe", "script", 'link:not([rel~="stylesheet"])', ".AdBannerContainer > [id]", "#GenericVideoInner", "ins.adsbygoogle", '[id^="google_ads_"]'],
+      eH = [".PadKeyboardPreviewText", ".PadKeyboardPhraseRow"].join(", ");
+
+    function qH(HH, BH) {
+      return null !== BH && void 0 !== BH && BH.closest(KH) ? HH : HH.replace(/\S/g, "*")
+    }
+
+    function gH(HH) {
+      const BH = function(HH) {
+        return HH.anonymised ? {
+          enable_recording_console_log: !1,
+          session_recording: {
+            blockSelector: [...cH, mH].join(", "),
+            maskTextSelector: "*",
+            maskTextFn: HH.showsChat ? qH : null,
+            maskAttributeFn: oH
+          }
+        } : {
+          enable_recording_console_log: !0,
+          session_recording: {
+            blockSelector: [...cH, (BH = HH.ownOrigins, `img[src^="http"]${BH.map((HH=>`:not([src^="${HH}/"])`)).join("")}`)].join(", "),
+            maskTextSelector: HH.showsChat ? eH : `${eH}, ${KH}`,
+            maskAttributeFn: MH
+          }
+        };
+        var BH
+      }(HH);
       return {
-        api_host: VV.apiHost,
+        api_host: HH.apiHost,
         persistence: "memory",
         bootstrap: {
-          distinctID: VV.deviceId,
+          distinctID: HH.recordingId,
           isIdentifiedID: !1,
-          sessionID: VV.recordingId
+          sessionID: HH.recordingId
         },
         person_profiles: "always",
         mask_personal_data_properties: !0,
+        custom_personal_data_properties: [...tH],
         session_idle_timeout_seconds: 36e3,
         disable_external_dependency_loading: !0,
-        opt_out_useragent_filter: VV.allowAutomatedBrowsers,
+        opt_out_useragent_filter: HH.allowAutomatedBrowsers,
         capture_pageview: !0,
         capture_pageleave: !0,
         autocapture: !1,
@@ -112,37 +170,31 @@ export const modules = {
         disable_web_experiments: !0,
         advanced_disable_feature_flags: !0,
         advanced_disable_flags: !0,
-        enable_recording_console_log: !0,
-        before_send: eV => {
-          const xV = TV(eV);
-          return null === xV || ("$snapshot" === xV.event ? function(VV, eV) {
+        enable_recording_console_log: BH.enable_recording_console_log,
+        before_send: BH => {
+          const LH = TH(BH);
+          return null === LH || (HH.anonymised && lH(LH), "$snapshot" === LH.event ? function(HH, BH) {
             const {
-              $snapshot_data: xV,
-              $window_id: JV,
-              distinct_id: YV
-            } = VV.properties;
+              $snapshot_data: LH,
+              $window_id: AH
+            } = HH.properties;
             try {
-              eV({
-                distinctId: String(YV),
-                windowId: JV,
-                events: xV
+              BH({
+                windowId: AH,
+                events: LH
               })
-            } catch (UV) {
-              console.error("Session replay couldn't take a page recording batch.", UV)
+            } catch (rH) {
+              console.error("Session replay couldn't take a page recording batch.", rH)
             }
-          }(xV, VV.onDomBatch) : VV.onTimelineEvent(xV)), null
+          }(LH, HH.onDomBatch) : HH.onTimelineEvent(LH)), null
         },
-        disable_session_recording: !VV.recordDom,
+        disable_session_recording: !HH.recordDom,
         session_recording: {
           captureCanvas: {
             recordCanvas: !1
           },
-          blockSelector: [...AV, (eV = VV.ownOrigins, `img[src^="http"]${eV.map((VV=>`:not([src^="${VV}/"])`)).join("")}`)].join(", "),
           inlineStylesheetBudgetRules: 200,
           maskAllInputs: !0,
-          maskInputFn: XV,
-          maskTextSelector: NV,
-          maskAttributeFn: jV,
           recordCrossOriginIframes: !1,
           recordHeaders: !1,
           recordBody: !1,
@@ -151,118 +203,166 @@ export const modules = {
           },
           full_snapshot_interval_millis: 9e5,
           session_idle_threshold_ms: 18e5,
-          sampleRate: 1
+          sampleRate: 1,
+          ...BH.session_recording
         }
-      };
-      var eV
+      }
     }
-    class zV {
-      constructor(VV) {
-        this.options = VV, this.buckets = new Map, this.lastEvictionMs = -1 / 0
+
+    function NH() {
+      return window.__PosthogExtensions__
+    }
+    var RH = LH(625),
+      jH = LH(120);
+
+    function nH() {
+      var HH;
+      const BH = navigator,
+        LH = new Date;
+      return {
+        local_hour: LH.getHours(),
+        local_weekday: LH.getDay(),
+        ...BH.hardwareConcurrency ? {
+          cpu_cores: BH.hardwareConcurrency
+        } : {},
+        ...BH.deviceMemory ? {
+          device_memory_gb: BH.deviceMemory
+        } : {},
+        ...null !== (HH = BH.connection) && void 0 !== HH && HH.effectiveType ? {
+          network_type: BH.connection.effectiveType
+        } : {}
       }
-      allow(VV, eV) {
-        this.evictExpired(VV, eV);
-        let xV = this.buckets.get(VV);
-        var JV, YV;
-        (void 0 === xV || eV - xV.startMs >= this.options.windowMs) && (xV = {
-          startMs: eV,
+    }
+
+    function FH(HH) {
+      var BH;
+      const LH = HH.tags;
+      return {
+        panel_entry_reason: null !== (BH = LH.recording_reason) && void 0 !== BH ? BH : "unknown",
+        panel_entry_date: (new Date).toISOString().slice(0, 10),
+        ...void 0 === LH.sample_rate ? {} : {
+          panel_entry_sample_rate: LH.sample_rate
+        }
+      }
+    }
+
+    function DH(HH, BH) {
+      return {
+        recording_id: HH.recordingId,
+        recording_scopes: HH.scopes.join(","),
+        dom_recorded: BH
+      }
+    }
+
+    function wH(HH, BH) {
+      const LH = {};
+      for (const [AH, rH] of Object.entries(BH)) LH[`${HH}${AH}`] = rH;
+      return LH
+    }
+    class ZH {
+      constructor(HH) {
+        this.options = HH, this.buckets = new Map, this.lastEvictionMs = -1 / 0
+      }
+      allow(HH, BH) {
+        this.evictExpired(HH, BH);
+        let LH = this.buckets.get(HH);
+        var AH, rH;
+        (void 0 === LH || BH - LH.startMs >= this.options.windowMs) && (LH = {
+          startMs: BH,
           count: 0,
-          suppressed: null !== (JV = null === (YV = xV) || void 0 === YV ? void 0 : YV.suppressed) && void 0 !== JV ? JV : 0
-        }, this.buckets.set(VV, xV));
-        if (xV.count >= this.options.maxPerWindow) return xV.suppressed++, null;
-        xV.count++;
-        const UV = xV.suppressed;
-        return xV.suppressed = 0, UV
+          suppressed: null !== (AH = null === (rH = LH) || void 0 === rH ? void 0 : rH.suppressed) && void 0 !== AH ? AH : 0
+        }, this.buckets.set(HH, LH));
+        if (LH.count >= this.options.maxPerWindow) return LH.suppressed++, null;
+        LH.count++;
+        const SH = LH.suppressed;
+        return LH.suppressed = 0, SH
       }
-      evictExpired(VV, eV) {
-        if (!(eV - this.lastEvictionMs < this.options.windowMs)) {
-          this.lastEvictionMs = eV;
-          for (const [xV, JV] of this.buckets) {
-            const YV = (eV - JV.startMs) / this.options.windowMs;
-            xV !== VV && YV >= (0 === JV.suppressed ? 1 : 10) && this.buckets.delete(xV)
+      evictExpired(HH, BH) {
+        if (!(BH - this.lastEvictionMs < this.options.windowMs)) {
+          this.lastEvictionMs = BH;
+          for (const [LH, AH] of this.buckets) {
+            const rH = (BH - AH.startMs) / this.options.windowMs;
+            LH !== HH && rH >= (0 === AH.suppressed ? 1 : 10) && this.buckets.delete(LH)
           }
         }
       }
     }
 
-    function GV(VV, eV, xV) {
-      const JV = new URL(VV);
-      return JV.pathname = `${JV.pathname.replace(/\/+$/,"")}/replay/${encodeURIComponent(eV)}`, JV.searchParams.set("timestamp", String(Math.round(xV - 5e3))), JV.toString()
+    function dH(HH, BH, LH) {
+      const AH = new URL(HH);
+      return AH.pathname = `${AH.pathname.replace(/\/+$/,"")}/replay/${encodeURIComponent(BH)}`, AH.searchParams.set("timestamp", String(Math.round(LH - 5e3))), AH.toString()
     }
-    class WV {
-      constructor(VV) {
-        this.options = VV, this.throttle = new zV({
+    class aH {
+      constructor(HH) {
+        this.options = HH, this.throttle = new ZH({
           maxPerWindow: 3,
           windowMs: 6e4
-        }), this.recordingId = void 0, this.domRecorded = void 0, this.recordingId = VV.recordingId, this.domRecorded = VV.domRecorded
+        })
       }
-      setRecording(VV) {
-        this.recordingId = VV, this.domRecorded = !0
-      }
-      annotate(VV, eV) {
-        const xV = Date.now(),
-          JV = this.throttle.allow("logged", xV);
-        var YV;
-        null !== JV && this.options.captureError(VV.message || VV.name, {
-          error_name: VV.name || null,
-          error_fingerprint: null !== (YV = eV.fingerprint) && void 0 !== YV ? YV : null,
-          suppressed_since_last: JV
+      annotate(HH, BH) {
+        const LH = Date.now(),
+          AH = this.throttle.allow("logged", LH);
+        var rH;
+        null !== AH && this.options.captureError(HH.message || HH.name, {
+          error_name: HH.name || null,
+          error_fingerprint: null !== (rH = BH.fingerprint) && void 0 !== rH ? rH : null,
+          suppressed_since_last: AH
         });
         return {
-          replay_recording_id: this.recordingId,
-          ...this.domRecorded ? {
-            replay_url: GV(this.options.dashboardHost, this.options.getSessionId(), xV)
+          replay_recording_id: this.options.recordingId,
+          ...this.options.domRecorded ? {
+            replay_url: dH(this.options.dashboardHost, this.options.getSessionId(), LH)
           } : {}
         }
       }
     }
 
-    function RV(VV) {
-      return VV < 50 ? "<50" : VV < 100 ? "50-100" : VV < 200 ? "100-200" : VV < 400 ? "200-400" : "400+"
+    function sH(HH) {
+      return HH < 50 ? "<50" : HH < 100 ? "50-100" : HH < 200 ? "100-200" : HH < 400 ? "200-400" : "400+"
     }
-    class gV {
+    class JH {
       constructor() {
         this.gamesJoined = [], this.flags = new Set, this.firstGame = null, this.fpsTags = null, this.maxHitchMs = 0, this.pingSumMs = 0, this.pingSamples = 0, this.maxPingMs = 0, this.unboundKeyPresses = new Map
       }
-      gameJoined(VV, eV) {
-        this.gamesJoined.includes(VV) || this.gamesJoined.push(VV), null === this.firstGame && (this.firstGame = {
-          joinedAtMs: eV,
+      gameJoined(HH, BH) {
+        this.gamesJoined.includes(HH) || this.gamesJoined.push(HH), null === this.firstGame && (this.firstGame = {
+          joinedAtMs: BH,
           leftAtMs: null
         })
       }
-      gameLeft(VV) {
-        null !== this.firstGame && null === this.firstGame.leftAtMs && (this.firstGame.leftAtMs = VV)
+      gameLeft(HH) {
+        null !== this.firstGame && null === this.firstGame.leftAtMs && (this.firstGame.leftAtMs = HH)
       }
-      setFlag(VV) {
-        return !this.flags.has(VV) && (this.flags.add(VV), !0)
+      setFlag(HH) {
+        return !this.flags.has(HH) && (this.flags.add(HH), !0)
       }
-      setFpsTags(VV) {
-        this.fpsTags = VV
+      setFpsTags(HH) {
+        this.fpsTags = HH
       }
-      addHitch(VV) {
-        return !(VV <= this.maxHitchMs) && (this.maxHitchMs = VV, !0)
+      addHitch(HH) {
+        return !(HH <= this.maxHitchMs) && (this.maxHitchMs = HH, !0)
       }
-      addPingSample(VV) {
-        const eV = this.pingTags();
-        this.pingSumMs += VV, this.pingSamples++, this.maxPingMs = Math.max(this.maxPingMs, VV);
-        const xV = this.pingTags();
-        return (null === eV || void 0 === eV ? void 0 : eV.ping_avg_bucket) !== (null === xV || void 0 === xV ? void 0 : xV.ping_avg_bucket) || (null === eV || void 0 === eV ? void 0 : eV.ping_max_bucket) !== (null === xV || void 0 === xV ? void 0 : xV.ping_max_bucket)
+      addPingSample(HH) {
+        const BH = this.pingTags();
+        this.pingSumMs += HH, this.pingSamples++, this.maxPingMs = Math.max(this.maxPingMs, HH);
+        const LH = this.pingTags();
+        return (null === BH || void 0 === BH ? void 0 : BH.ping_avg_bucket) !== (null === LH || void 0 === LH ? void 0 : LH.ping_avg_bucket) || (null === BH || void 0 === BH ? void 0 : BH.ping_max_bucket) !== (null === LH || void 0 === LH ? void 0 : LH.ping_max_bucket)
       }
-      addUnboundKeyPresses(VV) {
-        for (const [xV, JV] of VV) {
-          var eV;
-          this.unboundKeyPresses.set(xV, (null !== (eV = this.unboundKeyPresses.get(xV)) && void 0 !== eV ? eV : 0) + JV)
+      addUnboundKeyPresses(HH) {
+        for (const [LH, AH] of HH) {
+          var BH;
+          this.unboundKeyPresses.set(LH, (null !== (BH = this.unboundKeyPresses.get(LH)) && void 0 !== BH ? BH : 0) + AH)
         }
       }
       toProperties() {
-        var VV;
-        let eV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        var HH;
+        let BH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         return {
           ...{
-            first_game: null !== (VV = this.gamesJoined[0]) && void 0 !== VV ? VV : "",
+            first_game: null !== (HH = this.gamesJoined[0]) && void 0 !== HH ? HH : "",
             games_joined: this.gamesJoined.join(","),
             games_joined_count: this.gamesJoined.length,
-            quick_quit: this.isQuickQuit(eV),
+            quick_quit: this.isQuickQuit(BH),
             had_error: this.flags.has("had_error"),
             disconnected: this.flags.has("disconnected"),
             purchase_intent: this.flags.has("purchase_intent"),
@@ -275,117 +375,518 @@ export const modules = {
         }
       }
       unboundKeyTags() {
-        let VV = 0,
-          eV = "",
-          xV = 0;
-        for (const [JV, YV] of this.unboundKeyPresses) VV += YV, (YV > xV || YV === xV && JV < eV) && (eV = JV, xV = YV);
+        let HH = 0,
+          BH = "",
+          LH = 0;
+        for (const [AH, rH] of this.unboundKeyPresses) HH += rH, (rH > LH || rH === LH && AH < BH) && (BH = AH, LH = rH);
         return {
-          unbound_key_presses: VV,
-          top_unbound_key: eV
+          unbound_key_presses: HH,
+          top_unbound_key: BH
         }
       }
       pingTags() {
         return 0 === this.pingSamples ? null : {
-          ping_avg_bucket: RV(this.pingSumMs / this.pingSamples),
-          ping_max_bucket: RV(this.maxPingMs)
+          ping_avg_bucket: sH(this.pingSumMs / this.pingSamples),
+          ping_max_bucket: sH(this.maxPingMs)
         }
       }
-      isQuickQuit(VV) {
-        var eV;
+      isQuickQuit(HH) {
+        var BH;
         if (null === this.firstGame) return !1;
-        const xV = null !== (eV = this.firstGame.leftAtMs) && void 0 !== eV ? eV : VV;
-        return null !== xV && xV - this.firstGame.joinedAtMs < YV.y
+        const LH = null !== (BH = this.firstGame.leftAtMs) && void 0 !== BH ? BH : HH;
+        return null !== LH && LH - this.firstGame.joinedAtMs < AH.n
       }
     }
-    var DV = xV(1252),
-      iV = xV(1108),
-      CV = xV(375),
-      aV = xV(1117),
-      oV = xV(1099),
-      cV = xV(3091),
-      hV = xV(27),
-      lV = xV(32),
-      LV = xV(3093),
-      fV = xV(1391),
-      mV = xV(1348),
-      KV = xV(99),
-      HV = xV(1605),
-      uV = xV(2279),
-      sV = xV(1725),
-      SV = xV(35090);
-    const IV = ["keydown", "pointerdown", "touchstart"];
-    var dV = xV(1364);
-    var OV = xV(35111);
-    const Ve = ["quit_after_hitch", "quit_after_death", "quit_during_load", "quit_in_menu", "quit_idle", "quit_after_ad"],
-      ee = ["quit_during_load", "quit_after_ad", "quit_after_death", "quit_after_hitch", "quit_idle", "quit_in_menu"];
+    var iH = LH(1168),
+      pH = LH(1011),
+      yH = LH(317),
+      HB = LH(1016),
+      BB = LH(1005),
+      LB = LH(3030),
+      AB = LH(15),
+      rB = LH(1998),
+      SB = LH(18),
+      hB = LH(1297),
+      tB = LH(1253),
+      zB = LH(1504),
+      CB = LH(2236),
+      EB = LH(1659),
+      XB = LH(40779),
+      GB = LH(81),
+      YB = LH(40772),
+      uB = LH(1270);
+    class QB {
+      constructor(HH, BH, LH) {
+        this.replay = HH, this.quitContext = BH, this.flows = LH, this.errorThrottle = new ZH({
+          maxPerWindow: 3,
+          windowMs: 6e4
+        }), this.hitchThrottle = new ZH({
+          maxPerWindow: 5,
+          windowMs: 6e4
+        }), this.attachedToRender = !1
+      }
+      start() {
+        window.addEventListener("error", (HH => {
+            const BH = HH.error;
+            this.captureError("error", HH.message, HH.filename ? `${HH.filename}:${HH.lineno}:${HH.colno}` : null, BH instanceof Error ? BH.name : null, (0, YB.c)(HH))
+          })), window.addEventListener("unhandledrejection", (HH => {
+            const BH = HH.reason;
+            this.captureError("unhandled_rejection", BH instanceof Error ? BH.message : String(BH), null, BH instanceof Error ? BH.name : null, (0, YB.c)(HH))
+          })), SB.k.subscribe("unrecoverableError", (HH => {
+            this.captureError("unrecoverable", HH, null, null, !0)
+          })),
+          function(HH) {
+            var BH, LH;
+            if ("undefined" === typeof PerformanceObserver || null === (BH = null === (LH = PerformanceObserver.supportedEntryTypes) || void 0 === LH ? void 0 : LH.includes("long-animation-frame")) || void 0 === BH || !BH) return;
+            let AH = null;
+            new PerformanceObserver((BH => {
+              for (const SH of BH.getEntries()) {
+                var LH, rH;
+                const BH = SH,
+                  hH = !(null !== AH && BH.startTime - AH.endMs < 50) || BH.duration >= 3 * (null !== (LH = null === (rH = AH) || void 0 === rH ? void 0 : rH.durationMs) && void 0 !== LH ? LH : 0);
+                AH = {
+                  endMs: BH.startTime + BH.duration,
+                  durationMs: BH.duration
+                }, !document.hidden && BH.duration >= 100 && hH && HH({
+                  frameMs: BH.duration,
+                  mainThreadMs: (0, uB.m)(BH)
+                })
+              }
+            })).observe({
+              type: "long-animation-frame"
+            })
+          }((HH => {
+            this.onFrameHitch(HH)
+          }))
+      }
+      attachToRender() {
+        if (this.attachedToRender) return;
+        const HH = (0, tB.K)().gameRender();
+        null !== HH && (this.attachedToRender = !0, this.replay.setSessionProperties(Object.fromEntries([
+          ["renderer", HH.renderer],
+          ["gpu_vendor", (0, GB.getGpuVendor)()]
+        ])), HH.canvas.addEventListener("webglcontextlost", (() => {
+          this.replay.setFlag("had_error"), this.replay.capture("webgl_context_lost")
+        })), HH.canvas.addEventListener("webglcontextrestored", (() => {
+          this.replay.capture("webgl_context_restored")
+        })))
+      }
+      captureError(HH, BH, LH, rH, SH) {
+        const hH = xH(BH).slice(0, 300);
+        SH && null !== this.flows.stay && this.quitContext.noteError(performance.now());
+        const tH = this.errorThrottle.allow(`${HH}:${hH}`, Date.now());
+        null !== tH && (this.replay.captureClientError(HH, hH, {
+          source: LH,
+          error_name: rH,
+          suppressed_since_last: tH
+        }), this.replay.addReplayMarker(AH.j.error, {
+          kind: HH,
+          message: hH
+        }))
+      }
+      onFrameHitch(HH) {
+        let {
+          frameMs: BH,
+          mainThreadMs: LH
+        } = HH;
+        const AH = this.flows.stay;
+        if (null === AH || null === AH.playableAtMs || performance.now() - AH.playableAtMs < 2e3) return;
+        (0, EB.t)() || this.quitContext.noteHitch(performance.now()), this.replay.addHitch(Math.round(BH));
+        const rH = this.hitchThrottle.allow("frame_hitch", Date.now());
+        null !== rH && this.replay.capture("frame_hitch", {
+          Qz: Math.round(BH),
+          main_thread_ms: Math.round(LH),
+          game_name_with_variation: AH.name,
+          suppressed_since_last: rH
+        })
+      }
+    }
+    var WB = LH(7057),
+      MB = LH(304);
+    class xB {
+      constructor(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        this.steps = HH, this.furthestIndex = -1, this.heldIndex = -1, this.gateIndex = void 0, this.gateIndex = null === BH ? 1 / 0 : HH.indexOf(BH)
+      }
+      reach(HH) {
+        const BH = this.steps.indexOf(HH);
+        if (BH > this.gateIndex && this.furthestIndex < this.gateIndex) return this.heldIndex = Math.max(this.heldIndex, BH), null;
+        const LH = BH === this.gateIndex ? Math.max(BH, this.heldIndex) : BH;
+        return LH <= this.furthestIndex ? null : (this.furthestIndex = LH, LH)
+      }
+      get furthest() {
+        return -1 === this.furthestIndex ? null : this.steps[this.furthestIndex]
+      }
+      get furthestStepIndex() {
+        return this.furthestIndex
+      }
+    }
+    const vB = {
+      unbound_key_burst: {
+        count: 4,
+        windowMs: 5e3
+      },
+      menu_toggling: {
+        count: 4,
+        windowMs: 1e4
+      },
+      block_change_refused: {
+        count: 3,
+        windowMs: 1e4
+      },
+      pointer_lock_failed: {
+        count: 2,
+        windowMs: 1e4
+      }
+    };
+    class PB {
+      constructor(HH) {
+        this.threshold = HH, this.times = [], this.armed = !0, this.lastAtMs = -1 / 0
+      }
+      note(HH) {
+        const {
+          count: BH,
+          windowMs: LH
+        } = this.threshold;
+        if (!this.armed && HH - this.lastAtMs >= LH && (this.armed = !0), this.lastAtMs = HH, !this.armed) return !1;
+        for (this.times.push(HH); this.times.length > 0 && HH - this.times[0] >= LH;) this.times.shift();
+        return !(this.times.length < BH) && (this.times.length = 0, this.armed = !1, !0)
+      }
+    }
+    class TB {
+      constructor(HH) {
+        this.onSignal = HH, this.bursts = new Map, this.seen = [], this.signalCount = 0, this.idleCounted = !1;
+        for (const [BH, LH] of Object.entries(vB)) this.bursts.set(BH, new PB(LH))
+      }
+      note(HH, BH) {
+        if (this.bursts.get(HH).note(BH)) {
+          const {
+            count: BH,
+            windowMs: LH
+          } = vB[HH];
+          this.signal(HH, BH, LH)
+        }
+      }
+      checkIdle(HH) {
+        let {
+          nowMs: BH,
+          lastInputAtMs: LH,
+          pointerLocked: AH,
+          playable: rH,
+          visible: SH
+        } = HH;
+        BH - (null !== LH && void 0 !== LH ? LH : 0) < 3e4 ? this.idleCounted = !1 : !this.idleCounted && AH && rH && SH && (this.idleCounted = !0, this.signal("idle_pointer_locked", 1, 3e4))
+      }
+      tags() {
+        let HH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const BH = HH && !this.seen.includes("rage_quit") ? [...this.seen, "rage_quit"] : this.seen;
+        return {
+          frustration_score: this.signalCount + (HH ? 1 : 0),
+          frustration_signals: BH.join(",")
+        }
+      }
+      signal(HH, BH, LH) {
+        this.signalCount++, this.seen.includes(HH) || this.seen.push(HH), this.onSignal(HH, BH, LH)
+      }
+    }
+    const UB = WB.i.indexOf("first_input"),
+      VB = WB.i.indexOf("first_move"),
+      OB = {
+        keyboardMouse: "keyboard",
+        touch: "touch",
+        gamepad: "pad"
+      };
+    class bB {
+      constructor(HH, BH, LH) {
+        this.replay = HH, this.quitContext = BH, this.deps = LH, this.ladder = new xB(WB.c, "first_move"), this.frustration = void 0, this.frustrationThrottle = new ZH({
+          maxPerWindow: 5,
+          windowMs: 6e4
+        }), this.activations = new Set, this.currentStay = null, this.moveSubscriptions = [], this.everPlayable = !1, this.everPointerLocked = !1, this.pointerUnlockedAtMs = -1 / 0, this.everythingMenu = null, this.lastGameName = null, this.unsentStepMarkers = [], this.frustration = new TB(((HH, BH, LH) => {
+          this.onFrustration(HH, BH, LH)
+        })), BH.setFlowProperties((HH => this.quitProperties(HH)))
+      }
+      get stay() {
+        return this.currentStay
+      }
+      start() {
+        var HH;
+        this.reachStep("page_loaded"), SB.k.subscribe("sessionReplayStayOpened", (HH => {
+          this.resendStay(HH)
+        })), SB.k.subscribe("pointerLockUpdate", (HH => {
+          this.pointerLockChanged(HH)
+        })), SB.k.subscribe("localBlockMined", (() => {
+          this.blockBroken()
+        })), SB.k.subscribe("blockChangeRefused", (() => {
+          this.noteFrustration("block_change_refused")
+        })), SB.k.subscribe("controlsTutorialShown", (HH => {
+          this.controlsTutorialShown(HH)
+        })), SB.k.subscribe("showShopTouchTutorial", (HH => {
+          !1 !== HH && this.controlsTutorialShown("shop")
+        })), SB.k.subscribe("appManagerUpdated|openInGameMenuName", (HH => {
+          this.inGameMenuChanged(HH)
+        })), SB.k.subscribe("appManagerUpdated|openEverythingMenuName", (HH => {
+          this.everythingMenuChanged(HH)
+        })), document.addEventListener("pointerlockerror", (() => {
+          this.pointerLockFailed()
+        })), null === (HH = (0, XB.c)()) || void 0 === HH || HH.onUnboundKey((() => {
+          this.unboundKeyPressed()
+        }))
+      }
+      gameLoading() {
+        this.reachStep("game_loading")
+      }
+      gameJoined(HH, BH, LH) {
+        const AH = LH && BH === this.lastGameName;
+        this.lastGameName = BH, this.stopWatchingMoves();
+        const rH = {
+          name: BH,
+          joinedAtMs: Date.now(),
+          playableAtMs: null,
+          visiblePlayedMs: 0,
+          deaths: 0,
+          ladder: new xB(WB.i, "first_move"),
+          unboundKeyPresses: 0
+        };
+        return this.currentStay = rH, this.reachStayStep("joined"), HH >= 2 && !AH && this.reachStep("second_game"), rH
+      }
+      gamePlayable() {
+        const HH = this.currentStay;
+        null !== HH && (HH.playableAtMs = this.deps.now(), this.everPlayable = !0, this.reachStep("game_playable"), this.reachStayStep("game_playable"), this.deps.isPointerLocked() && this.pointerLocked(), this.watchMoves())
+      }
+      input() {
+        const HH = this.currentStay;
+        null === HH || null === HH.playableAtMs || HH.ladder.furthestStepIndex >= UB || (this.reachStep("first_input"), this.reachStayStep("first_input"))
+      }
+      played60s() {
+        this.reachStep("played_60s"), this.reachStayStep("played_60s")
+      }
+      gameLeft() {
+        this.stopWatchingMoves(), this.currentStay = null
+      }
+      IX() {
+        var HH, BH, LH;
+        this.sendStepMarkers(), this.frustration.checkIdle({
+          nowMs: this.deps.now(),
+          lastInputAtMs: Math.max(null !== (HH = this.quitContext.getLastInputAtMs()) && void 0 !== HH ? HH : 0, null !== (BH = null === (LH = this.currentStay) || void 0 === LH ? void 0 : LH.playableAtMs) && void 0 !== BH ? BH : 0),
+          pointerLocked: this.deps.isPointerLocked() && "gamepad" !== this.deps.getInputDevice(),
+          playable: this.isPlayable(),
+          visible: this.deps.isPageVisible()
+        })
+      }
+      pointerLocked() {
+        this.isPlayable() && (this.everPointerLocked = !0, this.activate("first_pointer_lock"), this.reachStep("pointer_locked"), this.reachStayStep("pointer_locked"))
+      }
+      pointerLockFailed() {
+        this.isPlayable() && this.deps.now() - this.pointerUnlockedAtMs >= 1500 && this.noteFrustration("pointer_lock_failed")
+      }
+      moved() {
+        this.stopWatchingMoves(), this.activate("first_move", {
+          input: OB[this.deps.getInputDevice()]
+        }), this.reachStep("first_move"), this.reachStayStep("first_move")
+      }
+      blockBroken() {
+        this.isPlayable() && (this.activate("first_block_broken"), this.reachStep("first_block"), this.reachStayStep("first_block"))
+      }
+      inGameMenuChanged(HH) {
+        null !== HH && this.menuOpened(HH, "inventory" === HH ? "first_inventory_open" : null)
+      }
+      everythingMenuChanged(HH) {
+        const BH = null === this.everythingMenu;
+        this.everythingMenu = HH, null !== HH && (this.menuOpened(HH, HH === MB.o.SETTINGS ? "first_settings_open" : null), HH === MB.o.SETTINGS && BH && null !== this.currentStay && this.noteFrustration("menu_toggling"))
+      }
+      pointerLockChanged(HH) {
+        HH ? this.pointerLocked() : this.pointerUnlockedAtMs = this.deps.now()
+      }
+      controlsTutorialShown(HH) {
+        const BH = `controls_tutorial_${HH}`;
+        this.activations.has(BH) || (this.activations.add(BH), this.replay.capture("controls_tutorial_shown", {
+          tutorial: HH,
+          ...this.timing()
+        }))
+      }
+      unboundKeyPressed() {
+        this.noteFrustration("unbound_key_burst");
+        const HH = this.currentStay;
+        null !== HH && HH.unboundKeyPresses < WB.k && (HH.unboundKeyPresses++, this.deps.publishStayProgress({
+          unboundKeyPresses: HH.unboundKeyPresses
+        }))
+      }
+      noteFrustration(HH) {
+        this.frustration.note(HH, this.deps.now())
+      }
+      quitProperties(HH) {
+        return {
+          ...this.ladderTags(),
+          ...this.frustration.tags(HH),
+          never_pointer_locked: this.everPlayable && !this.everPointerLocked && !this.deps.isTouchScreen() && "gamepad" !== this.deps.getInputDevice()
+        }
+      }
+      isPlayable() {
+        return null !== this.currentStay && null !== this.currentStay.playableAtMs
+      }
+      ladderTags() {
+        var HH;
+        return {
+          furthest_step: null !== (HH = this.ladder.furthest) && void 0 !== HH ? HH : "",
+          furthest_step_index: this.ladder.furthestStepIndex
+        }
+      }
+      reachStep(HH) {
+        null !== this.ladder.reach(HH) && (this.replay.setSessionProperties(this.ladderTags(), !1), this.unsentStepMarkers.push(WB.c.indexOf(HH)), this.sendStepMarkers())
+      }
+      sendStepMarkers() {
+        for (; this.unsentStepMarkers.length > 0 && this.replay.addReplayMarker(AH.j.step, {
+            step: this.unsentStepMarkers[0]
+          }, !0);) this.unsentStepMarkers.shift()
+      }
+      resendStay(HH) {
+        const BH = this.currentStay;
+        var LH;
+        null !== BH && BH.name === HH && this.deps.publishStayProgress({
+          furthestStep: null !== (LH = BH.ladder.furthest) && void 0 !== LH ? LH : void 0,
+          unboundKeyPresses: BH.unboundKeyPresses
+        })
+      }
+      reachStayStep(HH) {
+        var BH;
+        const LH = null === (BH = this.currentStay) || void 0 === BH ? void 0 : BH.ladder;
+        void 0 !== LH && null !== LH.reach(HH) && this.deps.publishStayProgress({
+          furthestStep: LH.furthest
+        })
+      }
+      menuOpened(HH, BH) {
+        this.replay.capture("menu_opened", {
+          menu: HH
+        }), null !== BH && this.activate(BH)
+      }
+      activate(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.activations.has(HH) || (this.activations.add(HH), this.replay.capture(HH, {
+          ...BH,
+          ...this.timing()
+        }))
+      }
+      timing() {
+        var HH, BH;
+        const LH = this.deps.now(),
+          AH = null !== (HH = null === (BH = this.currentStay) || void 0 === BH ? void 0 : BH.playableAtMs) && void 0 !== HH ? HH : null;
+        return {
+          ms_since_page_load: Math.round(LH),
+          ms_since_playable: null === AH ? null : Math.round(LH - AH)
+        }
+      }
+      onFrustration(HH, BH, LH) {
+        this.replay.setSessionProperties(this.frustration.tags(), !1), this.replay.addReplayMarker(AH.j.frustration, {
+          signal: WB.f.indexOf(HH)
+        });
+        const rH = this.frustrationThrottle.allow(HH, Date.now());
+        null !== rH && this.replay.capture("frustration_signal", {
+          signal: HH,
+          count: BH,
+          window_ms: LH,
+          suppressed_since_last: rH
+        })
+      }
+      watchMoves() {
+        var HH, BH;
+        if (0 === this.moveSubscriptions.length && (null !== (HH = null === (BH = this.currentStay) || void 0 === BH ? void 0 : BH.ladder.furthestStepIndex) && void 0 !== HH ? HH : 1 / 0) < VB) {
+          const HH = () => {
+            this.moved()
+          };
+          this.moveSubscriptions = [SB.k.subscribe("usedKeyboard", HH), SB.k.subscribe("stickMoved", HH)]
+        }
+      }
+      stopWatchingMoves() {
+        for (const HH of this.moveSubscriptions) SB.k.unsubscribe(HH);
+        this.moveSubscriptions = []
+      }
+    }
+    const kB = ["quit_after_hitch", "quit_after_death", "quit_during_load", "quit_in_menu", "quit_idle", "quit_after_ad"],
+      mB = ["quit_during_load", "quit_after_ad", "quit_after_death", "quit_after_hitch", "quit_idle", "quit_in_menu"];
 
-    function xe(VV) {
-      var eV;
-      return null !== (eV = ee.find((eV => VV.includes(eV)))) && void 0 !== eV ? eV : "none"
+    function oB(HH) {
+      var BH;
+      return null !== (BH = mB.find((BH => HH.includes(BH)))) && void 0 !== BH ? BH : "none"
     }
 
-    function Je(VV, eV, xV) {
-      return null !== VV && eV - VV < xV
+    function IB(HH, BH, LH) {
+      return null !== HH && BH - HH < LH
     }
-    class Ye {
+    class fB {
       constructor() {
         this.history = {
           lastHitchAtMs: null,
           lastDeathAtMs: null,
           lastInputAtMs: null,
+          lastErrorAtMs: null,
           lastAdFinishedAtMs: null,
           adPlaying: !1
-        }, this.lastLoadStep = null
+        }, this.lastLoadStep = null, this.flowProperties = () => ({})
       }
-      noteInput(VV) {
-        this.history.lastInputAtMs = VV
+      setFlowProperties(HH) {
+        this.flowProperties = HH
       }
-      noteHitch(VV) {
-        this.history.lastHitchAtMs = VV
+      noteInput(HH) {
+        this.history.lastInputAtMs = HH
       }
-      noteDeath(VV) {
-        this.history.lastDeathAtMs = VV
+      noteHitch(HH) {
+        this.history.lastHitchAtMs = HH
+      }
+      noteDeath(HH) {
+        this.history.lastDeathAtMs = HH
+      }
+      noteError(HH) {
+        this.history.lastErrorAtMs = HH
+      }
+      getLastInputAtMs() {
+        return this.history.lastInputAtMs
       }
       forgetGame() {
-        this.history.lastDeathAtMs = null, this.history.lastHitchAtMs = null
+        this.history.lastDeathAtMs = null, this.history.lastHitchAtMs = null, this.history.lastErrorAtMs = null
       }
       noteAdStarted() {
         this.history.adPlaying = !0
       }
-      noteAdFinished(VV) {
-        this.history.adPlaying = !1, this.history.lastAdFinishedAtMs = VV
+      noteAdFinished(HH) {
+        this.history.adPlaying = !1, this.history.lastAdFinishedAtMs = HH
       }
-      noteLoadStep(VV) {
-        this.lastLoadStep = VV
+      noteLoadStep(HH) {
+        this.lastLoadStep = HH
       }
       getLastLoadStep() {
         return this.lastLoadStep
       }
-      quit(VV) {
-        const eV = function(VV, eV) {
-            var xV, JV;
-            const YV = [];
-            return Je(eV.lastHitchAtMs, VV.nowMs, 15e3) && YV.push("quit_after_hitch"), Je(eV.lastDeathAtMs, VV.nowMs, 15e3) && YV.push("quit_after_death"), VV.loading ? YV.push("quit_during_load") : "page" !== VV.quitFrom || VV.inGame && !VV.menuOpen || YV.push("quit_in_menu"), Je(null !== (xV = eV.lastInputAtMs) && void 0 !== xV ? xV : 0, VV.nowMs, 6e4) || YV.push("quit_idle"), (!0 === eV.adPlaying || Je(null !== (JV = eV.lastAdFinishedAtMs) && void 0 !== JV ? JV : null, VV.nowMs, 3e4)) && YV.push("quit_after_ad"), YV
-          }(VV, this.history),
-          xV = {
-            quit_from: VV.quitFrom,
-            in_game: VV.inGame,
-            quit_reasons: eV.join(","),
-            quit_reason: xe(eV)
+      quit(HH) {
+        const BH = function(HH, BH) {
+            var LH, AH;
+            const rH = [];
+            return IB(BH.lastHitchAtMs, HH.nowMs, 15e3) && rH.push("quit_after_hitch"), IB(BH.lastDeathAtMs, HH.nowMs, 15e3) && rH.push("quit_after_death"), HH.loading ? rH.push("quit_during_load") : "page" !== HH.quitFrom || HH.inGame && !HH.menuOpen || rH.push("quit_in_menu"), IB(null !== (LH = BH.lastInputAtMs) && void 0 !== LH ? LH : 0, HH.nowMs, 6e4) || rH.push("quit_idle"), (!0 === BH.adPlaying || IB(null !== (AH = BH.lastAdFinishedAtMs) && void 0 !== AH ? AH : null, HH.nowMs, 3e4)) && rH.push("quit_after_ad"), rH
+          }(HH, this.history),
+          LH = function(HH, BH) {
+            var LH;
+            return IB(BH.lastDeathAtMs, HH, 1e4) || IB(null !== (LH = BH.lastErrorAtMs) && void 0 !== LH ? LH : null, HH, 1e4)
+          }(HH.nowMs, this.history),
+          AH = {
+            quit_from: HH.quitFrom,
+            in_game: HH.inGame,
+            quit_reasons: BH.join(","),
+            quit_reason: oB(BH),
+            rage_quit: LH,
+            ...this.flowProperties(LH)
           };
-        var JV;
-        eV.includes("quit_during_load") && (xV.last_load_step = null !== (JV = this.lastLoadStep) && void 0 !== JV ? JV : "none");
-        null !== VV.gameName && (xV.game_name_with_variation = VV.gameName, xV.game_name = (0, CV.Pb)(VV.gameName));
-        for (const YV of Ve) xV[YV] = eV.includes(YV);
+        var rH;
+        BH.includes("quit_during_load") && (AH.last_load_step = null !== (rH = this.lastLoadStep) && void 0 !== rH ? rH : "none");
+        null !== HH.gameName && (AH.game_name_with_variation = HH.gameName, AH.game_name = (0, yH.Wb)(HH.gameName));
+        for (const SH of kB) AH[SH] = BH.includes(SH);
         return {
-          reasons: eV,
-          properties: xV
+          reasons: BH,
+          properties: AH
         }
       }
     }
-    class Ue {
-      constructor(VV) {
-        this.deps = VV, this.quitContext = new Ye, this.loading = !1, this.inGame = !1, this.switching = !1, this.nextLeaveIsNotAQuit = !1, this.pendingQuit = null, this.exited = !1
+    class lB {
+      constructor(HH) {
+        this.deps = HH, this.quitContext = new fB, this.loading = !1, this.inGame = !1, this.switching = !1, this.nextLeaveIsNotAQuit = !1, this.pendingQuit = null, this.exited = !1
       }
       joinStarted() {
         this.loading = !0, this.nextLeaveIsNotAQuit = !1, this.inGame && (this.switching = !0), this.resolvePendingQuitAsSwitch()
@@ -396,36 +897,36 @@ export const modules = {
       gamePlayable() {
         this.loading = !1
       }
-      joinFailed(VV) {
-        this.loading = !1, this.nextLeaveIsNotAQuit = this.inGame, this.deps.capture("join_failed", VV)
+      joinFailed(HH) {
+        this.loading = !1, this.nextLeaveIsNotAQuit = this.inGame, this.deps.capture("join_failed", HH)
       }
       disconnected() {
         this.nextLeaveIsNotAQuit = !0
       }
-      kickedForAfk(VV) {
+      kickedForAfk(HH) {
         this.nextLeaveIsNotAQuit = !0, this.deps.capture("kicked_afk", {
-          game_name_with_variation: VV
+          game_name_with_variation: HH
         })
       }
-      gameLeft(VV) {
-        const eV = this.nextLeaveIsNotAQuit || this.deps.isJoinAbandoned(),
-          xV = this.switching,
-          JV = this.loading;
-        if (this.nextLeaveIsNotAQuit = !1, this.switching = !1, this.inGame = !1, null === VV) return;
-        if (xV || (this.loading = !1), eV) return void this.quitContext.forgetGame();
-        const YV = this.quitContext.quit({
+      gameLeft(HH) {
+        const BH = this.nextLeaveIsNotAQuit || this.deps.isJoinAbandoned(),
+          LH = this.switching,
+          AH = this.loading;
+        if (this.nextLeaveIsNotAQuit = !1, this.switching = !1, this.inGame = !1, null === HH) return;
+        if (LH || (this.loading = !1), BH) return void this.quitContext.forgetGame();
+        const rH = this.quitContext.quit({
           quitFrom: "game",
-          gameName: VV,
+          gameName: HH,
           nowMs: this.deps.now(),
           inGame: !0,
-          loading: JV,
+          loading: AH,
           menuOpen: !1
         });
-        this.quitContext.forgetGame(), xV ? this.captureSwitch(YV) : this.startPendingQuit(YV)
+        this.quitContext.forgetGame(), LH ? this.captureSwitch(rH) : this.startPendingQuit(rH)
       }
-      gameReplayOpened(VV) {
-        this.nextLeaveIsNotAQuit = !0, this.gameLeft(VV), this.deps.capture("game_replay_opened", {
-          from_game_name_with_variation: VV
+      gameReplayOpened(HH) {
+        this.nextLeaveIsNotAQuit = !0, this.gameLeft(HH), this.deps.capture("game_replay_opened", {
+          from_game_name_with_variation: HH
         })
       }
       playPageLeft() {
@@ -438,12 +939,12 @@ export const modules = {
           menuOpen: !1
         })))
       }
-      pageHidden(VV) {
+      pageHidden(HH) {
         if (this.exited) return;
         this.exited = !0;
-        const eV = this.pendingQuit;
-        null !== eV && (clearTimeout(eV.timer), this.pendingQuit = null, this.deps.onGameQuit(eV.quit), this.deps.captureOnExit("quit_context", eV.quit.properties, eV.atEpochMs));
-        const xV = {
+        const BH = this.pendingQuit;
+        null !== BH && (clearTimeout(BH.timer), this.pendingQuit = null, this.deps.onGameQuit(BH.quit), this.deps.captureOnExit("quit_context", BH.quit.properties, BH.atEpochMs));
+        const LH = {
             quitFrom: "page",
             gameName: null,
             nowMs: this.deps.now(),
@@ -451,112 +952,115 @@ export const modules = {
             loading: this.loading,
             menuOpen: this.deps.isMenuOpen()
           },
-          JV = this.quitContext.quit(xV);
-        this.inGame && this.deps.onGameQuit(JV), this.deps.captureOnExit("quit_context", {
-          ...VV,
-          ...JV.properties
+          AH = this.quitContext.quit(LH);
+        this.inGame && this.deps.onGameQuit(AH), this.deps.captureOnExit("quit_context", {
+          ...HH,
+          ...AH.properties
         })
       }
       pageRestored() {
         this.exited = !1, this.deps.capture("page_restored", {})
       }
-      startPendingQuit(VV) {
+      startPendingQuit(HH) {
         this.resolvePendingQuitAsSwitch();
-        const eV = {
-          quit: VV,
+        const BH = {
+          quit: HH,
           atEpochMs: Date.now(),
           timer: setTimeout((() => {
-            this.pendingQuit === eV && (this.pendingQuit = null, this.deps.onGameQuit(VV), this.deps.capture("quit_context", VV.properties, eV.atEpochMs))
+            this.pendingQuit === BH && (this.pendingQuit = null, this.deps.onGameQuit(HH), this.deps.capture("quit_context", HH.properties, BH.atEpochMs))
           }), 1e4)
         };
-        this.pendingQuit = eV
+        this.pendingQuit = BH
       }
       resolvePendingQuitAsSwitch() {
-        const VV = this.pendingQuit;
-        null !== VV && (clearTimeout(VV.timer), this.pendingQuit = null, "string" === typeof VV.quit.properties.game_name_with_variation && this.captureSwitch(VV.quit))
+        const HH = this.pendingQuit;
+        null !== HH && (clearTimeout(HH.timer), this.pendingQuit = null, "string" === typeof HH.quit.properties.game_name_with_variation && this.captureSwitch(HH.quit))
       }
-      captureSwitch(VV) {
+      captureSwitch(HH) {
         this.deps.capture("game_switched", {
-          from_game_name_with_variation: VV.properties.game_name_with_variation,
-          from_game_name: VV.properties.game_name,
-          after_death: VV.reasons.includes("quit_after_death"),
-          after_hitch: VV.reasons.includes("quit_after_hitch")
+          from_game_name_with_variation: HH.properties.game_name_with_variation,
+          from_game_name: HH.properties.game_name,
+          after_death: HH.reasons.includes("quit_after_death"),
+          after_hitch: HH.reasons.includes("quit_after_hitch")
         })
       }
     }
-    class ye {
-      constructor(VV) {
-        this.replay = VV, this.pointerLockThrottle = new zV({
+    var KB = LH(7065);
+    class cB {
+      constructor(HH) {
+        this.replay = HH, this.pointerLockThrottle = new ZH({
           maxPerWindow: 10,
           windowMs: 6e4
         }), this.counts = new Map, this.game = null, this.timer = null
       }
-      start(VV) {
-        VV.onUnboundKey((VV => {
-          this.onUnboundKey(VV)
-        })), VV.onPointerLock((VV => {
-          const eV = this.pointerLockThrottle.allow("pointer_lock_changed", Date.now());
-          null !== eV && this.replay.capture("pointer_lock_changed", {
-            locked: VV,
-            in_game: "inGame" === hV.b.get("gameState"),
-            menu_open: (0, sV.n)(),
-            suppressed_since_last: eV
+      start(HH) {
+        HH.onUnboundKey((HH => {
+          this.onUnboundKey(HH)
+        })), HH.onPointerLock((HH => {
+          const BH = this.pointerLockThrottle.allow("pointer_lock_changed", Date.now());
+          null !== BH && this.replay.capture("pointer_lock_changed", {
+            locked: HH,
+            in_game: "inGame" === AB.c.get("gameState"),
+            menu_open: (0, EB.t)(),
+            suppressed_since_last: BH
           })
-        })), lV.h.subscribe("leaveGame", (() => {
+        })), SB.k.subscribe("leaveGame", (() => {
           this.flush(!1)
         })), document.addEventListener("visibilitychange", (() => {
           document.hidden && this.flush(!0)
         }))
       }
-      onUnboundKey(VV) {
-        var eV;
-        const xV = (0, fV.e)().gameNameWithVariation;
-        xV !== this.game && (this.flush(!1), this.game = xV), this.counts.set(VV, (null !== (eV = this.counts.get(VV)) && void 0 !== eV ? eV : 0) + 1), this.timer ??= setTimeout((() => {
+      onUnboundKey(HH) {
+        var BH, LH;
+        const AH = (0, hB.c)().gameNameWithVariation;
+        AH !== this.game && (this.flush(!1), this.game = AH);
+        const rH = null !== (BH = (0, KB.i)(HH)) && void 0 !== BH ? BH : HH;
+        this.counts.set(rH, (null !== (LH = this.counts.get(rH)) && void 0 !== LH ? LH : 0) + 1), this.timer ??= setTimeout((() => {
           this.flush(!1)
-        }), 1e4)
+        }), 1e4 - Date.now() % 1e4)
       }
-      flush(VV) {
+      flush(HH) {
         if (null !== this.timer && (clearTimeout(this.timer), this.timer = null), 0 === this.counts.size) return;
-        const eV = (xV = this.counts, [...xV].sort(((VV, eV) => eV[1] - VV[1] || (VV[0] < eV[0] ? -1 : 1))));
-        var xV;
-        let JV = 0;
-        for (const [, UV] of eV) JV += UV;
-        const YV = {
-          key_counts: Object.fromEntries(eV),
-          keys: eV.map((VV => {
-            let [eV] = VV;
-            return eV
+        const BH = (LH = this.counts, [...LH].sort(((HH, BH) => BH[1] - HH[1] || (HH[0] < BH[0] ? -1 : 1))));
+        var LH;
+        let AH = 0;
+        for (const [, SH] of BH) AH += SH;
+        const rH = {
+          key_counts: Object.fromEntries(BH),
+          keys: BH.map((HH => {
+            let [BH] = HH;
+            return BH
           })).join(","),
-          top_key: eV[0][0],
-          presses: JV,
-          game_name: null === this.game ? null : (0, CV.Pb)(this.game),
+          top_key: BH[0][0],
+          presses: AH,
+          game_name: null === this.game ? null : (0, yH.Wb)(this.game),
           game_name_with_variation: this.game
         };
-        this.replay.addUnboundKeyPresses(this.counts), this.counts.clear(), VV ? this.replay.captureOnExit("unbound_keys", YV) : this.replay.capture("unbound_keys", YV)
+        this.replay.addUnboundKeyPresses(this.counts), this.counts.clear(), HH ? this.replay.captureOnExit("unbound_keys", rH) : this.replay.capture("unbound_keys", rH)
       }
     }
-    var pe = xV(165);
+    var eB = LH(152);
 
-    function Qe(VV) {
-      var eV, xV;
-      return null !== (eV = null === (xV = pe.i[VV]) || void 0 === xV ? void 0 : xV.toLowerCase()) && void 0 !== eV ? eV : String(VV)
+    function qB(HH) {
+      var BH, LH;
+      return null !== (BH = null === (LH = eB.h[HH]) || void 0 === LH ? void 0 : LH.toLowerCase()) && void 0 !== BH ? BH : String(HH)
     }
-    class ne {
-      constructor(VV, eV) {
-        this.replay = VV, this.quitContext = eV, this.startedAtMs = null, this.steps = new Map, this.firstGamePlayable = !1
+    class gB {
+      constructor(HH, BH) {
+        this.replay = HH, this.quitContext = BH, this.startedAtMs = null, this.steps = new Map, this.firstGamePlayable = !1
       }
       started() {
         this.startedAtMs = Date.now()
       }
-      stepCompleted(VV) {
-        if (this.steps.has(VV)) return;
-        const eV = performance.now();
-        this.steps.set(VV, eV);
-        const xV = Qe(VV);
-        this.quitContext.noteLoadStep(xV), this.firstGamePlayable || this.replay.capture("game_load_step", {
-          load_step: xV,
-          step_number: VV,
-          ms_since_page_load: Math.round(eV),
+      stepCompleted(HH) {
+        if (this.steps.has(HH)) return;
+        const BH = performance.now();
+        this.steps.set(HH, BH);
+        const LH = qB(HH);
+        this.quitContext.noteLoadStep(LH), this.firstGamePlayable || this.replay.capture("game_load_step", {
+          load_step: LH,
+          step_number: HH,
+          ms_since_page_load: Math.round(BH),
           ms_since_load_start: null === this.startedAtMs ? null : Date.now() - this.startedAtMs
         })
       }
@@ -567,106 +1071,151 @@ export const modules = {
         this.startedAtMs = null
       }
       playable() {
-        let VV = null,
-          eV = null;
-        for (const [JV, YV] of [...this.steps].sort(((VV, eV) => VV[1] - eV[1]))) null !== eV && (null === VV || YV - eV > VV.ms) && (VV = {
-          step: JV,
-          ms: YV - eV
-        }), eV = YV;
-        const xV = null === this.startedAtMs ? null : Date.now() - this.startedAtMs;
+        let HH = null,
+          BH = null;
+        for (const [AH, rH] of [...this.steps].sort(((HH, BH) => HH[1] - BH[1]))) null !== BH && (null === HH || rH - BH > HH.ms) && (HH = {
+          step: AH,
+          ms: rH - BH
+        }), BH = rH;
+        const LH = null === this.startedAtMs ? null : Date.now() - this.startedAtMs;
         return this.firstGamePlayable = !0, this.ended(), {
-          load_ms: xV,
-          slowest_load_step: null === VV ? null : Qe(VV.step),
-          slowest_load_step_ms: null === VV ? null : Math.round(VV.ms)
+          load_ms: LH,
+          slowest_load_step: null === HH ? null : qB(HH.step),
+          slowest_load_step_ms: null === HH ? null : Math.round(HH.ms)
         }
       }
       resetSteps() {
         this.steps.clear(), this.quitContext.noteLoadStep(null)
       }
     }
-    class we {
-      constructor(VV, eV) {
-        this.replay = VV, this.quitContext = eV, this.chatThrottle = new zV({
-          maxPerWindow: 10,
-          windowMs: 6e4
-        }), this.settings = hV.b.get("clientEscMenuOptions"), this.pendingSettings = {}, this.settingsTimer = null, this.adRequest = null, this.playingAd = null
+    const NB = ["keydown", "pointerdown", "touchstart"];
+    class RB {
+      constructor(HH) {
+        this.replay = HH, this.firstInGameInputSent = !1
+      }
+      startFirstInputWatch() {
+        setTimeout((() => {
+          ! function(HH) {
+            var BH;
+            let LH = !1;
+            const AH = (BH, AH, rH) => {
+              LH || (LH = !0, HH(BH, AH, rH))
+            };
+            if ("undefined" !== typeof PerformanceObserver && null !== (BH = PerformanceObserver.supportedEntryTypes) && void 0 !== BH && BH.includes("first-input")) {
+              const HH = new PerformanceObserver((BH => {
+                const [LH] = BH.getEntries();
+                HH.disconnect(), AH(LH.name, LH.startTime, !0)
+              }));
+              return void HH.observe({
+                type: "first-input",
+                buffered: !0
+              })
+            }
+            const rH = new AbortController,
+              SH = HH => {
+                rH.abort(), AH(HH.type, HH.timeStamp, !1)
+              };
+            for (const hH of NB) window.addEventListener(hH, SH, {
+              capture: !0,
+              passive: !0,
+              signal: rH.signal
+            })
+          }(((HH, BH, LH) => {
+            this.replay.capture("first_input", Object.fromEntries([
+              ["input_type", HH],
+              ["ms_since_page_load", Math.round(BH)],
+              ["buffered", LH]
+            ]))
+          }))
+        }), 100)
+      }
+      onFirstInGameInput(HH, BH) {
+        this.firstInGameInputSent = !0, this.replay.capture("first_ingame_input", Object.fromEntries([
+          ["input_type", HH],
+          ["ms_since_playable", Math.round(performance.now() - BH)],
+          ["ms_since_page_load", Math.round(performance.now())]
+        ]))
+      }
+      capturePageLoadTiming() {
+        const HH = performance.getEntriesByType("navigation")[0],
+          BH = performance.getEntriesByName("first-contentful-paint")[0];
+        this.replay.capture("page_load_timing", {
+          ttfb_ms: HH ? Math.round(HH.responseStart) : null,
+          first_contentful_paint_ms: BH ? Math.round(BH.startTime) : null,
+          dom_content_loaded_ms: HH ? Math.round(HH.domContentLoadedEventEnd) : null,
+          load_ms: HH ? Math.round(HH.loadEventEnd) : null,
+          transfer_kb: HH ? Math.round(HH.transferSize / 1024) : null,
+          recording_started_ms: Math.round(performance.now())
+        })
+      }
+    }
+    class jB {
+      constructor(HH, BH) {
+        this.replay = HH, this.quitContext = BH, this.settings = AB.c.get("clientEscMenuOptions"), this.pendingSettings = {}, this.settingsTimer = null, this.adRequest = null, this.playingAd = null
       }
       start() {
-        lV.h.subscribe("chatSent", (VV => {
+        SB.k.subscribe("purchaseStarted", (HH => {
           let {
-            length: eV
-          } = VV;
-          null !== this.chatThrottle.allow("chat", Date.now()) && this.replay.capture("chat_sent", {
-            length: eV
-          })
-        })), lV.h.subscribe("purchaseStarted", (VV => {
-          let {
-            product: eV
-          } = VV;
+            product: BH
+          } = HH;
           this.replay.setFlag("purchase_intent"), this.replay.capture("purchase_started", {
-            product: eV
+            product: BH
           })
-        })), lV.h.subscribe("purchaseEnded", (VV => {
+        })), SB.k.subscribe("purchaseEnded", (HH => {
           let {
-            outcome: eV
-          } = VV;
+            outcome: BH
+          } = HH;
           this.replay.capture("purchase_ended", {
-            outcome: eV
+            outcome: BH
           })
-        })), lV.h.subscribe("adRequested", (VV => {
+        })), SB.k.subscribe("adRequested", (HH => {
           let {
-            adKind: eV,
-            provider: xV
-          } = VV;
+            adKind: BH,
+            provider: LH
+          } = HH;
           this.adRequest = {
-            adKind: eV,
-            provider: xV,
+            adKind: BH,
+            provider: LH,
             atMs: performance.now()
           }
-        })), lV.h.subscribe("appManagerUpdated|soundOnFromAd", (VV => {
-          VV && null !== this.playingAd ? this.onAdFinished() : VV || null !== this.playingAd || this.onAdStarted()
-        }));
-        for (const VV of ["openEverythingMenuName", "openInGameMenuName"]) lV.h.subscribe(`appManagerUpdated|${VV}`, (VV => {
-          null !== VV && this.replay.capture("menu_opened", {
-            menu: VV
-          })
-        }));
-        lV.h.subscribe("appManagerUpdated|clientEscMenuOptions", (VV => {
-          hV.b.isApplyingDefaults ? this.settings = VV : this.onSettingsChanged(VV)
+        })), SB.k.subscribe("appManagerUpdated|soundOnFromAd", (HH => {
+          HH && null !== this.playingAd ? this.onAdFinished() : HH || null !== this.playingAd || this.onAdStarted()
+        })), SB.k.subscribe("appManagerUpdated|clientEscMenuOptions", (HH => {
+          AB.c.isApplyingDefaults ? this.settings = HH : this.onSettingsChanged(HH)
         }))
       }
       onAdStarted() {
-        var VV, eV;
-        const xV = performance.now(),
-          JV = null !== this.adRequest && xV - this.adRequest.atMs < 6e4 ? this.adRequest : null;
+        var HH, BH;
+        const LH = performance.now(),
+          AH = null !== this.adRequest && LH - this.adRequest.atMs < 6e4 ? this.adRequest : null;
         this.adRequest = null, this.playingAd = {
-          ad_kind: null !== (VV = null === JV || void 0 === JV ? void 0 : JV.adKind) && void 0 !== VV ? VV : "unknown",
-          provider: null !== (eV = null === JV || void 0 === JV ? void 0 : JV.provider) && void 0 !== eV ? eV : null,
-          startedAtMs: xV
-        }, this.replay.setFlag("ad_shown"), this.quitContext.noteAdStarted(), this.replay.capture("ad_started", this.adProperties(this.playingAd, xV))
+          ad_kind: null !== (HH = null === AH || void 0 === AH ? void 0 : AH.adKind) && void 0 !== HH ? HH : "unknown",
+          provider: null !== (BH = null === AH || void 0 === AH ? void 0 : AH.provider) && void 0 !== BH ? BH : null,
+          startedAtMs: LH
+        }, this.replay.setFlag("ad_shown"), this.quitContext.noteAdStarted(), this.replay.capture("ad_started", this.adProperties(this.playingAd, LH))
       }
       onAdFinished() {
-        const VV = performance.now(),
-          eV = this.playingAd;
-        this.playingAd = null, this.quitContext.noteAdFinished(VV), this.replay.capture("ad_finished", {
-          ...this.adProperties(eV, VV),
-          ad_ms: Math.round(VV - eV.startedAtMs)
+        const HH = performance.now(),
+          BH = this.playingAd;
+        this.playingAd = null, this.quitContext.noteAdFinished(HH), this.replay.capture("ad_finished", {
+          ...this.adProperties(BH, HH),
+          ad_ms: Math.round(HH - BH.startedAtMs)
         })
       }
-      adProperties(VV, eV) {
+      adProperties(HH, BH) {
         return {
-          ad_kind: VV.ad_kind,
-          provider: VV.provider,
-          minutes_since_page_load: Math.floor(eV / 6e4),
-          in_game: "inGame" === hV.b.get("gameState")
+          ad_kind: HH.ad_kind,
+          provider: HH.provider,
+          minutes_since_page_load: Math.floor(BH / 6e4),
+          in_game: "inGame" === AB.c.get("gameState")
         }
       }
-      onSettingsChanged(VV) {
-        Object.assign(this.pendingSettings, function(VV, eV) {
-          const xV = {};
-          for (const JV of Object.keys(eV)) VV[JV] !== eV[JV] && (xV[JV] = eV[JV]);
-          return xV
-        }(this.settings, VV)), this.settings = VV, null !== this.settingsTimer && clearTimeout(this.settingsTimer), this.settingsTimer = setTimeout((() => {
+      onSettingsChanged(HH) {
+        Object.assign(this.pendingSettings, function(HH, BH) {
+          const LH = {};
+          for (const AH of Object.keys(BH)) HH[AH] !== BH[AH] && (LH[AH] = BH[AH]);
+          return LH
+        }(this.settings, HH)), this.settings = HH, null !== this.settingsTimer && clearTimeout(this.settingsTimer), this.settingsTimer = setTimeout((() => {
           this.settingsTimer = null, Object.keys(this.pendingSettings).length > 0 && (this.replay.capture("settings_changed", {
             changed_settings: Object.keys(this.pendingSettings),
             values: this.pendingSettings
@@ -675,382 +1224,257 @@ export const modules = {
       }
     }
 
-    function Ze(VV) {
-      switch ((0, DV.r)(VV)) {
-        case iV.e.DISCORD_GUILD:
+    function nB(HH) {
+      switch ((0, iH.v)(HH)) {
+        case pH.e.DISCORD_GUILD:
           return "discord_guild";
-        case iV.e.DISCORD_DM:
+        case pH.e.DISCORD_DM:
           return "discord_dm";
         default:
-          return (0, DV.I)(VV) ? "public" : "private"
+          return (0, iH.N)(HH) ? "public" : "private"
       }
     }
-    class ve {
-      constructor(VV) {
-        this.replay = VV, this.errorThrottle = new zV({
-          maxPerWindow: 3,
-          windowMs: 6e4
-        }), this.hitchThrottle = new zV({
-          maxPerWindow: 5,
-          windowMs: 6e4
-        }), this.attachedToRender = !1, this.framesThisTick = 0, this.lastTickMs = performance.now(), this.ticks = 0, this.gamesJoined = 0, this.game = null, this.gameJoinedEvent = void 0, this.leaves = void 0, this.joinLoad = void 0, this.deathSubscription = null, this.inputSinceActiveMarker = !1, this.firstInGameInputSent = !1, this.firstMinutePlayedSent = !1, this.gameJoinedEvent = new OV.c(VV), this.leaves = new Ue({
-          capture: (eV, xV, JV) => {
-            void 0 === JV ? VV.capture(eV, xV) : VV.captureAt(eV, xV, JV)
+    class FB {
+      constructor(HH) {
+        this.replay = HH, this.framesThisTick = 0, this.lastTickMs = performance.now(), this.ticks = 0, this.gamesJoined = 0, this.pageEvents = void 0, this.flows = void 0, this.health = void 0, this.leaves = void 0, this.joinLoad = void 0, this.unsubscribeDeaths = () => {}, this.inputSinceActiveMarker = !1, this.firstMinutePlayedSent = !1, this.pageEvents = new RB(HH), this.leaves = new lB({
+          capture: (BH, LH, AH) => {
+            void 0 === AH ? HH.capture(BH, LH) : HH.captureAt(BH, LH, AH)
           },
-          captureOnExit: (eV, xV, JV) => {
-            VV.captureOnExit(eV, xV, JV)
+          captureOnExit: (BH, LH, AH) => {
+            HH.captureOnExit(BH, LH, AH)
           },
-          onGameQuit: VV => {
+          onGameQuit: HH => {
             let {
-              reasons: eV,
-              properties: xV
-            } = VV;
-            const JV = xV.game_name_with_variation;
-            lV.h.QZ("sessionReplayGameQuit", {
-              reasons: eV,
-              gameName: "string" === typeof JV ? JV : null
+              reasons: BH,
+              properties: LH
+            } = HH;
+            const AH = LH.game_name_with_variation;
+            SB.k.AX("sessionReplayGameQuit", {
+              reasons: BH,
+              gameName: "string" === typeof AH ? AH : null
             })
           },
-          isMenuOpen: sV.n,
-          isJoinAbandoned: uV.h,
+          isMenuOpen: EB.t,
+          isJoinAbandoned: CB.e,
           now: () => performance.now()
-        }), this.joinLoad = new ne(VV, this.leaves.quitContext)
+        }), this.joinLoad = new gB(HH, this.leaves.quitContext), this.flows = function(HH, BH) {
+          return new bB(HH, BH, {
+            now: () => performance.now(),
+            isTouchScreen: () => AB.c.get("isTouchScreen"),
+            getInputDevice: () => AB.c.get("activeInputDevice"),
+            isPointerLocked: () => null !== document.pointerLockElement,
+            isPageVisible: () => !document.hidden,
+            publishStayProgress: HH => {
+              SB.k.AX("sessionReplayStayProgress", HH)
+            }
+          })
+        }(HH, this.leaves.quitContext), this.health = new QB(HH, this.leaves.quitContext, this.flows)
       }
       start() {
-        const VV = (0, SV.e)(),
-          eV = new ye(this.replay);
-        null !== VV && eV.start(VV), this.capturePageLoadTiming();
-        const xV = hV.b.get("gameState");
-        "inGame" === xV ? this.joinConnectedGame() : "loadingScreen" !== xV && "findingLobby" !== xV || this.leaves.joinStarted(), this.subscribeToGameFlow(), new we(this.replay, this.leaves.quitContext).start(), this.subscribeToErrors(), this.trackInput(), setTimeout((() => {
-          ! function(VV) {
-            var eV;
-            let xV = !1;
-            const JV = (eV, JV, YV) => {
-              xV || (xV = !0, VV(eV, JV, YV))
-            };
-            if ("undefined" !== typeof PerformanceObserver && null !== (eV = PerformanceObserver.supportedEntryTypes) && void 0 !== eV && eV.includes("first-input")) {
-              const VV = new PerformanceObserver((eV => {
-                const [xV] = eV.getEntries();
-                VV.disconnect(), JV(xV.name, xV.startTime, !0)
-              }));
-              return void VV.observe({
-                type: "first-input",
-                buffered: !0
-              })
-            }
-            const YV = new AbortController,
-              UV = VV => {
-                YV.abort(), JV(VV.type, VV.timeStamp, !1)
-              };
-            for (const yV of IV) window.addEventListener(yV, UV, {
-              capture: !0,
-              passive: !0,
-              signal: YV.signal
-            })
-          }(((VV, eV, xV) => {
-            this.replay.capture("first_input", Object.fromEntries([
-              ["input_type", VV],
-              ["ms_since_page_load", Math.round(eV)],
-              ["buffered", xV]
-            ]))
-          }))
-        }), 100), (0, mV.y)((() => {
+        const HH = (0, XB.c)(),
+          BH = new cB(this.replay);
+        null !== HH && BH.start(HH), this.pageEvents.capturePageLoadTiming(), this.flows.start();
+        const LH = AB.c.get("gameState");
+        "inGame" === LH ? this.joinConnectedGame() : "loadingScreen" !== LH && "findingLobby" !== LH || this.leaves.joinStarted(), this.subscribeToGameFlow(), new jB(this.replay, this.leaves.quitContext).start(), this.health.start(), this.trackInput(), this.pageEvents.startFirstInputWatch(), (0, tB.B)((() => {
           this.framesThisTick++
         })), setInterval((() => {
-          this.Iq()
+          this.Dv()
         }), 1e3), window.addEventListener("pagehide", (() => {
-          this.gameJoinedEvent.flush(!0), eV.flush(!0), this.leaves.pageHidden(this.replay.finalTags())
-        })), window.addEventListener("pageshow", (VV => {
-          VV.persisted && this.leaves.pageRestored()
+          BH.flush(!0), this.leaves.pageHidden(this.replay.finalTags())
+        })), window.addEventListener("pageshow", (HH => {
+          HH.persisted && this.leaves.pageRestored()
         }))
       }
       trackInput() {
-        const VV = VV => {
-          var eV, xV;
-          this.inputSinceActiveMarker = !0, this.leaves.quitContext.noteInput(VV.timeStamp);
-          const JV = null !== (eV = null === (xV = this.game) || void 0 === xV ? void 0 : xV.playableAtMs) && void 0 !== eV ? eV : null;
-          this.firstInGameInputSent || null === JV || this.onFirstInGameInput(VV.type, JV)
+        const HH = HH => {
+          var BH, LH;
+          this.inputSinceActiveMarker = !0, this.leaves.quitContext.noteInput(HH.timeStamp), this.flows.input();
+          const AH = null !== (BH = null === (LH = this.flows.stay) || void 0 === LH ? void 0 : LH.playableAtMs) && void 0 !== BH ? BH : null;
+          this.pageEvents.firstInGameInputSent || null === AH || this.pageEvents.onFirstInGameInput(HH.type, AH)
         };
-        for (const eV of ["keydown", "pointerdown", "pointermove", "wheel"]) window.addEventListener(eV, VV, {
+        for (const BH of ["keydown", "pointerdown", "pointermove", "wheel"]) window.addEventListener(BH, HH, {
           capture: !0,
           passive: !0
         })
       }
-      onFirstInGameInput(VV, eV) {
-        this.firstInGameInputSent = !0, this.replay.capture("first_ingame_input", Object.fromEntries([
-          ["input_type", VV],
-          ["ms_since_playable", Date.now() - eV],
-          ["ms_since_page_load", Math.round(performance.now())]
-        ]))
-      }
-      capturePageLoadTiming() {
-        const VV = performance.getEntriesByType("navigation")[0],
-          eV = performance.getEntriesByName("first-contentful-paint")[0];
-        this.replay.capture("page_load_timing", {
-          ttfb_ms: VV ? Math.round(VV.responseStart) : null,
-          first_contentful_paint_ms: eV ? Math.round(eV.startTime) : null,
-          dom_content_loaded_ms: VV ? Math.round(VV.domContentLoadedEventEnd) : null,
-          load_ms: VV ? Math.round(VV.loadEventEnd) : null,
-          transfer_kb: VV ? Math.round(VV.transferSize / 1024) : null,
-          recording_started_ms: Math.round(performance.now())
-        })
-      }
       subscribeToGameFlow() {
-        lV.h.subscribe("joinedGame", (VV => {
-            let {
-              gameNameWithVariation: eV,
-              lobbyName: xV
-            } = VV;
-            (0, uV.h)() || this.onJoinedGame(eV, xV)
-          })), lV.h.subscribe("leaveGame", (() => {
-            var VV, eV;
-            const xV = null !== (VV = null === (eV = this.game) || void 0 === eV ? void 0 : eV.name) && void 0 !== VV ? VV : null;
-            this.onLeftGame(), this.leaves.gameLeft(xV)
-          })), lV.h.subscribe("replayViewer|replayLoaded", (() => {
-            if (null === this.game) return;
-            const VV = this.game.name;
-            this.onLeftGame(), this.leaves.gameReplayOpened(VV)
-          })), lV.h.subscribe("matchmakeAndPlayStepCompleted", (VV => {
-            let {
-              step: eV
-            } = VV;
-            this.joinLoad.stepCompleted(eV)
-          })), lV.h.subscribe("leftPlayPage", (() => {
-            this.leaves.playPageLeft(), this.joinLoad.ended()
-          })), lV.h.subscribe("joinFailed", (VV => {
-            let {
-              step: eV,
-              severity: xV
-            } = VV;
-            this.leaves.joinFailed({
-              step: eV,
-              severity: xV,
-              game_name_with_variation: (0, fV.e)().requestedGameNameWithVariation,
-              last_load_step: this.leaves.quitContext.getLastLoadStep()
-            }), this.joinLoad.ended()
-          })), lV.h.subscribe("kickedForAfk", (() => {
-            var VV, eV;
-            this.leaves.kickedForAfk(null !== (VV = null === (eV = this.game) || void 0 === eV ? void 0 : eV.name) && void 0 !== VV ? VV : null)
-          })), lV.h.subscribe("unwantedLeftGame", (VV => {
-            this.leaves.disconnected(), this.replay.setFlag("disconnected"), this.replay.capture("disconnected", {
-              reason: VV.reason,
-              can_reconnect: VV.canReconnect,
-              automatically_reconnect: VV.automaticallyReconnect,
-              requires_refresh: VV.requiresRefresh
-            })
-          })), lV.h.subscribe("appManagerUpdated|gameState", (VV => {
-            "loadingScreen" === VV ? this.leaves.joinStarted() : "findingLobby" === VV ? (this.leaves.joinStarted(), this.joinLoad.started(), this.replay.capture("game_loading_started", {
-              entry_source: hV.b.get("gameEntrySource")
-            })) : "inGame" === VV ? this.onPlayable() : "landingPage" === VV && (this.replay.capture("homepage_viewed"), this.replay.capture("$screen", {
-              $screen_name: "homepage"
-            }))
-          })), lV.h.subscribe("appManagerUpdated|gameEntrySource", (VV => {
-            "autoReconnect" !== VV && "manualReconnect" !== VV || this.replay.capture("reconnect_attempted", {
-              automatic: "autoReconnect" === VV
-            })
-          })),
-          function(VV) {
-            var eV, xV;
-            if ("undefined" === typeof PerformanceObserver || null === (eV = null === (xV = PerformanceObserver.supportedEntryTypes) || void 0 === xV ? void 0 : xV.includes("long-animation-frame")) || void 0 === eV || !eV) return;
-            let JV = null;
-            new PerformanceObserver((eV => {
-              for (const UV of eV.getEntries()) {
-                var xV, YV;
-                const eV = UV,
-                  yV = !(null !== JV && eV.startTime - JV.endMs < 50) || eV.duration >= 3 * (null !== (xV = null === (YV = JV) || void 0 === YV ? void 0 : YV.durationMs) && void 0 !== xV ? xV : 0);
-                JV = {
-                  endMs: eV.startTime + eV.duration,
-                  durationMs: eV.duration
-                }, !document.hidden && eV.duration >= 100 && yV && VV({
-                  frameMs: eV.duration,
-                  mainThreadMs: (0, dV.q)(eV)
-                })
-              }
-            })).observe({
-              type: "long-animation-frame"
-            })
-          }((VV => {
-            this.onFrameHitch(VV)
-          })), lV.h.subscribe("sessionReplayPlayerKill", (VV => {
-            let {
-              killstreak: eV
-            } = VV;
-            this.replay.capture("player_kill", {
-              killstreak: eV
-            })
+        SB.k.subscribe("joinedGame", (HH => {
+          let {
+            gameNameWithVariation: BH,
+            lobbyName: LH
+          } = HH;
+          (0, CB.e)() || this.onJoinedGame(BH, LH)
+        })), SB.k.subscribe("leaveGame", (() => {
+          var HH, BH;
+          const LH = null !== (HH = null === (BH = this.flows.stay) || void 0 === BH ? void 0 : BH.name) && void 0 !== HH ? HH : null;
+          this.onLeftGame(), this.leaves.gameLeft(LH)
+        })), SB.k.subscribe("replayViewer|replayLoaded", (() => {
+          const HH = this.flows.stay;
+          null !== HH && (this.onLeftGame(), this.leaves.gameReplayOpened(HH.name))
+        })), SB.k.subscribe("matchmakeAndPlayStepCompleted", (HH => {
+          let {
+            step: BH
+          } = HH;
+          this.joinLoad.stepCompleted(BH)
+        })), SB.k.subscribe("leftPlayPage", (() => {
+          this.leaves.playPageLeft(), this.joinLoad.ended()
+        })), SB.k.subscribe("joinFailed", (HH => {
+          let {
+            step: BH,
+            severity: LH
+          } = HH;
+          this.leaves.joinFailed({
+            step: BH,
+            severity: LH,
+            game_name_with_variation: (0, hB.c)().requestedGameNameWithVariation,
+            last_load_step: this.leaves.quitContext.getLastLoadStep()
+          }), this.joinLoad.ended()
+        })), SB.k.subscribe("kickedForAfk", (() => {
+          var HH, BH;
+          this.leaves.kickedForAfk(null !== (HH = null === (BH = this.flows.stay) || void 0 === BH ? void 0 : BH.name) && void 0 !== HH ? HH : null)
+        })), SB.k.subscribe("unwantedLeftGame", (HH => {
+          this.leaves.disconnected(), this.replay.setFlag("disconnected"), this.replay.capture("disconnected", {
+            reason: HH.reason,
+            can_reconnect: HH.canReconnect,
+            automatically_reconnect: HH.automaticallyReconnect,
+            requires_refresh: HH.requiresRefresh
+          })
+        })), SB.k.subscribe("appManagerUpdated|gameState", (HH => {
+          "loadingScreen" === HH ? this.leaves.joinStarted() : "findingLobby" === HH ? (this.leaves.joinStarted(), this.joinLoad.started(), this.replay.capture("game_loading_started", {
+            entry_source: AB.c.get("gameEntrySource")
+          }), this.flows.gameLoading()) : "inGame" === HH ? this.onPlayable() : "landingPage" === HH && (this.replay.capture("homepage_viewed"), this.replay.capture("$screen", {
+            $screen_name: "homepage"
           }))
-      }
-      subscribeToErrors() {
-        window.addEventListener("error", (VV => {
-          const eV = VV.error;
-          this.captureError("error", VV.message, VV.filename ? `${VV.filename}:${VV.lineno}:${VV.colno}` : null, eV instanceof Error ? eV.name : null)
-        })), window.addEventListener("unhandledrejection", (VV => {
-          const eV = VV.reason;
-          this.captureError("unhandled_rejection", eV instanceof Error ? eV.message : String(eV), null, eV instanceof Error ? eV.name : null)
-        })), lV.h.subscribe("unrecoverableError", (VV => {
-          this.captureError("unrecoverable", VV, null, null)
-        }))
-      }
-      captureError(VV, eV, xV, JV) {
-        const UV = qV(eV).slice(0, 300),
-          yV = this.errorThrottle.allow(`${VV}:${UV}`, Date.now());
-        null !== yV && (this.replay.captureClientError(VV, UV, {
-          source: xV,
-          error_name: JV,
-          suppressed_since_last: yV
-        }), this.replay.addReplayMarker(YV.t.error, {
-          kind: VV,
-          message: UV
+        })), SB.k.subscribe("appManagerUpdated|gameEntrySource", (HH => {
+          "autoReconnect" !== HH && "manualReconnect" !== HH || this.replay.capture("reconnect_attempted", {
+            automatic: "autoReconnect" === HH
+          })
+        })), SB.k.subscribe("sessionReplayPlayerKill", (HH => {
+          let {
+            killstreak: BH
+          } = HH;
+          this.replay.capture("player_kill", {
+            killstreak: BH
+          })
         }))
       }
       onPlayable() {
-        (0, uV.h)() || (0, fV.f)() || (null === this.game && this.joinConnectedGame(), this.replay.capture("game_playable", {
+        (0, CB.e)() || (0, hB.d)() || (null === this.flows.stay && this.joinConnectedGame(), this.replay.capture("game_playable", {
           ms_since_page_load: Math.round(performance.now()),
           ...this.joinLoad.playable()
-        }), this.leaves.gamePlayable(), null !== this.game && (this.game.playableAtMs = Date.now()))
+        }), this.leaves.gamePlayable(), this.flows.gamePlayable())
       }
       joinConnectedGame() {
-        if ((0, fV.f)()) return;
+        if ((0, hB.d)()) return;
         const {
-          gameNameWithVariation: VV,
-          lobbyName: eV
-        } = (0, fV.e)();
-        null !== VV && null !== eV ? this.onJoinedGame(VV, eV) : console.warn("Session replay found a game playable with no game joined; not labelling it")
+          gameNameWithVariation: HH,
+          lobbyName: BH
+        } = (0, hB.c)();
+        null !== HH && null !== BH ? this.onJoinedGame(HH, BH) : console.warn("Session replay found a game playable with no game joined; not labelling it")
       }
-      onJoinedGame(VV, eV) {
+      onJoinedGame(HH, BH) {
         this.replay.takeFullSnapshot();
-        const xV = (0, DV.I)(eV),
-          JV = Date.now(),
-          YV = "inGame" === hV.b.get("gameState") ? JV : null;
-        this.game = {
-          joinedAtMs: JV,
-          name: VV,
-          playableAtMs: YV,
-          visiblePlayedMs: 0,
-          deaths: 0
-        }, this.gamesJoined++, this.leaves.gameJoined();
-        const UV = HV.clientSidePartyStateManager.getPartyInformation(),
-          yV = {
-            game_name: (0, CV.Pb)(VV),
-            game_name_with_variation: VV,
+        const LH = (0, iH.N)(BH),
+          AH = AB.c.get("gameEntrySource");
+        this.gamesJoined++, this.leaves.gameJoined(), this.flows.gameJoined(this.gamesJoined, HH, "autoReconnect" === AH || "manualReconnect" === AH), "inGame" === AB.c.get("gameState") && this.flows.gamePlayable();
+        const rH = zB.clientSidePartyStateManager.getPartyInformation(),
+          SH = {
+            game_name: (0, yH.Wb)(HH),
+            game_name_with_variation: HH,
             game_number: this.gamesJoined,
-            game_analytics_id: (0, aV.i)(VV, xV),
-            is_custom_game: (0, oV.l)(VV),
-            lobby_type: Ze(eV),
-            in_party: null !== UV,
-            party_size: null === UV ? 0 : UV.memberSocialPreviews.length + 1
+            game_analytics_id: (0, HB.g)(HH, LH),
+            is_custom_game: (0, BB.l)(HH),
+            lobby_type: nB(BH),
+            in_party: null !== rH,
+            party_size: null === rH ? 0 : rH.memberSocialPreviews.length + 1
           };
-        this.replay.gameJoined(VV, yV), this.gameJoinedEvent.send(VV, {
-          ...yV,
-          entry_source: hV.b.get("gameEntrySource")
-        }, JV), this.subscribeToDeaths(VV)
+        this.replay.gameJoined(HH, SH), this.replay.capture("game_joined", {
+          ...SH,
+          entry_source: AH
+        }), this.replay.capture("$screen", {
+          $screen_name: SH.is_custom_game ? `custom: ${SH.game_analytics_id}` : SH.game_name
+        }), this.subscribeToDeaths(HH)
       }
       onLeftGame() {
-        this.joinLoad.forgetStart(), null !== this.game && (this.gameJoinedEvent.flush(), this.replay.capture("game_left", {
-          game_name_with_variation: this.game.name,
-          duration_ms: Date.now() - this.game.joinedAtMs
-        }), this.game = null, this.replay.gameLeft(), lV.h.unsubscribe(this.deathSubscription), this.deathSubscription = null)
+        this.joinLoad.forgetStart();
+        const HH = this.flows.stay;
+        null !== HH && (this.replay.capture("game_left", {
+          game_name_with_variation: HH.name,
+          duration_ms: Date.now() - HH.joinedAtMs
+        }), this.flows.gameLeft(), this.replay.gameLeft(), this.unsubscribeDeaths(), this.unsubscribeDeaths = () => {})
       }
-      subscribeToDeaths(VV) {
-        const eV = (0, LV.d)();
-        if (lV.h.unsubscribe(this.deathSubscription), this.deathSubscription = null, !eV) return;
-        let xV = !0;
-        this.deathSubscription = lV.h.subscribe(`otherEntitySettingsClientifiedEId|${eV.bD}|_isAlive`, (JV => {
-          const UV = xV && !JV;
-          if (xV = JV, UV) {
+      subscribeToDeaths(HH) {
+        this.unsubscribeDeaths();
+        let BH = !0;
+        this.unsubscribeDeaths = rB.gameBridge.subscribe("localPlayerAliveSet", (LH => {
+          const rH = BH && !LH;
+          if (BH = LH, rH) {
             this.leaves.quitContext.noteDeath(performance.now());
-            const [xV, JV, UV] = eV.sF.YF(eV.bD), yV = {
-              x: Math.round(xV),
-              y: Math.round(JV),
-              z: Math.round(UV)
-            }, pV = this.game, QV = null === pV ? {} : {
-              death_number: ++pV.deaths,
-              seconds_since_join: Math.round((Date.now() - pV.joinedAtMs) / 1e3)
+            const [BH, LH, rH] = rB.gameBridge.lookup("localPos", null), SH = {
+              x: Math.round(BH),
+              y: Math.round(LH),
+              z: Math.round(rH)
+            }, hH = this.flows.stay, tH = null === hH ? {} : {
+              death_number: ++hH.deaths,
+              seconds_since_join: Math.round((Date.now() - hH.joinedAtMs) / 1e3)
             };
             this.replay.capture("player_died", {
-              ...yV,
-              game_name_with_variation: VV,
-              ...QV
-            }), this.replay.addReplayMarker(YV.t.death, yV)
+              ...SH,
+              game_name_with_variation: HH,
+              ...tH
+            }), this.replay.addReplayMarker(AH.j.death, SH)
           }
         }))
       }
-      onFrameHitch(VV) {
-        let {
-          frameMs: eV,
-          mainThreadMs: xV
-        } = VV;
-        const JV = this.game;
-        if (null === JV || null === JV.playableAtMs || Date.now() - JV.playableAtMs < 2e3) return;
-        (0, sV.n)() || this.leaves.quitContext.noteHitch(performance.now()), this.replay.addHitch(Math.round(eV));
-        const YV = this.hitchThrottle.allow("frame_hitch", Date.now());
-        null !== YV && this.replay.capture("frame_hitch", {
-          zp: Math.round(eV),
-          main_thread_ms: Math.round(xV),
-          game_name_with_variation: JV.name,
-          suppressed_since_last: YV
-        })
-      }
-      Iq() {
-        this.attachToRender();
-        const VV = performance.now(),
-          eV = VV - this.lastTickMs,
-          xV = eV <= 5e3,
-          JV = this.game;
-        if (null !== JV && null !== JV.playableAtMs && !document.hidden && xV && JV.visiblePlayedMs < 6e4 && (JV.visiblePlayedMs += eV, JV.visiblePlayedMs >= 6e4)) {
-          const eV = Math.round(VV);
+      Dv() {
+        this.health.attachToRender();
+        const HH = performance.now(),
+          BH = HH - this.lastTickMs,
+          LH = BH <= 5e3,
+          rH = this.flows.stay;
+        if (null !== rH && null !== rH.playableAtMs && !document.hidden && LH && rH.visiblePlayedMs < 6e4 && (rH.visiblePlayedMs += BH, rH.visiblePlayedMs >= 6e4)) {
+          const BH = Math.round(HH);
           this.replay.capture("game_played_60s", {
-            game_name_with_variation: JV.name,
-            ms_since_page_load: eV,
+            game_name_with_variation: rH.name,
+            ms_since_page_load: BH,
             ...this.firstMinutePlayedSent ? {} : {
-              ttff_ms: eV
+              ttff_ms: BH
             }
-          }), this.firstMinutePlayedSent = !0
+          }), this.firstMinutePlayedSent = !0, this.flows.played60s()
         }
-        const UV = null !== this.game && !document.hidden;
-        this.replay.addFpsSample(UV && xV && this.framesThisTick > 0 ? 1e3 * this.framesThisTick / eV : null);
-        const yV = UV ? cV.e.getLastColyseusPingMs() : null;
-        null !== yV && this.replay.addPingSample(yV), this.framesThisTick = 0, this.lastTickMs = VV, this.ticks++, this.ticks % 2 === 0 && (UV && this.inputSinceActiveMarker && this.replay.addReplayMarker(YV.t.active), this.inputSinceActiveMarker = !1), this.replay.markClockIfDue(this.ticks, 30)
-      }
-      attachToRender() {
-        if (this.attachedToRender) return;
-        const VV = (0, mV.K)().gameRender();
-        null !== VV && (this.attachedToRender = !0, this.replay.setSessionProperties(Object.fromEntries([
-          ["renderer", VV.renderer],
-          ["gpu_vendor", (0, KV.getGpuVendor)()]
-        ])), VV.canvas.addEventListener("webglcontextlost", (() => {
-          this.replay.setFlag("had_error"), this.replay.capture("webgl_context_lost")
-        })), VV.canvas.addEventListener("webglcontextrestored", (() => {
-          this.replay.capture("webgl_context_restored")
-        })))
+        this.flows.IX();
+        const SH = null !== this.flows.stay && !document.hidden;
+        this.replay.addFpsSample(SH && LH && this.framesThisTick > 0 ? 1e3 * this.framesThisTick / BH : null);
+        const hH = SH ? LB.c.getLastColyseusPingMs() : null;
+        null !== hH && this.replay.addPingSample(hH), this.framesThisTick = 0, this.lastTickMs = HH, this.ticks++, this.ticks % 2 === 0 && (SH && this.inputSinceActiveMarker && this.replay.addReplayMarker(AH.j.active), this.inputSinceActiveMarker = !1), this.replay.markClockIfDue(this.ticks, 30)
       }
     }
-    var re = xV(1241),
-      ke = xV(1230),
-      be = xV(34892);
+    var DB = LH(1148),
+      wB = LH(1131),
+      ZB = LH(40738);
 
-    function Ee(VV) {
-      return VV.length + 64
+    function dB(HH) {
+      return HH.length + 64
     }
-    async function Be() {
+    async function aB() {
       return new Response("{}")
     }
 
-    function je(VV, eV, xV) {
-      return be.e.fetch(VV, {
+    function sB(HH, BH, LH) {
+      return ZB.g.fetch(HH, {
         method: "POST",
         headers: {
           "Content-Type": "text/plain"
         },
-        body: eV,
-        signal: (0, re.u)(3e4)
-      }, xV)
+        body: BH,
+        signal: (0, DB.u)(3e4)
+      }, LH)
     }
-    class qe {
-      constructor(VV) {
-        var eV, xV, JV;
-        let YV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.uploadToken = VV, this.url = void 0, this.post = void 0, this.isHidden = void 0, this.queue = [], this.retries = [], this.refusedTokens = new Set, this.overflowWarned = !1, this.unloading = !1, this.sendScheduled = !1, this.url = null !== (eV = YV.url) && void 0 !== eV ? eV : `${ke.clientSideServerUrls.indexUrl}/index/replay/timeline`, this.post = null !== (xV = YV.post) && void 0 !== xV ? xV : je, this.isHidden = null !== (JV = YV.isHidden) && void 0 !== JV ? JV : () => "hidden" === document.visibilityState
+    class JB {
+      constructor(HH) {
+        var BH, LH, AH;
+        let rH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.uploadToken = HH, this.url = void 0, this.post = void 0, this.isHidden = void 0, this.queue = [], this.retries = [], this.refusedTokens = new Set, this.overflowWarned = !1, this.unloading = !1, this.sendScheduled = !1, this.url = null !== (BH = rH.url) && void 0 !== BH ? BH : `${wB.clientSideServerUrls.indexUrl}/index/replay/timeline`, this.post = null !== (LH = rH.post) && void 0 !== LH ? LH : sB, this.isHidden = null !== (AH = rH.isHidden) && void 0 !== AH ? AH : () => "hidden" === document.visibilityState
       }
       start() {
         setInterval((() => {
@@ -1063,34 +1487,30 @@ export const modules = {
           this.unloading = !1
         }))
       }
-      setUploadToken(VV) {
-        this.uploadToken = VV
-      }
-      add(VV) {
+      add(HH) {
         if (this.refusedTokens.has(this.uploadToken)) return;
-        const eV = function(VV) {
-            const eV = {
-              ...VV.properties
+        const BH = function(HH) {
+            const BH = {
+              ...HH.properties
             };
-            return void 0 !== VV.$set && (eV.$set = {
-              ...VV.properties.$set,
-              ...VV.$set
-            }), void 0 !== VV.$set_once && (eV.$set_once = {
-              ...VV.$set_once,
-              ...VV.properties.$set_once
-            }), void 0 !== VV.$unset && (eV.$unset = VV.$unset), {
-              uuid: VV.uuid,
-              event: VV.event,
-              timestampMs: VV.timestamp.getTime(),
-              distinctId: String(VV.properties.distinct_id),
-              properties: JSON.stringify(eV)
+            return void 0 !== HH.$set && (BH.$set = {
+              ...HH.properties.$set,
+              ...HH.$set
+            }), void 0 !== HH.$set_once && (BH.$set_once = {
+              ...HH.$set_once,
+              ...HH.properties.$set_once
+            }), void 0 !== HH.$unset && (BH.$unset = HH.$unset), {
+              uuid: HH.uuid,
+              event: HH.event,
+              timestampMs: HH.timestamp.getTime(),
+              properties: JSON.stringify(BH)
             }
-          }(VV),
-          xV = (0, be.f)(JSON.stringify(eV));
-        eV.properties.length > 32768 || eV.event.length > 64 || eV.distinctId.length > 200 || Ee(this.uploadToken) + xV > 102400 ? console.warn(`Session replay timeline event ${eV.event.slice(0,64)} is too large for index-server; dropped.`) : (this.queue.push({
+          }(HH),
+          LH = (0, ZB.h)(JSON.stringify(BH));
+        BH.properties.length > 32768 || BH.event.length > 64 || dB(this.uploadToken) + LH > 102400 ? console.warn(`Session replay timeline event ${BH.event.slice(0,64)} is too large for index-server; dropped.`) : (this.queue.push({
           uploadToken: this.uploadToken,
-          event: eV,
-          bytes: xV,
+          event: BH,
+          bytes: LH,
           attempts: 0
         }), this.trimToCap(), this.queue.length >= 50 ? this.sendQueued() : (this.unloading || this.isHidden()) && this.sendSoon())
       }
@@ -1100,144 +1520,73 @@ export const modules = {
         })))
       }
       flush() {
-        this.retries.length > 0 && (this.queue = [...this.retries, ...this.queue].sort(((VV, eV) => VV.event.timestampMs - eV.event.timestampMs)), this.retries = []), this.sendQueued()
+        this.retries.length > 0 && (this.queue = [...this.retries, ...this.queue].sort(((HH, BH) => HH.event.timestampMs - BH.event.timestampMs)), this.retries = []), this.sendQueued()
       }
       sendQueued() {
         for (; this.queue.length > 0;) {
-          const VV = this.takeBatch();
-          this.refusedTokens.has(VV.uploadToken) || this.send(VV)
+          const HH = this.takeBatch();
+          this.refusedTokens.has(HH.uploadToken) || this.send(HH)
         }
       }
       trimToCap() {
-        let VV = this.retries.length + this.queue.length - 1e3;
-        if (VV <= 0) return void(this.overflowWarned = !1);
-        const eV = Math.min(VV, this.retries.length);
-        this.retries.splice(0, eV), VV -= eV, this.queue.splice(0, VV), this.overflowWarned || (this.overflowWarned = !0, console.warn("Session replay timeline queue is full; dropping its oldest events until it drains."))
+        let HH = this.retries.length + this.queue.length - 1e3;
+        if (HH <= 0) return void(this.overflowWarned = !1);
+        const BH = Math.min(HH, this.retries.length);
+        this.retries.splice(0, BH), HH -= BH, this.queue.splice(0, HH), this.overflowWarned || (this.overflowWarned = !0, console.warn("Session replay timeline queue is full; dropping its oldest events until it drains."))
       }
       takeBatch() {
-        const VV = this.queue.shift(),
-          eV = [VV];
-        let xV = Ee(VV.uploadToken) + VV.bytes;
-        for (; this.queue.length > 0 && eV.length < 100 && this.queue[0].uploadToken === VV.uploadToken && xV + this.queue[0].bytes <= 32768;) {
-          const VV = this.queue.shift();
-          eV.push(VV), xV += VV.bytes
+        const HH = this.queue.shift(),
+          BH = [HH];
+        let LH = dB(HH.uploadToken) + HH.bytes;
+        for (; this.queue.length > 0 && BH.length < 100 && this.queue[0].uploadToken === HH.uploadToken && LH + this.queue[0].bytes <= 32768;) {
+          const HH = this.queue.shift();
+          BH.push(HH), LH += HH.bytes
         }
         return {
-          uploadToken: VV.uploadToken,
-          events: eV
+          uploadToken: HH.uploadToken,
+          events: BH
         }
       }
-      async send(VV) {
-        const eV = await this.sendOnce(VV);
-        if ("refused" === eV && this.refusedTokens.add(VV.uploadToken), "retryLater" !== eV) return;
-        const xV = VV.events.filter((VV => ++VV.attempts < 3));
-        xV.length < VV.events.length && console.error(`Session replay timeline: dropped ${VV.events.length-xV.length} events after 3 attempts.`), this.retries.push(...xV), this.trimToCap()
+      async send(HH) {
+        const BH = await this.sendOnce(HH);
+        if ("refused" === BH && this.refusedTokens.add(HH.uploadToken), "retryLater" !== BH) return;
+        const LH = HH.events.filter((HH => ++HH.attempts < 3));
+        LH.length < HH.events.length && console.error(`Session replay timeline: dropped ${HH.events.length-LH.length} events after 3 attempts.`), this.retries.push(...LH), this.trimToCap()
       }
-      async sendOnce(VV) {
-        const eV = {
-            uploadToken: VV.uploadToken,
+      async sendOnce(HH) {
+        const BH = {
+            uploadToken: HH.uploadToken,
             sentAtMs: Date.now(),
-            events: VV.events.map((VV => VV.event))
+            events: HH.events.map((HH => HH.event))
           },
-          xV = JSON.stringify(eV);
-        let JV, YV = null;
+          LH = JSON.stringify(BH);
+        let AH, rH = null;
         try {
-          JV = await this.post(this.url, xV, (0, be.f)(xV)), JV.ok && (YV = await JV.json())
-        } catch (UV) {
-          return console.warn("Session replay timeline upload failed.", UV), "retryLater"
+          AH = await this.post(this.url, LH, (0, ZB.h)(LH)), AH.ok && (rH = await AH.json())
+        } catch (SH) {
+          return console.warn("Session replay timeline upload failed.", SH), "retryLater"
         }
-        return null === YV ? 408 === JV.status || 429 === JV.status || JV.status >= 500 ? "retryLater" : (console.error(`Session replay timeline upload failed with ${JV.status}; dropped ${VV.events.length} events.`), "dropped") : "rejected" in YV ? YV.retryable ? "retryLater" : (console.warn(`Session replay timeline refused: ${YV.reason}; dropping this recording's events.`), "refused") : "sent"
+        return null === rH ? 408 === AH.status || 429 === AH.status || AH.status >= 500 ? "retryLater" : (console.error(`Session replay timeline upload failed with ${AH.status}; dropped ${HH.events.length} events.`), "dropped") : "rejected" in rH ? rH.retryable ? "retryLater" : (console.warn(`Session replay timeline refused: ${rH.reason}; dropping this recording's events.`), "refused") : "sent"
       }
     }
-    var te = xV(138),
-      Fe = xV(35045),
-      Te = xV(2635),
-      Pe = xV(1353),
-      Ae = xV(313),
-      Ne = xV(4809),
-      Xe = xV(701);
-
-    function Me() {
-      return window.__PosthogExtensions__
-    }
-
-    function ze() {
-      var VV;
-      const eV = navigator,
-        xV = new Date;
-      return {
-        local_hour: xV.getHours(),
-        local_weekday: xV.getDay(),
-        ...eV.hardwareConcurrency ? {
-          cpu_cores: eV.hardwareConcurrency
-        } : {},
-        ...eV.deviceMemory ? {
-          device_memory_gb: eV.deviceMemory
-        } : {},
-        ...null !== (VV = eV.connection) && void 0 !== VV && VV.effectiveType ? {
-          network_type: eV.connection.effectiveType
-        } : {}
-      }
-    }
-
-    function Ge() {
-      const VV = {};
-      for (const [eV, xV] of Object.entries(Ae.b)) VV[`ab_${eV}`] = String(xV);
-      return VV
-    }
-
-    function We(VV) {
-      var eV;
-      const xV = VV.tags,
-        JV = (0, Ne.b)();
-      return {
-        panel_entry_reason: null !== (eV = xV.recording_reason) && void 0 !== eV ? eV : "unknown",
-        panel_entry_date: (new Date).toISOString().slice(0, 10),
-        ...null === JV ? {} : {
-          panel_entry_visit_number: JV
-        },
-        ...void 0 === xV.sample_rate ? {} : {
-          panel_entry_sample_rate: xV.sample_rate
-        }
-      }
-    }
-
-    function Re() {
-      const VV = (0, Ne.b)();
-      return null === VV ? {} : {
-        visit_number: VV
-      }
-    }
-
-    function ge(VV, eV) {
-      return {
-        recording_id: VV.recordingId,
-        recording_mode: VV.mode,
-        recording_scopes: VV.scopes.join(","),
-        dom_recorded: eV
-      }
-    }
-
-    function De(VV, eV) {
-      const xV = {};
-      for (const [JV, YV] of Object.entries(eV)) xV[`${VV}${JV}`] = YV;
-      return xV
-    }
-    class ie {
-      constructor(VV) {
-        var eV;
-        this.tags = new gV, this.fpsMonitor = void 0, this.errorLogLink = void 0, this.lastTagsJson = "", this.clockMarked = !1, this.personUpdateTimer = null, this.expectedSessionId = "", this.recorderPatched = !1, this.gameContextKeys = [], this.firstGameJoined = !1, this.timeline = void 0, this.onDomBatch = void 0;
+    var iB = LH(40751),
+      pB = LH(5096),
+      yB = LH(1260);
+    class HL {
+      constructor(HH) {
+        var BH;
+        this.tags = new JH, this.fpsMonitor = void 0, this.errorLogLink = void 0, this.lastTagsJson = "", this.clockMarked = !1, this.personUpdateTimer = null, this.expectedSessionId = "", this.recorderPatched = !1, this.gameContextKeys = [], this.firstGameJoined = !1, this.timeline = void 0, this.onDomBatch = void 0;
         const {
-          recording: xV
-        } = VV;
-        this.onDomBatch = VV.onDomBatch;
-        const YV = null !== VV.onDomBatch;
-        YV && this.patchRecorder(), this.timeline = new qe(xV.uploadToken, VV.dryRun ? {
-            post: Be
+          recording: LH
+        } = HH;
+        this.onDomBatch = HH.onDomBatch;
+        const hH = null !== HH.onDomBatch;
+        hH && this.patchRecorder(), this.timeline = new JB(LH.uploadToken, HH.dryRun ? {
+            post: aB
           } : {}), this.timeline.start(),
-          function(VV) {
-            const eV = {
-                supportedCompression: [UV.c.GZipJS],
+          function(HH) {
+            const BH = {
+                supportedCompression: [rH.b.GZipJS],
                 hasFeatureFlags: !1,
                 sessionRecording: {
                   endpoint: "/s/"
@@ -1247,402 +1596,288 @@ export const modules = {
                 toolbarVersion: "toolbar",
                 isAuthenticated: !1
               },
-              xV = window;
-            xV._POSTHOG_REMOTE_CONFIG = {
-              ...xV._POSTHOG_REMOTE_CONFIG,
-              [VV]: {
-                config: eV
+              LH = window;
+            LH._POSTHOG_REMOTE_CONFIG = {
+              ...LH._POSTHOG_REMOTE_CONFIG,
+              [HH]: {
+                config: BH
               }
             }
-          }(VV.posthog.projectApiKey), UV.g.init(VV.posthog.projectApiKey, MV({
-            apiHost: VV.posthog.apiHost,
-            recordingId: xV.recordingId,
-            deviceId: VV.deviceId,
-            recordDom: YV,
-            ownOrigins: [window.location.origin, new URL(ke.clientSideServerUrls.s3Url, window.location.href).origin],
-            allowAutomatedBrowsers: (0, Te.d)((0, Te.k)(), !1),
-            onTimelineEvent: VV => {
-              this.timeline.add(VV), "$pageview" === VV.event && VV.properties.$current_url && this.addReplayMarker("$pageview", {
-                href: VV.properties.$current_url
+          }(HH.posthog.projectApiKey), rH.c.init(HH.posthog.projectApiKey, gH({
+            apiHost: HH.posthog.apiHost,
+            recordingId: LH.recordingId,
+            recordDom: hH,
+            ownOrigins: [window.location.origin, new URL(wB.clientSideServerUrls.s3Url, window.location.href).origin],
+            anonymised: LH.anonymised,
+            showsChat: (0, AH.t)(LH),
+            allowAutomatedBrowsers: (0, pB.c)((0, pB.k)(), !1),
+            onTimelineEvent: HH => {
+              this.timeline.add(HH), "$pageview" === HH.event && HH.properties.$current_url && this.addReplayMarker("$pageview", {
+                href: HH.properties.$current_url
               })
             },
-            onDomBatch: VV => {
-              this.takeDomBatch(VV)
+            onDomBatch: HH => {
+              this.takeDomBatch(HH)
             }
-          })), YV && UV.g.startSessionRecording({
+          })), hH && rH.c.startSessionRecording({
             sampling: !0
-          }), this.expectedSessionId = xV.recordingId, UV.g.onSessionId((VV => {
-            VV !== this.expectedSessionId && console.warn(`Session replay: PostHog session ${VV} differs from recording ${this.expectedSessionId}; events carry recording_id.`)
-          }));
-        const pV = {
-          ...xV.tags,
-          site_used: te.siteUsed,
-          subsite_used: null !== te.subsiteUsed && void 0 !== te.subsiteUsed ? te.subsiteUsed : "",
-          is_iframed: te.isIframed,
-          entry_path: location.pathname,
-          ...ze(),
-          ...Ge(),
-          ...ge(xV, YV),
-          client_build: JV.e,
-          device_id: VV.deviceId,
-          ip_group_id: xV.ipGroupId,
-          logged_in: xV.loggedIn,
-          ...Re(),
-          ...null === xV.ipVisitNumber ? {} : {
-            ip_visit_number: xV.ipVisitNumber
-          }
-        };
-        UV.g.register(pV), null !== VV.videoStatus && UV.g.register({
-          replay_video_status: VV.videoStatus
-        }), (0, Xe.n)((() => {
-          UV.g.register(Re())
-        })), null !== xV.personId && UV.g.identify(xV.personId);
-        const {
-          logged_in: QV,
-          ...nV
-        } = pV;
-        UV.g.setPersonProperties(nV, {
-          ...De("initial_", nV),
-          ...We(xV)
-        }), this.fpsMonitor = new yV.e({
-          onEpisodeStarted: VV => {
-            this.capture("low_fps_started", {
-              avg_fps: Math.round(VV)
-            }), lV.h.QZ("sessionReplayLowFps", {
-              low: !0
+          }), this.expectedSessionId = LH.recordingId, rH.c.onSessionId((HH => {
+            HH !== this.expectedSessionId && console.warn(`Session replay: PostHog session ${HH} differs from recording ${this.expectedSessionId}; events carry recording_id.`)
+          })),
+          function(HH, BH) {
+            const {
+              recording: LH
+            } = HH, AH = {
+              ...LH.tags,
+              site_used: jH.siteUsed,
+              subsite_used: null !== jH.subsiteUsed && void 0 !== jH.subsiteUsed ? jH.subsiteUsed : "",
+              is_iframed: jH.isIframed,
+              entry_path: location.pathname,
+              ...nH(),
+              ...DH(LH, BH),
+              client_build: RH.d
+            };
+            rH.c.register(AH), null !== HH.videoStatus && rH.c.register({
+              replay_video_status: HH.videoStatus
+            }), rH.c.setPersonProperties(AH, {
+              ...wH("initial_", AH),
+              ...FH(LH)
             })
-          },
-          onEpisodeEnded: VV => {
-            this.capture("low_fps_episode", {
-              duration_ms: VV.durationMs,
-              min_fps: VV.minFps,
-              avg_fps: VV.avgFps
-            }), lV.h.QZ("sessionReplayLowFps", {
-              low: !1
-            })
-          }
-        }), this.errorLogLink = new WV({
-          dashboardHost: null !== (eV = VV.posthog.dashboardHost) && void 0 !== eV ? eV : VV.posthog.apiHost,
-          recordingId: xV.recordingId,
-          getSessionId: () => UV.g.get_session_id(),
-          domRecorded: YV,
-          captureError: (VV, eV) => {
-            this.captureClientError("logged", VV, eV)
-          }
-        }), (0, Pe.annotateLoggedErrors)(((VV, eV) => this.errorLogLink.annotate(VV, eV))), new ve(this).start()
+          }(HH, hH), this.fpsMonitor = new SH.d({
+            onEpisodeStarted: HH => {
+              this.capture("low_fps_started", {
+                avg_fps: Math.round(HH)
+              }), SB.k.AX("sessionReplayLowFps", {
+                low: !0
+              })
+            },
+            onEpisodeEnded: HH => {
+              this.capture("low_fps_episode", {
+                duration_ms: HH.durationMs,
+                min_fps: HH.minFps,
+                avg_fps: HH.avgFps
+              }), SB.k.AX("sessionReplayLowFps", {
+                low: !1
+              })
+            }
+          }), this.errorLogLink = new aH({
+            dashboardHost: null !== (BH = HH.posthog.dashboardHost) && void 0 !== BH ? BH : HH.posthog.apiHost,
+            recordingId: LH.recordingId,
+            getSessionId: () => rH.c.get_session_id(),
+            domRecorded: hH,
+            captureError: (HH, BH) => {
+              this.captureClientError("logged", HH, BH)
+            }
+          }), (0, yB.annotateLoggedErrors)(((HH, BH) => this.errorLogLink.annotate(HH, BH))), new FB(this).start()
       }
-      capture(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        UV.g.capture(VV, eV)
+      capture(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        rH.c.capture(HH, BH)
       }
-      captureAt(VV, eV, xV) {
-        UV.g.capture(VV, eV, {
-          timestamp: new Date(xV)
+      captureAt(HH, BH, LH) {
+        rH.c.capture(HH, BH, {
+          timestamp: new Date(LH)
         })
       }
-      captureOnExit(VV, eV) {
-        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
-        UV.g.capture(VV, eV, {
-          timestamp: new Date(xV)
+      captureOnExit(HH, BH) {
+        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
+        rH.c.capture(HH, BH, {
+          timestamp: new Date(LH)
         })
       }
-      captureClientError(VV, eV, xV) {
+      captureClientError(HH, BH, LH) {
         this.setFlag("had_error"), this.capture("client_error", {
-          kind: VV,
-          message: qV(eV).slice(0, 300),
+          kind: HH,
+          message: xH(BH).slice(0, 300),
           source: null,
           error_name: null,
-          ...xV
+          ...LH
         })
       }
       takeFullSnapshot() {
         if (this.tryFullSnapshot()) return;
-        const VV = performance.now() + 1500,
-          eV = setInterval((() => {
-            (this.tryFullSnapshot() || performance.now() >= VV) && clearInterval(eV)
+        const HH = performance.now() + 1500,
+          BH = setInterval((() => {
+            (this.tryFullSnapshot() || performance.now() >= HH) && clearInterval(BH)
           }), 100)
       }
-      upgradeToFullRecording(VV, eV) {
-        var xV;
-        this.onDomBatch = eV, this.patchRecorder(), this.expectedSessionId = VV.recordingId, this.timeline.setUploadToken(VV.uploadToken), this.errorLogLink.setRecording(VV.recordingId), null !== (xV = UV.g.sessionManager) && void 0 !== xV && xV.setBootstrapSessionId(VV.recordingId) || console.warn(`Session replay: PostHog rejected session id ${VV.recordingId}; events carry recording_id.`), UV.g.register({
-          ...VV.tags,
-          ...ge(VV, !0)
-        }), UV.g.startSessionRecording({
-          sampling: !0
-        }), this.takeFullSnapshot()
-      }
-      setVideoStatus(VV, eV) {
-        UV.g.register({
-          replay_video_status: VV
+      setVideoStatus(HH, BH) {
+        rH.c.register({
+          replay_video_status: HH
         });
-        const xV = "stopped_cellular" === VV ? "cellular" : "stopped_error" === VV ? "error" : null;
-        null !== xV && (this.capture("replay_video_stopped", {
-          reason: xV,
-          detail: null === eV ? null : qV(eV).slice(0, 300)
+        const LH = "stopped_cellular" === HH ? "cellular" : "stopped_error" === HH ? "error" : null;
+        null !== LH && (this.capture("replay_video_stopped", {
+          reason: LH,
+          detail: null === BH ? null : xH(BH).slice(0, 300)
         }), this.addReplayMarker("replay_video_stopped", {
-          reason: xV
+          reason: LH
         }))
       }
       stopDomRecording() {
-        UV.g.stopSessionRecording(), UV.g.register({
+        rH.c.stopSessionRecording(), rH.c.register({
           dom_recorded: !1
         })
       }
       optOut() {
-        UV.g.stopSessionRecording(), UV.g.set_config({
+        this.stopDomRecording(), rH.c.set_config({
           before_send: () => null
         })
       }
-      takeDomBatch(VV) {
-        null !== this.onDomBatch ? this.onDomBatch(VV) : console.warn("Session replay: posthog-js recorded the page of an events-only recording; dropped it")
+      takeDomBatch(HH) {
+        null !== this.onDomBatch ? this.onDomBatch(HH) : console.warn("Session replay: posthog-js recorded the page of an events-only recording; dropped it")
       }
       tryFullSnapshot() {
-        var VV;
-        return !(null === (VV = UV.g.sessionRecording) || void 0 === VV || !VV.started) && (Me().rrweb.record.takeFullSnapshot(), !0)
+        var HH;
+        return !(null === (HH = rH.c.sessionRecording) || void 0 === HH || !HH.started) && (NH().rrweb.record.takeFullSnapshot(), !0)
       }
       patchRecorder() {
         this.recorderPatched || (this.recorderPatched = !0, function() {
-          const VV = Me().rrwebPlugins,
-            eV = VV.getRecordConsolePlugin;
-          VV.getRecordConsolePlugin = () => eV({
+          const HH = NH().rrwebPlugins,
+            BH = HH.getRecordConsolePlugin;
+          HH.getRecordConsolePlugin = () => BH({
             level: ["warn", "error", "assert"]
           })
         }(), this.markClockOnFullSnapshots())
       }
       markClockOnFullSnapshots() {
-        const VV = Me().rrweb.record,
-          eV = VV.takeFullSnapshot;
-        VV.takeFullSnapshot = VV => {
-          eV(VV), this.markClock()
+        const HH = NH().rrweb.record,
+          BH = HH.takeFullSnapshot;
+        HH.takeFullSnapshot = HH => {
+          BH(HH), this.markClock()
         }
       }
       markClock() {
-        this.clockMarked = this.addReplayMarker(YV.t.clock, {
-          epochMs: (0, Fe.c)(),
+        this.clockMarked = this.addReplayMarker(AH.j.clock, {
+          epochMs: (0, iB.d)(),
           perfNowMs: performance.now()
         }) || this.clockMarked
       }
-      markClockIfDue(VV, eV) {
-        this.clockMarked && VV % eV !== 0 || this.markClock()
+      markClockIfDue(HH, BH) {
+        this.clockMarked && HH % BH !== 0 || this.markClock()
       }
-      addReplayMarker(VV) {
-        var eV, xV;
-        let JV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return null !== (eV = null === (xV = UV.g.sessionRecording) || void 0 === xV ? void 0 : xV.tryAddCustomEvent(VV, JV)) && void 0 !== eV && eV
+      addReplayMarker(HH) {
+        var BH, LH;
+        let AH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return (!(arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) || rH.c.sessionRecordingStarted()) && null !== (BH = null === (LH = rH.c.sessionRecording) || void 0 === LH ? void 0 : LH.tryAddCustomEvent(HH, AH)) && void 0 !== BH && BH
       }
-      gameJoined(VV, eV) {
-        this.unregisterGameContext(), this.gameContextKeys = Object.keys(eV), UV.g.register(eV), this.firstGameJoined || (this.firstGameJoined = !0, UV.g.setPersonProperties(void 0, {
-          first_game_ever: eV.game_name,
-          first_game_ever_with_variation: eV.game_name_with_variation,
-          first_game_ever_analytics_id: eV.game_analytics_id
-        })), this.tags.gameJoined(VV, Date.now()), this.updateTags()
-      }
-      addGameContext(VV) {
-        for (const eV of Object.keys(VV)) this.gameContextKeys.includes(eV) || this.gameContextKeys.push(eV);
-        UV.g.register(VV)
+      gameJoined(HH, BH) {
+        this.unregisterGameContext(), this.gameContextKeys = Object.keys(BH), rH.c.register(BH), this.firstGameJoined || (this.firstGameJoined = !0, rH.c.setPersonProperties(void 0, {
+          first_game_ever: BH.game_name,
+          first_game_ever_with_variation: BH.game_name_with_variation,
+          first_game_ever_analytics_id: BH.game_analytics_id
+        })), this.tags.gameJoined(HH, Date.now()), this.updateTags()
       }
       gameLeft() {
         this.unregisterGameContext(), this.tags.gameLeft(Date.now()), this.fpsMonitor.endEpisode(Date.now()), this.updateTags()
       }
-      setFlag(VV) {
-        this.tags.setFlag(VV) && this.updateTags()
+      setFlag(HH) {
+        this.tags.setFlag(HH) && this.updateTags()
       }
-      addHitch(VV) {
-        this.tags.addHitch(VV) && this.updateTags()
+      addHitch(HH) {
+        this.tags.addHitch(HH) && this.updateTags()
       }
-      setSessionProperties(VV) {
-        UV.g.register(VV), UV.g.setPersonProperties(VV)
+      setSessionProperties(HH) {
+        let BH = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        rH.c.register(HH), BH && rH.c.setPersonProperties(HH)
       }
-      addPingSample(VV) {
-        this.tags.addPingSample(VV) && this.updateTags()
+      addPingSample(HH) {
+        this.tags.addPingSample(HH) && this.updateTags()
       }
-      addFpsSample(VV) {
-        this.fpsMonitor.addSample(VV, Date.now());
-        const eV = this.fpsMonitor.getTags();
-        null !== eV && (this.tags.setFpsTags(eV), this.updateTags())
+      addFpsSample(HH) {
+        this.fpsMonitor.addSample(HH, Date.now());
+        const BH = this.fpsMonitor.getTags();
+        null !== BH && (this.tags.setFpsTags(BH), this.updateTags())
       }
-      addUnboundKeyPresses(VV) {
-        this.tags.addUnboundKeyPresses(VV), this.updateTags()
+      addUnboundKeyPresses(HH) {
+        this.tags.addUnboundKeyPresses(HH), this.updateTags()
       }
       finalTags() {
         return this.fpsMonitor.endEpisode(Date.now()), this.tags.toProperties(Date.now())
       }
       updateTags() {
-        const VV = this.tags.toProperties(),
-          eV = JSON.stringify(VV);
-        eV !== this.lastTagsJson && (this.lastTagsJson = eV, UV.g.register(VV), null === this.personUpdateTimer && (this.personUpdateTimer = setTimeout((() => {
-          this.personUpdateTimer = null, UV.g.setPersonProperties(this.tags.toProperties())
+        const HH = this.tags.toProperties(),
+          BH = JSON.stringify(HH);
+        BH !== this.lastTagsJson && (this.lastTagsJson = BH, rH.c.register(HH), null === this.personUpdateTimer && (this.personUpdateTimer = setTimeout((() => {
+          this.personUpdateTimer = null, rH.c.setPersonProperties(this.tags.toProperties())
         }), 0)))
       }
       unregisterGameContext() {
-        for (const VV of this.gameContextKeys) UV.g.unregister(VV);
+        for (const HH of this.gameContextKeys) rH.c.unregister(HH);
         this.gameContextKeys = []
       }
     }
   },
-  35045: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV
+  40751: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => SH
     });
-    const JV = 20;
-    let YV = Date.now() - performance.now();
+    const AH = 20;
+    let rH = Date.now() - performance.now();
 
-    function UV() {
-      const VV = performance.now(),
-        eV = Date.now();
-      return Math.abs(eV - (VV + YV)) > JV && (YV = eV - VV), VV + YV
+    function SH() {
+      const HH = performance.now(),
+        BH = Date.now();
+      return Math.abs(BH - (HH + rH)) > AH && (rH = BH - HH), HH + rH
     }
   },
-  34892: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => JV,
-      e: () => UV,
-      f: () => YV
+  40738: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => AH,
+      g: () => SH,
+      h: () => rH
     });
-    const JV = 32768;
+    const AH = 32768;
 
-    function YV(VV) {
-      return (new TextEncoder).encode(VV).byteLength
+    function rH(HH) {
+      return (new TextEncoder).encode(HH).byteLength
     }
-    const UV = new class {
+    const SH = new class {
       constructor() {
         this.inFlightBytes = 0, this.inFlightLabels = new Map
       }
-      async fetch(VV, eV, xV, JV) {
-        if (this.inFlightBytes + xV > 49152) return await fetch(VV, eV);
-        this.inFlightBytes += xV, this.countLabel(JV, 1);
-        const YV = () => {
-          this.inFlightBytes -= xV, this.countLabel(JV, -1)
+      async fetch(HH, BH, LH, AH) {
+        if (this.inFlightBytes + LH > 49152) return await fetch(HH, BH);
+        this.inFlightBytes += LH, this.countLabel(AH, 1);
+        const rH = () => {
+          this.inFlightBytes -= LH, this.countLabel(AH, -1)
         };
-        let UV;
+        let SH;
         try {
-          UV = await fetch(VV, {
-            ...eV,
+          SH = await fetch(HH, {
+            ...BH,
             keepalive: !0
           })
-        } catch (pV) {
-          var yV;
-          if (YV(), null !== (yV = eV.signal) && void 0 !== yV && yV.aborted) throw pV;
-          return console.info("Session replay keepalive request failed; retrying without keepalive.", pV), await fetch(VV, eV)
+        } catch (tH) {
+          var hH;
+          if (rH(), null !== (hH = BH.signal) && void 0 !== hH && hH.aborted) throw tH;
+          return console.info("Session replay keepalive request failed; retrying without keepalive.", tH), await fetch(HH, BH)
         }
-        return YV(), UV
+        return rH(), SH
       }
-      isInFlight(VV) {
-        var eV;
-        return (null !== (eV = this.inFlightLabels.get(VV)) && void 0 !== eV ? eV : 0) > 0
+      isInFlight(HH) {
+        var BH;
+        return (null !== (BH = this.inFlightLabels.get(HH)) && void 0 !== BH ? BH : 0) > 0
       }
-      sendBeacon(VV, eV) {
-        const xV = YV(eV);
-        return !(this.inFlightBytes + xV > 57344) && this.beaconSent(navigator.sendBeacon(VV, new Blob([eV], {
+      sendBeacon(HH, BH) {
+        const LH = rH(BH);
+        return !(this.inFlightBytes + LH > 57344) && this.beaconSent(navigator.sendBeacon(HH, new Blob([BH], {
           type: "text/plain"
-        })), xV)
+        })), LH)
       }
-      sendUploadBeacon(VV, eV, xV) {
-        return !(this.inFlightBytes + xV > 40960) && this.beaconSent(navigator.sendBeacon(VV, eV), xV)
+      sendUploadBeacon(HH, BH, LH) {
+        return !(this.inFlightBytes + LH > 40960) && this.beaconSent(navigator.sendBeacon(HH, BH), LH)
       }
-      countLabel(VV, eV) {
-        var xV;
-        void 0 !== VV && this.inFlightLabels.set(VV, (null !== (xV = this.inFlightLabels.get(VV)) && void 0 !== xV ? xV : 0) + eV)
+      countLabel(HH, BH) {
+        var LH;
+        void 0 !== HH && this.inFlightLabels.set(HH, (null !== (LH = this.inFlightLabels.get(HH)) && void 0 !== LH ? LH : 0) + BH)
       }
-      beaconSent(VV, eV) {
-        return VV && (this.inFlightBytes += eV, setTimeout((() => {
-          this.inFlightBytes -= eV
-        }), 1e4)), VV
-      }
-    }
-  },
-  5589: (VV, eV, xV) => {
-    xV.d(eV, {
-      B: () => pV,
-      D: () => vV,
-      H: () => ZV,
-      I: () => rV,
-      K: () => wV,
-      N: () => yV,
-      b: () => UV,
-      d: () => jV,
-      h: () => qV,
-      i: () => EV,
-      l: () => bV,
-      p: () => QV,
-      t: () => BV,
-      x: () => nV,
-      y: () => kV
-    });
-    const JV = {
-        maxFps: 30,
-        bitrate: 178e4,
-        minBitrate: 5e5,
-        maxMacroblocks: 3600,
-        keyframeIntervalMs: 2e3,
-        segmentDurationMs: 3e4,
-        manifestIntervalMs: 3e4,
-        partDurationMs: 4e3,
-        captureBudgetMsPerSecond: 20,
-        captureFrameCostFloorMs: .6,
-        softwareEncoderOnWindows: !0
-      },
-      YV = {
-        ...JV,
-        maxFps: 15,
-        bitrate: 5e5,
-        maxMacroblocks: 2040,
-        softwareEncoderOnWindows: !1
-      },
-      UV = {
-        desktop: JV,
-        mobile: YV,
-        tablet: YV
-      };
-
-    function yV(VV, eV) {
-      return {
-        ...UV[eV],
-        ...VV
+      beaconSent(HH, BH) {
+        return HH && (this.inFlightBytes += BH, setTimeout((() => {
+          this.inFlightBytes -= BH
+        }), 1e4)), HH
       }
     }
-    const pV = "/index/replay/segment-upload-url",
-      QV = "/index/replay/manifest",
-      nV = 65536;
-
-    function wV(VV) {
-      return {
-        count: Math.ceil(VV.segmentDurationMs / VV.partDurationMs) + 1,
-        maxBytes: Math.ceil(1.5 * VV.bitrate / 8 * (VV.partDurationMs / 1e3)) + 32768
-      }
-    }
-    const ZV = "/index/studio/replay-segment-urls",
-      vV = 20,
-      rV = 50,
-      kV = 6e4,
-      bV = 432e5,
-      EV = "Chat",
-      BV = {
-        clock: "bloxd-clock",
-        active: "bloxd-active",
-        death: "player_death",
-        error: "error"
-      },
-      jV = {
-        FullSnapshot: 2,
-        IncrementalSnapshot: 3,
-        Meta: 4,
-        Custom: 5,
-        Plugin: 6
-      },
-      qV = {
-        Mutation: 0,
-        MouseMove: 1,
-        MouseInteraction: 2,
-        Scroll: 3,
-        ViewportResize: 4,
-        Input: 5,
-        TouchMove: 6,
-        MediaInteraction: 7,
-        StyleSheetRule: 8,
-        Drag: 12
-      }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

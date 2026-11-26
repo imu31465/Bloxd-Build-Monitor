@@ -1,17 +1,17 @@
-export const id = 57;
-export const ids = [57];
+export const id = 58;
+export const ids = [58];
 export const modules = {
-  53966: (VV, eV, xV) => {
-    xV.d(eV, {
-      startRenderProbe: () => ZV
+  54562: (HH, BH, LH) => {
+    LH.d(BH, {
+      startRenderProbe: () => XH
     });
-    var JV = xV(660),
-      YV = xV(4831),
-      UV = xV(3142),
-      yV = xV(4981);
-    const pV = 1e3,
-      QV = 36e5,
-      nV = [{
+    var AH = LH(625),
+      rH = LH(4772),
+      SH = LH(3105),
+      hH = LH(4921);
+    const tH = 1e3,
+      zH = 36e5,
+      CH = [{
         field: "decodeProbe",
         name: "decode probe"
       }, {
@@ -19,32 +19,32 @@ export const modules = {
         name: "particle probe"
       }];
 
-    function wV(VV, eV, xV) {
-      var YV, UV;
-      return `${VV}; ${xV?`os ${xV.os}, gpu ${null!==(YV=xV.gpuFamily)&&void 0!==YV?YV:"unknown"} ${null!==(UV=xV.gpuModel)&&void 0!==UV?UV:"unknown"}`:"device unknown"}, version ${JV.e}; ${eV}`
+    function EH(HH, BH, LH) {
+      var rH, SH;
+      return `${HH}; ${LH?`os ${LH.os}, gpu ${null!==(rH=LH.gpuFamily)&&void 0!==rH?rH:"unknown"} ${null!==(SH=LH.gpuModel)&&void 0!==SH?SH:"unknown"}`:"device unknown"}, version ${AH.d}; ${BH}`
     }
 
-    function ZV(VV) {
-      var eV;
-      const xV = null !== (eV = null === VV || void 0 === VV ? void 0 : VV.backend) && void 0 !== eV ? eV : "none";
-      if ("webgl" !== xV) {
-        const VV = (0, yV.f)();
+    function XH(HH) {
+      var BH;
+      const LH = null !== (BH = null === HH || void 0 === HH ? void 0 : HH.backend) && void 0 !== BH ? BH : "none";
+      if ("webgl" !== LH) {
+        const HH = (0, hH.g)();
         for (const {
-            field: eV
+            field: BH
           }
-          of nV) delete VV[eV];
-        return void(0, UV.i)("renderprobe", `decode and particle probes not run: the renderer is ${xV}, and they read WebGL2's draws`)
+          of CH) delete HH[BH];
+        return void(0, SH.j)("renderprobe", `decode and particle probes not run: the renderer is ${LH}, and they read WebGL2's draws`)
       }
-      const JV = (0, yV.f)();
+      const AH = (0, hH.g)();
       for (const {
-          field: ZV,
-          name: vV
+          field: XH,
+          name: GH
         }
-        of nV)(0, yV.g)(JV, ZV, ["1", "pending"], QV, pV).then((VV => {
-        void 0 !== VV && (0, UV.i)("renderprobe", wV(vV, VV, (0, YV.c)(!1)))
+        of CH)(0, hH.k)(AH, XH, ["1", "pending"], zH, tH).then((HH => {
+        void 0 !== HH && (0, SH.j)("renderprobe", EH(GH, HH, (0, rH.e)(!1)))
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

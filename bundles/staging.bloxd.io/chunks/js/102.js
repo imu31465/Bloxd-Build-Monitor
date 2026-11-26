@@ -1,373 +1,373 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  41821: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      startWasmPadGameplay: () => oV
+  41856: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      startWasmPadGameplay: () => NH
     });
-    xV(41825);
-    var JV = xV(41827),
-      YV = xV(41841),
-      UV = xV(2080),
-      yV = xV(41852),
-      pV = xV(5301),
-      QV = xV(5281),
-      nV = xV(41856),
-      wV = xV(41861),
-      ZV = xV(5310),
-      vV = xV(41942),
-      rV = xV(2663),
-      kV = xV(9462),
-      bV = xV(41831),
-      EV = xV(9435),
-      BV = xV(40310);
-    const jV = VV => {
-        const eV = ZV.e.indexOf(VV);
-        if (eV < 0) throw new Error(`No core action "${VV}"`);
-        return eV
+    LH(41860);
+    var AH = LH(41864),
+      rH = LH(41884),
+      SH = LH(2036),
+      hH = LH(41898),
+      tH = LH(5268),
+      zH = LH(5255),
+      CH = LH(41905),
+      EH = LH(41911),
+      XH = LH(5279),
+      GH = LH(41985),
+      YH = LH(2605),
+      uH = LH(9543),
+      QH = LH(41871),
+      WH = LH(9522),
+      MH = LH(40035);
+    const xH = HH => {
+        const BH = XH.c.indexOf(HH);
+        if (BH < 0) throw new Error(`No core action "${HH}"`);
+        return BH
       },
-      qV = jV("primary-fire"),
-      tV = jV("alt-fire"),
-      FV = jV("mid-fire"),
-      TV = jV("jump"),
-      PV = jV("ReloadGun"),
-      AV = jV("SwapCameraZoom"),
-      NV = jV("TouchAction1"),
-      XV = {
-        SpecialAction1: jV("SpecialAction1"),
-        SpecialAction2: jV("SpecialAction2")
+      vH = xH("primary-fire"),
+      PH = xH("alt-fire"),
+      TH = xH("mid-fire"),
+      UH = xH("jump"),
+      VH = xH("ReloadGun"),
+      OH = xH("SwapCameraZoom"),
+      bH = xH("TouchAction1"),
+      kH = {
+        SpecialAction1: xH("SpecialAction1"),
+        SpecialAction2: xH("SpecialAction2")
       },
-      MV = (VV, eV) => {
-        (0, rV.v)(pV.T.PadAction, VV, 0, 0, (0, rV.s)(eV, performance.now()))
+      mH = (HH, BH) => {
+        (0, YH.w)(tH.M.PadAction, HH, 0, 0, (0, YH.u)(BH, performance.now()))
       },
-      zV = VV => {
-        MV(VV, yV.td.Down)
+      oH = HH => {
+        mH(HH, hH.xd.Down)
       },
-      GV = VV => {
-        MV(VV, 0)
+      IH = HH => {
+        mH(HH, 0)
       },
-      WV = VV => {
-        zV(VV), GV(VV)
+      fH = HH => {
+        oH(HH), IH(HH)
       },
-      RV = () => {
-        const VV = (0, wV.k)();
-        return null !== VV && void 0 !== VV && VV.isCoreRunning ? VV : null
+      lH = () => {
+        const HH = (0, EH.i)();
+        return null !== HH && void 0 !== HH && HH.isCoreRunning ? HH : null
       },
-      gV = VV => yV.s.playerFlags(VV.api.apiView, 0),
-      DV = VV => null !== VV && yV.s.targetBlockId(VV.api.apiView, 0) !== yV.Yc,
-      iV = () => {
-        const VV = (0, kV.c)(),
-          eV = new bV.e;
-        let xV = !1;
-        const JV = (VV, eV) => {
-            (0, rV.v)(pV.T.PadLook, yV.Dd.Rate, VV, eV, 0)
+      KH = HH => hH.y.playerFlags(HH.api.apiView, 0),
+      cH = HH => null !== HH && hH.y.targetBlockId(HH.api.apiView, 0) !== hH.cd,
+      eH = () => {
+        const HH = (0, uH.d)(),
+          BH = new QH.b;
+        let LH = !1;
+        const AH = (HH, BH) => {
+            (0, YH.w)(tH.M.PadLook, hH.Hd.Rate, HH, BH, 0)
           },
-          YV = () => {
-            xV = !1, eV.reset(), JV(0, 0)
+          rH = () => {
+            LH = !1, BH.reset(), AH(0, 0)
           };
         return {
-          update: (YV, UV, QV) => {
-            xV || (VV.discardPending(), xV = !0);
-            const nV = (0, bV.q)(eV, YV, UV, QV, performance.now());
-            JV(nV.yawRadPerSec, nV.pitchRadPerSec);
-            const wV = VV.drainLookDelta();
-            0 === wV.uR && 0 === wV.eD || (0, rV.v)(pV.T.PadLook, yV.Dd.Gyro, wV.uR, wV.eD, 0)
+          update: (rH, SH, zH) => {
+            LH || (HH.discardPending(), LH = !0);
+            const CH = (0, QH.q)(BH, rH, SH, zH, performance.now());
+            AH(CH.yawRadPerSec, CH.pitchRadPerSec);
+            const EH = HH.drainLookDelta();
+            0 === EH.lq && 0 === EH.Fq || (0, YH.w)(tH.M.PadLook, hH.Hd.Gyro, EH.lq, EH.Fq, 0)
           },
-          release: YV,
-          uninstall: YV
+          release: rH,
+          uninstall: rH
         }
       },
-      CV = () => {
-        const VV = RV();
-        return null !== VV && 0 !== (gV(VV) & yV.Ld.PadSneakToggled)
+      qH = () => {
+        const HH = lH();
+        return null !== HH && 0 !== (KH(HH) & hH.Md.PadSneakToggled)
       },
-      aV = () => {
-        const VV = (VV => {
-          const eV = VV => function() {
-            return (0, vV.c)(), VV(...arguments)
+      gH = () => {
+        const HH = (HH => {
+          const BH = HH => function() {
+            return (0, GH.c)(), HH(...arguments)
           };
           return {
-            primaryFireDown: eV((VV => (MV(qV, yV.td.Down | (VV ? yV.td.Repeat : 0)), 0))),
-            primaryFireUp: eV((() => {
-              GV(qV)
+            primaryFireDown: BH((HH => (mH(vH, hH.xd.Down | (HH ? hH.xd.Repeat : 0)), 0))),
+            primaryFireUp: BH((() => {
+              IH(vH)
             })),
-            altFireDown: eV((() => (zV(tV), 0))),
-            altFireUp: eV((() => {
-              GV(tV)
+            altFireDown: BH((() => (oH(PH), 0))),
+            altFireUp: BH((() => {
+              IH(PH)
             })),
-            jumpDown: eV((() => {
-              WV(TV)
+            jumpDown: BH((() => {
+              fH(UH)
             })),
-            specialActionDown: eV((VV => {
-              zV(XV[VV])
+            specialActionDown: BH((HH => {
+              oH(kH[HH])
             })),
-            specialActionUp: eV((VV => {
-              GV(XV[VV])
+            specialActionUp: BH((HH => {
+              IH(kH[HH])
             })),
-            reloadGun: eV((() => {
-              WV(PV)
+            reloadGun: BH((() => {
+              fH(VH)
             })),
-            dropItem: eV((VV => {
-              MV(yV.vd.Drop, yV.td.Down | (VV ? yV.td.Stack : 0))
+            dropItem: BH((HH => {
+              mH(hH.Ad.Drop, hH.xd.Down | (HH ? hH.xd.Stack : 0))
             })),
-            swapCameraZoom: eV((() => {
-              WV(AV)
+            swapCameraZoom: BH((() => {
+              fH(OH)
             })),
-            pickBlock: eV((() => (WV(FV), DV(VV()))))
+            pickBlock: BH((() => (fH(TH), cH(HH()))))
           }
-        })(RV);
-        let eV = !1,
-          xV = null;
-        const JV = () => {
-          var VV;
-          null === (VV = xV) || void 0 === VV || VV(), xV = null
+        })(lH);
+        let BH = !1,
+          LH = null;
+        const AH = () => {
+          var HH;
+          null === (HH = LH) || void 0 === HH || HH(), LH = null
         };
         return {
-          bodies: () => VV,
-          look: iV(),
-          move: (VV, xV) => {
-            var YV;
-            JV();
+          bodies: () => HH,
+          look: eH(),
+          move: (HH, LH) => {
+            var rH;
+            AH();
             const {
-              bits: UV,
-              flips: pV
-            } = (VV => {
-              if (null === VV) return {
-                bits: yV.zd.Peek,
+              bits: SH,
+              flips: tH
+            } = (HH => {
+              if (null === HH) return {
+                bits: hH.Ed.Peek,
                 flips: 0
               };
-              const eV = VV.sneakHeld ? yV.zd.SneakHeld : 0;
-              return "hold" === VV.mode ? {
-                bits: eV | yV.zd.SneakHoldMode,
-                flips: VV.sneakTogglePressed ? 1 : 0
+              const BH = HH.sneakHeld ? hH.Ed.SneakHeld : 0;
+              return "hold" === HH.mode ? {
+                bits: BH | hH.Ed.SneakHoldMode,
+                flips: HH.sneakTogglePressed ? 1 : 0
               } : {
-                bits: eV,
-                flips: VV.sneakPressed || VV.sneakTogglePressed ? 1 : 0
+                bits: BH,
+                flips: HH.sneakPressed || HH.sneakTogglePressed ? 1 : 0
               }
-            })(xV);
-            null !== (YV = RV()) && void 0 !== YV && YV.padMove(VV.x, VV.y, VV.magnitude, VV.headingOffset, (VV => yV.zd.Active | (VV.jumpHeld ? yV.zd.JumpHeld : 0) | (VV.jumpPressed ? yV.zd.JumpPressed : 0) | (VV.running ? yV.zd.Running : 0) | (VV.sprintHeld ? yV.zd.SprintHeld : 0))(VV) | UV, pV) && (eV = !0), (0, EV.h)(CV())
+            })(LH);
+            null !== (rH = lH()) && void 0 !== rH && rH.padMove(HH.x, HH.y, HH.magnitude, HH.headingOffset, (HH => hH.Ed.Active | (HH.jumpHeld ? hH.Ed.JumpHeld : 0) | (HH.jumpPressed ? hH.Ed.JumpPressed : 0) | (HH.running ? hH.Ed.Running : 0) | (HH.sprintHeld ? hH.Ed.SprintHeld : 0))(HH) | SH, tH) && (BH = !0), (0, WH.h)(qH())
           },
           stopMoving: () => {
-            var VV;
-            eV && (eV = !(null !== (VV = RV()) && void 0 !== VV && VV.padMove(0, 0, 0, 0, 0, 0)), JV(), xV = (0, QV.u)((() => {
-              JV(), (0, EV.h)(CV())
+            var HH;
+            BH && (BH = !(null !== (HH = lH()) && void 0 !== HH && HH.padMove(0, 0, 0, 0, 0, 0)), AH(), LH = (0, zH.v)((() => {
+              AH(), (0, WH.h)(qH())
             })))
           },
-          uninstall: JV,
-          deviceChanged: VV => {
-            var xV;
-            "touch" === VV ? ((0, EV.h)(!1), null !== (xV = RV()) && void 0 !== xV && xV.padMove(0, 0, 0, 0, yV.zd.EndToggle, 0) && (eV = !1)) : "gamepad" === VV && (0, EV.h)(CV())
+          uninstall: AH,
+          deviceChanged: HH => {
+            var LH;
+            "touch" === HH ? ((0, WH.h)(!1), null !== (LH = lH()) && void 0 !== LH && LH.padMove(0, 0, 0, 0, hH.Ed.EndToggle, 0) && (BH = !1)) : "gamepad" === HH && (0, WH.h)(qH())
           },
-          hasPlayer: () => null !== RV(),
+          hasPlayer: () => null !== lH(),
           isPlayerDead: () => {
-            var VV;
-            return !1 === (null === (VV = RV()) || void 0 === VV ? void 0 : VV.localPlayerAlive())
+            var HH;
+            return !1 === (null === (HH = lH()) || void 0 === HH ? void 0 : HH.localPlayerAlive())
           },
           isReplayMode: () => {
-            const VV = RV();
-            return null !== VV && 0 !== (gV(VV) & yV.Ld.Replay)
+            const HH = lH();
+            return null !== HH && 0 !== (KH(HH) & hH.Md.Replay)
           },
           isFreeCameraOn: () => {
-            const VV = RV();
-            return null !== VV && 0 !== (gV(VV) & yV.Ld.FreeCam)
+            const HH = lH();
+            return null !== HH && 0 !== (KH(HH) & hH.Md.FreeCam)
           },
-          targetsBlock: () => DV(RV()),
+          targetsBlock: () => cH(lH()),
           selectedSlotEmpty: () => {
-            var VV;
-            return !(null !== (VV = RV()) && void 0 !== VV && VV.items.hn())
+            var HH;
+            return !(null !== (HH = lH()) && void 0 !== HH && HH.items.LX())
           },
-          pickBlockAllowed: () => !!UV.c.get("creative") && !!UV.c.get("canPickBlocks"),
-          scrollHotbar: VV => {
-            MV(yV.vd.Hotbar, yV.td.Down | (VV > 0 ? yV.td.Next : 0))
+          pickBlockAllowed: () => !!SH.e.get("creative") && !!SH.e.get("canPickBlocks"),
+          scrollHotbar: HH => {
+            mH(hH.Ad.Hotbar, hH.xd.Down | (HH > 0 ? hH.xd.Next : 0))
           },
-          hasFullInventory: nV.j,
-          hasLobbyTab: () => (0, BV.c)({
-            lobbyLeaderboardInfo: UV.c.get("lobbyLeaderboardInfo"),
-            lobbyManage: UV.c.get("lobbyManage")
+          hasFullInventory: CH.m,
+          hasLobbyTab: () => (0, MH.e)({
+            lobbyLeaderboardInfo: SH.e.get("lobbyLeaderboardInfo"),
+            lobbyManage: SH.e.get("lobbyManage")
           }),
           contextActionInputs: () => {
-            var VV, eV, xV, JV;
-            const YV = RV();
+            var HH, BH, LH, AH;
+            const rH = lH();
             return {
-              holdingGun: !1 !== (null === YV || void 0 === YV ? void 0 : YV.localPlayerAlive()) && "Gun" === (null === YV || void 0 === YV || null === (VV = YV.items.hn()) || void 0 === VV || null === (eV = VV.typeObj) || void 0 === eV ? void 0 : eV.type),
-              customButtons: null !== (xV = UV.c.get("customButtons")) && void 0 !== xV ? xV : null,
-              touchscreenActionButton: null !== (JV = UV.c.get("touchscreenActionButton")) && void 0 !== JV ? JV : null
+              holdingGun: !1 !== (null === rH || void 0 === rH ? void 0 : rH.localPlayerAlive()) && "Gun" === (null === rH || void 0 === rH || null === (HH = rH.items.LX()) || void 0 === HH || null === (BH = HH.typeObj) || void 0 === BH ? void 0 : BH.type),
+              customButtons: null !== (LH = SH.e.get("customButtons")) && void 0 !== LH ? LH : null,
+              touchscreenActionButton: null !== (AH = SH.e.get("touchscreenActionButton")) && void 0 !== AH ? AH : null
             }
           },
-          pressTouchButton: VV => {
-            VV ? zV(NV) : GV(NV)
+          pressTouchButton: HH => {
+            HH ? oH(bH) : IH(bH)
           }
         }
       },
-      oV = () => {
-        const VV = (0, YV.b)(aV()),
-          eV = (0, JV.b)(),
-          xV = null;
+      NH = () => {
+        const HH = (0, rH.d)(gH()),
+          BH = (0, AH.e)(),
+          LH = null;
         return () => {
-          VV(), eV(), null === xV || void 0 === xV || xV()
+          HH(), BH(), null === LH || void 0 === LH || LH()
         }
       }
   },
-  5281: (VV, eV, xV) => {
-    xV.d(eV, {
-      A: () => zV,
-      C: () => jV,
-      E: () => yV,
-      G: () => pV,
-      J: () => NV,
-      b: () => AV,
-      d: () => tV,
-      g: () => WV,
-      h: () => GV,
-      l: () => BV,
-      m: () => TV,
-      o: () => qV,
-      s: () => FV,
-      u: () => XV,
-      w: () => MV
+  5255: (HH, BH, LH) => {
+    LH.d(BH, {
+      D: () => oH,
+      F: () => xH,
+      J: () => hH,
+      L: () => tH,
+      P: () => bH,
+      c: () => OH,
+      d: () => PH,
+      e: () => fH,
+      g: () => IH,
+      k: () => MH,
+      n: () => UH,
+      p: () => vH,
+      r: () => TH,
+      v: () => kH,
+      z: () => mH
     });
-    var JV = xV(5288);
-    const YV = {
+    var AH = LH(5260);
+    const rH = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let UV = YV;
+    let SH = rH;
 
-    function yV(VV) {
-      UV = null !== VV && void 0 !== VV ? VV : YV
+    function hH(HH) {
+      SH = null !== HH && void 0 !== HH ? HH : rH
     }
 
-    function pV() {
-      return UV
+    function tH() {
+      return SH
     }
-    const QV = new Set,
-      nV = new Set;
-    let wV = -1;
-    const ZV = new Set,
-      vV = new Set;
-    let rV = 0,
-      kV = 0;
-    const bV = new Set,
-      EV = new Set;
+    const zH = new Set,
+      CH = new Set;
+    let EH = -1;
+    const XH = new Set,
+      GH = new Set;
+    let YH = 0,
+      uH = 0;
+    const QH = new Set,
+      WH = new Set;
 
-    function BV(VV) {
-      return QV.add(VV), () => {
-        QV.delete(VV)
+    function MH(HH) {
+      return zH.add(HH), () => {
+        zH.delete(HH)
       }
     }
 
-    function jV(VV, eV) {
-      for (const JV of QV) try {
-        JV(VV)
-      } catch (xV) {
-        eV(xV)
+    function xH(HH, BH) {
+      for (const AH of zH) try {
+        AH(HH)
+      } catch (LH) {
+        BH(LH)
       }
     }
 
-    function qV(VV) {
-      return nV.add(VV), () => {
-        nV.delete(VV)
+    function vH(HH) {
+      return CH.add(HH), () => {
+        CH.delete(HH)
       }
     }
 
-    function tV(VV, eV) {
-      const xV = wV < 0 ? 0 : VV - wV;
-      wV = VV;
-      for (const YV of nV) try {
-        YV(xV)
-      } catch (JV) {
-        eV(JV)
+    function PH(HH, BH) {
+      const LH = EH < 0 ? 0 : HH - EH;
+      EH = HH;
+      for (const rH of CH) try {
+        rH(LH)
+      } catch (AH) {
+        BH(AH)
       }
     }
 
-    function FV(VV) {
-      return ZV.add(VV), () => {
-        ZV.delete(VV)
+    function TH(HH) {
+      return XH.add(HH), () => {
+        XH.delete(HH)
       }
     }
 
-    function TV(VV) {
-      return vV.add(VV), () => {
-        vV.delete(VV)
+    function UH(HH) {
+      return GH.add(HH), () => {
+        GH.delete(HH)
       }
     }
-    let PV = 0;
+    let VH = 0;
 
-    function AV(VV) {
-      PV += VV
+    function OH(HH) {
+      VH += HH
     }
 
-    function NV() {
-      const VV = PV;
-      return PV = 0, VV
+    function bH() {
+      const HH = VH;
+      return VH = 0, HH
     }
 
-    function XV(VV) {
-      return bV.add(VV), () => {
-        bV.delete(VV)
-      }
-    }
-
-    function MV(VV) {
-      return EV.add(VV), () => {
-        EV.delete(VV)
+    function kH(HH) {
+      return QH.add(HH), () => {
+        QH.delete(HH)
       }
     }
 
-    function zV() {
-      rV = 0, kV = 0, wV = -1
+    function mH(HH) {
+      return WH.add(HH), () => {
+        WH.delete(HH)
+      }
     }
 
-    function GV(VV, eV) {
-      if ("paced" === VV) return kV += eV, null;
-      if ("drawn" !== VV && "skipped" !== VV) return null;
-      const xV = eV + kV;
-      return kV = 0, xV
+    function oH() {
+      YH = 0, uH = 0, EH = -1
     }
 
-    function WV(VV, eV, xV, YV) {
-      const UV = (0, JV.e)(eV),
-        yV = VV > 0 ? performance.now() : 0;
-      for (let JV = 0; JV < VV; JV++)
-        for (const VV of bV) try {
-          VV()
-        } catch (pV) {
-          YV(pV)
+    function IH(HH, BH) {
+      if ("paced" === HH) return uH += BH, null;
+      if ("drawn" !== HH && "skipped" !== HH) return null;
+      const LH = BH + uH;
+      return uH = 0, LH
+    }
+
+    function fH(HH, BH, LH, rH) {
+      const SH = (0, AH.e)(BH),
+        hH = HH > 0 ? performance.now() : 0;
+      for (let AH = 0; AH < HH; AH++)
+        for (const HH of QH) try {
+          HH()
+        } catch (tH) {
+          rH(tH)
         }
-      if (VV > 0 && AV(performance.now() - yV), null !== xV) {
-        for (const VV of ZV) try {
-          VV(xV)
-        } catch (pV) {
-          YV(pV)
+      if (HH > 0 && OH(performance.now() - hH), null !== LH) {
+        for (const HH of XH) try {
+          HH(LH)
+        } catch (tH) {
+          rH(tH)
         }
-        rV += xV
+        YH += LH
       }
-      if ("drawn" === eV) {
-        const VV = rV;
-        rV = 0;
-        for (const eV of vV) try {
-          eV(VV)
-        } catch (pV) {
-          YV(pV)
+      if ("drawn" === BH) {
+        const HH = YH;
+        YH = 0;
+        for (const BH of GH) try {
+          BH(HH)
+        } catch (tH) {
+          rH(tH)
         }
       }
-      for (const JV of EV) try {
-        JV(VV, UV)
-      } catch (pV) {
-        YV(pV)
+      for (const AH of WH) try {
+        AH(HH, SH)
+      } catch (tH) {
+        rH(tH)
       }
     }
   },
-  5310: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => YV,
-      h: () => UV,
-      l: () => yV,
-      p: () => JV,
-      q: () => pV
+  5279: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => rH,
+      f: () => SH,
+      i: () => hH,
+      j: () => AH,
+      k: () => tH
     });
-    const JV = {
+    const AH = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -564,8 +564,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      YV = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      UV = {
+      rH = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      SH = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -628,160 +628,160 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      yV = {
+      hH = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      pV = [16]
+      tH = [16]
   },
-  41942: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => yV,
-      g: () => UV,
-      h: () => YV
+  41985: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => hH,
+      d: () => SH,
+      g: () => rH
     });
-    let JV = null;
+    let AH = null;
 
-    function YV(VV) {
-      JV = VV
+    function rH(HH) {
+      AH = HH
     }
 
-    function UV(VV) {
-      JV === VV && (JV = null)
+    function SH(HH) {
+      AH === HH && (AH = null)
     }
 
-    function yV() {
-      var VV;
-      null === (VV = JV) || void 0 === VV || VV()
+    function hH() {
+      var HH;
+      null === (HH = AH) || void 0 === HH || HH()
     }
   },
-  5319: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => pV,
-      f: () => yV,
-      h: () => nV
+  5288: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => tH,
+      g: () => hH,
+      k: () => CH
     });
-    var JV = xV(2660),
-      YV = xV(2663);
-    const UV = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var AH = LH(2600),
+      rH = LH(2605);
+    const SH = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function yV(VV) {
-      return VV instanceof HTMLElement && (!!(VV.isContentEditable || VV instanceof HTMLTextAreaElement || VV instanceof HTMLSelectElement) || VV instanceof HTMLInputElement && !UV.has(VV.type))
+    function hH(HH) {
+      return HH instanceof HTMLElement && (!!(HH.isContentEditable || HH instanceof HTMLTextAreaElement || HH instanceof HTMLSelectElement) || HH instanceof HTMLInputElement && !SH.has(HH.type))
     }
 
-    function pV(VV) {
-      let eV = null;
-      const xV = xV => {
-          const YV = yV(xV);
-          YV !== eV && (eV = YV, VV(JV.i.UiCapture, JV.y.Keyboard, 0, 0, YV ? JV.y.Keyboard : 0))
+    function tH(HH) {
+      let BH = null;
+      const LH = LH => {
+          const rH = hH(LH);
+          rH !== BH && (BH = rH, HH(AH.g.UiCapture, AH.w.Keyboard, 0, 0, rH ? AH.w.Keyboard : 0))
         },
-        YV = VV => {
-          xV(VV.target)
+        rH = HH => {
+          LH(HH.target)
         },
-        UV = VV => {
-          xV(VV.relatedTarget)
+        SH = HH => {
+          LH(HH.relatedTarget)
         },
-        pV = () => {
-          xV(document.activeElement)
+        tH = () => {
+          LH(document.activeElement)
         },
-        QV = {
+        zH = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", YV, QV), document.addEventListener("focusout", UV, QV), document.addEventListener("keydown", pV, QV), xV(document.activeElement), () => {
-        document.removeEventListener("focusin", YV, QV), document.removeEventListener("focusout", UV, QV), document.removeEventListener("keydown", pV, QV)
+      return document.addEventListener("focusin", rH, zH), document.addEventListener("focusout", SH, zH), document.addEventListener("keydown", tH, zH), LH(document.activeElement), () => {
+        document.removeEventListener("focusin", rH, zH), document.removeEventListener("focusout", SH, zH), document.removeEventListener("keydown", tH, zH)
       }
     }
-    const QV = new Map;
+    const zH = new Map;
 
-    function nV(VV, eV) {
-      var xV;
-      let JV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      QV.set(JV, (null !== (xV = QV.get(JV)) && void 0 !== xV ? xV : 0) & ~VV | eV & VV);
-      let UV = 0;
-      for (const YV of QV.values()) UV |= YV;
-      return (0, YV.D)(VV, UV & VV)
+    function CH(HH, BH) {
+      var LH;
+      let AH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      zH.set(AH, (null !== (LH = zH.get(AH)) && void 0 !== LH ? LH : 0) & ~HH | BH & HH);
+      let SH = 0;
+      for (const rH of zH.values()) SH |= rH;
+      return (0, rH.E)(HH, SH & HH)
     }
   },
-  38114: (VV, eV, xV) => {
-    function JV(VV) {
-      return VV.includes("Leaf Bed")
+  37798: (HH, BH, LH) => {
+    function AH(HH) {
+      return HH.includes("Leaf Bed")
     }
 
-    function YV(VV) {
-      return / Bed(?: Head)?(?:\||$)/.test(VV) && !JV(VV)
+    function rH(HH) {
+      return / Bed(?: Head)?(?:\||$)/.test(HH) && !AH(HH)
     }
 
-    function UV(VV) {
-      return VV.includes(" Strongbed")
+    function SH(HH) {
+      return HH.includes(" Strongbed")
     }
 
-    function yV(VV) {
-      return JV(VV) || YV(VV) || UV(VV)
+    function hH(HH) {
+      return AH(HH) || rH(HH) || SH(HH)
     }
-    xV.d(eV, {
-      d: () => yV,
-      e: () => JV,
-      f: () => UV,
-      j: () => YV
+    LH.d(BH, {
+      d: () => hH,
+      h: () => AH,
+      l: () => SH,
+      m: () => rH
     })
   },
-  38112: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => nV
+  37793: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => CH
     });
-    var JV = xV(38114),
-      YV = xV(9820);
-    const UV = [],
-      yV = [],
-      pV = [],
-      QV = [];
-    for (const wV of Object.keys(YV.p))(0, JV.e)(wV) ? UV.push(wV) : (0, JV.j)(wV) && yV.push(wV), (0, JV.f)(wV) && pV.push(wV), (wV.includes(" Bed Head") || wV.includes(" Strongbed Head")) && QV.push(wV);
-    const nV = {
-      leafBeds: UV,
-      woolBeds: yV,
-      strongBeds: pV,
-      beds: [...UV, ...yV, ...pV],
-      bedHeads: QV,
+    var AH = LH(37798),
+      rH = LH(9940);
+    const SH = [],
+      hH = [],
+      tH = [],
+      zH = [];
+    for (const EH of Object.keys(rH.l))(0, AH.h)(EH) ? SH.push(EH) : (0, AH.m)(EH) && hH.push(EH), (0, AH.l)(EH) && tH.push(EH), (EH.includes(" Bed Head") || EH.includes(" Strongbed Head")) && zH.push(EH);
+    const CH = {
+      leafBeds: SH,
+      woolBeds: hH,
+      strongBeds: tH,
+      beds: [...SH, ...hH, ...tH],
+      bedHeads: zH,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  7024: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => yV,
-      i: () => YV,
-      j: () => QV,
-      n: () => UV,
-      o: () => nV,
-      q: () => JV,
-      s: () => pV
+  7007: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH,
+      e: () => rH,
+      h: () => zH,
+      i: () => SH,
+      m: () => CH,
+      o: () => AH,
+      p: () => tH
     });
-    let JV = function(VV) {
-        return VV[VV.DEFAULT = 0] = "DEFAULT", VV[VV.BOAT = 1] = "BOAT", VV[VV.GLIDER = 2] = "GLIDER", VV[VV.BALLOON = 3] = "BALLOON", VV[VV.SLEEPING = 4] = "SLEEPING", VV[VV.RIDING_MOB = 5] = "RIDING_MOB", VV[VV.CAR = 6] = "CAR", VV[VV.HOVERCRAFT = 7] = "HOVERCRAFT", VV
+    let AH = function(HH) {
+        return HH[HH.DEFAULT = 0] = "DEFAULT", HH[HH.BOAT = 1] = "BOAT", HH[HH.GLIDER = 2] = "GLIDER", HH[HH.BALLOON = 3] = "BALLOON", HH[HH.SLEEPING = 4] = "SLEEPING", HH[HH.RIDING_MOB = 5] = "RIDING_MOB", HH[HH.CAR = 6] = "CAR", HH[HH.HOVERCRAFT = 7] = "HOVERCRAFT", HH
       }({}),
-      YV = function(VV) {
-        return VV[VV.WOOD = 0] = "WOOD", VV[VV.OBSIDIAN = 1] = "OBSIDIAN", VV[VV.SPEED = 2] = "SPEED", VV
+      rH = function(HH) {
+        return HH[HH.WOOD = 0] = "WOOD", HH[HH.OBSIDIAN = 1] = "OBSIDIAN", HH[HH.SPEED = 2] = "SPEED", HH
       }({}),
-      UV = function(VV) {
-        return VV[VV.WOOD = 0] = "WOOD", VV[VV.IRON = 1] = "IRON", VV[VV.GOLD = 2] = "GOLD", VV[VV.DIAMOND = 3] = "DIAMOND", VV
+      SH = function(HH) {
+        return HH[HH.WOOD = 0] = "WOOD", HH[HH.IRON = 1] = "IRON", HH[HH.GOLD = 2] = "GOLD", HH[HH.DIAMOND = 3] = "DIAMOND", HH
       }({}),
-      yV = function(VV) {
-        return VV[VV.YELLOW = 0] = "YELLOW", VV[VV.WHITE = 1] = "WHITE", VV[VV.RED = 2] = "RED", VV[VV.PURPLE = 3] = "PURPLE", VV[VV.PINK = 4] = "PINK", VV[VV.ORANGE = 5] = "ORANGE", VV[VV.MAGENTA = 6] = "MAGENTA", VV[VV.LIME = 7] = "LIME", VV[VV.LIGHT_GRAY = 8] = "LIGHT_GRAY", VV[VV.LIGHT_BLUE = 9] = "LIGHT_BLUE", VV[VV.GREEN = 10] = "GREEN", VV[VV.GRAY = 11] = "GRAY", VV[VV.CYAN = 12] = "CYAN", VV[VV.BROWN = 13] = "BROWN", VV[VV.BLUE = 14] = "BLUE", VV[VV.BLACK = 15] = "BLACK", VV
+      hH = function(HH) {
+        return HH[HH.YELLOW = 0] = "YELLOW", HH[HH.WHITE = 1] = "WHITE", HH[HH.RED = 2] = "RED", HH[HH.PURPLE = 3] = "PURPLE", HH[HH.PINK = 4] = "PINK", HH[HH.ORANGE = 5] = "ORANGE", HH[HH.MAGENTA = 6] = "MAGENTA", HH[HH.LIME = 7] = "LIME", HH[HH.LIGHT_GRAY = 8] = "LIGHT_GRAY", HH[HH.LIGHT_BLUE = 9] = "LIGHT_BLUE", HH[HH.GREEN = 10] = "GREEN", HH[HH.GRAY = 11] = "GRAY", HH[HH.CYAN = 12] = "CYAN", HH[HH.BROWN = 13] = "BROWN", HH[HH.BLUE = 14] = "BLUE", HH[HH.BLACK = 15] = "BLACK", HH
       }({}),
-      pV = function(VV) {
-        return VV[VV.ROTATION_1 = 0] = "ROTATION_1", VV[VV.ROTATION_2 = 1] = "ROTATION_2", VV[VV.ROTATION_3 = 2] = "ROTATION_3", VV[VV.ROTATION_4 = 3] = "ROTATION_4", VV
+      tH = function(HH) {
+        return HH[HH.ROTATION_1 = 0] = "ROTATION_1", HH[HH.ROTATION_2 = 1] = "ROTATION_2", HH[HH.ROTATION_3 = 2] = "ROTATION_3", HH[HH.ROTATION_4 = 3] = "ROTATION_4", HH
       }({}),
-      QV = function(VV) {
-        return VV[VV.KART = 0] = "KART", VV[VV.OFF_ROADER = 1] = "OFF_ROADER", VV[VV.CAR = 2] = "CAR", VV[VV.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", VV[VV.ARMORED_CAR = 4] = "ARMORED_CAR", VV[VV.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", VV[VV.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", VV[VV.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", VV
+      zH = function(HH) {
+        return HH[HH.KART = 0] = "KART", HH[HH.OFF_ROADER = 1] = "OFF_ROADER", HH[HH.CAR = 2] = "CAR", HH[HH.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", HH[HH.ARMORED_CAR = 4] = "ARMORED_CAR", HH[HH.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", HH[HH.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", HH[HH.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", HH
       }({});
-    JV.DEFAULT, JV.BOAT, YV.SPEED, JV.GLIDER, UV.DIAMOND, JV.BALLOON, yV.BLACK, JV.SLEEPING, pV.ROTATION_4, JV.RIDING_MOB, JV.CAR, QV.MOONSTONE_MINING_DRILL, JV.HOVERCRAFT;
-    let nV = function(VV) {
-      return VV[VV.NORMAL = 0] = "NORMAL", VV[VV.GLIDING = 1] = "GLIDING", VV[VV.FLOATING = 2] = "FLOATING", VV
+    AH.DEFAULT, AH.BOAT, rH.SPEED, AH.GLIDER, SH.DIAMOND, AH.BALLOON, hH.BLACK, AH.SLEEPING, tH.ROTATION_4, AH.RIDING_MOB, AH.CAR, zH.MOONSTONE_MINING_DRILL, AH.HOVERCRAFT;
+    let CH = function(HH) {
+      return HH[HH.NORMAL = 0] = "NORMAL", HH[HH.GLIDING = 1] = "GLIDING", HH[HH.FLOATING = 2] = "FLOATING", HH
     }({})
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

@@ -110,6 +110,10 @@
   position: relative
 }
 
+.PlayerProfile .PlayerProfileLeft .PlayerProfileModel:empty {
+  display: none
+}
+
 .PlayerProfile .PlayerProfileLeft .PlayerProfileModel .PlayerProfileModelLoading {
   align-items: center;
   display: flex;

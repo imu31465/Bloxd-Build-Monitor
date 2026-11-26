@@ -1,272 +1,272 @@
 export const id = 92;
 export const ids = [92, 108];
 export const modules = {
-    5333: (VV, eV, xV) => {
-      xV.d(eV, {
-        e: () => EV,
-        i: () => BV
+    5308: (HH, BH, LH) => {
+      LH.d(BH, {
+        e: () => WH,
+        h: () => MH
       });
-      var JV = xV(1146),
-        YV = xV.n(JV),
-        UV = xV(62),
-        yV = xV(1220),
-        pV = xV(5335),
-        QV = xV(2021),
-        nV = xV(2693),
-        wV = xV(5339),
-        ZV = xV(1321);
-      const vV = new WeakMap;
-      let rV = 0;
+      var AH = LH(1038),
+        rH = LH.n(AH),
+        SH = LH(45),
+        hH = LH(1123),
+        tH = LH(5314),
+        zH = LH(1967),
+        CH = LH(2628),
+        EH = LH(5319),
+        XH = LH(1225);
+      const GH = new WeakMap;
+      let YH = 0;
 
-      function kV(VV) {
-        let eV = vV.get(VV);
-        return void 0 === eV && (eV = rV++, vV.set(VV, eV)), eV
+      function uH(HH) {
+        let BH = GH.get(HH);
+        return void 0 === BH && (BH = YH++, GH.set(HH, BH)), BH
       }
 
-      function bV(VV) {
+      function QH(HH) {
         let {
-          piece: eV
-        } = VV;
-        return "space" === eV.kind ? (0, ZV.jsx)(ZV.Fragment, {
-          children: eV.text
-        }) : (0, ZV.jsx)("span", {
+          piece: BH
+        } = HH;
+        return "space" === BH.kind ? (0, XH.jsx)(XH.Fragment, {
+          children: BH.text
+        }) : (0, XH.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${eV.delayMs}ms`
+            "--word-delay": `${BH.delayMs}ms`
           },
-          children: (0, ZV.jsx)(pV.e, {
-            text: "icon" === eV.kind ? `[[${eV.icon}]]` : eV.text
+          children: (0, XH.jsx)(tH.b, {
+            text: "icon" === BH.kind ? `[[${BH.icon}]]` : BH.text
           })
         })
       }
 
-      function EV(VV) {
+      function WH(HH) {
         let {
-          display: eV
-        } = VV;
+          display: BH
+        } = HH;
         const {
-          selectedLanguage: xV
-        } = (0, yV.A)(), JV = (0, UV.useMemo)((() => (0, wV.c)((0, wV.g)(eV).plan.pieces)), [eV, xV.code]);
-        return (0, ZV.jsxs)("div", {
-          className: YV()("Dialogue", {
-            DialogueAnimateIn: !1 !== eV.animateIn
+          selectedLanguage: LH
+        } = (0, hH.B)(), AH = (0, SH.useMemo)((() => (0, EH.b)((0, EH.d)(BH).plan.pieces)), [BH, LH.code]);
+        return (0, XH.jsxs)("div", {
+          className: rH()("Dialogue", {
+            DialogueAnimateIn: !1 !== BH.animateIn
           }),
-          children: [eV.speakerName && (0, ZV.jsx)(QV.b, {
-            text: eV.speakerName,
+          children: [BH.speakerName && (0, XH.jsx)(zH.b, {
+            text: BH.speakerName,
             className: "DialogueSpeaker"
-          }), (0, ZV.jsx)("p", {
+          }), (0, XH.jsx)("p", {
             className: "DialogueLine",
-            children: JV.map(((VV, eV) => 1 === VV.length && "space" === VV[0].kind ? VV[0].text : (0, ZV.jsx)("span", {
+            children: AH.map(((HH, BH) => 1 === HH.length && "space" === HH[0].kind ? HH[0].text : (0, XH.jsx)("span", {
               className: "DialogueGlue",
-              children: VV.map(((VV, eV) => (0, ZV.jsx)(bV, {
-                piece: VV
-              }, eV)))
-            }, eV)))
+              children: HH.map(((HH, BH) => (0, XH.jsx)(QH, {
+                piece: HH
+              }, BH)))
+            }, BH)))
           })]
         })
       }
-      const BV = (0, UV.memo)((function() {
-        const VV = (0, nV.j)("dialogue");
-        return (0, ZV.jsx)("div", {
+      const MH = (0, SH.memo)((function() {
+        const HH = (0, CH.j)("dialogue");
+        return (0, XH.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: VV && (0, ZV.jsx)(EV, {
-            display: VV
-          }, kV(VV))
+          children: HH && (0, XH.jsx)(WH, {
+            display: HH
+          }, uH(HH))
         })
       }))
     },
-    5222: (VV, eV, xV) => {
-        xV.r(eV), xV.d(eV, {
-          default: () => OU
+    5188: (HH, BH, LH) => {
+        LH.r(BH), LH.d(BH, {
+          default: () => yS
         });
-        var JV = xV(62),
-          YV = xV(1146),
-          UV = xV.n(YV),
-          yV = xV(1616),
-          pV = xV(1625),
-          QV = xV(27),
-          nV = xV(78),
-          wV = xV(5226),
-          ZV = xV(5239),
-          vV = xV(5241),
-          rV = xV(4788),
-          kV = xV(1321);
-        const bV = "/textures/docs/icons";
+        var AH = LH(45),
+          rH = LH(1038),
+          SH = LH.n(rH),
+          hH = LH(1511),
+          tH = LH(1520),
+          zH = LH(15),
+          CH = LH(69),
+          EH = LH(5194),
+          XH = LH(5207),
+          GH = LH(5214),
+          YH = LH(4740),
+          uH = LH(1225);
+        const QH = "/textures/docs/icons";
 
-        function EV(VV) {
+        function WH(HH) {
           let {
-            name: eV,
-            isTinted: xV,
-            className: JV,
-            style: YV
-          } = VV;
-          const yV = `${bV}/${eV}.png`;
-          return xV ? (0, kV.jsxs)("span", {
-            className: UV()("DocsPixelIcon", "Tinted", JV),
+            name: BH,
+            isTinted: LH,
+            className: AH,
+            style: rH
+          } = HH;
+          const hH = `${QH}/${BH}.png`;
+          return LH ? (0, uH.jsxs)("span", {
+            className: SH()("DocsPixelIcon", "Tinted", AH),
             "aria-hidden": "true",
-            style: YV,
-            children: [(0, kV.jsx)("span", {
+            style: rH,
+            children: [(0, uH.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${yV}")`,
-                WebkitMaskImage: `url("${yV}")`
+                maskImage: `url("${hH}")`,
+                WebkitMaskImage: `url("${hH}")`
               }
-            }), (0, kV.jsx)("img", {
-              src: yV,
+            }), (0, uH.jsx)("img", {
+              src: hH,
               alt: ""
             })]
-          }) : (0, kV.jsx)("img", {
-            className: UV()("DocsPixelIcon", JV),
-            src: yV,
+          }) : (0, uH.jsx)("img", {
+            className: SH()("DocsPixelIcon", AH),
+            src: hH,
             alt: "",
             "aria-hidden": "true",
-            style: YV
+            style: rH
           })
         }
-        const BV = 1500;
+        const MH = 1500;
 
-        function jV() {
-          const [VV, eV] = (0, JV.useState)(null);
-          (0, JV.useEffect)((() => {
-            if (null === VV) return;
-            const xV = setTimeout((() => {
-              eV(null)
-            }), BV);
+        function xH() {
+          const [HH, BH] = (0, AH.useState)(null);
+          (0, AH.useEffect)((() => {
+            if (null === HH) return;
+            const LH = setTimeout((() => {
+              BH(null)
+            }), MH);
             return () => {
-              clearTimeout(xV)
+              clearTimeout(LH)
             }
-          }), [VV]);
-          return [VV, VV => {
-            (0, rV.b)(VV).then((() => {
-              eV({
-                text: VV,
+          }), [HH]);
+          return [HH, HH => {
+            (0, YH.c)(HH).then((() => {
+              BH({
+                text: HH,
                 failed: !1
               })
-            }), (xV => {
-              console.error("Could not copy to the clipboard", xV), eV({
-                text: VV,
+            }), (LH => {
+              console.error("Could not copy to the clipboard", LH), BH({
+                text: HH,
                 failed: !0
               })
             }))
           }]
         }
 
-        function qV(VV) {
+        function vH(HH) {
           let {
-            text: eV,
-            label: xV,
-            className: JV
-          } = VV;
-          const [YV, yV] = jV(), pV = !1 === (null === YV || void 0 === YV ? void 0 : YV.failed);
-          return (0, kV.jsxs)("button", {
+            text: BH,
+            label: LH,
+            className: AH
+          } = HH;
+          const [rH, hH] = xH(), tH = !1 === (null === rH || void 0 === rH ? void 0 : rH.failed);
+          return (0, uH.jsxs)("button", {
             type: "button",
-            className: UV()("DocsCopyButton", JV, {
-              Copied: pV
+            className: SH()("DocsCopyButton", AH, {
+              Copied: tH
             }),
-            title: `Copy ${eV.length>40?"to clipboard":eV}`,
-            "aria-label": xV ? void 0 : `Copy ${eV}`,
-            onClick: VV => {
-              VV.stopPropagation(), yV(eV)
+            title: "Copy to clipboard",
+            "aria-label": LH ? void 0 : `Copy ${BH}`,
+            onClick: HH => {
+              HH.stopPropagation(), hH(BH)
             },
-            children: [(0, kV.jsx)(EV, {
-              name: pV ? "check" : "copy"
-            }), xV && (0, kV.jsx)("span", {
-              children: pV ? "Copied" : null !== YV && void 0 !== YV && YV.failed ? "Copy failed" : xV
+            children: [(0, uH.jsx)(WH, {
+              name: tH ? "check" : "copy"
+            }), LH && (0, uH.jsx)("span", {
+              children: tH ? "Copied" : null !== rH && void 0 !== rH && rH.failed ? "Copy failed" : LH
             })]
           })
         }
-        wV.c.registerLanguage("javascript", ZV.e), wV.c.registerLanguage("typescript", vV.b);
-        const tV = {
+        EH.c.registerLanguage("javascript", XH.e), EH.c.registerLanguage("typescript", GH.b);
+        const PH = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          FV = {
+          TH = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          TV = 24;
+          UH = 24;
 
-        function PV(VV) {
+        function VH(HH) {
           let {
-            code: eV,
-            lang: xV,
-            compact: YV = !1
-          } = VV;
-          const yV = (0, JV.useMemo)((() => function(VV, eV) {
-              const xV = tV[eV];
-              return xV ? wV.c.highlight(VV, {
-                language: xV
-              }).value : VV.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(eV, xV)), [eV, xV]),
-            pV = eV.split("\n").length,
-            QV = !YV && pV > TV + 6,
-            [nV, ZV] = (0, JV.useState)(!1),
-            vV = tV[xV];
-          return (0, kV.jsxs)("div", {
-            className: UV()("DocsCodeBlock", {
-              Compact: YV,
-              Collapsed: QV && !nV
+            code: BH,
+            lang: LH,
+            compact: rH = !1
+          } = HH;
+          const hH = (0, AH.useMemo)((() => function(HH, BH) {
+              const LH = PH[BH];
+              return LH ? EH.c.highlight(HH, {
+                language: LH
+              }).value : HH.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(BH, LH)), [BH, LH]),
+            tH = BH.split("\n").length,
+            zH = !rH && tH > UH + 6,
+            [CH, XH] = (0, AH.useState)(!1),
+            GH = PH[LH];
+          return (0, uH.jsxs)("div", {
+            className: SH()("DocsCodeBlock", {
+              Compact: rH,
+              Collapsed: zH && !CH
             }),
-            children: [!YV && (0, kV.jsxs)("div", {
+            children: [!rH && (0, uH.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, kV.jsx)("span", {
+              children: [(0, uH.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: vV ? FV[vV] : "Text"
-              }), (0, kV.jsx)(qV, {
-                text: eV,
+                children: GH ? TH[GH] : "Text"
+              }), (0, uH.jsx)(vH, {
+                text: BH,
                 label: "Copy"
               })]
-            }), (0, kV.jsx)("pre", {
-              children: (0, kV.jsx)("code", {
+            }), (0, uH.jsx)("pre", {
+              children: (0, uH.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: yV
+                  __html: hH
                 }
               })
-            }), QV && (0, kV.jsxs)("button", {
+            }), zH && (0, uH.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": nV,
+              "aria-expanded": CH,
               onClick: () => {
-                ZV(!nV)
+                XH(!CH)
               },
-              children: [(0, kV.jsx)(EV, {
-                name: nV ? "chevron-up" : "chevron-down"
-              }), nV ? "Show less" : `Show all ${pV} lines`]
+              children: [(0, uH.jsx)(WH, {
+                name: CH ? "chevron-up" : "chevron-down"
+              }), CH ? "Show less" : `Show all ${tH} lines`]
             })]
           })
         }
-        var AV = xV(5243);
-        var NV = xV(5246);
-        const XV = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var OH = LH(5218);
+        var bH = LH(5220);
+        const kH = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function MV(VV) {
-          const eV = new Map;
-          let xV, JV = [],
-            YV = !1;
-          const UV = () => {
-            xV && eV.set(xV.name, xV.lines.join("\n").trimEnd())
+        function mH(HH) {
+          const BH = new Map;
+          let LH, AH = [],
+            rH = !1;
+          const SH = () => {
+            LH && BH.set(LH.name, LH.lines.join("\n").trimEnd())
           };
-          for (const yV of VV.split("\n")) {
-            const VV = yV.match(XV);
-            YV || yV.startsWith("/*") ? (YV || (UV(), xV = void 0), JV.push(yV), YV = !yV.includes("*/")) : VV ? (UV(), xV = {
-              name: VV[1],
-              lines: [...JV, yV]
-            }, JV = []) : xV && (yV.startsWith(" ") || yV.startsWith("\t") || /^[}\])|]/.test(yV)) ? xV.lines.push(yV) : xV && "" !== yV.trim() && (UV(), xV = void 0)
+          for (const hH of HH.split("\n")) {
+            const HH = hH.match(kH);
+            rH || hH.startsWith("/*") ? (rH || (SH(), LH = void 0), AH.push(hH), rH = !hH.includes("*/")) : HH ? (SH(), LH = {
+              name: HH[1],
+              lines: [...AH, hH]
+            }, AH = []) : LH && (hH.startsWith(" ") || hH.startsWith("\t") || /^[}\])|]/.test(hH)) ? LH.lines.push(hH) : LH && "" !== hH.trim() && (SH(), LH = void 0)
           }
-          return UV(), eV
+          return SH(), BH
         }
 
-        function zV(VV) {
-          return "methods" === VV || "callbacks" === VV || "settings" === VV
+        function oH(HH) {
+          return "methods" === HH || "callbacks" === HH || "settings" === HH
         }
-        const GV = {
+        const IH = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (VV, eV) => `api.setClientOption(playerId, "${VV}", ${eV})`
+              setterSnippet: (HH, BH) => `api.setClientOption(playerId, "${HH}", ${BH})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (VV, eV) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${VV}", ${eV})`
+              setterSnippet: (HH, BH) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${HH}", ${BH})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (VV, eV) => `api.setMobSetting(mobId, "${VV}", ${eV})`
+              setterSnippet: (HH, BH) => `api.setMobSetting(mobId, "${HH}", ${BH})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (VV, eV) => `api.setVehicleSetting(vehicleId, "${VV}", ${eV})`
+              setterSnippet: (HH, BH) => `api.setVehicleSetting(vehicleId, "${HH}", ${BH})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          WV = {
+          fH = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function RV(VV) {
-          return VV.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function lH(HH) {
+          return HH.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function gV(VV) {
-          let eV = !1;
-          return VV.split("\n").map((VV => (VV.startsWith("```") && (eV = !eV), !eV && /^#{3,} /.test(VV) ? VV.slice(1) : VV))).join("\n")
+        function KH(HH) {
+          let BH = !1;
+          return HH.split("\n").map((HH => (HH.startsWith("```") && (BH = !BH), !BH && /^#{3,} /.test(HH) ? HH.slice(1) : HH))).join("\n")
         }
 
-        function DV(VV) {
-          return "readme" === VV ? "getting-started" : RV(VV)
+        function cH(HH) {
+          return "readme" === HH ? "getting-started" : lH(HH)
         }
-        const iV = "## Glossary of Referenced Types";
-        const CV = [{
+        const eH = "## Glossary of Referenced Types";
+        const qH = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...NV.c.flatMap((VV => {
-            const eV = {
-              id: VV.id,
-              slug: DV(VV.id),
-              title: VV.title,
-              markdown: VV.content,
-              ...GV[VV.id]
+          }, ...bH.c.flatMap((HH => {
+            const BH = {
+              id: HH.id,
+              slug: cH(HH.id),
+              title: HH.title,
+              markdown: HH.content,
+              ...IH[HH.id]
             };
-            if ("readme" === VV.id) return function(VV) {
-              const eV = VV.markdown.indexOf(iV),
-                xV = VV.markdown.indexOf("\n```", eV),
-                JV = VV.markdown.indexOf("\n```", xV + 1);
-              if (-1 === eV || -1 === xV || -1 === JV) throw new Error(`Getting started has no "${iV}" section with a code block`);
-              const YV = VV.markdown.slice(eV + 31, xV).trim(),
-                UV = [...MV(VV.markdown.slice(VV.markdown.indexOf("\n", xV + 1) + 1, JV))].map((VV => {
-                  let [eV, xV] = VV;
-                  return `## ${eV}\n\n\`\`\`ts\n${xV}\n\`\`\`\n`
+            if ("readme" === HH.id) return function(HH) {
+              const BH = HH.markdown.indexOf(eH),
+                LH = HH.markdown.indexOf("\n```", BH),
+                AH = HH.markdown.indexOf("\n```", LH + 1);
+              if (-1 === BH || -1 === LH || -1 === AH) throw new Error(`Getting started has no "${eH}" section with a code block`);
+              const rH = HH.markdown.slice(BH + 31, LH).trim(),
+                SH = [...mH(HH.markdown.slice(HH.markdown.indexOf("\n", LH + 1) + 1, AH))].map((HH => {
+                  let [BH, LH] = HH;
+                  return `## ${BH}\n\n\`\`\`ts\n${LH}\n\`\`\`\n`
                 })),
-                yV = VV.markdown.slice(VV.markdown.indexOf("\n", JV + 1) + 1);
+                hH = HH.markdown.slice(HH.markdown.indexOf("\n", AH + 1) + 1);
               return [{
-                ...VV,
-                markdown: `${VV.markdown.slice(0,eV)}${yV}`
+                ...HH,
+                markdown: `${HH.markdown.slice(0,BH)}${hH}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${YV}\n\n${UV.join("\n")}`
+                markdown: `# Types\n\n${rH}\n\n${SH.join("\n")}`
               }]
-            }(eV);
-            if ("howTo" === VV.id) {
+            }(BH);
+            if ("howTo" === HH.id) {
               const {
-                parent: VV,
-                guides: xV
-              } = function(VV) {
-                const [eV, ...xV] = VV.markdown.split(/^(?=## )/m), JV = [eV], YV = [];
-                for (const yV of xV) {
-                  var UV;
-                  const eV = yV.indexOf("\n"),
-                    xV = yV.slice(3, eV).trim(),
-                    pV = yV.slice(eV + 1);
-                  if (!pV.includes("```")) {
-                    JV.push(yV);
+                parent: HH,
+                guides: LH
+              } = function(HH) {
+                const [BH, ...LH] = HH.markdown.split(/^(?=## )/m), AH = [BH], rH = [];
+                for (const hH of LH) {
+                  var SH;
+                  const BH = hH.indexOf("\n"),
+                    LH = hH.slice(3, BH).trim(),
+                    tH = hH.slice(BH + 1);
+                  if (!tH.includes("```")) {
+                    AH.push(hH);
                     continue
                   }
-                  const QV = null !== (UV = WV[xV]) && void 0 !== UV ? UV : {
+                  const zH = null !== (SH = fH[LH]) && void 0 !== SH ? SH : {
                     icon: "lightbulb",
-                    summary: `How to use ${xV.toLowerCase()} in World Code.`
+                    summary: `How to use ${LH.toLowerCase()} in World Code.`
                   };
-                  YV.push({
-                    id: `${VV.id}${xV.split(/[^A-Za-z0-9]+/).map((VV=>VV.charAt(0).toUpperCase()+VV.slice(1))).join("")}`,
-                    slug: `${VV.slug}-${RV(xV)}`,
-                    title: xV,
+                  rH.push({
+                    id: `${HH.id}${LH.split(/[^A-Za-z0-9]+/).map((HH=>HH.charAt(0).toUpperCase()+HH.slice(1))).join("")}`,
+                    slug: `${HH.slug}-${lH(LH)}`,
+                    title: LH,
                     layout: "article",
-                    sourceAnchor: (0, AV.w)(xV),
-                    markdown: `# ${xV}\n\n${gV(pV)}`,
-                    ...QV
+                    sourceAnchor: (0, OH.r)(LH),
+                    markdown: `# ${LH}\n\n${KH(tH)}`,
+                    ...zH
                   })
                 }
                 return {
                   parent: {
-                    ...VV,
-                    markdown: JV.join(""),
-                    childPageIds: YV.map((VV => VV.id))
+                    ...HH,
+                    markdown: AH.join(""),
+                    childPageIds: rH.map((HH => HH.id))
                   },
-                  guides: YV
+                  guides: rH
                 }
-              }(eV);
-              return [VV, ...xV]
+              }(BH);
+              return [HH, ...LH]
             }
-            return [eV]
+            return [BH]
           }))],
-          aV = [{
+          gH = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...CV.filter((VV => void 0 !== VV.sourceAnchor)).map((VV => VV.id))]
+            pageIds: ["howTo", ...qH.filter((HH => void 0 !== HH.sourceAnchor)).map((HH => HH.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function oV(VV) {
-          return CV.find((eV => eV.id === VV))
+        function NH(HH) {
+          return qH.find((BH => BH.id === HH))
         }
-        const cV = new Map;
+        const RH = new Map;
 
-        function hV(VV) {
-          let eV = cV.get(VV.id);
-          return eV || (eV = (0, AV.E)(VV.markdown, "changelog" === VV.layout ? 3 : 2), cV.set(VV.id, eV)), eV
-        }
-
-        function lV(VV, eV) {
-          return hV(VV).sections.some((VV => VV.heading.anchor === eV || VV.blocks.some((VV => "heading" === VV.kind && VV.anchor === eV))))
+        function jH(HH) {
+          let BH = RH.get(HH.id);
+          return BH || (BH = (0, OH.z)(HH.markdown, "changelog" === HH.layout ? 3 : 2), RH.set(HH.id, BH)), BH
         }
 
-        function LV(VV) {
-          const [eV, ...xV] = VV.replace(/^#/, "").split("-"), JV = CV.find((VV => VV.id === eV));
-          if (!JV) return null;
-          const YV = xV.length > 0 ? (0, AV.w)(xV.join("-")) : "";
-          for (const yV of null !== (UV = JV.childPageIds) && void 0 !== UV ? UV : []) {
-            var UV;
-            const VV = oV(yV);
-            if (VV.sourceAnchor === YV) return {
-              page: VV,
+        function nH(HH, BH) {
+          return jH(HH).sections.some((HH => HH.heading.anchor === BH || HH.blocks.some((HH => "heading" === HH.kind && HH.anchor === BH))))
+        }
+
+        function FH(HH) {
+          const [BH, ...LH] = HH.replace(/^#/, "").split("-"), AH = qH.find((HH => HH.id === BH));
+          if (!AH) return null;
+          const rH = LH.length > 0 ? (0, OH.r)(LH.join("-")) : "";
+          for (const hH of null !== (SH = AH.childPageIds) && void 0 !== SH ? SH : []) {
+            var SH;
+            const HH = NH(hH);
+            if (HH.sourceAnchor === rH) return {
+              page: HH,
               anchor: ""
             };
-            if (lV(VV, YV)) return {
-              page: VV,
-              anchor: YV
+            if (nH(HH, rH)) return {
+              page: HH,
+              anchor: rH
             }
           }
           return {
-            page: JV,
-            anchor: YV
+            page: AH,
+            anchor: rH
           }
         }
-        const fV = {
+        const DH = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function mV(VV, eV) {
-          let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const JV = eV.slug ? `${VV}/${eV.slug}` : VV;
-          return xV ? `${JV}#${xV}` : JV
+        function wH(HH, BH) {
+          let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const AH = BH.slug ? `${HH}/${BH.slug}` : HH;
+          return LH ? `${AH}#${LH}` : AH
         }
-        var KV = xV(5259);
-        const HV = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          uV = new Set(["GameApi", "Console", "_TypeOf"]),
-          sV = 4;
+        var ZH = LH(5240);
+        const dH = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          aH = new Set(["GameApi", "Console", "_TypeOf"]),
+          sH = 4;
 
-        function SV(VV) {
-          let eV = VV.length;
-          for (; eV > 0 && "" === VV[eV - 1].trim();) eV--;
-          return VV.slice(0, eV)
+        function JH(HH) {
+          let BH = HH.length;
+          for (; BH > 0 && "" === HH[BH - 1].trim();) BH--;
+          return HH.slice(0, BH)
         }
 
-        function IV(VV) {
-          var eV;
-          const xV = SV(VV);
-          if (null === (eV = xV.at(-1)) || void 0 === eV || !eV.trimEnd().endsWith("*/")) return {
-            lines: xV,
+        function iH(HH) {
+          var BH;
+          const LH = JH(HH);
+          if (null === (BH = LH.at(-1)) || void 0 === BH || !BH.trimEnd().endsWith("*/")) return {
+            lines: LH,
             doc: ""
           };
-          const JV = xV.findLastIndex((VV => VV.startsWith("/**")));
-          return -1 === JV ? {
-            lines: xV,
+          const AH = LH.findLastIndex((HH => HH.startsWith("/**")));
+          return -1 === AH ? {
+            lines: LH,
             doc: ""
           } : {
-            lines: SV(xV.slice(0, JV)),
-            doc: xV.slice(JV).join("\n")
+            lines: JH(LH.slice(0, AH)),
+            doc: LH.slice(AH).join("\n")
           }
         }
 
-        function dV(VV) {
-          var eV;
-          const xV = VV.split("\n"),
-            JV = xV.flatMap(((VV, eV) => HV.test(VV) ? [eV] : []));
-          let YV = IV(xV.slice(0, null !== (eV = JV[0]) && void 0 !== eV ? eV : xV.length)).doc;
-          return JV.map(((VV, eV) => {
-            var UV;
-            const yV = IV(xV.slice(VV, null !== (UV = JV[eV + 1]) && void 0 !== UV ? UV : xV.length)),
-              pV = {
-                name: xV[VV].match(HV)[1],
-                doc: YV,
-                lines: yV.lines
+        function pH(HH) {
+          var BH;
+          const LH = HH.split("\n"),
+            AH = LH.flatMap(((HH, BH) => dH.test(HH) ? [BH] : []));
+          let rH = iH(LH.slice(0, null !== (BH = AH[0]) && void 0 !== BH ? BH : LH.length)).doc;
+          return AH.map(((HH, BH) => {
+            var SH;
+            const hH = iH(LH.slice(HH, null !== (SH = AH[BH + 1]) && void 0 !== SH ? SH : LH.length)),
+              tH = {
+                name: LH[HH].match(dH)[1],
+                doc: rH,
+                lines: hH.lines
               };
-            return YV = yV.doc, pV
+            return rH = hH.doc, tH
           }))
         }
 
-        function OV(VV) {
-          var eV;
-          const xV = VV.match(/^readonly \[([\s\S]*)\]$/);
-          return xV ? null !== (eV = xV[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== eV ? eV : [] : null
+        function yH(HH) {
+          var BH;
+          const LH = HH.match(/^readonly \[([\s\S]*)\]$/);
+          return LH ? null !== (BH = LH[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== BH ? BH : [] : null
         }
 
-        function Ve(VV) {
-          if (!VV.startsWith("{") || !VV.endsWith("}")) return null;
-          const eV = {
+        function HB(HH) {
+          if (!HH.startsWith("{") || !HH.endsWith("}")) return null;
+          const BH = {
               keys: [],
               values: []
             },
-            xV = VV => {
-              const xV = VV.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              xV && (eV.keys.push(xV[1].startsWith('"') ? xV[1] : `"${xV[1]}"`), eV.values.push(xV[2].trim()))
+            LH = HH => {
+              const LH = HH.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              LH && (BH.keys.push(LH[1].startsWith('"') ? LH[1] : `"${LH[1]}"`), BH.values.push(LH[2].trim()))
             };
-          let JV = 0,
-            YV = "";
-          for (const UV of VV.slice(1, -1)) "{[(".includes(UV) ? JV++ : "}])".includes(UV) && JV--, ";" === UV && 0 === JV ? (xV(YV), YV = "") : YV += UV;
-          return xV(YV), eV
+          let AH = 0,
+            rH = "";
+          for (const SH of HH.slice(1, -1)) "{[(".includes(SH) ? AH++ : "}])".includes(SH) && AH--, ";" === SH && 0 === AH ? (LH(rH), rH = "") : rH += SH;
+          return LH(rH), BH
         }
 
-        function ee(VV) {
-          return VV.length > sV ? `\n\t| ${VV.join("\n\t| ")}` : VV.join(" | ")
+        function BB(HH) {
+          return HH.length > sH ? `\n\t| ${HH.join("\n\t| ")}` : HH.join(" | ")
         }
 
-        function xe(VV, eV) {
-          const xV = function(VV, eV) {
-            return VV.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((VV, xV) => {
-              var JV;
-              const YV = null === (JV = eV.get(xV)) || void 0 === JV ? void 0 : JV.object;
-              return YV ? ee(YV.values) : VV
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((VV, xV) => {
-              var JV, YV;
-              const UV = null === (JV = eV.get(xV)) || void 0 === JV || null === (YV = JV.object) || void 0 === YV ? void 0 : YV.values.map(OV);
-              return null !== UV && void 0 !== UV && UV.every((VV => null !== VV)) ? ee([...new Set(UV.flat())]) : VV
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((VV, xV) => {
-              var JV;
-              const YV = null === (JV = eV.get(xV)) || void 0 === JV ? void 0 : JV.members;
-              return YV ? ee(YV) : VV
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((VV, xV) => {
-              var JV;
-              const YV = null === (JV = eV.get(xV)) || void 0 === JV ? void 0 : JV.object;
-              return YV ? ee(YV.keys) : VV
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((VV, xV) => {
-              var JV, YV;
-              return null !== (JV = null === (YV = eV.get(xV)) || void 0 === YV ? void 0 : YV.text) && void 0 !== JV ? JV : VV
+        function LB(HH, BH) {
+          const LH = function(HH, BH) {
+            return HH.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((HH, LH) => {
+              var AH;
+              const rH = null === (AH = BH.get(LH)) || void 0 === AH ? void 0 : AH.object;
+              return rH ? BB(rH.values) : HH
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((HH, LH) => {
+              var AH, rH;
+              const SH = null === (AH = BH.get(LH)) || void 0 === AH || null === (rH = AH.object) || void 0 === rH ? void 0 : rH.values.map(yH);
+              return null !== SH && void 0 !== SH && SH.every((HH => null !== HH)) ? BB([...new Set(SH.flat())]) : HH
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((HH, LH) => {
+              var AH;
+              const rH = null === (AH = BH.get(LH)) || void 0 === AH ? void 0 : AH.members;
+              return rH ? BB(rH) : HH
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((HH, LH) => {
+              var AH;
+              const rH = null === (AH = BH.get(LH)) || void 0 === AH ? void 0 : AH.object;
+              return rH ? BB(rH.keys) : HH
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((HH, LH) => {
+              var AH, rH;
+              return null !== (AH = null === (rH = BH.get(LH)) || void 0 === rH ? void 0 : rH.text) && void 0 !== AH ? AH : HH
             }))
-          }(VV.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), eV);
-          return [VV.doc, xV].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(HH.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), BH);
+          return [HH.doc, LH].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function Je(VV) {
-          const eV = dV(VV),
-            xV = function(VV) {
-              const eV = new Map,
-                xV = VV.find((VV => "_TypeOf" === VV.name));
-              let JV = null;
-              const YV = () => {
-                if (JV) {
-                  const VV = JV.lines.join("\n");
-                  eV.set(JV.name, {
-                    text: VV,
-                    members: OV(VV),
-                    object: Ve(VV)
+        function AB(HH) {
+          const BH = pH(HH),
+            LH = function(HH) {
+              const BH = new Map,
+                LH = HH.find((HH => "_TypeOf" === HH.name));
+              let AH = null;
+              const rH = () => {
+                if (AH) {
+                  const HH = AH.lines.join("\n");
+                  BH.set(AH.name, {
+                    text: HH,
+                    members: yH(HH),
+                    object: HB(HH)
                   })
                 }
               };
-              for (const UV of xV.lines.slice(1, -1)) {
-                const VV = UV.match(/^\t([\w$]+): (.+)$/);
-                VV ? (YV(), JV = {
-                  name: VV[1],
-                  lines: [VV[2]]
-                }) : JV && JV.lines.push(UV.replace(/^\t/, ""))
+              for (const SH of LH.lines.slice(1, -1)) {
+                const HH = SH.match(/^\t([\w$]+): (.+)$/);
+                HH ? (rH(), AH = {
+                  name: HH[1],
+                  lines: [HH[2]]
+                }) : AH && AH.lines.push(SH.replace(/^\t/, ""))
               }
-              return YV(), eV
-            }(eV),
-            JV = new Map;
-          for (const YV of eV) uV.has(YV.name) || JV.has(YV.name) || JV.set(YV.name, xe(YV, xV));
-          return JV
+              return rH(), BH
+            }(BH),
+            AH = new Map;
+          for (const rH of BH) aH.has(rH.name) || AH.has(rH.name) || AH.set(rH.name, LB(rH, LH));
+          return AH
         }
-        let Ye, Ue, ye;
+        let rB, SB, hB;
 
-        function pe() {
-          return Ue ??= function(VV) {
-            const eV = dV(VV).find((VV => "GameApi" === VV.name)),
-              xV = new Map,
-              JV = eV.lines;
-            for (let UV = 0; UV < JV.length; UV++) {
-              var YV;
-              if (!JV[UV].trimStart().startsWith("/**")) continue;
-              const VV = UV;
-              for (; UV < JV.length && !JV[UV].includes("*/");) UV++;
-              const eV = null === (YV = JV[UV + 1]) || void 0 === YV ? void 0 : YV.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!eV) continue;
-              let yV = null;
-              const pV = [];
-              let QV = "description",
-                nV = !1;
-              for (const xV of JV.slice(VV, UV + 1).join("\n").split("\n").map((VV => VV.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const VV = xV.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                VV ? (yV = VV[1].trim(), QV = "deprecation") : xV.startsWith("@") ? (QV = "otherTag", nV = !0) : "" === xV.trim() ? nV || (QV = "description", pV.push(xV)) : "deprecation" !== QV || /^[A-Z]/.test(xV.trim()) ? "otherTag" !== QV && (QV = "description", pV.push(xV)) : yV = `${yV} ${xV.trim()}`.trim()
+        function tB() {
+          return SB ??= function(HH) {
+            const BH = pH(HH).find((HH => "GameApi" === HH.name)),
+              LH = new Map,
+              AH = BH.lines;
+            for (let SH = 0; SH < AH.length; SH++) {
+              var rH;
+              if (!AH[SH].trimStart().startsWith("/**")) continue;
+              const HH = SH;
+              for (; SH < AH.length && !AH[SH].includes("*/");) SH++;
+              const BH = null === (rH = AH[SH + 1]) || void 0 === rH ? void 0 : rH.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!BH) continue;
+              let hH = null;
+              const tH = [];
+              let zH = "description",
+                CH = !1;
+              for (const LH of AH.slice(HH, SH + 1).join("\n").split("\n").map((HH => HH.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const HH = LH.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                HH ? (hH = HH[1].trim(), zH = "deprecation") : LH.startsWith("@") ? (zH = "otherTag", CH = !0) : "" === LH.trim() ? CH || (zH = "description", tH.push(LH)) : "deprecation" !== zH || /^[A-Z]/.test(LH.trim()) ? "otherTag" !== zH && (zH = "description", tH.push(LH)) : hH = `${hH} ${LH.trim()}`.trim()
               }
-              xV.set(eV[1], {
-                deprecation: yV,
-                description: pV.join("\n").trim()
+              LH.set(BH[1], {
+                deprecation: hH,
+                description: tH.join("\n").trim()
               })
             }
-            return xV
-          }(KV.default), Ue
+            return LH
+          }(ZH.default), SB
         }
 
-        function Qe() {
-          if (!ye) {
-            ye = new Map;
-            for (const VV of CV) {
-              const eV = (0, AV.A)(hV(VV)).flatMap((VV => VV.blocks));
-              for (const VV of (0, AV.n)(eV))
-                if ("ts" === VV.lang || "typescript" === VV.lang)
-                  for (const [eV, xV] of MV(VV.code)) ye.set(eV, xV)
+        function zB() {
+          if (!hB) {
+            hB = new Map;
+            for (const HH of qH) {
+              const BH = (0, OH.v)(jH(HH)).flatMap((HH => HH.blocks));
+              for (const HH of (0, OH.j)(BH))
+                if ("ts" === HH.lang || "typescript" === HH.lang)
+                  for (const [BH, LH] of mH(HH.code)) hB.set(BH, LH)
             }
-            for (const [VV, eV] of(Ye ??= Je(KV.default), Ye)) ye.has(VV) || ye.set(VV, eV)
+            for (const [HH, BH] of(rB ??= AB(ZH.default), rB)) hB.has(HH) || hB.set(HH, BH)
           }
-          return ye
+          return hB
         }
-        const ne = {
+        const CB = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let we;
+        let EB;
 
-        function Ze() {
-          if (!we) {
-            we = new Map;
-            for (const VV of CV)
-              if (zV(VV.layout))
-                for (const eV of hV(VV).sections) we.has(eV.heading.text) || we.set(eV.heading.text, {
-                  pageId: VV.id,
-                  anchor: eV.heading.anchor
+        function XB() {
+          if (!EB) {
+            EB = new Map;
+            for (const HH of qH)
+              if (oH(HH.layout))
+                for (const BH of jH(HH).sections) EB.has(BH.heading.text) || EB.set(BH.heading.text, {
+                  pageId: HH.id,
+                  anchor: BH.heading.anchor
                 })
           }
-          return we
+          return EB
         }
 
-        function ve(VV) {
-          const eV = VV.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return eV ? Ze().get(eV[1]) : void 0
+        function GB(HH) {
+          const BH = HH.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return BH ? XB().get(BH[1]) : void 0
         }
-        const re = (0, JV.createContext)("/docs"),
-          ke = (0, JV.createContext)(null),
-          be = (0, JV.createContext)(!1),
-          Ee = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const YB = (0, AH.createContext)("/docs"),
+          uB = (0, AH.createContext)(null),
+          QB = (0, AH.createContext)(!1),
+          WB = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function Be(VV) {
-          const eV = VV.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return eV ? eV[1] : null
+        function MB(HH) {
+          const BH = HH.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return BH ? BH[1] : null
         }
 
-        function je(VV) {
+        function xB(HH) {
           let {
-            colour: eV
-          } = VV;
-          return (0, kV.jsx)("span", {
+            colour: BH
+          } = HH;
+          return (0, uH.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: eV
+              background: BH
             },
             "aria-hidden": "true"
           })
         }
 
-        function qe(VV) {
-          const eV = [];
-          let xV = 0;
-          for (const JV of VV.matchAll(Ee)) eV.push(VV.slice(xV, JV.index), (0, kV.jsx)(je, {
-            colour: JV[0]
-          }), JV[0]), xV = JV.index + JV[0].length;
-          return eV.push(VV.slice(xV)), eV
+        function vB(HH) {
+          const BH = [];
+          let LH = 0;
+          for (const AH of HH.matchAll(WB)) BH.push(HH.slice(LH, AH.index), (0, uH.jsx)(xB, {
+            colour: AH[0]
+          }), AH[0]), LH = AH.index + AH[0].length;
+          return BH.push(HH.slice(LH)), BH
         }
 
-        function te(VV) {
+        function PB(HH) {
           let {
-            href: eV,
-            children: xV
-          } = VV;
-          const YV = (0, JV.useContext)(re);
-          if (eV.startsWith("#")) {
-            const VV = LV(eV);
-            if (VV) return (0, kV.jsx)(yV.b, {
-              to: mV(YV, VV.page, VV.anchor),
-              children: (0, kV.jsx)(be.Provider, {
+            href: BH,
+            children: LH
+          } = HH;
+          const rH = (0, AH.useContext)(YB);
+          if (BH.startsWith("#")) {
+            const HH = FH(BH);
+            if (HH) return (0, uH.jsx)(hH.e, {
+              to: wH(rH, HH.page, HH.anchor),
+              children: (0, uH.jsx)(QB.Provider, {
                 value: !0,
-                children: xV
+                children: LH
               })
             })
           }
-          return (0, kV.jsx)("a", {
-            href: eV,
+          return (0, uH.jsx)("a", {
+            href: BH,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, kV.jsx)(be.Provider, {
+            children: (0, uH.jsx)(QB.Provider, {
               value: !0,
-              children: xV
+              children: LH
             })
           })
         }
 
-        function Fe(VV) {
+        function TB(HH) {
           let {
-            code: eV
-          } = VV;
-          const xV = (0, JV.useContext)(re);
-          if ((0, JV.useContext)(be)) return (0, kV.jsx)("code", {
+            code: BH
+          } = HH;
+          const LH = (0, AH.useContext)(YB);
+          if ((0, AH.useContext)(QB)) return (0, uH.jsx)("code", {
             className: "DocsInlineCode",
-            children: eV
+            children: BH
           });
-          if (Qe().has(eV)) return (0, kV.jsx)(Ne, {
-            type: eV
+          if (zB().has(BH)) return (0, uH.jsx)(bB, {
+            type: BH
           });
-          const YV = ve(eV);
-          if (YV) return (0, kV.jsx)(yV.b, {
+          const rH = GB(BH);
+          if (rH) return (0, uH.jsx)(hH.e, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: mV(xV, oV(YV.pageId), YV.anchor),
-            children: eV
+            to: wH(LH, NH(rH.pageId), rH.anchor),
+            children: BH
           });
-          const UV = Be(eV);
-          return (0, kV.jsxs)("code", {
+          const SH = MB(BH);
+          return (0, uH.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [UV && (0, kV.jsx)(je, {
-              colour: UV
-            }), eV]
+            children: [SH && (0, uH.jsx)(xB, {
+              colour: SH
+            }), BH]
           })
         }
 
-        function Te(VV) {
+        function UB(HH) {
           let {
-            text: eV
-          } = VV;
-          const xV = [];
-          let YV = 0;
-          for (const JV of eV.matchAll(AV.h)) {
-            JV.index > YV && xV.push(...qe(eV.slice(YV, JV.index)));
-            const [, VV, UV, yV, pV, QV] = JV;
-            VV ? xV.push((0, kV.jsx)(Fe, {
-              code: (0, AV.r)(VV, UV)
-            })) : yV ? xV.push((0, kV.jsx)("strong", {
-              children: (0, kV.jsx)(Te, {
-                text: yV
+            text: BH
+          } = HH;
+          const LH = [];
+          let rH = 0;
+          for (const AH of BH.matchAll(OH.e)) {
+            AH.index > rH && LH.push(...vB(BH.slice(rH, AH.index)));
+            const [, HH, SH, hH, tH, zH] = AH;
+            HH ? LH.push((0, uH.jsx)(TB, {
+              code: (0, OH.l)(HH, SH)
+            })) : hH ? LH.push((0, uH.jsx)("strong", {
+              children: (0, uH.jsx)(UB, {
+                text: hH
               })
-            })) : xV.push((0, kV.jsx)(te, {
-              href: QV,
-              children: (0, kV.jsx)(Te, {
-                text: pV
+            })) : LH.push((0, uH.jsx)(PB, {
+              href: zH,
+              children: (0, uH.jsx)(UB, {
+                text: tH
               })
-            })), YV = JV.index + JV[0].length
+            })), rH = AH.index + AH[0].length
           }
-          return YV < eV.length && xV.push(...qe(eV.slice(YV))), (0, kV.jsx)(kV.Fragment, {
-            children: xV.map(((VV, eV) => (0, kV.jsx)(JV.Fragment, {
-              children: VV
-            }, eV)))
+          return rH < BH.length && LH.push(...vB(BH.slice(rH))), (0, uH.jsx)(uH.Fragment, {
+            children: LH.map(((HH, BH) => (0, uH.jsx)(AH.Fragment, {
+              children: HH
+            }, BH)))
           })
         }
-        const Pe = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          Ae = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const VB = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          OB = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function Ne(VV) {
+        function bB(HH) {
           let {
-            type: eV
-          } = VV;
-          const xV = Qe(),
-            YV = [];
-          for (const JV of eV.trim().matchAll(Pe)) {
-            const [VV, eV, UV, yV, pV] = JV;
-            eV ? YV.push((0, kV.jsx)("span", {
+            type: BH
+          } = HH;
+          const LH = zB(),
+            rH = [];
+          for (const AH of BH.trim().matchAll(VB)) {
+            const [HH, BH, SH, hH, tH] = AH;
+            BH ? rH.push((0, uH.jsx)("span", {
               className: "DocsTypeString",
-              children: VV
-            })) : UV && xV.has(UV) ? YV.push((0, kV.jsx)(We, {
-              name: UV,
-              definition: xV.get(UV)
-            })) : UV ? YV.push((0, kV.jsx)("span", {
-              className: Ae.has(UV) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: VV
-            })) : yV ? YV.push((0, kV.jsx)("span", {
+              children: HH
+            })) : SH && LH.has(SH) ? rH.push((0, uH.jsx)(fB, {
+              name: SH,
+              definition: LH.get(SH)
+            })) : SH ? rH.push((0, uH.jsx)("span", {
+              className: OB.has(SH) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: HH
+            })) : hH ? rH.push((0, uH.jsx)("span", {
               className: "DocsTypeNumber",
-              children: VV
-            })) : pV ? YV.push(" ") : YV.push((0, kV.jsx)("span", {
+              children: HH
+            })) : tH ? rH.push(" ") : rH.push((0, uH.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: VV
+              children: HH
             }))
           }
-          return (0, kV.jsx)("code", {
+          return (0, uH.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: YV.map(((VV, eV) => (0, kV.jsx)(JV.Fragment, {
-              children: VV
-            }, eV)))
+            children: rH.map(((HH, BH) => (0, uH.jsx)(AH.Fragment, {
+              children: HH
+            }, BH)))
           })
         }
-        const Xe = 480,
-          Me = 6,
-          ze = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let Ge = 0;
+        const kB = 480,
+          mB = 6,
+          oB = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let IB = 0;
 
-        function We(VV) {
+        function fB(HH) {
           let {
-            name: eV,
-            definition: xV
-          } = VV;
-          const YV = (0, JV.useContext)(re),
-            UV = ne[eV],
-            pV = (0, JV.useRef)(null),
-            QV = (0, JV.useRef)(null),
-            wV = (0, JV.useRef)(null),
-            [ZV, vV] = (0, JV.useState)(!1),
-            [rV, bV] = (0, JV.useState)(null),
-            BV = (0, JV.useRef)(),
-            jV = (0, JV.useContext)(ke),
-            [qV] = (0, JV.useState)((() => "DocsTypePopover-" + Ge++)),
-            tV = () => {
-              clearTimeout(BV.current), vV(!0)
+            name: BH,
+            definition: LH
+          } = HH;
+          const rH = (0, AH.useContext)(YB),
+            SH = CB[BH],
+            tH = (0, AH.useRef)(null),
+            zH = (0, AH.useRef)(null),
+            EH = (0, AH.useRef)(null),
+            [XH, GH] = (0, AH.useState)(!1),
+            [YH, QH] = (0, AH.useState)(null),
+            MH = (0, AH.useRef)(),
+            xH = (0, AH.useContext)(uB),
+            [vH] = (0, AH.useState)((() => "DocsTypePopover-" + IB++)),
+            PH = () => {
+              clearTimeout(MH.current), GH(!0)
             },
-            FV = () => {
-              clearTimeout(BV.current), BV.current = setTimeout((() => {
-                vV(!1)
+            TH = () => {
+              clearTimeout(MH.current), MH.current = setTimeout((() => {
+                GH(!1)
               }), 120)
             };
-          return (0, JV.useEffect)((() => {
-            if (!ZV) return;
-            const VV = VV => {
-              if ("Escape" === VV.key) {
-                var eV, xV;
-                if (null !== (eV = QV.current) && void 0 !== eV && eV.contains(document.activeElement)) null === (xV = pV.current) || void 0 === xV || xV.focus();
-                vV(!1)
+          return (0, AH.useEffect)((() => {
+            if (!XH) return;
+            const HH = HH => {
+              if ("Escape" === HH.key) {
+                var BH, LH;
+                if (null !== (BH = zH.current) && void 0 !== BH && BH.contains(document.activeElement)) null === (LH = tH.current) || void 0 === LH || LH.focus();
+                GH(!1)
               }
             };
-            return document.addEventListener("keydown", VV), () => {
-              document.removeEventListener("keydown", VV)
+            return document.addEventListener("keydown", HH), () => {
+              document.removeEventListener("keydown", HH)
             }
-          }), [ZV]), (0, JV.useEffect)((() => () => {
-            clearTimeout(BV.current)
-          }), []), (0, JV.useLayoutEffect)((() => {
-            if (!ZV || !pV.current || !QV.current) return void bV(null);
-            const VV = pV.current.getBoundingClientRect(),
-              eV = QV.current.offsetHeight,
-              xV = Math.min(Xe, window.innerWidth - 32),
-              JV = Math.min(Math.max(16, VV.left), window.innerWidth - xV - 16),
-              YV = VV.bottom + Me + eV < window.innerHeight;
-            bV({
-              left: JV,
-              top: YV ? VV.bottom + Me : Math.max(16, VV.top - Me - eV)
+          }), [XH]), (0, AH.useEffect)((() => () => {
+            clearTimeout(MH.current)
+          }), []), (0, AH.useLayoutEffect)((() => {
+            if (!XH || !tH.current || !zH.current) return void QH(null);
+            const HH = tH.current.getBoundingClientRect(),
+              BH = zH.current.offsetHeight,
+              LH = Math.min(kB, window.innerWidth - 32),
+              AH = Math.min(Math.max(16, HH.left), window.innerWidth - LH - 16),
+              rH = HH.bottom + mB + BH < window.innerHeight;
+            QH({
+              left: AH,
+              top: rH ? HH.bottom + mB : Math.max(16, HH.top - mB - BH)
             })
-          }), [ZV]), (0, kV.jsxs)(kV.Fragment, {
-            children: [(0, kV.jsx)("button", {
+          }), [XH]), (0, uH.jsxs)(uH.Fragment, {
+            children: [(0, uH.jsx)("button", {
               type: "button",
-              ref: pV,
+              ref: tH,
               className: "DocsTypeLink",
-              "aria-expanded": ZV,
-              "aria-describedby": ZV ? qV : void 0,
-              onMouseEnter: tV,
-              onMouseLeave: FV,
-              onFocus: tV,
-              onBlur: FV,
-              onKeyDown: VV => {
-                "Tab" === VV.key && !VV.shiftKey && wV.current && (VV.preventDefault(), wV.current.focus())
+              "aria-expanded": XH,
+              "aria-describedby": XH ? vH : void 0,
+              onMouseEnter: PH,
+              onMouseLeave: TH,
+              onFocus: PH,
+              onBlur: TH,
+              onKeyDown: HH => {
+                "Tab" === HH.key && !HH.shiftKey && EH.current && (HH.preventDefault(), EH.current.focus())
               },
-              onClick: tV,
-              children: eV
-            }), ZV && (0, nV.createPortal)((0, kV.jsxs)("span", {
-              ref: QV,
-              id: qV,
+              onClick: PH,
+              children: BH
+            }), XH && (0, CH.createPortal)((0, uH.jsxs)("span", {
+              ref: zH,
+              id: vH,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: rV ? {
-                left: rV.left,
-                top: rV.top,
-                maxWidth: Xe
+              style: YH ? {
+                left: YH.left,
+                top: YH.top,
+                maxWidth: kB
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: tV,
-              onMouseLeave: FV,
-              onFocus: tV,
-              onBlur: FV,
-              children: [(0, kV.jsxs)("span", {
+              onMouseEnter: PH,
+              onMouseLeave: TH,
+              onFocus: PH,
+              onBlur: TH,
+              children: [(0, uH.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, kV.jsx)("span", {
+                children: [(0, uH.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: eV
-                }), UV && (0, kV.jsxs)(yV.b, {
-                  ref: wV,
+                  children: BH
+                }), SH && (0, uH.jsxs)(hH.e, {
+                  ref: EH,
                   className: "DocsTypePopoverLink",
-                  to: mV(YV, oV(UV)),
+                  to: wH(rH, NH(SH)),
                   onClick: () => {
-                    vV(!1)
+                    GH(!1)
                   },
-                  onKeyDown: VV => {
-                    if ("Tab" === VV.key) {
-                      var eV;
-                      if (VV.preventDefault(), VV.shiftKey || !pV.current || ! function(VV, eV) {
-                          const xV = [...document.querySelectorAll(ze)],
-                            JV = xV.slice(xV.indexOf(VV) + 1).find((VV => VV.getClientRects().length > 0 && !(null !== eV && void 0 !== eV && eV.contains(VV))));
-                          return null === JV || void 0 === JV || JV.focus(), void 0 !== JV
-                        }(pV.current, QV.current)) null === (eV = pV.current) || void 0 === eV || eV.focus();
-                      VV.shiftKey || vV(!1)
+                  onKeyDown: HH => {
+                    if ("Tab" === HH.key) {
+                      var BH;
+                      if (HH.preventDefault(), HH.shiftKey || !tH.current || ! function(HH, BH) {
+                          const LH = [...document.querySelectorAll(oB)],
+                            AH = LH.slice(LH.indexOf(HH) + 1).find((HH => HH.getClientRects().length > 0 && !(null !== BH && void 0 !== BH && BH.contains(HH))));
+                          return null === AH || void 0 === AH || AH.focus(), void 0 !== AH
+                        }(tH.current, zH.current)) null === (BH = tH.current) || void 0 === BH || BH.focus();
+                      HH.shiftKey || GH(!1)
                     }
                   },
-                  children: [oV(UV).title, (0, kV.jsx)(EV, {
+                  children: [NH(SH).title, (0, uH.jsx)(WH, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, kV.jsx)(PV, {
+              }), (0, uH.jsx)(VH, {
                 lang: "ts",
-                code: xV,
+                code: LH,
                 compact: !0
               })]
-            }), null !== jV && void 0 !== jV ? jV : document.body)]
+            }), null !== xH && void 0 !== xH ? xH : document.body)]
           })
         }
-        var Re = xV(206),
-          ge = xV(5261),
-          De = xV(5264),
-          ie = xV(5273);
-        const Ce = {
+        var lB = LH(176),
+          KB = LH(5248),
+          cB = LH(5250),
+          eB = LH(5253);
+        const qB = {
           progressBar: {
-            cJ: 30,
-            hJ: .075,
-            lJ: 5,
-            LJ: !1,
+            jH: 30,
+            nH: .075,
+            FH: 5,
+            DH: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            fJ: "fa-solid fa-computer-mouse",
+            dH: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            KJ: 3e3,
+            sH: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            HJ: !0,
+            JH: !0,
             scale: 3,
             rotation: 15,
-            uJ: !1
+            iH: !1
           },
           gravityBar: {
-            cJ: 30,
-            SJ: .25,
-            IJ: 3,
-            dJ: .8,
+            jH: 30,
+            yH: .25,
+            HB: 3,
+            BB: .8,
             gravity: 1,
-            OJ: 1.5,
-            VY: 8,
-            eY: 4,
-            LJ: !1,
+            LB: 1.5,
+            AB: 8,
+            rB: 4,
+            DH: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            JY: .15,
+            hB: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            UY: 5,
-            yY: 1200,
-            pY: .15,
-            QY: 3,
+            zB: 5,
+            CB: 1200,
+            EB: .15,
+            XB: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var ae = xV(364),
-          oe = xV(2130);
+        var gB = LH(304),
+          NB = LH(2073);
 
-        function ce(VV) {
-          return VV.startsWith("fa-")
+        function RB(HH) {
+          return HH.startsWith("fa-")
         }
-        const he = {
+        const jB = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          le = {
+          nB = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function Le(VV) {
-          return "string" === typeof VV ? "text" : "entityName" in VV || "translationKey" in VV ? "other" : (0, ae.wb)(VV) ? "progressBar" : (0, ae.vb)(VV) ? "keyBinding" : "icon" in VV ? "icon" : "str" in VV && "string" === typeof VV.str ? "text" : "other"
+        function FB(HH) {
+          return "string" === typeof HH ? "text" : "entityName" in HH || "translationKey" in HH ? "other" : (0, gB.Eb)(HH) ? "progressBar" : (0, gB.Cb)(HH) ? "keyBinding" : "icon" in HH ? "icon" : "str" in HH && "string" === typeof HH.str ? "text" : "other"
         }
-        const fe = [{
+        const DB = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          me = {
+          wB = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...fe],
+            }, ...DB],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: oe.i
+                options: NB.m
               },
               isRequired: !0
-            }, ...fe],
+            }, ...DB],
             other: []
           };
 
-        function Ke(VV) {
-          return "string" === typeof VV ? {
-            str: VV
-          } : VV
+        function ZB(HH) {
+          return "string" === typeof HH ? {
+            str: HH
+          } : HH
         }
 
-        function He(VV, eV) {
-          let xV = Ke(VV);
-          for (const JV of eV) xV = xV && "object" === typeof xV ? xV[JV] : void 0;
-          return xV
+        function dB(HH, BH) {
+          let LH = ZB(HH);
+          for (const AH of BH) LH = LH && "object" === typeof LH ? LH[AH] : void 0;
+          return LH
         }
 
-        function ue(VV, eV, xV) {
-          const JV = (VV, YV) => {
-            var UV;
-            const yV = eV[YV],
-              pV = {
-                ...VV
+        function aB(HH, BH, LH) {
+          const AH = (HH, rH) => {
+            var SH;
+            const hH = BH[rH],
+              tH = {
+                ...HH
               };
-            if (YV === eV.length - 1) return void 0 === xV ? delete pV[yV] : pV[yV] = xV, pV;
-            const QV = JV(null !== (UV = VV[yV]) && void 0 !== UV ? UV : {}, YV + 1);
-            return 0 === Object.keys(QV).length ? delete pV[yV] : pV[yV] = QV, pV
+            if (rH === BH.length - 1) return void 0 === LH ? delete tH[hH] : tH[hH] = LH, tH;
+            const zH = AH(null !== (SH = HH[hH]) && void 0 !== SH ? SH : {}, rH + 1);
+            return 0 === Object.keys(zH).length ? delete tH[hH] : tH[hH] = zH, tH
           };
-          return function(VV) {
-            const eV = Object.keys(VV);
-            return "string" === typeof VV.str && 1 === eV.length ? VV.str : VV
-          }(JV(Ke(VV), 0))
+          return function(HH) {
+            const BH = Object.keys(HH);
+            return "string" === typeof HH.str && 1 === BH.length ? HH.str : HH
+          }(AH(ZB(HH), 0))
         }
 
-        function se(VV, eV) {
-          const xV = Le(VV),
-            JV = me[xV].find((VV => VV.path.join(".") === eV.join("."))),
-            YV = null !== JV && void 0 !== JV && JV.isRequired && "other" !== xV ? He(le[xV], eV) : void 0;
-          return ue(VV, eV, YV)
+        function sB(HH, BH) {
+          const LH = FB(HH),
+            AH = wB[LH].find((HH => HH.path.join(".") === BH.join("."))),
+            rH = null !== AH && void 0 !== AH && AH.isRequired && "other" !== LH ? dB(nB[LH], BH) : void 0;
+          return aB(HH, BH, rH)
         }
 
-        function Se(VV) {
-          switch (Le(VV)) {
+        function JB(HH) {
+          switch (FB(HH)) {
             case "text":
-              return String(He(VV, ["str"]));
+              return String(dB(HH, ["str"]));
             case "icon":
-              return String(He(VV, ["icon"]));
+              return String(dB(HH, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(He(VV,["progress"])))}%`;
+              return `${Math.round(100*Number(dB(HH,["progress"])))}%`;
             case "keyBinding":
-              return String(He(VV, ["action"]));
+              return String(dB(HH, ["action"]));
             case "other":
-              return JSON.stringify(VV)
+              return JSON.stringify(HH)
           }
         }
-        const Ie = /^[A-Za-z_$][\w$]*$/;
+        const iB = /^[A-Za-z_$][\w$]*$/;
 
-        function de(VV) {
-          if (Array.isArray(VV)) return `[${VV.map(de).join(", ")}]`;
-          if (VV && "object" === typeof VV) {
-            const eV = Object.entries(VV).map((VV => {
-              let [eV, xV] = VV;
-              return `${Ie.test(eV)?eV:JSON.stringify(eV)}: ${de(xV)}`
+        function pB(HH) {
+          if (Array.isArray(HH)) return `[${HH.map(pB).join(", ")}]`;
+          if (HH && "object" === typeof HH) {
+            const BH = Object.entries(HH).map((HH => {
+              let [BH, LH] = HH;
+              return `${iB.test(BH)?BH:JSON.stringify(BH)}: ${pB(LH)}`
             }));
-            return 0 === eV.length ? "{}" : `{ ${eV.join(", ")} }`
+            return 0 === BH.length ? "{}" : `{ ${BH.join(", ")} }`
           }
-          return JSON.stringify(VV)
+          return JSON.stringify(HH)
         }
 
-        function Oe(VV) {
-          const eV = VV.map(de),
-            xV = `[${eV.join(", ")}]`;
-          return xV.length <= 60 ? xV : `[\n${eV.map((VV=>`    ${VV},`)).join("\n")}\n]`
+        function yB(HH) {
+          const BH = HH.map(pB),
+            LH = `[${BH.join(", ")}]`;
+          return LH.length <= 60 ? LH : `[\n${BH.map((HH=>`    ${HH},`)).join("\n")}\n]`
         }
-        const Vx = {
+        const HL = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function ex(VV) {
-          let eV = "";
-          for (let YV = 0; YV < VV.length; YV++) {
-            const UV = VV[YV];
-            if ("\\" === UV) {
-              var xV;
-              const JV = null !== (xV = VV[YV + 1]) && void 0 !== xV ? xV : "";
-              eV += "'" === JV ? "'" : UV + JV, YV++
-            } else if ('"' === UV) eV += '\\"';
+        function BL(HH) {
+          let BH = "";
+          for (let rH = 0; rH < HH.length; rH++) {
+            const SH = HH[rH];
+            if ("\\" === SH) {
+              var LH;
+              const AH = null !== (LH = HH[rH + 1]) && void 0 !== LH ? LH : "";
+              BH += "'" === AH ? "'" : SH + AH, rH++
+            } else if ('"' === SH) BH += '\\"';
             else {
-              var JV;
-              eV += null !== (JV = Vx[UV]) && void 0 !== JV ? JV : UV
+              var AH;
+              BH += null !== (AH = HL[SH]) && void 0 !== AH ? AH : SH
             }
           }
-          return `"${eV}"`
+          return `"${BH}"`
         }
 
-        function xx(VV) {
-          if ("string" === typeof VV) return !0;
-          if (!VV || "object" !== typeof VV || Array.isArray(VV)) return !1;
-          const eV = VV;
-          return "ProgressBar" === eV.type ? "number" === typeof eV.progress : "StyledKeyBinding" === eV.type ? oe.i.includes(eV.action) : "string" === typeof eV.icon || "string" === typeof eV.str || "string" === typeof eV.entityName || "string" === typeof eV.translationKey
+        function LL(HH) {
+          if ("string" === typeof HH) return !0;
+          if (!HH || "object" !== typeof HH || Array.isArray(HH)) return !1;
+          const BH = HH;
+          return "ProgressBar" === BH.type ? "number" === typeof BH.progress : "StyledKeyBinding" === BH.type ? NB.m.includes(BH.action) : "string" === typeof BH.icon || "string" === typeof BH.str || "string" === typeof BH.entityName || "string" === typeof BH.translationKey
         }
 
-        function Jx(VV) {
-          let eV;
+        function AL(HH) {
+          let BH;
           try {
-            eV = function(VV) {
-              let eV = "",
-                xV = "",
-                JV = 0;
-              const YV = () => {
-                eV += xV.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), xV = ""
+            BH = function(HH) {
+              let BH = "",
+                LH = "",
+                AH = 0;
+              const rH = () => {
+                BH += LH.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), LH = ""
               };
-              for (; JV < VV.length;) {
-                const UV = VV.slice(JV).search(/["'`]|\/\//);
-                if (-1 === UV) {
-                  xV += VV.slice(JV);
+              for (; AH < HH.length;) {
+                const SH = HH.slice(AH).search(/["'`]|\/\//);
+                if (-1 === SH) {
+                  LH += HH.slice(AH);
                   break
                 }
-                xV += VV.slice(JV, JV + UV);
-                const yV = JV + UV,
-                  pV = VV[yV];
-                if ("/" === pV) {
-                  const eV = VV.indexOf("\n", yV);
-                  JV = -1 === eV ? VV.length : eV;
+                LH += HH.slice(AH, AH + SH);
+                const hH = AH + SH,
+                  tH = HH[hH];
+                if ("/" === tH) {
+                  const BH = HH.indexOf("\n", hH);
+                  AH = -1 === BH ? HH.length : BH;
                   continue
                 }
-                if (YV(), "`" === pV) throw new Error("Use quotes rather than template strings.");
-                let QV = yV + 1;
-                for (; QV < VV.length && VV[QV] !== pV;) QV += "\\" === VV[QV] ? 2 : 1;
-                if (QV >= VV.length) throw new Error("A string is missing its closing quote.");
-                const nV = VV.slice(yV + 1, QV);
-                eV += ex(nV), JV = QV + 1
+                if (rH(), "`" === tH) throw new Error("Use quotes rather than template strings.");
+                let zH = hH + 1;
+                for (; zH < HH.length && HH[zH] !== tH;) zH += "\\" === HH[zH] ? 2 : 1;
+                if (zH >= HH.length) throw new Error("A string is missing its closing quote.");
+                const CH = HH.slice(hH + 1, zH);
+                BH += BL(CH), AH = zH + 1
               }
-              return YV(), JSON.parse(eV)
-            }(VV.trim())
-          } catch (JV) {
+              return rH(), JSON.parse(BH)
+            }(HH.trim())
+          } catch (AH) {
             return {
               parts: null,
-              error: JV instanceof SyntaxError ? "This isn't a valid array yet." : JV.message
+              error: AH instanceof SyntaxError ? "This isn't a valid array yet." : AH.message
             }
           }
-          if (!Array.isArray(eV)) return {
+          if (!Array.isArray(BH)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const xV = eV.findIndex((VV => !xx(VV)));
-          return -1 !== xV ? {
+          const LH = BH.findIndex((HH => !LL(HH)));
+          return -1 !== LH ? {
             parts: null,
-            error: `Part ${xV+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${LH+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: eV,
+            parts: BH,
             error: null
           }
         }
-        const Yx = 1 / Re.f.clientTicksPerSecond,
-          Ux = 700,
-          yx = {
+        const rL = 1 / lB.g.clientTicksPerSecond,
+          SL = 700,
+          hL = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          px = {
-            progressBar: Ce.progressBar.fJ,
-            timedClick: Ce.timedClick.icon,
-            gravityBar: Ce.gravityBar.icon,
-            precisionBar: Ce.precisionBar.icon,
-            rhythmClick: Ce.rhythmClick.icon
+          tL = {
+            progressBar: qB.progressBar.dH,
+            timedClick: qB.timedClick.icon,
+            gravityBar: qB.gravityBar.icon,
+            precisionBar: qB.precisionBar.icon,
+            rhythmClick: qB.rhythmClick.icon
           };
 
-        function Qx(VV) {
+        function zL(HH) {
           let {
-            type: eV
-          } = VV;
-          const [xV, YV] = (0, JV.useState)("ready"), [yV, pV] = (0, JV.useState)(1), [QV, nV] = (0, JV.useState)(!0), wV = (0, JV.useRef)(null), ZV = (0, JV.useRef)(null), vV = (0, JV.useRef)(null), rV = (0, JV.useRef)(new Set), bV = (0, JV.useRef)(!1), BV = px[eV], jV = (0, JV.useMemo)((() => ({
+            type: BH
+          } = HH;
+          const [LH, rH] = (0, AH.useState)("ready"), [hH, tH] = (0, AH.useState)(1), [zH, CH] = (0, AH.useState)(!0), EH = (0, AH.useRef)(null), XH = (0, AH.useRef)(null), GH = (0, AH.useRef)(null), YH = (0, AH.useRef)(new Set), QH = (0, AH.useRef)(!1), MH = tL[BH], xH = (0, AH.useMemo)((() => ({
             getState: () => {
-              var VV, eV;
-              return null !== (VV = null === (eV = vV.current) || void 0 === eV ? void 0 : eV.getState()) && void 0 !== VV ? VV : yx
+              var HH, BH;
+              return null !== (HH = null === (BH = GH.current) || void 0 === BH ? void 0 : BH.getState()) && void 0 !== HH ? HH : hL
             },
-            onFrame: VV => (rV.current.add(VV), () => {
-              rV.current.delete(VV)
+            onFrame: HH => (YH.current.add(HH), () => {
+              YH.current.delete(HH)
             })
           })), []);
-          (0, JV.useEffect)((() => {
-            const VV = wV.current,
-              eV = ZV.current;
-            if (!VV || !eV) return;
-            const xV = new ResizeObserver((() => {
-              pV(VV.clientWidth / Math.max(1, eV.offsetWidth))
+          (0, AH.useEffect)((() => {
+            const HH = EH.current,
+              BH = XH.current;
+            if (!HH || !BH) return;
+            const LH = new ResizeObserver((() => {
+              tH(HH.clientWidth / Math.max(1, BH.offsetWidth))
             }));
-            return xV.observe(VV), () => {
-              xV.disconnect()
+            return LH.observe(HH), () => {
+              LH.disconnect()
             }
-          }), []), (0, JV.useEffect)((() => {
-            var VV;
-            if ("playing" !== xV) return;
-            let JV = !1;
-            const UV = new ie.g[eV](Ce[eV], (VV => {
-              JV = !0, nV(!1), YV(VV ? "succeeded" : "failed")
+          }), []), (0, AH.useEffect)((() => {
+            var HH;
+            if ("playing" !== LH) return;
+            let AH = !1;
+            const SH = new eB.f[BH](qB[BH], (HH => {
+              AH = !0, CH(!1), rH(HH ? "succeeded" : "failed")
             }), (() => {}));
-            vV.current = UV;
-            let yV = 0,
-              pV = performance.now(),
-              QV = requestAnimationFrame((function VV(eV) {
-                for (yV += Math.min(.25, (eV - pV) / 1e3), pV = eV; yV >= Yx && !JV;) yV -= Yx, UV.handleTick(Yx);
-                for (const xV of rV.current) xV();
-                JV || (QV = requestAnimationFrame(VV))
+            GH.current = SH;
+            let hH = 0,
+              tH = performance.now(),
+              zH = requestAnimationFrame((function HH(BH) {
+                for (hH += Math.min(.25, (BH - tH) / 1e3), tH = BH; hH >= rL && !AH;) hH -= rL, SH.handleTick(rL);
+                for (const LH of YH.current) LH();
+                AH || (zH = requestAnimationFrame(HH))
               }));
-            return null === (VV = wV.current) || void 0 === VV || VV.focus({
+            return null === (HH = EH.current) || void 0 === HH || HH.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(QV), UV.tearDown(), vV.current = null, bV.current = !1
+              cancelAnimationFrame(zH), SH.tearDown(), GH.current = null, QH.current = !1
             }
-          }), [xV, eV]), (0, JV.useEffect)((() => {
-            if (QV) return;
-            const VV = setTimeout((() => {
-              nV(!0)
-            }), Ux);
+          }), [LH, BH]), (0, AH.useEffect)((() => {
+            if (zH) return;
+            const HH = setTimeout((() => {
+              CH(!0)
+            }), SL);
             return () => {
-              clearTimeout(VV)
+              clearTimeout(HH)
             }
-          }), [QV]);
-          const qV = VV => {
-            var eV;
-            "playing" === xV && bV.current !== VV && (bV.current = VV, null === (eV = vV.current) || void 0 === eV || eV.handleMouseInput(VV))
+          }), [zH]);
+          const vH = HH => {
+            var BH;
+            "playing" === LH && QH.current !== HH && (QH.current = HH, null === (BH = GH.current) || void 0 === BH || BH.handleMouseInput(HH))
           };
-          return (0, kV.jsxs)("div", {
+          return (0, uH.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, kV.jsxs)("div", {
-              ref: wV,
-              className: UV()("DocsQteStage", {
-                Playing: "playing" === xV
+            children: [(0, uH.jsxs)("div", {
+              ref: EH,
+              className: SH()("DocsQteStage", {
+                Playing: "playing" === LH
               }),
-              tabIndex: "playing" === xV ? 0 : -1,
-              role: "playing" === xV ? "button" : void 0,
-              "aria-label": "playing" === xV ? `${eV} quick time event: click or press Space` : void 0,
-              onPointerDown: VV => {
-                0 === VV.button && qV(!0)
+              tabIndex: "playing" === LH ? 0 : -1,
+              role: "playing" === LH ? "button" : void 0,
+              "aria-label": "playing" === LH ? `${BH} quick time event: click or press Space` : void 0,
+              onPointerDown: HH => {
+                0 === HH.button && vH(!0)
               },
               onPointerUp: () => {
-                qV(!1)
+                vH(!1)
               },
               onPointerLeave: () => {
-                qV(!1)
+                vH(!1)
               },
               onPointerCancel: () => {
-                qV(!1)
+                vH(!1)
               },
-              onKeyDown: VV => {
-                "playing" !== xV || " " !== VV.key && "Enter" !== VV.key || (VV.preventDefault(), qV(!0))
+              onKeyDown: HH => {
+                "playing" !== LH || " " !== HH.key && "Enter" !== HH.key || (HH.preventDefault(), vH(!0))
               },
-              onKeyUp: VV => {
-                "playing" !== xV || " " !== VV.key && "Enter" !== VV.key || qV(!1)
+              onKeyUp: HH => {
+                "playing" !== LH || " " !== HH.key && "Enter" !== HH.key || vH(!1)
               },
-              children: [(0, kV.jsx)("div", {
-                ref: ZV,
+              children: [(0, uH.jsx)("div", {
+                ref: XH,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${yV})`
+                  transform: `scale(${hH})`
                 },
-                children: "playing" === xV && (0, kV.jsx)(De.d.Provider, {
-                  value: jV,
-                  children: (0, kV.jsx)(ge.b, {
+                children: "playing" === LH && (0, uH.jsx)(cB.e.Provider, {
+                  value: xH,
+                  children: (0, uH.jsx)(KB.b, {
                     qte: {
-                      type: eV,
-                      parameters: Ce[eV]
+                      type: BH,
+                      parameters: qB[BH]
                     }
                   })
                 })
-              }), "playing" !== xV && (0, kV.jsxs)("div", {
+              }), "playing" !== LH && (0, uH.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== xV && (0, kV.jsxs)("div", {
-                  className: UV()("DocsQteResult", "succeeded" === xV ? "Succeeded" : "Failed"),
-                  children: [(0, kV.jsx)(EV, {
-                    name: "succeeded" === xV ? "check" : "cross",
+                children: ["ready" !== LH && (0, uH.jsxs)("div", {
+                  className: SH()("DocsQteResult", "succeeded" === LH ? "Succeeded" : "Failed"),
+                  children: [(0, uH.jsx)(WH, {
+                    name: "succeeded" === LH ? "check" : "cross",
                     isTinted: !0
-                  }), (0, kV.jsx)("span", {
-                    children: "succeeded" === xV ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, uH.jsx)("span", {
+                    children: "succeeded" === LH ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, kV.jsxs)("button", {
+                }), (0, uH.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !QV,
+                  disabled: !zH,
                   onClick: () => {
-                    YV("playing")
+                    rH("playing")
                   },
-                  children: [(0, kV.jsx)(EV, {
-                    name: "ready" === xV ? "play" : "replay"
-                  }), (0, kV.jsx)("span", {
-                    children: "ready" === xV ? `Try ${eV}` : "Play again"
+                  children: [(0, uH.jsx)(WH, {
+                    name: "ready" === LH ? "play" : "replay"
+                  }), (0, uH.jsx)("span", {
+                    children: "ready" === LH ? `Try ${BH}` : "Play again"
                   })]
                 })]
               })]
-            }), BV && !ce(BV) && (0, kV.jsxs)("p", {
+            }), MH && !RB(MH) && (0, uH.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, kV.jsx)("code", {
-                children: BV
+              children: ["The ", (0, uH.jsx)("code", {
+                children: MH
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function nx(VV) {
+        function CL(HH) {
           let {
-            level: eV,
-            text: xV,
-            anchor: JV,
-            className: YV
-          } = VV;
-          const yV = `h${Math.min(eV,6)}`;
-          return (0, kV.jsxs)(yV, {
-                id: JV,
-                className: UV()("DocsHeading", YV),
-                children: [(0, kV.jsx)(Te, {
-                      text: xV
-                    }), (0, kV.jsx)("a", {
+            level: BH,
+            text: LH,
+            anchor: AH,
+            className: rH
+          } = HH;
+          const hH = `h${Math.min(BH,6)}`;
+          return (0, uH.jsxs)(hH, {
+                id: AH,
+                className: SH()("DocsHeading", rH),
+                children: [(0, uH.jsx)(UB, {
+                      text: LH
+                    }), (0, uH.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${JV}`,
-                        "aria-label": `Link to ${xV.replace(/`/g,"")}`,children:"#"})]})}function wx(VV){let{items:eV,ordered:xV}=VV;const JV=xV?"ol":"ul";return(0,kV.jsx)(JV,{className:"DocsList",children:eV.map(((VV,eV)=>(0,kV.jsxs)("li",{children:[(0,kV.jsx)(Te,{text:VV.text}),VV.children.length>0&&(0,kV.jsx)(wx,{items:VV.children,ordered:xV})]},eV)))})}function Zx(VV){const eV=VV[0],xV="paragraph"===(null===eV||void 0===eV?void 0:eV.kind)?eV.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(xV)?"warning":/^\*\*(tip|prefer)/.test(xV)?"tip":"note"}function vx(VV){let{block:eV}=VV;switch(eV.kind){case"heading":return(0,kV.jsx)(nx,{level:eV.level,text:eV.text,anchor:eV.anchor});case"paragraph":return(0,kV.jsx)("p",{children:(0,kV.jsx)(Te,{text:eV.text})});case"code":{const VV="ts"===eV.lang?function(VV){const eV=VV.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return eV&&Object.hasOwn(Ce,eV[1])?eV[1]:null}(eV.code):null;return(0,kV.jsxs)(kV.Fragment,{children:[(0,kV.jsx)(PV,{code:eV.code,lang:eV.lang}),VV&&(0,kV.jsx)(Qx,{type:VV})]})}case"table":return(0,kV.jsx)("div",{className:"DocsTableScroll",children:(0,kV.jsxs)("table",{className:"DocsTable",children:[(0,kV.jsx)("thead",{children:(0,kV.jsx)("tr",{children:eV.header.map(((VV,eV)=>(0,kV.jsx)("th",{children:(0,kV.jsx)(Te,{text:VV})},eV)))})}),(0,kV.jsx)("tbody",{children:eV.rows.map(((VV,eV)=>(0,kV.jsx)("tr",{children:VV.map(((VV,eV)=>(0,kV.jsx)("td",{children:(0,kV.jsx)(Te,{text:VV})},eV)))},eV)))})]})});case"list":return(0,kV.jsx)(wx,{items:eV.items,ordered:eV.ordered});case"quote":return(0,kV.jsx)("aside",{className:UV()("DocsCallout",Zx(eV.blocks)),children:(0,kV.jsx)(rx,{blocks:eV.blocks})});case"rule":return(0,kV.jsx)("hr",{className:"DocsRule"})}}function rx(VV){let{blocks:eV}=VV;return(0,kV.jsx)(kV.Fragment,{children:eV.map(((VV,eV)=>(0,kV.jsx)(vx,{block:VV},eV)))})}var kx=xV(5252),bx=xV(5255);function Ex(VV){return"blocks"===VV||"items"===VV}const Bx=new Map;function jx(VV){let eV=Bx.get(VV);return eV||(eV=function(VV){const eV={entries:[],legend:[],notes:[],examples:[]};let xV=!1;for(const UV of VV.split(/\r?\n/).slice(1)){if(UV.startsWith("#")){const VV=UV.replace(/^# ?/,""),JV=VV.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);JV?eV.legend.push({code:JV[1],meaning:JV[2],usage:JV[3].trim()}):/^Examples:/.test(VV.trim())?xV=!0:xV&&VV.trim()?eV.examples.push(VV.trim()):VV.trim()&&!/^\s/.test(VV)&&eV.notes.push(VV.trim());continue}const VV=UV.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var JV,YV;VV&&eV.entries.push({name:VV[1],variants:null!==(JV=null===(YV=VV[2])||void 0===YV?void 0:YV.split(","))&&void 0!==JV?JV:[]})}return eV}("blocks"===VV?kx:bx),Bx.set(VV,eV)),eV}function qx(VV){let{className:eV,value:xV,placeholder:JV,label:YV,onChange:UV,count:yV,children:pV}=VV;return(0,kV.jsxs)("div",{className:eV,children:[(0,kV.jsx)(EV,{name:"magnifying-glass"}),(0,kV.jsx)("input",{type:"search",value:xV,placeholder:JV,"aria-label":YV,onChange:VV=>{UV(VV.target.value)}}),pV,yV&&(0,kV.jsxs)("span",{className:"DocsFilterCount",children:[yV.visible," of ",yV.total]})]})}var tx=xV(1414);function Fx(VV){const eV=VV.trim().match(/^(` {
+                        href: `#${AH}`,
+                        "aria-label": `Link to ${LH.replace(/`/g,"")}`,children:"#"})]})}function EL(HH){let{items:BH,ordered:LH}=HH;const AH=LH?"ol":"ul";return(0,uH.jsx)(AH,{className:"DocsList",children:BH.map(((HH,BH)=>(0,uH.jsxs)("li",{children:[(0,uH.jsx)(UB,{text:HH.text}),HH.children.length>0&&(0,uH.jsx)(EL,{items:HH.children,ordered:LH})]},BH)))})}function XL(HH){const BH=HH[0],LH="paragraph"===(null===BH||void 0===BH?void 0:BH.kind)?BH.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(LH)?"warning":/^\*\*(tip|prefer)/.test(LH)?"tip":"note"}function GL(HH){let{block:BH}=HH;switch(BH.kind){case"heading":return(0,uH.jsx)(CL,{level:BH.level,text:BH.text,anchor:BH.anchor});case"paragraph":return(0,uH.jsx)("p",{children:(0,uH.jsx)(UB,{text:BH.text})});case"code":{const HH="ts"===BH.lang?function(HH){const BH=HH.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return BH&&Object.hasOwn(qB,BH[1])?BH[1]:null}(BH.code):null;return(0,uH.jsxs)(uH.Fragment,{children:[(0,uH.jsx)(VH,{code:BH.code,lang:BH.lang}),HH&&(0,uH.jsx)(zL,{type:HH})]})}case"table":return(0,uH.jsx)("div",{className:"DocsTableScroll",children:(0,uH.jsxs)("table",{className:"DocsTable",children:[(0,uH.jsx)("thead",{children:(0,uH.jsx)("tr",{children:BH.header.map(((HH,BH)=>(0,uH.jsx)("th",{children:(0,uH.jsx)(UB,{text:HH})},BH)))})}),(0,uH.jsx)("tbody",{children:BH.rows.map(((HH,BH)=>(0,uH.jsx)("tr",{children:HH.map(((HH,BH)=>(0,uH.jsx)("td",{children:(0,uH.jsx)(UB,{text:HH})},BH)))},BH)))})]})});case"list":return(0,uH.jsx)(EL,{items:BH.items,ordered:BH.ordered});case"quote":return(0,uH.jsx)("aside",{className:SH()("DocsCallout",XL(BH.blocks)),children:(0,uH.jsx)(YL,{blocks:BH.blocks})});case"rule":return(0,uH.jsx)("hr",{className:"DocsRule"})}}function YL(HH){let{blocks:BH}=HH;return(0,uH.jsx)(uH.Fragment,{children:BH.map(((HH,BH)=>(0,uH.jsx)(GL,{block:HH},BH)))})}var uL=LH(5228),QL=LH(5232);function WL(HH){return"blocks"===HH||"items"===HH}const ML=new Map;function xL(HH){let BH=ML.get(HH);return BH||(BH=function(HH){const BH={entries:[],legend:[],notes:[],examples:[]};let LH=!1;for(const SH of HH.split(/\r?\n/).slice(1)){if(SH.startsWith("#")){const HH=SH.replace(/^# ?/,""),AH=HH.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);AH?BH.legend.push({code:AH[1],meaning:AH[2],usage:AH[3].trim()}):/^Examples:/.test(HH.trim())?LH=!0:LH&&HH.trim()?BH.examples.push(HH.trim()):HH.trim()&&!/^\s/.test(HH)&&BH.notes.push(HH.trim());continue}const HH=SH.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var AH,rH;HH&&BH.entries.push({name:HH[1],variants:null!==(AH=null===(rH=HH[2])||void 0===rH?void 0:rH.split(","))&&void 0!==AH?AH:[]})}return BH}("blocks"===HH?uL:QL),ML.set(HH,BH)),BH}function vL(HH){let{className:BH,value:LH,placeholder:AH,label:rH,onChange:SH,count:hH,children:tH}=HH;return(0,uH.jsxs)("div",{className:BH,children:[(0,uH.jsx)(WH,{name:"magnifying-glass"}),(0,uH.jsx)("input",{type:"search",value:LH,placeholder:AH,"aria-label":rH,onChange:HH=>{SH(HH.target.value)}}),tH,hH&&(0,uH.jsxs)("span",{className:"DocsFilterCount",children:[hH.visible," of ",hH.total]})]})}var PL=LH(1315);function TL(HH){const BH=HH.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return eV?eV[2]:null}function Tx(VV){return"paragraph"===VV.kind&&""===VV.text.trim()}function Px(VV){const eV={name:VV.heading.text,description:[],params:[],returns:null};let xV="description";for(const YV of VV.blocks)if(!Tx(YV))if("heading"===YV.kind&&/^Parameters:?$/.test(YV.text))xV="params";else if("heading"===YV.kind&&/^Returns:?$/.test(YV.text))xV="returns",eV.returns={type:"",description:[]};else if("params"!==xV||"table"!==YV.kind){if("returns"===xV&&"paragraph"===YV.kind&&""===eV.returns.type){const VV=Fx(YV.text);if(null!==VV){eV.returns.type=VV.replaceAll("\\|","|");continue}}"returns"===xV?eV.returns.description.push(YV):eV.description.push(YV)}else for(const[VV,xV,UV]of YV.rows){var JV;eV.params.push({name:VV,type:null!==(JV=Fx(xV))&&void 0!==JV?JV:xV,description:null!==UV&&void 0!==UV?UV:""})}return eV}const Ax=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function Nx(VV){return VV.filter((VV=>!Tx(VV)))}const Xx=/^[\w][\w .'&!:()-]*$/,Mx=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function zx(VV){var eV;if("code"===VV.kind&&"text"===VV.lang){const eV=VV.code.split("\n").map((VV=>VV.trim())).filter(Boolean);return eV.length>0&&eV.every((VV=>Xx.test(VV)))?eV.map((VV=>({name:VV}))):null}return"paragraph"===VV.kind&&Mx.test(VV.text.trim())?[...VV.text.matchAll(/`([ ^ `]+)` / g)].flatMap((VV => VV[1].split(/,\s*/).map((VV => ({
-                              name: VV.trim()
-                            }))))): "table" === VV.kind && null !== (eV = VV.header[0]) && void 0 !== eV && eV.startsWith("Song") ? VV.rows.map((VV => {
-                              let [eV, xV] = VV;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return BH?BH[2]:null}function UL(HH){return"paragraph"===HH.kind&&""===HH.text.trim()}function VL(HH){const BH={name:HH.heading.text,description:[],params:[],returns:null};let LH="description";for(const rH of HH.blocks)if(!UL(rH))if("heading"===rH.kind&&/^Parameters:?$/.test(rH.text))LH="params";else if("heading"===rH.kind&&/^Returns:?$/.test(rH.text))LH="returns",BH.returns={type:"",description:[]};else if("params"!==LH||"table"!==rH.kind){if("returns"===LH&&"paragraph"===rH.kind&&""===BH.returns.type){const HH=TL(rH.text);if(null!==HH){BH.returns.type=HH.replaceAll("\\|","|");continue}}"returns"===LH?BH.returns.description.push(rH):BH.description.push(rH)}else for(const[HH,LH,SH]of rH.rows){var AH;BH.params.push({name:HH,type:null!==(AH=TL(LH))&&void 0!==AH?AH:LH,description:null!==SH&&void 0!==SH?SH:""})}return BH}const OL=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function bL(HH){return HH.filter((HH=>!UL(HH)))}const kL=/^[\w][\w .'&!:()-]*$/,mL=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function oL(HH){var BH;if("code"===HH.kind&&"text"===HH.lang){const BH=HH.code.split("\n").map((HH=>HH.trim())).filter(Boolean);return BH.length>0&&BH.every((HH=>kL.test(HH)))?BH.map((HH=>({name:HH}))):null}return"paragraph"===HH.kind&&mL.test(HH.text.trim())?[...HH.text.matchAll(/`([ ^ `]+)` / g)].flatMap((HH => HH[1].split(/,\s*/).map((HH => ({
+                              name: HH.trim()
+                            }))))): "table" === HH.kind && null !== (BH = HH.header[0]) && void 0 !== BH && BH.startsWith("Song") ? HH.rows.map((HH => {
+                              let [BH, LH] = HH;
                               return {
-                                name: eV.replace(/`/g, ""),
-                                caption: xV
+                                name: BH.replace(/`/g, ""),
+                                caption: LH
                               }
                             })) : null
                           }
 
-                          function Gx(VV) {
-                            const eV = [];
-                            for (const xV of VV) {
-                              const VV = zx(xV),
-                                JV = eV.at(-1),
-                                YV = "table" === xV.kind;
-                              VV ? "names" === (null === JV || void 0 === JV ? void 0 : JV.kind) && JV.isSongs === YV ? JV.names.push(...VV) : eV.push({
+                          function IL(HH) {
+                            const BH = [];
+                            for (const LH of HH) {
+                              const HH = oL(LH),
+                                AH = BH.at(-1),
+                                rH = "table" === LH.kind;
+                              HH ? "names" === (null === AH || void 0 === AH ? void 0 : AH.kind) && AH.isSongs === rH ? AH.names.push(...HH) : BH.push({
                                 kind: "names",
-                                names: VV,
-                                isSongs: YV
-                              }) : eV.push({
+                                names: HH,
+                                isSongs: rH
+                              }) : BH.push({
                                 kind: "block",
-                                block: xV
+                                block: LH
                               })
                             }
-                            return eV
+                            return BH
                           }
-                          const Wx = {
+                          const fL = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function Rx(VV, eV) {
-                            return `${Wx[VV]}-${(0,AV.w)(eV)}`
+                          function lL(HH, BH) {
+                            return `${fL[HH]}-${(0,OH.r)(BH)}`
                           }
-                          const gx = new WeakMap;
+                          const KL = new WeakMap;
 
-                          function Dx(VV, eV, xV) {
-                            let JV = gx.get(eV);
-                            if (!JV) {
-                              JV = new Map;
-                              const xV = new Set;
-                              for (const YV of (0, AV.A)(eV)) {
-                                const eV = Gx(Nx(YV.blocks)).map((eV => {
-                                  if ("block" === eV.kind) return eV;
+                          function cL(HH, BH, LH) {
+                            let AH = KL.get(BH);
+                            if (!AH) {
+                              AH = new Map;
+                              const LH = new Set;
+                              for (const rH of (0, OH.v)(BH)) {
+                                const BH = IL(bL(rH.blocks)).map((BH => {
+                                  if ("block" === BH.kind) return BH;
                                   return {
                                     kind: "names",
-                                    names: eV.names.map((eV => {
-                                      var JV, UV;
-                                      const yV = Rx(VV, eV.name);
-                                      let pV = yV;
-                                      for (let VV = 2; xV.has(pV); VV++) pV = `${yV}-${VV}`;
-                                      return xV.add(pV), {
-                                        ...eV,
-                                        anchor: pV,
-                                        heading: null !== (JV = null === (UV = YV.heading) || void 0 === UV ? void 0 : UV.text) && void 0 !== JV ? JV : ""
+                                    names: BH.names.map((BH => {
+                                      var AH, SH;
+                                      const hH = lL(HH, BH.name);
+                                      let tH = hH;
+                                      for (let HH = 2; LH.has(tH); HH++) tH = `${hH}-${HH}`;
+                                      return LH.add(tH), {
+                                        ...BH,
+                                        anchor: tH,
+                                        heading: null !== (AH = null === (SH = rH.heading) || void 0 === SH ? void 0 : SH.text) && void 0 !== AH ? AH : ""
                                       }
                                     })),
-                                    isSongs: eV.isSongs
+                                    isSongs: BH.isSongs
                                   }
                                 }));
-                                JV.set(YV.blocks, eV)
+                                AH.set(rH.blocks, BH)
                               }
-                              gx.set(eV, JV)
+                              KL.set(BH, AH)
                             }
-                            const YV = JV.get(xV);
-                            if (!YV) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return YV
+                            const rH = AH.get(LH);
+                            if (!rH) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return rH
                           }
-                          const ix = "/textures/docs/skinPreviews",
-                            Cx = [{
+                          const eL = "/textures/docs/skinPreviews",
+                            qL = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var ax = xV(4628),
-                            ox = xV(4642);
+                          var gL = LH(4599),
+                            NL = LH(4617);
 
-                          function cx(VV) {
-                            return Object.hasOwn(ax.e, VV) ? ax.e[VV] : null
+                          function RL(HH) {
+                            return Object.hasOwn(gL.d, HH) ? gL.d[HH] : null
                           }
-                          const hx = {
+                          const jL = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: ox.g.Standard
+                            blendMode: NL.f.Standard
                           };
 
-                          function lx(VV, eV, xV) {
-                            return eV + (xV - eV) * VV()
+                          function nL(HH, BH, LH) {
+                            return BH + (LH - BH) * HH()
                           }
 
-                          function Lx(VV, eV, xV) {
-                            return VV + (eV - VV) * xV
+                          function FL(HH, BH, LH) {
+                            return HH + (BH - HH) * LH
                           }
 
-                          function fx(VV) {
-                            return VV.length > 0 && "timeFraction" in VV[0]
+                          function DL(HH) {
+                            return HH.length > 0 && "timeFraction" in HH[0]
                           }
 
-                          function mx(VV, eV) {
-                            if (0 === VV.colorGradients.length) return [{
+                          function wL(HH, BH) {
+                            if (0 === HH.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!fx(VV.colorGradients)) {
-                              const xV = VV.colorGradients,
+                            if (!DL(HH.colorGradients)) {
+                              const LH = HH.colorGradients,
                                 {
-                                  color: JV
-                                } = xV[Math.floor(eV() * xV.length) % xV.length];
+                                  color: AH
+                                } = LH[Math.floor(BH() * LH.length) % LH.length];
                               return [{
                                 at: 0,
-                                colour: [JV[0] / 255, JV[1] / 255, JV[2] / 255, 1]
+                                colour: [AH[0] / 255, AH[1] / 255, AH[2] / 255, 1]
                               }]
                             }
-                            return [...VV.colorGradients].sort(((VV, eV) => VV.timeFraction - eV.timeFraction)).map((VV => {
-                              var xV, JV, YV;
-                              const UV = VV.minColor,
-                                yV = null !== (xV = VV.maxColor) && void 0 !== xV ? xV : UV,
-                                pV = eV(),
-                                QV = [Lx(UV[0], yV[0], pV) / 255, Lx(UV[1], yV[1], pV) / 255, Lx(UV[2], yV[2], pV) / 255, Lx(null !== (JV = UV[3]) && void 0 !== JV ? JV : 1, null !== (YV = yV[3]) && void 0 !== YV ? YV : 1, pV)];
+                            return [...HH.colorGradients].sort(((HH, BH) => HH.timeFraction - BH.timeFraction)).map((HH => {
+                              var LH, AH, rH;
+                              const SH = HH.minColor,
+                                hH = null !== (LH = HH.maxColor) && void 0 !== LH ? LH : SH,
+                                tH = BH(),
+                                zH = [FL(SH[0], hH[0], tH) / 255, FL(SH[1], hH[1], tH) / 255, FL(SH[2], hH[2], tH) / 255, FL(null !== (AH = SH[3]) && void 0 !== AH ? AH : 1, null !== (rH = hH[3]) && void 0 !== rH ? rH : 1, tH)];
                               return {
-                                at: VV.timeFraction,
-                                colour: QV
+                                at: HH.timeFraction,
+                                colour: zH
                               }
                             }))
                           }
 
-                          function Kx(VV, eV, xV, JV) {
-                            const YV = lx(JV, VV.minEmitPower, VV.maxEmitPower),
-                              UV = eV => lx(JV, Math.min(VV.dir1[eV], VV.dir2[eV]), Math.max(VV.dir1[eV], VV.dir2[eV])) * YV,
-                              yV = [...VV.velocityGradients].sort(((VV, eV) => VV.timeFraction - eV.timeFraction)).map((VV => ({
-                                at: VV.timeFraction,
-                                factor: lx(JV, VV.factor, VV.factor2)
+                          function ZL(HH, BH, LH, AH) {
+                            const rH = nL(AH, HH.minEmitPower, HH.maxEmitPower),
+                              SH = BH => nL(AH, Math.min(HH.dir1[BH], HH.dir2[BH]), Math.max(HH.dir1[BH], HH.dir2[BH])) * rH,
+                              hH = [...HH.velocityGradients].sort(((HH, BH) => HH.timeFraction - BH.timeFraction)).map((HH => ({
+                                at: HH.timeFraction,
+                                factor: nL(AH, HH.factor, HH.factor2)
                               })));
                             return {
-                              pos: [lx(JV, eV[0], xV[0]), lx(JV, eV[1], xV[1]), lx(JV, eV[2], xV[2])],
-                              dir: [UV(0), UV(1), UV(2)],
+                              pos: [nL(AH, BH[0], LH[0]), nL(AH, BH[1], LH[1]), nL(AH, BH[2], LH[2])],
+                              dir: [SH(0), SH(1), SH(2)],
                               age: 0,
-                              life: lx(JV, VV.minLifeTime, VV.maxLifeTime),
-                              size: lx(JV, VV.minSize, VV.maxSize),
-                              colours: mx(VV, JV),
-                              velocityFactors: yV
+                              life: nL(AH, HH.minLifeTime, HH.maxLifeTime),
+                              size: nL(AH, HH.minSize, HH.maxSize),
+                              colours: wL(HH, AH),
+                              velocityFactors: hH
                             }
                           }
 
-                          function Hx(VV, eV, xV, JV) {
-                            if (eV < VV[0].at) return xV(Math.min(1, VV.length - 1));
-                            for (let YV = 0; YV < VV.length - 1; YV++)
-                              if (eV <= VV[YV + 1].at) {
-                                const UV = VV[YV + 1].at - VV[YV].at;
-                                return JV(xV(YV), xV(YV + 1), UV > 0 ? (eV - VV[YV].at) / UV : 1)
-                              } return xV(VV.length - 1)
+                          function dL(HH, BH, LH, AH) {
+                            if (BH < HH[0].at) return LH(Math.min(1, HH.length - 1));
+                            for (let rH = 0; rH < HH.length - 1; rH++)
+                              if (BH <= HH[rH + 1].at) {
+                                const SH = HH[rH + 1].at - HH[rH].at;
+                                return AH(LH(rH), LH(rH + 1), SH > 0 ? (BH - HH[rH].at) / SH : 1)
+                              } return LH(HH.length - 1)
                           }
 
-                          function ux(VV) {
-                            return Hx(VV.colours, VV.age / VV.life, (eV => VV.colours[eV].colour), ((VV, eV, xV) => [Lx(VV[0], eV[0], xV), Lx(VV[1], eV[1], xV), Lx(VV[2], eV[2], xV), Lx(VV[3], eV[3], xV)]))
+                          function aL(HH) {
+                            return dL(HH.colours, HH.age / HH.life, (BH => HH.colours[BH].colour), ((HH, BH, LH) => [FL(HH[0], BH[0], LH), FL(HH[1], BH[1], LH), FL(HH[2], BH[2], LH), FL(HH[3], BH[3], LH)]))
                           }
 
-                          function sx(VV, eV, xV) {
-                            if (VV.age += xV, VV.age >= VV.life) return !1;
-                            const JV = function(VV) {
-                              return 0 === VV.velocityFactors.length ? 1 : Hx(VV.velocityFactors, VV.age / VV.life, (eV => VV.velocityFactors[eV].factor), Lx)
-                            }(VV) * xV;
-                            for (let UV = 0; UV < 3; UV++) {
-                              var YV;
-                              VV.pos[UV] += VV.dir[UV] * JV, VV.dir[UV] += (null !== (YV = eV[UV]) && void 0 !== YV ? YV : 0) * xV
+                          function sL(HH, BH, LH) {
+                            if (HH.age += LH, HH.age >= HH.life) return !1;
+                            const AH = function(HH) {
+                              return 0 === HH.velocityFactors.length ? 1 : dL(HH.velocityFactors, HH.age / HH.life, (BH => HH.velocityFactors[BH].factor), FL)
+                            }(HH) * LH;
+                            for (let SH = 0; SH < 3; SH++) {
+                              var rH;
+                              HH.pos[SH] += HH.dir[SH] * AH, HH.dir[SH] += (null !== (rH = BH[SH]) && void 0 !== rH ? rH : 0) * LH
                             }
                             return !0
                           }
 
-                          function Sx(VV) {
-                            return String(Math.round(1e6 * VV) / 1e6)
+                          function JL(HH) {
+                            return String(Math.round(1e6 * HH) / 1e6)
                           }
 
-                          function Ix(VV) {
-                            return `[${VV.map(Sx).join(", ")}]`
+                          function iL(HH) {
+                            return `[${HH.map(JL).join(", ")}]`
                           }
 
-                          function dx(VV, eV) {
-                            const xV = `${eV}    `;
-                            return `[\n${(fx(VV)?VV.map((VV=>{const eV=[`${xV}    timeFraction: ${Sx(VV.timeFraction)},`,`${xV}    minColor: ${Ix(VV.minColor)},`];return VV.maxColor&&eV.push(`${xV}    maxColor: ${Ix(VV.maxColor)},`),`${xV}{\n${eV.join("\n")}\n${xV}},`})):VV.map((VV=>`
+                          function pL(HH, BH) {
+                            const LH = `${BH}    `;
+                            return `[\n${(DL(HH)?HH.map((HH=>{const BH=[`${LH}    timeFraction: ${JL(HH.timeFraction)},`,`${LH}    minColor: ${iL(HH.minColor)},`];return HH.maxColor&&BH.push(`${LH}    maxColor: ${iL(HH.maxColor)},`),`${LH}{\n${BH.join("\n")}\n${LH}},`})):HH.map((HH=>`
                             $ {
-                              xV
+                              LH
                             } {
                               color: $ {
-                                Ix(VV.color)
+                                iL(HH.color)
                               }
-                            }, `))).join("\n")}\n${eV}]`
+                            }, `))).join("\n")}\n${BH}]`
                           }
-                          const Ox = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            VJ = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const eJ = .6;
+                          const yL = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            HA = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const BA = .6;
 
-                          function xJ(VV, eV) {
-                            return `${eV?"song":"sound"}:${VV}`
+                          function LA(HH, BH) {
+                            return `${BH?"song":"sound"}:${HH}`
                           }
-                          let JJ = {
+                          let AA = {
                               track: null,
-                              volume: eJ
+                              volume: BA
                             },
-                            YJ = null,
-                            UJ = 0,
-                            yJ = 0;
-                          const pJ = new Set;
+                            rA = null,
+                            SA = 0,
+                            hA = 0;
+                          const tA = new Set;
 
-                          function QJ(VV) {
-                            JJ = {
-                              ...JJ,
-                              ...VV
-                            }, pJ.forEach((VV => {
-                              VV()
+                          function zA(HH) {
+                            AA = {
+                              ...AA,
+                              ...HH
+                            }, tA.forEach((HH => {
+                              HH()
                             }))
                           }
 
-                          function nJ(VV) {
-                            JJ.track && QJ({
+                          function CA(HH) {
+                            AA.track && zA({
                               track: {
-                                ...JJ.track,
-                                ...VV
+                                ...AA.track,
+                                ...HH
                               }
                             })
                           }
 
-                          function wJ(VV) {
-                            const [eV, xV] = (0, JV.useState)((() => VV(JJ))), YV = (0, JV.useRef)(VV);
-                            return YV.current = VV, (0, JV.useEffect)((() => {
-                              const VV = () => {
-                                xV((() => YV.current(JJ)))
+                          function EA(HH) {
+                            const [BH, LH] = (0, AH.useState)((() => HH(AA))), rH = (0, AH.useRef)(HH);
+                            return rH.current = HH, (0, AH.useEffect)((() => {
+                              const HH = () => {
+                                LH((() => rH.current(AA)))
                               };
-                              return pJ.add(VV), VV(), () => {
-                                pJ.delete(VV)
+                              return tA.add(HH), HH(), () => {
+                                tA.delete(HH)
                               }
-                            }), []), eV
+                            }), []), BH
                           }
 
-                          function ZJ() {
-                            UJ++;
-                            const VV = YJ;
-                            YJ = null, null === VV || void 0 === VV || VV.stop()
+                          function XA() {
+                            SA++;
+                            const HH = rA;
+                            rA = null, null === HH || void 0 === HH || HH.stop()
                           }
 
-                          function vJ(VV, eV) {
-                            let JV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            ZJ();
-                            const YV = UJ,
+                          function GA(HH, BH) {
+                            let AH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            XA();
+                            const rH = SA,
                               {
-                                track: UV
-                              } = JJ,
-                              yV = UV && UV.name === VV && UV.isSong === eV ? UV.duration : 0;
-                            yJ = JV, QJ({
+                                track: SH
+                              } = AA,
+                              hH = SH && SH.name === HH && SH.isSong === BH ? SH.duration : 0;
+                            hA = AH, zA({
                               track: {
-                                name: VV,
-                                isSong: eV,
+                                name: HH,
+                                isSong: BH,
                                 status: "loading",
-                                duration: yV
+                                duration: hH
                               }
-                            }), Promise.all([xV.e(245), xV.e(274)]).then((() => xV(41053))).then((xV => {
+                            }), Promise.all([LH.e(249), LH.e(278)]).then((() => LH(41086))).then((LH => {
                               let {
-                                playDocsSound: UV
-                              } = xV;
-                              YV === UJ && (YJ = UV(VV, eV, JJ.volume, JV, {
-                                onPlay: VV => {
-                                  YV === UJ && nJ({
+                                playDocsSound: SH
+                              } = LH;
+                              rH === SA && (rA = SH(HH, BH, AA.volume, AH, {
+                                onPlay: HH => {
+                                  rH === SA && CA({
                                     status: "playing",
-                                    duration: VV
+                                    duration: HH
                                   })
                                 },
-                                onEnd: VV => {
-                                  var eV, xV;
-                                  YV === UJ && (YJ = null, VV ? QJ({
+                                onEnd: HH => {
+                                  var BH, LH;
+                                  rH === SA && (rA = null, HH ? zA({
                                     track: null
-                                  }) : (yJ = null !== (eV = null === (xV = JJ.track) || void 0 === xV ? void 0 : xV.duration) && void 0 !== eV ? eV : 0, nJ({
+                                  }) : (hA = null !== (BH = null === (LH = AA.track) || void 0 === LH ? void 0 : LH.duration) && void 0 !== BH ? BH : 0, CA({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((eV => {
-                              console.error(`Could not play docs sound ${VV}`, eV), YV === UJ && QJ({
+                            })).catch((BH => {
+                              console.error(`Could not play docs sound ${HH}`, BH), rH === SA && zA({
                                 track: null
                               })
                             }))
                           }
 
-                          function rJ() {
+                          function YA() {
                             const {
-                              track: VV
-                            } = JJ;
-                            if (!VV) return;
-                            if ("playing" === VV.status && YJ) return yJ = YJ.YF(), YJ.pause(), void nJ({
+                              track: HH
+                            } = AA;
+                            if (!HH) return;
+                            if ("playing" === HH.status && rA) return hA = rA.hT(), rA.pause(), void CA({
                               status: "paused"
                             });
-                            if ("loading" === VV.status) return ZJ(), void nJ({
+                            if ("loading" === HH.status) return XA(), void CA({
                               status: "paused"
                             });
-                            if (YJ) return void YJ.resume();
-                            const eV = VV.duration > 0 && yJ >= VV.duration - .05;
-                            vJ(VV.name, VV.isSong, eV ? 0 : yJ)
+                            if (rA) return void rA.resume();
+                            const BH = HH.duration > 0 && hA >= HH.duration - .05;
+                            GA(HH.name, HH.isSong, BH ? 0 : hA)
                           }
 
-                          function kJ() {
-                            var VV;
-                            return YJ && "playing" === (null === (VV = JJ.track) || void 0 === VV ? void 0 : VV.status) ? YJ.YF() : yJ
+                          function uA() {
+                            var HH;
+                            return rA && "playing" === (null === (HH = AA.track) || void 0 === HH ? void 0 : HH.status) ? rA.hT() : hA
                           }
 
-                          function bJ(VV) {
-                            var eV;
-                            null === (eV = YJ) || void 0 === eV || eV.setVolume(VV), QJ({
-                              volume: VV
+                          function QA(HH) {
+                            var BH;
+                            null === (BH = rA) || void 0 === BH || BH.setVolume(HH), zA({
+                              volume: HH
                             })
                           }
 
-                          function EJ() {
-                            ZJ(), yJ = 0, QJ({
+                          function WA() {
+                            XA(), hA = 0, zA({
                               track: null
                             })
                           }
-                          const BJ = (0, JV.createContext)(null);
-                          let jJ = null;
+                          const MA = (0, AH.createContext)(null);
+                          let xA = null;
 
-                          function qJ() {
-                            const [VV, eV] = (0, JV.useState)(null);
-                            return (0, JV.useEffect)((() => {
-                              let VV = !1;
-                              return jJ ??= Promise.all([xV.e(84), xV.e(87), xV.e(85), xV.e(86), xV.e(202), xV.e(113), xV.e(249)]).then((() => xV(41047))), jJ.then((xV => {
-                                VV || eV(xV)
-                              }), (VV => {
-                                console.error("Could not load the docs gallery's textures", VV), jJ = null
+                          function vA() {
+                            const [HH, BH] = (0, AH.useState)(null);
+                            return (0, AH.useEffect)((() => {
+                              let HH = !1;
+                              return xA ??= Promise.all([LH.e(84), LH.e(87), LH.e(85), LH.e(86), LH.e(204), LH.e(35), LH.e(253)]).then((() => LH(41078))), xA.then((LH => {
+                                HH || BH(LH)
+                              }), (HH => {
+                                console.error("Could not load the docs gallery's textures", HH), xA = null
                               })), () => {
-                                VV = !0
+                                HH = !0
                               }
-                            }), []), VV
+                            }), []), HH
                           }
-                          const tJ = 24,
-                            FJ = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const PA = 24,
+                            TA = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function TJ(VV, eV) {
-                            const xV = "skins" === VV ? function(VV, eV) {
-                              const xV = Cx.find((eV => VV.startsWith(eV.heading)));
-                              return xV ? function(VV, eV) {
-                                return `${VV}-${eV}`
-                              }(xV.prefix, eV) : null
-                            }(eV.heading, eV.name) : null;
-                            return null === xV ? null : `${ix}/${xV}.webp`
+                          function UA(HH, BH) {
+                            const LH = "skins" === HH ? function(HH, BH) {
+                              const LH = qL.find((BH => HH.startsWith(BH.heading)));
+                              return LH ? function(HH, BH) {
+                                return `${HH}-${BH}`
+                              }(LH.prefix, BH) : null
+                            }(BH.heading, BH.name) : null;
+                            return null === LH ? null : `${eL}/${LH}.webp`
                           }
 
-                          function PJ(VV) {
+                          function VA(HH) {
                             let {
-                              kind: eV,
-                              entry: xV,
-                              assets: YV,
-                              renderedUrl: yV
-                            } = VV;
+                              kind: BH,
+                              entry: LH,
+                              assets: rH,
+                              renderedUrl: hH
+                            } = HH;
                             const {
-                              name: pV
-                            } = xV, [QV, nV] = (0, JV.useState)(!1);
-                            if ("icons" === eV && ce(pV)) return (0, kV.jsx)(tx.b, {
+                              name: tH
+                            } = LH, [zH, CH] = (0, AH.useState)(!1);
+                            if ("icons" === BH && RB(tH)) return (0, uH.jsx)(PL.c, {
                               className: "DocsTileIcon",
-                              name: pV
+                              name: tH
                             });
-                            let wV = null;
-                            var ZV;
-                            if ("icons" === eV) wV = null !== (ZV = null === YV || void 0 === YV ? void 0 : YV.getIngameIconUrl(pV)) && void 0 !== ZV ? ZV : null;
-                            else if ("particles" === eV) {
-                              var vV, rV, bV;
-                              wV = null !== (vV = null === YV || void 0 === YV ? void 0 : YV.getParticleTextureUrl(null !== (rV = null === (bV = cx(pV)) || void 0 === bV ? void 0 : bV.texture) && void 0 !== rV ? rV : pV)) && void 0 !== vV ? vV : null
-                            } else "skins" === eV && (wV = null !== yV && void 0 !== yV ? yV : FJ.test(pV) ? `/textures/charSkins/previews/${pV}_preview.png` : null);
-                            return !wV || QV ? (0, kV.jsx)(EV, {
+                            let EH = null;
+                            var XH;
+                            if ("icons" === BH) EH = null !== (XH = null === rH || void 0 === rH ? void 0 : rH.getIngameIconUrl(tH)) && void 0 !== XH ? XH : null;
+                            else if ("particles" === BH) {
+                              var GH, YH, QH;
+                              EH = null !== (GH = null === rH || void 0 === rH ? void 0 : rH.getParticleTextureUrl(null !== (YH = null === (QH = RL(tH)) || void 0 === QH ? void 0 : QH.texture) && void 0 !== YH ? YH : tH)) && void 0 !== GH ? GH : null
+                            } else "skins" === BH && (EH = null !== hH && void 0 !== hH ? hH : TA.test(tH) ? `/textures/charSkins/previews/${tH}_preview.png` : null);
+                            return !EH || zH ? (0, uH.jsx)(WH, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === eV ? "person" : "image"
-                            }) : (0, kV.jsx)("img", {
-                              className: UV()("DocsTileImage", {
-                                Pixelated: "skins" !== eV
+                              name: "skins" === BH ? "person" : "image"
+                            }) : (0, uH.jsx)("img", {
+                              className: SH()("DocsTileImage", {
+                                Pixelated: "skins" !== BH
                               }),
-                              src: wV,
-                              srcSet: wV === yV ? `${wV} 2x` : void 0,
+                              src: EH,
+                              srcSet: EH === hH ? `${EH} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${wV}`), nV(!0)
+                                console.warn(`Docs gallery: could not load ${EH}`), CH(!0)
                               }
                             })
                           }
 
-                          function AJ(VV) {
+                          function OA(HH) {
                             let {
-                              entry: eV,
-                              isSong: xV
-                            } = VV;
-                            const JV = wJ((VV => {
+                              entry: BH,
+                              isSong: LH
+                            } = HH;
+                            const AH = EA((HH => {
                                 let {
-                                  track: JV
-                                } = VV;
-                                return (null === JV || void 0 === JV ? void 0 : JV.name) === eV.name && JV.isSong === xV ? JV.status : null
+                                  track: AH
+                                } = HH;
+                                return (null === AH || void 0 === AH ? void 0 : AH.name) === BH.name && AH.isSong === LH ? AH.status : null
                               })),
-                              YV = null !== JV && "paused" !== JV;
-                            return (0, kV.jsxs)("button", {
+                              rH = null !== AH && "paused" !== AH;
+                            return (0, uH.jsxs)("button", {
                               type: "button",
-                              id: eV.anchor,
-                              className: UV()("DocsSoundTile", {
-                                Playing: YV
+                              id: BH.anchor,
+                              className: SH()("DocsSoundTile", {
+                                Playing: rH
                               }),
-                              "data-docs-track": xJ(eV.name, xV),
-                              "aria-label": YV ? `Pause ${eV.name}` : `Play ${eV.name}`,
+                              "data-docs-track": LA(BH.name, LH),
+                              "aria-label": rH ? `Pause ${BH.name}` : `Play ${BH.name}`,
                               onClick: () => {
-                                null !== JV ? rJ() : vJ(eV.name, xV)
+                                null !== AH ? YA() : GA(BH.name, LH)
                               },
-                              children: [(0, kV.jsx)("span", {
+                              children: [(0, uH.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, kV.jsx)(EV, {
-                                  name: YV ? "pause" : "play"
+                                children: (0, uH.jsx)(WH, {
+                                  name: rH ? "pause" : "play"
                                 })
-                              }), (0, kV.jsx)("code", {
+                              }), (0, uH.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: eV.name
-                              }), eV.caption && (0, kV.jsx)("span", {
+                                children: BH.name
+                              }), BH.caption && (0, uH.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: eV.caption
+                                children: BH.caption
                               })]
                             })
                           }
 
-                          function NJ(VV) {
+                          function bA(HH) {
                             let {
-                              kind: eV,
-                              names: xV,
-                              isSongs: YV
-                            } = VV;
-                            const yV = qJ(),
-                              [pV, QV] = jV(),
-                              nV = !1 === (null === pV || void 0 === pV ? void 0 : pV.failed) ? pV.text : null,
-                              wV = (0, JV.useContext)(BJ),
-                              [ZV, vV] = (0, JV.useState)(""),
-                              rV = ZV.trim().toLowerCase(),
-                              bV = rV ? xV.filter((VV => VV.name.toLowerCase().includes(rV))) : xV;
-                            return (0, kV.jsxs)("div", {
+                              kind: BH,
+                              names: LH,
+                              isSongs: rH
+                            } = HH;
+                            const hH = vA(),
+                              [tH, zH] = xH(),
+                              CH = !1 === (null === tH || void 0 === tH ? void 0 : tH.failed) ? tH.text : null,
+                              EH = (0, AH.useContext)(MA),
+                              [XH, GH] = (0, AH.useState)(""),
+                              YH = XH.trim().toLowerCase(),
+                              QH = YH ? LH.filter((HH => HH.name.toLowerCase().includes(YH))) : LH;
+                            return (0, uH.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [xV.length > tJ && (0, kV.jsx)(qx, {
+                              children: [LH.length > PA && (0, uH.jsx)(vL, {
                                 className: "DocsGalleryFilter",
-                                value: ZV,
-                                placeholder: `Filter ${xV.length} names\u2026`,
+                                value: XH,
+                                placeholder: `Filter ${LH.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: vV,
-                                count: rV ? {
-                                  visible: bV.length,
-                                  total: xV.length
+                                onChange: GH,
+                                count: YH ? {
+                                  visible: QH.length,
+                                  total: LH.length
                                 } : null
-                              }), (0, kV.jsx)("div", {
-                                className: UV()("DocsGalleryGrid", `Kind-${eV}`, {
-                                  Songs: YV
+                              }), (0, uH.jsx)("div", {
+                                className: SH()("DocsGalleryGrid", `Kind-${BH}`, {
+                                  Songs: rH
                                 }),
-                                children: bV.map((VV => {
-                                  if ("sounds" === eV) return (0, kV.jsx)(AJ, {
-                                    entry: VV,
-                                    isSong: YV
-                                  }, VV.anchor);
-                                  if (wV && "particles" === eV && cx(VV.name)) return (0, kV.jsxs)("button", {
+                                children: QH.map((HH => {
+                                  if ("sounds" === BH) return (0, uH.jsx)(OA, {
+                                    entry: HH,
+                                    isSong: rH
+                                  }, HH.anchor);
+                                  if (EH && "particles" === BH && RL(HH.name)) return (0, uH.jsxs)("button", {
                                     type: "button",
-                                    id: VV.anchor,
-                                    className: UV()("DocsTile Previewable", {
-                                      Copied: nV === VV.name
+                                    id: HH.anchor,
+                                    className: SH()("DocsTile Previewable", {
+                                      Copied: CH === HH.name
                                     }),
-                                    title: `Play "${VV.name}" in the playground and copy its name`,
+                                    title: `Play "${HH.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      wV(VV.name), QV(VV.name)
+                                      EH(HH.name), zH(HH.name)
                                     },
-                                    children: [(0, kV.jsxs)("span", {
+                                    children: [(0, uH.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, kV.jsx)(PJ, {
-                                        kind: eV,
-                                        entry: VV,
-                                        assets: yV,
+                                      children: [(0, uH.jsx)(VA, {
+                                        kind: BH,
+                                        entry: HH,
+                                        assets: hH,
                                         renderedUrl: null
-                                      }), (0, kV.jsx)("span", {
+                                      }), (0, uH.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, kV.jsx)(EV, {
+                                        children: (0, uH.jsx)(WH, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, kV.jsx)("span", {
+                                    }), (0, uH.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: nV === VV.name ? "Copied!" : VV.name
+                                      children: CH === HH.name ? "Copied!" : HH.name
                                     })]
-                                  }, VV.anchor);
-                                  const xV = TJ(eV, VV);
-                                  return (0, kV.jsxs)("button", {
+                                  }, HH.anchor);
+                                  const LH = UA(BH, HH);
+                                  return (0, uH.jsxs)("button", {
                                     type: "button",
-                                    id: VV.anchor,
-                                    className: UV()("DocsTile", {
-                                      Copied: nV === VV.name
+                                    id: HH.anchor,
+                                    className: SH()("DocsTile", {
+                                      Copied: CH === HH.name
                                     }),
-                                    title: `Copy "${VV.name}"`,
+                                    title: `Copy "${HH.name}"`,
                                     onClick: () => {
-                                      QV(VV.name)
+                                      zH(HH.name)
                                     },
-                                    children: [(0, kV.jsx)("span", {
-                                      className: UV()("DocsTilePreview", {
-                                        Rendered: null !== xV
+                                    children: [(0, uH.jsx)("span", {
+                                      className: SH()("DocsTilePreview", {
+                                        Rendered: null !== LH
                                       }),
-                                      children: (0, kV.jsx)(PJ, {
-                                        kind: eV,
-                                        entry: VV,
-                                        assets: yV,
-                                        renderedUrl: xV
+                                      children: (0, uH.jsx)(VA, {
+                                        kind: BH,
+                                        entry: HH,
+                                        assets: hH,
+                                        renderedUrl: LH
                                       })
-                                    }), (0, kV.jsx)("span", {
+                                    }), (0, uH.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: nV === VV.name ? "Copied!" : VV.name
+                                      children: CH === HH.name ? "Copied!" : HH.name
                                     })]
-                                  }, VV.anchor)
+                                  }, HH.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function XJ(VV) {
+                          function kA(HH) {
                             let {
-                              kind: eV,
-                              content: xV,
-                              blocks: JV
-                            } = VV;
-                            return (0, kV.jsx)(kV.Fragment, {
-                              children: Dx(eV, xV, JV).map(((VV, xV) => "block" === VV.kind ? (0, kV.jsx)(vx, {
-                                block: VV.block
-                              }, xV) : (0, kV.jsx)(NJ, {
-                                kind: eV,
-                                names: VV.names,
-                                isSongs: VV.isSongs
-                              }, xV)))
+                              kind: BH,
+                              content: LH,
+                              blocks: AH
+                            } = HH;
+                            return (0, uH.jsx)(uH.Fragment, {
+                              children: cL(BH, LH, AH).map(((HH, LH) => "block" === HH.kind ? (0, uH.jsx)(GL, {
+                                block: HH.block
+                              }, LH) : (0, uH.jsx)(bA, {
+                                kind: BH,
+                                names: HH.names,
+                                isSongs: HH.isSongs
+                              }, LH)))
                             })
                           }
-                          const MJ = [{
+                          const mA = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,789 +2161,789 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function zJ(VV) {
+                          function oA(HH) {
                             let {
-                              cards: eV = MJ,
-                              label: xV = "Start here"
-                            } = VV;
-                            const YV = (0, JV.useContext)(re);
-                            return (0, kV.jsx)("nav", {
+                              cards: BH = mA,
+                              label: LH = "Start here"
+                            } = HH;
+                            const rH = (0, AH.useContext)(YB);
+                            return (0, uH.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": xV,
-                              children: eV.map((VV => {
+                              "aria-label": LH,
+                              children: BH.map((HH => {
                                 let {
-                                  pageId: eV,
-                                  countNoun: xV
-                                } = VV;
-                                const JV = oV(eV);
-                                return (0, kV.jsxs)(yV.b, {
-                                  to: mV(YV, JV),
+                                  pageId: BH,
+                                  countNoun: LH
+                                } = HH;
+                                const AH = NH(BH);
+                                return (0, uH.jsxs)(hH.e, {
+                                  to: wH(rH, AH),
                                   className: "DocsLandingCard",
-                                  children: [(0, kV.jsx)("span", {
+                                  children: [(0, uH.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, kV.jsx)(EV, {
-                                      name: JV.icon
+                                    children: (0, uH.jsx)(WH, {
+                                      name: AH.icon
                                     })
-                                  }), (0, kV.jsx)("span", {
+                                  }), (0, uH.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: JV.title
-                                  }), (0, kV.jsx)("span", {
+                                    children: AH.title
+                                  }), (0, uH.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: JV.summary
-                                  }), xV && (0, kV.jsxs)("span", {
+                                    children: AH.summary
+                                  }), LH && (0, uH.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [hV(JV).sections.length, " ", xV]
+                                    children: [jH(AH).sections.length, " ", LH]
                                   })]
-                                }, eV)
+                                }, BH)
                               }))
                             })
                           }
-                          const GJ = 240;
+                          const IA = 240;
 
-                          function WJ(VV) {
+                          function fA(HH) {
                             let {
-                              faces: eV
-                            } = VV;
-                            return (0, kV.jsxs)("span", {
+                              faces: BH
+                            } = HH;
+                            return (0, uH.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, kV.jsx)("span", {
+                              children: [(0, uH.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${eV.top}")`
+                                  backgroundImage: `url("${BH.top}")`
                                 }
-                              }), (0, kV.jsx)("span", {
+                              }), (0, uH.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${eV.left}")`
+                                  backgroundImage: `url("${BH.left}")`
                                 }
-                              }), (0, kV.jsx)("span", {
+                              }), (0, uH.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${eV.right}")`
+                                  backgroundImage: `url("${BH.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function RJ(VV) {
+                          function lA(HH) {
                             let {
-                              src: eV
-                            } = VV;
-                            const [xV, YV] = (0, JV.useState)(!1);
-                            return xV ? null : (0, kV.jsx)("img", {
-                              src: eV,
+                              src: BH
+                            } = HH;
+                            const [LH, rH] = (0, AH.useState)(!1);
+                            return LH ? null : (0, uH.jsx)("img", {
+                              src: BH,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${eV}`), YV(!0)
+                                console.warn(`Docs catalogue: could not load ${BH}`), rH(!0)
                               }
                             })
                           }
 
-                          function gJ(VV) {
+                          function KA(HH) {
                             let {
-                              kind: eV
-                            } = VV;
-                            const xV = jx(eV),
-                              YV = qJ(),
-                              yV = (0, pV.r)(),
-                              [QV, nV] = (0, JV.useState)(""),
-                              [wV, ZV] = (0, JV.useState)(null),
-                              [vV, rV] = (0, JV.useState)(GJ),
-                              [bV, BV] = (0, JV.useState)(null),
-                              jV = (0, JV.useRef)(null),
-                              tV = QV.trim().toLowerCase();
-                            (0, JV.useEffect)((() => {
-                              const VV = (0, AV.v)(yV.hash),
-                                JV = xV.entries.find((xV => Rx(eV, xV.name) === VV));
-                              if (JV) jV.current = JV.name, nV(JV.name), ZV(null), BV(JV.name);
-                              else if (null !== jV.current) {
-                                const VV = jV.current;
-                                jV.current = null, nV((eV => eV === VV ? "" : eV)), BV(null)
+                              kind: BH
+                            } = HH;
+                            const LH = xL(BH),
+                              rH = vA(),
+                              hH = (0, tH.s)(),
+                              [zH, CH] = (0, AH.useState)(""),
+                              [EH, XH] = (0, AH.useState)(null),
+                              [GH, YH] = (0, AH.useState)(IA),
+                              [QH, MH] = (0, AH.useState)(null),
+                              xH = (0, AH.useRef)(null),
+                              PH = zH.trim().toLowerCase();
+                            (0, AH.useEffect)((() => {
+                              const HH = (0, OH.p)(hH.hash),
+                                AH = LH.entries.find((LH => lL(BH, LH.name) === HH));
+                              if (AH) xH.current = AH.name, CH(AH.name), XH(null), MH(AH.name);
+                              else if (null !== xH.current) {
+                                const HH = xH.current;
+                                xH.current = null, CH((BH => BH === HH ? "" : BH)), MH(null)
                               }
-                            }), [xV, eV, yV.hash, yV.key]), (0, JV.useEffect)((() => {
-                              var VV;
-                              null !== bV && (null === (VV = document.getElementById(Rx(eV, bV))) || void 0 === VV || VV.scrollIntoView({
+                            }), [LH, BH, hH.hash, hH.key]), (0, AH.useEffect)((() => {
+                              var HH;
+                              null !== QH && (null === (HH = document.getElementById(lL(BH, QH))) || void 0 === HH || HH.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [eV, bV]);
-                            const FV = xV.entries.filter((VV => (!tV || VV.name.toLowerCase().includes(tV)) && (!wV || VV.variants.includes(wV))));
-                            return (0, kV.jsxs)("div", {
+                            }), [BH, QH]);
+                            const TH = LH.entries.filter((HH => (!PH || HH.name.toLowerCase().includes(PH)) && (!EH || HH.variants.includes(EH))));
+                            return (0, uH.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [xV.notes.length > 0 && (0, kV.jsx)("div", {
+                              children: [LH.notes.length > 0 && (0, uH.jsx)("div", {
                                 className: "DocsProse",
-                                children: xV.notes.map((VV => (0, kV.jsx)("p", {
-                                  children: VV
-                                }, VV)))
-                              }), xV.legend.length > 0 && (0, kV.jsx)("div", {
+                                children: LH.notes.map((HH => (0, uH.jsx)("p", {
+                                  children: HH
+                                }, HH)))
+                              }), LH.legend.length > 0 && (0, uH.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, kV.jsxs)("table", {
+                                children: (0, uH.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, kV.jsx)("thead", {
-                                    children: (0, kV.jsxs)("tr", {
-                                      children: [(0, kV.jsx)("th", {
+                                  children: [(0, uH.jsx)("thead", {
+                                    children: (0, uH.jsxs)("tr", {
+                                      children: [(0, uH.jsx)("th", {
                                         children: "Code"
-                                      }), (0, kV.jsx)("th", {
+                                      }), (0, uH.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, kV.jsx)("th", {
+                                      }), (0, uH.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, kV.jsx)("tbody", {
-                                    children: xV.legend.map((VV => (0, kV.jsxs)("tr", {
-                                      children: [(0, kV.jsx)("td", {
-                                        children: (0, kV.jsx)("button", {
+                                  }), (0, uH.jsx)("tbody", {
+                                    children: LH.legend.map((HH => (0, uH.jsxs)("tr", {
+                                      children: [(0, uH.jsx)("td", {
+                                        children: (0, uH.jsx)("button", {
                                           type: "button",
-                                          className: UV()("DocsVariantChip", {
-                                            Active: wV === VV.code
+                                          className: SH()("DocsVariantChip", {
+                                            Active: EH === HH.code
                                           }),
-                                          "aria-pressed": wV === VV.code,
-                                          title: `Show only ${eV} with ${VV.meaning} variants`,
+                                          "aria-pressed": EH === HH.code,
+                                          title: `Show only ${BH} with ${HH.meaning} variants`,
                                           onClick: () => {
-                                            ZV(wV === VV.code ? null : VV.code)
+                                            XH(EH === HH.code ? null : HH.code)
                                           },
-                                          children: VV.code
+                                          children: HH.code
                                         })
-                                      }), (0, kV.jsx)("td", {
-                                        children: VV.meaning
-                                      }), (0, kV.jsx)("td", {
-                                        children: (0, kV.jsx)("code", {
+                                      }), (0, uH.jsx)("td", {
+                                        children: HH.meaning
+                                      }), (0, uH.jsx)("td", {
+                                        children: (0, uH.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: VV.usage
+                                          children: HH.usage
                                         })
                                       })]
-                                    }, VV.code)))
+                                    }, HH.code)))
                                   })]
                                 })
-                              }), xV.examples.length > 0 && (0, kV.jsx)(PV, {
+                              }), LH.examples.length > 0 && (0, uH.jsx)(VH, {
                                 lang: "text",
-                                code: xV.examples.join("\n")
-                              }), (0, kV.jsx)(qx, {
+                                code: LH.examples.join("\n")
+                              }), (0, uH.jsx)(vL, {
                                 className: "DocsFilterBar",
-                                value: QV,
-                                placeholder: `Search ${xV.entries.length} ${eV}\u2026`,
-                                label: `Search ${eV}`,
-                                onChange: VV => {
-                                  nV(VV), rV(GJ)
+                                value: zH,
+                                placeholder: `Search ${LH.entries.length} ${BH}\u2026`,
+                                label: `Search ${BH}`,
+                                onChange: HH => {
+                                  CH(HH), YH(IA)
                                 },
-                                count: tV || wV ? {
-                                  visible: FV.length,
-                                  total: xV.entries.length
+                                count: PH || EH ? {
+                                  visible: TH.length,
+                                  total: LH.entries.length
                                 } : null,
-                                children: wV && (0, kV.jsxs)("button", {
+                                children: EH && (0, uH.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    ZV(null)
+                                    XH(null)
                                   },
-                                  children: [wV, " ", (0, kV.jsx)(EV, {
+                                  children: [EH, " ", (0, uH.jsx)(WH, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, kV.jsx)("div", {
+                              }), (0, uH.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: FV.slice(0, vV).map((VV => {
-                                  const xV = "blocks" === eV ? null === YV || void 0 === YV ? void 0 : YV.getBlockFaces(VV.name) : null,
-                                    JV = YV && !xV ? YV.getItemTextureUrl(VV.name) : null;
-                                  return (0, kV.jsxs)("div", {
-                                    id: Rx(eV, VV.name),
-                                    className: UV()("DocsCatalogueTile", {
-                                      Linked: VV.name === bV
+                                children: TH.slice(0, GH).map((HH => {
+                                  const LH = "blocks" === BH ? null === rH || void 0 === rH ? void 0 : rH.getBlockFaces(HH.name) : null,
+                                    AH = rH && !LH ? rH.getItemTextureUrl(HH.name) : null;
+                                  return (0, uH.jsxs)("div", {
+                                    id: lL(BH, HH.name),
+                                    className: SH()("DocsCatalogueTile", {
+                                      Linked: HH.name === QH
                                     }),
-                                    children: [(0, kV.jsxs)("span", {
+                                    children: [(0, uH.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [xV && (0, kV.jsx)(WJ, {
-                                        faces: xV
-                                      }), JV && (0, kV.jsx)(RJ, {
-                                        src: JV
+                                      children: [LH && (0, uH.jsx)(fA, {
+                                        faces: LH
+                                      }), AH && (0, uH.jsx)(lA, {
+                                        src: AH
                                       })]
-                                    }), (0, kV.jsx)("span", {
+                                    }), (0, uH.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: VV.name
-                                    }), VV.variants.length > 0 && (0, kV.jsx)("span", {
+                                      children: HH.name
+                                    }), HH.variants.length > 0 && (0, uH.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: VV.variants.map((VV => (0, kV.jsx)("span", {
-                                        children: VV
-                                      }, VV)))
-                                    }), (0, kV.jsx)(qV, {
-                                      text: VV.name,
+                                      children: HH.variants.map((HH => (0, uH.jsx)("span", {
+                                        children: HH
+                                      }, HH)))
+                                    }), (0, uH.jsx)(vH, {
+                                      text: HH.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, VV.name)
+                                  }, HH.name)
                                 }))
-                              }), FV.length > vV && (0, kV.jsxs)("button", {
+                              }), TH.length > GH && (0, uH.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  rV(FV.length)
+                                  YH(TH.length)
                                 },
-                                children: ["Show all ", FV.length]
-                              }), 0 === FV.length && (0, kV.jsxs)("p", {
+                                children: ["Show all ", TH.length]
+                              }), 0 === TH.length && (0, uH.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", eV, " match."]
+                                children: ["No ", BH, " match."]
                               })]
                             })
                           }
-                          var DJ = xV(5323),
-                            iJ = xV(1682);
-                          const CJ = .95 * DJ.b;
+                          var cA = LH(5296),
+                            eA = LH(1603);
+                          const qA = .95 * cA.c;
 
-                          function aJ(VV) {
-                            return /^\s*```/.test(VV)
+                          function gA(HH) {
+                            return /^\s*```/.test(HH)
                           }
 
-                          function oJ(VV, eV) {
-                            const xV = [
+                          function NA(HH, BH) {
+                            const LH = [
                               []
                             ];
-                            let JV = !1;
-                            for (const YV of VV.split("\n")) !JV && eV(YV) && xV.at(-1).length > 0 && xV.push([]), aJ(YV) && (JV = !JV), xV.at(-1).push(YV);
-                            return xV.map((VV => VV.join("\n").trim())).filter(Boolean)
+                            let AH = !1;
+                            for (const rH of HH.split("\n")) !AH && BH(rH) && LH.at(-1).length > 0 && LH.push([]), gA(rH) && (AH = !AH), LH.at(-1).push(rH);
+                            return LH.map((HH => HH.join("\n").trim())).filter(Boolean)
                           }
 
-                          function cJ(VV, eV) {
-                            const xV = `${"#".repeat(eV)} `,
-                              JV = [];
-                            let YV = !1;
-                            for (const UV of VV.split("\n")) aJ(UV) ? YV = !YV : !YV && UV.startsWith(xV) && JV.push(UV.slice(xV.length).trim());
-                            return JV
+                          function RA(HH, BH) {
+                            const LH = `${"#".repeat(BH)} `,
+                              AH = [];
+                            let rH = !1;
+                            for (const SH of HH.split("\n")) gA(SH) ? rH = !rH : !rH && SH.startsWith(LH) && AH.push(SH.slice(LH.length).trim());
+                            return AH
                           }
 
-                          function hJ(VV) {
-                            return VV.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function jA(HH) {
+                            return HH.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class lJ {
-                            constructor(VV, eV) {
-                              this.origin = eV, this.pages = void 0, this.partPaths = new Map;
-                              const xV = VV.map((VV => {
-                                const eV = eV => this.resolveLinks(VV, eV).length,
-                                  xV = function(VV, eV) {
-                                    const xV = VV.map((VV => eV(VV.markdown) + 2)),
-                                      JV = xV.reduce(((VV, eV) => VV + eV), 0),
-                                      YV = JV / Math.ceil(JV / CJ),
-                                      UV = [];
-                                    let yV = 0;
-                                    return VV.forEach(((VV, eV) => {
-                                      const JV = xV[eV];
-                                      (0 === UV.length || yV + JV > CJ || yV + JV / 2 > YV) && (UV.push([]), yV = 0), UV.at(-1).push(VV), yV += JV
-                                    })), UV
-                                  }(function(VV, eV) {
-                                    return oJ(VV, (VV => VV.startsWith("## "))).flatMap((VV => {
-                                      var xV;
-                                      const JV = null !== (xV = cJ(VV, 2)[0]) && void 0 !== xV ? xV : "";
-                                      if (eV(VV) <= CJ) return [{
-                                        markdown: VV,
-                                        section: JV
+                          class nA {
+                            constructor(HH, BH) {
+                              this.origin = BH, this.pages = void 0, this.partPaths = new Map;
+                              const LH = HH.map((HH => {
+                                const BH = BH => this.resolveLinks(HH, BH).length,
+                                  LH = function(HH, BH) {
+                                    const LH = HH.map((HH => BH(HH.markdown) + 2)),
+                                      AH = LH.reduce(((HH, BH) => HH + BH), 0),
+                                      rH = AH / Math.ceil(AH / qA),
+                                      SH = [];
+                                    let hH = 0;
+                                    return HH.forEach(((HH, BH) => {
+                                      const AH = LH[BH];
+                                      (0 === SH.length || hH + AH > qA || hH + AH / 2 > rH) && (SH.push([]), hH = 0), SH.at(-1).push(HH), hH += AH
+                                    })), SH
+                                  }(function(HH, BH) {
+                                    return NA(HH, (HH => HH.startsWith("## "))).flatMap((HH => {
+                                      var LH;
+                                      const AH = null !== (LH = RA(HH, 2)[0]) && void 0 !== LH ? LH : "";
+                                      if (BH(HH) <= qA) return [{
+                                        markdown: HH,
+                                        section: AH
                                       }];
-                                      let YV = !1,
-                                        UV = "";
-                                      return oJ(VV, (VV => {
-                                        const eV = YV && "" !== VV.trim();
-                                        return YV = "" === VV.trim(), eV
-                                      })).map((VV => {
-                                        var eV;
-                                        const xV = cJ(VV, 3),
-                                          YV = VV.startsWith("### ") ? xV[0] : UV;
-                                        return UV = null !== (eV = xV.at(-1)) && void 0 !== eV ? eV : UV, {
-                                          markdown: VV,
-                                          section: JV || YV
+                                      let rH = !1,
+                                        SH = "";
+                                      return NA(HH, (HH => {
+                                        const BH = rH && "" !== HH.trim();
+                                        return rH = "" === HH.trim(), BH
+                                      })).map((HH => {
+                                        var BH;
+                                        const LH = RA(HH, 3),
+                                          rH = HH.startsWith("### ") ? LH[0] : SH;
+                                        return SH = null !== (BH = LH.at(-1)) && void 0 !== BH ? BH : SH, {
+                                          markdown: HH,
+                                          section: AH || rH
                                         }
                                       }))
                                     }))
-                                  }(hJ(VV), eV), eV);
+                                  }(jA(HH), BH), BH);
                                 return {
-                                  page: VV,
-                                  groups: xV.length > 1 ? xV : []
+                                  page: HH,
+                                  groups: LH.length > 1 ? LH : []
                                 }
                               }));
                               for (const {
-                                  page: JV,
-                                  groups: YV
+                                  page: AH,
+                                  groups: rH
                                 }
-                                of xV) YV.forEach(((VV, eV) => {
-                                const xV = (0, DJ.w)(JV.slug, eV);
-                                for (const YV of VV.flatMap((VV => [...cJ(VV.markdown, 2), ...cJ(VV.markdown, 3)]))) {
-                                  const VV = `${JV.id}#${(0,AV.w)(YV)}`;
-                                  this.partPaths.has(VV) || this.partPaths.set(VV, xV)
+                                of LH) rH.forEach(((HH, BH) => {
+                                const LH = (0, cA.u)(AH.slug, BH);
+                                for (const rH of HH.flatMap((HH => [...RA(HH.markdown, 2), ...RA(HH.markdown, 3)]))) {
+                                  const HH = `${AH.id}#${(0,OH.r)(rH)}`;
+                                  this.partPaths.has(HH) || this.partPaths.set(HH, LH)
                                 }
                               }));
-                              this.pages = xV.map((VV => {
+                              this.pages = LH.map((HH => {
                                 let {
-                                  page: eV,
-                                  groups: xV
-                                } = VV;
+                                  page: BH,
+                                  groups: LH
+                                } = HH;
                                 return {
-                                  page: eV,
-                                  path: (0, DJ.u)(eV.slug),
-                                  markdown: `# ${eV.title}\n\n${this.resolveLinks(eV,hJ(eV))}\n`,
-                                  parts: xV.map(((VV, JV) => this.renderPart(eV, VV, JV, xV.length)))
+                                  page: BH,
+                                  path: (0, cA.r)(BH.slug),
+                                  markdown: `# ${BH.title}\n\n${this.resolveLinks(BH,jA(BH))}\n`,
+                                  parts: LH.map(((HH, AH) => this.renderPart(BH, HH, AH, LH.length)))
                                 }
                               }))
                             }
-                            url(VV) {
-                              return `${this.origin}${VV}`
+                            url(HH) {
+                              return `${this.origin}${HH}`
                             }
-                            getPage(VV) {
-                              return this.pages.find((eV => eV.page.id === VV))
+                            getPage(HH) {
+                              return this.pages.find((BH => BH.page.id === HH))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((VV => (VV.parts.length > 0 ? VV.parts : [{
-                                path: VV.path,
+                              return this.pages.flatMap((HH => (HH.parts.length > 0 ? HH.parts : [{
+                                path: HH.path,
                                 label: "",
-                                markdown: VV.markdown
-                              }]).filter((VV => VV.markdown.length > DJ.b))))
+                                markdown: HH.markdown
+                              }]).filter((HH => HH.markdown.length > cA.c))))
                             }
-                            markdownUrl(VV, eV) {
-                              const xV = eV && this.partPaths.get(`${VV.id}#${eV}`) || (0, DJ.u)(VV.slug);
-                              return this.url(eV ? `${xV}#${eV}` : xV)
+                            markdownUrl(HH, BH) {
+                              const LH = BH && this.partPaths.get(`${HH.id}#${BH}`) || (0, cA.r)(HH.slug);
+                              return this.url(BH ? `${LH}#${BH}` : LH)
                             }
-                            resolveLinks(VV, eV) {
-                              return eV.replace(/\]\((#[^)]+)\)/g, ((eV, xV) => {
-                                var JV;
-                                const YV = null !== (JV = LV(xV)) && void 0 !== JV ? JV : this.samePageTarget(VV, xV);
-                                return YV ? `](${this.markdownUrl(YV.page,YV.anchor)})` : eV
+                            resolveLinks(HH, BH) {
+                              return BH.replace(/\]\((#[^)]+)\)/g, ((BH, LH) => {
+                                var AH;
+                                const rH = null !== (AH = FH(LH)) && void 0 !== AH ? AH : this.samePageTarget(HH, LH);
+                                return rH ? `](${this.markdownUrl(rH.page,rH.anchor)})` : BH
                               }))
                             }
-                            samePageTarget(VV, eV) {
-                              const xV = (0, AV.w)(eV.slice(1));
-                              return lV(VV, xV) ? {
-                                page: VV,
-                                anchor: xV
+                            samePageTarget(HH, BH) {
+                              const LH = (0, OH.r)(BH.slice(1));
+                              return nH(HH, LH) ? {
+                                page: HH,
+                                anchor: LH
                               } : null
                             }
-                            renderPart(VV, eV, xV, JV) {
-                              const YV = function(VV) {
-                                  const eV = VV.map((VV => VV.section)).filter(Boolean);
-                                  if (0 === eV.length) return "";
-                                  const xV = eV[0],
-                                    JV = eV.at(-1);
-                                  return xV === JV ? xV : `${xV} to ${JV}`
-                                }(eV),
-                                UV = eV.map((VV => VV.markdown)).join("\n\n"),
-                                yV = YV ? `It covers ${YV}. ` : "",
-                                pV = `Part ${xV+1} of ${JV} of [${VV.title}](${this.url((0,DJ.u)(VV.slug))}). ${yV}[llms.txt](${this.url(DJ.i)}) lists every part.`;
+                            renderPart(HH, BH, LH, AH) {
+                              const rH = function(HH) {
+                                  const BH = HH.map((HH => HH.section)).filter(Boolean);
+                                  if (0 === BH.length) return "";
+                                  const LH = BH[0],
+                                    AH = BH.at(-1);
+                                  return LH === AH ? LH : `${LH} to ${AH}`
+                                }(BH),
+                                SH = BH.map((HH => HH.markdown)).join("\n\n"),
+                                hH = rH ? `It covers ${rH}. ` : "",
+                                tH = `Part ${LH+1} of ${AH} of [${HH.title}](${this.url((0,cA.r)(HH.slug))}). ${hH}[llms.txt](${this.url(cA.h)}) lists every part.`;
                               return {
-                                path: (0, DJ.w)(VV.slug, xV),
-                                label: YV,
-                                markdown: `# ${VV.title}, part ${xV+1} of ${JV}\n\n${pV}\n\n${this.resolveLinks(VV,UV)}\n`
+                                path: (0, cA.u)(HH.slug, LH),
+                                label: rH,
+                                markdown: `# ${HH.title}, part ${LH+1} of ${AH}\n\n${tH}\n\n${this.resolveLinks(HH,SH)}\n`
                               }
                             }
-                            llmsTxt(VV) {
-                              const eV = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${LJ(DJ.b)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const xV of aV) {
-                                eV.push("", `## ${xV.title}`, "");
-                                for (const VV of xV.pageIds) {
-                                  const xV = this.getPage(VV),
+                            llmsTxt(HH) {
+                              const BH = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${FA(cA.c)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const LH of gH) {
+                                BH.push("", `## ${LH.title}`, "");
+                                for (const HH of LH.pageIds) {
+                                  const LH = this.getPage(HH),
                                     {
-                                      page: JV,
-                                      parts: YV
-                                    } = xV,
-                                    UV = `About ${LJ(xV.markdown.length)} tokens${YV.length>0?`, in ${YV.length} parts:`:"."}`;
-                                  eV.push(`- [${JV.title}](${this.url(xV.path)}): ${JV.summary} ${UV}`), YV.forEach(((VV, xV) => {
-                                    eV.push(`  - [Part ${xV+1}${VV.label?`: ${VV.label}`:""}](${this.url(VV.path)})`)
+                                      page: AH,
+                                      parts: rH
+                                    } = LH,
+                                    SH = `About ${FA(LH.markdown.length)} tokens${rH.length>0?`, in ${rH.length} parts:`:"."}`;
+                                  BH.push(`- [${AH.title}](${this.url(LH.path)}): ${AH.summary} ${SH}`), rH.forEach(((HH, LH) => {
+                                    BH.push(`  - [Part ${LH+1}${HH.label?`: ${HH.label}`:""}](${this.url(HH.path)})`)
                                   }))
                                 }
                               }
-                              return eV.push("", "## Optional", "", `- [Every page in one file](${this.url(DJ.e)}): About ${LJ(VV.length)} tokens, for a model with a large context window.`, ""), eV.join("\n")
+                              return BH.push("", "## Optional", "", `- [Every page in one file](${this.url(cA.g)}): About ${FA(HH.length)} tokens, for a model with a large context window.`, ""), BH.join("\n")
                             }
                             llmsFullTxt() {
-                              return aV.flatMap((VV => VV.pageIds.map((VV => this.getPage(VV).markdown)))).join("\n---\n\n")
+                              return gH.flatMap((HH => HH.pageIds.map((HH => this.getPage(HH).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const VV = this.llmsFullTxt(),
-                                eV = this.llmsTxt(VV),
-                                xV = new Map([
-                                  [DJ.p, eV],
-                                  [DJ.i, eV],
-                                  [DJ.e, VV]
+                              const HH = this.llmsFullTxt(),
+                                BH = this.llmsTxt(HH),
+                                LH = new Map([
+                                  [cA.n, BH],
+                                  [cA.h, BH],
+                                  [cA.g, HH]
                                 ]);
-                              for (const JV of this.pages) {
-                                xV.set(JV.path, JV.markdown);
-                                for (const VV of JV.parts) xV.set(VV.path, VV.markdown)
+                              for (const AH of this.pages) {
+                                LH.set(AH.path, AH.markdown);
+                                for (const HH of AH.parts) LH.set(HH.path, HH.markdown)
                               }
-                              return xV
+                              return LH
                             }
                           }
 
-                          function LJ(VV) {
-                            return `${Math.max(1,Math.round(VV/4e3))}K`
+                          function FA(HH) {
+                            return `${Math.max(1,Math.round(HH/4e3))}K`
                           }
-                          let fJ = null;
+                          let DA = null;
 
-                          function mJ() {
-                            return fJ ??= new lJ(CV, iJ.d), fJ
+                          function wA() {
+                            return DA ??= new nA(qH, eA.c), DA
                           }
-                          var KJ = xV(5330);
-                          const HJ = [KJ.e, KJ.o];
+                          var ZA = LH(5302);
+                          const dA = [ZA.h, ZA.p];
 
-                          function uJ(VV) {
-                            return mJ().getPage(VV.id).parts.length > 0 ? `Read ${DJ.l}, then the parts of the Bloxd Code API's ${VV.title} page it lists, so I can ask questions about it.` : `Read ${iJ.d}${(0,DJ.u)(VV.slug)} so I can ask questions about it. ${KJ.k}`
+                          function aA(HH) {
+                            return wA().getPage(HH.id).parts.length > 0 ? `Read ${cA.l}, then the parts of the Bloxd Code API's ${HH.title} page it lists, so I can ask questions about it.` : `Read ${eA.c}${(0,cA.r)(HH.slug)} so I can ask questions about it. ${ZA.o}`
                           }
 
-                          function sJ(VV) {
+                          function sA(HH) {
                             let {
-                              page: eV
-                            } = VV;
-                            const [xV, JV] = jV();
-                            return (0, kV.jsxs)("div", {
+                              page: BH
+                            } = HH;
+                            const [LH, AH] = xH();
+                            return (0, uH.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, kV.jsxs)("button", {
+                              children: [(0, uH.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  JV(mJ().getPage(eV.id).markdown)
+                                  AH(wA().getPage(BH.id).markdown)
                                 },
-                                children: [(0, kV.jsx)(EV, {
-                                  name: !1 === (null === xV || void 0 === xV ? void 0 : xV.failed) ? "check" : "copy"
-                                }), (0, kV.jsx)("span", {
-                                  children: xV ? xV.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, uH.jsx)(WH, {
+                                  name: !1 === (null === LH || void 0 === LH ? void 0 : LH.failed) ? "check" : "copy"
+                                }), (0, uH.jsx)("span", {
+                                  children: LH ? LH.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), HJ.map((VV => (0, kV.jsxs)("a", {
+                              }), dA.map((HH => (0, uH.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: (0, KJ.c)(VV, uJ(eV)),
+                                href: (0, ZA.e)(HH, aA(BH)),
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, kV.jsx)(EV, {
+                                children: [(0, uH.jsx)(WH, {
                                   name: "external-link"
-                                }), (0, kV.jsxs)("span", {
-                                  children: ["Open in ", VV.name]
+                                }), (0, uH.jsxs)("span", {
+                                  children: ["Open in ", HH.name]
                                 })]
-                              }, VV.name)))]
+                              }, HH.name)))]
                             })
                           }
 
-                          function SJ(VV) {
-                            return `#${[0,1,2].map((eV=>Math.round(Math.min(255,Math.max(0,VV[eV]))).toString(16).padStart(2,"0"))).join("")}`
+                          function JA(HH) {
+                            return `#${[0,1,2].map((BH=>Math.round(Math.min(255,Math.max(0,HH[BH]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function IJ(VV) {
-                            return [parseInt(VV.slice(1, 3), 16), parseInt(VV.slice(3, 5), 16), parseInt(VV.slice(5, 7), 16)]
+                          function iA(HH) {
+                            return [parseInt(HH.slice(1, 3), 16), parseInt(HH.slice(3, 5), 16), parseInt(HH.slice(5, 7), 16)]
                           }
 
-                          function dJ(VV) {
+                          function pA(HH) {
                             let {
-                              label: eV,
-                              min: xV,
-                              max: JV,
-                              step: YV,
-                              low: UV,
-                              high: yV,
-                              onChange: pV
-                            } = VV;
-                            return (0, kV.jsxs)("div", {
+                              label: BH,
+                              min: LH,
+                              max: AH,
+                              step: rH,
+                              low: SH,
+                              high: hH,
+                              onChange: tH
+                            } = HH;
+                            return (0, uH.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, kV.jsxs)("div", {
+                              children: [(0, uH.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, kV.jsx)("span", {
-                                  children: eV
-                                }), (0, kV.jsx)("span", {
+                                children: [(0, uH.jsx)("span", {
+                                  children: BH
+                                }), (0, uH.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: UV === yV ? UV : `${UV}\u2013${yV}`
+                                  children: SH === hH ? SH : `${SH}\u2013${hH}`
                                 })]
-                              }), (0, kV.jsxs)("div", {
+                              }), (0, uH.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, kV.jsx)("input", {
+                                children: [(0, uH.jsx)("input", {
                                   type: "range",
-                                  min: xV,
-                                  max: JV,
-                                  step: YV,
-                                  value: Math.min(JV, UV),
-                                  "aria-label": `Minimum ${eV.toLowerCase()}`,
-                                  onChange: VV => {
-                                    const eV = Number(VV.target.value);
-                                    pV(eV, Math.max(eV, yV))
+                                  min: LH,
+                                  max: AH,
+                                  step: rH,
+                                  value: Math.min(AH, SH),
+                                  "aria-label": `Minimum ${BH.toLowerCase()}`,
+                                  onChange: HH => {
+                                    const BH = Number(HH.target.value);
+                                    tH(BH, Math.max(BH, hH))
                                   }
-                                }), (0, kV.jsx)("input", {
+                                }), (0, uH.jsx)("input", {
                                   type: "range",
-                                  min: xV,
-                                  max: JV,
-                                  step: YV,
-                                  value: Math.min(JV, yV),
-                                  "aria-label": `Maximum ${eV.toLowerCase()}`,
-                                  onChange: VV => {
-                                    const eV = Number(VV.target.value);
-                                    pV(Math.min(eV, UV), eV)
+                                  min: LH,
+                                  max: AH,
+                                  step: rH,
+                                  value: Math.min(AH, hH),
+                                  "aria-label": `Maximum ${BH.toLowerCase()}`,
+                                  onChange: HH => {
+                                    const BH = Number(HH.target.value);
+                                    tH(Math.min(BH, SH), BH)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function OJ(VV) {
+                          function yA(HH) {
                             let {
-                              label: eV,
-                              min: xV,
-                              max: JV,
-                              step: YV,
-                              value: UV,
-                              onChange: yV,
-                              format: pV = String
-                            } = VV;
-                            return (0, kV.jsxs)("div", {
+                              label: BH,
+                              min: LH,
+                              max: AH,
+                              step: rH,
+                              value: SH,
+                              onChange: hH,
+                              format: tH = String
+                            } = HH;
+                            return (0, uH.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, kV.jsxs)("div", {
+                              children: [(0, uH.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, kV.jsx)("span", {
-                                  children: eV
-                                }), (0, kV.jsx)("span", {
+                                children: [(0, uH.jsx)("span", {
+                                  children: BH
+                                }), (0, uH.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: pV(UV)
+                                  children: tH(SH)
                                 })]
-                              }), (0, kV.jsx)("input", {
+                              }), (0, uH.jsx)("input", {
                                 type: "range",
-                                min: xV,
-                                max: JV,
-                                step: YV,
-                                value: Math.min(JV, Math.max(xV, UV)),
-                                "aria-label": eV,
-                                onChange: VV => {
-                                  yV(Number(VV.target.value))
+                                min: LH,
+                                max: AH,
+                                step: rH,
+                                value: Math.min(AH, Math.max(LH, SH)),
+                                "aria-label": BH,
+                                onChange: HH => {
+                                  hH(Number(HH.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function VY(VV) {
+                          function Hr(HH) {
                             let {
-                              opts: eV,
-                              onChange: xV
-                            } = VV;
-                            const JV = eV.colorGradients;
-                            if (!fx(JV)) return (0, kV.jsxs)("div", {
+                              opts: BH,
+                              onChange: LH
+                            } = HH;
+                            const AH = BH.colorGradients;
+                            if (!DL(AH)) return (0, uH.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, kV.jsx)("div", {
+                              children: [(0, uH.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, kV.jsx)("span", {
+                                children: (0, uH.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, kV.jsx)("div", {
+                              }), (0, uH.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: JV.map(((VV, eV) => (0, kV.jsx)("input", {
+                                children: AH.map(((HH, BH) => (0, uH.jsx)("input", {
                                   type: "color",
-                                  value: SJ(VV.color),
-                                  "aria-label": `Colour ${eV+1}`,
-                                  onChange: VV => {
-                                    const YV = [...JV];
-                                    YV[eV] = {
-                                      color: IJ(VV.target.value)
-                                    }, xV(YV)
+                                  value: JA(HH.color),
+                                  "aria-label": `Colour ${BH+1}`,
+                                  onChange: HH => {
+                                    const rH = [...AH];
+                                    rH[BH] = {
+                                      color: iA(HH.target.value)
+                                    }, LH(rH)
                                   }
-                                }, eV)))
+                                }, BH)))
                               })]
                             });
-                            const YV = (VV, eV) => {
-                              const YV = [...JV];
-                              YV[VV] = eV, xV(YV)
+                            const rH = (HH, BH) => {
+                              const rH = [...AH];
+                              rH[HH] = BH, LH(rH)
                             };
-                            return (0, kV.jsxs)("div", {
+                            return (0, uH.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, kV.jsxs)("div", {
+                              children: [(0, uH.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, kV.jsx)("span", {
+                                children: [(0, uH.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, kV.jsx)("span", {
+                                }), (0, uH.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), JV.map(((VV, eV) => {
-                                var xV;
-                                const JV = null !== (xV = VV.maxColor) && void 0 !== xV ? xV : VV.minColor;
-                                return (0, kV.jsxs)("div", {
+                              }), AH.map(((HH, BH) => {
+                                var LH;
+                                const AH = null !== (LH = HH.maxColor) && void 0 !== LH ? LH : HH.minColor;
+                                return (0, uH.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, kV.jsxs)("span", {
+                                  children: [(0, uH.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * VV.timeFraction), "%"]
-                                  }), (0, kV.jsx)("span", {
+                                    children: [Math.round(100 * HH.timeFraction), "%"]
+                                  }), (0, uH.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${SJ(VV.minColor)}, ${SJ(JV)})`
+                                      background: `linear-gradient(90deg, ${JA(HH.minColor)}, ${JA(AH)})`
                                     }
-                                  }), (0, kV.jsx)("input", {
+                                  }), (0, uH.jsx)("input", {
                                     type: "color",
-                                    value: SJ(VV.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*VV.timeFraction)}%`,
-                                    onChange: xV => {
-                                      YV(eV, {
-                                        ...VV,
-                                        minColor: [...IJ(xV.target.value), VV.minColor[3]]
+                                    value: JA(HH.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*HH.timeFraction)}%`,
+                                    onChange: LH => {
+                                      rH(BH, {
+                                        ...HH,
+                                        minColor: [...iA(LH.target.value), HH.minColor[3]]
                                       })
                                     }
-                                  }), (0, kV.jsx)("input", {
+                                  }), (0, uH.jsx)("input", {
                                     type: "color",
-                                    value: SJ(JV),
-                                    "aria-label": `Maximum colour at ${Math.round(100*VV.timeFraction)}%`,
-                                    onChange: xV => {
-                                      YV(eV, {
-                                        ...VV,
-                                        maxColor: [...IJ(xV.target.value), JV[3]]
+                                    value: JA(AH),
+                                    "aria-label": `Maximum colour at ${Math.round(100*HH.timeFraction)}%`,
+                                    onChange: LH => {
+                                      rH(BH, {
+                                        ...HH,
+                                        maxColor: [...iA(LH.target.value), AH[3]]
                                       })
                                     }
                                   })]
-                                }, eV)
+                                }, BH)
                               }))]
                             })
                           }
-                          const eY = [-.5, -.5, -.5],
-                            xY = [.5, .5, .5],
-                            JY = [0, 1, 2, 3, 4, 5, 6, 7].map((VV => [1 & VV ? xY[0] : eY[0], 2 & VV ? xY[1] : eY[1], 4 & VV ? xY[2] : eY[2]]));class YY {
+                          const Br = [-.5, -.5, -.5],
+                            Lr = [.5, .5, .5],
+                            Ar = [0, 1, 2, 3, 4, 5, 6, 7].map((HH => [1 & HH ? Lr[0] : Br[0], 2 & HH ? Lr[1] : Br[1], 4 & HH ? Lr[2] : Br[2]]));class rr {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(VV, eV, xV, JV) {
-                              const YV = Math.round(31 * eV),
-                                UV = Math.round(31 * xV),
-                                yV = Math.round(31 * JV),
-                                pV = `${YV}|${UV}|${yV}`;
-                              let QV = this.tints.get(VV);
-                              (!QV || QV.size > 2e3) && (QV = new Map, this.tints.set(VV, QV));
-                              let nV = QV.get(pV);
-                              if (nV) return nV;
-                              nV = document.createElement("canvas"), nV.width = VV.naturalWidth || 16, nV.height = VV.naturalHeight || 16;
-                              const wV = nV.getContext("2d");
-                              return wV ? (wV.imageSmoothingEnabled = !1, wV.drawImage(VV, 0, 0, nV.width, nV.height), wV.globalCompositeOperation = "multiply", wV.fillStyle = `rgb(${YV/31*255}, ${UV/31*255}, ${yV/31*255})`, wV.fillRect(0, 0, nV.width, nV.height), wV.globalCompositeOperation = "destination-in", wV.drawImage(VV, 0, 0, nV.width, nV.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), QV.set(pV, nV), nV
+                            get(HH, BH, LH, AH) {
+                              const rH = Math.round(31 * BH),
+                                SH = Math.round(31 * LH),
+                                hH = Math.round(31 * AH),
+                                tH = `${rH}|${SH}|${hH}`;
+                              let zH = this.tints.get(HH);
+                              (!zH || zH.size > 2e3) && (zH = new Map, this.tints.set(HH, zH));
+                              let CH = zH.get(tH);
+                              if (CH) return CH;
+                              CH = document.createElement("canvas"), CH.width = HH.naturalWidth || 16, CH.height = HH.naturalHeight || 16;
+                              const EH = CH.getContext("2d");
+                              return EH ? (EH.imageSmoothingEnabled = !1, EH.drawImage(HH, 0, 0, CH.width, CH.height), EH.globalCompositeOperation = "multiply", EH.fillStyle = `rgb(${rH/31*255}, ${SH/31*255}, ${hH/31*255})`, EH.fillRect(0, 0, CH.width, CH.height), EH.globalCompositeOperation = "destination-in", EH.drawImage(HH, 0, 0, CH.width, CH.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), zH.set(tH, CH), CH
                             }
                           }
 
-                          function UY(VV) {
+                          function Sr(HH) {
                             let {
-                              opts: eV,
-                              textureUrl: xV,
-                              burst: YV,
-                              paused: UV
-                            } = VV;
-                            const yV = (0, JV.useRef)(null),
-                              pV = (0, JV.useRef)(eV);
-                            pV.current = eV;
-                            const QV = (0, JV.useRef)(UV);
-                            QV.current = UV;
-                            const nV = (0, JV.useRef)(null),
-                              wV = (0, JV.useRef)(null),
-                              ZV = (0, JV.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(VV) {
-                                let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const xV = [-.5, -.5, -.5],
-                                  JV = [.5, .5, .5];
-                                let YV = .5;
-                                for (let UV = 0; UV < 40; UV++) {
-                                  const UV = Kx(VV, xV, JV, eV),
-                                    yV = Math.max(UV.life / 30, .001);
-                                  for (; sx(UV, VV.gravity, yV);) YV = Math.max(YV, Math.hypot(UV.pos[0], UV.pos[1], UV.pos[2]) + UV.size / 2)
+                              opts: BH,
+                              textureUrl: LH,
+                              burst: rH,
+                              paused: SH
+                            } = HH;
+                            const hH = (0, AH.useRef)(null),
+                              tH = (0, AH.useRef)(BH);
+                            tH.current = BH;
+                            const zH = (0, AH.useRef)(SH);
+                            zH.current = SH;
+                            const CH = (0, AH.useRef)(null),
+                              EH = (0, AH.useRef)(null),
+                              XH = (0, AH.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(HH) {
+                                let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const LH = [-.5, -.5, -.5],
+                                  AH = [.5, .5, .5];
+                                let rH = .5;
+                                for (let SH = 0; SH < 40; SH++) {
+                                  const SH = ZL(HH, LH, AH, BH),
+                                    hH = Math.max(SH.life / 30, .001);
+                                  for (; sL(SH, HH.gravity, hH);) rH = Math.max(rH, Math.hypot(SH.pos[0], SH.pos[1], SH.pos[2]) + SH.size / 2)
                                 }
-                                return YV
-                              }(eV)))), [eV]),
-                              vV = (0, JV.useRef)(ZV);
-                            return vV.current = ZV, (0, JV.useEffect)((() => {
-                              if (nV.current = null, !xV) return;
-                              const VV = new Image;
-                              let eV = !1;
-                              return VV.onload = () => {
-                                eV || (nV.current = VV)
-                              }, VV.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${xV}`)
-                              }, VV.src = xV, () => {
-                                eV = !0
+                                return rH
+                              }(BH)))), [BH]),
+                              GH = (0, AH.useRef)(XH);
+                            return GH.current = XH, (0, AH.useEffect)((() => {
+                              if (CH.current = null, !LH) return;
+                              const HH = new Image;
+                              let BH = !1;
+                              return HH.onload = () => {
+                                BH || (CH.current = HH)
+                              }, HH.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${LH}`)
+                              }, HH.src = LH, () => {
+                                BH = !0
                               }
-                            }), [xV]), (0, JV.useEffect)((() => {
-                              var VV;
-                              null === (VV = wV.current) || void 0 === VV || VV.call(wV)
-                            }), [eV, YV]), (0, JV.useEffect)((() => {
-                              const VV = yV.current,
-                                eV = null === VV || void 0 === VV ? void 0 : VV.getContext("2d");
-                              if (!VV || !eV) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const xV = new YY;
-                              let JV = [],
-                                YV = 0,
-                                UV = -.7,
-                                ZV = vV.current,
-                                rV = performance.now(),
-                                kV = 0,
-                                bV = !0,
-                                EV = null;
-                              const BV = () => {
-                                const VV = pV.current,
-                                  eV = Math.min(400, Math.max(0, Math.ceil(VV.manualEmitCount)));
-                                JV = [];
-                                for (let xV = 0; xV < eV; xV++) JV.push(Kx(VV, eY, xY, Math.random));
-                                YV = 0
+                            }), [LH]), (0, AH.useEffect)((() => {
+                              var HH;
+                              null === (HH = EH.current) || void 0 === HH || HH.call(EH)
+                            }), [BH, rH]), (0, AH.useEffect)((() => {
+                              const HH = hH.current,
+                                BH = null === HH || void 0 === HH ? void 0 : HH.getContext("2d");
+                              if (!HH || !BH) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const LH = new rr;
+                              let AH = [],
+                                rH = 0,
+                                SH = -.7,
+                                XH = GH.current,
+                                YH = performance.now(),
+                                uH = 0,
+                                QH = !0,
+                                WH = null;
+                              const MH = () => {
+                                const HH = tH.current,
+                                  BH = Math.min(400, Math.max(0, Math.ceil(HH.manualEmitCount)));
+                                AH = [];
+                                for (let LH = 0; LH < BH; LH++) AH.push(ZL(HH, Br, Lr, Math.random));
+                                rH = 0
                               };
-                              wV.current = BV, BV();
-                              const jV = yV => {
-                                kV = requestAnimationFrame(jV);
-                                const wV = Math.min(.05, (yV - rV) / 1e3);
-                                if (rV = yV, !bV) return;
-                                const qV = window.devicePixelRatio || 1,
-                                  tV = Math.round(VV.clientWidth * qV),
-                                  FV = Math.round(VV.clientHeight * qV);
-                                if (0 === tV || 0 === FV) return;
-                                VV.width === tV && VV.height === FV || (VV.width = tV, VV.height = FV);
-                                const TV = pV.current;
-                                null === EV && (UV += .18 * wV), ZV += (vV.current - ZV) * Math.min(1, 4 * wV);
-                                const PV = .6 * wV;
-                                JV = JV.filter((VV => sx(VV, TV.gravity, PV))), 0 !== JV.length || QV.current || (YV += wV, YV > .6 && BV());
-                                const AV = function(VV, eV, xV, JV) {
-                                  const YV = 3.2 * JV,
-                                    UV = .44 * Math.min(VV, eV) * YV / JV,
-                                    yV = Math.cos(xV),
-                                    pV = Math.sin(xV),
-                                    QV = Math.cos(.42),
-                                    nV = Math.sin(.42);
-                                  return (xV, JV, wV) => {
-                                    const ZV = xV * pV + wV * yV,
-                                      vV = YV - (JV * nV + ZV * QV);
-                                    if (vV < .05) return null;
-                                    const rV = UV / vV;
+                              EH.current = MH, MH();
+                              const xH = hH => {
+                                uH = requestAnimationFrame(xH);
+                                const EH = Math.min(.05, (hH - YH) / 1e3);
+                                if (YH = hH, !QH) return;
+                                const vH = window.devicePixelRatio || 1,
+                                  PH = Math.round(HH.clientWidth * vH),
+                                  TH = Math.round(HH.clientHeight * vH);
+                                if (0 === PH || 0 === TH) return;
+                                HH.width === PH && HH.height === TH || (HH.width = PH, HH.height = TH);
+                                const UH = tH.current;
+                                null === WH && (SH += .18 * EH), XH += (GH.current - XH) * Math.min(1, 4 * EH);
+                                const VH = .6 * EH;
+                                AH = AH.filter((HH => sL(HH, UH.gravity, VH))), 0 !== AH.length || zH.current || (rH += EH, rH > .6 && MH());
+                                const OH = function(HH, BH, LH, AH) {
+                                  const rH = 3.2 * AH,
+                                    SH = .44 * Math.min(HH, BH) * rH / AH,
+                                    hH = Math.cos(LH),
+                                    tH = Math.sin(LH),
+                                    zH = Math.cos(.42),
+                                    CH = Math.sin(.42);
+                                  return (LH, AH, EH) => {
+                                    const XH = LH * tH + EH * hH,
+                                      GH = rH - (AH * CH + XH * zH);
+                                    if (GH < .05) return null;
+                                    const YH = SH / GH;
                                     return {
-                                      x: VV / 2 + (xV * yV - wV * pV) * rV,
-                                      y: eV / 2 - (JV * QV - ZV * nV) * rV,
-                                      scale: rV,
-                                      depth: vV
+                                      x: HH / 2 + (LH * hH - EH * tH) * YH,
+                                      y: BH / 2 - (AH * zH - XH * CH) * YH,
+                                      scale: YH,
+                                      depth: GH
                                     }
                                   }
-                                }(tV, FV, UV, ZV);
-                                ! function(VV, eV, xV, JV, YV) {
-                                  const UV = VV.createLinearGradient(0, 0, 0, xV);
-                                  UV.addColorStop(0, "#23262d"), UV.addColorStop(1, "#16181c"), VV.globalCompositeOperation = "source-over", VV.globalAlpha = 1, VV.fillStyle = UV, VV.fillRect(0, 0, eV, xV);
-                                  const yV = (eV, xV) => {
-                                      const YV = JV(eV[0], eV[1], eV[2]),
-                                        UV = JV(xV[0], xV[1], xV[2]);
-                                      YV && UV && (VV.beginPath(), VV.moveTo(YV.x, YV.y), VV.lineTo(UV.x, UV.y), VV.stroke())
+                                }(PH, TH, SH, XH);
+                                ! function(HH, BH, LH, AH, rH) {
+                                  const SH = HH.createLinearGradient(0, 0, 0, LH);
+                                  SH.addColorStop(0, "#23262d"), SH.addColorStop(1, "#16181c"), HH.globalCompositeOperation = "source-over", HH.globalAlpha = 1, HH.fillStyle = SH, HH.fillRect(0, 0, BH, LH);
+                                  const hH = (BH, LH) => {
+                                      const rH = AH(BH[0], BH[1], BH[2]),
+                                        SH = AH(LH[0], LH[1], LH[2]);
+                                      rH && SH && (HH.beginPath(), HH.moveTo(rH.x, rH.y), HH.lineTo(SH.x, SH.y), HH.stroke())
                                     },
-                                    pV = Math.ceil(YV) + 1,
-                                    QV = eY[1];
-                                  VV.lineWidth = 1, VV.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let nV = -pV; nV <= pV; nV++) yV([nV + .5, QV, .5 - pV], [nV + .5, QV, pV + .5]), yV([.5 - pV, QV, nV + .5], [pV + .5, QV, nV + .5]);
-                                  VV.strokeStyle = "rgba(255, 255, 255, 0.28)", VV.setLineDash([4, 4]);
-                                  for (const nV of JY)
-                                    for (const VV of JY) {
-                                      const eV = [0, 1, 2].filter((eV => nV[eV] !== VV[eV]));
-                                      1 === eV.length && nV[eV[0]] < VV[eV[0]] && yV(nV, VV)
+                                    tH = Math.ceil(rH) + 1,
+                                    zH = Br[1];
+                                  HH.lineWidth = 1, HH.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let CH = -tH; CH <= tH; CH++) hH([CH + .5, zH, .5 - tH], [CH + .5, zH, tH + .5]), hH([.5 - tH, zH, CH + .5], [tH + .5, zH, CH + .5]);
+                                  HH.strokeStyle = "rgba(255, 255, 255, 0.28)", HH.setLineDash([4, 4]);
+                                  for (const CH of Ar)
+                                    for (const HH of Ar) {
+                                      const BH = [0, 1, 2].filter((BH => CH[BH] !== HH[BH]));
+                                      1 === BH.length && CH[BH[0]] < HH[BH[0]] && hH(CH, HH)
                                     }
-                                  VV.setLineDash([])
-                                }(eV, tV, FV, AV, ZV);
-                                const NV = nV.current,
-                                  XV = JV.map((VV => ({
-                                    particle: VV,
-                                    at: AV(VV.pos[0], VV.pos[1], VV.pos[2])
-                                  }))).filter((VV => null !== VV.at)).sort(((VV, eV) => eV.at.depth - VV.at.depth));
-                                eV.imageSmoothingEnabled = !1;
-                                for (const VV of function(VV) {
-                                    switch (VV) {
-                                      case ox.g.OneOne:
+                                  HH.setLineDash([])
+                                }(BH, PH, TH, OH, XH);
+                                const bH = CH.current,
+                                  kH = AH.map((HH => ({
+                                    particle: HH,
+                                    at: OH(HH.pos[0], HH.pos[1], HH.pos[2])
+                                  }))).filter((HH => null !== HH.at)).sort(((HH, BH) => BH.at.depth - HH.at.depth));
+                                BH.imageSmoothingEnabled = !1;
+                                for (const HH of function(HH) {
+                                    switch (HH) {
+                                      case NL.f.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case ox.g.Add:
+                                      case NL.f.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case ox.g.Multiply:
+                                      case NL.f.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case ox.g.MultiplyAdd:
+                                      case NL.f.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2957,665 +2957,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(TV.blendMode)) {
-                                  eV.globalCompositeOperation = VV.operation;
+                                  }(UH.blendMode)) {
+                                  BH.globalCompositeOperation = HH.operation;
                                   for (const {
-                                      particle: JV,
-                                      at: YV
+                                      particle: AH,
+                                      at: rH
                                     }
-                                    of XV) {
-                                    const [UV, yV, pV, QV] = ux(JV), nV = Math.max(1, JV.size * YV.scale);
-                                    eV.globalAlpha = VV.usesAlpha ? Math.min(1, Math.max(0, QV)) : 1, NV ? eV.drawImage(xV.get(NV, UV, yV, pV), YV.x - nV / 2, YV.y - nV / 2, nV, nV) : (eV.fillStyle = `rgb(${255*UV}, ${255*yV}, ${255*pV})`, eV.fillRect(YV.x - nV / 2, YV.y - nV / 2, nV, nV))
+                                    of kH) {
+                                    const [SH, hH, tH, zH] = aL(AH), CH = Math.max(1, AH.size * rH.scale);
+                                    BH.globalAlpha = HH.usesAlpha ? Math.min(1, Math.max(0, zH)) : 1, bH ? BH.drawImage(LH.get(bH, SH, hH, tH), rH.x - CH / 2, rH.y - CH / 2, CH, CH) : (BH.fillStyle = `rgb(${255*SH}, ${255*hH}, ${255*tH})`, BH.fillRect(rH.x - CH / 2, rH.y - CH / 2, CH, CH))
                                   }
                                 }
-                                eV.globalCompositeOperation = "source-over", eV.globalAlpha = 1
+                                BH.globalCompositeOperation = "source-over", BH.globalAlpha = 1
                               };
-                              kV = requestAnimationFrame(jV);
-                              const qV = new IntersectionObserver((VV => {
-                                let [eV] = VV;
-                                bV = eV.isIntersecting
+                              uH = requestAnimationFrame(xH);
+                              const vH = new IntersectionObserver((HH => {
+                                let [BH] = HH;
+                                QH = BH.isIntersecting
                               }));
-                              qV.observe(VV);
-                              const tV = eV => {
-                                  EV = eV.clientX, VV.setPointerCapture(eV.pointerId)
+                              vH.observe(HH);
+                              const PH = BH => {
+                                  WH = BH.clientX, HH.setPointerCapture(BH.pointerId)
                                 },
-                                FV = VV => {
-                                  null !== EV && (UV += .01 * (VV.clientX - EV), EV = VV.clientX)
+                                TH = HH => {
+                                  null !== WH && (SH += .01 * (HH.clientX - WH), WH = HH.clientX)
                                 },
-                                TV = () => {
-                                  EV = null
+                                UH = () => {
+                                  WH = null
                                 };
-                              return VV.addEventListener("pointerdown", tV), VV.addEventListener("pointermove", FV), VV.addEventListener("pointerup", TV), VV.addEventListener("pointercancel", TV), () => {
-                                cancelAnimationFrame(kV), qV.disconnect(), wV.current = null, VV.removeEventListener("pointerdown", tV), VV.removeEventListener("pointermove", FV), VV.removeEventListener("pointerup", TV), VV.removeEventListener("pointercancel", TV)
+                              return HH.addEventListener("pointerdown", PH), HH.addEventListener("pointermove", TH), HH.addEventListener("pointerup", UH), HH.addEventListener("pointercancel", UH), () => {
+                                cancelAnimationFrame(uH), vH.disconnect(), EH.current = null, HH.removeEventListener("pointerdown", PH), HH.removeEventListener("pointermove", TH), HH.removeEventListener("pointerup", UH), HH.removeEventListener("pointercancel", UH)
                               }
-                            }), []), (0, kV.jsx)("canvas", {
-                              ref: yV,
+                            }), []), (0, uH.jsx)("canvas", {
+                              ref: hH,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${eV.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${BH.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const yY = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            pY = [{
-                              mode: ox.g.OneOne,
+                          const hr = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            tr = [{
+                              mode: NL.f.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: ox.g.Standard,
+                              mode: NL.f.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: ox.g.Add,
+                              mode: NL.f.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: ox.g.Multiply,
+                              mode: NL.f.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: ox.g.MultiplyAdd,
+                              mode: NL.f.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            QY = (0, JV.forwardRef)((function(VV, eV) {
-                              var xV, YV;
+                            zr = (0, AH.forwardRef)((function(HH, BH) {
+                              var LH, rH;
                               let {
-                                textures: yV
-                              } = VV;
-                              const pV = qJ(),
-                                QV = (0, JV.useRef)(null),
-                                [nV, wV] = (0, JV.useState)(hx),
-                                [ZV, vV] = (0, JV.useState)("example"),
-                                [rV, bV] = (0, JV.useState)(0),
-                                [BV, jV] = (0, JV.useState)(!1),
-                                tV = VV => {
-                                  const eV = "example" === VV ? hx : cx(VV);
-                                  eV && (wV(eV), vV(VV))
+                                textures: hH
+                              } = HH;
+                              const tH = vA(),
+                                zH = (0, AH.useRef)(null),
+                                [CH, EH] = (0, AH.useState)(jL),
+                                [XH, GH] = (0, AH.useState)("example"),
+                                [YH, QH] = (0, AH.useState)(0),
+                                [MH, xH] = (0, AH.useState)(!1),
+                                PH = HH => {
+                                  const BH = "example" === HH ? jL : RL(HH);
+                                  BH && (EH(BH), GH(HH))
                                 };
-                              (0, JV.useImperativeHandle)(eV, (() => ({
-                                preview: VV => {
-                                  var eV;
-                                  tV(VV), null === (eV = QV.current) || void 0 === eV || eV.scrollIntoView({
+                              (0, AH.useImperativeHandle)(BH, (() => ({
+                                preview: HH => {
+                                  var BH;
+                                  PH(HH), null === (BH = zH.current) || void 0 === BH || BH.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const FV = VV => {
-                                  wV({
-                                    ...nV,
-                                    ...VV
-                                  }), vV(null)
+                              const TH = HH => {
+                                  EH({
+                                    ...CH,
+                                    ...HH
+                                  }), GH(null)
                                 },
-                                TV = function(VV, eV) {
-                                  if (null !== eV) return `${Ox}    presetId: "${eV}",\n${VJ}\n})`;
-                                  const xV = VV.velocityGradients.map((VV => `        {\n            timeFraction: ${Sx(VV.timeFraction)},\n            factor: ${Sx(VV.factor)},\n            factor2: ${Sx(VV.factor2)},\n        },`)),
-                                    JV = [`    dir1: ${Ix(VV.dir1)},`, `    dir2: ${Ix(VV.dir2)},`, VJ, `    texture: "${VV.texture}",`, `    minLifeTime: ${Sx(VV.minLifeTime)},`, `    maxLifeTime: ${Sx(VV.maxLifeTime)},`, `    minEmitPower: ${Sx(VV.minEmitPower)},`, `    maxEmitPower: ${Sx(VV.maxEmitPower)},`, `    minSize: ${Sx(VV.minSize)},`, `    maxSize: ${Sx(VV.maxSize)},`, `    manualEmitCount: ${Sx(VV.manualEmitCount)},`, `    gravity: ${Ix(VV.gravity)},`, `    colorGradients: ${dx(VV.colorGradients,"    ")},`, `    velocityGradients: ${xV.length>0?`[\n${xV.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${Sx(VV.blendMode)},`];
-                                  return void 0 !== VV.hideDist && JV.push(`    hideDist: ${Sx(VV.hideDist)},`), `${Ox}${JV.join("\n")}\n})`
-                                }(nV, null === ZV || "example" === ZV ? null : ZV),
-                                AV = yV.includes(nV.texture) ? yV : [...yV, nV.texture];
-                              return (0, kV.jsxs)("section", {
-                                ref: QV,
+                                UH = function(HH, BH) {
+                                  if (null !== BH) return `${yL}    presetId: "${BH}",\n${HA}\n})`;
+                                  const LH = HH.velocityGradients.map((HH => `        {\n            timeFraction: ${JL(HH.timeFraction)},\n            factor: ${JL(HH.factor)},\n            factor2: ${JL(HH.factor2)},\n        },`)),
+                                    AH = [`    dir1: ${iL(HH.dir1)},`, `    dir2: ${iL(HH.dir2)},`, HA, `    texture: "${HH.texture}",`, `    minLifeTime: ${JL(HH.minLifeTime)},`, `    maxLifeTime: ${JL(HH.maxLifeTime)},`, `    minEmitPower: ${JL(HH.minEmitPower)},`, `    maxEmitPower: ${JL(HH.maxEmitPower)},`, `    minSize: ${JL(HH.minSize)},`, `    maxSize: ${JL(HH.maxSize)},`, `    manualEmitCount: ${JL(HH.manualEmitCount)},`, `    gravity: ${iL(HH.gravity)},`, `    colorGradients: ${pL(HH.colorGradients,"    ")},`, `    velocityGradients: ${LH.length>0?`[\n${LH.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${JL(HH.blendMode)},`];
+                                  return void 0 !== HH.hideDist && AH.push(`    hideDist: ${JL(HH.hideDist)},`), `${yL}${AH.join("\n")}\n})`
+                                }(CH, null === XH || "example" === XH ? null : XH),
+                                OH = hH.includes(CH.texture) ? hH : [...hH, CH.texture];
+                              return (0, uH.jsxs)("section", {
+                                ref: zH,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, kV.jsxs)("header", {
+                                children: [(0, uH.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, kV.jsxs)("div", {
-                                    children: [(0, kV.jsx)("div", {
+                                  children: [(0, uH.jsxs)("div", {
+                                    children: [(0, uH.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, kV.jsx)("div", {
+                                    }), (0, uH.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, kV.jsx)(qV, {
-                                    text: TV,
+                                  }), (0, uH.jsx)(vH, {
+                                    text: UH,
                                     label: "Copy code"
                                   })]
-                                }), (0, kV.jsxs)("div", {
+                                }), (0, uH.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, kV.jsx)("button", {
+                                  children: [(0, uH.jsx)("button", {
                                     type: "button",
-                                    className: UV()("DocsVariantChip", {
-                                      Active: "example" === ZV
+                                    className: SH()("DocsVariantChip", {
+                                      Active: "example" === XH
                                     }),
                                     onClick: () => {
-                                      tV("example")
+                                      PH("example")
                                     },
                                     children: "Example"
-                                  }), yY.filter((VV => null !== cx(VV))).map((VV => (0, kV.jsx)("button", {
+                                  }), hr.filter((HH => null !== RL(HH))).map((HH => (0, uH.jsx)("button", {
                                     type: "button",
-                                    className: UV()("DocsVariantChip", {
-                                      Active: ZV === VV
+                                    className: SH()("DocsVariantChip", {
+                                      Active: XH === HH
                                     }),
                                     onClick: () => {
-                                      tV(VV)
+                                      PH(HH)
                                     },
-                                    children: VV
-                                  }, VV))), (0, kV.jsxs)("select", {
+                                    children: HH
+                                  }, HH))), (0, uH.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== ZV && void 0 !== ZV ? ZV : "custom",
+                                    value: null !== XH && void 0 !== XH ? XH : "custom",
                                     "aria-label": "Preset",
-                                    onChange: VV => {
-                                      tV(VV.target.value)
+                                    onChange: HH => {
+                                      PH(HH.target.value)
                                     },
-                                    children: [(0, kV.jsx)("option", {
+                                    children: [(0, uH.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === ZV && (0, kV.jsx)("option", {
+                                    }), null === XH && (0, uH.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), ax.d.map((VV => (0, kV.jsx)("option", {
-                                      value: VV,
-                                      children: VV
-                                    }, VV)))]
+                                    }), gL.b.map((HH => (0, uH.jsx)("option", {
+                                      value: HH,
+                                      children: HH
+                                    }, HH)))]
                                   })]
-                                }), (0, kV.jsxs)("div", {
+                                }), (0, uH.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, kV.jsxs)("div", {
+                                  children: [(0, uH.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, kV.jsx)(UY, {
-                                      opts: nV,
-                                      textureUrl: null !== (xV = null === pV || void 0 === pV ? void 0 : pV.getParticleTextureUrl(nV.texture)) && void 0 !== xV ? xV : null,
-                                      burst: rV,
-                                      paused: BV
-                                    }), (0, kV.jsxs)("div", {
+                                    children: [(0, uH.jsx)(Sr, {
+                                      opts: CH,
+                                      textureUrl: null !== (LH = null === tH || void 0 === tH ? void 0 : tH.getParticleTextureUrl(CH.texture)) && void 0 !== LH ? LH : null,
+                                      burst: YH,
+                                      paused: MH
+                                    }), (0, uH.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, kV.jsxs)("button", {
+                                      children: [(0, uH.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          bV(rV + 1)
+                                          QH(YH + 1)
                                         },
-                                        children: [(0, kV.jsx)(EV, {
+                                        children: [(0, uH.jsx)(WH, {
                                           name: "replay"
-                                        }), (0, kV.jsx)("span", {
+                                        }), (0, uH.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, kV.jsxs)("button", {
+                                      }), (0, uH.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": BV,
+                                        "aria-pressed": MH,
                                         onClick: () => {
-                                          jV(!BV)
+                                          xH(!MH)
                                         },
-                                        children: [(0, kV.jsx)(EV, {
-                                          name: BV ? "play" : "pause"
-                                        }), (0, kV.jsx)("span", {
-                                          children: BV ? "Loop" : "Stop looping"
+                                        children: [(0, uH.jsx)(WH, {
+                                          name: MH ? "play" : "pause"
+                                        }), (0, uH.jsx)("span", {
+                                          children: MH ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, kV.jsxs)("div", {
+                                  }), (0, uH.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, kV.jsxs)("div", {
+                                    children: [(0, uH.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, kV.jsxs)("div", {
+                                      children: [(0, uH.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, kV.jsx)("span", {
+                                        children: [(0, uH.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, kV.jsx)("code", {
+                                        }), (0, uH.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: nV.texture
+                                          children: CH.texture
                                         })]
-                                      }), (0, kV.jsx)("div", {
+                                      }), (0, uH.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: AV.map((VV => {
-                                          var eV;
-                                          const xV = null !== (eV = null === pV || void 0 === pV ? void 0 : pV.getParticleTextureUrl(VV)) && void 0 !== eV ? eV : null;
-                                          return (0, kV.jsx)("button", {
+                                        children: OH.map((HH => {
+                                          var BH;
+                                          const LH = null !== (BH = null === tH || void 0 === tH ? void 0 : tH.getParticleTextureUrl(HH)) && void 0 !== BH ? BH : null;
+                                          return (0, uH.jsx)("button", {
                                             type: "button",
-                                            className: UV()("DocsParticleTexture", {
-                                              Active: nV.texture === VV
+                                            className: SH()("DocsParticleTexture", {
+                                              Active: CH.texture === HH
                                             }),
-                                            title: VV,
-                                            "aria-label": VV,
-                                            "aria-pressed": nV.texture === VV,
+                                            title: HH,
+                                            "aria-label": HH,
+                                            "aria-pressed": CH.texture === HH,
                                             onClick: () => {
-                                              FV({
-                                                texture: VV
+                                              TH({
+                                                texture: HH
                                               })
                                             },
-                                            children: xV ? (0, kV.jsx)("img", {
-                                              src: xV,
+                                            children: LH ? (0, uH.jsx)("img", {
+                                              src: LH,
                                               alt: ""
-                                            }) : (0, kV.jsx)(EV, {
+                                            }) : (0, uH.jsx)(WH, {
                                               name: "image"
                                             })
-                                          }, VV)
+                                          }, HH)
                                         }))
                                       })]
-                                    }), (0, kV.jsx)(OJ, {
+                                    }), (0, uH.jsx)(yA, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: nV.manualEmitCount,
-                                      onChange: VV => {
-                                        FV({
-                                          manualEmitCount: VV
+                                      value: CH.manualEmitCount,
+                                      onChange: HH => {
+                                        TH({
+                                          manualEmitCount: HH
                                         })
                                       }
-                                    }), (0, kV.jsx)(dJ, {
+                                    }), (0, uH.jsx)(pA, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: nV.minLifeTime,
-                                      high: nV.maxLifeTime,
-                                      onChange: (VV, eV) => {
-                                        FV({
-                                          minLifeTime: VV,
-                                          maxLifeTime: eV
+                                      low: CH.minLifeTime,
+                                      high: CH.maxLifeTime,
+                                      onChange: (HH, BH) => {
+                                        TH({
+                                          minLifeTime: HH,
+                                          maxLifeTime: BH
                                         })
                                       }
-                                    }), (0, kV.jsx)(dJ, {
+                                    }), (0, uH.jsx)(pA, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: nV.minEmitPower,
-                                      high: nV.maxEmitPower,
-                                      onChange: (VV, eV) => {
-                                        FV({
-                                          minEmitPower: VV,
-                                          maxEmitPower: eV
+                                      low: CH.minEmitPower,
+                                      high: CH.maxEmitPower,
+                                      onChange: (HH, BH) => {
+                                        TH({
+                                          minEmitPower: HH,
+                                          maxEmitPower: BH
                                         })
                                       }
-                                    }), (0, kV.jsx)(dJ, {
+                                    }), (0, uH.jsx)(pA, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: nV.minSize,
-                                      high: nV.maxSize,
-                                      onChange: (VV, eV) => {
-                                        FV({
-                                          minSize: VV,
-                                          maxSize: eV
+                                      low: CH.minSize,
+                                      high: CH.maxSize,
+                                      onChange: (HH, BH) => {
+                                        TH({
+                                          minSize: HH,
+                                          maxSize: BH
                                         })
                                       }
-                                    }), (0, kV.jsx)(OJ, {
+                                    }), (0, uH.jsx)(yA, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (YV = nV.gravity[1]) && void 0 !== YV ? YV : 0,
-                                      onChange: VV => {
-                                        var eV, xV;
-                                        FV({
-                                          gravity: [null !== (eV = nV.gravity[0]) && void 0 !== eV ? eV : 0, VV, null !== (xV = nV.gravity[2]) && void 0 !== xV ? xV : 0]
+                                      value: null !== (rH = CH.gravity[1]) && void 0 !== rH ? rH : 0,
+                                      onChange: HH => {
+                                        var BH, LH;
+                                        TH({
+                                          gravity: [null !== (BH = CH.gravity[0]) && void 0 !== BH ? BH : 0, HH, null !== (LH = CH.gravity[2]) && void 0 !== LH ? LH : 0]
                                         })
                                       }
-                                    }), (0, kV.jsxs)("div", {
+                                    }), (0, uH.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, kV.jsx)("div", {
+                                      children: [(0, uH.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, kV.jsx)("span", {
+                                        children: (0, uH.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, kV.jsx)("select", {
+                                      }), (0, uH.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: nV.blendMode,
+                                        value: CH.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: VV => {
-                                          FV({
-                                            blendMode: Number(VV.target.value)
+                                        onChange: HH => {
+                                          TH({
+                                            blendMode: Number(HH.target.value)
                                           })
                                         },
-                                        children: pY.map((VV => {
+                                        children: tr.map((HH => {
                                           let {
-                                            mode: eV,
-                                            label: xV
-                                          } = VV;
-                                          return (0, kV.jsx)("option", {
-                                            value: eV,
-                                            children: xV
-                                          }, eV)
+                                            mode: BH,
+                                            label: LH
+                                          } = HH;
+                                          return (0, uH.jsx)("option", {
+                                            value: BH,
+                                            children: LH
+                                          }, BH)
                                         }))
                                       })]
-                                    }), (0, kV.jsx)(VY, {
-                                      opts: nV,
-                                      onChange: VV => {
-                                        FV({
-                                          colorGradients: VV
+                                    }), (0, uH.jsx)(Hr, {
+                                      opts: CH,
+                                      onChange: HH => {
+                                        TH({
+                                          colorGradients: HH
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, kV.jsx)(PV, {
-                                  code: TV,
+                                }), (0, uH.jsx)(VH, {
+                                  code: UH,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var nY = xV(4948),
-                            wY = xV(2021);
+                          var Cr = LH(4877),
+                            Er = LH(1967);
 
-                          function ZY(VV, eV) {
-                            return VV ? nY.d.includes(eV) ? VV.getIngameIconUrl(eV) : VV.getItemIconUrl(eV) : null
+                          function Xr(HH, BH) {
+                            return HH ? Cr.b.includes(BH) ? HH.getIngameIconUrl(BH) : HH.getItemIconUrl(BH) : null
                           }
 
-                          function vY(VV) {
-                            var eV, xV, JV;
+                          function Gr(HH) {
+                            var BH, LH, AH;
                             let {
-                              part: YV,
-                              assets: yV
-                            } = VV;
-                            const pV = ZY(yV, YV.icon),
-                              QV = null !== (eV = null === (xV = YV.style) || void 0 === xV ? void 0 : xV.fontSize) && void 0 !== eV ? eV : "1.8em",
-                              nV = (0, ae.Yb)(YV.style);
-                            return (0, kV.jsxs)("span", {
-                              className: UV()("DocsBloxdTextIcon", {
-                                Missing: !pV
+                              part: rH,
+                              assets: hH
+                            } = HH;
+                            const tH = Xr(hH, rH.icon),
+                              zH = null !== (BH = null === (LH = rH.style) || void 0 === LH ? void 0 : LH.fontSize) && void 0 !== BH ? BH : "1.8em",
+                              CH = (0, gB.kc)(rH.style);
+                            return (0, uH.jsxs)("span", {
+                              className: SH()("DocsBloxdTextIcon", {
+                                Missing: !tH
                               }),
                               style: {
-                                width: QV,
-                                height: QV,
-                                opacity: null === (JV = YV.style) || void 0 === JV ? void 0 : JV.opacity
+                                width: zH,
+                                height: zH,
+                                opacity: null === (AH = rH.style) || void 0 === AH ? void 0 : AH.opacity
                               },
-                              title: pV ? void 0 : `No Bloxd icon, item or block is called "${YV.icon}"`,
-                              children: [pV && nV && (0, kV.jsx)("span", {
+                              title: tH ? void 0 : "No Bloxd icon, item or block has this name",
+                              children: [tH && CH && (0, uH.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: nV,
-                                  maskImage: `url("${pV}")`,
-                                  WebkitMaskImage: `url("${pV}")`
+                                  background: CH,
+                                  maskImage: `url("${tH}")`,
+                                  WebkitMaskImage: `url("${tH}")`
                                 }
-                              }), pV ? (0, kV.jsx)("img", {
-                                src: pV,
+                              }), tH ? (0, uH.jsx)("img", {
+                                src: tH,
                                 alt: "",
-                                className: UV()({
-                                  Tinted: nV
+                                className: SH()({
+                                  Tinted: CH
                                 })
-                              }) : (0, kV.jsx)(EV, {
+                              }) : (0, uH.jsx)(WH, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function rY(VV) {
+                          function Yr(HH) {
                             let {
-                              parts: eV,
-                              className: xV
-                            } = VV;
-                            const JV = qJ(),
-                              YV = [];
-                            let yV = [];
-                            const pV = VV => {
-                              yV.length > 0 && (YV.push((0, kV.jsx)(wY.b, {
-                                text: yV
-                              }, `run-${VV}`)), yV = [])
+                              parts: BH,
+                              className: LH
+                            } = HH;
+                            const AH = vA(),
+                              rH = [];
+                            let hH = [];
+                            const tH = HH => {
+                              hH.length > 0 && (rH.push((0, uH.jsx)(Er.b, {
+                                text: hH
+                              }, `run-${HH}`)), hH = [])
                             };
-                            return eV.forEach(((VV, eV) => {
-                              "icon" !== Le(VV) || ce(VV.icon) ? yV.push(VV) : (pV(eV), YV.push((0, kV.jsx)(vY, {
-                                part: VV,
-                                assets: JV
-                              }, `icon-${eV}`)))
-                            })), pV(eV.length), (0, kV.jsx)("div", {
-                              className: UV()("DocsStyledTextPreview", xV),
-                              children: YV
+                            return BH.forEach(((HH, BH) => {
+                              "icon" !== FB(HH) || RB(HH.icon) ? hH.push(HH) : (tH(BH), rH.push((0, uH.jsx)(Gr, {
+                                part: HH,
+                                assets: AH
+                              }, `icon-${BH}`)))
+                            })), tH(BH.length), (0, uH.jsx)("div", {
+                              className: SH()("DocsStyledTextPreview", LH),
+                              children: rH
                             })
                           }
-                          const kY = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let bY = null;
+                          const ur = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let Qr = null;
 
-                          function EY(VV) {
-                            if (bY ??= document.createElement("canvas").getContext("2d"), !bY) return "#000000";
-                            bY.fillStyle = "#000000", bY.fillStyle = VV;
-                            const eV = bY.fillStyle;
-                            return eV.startsWith("#") ? eV : "#000000"
+                          function Wr(HH) {
+                            if (Qr ??= document.createElement("canvas").getContext("2d"), !Qr) return "#000000";
+                            Qr.fillStyle = "#000000", Qr.fillStyle = HH;
+                            const BH = Qr.fillStyle;
+                            return BH.startsWith("#") ? BH : "#000000"
                           }
 
-                          function BY(VV) {
+                          function Mr(HH) {
                             let {
-                              value: eV,
-                              label: xV,
-                              onChange: JV
-                            } = VV;
-                            return (0, kV.jsxs)("span", {
+                              value: BH,
+                              label: LH,
+                              onChange: AH
+                            } = HH;
+                            return (0, uH.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, kV.jsx)("input", {
+                              children: [(0, uH.jsx)("input", {
                                 type: "color",
-                                value: EY(eV),
-                                "aria-label": `${xV} picker`,
-                                onChange: VV => {
-                                  JV(VV.target.value)
+                                value: Wr(BH),
+                                "aria-label": `${LH} picker`,
+                                onChange: HH => {
+                                  AH(HH.target.value)
                                 }
-                              }), (0, kV.jsx)("input", {
+                              }), (0, uH.jsx)("input", {
                                 type: "text",
-                                value: eV,
+                                value: BH,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": xV,
+                                "aria-label": LH,
                                 spellCheck: !1,
-                                onChange: VV => {
-                                  JV(VV.target.value)
+                                onChange: HH => {
+                                  AH(HH.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function jY(VV) {
+                          function xr(HH) {
                             let {
-                              value: eV,
-                              fontAwesomeIcons: xV,
-                              onChange: YV
-                            } = VV;
-                            const yV = qJ(),
-                              [pV, QV] = (0, JV.useState)(ce(eV) ? "fontAwesome" : "bloxd"),
-                              [nV, wV] = (0, JV.useState)(""),
-                              ZV = nV.trim().toLowerCase(),
-                              vV = "bloxd" === pV ? nY.d : xV,
-                              rV = ZV ? vV.filter((VV => VV.toLowerCase().includes(ZV))) : vV;
-                            return (0, kV.jsxs)("div", {
+                              value: BH,
+                              fontAwesomeIcons: LH,
+                              onChange: rH
+                            } = HH;
+                            const hH = vA(),
+                              [tH, zH] = (0, AH.useState)(RB(BH) ? "fontAwesome" : "bloxd"),
+                              [CH, EH] = (0, AH.useState)(""),
+                              XH = CH.trim().toLowerCase(),
+                              GH = "bloxd" === tH ? Cr.b : LH,
+                              YH = XH ? GH.filter((HH => HH.toLowerCase().includes(XH))) : GH;
+                            return (0, uH.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, kV.jsx)("input", {
+                              children: [(0, uH.jsx)("input", {
                                 type: "text",
-                                value: eV,
+                                value: BH,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: VV => {
-                                  YV(VV.target.value)
+                                onChange: HH => {
+                                  rH(HH.target.value)
                                 }
-                              }), (0, kV.jsx)("p", {
+                              }), (0, uH.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, kV.jsxs)("div", {
+                              }), (0, uH.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((VV => (0, kV.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((HH => (0, uH.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": pV === VV,
-                                    className: UV()("DocsVariantChip", {
-                                      Active: pV === VV
+                                    "aria-selected": tH === HH,
+                                    className: SH()("DocsVariantChip", {
+                                      Active: tH === HH
                                     }),
                                     onClick: () => {
-                                      QV(VV)
+                                      zH(HH)
                                     },
-                                    children: "bloxd" === VV ? `Bloxd icons (${nY.d.length})` : `Font Awesome (${xV.length})`
-                                  }, VV))), (0, kV.jsx)("input", {
+                                    children: "bloxd" === HH ? `Bloxd icons (${Cr.b.length})` : `Font Awesome (${LH.length})`
+                                  }, HH))), (0, uH.jsx)("input", {
                                     type: "search",
-                                    value: nV,
+                                    value: CH,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: VV => {
-                                      wV(VV.target.value)
+                                    onChange: HH => {
+                                      EH(HH.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, kV.jsxs)("div", {
+                              }), (0, uH.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [rV.map((VV => {
-                                  const xV = "bloxd" === pV ? ZY(yV, VV) : null;
-                                  return (0, kV.jsx)("button", {
+                                children: [YH.map((HH => {
+                                  const LH = "bloxd" === tH ? Xr(hH, HH) : null;
+                                  return (0, uH.jsx)("button", {
                                     type: "button",
-                                    title: VV,
-                                    "aria-label": VV,
-                                    "aria-pressed": VV === eV,
-                                    className: UV()("DocsIconPickerOption", {
-                                      Active: VV === eV
+                                    title: HH,
+                                    "aria-label": HH,
+                                    "aria-pressed": HH === BH,
+                                    className: SH()("DocsIconPickerOption", {
+                                      Active: HH === BH
                                     }),
                                     onClick: () => {
-                                      YV(VV)
+                                      rH(HH)
                                     },
-                                    children: "fontAwesome" === pV ? (0, kV.jsx)(tx.b, {
-                                      name: VV
-                                    }) : xV ? (0, kV.jsx)("img", {
-                                      src: xV,
+                                    children: "fontAwesome" === tH ? (0, uH.jsx)(PL.c, {
+                                      name: HH
+                                    }) : LH ? (0, uH.jsx)("img", {
+                                      src: LH,
                                       alt: ""
-                                    }) : (0, kV.jsx)(EV, {
+                                    }) : (0, uH.jsx)(WH, {
                                       name: "image"
                                     })
-                                  }, VV)
-                                })), 0 === rV.length && (0, kV.jsxs)("p", {
+                                  }, HH)
+                                })), 0 === YH.length && (0, uH.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", nV, "\u201d."]
+                                  children: ["No icons match \u201c", CH, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function qY(VV) {
+                          function vr(HH) {
                             let {
-                              property: eV,
-                              value: xV,
-                              fontAwesomeIcons: JV,
-                              onChange: YV
-                            } = VV;
+                              property: BH,
+                              value: LH,
+                              fontAwesomeIcons: AH,
+                              onChange: rH
+                            } = HH;
                             const {
-                              field: UV,
-                              label: yV
-                            } = eV, pV = VV => "" !== VV || eV.isRequired ? VV : void 0;
-                            switch (UV.kind) {
+                              field: SH,
+                              label: hH
+                            } = BH, tH = HH => "" !== HH || BH.isRequired ? HH : void 0;
+                            switch (SH.kind) {
                               case "text":
-                                return UV.multiline ? (0, kV.jsx)("textarea", {
-                                  value: String(null !== xV && void 0 !== xV ? xV : ""),
+                                return SH.multiline ? (0, uH.jsx)("textarea", {
+                                  value: String(null !== LH && void 0 !== LH ? LH : ""),
                                   rows: 2,
-                                  "aria-label": yV,
-                                  onChange: VV => {
-                                    YV(VV.target.value)
+                                  "aria-label": hH,
+                                  onChange: HH => {
+                                    rH(HH.target.value)
                                   }
-                                }) : (0, kV.jsx)("input", {
+                                }) : (0, uH.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== xV && void 0 !== xV ? xV : ""),
-                                  "aria-label": yV,
-                                  onChange: VV => {
-                                    YV(pV(VV.target.value))
+                                  value: String(null !== LH && void 0 !== LH ? LH : ""),
+                                  "aria-label": hH,
+                                  onChange: HH => {
+                                    rH(tH(HH.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, kV.jsx)("input", {
+                                return (0, uH.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== xV && void 0 !== xV ? xV : ""),
-                                  placeholder: eV.defaultText,
+                                  value: String(null !== LH && void 0 !== LH ? LH : ""),
+                                  placeholder: BH.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": yV,
+                                  "aria-label": hH,
                                   spellCheck: !1,
-                                  onChange: VV => {
-                                    YV(pV(VV.target.value.trim()))
+                                  onChange: HH => {
+                                    rH(tH(HH.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, kV.jsx)(BY, {
-                                  value: String(null !== xV && void 0 !== xV ? xV : ""),
-                                  label: yV,
-                                  onChange: VV => {
-                                    YV(pV(VV))
+                                return (0, uH.jsx)(Mr, {
+                                  value: String(null !== LH && void 0 !== LH ? LH : ""),
+                                  label: hH,
+                                  onChange: HH => {
+                                    rH(tH(HH))
                                   }
                                 });
                               case "colours": {
-                                const VV = Array.isArray(xV) ? xV : [],
-                                  eV = VV => {
-                                    YV(VV.length > 0 ? VV : void 0)
+                                const HH = Array.isArray(LH) ? LH : [],
+                                  BH = HH => {
+                                    rH(HH.length > 0 ? HH : void 0)
                                   };
-                                return (0, kV.jsxs)("div", {
+                                return (0, uH.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [VV.map(((xV, JV) => (0, kV.jsxs)("span", {
+                                  children: [HH.map(((LH, AH) => (0, uH.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, kV.jsx)(BY, {
-                                      value: xV,
-                                      label: `${yV} ${JV+1}`,
-                                      onChange: xV => {
-                                        eV(VV.map(((VV, eV) => eV === JV ? xV : VV)))
+                                    children: [(0, uH.jsx)(Mr, {
+                                      value: LH,
+                                      label: `${hH} ${AH+1}`,
+                                      onChange: LH => {
+                                        BH(HH.map(((HH, BH) => BH === AH ? LH : HH)))
                                       }
-                                    }), (0, kV.jsx)("button", {
+                                    }), (0, uH.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${JV+1}`,
+                                      "aria-label": `Remove colour ${AH+1}`,
                                       onClick: () => {
-                                        eV(VV.filter(((VV, eV) => eV !== JV)))
+                                        BH(HH.filter(((HH, BH) => BH !== AH)))
                                       },
-                                      children: (0, kV.jsx)(EV, {
+                                      children: (0, uH.jsx)(WH, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, JV))), (0, kV.jsxs)("button", {
+                                  }, AH))), (0, uH.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var xV;
-                                      eV([...VV, null !== (xV = VV.at(-1)) && void 0 !== xV ? xV : "#ffffff"])
+                                      var LH;
+                                      BH([...HH, null !== (LH = HH.at(-1)) && void 0 !== LH ? LH : "#ffffff"])
                                     },
-                                    children: [(0, kV.jsx)(EV, {
+                                    children: [(0, uH.jsx)(WH, {
                                       name: "plus"
-                                    }), 0 === VV.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === HH.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var QV;
-                                const VV = "number" === typeof xV ? xV : Number(null !== (QV = eV.defaultText) && void 0 !== QV ? QV : 0);
-                                return (0, kV.jsxs)("span", {
+                                var zH;
+                                const HH = "number" === typeof LH ? LH : Number(null !== (zH = BH.defaultText) && void 0 !== zH ? zH : 0);
+                                return (0, uH.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, kV.jsx)("input", {
+                                  children: [(0, uH.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: VV,
-                                    "aria-label": yV,
-                                    onChange: VV => {
-                                      YV(Number(VV.target.value))
+                                    value: HH,
+                                    "aria-label": hH,
+                                    onChange: HH => {
+                                      rH(Number(HH.target.value))
                                     }
-                                  }), (0, kV.jsx)("output", {
-                                    children: VV.toFixed(2)
+                                  }), (0, uH.jsx)("output", {
+                                    children: HH.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, kV.jsxs)("select", {
-                                  value: String(null !== xV && void 0 !== xV ? xV : ""),
-                                  "aria-label": yV,
-                                  onChange: VV => {
-                                    YV(pV(VV.target.value))
+                                return (0, uH.jsxs)("select", {
+                                  value: String(null !== LH && void 0 !== LH ? LH : ""),
+                                  "aria-label": hH,
+                                  onChange: HH => {
+                                    rH(tH(HH.target.value))
                                   },
-                                  children: [!eV.isRequired && (0, kV.jsxs)("option", {
+                                  children: [!BH.isRequired && (0, uH.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", eV.defaultText, ")"]
-                                  }), UV.options.map((VV => (0, kV.jsx)("option", {
-                                    value: VV,
-                                    children: VV
-                                  }, VV)))]
+                                    children: ["Default (", BH.defaultText, ")"]
+                                  }), SH.options.map((HH => (0, uH.jsx)("option", {
+                                    value: HH,
+                                    children: HH
+                                  }, HH)))]
                                 });
                               case "icon":
-                                return (0, kV.jsx)(jY, {
-                                  value: String(null !== xV && void 0 !== xV ? xV : ""),
-                                  fontAwesomeIcons: JV,
-                                  onChange: YV
+                                return (0, uH.jsx)(xr, {
+                                  value: String(null !== LH && void 0 !== LH ? LH : ""),
+                                  fontAwesomeIcons: AH,
+                                  onChange: rH
                                 })
                             }
                           }
 
-                          function tY(VV) {
-                            let eV;
+                          function Pr(HH) {
+                            let BH;
                             try {
-                              eV = JSON.parse(VV)
-                            } catch (xV) {
+                              BH = JSON.parse(HH)
+                            } catch (LH) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${xV.message}`
+                                error: `Not valid JSON yet: ${LH.message}`
                               }
                             }
-                            return xx(eV) ? {
-                              part: eV,
+                            return LL(BH) ? {
+                              part: BH,
                               error: null
                             } : {
                               part: null,
@@ -3623,150 +3623,150 @@ export const modules = {
                             }
                           }
 
-                          function FY(VV) {
+                          function Tr(HH) {
                             let {
-                              parts: eV,
-                              index: xV,
-                              fontAwesomeIcons: YV,
-                              onChange: UV,
-                              bR: yV,
-                              onClose: pV
-                            } = VV;
-                            const QV = (0, JV.useContext)(ke),
-                              wV = (0, JV.useRef)(null),
-                              ZV = eV[xV],
-                              vV = Le(ZV),
-                              [rV, bV] = (0, JV.useState)((() => JSON.stringify(ZV, null, 2))),
-                              BV = (0, JV.useMemo)((() => "other" === vV ? tY(rV).error : null), [vV, rV]);
-                            (0, JV.useEffect)((() => {
-                              var VV;
-                              null === (VV = wV.current) || void 0 === VV || VV.focus()
+                              parts: BH,
+                              index: LH,
+                              fontAwesomeIcons: rH,
+                              onChange: SH,
+                              bq: hH,
+                              onClose: tH
+                            } = HH;
+                            const zH = (0, AH.useContext)(uB),
+                              EH = (0, AH.useRef)(null),
+                              XH = BH[LH],
+                              GH = FB(XH),
+                              [YH, QH] = (0, AH.useState)((() => JSON.stringify(XH, null, 2))),
+                              MH = (0, AH.useMemo)((() => "other" === GH ? Pr(YH).error : null), [GH, YH]);
+                            (0, AH.useEffect)((() => {
+                              var HH;
+                              null === (HH = EH.current) || void 0 === HH || HH.focus()
                             }), []);
-                            const jV = (0, kV.jsx)("div", {
+                            const xH = (0, uH.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: VV => {
-                                VV.target === VV.currentTarget && pV()
+                              onMouseDown: HH => {
+                                HH.target === HH.currentTarget && tH()
                               },
-                              children: (0, kV.jsxs)("div", {
-                                ref: wV,
+                              children: (0, uH.jsxs)("div", {
+                                ref: EH,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${xV+1}: ${he[vV]}`,
+                                "aria-label": `Edit part ${LH+1}: ${jB[GH]}`,
                                 tabIndex: -1,
-                                onKeyDown: VV => {
-                                  "Escape" === VV.key ? (VV.stopPropagation(), pV()) : "Tab" === VV.key && wV.current && function(VV, eV) {
-                                    const xV = Array.from(VV.querySelectorAll(ze)),
-                                      JV = xV[0],
-                                      YV = xV.at(-1);
-                                    if (!JV || !YV) return;
-                                    const UV = document.activeElement;
-                                    !eV.shiftKey || UV !== JV && UV !== VV ? eV.shiftKey || UV !== YV || (eV.preventDefault(), JV.focus()) : (eV.preventDefault(), YV.focus())
-                                  }(wV.current, VV)
+                                onKeyDown: HH => {
+                                  "Escape" === HH.key ? (HH.stopPropagation(), tH()) : "Tab" === HH.key && EH.current && function(HH, BH) {
+                                    const LH = Array.from(HH.querySelectorAll(oB)),
+                                      AH = LH[0],
+                                      rH = LH.at(-1);
+                                    if (!AH || !rH) return;
+                                    const SH = document.activeElement;
+                                    !BH.shiftKey || SH !== AH && SH !== HH ? BH.shiftKey || SH !== rH || (BH.preventDefault(), AH.focus()) : (BH.preventDefault(), rH.focus())
+                                  }(EH.current, HH)
                                 },
-                                children: [(0, kV.jsxs)("header", {
+                                children: [(0, uH.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, kV.jsxs)("div", {
-                                    children: [(0, kV.jsxs)("div", {
+                                  children: [(0, uH.jsxs)("div", {
+                                    children: [(0, uH.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", xV + 1]
-                                    }), (0, kV.jsx)("div", {
+                                      children: ["Part ", LH + 1]
+                                    }), (0, uH.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: he[vV]
+                                      children: jB[GH]
                                     })]
-                                  }), (0, kV.jsx)("button", {
+                                  }), (0, uH.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: pV,
-                                    children: (0, kV.jsx)(EV, {
+                                    onClick: tH,
+                                    children: (0, uH.jsx)(WH, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, kV.jsx)(rY, {
-                                  parts: eV,
+                                }), (0, uH.jsx)(Yr, {
+                                  parts: BH,
                                   className: "DocsTextDialogPreview"
-                                }), (0, kV.jsx)("div", {
+                                }), (0, uH.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === vV ? (0, kV.jsxs)("label", {
+                                  children: "other" === GH ? (0, uH.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, kV.jsx)("span", {
+                                    children: [(0, uH.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, kV.jsx)("textarea", {
+                                    }), (0, uH.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: rV,
+                                      value: YH,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: VV => {
-                                        bV(VV.target.value);
-                                        const eV = tY(VV.target.value);
-                                        null !== eV.part && UV(eV.part)
+                                      onChange: HH => {
+                                        QH(HH.target.value);
+                                        const BH = Pr(HH.target.value);
+                                        null !== BH.part && SH(BH.part)
                                       }
-                                    }), BV && (0, kV.jsx)("span", {
+                                    }), MH && (0, uH.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: BV
+                                      children: MH
                                     })]
-                                  }) : me[vV].map((VV => {
-                                    const eV = He(ZV, VV.path),
-                                      xV = VV.isRequired ? JSON.stringify(se(ZV, VV.path)) === JSON.stringify(ZV) : void 0 === eV;
-                                    return (0, kV.jsxs)("div", {
+                                  }) : wB[GH].map((HH => {
+                                    const BH = dB(XH, HH.path),
+                                      LH = HH.isRequired ? JSON.stringify(sB(XH, HH.path)) === JSON.stringify(XH) : void 0 === BH;
+                                    return (0, uH.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, kV.jsxs)("div", {
+                                      children: [(0, uH.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, kV.jsx)("span", {
-                                          children: VV.label
-                                        }), (0, kV.jsxs)("button", {
+                                        children: [(0, uH.jsx)("span", {
+                                          children: HH.label
+                                        }), (0, uH.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: xV,
-                                          "aria-label": `Reset ${VV.label.toLowerCase()} to default`,
+                                          disabled: LH,
+                                          "aria-label": `Reset ${HH.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            UV(se(ZV, VV.path))
+                                            SH(sB(XH, HH.path))
                                           },
-                                          children: [(0, kV.jsx)(EV, {
+                                          children: [(0, uH.jsx)(WH, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, kV.jsx)(qY, {
-                                        property: VV,
-                                        value: eV,
-                                        fontAwesomeIcons: YV,
-                                        onChange: eV => {
-                                          UV(ue(ZV, VV.path, eV))
+                                      }), (0, uH.jsx)(vr, {
+                                        property: HH,
+                                        value: BH,
+                                        fontAwesomeIcons: rH,
+                                        onChange: BH => {
+                                          SH(aB(XH, HH.path, BH))
                                         }
-                                      }), !VV.isRequired && (0, kV.jsxs)("span", {
+                                      }), !HH.isRequired && (0, uH.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", VV.defaultText]
+                                        children: ["Default: ", HH.defaultText]
                                       })]
-                                    }, VV.path.join("."))
+                                    }, HH.path.join("."))
                                   }))
-                                }), (0, kV.jsxs)("footer", {
+                                }), (0, uH.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, kV.jsxs)("button", {
+                                  children: [(0, uH.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: yV,
-                                    children: [(0, kV.jsx)(EV, {
+                                    onClick: hH,
+                                    children: [(0, uH.jsx)(WH, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, kV.jsx)("button", {
+                                  }), (0, uH.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: pV,
+                                    onClick: tH,
                                     children: "Done"
                                   })]
-                                }), (0, kV.jsx)("datalist", {
+                                }), (0, uH.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: kY.map((VV => (0, kV.jsx)("option", {
-                                    value: VV
-                                  }, VV)))
+                                  children: ur.map((HH => (0, uH.jsx)("option", {
+                                    value: HH
+                                  }, HH)))
                                 })]
                               })
                             });
-                            return QV ? (0, nV.createPortal)(jV, QV) : jV
+                            return zH ? (0, CH.createPortal)(xH, zH) : xH
                           }
-                          const TY = [{
+                          const Ur = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3810,265 +3810,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            PY = Object.keys(le);
+                            Vr = Object.keys(nB);
 
-                          function AY(VV) {
+                          function Or(HH) {
                             let {
-                              fontAwesomeIcons: eV
-                            } = VV;
-                            const [xV, YV] = (0, JV.useState)(TY[0].parts), [yV, pV] = (0, JV.useState)((() => Oe(TY[0].parts))), [QV, nV] = (0, JV.useState)(null), [wV, ZV] = (0, JV.useState)(!1), [vV, rV] = (0, JV.useState)(null), [bV, BV] = (0, JV.useState)(!1), [jV, qV] = (0, JV.useState)(null), tV = (0, JV.useRef)(null), FV = Oe(xV);
-                            (0, JV.useLayoutEffect)((() => {
-                              var VV;
-                              if (!jV) return;
-                              const eV = VV => {
-                                  var eV;
-                                  return null === (eV = tV.current) || void 0 === eV ? void 0 : eV.querySelector(`[data-focus-key="${VV}"]`)
+                              fontAwesomeIcons: BH
+                            } = HH;
+                            const [LH, rH] = (0, AH.useState)(Ur[0].parts), [hH, tH] = (0, AH.useState)((() => yB(Ur[0].parts))), [zH, CH] = (0, AH.useState)(null), [EH, XH] = (0, AH.useState)(!1), [GH, YH] = (0, AH.useState)(null), [QH, MH] = (0, AH.useState)(!1), [xH, vH] = (0, AH.useState)(null), PH = (0, AH.useRef)(null), TH = yB(LH);
+                            (0, AH.useLayoutEffect)((() => {
+                              var HH;
+                              if (!xH) return;
+                              const BH = HH => {
+                                  var BH;
+                                  return null === (BH = PH.current) || void 0 === BH ? void 0 : BH.querySelector(`[data-focus-key="${HH}"]`)
                                 },
-                                xV = eV(jV.key);
-                              null === (VV = xV && !xV.disabled ? xV : eV(jV.fallback)) || void 0 === VV || VV.focus(), qV(null)
-                            }), [jV]);
-                            const TV = VV => {
-                                YV(VV), pV(Oe(VV)), nV(null)
+                                LH = BH(xH.key);
+                              null === (HH = LH && !LH.disabled ? LH : BH(xH.fallback)) || void 0 === HH || HH.focus(), vH(null)
+                            }), [xH]);
+                            const UH = HH => {
+                                rH(HH), tH(yB(HH)), CH(null)
                               },
-                              AV = VV => {
-                                TV(xV.filter(((eV, xV) => xV !== VV))), qV({
-                                  key: `edit-${Math.min(VV,xV.length-2)}`,
+                              OH = HH => {
+                                UH(LH.filter(((BH, LH) => LH !== HH))), vH({
+                                  key: `edit-${Math.min(HH,LH.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              NV = (VV, eV) => {
-                                const JV = [...xV],
-                                  [YV] = JV.splice(VV, 1);
-                                JV.splice(VV + eV, 0, YV), TV(JV);
-                                qV({
-                                  key: `${eV<0?"up":"down"}-${VV+eV}`,
-                                  fallback: `edit-${VV+eV}`
+                              bH = (HH, BH) => {
+                                const AH = [...LH],
+                                  [rH] = AH.splice(HH, 1);
+                                AH.splice(HH + BH, 0, rH), UH(AH);
+                                vH({
+                                  key: `${BH<0?"up":"down"}-${HH+BH}`,
+                                  fallback: `edit-${HH+BH}`
                                 })
                               };
-                            return (0, kV.jsxs)("section", {
-                              ref: tV,
+                            return (0, uH.jsxs)("section", {
+                              ref: PH,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, kV.jsx)("header", {
+                              children: [(0, uH.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, kV.jsxs)("div", {
-                                  children: [(0, kV.jsx)("div", {
+                                children: (0, uH.jsxs)("div", {
+                                  children: [(0, uH.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, kV.jsx)("div", {
+                                  }), (0, uH.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, kV.jsx)("div", {
+                              }), (0, uH.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: TY.map((VV => (0, kV.jsx)("button", {
+                                children: Ur.map((HH => (0, uH.jsx)("button", {
                                   type: "button",
-                                  className: UV()("DocsVariantChip", {
-                                    Active: FV === Oe(VV.parts)
+                                  className: SH()("DocsVariantChip", {
+                                    Active: TH === yB(HH.parts)
                                   }),
                                   onClick: () => {
-                                    TV(VV.parts)
+                                    UH(HH.parts)
                                   },
-                                  children: VV.label
-                                }, VV.label)))
-                              }), (0, kV.jsx)(rY, {
-                                parts: xV,
+                                  children: HH.label
+                                }, HH.label)))
+                              }), (0, uH.jsx)(Yr, {
+                                parts: LH,
                                 className: "DocsTextEditorPreview"
-                              }), (0, kV.jsxs)("div", {
+                              }), (0, uH.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, kV.jsxs)("div", {
+                                children: [(0, uH.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, kV.jsx)("div", {
+                                  children: [(0, uH.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, kV.jsxs)("ol", {
+                                  }), (0, uH.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [xV.map(((VV, eV) => {
-                                      const JV = Le(VV);
-                                      return (0, kV.jsxs)("li", {
+                                    children: [LH.map(((HH, BH) => {
+                                      const AH = FB(HH);
+                                      return (0, uH.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, kV.jsxs)("button", {
+                                        children: [(0, uH.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${eV}`,
-                                          "aria-label": `Edit part ${eV+1}, ${he[JV]}`,
+                                          "data-focus-key": `edit-${BH}`,
+                                          "aria-label": `Edit part ${BH+1}, ${jB[AH]}`,
                                           onClick: () => {
-                                            rV(eV)
+                                            YH(BH)
                                           },
-                                          children: [(0, kV.jsx)("span", {
+                                          children: [(0, uH.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: he[JV]
-                                          }), (0, kV.jsx)(rY, {
-                                            parts: [VV],
+                                            children: jB[AH]
+                                          }), (0, uH.jsx)(Yr, {
+                                            parts: [HH],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== JV && (0, kV.jsx)("code", {
+                                          }), "text" !== AH && (0, uH.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: Se(VV)
+                                            children: JB(HH)
                                           })]
-                                        }), (0, kV.jsxs)("span", {
+                                        }), (0, uH.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, kV.jsx)("button", {
+                                          children: [(0, uH.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${eV+1} up`,
-                                            "data-focus-key": `up-${eV}`,
-                                            disabled: 0 === eV,
+                                            "aria-label": `Move part ${BH+1} up`,
+                                            "data-focus-key": `up-${BH}`,
+                                            disabled: 0 === BH,
                                             onClick: () => {
-                                              NV(eV, -1)
+                                              bH(BH, -1)
                                             },
-                                            children: (0, kV.jsx)(EV, {
+                                            children: (0, uH.jsx)(WH, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, kV.jsx)("button", {
+                                          }), (0, uH.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${eV+1} down`,
-                                            "data-focus-key": `down-${eV}`,
-                                            disabled: eV === xV.length - 1,
+                                            "aria-label": `Move part ${BH+1} down`,
+                                            "data-focus-key": `down-${BH}`,
+                                            disabled: BH === LH.length - 1,
                                             onClick: () => {
-                                              NV(eV, 1)
+                                              bH(BH, 1)
                                             },
-                                            children: (0, kV.jsx)(EV, {
+                                            children: (0, uH.jsx)(WH, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, kV.jsx)("button", {
+                                          }), (0, uH.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${eV+1}`,
+                                            "aria-label": `Remove part ${BH+1}`,
                                             onClick: () => {
-                                              AV(eV)
+                                              OH(BH)
                                             },
-                                            children: (0, kV.jsx)(EV, {
+                                            children: (0, uH.jsx)(WH, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, eV)
-                                    })), 0 === xV.length && (0, kV.jsx)("li", {
+                                      }, BH)
+                                    })), 0 === LH.length && (0, uH.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, kV.jsxs)("div", {
+                                  }), (0, uH.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: VV => {
-                                      "Escape" === VV.key && bV && (VV.stopPropagation(), BV(!1), qV({
+                                    onKeyDown: HH => {
+                                      "Escape" === HH.key && QH && (HH.stopPropagation(), MH(!1), vH({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, kV.jsxs)("button", {
+                                    children: [(0, uH.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": bV,
+                                      "aria-expanded": QH,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        BV(!bV)
+                                        MH(!QH)
                                       },
-                                      children: [(0, kV.jsx)(EV, {
+                                      children: [(0, uH.jsx)(WH, {
                                         name: "plus"
-                                      }), "Add a part", (0, kV.jsx)(EV, {
-                                        name: bV ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, uH.jsx)(WH, {
+                                        name: QH ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), bV && (0, kV.jsx)("ul", {
+                                    }), QH && (0, uH.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: PY.map((VV => (0, kV.jsx)("li", {
-                                        children: (0, kV.jsx)("button", {
+                                      children: Vr.map((HH => (0, uH.jsx)("li", {
+                                        children: (0, uH.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (VV => {
-                                              TV([...xV, le[VV]]), BV(!1), rV(xV.length)
-                                            })(VV)
+                                            (HH => {
+                                              UH([...LH, nB[HH]]), MH(!1), YH(LH.length)
+                                            })(HH)
                                           },
-                                          children: he[VV]
+                                          children: jB[HH]
                                         })
-                                      }, VV)))
+                                      }, HH)))
                                     })]
                                   })]
-                                }), (0, kV.jsxs)("div", {
+                                }), (0, uH.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, kV.jsxs)("div", {
+                                  children: [(0, uH.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, kV.jsxs)("button", {
+                                    children: ["Code", (0, uH.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": wV,
+                                      "aria-pressed": EH,
                                       onClick: () => {
-                                        ZV(!wV)
+                                        XH(!EH)
                                       },
-                                      children: [(0, kV.jsx)(EV, {
-                                        name: wV ? "check" : "pencil"
-                                      }), wV ? "Done" : "Edit"]
+                                      children: [(0, uH.jsx)(WH, {
+                                        name: EH ? "check" : "pencil"
+                                      }), EH ? "Done" : "Edit"]
                                     })]
-                                  }), wV ? (0, kV.jsxs)(kV.Fragment, {
-                                    children: [(0, kV.jsx)("textarea", {
+                                  }), EH ? (0, uH.jsxs)(uH.Fragment, {
+                                    children: [(0, uH.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: yV,
+                                      value: hH,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: VV => {
-                                        pV(VV.target.value);
-                                        const eV = Jx(VV.target.value);
-                                        nV(eV.error), eV.parts && YV(eV.parts)
+                                      onChange: HH => {
+                                        tH(HH.target.value);
+                                        const BH = AL(HH.target.value);
+                                        CH(BH.error), BH.parts && rH(BH.parts)
                                       }
-                                    }), QV && (0, kV.jsx)("p", {
+                                    }), zH && (0, uH.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: QV
+                                      children: zH
                                     })]
-                                  }) : (0, kV.jsx)(PV, {
+                                  }) : (0, uH.jsx)(VH, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${FV})`
+                                    code: `api.sendMessage(playerId, ${TH})`
                                   })]
                                 })]
-                              }), null !== vV && vV < xV.length && (0, kV.jsx)(FY, {
-                                parts: xV,
-                                index: vV,
-                                fontAwesomeIcons: eV,
-                                onChange: VV => {
-                                  ((VV, eV) => {
-                                    TV(xV.map(((xV, JV) => JV === VV ? eV : xV)))
-                                  })(vV, VV)
+                              }), null !== GH && GH < LH.length && (0, uH.jsx)(Tr, {
+                                parts: LH,
+                                index: GH,
+                                fontAwesomeIcons: BH,
+                                onChange: HH => {
+                                  ((HH, BH) => {
+                                    UH(LH.map(((LH, AH) => AH === HH ? BH : LH)))
+                                  })(GH, HH)
                                 },
-                                bR: () => {
-                                  AV(vV), rV(null)
+                                bq: () => {
+                                  OH(GH), YH(null)
                                 },
                                 onClose: () => {
-                                  rV(null), qV({
-                                    key: `edit-${vV}`,
+                                  YH(null), vH({
+                                    key: `edit-${GH}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var NY = xV(5342),
-                            XY = xV(5333),
-                            MY = xV(5339),
-                            zY = xV(5351);
-                          const GY = 40,
-                            WY = 800,
-                            RY = 150,
-                            gY = 8e3,
-                            DY = 2e3;
+                          var br = LH(5325),
+                            kr = LH(5308),
+                            mr = LH(5319),
+                            or = LH(5333);
+                          const Ir = 40,
+                            fr = 800,
+                            lr = 150,
+                            Kr = 8e3,
+                            cr = 2e3;
 
-                          function iY(VV, eV) {
-                            return 12 * Math.log2(eV / VV)
+                          function er(HH, BH) {
+                            return 12 * Math.log2(BH / HH)
                           }
 
-                          function CY(VV, eV) {
-                            return Math.round(VV * 2 ** (eV / 12) * 10) / 10
+                          function qr(HH, BH) {
+                            return Math.round(HH * 2 ** (BH / 12) * 10) / 10
                           }
 
-                          function aY(VV) {
-                            return `${VV} ms`
+                          function gr(HH) {
+                            return `${HH} ms`
                           }
 
-                          function oY(VV) {
-                            return `${VV} st`
+                          function Nr(HH) {
+                            return `${HH} st`
                           }
-                          const cY = [{
+                          const Rr = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4086,769 +4086,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function hY(VV) {
+                          function jr(HH) {
                             let {
-                              synth: eV,
-                              onChange: xV
-                            } = VV;
-                            const JV = (0, NY.j)(eV);
-                            return (0, kV.jsxs)("div", {
+                              synth: BH,
+                              onChange: LH
+                            } = HH;
+                            const AH = (0, br.k)(BH);
+                            return (0, uH.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, kV.jsxs)("div", {
+                              children: [(0, uH.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, kV.jsx)("div", {
+                                children: [(0, uH.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, kV.jsxs)("div", {
+                                }), (0, uH.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, kV.jsx)("div", {
+                                  children: [(0, uH.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, kV.jsx)("span", {
+                                    children: (0, uH.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, kV.jsx)("div", {
+                                  }), (0, uH.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: NY.g.map((VV => (0, kV.jsx)("button", {
+                                    children: br.g.map((HH => (0, uH.jsx)("button", {
                                       type: "button",
-                                      className: UV()("DocsVariantChip", {
-                                        Active: eV.waveform === VV
+                                      className: SH()("DocsVariantChip", {
+                                        Active: BH.waveform === HH
                                       }),
-                                      "aria-pressed": eV.waveform === VV,
+                                      "aria-pressed": BH.waveform === HH,
                                       onClick: () => {
-                                        xV({
-                                          waveform: VV
+                                        LH({
+                                          waveform: HH
                                         })
                                       },
-                                      children: VV
-                                    }, VV)))
+                                      children: HH
+                                    }, HH)))
                                   })]
-                                }), (0, kV.jsx)(OJ, {
+                                }), (0, uH.jsx)(yA, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: iY(GY, WY),
+                                  max: er(Ir, fr),
                                   step: .1,
-                                  value: iY(GY, eV.pitchHz),
-                                  format: () => `${eV.pitchHz} Hz`,
-                                  onChange: VV => {
-                                    xV({
-                                      pitchHz: CY(GY, VV)
+                                  value: er(Ir, BH.pitchHz),
+                                  format: () => `${BH.pitchHz} Hz`,
+                                  onChange: HH => {
+                                    LH({
+                                      pitchHz: qr(Ir, HH)
                                     })
                                   }
-                                }), (0, kV.jsx)(OJ, {
+                                }), (0, uH.jsx)(yA, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: eV.syllableMs,
-                                  format: aY,
-                                  onChange: VV => {
-                                    xV({
-                                      syllableMs: VV
+                                  value: BH.syllableMs,
+                                  format: gr,
+                                  onChange: HH => {
+                                    LH({
+                                      syllableMs: HH
                                     })
                                   }
-                                }), (0, kV.jsx)(OJ, {
+                                }), (0, uH.jsx)(yA, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: eV.volume,
-                                  onChange: VV => {
-                                    xV({
-                                      volume: VV
+                                  value: BH.volume,
+                                  onChange: HH => {
+                                    LH({
+                                      volume: HH
                                     })
                                   }
                                 })]
-                              }), (0, kV.jsxs)("div", {
+                              }), (0, uH.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, kV.jsx)("div", {
+                                children: [(0, uH.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, kV.jsx)(OJ, {
+                                }), (0, uH.jsx)(yA, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: eV.durationMs,
-                                  format: aY,
-                                  onChange: VV => {
-                                    xV({
-                                      durationMs: VV
+                                  value: BH.durationMs,
+                                  format: gr,
+                                  onChange: HH => {
+                                    LH({
+                                      durationMs: HH
                                     })
                                   }
-                                }), (0, kV.jsx)(OJ, {
+                                }), (0, uH.jsx)(yA, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: JV.durationMs,
+                                  max: AH.durationMs,
                                   step: 1,
-                                  value: JV.attackMs,
-                                  format: aY,
-                                  onChange: VV => {
-                                    xV({
-                                      attackMs: VV
+                                  value: AH.attackMs,
+                                  format: gr,
+                                  onChange: HH => {
+                                    LH({
+                                      attackMs: HH
                                     })
                                   }
-                                }), (0, kV.jsx)(OJ, {
+                                }), (0, uH.jsx)(yA, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: JV.durationMs - JV.attackMs,
+                                  max: AH.durationMs - AH.attackMs,
                                   step: 1,
-                                  value: JV.releaseMs,
-                                  format: aY,
-                                  onChange: VV => {
-                                    xV({
-                                      releaseMs: VV
+                                  value: AH.releaseMs,
+                                  format: gr,
+                                  onChange: HH => {
+                                    LH({
+                                      releaseMs: HH
                                     })
                                   }
-                                }), (0, kV.jsx)(OJ, {
+                                }), (0, uH.jsx)(yA, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: eV.glideSemitones,
-                                  format: oY,
-                                  onChange: VV => {
-                                    xV({
-                                      glideSemitones: VV
+                                  value: BH.glideSemitones,
+                                  format: Nr,
+                                  onChange: HH => {
+                                    LH({
+                                      glideSemitones: HH
                                     })
                                   }
-                                }), (0, kV.jsxs)("label", {
+                                }), (0, uH.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, kV.jsx)("input", {
+                                  children: [(0, uH.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== eV.lowpassHz,
-                                    onChange: VV => {
-                                      xV({
-                                        lowpassHz: VV.target.checked ? DY : null
+                                    checked: null !== BH.lowpassHz,
+                                    onChange: HH => {
+                                      LH({
+                                        lowpassHz: HH.target.checked ? cr : null
                                       })
                                     }
-                                  }), (0, kV.jsx)("span", {
+                                  }), (0, uH.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== eV.lowpassHz && (0, kV.jsx)(OJ, {
+                                }), null !== BH.lowpassHz && (0, uH.jsx)(yA, {
                                   label: "Filter",
                                   min: 0,
-                                  max: iY(RY, gY),
+                                  max: er(lr, Kr),
                                   step: .1,
-                                  value: iY(RY, eV.lowpassHz),
-                                  format: () => `${eV.lowpassHz} Hz`,
-                                  onChange: VV => {
-                                    xV({
-                                      lowpassHz: CY(RY, VV)
+                                  value: er(lr, BH.lowpassHz),
+                                  format: () => `${BH.lowpassHz} Hz`,
+                                  onChange: HH => {
+                                    LH({
+                                      lowpassHz: qr(lr, HH)
                                     })
                                   }
                                 })]
-                              }), (0, kV.jsxs)("div", {
+                              }), (0, uH.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, kV.jsx)("div", {
+                                children: [(0, uH.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), cY.map((VV => {
+                                }), Rr.map((HH => {
                                   let {
-                                    key: JV,
-                                    label: YV,
-                                    max: UV
-                                  } = VV;
-                                  return (0, kV.jsx)(OJ, {
-                                    label: YV,
+                                    key: AH,
+                                    label: rH,
+                                    max: SH
+                                  } = HH;
+                                  return (0, uH.jsx)(yA, {
+                                    label: rH,
                                     min: 0,
-                                    max: UV,
+                                    max: SH,
                                     step: .1,
-                                    value: eV.intonation[JV],
-                                    format: oY,
-                                    onChange: VV => {
-                                      xV({
+                                    value: BH.intonation[AH],
+                                    format: Nr,
+                                    onChange: HH => {
+                                      LH({
                                         intonation: {
-                                          ...eV.intonation,
-                                          [JV]: VV
+                                          ...BH.intonation,
+                                          [AH]: HH
                                         }
                                       })
                                     }
-                                  }, JV)
+                                  }, AH)
                                 }))]
                               })]
                             })
                           }
-                          const lY = Object.keys(NY.i),
-                            LY = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const nr = Object.keys(br.i),
+                            Fr = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function fY(VV) {
-                            var eV;
-                            const xV = JSON.stringify((0, NY.j)(VV));
-                            return null !== (eV = lY.find((VV => JSON.stringify((0, NY.j)(NY.i[VV])) === xV))) && void 0 !== eV ? eV : null
+                          function Dr(HH) {
+                            var BH;
+                            const LH = JSON.stringify((0, br.k)(HH));
+                            return null !== (BH = nr.find((HH => JSON.stringify((0, br.k)(br.i[HH])) === LH))) && void 0 !== BH ? BH : null
                           }
 
-                          function mY(VV) {
-                            let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof VV || null === VV) return JSON.stringify(VV);
-                            return `{\n${Object.entries(VV).map((VV=>{let[xV,JV]=VV;return`${eV}    ${xV}: ${mY(JV,`${eV}    `)},`})).join("\n")}\n${eV}}`
+                          function wr(HH) {
+                            let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof HH || null === HH) return JSON.stringify(HH);
+                            return `{\n${Object.entries(HH).map((HH=>{let[LH,AH]=HH;return`${BH}    ${LH}: ${wr(AH,`${BH}    `)},`})).join("\n")}\n${BH}}`
                           }
 
-                          function KY(VV, eV, xV) {
-                            const JV = fY(VV),
-                              YV = [`    line: ${JSON.stringify(eV)},`];
-                            return xV && YV.push(`    speakerName: ${JSON.stringify(xV)},`), YV.push("    voice,"), `const voice = ${JV?JSON.stringify(JV):mY((0,NY.j)(VV))}\n\napi.setClientOption(playerId, "dialogue", {\n${YV.join("\n")}\n})`
+                          function Zr(HH, BH, LH) {
+                            const AH = Dr(HH),
+                              rH = [`    line: ${JSON.stringify(BH)},`];
+                            return LH && rH.push(`    speakerName: ${JSON.stringify(LH)},`), rH.push("    voice,"), `const voice = ${AH?JSON.stringify(AH):wr((0,br.k)(HH))}\n\napi.setClientOption(playerId, "dialogue", {\n${rH.join("\n")}\n})`
                           }
-                          const HY = 400,
-                            uY = 90;
-                          let sY = null;
+                          const dr = 400,
+                            ar = 90;
+                          let sr = null;
 
-                          function SY(VV, eV, xV) {
-                            return sY ??= new AudioContext, sY.resume(), (0, zY.d)(sY, sY.destination, VV, eV, xV, (() => {}))
+                          function Jr(HH, BH, LH) {
+                            return sr ??= new AudioContext, sr.resume(), (0, or.b)(sr, sr.destination, HH, BH, LH, (() => {}))
                           }
 
-                          function IY() {
-                            const [VV, eV] = (0, JV.useState)(NY.i.regular), [xV, YV] = (0, JV.useState)(LY[0]), [yV, pV] = (0, JV.useState)("Innkeeper"), [QV, nV] = (0, JV.useState)(0), wV = wJ((VV => VV.volume)), ZV = (0, JV.useRef)(null), vV = (0, JV.useRef)(0), rV = (0, JV.useRef)(0), bV = () => {
-                              var VV;
-                              null === (VV = ZV.current) || void 0 === VV || VV.call(ZV), ZV.current = null
+                          function ir() {
+                            const [HH, BH] = (0, AH.useState)(br.i.regular), [LH, rH] = (0, AH.useState)(Fr[0]), [hH, tH] = (0, AH.useState)("Innkeeper"), [zH, CH] = (0, AH.useState)(0), EH = EA((HH => HH.volume)), XH = (0, AH.useRef)(null), GH = (0, AH.useRef)(0), YH = (0, AH.useRef)(0), QH = () => {
+                              var HH;
+                              null === (HH = XH.current) || void 0 === HH || HH.call(XH), XH.current = null
                             };
-                            (0, JV.useEffect)((() => () => {
-                              var VV;
-                              null === (VV = ZV.current) || void 0 === VV || VV.call(ZV), window.clearTimeout(vV.current)
+                            (0, AH.useEffect)((() => () => {
+                              var HH;
+                              null === (HH = XH.current) || void 0 === HH || HH.call(XH), window.clearTimeout(GH.current)
                             }), []);
-                            const BV = (0, JV.useMemo)((() => ({
-                                line: xV,
-                                speakerName: yV || void 0,
-                                voice: VV
-                              })), [xV, yV, VV]),
-                              jV = (0, JV.useRef)(BV);
-                            jV.current = BV;
-                            const tV = fY(VV),
-                              FV = VV => {
-                                window.clearTimeout(vV.current), bV();
+                            const MH = (0, AH.useMemo)((() => ({
+                                line: LH,
+                                speakerName: hH || void 0,
+                                voice: HH
+                              })), [LH, hH, HH]),
+                              xH = (0, AH.useRef)(MH);
+                            xH.current = MH;
+                            const PH = Dr(HH),
+                              TH = HH => {
+                                window.clearTimeout(GH.current), QH();
                                 const {
-                                  plan: eV,
-                                  synth: xV
-                                } = (0, MY.g)(VV);
-                                xV && (ZV.current = SY(xV, eV.blips, wV)), nV((VV => VV + 1))
+                                  plan: BH,
+                                  synth: LH
+                                } = (0, mr.d)(HH);
+                                LH && (XH.current = Jr(LH, BH.blips, EH)), CH((HH => HH + 1))
                               },
-                              TV = KY(VV, xV, yV);
-                            return (0, kV.jsxs)("section", {
+                              UH = Zr(HH, LH, hH);
+                            return (0, uH.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, kV.jsxs)("header", {
+                              children: [(0, uH.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, kV.jsxs)("div", {
-                                  children: [(0, kV.jsx)("div", {
+                                children: [(0, uH.jsxs)("div", {
+                                  children: [(0, uH.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, kV.jsx)("div", {
+                                  }), (0, uH.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, kV.jsx)(qV, {
-                                  text: TV,
+                                }), (0, uH.jsx)(vH, {
+                                  text: UH,
                                   label: "Copy code"
                                 })]
-                              }), (0, kV.jsxs)("div", {
+                              }), (0, uH.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [lY.map((VV => (0, kV.jsx)("button", {
+                                children: [nr.map((HH => (0, uH.jsx)("button", {
                                   type: "button",
-                                  className: UV()("DocsVariantChip", {
-                                    Active: tV === VV
+                                  className: SH()("DocsVariantChip", {
+                                    Active: PH === HH
                                   }),
-                                  "aria-pressed": tV === VV,
+                                  "aria-pressed": PH === HH,
                                   onClick: () => {
-                                    (VV => {
-                                      const xV = NY.i[VV];
-                                      eV(xV), FV({
-                                        ...BV,
-                                        voice: xV
+                                    (HH => {
+                                      const LH = br.i[HH];
+                                      BH(LH), TH({
+                                        ...MH,
+                                        voice: LH
                                       })
-                                    })(VV)
+                                    })(HH)
                                   },
-                                  children: VV
-                                }, VV))), !tV && (0, kV.jsx)("span", {
+                                  children: HH
+                                }, HH))), !PH && (0, uH.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, kV.jsxs)("div", {
+                              }), (0, uH.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, kV.jsxs)("div", {
+                                children: [(0, uH.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, kV.jsx)("div", {
+                                  children: [(0, uH.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, kV.jsx)(XY.e, {
-                                      display: BV
-                                    }, QV)
-                                  }), (0, kV.jsxs)("form", {
+                                    children: (0, uH.jsx)(kr.e, {
+                                      display: MH
+                                    }, zH)
+                                  }), (0, uH.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: VV => {
-                                      VV.preventDefault(), FV(BV)
+                                    onSubmit: HH => {
+                                      HH.preventDefault(), TH(MH)
                                     },
-                                    children: [(0, kV.jsx)("input", {
-                                      value: xV,
+                                    children: [(0, uH.jsx)("input", {
+                                      value: LH,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: VV => {
-                                        YV(VV.target.value)
+                                      onChange: HH => {
+                                        rH(HH.target.value)
                                       }
-                                    }), (0, kV.jsxs)("button", {
+                                    }), (0, uH.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, kV.jsx)(EV, {
+                                      children: [(0, uH.jsx)(WH, {
                                         name: "play"
-                                      }), (0, kV.jsx)("span", {
+                                      }), (0, uH.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, kV.jsx)("div", {
+                                  }), (0, uH.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: LY.map((VV => (0, kV.jsx)("button", {
+                                    children: Fr.map((HH => (0, uH.jsx)("button", {
                                       type: "button",
-                                      className: UV()("DocsVariantChip", {
-                                        Active: xV === VV
+                                      className: SH()("DocsVariantChip", {
+                                        Active: LH === HH
                                       }),
                                       onClick: () => {
-                                        var eV;
-                                        YV(eV = VV), FV({
-                                          ...BV,
-                                          line: eV
+                                        var BH;
+                                        rH(BH = HH), TH({
+                                          ...MH,
+                                          line: BH
                                         })
                                       },
-                                      children: VV
-                                    }, VV)))
-                                  }), (0, kV.jsxs)("label", {
+                                      children: HH
+                                    }, HH)))
+                                  }), (0, uH.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, kV.jsx)("span", {
+                                    children: [(0, uH.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, kV.jsx)("input", {
-                                      value: yV,
+                                    }), (0, uH.jsx)("input", {
+                                      value: hH,
                                       placeholder: "No name",
-                                      onChange: VV => {
-                                        pV(VV.target.value)
+                                      onChange: HH => {
+                                        tH(HH.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, kV.jsx)(hY, {
-                                  synth: VV,
-                                  onChange: xV => {
-                                    const JV = {
-                                      ...VV,
-                                      ...xV
+                                }), (0, uH.jsx)(jr, {
+                                  synth: HH,
+                                  onChange: LH => {
+                                    const AH = {
+                                      ...HH,
+                                      ...LH
                                     };
-                                    eV(JV);
-                                    const YV = {
-                                        ...BV,
-                                        voice: JV
+                                    BH(AH);
+                                    const rH = {
+                                        ...MH,
+                                        voice: AH
                                       },
-                                      UV = performance.now();
-                                    if (UV - rV.current >= uY) {
-                                      rV.current = UV, bV();
-                                      const VV = (0, MY.g)(YV).plan.blips[0];
-                                      VV && (ZV.current = SY((0, NY.j)(JV), [{
-                                        ...VV,
+                                      SH = performance.now();
+                                    if (SH - YH.current >= ar) {
+                                      YH.current = SH, QH();
+                                      const HH = (0, mr.d)(rH).plan.blips[0];
+                                      HH && (XH.current = Jr((0, br.k)(AH), [{
+                                        ...HH,
                                         atMs: 0
-                                      }], wV))
+                                      }], EH))
                                     }
-                                    window.clearTimeout(vV.current), vV.current = window.setTimeout((() => {
-                                      FV(jV.current)
-                                    }), HY)
+                                    window.clearTimeout(GH.current), GH.current = window.setTimeout((() => {
+                                      TH(xH.current)
+                                    }), dr)
                                   }
                                 })]
-                              }), (0, kV.jsx)(PV, {
-                                code: TV,
+                              }), (0, uH.jsx)(VH, {
+                                code: UH,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var dY = xV(5364);
-                          const OY = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            VU = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            eU = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${VU}`, "g"), dY.o],
+                          var pr = LH(5347);
+                          const yr = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            HS = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            BS = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${HS}`, "g"), pr.j],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, dY.o]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, pr.j]
                             ];
 
-                          function xU(VV) {
-                            return `${VV.pageId}#${VV.anchor}`
+                          function LS(HH) {
+                            return `${HH.pageId}#${HH.anchor}`
                           }
-                          let JU, YU, UU;
+                          let AS, rS, SS;
 
-                          function yU(VV) {
-                            const eV = (0, AV.l)(VV),
-                              xV = new Set;
-                            for (const [, , JV] of eV.matchAll(AV.d)) {
-                              const VV = JV.startsWith("#") ? LV(JV) : null,
-                                eV = VV ? xU({
-                                  pageId: VV.page.id,
-                                  anchor: VV.anchor
+                          function hS(HH) {
+                            const BH = (0, OH.f)(HH),
+                              LH = new Set;
+                            for (const [, , AH] of BH.matchAll(OH.c)) {
+                              const HH = AH.startsWith("#") ? FH(AH) : null,
+                                BH = HH ? LS({
+                                  pageId: HH.page.id,
+                                  anchor: HH.anchor
                                 }) : null;
-                              null !== eV && (JU || (JU = new Set(CV.flatMap((VV => zV(VV.layout) ? hV(VV).sections.map((eV => xU({
-                                pageId: VV.id,
-                                anchor: eV.heading.anchor
-                              }))) : [])))), JU).has(eV) && xV.add(eV)
+                              null !== BH && (AS || (AS = new Set(qH.flatMap((HH => oH(HH.layout) ? jH(HH).sections.map((BH => LS({
+                                pageId: HH.id,
+                                anchor: BH.heading.anchor
+                              }))) : [])))), AS).has(BH) && LH.add(BH)
                             }
-                            for (const [, , JV] of eV.matchAll(OY)) {
-                              const VV = ve(JV);
-                              VV && xV.add(xU(VV))
+                            for (const [, , AH] of BH.matchAll(yr)) {
+                              const HH = GB(AH);
+                              HH && LH.add(LS(HH))
                             }
-                            return xV
+                            return LH
                           }
 
-                          function pU(VV, eV) {
-                            const xV = new Set,
-                              JV = function(VV) {
-                                return VV.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(VV);
-                            for (const [, YV] of JV.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) xV.add(YV);
-                            for (const [YV, UV] of eU)
-                              for (const [, VV] of(0, dY.h)(JV, YV, UV)) eV.has(VV) && xV.add(VV);
-                            return xV
+                          function tS(HH, BH) {
+                            const LH = new Set,
+                              AH = function(HH) {
+                                return HH.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(HH);
+                            for (const [, rH] of AH.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) LH.add(rH);
+                            for (const [rH, SH] of BS)
+                              for (const [, HH] of(0, pr.c)(AH, rH, SH)) BH.has(HH) && LH.add(HH);
+                            return LH
                           }
 
-                          function QU(VV, eV, xV, JV) {
-                            const YV = VV.get(eV);
-                            YV ? !JV && YV.some((VV => VV.pageId === xV.pageId)) || YV.push(xV) : VV.set(eV, [xV])
+                          function zS(HH, BH, LH, AH) {
+                            const rH = HH.get(BH);
+                            rH ? !AH && rH.some((HH => HH.pageId === LH.pageId)) || rH.push(LH) : HH.set(BH, [LH])
                           }
-                          const nU = /^[A-Za-z_$][\w$]*$/;
+                          const CS = /^[A-Za-z_$][\w$]*$/;
 
-                          function wU(VV) {
-                            return nU.test(VV.name) ? VV.name : "options"
-                          }
-
-                          function ZU(VV, eV) {
-                            const xV = VV.params.map(wU).join(", ");
-                            return eV ? `${VV.name} = (${xV}) => {\n\t\n}` : `api.${VV.name}(${xV})`
+                          function ES(HH) {
+                            return CS.test(HH.name) ? HH.name : "options"
                           }
 
-                          function vU(VV) {
+                          function XS(HH, BH) {
+                            const LH = HH.params.map(ES).join(", ");
+                            return BH ? `${HH.name} = (${LH}) => {\n\t\n}` : `api.${HH.name}(${LH})`
+                          }
+
+                          function GS(HH) {
                             let {
-                              method: eV,
-                              isCallback: xV
-                            } = VV;
-                            return (0, kV.jsxs)("div", {
+                              method: BH,
+                              isCallback: LH
+                            } = HH;
+                            return (0, uH.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, kV.jsxs)("span", {
+                              children: [(0, uH.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [xV ? (0, kV.jsxs)(kV.Fragment, {
-                                  children: [(0, kV.jsx)("span", {
+                                children: [LH ? (0, uH.jsxs)(uH.Fragment, {
+                                  children: [(0, uH.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: eV.name
-                                  }), (0, kV.jsx)("span", {
+                                    children: BH.name
+                                  }), (0, uH.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, kV.jsxs)(kV.Fragment, {
-                                  children: [(0, kV.jsx)("span", {
+                                }) : (0, uH.jsxs)(uH.Fragment, {
+                                  children: [(0, uH.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, kV.jsx)("span", {
+                                  }), (0, uH.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: eV.name
-                                  }), (0, kV.jsx)("span", {
+                                    children: BH.name
+                                  }), (0, uH.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), eV.params.map(((VV, xV) => (0, kV.jsxs)(JV.Fragment, {
-                                  children: [xV > 0 && (0, kV.jsx)("span", {
+                                }), BH.params.map(((HH, LH) => (0, uH.jsxs)(AH.Fragment, {
+                                  children: [LH > 0 && (0, uH.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, kV.jsx)("a", {
+                                  }), (0, uH.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${eV.name}-${wU(VV)}`,
-                                    children: VV.name
+                                    href: `#${BH.name}-${ES(HH)}`,
+                                    children: HH.name
                                   })]
-                                }, VV.name))), (0, kV.jsx)("span", {
+                                }, HH.name))), (0, uH.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: xV ? ") => " : ")"
-                                }), xV && !eV.returns && (0, kV.jsx)("span", {
+                                  children: LH ? ") => " : ")"
+                                }), LH && !BH.returns && (0, uH.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), eV.returns && eV.returns.type && (0, kV.jsxs)("span", {
+                              }), BH.returns && BH.returns.type && (0, uH.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!xV && (0, kV.jsx)("span", {
+                                children: [!LH && (0, uH.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, kV.jsx)(Ne, {
-                                  type: eV.returns.type
+                                }), (0, uH.jsx)(bB, {
+                                  type: BH.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function rU(VV) {
+                          function YS(HH) {
                             let {
-                              title: eV,
-                              references: xV
-                            } = VV;
-                            const YV = (0, JV.useContext)(re);
-                            return (0, kV.jsxs)("div", {
+                              title: BH,
+                              references: LH
+                            } = HH;
+                            const rH = (0, AH.useContext)(YB);
+                            return (0, uH.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, kV.jsx)("span", {
+                              children: [(0, uH.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: eV
-                              }), xV.map((VV => (0, kV.jsx)(yV.b, {
-                                to: mV(YV, oV(VV.pageId), VV.anchor),
-                                children: VV.label
-                              }, `${VV.pageId}#${VV.anchor}`)))]
+                                children: BH
+                              }), LH.map((HH => (0, uH.jsx)(hH.e, {
+                                to: wH(rH, NH(HH.pageId), HH.anchor),
+                                children: HH.label
+                              }, `${HH.pageId}#${HH.anchor}`)))]
                             })
                           }
 
-                          function kU(VV) {
-                            var eV, xV;
+                          function uS(HH) {
+                            var BH, LH;
                             let {
-                              pageId: JV,
-                              anchor: YV
-                            } = VV;
-                            const UV = xU({
-                                pageId: JV,
-                                anchor: YV
+                              pageId: AH,
+                              anchor: rH
+                            } = HH;
+                            const SH = LS({
+                                pageId: AH,
+                                anchor: rH
                               }),
-                              yV = null !== (eV = function() {
-                                if (!UU) {
-                                  UU = new Map;
-                                  const JV = new Set(CV.filter((VV => "callbacks" === VV.layout)).flatMap((VV => hV(VV).sections.map((VV => VV.heading.text)))));
-                                  for (const YV of CV)
-                                    if ("article" === YV.layout || "snippets" === YV.layout)
-                                      for (const UV of (0, AV.A)(hV(YV)))
+                              hH = null !== (BH = function() {
+                                if (!SS) {
+                                  SS = new Map;
+                                  const AH = new Set(qH.filter((HH => "callbacks" === HH.layout)).flatMap((HH => jH(HH).sections.map((HH => HH.heading.text)))));
+                                  for (const rH of qH)
+                                    if ("article" === rH.layout || "snippets" === rH.layout)
+                                      for (const SH of (0, OH.v)(jH(rH)))
                                         for (const {
-                                            code: yV
+                                            code: hH
                                           }
-                                          of(0, AV.n)(UV.blocks))
-                                          for (const pV of pU(yV, JV)) {
-                                            const JV = Ze().get(pV);
-                                            if (JV) {
-                                              var VV, eV, xV;
-                                              const yV = {
-                                                pageId: YV.id,
-                                                anchor: null !== (VV = null === (eV = UV.heading) || void 0 === eV ? void 0 : eV.anchor) && void 0 !== VV ? VV : "",
-                                                label: null !== (xV = YV.navTitle) && void 0 !== xV ? xV : YV.title
+                                          of(0, OH.j)(SH.blocks))
+                                          for (const tH of tS(hH, AH)) {
+                                            const AH = XB().get(tH);
+                                            if (AH) {
+                                              var HH, BH, LH;
+                                              const hH = {
+                                                pageId: rH.id,
+                                                anchor: null !== (HH = null === (BH = SH.heading) || void 0 === BH ? void 0 : BH.anchor) && void 0 !== HH ? HH : "",
+                                                label: null !== (LH = rH.navTitle) && void 0 !== LH ? LH : rH.title
                                               };
-                                              QU(UU, xU(JV), yV, !1)
+                                              zS(SS, LS(AH), hH, !1)
                                             }
                                           }
                                 }
-                                return UU
-                              }().get(UV)) && void 0 !== eV ? eV : [],
-                              pV = null !== (xV = function() {
-                                if (!YU) {
-                                  YU = new Map;
-                                  const VV = oV("changelog");
-                                  for (const eV of hV(VV).sections) {
-                                    const xV = new Set(eV.blocks.flatMap((VV => [...yU(VV)])));
-                                    for (const JV of xV) {
-                                      const xV = {
-                                        pageId: VV.id,
-                                        anchor: eV.heading.anchor,
-                                        label: eV.heading.text
+                                return SS
+                              }().get(SH)) && void 0 !== BH ? BH : [],
+                              tH = null !== (LH = function() {
+                                if (!rS) {
+                                  rS = new Map;
+                                  const HH = NH("changelog");
+                                  for (const BH of jH(HH).sections) {
+                                    const LH = new Set(BH.blocks.flatMap((HH => [...hS(HH)])));
+                                    for (const AH of LH) {
+                                      const LH = {
+                                        pageId: HH.id,
+                                        anchor: BH.heading.anchor,
+                                        label: BH.heading.text
                                       };
-                                      QU(YU, JV, xV, !0)
+                                      zS(rS, AH, LH, !0)
                                     }
                                   }
                                 }
-                                return YU
-                              }().get(UV)) && void 0 !== xV ? xV : [];
-                            return 0 === yV.length && 0 === pV.length ? null : (0, kV.jsxs)("footer", {
+                                return rS
+                              }().get(SH)) && void 0 !== LH ? LH : [];
+                            return 0 === hH.length && 0 === tH.length ? null : (0, uH.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [yV.length > 0 && (0, kV.jsx)(rU, {
+                              children: [hH.length > 0 && (0, uH.jsx)(YS, {
                                 title: "Used in",
-                                references: yV
-                              }), pV.length > 0 && (0, kV.jsx)(rU, {
+                                references: hH
+                              }), tH.length > 0 && (0, uH.jsx)(YS, {
                                 title: "Changelog",
-                                references: pV
+                                references: tH
                               })]
                             })
                           }
 
-                          function bU(VV) {
+                          function QS(HH) {
                             let {
-                              method: eV,
-                              pageId: xV,
-                              anchor: JV,
-                              isCallback: YV
-                            } = VV;
-                            const UV = YV ? void 0 : pe().get(eV.name),
-                              yV = eV.description.length > 0 || null === UV || void 0 === UV || !UV.description ? eV.description : (0, AV.I)(UV.description);
-                            return (0, kV.jsxs)("article", {
+                              method: BH,
+                              pageId: LH,
+                              anchor: AH,
+                              isCallback: rH
+                            } = HH;
+                            const SH = rH ? void 0 : tB().get(BH.name),
+                              hH = BH.description.length > 0 || null === SH || void 0 === SH || !SH.description ? BH.description : (0, OH.D)(SH.description);
+                            return (0, uH.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, kV.jsxs)("header", {
+                              children: [(0, uH.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, kV.jsx)(nx, {
+                                children: [(0, uH.jsx)(CL, {
                                   level: 2,
-                                  text: eV.name,
-                                  anchor: JV,
+                                  text: BH.name,
+                                  anchor: AH,
                                   className: "DocsCardTitle"
-                                }), (0, kV.jsx)(qV, {
-                                  text: ZU(eV, YV),
-                                  label: YV ? "Copy handler" : "Copy call",
+                                }), (0, uH.jsx)(vH, {
+                                  text: XS(BH, rH),
+                                  label: rH ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, kV.jsx)(vU, {
-                                method: eV,
-                                isCallback: YV
-                              }), UV && null !== UV.deprecation && (0, kV.jsxs)("aside", {
+                              }), (0, uH.jsx)(GS, {
+                                method: BH,
+                                isCallback: rH
+                              }), SH && null !== SH.deprecation && (0, uH.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, kV.jsx)("strong", {
+                                children: [(0, uH.jsx)("strong", {
                                   children: "Deprecated"
-                                }), UV.deprecation && (0, kV.jsxs)(kV.Fragment, {
-                                  children: [": ", (0, kV.jsx)(Te, {
-                                    text: (pV = UV.deprecation, (0, dY.z)(pV, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, dY.l)("`\\w"), (VV => {
-                                      let [eV] = VV;
-                                      return Ze().has(eV) ? `\`${eV}\`` : eV
+                                }), SH.deprecation && (0, uH.jsxs)(uH.Fragment, {
+                                  children: [": ", (0, uH.jsx)(UB, {
+                                    text: (tH = SH.deprecation, (0, pr.o)(tH, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, pr.i)("`\\w"), (HH => {
+                                      let [BH] = HH;
+                                      return XB().has(BH) ? `\`${BH}\`` : BH
                                     })))
                                   })]
                                 })]
-                              }), yV.length > 0 && (0, kV.jsx)("div", {
+                              }), hH.length > 0 && (0, uH.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, kV.jsx)(rx, {
-                                  blocks: yV
+                                children: (0, uH.jsx)(YL, {
+                                  blocks: hH
                                 })
-                              }), eV.params.length > 0 && (0, kV.jsxs)("section", {
+                              }), BH.params.length > 0 && (0, uH.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, kV.jsx)("h3", {
+                                children: [(0, uH.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, kV.jsx)("dl", {
+                                }), (0, uH.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: eV.params.map((VV => (0, kV.jsxs)("div", {
-                                    id: `${eV.name}-${wU(VV)}`,
+                                  children: BH.params.map((HH => (0, uH.jsxs)("div", {
+                                    id: `${BH.name}-${ES(HH)}`,
                                     className: "DocsParam",
-                                    children: [(0, kV.jsxs)("dt", {
-                                      children: [(0, kV.jsx)("code", {
+                                    children: [(0, uH.jsxs)("dt", {
+                                      children: [(0, uH.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: VV.name
-                                      }), (0, kV.jsx)(Ne, {
-                                        type: VV.type
+                                        children: HH.name
+                                      }), (0, uH.jsx)(bB, {
+                                        type: HH.type
                                       })]
-                                    }), VV.description && (0, kV.jsx)("dd", {
-                                      children: (0, kV.jsx)(Te, {
-                                        text: VV.description
+                                    }), HH.description && (0, uH.jsx)("dd", {
+                                      children: (0, uH.jsx)(UB, {
+                                        text: HH.description
                                       })
                                     })]
-                                  }, VV.name)))
+                                  }, HH.name)))
                                 })]
-                              }), eV.returns && (eV.returns.type || eV.returns.description.length > 0) && (0, kV.jsxs)("section", {
+                              }), BH.returns && (BH.returns.type || BH.returns.description.length > 0) && (0, uH.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, kV.jsx)("h3", {
+                                children: [(0, uH.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, kV.jsxs)("div", {
+                                }), (0, uH.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [eV.returns.type && (0, kV.jsx)(Ne, {
-                                    type: eV.returns.type
-                                  }), eV.returns.description.length > 0 && (0, kV.jsx)("div", {
+                                  children: [BH.returns.type && (0, uH.jsx)(bB, {
+                                    type: BH.returns.type
+                                  }), BH.returns.description.length > 0 && (0, uH.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, kV.jsx)(rx, {
-                                      blocks: eV.returns.description
+                                    children: (0, uH.jsx)(YL, {
+                                      blocks: BH.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, kV.jsx)(kU, {
-                                pageId: xV,
-                                anchor: JV
+                              }), (0, uH.jsx)(uS, {
+                                pageId: LH,
+                                anchor: AH
                               })]
                             });
-                            var pV
+                            var tH
                           }
 
-                          function EU(VV) {
-                            var eV;
-                            return null !== VV.defaultValue && "undefined" !== VV.defaultValue ? VV.defaultValue : null !== (eV = VV.example) && void 0 !== eV ? eV : "value"
+                          function WS(HH) {
+                            var BH;
+                            return null !== HH.defaultValue && "undefined" !== HH.defaultValue ? HH.defaultValue : null !== (BH = HH.example) && void 0 !== BH ? BH : "value"
                           }
 
-                          function BU(VV) {
+                          function MS(HH) {
                             let {
-                              setting: eV,
-                              pageId: xV,
-                              anchor: JV,
-                              setterSnippet: YV
-                            } = VV;
-                            const UV = null === eV.defaultValue ? null : Be(eV.defaultValue);
-                            return (0, kV.jsxs)("article", {
+                              setting: BH,
+                              pageId: LH,
+                              anchor: AH,
+                              setterSnippet: rH
+                            } = HH;
+                            const SH = null === BH.defaultValue ? null : MB(BH.defaultValue);
+                            return (0, uH.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, kV.jsxs)("header", {
+                              children: [(0, uH.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, kV.jsx)(nx, {
+                                children: [(0, uH.jsx)(CL, {
                                   level: 2,
-                                  text: eV.name,
-                                  anchor: JV,
+                                  text: BH.name,
+                                  anchor: AH,
                                   className: "DocsCardTitle"
-                                }), (0, kV.jsx)(qV, {
-                                  text: YV(eV.name, EU(eV)),
+                                }), (0, uH.jsx)(vH, {
+                                  text: rH(BH.name, WS(BH)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, kV.jsxs)("dl", {
+                              }), (0, uH.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, kV.jsxs)("div", {
-                                  children: [(0, kV.jsx)("dt", {
+                                children: [(0, uH.jsxs)("div", {
+                                  children: [(0, uH.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, kV.jsx)("dd", {
-                                    children: (0, kV.jsx)(Ne, {
-                                      type: eV.type
+                                  }), (0, uH.jsx)("dd", {
+                                    children: (0, uH.jsx)(bB, {
+                                      type: BH.type
                                     })
                                   })]
-                                }), null !== eV.defaultValue && (0, kV.jsxs)("div", {
-                                  children: [(0, kV.jsx)("dt", {
+                                }), null !== BH.defaultValue && (0, uH.jsxs)("div", {
+                                  children: [(0, uH.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, kV.jsx)("dd", {
-                                    children: (0, kV.jsxs)("code", {
+                                  }), (0, uH.jsx)("dd", {
+                                    children: (0, uH.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [UV && (0, kV.jsx)(je, {
-                                        colour: UV
-                                      }), eV.defaultValue]
+                                      children: [SH && (0, uH.jsx)(xB, {
+                                        colour: SH
+                                      }), BH.defaultValue]
                                     })
                                   })]
-                                }), null !== eV.example && (0, kV.jsxs)("div", {
-                                  children: [(0, kV.jsx)("dt", {
+                                }), null !== BH.example && (0, uH.jsxs)("div", {
+                                  children: [(0, uH.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, kV.jsx)("dd", {
-                                    children: (0, kV.jsx)("code", {
+                                  }), (0, uH.jsx)("dd", {
+                                    children: (0, uH.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: eV.example
+                                      children: BH.example
                                     })
                                   })]
                                 })]
-                              }), eV.description.length > 0 && (0, kV.jsx)("div", {
+                              }), BH.description.length > 0 && (0, uH.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, kV.jsx)(rx, {
-                                  blocks: eV.description
+                                children: (0, uH.jsx)(YL, {
+                                  blocks: BH.description
                                 })
-                              }), (0, kV.jsx)(kU, {
-                                pageId: xV,
-                                anchor: JV
+                              }), (0, uH.jsx)(uS, {
+                                pageId: LH,
+                                anchor: AH
                               })]
                             })
                           }
 
-                          function jU(VV) {
+                          function xS(HH) {
                             let {
-                              section: eV
-                            } = VV;
-                            return (0, kV.jsxs)("article", {
+                              section: BH
+                            } = HH;
+                            return (0, uH.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, kV.jsx)(nx, {
+                              children: [(0, uH.jsx)(CL, {
                                 level: 2,
-                                text: eV.heading.text,
-                                anchor: eV.heading.anchor,
+                                text: BH.heading.text,
+                                anchor: BH.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, kV.jsx)("div", {
+                              }), (0, uH.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, kV.jsx)(rx, {
-                                  blocks: eV.blocks
+                                children: (0, uH.jsx)(YL, {
+                                  blocks: BH.blocks
                                 })
                               })]
                             })
                           }
 
-                          function qU(VV) {
+                          function vS(HH) {
                             let {
-                              section: eV
-                            } = VV;
-                            return (0, kV.jsxs)("section", {
+                              section: BH
+                            } = HH;
+                            return (0, uH.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, kV.jsx)(nx, {
-                                level: eV.heading.level,
-                                text: eV.heading.text,
-                                anchor: eV.heading.anchor
-                              }), (0, kV.jsx)(rx, {
-                                blocks: eV.blocks
+                              children: [(0, uH.jsx)(CL, {
+                                level: BH.heading.level,
+                                text: BH.heading.text,
+                                anchor: BH.heading.anchor
+                              }), (0, uH.jsx)(YL, {
+                                blocks: BH.blocks
                               })]
                             })
                           }
-                          const tU = {
+                          const PS = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4857,337 +4857,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function FU(VV) {
+                          function TS(HH) {
                             let {
-                              page: eV,
-                              section: xV
-                            } = VV;
-                            if ("methods" === eV.layout || "callbacks" === eV.layout) return (0, kV.jsx)(bU, {
-                              method: Px(xV),
-                              pageId: eV.id,
-                              anchor: xV.heading.anchor,
-                              isCallback: "callbacks" === eV.layout
+                              page: BH,
+                              section: LH
+                            } = HH;
+                            if ("methods" === BH.layout || "callbacks" === BH.layout) return (0, uH.jsx)(QS, {
+                              method: VL(LH),
+                              pageId: BH.id,
+                              anchor: LH.heading.anchor,
+                              isCallback: "callbacks" === BH.layout
                             });
-                            if ("settings" === eV.layout) {
-                              const VV = function(VV) {
-                                const eV = {
-                                  name: VV.heading.text,
+                            if ("settings" === BH.layout) {
+                              const HH = function(HH) {
+                                const BH = {
+                                  name: HH.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const JV of VV.blocks) {
-                                  var xV;
-                                  if (Tx(JV)) continue;
-                                  const VV = "paragraph" === JV.kind ? JV.text.match(Ax) : null;
-                                  if (!VV) {
-                                    eV.description.push(JV);
+                                for (const AH of HH.blocks) {
+                                  var LH;
+                                  if (UL(AH)) continue;
+                                  const HH = "paragraph" === AH.kind ? AH.text.match(OL) : null;
+                                  if (!HH) {
+                                    BH.description.push(AH);
                                     continue
                                   }
-                                  const YV = null !== (xV = Fx(VV[2])) && void 0 !== xV ? xV : VV[2];
-                                  "Type" === VV[1] ? eV.type = YV : "Default" === VV[1] ? eV.defaultValue = YV : "" !== YV && (eV.example = YV)
+                                  const rH = null !== (LH = TL(HH[2])) && void 0 !== LH ? LH : HH[2];
+                                  "Type" === HH[1] ? BH.type = rH : "Default" === HH[1] ? BH.defaultValue = rH : "" !== rH && (BH.example = rH)
                                 }
-                                return eV.type ? eV : null
-                              }(xV);
-                              if (VV) return (0, kV.jsx)(BU, {
-                                setting: VV,
-                                pageId: eV.id,
-                                anchor: xV.heading.anchor,
-                                setterSnippet: eV.setterSnippet
+                                return BH.type ? BH : null
+                              }(LH);
+                              if (HH) return (0, uH.jsx)(MS, {
+                                setting: HH,
+                                pageId: BH.id,
+                                anchor: LH.heading.anchor,
+                                setterSnippet: BH.setterSnippet
                               })
                             }
-                            return "snippets" === eV.layout ? (0, kV.jsx)(jU, {
-                              section: xV
-                            }) : "changelog" === eV.layout ? (0, kV.jsxs)("section", {
+                            return "snippets" === BH.layout ? (0, uH.jsx)(xS, {
+                              section: LH
+                            }) : "changelog" === BH.layout ? (0, uH.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, kV.jsx)("div", {
+                              children: [(0, uH.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, kV.jsx)(nx, {
+                                children: (0, uH.jsx)(CL, {
                                   level: 2,
-                                  text: xV.heading.text,
-                                  anchor: xV.heading.anchor
+                                  text: LH.heading.text,
+                                  anchor: LH.heading.anchor
                                 })
-                              }), (0, kV.jsx)("div", {
+                              }), (0, uH.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, kV.jsx)(rx, {
-                                  blocks: Nx(xV.blocks)
+                                children: (0, uH.jsx)(YL, {
+                                  blocks: bL(LH.blocks)
                                 })
                               })]
-                            }) : eV.gallery ? (0, kV.jsxs)("section", {
+                            }) : BH.gallery ? (0, uH.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, kV.jsx)(nx, {
-                                level: xV.heading.level,
-                                text: xV.heading.text,
-                                anchor: xV.heading.anchor
-                              }), (0, kV.jsx)(XJ, {
-                                kind: eV.gallery,
-                                content: hV(eV),
-                                blocks: xV.blocks
+                              children: [(0, uH.jsx)(CL, {
+                                level: LH.heading.level,
+                                text: LH.heading.text,
+                                anchor: LH.heading.anchor
+                              }), (0, uH.jsx)(kA, {
+                                kind: BH.gallery,
+                                content: jH(BH),
+                                blocks: LH.blocks
                               })]
-                            }) : (0, kV.jsx)(qU, {
-                              section: xV
+                            }) : (0, uH.jsx)(vS, {
+                              section: LH
                             })
                           }
 
-                          function TU(VV) {
+                          function US(HH) {
                             let {
-                              page: eV,
-                              onTocChange: xV
-                            } = VV;
-                            const YV = hV(eV),
-                              [UV, yV] = (0, JV.useState)(""),
-                              pV = "article" !== eV.layout,
-                              QV = Ex(eV.gallery) ? eV.gallery : null,
-                              nV = null !== QV,
-                              wV = UV.trim().toLowerCase(),
-                              ZV = (0, JV.useRef)(null),
-                              vV = (0, JV.useCallback)((VV => {
-                                var eV;
-                                null === (eV = ZV.current) || void 0 === eV || eV.preview(VV)
+                              page: BH,
+                              onTocChange: LH
+                            } = HH;
+                            const rH = jH(BH),
+                              [SH, hH] = (0, AH.useState)(""),
+                              tH = "article" !== BH.layout,
+                              zH = WL(BH.gallery) ? BH.gallery : null,
+                              CH = null !== zH,
+                              EH = SH.trim().toLowerCase(),
+                              XH = (0, AH.useRef)(null),
+                              GH = (0, AH.useCallback)((HH => {
+                                var BH;
+                                null === (BH = XH.current) || void 0 === BH || BH.preview(HH)
                               }), []),
-                              rV = (0, JV.useMemo)((() => {
-                                if (!eV.hasParticlePlayground) return [];
-                                const VV = Gx(YV.intro).find((VV => "names" === VV.kind && !VV.names.some((VV => null !== cx(VV.name)))));
-                                return "names" === (null === VV || void 0 === VV ? void 0 : VV.kind) ? VV.names.map((VV => VV.name)) : []
-                              }), [eV, YV]),
-                              bV = (0, JV.useMemo)((() => {
-                                if (!eV.hasTextPlayground) return [];
-                                const VV = YV.sections.flatMap((VV => VV.blocks.flatMap((VV => {
-                                  var eV;
-                                  return (null !== (eV = zx(VV)) && void 0 !== eV ? eV : []).flatMap((VV => ce(VV.name) ? [VV.name] : []))
+                              YH = (0, AH.useMemo)((() => {
+                                if (!BH.hasParticlePlayground) return [];
+                                const HH = IL(rH.intro).find((HH => "names" === HH.kind && !HH.names.some((HH => null !== RL(HH.name)))));
+                                return "names" === (null === HH || void 0 === HH ? void 0 : HH.kind) ? HH.names.map((HH => HH.name)) : []
+                              }), [BH, rH]),
+                              QH = (0, AH.useMemo)((() => {
+                                if (!BH.hasTextPlayground) return [];
+                                const HH = rH.sections.flatMap((HH => HH.blocks.flatMap((HH => {
+                                  var BH;
+                                  return (null !== (BH = oL(HH)) && void 0 !== BH ? BH : []).flatMap((HH => RB(HH.name) ? [HH.name] : []))
                                 }))));
-                                return [...new Set(VV)]
-                              }), [eV, YV]),
-                              EV = (0, JV.useMemo)((() => wV ? YV.sections.filter((VV => function(VV, eV) {
-                                return !!VV.heading.text.toLowerCase().includes(eV) || VV.blocks.some((VV => (0, AV.l)(VV).toLowerCase().includes(eV)))
-                              }(VV, wV))) : YV.sections), [YV, wV]),
-                              BV = (0, JV.useMemo)((() => function(VV, eV) {
-                                return "article" !== VV.layout ? eV.map((VV => ({
-                                  anchor: VV.heading.anchor,
-                                  text: VV.heading.text,
+                                return [...new Set(HH)]
+                              }), [BH, rH]),
+                              WH = (0, AH.useMemo)((() => EH ? rH.sections.filter((HH => function(HH, BH) {
+                                return !!HH.heading.text.toLowerCase().includes(BH) || HH.blocks.some((HH => (0, OH.f)(HH).toLowerCase().includes(BH)))
+                              }(HH, EH))) : rH.sections), [rH, EH]),
+                              MH = (0, AH.useMemo)((() => function(HH, BH) {
+                                return "article" !== HH.layout ? BH.map((HH => ({
+                                  anchor: HH.heading.anchor,
+                                  text: HH.heading.text,
                                   level: 2
-                                }))) : eV.flatMap((VV => {
-                                  const eV = VV.blocks.flatMap((VV => "heading" === VV.kind && 3 === VV.level ? [{
-                                    anchor: VV.anchor,
-                                    text: VV.text,
+                                }))) : BH.flatMap((HH => {
+                                  const BH = HH.blocks.flatMap((HH => "heading" === HH.kind && 3 === HH.level ? [{
+                                    anchor: HH.anchor,
+                                    text: HH.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: VV.heading.anchor,
-                                    text: VV.heading.text,
+                                    anchor: HH.heading.anchor,
+                                    text: HH.heading.text,
                                     level: 2
-                                  }, ...eV]
+                                  }, ...BH]
                                 }))
-                              }(eV, EV)), [eV, EV]);
-                            return (0, JV.useEffect)((() => {
-                              xV(BV)
-                            }), [BV, xV]), (0, kV.jsxs)("article", {
+                              }(BH, WH)), [BH, WH]);
+                            return (0, AH.useEffect)((() => {
+                              LH(MH)
+                            }), [MH, LH]), (0, uH.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, kV.jsxs)("header", {
+                              children: [(0, uH.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, kV.jsx)("h1", {
+                                children: [(0, uH.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: YV.title || eV.title
-                                }), (0, kV.jsx)("p", {
+                                  children: rH.title || BH.title
+                                }), (0, uH.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: eV.summary
-                                }), (0, kV.jsx)(sJ, {
-                                  page: eV
-                                }), pV && (0, kV.jsx)("div", {
+                                  children: BH.summary
+                                }), (0, uH.jsx)(sA, {
+                                  page: BH
+                                }), tH && (0, uH.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, kV.jsxs)("span", {
-                                    children: [(0, kV.jsx)("strong", {
-                                      children: YV.sections.length
-                                    }), " ", tU[eV.layout]]
+                                  children: (0, uH.jsxs)("span", {
+                                    children: [(0, uH.jsx)("strong", {
+                                      children: rH.sections.length
+                                    }), " ", PS[BH.layout]]
                                   })
                                 })]
-                              }), "" === eV.slug && (0, kV.jsx)(zJ, {}), QV && (0, kV.jsx)(gJ, {
-                                kind: QV
-                              }, QV), eV.hasParticlePlayground && (0, kV.jsx)(QY, {
-                                ref: ZV,
-                                textures: rV
-                              }), !nV && YV.intro.length > 0 && (0, kV.jsx)("div", {
+                              }), "" === BH.slug && (0, uH.jsx)(oA, {}), zH && (0, uH.jsx)(KA, {
+                                kind: zH
+                              }, zH), BH.hasParticlePlayground && (0, uH.jsx)(zr, {
+                                ref: XH,
+                                textures: YH
+                              }), !CH && rH.intro.length > 0 && (0, uH.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: eV.gallery ? (0, kV.jsx)(BJ.Provider, {
-                                  value: eV.hasParticlePlayground ? vV : null,
-                                  children: (0, kV.jsx)(XJ, {
-                                    kind: eV.gallery,
-                                    content: YV,
-                                    blocks: YV.intro
+                                children: BH.gallery ? (0, uH.jsx)(MA.Provider, {
+                                  value: BH.hasParticlePlayground ? GH : null,
+                                  children: (0, uH.jsx)(kA, {
+                                    kind: BH.gallery,
+                                    content: rH,
+                                    blocks: rH.intro
                                   })
-                                }) : (0, kV.jsx)(rx, {
-                                  blocks: Nx(YV.intro)
+                                }) : (0, uH.jsx)(YL, {
+                                  blocks: bL(rH.intro)
                                 })
-                              }), eV.hasTextPlayground && (0, kV.jsx)(AY, {
-                                fontAwesomeIcons: bV
-                              }), eV.hasVoicePlayground && (0, kV.jsx)(IY, {}), eV.childPageIds && (0, kV.jsx)(zJ, {
-                                cards: eV.childPageIds.map((VV => ({
-                                  pageId: VV
+                              }), BH.hasTextPlayground && (0, uH.jsx)(Or, {
+                                fontAwesomeIcons: QH
+                              }), BH.hasVoicePlayground && (0, uH.jsx)(ir, {}), BH.childPageIds && (0, uH.jsx)(oA, {
+                                cards: BH.childPageIds.map((HH => ({
+                                  pageId: HH
                                 }))),
-                                label: eV.title
-                              }), pV && (0, kV.jsx)(qx, {
+                                label: BH.title
+                              }), tH && (0, uH.jsx)(vL, {
                                 className: "DocsFilterBar",
-                                value: UV,
-                                placeholder: `Filter ${YV.sections.length} ${tU[eV.layout]}\u2026`,
-                                label: `Filter ${tU[eV.layout]}`,
-                                onChange: yV,
-                                count: wV ? {
-                                  visible: EV.length,
-                                  total: YV.sections.length
+                                value: SH,
+                                placeholder: `Filter ${rH.sections.length} ${PS[BH.layout]}\u2026`,
+                                label: `Filter ${PS[BH.layout]}`,
+                                onChange: hH,
+                                count: EH ? {
+                                  visible: WH.length,
+                                  total: rH.sections.length
                                 } : null
-                              }), !nV && (0, kV.jsxs)("div", {
-                                className: `DocsSections Layout-${eV.layout}`,
-                                children: [EV.map((VV => (0, kV.jsx)(FU, {
-                                  page: eV,
-                                  section: VV
-                                }, VV.heading.anchor))), 0 === EV.length && (0, kV.jsxs)("p", {
+                              }), !CH && (0, uH.jsxs)("div", {
+                                className: `DocsSections Layout-${BH.layout}`,
+                                children: [WH.map((HH => (0, uH.jsx)(TS, {
+                                  page: BH,
+                                  section: HH
+                                }, HH.heading.anchor))), 0 === WH.length && (0, uH.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", tU[eV.layout], " match \u201c", UV, "\u201d."]
+                                  children: ["No ", PS[BH.layout], " match \u201c", SH, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const PU = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const VS = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function AU(VV) {
+                          function OS(HH) {
                             let {
-                              entry: eV,
-                              isActive: xV,
-                              onNavigate: JV,
-                              label: YV,
-                              children: yV
-                            } = VV;
-                            return (0, kV.jsx)("a", {
-                              href: `#${eV.anchor}`,
-                              "aria-label": YV,
-                              className: UV()(`Level${eV.level}`, {
-                                Active: xV
+                              entry: BH,
+                              isActive: LH,
+                              onNavigate: AH,
+                              label: rH,
+                              children: hH
+                            } = HH;
+                            return (0, uH.jsx)("a", {
+                              href: `#${BH.anchor}`,
+                              "aria-label": rH,
+                              className: SH()(`Level${BH.level}`, {
+                                Active: LH
                               }),
-                              "aria-current": xV ? "location" : void 0,
-                              onClick: VV => {
-                                VV.preventDefault(), JV(eV.anchor)
+                              "aria-current": LH ? "location" : void 0,
+                              onClick: HH => {
+                                HH.preventDefault(), AH(BH.anchor)
                               },
-                              children: yV
+                              children: hH
                             })
                           }
 
-                          function NU(VV) {
+                          function bS(HH) {
                             let {
-                              toc: eV,
-                              activeAnchor: xV,
-                              onNavigate: YV
-                            } = VV;
-                            const yV = Math.max(0, eV.findIndex((VV => VV.anchor === xV))),
-                              pV = (0, JV.useRef)(null),
-                              QV = (0, JV.useRef)(!1);
-                            (0, JV.useEffect)((() => {
-                              var VV, xV;
-                              const JV = null === (VV = pV.current) || void 0 === VV ? void 0 : VV.closest(".DocsToc"),
-                                YV = null === (xV = pV.current) || void 0 === xV ? void 0 : xV.querySelector(".DocsTimelineNotch.Active");
-                              if (!JV || !YV) return;
-                              let UV = 0;
-                              if (yV === eV.length - 1) UV = JV.scrollHeight;
-                              else if (yV > 0) {
-                                const VV = JV.getBoundingClientRect(),
-                                  eV = YV.getBoundingClientRect();
-                                UV = JV.scrollTop + eV.top + eV.height / 2 - (VV.top + JV.clientHeight / 2)
+                              toc: BH,
+                              activeAnchor: LH,
+                              onNavigate: rH
+                            } = HH;
+                            const hH = Math.max(0, BH.findIndex((HH => HH.anchor === LH))),
+                              tH = (0, AH.useRef)(null),
+                              zH = (0, AH.useRef)(!1);
+                            (0, AH.useEffect)((() => {
+                              var HH, LH;
+                              const AH = null === (HH = tH.current) || void 0 === HH ? void 0 : HH.closest(".DocsToc"),
+                                rH = null === (LH = tH.current) || void 0 === LH ? void 0 : LH.querySelector(".DocsTimelineNotch.Active");
+                              if (!AH || !rH) return;
+                              let SH = 0;
+                              if (hH === BH.length - 1) SH = AH.scrollHeight;
+                              else if (hH > 0) {
+                                const HH = AH.getBoundingClientRect(),
+                                  BH = rH.getBoundingClientRect();
+                                SH = AH.scrollTop + BH.top + BH.height / 2 - (HH.top + AH.clientHeight / 2)
                               }
-                              JV.scrollTo({
-                                top: UV,
-                                behavior: QV.current ? "smooth" : "auto"
-                              }), QV.current = !0
-                            }), [yV, eV.length]);
-                            const nV = [];
-                            return eV.forEach(((VV, eV) => {
-                              var xV, JV, YV;
-                              const UV = function(VV) {
-                                  const eV = VV.trim().match(PU);
-                                  return eV ? {
-                                    day: eV[1],
-                                    month: `${eV[2]} ${eV[3]}`
+                              AH.scrollTo({
+                                top: SH,
+                                behavior: zH.current ? "smooth" : "auto"
+                              }), zH.current = !0
+                            }), [hH, BH.length]);
+                            const CH = [];
+                            return BH.forEach(((HH, BH) => {
+                              var LH, AH, rH;
+                              const SH = function(HH) {
+                                  const BH = HH.trim().match(VS);
+                                  return BH ? {
+                                    day: BH[1],
+                                    month: `${BH[2]} ${BH[3]}`
                                   } : null
-                                }(VV.text),
-                                yV = null !== (xV = null === UV || void 0 === UV ? void 0 : UV.month) && void 0 !== xV ? xV : null;
-                              null !== yV && (null === (JV = nV.at(-1)) || void 0 === JV ? void 0 : JV.month) === yV || nV.push({
-                                month: yV,
+                                }(HH.text),
+                                hH = null !== (LH = null === SH || void 0 === SH ? void 0 : SH.month) && void 0 !== LH ? LH : null;
+                              null !== hH && (null === (AH = CH.at(-1)) || void 0 === AH ? void 0 : AH.month) === hH || CH.push({
+                                month: hH,
                                 entries: []
-                              }), nV.at(-1).entries.push({
-                                entry: VV,
-                                day: null !== (YV = null === UV || void 0 === UV ? void 0 : UV.day) && void 0 !== YV ? YV : null,
-                                index: eV
+                              }), CH.at(-1).entries.push({
+                                entry: HH,
+                                day: null !== (rH = null === SH || void 0 === SH ? void 0 : SH.day) && void 0 !== rH ? rH : null,
+                                index: BH
                               })
-                            })), (0, kV.jsx)("ol", {
-                              ref: pV,
+                            })), (0, uH.jsx)("ol", {
+                              ref: tH,
                               className: "DocsTimeline",
-                              children: nV.map((VV => {
+                              children: CH.map((HH => {
                                 let {
-                                  month: eV,
-                                  entries: xV
-                                } = VV;
-                                return (0, kV.jsxs)("li", {
+                                  month: BH,
+                                  entries: LH
+                                } = HH;
+                                return (0, uH.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [eV && (0, kV.jsx)("span", {
+                                  children: [BH && (0, uH.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: eV
-                                  }), (0, kV.jsx)("ol", {
-                                    children: xV.map((VV => {
+                                    children: BH
+                                  }), (0, uH.jsx)("ol", {
+                                    children: LH.map((HH => {
                                       let {
-                                        entry: eV,
-                                        day: xV,
-                                        index: JV
-                                      } = VV;
-                                      return (0, kV.jsx)("li", {
-                                        className: UV()("DocsTimelineNotch", {
-                                          Passed: JV < yV,
-                                          Active: JV === yV
+                                        entry: BH,
+                                        day: LH,
+                                        index: AH
+                                      } = HH;
+                                      return (0, uH.jsx)("li", {
+                                        className: SH()("DocsTimelineNotch", {
+                                          Passed: AH < hH,
+                                          Active: AH === hH
                                         }),
-                                        children: (0, kV.jsx)(AU, {
-                                          entry: eV,
-                                          isActive: JV === yV,
-                                          onNavigate: YV,
-                                          label: eV.text,
-                                          children: (0, kV.jsx)("span", {
+                                        children: (0, uH.jsx)(OS, {
+                                          entry: BH,
+                                          isActive: AH === hH,
+                                          onNavigate: rH,
+                                          label: BH.text,
+                                          children: (0, uH.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== xV && void 0 !== xV ? xV : eV.text
+                                            children: null !== LH && void 0 !== LH ? LH : BH.text
                                           })
                                         })
-                                      }, eV.anchor)
+                                      }, BH.anchor)
                                     }))
                                   })]
-                                }, xV[0].entry.anchor)
+                                }, LH[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function XU(VV) {
+                          function kS(HH) {
                             let {
-                              isChangelog: eV,
-                              toc: xV,
-                              activeAnchor: JV,
-                              onNavigate: YV
-                            } = VV;
-                            return 0 === xV.length ? null : (0, kV.jsxs)(kV.Fragment, {
-                              children: [(0, kV.jsx)("div", {
+                              isChangelog: BH,
+                              toc: LH,
+                              activeAnchor: AH,
+                              onNavigate: rH
+                            } = HH;
+                            return 0 === LH.length ? null : (0, uH.jsxs)(uH.Fragment, {
+                              children: [(0, uH.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: eV ? "Updates" : "On this page"
-                              }), eV ? (0, kV.jsx)(NU, {
-                                toc: xV,
-                                activeAnchor: JV,
-                                onNavigate: YV
-                              }) : (0, kV.jsx)("ul", {
-                                children: xV.map((VV => (0, kV.jsx)("li", {
-                                  children: (0, kV.jsx)(AU, {
-                                    entry: VV,
-                                    isActive: VV.anchor === JV,
-                                    onNavigate: YV,
-                                    children: VV.text.replace(/`/g, "")
+                                children: BH ? "Updates" : "On this page"
+                              }), BH ? (0, uH.jsx)(bS, {
+                                toc: LH,
+                                activeAnchor: AH,
+                                onNavigate: rH
+                              }) : (0, uH.jsx)("ul", {
+                                children: LH.map((HH => (0, uH.jsx)("li", {
+                                  children: (0, uH.jsx)(OS, {
+                                    entry: HH,
+                                    isActive: HH.anchor === AH,
+                                    onNavigate: rH,
+                                    children: HH.text.replace(/`/g, "")
                                   })
-                                }, VV.anchor)))
+                                }, HH.anchor)))
                               })]
                             })
                           }
-                          const MU = {
+                          const mS = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5195,7 +5195,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            zU = {
+                            oS = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5203,1086 +5203,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            GU = 20,
-                            WU = 10,
-                            RU = 40,
-                            gU = 120;
-                          let DU;
+                            IS = 20,
+                            fS = 10,
+                            lS = 40,
+                            KS = 120;
+                          let cS;
 
-                          function iU(VV) {
-                            const eV = VV.gallery;
-                            if (!eV) return [];
-                            if (Ex(eV)) return function(VV) {
-                              return jx(VV).entries.map((VV => VV.name))
-                            }(eV).map((xV => ({
-                              page: VV,
-                              anchor: Rx(eV, xV),
-                              title: xV,
-                              kind: zU[eV],
+                          function eS(HH) {
+                            const BH = HH.gallery;
+                            if (!BH) return [];
+                            if (WL(BH)) return function(HH) {
+                              return xL(HH).entries.map((HH => HH.name))
+                            }(BH).map((LH => ({
+                              page: HH,
+                              anchor: lL(BH, LH),
+                              title: LH,
+                              kind: oS[BH],
                               text: "",
-                              listedUnder: VV.title
+                              listedUnder: HH.title
                             })));
-                            const xV = hV(VV);
-                            return (0, AV.A)(xV).flatMap((JV => {
-                              const YV = JV.heading ? `${VV.title} \u203a ${JV.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : VV.title;
-                              return Dx(eV, xV, JV.blocks).flatMap((xV => "names" !== xV.kind ? [] : xV.names.map((JV => {
-                                const UV = xV.isSongs ? "Song" : zU[eV];
+                            const LH = jH(HH);
+                            return (0, OH.v)(LH).flatMap((AH => {
+                              const rH = AH.heading ? `${HH.title} \u203a ${AH.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : HH.title;
+                              return cL(BH, LH, AH.blocks).flatMap((LH => "names" !== LH.kind ? [] : LH.names.map((AH => {
+                                const SH = LH.isSongs ? "Song" : oS[BH];
                                 return {
-                                  page: VV,
-                                  anchor: JV.anchor,
-                                  title: JV.name,
-                                  kind: UV,
+                                  page: HH,
+                                  anchor: AH.anchor,
+                                  title: AH.name,
+                                  kind: SH,
                                   text: "",
-                                  listedUnder: YV
+                                  listedUnder: rH
                                 }
                               }))))
                             }))
                           }
 
-                          function CU(VV, eV, xV) {
-                            const JV = VV.title.toLowerCase();
-                            let YV = 0;
-                            if (JV === eV) YV = 100;
-                            else if (JV.startsWith(eV)) YV = 80;
-                            else if (JV.includes(eV)) YV = 60;
-                            else if (xV.every((VV => JV.includes(VV)))) YV = 45;
+                          function qS(HH, BH, LH) {
+                            const AH = HH.title.toLowerCase();
+                            let rH = 0;
+                            if (AH === BH) rH = 100;
+                            else if (AH.startsWith(BH)) rH = 80;
+                            else if (AH.includes(BH)) rH = 60;
+                            else if (LH.every((HH => AH.includes(HH)))) rH = 45;
                             else {
-                              if (!VV.text.toLowerCase().includes(eV)) return 0;
-                              YV = 20
+                              if (!HH.text.toLowerCase().includes(BH)) return 0;
+                              rH = 20
                             }
-                            return YV - Math.min(JV.length / 10, 9) + ("Page" === VV.kind ? 8 : "Method" === VV.kind ? 3 : 0) - (VV.listedUnder ? GU : 0)
+                            return rH - Math.min(AH.length / 10, 9) + ("Page" === HH.kind ? 8 : "Method" === HH.kind ? 3 : 0) - (HH.listedUnder ? IS : 0)
                           }
 
-                          function aU(VV, eV) {
-                            const xV = VV.toLowerCase().indexOf(eV),
-                              JV = Math.max(0, xV - gU / 3);
-                            return `${JV>0?"\u2026":""}${VV.slice(JV,JV+gU)}${JV+gU<VV.length?"\u2026":""}`
+                          function gS(HH, BH) {
+                            const LH = HH.toLowerCase().indexOf(BH),
+                              AH = Math.max(0, LH - KS / 3);
+                            return `${AH>0?"\u2026":""}${HH.slice(AH,AH+KS)}${AH+KS<HH.length?"\u2026":""}`
                           }
 
-                          function oU(VV) {
+                          function NS(HH) {
                             let {
-                              text: eV,
-                              query: xV
-                            } = VV;
-                            const JV = xV ? eV.toLowerCase().indexOf(xV) : -1;
-                            return -1 === JV ? (0, kV.jsx)(kV.Fragment, {
-                              children: eV
-                            }) : (0, kV.jsxs)(kV.Fragment, {
-                              children: [eV.slice(0, JV), (0, kV.jsx)("mark", {
-                                children: eV.slice(JV, JV + xV.length)
-                              }), eV.slice(JV + xV.length)]
+                              text: BH,
+                              query: LH
+                            } = HH;
+                            const AH = LH ? BH.toLowerCase().indexOf(LH) : -1;
+                            return -1 === AH ? (0, uH.jsx)(uH.Fragment, {
+                              children: BH
+                            }) : (0, uH.jsxs)(uH.Fragment, {
+                              children: [BH.slice(0, AH), (0, uH.jsx)("mark", {
+                                children: BH.slice(AH, AH + LH.length)
+                              }), BH.slice(AH + LH.length)]
                             })
                           }
 
-                          function cU(VV) {
+                          function RS(HH) {
                             let {
-                              basePath: eV,
-                              onClose: xV
-                            } = VV;
-                            const YV = (0, pV.v)(),
-                              [yV, QV] = (0, JV.useState)(""),
-                              [nV, wV] = (0, JV.useState)(0),
-                              ZV = (0, JV.useRef)(null),
-                              vV = (0, JV.useRef)(null),
-                              rV = yV.trim().toLowerCase(),
-                              bV = (0, JV.useMemo)((() => {
-                                const VV = (DU || (DU = CV.flatMap((VV => {
-                                  const eV = hV(VV);
+                              basePath: BH,
+                              onClose: LH
+                            } = HH;
+                            const rH = (0, tH.u)(),
+                              [hH, zH] = (0, AH.useState)(""),
+                              [CH, EH] = (0, AH.useState)(0),
+                              XH = (0, AH.useRef)(null),
+                              GH = (0, AH.useRef)(null),
+                              YH = hH.trim().toLowerCase(),
+                              QH = (0, AH.useMemo)((() => {
+                                const HH = (cS || (cS = qH.flatMap((HH => {
+                                  const BH = jH(HH);
                                   return [{
-                                    page: VV,
+                                    page: HH,
                                     anchor: "",
-                                    title: VV.title,
+                                    title: HH.title,
                                     kind: "Page",
-                                    text: VV.summary
-                                  }, ...eV.sections.flatMap((eV => {
-                                    const xV = eV.blocks.filter((VV => "paragraph" === VV.kind)).map(AV.l).join(" ").replace(/[`*]/g, ""),
-                                      JV = {
-                                        page: VV,
-                                        anchor: eV.heading.anchor,
-                                        title: eV.heading.text.replace(/`/g, ""),
-                                        kind: MU[VV.layout],
-                                        text: xV
+                                    text: HH.summary
+                                  }, ...BH.sections.flatMap((BH => {
+                                    const LH = BH.blocks.filter((HH => "paragraph" === HH.kind)).map(OH.f).join(" ").replace(/[`*]/g, ""),
+                                      AH = {
+                                        page: HH,
+                                        anchor: BH.heading.anchor,
+                                        title: BH.heading.text.replace(/`/g, ""),
+                                        kind: mS[HH.layout],
+                                        text: LH
                                       },
-                                      YV = eV.blocks.flatMap((eV => "article" === VV.layout && "heading" === eV.kind && 3 === eV.level ? [{
-                                        page: VV,
-                                        anchor: eV.anchor,
-                                        title: eV.text.replace(/`/g, ""),
+                                      rH = BH.blocks.flatMap((BH => "article" === HH.layout && "heading" === BH.kind && 3 === BH.level ? [{
+                                        page: HH,
+                                        anchor: BH.anchor,
+                                        title: BH.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: JV.title
+                                        text: AH.title
                                       }] : []));
-                                    return [JV, ...YV]
-                                  })), ...iU(VV)]
-                                }))), DU);
-                                if (!rV) return VV.filter((VV => "Page" === VV.kind));
-                                const eV = rV.split(/\s+/);
-                                let xV = 0;
-                                return VV.map((VV => ({
-                                  entry: VV,
-                                  score: CU(VV, rV, eV)
-                                }))).filter((VV => VV.score > 0)).sort(((VV, eV) => eV.score - VV.score)).filter((VV => !VV.entry.listedUnder || (xV++, xV <= WU))).slice(0, RU).map((VV => VV.entry))
-                              }), [rV]);
-                            (0, JV.useEffect)((() => {
-                              wV(0)
-                            }), [rV]), (0, JV.useEffect)((() => {
-                              const VV = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [AH, ...rH]
+                                  })), ...eS(HH)]
+                                }))), cS);
+                                if (!YH) return HH.filter((HH => "Page" === HH.kind));
+                                const BH = YH.split(/\s+/);
+                                let LH = 0;
+                                return HH.map((HH => ({
+                                  entry: HH,
+                                  score: qS(HH, YH, BH)
+                                }))).filter((HH => HH.score > 0)).sort(((HH, BH) => BH.score - HH.score)).filter((HH => !HH.entry.listedUnder || (LH++, LH <= fS))).slice(0, lS).map((HH => HH.entry))
+                              }), [YH]);
+                            (0, AH.useEffect)((() => {
+                              EH(0)
+                            }), [YH]), (0, AH.useEffect)((() => {
+                              const HH = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === VV || void 0 === VV || VV.focus()
+                                null === HH || void 0 === HH || HH.focus()
                               }
-                            }), []), (0, JV.useEffect)((() => {
-                              var VV, eV;
-                              null === (VV = ZV.current) || void 0 === VV || null === (eV = VV.querySelector(".Active")) || void 0 === eV || eV.scrollIntoView({
+                            }), []), (0, AH.useEffect)((() => {
+                              var HH, BH;
+                              null === (HH = XH.current) || void 0 === HH || null === (BH = HH.querySelector(".Active")) || void 0 === BH || BH.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [nV]);
-                            const BV = VV => {
-                              YV(mV(eV, VV.page, VV.anchor)), xV()
+                            }), [CH]);
+                            const MH = HH => {
+                              rH(wH(BH, HH.page, HH.anchor)), LH()
                             };
-                            return (0, kV.jsx)("div", {
+                            return (0, uH.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: VV => {
-                                VV.target === VV.currentTarget && xV()
+                              onMouseDown: HH => {
+                                HH.target === HH.currentTarget && LH()
                               },
-                              children: (0, kV.jsxs)("div", {
+                              children: (0, uH.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: VV => {
-                                  VV.target !== vV.current && VV.preventDefault()
+                                onMouseDown: HH => {
+                                  HH.target !== GH.current && HH.preventDefault()
                                 },
-                                onKeyDown: VV => {
-                                  if ("Escape" === VV.key) xV();
-                                  else if ("Tab" === VV.key) {
-                                    var eV;
-                                    VV.preventDefault(), null === (eV = vV.current) || void 0 === eV || eV.focus()
+                                onKeyDown: HH => {
+                                  if ("Escape" === HH.key) LH();
+                                  else if ("Tab" === HH.key) {
+                                    var BH;
+                                    HH.preventDefault(), null === (BH = GH.current) || void 0 === BH || BH.focus()
                                   }
                                 },
-                                children: [(0, kV.jsxs)("div", {
+                                children: [(0, uH.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, kV.jsx)(EV, {
+                                  children: [(0, uH.jsx)(WH, {
                                     name: "magnifying-glass"
-                                  }), (0, kV.jsx)("input", {
-                                    ref: vV,
+                                  }), (0, uH.jsx)("input", {
+                                    ref: GH,
                                     autoFocus: !0,
-                                    value: yV,
+                                    value: hH,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": bV.length > 0 ? `DocsSearchResult-${nV}` : void 0,
-                                    onChange: VV => {
-                                      QV(VV.target.value)
+                                    "aria-activedescendant": QH.length > 0 ? `DocsSearchResult-${CH}` : void 0,
+                                    onChange: HH => {
+                                      zH(HH.target.value)
                                     },
-                                    onKeyDown: VV => {
-                                      if ("ArrowDown" === VV.key || "ArrowUp" === VV.key) {
-                                        VV.preventDefault();
-                                        const eV = "ArrowDown" === VV.key ? 1 : -1;
-                                        wV((nV + eV + bV.length) % Math.max(bV.length, 1))
-                                      } else "Enter" === VV.key && bV[nV] && BV(bV[nV])
+                                    onKeyDown: HH => {
+                                      if ("ArrowDown" === HH.key || "ArrowUp" === HH.key) {
+                                        HH.preventDefault();
+                                        const BH = "ArrowDown" === HH.key ? 1 : -1;
+                                        EH((CH + BH + QH.length) % Math.max(QH.length, 1))
+                                      } else "Enter" === HH.key && QH[CH] && MH(QH[CH])
                                     }
-                                  }), (0, kV.jsx)("kbd", {
+                                  }), (0, uH.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, kV.jsxs)("ul", {
+                                }), (0, uH.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: ZV,
+                                  ref: XH,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!rV && (0, kV.jsx)("li", {
+                                  children: [!YH && (0, uH.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), bV.map(((VV, eV) => {
-                                    var xV;
-                                    return (0, kV.jsxs)("li", {
-                                      id: `DocsSearchResult-${eV}`,
+                                  }), QH.map(((HH, BH) => {
+                                    var LH;
+                                    return (0, uH.jsxs)("li", {
+                                      id: `DocsSearchResult-${BH}`,
                                       role: "option",
-                                      "aria-selected": eV === nV,
-                                      className: UV()("DocsSearchResult", {
-                                        Active: eV === nV
+                                      "aria-selected": BH === CH,
+                                      className: SH()("DocsSearchResult", {
+                                        Active: BH === CH
                                       }),
                                       onMouseMove: () => {
-                                        wV(eV)
+                                        EH(BH)
                                       },
                                       onClick: () => {
-                                        BV(VV)
+                                        MH(HH)
                                       },
-                                      children: [(0, kV.jsx)(EV, {
-                                        name: VV.page.icon
-                                      }), (0, kV.jsxs)("div", {
+                                      children: [(0, uH.jsx)(WH, {
+                                        name: HH.page.icon
+                                      }), (0, uH.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, kV.jsx)("div", {
+                                        children: [(0, uH.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, kV.jsx)(oU, {
-                                            text: VV.title,
-                                            query: rV
+                                          children: (0, uH.jsx)(NS, {
+                                            text: HH.title,
+                                            query: YH
                                           })
-                                        }), VV.text && (0, kV.jsx)("div", {
+                                        }), HH.text && (0, uH.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, kV.jsx)(oU, {
-                                            text: aU(VV.text, rV),
-                                            query: rV
+                                          children: (0, uH.jsx)(NS, {
+                                            text: gS(HH.text, YH),
+                                            query: YH
                                           })
                                         })]
-                                      }), (0, kV.jsx)("span", {
+                                      }), (0, uH.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === VV.kind ? "Page" : null !== (xV = VV.listedUnder) && void 0 !== xV ? xV : `${VV.kind} \xb7 ${VV.page.title}`
+                                        children: "Page" === HH.kind ? "Page" : null !== (LH = HH.listedUnder) && void 0 !== LH ? LH : `${HH.kind} \xb7 ${HH.page.title}`
                                       })]
-                                    }, `${VV.page.id}#${VV.anchor}`)
-                                  })), rV && 0 === bV.length && (0, kV.jsxs)("li", {
+                                    }, `${HH.page.id}#${HH.anchor}`)
+                                  })), YH && 0 === QH.length && (0, uH.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", yV, "\u201d."]
+                                    children: ["Nothing matches \u201c", hH, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function hU(VV, eV) {
-                            if (eV < 10) return `${VV.toFixed(1)}s`;
-                            const xV = Math.floor(VV);
-                            return `${Math.floor(xV/60)}:${String(xV%60).padStart(2,"0")}`
+                          function jS(HH, BH) {
+                            if (BH < 10) return `${HH.toFixed(1)}s`;
+                            const LH = Math.floor(HH);
+                            return `${Math.floor(LH/60)}:${String(LH%60).padStart(2,"0")}`
                           }
 
-                          function lU() {
-                            const VV = wJ((VV => VV.track)),
-                              eV = wJ((VV => VV.volume)),
-                              [xV, YV] = (0, JV.useState)(0),
-                              yV = (0, JV.useRef)(eJ);
-                            if ((0, JV.useEffect)((() => {
-                                if (!VV) return;
-                                if (YV(kJ()), "playing" !== VV.status) return;
-                                let eV = 0;
-                                const xV = () => {
-                                  YV(kJ()), eV = requestAnimationFrame(xV)
+                          function nS() {
+                            const HH = EA((HH => HH.track)),
+                              BH = EA((HH => HH.volume)),
+                              [LH, rH] = (0, AH.useState)(0),
+                              hH = (0, AH.useRef)(BA);
+                            if ((0, AH.useEffect)((() => {
+                                if (!HH) return;
+                                if (rH(uA()), "playing" !== HH.status) return;
+                                let BH = 0;
+                                const LH = () => {
+                                  rH(uA()), BH = requestAnimationFrame(LH)
                                 };
-                                return eV = requestAnimationFrame(xV), () => {
-                                  cancelAnimationFrame(eV)
+                                return BH = requestAnimationFrame(LH), () => {
+                                  cancelAnimationFrame(BH)
                                 }
-                              }), [VV]), !VV) return null;
-                            const pV = "paused" !== VV.status,
-                              QV = Math.min(xV, VV.duration);
-                            return (0, kV.jsx)("div", {
+                              }), [HH]), !HH) return null;
+                            const tH = "paused" !== HH.status,
+                              zH = Math.min(LH, HH.duration);
+                            return (0, uH.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, kV.jsxs)("section", {
+                              children: (0, uH.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, kV.jsx)("button", {
+                                children: [(0, uH.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": pV ? `Pause ${VV.name}` : `Play ${VV.name}`,
-                                  onClick: rJ,
-                                  children: (0, kV.jsx)(EV, {
-                                    name: pV ? "pause" : "play"
+                                  "aria-label": tH ? `Pause ${HH.name}` : `Play ${HH.name}`,
+                                  onClick: YA,
+                                  children: (0, uH.jsx)(WH, {
+                                    name: tH ? "pause" : "play"
                                   })
-                                }), (0, kV.jsxs)("div", {
+                                }), (0, uH.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, kV.jsxs)("div", {
+                                  children: [(0, uH.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, kV.jsx)("code", {
-                                      children: VV.name
-                                    }), (0, kV.jsx)("span", {
-                                      children: VV.isSong ? "Song" : "Sound"
+                                    children: [(0, uH.jsx)("code", {
+                                      children: HH.name
+                                    }), (0, uH.jsx)("span", {
+                                      children: HH.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, kV.jsxs)("div", {
+                                  }), (0, uH.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, kV.jsx)("span", {
-                                      children: hU(QV, VV.duration)
-                                    }), (0, kV.jsx)("input", {
+                                    children: [(0, uH.jsx)("span", {
+                                      children: jS(zH, HH.duration)
+                                    }), (0, uH.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: VV.duration || 1,
+                                      max: HH.duration || 1,
                                       step: .01,
-                                      value: QV,
-                                      disabled: 0 === VV.duration,
+                                      value: zH,
+                                      disabled: 0 === HH.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${hU(QV,VV.duration)} of ${hU(VV.duration,VV.duration)}`,
-                                      onChange: VV => {
-                                        const eV = Number(VV.target.value);
-                                        ! function(VV) {
-                                          var eV;
-                                          yJ = VV, null === (eV = YJ) || void 0 === eV || eV.seek(VV)
-                                        }(eV), YV(eV)
+                                      "aria-valuetext": `${jS(zH,HH.duration)} of ${jS(HH.duration,HH.duration)}`,
+                                      onChange: HH => {
+                                        const BH = Number(HH.target.value);
+                                        ! function(HH) {
+                                          var BH;
+                                          hA = HH, null === (BH = rA) || void 0 === BH || BH.seek(HH)
+                                        }(BH), rH(BH)
                                       }
-                                    }), (0, kV.jsx)("span", {
-                                      children: VV.duration > 0 ? hU(VV.duration, VV.duration) : "\u2013"
+                                    }), (0, uH.jsx)("span", {
+                                      children: HH.duration > 0 ? jS(HH.duration, HH.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, kV.jsxs)("div", {
+                                }), (0, uH.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, kV.jsx)("button", {
+                                  children: [(0, uH.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === eV ? "Unmute" : "Mute",
+                                    "aria-label": 0 === BH ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === eV ? bJ(yV.current) : (yV.current = eV, bJ(0))
+                                      0 === BH ? QA(hH.current) : (hH.current = BH, QA(0))
                                     },
-                                    children: (0, kV.jsx)(EV, {
+                                    children: (0, uH.jsx)(WH, {
                                       name: "volume",
-                                      className: UV()({
-                                        Muted: 0 === eV
+                                      className: SH()({
+                                        Muted: 0 === BH
                                       })
                                     })
-                                  }), (0, kV.jsx)("input", {
+                                  }), (0, uH.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: eV,
+                                    value: BH,
                                     "aria-label": "Volume",
-                                    onChange: VV => {
-                                      bJ(Number(VV.target.value))
+                                    onChange: HH => {
+                                      QA(Number(HH.target.value))
                                     }
                                   })]
-                                }), (0, kV.jsx)("button", {
+                                }), (0, uH.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var eV;
-                                    null === (eV = document.querySelector(`[data-docs-track="${CSS.escape(xJ(VV.name,VV.isSong))}"]`)) || void 0 === eV || eV.focus(), EJ()
+                                    var BH;
+                                    null === (BH = document.querySelector(`[data-docs-track="${CSS.escape(LA(HH.name,HH.isSong))}"]`)) || void 0 === BH || BH.focus(), WA()
                                   },
-                                  children: (0, kV.jsx)(EV, {
+                                  children: (0, uH.jsx)(WH, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var LU = xV(40);
-                          const fU = "docsTheme",
-                            mU = window.matchMedia("(prefers-color-scheme: light)");
+                          var FS = LH(30);
+                          const DS = "docsTheme",
+                            wS = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function KU(VV) {
+                          function ZS(HH) {
                             let {
-                              theme: eV,
-                              onChange: xV
-                            } = VV;
-                            const JV = "dark" === eV ? "light" : "dark";
-                            return (0, kV.jsx)("button", {
+                              theme: BH,
+                              onChange: LH
+                            } = HH;
+                            const AH = "dark" === BH ? "light" : "dark";
+                            return (0, uH.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${JV} theme`,
-                              title: `Switch to ${JV} theme`,
+                              "aria-label": `Switch to ${AH} theme`,
+                              title: `Switch to ${AH} theme`,
                               onClick: () => {
-                                xV(JV)
+                                LH(AH)
                               },
-                              children: (0, kV.jsx)(EV, {
-                                name: "dark" === eV ? "moon" : "sun"
+                              children: (0, uH.jsx)(WH, {
+                                name: "dark" === BH ? "moon" : "sun"
                               })
                             })
                           }
-                          const HU = "https://github.com/Bloxdy/code-api",
-                            uU = "https://discord.gg/playbloxd",
-                            sU = 180,
-                            SU = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const dS = "https://github.com/Bloxdy/code-api",
+                            aS = "https://discord.gg/playbloxd",
+                            sS = 180,
+                            JS = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function IU(VV) {
+                          function iS(HH) {
                             let {
-                              basePath: eV,
-                              activePageId: xV,
-                              onNavigate: JV
-                            } = VV;
-                            return (0, kV.jsx)("nav", {
+                              basePath: BH,
+                              activePageId: LH,
+                              onNavigate: AH
+                            } = HH;
+                            return (0, uH.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: aV.map((VV => (0, kV.jsxs)("div", {
+                              children: gH.map((HH => (0, uH.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, kV.jsx)("div", {
+                                children: [(0, uH.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: VV.title
-                                }), VV.pageIds.map((VV => {
-                                  var YV;
-                                  const pV = oV(VV);
-                                  return (0, kV.jsxs)(yV.b, {
-                                    to: mV(eV, pV),
-                                    className: UV()("DocsNavLink", {
-                                      Active: pV.id === xV
+                                  children: HH.title
+                                }), HH.pageIds.map((HH => {
+                                  var rH;
+                                  const tH = NH(HH);
+                                  return (0, uH.jsxs)(hH.e, {
+                                    to: wH(BH, tH),
+                                    className: SH()("DocsNavLink", {
+                                      Active: tH.id === LH
                                     }),
-                                    "aria-current": pV.id === xV ? "page" : void 0,
-                                    onClick: JV,
-                                    children: [(0, kV.jsx)(EV, {
-                                      name: pV.icon
-                                    }), (0, kV.jsx)("span", {
-                                      children: null !== (YV = pV.navTitle) && void 0 !== YV ? YV : pV.title
+                                    "aria-current": tH.id === LH ? "page" : void 0,
+                                    onClick: AH,
+                                    children: [(0, uH.jsx)(WH, {
+                                      name: tH.icon
+                                    }), (0, uH.jsx)("span", {
+                                      children: null !== (rH = tH.navTitle) && void 0 !== rH ? rH : tH.title
                                     })]
-                                  }, pV.id)
+                                  }, tH.id)
                                 }))]
-                              }, VV.title)))
+                              }, HH.title)))
                             })
                           }
 
-                          function dU(VV) {
+                          function pS(HH) {
                             let {
-                              basePath: eV,
-                              pageId: xV
-                            } = VV;
-                            const JV = aV.flatMap((VV => VV.pageIds)),
-                              YV = JV.indexOf(xV),
-                              UV = YV > 0 ? oV(JV[YV - 1]) : null,
-                              pV = YV < JV.length - 1 ? oV(JV[YV + 1]) : null;
-                            return (0, kV.jsxs)("nav", {
+                              basePath: BH,
+                              pageId: LH
+                            } = HH;
+                            const AH = gH.flatMap((HH => HH.pageIds)),
+                              rH = AH.indexOf(LH),
+                              SH = rH > 0 ? NH(AH[rH - 1]) : null,
+                              tH = rH < AH.length - 1 ? NH(AH[rH + 1]) : null;
+                            return (0, uH.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [UV ? (0, kV.jsxs)(yV.b, {
+                              children: [SH ? (0, uH.jsxs)(hH.e, {
                                 className: "DocsPagerLink Previous",
-                                to: mV(eV, UV),
-                                children: [(0, kV.jsx)("span", {
+                                to: wH(BH, SH),
+                                children: [(0, uH.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, kV.jsx)("span", {
+                                }), (0, uH.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: UV.title
+                                  children: SH.title
                                 })]
-                              }) : (0, kV.jsx)("span", {}), pV && (0, kV.jsxs)(yV.b, {
+                              }) : (0, uH.jsx)("span", {}), tH && (0, uH.jsxs)(hH.e, {
                                 className: "DocsPagerLink Next",
-                                to: mV(eV, pV),
-                                children: [(0, kV.jsx)("span", {
+                                to: wH(BH, tH),
+                                children: [(0, uH.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, kV.jsx)("span", {
+                                }), (0, uH.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: pV.title
+                                  children: tH.title
                                 })]
                               })]
                             })
                           }
 
-                          function OU(VV) {
+                          function yS(HH) {
                             let {
-                              basePath: eV,
-                              embedded: xV = !1
-                            } = VV;
+                              basePath: BH,
+                              embedded: LH = !1
+                            } = HH;
                             const {
-                              pageSlug: YV = ""
-                            } = (0, pV.A)(), nV = (0, pV.r)(), wV = (0, pV.v)(), ZV = (vV = YV, CV.find((VV => VV.slug === vV)));
-                            var vV;
-                            const [rV, bV] = function() {
-                              const [VV, eV] = (0, JV.useState)((() => {
-                                const VV = LU.m.getItem(fU);
-                                return "dark" === VV || "light" === VV ? VV : null
-                              })), [xV, YV] = (0, JV.useState)(mU.matches ? "light" : "dark");
-                              return (0, JV.useEffect)((() => {
-                                const VV = () => {
-                                  YV(mU.matches ? "light" : "dark")
+                              pageSlug: rH = ""
+                            } = (0, tH.A)(), CH = (0, tH.s)(), EH = (0, tH.u)(), XH = (GH = rH, qH.find((HH => HH.slug === GH)));
+                            var GH;
+                            const [YH, QH] = function() {
+                              const [HH, BH] = (0, AH.useState)((() => {
+                                const HH = FS.e.getItem(DS);
+                                return "dark" === HH || "light" === HH ? HH : null
+                              })), [LH, rH] = (0, AH.useState)(wS.matches ? "light" : "dark");
+                              return (0, AH.useEffect)((() => {
+                                const HH = () => {
+                                  rH(wS.matches ? "light" : "dark")
                                 };
-                                return mU.addEventListener("change", VV), () => {
-                                  mU.removeEventListener("change", VV)
+                                return wS.addEventListener("change", HH), () => {
+                                  wS.removeEventListener("change", HH)
                                 }
-                              }), []), [null !== VV && void 0 !== VV ? VV : xV, VV => {
-                                LU.m.setItem(fU, VV), eV(VV)
+                              }), []), [null !== HH && void 0 !== HH ? HH : LH, HH => {
+                                FS.e.setItem(DS, HH), BH(HH)
                               }]
-                            }(), [BV, jV] = (0, JV.useState)(null), [qV, tV] = (0, JV.useState)(!1), [FV, TV] = (0, JV.useState)(!1), [PV, NV] = (0, JV.useState)([]), XV = function(VV, eV) {
-                              const [xV, YV] = (0, JV.useState)("");
-                              return (0, JV.useEffect)((() => {
-                                if (!eV) return;
-                                let xV = 0;
-                                const JV = () => {
-                                    var JV, UV;
-                                    xV = 0;
-                                    const yV = eV.getBoundingClientRect().top + sU;
-                                    let pV = null !== (JV = null === (UV = VV[0]) || void 0 === UV ? void 0 : UV.anchor) && void 0 !== JV ? JV : "";
-                                    for (const eV of VV) {
-                                      const VV = document.getElementById(eV.anchor);
-                                      VV && VV.getBoundingClientRect().top <= yV && (pV = eV.anchor)
+                            }(), [MH, xH] = (0, AH.useState)(null), [vH, PH] = (0, AH.useState)(!1), [TH, UH] = (0, AH.useState)(!1), [VH, bH] = (0, AH.useState)([]), kH = function(HH, BH) {
+                              const [LH, rH] = (0, AH.useState)("");
+                              return (0, AH.useEffect)((() => {
+                                if (!BH) return;
+                                let LH = 0;
+                                const AH = () => {
+                                    var AH, SH;
+                                    LH = 0;
+                                    const hH = BH.getBoundingClientRect().top + sS;
+                                    let tH = null !== (AH = null === (SH = HH[0]) || void 0 === SH ? void 0 : SH.anchor) && void 0 !== AH ? AH : "";
+                                    for (const BH of HH) {
+                                      const HH = document.getElementById(BH.anchor);
+                                      HH && HH.getBoundingClientRect().top <= hH && (tH = BH.anchor)
                                     }
-                                    eV.scrollTop + eV.clientHeight >= eV.scrollHeight - 2 && eV.scrollTop > 0 && VV.length > 0 && (pV = VV[VV.length - 1].anchor), YV(pV)
+                                    BH.scrollTop + BH.clientHeight >= BH.scrollHeight - 2 && BH.scrollTop > 0 && HH.length > 0 && (tH = HH[HH.length - 1].anchor), rH(tH)
                                   },
-                                  UV = () => {
-                                    xV || (xV = requestAnimationFrame(JV))
+                                  SH = () => {
+                                    LH || (LH = requestAnimationFrame(AH))
                                   };
-                                return JV(), eV.addEventListener("scroll", UV, {
+                                return AH(), BH.addEventListener("scroll", SH, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(xV), eV.removeEventListener("scroll", UV)
+                                  cancelAnimationFrame(LH), BH.removeEventListener("scroll", SH)
                                 }
-                              }), [VV, eV]), xV
-                            }(PV, BV), MV = "" === YV && nV.hash ? function(VV) {
-                              const eV = (0, AV.v)(VV);
-                              if (lV(oV("welcome"), eV)) return null;
-                              const xV = Object.hasOwn(fV, eV) ? fV[eV] : null;
-                              if (xV) return {
-                                page: oV(xV.pageId),
-                                anchor: xV.anchor
+                              }), [HH, BH]), LH
+                            }(VH, MH), mH = "" === rH && CH.hash ? function(HH) {
+                              const BH = (0, OH.p)(HH);
+                              if (nH(NH("welcome"), BH)) return null;
+                              const LH = Object.hasOwn(DH, BH) ? DH[BH] : null;
+                              if (LH) return {
+                                page: NH(LH.pageId),
+                                anchor: LH.anchor
                               };
-                              const JV = oV("readme");
-                              return lV(JV, eV) ? {
-                                page: JV,
-                                anchor: eV
-                              } : LV(`#${eV}`)
-                            }(nV.hash) : null;
-                            (0, JV.useEffect)((() => (QV.b.set({
+                              const AH = NH("readme");
+                              return nH(AH, BH) ? {
+                                page: AH,
+                                anchor: BH
+                              } : FH(`#${BH}`)
+                            }(CH.hash) : null;
+                            (0, AH.useEffect)((() => (zH.c.set({
                               musicOnFromPage: !1
                             }), () => {
-                              QV.b.set({
+                              zH.c.set({
                                 musicOnFromPage: !0
-                              }), EJ()
-                            })), []), (0, JV.useEffect)((() => {
-                              const VV = VV => {
-                                const eV = VV.target;
-                                if (eV.closest(".DocsTextDialog")) return;
-                                const xV = eV.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(eV.tagName);
-                                "k" === VV.key && (VV.metaKey || VV.ctrlKey) || "/" === VV.key && !xV ? (VV.preventDefault(), TV(!0)) : "Escape" === VV.key && tV(!1)
+                              }), WA()
+                            })), []), (0, AH.useEffect)((() => {
+                              const HH = HH => {
+                                const BH = HH.target;
+                                if (BH.closest(".DocsTextDialog")) return;
+                                const LH = BH.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(BH.tagName);
+                                "k" === HH.key && (HH.metaKey || HH.ctrlKey) || "/" === HH.key && !LH ? (HH.preventDefault(), UH(!0)) : "Escape" === HH.key && PH(!1)
                               };
-                              return window.addEventListener("keydown", VV), () => {
-                                window.removeEventListener("keydown", VV)
+                              return window.addEventListener("keydown", HH), () => {
+                                window.removeEventListener("keydown", HH)
                               }
                             }), []);
-                            const zV = (0, JV.useRef)(null);
-                            (0, JV.useLayoutEffect)((() => {
-                              var VV, eV;
-                              if (!BV) return;
-                              const xV = zV.current === nV.pathname;
-                              zV.current = nV.pathname;
-                              const JV = (0, AV.v)(nV.hash),
-                                YV = JV ? document.getElementById(JV) : null;
-                              if (null === (VV = BV.querySelector(".DocsTargeted")) || void 0 === VV || VV.classList.remove("DocsTargeted"), null === YV || void 0 === YV || null === (eV = YV.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === eV || eV.classList.add("DocsTargeted"), YV) {
-                                var UV;
-                                const VV = YV.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (UV = YV.closest(".DocsChangelogEntry")) && void 0 !== UV ? UV : YV).scrollIntoView({
-                                  block: VV ? "center" : "start",
-                                  behavior: xV ? "smooth" : "auto"
+                            const oH = (0, AH.useRef)(null);
+                            (0, AH.useLayoutEffect)((() => {
+                              var HH, BH;
+                              if (!MH) return;
+                              const LH = oH.current === CH.pathname;
+                              oH.current = CH.pathname;
+                              const AH = (0, OH.p)(CH.hash),
+                                rH = AH ? document.getElementById(AH) : null;
+                              if (null === (HH = MH.querySelector(".DocsTargeted")) || void 0 === HH || HH.classList.remove("DocsTargeted"), null === rH || void 0 === rH || null === (BH = rH.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === BH || BH.classList.add("DocsTargeted"), rH) {
+                                var SH;
+                                const HH = rH.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (SH = rH.closest(".DocsChangelogEntry")) && void 0 !== SH ? SH : rH).scrollIntoView({
+                                  block: HH ? "center" : "start",
+                                  behavior: LH ? "smooth" : "auto"
                                 })
-                              } else xV || BV.scrollTo({
+                              } else LH || MH.scrollTo({
                                 top: 0
                               })
-                            }), [BV, nV.pathname, nV.hash, nV.key]);
-                            const GV = (0, JV.useCallback)((() => {
-                                tV(!1)
+                            }), [MH, CH.pathname, CH.hash, CH.key]);
+                            const IH = (0, AH.useCallback)((() => {
+                                PH(!1)
                               }), []),
-                              WV = (0, JV.useCallback)((VV => {
-                                wV({
-                                  hash: VV
+                              fH = (0, AH.useCallback)((HH => {
+                                EH({
+                                  hash: HH
                                 })
-                              }), [wV]);
-                            if (MV) return (0, kV.jsx)(pV.b, {
+                              }), [EH]);
+                            if (mH) return (0, uH.jsx)(tH.c, {
                               replace: !0,
-                              to: mV(eV, MV.page, MV.anchor)
+                              to: wH(BH, mH.page, mH.anchor)
                             });
-                            if (!ZV) return (0, kV.jsx)(pV.b, {
+                            if (!XH) return (0, uH.jsx)(tH.c, {
                               replace: !0,
-                              to: eV
+                              to: BH
                             });
-                            const RV = xV ? "div" : "main";
-                            return (0, kV.jsx)(re.Provider, {
-                              value: eV,
-                              children: (0, kV.jsx)(ke.Provider, {
-                                value: BV,
-                                children: (0, kV.jsxs)("div", {
-                                  ref: jV,
-                                  className: UV()("DocsSite", {
-                                    Embedded: xV,
-                                    NavOpen: qV
+                            const lH = LH ? "div" : "main";
+                            return (0, uH.jsx)(YB.Provider, {
+                              value: BH,
+                              children: (0, uH.jsx)(uB.Provider, {
+                                value: MH,
+                                children: (0, uH.jsxs)("div", {
+                                  ref: xH,
+                                  className: SH()("DocsSite", {
+                                    Embedded: LH,
+                                    NavOpen: vH
                                   }),
-                                  "data-theme": rV,
-                                  children: [(0, kV.jsxs)("header", {
+                                  "data-theme": YH,
+                                  children: [(0, uH.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, kV.jsx)("button", {
+                                    children: [(0, uH.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": qV ? "Close menu" : "Open menu",
-                                      "aria-expanded": qV,
+                                      "aria-label": vH ? "Close menu" : "Open menu",
+                                      "aria-expanded": vH,
                                       onClick: () => {
-                                        tV(!qV)
+                                        PH(!vH)
                                       },
-                                      children: (0, kV.jsx)(EV, {
-                                        name: qV ? "cross" : "menu"
+                                      children: (0, uH.jsx)(WH, {
+                                        name: vH ? "cross" : "menu"
                                       })
-                                    }), (0, kV.jsxs)(yV.b, {
-                                      to: eV,
+                                    }), (0, uH.jsxs)(hH.e, {
+                                      to: BH,
                                       className: "DocsBrand",
-                                      children: [(0, kV.jsx)("img", {
+                                      children: [(0, uH.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, kV.jsx)("span", {
+                                      }), (0, uH.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, kV.jsx)("span", {
+                                      }), (0, uH.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, kV.jsxs)("button", {
+                                    }), (0, uH.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        TV(!0)
+                                        UH(!0)
                                       },
-                                      children: [(0, kV.jsx)(EV, {
+                                      children: [(0, uH.jsx)(WH, {
                                         name: "magnifying-glass"
-                                      }), (0, kV.jsx)("span", {
+                                      }), (0, uH.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, kV.jsxs)("kbd", {
-                                        children: [SU ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, uH.jsxs)("kbd", {
+                                        children: [JS ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, kV.jsxs)("div", {
+                                    }), (0, uH.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, kV.jsxs)("a", {
-                                        href: uU,
+                                      children: [(0, uH.jsxs)("a", {
+                                        href: aS,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, kV.jsx)(EV, {
+                                        children: [(0, uH.jsx)(WH, {
                                           name: "discord"
-                                        }), (0, kV.jsx)("span", {
+                                        }), (0, uH.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, kV.jsxs)("a", {
-                                        href: HU,
+                                      }), (0, uH.jsxs)("a", {
+                                        href: dS,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, kV.jsx)(EV, {
+                                        children: [(0, uH.jsx)(WH, {
                                           name: "external-link"
-                                        }), (0, kV.jsx)("span", {
+                                        }), (0, uH.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !xV && (0, kV.jsxs)(yV.b, {
+                                      }), !LH && (0, uH.jsxs)(hH.e, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, kV.jsx)(EV, {
+                                        children: [(0, uH.jsx)(WH, {
                                           name: "play"
-                                        }), (0, kV.jsx)("span", {
+                                        }), (0, uH.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, kV.jsx)(KU, {
-                                        theme: rV,
-                                        onChange: bV
+                                      }), (0, uH.jsx)(ZS, {
+                                        theme: YH,
+                                        onChange: QH
                                       })]
                                     })]
-                                  }), (0, kV.jsxs)("div", {
+                                  }), (0, uH.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, kV.jsx)("aside", {
+                                    children: [(0, uH.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, kV.jsx)(IU, {
-                                        basePath: eV,
-                                        activePageId: ZV.id,
-                                        onNavigate: GV
+                                      children: (0, uH.jsx)(iS, {
+                                        basePath: BH,
+                                        activePageId: XH.id,
+                                        onNavigate: IH
                                       })
-                                    }), (0, kV.jsx)("div", {
+                                    }), (0, uH.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: GV
-                                    }), (0, kV.jsxs)(RV, {
+                                      onClick: IH
+                                    }), (0, uH.jsxs)(lH, {
                                       className: "DocsMain",
-                                      children: [(0, kV.jsx)(TU, {
-                                        page: ZV,
-                                        onTocChange: NV
-                                      }, ZV.id), (0, kV.jsx)(dU, {
-                                        basePath: eV,
-                                        pageId: ZV.id
+                                      children: [(0, uH.jsx)(US, {
+                                        page: XH,
+                                        onTocChange: bH
+                                      }, XH.id), (0, uH.jsx)(pS, {
+                                        basePath: BH,
+                                        pageId: XH.id
                                       })]
-                                    }), (0, kV.jsx)("aside", {
-                                      className: UV()("DocsToc", {
-                                        Timeline: "changelog" === ZV.layout
+                                    }), (0, uH.jsx)("aside", {
+                                      className: SH()("DocsToc", {
+                                        Timeline: "changelog" === XH.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, kV.jsx)(XU, {
-                                        isChangelog: "changelog" === ZV.layout,
-                                        toc: PV,
-                                        activeAnchor: XV,
-                                        onNavigate: WV
+                                      children: (0, uH.jsx)(kS, {
+                                        isChangelog: "changelog" === XH.layout,
+                                        toc: VH,
+                                        activeAnchor: kH,
+                                        onNavigate: fH
                                       })
                                     })]
-                                  }), (0, kV.jsx)(lU, {}), FV && (0, kV.jsx)(cU, {
-                                    basePath: eV,
+                                  }), (0, uH.jsx)(nS, {}), TH && (0, uH.jsx)(RS, {
+                                    basePath: BH,
                                     onClose: () => {
-                                      TV(!1)
+                                      UH(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 5243: (VV, eV, xV) => {
-                          xV.d(eV, {
-                            A: () => kV,
-                            E: () => rV,
-                            I: () => vV,
-                            d: () => JV,
-                            h: () => yV,
-                            l: () => EV,
-                            n: () => bV,
-                            r: () => pV,
-                            v: () => YV,
-                            w: () => UV
+                        }, 5218: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            D: () => GH,
+                            c: () => AH,
+                            e: () => hH,
+                            f: () => WH,
+                            j: () => QH,
+                            l: () => tH,
+                            p: () => rH,
+                            r: () => SH,
+                            v: () => uH,
+                            z: () => YH
                           });
-                          const JV = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const AH = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function YV(VV) {
+                          function rH(HH) {
                             try {
-                              return decodeURIComponent(VV.slice(1))
+                              return decodeURIComponent(HH.slice(1))
                             } catch {
-                              return VV.slice(1)
+                              return HH.slice(1)
                             }
                           }
 
-                          function UV(VV) {
-                            return VV.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function SH(HH) {
+                            return HH.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const yV = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${JV.source}`, "g");
+                          const hH = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${AH.source}`, "g");
 
-                          function pV(VV, eV) {
-                            return 2 === VV.length ? eV.replace(/^ (.*) $/, "$1") : eV
-                          }
-
-                          function QV(VV) {
-                            return "" === VV.trim()
+                          function tH(HH, BH) {
+                            return 2 === HH.length ? BH.replace(/^ (.*) $/, "$1") : BH
                           }
 
-                          function nV(VV) {
-                            const eV = [];
-                            for (const xV of VV.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) eV.length > 0 && eV[eV.length - 1].endsWith("\\") ? eV[eV.length - 1] += `|${xV}` : eV.push(xV);
-                            return eV.map((VV => VV.trim().replaceAll("\\|", "|")))
+                          function zH(HH) {
+                            return "" === HH.trim()
                           }
-                          const wV = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function ZV(VV) {
-                            const eV = [],
-                              xV = [{
+                          function CH(HH) {
+                            const BH = [];
+                            for (const LH of HH.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) BH.length > 0 && BH[BH.length - 1].endsWith("\\") ? BH[BH.length - 1] += `|${LH}` : BH.push(LH);
+                            return BH.map((HH => HH.trim().replaceAll("\\|", "|")))
+                          }
+                          const EH = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function XH(HH) {
+                            const BH = [],
+                              LH = [{
                                 indent: -1,
-                                items: eV
+                                items: BH
                               }];
-                            let JV = null;
-                            for (const YV of VV) {
-                              const VV = YV.match(wV);
-                              if (!VV) {
-                                JV && (JV.text += ` ${YV.trim()}`);
+                            let AH = null;
+                            for (const rH of HH) {
+                              const HH = rH.match(EH);
+                              if (!HH) {
+                                AH && (AH.text += ` ${rH.trim()}`);
                                 continue
                               }
-                              const eV = VV[1].replace(/\t/g, "  ").length;
-                              for (; eV <= xV[xV.length - 1].indent;) xV.pop();
-                              JV = {
-                                text: VV[3].trim(),
+                              const BH = HH[1].replace(/\t/g, "  ").length;
+                              for (; BH <= LH[LH.length - 1].indent;) LH.pop();
+                              AH = {
+                                text: HH[3].trim(),
                                 children: []
-                              }, xV[xV.length - 1].items.push(JV), xV.push({
-                                indent: eV,
-                                items: JV.children
+                              }, LH[LH.length - 1].items.push(AH), LH.push({
+                                indent: BH,
+                                items: AH.children
                               })
                             }
-                            return eV
+                            return BH
                           }
 
-                          function vV(VV) {
-                            const eV = VV.replace(/\r\n/g, "\n").split("\n"),
-                              xV = [];
-                            let JV = 0;
-                            for (; JV < eV.length;) {
-                              const VV = eV[JV];
-                              if (QV(VV)) {
-                                JV++;
+                          function GH(HH) {
+                            const BH = HH.replace(/\r\n/g, "\n").split("\n"),
+                              LH = [];
+                            let AH = 0;
+                            for (; AH < BH.length;) {
+                              const HH = BH[AH];
+                              if (zH(HH)) {
+                                AH++;
                                 continue
                               }
-                              const YV = VV.match(/^\s*```\s*(\w*)\s*$/);
-                              if (YV) {
-                                const VV = [];
-                                for (JV++; JV < eV.length && !/^\s*```\s*$/.test(eV[JV]);) VV.push(eV[JV]), JV++;
-                                JV++, xV.push({
+                              const rH = HH.match(/^\s*```\s*(\w*)\s*$/);
+                              if (rH) {
+                                const HH = [];
+                                for (AH++; AH < BH.length && !/^\s*```\s*$/.test(BH[AH]);) HH.push(BH[AH]), AH++;
+                                AH++, LH.push({
                                   kind: "code",
-                                  lang: YV[1] || "text",
-                                  code: VV.join("\n").replace(/\s+$/, "")
+                                  lang: rH[1] || "text",
+                                  code: HH.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const yV = VV.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (yV) {
-                                const VV = yV[2].trim();
-                                xV.push({
+                              const hH = HH.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (hH) {
+                                const HH = hH[2].trim();
+                                LH.push({
                                   kind: "heading",
-                                  level: yV[1].length,
-                                  text: VV,
-                                  anchor: UV(VV)
-                                }), JV++;
+                                  level: hH[1].length,
+                                  text: HH,
+                                  anchor: SH(HH)
+                                }), AH++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(VV)) {
-                                xV.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(HH)) {
+                                LH.push({
                                   kind: "rule"
-                                }), JV++;
+                                }), AH++;
                                 continue
                               }
-                              if (VV.trim().startsWith("|") && JV + 1 < eV.length && /^\s*\|[\s:|-]+\|\s*$/.test(eV[JV + 1])) {
-                                const YV = nV(VV),
-                                  UV = [];
-                                for (JV += 2; JV < eV.length && eV[JV].trim().startsWith("|");) UV.push(nV(eV[JV])), JV++;
-                                xV.push({
+                              if (HH.trim().startsWith("|") && AH + 1 < BH.length && /^\s*\|[\s:|-]+\|\s*$/.test(BH[AH + 1])) {
+                                const rH = CH(HH),
+                                  SH = [];
+                                for (AH += 2; AH < BH.length && BH[AH].trim().startsWith("|");) SH.push(CH(BH[AH])), AH++;
+                                LH.push({
                                   kind: "table",
-                                  header: YV,
-                                  rows: UV
+                                  header: rH,
+                                  rows: SH
                                 });
                                 continue
                               }
-                              if (VV.startsWith(">")) {
-                                const VV = [];
-                                for (; JV < eV.length && eV[JV].startsWith(">");) VV.push(eV[JV].replace(/^>\s?/, "")), JV++;
-                                xV.push({
+                              if (HH.startsWith(">")) {
+                                const HH = [];
+                                for (; AH < BH.length && BH[AH].startsWith(">");) HH.push(BH[AH].replace(/^>\s?/, "")), AH++;
+                                LH.push({
                                   kind: "quote",
-                                  blocks: vV(VV.join("\n"))
+                                  blocks: GH(HH.join("\n"))
                                 });
                                 continue
                               }
-                              if (wV.test(VV)) {
-                                const YV = [],
-                                  UV = /^\s*\d+\./.test(VV);
-                                for (; JV < eV.length && !QV(eV[JV]) && (wV.test(eV[JV]) || /^\s+\S/.test(eV[JV]));) YV.push(eV[JV]), JV++;
-                                xV.push({
+                              if (EH.test(HH)) {
+                                const rH = [],
+                                  SH = /^\s*\d+\./.test(HH);
+                                for (; AH < BH.length && !zH(BH[AH]) && (EH.test(BH[AH]) || /^\s+\S/.test(BH[AH]));) rH.push(BH[AH]), AH++;
+                                LH.push({
                                   kind: "list",
-                                  ordered: UV,
-                                  items: ZV(YV)
+                                  ordered: SH,
+                                  items: XH(rH)
                                 });
                                 continue
                               }
-                              const pV = [];
-                              for (; JV < eV.length && !QV(eV[JV]) && !/^\s*```/.test(eV[JV]) && !/^#{1,6}\s/.test(eV[JV]) && !eV[JV].startsWith(">") && !wV.test(eV[JV]) && (!eV[JV].trim().startsWith("|") || 0 !== pV.length);) pV.push(eV[JV].trim()), JV++;
-                              0 === pV.length && (pV.push(eV[JV].trim()), JV++), xV.push({
+                              const tH = [];
+                              for (; AH < BH.length && !zH(BH[AH]) && !/^\s*```/.test(BH[AH]) && !/^#{1,6}\s/.test(BH[AH]) && !BH[AH].startsWith(">") && !EH.test(BH[AH]) && (!BH[AH].trim().startsWith("|") || 0 !== tH.length);) tH.push(BH[AH].trim()), AH++;
+                              0 === tH.length && (tH.push(BH[AH].trim()), AH++), LH.push({
                                 kind: "paragraph",
-                                text: pV.join(" ")
+                                text: tH.join(" ")
                               })
                             }
-                            return xV
+                            return LH
                           }
 
-                          function rV(VV) {
-                            let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const xV = vV(VV);
-                            let JV = "";
-                            const YV = [],
-                              UV = [],
-                              yV = new Map;
-                            for (const nV of xV) {
-                              if ("heading" === nV.kind) {
-                                var pV;
-                                const VV = (null !== (pV = yV.get(nV.anchor)) && void 0 !== pV ? pV : 0) + 1;
-                                yV.set(nV.anchor, VV), VV > 1 && (nV.anchor = `${nV.anchor}-${VV}`)
+                          function YH(HH) {
+                            let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const LH = GH(HH);
+                            let AH = "";
+                            const rH = [],
+                              SH = [],
+                              hH = new Map;
+                            for (const CH of LH) {
+                              if ("heading" === CH.kind) {
+                                var tH;
+                                const HH = (null !== (tH = hH.get(CH.anchor)) && void 0 !== tH ? tH : 0) + 1;
+                                hH.set(CH.anchor, HH), HH > 1 && (CH.anchor = `${CH.anchor}-${HH}`)
                               }
-                              if ("heading" === nV.kind && 1 === nV.level && !JV) {
-                                JV = nV.text;
+                              if ("heading" === CH.kind && 1 === CH.level && !AH) {
+                                AH = CH.text;
                                 continue
                               }
-                              if ("heading" === nV.kind && nV.level <= eV) {
-                                UV.push({
-                                  heading: nV,
+                              if ("heading" === CH.kind && CH.level <= BH) {
+                                SH.push({
+                                  heading: CH,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const VV = UV.at(-1);
-                              VV ? VV.blocks.push(nV) : YV.push(nV)
+                              const HH = SH.at(-1);
+                              HH ? HH.blocks.push(CH) : rH.push(CH)
                             }
-                            const QV = VV => {
+                            const zH = HH => {
                               for (;
-                                "rule" === (null === (eV = VV.at(-1)) || void 0 === eV ? void 0 : eV.kind);) {
-                                var eV;
-                                VV.pop()
+                                "rule" === (null === (BH = HH.at(-1)) || void 0 === BH ? void 0 : BH.kind);) {
+                                var BH;
+                                HH.pop()
                               }
                             };
-                            QV(YV);
-                            for (const nV of UV) QV(nV.blocks);
+                            zH(rH);
+                            for (const CH of SH) zH(CH.blocks);
                             return {
-                              title: JV,
-                              intro: YV,
-                              sections: UV
+                              title: AH,
+                              intro: rH,
+                              sections: SH
                             }
                           }
 
-                          function kV(VV) {
+                          function uH(HH) {
                             return [{
                               heading: null,
-                              blocks: VV.intro
-                            }, ...VV.sections.map((VV => ({
-                              heading: VV.heading,
-                              blocks: VV.blocks
+                              blocks: HH.intro
+                            }, ...HH.sections.map((HH => ({
+                              heading: HH.heading,
+                              blocks: HH.blocks
                             })))]
                           }
 
-                          function bV(VV) {
-                            return VV.flatMap((VV => "code" === VV.kind ? [VV] : "quote" === VV.kind ? bV(VV.blocks) : []))
+                          function QH(HH) {
+                            return HH.flatMap((HH => "code" === HH.kind ? [HH] : "quote" === HH.kind ? QH(HH.blocks) : []))
                           }
 
-                          function EV(VV) {
-                            switch (VV.kind) {
+                          function WH(HH) {
+                            switch (HH.kind) {
                               case "heading":
                               case "paragraph":
-                                return VV.text;
+                                return HH.text;
                               case "code":
-                                return VV.code;
+                                return HH.code;
                               case "table":
-                                return [VV.header, ...VV.rows].map((VV => VV.join(" "))).join(" ");
+                                return [HH.header, ...HH.rows].map((HH => HH.join(" "))).join(" ");
                               case "list": {
-                                const eV = VV => VV.map((VV => `${VV.text} ${eV(VV.children)}`)).join(" ");
-                                return eV(VV.items)
+                                const BH = HH => HH.map((HH => `${HH.text} ${BH(HH.children)}`)).join(" ");
+                                return BH(HH.items)
                               }
                               case "quote":
-                                return VV.blocks.map(EV).join(" ");
+                                return HH.blocks.map(WH).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 5335: (VV, eV, xV) => {
-                          xV.d(eV, {
-                            e: () => pV
+                        }, 5314: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            b: () => tH
                           });
-                          var JV = xV(62),
-                            YV = xV(364),
-                            UV = xV(2039),
-                            yV = xV(1321);
+                          var AH = LH(45),
+                            rH = LH(304),
+                            SH = LH(1986),
+                            hH = LH(1225);
 
-                          function pV(VV) {
+                          function tH(HH) {
                             let {
-                              text: eV
-                            } = VV;
-                            const xV = [];
-                            let pV = "";
-                            return (0, YV.dc)(eV).forEach(((VV, eV) => {
-                              if ("string" === typeof VV || !(0, UV.h)(VV.icon)) return void(pV += "string" === typeof VV ? VV : VV.icon);
-                              const YV = Math.max(0, pV.trimEnd().search(/\S{1,12}$/));
-                              xV.push((0, yV.jsxs)(JV.Fragment, {
-                                children: [pV.slice(0, YV), (0, yV.jsxs)("span", {
+                              text: BH
+                            } = HH;
+                            const LH = [];
+                            let tH = "";
+                            return (0, rH.tc)(BH).forEach(((HH, BH) => {
+                              if ("string" === typeof HH || !(0, SH.f)(HH.icon)) return void(tH += "string" === typeof HH ? HH : HH.icon);
+                              const rH = Math.max(0, tH.trimEnd().search(/\S{1,12}$/));
+                              LH.push((0, hH.jsxs)(AH.Fragment, {
+                                children: [tH.slice(0, rH), (0, hH.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [pV.slice(YV), (0, yV.jsx)("span", {
+                                  children: [tH.slice(rH), (0, hH.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": VV.icon,
-                                    children: (0, yV.jsx)(UV.e, {
-                                      itemName: VV.icon,
+                                    "aria-label": HH.icon,
+                                    children: (0, hH.jsx)(SH.e, {
+                                      itemName: HH.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, eV)), pV = ""
-                            })), xV.push(pV), (0, yV.jsx)(yV.Fragment, {
-                              children: xV
+                              }, BH)), tH = ""
+                            })), LH.push(tH), (0, hH.jsx)(hH.Fragment, {
+                              children: LH
                             })
                           }
-                        }, 5261: (VV, eV, xV) => {
-                          xV.d(eV, {
-                            e: () => jV,
-                            b: () => BV
+                        }, 5248: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            f: () => xH,
+                            b: () => MH
                           });
-                          var JV = xV(62),
-                            YV = xV(1542),
-                            UV = xV(2021),
-                            yV = xV(5264),
-                            pV = xV(1321);
-                          const QV = (0, JV.memo)((function(VV) {
+                          var AH = LH(45),
+                            rH = LH(1450),
+                            SH = LH(1967),
+                            hH = LH(5250),
+                            tH = LH(1225);
+                          const zH = (0, AH.memo)((function(HH) {
                             let {
-                              initialParameters: eV
-                            } = VV;
-                            const xV = (0, JV.useRef)(null),
-                              YV = (0, JV.useRef)(null),
-                              QV = (0, JV.useRef)(0),
-                              nV = (0, JV.useRef)(null),
-                              wV = eV.description,
-                              ZV = eV.fJ,
+                              initialParameters: BH
+                            } = HH;
+                            const LH = (0, AH.useRef)(null),
+                              rH = (0, AH.useRef)(null),
+                              zH = (0, AH.useRef)(0),
+                              CH = (0, AH.useRef)(null),
+                              EH = BH.description,
+                              XH = BH.dH,
                               {
-                                scale: vV,
-                                rotation: rV
-                              } = null !== eV && void 0 !== eV ? eV : {},
-                              kV = (0, yV.f)();
-                            return (0, JV.useEffect)((() => {
-                              const VV = kV.onFrame((() => {
-                                const VV = kV.getState();
-                                if (!VV.isActive || !xV.current || !YV.current) return;
-                                const eV = VV.state;
-                                if (xV.current.value = eV.progress, eV.clickCount > QV.current) {
-                                  QV.current = eV.clickCount;
-                                  const VV = YV.current;
-                                  VV.classList.add("pulse"), nV.current = setTimeout((() => {
-                                    VV.classList.remove("pulse")
+                                scale: GH,
+                                rotation: YH
+                              } = null !== BH && void 0 !== BH ? BH : {},
+                              uH = (0, hH.f)();
+                            return (0, AH.useEffect)((() => {
+                              const HH = uH.onFrame((() => {
+                                const HH = uH.getState();
+                                if (!HH.isActive || !LH.current || !rH.current) return;
+                                const BH = HH.state;
+                                if (LH.current.value = BH.progress, BH.clickCount > zH.current) {
+                                  zH.current = BH.clickCount;
+                                  const HH = rH.current;
+                                  HH.classList.add("pulse"), CH.current = setTimeout((() => {
+                                    HH.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(nV.current), VV()
+                                clearTimeout(CH.current), HH()
                               }
-                            }), [kV]), (0, pV.jsx)(pV.Fragment, {
-                              children: (0, pV.jsxs)("div", {
+                            }), [uH]), (0, tH.jsx)(tH.Fragment, {
+                              children: (0, tH.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== vV && {
-                                    "--scale": vV
+                                  ...null !== GH && {
+                                    "--scale": GH
                                   },
-                                  ...null !== rV && {
-                                    "--rotation": `${rV}deg`
+                                  ...null !== YH && {
+                                    "--rotation": `${YH}deg`
                                   }
                                 },
-                                children: [(0, pV.jsx)("progress", {
+                                children: [(0, tH.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: xV
-                                }), (0, pV.jsx)("span", {
+                                  ref: LH
+                                }), (0, tH.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: YV,
-                                  children: (0, pV.jsx)(UV.b, {
+                                  ref: rH,
+                                  children: (0, tH.jsx)(SH.b, {
                                     text: [{
-                                      icon: ZV
+                                      icon: XH
                                     }]
                                   })
-                                }), (0, pV.jsx)("div", {
+                                }), (0, tH.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, pV.jsx)(UV.b, {
-                                    text: wV
+                                  children: (0, tH.jsx)(SH.b, {
+                                    text: EH
                                   })
                                 })]
                               })
                             })
                           }));
-                          var nV = xV(1146),
-                            wV = xV.n(nV);
-                          const ZV = 2 * Math.PI * 90,
-                            vV = (0, JV.memo)((function(VV) {
+                          var CH = LH(1038),
+                            EH = LH.n(CH);
+                          const XH = 2 * Math.PI * 90,
+                            GH = (0, AH.memo)((function(HH) {
                               let {
-                                initialParameters: eV
-                              } = VV;
-                              const xV = (0, JV.useRef)(null),
-                                YV = (0, JV.useRef)(null),
-                                QV = (0, JV.useRef)(null),
-                                nV = eV.label,
-                                vV = eV.icon,
-                                rV = eV.HJ,
+                                initialParameters: BH
+                              } = HH;
+                              const LH = (0, AH.useRef)(null),
+                                rH = (0, AH.useRef)(null),
+                                zH = (0, AH.useRef)(null),
+                                CH = BH.label,
+                                GH = BH.icon,
+                                YH = BH.JH,
                                 {
-                                  scale: kV,
-                                  rotation: bV,
-                                  uJ: EV
-                                } = null !== eV && void 0 !== eV ? eV : {},
-                                BV = (0, yV.f)();
-                              return (0, JV.useEffect)((() => {
-                                const VV = BV.onFrame((() => {
-                                  var VV, eV;
-                                  const JV = BV.getState();
-                                  if (!JV.isActive || !YV.current) return;
-                                  const UV = JV.state,
-                                    yV = null !== (VV = UV.timeRemaining) && void 0 !== VV ? VV : 0,
-                                    pV = null !== (eV = UV.KJ) && void 0 !== eV ? eV : 1,
-                                    nV = ZV * (1 - yV / pV);
-                                  YV.current.style.strokeDashoffset = `${nV}`, xV.current && (xV.current.style.opacity = yV > 0 ? "1" : "0"), QV.current && rV && (QV.current.textContent = `${(yV/1e3).toFixed(1)}s`)
+                                  scale: uH,
+                                  rotation: QH,
+                                  iH: WH
+                                } = null !== BH && void 0 !== BH ? BH : {},
+                                MH = (0, hH.f)();
+                              return (0, AH.useEffect)((() => {
+                                const HH = MH.onFrame((() => {
+                                  var HH, BH;
+                                  const AH = MH.getState();
+                                  if (!AH.isActive || !rH.current) return;
+                                  const SH = AH.state,
+                                    hH = null !== (HH = SH.timeRemaining) && void 0 !== HH ? HH : 0,
+                                    tH = null !== (BH = SH.sH) && void 0 !== BH ? BH : 1,
+                                    CH = XH * (1 - hH / tH);
+                                  rH.current.style.strokeDashoffset = `${CH}`, LH.current && (LH.current.style.opacity = hH > 0 ? "1" : "0"), zH.current && YH && (zH.current.textContent = `${(hH/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  VV()
+                                  HH()
                                 }
-                              }), [BV, rV]), (0, pV.jsxs)("div", {
+                              }), [MH, YH]), (0, tH.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: xV,
+                                ref: LH,
                                 style: {
-                                  ...null !== kV && {
-                                    "--scale": kV
+                                  ...null !== uH && {
+                                    "--scale": uH
                                   },
-                                  ...null !== bV && {
-                                    "--rotation": `${bV}deg`
+                                  ...null !== QH && {
+                                    "--rotation": `${QH}deg`
                                   }
                                 },
-                                children: [(0, pV.jsxs)("div", {
+                                children: [(0, tH.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, pV.jsxs)("svg", {
+                                  children: [(0, tH.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, pV.jsx)("circle", {
+                                    children: [(0, tH.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, pV.jsx)("circle", {
+                                    }), (0, tH.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6290,80 +6290,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: ZV,
-                                      ref: YV
+                                      strokeDasharray: XH,
+                                      ref: rH
                                     })]
-                                  }), (0, pV.jsx)("div", {
+                                  }), (0, tH.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, pV.jsx)(UV.b, {
+                                    children: (0, tH.jsx)(SH.b, {
                                       text: [{
-                                        icon: vV
+                                        icon: GH
                                       }],
-                                      className: wV()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: EV
+                                      className: EH()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: WH
                                       })
                                     })
                                   })]
-                                }), (0, pV.jsxs)("div", {
+                                }), (0, tH.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, pV.jsx)(UV.b, {
-                                    text: nV,
+                                  children: [(0, tH.jsx)(SH.b, {
+                                    text: CH,
                                     className: "QTETimedClickLabelText"
-                                  }), rV && (0, pV.jsx)("span", {
+                                  }), YH && (0, tH.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: QV
+                                    ref: zH
                                   })]
                                 })]
                               })
                             })),
-                            rV = (0, JV.memo)((function(VV) {
+                            YH = (0, AH.memo)((function(HH) {
                               let {
-                                initialParameters: eV
-                              } = VV;
-                              const xV = (0, JV.useRef)(null),
-                                YV = (0, JV.useRef)(null),
-                                QV = (0, JV.useRef)(null),
-                                nV = (0, JV.useRef)(!1),
-                                wV = eV.description,
-                                ZV = null === eV || void 0 === eV ? void 0 : eV.icon,
-                                vV = (0, yV.f)();
-                              return (0, JV.useEffect)((() => {
-                                const VV = vV.onFrame((() => {
-                                  const VV = vV.getState();
-                                  if (!VV.isActive) return;
-                                  const eV = VV.state;
-                                  if (xV.current) {
-                                    const VV = 100 * (eV.catchZonePosition - eV.SJ / 2);
-                                    xV.current.style.left = `${VV}%`, xV.current.style.width = 100 * eV.SJ + "%", eV.isCatching !== nV.current && (nV.current = eV.isCatching, eV.isCatching ? xV.current.classList.add("catching") : xV.current.classList.remove("catching"))
+                                initialParameters: BH
+                              } = HH;
+                              const LH = (0, AH.useRef)(null),
+                                rH = (0, AH.useRef)(null),
+                                zH = (0, AH.useRef)(null),
+                                CH = (0, AH.useRef)(!1),
+                                EH = BH.description,
+                                XH = null === BH || void 0 === BH ? void 0 : BH.icon,
+                                GH = (0, hH.f)();
+                              return (0, AH.useEffect)((() => {
+                                const HH = GH.onFrame((() => {
+                                  const HH = GH.getState();
+                                  if (!HH.isActive) return;
+                                  const BH = HH.state;
+                                  if (LH.current) {
+                                    const HH = 100 * (BH.catchZonePosition - BH.yH / 2);
+                                    LH.current.style.left = `${HH}%`, LH.current.style.width = 100 * BH.yH + "%", BH.isCatching !== CH.current && (CH.current = BH.isCatching, BH.isCatching ? LH.current.classList.add("catching") : LH.current.classList.remove("catching"))
                                   }
-                                  YV.current && (YV.current.style.left = 100 * eV.moverPosition + "%"), QV.current && (QV.current.value = eV.progress)
+                                  rH.current && (rH.current.style.left = 100 * BH.moverPosition + "%"), zH.current && (zH.current.value = BH.progress)
                                 }));
                                 return () => {
-                                  VV()
+                                  HH()
                                 }
-                              }), [vV]), (0, pV.jsxs)("div", {
+                              }), [GH]), (0, tH.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, pV.jsx)("div", {
+                                children: [(0, tH.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, pV.jsx)(UV.b, {
-                                    text: wV
+                                  children: (0, tH.jsx)(SH.b, {
+                                    text: EH
                                   })
-                                }), (0, pV.jsx)("progress", {
+                                }), (0, tH.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: QV
-                                }), (0, pV.jsxs)("div", {
+                                  ref: zH
+                                }), (0, tH.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, pV.jsx)("div", {
+                                  children: [(0, tH.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: xV
-                                  }), (0, pV.jsx)("div", {
+                                    ref: LH
+                                  }), (0, tH.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: YV,
-                                    children: (0, pV.jsx)("span", {
-                                      children: ZV && (0, pV.jsx)(UV.b, {
+                                    ref: rH,
+                                    children: (0, tH.jsx)("span", {
+                                      children: XH && (0, tH.jsx)(SH.b, {
                                         text: [{
-                                          icon: ZV,
+                                          icon: XH,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6374,782 +6374,782 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var kV = xV(657);
-                          const bV = (0, JV.memo)((function(VV) {
+                          var uH = LH(619);
+                          const QH = (0, AH.memo)((function(HH) {
                               let {
-                                initialParameters: eV
-                              } = VV;
-                              const xV = (0, JV.useRef)(null),
-                                YV = eV.label,
-                                QV = eV.JY,
+                                initialParameters: BH
+                              } = HH;
+                              const LH = (0, AH.useRef)(null),
+                                rH = BH.label,
+                                zH = BH.hB,
                                 {
-                                  icon: nV,
-                                  scale: wV,
-                                  rotation: ZV
-                                } = null !== eV && void 0 !== eV ? eV : {},
-                                vV = 100 * (.5 - QV / 2),
-                                rV = 100 * QV,
-                                bV = (0, yV.f)();
-                              return (0, JV.useEffect)((() => {
-                                const VV = bV.onFrame((() => {
-                                  const VV = bV.getState();
-                                  if (!VV.isActive || !xV.current) return;
-                                  const eV = VV.state;
-                                  xV.current.style.left = 100 * eV.markerPosition + "%"
+                                  icon: CH,
+                                  scale: EH,
+                                  rotation: XH
+                                } = null !== BH && void 0 !== BH ? BH : {},
+                                GH = 100 * (.5 - zH / 2),
+                                YH = 100 * zH,
+                                QH = (0, hH.f)();
+                              return (0, AH.useEffect)((() => {
+                                const HH = QH.onFrame((() => {
+                                  const HH = QH.getState();
+                                  if (!HH.isActive || !LH.current) return;
+                                  const BH = HH.state;
+                                  LH.current.style.left = 100 * BH.markerPosition + "%"
                                 }));
                                 return () => {
-                                  VV()
+                                  HH()
                                 }
-                              }), [bV]), (0, pV.jsxs)("div", {
+                              }), [QH]), (0, tH.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, kV.J)(wV) && {
-                                    "--scale": wV
+                                  ...!(0, uH.M)(EH) && {
+                                    "--scale": EH
                                   },
-                                  ...!(0, kV.J)(ZV) && {
-                                    "--rotation": `${ZV}deg`
+                                  ...!(0, uH.M)(XH) && {
+                                    "--rotation": `${XH}deg`
                                   }
                                 },
-                                children: [nV && (0, pV.jsx)(UV.b, {
+                                children: [CH && (0, tH.jsx)(SH.b, {
                                   text: [{
-                                    icon: nV
+                                    icon: CH
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, pV.jsxs)("div", {
+                                }), (0, tH.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, pV.jsx)("div", {
+                                  children: [(0, tH.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${vV}%`,
-                                      width: `${rV}%`
+                                      left: `${GH}%`,
+                                      width: `${YH}%`
                                     }
-                                  }), (0, pV.jsx)("div", {
+                                  }), (0, tH.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: xV
+                                    ref: LH
                                   })]
-                                }), (0, pV.jsx)("div", {
+                                }), (0, tH.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, pV.jsx)(UV.b, {
-                                    text: YV
+                                  children: (0, tH.jsx)(SH.b, {
+                                    text: rH
                                   })
                                 })]
                               })
                             })),
-                            EV = (0, JV.memo)((function(VV) {
+                            WH = (0, AH.memo)((function(HH) {
                               let {
-                                initialParameters: eV
-                              } = VV;
-                              const xV = (0, JV.useRef)(null),
-                                [YV, QV] = (0, JV.useState)((() => new Array(eV.UY).fill("pending"))),
-                                [nV, wV] = (0, JV.useState)((() => {
-                                  const VV = eV.QY;
-                                  return (0, kV.J)(VV) || VV <= 0 ? [] : new Array(VV).fill("pending")
+                                initialParameters: BH
+                              } = HH;
+                              const LH = (0, AH.useRef)(null),
+                                [rH, zH] = (0, AH.useState)((() => new Array(BH.zB).fill("pending"))),
+                                [CH, EH] = (0, AH.useState)((() => {
+                                  const HH = BH.XB;
+                                  return (0, uH.M)(HH) || HH <= 0 ? [] : new Array(HH).fill("pending")
                                 })),
-                                ZV = eV.label,
+                                XH = BH.label,
                                 {
-                                  icon: vV
-                                } = eV,
-                                rV = (0, JV.useRef)(0),
-                                bV = (0, JV.useRef)(0),
-                                EV = (0, JV.useRef)([]),
-                                BV = (0, yV.f)();
-                              return (0, JV.useEffect)((() => {
-                                const VV = BV.onFrame((() => {
-                                  const VV = BV.getState();
-                                  if (!VV.isActive || !xV.current) return;
-                                  const eV = VV.state,
-                                    JV = 30 + 60 * eV.outerCircleProgress;
-                                  if (xV.current.setAttribute("r", String(JV)), !0 === eV.lastClickResult && eV.successes > rV.current) {
-                                    xV.current.classList.remove("QTERhythmClickOuterCircle--miss"), xV.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const VV = setTimeout((() => {
-                                      var VV;
-                                      null === (VV = xV.current) || void 0 === VV || VV.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: GH
+                                } = BH,
+                                YH = (0, AH.useRef)(0),
+                                QH = (0, AH.useRef)(0),
+                                WH = (0, AH.useRef)([]),
+                                MH = (0, hH.f)();
+                              return (0, AH.useEffect)((() => {
+                                const HH = MH.onFrame((() => {
+                                  const HH = MH.getState();
+                                  if (!HH.isActive || !LH.current) return;
+                                  const BH = HH.state,
+                                    AH = 30 + 60 * BH.outerCircleProgress;
+                                  if (LH.current.setAttribute("r", String(AH)), !0 === BH.lastClickResult && BH.successes > YH.current) {
+                                    LH.current.classList.remove("QTERhythmClickOuterCircle--miss"), LH.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const HH = setTimeout((() => {
+                                      var HH;
+                                      null === (HH = LH.current) || void 0 === HH || HH.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    EV.current.push(VV)
-                                  } else if (!1 === eV.lastClickResult && eV.misses > bV.current) {
-                                    xV.current.classList.remove("QTERhythmClickOuterCircle--hit"), xV.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const VV = setTimeout((() => {
-                                      var VV;
-                                      null === (VV = xV.current) || void 0 === VV || VV.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    WH.current.push(HH)
+                                  } else if (!1 === BH.lastClickResult && BH.misses > QH.current) {
+                                    LH.current.classList.remove("QTERhythmClickOuterCircle--hit"), LH.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const HH = setTimeout((() => {
+                                      var HH;
+                                      null === (HH = LH.current) || void 0 === HH || HH.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    EV.current.push(VV)
+                                    WH.current.push(HH)
                                   }
-                                  eV.successes === rV.current && eV.misses === bV.current || (rV.current = eV.successes, bV.current = eV.misses, QV((VV => {
-                                    const xV = [...VV];
-                                    for (let JV = 0; JV < eV.UY; JV++) xV[JV] = JV < eV.successes ? "success" : "pending";
-                                    return xV
-                                  })), wV((VV => {
-                                    if (0 === VV.length) return VV;
-                                    const xV = [...VV];
-                                    for (let JV = 0; JV < xV.length; JV++) xV[JV] = JV < eV.misses ? "miss" : "pending";
-                                    return xV
+                                  BH.successes === YH.current && BH.misses === QH.current || (YH.current = BH.successes, QH.current = BH.misses, zH((HH => {
+                                    const LH = [...HH];
+                                    for (let AH = 0; AH < BH.zB; AH++) LH[AH] = AH < BH.successes ? "success" : "pending";
+                                    return LH
+                                  })), EH((HH => {
+                                    if (0 === HH.length) return HH;
+                                    const LH = [...HH];
+                                    for (let AH = 0; AH < LH.length; AH++) LH[AH] = AH < BH.misses ? "miss" : "pending";
+                                    return LH
                                   })))
                                 }));
                                 return () => {
-                                  VV();
-                                  for (const VV of EV.current) clearTimeout(VV);
-                                  EV.current = []
+                                  HH();
+                                  for (const HH of WH.current) clearTimeout(HH);
+                                  WH.current = []
                                 }
-                              }), [BV]), (0, pV.jsxs)("div", {
+                              }), [MH]), (0, tH.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, pV.jsx)("div", {
+                                children: [(0, tH.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: YV.map(((VV, eV) => (0, pV.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === VV ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, eV)))
-                                }), (0, pV.jsxs)("div", {
+                                  children: rH.map(((HH, BH) => (0, tH.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === HH ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, BH)))
+                                }), (0, tH.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, pV.jsxs)("svg", {
+                                  children: [(0, tH.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, pV.jsx)("circle", {
+                                    children: [(0, tH.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, pV.jsx)("circle", {
+                                    }), (0, tH.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: xV
+                                      ref: LH
                                     })]
-                                  }), vV && (0, pV.jsx)("div", {
+                                  }), GH && (0, tH.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, pV.jsx)(UV.b, {
+                                    children: (0, tH.jsx)(SH.b, {
                                       text: [{
-                                        icon: vV
+                                        icon: GH
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), nV.length > 0 && (0, pV.jsx)("div", {
+                                }), CH.length > 0 && (0, tH.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: nV.map(((VV, eV) => (0, pV.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === VV ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, eV)))
-                                }), (0, pV.jsx)("div", {
+                                  children: CH.map(((HH, BH) => (0, tH.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === HH ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, BH)))
+                                }), (0, tH.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, pV.jsx)(UV.b, {
-                                    text: ZV
+                                  children: (0, tH.jsx)(SH.b, {
+                                    text: XH
                                   })
                                 })]
                               })
                             }));
 
-                          function BV(VV) {
+                          function MH(HH) {
                             let {
-                              qte: eV
-                            } = VV;
-                            switch (eV.type) {
+                              qte: BH
+                            } = HH;
+                            switch (BH.type) {
                               case "progressBar":
-                                return (0, pV.jsx)(QV, {
-                                  initialParameters: eV.parameters
+                                return (0, tH.jsx)(zH, {
+                                  initialParameters: BH.parameters
                                 });
                               case "timedClick":
-                                return (0, pV.jsx)(vV, {
-                                  initialParameters: eV.parameters
+                                return (0, tH.jsx)(GH, {
+                                  initialParameters: BH.parameters
                                 });
                               case "gravityBar":
-                                return (0, pV.jsx)(rV, {
-                                  initialParameters: eV.parameters
+                                return (0, tH.jsx)(YH, {
+                                  initialParameters: BH.parameters
                                 });
                               case "precisionBar":
-                                return (0, pV.jsx)(bV, {
-                                  initialParameters: eV.parameters
+                                return (0, tH.jsx)(QH, {
+                                  initialParameters: BH.parameters
                                 });
                               case "rhythmClick":
-                                return (0, pV.jsx)(EV, {
-                                  initialParameters: eV.parameters
+                                return (0, tH.jsx)(WH, {
+                                  initialParameters: BH.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const jV = (0, JV.memo)((function() {
-                            const [VV, eV] = (0, JV.useState)({
+                          const xH = (0, AH.memo)((function() {
+                            const [HH, BH] = (0, AH.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, YV.g)("qteStateUpdated", (VV => {
-                              eV(VV)
-                            })), VV.isActive && VV.type ? (0, pV.jsx)("div", {
+                            return (0, rH.d)("qteStateUpdated", (HH => {
+                              BH(HH)
+                            })), HH.isActive && HH.type ? (0, tH.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, pV.jsx)(BV, {
-                                qte: VV
+                              children: (0, tH.jsx)(MH, {
+                                qte: HH
                               })
                             }) : null
                           }))
-                        }, 5264: (VV, eV, xV) => {
-                          xV.d(eV, {
-                            d: () => pV,
-                            f: () => QV
+                        }, 5250: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            e: () => tH,
+                            f: () => zH
                           });
-                          var JV = xV(62),
-                            YV = xV(1348),
-                            UV = xV(5273);
-                          const yV = {
-                              getState: () => UV.d.getCurrentState(),
-                              onFrame: YV.v
+                          var AH = LH(45),
+                            rH = LH(1253),
+                            SH = LH(5253);
+                          const hH = {
+                              getState: () => SH.d.getCurrentState(),
+                              onFrame: rH.x
                             },
-                            pV = (0, JV.createContext)(yV);
+                            tH = (0, AH.createContext)(hH);
 
-                          function QV() {
-                            return (0, JV.useContext)(pV)
+                          function zH() {
+                            return (0, AH.useContext)(tH)
                           }
-                        }, 5339: (VV, eV, xV) => {
-                          xV.d(eV, {
-                            c: () => DV,
-                            g: () => gV
+                        }, 5319: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            b: () => cH,
+                            d: () => KH
                           });
-                          var JV = xV(5342),
-                            YV = xV(364);
-                          const UV = 120,
-                            yV = 260,
-                            pV = 1.15,
-                            QV = 1.2,
-                            nV = 2,
-                            wV = 1.08,
-                            ZV = .8,
-                            vV = .95,
-                            rV = 8,
-                            kV = "[\"')\\]\u300d\u300f\uff09]*",
-                            bV = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${kV}$`),
-                            EV = new RegExp(`[?\uff1f]${kV}$`),
-                            BV = new RegExp(`[!\uff01]${kV}$`),
-                            jV = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            qV = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            tV = new RegExp(`[${qV}]`),
-                            FV = new RegExp(`[${qV}]|[^${qV}]+`, "g"),
-                            TV = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var AH = LH(5325),
+                            rH = LH(304);
+                          const SH = 120,
+                            hH = 260,
+                            tH = 1.15,
+                            zH = 1.2,
+                            CH = 2,
+                            EH = 1.08,
+                            XH = .8,
+                            GH = .95,
+                            YH = 8,
+                            uH = "[\"')\\]\u300d\u300f\uff09]*",
+                            QH = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${uH}$`),
+                            WH = new RegExp(`[?\uff1f]${uH}$`),
+                            MH = new RegExp(`[!\uff01]${uH}$`),
+                            xH = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            vH = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            PH = new RegExp(`[${vH}]`),
+                            TH = new RegExp(`[${vH}]|[^${vH}]+`, "g"),
+                            UH = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function PV(VV) {
-                            let eV = 2166136261;
-                            for (let xV = 0; xV < VV.length; xV++) eV ^= VV.charCodeAt(xV), eV = Math.imul(eV, 16777619);
-                            return (eV >>> 0) / 4294967295 * 2 - 1
+                          function VH(HH) {
+                            let BH = 2166136261;
+                            for (let LH = 0; LH < HH.length; LH++) BH ^= HH.charCodeAt(LH), BH = Math.imul(BH, 16777619);
+                            return (BH >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function AV(VV) {
-                            var eV;
-                            if (tV.test(VV)) return 1;
-                            const xV = VV.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              JV = xV.replace(/[^0-9]/g, "");
-                            if (JV.length > 0 && !/\p{L}/u.test(xV)) return Math.min(JV.length, 4);
-                            const YV = null !== (eV = xV.match(TV)) && void 0 !== eV ? eV : [];
-                            if (0 === YV.length) {
-                              var UV, yV;
-                              const VV = null !== (UV = null === (yV = xV.match(/\p{L}/gu)) || void 0 === yV ? void 0 : yV.length) && void 0 !== UV ? UV : 0;
-                              return 0 === VV ? 0 : Math.min(Math.max(1, Math.round(VV / 2.5)), rV)
+                          function OH(HH) {
+                            var BH;
+                            if (PH.test(HH)) return 1;
+                            const LH = HH.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              AH = LH.replace(/[^0-9]/g, "");
+                            if (AH.length > 0 && !/\p{L}/u.test(LH)) return Math.min(AH.length, 4);
+                            const rH = null !== (BH = LH.match(UH)) && void 0 !== BH ? BH : [];
+                            if (0 === rH.length) {
+                              var SH, hH;
+                              const HH = null !== (SH = null === (hH = LH.match(/\p{L}/gu)) || void 0 === hH ? void 0 : hH.length) && void 0 !== SH ? SH : 0;
+                              return 0 === HH ? 0 : Math.min(Math.max(1, Math.round(HH / 2.5)), YH)
                             }
-                            const pV = xV.replace(/[^\p{L}]/gu, ""),
-                              QV = YV.length > 1 && "e" === YV.at(-1) && pV.endsWith("e") && !pV.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(VV.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(YV.length - (QV ? 1 : 0), rV)
+                            const tH = LH.replace(/[^\p{L}]/gu, ""),
+                              zH = rH.length > 1 && "e" === rH.at(-1) && tH.endsWith("e") && !tH.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(HH.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(rH.length - (zH ? 1 : 0), YH)
                           }
 
-                          function NV(VV) {
-                            return VV.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function bH(HH) {
+                            return HH.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function XV(VV) {
-                            const eV = VV.replace(/[^\p{L}]/gu, "");
-                            return eV.length >= 2 && eV === eV.toUpperCase() && eV !== eV.toLowerCase()
+                          function kH(HH) {
+                            const BH = HH.replace(/[^\p{L}]/gu, "");
+                            return BH.length >= 2 && BH === BH.toUpperCase() && BH !== BH.toLowerCase()
                           }
 
-                          function MV(VV, eV) {
-                            var xV;
-                            const rV = eV && (0, JV.j)(eV),
-                              kV = null !== (xV = null === rV || void 0 === rV ? void 0 : rV.syllableMs) && void 0 !== xV ? xV : JV.e,
-                              qV = function(VV) {
-                                const eV = [];
-                                for (const JV of (0, YV.dc)(VV))
-                                  if ("string" === typeof JV)
-                                    for (const VV of JV.split(/(\s+)/)) {
-                                      if ("" === VV) continue;
-                                      if (/^\s+$/.test(VV)) {
-                                        eV.push({
+                          function mH(HH, BH) {
+                            var LH;
+                            const YH = BH && (0, AH.k)(BH),
+                              uH = null !== (LH = null === YH || void 0 === YH ? void 0 : YH.syllableMs) && void 0 !== LH ? LH : AH.e,
+                              vH = function(HH) {
+                                const BH = [];
+                                for (const AH of (0, rH.tc)(HH))
+                                  if ("string" === typeof AH)
+                                    for (const HH of AH.split(/(\s+)/)) {
+                                      if ("" === HH) continue;
+                                      if (/^\s+$/.test(HH)) {
+                                        BH.push({
                                           kind: "space",
-                                          text: VV
+                                          text: HH
                                         });
                                         continue
                                       }
-                                      if (!tV.test(VV)) {
-                                        eV.push({
+                                      if (!PH.test(HH)) {
+                                        BH.push({
                                           kind: "word",
-                                          text: VV,
+                                          text: HH,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let JV = !0;
-                                      for (const YV of null !== (xV = VV.match(FV)) && void 0 !== xV ? xV : []) {
-                                        var xV;
-                                        const VV = eV.at(-1);
-                                        JV || "word" !== (null === VV || void 0 === VV ? void 0 : VV.kind) || tV.test(YV) || /[\p{L}\p{N}]/u.test(YV) ? (JV || eV.push({
+                                      let AH = !0;
+                                      for (const rH of null !== (LH = HH.match(TH)) && void 0 !== LH ? LH : []) {
+                                        var LH;
+                                        const HH = BH.at(-1);
+                                        AH || "word" !== (null === HH || void 0 === HH ? void 0 : HH.kind) || PH.test(rH) || /[\p{L}\p{N}]/u.test(rH) ? (AH || BH.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), eV.push({
+                                        }), BH.push({
                                           kind: "word",
-                                          text: YV,
+                                          text: rH,
                                           delayMs: 0
-                                        }), JV = !1) : VV.text += YV
+                                        }), AH = !1) : HH.text += rH
                                       }
-                                    } else eV.push({
+                                    } else BH.push({
                                       kind: "icon",
-                                      text: JV.icon,
+                                      text: AH.icon,
                                       delayMs: 0
                                     });
-                                return eV
-                              }(VV),
-                              TV = [];
-                            let MV = [];
-                            for (const JV of qV) "space" !== JV.kind && (MV.push(JV), bV.test(JV.text) && (TV.push(MV), MV = []));
-                            TV.push(MV);
-                            const zV = [];
-                            let GV = 0;
-                            for (const JV of TV) {
-                              var WV, RV;
-                              const VV = null !== (WV = null === (RV = JV.at(-1)) || void 0 === RV ? void 0 : RV.text) && void 0 !== WV ? WV : "",
-                                eV = EV.test(VV),
-                                xV = BV.test(VV),
-                                YV = JV.map((VV => "word" === VV.kind ? AV(VV.text) : 1)),
-                                qV = YV.findLastIndex((VV => VV > 0));
-                              for (const [EV, BV] of JV.entries()) {
-                                const VV = "word" === BV.kind,
-                                  JV = YV[EV];
-                                BV.delayMs = GV;
-                                for (let YV = 0; rV && YV < JV; YV++) {
+                                return BH
+                              }(HH),
+                              UH = [];
+                            let mH = [];
+                            for (const AH of vH) "space" !== AH.kind && (mH.push(AH), QH.test(AH.text) && (UH.push(mH), mH = []));
+                            UH.push(mH);
+                            const oH = [];
+                            let IH = 0;
+                            for (const AH of UH) {
+                              var fH, lH;
+                              const HH = null !== (fH = null === (lH = AH.at(-1)) || void 0 === lH ? void 0 : lH.text) && void 0 !== fH ? fH : "",
+                                BH = WH.test(HH),
+                                LH = MH.test(HH),
+                                rH = AH.map((HH => "word" === HH.kind ? OH(HH.text) : 1)),
+                                vH = rH.findLastIndex((HH => HH > 0));
+                              for (const [WH, MH] of AH.entries()) {
+                                const HH = "word" === MH.kind,
+                                  AH = rH[WH];
+                                MH.delayMs = IH;
+                                for (let rH = 0; YH && rH < AH; rH++) {
                                   const {
-                                    intonation: UV
-                                  } = rV;
-                                  let yV = qV > 0 ? -UV.declineSemitones * (EV / qV) : 0;
-                                  yV += PV(`${NV(BV.text)}|${YV}`) * UV.variationSemitones;
-                                  const bV = Math.min(1, UV.variationSemitones);
-                                  let jV = rV.glideSemitones,
-                                    tV = 1;
-                                  xV && (yV += UV.exclaimLiftSemitones, tV *= pV), eV && EV === qV && (yV += UV.questionRiseSemitones * (JV > 1 ? .5 + .5 * YV / (JV - 1) : 1), YV === JV - 1 && (jV = Math.abs(jV) + UV.questionRiseSemitones / 2)), VV && XV(BV.text) && (yV += nV * bV, tV *= QV), JV > 1 && 0 === YV && (yV += ZV * bV, tV *= wV), zV.push({
-                                    atMs: GV + YV * kV,
-                                    semitones: yV,
-                                    glideSemitones: jV,
-                                    durationMs: YV < JV - 1 ? Math.min(rV.durationMs, kV * vV) : rV.durationMs,
-                                    level: tV
+                                    intonation: SH
+                                  } = YH;
+                                  let hH = vH > 0 ? -SH.declineSemitones * (WH / vH) : 0;
+                                  hH += VH(`${bH(MH.text)}|${rH}`) * SH.variationSemitones;
+                                  const QH = Math.min(1, SH.variationSemitones);
+                                  let xH = YH.glideSemitones,
+                                    PH = 1;
+                                  LH && (hH += SH.exclaimLiftSemitones, PH *= tH), BH && WH === vH && (hH += SH.questionRiseSemitones * (AH > 1 ? .5 + .5 * rH / (AH - 1) : 1), rH === AH - 1 && (xH = Math.abs(xH) + SH.questionRiseSemitones / 2)), HH && kH(MH.text) && (hH += CH * QH, PH *= zH), AH > 1 && 0 === rH && (hH += XH * QH, PH *= EH), oH.push({
+                                    atMs: IH + rH * uH,
+                                    semitones: hH,
+                                    glideSemitones: xH,
+                                    durationMs: rH < AH - 1 ? Math.min(YH.durationMs, uH * GH) : YH.durationMs,
+                                    level: PH
                                   })
                                 }
-                                GV += JV * kV + (bV.test(BV.text) ? yV : jV.test(BV.text) ? UV : 0)
+                                IH += AH * uH + (QH.test(MH.text) ? hH : xH.test(MH.text) ? SH : 0)
                               }
                             }
                             return {
-                              pieces: qV.map((VV => "space" === VV.kind ? VV : "icon" === VV.kind ? {
+                              pieces: vH.map((HH => "space" === HH.kind ? HH : "icon" === HH.kind ? {
                                 kind: "icon",
-                                icon: VV.text,
-                                delayMs: VV.delayMs
+                                icon: HH.text,
+                                delayMs: HH.delayMs
                               } : {
                                 kind: "word",
-                                text: VV.text,
-                                delayMs: VV.delayMs
+                                text: HH.text,
+                                delayMs: HH.delayMs
                               })),
-                              blips: zV
+                              blips: oH
                             }
                           }
-                          var zV = xV(1220),
-                            GV = xV(1279),
-                            WV = xV(2059);
+                          var oH = LH(1123),
+                            IH = LH(1194),
+                            fH = LH(2003);
 
-                          function RV(VV) {
-                            if ("string" === typeof VV) return VV;
-                            const eV = GV.c.get().getCurrentLanguageCode();
-                            return (0, zV.r)(eV, VV.translationKey, (0, zV.p)(VV.params, WV.e.shown))
+                          function lH(HH) {
+                            if ("string" === typeof HH) return HH;
+                            const BH = IH.g.get().getCurrentLanguageCode();
+                            return (0, oH.r)(BH, HH.translationKey, (0, oH.q)(HH.params, fH.c.shown))
                           }
 
-                          function gV(VV) {
-                            const eV = void 0 === VV.voice ? null : (0, JV.n)(VV.voice),
-                              xV = eV && (0, JV.j)(eV);
+                          function KH(HH) {
+                            const BH = void 0 === HH.voice ? null : (0, AH.l)(HH.voice),
+                              LH = BH && (0, AH.k)(BH);
                             return {
-                              plan: MV(RV(VV.line), xV),
-                              synth: xV
+                              plan: mH(lH(HH.line), LH),
+                              synth: LH
                             }
                           }
 
-                          function DV(VV) {
-                            const eV = [];
-                            let xV = [];
-                            for (const [YV, UV] of VV.entries()) {
-                              var JV;
-                              "space" === UV.kind && (" " !== UV.text || "icon" !== (null === (JV = VV[YV + 1]) || void 0 === JV ? void 0 : JV.kind)) ? (xV.length > 0 && eV.push(xV), eV.push([UV]), xV = []) : xV.push(UV)
+                          function cH(HH) {
+                            const BH = [];
+                            let LH = [];
+                            for (const [rH, SH] of HH.entries()) {
+                              var AH;
+                              "space" === SH.kind && (" " !== SH.text || "icon" !== (null === (AH = HH[rH + 1]) || void 0 === AH ? void 0 : AH.kind)) ? (LH.length > 0 && BH.push(LH), BH.push([SH]), LH = []) : LH.push(SH)
                             }
-                            return xV.length > 0 && eV.push(xV), eV
+                            return LH.length > 0 && BH.push(LH), BH
                           }
-                        }, 5351: (VV, eV, xV) => {
-                          xV.d(eV, {
-                            d: () => wV,
-                            g: () => ZV
+                        }, 5333: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            b: () => EH,
+                            f: () => XH
                           });
-                          var JV = xV(5353),
-                            YV = xV(27);
-                          const UV = .25,
-                            yV = .85,
-                            pV = .02,
-                            QV = .01;
+                          var AH = LH(5335),
+                            rH = LH(15);
+                          const SH = .25,
+                            hH = .85,
+                            tH = .02,
+                            zH = .01;
 
-                          function nV(VV, eV, xV, JV, YV, UV, pV) {
+                          function CH(HH, BH, LH, AH, rH, SH, tH) {
                             const {
-                              waveform: QV,
-                              pitchHz: nV,
-                              attackMs: wV,
-                              releaseMs: ZV,
-                              lowpassHz: vV
-                            } = xV, rV = YV + JV.durationMs / 1e3, kV = nV * 2 ** (JV.semitones / 12), bV = VV.createOscillator();
-                            bV.type = QV, bV.frequency.setValueAtTime(kV, YV), bV.frequency.exponentialRampToValueAtTime(kV * 2 ** (JV.glideSemitones / 12), rV);
-                            const EV = YV + Math.min(wV, JV.durationMs) / 1e3,
-                              BV = VV.createGain();
-                            BV.gain.setValueAtTime(0, YV), BV.gain.linearRampToValueAtTime(UV, EV), BV.gain.linearRampToValueAtTime(UV * yV, Math.max(EV, rV - ZV / 1e3)), BV.gain.linearRampToValueAtTime(0, rV);
-                            const jV = [bV];
-                            if (null !== vV) {
-                              const eV = VV.createBiquadFilter();
-                              eV.type = "lowpass", eV.frequency.value = vV, jV.push(eV)
+                              waveform: zH,
+                              pitchHz: CH,
+                              attackMs: EH,
+                              releaseMs: XH,
+                              lowpassHz: GH
+                            } = LH, YH = rH + AH.durationMs / 1e3, uH = CH * 2 ** (AH.semitones / 12), QH = HH.createOscillator();
+                            QH.type = zH, QH.frequency.setValueAtTime(uH, rH), QH.frequency.exponentialRampToValueAtTime(uH * 2 ** (AH.glideSemitones / 12), YH);
+                            const WH = rH + Math.min(EH, AH.durationMs) / 1e3,
+                              MH = HH.createGain();
+                            MH.gain.setValueAtTime(0, rH), MH.gain.linearRampToValueAtTime(SH, WH), MH.gain.linearRampToValueAtTime(SH * hH, Math.max(WH, YH - XH / 1e3)), MH.gain.linearRampToValueAtTime(0, YH);
+                            const xH = [QH];
+                            if (null !== GH) {
+                              const BH = HH.createBiquadFilter();
+                              BH.type = "lowpass", BH.frequency.value = GH, xH.push(BH)
                             }
-                            jV.push(BV, eV);
-                            for (let yV = 1; yV < jV.length; yV++) jV[yV - 1].connect(jV[yV]);
-                            return bV.onended = () => {
-                              for (const VV of jV.slice(0, -1)) VV.disconnect();
-                              pV()
-                            }, bV.start(YV), bV.stop(rV), bV
+                            xH.push(MH, BH);
+                            for (let hH = 1; hH < xH.length; hH++) xH[hH - 1].connect(xH[hH]);
+                            return QH.onended = () => {
+                              for (const HH of xH.slice(0, -1)) HH.disconnect();
+                              tH()
+                            }, QH.start(rH), QH.stop(YH), QH
                           }
 
-                          function wV(VV, eV, xV, JV, YV, yV) {
-                            if (0 === JV.length) return yV(), () => {};
-                            const wV = UV * xV.volume * YV,
-                              ZV = VV.createGain();
-                            ZV.connect(eV);
-                            const vV = VV.currentTime + pV,
-                              rV = new Set;
-                            for (const UV of JV) {
-                              const eV = nV(VV, ZV, xV, UV, vV + UV.atMs / 1e3, wV * UV.level, (() => {
-                                rV.delete(eV), 0 === rV.size && (ZV.disconnect(), yV())
+                          function EH(HH, BH, LH, AH, rH, hH) {
+                            if (0 === AH.length) return hH(), () => {};
+                            const EH = SH * LH.volume * rH,
+                              XH = HH.createGain();
+                            XH.connect(BH);
+                            const GH = HH.currentTime + tH,
+                              YH = new Set;
+                            for (const SH of AH) {
+                              const BH = CH(HH, XH, LH, SH, GH + SH.atMs / 1e3, EH * SH.level, (() => {
+                                YH.delete(BH), 0 === YH.size && (XH.disconnect(), hH())
                               }));
-                              rV.add(eV)
+                              YH.add(BH)
                             }
                             return () => {
-                              const eV = VV.currentTime;
-                              ZV.gain.setTargetAtTime(0, eV, QV);
-                              for (const VV of rV) try {
-                                VV.stop(eV + 5 * QV)
+                              const BH = HH.currentTime;
+                              XH.gain.setTargetAtTime(0, BH, zH);
+                              for (const HH of YH) try {
+                                HH.stop(BH + 5 * zH)
                               } catch {}
                             }
                           }
 
-                          function ZV(VV, eV) {
-                            var xV;
-                            const UV = JV.Howler.ctx,
-                              yV = JV.Howler.masterGain;
-                            if (!UV || !yV || !YV.b.get("soundOnFromAd")) return () => {};
-                            const pV = JV.Howler;
-                            return null === (xV = pV._autoResume) || void 0 === xV || xV.call(pV), wV(UV, yV, VV, eV, YV.b.get("soundVolume"), (() => {
-                              var VV;
-                              null === (VV = pV._autoSuspend) || void 0 === VV || VV.call(pV)
+                          function XH(HH, BH) {
+                            var LH;
+                            const SH = AH.Howler.ctx,
+                              hH = AH.Howler.masterGain;
+                            if (!SH || !hH || !rH.c.get("soundOnFromAd")) return () => {};
+                            const tH = AH.Howler;
+                            return null === (LH = tH._autoResume) || void 0 === LH || LH.call(tH), EH(SH, hH, HH, BH, rH.c.get("soundVolume"), (() => {
+                              var HH;
+                              null === (HH = tH._autoSuspend) || void 0 === HH || HH.call(tH)
                             }))
                           }
-                        }, 5330: (VV, eV, xV) => {
-                          xV.d(eV, {
-                            c: () => pV,
-                            e: () => YV,
-                            g: () => QV,
-                            k: () => yV,
-                            o: () => UV
+                        }, 5302: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            e: () => tH,
+                            h: () => rH,
+                            l: () => zH,
+                            o: () => hH,
+                            p: () => SH
                           });
-                          var JV = xV(5323);
-                          const YV = {
+                          var AH = LH(5296);
+                          const rH = {
                               name: "ChatGPT",
                               url: "https://chatgpt.com/?hints=search&q="
                             },
-                            UV = {
+                            SH = {
                               name: "Claude",
                               url: "https://claude.ai/new?q="
                             },
-                            yV = `${JV.l} lists every page of the Bloxd Code API docs.`;
+                            hH = `${AH.l} lists every page of the Bloxd Code API docs.`;
 
-                          function pV(VV, eV) {
-                            return `${VV.url}${encodeURIComponent(eV.toWellFormed())}`
+                          function tH(HH, BH) {
+                            return `${HH.url}${encodeURIComponent(BH.toWellFormed())}`
                           }
 
-                          function QV(VV) {
-                            const eV = pV(YV, VV);
-                            return eV.length <= 3e4 ? {
-                              url: eV,
+                          function zH(HH) {
+                            const BH = tH(rH, HH);
+                            return BH.length <= 3e4 ? {
+                              url: BH,
                               sendsPrompt: !0
                             } : {
-                              url: new URL(YV.url).origin,
+                              url: new URL(rH.url).origin,
                               sendsPrompt: !1
                             }
                           }
-                        }, 5353: (VV, eV, xV) => {
-                          xV.r(eV), xV.d(eV, {
-                            Howl: () => YV.Howl,
-                            Howler: () => YV.Howler,
-                            musicOutput: () => EV,
-                            readyAudioContext: () => BV
+                        }, 5335: (HH, BH, LH) => {
+                          LH.r(BH), LH.d(BH, {
+                            Howl: () => rH.Howl,
+                            Howler: () => rH.Howler,
+                            musicOutput: () => WH,
+                            readyAudioContext: () => MH
                           });
-                          var JV, YV = xV(5357),
-                            UV = xV(3886),
-                            yV = xV(5137);
-                          const pV = YV.Howler;
+                          var AH, rH = LH(5343),
+                            SH = LH(3811),
+                            hH = LH(5067);
+                          const tH = rH.Howler;
 
-                          function QV() {
-                            var VV, eV;
-                            if (pV.ctx || !pV.usingWebAudio || "undefined" === typeof AudioContext || !(0, yV.i)()) return;
-                            const xV = navigator.audioSession;
-                            let JV;
-                            "auto" === (null === xV || void 0 === xV ? void 0 : xV.type) && (xV.type = "ambient");
+                          function zH() {
+                            var HH, BH;
+                            if (tH.ctx || !tH.usingWebAudio || "undefined" === typeof AudioContext || !(0, hH.i)()) return;
+                            const LH = navigator.audioSession;
+                            let AH;
+                            "auto" === (null === LH || void 0 === LH ? void 0 : LH.type) && (LH.type = "ambient");
                             try {
-                              JV = new AudioContext({
+                              AH = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const YV = JV.createGain();
-                            YV.gain.setValueAtTime(pV._muted ? 0 : null !== (VV = pV._volume) && void 0 !== VV ? VV : 1, JV.currentTime), YV.connect(JV.destination), pV.ctx = JV, pV.masterGain = YV, null === (eV = pV._setup) || void 0 === eV || eV.call(pV)
+                            const rH = AH.createGain();
+                            rH.gain.setValueAtTime(tH._muted ? 0 : null !== (HH = tH._volume) && void 0 !== HH ? HH : 1, AH.currentTime), rH.connect(AH.destination), tH.ctx = AH, tH.masterGain = rH, null === (BH = tH._setup) || void 0 === BH || BH.call(tH)
                           }
-                          pV._mobileUnloaded = !0;
-                          const nV = pV.volume.bind(YV.Howler);
-                          pV.volume = function() {
-                            return QV(), nV(...arguments)
+                          tH._mobileUnloaded = !0;
+                          const CH = tH.volume.bind(rH.Howler);
+                          tH.volume = function() {
+                            return zH(), CH(...arguments)
                           };
-                          const wV = pV.mute.bind(YV.Howler);
-                          pV.mute = VV => (QV(), wV(VV));
-                          const ZV = YV.Howl.prototype,
-                            vV = ZV.init;
+                          const EH = tH.mute.bind(rH.Howler);
+                          tH.mute = HH => (zH(), EH(HH));
+                          const XH = rH.Howl.prototype,
+                            GH = XH.init;
 
-                          function rV() {
-                            for (; pV._html5AudioPool.length < pV.html5PoolSize;) {
-                              const VV = new Audio;
-                              VV._unlocked = !0, pV._releaseHtml5Audio(VV)
+                          function YH() {
+                            for (; tH._html5AudioPool.length < tH.html5PoolSize;) {
+                              const HH = new Audio;
+                              HH._unlocked = !0, tH._releaseHtml5Audio(HH)
                             }
-                            for (const eV of pV._howls)
-                              if (!eV._webAudio)
-                                for (const xV of eV._getSoundIds()) {
-                                  var VV;
-                                  const JV = null === (VV = eV._soundById(xV)) || void 0 === VV ? void 0 : VV._node;
-                                  JV && !JV._unlocked && (JV._unlocked = !0, JV.load())
+                            for (const BH of tH._howls)
+                              if (!BH._webAudio)
+                                for (const LH of BH._getSoundIds()) {
+                                  var HH;
+                                  const AH = null === (HH = BH._soundById(LH)) || void 0 === HH ? void 0 : HH._node;
+                                  AH && !AH._unlocked && (AH._unlocked = !0, AH.load())
                                 }
                           }
-                          ZV.init = function(VV) {
-                            return QV(), vV.call(this, VV)
-                          }, (0, yV.i)() && (pV._unlockAudio = () => {
-                            const VV = pV.ctx;
-                            if (pV._audioUnlocked || !VV) return;
-                            pV.autoUnlock = !1;
-                            const eV = VV.createBuffer(1, 1, 22050);
-                            pV._scratchBuffer = eV;
-                            const xV = new AbortController;
-                            let JV = "afterPaint";
-                            const YV = () => {
-                                var JV;
-                                if (pV._audioUnlocked) return;
-                                null === (JV = pV._autoResume) || void 0 === JV || JV.call(pV);
-                                const YV = VV.createBufferSource();
-                                YV.buffer = eV, YV.connect(VV.destination), YV.start(0), VV.resume().catch((() => {})), YV.onended = () => {
-                                  YV.disconnect(0), pV._audioUnlocked = !0, xV.abort();
-                                  for (const VV of pV._howls) VV._emit("unlock")
+                          XH.init = function(HH) {
+                            return zH(), GH.call(this, HH)
+                          }, (0, hH.i)() && (tH._unlockAudio = () => {
+                            const HH = tH.ctx;
+                            if (tH._audioUnlocked || !HH) return;
+                            tH.autoUnlock = !1;
+                            const BH = HH.createBuffer(1, 1, 22050);
+                            tH._scratchBuffer = BH;
+                            const LH = new AbortController;
+                            let AH = "afterPaint";
+                            const rH = () => {
+                                var AH;
+                                if (tH._audioUnlocked) return;
+                                null === (AH = tH._autoResume) || void 0 === AH || AH.call(tH);
+                                const rH = HH.createBufferSource();
+                                rH.buffer = BH, rH.connect(HH.destination), rH.start(0), HH.resume().catch((() => {})), rH.onended = () => {
+                                  rH.disconnect(0), tH._audioUnlocked = !0, LH.abort();
+                                  for (const HH of tH._howls) HH._emit("unlock")
                                 }
                               },
-                              QV = () => {
-                                rV(), YV()
+                              zH = () => {
+                                YH(), rH()
                               },
-                              nV = eV => {
-                                if (rV(), "inTap" === JV) {
-                                  if ("running" === VV.state) return;
-                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), YV()
-                                } else "afterPaint" === JV && (JV = "queued", (0, UV.c)(eV.timeStamp, (() => {
-                                  JV = "inTap", YV()
+                              CH = BH => {
+                                if (YH(), "inTap" === AH) {
+                                  if ("running" === HH.state) return;
+                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), rH()
+                                } else "afterPaint" === AH && (AH = "queued", (0, SH.c)(BH.timeStamp, (() => {
+                                  AH = "inTap", rH()
                                 })))
                               };
-                            for (const UV of ["touchstart", "touchend"]) document.addEventListener(UV, QV, {
+                            for (const SH of ["touchstart", "touchend"]) document.addEventListener(SH, zH, {
                               capture: !0,
-                              signal: xV.signal
+                              signal: LH.signal
                             });
-                            for (const UV of yV.c) document.addEventListener(UV, nV, {
+                            for (const SH of hH.d) document.addEventListener(SH, CH, {
                               capture: !0,
-                              signal: xV.signal
+                              signal: LH.signal
                             })
                           });
-                          let kV = 0;
-                          const bV = null === (JV = pV._autoSuspend) || void 0 === JV ? void 0 : JV.bind(YV.Howler);
+                          let uH = 0;
+                          const QH = null === (AH = tH._autoSuspend) || void 0 === AH ? void 0 : AH.bind(rH.Howler);
 
-                          function EV() {
-                            BV();
+                          function WH() {
+                            MH();
                             const {
-                              ctx: VV,
-                              masterGain: eV
-                            } = pV;
-                            return VV && eV ? {
-                              ctx: VV,
-                              destination: eV,
-                              holdAwake: VV => {
-                                var eV, xV;
-                                (kV += VV ? 1 : -1, VV) ? null === (eV = pV._autoResume) || void 0 === eV || eV.call(pV): null === (xV = pV._autoSuspend) || void 0 === xV || xV.call(pV)
+                              ctx: HH,
+                              masterGain: BH
+                            } = tH;
+                            return HH && BH ? {
+                              ctx: HH,
+                              destination: BH,
+                              holdAwake: HH => {
+                                var BH, LH;
+                                (uH += HH ? 1 : -1, HH) ? null === (BH = tH._autoResume) || void 0 === BH || BH.call(tH): null === (LH = tH._autoSuspend) || void 0 === LH || LH.call(tH)
                               },
                               wake: () => {
-                                var eV;
-                                "running" !== VV.state && (null === (eV = pV._autoResume) || void 0 === eV || eV.call(pV), VV.resume().catch((() => {})))
+                                var BH;
+                                "running" !== HH.state && (null === (BH = tH._autoResume) || void 0 === BH || BH.call(tH), HH.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function BV() {
-                            var VV;
-                            (pV.volume(), pV.ctx && pV.autoUnlock) && (null === (VV = pV._unlockAudio) || void 0 === VV || VV.call(pV))
+                          function MH() {
+                            var HH;
+                            (tH.volume(), tH.ctx && tH.autoUnlock) && (null === (HH = tH._unlockAudio) || void 0 === HH || HH.call(tH))
                           }
-                          bV && (pV._autoSuspend = () => kV > 0 ? YV.Howler : bV())
-                        }, 5364: (VV, eV, xV) => {
-                          function JV(VV) {
+                          QH && (tH._autoSuspend = () => uH > 0 ? rH.Howler : QH())
+                        }, 5347: (HH, BH, LH) => {
+                          function AH(HH) {
                             return {
-                              notAfter: VV
+                              notAfter: HH
                             }
                           }
-                          xV.d(eV, {
-                            B: () => ZV,
-                            e: () => QV,
-                            h: () => nV,
-                            k: () => pV,
-                            l: () => JV,
-                            o: () => YV,
-                            s: () => UV,
-                            w: () => yV,
-                            z: () => wV
+                          LH.d(BH, {
+                            b: () => zH,
+                            c: () => CH,
+                            g: () => tH,
+                            i: () => AH,
+                            j: () => rH,
+                            k: () => SH,
+                            n: () => hH,
+                            o: () => EH,
+                            s: () => XH
                           });
-                          const YV = JV("\\w$."),
-                            UV = JV("\\w.,");
+                          const rH = AH("\\w$."),
+                            SH = AH("\\w.,");
 
-                          function yV(VV) {
-                            return eV => QV(eV, VV)
+                          function hH(HH) {
+                            return BH => zH(BH, HH)
                           }
 
-                          function pV(VV) {
-                            return eV => !VV.test(eV.input.slice(0, eV.index))
+                          function tH(HH) {
+                            return BH => !HH.test(BH.input.slice(0, BH.index))
                           }
 
-                          function QV(VV, eV) {
-                            return VV.index > 0 && new RegExp(`[${eV}]`).test(VV.input[VV.index - 1])
+                          function zH(HH, BH) {
+                            return HH.index > 0 && new RegExp(`[${BH}]`).test(HH.input[HH.index - 1])
                           }
 
-                          function nV(VV, eV, xV) {
-                            return function(VV) {
-                              return void 0 !== VV && "function" !== typeof VV
-                            }(xV) ? function(VV, eV, xV) {
-                              const JV = eV.flags.replace(/[gy]/g, ""),
-                                YV = new RegExp(`[^${xV}](?:${eV.source})`, `${JV}g`),
-                                UV = [],
-                                yV = xV => {
-                                  const JV = xV.index + xV[0].length;
-                                  return ("" === xV[0] ? vV(VV, eV, JV) : JV) - 1
+                          function CH(HH, BH, LH) {
+                            return function(HH) {
+                              return void 0 !== HH && "function" !== typeof HH
+                            }(LH) ? function(HH, BH, LH) {
+                              const AH = BH.flags.replace(/[gy]/g, ""),
+                                rH = new RegExp(`[^${LH}](?:${BH.source})`, `${AH}g`),
+                                SH = [],
+                                hH = LH => {
+                                  const AH = LH.index + LH[0].length;
+                                  return ("" === LH[0] ? GH(HH, BH, AH) : AH) - 1
                                 },
-                                pV = new RegExp(`(?:${eV.source})`, `${JV}y`).exec(VV);
-                              if (pV) {
-                                if (UV.push(pV), !eV.global) return UV;
-                                YV.lastIndex = yV(pV)
+                                tH = new RegExp(`(?:${BH.source})`, `${AH}y`).exec(HH);
+                              if (tH) {
+                                if (SH.push(tH), !BH.global) return SH;
+                                rH.lastIndex = hH(tH)
                               }
-                              for (let QV = YV.exec(VV); QV; QV = YV.exec(VV)) {
-                                const xV = vV(VV, eV, QV.index) - QV.index;
-                                if (QV[0] = QV[0].slice(xV), QV.index += xV, UV.push(QV), !eV.global) break;
-                                YV.lastIndex = yV(QV)
+                              for (let zH = rH.exec(HH); zH; zH = rH.exec(HH)) {
+                                const LH = GH(HH, BH, zH.index) - zH.index;
+                                if (zH[0] = zH[0].slice(LH), zH.index += LH, SH.push(zH), !BH.global) break;
+                                rH.lastIndex = hH(zH)
                               }
-                              return UV
-                            }(VV, eV, xV.notAfter) : function(VV, eV, xV) {
-                              const JV = new RegExp(eV.source, `${eV.flags.replace(/[gy]/g,"")}g`),
-                                YV = [];
-                              for (let UV = JV.exec(VV); UV; UV = JV.exec(VV))
-                                if (!xV || xV(UV)) {
-                                  if (YV.push(UV), !eV.global) break;
-                                  "" === UV[0] && (JV.lastIndex = vV(VV, eV, JV.lastIndex))
-                                } else JV.lastIndex = vV(VV, eV, UV.index);
-                              return YV
-                            }(VV, eV, xV)
+                              return SH
+                            }(HH, BH, LH.notAfter) : function(HH, BH, LH) {
+                              const AH = new RegExp(BH.source, `${BH.flags.replace(/[gy]/g,"")}g`),
+                                rH = [];
+                              for (let SH = AH.exec(HH); SH; SH = AH.exec(HH))
+                                if (!LH || LH(SH)) {
+                                  if (rH.push(SH), !BH.global) break;
+                                  "" === SH[0] && (AH.lastIndex = GH(HH, BH, AH.lastIndex))
+                                } else AH.lastIndex = GH(HH, BH, SH.index);
+                              return rH
+                            }(HH, BH, LH)
                           }
 
-                          function wV(VV, eV, xV, JV) {
-                            let YV = "",
-                              UV = 0;
-                            for (const yV of nV(VV, eV, xV)) YV += VV.slice(UV, yV.index) + JV(yV), UV = yV.index + yV[0].length;
-                            return YV + VV.slice(UV)
+                          function EH(HH, BH, LH, AH) {
+                            let rH = "",
+                              SH = 0;
+                            for (const hH of CH(HH, BH, LH)) rH += HH.slice(SH, hH.index) + AH(hH), SH = hH.index + hH[0].length;
+                            return rH + HH.slice(SH)
                           }
 
-                          function ZV(VV, eV, xV) {
-                            const JV = [];
-                            let YV = 0;
-                            for (const UV of nV(VV, eV, xV)) JV.push(VV.slice(YV, UV.index)), YV = UV.index + UV[0].length;
-                            return [...JV, VV.slice(YV)]
+                          function XH(HH, BH, LH) {
+                            const AH = [];
+                            let rH = 0;
+                            for (const SH of CH(HH, BH, LH)) AH.push(HH.slice(rH, SH.index)), rH = SH.index + SH[0].length;
+                            return [...AH, HH.slice(rH)]
                           }
 
-                          function vV(VV, eV, xV) {
-                            var JV;
-                            return xV + (eV.unicode && (null !== (JV = VV.codePointAt(xV)) && void 0 !== JV ? JV : 0) > 65535 ? 2 : 1)
+                          function GH(HH, BH, LH) {
+                            var AH;
+                            return LH + (BH.unicode && (null !== (AH = HH.codePointAt(LH)) && void 0 !== AH ? AH : 0) > 65535 ? 2 : 1)
                           }
-                        }, 5323: (VV, eV, xV) => {
-                          xV.d(eV, {
-                            C: () => rV,
-                            b: () => YV,
-                            e: () => QV,
-                            i: () => UV,
-                            l: () => yV,
-                            p: () => pV,
-                            t: () => EV,
-                            u: () => wV,
-                            w: () => ZV,
-                            z: () => bV
+                        }, 5296: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            A: () => YH,
+                            c: () => rH,
+                            g: () => zH,
+                            h: () => SH,
+                            l: () => hH,
+                            n: () => tH,
+                            p: () => WH,
+                            r: () => EH,
+                            u: () => XH,
+                            x: () => QH
                           });
-                          var JV = xV(1682);
-                          const YV = 24e3,
-                            UV = "/docs/llms.txt",
-                            yV = `${JV.d}${UV}`,
-                            pV = "/llms.txt",
-                            QV = "/docs/llms-full.txt";
+                          var AH = LH(1603);
+                          const rH = 24e3,
+                            SH = "/docs/llms.txt",
+                            hH = `${AH.c}${SH}`,
+                            tH = "/llms.txt",
+                            zH = "/docs/llms-full.txt";
 
-                          function nV(VV) {
-                            return VV || "index"
+                          function CH(HH) {
+                            return HH || "index"
                           }
 
-                          function wV(VV) {
-                            return `/docs/${nV(VV)}.md`
+                          function EH(HH) {
+                            return `/docs/${CH(HH)}.md`
                           }
 
-                          function ZV(VV, eV) {
-                            return `/docs/${nV(VV)}/${eV+1}.md`
+                          function XH(HH, BH) {
+                            return `/docs/${CH(HH)}/${BH+1}.md`
                           }
-                          const vV = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const GH = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function rV(VV) {
-                            const eV = vV.exec(VV);
-                            return null === eV ? null : {
-                              name: eV[1],
-                              part: void 0 === eV[2] ? null : Number(eV[2])
+                          function YH(HH) {
+                            const BH = GH.exec(HH);
+                            return null === BH ? null : {
+                              name: BH[1],
+                              part: void 0 === BH[2] ? null : Number(BH[2])
                             }
                           }
-                          const kV = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const uH = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function bV(VV) {
-                            const eV = kV.exec(VV);
-                            if (null === eV) return null;
-                            const [, xV = "", JV] = eV;
-                            return void 0 === JV ? wV(xV) : ZV(xV, Number(JV) - 1)
+                          function QH(HH) {
+                            const BH = uH.exec(HH);
+                            if (null === BH) return null;
+                            const [, LH = "", AH] = BH;
+                            return void 0 === AH ? EH(LH) : XH(LH, Number(AH) - 1)
                           }
 
-                          function EV(VV) {
-                            return `/docsHtml/${nV(VV)}.html`
+                          function WH(HH) {
+                            return `/docsHtml/${CH(HH)}.html`
                           }
-                        }, 5342: (VV, eV, xV) => {
-                          xV.d(eV, {
-                            e: () => YV,
-                            g: () => JV,
-                            i: () => UV,
-                            j: () => QV,
-                            n: () => yV
+                        }, 5325: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            e: () => rH,
+                            g: () => AH,
+                            i: () => SH,
+                            k: () => zH,
+                            l: () => hH
                           });
-                          const JV = ["sine", "triangle", "square", "sawtooth"],
-                            YV = 55,
-                            UV = {
+                          const AH = ["sine", "triangle", "square", "sawtooth"],
+                            rH = 55,
+                            SH = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7288,38 +7288,38 @@ export const modules = {
                               }
                             };
 
-                          function yV(VV) {
-                            return "string" !== typeof VV ? VV : Object.hasOwn(UV, VV) ? UV[VV] : null
+                          function hH(HH) {
+                            return "string" !== typeof HH ? HH : Object.hasOwn(SH, HH) ? SH[HH] : null
                           }
 
-                          function pV(VV, eV, xV) {
-                            return Math.min(xV, Math.max(eV, VV))
+                          function tH(HH, BH, LH) {
+                            return Math.min(LH, Math.max(BH, HH))
                           }
 
-                          function QV(VV) {
-                            const eV = pV(VV.durationMs, 10, 500),
-                              xV = pV(VV.attackMs, 0, eV),
+                          function zH(HH) {
+                            const BH = tH(HH.durationMs, 10, 500),
+                              LH = tH(HH.attackMs, 0, BH),
                               {
-                                intonation: YV
-                              } = VV;
+                                intonation: rH
+                              } = HH;
                             return {
-                              waveform: JV.includes(VV.waveform) ? VV.waveform : "sine",
-                              pitchHz: pV(VV.pitchHz, 20, 4e3),
-                              glideSemitones: pV(VV.glideSemitones, -24, 24),
-                              durationMs: eV,
-                              attackMs: xV,
-                              releaseMs: pV(VV.releaseMs, 0, eV - xV),
-                              lowpassHz: null === VV.lowpassHz ? null : pV(VV.lowpassHz, 20, 2e4),
-                              volume: pV(VV.volume, 0, 2),
+                              waveform: AH.includes(HH.waveform) ? HH.waveform : "sine",
+                              pitchHz: tH(HH.pitchHz, 20, 4e3),
+                              glideSemitones: tH(HH.glideSemitones, -24, 24),
+                              durationMs: BH,
+                              attackMs: LH,
+                              releaseMs: tH(HH.releaseMs, 0, BH - LH),
+                              lowpassHz: null === HH.lowpassHz ? null : tH(HH.lowpassHz, 20, 2e4),
+                              volume: tH(HH.volume, 0, 2),
                               intonation: {
-                                variationSemitones: pV(YV.variationSemitones, 0, 6),
-                                declineSemitones: pV(YV.declineSemitones, 0, 12),
-                                questionRiseSemitones: pV(YV.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: pV(YV.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: tH(rH.variationSemitones, 0, 6),
+                                declineSemitones: tH(rH.declineSemitones, 0, 12),
+                                questionRiseSemitones: tH(rH.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: tH(rH.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: pV(VV.syllableMs, 25, 200)
+                              syllableMs: tH(HH.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const VV in modules) Object.freeze(modules[VV]);
+                      for (const HH in modules) Object.freeze(modules[HH]);

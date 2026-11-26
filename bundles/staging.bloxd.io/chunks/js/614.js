@@ -1,31 +1,31 @@
 export const id = 614;
 export const ids = [614];
 export const modules = {
-  44636: (VV, eV, xV) => {
-    xV.d(eV, {
-      parseShaderPack: () => JV
+  45226: (HH, BH, LH) => {
+    LH.d(BH, {
+      parseShaderPack: () => AH
     });
 
-    function JV(VV) {
-      var eV, xV;
-      const JV = VV.get("shaderPackUrl"),
-        YV = null !== (eV = VV.get("shaderPackMode")) && void 0 !== eV ? eV : "strict";
-      if (null === JV) {
-        if (VV.has("shaderPackMode")) throw new Error("shaderPackMode= needs shaderPackUrl=");
+    function AH(HH) {
+      var BH, LH;
+      const AH = HH.get("shaderPackUrl"),
+        rH = null !== (BH = HH.get("shaderPackMode")) && void 0 !== BH ? BH : "strict";
+      if (null === AH) {
+        if (HH.has("shaderPackMode")) throw new Error("shaderPackMode= needs shaderPackUrl=");
         return null
       }
-      if ("lite" !== VV.get("renderer")) throw new Error("shaderPackUrl= needs renderer=lite: shader packs run on Lite only");
-      if (! function(VV) {
-          return "strict" === VV || "allow" === VV
-        }(YV)) throw new Error(`Unknown shaderPackMode "${YV}" - use strict or allow`);
-      const UV = (null !== (xV = VV.get("variants")) && void 0 !== xV ? xV : "").split(",").find((VV => VV.trim().startsWith("liteShaderPack")));
-      if (void 0 !== UV) throw new Error(`shaderPackUrl= runs its own pack: drop variants=${UV.trim()}`);
+      if ("lite" !== HH.get("renderer")) throw new Error("shaderPackUrl= needs renderer=lite: shader packs run on Lite only");
+      if (! function(HH) {
+          return "strict" === HH || "allow" === HH
+        }(rH)) throw new Error(`Unknown shaderPackMode "${rH}" - use strict or allow`);
+      const SH = (null !== (LH = HH.get("variants")) && void 0 !== LH ? LH : "").split(",").find((HH => HH.trim().startsWith("liteShaderPack")));
+      if (void 0 !== SH) throw new Error(`shaderPackUrl= runs its own pack: drop variants=${SH.trim()}`);
       return {
-        url: JV,
-        mode: YV
+        url: AH,
+        mode: rH
       }
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

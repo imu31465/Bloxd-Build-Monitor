@@ -1,69 +1,69 @@
-export const id = 38;
-export const ids = [38];
+export const id = 39;
+export const ids = [39];
 export const modules = {
-  35156: (VV, eV, xV) => {
-    function JV(VV, eV) {
-      return 0 === VV.length ? 0 : VV[Math.min(VV.length - 1, Math.floor(eV * VV.length))]
+  34832: (HH, BH, LH) => {
+    function AH(HH, BH) {
+      return 0 === HH.length ? 0 : HH[Math.min(HH.length - 1, Math.floor(BH * HH.length))]
     }
 
-    function YV(VV) {
-      return VV.toFixed(1)
+    function rH(HH) {
+      return HH.toFixed(1)
     }
-    xV.d(eV, {
-      c: () => YV,
-      e: () => JV
+    LH.d(BH, {
+      d: () => rH,
+      g: () => AH
     })
   },
-  35152: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      FIRST_SUMMARIES_FOR_MS: () => EV,
-      FIRST_SUMMARY_MS: () => bV,
-      FrameDebugLog: () => AV,
-      OUTLIER_BURST: () => jV,
-      OUTLIER_MS: () => BV,
-      OUTLIER_REFILL_MS: () => qV,
-      SUMMARY_MS: () => kV,
-      startFrameDebug: () => XV
+  34830: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      FIRST_SUMMARIES_FOR_MS: () => WH,
+      FIRST_SUMMARY_MS: () => QH,
+      FrameDebugLog: () => OH,
+      OUTLIER_BURST: () => xH,
+      OUTLIER_MS: () => MH,
+      OUTLIER_REFILL_MS: () => vH,
+      SUMMARY_MS: () => uH,
+      startFrameDebug: () => kH
     });
-    var JV = xV(5301),
-      YV = xV(5288),
-      UV = xV(35156),
-      yV = xV(3142),
-      pV = xV(1364),
-      QV = xV(3311);
-    class nV {
+    var AH = LH(5268),
+      rH = LH(5260),
+      SH = LH(34832),
+      hH = LH(3105),
+      tH = LH(1270),
+      zH = LH(3277);
+    class CH {
       constructor() {
-        this.kind = void 0, this.entries = new Float64Array(256), this.next = 0, this.size = 0, this.onLongFrame = VV => {
-          const eV = VV;
-          this.add(eV.startTime, eV.duration, eV.blockingDuration, (0, pV.s)(eV))
-        }, this.onLongTask = VV => {
-          this.add(VV.startTime, VV.duration, 0, 0)
-        }, null !== (0, QV.b)("long-animation-frame", this.onLongFrame) ? this.kind = "loaf" : this.kind = null !== (0, QV.b)("longtask", this.onLongTask) ? "longtask" : null
+        this.kind = void 0, this.entries = new Float64Array(256), this.next = 0, this.size = 0, this.onLongFrame = HH => {
+          const BH = HH;
+          this.add(BH.startTime, BH.duration, BH.blockingDuration, (0, tH.q)(BH))
+        }, this.onLongTask = HH => {
+          this.add(HH.startTime, HH.duration, 0, 0)
+        }, null !== (0, zH.e)("long-animation-frame", this.onLongFrame) ? this.kind = "loaf" : this.kind = null !== (0, zH.e)("longtask", this.onLongTask) ? "longtask" : null
       }
-      add(VV, eV, xV, JV) {
-        this.entries.set([VV, eV, xV, JV], 4 * this.next), this.next = (this.next + 1) % 64, this.size = Math.min(this.size + 1, 64)
+      add(HH, BH, LH, AH) {
+        this.entries.set([HH, BH, LH, AH], 4 * this.next), this.next = (this.next + 1) % 64, this.size = Math.min(this.size + 1, 64)
       }
-      describe(VV, eV) {
+      describe(HH, BH) {
         if (null === this.kind) return "long tasks n/a";
-        let xV = 0,
-          JV = 0,
-          YV = 0,
-          UV = 0;
-        for (let pV = 0; pV < this.size; pV++) {
-          const yV = 4 * pV,
-            QV = this.entries[yV] + this.entries[yV + 1];
-          QV > VV && QV <= eV + 2 && (xV++, JV += this.entries[yV + 1], YV += this.entries[yV + 2], UV += this.entries[yV + 3])
+        let LH = 0,
+          AH = 0,
+          rH = 0,
+          SH = 0;
+        for (let tH = 0; tH < this.size; tH++) {
+          const hH = 4 * tH,
+            zH = this.entries[hH] + this.entries[hH + 1];
+          zH > HH && zH <= BH + 2 && (LH++, AH += this.entries[hH + 1], rH += this.entries[hH + 2], SH += this.entries[hH + 3])
         }
-        const yV = "loaf" === this.kind && xV > 0 ? ` (blocking ${YV.toFixed(0)}, script ${UV.toFixed(0)})` : "";
-        return `${xV} ${this.kind} ${JV.toFixed(0)} ms${yV}`
+        const hH = "loaf" === this.kind && LH > 0 ? ` (blocking ${rH.toFixed(0)}, script ${SH.toFixed(0)})` : "";
+        return `${LH} ${this.kind} ${AH.toFixed(0)} ms${hH}`
       }
     }
-    var wV = xV(35165);
+    var EH = LH(34837);
 
-    function ZV(VV, eV) {
-      return eV < 0 || VV < eV ? VV : VV - eV
+    function XH(HH, BH) {
+      return BH < 0 || HH < BH ? HH : HH - BH
     }
-    class vV {
+    class GH {
       constructor() {
         this.source = null, this.now = {
           chunksReceived: -1,
@@ -83,15 +83,15 @@ export const modules = {
           jobsInFlight: -1,
           workersLive: -1,
           workersRetired: -1
-        }, this.lastMs = 0, this.hidden = new wV.c, this.hiddenBefore = {
+        }, this.lastMs = 0, this.hidden = new EH.b, this.hiddenBefore = {
           changes: 0,
           hiddenMs: 0
         }
       }
-      setSource(VV) {
-        this.source = VV
+      setSource(HH) {
+        this.source = HH
       }
-      start(VV) {
+      start(HH) {
         this.before = {
           chunksReceived: -1,
           chunksCancelled: -1,
@@ -101,123 +101,123 @@ export const modules = {
           jobsInFlight: -1,
           workersLive: -1,
           workersRetired: -1
-        }, this.lastMs = VV
+        }, this.lastMs = HH
       }
-      take(VV) {
-        var eV;
-        const xV = [];
-        if (!0 === (null === (eV = this.source) || void 0 === eV ? void 0 : eV.call(this, this.now)) && (JV = this.now, YV = this.before, JV.chunksReceived !== YV.chunksReceived || JV.chunksCancelled !== YV.chunksCancelled || JV.chunksStored !== YV.chunksStored || JV.jobsSent !== YV.jobsSent || JV.jobsDone !== YV.jobsDone || JV.jobsInFlight !== YV.jobsInFlight || JV.workersLive !== YV.workersLive || JV.workersRetired !== YV.workersRetired)) {
-          xV.push(function(VV, eV) {
-            const xV = [`chunks +${ZV(VV.chunksReceived,eV.chunksReceived)} got`, `+${ZV(VV.chunksCancelled,eV.chunksCancelled)} cancelled`];
-            VV.chunksStored >= 0 && xV.push(`${VV.chunksStored} stored`);
-            const JV = `jobs +${ZV(VV.jobsSent,eV.jobsSent)} sent, +${ZV(VV.jobsDone,eV.jobsDone)} done, ${VV.jobsInFlight} in flight`;
-            return `${xV.join(", ")}; ${JV}; workers ${VV.workersLive} live, ${VV.workersRetired} retired`
+      take(HH) {
+        var BH;
+        const LH = [];
+        if (!0 === (null === (BH = this.source) || void 0 === BH ? void 0 : BH.call(this, this.now)) && (AH = this.now, rH = this.before, AH.chunksReceived !== rH.chunksReceived || AH.chunksCancelled !== rH.chunksCancelled || AH.chunksStored !== rH.chunksStored || AH.jobsSent !== rH.jobsSent || AH.jobsDone !== rH.jobsDone || AH.jobsInFlight !== rH.jobsInFlight || AH.workersLive !== rH.workersLive || AH.workersRetired !== rH.workersRetired)) {
+          LH.push(function(HH, BH) {
+            const LH = [`chunks +${XH(HH.chunksReceived,BH.chunksReceived)} got`, `+${XH(HH.chunksCancelled,BH.chunksCancelled)} cancelled`];
+            HH.chunksStored >= 0 && LH.push(`${HH.chunksStored} stored`);
+            const AH = `jobs +${XH(HH.jobsSent,BH.jobsSent)} sent, +${XH(HH.jobsDone,BH.jobsDone)} done, ${HH.jobsInFlight} in flight`;
+            return `${LH.join(", ")}; ${AH}; workers ${HH.workersLive} live, ${HH.workersRetired} retired`
           }(this.now, this.before));
-          const VV = this.before;
-          this.before = this.now, this.now = VV
+          const HH = this.before;
+          this.before = this.now, this.now = HH
         }
-        var JV, YV;
-        const UV = this.hidden.totals(VV),
-          yV = UV.changes - this.hiddenBefore.changes,
-          pV = UV.hiddenMs - this.hiddenBefore.hiddenMs;
-        if ((yV > 0 || pV > 0) && (xV.push((0, wV.f)({
-            changes: yV,
-            hiddenMs: pV
-          })), this.hiddenBefore = UV), 0 === xV.length) return null;
-        const QV = `load ${Math.round((VV-this.lastMs)/1e3)}s: ${xV.join("; ")}`;
-        return this.lastMs = VV, QV
+        var AH, rH;
+        const SH = this.hidden.totals(HH),
+          hH = SH.changes - this.hiddenBefore.changes,
+          tH = SH.hiddenMs - this.hiddenBefore.hiddenMs;
+        if ((hH > 0 || tH > 0) && (LH.push((0, EH.c)({
+            changes: hH,
+            hiddenMs: tH
+          })), this.hiddenBefore = SH), 0 === LH.length) return null;
+        const zH = `load ${Math.round((HH-this.lastMs)/1e3)}s: ${LH.join("; ")}`;
+        return this.lastMs = HH, zH
       }
     }
-    class rV {
+    class YH {
       constructor() {
         this.count = 0, this.paced = 0, this.skipped = 0, this.run = 0, this.longest = 0, this.longestMs = 0, this.longestAhead = -1
       }
       drawn() {
         this.run = 0
       }
-      add(VV, eV, xV) {
-        this.count++, "paced" === VV ? this.paced++ : "skipped" === VV && this.skipped++, this.run++, this.run > this.longest && (this.longest = this.run, this.longestMs = eV, this.longestAhead = xV)
+      add(HH, BH, LH) {
+        this.count++, "paced" === HH ? this.paced++ : "skipped" === HH && this.skipped++, this.run++, this.run > this.longest && (this.longest = this.run, this.longestMs = BH, this.longestAhead = LH)
       }
       describe() {
         if (0 === this.count) return "0 undrawn";
-        const VV = this.count - this.paced - this.skipped;
-        return `${this.count} undrawn: ${this.paced} paced, ${this.skipped} skipped, ${VV} other, longest ${this.longest} in ${(0,UV.c)(this.longestMs)} ms at ${this.longestAhead} ahead`
+        const HH = this.count - this.paced - this.skipped;
+        return `${this.count} undrawn: ${this.paced} paced, ${this.skipped} skipped, ${HH} other, longest ${this.longest} in ${(0,SH.d)(this.longestMs)} ms at ${this.longestAhead} ahead`
       }
       reset() {
         this.count = 0, this.paced = 0, this.skipped = 0, this.longest = 0, this.longestMs = 0, this.longestAhead = -1
       }
     }
-    const kV = 2e4,
-      bV = 5e3,
-      EV = 6e4,
-      BV = 250,
-      jV = 10,
-      qV = 6e4,
-      tV = 8192;
+    const uH = 2e4,
+      QH = 5e3,
+      WH = 6e4,
+      MH = 250,
+      xH = 10,
+      vH = 6e4,
+      PH = 8192;
 
-    function FV(VV) {
-      return VV.mainMs = 0, VV.renderMs = 0, VV.ticks = 0, VV.tickMs = 0, VV.rafs = 0, VV.pendingBefore = -1, VV.pendingMax = -1, VV.pendingAfter = -1, VV
+    function TH(HH) {
+      return HH.mainMs = 0, HH.renderMs = 0, HH.ticks = 0, HH.tickMs = 0, HH.rafs = 0, HH.pendingBefore = -1, HH.pendingMax = -1, HH.pendingAfter = -1, HH
     }
 
-    function TV() {
-      return FV({})
+    function UH() {
+      return TH({})
     }
-    class PV {
+    class VH {
       constructor() {
-        this.intervals = new Float64Array(tV), this.totals = TV(), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = new rV, this.shown = 0, this.dropped = 0
+        this.intervals = new Float64Array(PH), this.totals = UH(), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = new YH, this.shown = 0, this.dropped = 0
       }
       reset() {
-        FV(this.totals), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn.reset(), this.shown = 0, this.dropped = 0
+        TH(this.totals), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn.reset(), this.shown = 0, this.dropped = 0
       }
     }
-    class AV {
+    class OH {
       constructor() {
-        this.longTasks = new nV, this.summary = new PV, this.current = TV(), this.lastDrawnStartMs = -1, this.lastPending = -1, this.ahead = -1, this.tokens = jV, this.lastRefillMs = performance.now(), this.waiting = [], this.outlierTimer = null, this.flushTimer = null, this.startedMs = 0, this.lastFlushMs = 0, this.loadLine = new vV, this.inGameSinceFlush = !1, this.visibilityChanged = () => {
+        this.longTasks = new CH, this.summary = new VH, this.current = UH(), this.lastDrawnStartMs = -1, this.lastPending = -1, this.ahead = -1, this.tokens = xH, this.lastRefillMs = performance.now(), this.waiting = [], this.outlierTimer = null, this.flushTimer = null, this.startedMs = 0, this.lastFlushMs = 0, this.loadLine = new GH, this.inGameSinceFlush = !1, this.visibilityChanged = () => {
           this.restart(), this.loadLine.hidden.changed(performance.now())
         }, this.restart = () => {
           this.lastDrawnStartMs = -1
         }, this.animationFrame = () => {
           this.current.rafs++
-        }, this.wasmFrame = (VV, eV, xV, YV, UV, yV) => {
-          this.ahead = VV.headerWord(JV.Q.Pacing) & JV.gb.AheadMask, this.frame(eV, xV, YV, UV, VV.headerWord(JV.Q.RenderUs) / 1e3, VV.headerWord(JV.Q.TicksRun), yV, VV.headerWord(JV.Q.RenderPending))
-        }, this.wasmPeekPaced = VV => {
-          const eV = performance.now();
-          this.frame(eV, eV, "paced", VV, 0, 0, 0, this.lastPending)
-        }, this.jsFrame = (VV, eV, xV) => {
-          this.frame(VV, eV, "drawn", xV, eV - VV, 0, 0, -1)
-        }, this.jsTick = VV => {
-          this.current.mainMs += VV, this.current.ticks++, this.current.tickMs += VV
+        }, this.wasmFrame = (HH, BH, LH, rH, SH, hH) => {
+          this.ahead = HH.headerWord(AH.I.Pacing) & AH.fb.AheadMask, this.frame(BH, LH, rH, SH, HH.headerWord(AH.I.RenderUs) / 1e3, HH.headerWord(AH.I.TicksRun), hH, HH.headerWord(AH.I.RenderPending))
+        }, this.wasmPeekPaced = HH => {
+          const BH = performance.now();
+          this.frame(BH, BH, "paced", HH, 0, 0, 0, this.lastPending)
+        }, this.jsFrame = (HH, BH, LH) => {
+          this.frame(HH, BH, "drawn", LH, BH - HH, 0, 0, -1)
+        }, this.jsTick = HH => {
+          this.current.mainMs += HH, this.current.ticks++, this.current.tickMs += HH
         }, this.logOutliers = () => {
           this.outlierTimer = null;
-          const VV = performance.now();
-          let eV = 0;
-          for (const xV of this.waiting) {
-            if (xV.dueMs > VV) {
-              this.waiting[eV++] = xV;
+          const HH = performance.now();
+          let BH = 0;
+          for (const LH of this.waiting) {
+            if (LH.dueMs > HH) {
+              this.waiting[BH++] = LH;
               continue
             }
-            const JV = [`long frame ${(0,UV.c)(xV.intervalMs)} ms ending at ${(0,UV.c)(xV.endMs)} ms: main ${(0,UV.c)(xV.mainMs)} (render ${(0,UV.c)(xV.renderMs)}, ${xV.ticks} ticks ${(0,UV.c)(xV.tickMs)}), outside ${(0,UV.c)(xV.intervalMs-xV.mainMs)}`, `${xV.rafs} rafs`];
-            xV.pendingBefore >= 0 && JV.push(`pending ${xV.pendingBefore} -> ${xV.pendingAfter} (max ${xV.pendingMax})`), JV.push(this.longTasks.describe(xV.endMs - xV.intervalMs, xV.endMs)), (0, yV.i)("frame", JV.join("; "))
+            const AH = [`long frame ${(0,SH.d)(LH.intervalMs)} ms ending at ${(0,SH.d)(LH.endMs)} ms: main ${(0,SH.d)(LH.mainMs)} (render ${(0,SH.d)(LH.renderMs)}, ${LH.ticks} ticks ${(0,SH.d)(LH.tickMs)}), outside ${(0,SH.d)(LH.intervalMs-LH.mainMs)}`, `${LH.rafs} rafs`];
+            LH.pendingBefore >= 0 && AH.push(`pending ${LH.pendingBefore} -> ${LH.pendingAfter} (max ${LH.pendingMax})`), AH.push(this.longTasks.describe(LH.endMs - LH.intervalMs, LH.endMs)), (0, hH.j)("frame", AH.join("; "))
           }
-          this.waiting.length = eV, eV > 0 && (this.outlierTimer = setTimeout(this.logOutliers, this.waiting[0].dueMs - VV))
+          this.waiting.length = BH, BH > 0 && (this.outlierTimer = setTimeout(this.logOutliers, this.waiting[0].dueMs - HH))
         }, this.flush = () => {
           this.flushTimer = null;
-          const VV = performance.now(),
-            eV = Math.round((VV - this.lastFlushMs) / 1e3);
-          this.lastFlushMs = VV, this.scheduleFlush();
-          if (this.logSummary(eV) || this.inGameSinceFlush) {
-            const eV = this.loadLine.take(VV);
-            null !== eV && (0, yV.i)("frame", eV)
+          const HH = performance.now(),
+            BH = Math.round((HH - this.lastFlushMs) / 1e3);
+          this.lastFlushMs = HH, this.scheduleFlush();
+          if (this.logSummary(BH) || this.inGameSinceFlush) {
+            const BH = this.loadLine.take(HH);
+            null !== BH && (0, hH.j)("frame", BH)
           }
           this.inGameSinceFlush = !1, this.summary.reset()
         }, document.addEventListener("visibilitychange", this.visibilityChanged)
       }
-      start(VV, eV) {
-        var xV;
-        this.restart(), this.startedMs = performance.now(), this.lastFlushMs = this.startedMs, this.loadLine.start(this.startedMs), this.scheduleFlush(), (0, yV.i)("frame", `start: ${VV} client, ${eV}, dpr ${window.devicePixelRatio}, long tasks ${null!==(xV=this.longTasks.kind)&&void 0!==xV?xV:"n/a"}; a summary each ${kV/1e3} s in game (${bV/1e3} s for the first ${EV/1e3} s), outliers over ${BV} ms`)
+      start(HH, BH) {
+        var LH;
+        this.restart(), this.startedMs = performance.now(), this.lastFlushMs = this.startedMs, this.loadLine.start(this.startedMs), this.scheduleFlush(), (0, hH.j)("frame", `start: ${HH} client, ${BH}, dpr ${window.devicePixelRatio}, long tasks ${null!==(LH=this.longTasks.kind)&&void 0!==LH?LH:"n/a"}; a summary each ${uH/1e3} s in game (${QH/1e3} s for the first ${WH/1e3} s), outliers over ${MH} ms`)
       }
-      setLoadCounts(VV) {
-        this.loadLine.setSource(VV)
+      setLoadCounts(HH) {
+        this.loadLine.setSource(HH)
       }
       joined() {
         this.startedMs = performance.now(), this.scheduleFlush()
@@ -227,68 +227,68 @@ export const modules = {
       }
       scheduleFlush() {
         null !== this.flushTimer && clearTimeout(this.flushTimer);
-        const VV = performance.now() - this.startedMs < EV;
-        this.flushTimer = setTimeout(this.flush, VV ? bV : kV)
+        const HH = performance.now() - this.startedMs < WH;
+        this.flushTimer = setTimeout(this.flush, HH ? QH : uH)
       }
-      frame(VV, eV, xV, JV, UV, yV, pV, QV) {
-        if (!JV) return this.restart(), void(this.lastPending = QV);
-        const nV = this.current;
-        (0, YV.b)(xV) ? (this.lastDrawnStartMs >= 0 && (nV.pendingAfter = this.lastPending, this.closeInterval(VV - this.lastDrawnStartMs, VV)), this.lastDrawnStartMs = VV, FV(nV).pendingBefore = this.lastPending, this.summary.undrawn.drawn()) : this.lastDrawnStartMs >= 0 && this.summary.undrawn.add(xV, eV - this.lastDrawnStartMs, this.ahead), nV.mainMs += eV - VV, nV.renderMs += UV, nV.ticks += yV, nV.tickMs += pV, nV.pendingMax = Math.max(nV.pendingMax, QV), this.lastPending = QV, this.summary.totals.pendingMax = Math.max(this.summary.totals.pendingMax, QV)
+      frame(HH, BH, LH, AH, SH, hH, tH, zH) {
+        if (!AH) return this.restart(), void(this.lastPending = zH);
+        const CH = this.current;
+        (0, rH.b)(LH) ? (this.lastDrawnStartMs >= 0 && (CH.pendingAfter = this.lastPending, this.closeInterval(HH - this.lastDrawnStartMs, HH)), this.lastDrawnStartMs = HH, TH(CH).pendingBefore = this.lastPending, this.summary.undrawn.drawn()) : this.lastDrawnStartMs >= 0 && this.summary.undrawn.add(LH, BH - this.lastDrawnStartMs, this.ahead), CH.mainMs += BH - HH, CH.renderMs += SH, CH.ticks += hH, CH.tickMs += tH, CH.pendingMax = Math.max(CH.pendingMax, zH), this.lastPending = zH, this.summary.totals.pendingMax = Math.max(this.summary.totals.pendingMax, zH)
       }
-      closeInterval(VV, eV) {
-        const xV = this.summary,
-          JV = this.current;
-        xV.frames < tV && (xV.intervals[xV.frames] = VV), xV.frames++, xV.maxMs = Math.max(xV.maxMs, VV);
-        const YV = xV.totals;
-        YV.mainMs += JV.mainMs, YV.renderMs += JV.renderMs, YV.ticks += JV.ticks, YV.tickMs += JV.tickMs, YV.rafs += JV.rafs, VV > 50 && xV.slow++, VV > BV && this.outlier(VV, eV)
+      closeInterval(HH, BH) {
+        const LH = this.summary,
+          AH = this.current;
+        LH.frames < PH && (LH.intervals[LH.frames] = HH), LH.frames++, LH.maxMs = Math.max(LH.maxMs, HH);
+        const rH = LH.totals;
+        rH.mainMs += AH.mainMs, rH.renderMs += AH.renderMs, rH.ticks += AH.ticks, rH.tickMs += AH.tickMs, rH.rafs += AH.rafs, HH > 50 && LH.slow++, HH > MH && this.outlier(HH, BH)
       }
-      outlier(VV, eV) {
-        const xV = Math.floor((eV - this.lastRefillMs) / qV);
-        xV > 0 && (this.tokens = Math.min(jV, this.tokens + xV), this.lastRefillMs += xV * qV), 0 !== this.tokens ? (this.tokens--, this.summary.shown++, this.waiting.push({
+      outlier(HH, BH) {
+        const LH = Math.floor((BH - this.lastRefillMs) / vH);
+        LH > 0 && (this.tokens = Math.min(xH, this.tokens + LH), this.lastRefillMs += LH * vH), 0 !== this.tokens ? (this.tokens--, this.summary.shown++, this.waiting.push({
           ...this.current,
-          endMs: eV,
-          intervalMs: VV,
+          endMs: BH,
+          intervalMs: HH,
           dueMs: performance.now() + 1e3
         }), this.outlierTimer ??= setTimeout(this.logOutliers, 1e3)) : this.summary.dropped++
       }
-      logSummary(VV) {
-        const eV = this.summary,
-          xV = eV.totals;
-        if (0 === eV.frames) return eV.undrawn.count > 0 && (0, yV.i)("frame", `${VV}s: no frames drawn, ${eV.undrawn.describe()}; pending max ${xV.pendingMax}`), eV.undrawn.count > 0;
-        const JV = eV.intervals.subarray(0, Math.min(eV.frames, tV)).sort(),
-          YV = [`${eV.frames} frames, median ${(0,UV.c)((0,UV.e)(JV,.5))} p95 ${(0,UV.c)((0,UV.e)(JV,.95))} max ${(0,UV.c)(eV.maxMs)} ms, ${eV.slow} over 50, ${eV.shown+eV.dropped} over ${BV}`, `${xV.rafs} rafs, ${eV.undrawn.describe()}`, `main ${(0,UV.c)(xV.mainMs)} ms (render ${(0,UV.c)(xV.renderMs)}, ${xV.ticks} ticks ${(0,UV.c)(xV.tickMs)})`];
-        return xV.pendingMax >= 0 && YV.push(`pending max ${xV.pendingMax}`), this.ahead >= 0 && YV.push(`${this.ahead} frames ahead`), YV.push(`outliers ${eV.shown} logged, ${eV.dropped} dropped`), (0, yV.i)("frame", `${VV}s: ${YV.join("; ")}`), !0
+      logSummary(HH) {
+        const BH = this.summary,
+          LH = BH.totals;
+        if (0 === BH.frames) return BH.undrawn.count > 0 && (0, hH.j)("frame", `${HH}s: no frames drawn, ${BH.undrawn.describe()}; pending max ${LH.pendingMax}`), BH.undrawn.count > 0;
+        const AH = BH.intervals.subarray(0, Math.min(BH.frames, PH)).sort(),
+          rH = [`${BH.frames} frames, median ${(0,SH.d)((0,SH.g)(AH,.5))} p95 ${(0,SH.d)((0,SH.g)(AH,.95))} max ${(0,SH.d)(BH.maxMs)} ms, ${BH.slow} over 50, ${BH.shown+BH.dropped} over ${MH}`, `${LH.rafs} rafs, ${BH.undrawn.describe()}`, `main ${(0,SH.d)(LH.mainMs)} ms (render ${(0,SH.d)(LH.renderMs)}, ${LH.ticks} ticks ${(0,SH.d)(LH.tickMs)})`];
+        return LH.pendingMax >= 0 && rH.push(`pending max ${LH.pendingMax}`), this.ahead >= 0 && rH.push(`${this.ahead} frames ahead`), rH.push(`outliers ${BH.shown} logged, ${BH.dropped} dropped`), (0, hH.j)("frame", `${HH}s: ${rH.join("; ")}`), !0
       }
     }
-    let NV = null;
+    let bH = null;
 
-    function XV(VV, eV) {
-      return NV ??= new AV, NV.start(VV, eV), NV
+    function kH(HH, BH) {
+      return bH ??= new OH, bH.start(HH, BH), bH
     }
   },
-  35165: (VV, eV, xV) => {
-    function JV(VV) {
-      return `hidden ${VV.changes} changes, ${Math.round(VV.hiddenMs)} ms`
+  34837: (HH, BH, LH) => {
+    function AH(HH) {
+      return `hidden ${HH.changes} changes, ${Math.round(HH.hiddenMs)} ms`
     }
-    xV.d(eV, {
-      c: () => YV,
-      f: () => JV
+    LH.d(BH, {
+      b: () => rH,
+      c: () => AH
     });
-    class YV {
+    class rH {
       constructor() {
         this.changes = 0, this.hiddenMs = 0, this.hiddenSinceMs = document.hidden ? performance.now() : -1
       }
-      changed(VV) {
-        this.changes++, document.hidden ? this.hiddenSinceMs = VV : this.hiddenSinceMs >= 0 && (this.hiddenMs += VV - this.hiddenSinceMs, this.hiddenSinceMs = -1)
+      changed(HH) {
+        this.changes++, document.hidden ? this.hiddenSinceMs = HH : this.hiddenSinceMs >= 0 && (this.hiddenMs += HH - this.hiddenSinceMs, this.hiddenSinceMs = -1)
       }
-      totals(VV) {
+      totals(HH) {
         return {
           changes: this.changes,
-          hiddenMs: this.hiddenMs + (this.hiddenSinceMs >= 0 ? VV - this.hiddenSinceMs : 0)
+          hiddenMs: this.hiddenMs + (this.hiddenSinceMs >= 0 ? HH - this.hiddenSinceMs : 0)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

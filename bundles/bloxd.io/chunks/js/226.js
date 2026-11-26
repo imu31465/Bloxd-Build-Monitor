@@ -1,293 +1,166 @@
 export const id = 226;
 export const ids = [226];
 export const modules = {
-  44421: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      MobPreview: () => ZV
+  35061: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      packDisplayName: () => QH,
+      packModelMessage: () => WH,
+      packModelSummary: () => xH,
+      refusedPackModels: () => MH
     });
-    var JV = xV(62),
-      YV = xV(1146),
-      UV = xV.n(YV),
-      yV = xV(44429),
-      pV = xV(35337),
-      QV = xV(44438),
-      nV = xV(1321);
+    var AH = LH(35067),
+      rH = LH(35071);
+    const SH = "DRACO",
+      hH = 0,
+      tH = 1,
+      zH = 0,
+      CH = 1,
+      EH = 32768;
 
-    function wV(VV) {
-      return pV.h.openMob(VV)
-    }
-    const ZV = (0, JV.memo)((function(VV) {
-      let {
-        mobType: eV,
-        variation: xV = null,
-        animation: YV = QV.h,
-        className: pV
-      } = VV;
-      const ZV = (0, JV.useRef)(null),
-        vV = (0, JV.useMemo)((() => ({
-          mobType: eV,
-          variation: xV,
-          animation: YV
-        })), [eV, xV, YV]);
-      return (0, yV.c)(ZV, wV, vV), (0, nV.jsx)("div", {
-        className: UV()("MobPreview", pV),
-        ref: ZV
-      })
-    }))
-  },
-  44429: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV
-    });
-    var JV = xV(62),
-      YV = xV(3080);
-
-    function UV(VV, eV, xV) {
-      const UV = (0, JV.useRef)(null),
-        {
-          width: yV,
-          height: pV
-        } = (0, YV.d)(VV);
-      (0, JV.useEffect)((() => {
-        const xV = eV(VV.current);
-        return UV.current = xV, () => {
-          xV.close(), UV.current = null
-        }
-      }), [VV, eV]), (0, JV.useEffect)((() => {
-        yV <= 0 || pV <= 0 || UV.current.resize(yV, pV)
-      }), [yV, pV]), (0, JV.useEffect)((() => {
-        UV.current.show(xV)
-      }), [xV])
-    }
-  },
-  44438: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => vV,
-      g: () => ZV,
-      h: () => QV
-    });
-    var JV = xV(38340),
-      YV = xV(39828);
-
-    function UV(VV, eV) {
-      let [xV, JV, YV] = VV;
-      return [0, .5, 1].map((VV => ({
-        timeFraction: VV,
-        rotation: {
-          zY: "catmull-rom-spline",
-          point: [xV, JV, YV + (.5 === VV ? eV : 0)]
-        }
-      })))
-    }
-
-    function yV(VV, eV, xV) {
-      return {
-        PY: 3200,
-        loop: !0,
-        NY: {
-          Root: {
-            timeline: [0, .5, 1].map((VV => ({
-              timeFraction: VV,
-              position: {
-                zY: "catmull-rom-spline",
-                point: [0, .5 === VV ? .18 : 0, 0]
+    function XH(HH) {
+      const BH = new DataView(HH.buffer, HH.byteOffset, HH.byteLength);
+      let LH = 0;
+      const AH = () => {
+          if (LH >= HH.byteLength) throw new RangeError("past the stream");
+          return HH[LH++]
+        },
+        rH = () => {
+          if (LH + 4 > HH.byteLength) throw new RangeError("past the stream");
+          const AH = BH.getUint32(LH, !0);
+          return LH += 4, AH
+        },
+        XH = () => {
+          let HH = 0;
+          for (let BH = 0; BH < 35; BH += 7) {
+            const LH = AH();
+            if (HH += (127 & LH) * 2 ** BH, 0 === (128 & LH)) return HH
+          }
+          throw new RangeError("varint too long")
+        };
+      try {
+        for (let HH = 0; HH < SH.length; HH++)
+          if (AH() !== SH.charCodeAt(HH)) return null;
+        const BH = AH(),
+          GH = AH(),
+          YH = AH(),
+          uH = AH(),
+          QH = AH() | AH() << 8;
+        if (2 !== BH) return null;
+        0 !== (QH & EH) && function(HH, BH, LH) {
+          const AH = () => {
+              BH(LH())
+            },
+            rH = () => {
+              let LH = 1,
+                rH = !0;
+              for (; LH > 0;) {
+                LH--, rH || AH(), rH = !1;
+                const SH = HH();
+                for (let LH = 0; LH < SH; LH++) AH(), BH(HH());
+                LH += HH()
               }
-            })))
-          },
-          HeadMesh: {
-            timeline: [0, .25, .75, 1].map((VV => ({
-              timeFraction: VV,
-              rotation: {
-                zY: "catmull-rom-spline",
-                point: [0, .25 === VV ? .12 : .75 === VV ? -.12 : 0, 0]
-              }
-            })))
-          },
-          ArmLeftMesh: {
-            timeline: UV(VV, xV)
-          },
-          ArmRightMesh: {
-            timeline: UV(eV, -xV)
+            },
+            SH = HH();
+          for (let hH = 0; hH < SH; hH++) HH(), rH();
+          rH()
+        }(XH, (BH => {
+          if (LH + BH > HH.byteLength) throw new RangeError("past the stream");
+          LH += BH
+        }), AH);
+        const WH = GH < 2 ? rH : XH;
+        if (YH === hH) return {
+          faces: 0,
+          vertices: rH(),
+          minor: GH
+        };
+        if (YH !== tH) return null;
+        if (uH === zH) {
+          return {
+            faces: WH(),
+            vertices: WH(),
+            minor: GH
           }
         }
-      }
-    }
-    const pV = yV([0, 0, 0], [0, 0, 0], .07),
-      QV = (0, YV.b)((0, JV.e)(pV), "mobIdle"),
-      nV = yV([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
-      wV = yV([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
-      ZV = (0, YV.b)((0, JV.e)(nV), "gunReady"),
-      vV = (0, YV.b)((0, JV.e)(wV), "gunAimed")
-  },
-  35343: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => yV,
-      c: () => YV,
-      g: () => wV
-    });
-    var JV = xV(1656);
-
-    function YV(VV) {
-      var eV;
-      return {
-        ...yV.store,
-        yaw: yV.store.yaw + (null !== (eV = JV.c[VV].previewYaw) && void 0 !== eV ? eV : 0)
-      }
-    }
-    const UV = {
-        yaw: .61 * Math.PI,
-        pitch: Math.PI / 2.05,
-        radius: 30,
-        target: [0, 0, 0]
-      },
-      yV = {
-        player: UV,
-        store: {
-          ...UV,
-          radius: 33,
-          target: [0, 3.9, 0]
+        if (uH !== CH) return null;
+        AH(), GH < 2 && XH();
+        const MH = XH();
+        return {
+          faces: XH(),
+          vertices: MH,
+          minor: GH
         }
-      };
+      } catch {
+        return null
+      }
+    }
 
-    function pV(VV, eV) {
-      VV instanceof Promise ? VV.then(eV).catch((VV => {
-        console.error("Couldn't open the preview", VV)
-      })) : eV(VV)
-    }
-    class QV {
-      constructor(VV) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, pV(VV, (VV => {
-          this.closed ? VV.close() : (this.opened = VV, null !== this.size && VV.resize(this.size.width, this.size.height), null !== this.view && VV.show(this.view))
-        }))
-      }
-      show(VV) {
-        var eV;
-        this.view = VV, null === (eV = this.opened) || void 0 === eV || eV.show(VV)
-      }
-      resize(VV, eV) {
-        var xV;
-        this.size = {
-          width: VV,
-          height: eV
-        }, null === (xV = this.opened) || void 0 === xV || xV.resize(VV, eV)
-      }
-      close() {
-        var VV;
-        this.closed = !0, null === (VV = this.opened) || void 0 === VV || VV.close(), this.opened = null
-      }
-    }
-    class nV {
-      constructor(VV) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(VV).then((VV => VV.ready)), pV(VV, (VV => {
-          this.closed ? VV.close() : (this.opened = VV, null !== this.size && VV.resize(this.size.width, this.size.height))
-        }))
-      }
-      get dev() {
-        return this.opened.dev
-      }
-      isReady() {
-        var VV, eV;
-        return null !== (VV = null === (eV = this.opened) || void 0 === eV ? void 0 : eV.isReady()) && void 0 !== VV && VV
-      }
-      setCosmetic(VV, eV) {
-        var xV;
-        null === (xV = this.opened) || void 0 === xV || xV.setCosmetic(VV, eV)
-      }
-      playEmote(VV) {
-        var eV;
-        null === (eV = this.opened) || void 0 === eV || eV.playEmote(VV)
-      }
-      setOrbit(VV) {
-        var eV;
-        null === (eV = this.opened) || void 0 === eV || eV.setOrbit(VV)
-      }
-      resetCamera() {
-        var VV;
-        null === (VV = this.opened) || void 0 === VV || VV.resetCamera()
-      }
-      async untilDrawn(VV) {
-        var eV;
-        await this.ready, await (null === (eV = this.opened) || void 0 === eV ? void 0 : eV.untilDrawn(VV))
-      }
-      resize(VV, eV) {
-        var xV;
-        this.size = {
-          width: VV,
-          height: eV
-        }, null === (xV = this.opened) || void 0 === xV || xV.resize(VV, eV)
-      }
-      close() {
-        var VV;
-        this.closed = !0, null === (VV = this.opened) || void 0 === VV || VV.close(), this.opened = null
-      }
-    }
-    const wV = new class {
-      constructor() {
-        this.host = null, this.makeDefault = null
-      }
-      setHost(VV) {
-        this.host = VV
-      }
-      setDefaultHost(VV) {
-        this.makeDefault = VV
-      }
-      current() {
-        if (null === this.host) {
-          if (null === this.makeDefault) throw new Error("no preview host");
-          this.host = this.makeDefault()
+    function GH(HH, BH, LH) {
+      var AH, rH;
+      if (null === (AH = null === (rH = HH.extensionsUsed) || void 0 === rH ? void 0 : rH.includes("KHR_draco_mesh_compression")) || void 0 === AH || !AH) return null;
+      for (const QH of null !== (SH = HH.meshes) && void 0 !== SH ? SH : []) {
+        var SH;
+        for (const AH of QH.primitives) {
+          var hH, tH, zH, CH, EH, GH;
+          const rH = null === (hH = AH.extensions) || void 0 === hH ? void 0 : hH.KHR_draco_mesh_compression;
+          if ("object" !== typeof rH || null === rH) continue;
+          const SH = null === (tH = HH.bufferViews) || void 0 === tH ? void 0 : tH[rH.bufferView];
+          if (null === BH || void 0 === SH) return YH;
+          const QH = null !== (zH = SH.byteOffset) && void 0 !== zH ? zH : 0,
+            WH = XH(BH.subarray(QH, QH + SH.byteLength));
+          if (null === WH && !LH) continue;
+          const MH = null !== (CH = HH.accessors) && void 0 !== CH ? CH : [],
+            xH = null === (EH = MH[AH.attributes.POSITION]) || void 0 === EH ? void 0 : EH.count,
+            vH = void 0 === AH.indices ? 0 : null === (GH = MH[AH.indices]) || void 0 === GH ? void 0 : GH.count;
+          if (null === WH || void 0 === xH || void 0 === vH || 3 * WH.faces !== vH || WH.vertices > xH) return YH;
+          if (LH && WH.minor < 2) return uH
         }
-        return this.host
       }
-      openMob(VV) {
-        return new QV(this.current().openMob(VV))
-      }
-      openPet(VV) {
-        return new QV(this.current().openPet(VV))
-      }
-      openMobLineup(VV) {
-        return new QV(this.current().openMobLineup(VV))
-      }
-      openCharacter(VV, eV) {
-        return new nV(this.current().openCharacter(VV, eV))
-      }
+      return null
     }
-  },
-  35337: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => JV.b,
-      f: () => JV.c,
-      h: () => JV.g
-    });
-    var JV = xV(35343);
-    class YV {
-      constructor(VV) {
-        this.load = VV, this.loaded = null, this.loading = null
-      }
-      run(VV) {
-        return null !== this.loaded ? VV(this.loaded) : (this.loading ??= this.load().then((VV => (this.loaded = VV, VV)), (VV => {
-          throw this.loading = null, VV
-        })), this.loading.then(VV))
-      }
+    const YH = "has a Draco stream whose counts don't match its accessors",
+      uH = "has a Draco stream too old to decode: export it again";
+
+    function QH(HH) {
+      var BH;
+      return null !== (BH = HH.name) && void 0 !== BH ? BH : HH.fromFolderName || HH.id
     }
-    class UV {
-      constructor() {
-        this.mobScene = new YV((() => Promise.all([xV.e(84), xV.e(255), xV.e(254), xV.e(279), xV.e(111), xV.e(280), xV.e(87), xV.e(277), xV.e(85), xV.e(86), xV.e(287), xV.e(281), xV.e(286), xV.e(284), xV.e(276), xV.e(302), xV.e(251), xV.e(269), xV.e(282), xV.e(285), xV.e(89), xV.e(202), xV.e(245), xV.e(109), xV.e(257), xV.e(248), xV.e(264), xV.e(223), xV.e(265), xV.e(88), xV.e(271)]).then((() => xV(42411))))), this.characterScene = new YV((() => Promise.all([xV.e(84), xV.e(255), xV.e(254), xV.e(279), xV.e(111), xV.e(280), xV.e(87), xV.e(277), xV.e(85), xV.e(86), xV.e(287), xV.e(281), xV.e(286), xV.e(284), xV.e(276), xV.e(302), xV.e(251), xV.e(269), xV.e(282), xV.e(285), xV.e(89), xV.e(202), xV.e(245), xV.e(109), xV.e(257), xV.e(248), xV.e(264), xV.e(223), xV.e(265), xV.e(88), xV.e(270)]).then((() => xV(42518)))))
-      }
-      openMob(VV) {
-        return this.mobScene.run((eV => eV.openMobPreview(VV)))
-      }
-      openPet(VV) {
-        return this.mobScene.run((eV => eV.openPetPreview(VV)))
-      }
-      openMobLineup(VV) {
-        return this.mobScene.run((eV => eV.openMobLineupPreview(VV)))
-      }
-      openCharacter(VV, eV) {
-        return this.characterScene.run((xV => xV.openCharacterPreview(VV, eV)))
-      }
+
+    function WH(HH, BH, LH) {
+      return `Texture pack "${HH}": model "${BH}" was not loaded because it ${LH}. The default model is used instead.`
     }
-    JV.g.setDefaultHost((() => new UV))
+
+    function MH(HH, BH, LH) {
+      let {
+        strictDraco: SH = !1
+      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const hH = {};
+      for (const [tH, zH] of Object.entries(BH)) {
+        let BH;
+        if (zH.startsWith("data:")) try {
+          const HH = new Uint8Array((0, rH.q)(zH));
+          if (BH = (0, AH.b)(HH), null === BH) {
+            const {
+              json: LH,
+              bin: AH
+            } = (0, rH.z)(HH);
+            BH = GH(LH, AH, SH)
+          }
+        } catch {
+          BH = "is not a binary glTF 2.0 file"
+        } else BH = "loads data from outside the file";
+        BH && (hH[tH] = BH, LH && console.warn(WH(HH, tH, BH)))
+      }
+      return hH
+    }
+
+    function xH(HH, BH) {
+      const LH = Object.keys(BH);
+      if (0 === LH.length) return null;
+      if (1 === LH.length) return WH(HH, LH[0], BH[LH[0]]);
+      const AH = LH.map((HH => `"${HH}" ${BH[HH]}`)).join("; ");
+      return `Texture pack "${HH}": ${LH.length} models were not loaded (${AH}). The default models are used instead.`
+    }
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

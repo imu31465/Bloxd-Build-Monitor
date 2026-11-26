@@ -1,11 +1,11 @@
 export const id = 606;
 export const ids = [606];
 export const modules = {
-  44299: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => JV
+  44874: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => AH
     });
-    const JV = String.raw`interface Map<K, V> {
+    const AH = String.raw`interface Map<K, V> {
     clear(): void;
     /**
      * @returns true if an element in the Map existed and has been removed, or false if the element does not exist.
@@ -6409,11 +6409,11 @@ interface Math {
     f16round(x: number): number;
 }`
   },
-  44295: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => JV
+  44871: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => AH
     });
-    const JV = String.raw`import type {
+    const AH = String.raw`import type {
 	GameApi,
 	Console,
 	EntityId,
@@ -7180,12 +7180,12 @@ declare global {
 	var onPlayerPotionEffect: (initiatorId: string, targetId: string, effectName: "Damage" | "Speed" | "Damage Reduction" | "Invisible" | "Jump Boost" | "Knockback" | "Poisoned" | "Slowness" | "Weakness" | "Cleansed" | "Instant Damage" | "Health Regen" | "Healing Pulse" | "Instant Health" | "Haste" | "Shield" | "Double Jump" | "Heat Resistance" | "Thief" | "X-Ray Vision" | "Mining Yield" | "Brain Rot" | "Aura" | "Wall Climbing" | "Air Walk" | "Pickpocketer" | "Lifesteal" | "Bounciness" | "Blindness" | "Poopy" | "Glowing" | "Night Vision") => void | "preventEffect"
 
 	/**
-	 * Called when a player is damaging a mesh entity
+	 * Called when a player is damaging a mesh entity. A melee hit only counts on one the player's canAttack setting allows
 	 */
 	var onPlayerDamagingMeshEntity: (playerId: PlayerId, damagedId: EntityId, damageDealt: number, withItem: string) => void
 
 	/**
-	 * Called when a player breaks a mesh entity
+	 * Called when a player breaks a mesh entity, only one the player's canAttack setting allows
 	 * @param playerId - The id of the player breaking the mesh entity
 	 * @param entityId - The id of the mesh entity being broken
 	 */
@@ -7361,4 +7361,4 @@ export {}
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

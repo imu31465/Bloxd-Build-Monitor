@@ -1,104 +1,107 @@
 export const id = 140;
 export const ids = [140];
 export const modules = {
-  7111: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      default: () => bV
+  7095: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      default: () => WH
     });
-    var JV = xV(1625),
-      YV = xV(1649),
-      UV = xV(3364),
-      yV = xV(2437),
-      pV = xV(1551),
-      QV = xV(1612),
-      nV = xV(1168),
-      wV = xV(62),
-      ZV = xV(1414),
-      vV = xV(1321);
+    var AH = LH(1520),
+      rH = LH(1556),
+      SH = LH(3319),
+      hH = LH(2406),
+      tH = LH(1455),
+      zH = LH(1509),
+      CH = LH(1061),
+      EH = LH(45),
+      XH = LH(1315),
+      GH = LH(1225);
 
-    function rV(VV) {
+    function YH(HH) {
       let {
-        iconName: eV,
-        iconCountPerGroup: xV,
-        animation: JV,
-        midShowerStart: YV = !1,
-        customClass: UV
-      } = VV;
-      const [yV, pV] = (0, wV.useState)({});
-      return (0, wV.useEffect)((() => {
-        const VV = {};
-        for (const eV of Array.from(Array(3).keys())) {
-          VV[eV] = [];
-          for (let JV = 0; JV < xV; JV++) VV[eV].push({
+        iconName: BH,
+        iconCountPerGroup: LH,
+        animation: AH,
+        midShowerStart: rH = !1,
+        customClass: SH
+      } = HH;
+      const [hH, tH] = (0, EH.useState)({});
+      return (0, EH.useEffect)((() => {
+        const HH = {};
+        for (const BH of Array.from(Array(3).keys())) {
+          HH[BH] = [];
+          for (let AH = 0; AH < LH; AH++) HH[BH].push({
             left: 100 * Math.random() + "%",
-            animationDelay: 20 * Math.random() * (YV ? -1 : 1) + "s"
+            animationDelay: 20 * Math.random() * (rH ? -1 : 1) + "s"
           })
         }
-        pV(VV)
-      }), [xV, YV]), (0, vV.jsx)("div", {
-        className: `IconShower IconShowerAnimation${JV} ${null!==UV&&void 0!==UV?UV:""}`,
-        children: Object.keys(yV).map((VV => yV[VV].map((xV => (0, vV.jsx)("div", {
-          className: `Icon IconGroup${VV}`,
+        tH(HH)
+      }), [LH, rH]), (0, GH.jsx)("div", {
+        className: `IconShower IconShowerAnimation${AH} ${null!==SH&&void 0!==SH?SH:""}`,
+        children: Object.keys(hH).map((HH => hH[HH].map((LH => (0, GH.jsx)("div", {
+          className: `Icon IconGroup${HH}`,
           style: {
-            left: xV.left,
-            animationDelay: xV.animationDelay
+            left: LH.left,
+            animationDelay: LH.animationDelay
           },
-          children: (0, vV.jsx)(ZV.b, {
-            name: eV
+          children: (0, GH.jsx)(XH.c, {
+            name: BH
           })
-        }, xV.left)))))
+        }, LH.left)))))
       })
     }
-    var kV = xV(1220);
+    var uH = LH(1123),
+      QH = LH(2486);
 
-    function bV() {
-      var VV;
+    function WH() {
+      var HH;
       const {
-        t: eV
-      } = (0, kV.A)(), {
-        pack: xV
-      } = (0, JV.A)(), {
-        userContext: wV
-      } = (0, nV.d)();
-      if (xV) {
-        const VV = YV.d[xV];
-        if (null === VV || void 0 === VV || !VV.purchasable) return (0, vV.jsx)(QV.NavigatePreserveSearch, {
+        t: BH
+      } = (0, uH.B)(), {
+        pack: LH
+      } = (0, AH.A)(), {
+        userContext: EH
+      } = (0, CH.e)();
+      if (LH) {
+        const HH = rH.b[LH];
+        if (null === HH || void 0 === HH || !HH.purchasable) return (0, GH.jsx)(zH.NavigatePreserveSearch, {
           to: "/"
         })
       }
-      const bV = xV ? YV.d[xV] : null,
-        EV = xV ? UV.k[(0, yV.m)(xV)] : null,
-        BV = void 0 !== (null === bV || void 0 === bV ? void 0 : bV.characterSet) || null !== bV && void 0 !== bV && bV.singleItem ? bV.displayName : `${null!==(VV=null===bV||void 0===bV?void 0:bV.displayName)&&void 0!==VV?VV:xV} Pack`,
-        jV = bV ? `Your ${BV} is Ready!` : "Welcome To Super Rank!",
-        qV = bV ? "Equip your new cosmetics in the character customisation menu!" : "You can change you name color and cape in the customization menu in game!",
-        tV = bV ? !wV.getOwnedCosmeticPacks().includes(xV) : !wV.playerHasRank("super"),
-        FV = bV ? "You should get your cosmetics instantly, but it could take up to an hour to apply. If you don't have them after an hour, contact help@bloxd.io." : "You should get Super Rank instantly, but it could take up to an hour to apply. If you don't have Super Rank after an hour, contact help@bloxd.io.";
-      return (0, vV.jsxs)("div", {
+      const WH = LH ? rH.b[LH] : null,
+        MH = LH ? SH.j[(0, hH.j)(LH)] : null,
+        xH = void 0 !== (null === WH || void 0 === WH ? void 0 : WH.characterSet) || null !== WH && void 0 !== WH && WH.singleItem ? WH.displayName : `${null!==(HH=null===WH||void 0===WH?void 0:WH.displayName)&&void 0!==HH?HH:LH} Pack`,
+        vH = Date.now(),
+        PH = BH((0, QH.u)(vH).nameKey),
+        TH = WH ? `Your ${xH} is Ready!` : `Welcome To ${PH}!`,
+        UH = WH ? "Equip your new cosmetics in the character customisation menu!" : "You can change you name color and cape in the customization menu in game!",
+        VH = WH ? !EH.getOwnedCosmeticPacks().includes(LH) : !(0, QH.k)(EH.getPlayerRanks(), vH),
+        OH = WH ? "You should get your cosmetics instantly, but it could take up to an hour to apply. If you don't have them after an hour, contact help@bloxd.io." : `You should get ${PH} instantly, but it could take up to an hour to apply. If you don't have ${PH} after an hour, contact help@bloxd.io.`;
+      return (0, GH.jsxs)("div", {
         className: "PurchaseWelcome AnimFadeInScaleUp",
-        children: [EV && (0, vV.jsx)(EV, {}), !bV && (0, vV.jsx)(rV, {
+        children: [MH && (0, GH.jsx)(MH, {}), !WH && (0, GH.jsx)(YH, {
           iconName: "bolt",
           iconCountPerGroup: 10,
           animation: "Fall",
           midShowerStart: !0,
           customClass: "SuperRankWelcomeIconShower"
-        }), (0, vV.jsx)("div", {
+        }), (0, GH.jsx)("div", {
           className: "PurchaseWelcomeTitle FullyFancyText",
-          children: jV
-        }), (0, vV.jsx)("div", {
+          children: TH
+        }), (0, GH.jsx)("div", {
           className: "PurchaseWelcomeText",
-          children: qV
-        }), tV && (0, vV.jsxs)("div", {
+          children: UH
+        }), VH && (0, GH.jsxs)("div", {
           className: "PurchaseWelcomeWarning",
-          children: [(0, vV.jsx)(ZV.b, {
+          children: [(0, GH.jsx)(XH.c, {
             name: "circle-info"
-          }), (0, vV.jsx)("div", {
-            children: FV
+          }), (0, GH.jsx)("div", {
+            children: OH
           })]
-        }), (0, vV.jsx)(QV.LinkPreserveSearch, {
+        }), (0, GH.jsx)(zH.LinkPreserveSearch, {
           to: "/",
-          children: (0, vV.jsx)(pV.m, {
+          children: (0, GH.jsx)(tH.u, {
             className: "PurchaseWelcomeContinue",
-            children: eV("general:continue")
+            children: BH("general:continue")
           })
         })]
       })
@@ -106,4 +109,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

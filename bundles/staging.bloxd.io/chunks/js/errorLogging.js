@@ -1,139 +1,139 @@
-export const id = 36;
-export const ids = [36];
+export const id = 37;
+export const ids = [37];
 export const modules = {
-  7238: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      BaseExtension: () => Vx,
-      BaseInstrumentation: () => ex,
-      BaseTransport: () => IY,
-      CSPInstrumentation: () => AY,
-      ConsoleInstrumentation: () => Rx,
-      ConsoleTransport: () => xU,
-      EVENT_CLICK: () => qe,
-      EVENT_NAVIGATION: () => te,
-      EVENT_ROUTE_CHANGE: () => Xe,
-      EVENT_SESSION_EXTEND: () => Ae,
-      EVENT_SESSION_RESUME: () => Pe,
-      EVENT_SESSION_START: () => Te,
-      EVENT_VIEW_CHANGED: () => Fe,
-      ErrorsInstrumentation: () => Dx,
-      FetchTransport: () => tU,
-      InternalLoggerLevel: () => me,
-      LogLevel: () => qx,
-      MAX_SESSION_PERSISTENCE_TIME: () => QV,
-      NavigationInstrumentation: () => hY,
-      Observable: () => jx,
-      PerformanceInstrumentation: () => HJ,
-      PersistentSessionsManager: () => ae,
-      SESSION_EXPIRATION_TIME: () => UV,
-      SESSION_INACTIVITY_TIME: () => yV,
-      STORAGE_KEY: () => YV,
-      SessionInstrumentation: () => Jx,
-      TransportItemType: () => dY,
-      UserActionInstrumentation: () => PY,
-      UserActionState: () => kY,
-      VERSION: () => xx,
-      ViewInstrumentation: () => Cx,
-      VolatileSessionsManager: () => oe,
-      WebVitalsInstrumentation: () => gJ,
-      allLogLevels: () => Fx,
-      browserMeta: () => HY,
-      buildStackFrame: () => Yx,
-      captureMetas: () => CU,
-      createInternalLogger: () => NU,
-      createPromiseBuffer: () => vU,
-      createSession: () => sY,
-      deepEqual: () => je,
-      defaultEventDomain: () => JV,
-      defaultExceptionType: () => Nx,
-      defaultGlobalObjectKey: () => XU,
-      defaultInternalLoggerLevel: () => He,
-      defaultLogLevel: () => tx,
-      faro: () => bV,
-      genShortID: () => Be,
-      getCurrentTimestamp: () => ke,
-      getDataFromSafariExtensions: () => vx,
-      getIgnoreUrls: () => uV,
-      getInternalFaroFromGlobalObject: () => vV,
-      getStackFramesFromError: () => kx,
-      getTransportBody: () => eU,
-      getUrlFromResource: () => SV,
-      getWebInstrumentations: () => lY,
-      globalObject: () => wV,
-      initializeFaro: () => IU,
-      internalGlobalObjectKey: () => ZV,
-      isArray: () => GV,
-      isBoolean: () => NV,
-      isDomError: () => cV,
-      isDomException: () => hV,
-      isElement: () => LV,
-      isElementDefined: () => lV,
-      XZ: () => HV,
-      isError: () => aV,
-      isErrorDefined: () => CV,
-      isErrorEvent: () => oV,
-      isEvent: () => iV,
-      isEventDefined: () => DV,
-      isFunction: () => zV,
-      isInstanceOf: () => qV,
-      isInt: () => AV,
-      isInternalFaroOnGlobalObject: () => kV,
-      isMap: () => mV,
-      isMapDefined: () => fV,
-      isNull: () => FV,
-      isNumber: () => PV,
-      isObject: () => MV,
-      isPrimitive: () => gV,
-      isRegExp: () => WV,
-      isString: () => TV,
-      isSymbol: () => XV,
-      isSyntheticEvent: () => KV,
-      isThenable: () => RV,
-      isToString: () => jV,
-      isTypeof: () => BV,
-      isUndefined: () => tV,
-      makeCoreConfig: () => GU,
-      noop: () => fe,
-      osMeta: () => uY,
-      parseStacktrace: () => bx,
-      sdkMeta: () => SY,
-      setInternalFaroOnGlobalObject: () => rV,
-      transportItemTypeToBodyKey: () => OY,
-      unknownString: () => ix,
-      userActionDataAttribute: () => uJ,
-      userActionTimeoutDataAttribute: () => sJ
+  7237: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      BaseExtension: () => HL,
+      BaseInstrumentation: () => BL,
+      BaseTransport: () => ir,
+      CSPInstrumentation: () => Or,
+      ConsoleInstrumentation: () => lL,
+      ConsoleTransport: () => LS,
+      EVENT_CLICK: () => vB,
+      EVENT_NAVIGATION: () => PB,
+      EVENT_ROUTE_CHANGE: () => kB,
+      EVENT_SESSION_EXTEND: () => OB,
+      EVENT_SESSION_RESUME: () => VB,
+      EVENT_SESSION_START: () => UB,
+      EVENT_VIEW_CHANGED: () => TB,
+      ErrorsInstrumentation: () => cL,
+      FetchTransport: () => PS,
+      InternalLoggerLevel: () => wB,
+      LogLevel: () => vL,
+      MAX_SESSION_PERSISTENCE_TIME: () => zH,
+      NavigationInstrumentation: () => jr,
+      Observable: () => xL,
+      PerformanceInstrumentation: () => dA,
+      PersistentSessionsManager: () => gB,
+      SESSION_EXPIRATION_TIME: () => SH,
+      SESSION_INACTIVITY_TIME: () => hH,
+      STORAGE_KEY: () => rH,
+      SessionInstrumentation: () => AL,
+      TransportItemType: () => pr,
+      UserActionInstrumentation: () => Vr,
+      UserActionState: () => ur,
+      VERSION: () => LL,
+      ViewInstrumentation: () => qL,
+      VolatileSessionsManager: () => NB,
+      WebVitalsInstrumentation: () => KA,
+      allLogLevels: () => TL,
+      browserMeta: () => dr,
+      buildStackFrame: () => rL,
+      captureMetas: () => qS,
+      createInternalLogger: () => bS,
+      createPromiseBuffer: () => GS,
+      createSession: () => sr,
+      deepEqual: () => xB,
+      defaultEventDomain: () => AH,
+      defaultExceptionType: () => bL,
+      defaultGlobalObjectKey: () => kS,
+      defaultInternalLoggerLevel: () => dB,
+      defaultLogLevel: () => PL,
+      faro: () => QH,
+      genShortID: () => MB,
+      getCurrentTimestamp: () => uB,
+      getDataFromSafariExtensions: () => GL,
+      getIgnoreUrls: () => aH,
+      getInternalFaroFromGlobalObject: () => GH,
+      getStackFramesFromError: () => uL,
+      getTransportBody: () => BS,
+      getUrlFromResource: () => JH,
+      getWebInstrumentations: () => nr,
+      globalObject: () => EH,
+      initializeFaro: () => iS,
+      internalGlobalObjectKey: () => XH,
+      isArray: () => IH,
+      isBoolean: () => bH,
+      isDomError: () => RH,
+      isDomException: () => jH,
+      isElement: () => FH,
+      isElementDefined: () => nH,
+      TX: () => dH,
+      isError: () => gH,
+      isErrorDefined: () => qH,
+      isErrorEvent: () => NH,
+      isEvent: () => eH,
+      isEventDefined: () => cH,
+      isFunction: () => oH,
+      isInstanceOf: () => vH,
+      isInt: () => OH,
+      isInternalFaroOnGlobalObject: () => uH,
+      isMap: () => wH,
+      isMapDefined: () => DH,
+      isNull: () => TH,
+      isNumber: () => VH,
+      isObject: () => mH,
+      isPrimitive: () => KH,
+      isRegExp: () => fH,
+      isString: () => UH,
+      isSymbol: () => kH,
+      isSyntheticEvent: () => ZH,
+      isThenable: () => lH,
+      isToString: () => xH,
+      isTypeof: () => MH,
+      isUndefined: () => PH,
+      makeCoreConfig: () => IS,
+      noop: () => DB,
+      osMeta: () => ar,
+      parseStacktrace: () => QL,
+      sdkMeta: () => Jr,
+      setInternalFaroOnGlobalObject: () => YH,
+      transportItemTypeToBodyKey: () => yr,
+      unknownString: () => eL,
+      userActionDataAttribute: () => aA,
+      userActionTimeoutDataAttribute: () => sA
     });
-    const JV = "browser",
-      YV = "com.grafana.faro.session",
-      UV = 144e5,
-      yV = 9e5,
-      pV = 1e3,
-      QV = yV,
-      nV = {
+    const AH = "browser",
+      rH = "com.grafana.faro.session",
+      SH = 144e5,
+      hH = 9e5,
+      tH = 1e3,
+      zH = hH,
+      CH = {
         enabled: !0,
         persistent: !1,
-        maxSessionPersistenceTime: QV
+        maxSessionPersistenceTime: zH
       };
-    const wV = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof xV.g ? xV.g : "undefined" !== typeof self ? self : void 0;
-    const ZV = "_faroInternal";
+    const EH = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof LH.g ? LH.g : "undefined" !== typeof self ? self : void 0;
+    const XH = "_faroInternal";
 
-    function vV() {
-      return wV[ZV]
+    function GH() {
+      return EH[XH]
     }
 
-    function rV(VV) {
-      VV.config.isolate ? VV.internalLogger.debug("Skipping registering internal Faro instance on global object") : (VV.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(wV, ZV, {
+    function YH(HH) {
+      HH.config.isolate ? HH.internalLogger.debug("Skipping registering internal Faro instance on global object") : (HH.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(EH, XH, {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: VV
+        value: HH
       }))
     }
 
-    function kV() {
-      return ZV in wV
+    function uH() {
+      return XH in EH
     }
-    let bV = {
+    let QH = {
       api: {
         pushLog: () => {},
         pushError: () => {},
@@ -160,592 +160,592 @@ export const modules = {
       }
     };
 
-    function EV(VV, eV, xV, JV, YV, UV, yV) {
-      return eV.debug("Initializing Faro"), bV = {
-          api: UV,
-          config: xV,
-          instrumentations: yV,
-          internalLogger: eV,
-          metas: JV,
-          pause: YV.pause,
-          transports: YV,
-          unpatchedConsole: VV,
-          unpause: YV.unpause
-        }, rV(bV),
-        function(VV) {
-          if (VV.config.preventGlobalExposure) VV.internalLogger.debug("Skipping registering public Faro instance in the global scope");
+    function WH(HH, BH, LH, AH, rH, SH, hH) {
+      return BH.debug("Initializing Faro"), QH = {
+          api: SH,
+          config: LH,
+          instrumentations: hH,
+          internalLogger: BH,
+          metas: AH,
+          pause: rH.pause,
+          transports: rH,
+          unpatchedConsole: HH,
+          unpause: rH.unpause
+        }, YH(QH),
+        function(HH) {
+          if (HH.config.preventGlobalExposure) HH.internalLogger.debug("Skipping registering public Faro instance in the global scope");
           else {
-            if (VV.internalLogger.debug(`Registering public faro reference in the global scope using "${VV.config.globalObjectKey}" key`), VV.config.globalObjectKey in wV) return void VV.internalLogger.warn(`Skipping global registration due to key "${VV.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
-            Object.defineProperty(wV, VV.config.globalObjectKey, {
+            if (HH.internalLogger.debug(`Registering public faro reference in the global scope using "${HH.config.globalObjectKey}" key`), HH.config.globalObjectKey in EH) return void HH.internalLogger.warn(`Skipping global registration due to key "${HH.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
+            Object.defineProperty(EH, HH.config.globalObjectKey, {
               configurable: !1,
               writable: !1,
-              value: VV
+              value: HH
             })
           }
-        }(bV), bV
+        }(QH), QH
     }
 
-    function BV(VV, eV) {
-      return typeof VV === eV
+    function MH(HH, BH) {
+      return typeof HH === BH
     }
 
-    function jV(VV, eV) {
-      return Object.prototype.toString.call(VV) === `[object ${eV}]`
+    function xH(HH, BH) {
+      return Object.prototype.toString.call(HH) === `[object ${BH}]`
     }
 
-    function qV(VV, eV) {
+    function vH(HH, BH) {
       try {
-        return VV instanceof eV
-      } catch (xV) {
+        return HH instanceof BH
+      } catch (LH) {
         return !1
       }
     }
-    const tV = VV => BV(VV, "undefined"),
-      FV = VV => BV(VV, "null"),
-      TV = VV => BV(VV, "string"),
-      PV = VV => BV(VV, "number") && !isNaN(VV) || BV(VV, "bigint"),
-      AV = VV => PV(VV) && Number.isInteger(VV),
-      NV = VV => BV(VV, "boolean"),
-      XV = VV => BV(VV, "symbol"),
-      MV = VV => !FV(VV) && BV(VV, "object"),
-      zV = VV => BV(VV, "function"),
-      GV = VV => jV(VV, "Array"),
-      WV = VV => jV(VV, "RegExp"),
-      RV = VV => zV(null === VV || void 0 === VV ? void 0 : VV.then),
-      gV = VV => !MV(VV) && !zV(VV),
-      DV = "undefined" !== typeof Event,
-      iV = VV => DV && qV(VV, Event),
-      CV = "undefined" !== typeof Error,
-      aV = VV => CV && qV(VV, Error),
-      oV = VV => jV(VV, "ErrorEvent"),
-      cV = VV => jV(VV, "DOMError"),
-      hV = VV => jV(VV, "DOMException"),
-      lV = "undefined" !== typeof Element,
-      LV = VV => lV && qV(VV, Element),
-      fV = "undefined" !== typeof Map,
-      mV = VV => fV && qV(VV, Map),
-      KV = VV => MV(VV) && "nativeEvent" in VV && "preventDefault" in VV && "stopPropagation" in VV;
+    const PH = HH => MH(HH, "undefined"),
+      TH = HH => MH(HH, "null"),
+      UH = HH => MH(HH, "string"),
+      VH = HH => MH(HH, "number") && !isNaN(HH) || MH(HH, "bigint"),
+      OH = HH => VH(HH) && Number.isInteger(HH),
+      bH = HH => MH(HH, "boolean"),
+      kH = HH => MH(HH, "symbol"),
+      mH = HH => !TH(HH) && MH(HH, "object"),
+      oH = HH => MH(HH, "function"),
+      IH = HH => xH(HH, "Array"),
+      fH = HH => xH(HH, "RegExp"),
+      lH = HH => oH(null === HH || void 0 === HH ? void 0 : HH.then),
+      KH = HH => !mH(HH) && !oH(HH),
+      cH = "undefined" !== typeof Event,
+      eH = HH => cH && vH(HH, Event),
+      qH = "undefined" !== typeof Error,
+      gH = HH => qH && vH(HH, Error),
+      NH = HH => xH(HH, "ErrorEvent"),
+      RH = HH => xH(HH, "DOMError"),
+      jH = HH => xH(HH, "DOMException"),
+      nH = "undefined" !== typeof Element,
+      FH = HH => nH && vH(HH, Element),
+      DH = "undefined" !== typeof Map,
+      wH = HH => DH && vH(HH, Map),
+      ZH = HH => mH(HH) && "nativeEvent" in HH && "preventDefault" in HH && "stopPropagation" in HH;
 
-    function HV(VV) {
-      return null == VV || (GV(VV) || TV(VV) ? 0 === VV.length : !!MV(VV) && 0 === Object.keys(VV).length)
+    function dH(HH) {
+      return null == HH || (IH(HH) || UH(HH) ? 0 === HH.length : !!mH(HH) && 0 === Object.keys(HH).length)
     }
 
-    function uV() {
-      return bV.transports.transports.flatMap((VV => VV.getIgnoreUrls()))
+    function aH() {
+      return QH.transports.transports.flatMap((HH => HH.getIgnoreUrls()))
     }
 
-    function sV() {
-      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      return uV().some((eV => VV && null != VV.match(eV)))
+    function sH() {
+      let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      return aH().some((BH => HH && null != HH.match(BH)))
     }
 
-    function SV(VV) {
-      return TV(VV) ? VV : VV instanceof URL ? VV.href : !HV(VV) && zV(null === VV || void 0 === VV ? void 0 : VV.toString) ? VV.toString() : void 0
+    function JH(HH) {
+      return UH(HH) ? HH : HH instanceof URL ? HH.href : !dH(HH) && oH(null === HH || void 0 === HH ? void 0 : HH.toString) ? HH.toString() : void 0
     }
-    const IV = "sessionStorage",
-      dV = "localStorage";
+    const iH = "sessionStorage",
+      pH = "localStorage";
 
-    function OV(VV) {
+    function yH(HH) {
       try {
-        let eV;
-        eV = window[VV];
-        const xV = "__faro_storage_test__";
-        return eV.setItem(xV, xV), eV.removeItem(xV), !0
-      } catch (xV) {
-        var eV;
-        return null === (eV = bV.internalLogger) || void 0 === eV || eV.info(`Web storage of type ${VV} is not available. Reason: ${xV}`), !1
+        let BH;
+        BH = window[HH];
+        const LH = "__faro_storage_test__";
+        return BH.setItem(LH, LH), BH.removeItem(LH), !0
+      } catch (LH) {
+        var BH;
+        return null === (BH = QH.internalLogger) || void 0 === BH || BH.info(`Web storage of type ${HH} is not available. Reason: ${LH}`), !1
       }
     }
 
-    function Ve(VV, eV) {
-      return Ue(eV) ? window[eV].getItem(VV) : null
+    function HB(HH, BH) {
+      return SB(BH) ? window[BH].getItem(HH) : null
     }
 
-    function ee(VV, eV, xV) {
-      if (Ue(xV)) try {
-        window[xV].setItem(VV, eV)
-      } catch (JV) {}
+    function BB(HH, BH, LH) {
+      if (SB(LH)) try {
+        window[LH].setItem(HH, BH)
+      } catch (AH) {}
     }
 
-    function xe(VV, eV) {
-      Ue(eV) && window[eV].removeItem(VV)
+    function LB(HH, BH) {
+      SB(BH) && window[BH].removeItem(HH)
     }
-    const Je = OV(dV),
-      Ye = OV(IV);
+    const AB = yH(pH),
+      rB = yH(iH);
 
-    function Ue(VV) {
-      return VV === dV ? Je : VV === IV && Ye
-    }
-
-    function ye(VV) {
-      return ye = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(VV) {
-        return typeof VV
-      } : function(VV) {
-        return VV && "function" == typeof Symbol && VV.constructor === Symbol && VV !== Symbol.prototype ? "symbol" : typeof VV
-      }, ye(VV)
+    function SB(HH) {
+      return HH === pH ? AB : HH === iH && rB
     }
 
-    function pe(VV) {
-      var eV = function(VV, eV) {
-        if ("object" != ye(VV) || !VV) return VV;
-        var xV = VV[Symbol.toPrimitive];
-        if (void 0 !== xV) {
-          var JV = xV.call(VV, eV || "default");
-          if ("object" != ye(JV)) return JV;
+    function hB(HH) {
+      return hB = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(HH) {
+        return typeof HH
+      } : function(HH) {
+        return HH && "function" == typeof Symbol && HH.constructor === Symbol && HH !== Symbol.prototype ? "symbol" : typeof HH
+      }, hB(HH)
+    }
+
+    function tB(HH) {
+      var BH = function(HH, BH) {
+        if ("object" != hB(HH) || !HH) return HH;
+        var LH = HH[Symbol.toPrimitive];
+        if (void 0 !== LH) {
+          var AH = LH.call(HH, BH || "default");
+          if ("object" != hB(AH)) return AH;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === eV ? String : Number)(VV)
-      }(VV, "string");
-      return "symbol" == ye(eV) ? eV : eV + ""
+        return ("string" === BH ? String : Number)(HH)
+      }(HH, "string");
+      return "symbol" == hB(BH) ? BH : BH + ""
     }
 
-    function Qe(VV, eV, xV) {
-      return (eV = pe(eV)) in VV ? Object.defineProperty(VV, eV, {
-        value: xV,
+    function zB(HH, BH, LH) {
+      return (BH = tB(BH)) in HH ? Object.defineProperty(HH, BH, {
+        value: LH,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : VV[eV] = xV, VV
+      }) : HH[BH] = LH, HH
     }
 
-    function ne(VV, eV) {
-      var xV = Object.keys(VV);
+    function CB(HH, BH) {
+      var LH = Object.keys(HH);
       if (Object.getOwnPropertySymbols) {
-        var JV = Object.getOwnPropertySymbols(VV);
-        eV && (JV = JV.filter((function(eV) {
-          return Object.getOwnPropertyDescriptor(VV, eV).enumerable
-        }))), xV.push.apply(xV, JV)
+        var AH = Object.getOwnPropertySymbols(HH);
+        BH && (AH = AH.filter((function(BH) {
+          return Object.getOwnPropertyDescriptor(HH, BH).enumerable
+        }))), LH.push.apply(LH, AH)
       }
-      return xV
+      return LH
     }
 
-    function we(VV) {
-      for (var eV = 1; eV < arguments.length; eV++) {
-        var xV = null != arguments[eV] ? arguments[eV] : {};
-        eV % 2 ? ne(Object(xV), !0).forEach((function(eV) {
-          Qe(VV, eV, xV[eV])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(VV, Object.getOwnPropertyDescriptors(xV)) : ne(Object(xV)).forEach((function(eV) {
-          Object.defineProperty(VV, eV, Object.getOwnPropertyDescriptor(xV, eV))
+    function EB(HH) {
+      for (var BH = 1; BH < arguments.length; BH++) {
+        var LH = null != arguments[BH] ? arguments[BH] : {};
+        BH % 2 ? CB(Object(LH), !0).forEach((function(BH) {
+          zB(HH, BH, LH[BH])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(HH, Object.getOwnPropertyDescriptors(LH)) : CB(Object(LH)).forEach((function(BH) {
+          Object.defineProperty(HH, BH, Object.getOwnPropertyDescriptor(LH, BH))
         }))
       }
-      return VV
+      return HH
     }
 
-    function Ze() {
-      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : bV;
-      var eV, xV, JV;
-      const YV = VV.config.sessionTracking,
-        UV = null !== (eV = null !== (xV = null === YV || void 0 === YV || null === (JV = YV.sampler) || void 0 === JV ? void 0 : JV.call(YV, {
-          metas: VV.metas.value
-        })) && void 0 !== xV ? xV : null === YV || void 0 === YV ? void 0 : YV.samplingRate) && void 0 !== eV ? eV : 1,
-        yV = "number" === typeof UV ? function(VV) {
-          return Math.min(1, Math.max(0, VV))
-        }(UV) : 0;
-      if (!(yV > 0)) return !1;
-      if (1 === yV) return !0;
+    function XB() {
+      let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : QH;
+      var BH, LH, AH;
+      const rH = HH.config.sessionTracking,
+        SH = null !== (BH = null !== (LH = null === rH || void 0 === rH || null === (AH = rH.sampler) || void 0 === AH ? void 0 : AH.call(rH, {
+          metas: HH.metas.value
+        })) && void 0 !== LH ? LH : null === rH || void 0 === rH ? void 0 : rH.samplingRate) && void 0 !== BH ? BH : 1,
+        hH = "number" === typeof SH ? function(HH) {
+          return Math.min(1, Math.max(0, HH))
+        }(SH) : 0;
+      if (!(hH > 0)) return !1;
+      if (1 === hH) return !0;
       try {
-        const VV = "undefined" !== typeof window ? window.crypto : void 0;
-        if ("function" === typeof(null === VV || void 0 === VV ? void 0 : VV.getRandomValues)) {
-          const eV = new Uint32Array(1);
-          return VV.getRandomValues(eV), eV[0] / Math.pow(2, 32) < yV
+        const HH = "undefined" !== typeof window ? window.crypto : void 0;
+        if ("function" === typeof(null === HH || void 0 === HH ? void 0 : HH.getRandomValues)) {
+          const BH = new Uint32Array(1);
+          return HH.getRandomValues(BH), BH[0] / Math.pow(2, 32) < hH
         }
-      } catch (pV) {}
-      return Math.random() < yV
+      } catch (tH) {}
+      return Math.random() < hH
     }
 
-    function ve() {
+    function GB() {
       return Date.now()
     }
 
-    function re() {
+    function YB() {
       return "undefined" !== typeof performance && "function" === typeof performance.now ? performance.now() : Date.now()
     }
 
-    function ke() {
+    function uB() {
       return (new Date).toISOString()
     }
 
-    function be(VV) {
-      return new Date(VV).toISOString()
+    function QB(HH) {
+      return new Date(HH).toISOString()
     }
-    const Ee = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
+    const WB = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
 
-    function Be() {
-      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      const eV = new Uint32Array(VV),
-        xV = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
-      if (null === xV || void 0 === xV ? void 0 : xV.getRandomValues) xV.getRandomValues(eV);
+    function MB() {
+      let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      const BH = new Uint32Array(HH),
+        LH = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
+      if (null === LH || void 0 === LH ? void 0 : LH.getRandomValues) LH.getRandomValues(BH);
       else
-        for (let YV = 0; YV < VV; YV++) eV[YV] = Math.floor(4294967296 * Math.random());
-      let JV = "";
-      for (let YV = 0; YV < VV; YV++) JV += Ee[eV[YV] % 59];
-      return JV
+        for (let rH = 0; rH < HH; rH++) BH[rH] = Math.floor(4294967296 * Math.random());
+      let AH = "";
+      for (let rH = 0; rH < HH; rH++) AH += WB[BH[rH] % 59];
+      return AH
     }
 
-    function je(VV, eV) {
-      if (VV === eV) return !0;
-      if (BV(VV, "number") && isNaN(VV)) return BV(eV, "number") && isNaN(eV);
-      const xV = GV(VV),
-        JV = GV(eV);
-      if (xV !== JV) return !1;
-      if (xV && JV) {
-        const xV = VV.length;
-        if (xV !== eV.length) return !1;
-        for (let JV = xV; 0 !== JV--;)
-          if (!je(VV[JV], eV[JV])) return !1;
+    function xB(HH, BH) {
+      if (HH === BH) return !0;
+      if (MH(HH, "number") && isNaN(HH)) return MH(BH, "number") && isNaN(BH);
+      const LH = IH(HH),
+        AH = IH(BH);
+      if (LH !== AH) return !1;
+      if (LH && AH) {
+        const LH = HH.length;
+        if (LH !== BH.length) return !1;
+        for (let AH = LH; 0 !== AH--;)
+          if (!xB(HH[AH], BH[AH])) return !1;
         return !0
       }
-      const YV = MV(VV),
-        UV = MV(eV);
-      if (YV !== UV) return !1;
-      if (VV && eV && YV && UV) {
-        const xV = Object.keys(VV),
-          JV = Object.keys(eV);
-        if (xV.length !== JV.length) return !1;
-        for (let VV of xV)
-          if (!JV.includes(VV)) return !1;
-        for (let YV of xV)
-          if (!je(VV[YV], eV[YV])) return !1;
+      const rH = mH(HH),
+        SH = mH(BH);
+      if (rH !== SH) return !1;
+      if (HH && BH && rH && SH) {
+        const LH = Object.keys(HH),
+          AH = Object.keys(BH);
+        if (LH.length !== AH.length) return !1;
+        for (let HH of LH)
+          if (!AH.includes(HH)) return !1;
+        for (let rH of LH)
+          if (!xB(HH[rH], BH[rH])) return !1;
         return !0
       }
       return !1
     }
-    const qe = "click",
-      te = "navigation",
-      Fe = "view_changed",
-      Te = "session_start",
-      Pe = "session_resume",
-      Ae = "session_extend",
-      Ne = "service_name_override",
-      Xe = "route_change";
+    const vB = "click",
+      PB = "navigation",
+      TB = "view_changed",
+      UB = "session_start",
+      VB = "session_resume",
+      OB = "session_extend",
+      bB = "service_name_override",
+      kB = "route_change";
 
-    function Me() {
+    function mB() {
       let {
-        sessionId: VV,
-        started: eV,
-        lastActivity: xV,
-        isSampled: JV = !0
-      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, YV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bV;
-      var UV;
-      const yV = ve(),
-        pV = null === (UV = YV.config) || void 0 === UV || null === (UV = UV.sessionTracking) || void 0 === UV ? void 0 : UV.generateSessionId;
-      return null == VV && (VV = "function" === typeof pV ? pV() : Be()), {
-        sessionId: VV,
-        lastActivity: null !== xV && void 0 !== xV ? xV : yV,
-        started: null !== eV && void 0 !== eV ? eV : yV,
-        isSampled: JV
+        sessionId: HH,
+        started: BH,
+        lastActivity: LH,
+        isSampled: AH = !0
+      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, rH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : QH;
+      var SH;
+      const hH = GB(),
+        tH = null === (SH = rH.config) || void 0 === SH || null === (SH = SH.sessionTracking) || void 0 === SH ? void 0 : SH.generateSessionId;
+      return null == HH && (HH = "function" === typeof tH ? tH() : MB()), {
+        sessionId: HH,
+        lastActivity: null !== LH && void 0 !== LH ? LH : hH,
+        started: null !== BH && void 0 !== BH ? BH : hH,
+        isSampled: AH
       }
     }
 
-    function ze(VV) {
-      if (null == VV) return !1;
-      const eV = ve();
-      return eV - VV.started < 144e5 && eV - VV.lastActivity < yV
+    function oB(HH) {
+      if (null == HH) return !1;
+      const BH = GB();
+      return BH - HH.started < 144e5 && BH - HH.lastActivity < hH
     }
 
-    function Ge(VV) {
+    function IB(HH) {
       let {
-        fetchUserSession: eV,
-        storeUserSession: xV,
-        adoptSession: JV,
-        updateInterval: YV = 0
-      } = VV, pV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bV, QV = 0;
+        fetchUserSession: BH,
+        storeUserSession: LH,
+        adoptSession: AH,
+        updateInterval: rH = 0
+      } = HH, tH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : QH, zH = 0;
       return function() {
         let {
-          forceSessionExtend: VV = !1,
-          refreshActivity: nV = !0
+          forceSessionExtend: HH = !1,
+          refreshActivity: CH = !0
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        var wV, ZV;
-        if (!eV || !xV) return;
-        const vV = ve();
-        if (!VV && vV < QV && QV - vV <= YV) return;
-        const rV = pV.config.sessionTracking,
-          kV = null === rV || void 0 === rV ? void 0 : rV.persistent;
-        if (kV && !Je || !kV && !Ye) return;
-        const bV = eV();
-        if (QV = Math.min(vV + YV, (null !== (wV = null === bV || void 0 === bV ? void 0 : bV.started) && void 0 !== wV ? wV : vV) + UV, (null !== (ZV = null === bV || void 0 === bV ? void 0 : bV.lastActivity) && void 0 !== ZV ? ZV : vV) + yV), !1 === VV && ze(bV)) {
-          var EV;
-          nV && xV(we(we({}, bV), {}, {
-            lastActivity: vV
+        var EH, XH;
+        if (!BH || !LH) return;
+        const GH = GB();
+        if (!HH && GH < zH && zH - GH <= rH) return;
+        const YH = tH.config.sessionTracking,
+          uH = null === YH || void 0 === YH ? void 0 : YH.persistent;
+        if (uH && !AB || !uH && !rB) return;
+        const QH = BH();
+        if (zH = Math.min(GH + rH, (null !== (EH = null === QH || void 0 === QH ? void 0 : QH.started) && void 0 !== EH ? EH : GH) + SH, (null !== (XH = null === QH || void 0 === QH ? void 0 : QH.lastActivity) && void 0 !== XH ? XH : GH) + hH), !1 === HH && oB(QH)) {
+          var WH;
+          CH && LH(EB(EB({}, QH), {}, {
+            lastActivity: GH
           }));
-          const VV = null === (EV = pV.metas.value.session) || void 0 === EV ? void 0 : EV.id;
-          null != JV && null != bV.sessionMeta && bV.sessionId !== VV && JV(bV.sessionMeta)
+          const HH = null === (WH = tH.metas.value.session) || void 0 === WH ? void 0 : WH.id;
+          null != AH && null != QH.sessionMeta && QH.sessionId !== HH && AH(QH.sessionMeta)
         } else {
-          var BV, jV, qV;
-          let VV = Re(Me({
-            isSampled: Ze(pV)
-          }, pV), bV, pV);
-          QV = vV + YV, xV(VV), null === (BV = pV.api) || void 0 === BV || BV.setSession(VV.sessionMeta), null === rV || void 0 === rV || null === (jV = rV.onSessionChange) || void 0 === jV || jV.call(rV, null !== (qV = null === bV || void 0 === bV ? void 0 : bV.sessionMeta) && void 0 !== qV ? qV : null, VV.sessionMeta)
+          var MH, xH, vH;
+          let HH = lB(mB({
+            isSampled: XB(tH)
+          }, tH), QH, tH);
+          zH = GH + rH, LH(HH), null === (MH = tH.api) || void 0 === MH || MH.setSession(HH.sessionMeta), null === YH || void 0 === YH || null === (xH = YH.onSessionChange) || void 0 === xH || xH.call(YH, null !== (vH = null === QH || void 0 === QH ? void 0 : QH.sessionMeta) && void 0 !== vH ? vH : null, HH.sessionMeta)
         }
       }
     }
 
-    function We(VV) {
-      let eV, {
-          fetchUserSession: xV,
-          storeUserSession: JV,
-          updateInterval: YV = 0
-        } = VV,
-        UV = 0;
-      return VV => {
-        const yV = ve();
-        if (VV === eV && yV < UV && UV - yV <= YV) return;
-        eV = VV, UV = yV + YV;
-        const pV = xV();
-        (null === pV || void 0 === pV ? void 0 : pV.sessionId) === VV && ze(pV) && JV(we(we({}, pV), {}, {
-          lastActivity: yV
+    function fB(HH) {
+      let BH, {
+          fetchUserSession: LH,
+          storeUserSession: AH,
+          updateInterval: rH = 0
+        } = HH,
+        SH = 0;
+      return HH => {
+        const hH = GB();
+        if (HH === BH && hH < SH && SH - hH <= rH) return;
+        BH = HH, SH = hH + rH;
+        const tH = LH();
+        (null === tH || void 0 === tH ? void 0 : tH.sessionId) === HH && oB(tH) && AH(EB(EB({}, tH), {}, {
+          lastActivity: hH
         }))
       }
     }
 
-    function Re(VV, eV) {
-      let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bV;
-      var JV, YV, UV, yV, pV, QV;
-      const nV = we(we({}, VV), {}, {
+    function lB(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : QH;
+      var AH, rH, SH, hH, tH, zH;
+      const CH = EB(EB({}, HH), {}, {
           sessionMeta: {
-            id: VV.sessionId,
-            attributes: De(we(we(we({}, null === (JV = xV.config.sessionTracking) || void 0 === JV || null === (JV = JV.session) || void 0 === JV ? void 0 : JV.attributes), null !== (YV = null === (UV = xV.metas.value.session) || void 0 === UV ? void 0 : UV.attributes) && void 0 !== YV ? YV : {}), {}, {
-              isSampled: VV.isSampled.toString()
+            id: HH.sessionId,
+            attributes: cB(EB(EB(EB({}, null === (AH = LH.config.sessionTracking) || void 0 === AH || null === (AH = AH.session) || void 0 === AH ? void 0 : AH.attributes), null !== (rH = null === (SH = LH.metas.value.session) || void 0 === SH ? void 0 : SH.attributes) && void 0 !== rH ? rH : {}), {}, {
+              isSampled: HH.isSampled.toString()
             }))
           }
         }),
-        wV = null !== (yV = null === (pV = xV.metas.value.session) || void 0 === pV ? void 0 : pV.overrides) && void 0 !== yV ? yV : null === eV || void 0 === eV || null === (QV = eV.sessionMeta) || void 0 === QV ? void 0 : QV.overrides;
-      HV(wV) || (nV.sessionMeta.overrides = wV);
-      const ZV = null === eV || void 0 === eV ? void 0 : eV.sessionId;
-      return null != ZV && (nV.sessionMeta.attributes.previousSession = ZV), nV
+        EH = null !== (hH = null === (tH = LH.metas.value.session) || void 0 === tH ? void 0 : tH.overrides) && void 0 !== hH ? hH : null === BH || void 0 === BH || null === (zH = BH.sessionMeta) || void 0 === zH ? void 0 : zH.overrides;
+      dH(EH) || (CH.sessionMeta.overrides = EH);
+      const XH = null === BH || void 0 === BH ? void 0 : BH.sessionId;
+      return null != XH && (CH.sessionMeta.attributes.previousSession = XH), CH
     }
 
-    function ge(VV) {
+    function KB(HH) {
       let {
-        fetchUserSession: eV,
-        storeUserSession: xV
-      } = VV, JV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bV, YV = !1;
-      return function(VV) {
-        if (YV) return;
-        const UV = VV.session,
-          yV = eV();
-        let pV = null === UV || void 0 === UV ? void 0 : UV.id;
-        const QV = null === UV || void 0 === UV ? void 0 : UV.attributes,
-          nV = null === UV || void 0 === UV ? void 0 : UV.overrides,
-          wV = null === yV || void 0 === yV ? void 0 : yV.sessionMeta,
-          ZV = null === wV || void 0 === wV ? void 0 : wV.overrides,
-          vV = !!nV && !je(nV, ZV),
-          rV = !!QV && !je(QV, null === wV || void 0 === wV ? void 0 : wV.attributes);
-        if (UV && pV !== (null === yV || void 0 === yV ? void 0 : yV.sessionId) || rV || vV) {
-          var kV, bV;
-          const VV = null != yV && pV === yV.sessionId,
-            eV = Re(VV ? yV : Me({
-              sessionId: pV,
-              isSampled: Ze(JV)
-            }, JV), yV, JV),
-            UV = null === yV || void 0 === yV || null === (kV = yV.sessionMeta) || void 0 === kV || null === (kV = kV.attributes) || void 0 === kV ? void 0 : kV.previousSession;
-          VV && null != UV && UV !== eV.sessionId && (eV.sessionMeta.attributes.previousSession = UV), (null === (bV = eV.sessionMeta.attributes) || void 0 === bV ? void 0 : bV.previousSession) === eV.sessionId && delete eV.sessionMeta.attributes.previousSession, xV(eV),
-            function(VV, eV) {
-              let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-              var YV, UV, yV;
-              if (!eV) return;
-              const pV = xV.serviceName,
-                QV = null !== (YV = null !== (UV = JV.serviceName) && void 0 !== UV ? UV : null === (yV = VV.metas.value.app) || void 0 === yV ? void 0 : yV.name) && void 0 !== YV ? YV : "";
-              pV && pV !== QV && VV.api.pushEvent(Ne, {
-                serviceName: pV,
-                previousServiceName: QV
+        fetchUserSession: BH,
+        storeUserSession: LH
+      } = HH, AH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : QH, rH = !1;
+      return function(HH) {
+        if (rH) return;
+        const SH = HH.session,
+          hH = BH();
+        let tH = null === SH || void 0 === SH ? void 0 : SH.id;
+        const zH = null === SH || void 0 === SH ? void 0 : SH.attributes,
+          CH = null === SH || void 0 === SH ? void 0 : SH.overrides,
+          EH = null === hH || void 0 === hH ? void 0 : hH.sessionMeta,
+          XH = null === EH || void 0 === EH ? void 0 : EH.overrides,
+          GH = !!CH && !xB(CH, XH),
+          YH = !!zH && !xB(zH, null === EH || void 0 === EH ? void 0 : EH.attributes);
+        if (SH && tH !== (null === hH || void 0 === hH ? void 0 : hH.sessionId) || YH || GH) {
+          var uH, QH;
+          const HH = null != hH && tH === hH.sessionId,
+            BH = lB(HH ? hH : mB({
+              sessionId: tH,
+              isSampled: XB(AH)
+            }, AH), hH, AH),
+            SH = null === hH || void 0 === hH || null === (uH = hH.sessionMeta) || void 0 === uH || null === (uH = uH.attributes) || void 0 === uH ? void 0 : uH.previousSession;
+          HH && null != SH && SH !== BH.sessionId && (BH.sessionMeta.attributes.previousSession = SH), (null === (QH = BH.sessionMeta.attributes) || void 0 === QH ? void 0 : QH.previousSession) === BH.sessionId && delete BH.sessionMeta.attributes.previousSession, LH(BH),
+            function(HH, BH) {
+              let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+              var rH, SH, hH;
+              if (!BH) return;
+              const tH = LH.serviceName,
+                zH = null !== (rH = null !== (SH = AH.serviceName) && void 0 !== SH ? SH : null === (hH = HH.metas.value.app) || void 0 === hH ? void 0 : hH.name) && void 0 !== rH ? rH : "";
+              tH && tH !== zH && HH.api.pushEvent(bB, {
+                serviceName: tH,
+                previousServiceName: zH
               })
-            }(JV, vV, nV, ZV), YV = !0;
+            }(AH, GH, CH, XH), rH = !0;
           try {
-            JV.api.setSession(eV.sessionMeta)
+            AH.api.setSession(BH.sessionMeta)
           } finally {
-            YV = !1
+            rH = !1
           }
         }
       }
     }
 
-    function De(VV) {
-      const eV = {};
-      for (const xV of Object.keys(VV)) {
-        const JV = VV[xV];
-        void 0 !== JV && (eV[xV] = JV)
+    function cB(HH) {
+      const BH = {};
+      for (const LH of Object.keys(HH)) {
+        const AH = HH[LH];
+        void 0 !== AH && (BH[LH] = AH)
       }
-      return eV
+      return BH
     }
 
-    function ie() {
-      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return JSON.stringify(null !== VV && void 0 !== VV ? VV : {}, function() {
-        const VV = new WeakSet;
-        return function(eV, xV) {
-          if (MV(xV) && null !== xV) {
-            if (VV.has(xV)) return null;
-            VV.add(xV)
+    function eB() {
+      let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      return JSON.stringify(null !== HH && void 0 !== HH ? HH : {}, function() {
+        const HH = new WeakSet;
+        return function(BH, LH) {
+          if (mH(LH) && null !== LH) {
+            if (HH.has(LH)) return null;
+            HH.add(LH)
           }
-          return xV
+          return LH
         }
       }())
     }
 
-    function Ce() {
-      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const eV = {};
-      for (const [xV, JV] of Object.entries(VV)) eV[xV] = MV(JV) && null !== JV ? ie(JV) : String(JV);
-      return eV
+    function qB() {
+      let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const BH = {};
+      for (const [LH, AH] of Object.entries(HH)) BH[LH] = mH(AH) && null !== AH ? eB(AH) : String(AH);
+      return BH
     }
-    var ae = class VV {
+    var gB = class HH {
       constructor() {
-        var eV = this;
-        let xV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : bV;
-        this.context = xV, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = VV => {
+        var BH = this;
+        let LH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : QH;
+        this.context = LH, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = HH => {
           this.adopting = !0;
           try {
-            var eV;
-            null === (eV = this.context.api) || void 0 === eV || eV.setSession(VV)
+            var BH;
+            null === (BH = this.context.api) || void 0 === BH || BH.setSession(HH)
           } finally {
             this.adopting = !1
           }
         }, this.updateSession = function() {
           let {
-            refreshActivity: VV = !0
+            refreshActivity: HH = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return eV.updateUserSession({
-            refreshActivity: VV
+          return BH.updateUserSession({
+            refreshActivity: HH
           })
-        }, this.recordActivity = We({
-          fetchUserSession: VV.fetchUserSession,
-          storeUserSession: VV.storeUserSession,
-          updateInterval: pV
-        }), this.updateUserSession = Ge({
-          fetchUserSession: VV.fetchUserSession,
-          storeUserSession: VV.storeUserSession,
+        }, this.recordActivity = fB({
+          fetchUserSession: HH.fetchUserSession,
+          storeUserSession: HH.storeUserSession,
+          updateInterval: tH
+        }), this.updateUserSession = IB({
+          fetchUserSession: HH.fetchUserSession,
+          storeUserSession: HH.storeUserSession,
           adoptSession: this.adoptSession,
-          updateInterval: pV
-        }, xV), this.init()
+          updateInterval: tH
+        }, LH), this.init()
       }
       static removeUserSession() {
-        xe(YV, VV.storageTypeLocal)
+        LB(rH, HH.storageTypeLocal)
       }
-      static storeUserSession(eV) {
-        ee(YV, ie(eV), VV.storageTypeLocal)
+      static storeUserSession(BH) {
+        BB(rH, eB(BH), HH.storageTypeLocal)
       }
       static fetchUserSession() {
-        const eV = Ve(YV, VV.storageTypeLocal);
-        return eV ? JSON.parse(eV) : null
+        const BH = HB(rH, HH.storageTypeLocal);
+        return BH ? JSON.parse(BH) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var VV;
+            var HH;
             this.updateSession({
               refreshActivity: !1
             });
-            const eV = null === (VV = this.context.api) || void 0 === VV || null === (VV = VV.getSession()) || void 0 === VV ? void 0 : VV.id;
-            eV && this.recordActivity(eV)
+            const BH = null === (HH = this.context.api) || void 0 === HH || null === (HH = HH.getSession()) || void 0 === HH ? void 0 : HH.id;
+            BH && this.recordActivity(BH)
           }
-        })), this.context.metas.addListener(ge({
-          fetchUserSession: VV.fetchUserSession,
-          storeUserSession: VV.storeUserSession
+        })), this.context.metas.addListener(KB({
+          fetchUserSession: HH.fetchUserSession,
+          storeUserSession: HH.storeUserSession
         }, this.context))
       }
     };
-    ae.storageTypeLocal = dV;
-    var oe = class VV {
+    gB.storageTypeLocal = pH;
+    var NB = class HH {
       constructor() {
-        var eV = this;
-        let xV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : bV;
-        this.context = xV, this.isAdopting = () => !1, this.updateSession = function() {
+        var BH = this;
+        let LH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : QH;
+        this.context = LH, this.isAdopting = () => !1, this.updateSession = function() {
           let {
-            refreshActivity: VV = !0
+            refreshActivity: HH = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return eV.updateUserSession({
-            refreshActivity: VV
+          return BH.updateUserSession({
+            refreshActivity: HH
           })
-        }, this.recordActivity = We({
-          fetchUserSession: VV.fetchUserSession,
-          storeUserSession: VV.storeUserSession,
-          updateInterval: pV
-        }), this.updateUserSession = Ge({
-          fetchUserSession: VV.fetchUserSession,
-          storeUserSession: VV.storeUserSession,
-          updateInterval: pV
-        }, xV), this.init()
+        }, this.recordActivity = fB({
+          fetchUserSession: HH.fetchUserSession,
+          storeUserSession: HH.storeUserSession,
+          updateInterval: tH
+        }), this.updateUserSession = IB({
+          fetchUserSession: HH.fetchUserSession,
+          storeUserSession: HH.storeUserSession,
+          updateInterval: tH
+        }, LH), this.init()
       }
       static removeUserSession() {
-        xe(YV, VV.storageTypeSession)
+        LB(rH, HH.storageTypeSession)
       }
-      static storeUserSession(eV) {
-        ee(YV, ie(eV), VV.storageTypeSession)
+      static storeUserSession(BH) {
+        BB(rH, eB(BH), HH.storageTypeSession)
       }
       static fetchUserSession() {
-        const eV = Ve(YV, VV.storageTypeSession);
-        return eV ? JSON.parse(eV) : null
+        const BH = HB(rH, HH.storageTypeSession);
+        return BH ? JSON.parse(BH) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var VV;
+            var HH;
             this.updateSession({
               refreshActivity: !1
             });
-            const eV = null === (VV = this.context.api) || void 0 === VV || null === (VV = VV.getSession()) || void 0 === VV ? void 0 : VV.id;
-            eV && this.recordActivity(eV)
+            const BH = null === (HH = this.context.api) || void 0 === HH || null === (HH = HH.getSession()) || void 0 === HH ? void 0 : HH.id;
+            BH && this.recordActivity(BH)
           }
-        })), this.context.metas.addListener(ge({
-          fetchUserSession: VV.fetchUserSession,
-          storeUserSession: VV.storeUserSession
+        })), this.context.metas.addListener(KB({
+          fetchUserSession: HH.fetchUserSession,
+          storeUserSession: HH.storeUserSession
         }, this.context))
       }
     };
-    oe.storageTypeSession = IV;
-    const ce = new WeakMap;
+    NB.storageTypeSession = iH;
+    const RB = new WeakMap;
 
-    function he(VV) {
-      let eV = ce.get(VV);
-      if (!eV) {
-        let xV = [],
-          JV = [];
-        eV = {
-          addSessionUpdateListener: VV => {
-            xV.push(VV)
+    function jB(HH) {
+      let BH = RB.get(HH);
+      if (!BH) {
+        let LH = [],
+          AH = [];
+        BH = {
+          addSessionUpdateListener: HH => {
+            LH.push(HH)
           },
-          removeSessionUpdateListener: VV => {
-            xV = xV.filter((eV => eV !== VV))
+          removeSessionUpdateListener: HH => {
+            LH = LH.filter((BH => BH !== HH))
           },
-          notifySessionUpdate: VV => {
-            xV.forEach((eV => eV(VV)))
+          notifySessionUpdate: HH => {
+            LH.forEach((BH => BH(HH)))
           },
-          shouldCapture: () => JV.every((VV => VV())),
-          addCaptureFilter: VV => {
-            JV.push(VV)
+          shouldCapture: () => AH.every((HH => HH())),
+          addCaptureFilter: HH => {
+            AH.push(HH)
           },
-          removeCaptureFilter: VV => {
-            JV = JV.filter((eV => eV !== VV))
+          removeCaptureFilter: HH => {
+            AH = AH.filter((BH => BH !== HH))
           }
-        }, ce.set(VV, eV)
+        }, RB.set(HH, BH)
       }
-      return eV
+      return BH
     }
-    var le = class {
-      constructor(VV, eV, xV) {
-        this.metas = VV, this.transports = eV, this.onActivate = xV, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = VV => {
-          var eV, xV, JV;
-          const YV = this.pending;
-          var UV, yV;
-          if ("overrides" === VV.type) return void(this.pending = {
-            reset: null !== (UV = null === YV || void 0 === YV ? void 0 : YV.reset) && void 0 !== UV && UV,
-            inheritOverrides: null === (yV = null === YV || void 0 === YV ? void 0 : YV.inheritOverrides) || void 0 === yV || yV,
-            session: we(we({}, null === YV || void 0 === YV ? void 0 : YV.session), {}, {
-              overrides: we(we({}, null === YV || void 0 === YV ? void 0 : YV.session.overrides), VV.overrides)
+    var nB = class {
+      constructor(HH, BH, LH) {
+        this.metas = HH, this.transports = BH, this.onActivate = LH, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = HH => {
+          var BH, LH, AH;
+          const rH = this.pending;
+          var SH, hH;
+          if ("overrides" === HH.type) return void(this.pending = {
+            reset: null !== (SH = null === rH || void 0 === rH ? void 0 : rH.reset) && void 0 !== SH && SH,
+            inheritOverrides: null === (hH = null === rH || void 0 === rH ? void 0 : rH.inheritOverrides) || void 0 === hH || hH,
+            session: EB(EB({}, null === rH || void 0 === rH ? void 0 : rH.session), {}, {
+              overrides: EB(EB({}, null === rH || void 0 === rH ? void 0 : rH.session.overrides), HH.overrides)
             })
           });
-          const pV = VV.session,
-            QV = HV(pV) || null != pV && "id" in pV && !pV.id,
-            nV = null !== (eV = null === pV || void 0 === pV ? void 0 : pV.overrides) && void 0 !== eV ? eV : null === YV || void 0 === YV ? void 0 : YV.session.overrides;
+          const tH = HH.session,
+            zH = dH(tH) || null != tH && "id" in tH && !tH.id,
+            CH = null !== (BH = null === tH || void 0 === tH ? void 0 : tH.overrides) && void 0 !== BH ? BH : null === rH || void 0 === rH ? void 0 : rH.session.overrides;
           this.pending = {
-            reset: QV || !(null === pV || void 0 === pV ? void 0 : pV.id) && null !== (xV = null === YV || void 0 === YV ? void 0 : YV.reset) && void 0 !== xV && xV,
-            inheritOverrides: !(!VV.overrides && void 0 !== (null === pV || void 0 === pV ? void 0 : pV.overrides)) && (null === (JV = null === YV || void 0 === YV ? void 0 : YV.inheritOverrides) || void 0 === JV || JV),
+            reset: zH || !(null === tH || void 0 === tH ? void 0 : tH.id) && null !== (LH = null === rH || void 0 === rH ? void 0 : rH.reset) && void 0 !== LH && LH,
+            inheritOverrides: !(!HH.overrides && void 0 !== (null === tH || void 0 === tH ? void 0 : tH.overrides)) && (null === (AH = null === rH || void 0 === rH ? void 0 : rH.inheritOverrides) || void 0 === AH || AH),
             session: {
-              id: null === pV || void 0 === pV ? void 0 : pV.id,
-              attributes: (null === pV || void 0 === pV ? void 0 : pV.attributes) && we({}, pV.attributes),
-              overrides: VV.overrides ? we(we({}, null === YV || void 0 === YV ? void 0 : YV.session.overrides), VV.overrides) : nV && we({}, nV)
+              id: null === tH || void 0 === tH ? void 0 : tH.id,
+              attributes: (null === tH || void 0 === tH ? void 0 : tH.attributes) && EB({}, tH.attributes),
+              overrides: HH.overrides ? EB(EB({}, null === rH || void 0 === rH ? void 0 : rH.session.overrides), HH.overrides) : CH && EB({}, CH)
             }
           }
         }, this.activate = () => {
@@ -753,553 +753,553 @@ export const modules = {
         }
       }
       initialize() {
-        var VV, eV;
-        this.waiting = !0, he(this.metas).addSessionUpdateListener(this.recordUpdate), he(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (VV = (eV = this.metas).addCaptureListener) || void 0 === VV || VV.call(eV, this.activate), this.activate()
+        var HH, BH;
+        this.waiting = !0, jB(this.metas).addSessionUpdateListener(this.recordUpdate), jB(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (HH = (BH = this.metas).addCaptureListener) || void 0 === HH || HH.call(BH, this.activate), this.activate()
       }
       destroy() {
-        var VV, eV;
-        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), he(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (VV = (eV = this.metas).removeCaptureListener) || void 0 === VV || VV.call(eV, this.activate), he(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
+        var HH, BH;
+        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), jB(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (HH = (BH = this.metas).removeCaptureListener) || void 0 === HH || HH.call(BH, this.activate), jB(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
       }
     };
 
-    function Le(VV) {
-      return (null === VV || void 0 === VV ? void 0 : VV.persistent) ? ae : oe
+    function FB(HH) {
+      return (null === HH || void 0 === HH ? void 0 : HH.persistent) ? gB : NB
     }
 
-    function fe() {}
-    let me = function(VV) {
-      return VV[VV.OFF = 0] = "OFF", VV[VV.ERROR = 1] = "ERROR", VV[VV.WARN = 2] = "WARN", VV[VV.INFO = 3] = "INFO", VV[VV.VERBOSE = 4] = "VERBOSE", VV
+    function DB() {}
+    let wB = function(HH) {
+      return HH[HH.OFF = 0] = "OFF", HH[HH.ERROR = 1] = "ERROR", HH[HH.WARN = 2] = "WARN", HH[HH.INFO = 3] = "INFO", HH[HH.VERBOSE = 4] = "VERBOSE", HH
     }({});
-    const Ke = {
-        debug: fe,
-        error: fe,
-        info: fe,
+    const ZB = {
+        debug: DB,
+        error: DB,
+        info: DB,
         prefix: "Faro",
-        warn: fe
+        warn: DB
       },
-      He = 1;
+      dB = 1;
 
-    function ue(VV) {
-      return ue = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(VV) {
-        return typeof VV
-      } : function(VV) {
-        return VV && "function" == typeof Symbol && VV.constructor === Symbol && VV !== Symbol.prototype ? "symbol" : typeof VV
-      }, ue(VV)
+    function aB(HH) {
+      return aB = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(HH) {
+        return typeof HH
+      } : function(HH) {
+        return HH && "function" == typeof Symbol && HH.constructor === Symbol && HH !== Symbol.prototype ? "symbol" : typeof HH
+      }, aB(HH)
     }
 
-    function se(VV) {
-      var eV = function(VV, eV) {
-        if ("object" != ue(VV) || !VV) return VV;
-        var xV = VV[Symbol.toPrimitive];
-        if (void 0 !== xV) {
-          var JV = xV.call(VV, eV || "default");
-          if ("object" != ue(JV)) return JV;
+    function sB(HH) {
+      var BH = function(HH, BH) {
+        if ("object" != aB(HH) || !HH) return HH;
+        var LH = HH[Symbol.toPrimitive];
+        if (void 0 !== LH) {
+          var AH = LH.call(HH, BH || "default");
+          if ("object" != aB(AH)) return AH;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === eV ? String : Number)(VV)
-      }(VV, "string");
-      return "symbol" == ue(eV) ? eV : eV + ""
+        return ("string" === BH ? String : Number)(HH)
+      }(HH, "string");
+      return "symbol" == aB(BH) ? BH : BH + ""
     }
 
-    function Se(VV, eV, xV) {
-      return (eV = se(eV)) in VV ? Object.defineProperty(VV, eV, {
-        value: xV,
+    function JB(HH, BH, LH) {
+      return (BH = sB(BH)) in HH ? Object.defineProperty(HH, BH, {
+        value: LH,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : VV[eV] = xV, VV
+      }) : HH[BH] = LH, HH
     }
 
-    function Ie(VV, eV) {
-      var xV = Object.keys(VV);
+    function iB(HH, BH) {
+      var LH = Object.keys(HH);
       if (Object.getOwnPropertySymbols) {
-        var JV = Object.getOwnPropertySymbols(VV);
-        eV && (JV = JV.filter((function(eV) {
-          return Object.getOwnPropertyDescriptor(VV, eV).enumerable
-        }))), xV.push.apply(xV, JV)
+        var AH = Object.getOwnPropertySymbols(HH);
+        BH && (AH = AH.filter((function(BH) {
+          return Object.getOwnPropertyDescriptor(HH, BH).enumerable
+        }))), LH.push.apply(LH, AH)
       }
-      return xV
+      return LH
     }
 
-    function de(VV) {
-      for (var eV = 1; eV < arguments.length; eV++) {
-        var xV = null != arguments[eV] ? arguments[eV] : {};
-        eV % 2 ? Ie(Object(xV), !0).forEach((function(eV) {
-          Se(VV, eV, xV[eV])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(VV, Object.getOwnPropertyDescriptors(xV)) : Ie(Object(xV)).forEach((function(eV) {
-          Object.defineProperty(VV, eV, Object.getOwnPropertyDescriptor(xV, eV))
+    function pB(HH) {
+      for (var BH = 1; BH < arguments.length; BH++) {
+        var LH = null != arguments[BH] ? arguments[BH] : {};
+        BH % 2 ? iB(Object(LH), !0).forEach((function(BH) {
+          JB(HH, BH, LH[BH])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(HH, Object.getOwnPropertyDescriptors(LH)) : iB(Object(LH)).forEach((function(BH) {
+          Object.defineProperty(HH, BH, Object.getOwnPropertyDescriptor(LH, BH))
         }))
       }
-      return VV
+      return HH
     }
-    const Oe = de({}, console);
-    var Vx = class {
+    const yB = pB({}, console);
+    var HL = class {
         constructor() {
-          this.unpatchedConsole = Oe, this.internalLogger = Ke, this.config = {}, this.metas = {}
+          this.unpatchedConsole = yB, this.internalLogger = ZB, this.config = {}, this.metas = {}
         }
         logDebug() {
-          for (var VV = arguments.length, eV = new Array(VV), xV = 0; xV < VV; xV++) eV[xV] = arguments[xV];
-          this.internalLogger.debug(`${this.name}\n`, ...eV)
+          for (var HH = arguments.length, BH = new Array(HH), LH = 0; LH < HH; LH++) BH[LH] = arguments[LH];
+          this.internalLogger.debug(`${this.name}\n`, ...BH)
         }
         logInfo() {
-          for (var VV = arguments.length, eV = new Array(VV), xV = 0; xV < VV; xV++) eV[xV] = arguments[xV];
-          this.internalLogger.info(`${this.name}\n`, ...eV)
+          for (var HH = arguments.length, BH = new Array(HH), LH = 0; LH < HH; LH++) BH[LH] = arguments[LH];
+          this.internalLogger.info(`${this.name}\n`, ...BH)
         }
         logWarn() {
-          for (var VV = arguments.length, eV = new Array(VV), xV = 0; xV < VV; xV++) eV[xV] = arguments[xV];
-          this.internalLogger.warn(`${this.name}\n`, ...eV)
+          for (var HH = arguments.length, BH = new Array(HH), LH = 0; LH < HH; LH++) BH[LH] = arguments[LH];
+          this.internalLogger.warn(`${this.name}\n`, ...BH)
         }
         logError() {
-          for (var VV = arguments.length, eV = new Array(VV), xV = 0; xV < VV; xV++) eV[xV] = arguments[xV];
-          this.internalLogger.error(`${this.name}\n`, ...eV)
+          for (var HH = arguments.length, BH = new Array(HH), LH = 0; LH < HH; LH++) BH[LH] = arguments[LH];
+          this.internalLogger.error(`${this.name}\n`, ...BH)
         }
       },
-      ex = class extends Vx {
+      BL = class extends HL {
         constructor() {
           super(...arguments), this.api = {}, this.transports = {}
         }
       };
-    const xx = "2.12.1";
-    var Jx = class extends ex {
+    const LL = "2.12.1";
+    var AL = class extends BL {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = xx, this.isAdoptingSession = () => !1
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = LL, this.isAdoptingSession = () => !1
       }
-      sendSessionStartEvent(VV) {
-        var eV;
-        const xV = VV.session;
-        if (xV && xV.id !== (null === (eV = this.notifiedSession) || void 0 === eV ? void 0 : eV.id)) {
-          var JV;
-          if (this.isAdoptingSession()) return void(this.notifiedSession = xV);
-          if (this.notifiedSession && this.notifiedSession.id === (null === (JV = xV.attributes) || void 0 === JV ? void 0 : JV.previousSession)) return this.api.pushEvent(Ae, {}, void 0, {
+      sendSessionStartEvent(HH) {
+        var BH;
+        const LH = HH.session;
+        if (LH && LH.id !== (null === (BH = this.notifiedSession) || void 0 === BH ? void 0 : BH.id)) {
+          var AH;
+          if (this.isAdoptingSession()) return void(this.notifiedSession = LH);
+          if (this.notifiedSession && this.notifiedSession.id === (null === (AH = LH.attributes) || void 0 === AH ? void 0 : AH.previousSession)) return this.api.pushEvent(OB, {}, void 0, {
             skipDedupe: !0
-          }), void(this.notifiedSession = xV);
-          this.notifiedSession = xV, this.api.pushEvent(Te, {}, void 0, {
+          }), void(this.notifiedSession = LH);
+          this.notifiedSession = LH, this.api.pushEvent(UB, {}, void 0, {
             skipDedupe: !0
           })
         }
       }
-      createInitialSession(VV, eV, xV) {
-        const JV = null === xV || void 0 === xV ? void 0 : xV.session;
-        let YV, UV, yV = VV.fetchUserSession();
-        if (eV.persistent && eV.maxSessionPersistenceTime && yV) {
-          const VV = ve();
-          yV.lastActivity < VV - eV.maxSessionPersistenceTime && (ae.removeUserSession(), yV = null)
+      createInitialSession(HH, BH, LH) {
+        const AH = null === LH || void 0 === LH ? void 0 : LH.session;
+        let rH, SH, hH = HH.fetchUserSession();
+        if (BH.persistent && BH.maxSessionPersistenceTime && hH) {
+          const HH = GB();
+          hH.lastActivity < HH - BH.maxSessionPersistenceTime && (gB.removeUserSession(), hH = null)
         }
-        const pV = ze(yV);
-        if ((null === xV || void 0 === xV ? void 0 : xV.reset) || !pV || (null === JV || void 0 === JV ? void 0 : JV.id) && JV.id !== (null === yV || void 0 === yV ? void 0 : yV.sessionId)) {
-          var QV, nV, wV, ZV, vV, rV;
-          UV = Me({
-            sessionId: (null === xV || void 0 === xV ? void 0 : xV.reset) ? void 0 : null !== (QV = null === JV || void 0 === JV ? void 0 : JV.id) && void 0 !== QV ? QV : null === (nV = eV.session) || void 0 === nV ? void 0 : nV.id,
-            isSampled: Ze(this)
+        const tH = oB(hH);
+        if ((null === LH || void 0 === LH ? void 0 : LH.reset) || !tH || (null === AH || void 0 === AH ? void 0 : AH.id) && AH.id !== (null === hH || void 0 === hH ? void 0 : hH.sessionId)) {
+          var zH, CH, EH, XH, GH, YH;
+          SH = mB({
+            sessionId: (null === LH || void 0 === LH ? void 0 : LH.reset) ? void 0 : null !== (zH = null === AH || void 0 === AH ? void 0 : AH.id) && void 0 !== zH ? zH : null === (CH = BH.session) || void 0 === CH ? void 0 : CH.id,
+            isSampled: XB(this)
           }, this);
-          const VV = UV.sessionId,
-            kV = xV && pV ? null === yV || void 0 === yV || null === (wV = yV.sessionMeta) || void 0 === wV ? void 0 : wV.overrides : void 0,
-            bV = kV ? we(we({}, null === (ZV = eV.session) || void 0 === ZV ? void 0 : ZV.overrides), kV) : null === (vV = eV.session) || void 0 === vV ? void 0 : vV.overrides;
-          UV.sessionMeta = we({
-            id: VV,
-            attributes: we({
-              isSampled: UV.isSampled.toString()
-            }, null === (rV = eV.session) || void 0 === rV ? void 0 : rV.attributes)
-          }, bV ? {
-            overrides: bV
-          } : {}), YV = Te
+          const HH = SH.sessionId,
+            uH = LH && tH ? null === hH || void 0 === hH || null === (EH = hH.sessionMeta) || void 0 === EH ? void 0 : EH.overrides : void 0,
+            QH = uH ? EB(EB({}, null === (XH = BH.session) || void 0 === XH ? void 0 : XH.overrides), uH) : null === (GH = BH.session) || void 0 === GH ? void 0 : GH.overrides;
+          SH.sessionMeta = EB({
+            id: HH,
+            attributes: EB({
+              isSampled: SH.isSampled.toString()
+            }, null === (YH = BH.session) || void 0 === YH ? void 0 : YH.attributes)
+          }, QH ? {
+            overrides: QH
+          } : {}), rH = UB
         } else {
-          var kV, bV;
-          const VV = null === yV || void 0 === yV ? void 0 : yV.sessionId;
-          UV = Me({
-            sessionId: VV,
-            isSampled: yV.isSampled || !1,
-            started: null === yV || void 0 === yV ? void 0 : yV.started
+          var uH, QH;
+          const HH = null === hH || void 0 === hH ? void 0 : hH.sessionId;
+          SH = mB({
+            sessionId: HH,
+            isSampled: hH.isSampled || !1,
+            started: null === hH || void 0 === hH ? void 0 : hH.started
           }, this);
-          const xV = null === yV || void 0 === yV ? void 0 : yV.sessionMeta,
-            JV = we(we({}, null === (kV = eV.session) || void 0 === kV ? void 0 : kV.overrides), null === xV || void 0 === xV ? void 0 : xV.overrides);
-          UV.sessionMeta = we(we({}, eV.session), {}, {
-            id: VV,
-            attributes: we(we(we({}, null === (bV = eV.session) || void 0 === bV ? void 0 : bV.attributes), null === xV || void 0 === xV ? void 0 : xV.attributes), {}, {
-              isSampled: UV.isSampled.toString()
+          const LH = null === hH || void 0 === hH ? void 0 : hH.sessionMeta,
+            AH = EB(EB({}, null === (uH = BH.session) || void 0 === uH ? void 0 : uH.overrides), null === LH || void 0 === LH ? void 0 : LH.overrides);
+          SH.sessionMeta = EB(EB({}, BH.session), {}, {
+            id: HH,
+            attributes: EB(EB(EB({}, null === (QH = BH.session) || void 0 === QH ? void 0 : QH.attributes), null === LH || void 0 === LH ? void 0 : LH.attributes), {}, {
+              isSampled: SH.isSampled.toString()
             }),
-            overrides: JV
-          }), YV = Pe
+            overrides: AH
+          }), rH = VB
         }
-        var EV;
-        if (JV && (UV.sessionMeta = we(we({}, UV.sessionMeta), {}, {
-            attributes: we(we(we({}, null === (EV = UV.sessionMeta) || void 0 === EV ? void 0 : EV.attributes), JV.attributes), {}, {
-              isSampled: UV.isSampled.toString()
+        var WH;
+        if (AH && (SH.sessionMeta = EB(EB({}, SH.sessionMeta), {}, {
+            attributes: EB(EB(EB({}, null === (WH = SH.sessionMeta) || void 0 === WH ? void 0 : WH.attributes), AH.attributes), {}, {
+              isSampled: SH.isSampled.toString()
             })
-          }), JV.overrides)) {
-          const VV = (null === xV || void 0 === xV ? void 0 : xV.inheritOverrides) ? we(we({}, UV.sessionMeta.overrides), JV.overrides) : JV.overrides;
-          Object.keys(VV).length > 0 ? UV.sessionMeta.overrides = VV : delete UV.sessionMeta.overrides
+          }), AH.overrides)) {
+          const HH = (null === LH || void 0 === LH ? void 0 : LH.inheritOverrides) ? EB(EB({}, SH.sessionMeta.overrides), AH.overrides) : AH.overrides;
+          Object.keys(HH).length > 0 ? SH.sessionMeta.overrides = HH : delete SH.sessionMeta.overrides
         }
         return {
-          initialSession: UV,
-          lifecycleType: YV
+          initialSession: SH,
+          lifecycleType: rH
         }
       }
-      registerBeforeSendHook(VV) {
-        var eV;
-        this.beforeSendHook = eV => {
-          var xV, JV;
-          const YV = null === (xV = eV.meta.session) || void 0 === xV ? void 0 : xV.id;
-          YV && !this.transports.isPaused() && VV(YV);
-          const UV = null === (JV = eV.meta.session) || void 0 === JV ? void 0 : JV.attributes;
-          if (UV && "true" === (null === UV || void 0 === UV ? void 0 : UV.isSampled)) {
-            var yV;
-            let VV = JSON.parse(JSON.stringify(eV));
-            const xV = null === (yV = VV.meta.session) || void 0 === yV ? void 0 : yV.attributes;
-            var pV;
-            if (null === xV || void 0 === xV || delete xV.isSampled, 0 === Object.keys(null !== xV && void 0 !== xV ? xV : {}).length) null === (pV = VV.meta.session) || void 0 === pV || delete pV.attributes;
-            return VV
+      registerBeforeSendHook(HH) {
+        var BH;
+        this.beforeSendHook = BH => {
+          var LH, AH;
+          const rH = null === (LH = BH.meta.session) || void 0 === LH ? void 0 : LH.id;
+          rH && !this.transports.isPaused() && HH(rH);
+          const SH = null === (AH = BH.meta.session) || void 0 === AH ? void 0 : AH.attributes;
+          if (SH && "true" === (null === SH || void 0 === SH ? void 0 : SH.isSampled)) {
+            var hH;
+            let HH = JSON.parse(JSON.stringify(BH));
+            const LH = null === (hH = HH.meta.session) || void 0 === hH ? void 0 : hH.attributes;
+            var tH;
+            if (null === LH || void 0 === LH || delete LH.isSampled, 0 === Object.keys(null !== LH && void 0 !== LH ? LH : {}).length) null === (tH = HH.meta.session) || void 0 === tH || delete tH.attributes;
+            return HH
           }
           return null
-        }, null === (eV = this.transports) || void 0 === eV || eV.addBeforeSendHooks(this.beforeSendHook)
+        }, null === (BH = this.transports) || void 0 === BH || BH.addBeforeSendHooks(this.beforeSendHook)
       }
       initialize() {
-        var VV;
+        var HH;
         this.logDebug("init session instrumentation");
-        const eV = document.prerendering;
-        var xV;
-        if ((null === (VV = this.config.sessionTracking) || void 0 === VV ? void 0 : VV.enabled) && (eV || this.prerenderSession)) return null !== (xV = this.prerenderSession) && void 0 !== xV || (this.prerenderSession = new le(this.metas, this.transports, (VV => {
-          this.prerenderSession = void 0, this.initializeSession(VV)
+        const BH = document.prerendering;
+        var LH;
+        if ((null === (HH = this.config.sessionTracking) || void 0 === HH ? void 0 : HH.enabled) && (BH || this.prerenderSession)) return null !== (LH = this.prerenderSession) && void 0 !== LH || (this.prerenderSession = new nB(this.metas, this.transports, (HH => {
+          this.prerenderSession = void 0, this.initializeSession(HH)
         }))), void this.prerenderSession.initialize();
         this.initializeSession()
       }
-      initializeSession(VV) {
-        const eV = this.config.sessionTracking;
-        if (null === eV || void 0 === eV ? void 0 : eV.enabled) {
-          var xV, JV;
-          const YV = Le(eV),
-            UV = new YV(this);
-          this.isAdoptingSession = UV.isAdopting, this.registerBeforeSendHook(UV.recordActivity);
+      initializeSession(HH) {
+        const BH = this.config.sessionTracking;
+        if (null === BH || void 0 === BH ? void 0 : BH.enabled) {
+          var LH, AH;
+          const rH = FB(BH),
+            SH = new rH(this);
+          this.isAdoptingSession = SH.isAdopting, this.registerBeforeSendHook(SH.recordActivity);
           const {
-            initialSession: yV,
-            lifecycleType: pV
-          } = this.createInitialSession(YV, eV, VV);
-          YV.storeUserSession(yV);
-          const QV = yV.sessionMeta;
-          this.notifiedSession = QV, this.api.setSession(QV), this.captureListener = () => {
-            this.transports.isPaused() || UV.updateSession({
+            initialSession: hH,
+            lifecycleType: tH
+          } = this.createInitialSession(rH, BH, HH);
+          rH.storeUserSession(hH);
+          const zH = hH.sessionMeta;
+          this.notifiedSession = zH, this.api.setSession(zH), this.captureListener = () => {
+            this.transports.isPaused() || SH.updateSession({
               refreshActivity: !1
             })
-          }, null === (xV = (JV = this.metas).addCaptureListener) || void 0 === xV || xV.call(JV, this.captureListener), pV === Te && this.api.pushEvent(Te, {}, void 0, {
+          }, null === (LH = (AH = this.metas).addCaptureListener) || void 0 === LH || LH.call(AH, this.captureListener), tH === UB && this.api.pushEvent(UB, {}, void 0, {
             skipDedupe: !0
-          }), pV === Pe && this.api.pushEvent(Pe, {}, void 0, {
+          }), tH === VB && this.api.pushEvent(VB, {}, void 0, {
             skipDedupe: !0
           })
         }
         this.sessionStartListener = this.sendSessionStartEvent.bind(this), this.metas.addListener(this.sessionStartListener)
       }
       destroy() {
-        var VV, eV, xV;
-        (null === (VV = this.prerenderSession) || void 0 === VV || VV.destroy(), this.captureListener) && (null === (eV = (xV = this.metas).removeCaptureListener) || void 0 === eV || eV.call(xV, this.captureListener), this.captureListener = void 0);
+        var HH, BH, LH;
+        (null === (HH = this.prerenderSession) || void 0 === HH || HH.destroy(), this.captureListener) && (null === (BH = (LH = this.metas).removeCaptureListener) || void 0 === BH || BH.call(LH, this.captureListener), this.captureListener = void 0);
         this.beforeSendHook && (this.transports.removeBeforeSendHooks(this.beforeSendHook), this.beforeSendHook = void 0), this.sessionStartListener && (this.metas.removeListener(this.sessionStartListener), this.sessionStartListener = void 0)
       }
     };
 
-    function Yx(VV, eV, xV, JV) {
-      const YV = {
-        filename: VV || document.location.href,
-        function: eV || "?"
+    function rL(HH, BH, LH, AH) {
+      const rH = {
+        filename: HH || document.location.href,
+        function: BH || "?"
       };
-      return void 0 !== xV && (YV.lineno = xV), void 0 !== JV && (YV.colno = JV), YV
+      return void 0 !== LH && (rH.lineno = LH), void 0 !== AH && (rH.colno = AH), rH
     }
-    const Ux = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
-      yx = /\((\S*)(?::(\d+))(?::(\d+))\)/,
-      px = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
-      Qx = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
-      nx = "safari-extension",
-      wx = "safari-web-extension",
-      Zx = /Minified React error #\d+;/i;
+    const SL = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
+      hL = /\((\S*)(?::(\d+))(?::(\d+))\)/,
+      tL = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
+      zL = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
+      CL = "safari-extension",
+      EL = "safari-web-extension",
+      XL = /Minified React error #\d+;/i;
 
-    function vx(VV, eV) {
-      const xV = null === VV || void 0 === VV ? void 0 : VV.includes(nx),
-        JV = !xV && (null === VV || void 0 === VV ? void 0 : VV.includes("safari-web-extension"));
-      return xV || JV ? [(null === VV || void 0 === VV ? void 0 : VV.includes("@")) ? VV.split("@")[0] : VV, xV ? `${nx}:${eV}` : `${wx}:${eV}`] : [VV, eV]
+    function GL(HH, BH) {
+      const LH = null === HH || void 0 === HH ? void 0 : HH.includes(CL),
+        AH = !LH && (null === HH || void 0 === HH ? void 0 : HH.includes("safari-web-extension"));
+      return LH || AH ? [(null === HH || void 0 === HH ? void 0 : HH.includes("@")) ? HH.split("@")[0] : HH, LH ? `${CL}:${BH}` : `${EL}:${BH}`] : [HH, BH]
     }
-    const rx = 1024;
+    const YL = 1024;
 
-    function kx(VV) {
-      let eV = [];
-      VV.stacktrace ? eV = VV.stacktrace.split("\n").filter(((VV, eV) => eV % 2 === 0)) : VV.stack && (eV = VV.stack.split("\n"));
-      const xV = eV.reduce(((eV, xV, JV) => {
-        if (xV.length > rx) return eV;
-        let YV, UV, yV, pV, QV;
-        if (YV = Ux.exec(xV)) {
-          if (UV = YV[1], yV = YV[2], pV = YV[3], QV = YV[4], null === yV || void 0 === yV ? void 0 : yV.startsWith("eval")) {
-            const VV = yx.exec(yV);
-            VV && (yV = VV[1], pV = VV[2], QV = VV[3])
+    function uL(HH) {
+      let BH = [];
+      HH.stacktrace ? BH = HH.stacktrace.split("\n").filter(((HH, BH) => BH % 2 === 0)) : HH.stack && (BH = HH.stack.split("\n"));
+      const LH = BH.reduce(((BH, LH, AH) => {
+        if (LH.length > YL) return BH;
+        let rH, SH, hH, tH, zH;
+        if (rH = SL.exec(LH)) {
+          if (SH = rH[1], hH = rH[2], tH = rH[3], zH = rH[4], null === hH || void 0 === hH ? void 0 : hH.startsWith("eval")) {
+            const HH = hL.exec(hH);
+            HH && (hH = HH[1], tH = HH[2], zH = HH[3])
           }
-          yV = (null === yV || void 0 === yV ? void 0 : yV.startsWith("address at ")) ? yV.substring(11) : yV, [UV, yV] = vx(UV, yV)
-        } else if (YV = px.exec(xV)) {
-          if (UV = YV[1], yV = YV[3], pV = YV[4], QV = YV[5], yV && yV.includes(" > eval")) {
-            const VV = Qx.exec(yV);
-            VV && (UV = UV || "eval", yV = VV[1], pV = VV[2])
-          } else 0 === JV && !QV && PV(VV.columnNumber) && (QV = String(VV.columnNumber + 1));
-          [UV, yV] = vx(UV, yV)
+          hH = (null === hH || void 0 === hH ? void 0 : hH.startsWith("address at ")) ? hH.substring(11) : hH, [SH, hH] = GL(SH, hH)
+        } else if (rH = tL.exec(LH)) {
+          if (SH = rH[1], hH = rH[3], tH = rH[4], zH = rH[5], hH && hH.includes(" > eval")) {
+            const HH = zL.exec(hH);
+            HH && (SH = SH || "eval", hH = HH[1], tH = HH[2])
+          } else 0 === AH && !zH && VH(HH.columnNumber) && (zH = String(HH.columnNumber + 1));
+          [SH, hH] = GL(SH, hH)
         }
-        return (yV || UV) && eV.push(Yx(yV, UV, pV ? Number(pV) : void 0, QV ? Number(QV) : void 0)), eV
+        return (hH || SH) && BH.push(rL(hH, SH, tH ? Number(tH) : void 0, zH ? Number(zH) : void 0)), BH
       }), []);
-      return Zx.test(VV.message) ? xV.slice(1) : xV
+      return XL.test(HH.message) ? LH.slice(1) : LH
     }
 
-    function bx(VV) {
+    function QL(HH) {
       return {
-        frames: kx(VV)
+        frames: uL(HH)
       }
     }
-    const Ex = "http-request-start",
-      Bx = "http-request-end";
-    var jx = class VV {
+    const WL = "http-request-start",
+      ML = "http-request-end";
+    var xL = class HH {
       constructor() {
         this.subscribers = []
       }
-      subscribe(VV) {
-        return this.subscribers.push(VV), {
-          unsubscribe: () => this.unsubscribe(VV)
+      subscribe(HH) {
+        return this.subscribers.push(HH), {
+          unsubscribe: () => this.unsubscribe(HH)
         }
       }
-      unsubscribe(VV) {
-        this.subscribers = this.subscribers.filter((eV => eV !== VV))
+      unsubscribe(HH) {
+        this.subscribers = this.subscribers.filter((BH => BH !== HH))
       }
-      notify(VV) {
-        this.subscribers.forEach((eV => eV(VV)))
+      notify(HH) {
+        this.subscribers.forEach((BH => BH(HH)))
       }
       first() {
-        const eV = new VV,
-          xV = VV => {
-            eV.notify(VV), JV.unsubscribe()
+        const BH = new HH,
+          LH = HH => {
+            BH.notify(HH), AH.unsubscribe()
           },
-          JV = this.subscribe(xV),
-          YV = eV.unsubscribe.bind(eV);
-        return this.withUnsubscribeOverride(eV, YV, xV)
+          AH = this.subscribe(LH),
+          rH = BH.unsubscribe.bind(BH);
+        return this.withUnsubscribeOverride(BH, rH, LH)
       }
-      takeWhile(eV) {
-        const xV = new VV,
-          JV = VV => {
-            eV(VV) ? xV.notify(VV) : xV.unsubscribe(JV)
+      takeWhile(BH) {
+        const LH = new HH,
+          AH = HH => {
+            BH(HH) ? LH.notify(HH) : LH.unsubscribe(AH)
           };
-        this.subscribe(JV);
-        const YV = xV.unsubscribe.bind(xV);
-        return this.withUnsubscribeOverride(xV, YV, JV)
+        this.subscribe(AH);
+        const rH = LH.unsubscribe.bind(LH);
+        return this.withUnsubscribeOverride(LH, rH, AH)
       }
-      filter(eV) {
-        const xV = new VV,
-          JV = VV => {
-            eV(VV) && xV.notify(VV)
+      filter(BH) {
+        const LH = new HH,
+          AH = HH => {
+            BH(HH) && LH.notify(HH)
           };
-        this.subscribe(JV);
-        const YV = xV.unsubscribe.bind(xV);
-        return this.withUnsubscribeOverride(xV, YV, JV)
+        this.subscribe(AH);
+        const rH = LH.unsubscribe.bind(LH);
+        return this.withUnsubscribeOverride(LH, rH, AH)
       }
       merge() {
-        const eV = new VV,
-          xV = [];
-        for (var JV = arguments.length, YV = new Array(JV), UV = 0; UV < JV; UV++) YV[UV] = arguments[UV];
-        YV.forEach((VV => {
-          const JV = VV.subscribe((VV => {
-            eV.notify(VV)
+        const BH = new HH,
+          LH = [];
+        for (var AH = arguments.length, rH = new Array(AH), SH = 0; SH < AH; SH++) rH[SH] = arguments[SH];
+        rH.forEach((HH => {
+          const AH = HH.subscribe((HH => {
+            BH.notify(HH)
           }));
-          xV.push(JV)
+          LH.push(AH)
         }));
-        const yV = eV.unsubscribeAll.bind(eV);
-        return eV.unsubscribe = () => {
-          xV.forEach((VV => VV.unsubscribe())), yV()
-        }, eV
+        const hH = BH.unsubscribeAll.bind(BH);
+        return BH.unsubscribe = () => {
+          LH.forEach((HH => HH.unsubscribe())), hH()
+        }, BH
       }
-      withUnsubscribeOverride(VV, eV, xV) {
-        return VV.unsubscribe = VV => {
-          eV(VV), this.unsubscribe(xV)
-        }, VV
+      withUnsubscribeOverride(HH, BH, LH) {
+        return HH.unsubscribe = HH => {
+          BH(HH), this.unsubscribe(LH)
+        }, HH
       }
       unsubscribeAll() {
         this.subscribers = []
       }
     };
-    let qx = function(VV) {
-      return VV.TRACE = "trace", VV.DEBUG = "debug", VV.INFO = "info", VV.LOG = "log", VV.WARN = "warn", VV.ERROR = "error", VV
+    let vL = function(HH) {
+      return HH.TRACE = "trace", HH.DEBUG = "debug", HH.INFO = "info", HH.LOG = "log", HH.WARN = "warn", HH.ERROR = "error", HH
     }({});
-    const tx = "log",
-      Fx = ["trace", "debug", "info", "log", "warn", "error"];
-    let Tx, Px = !1;
-    const Ax = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
-      Nx = "Error",
-      Xx = VV => VV.map((VV => MV(VV) ? ie(VV) : String(VV))).join(" ");
+    const PL = "log",
+      TL = ["trace", "debug", "info", "log", "warn", "error"];
+    let UL, VL = !1;
+    const OL = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
+      bL = "Error",
+      kL = HH => HH.map((HH => mH(HH) ? eB(HH) : String(HH))).join(" ");
 
-    function Mx(VV) {
-      let eV, xV, JV, YV, UV = [];
-      if (oV(VV) && VV.error) eV = VV.error.message, xV = VV.error.name, UV = kx(VV.error);
-      else if ((JV = cV(VV)) || hV(VV)) {
+    function mL(HH) {
+      let BH, LH, AH, rH, SH = [];
+      if (NH(HH) && HH.error) BH = HH.error.message, LH = HH.error.name, SH = uL(HH.error);
+      else if ((AH = RH(HH)) || jH(HH)) {
         const {
-          name: YV,
-          message: UV
-        } = VV;
-        xV = null !== YV && void 0 !== YV ? YV : JV ? "DOMError" : "DOMException", eV = UV ? `${xV}: ${UV}` : xV
-      } else aV(VV) ? (xV = VV.name, eV = VV.message, UV = kx(VV)) : (MV(VV) || (YV = iV(VV))) && (xV = YV ? VV.constructor.name : void 0, eV = `Non-Error exception captured with keys: ${Object.keys(VV)}`);
-      return [eV, xV, UV]
+          name: rH,
+          message: SH
+        } = HH;
+        LH = null !== rH && void 0 !== rH ? rH : AH ? "DOMError" : "DOMException", BH = SH ? `${LH}: ${SH}` : LH
+      } else gH(HH) ? (LH = HH.name, BH = HH.message, SH = uL(HH)) : (mH(HH) || (rH = eH(HH))) && (LH = rH ? HH.constructor.name : void 0, BH = `Non-Error exception captured with keys: ${Object.keys(HH)}`);
+      return [BH, LH, SH]
     }
 
-    function zx(VV) {
-      const [eV, xV, JV, YV, UV] = VV;
-      let yV, pV, QV = [];
-      const nV = TV(eV),
-        wV = Yx(xV, "?", JV, YV);
-      return UV || !nV ? ([yV, pV, QV] = Mx(null !== UV && void 0 !== UV ? UV : eV), 0 === QV.length && (QV = [wV])) : nV && ([yV, pV] = function(VV) {
-        var eV, xV;
-        const JV = VV.match(Ax),
-          YV = null !== (eV = null === JV || void 0 === JV ? void 0 : JV[1]) && void 0 !== eV ? eV : Nx;
-        return [null !== (xV = null === JV || void 0 === JV ? void 0 : JV[2]) && void 0 !== xV ? xV : VV, YV]
-      }(eV), QV = [wV]), {
-        value: yV,
-        type: pV,
-        stackFrames: QV
+    function oL(HH) {
+      const [BH, LH, AH, rH, SH] = HH;
+      let hH, tH, zH = [];
+      const CH = UH(BH),
+        EH = rL(LH, "?", AH, rH);
+      return SH || !CH ? ([hH, tH, zH] = mL(null !== SH && void 0 !== SH ? SH : BH), 0 === zH.length && (zH = [EH])) : CH && ([hH, tH] = function(HH) {
+        var BH, LH;
+        const AH = HH.match(OL),
+          rH = null !== (BH = null === AH || void 0 === AH ? void 0 : AH[1]) && void 0 !== BH ? BH : bL;
+        return [null !== (LH = null === AH || void 0 === AH ? void 0 : AH[2]) && void 0 !== LH ? LH : HH, rH]
+      }(BH), zH = [EH]), {
+        value: hH,
+        type: tH,
+        stackFrames: zH
       }
     }
 
-    function Gx(VV, eV) {
-      return aV(VV[0]) ? zx(VV) : {
-        value: eV(VV)
+    function IL(HH, BH) {
+      return gH(HH[0]) ? oL(HH) : {
+        value: BH(HH)
       }
     }
-    const Wx = VV => VV.map((VV => {
+    const fL = HH => HH.map((HH => {
       try {
-        return String(VV)
-      } catch (eV) {
+        return String(HH)
+      } catch (BH) {
         return ""
       }
     })).join(" ");
-    var Rx = class VV extends ex {
+    var lL = class HH extends BL {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = xx, this.errorSerializer = Wx
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = LL, this.errorSerializer = fL
       }
       initialize() {
-        var eV, xV;
-        const JV = this.config.consoleInstrumentation,
-          YV = (null === JV || void 0 === JV ? void 0 : JV.serializeErrors) || !!(null === JV || void 0 === JV ? void 0 : JV.errorSerializer);
-        this.errorSerializer = YV ? null !== (eV = null === JV || void 0 === JV ? void 0 : JV.errorSerializer) && void 0 !== eV ? eV : Xx : Wx;
-        const UV = null !== (xV = null === JV || void 0 === JV ? void 0 : JV.disabledLevels) && void 0 !== xV ? xV : VV.defaultDisabledLevels,
-          yV = function(VV) {
-            if (Tx || (Tx = new jx), !Px) {
-              const eV = null !== VV && void 0 !== VV ? VV : Oe;
-              Fx.forEach((VV => {
-                console[VV] = function() {
-                  for (var xV, JV = arguments.length, YV = new Array(JV), UV = 0; UV < JV; UV++) YV[UV] = arguments[UV];
-                  Tx.notify({
+        var BH, LH;
+        const AH = this.config.consoleInstrumentation,
+          rH = (null === AH || void 0 === AH ? void 0 : AH.serializeErrors) || !!(null === AH || void 0 === AH ? void 0 : AH.errorSerializer);
+        this.errorSerializer = rH ? null !== (BH = null === AH || void 0 === AH ? void 0 : AH.errorSerializer) && void 0 !== BH ? BH : kL : fL;
+        const SH = null !== (LH = null === AH || void 0 === AH ? void 0 : AH.disabledLevels) && void 0 !== LH ? LH : HH.defaultDisabledLevels,
+          hH = function(HH) {
+            if (UL || (UL = new xL), !VL) {
+              const BH = null !== HH && void 0 !== HH ? HH : yB;
+              TL.forEach((HH => {
+                console[HH] = function() {
+                  for (var LH, AH = arguments.length, rH = new Array(AH), SH = 0; SH < AH; SH++) rH[SH] = arguments[SH];
+                  UL.notify({
                     type: "console",
-                    level: VV,
-                    args: YV
-                  }), null === (xV = eV[VV]) || void 0 === xV || xV.apply(console, YV)
+                    level: HH,
+                    args: rH
+                  }), null === (LH = BH[HH]) || void 0 === LH || LH.apply(console, rH)
                 }
-              })), Px = !0
+              })), VL = !0
             }
-            return Tx
+            return UL
           }(this.unpatchedConsole);
-        this.subscription = yV.subscribe((eV => {
+        this.subscription = hH.subscribe((BH => {
           let {
-            level: xV,
-            args: YV
-          } = eV;
-          if (!UV.includes(xV)) try {
-            if (xV !== qx.ERROR || (null === JV || void 0 === JV ? void 0 : JV.consoleErrorAsLog))
-              if (xV === qx.ERROR && (null === JV || void 0 === JV ? void 0 : JV.consoleErrorAsLog)) {
+            level: LH,
+            args: rH
+          } = BH;
+          if (!SH.includes(LH)) try {
+            if (LH !== vL.ERROR || (null === AH || void 0 === AH ? void 0 : AH.consoleErrorAsLog))
+              if (LH === vL.ERROR && (null === AH || void 0 === AH ? void 0 : AH.consoleErrorAsLog)) {
                 const {
-                  value: eV,
-                  type: JV,
-                  stackFrames: UV
-                } = Gx(YV, this.errorSerializer);
-                this.api.pushLog(eV ? [VV.consoleErrorPrefix + eV] : YV, {
-                  level: xV,
+                  value: BH,
+                  type: AH,
+                  stackFrames: SH
+                } = IL(rH, this.errorSerializer);
+                this.api.pushLog(BH ? [HH.consoleErrorPrefix + BH] : rH, {
+                  level: LH,
                   context: {
-                    value: null !== eV && void 0 !== eV ? eV : "",
-                    type: null !== JV && void 0 !== JV ? JV : "",
-                    stackFrames: (null === UV || void 0 === UV ? void 0 : UV.length) ? Xx(UV) : ""
+                    value: null !== BH && void 0 !== BH ? BH : "",
+                    type: null !== AH && void 0 !== AH ? AH : "",
+                    stackFrames: (null === SH || void 0 === SH ? void 0 : SH.length) ? kL(SH) : ""
                   }
                 })
-              } else this.api.pushLog(YV, {
-                level: xV
+              } else this.api.pushLog(rH, {
+                level: LH
               });
             else {
               const {
-                value: eV,
-                type: xV,
-                stackFrames: JV
-              } = Gx(YV, this.errorSerializer);
-              if (eV && !xV && !JV) return void this.api.pushError(new Error(VV.consoleErrorPrefix + eV));
-              this.api.pushError(new Error(VV.consoleErrorPrefix + eV), {
-                type: xV,
-                stackFrames: JV
+                value: BH,
+                type: LH,
+                stackFrames: AH
+              } = IL(rH, this.errorSerializer);
+              if (BH && !LH && !AH) return void this.api.pushError(new Error(HH.consoleErrorPrefix + BH));
+              this.api.pushError(new Error(HH.consoleErrorPrefix + BH), {
+                type: LH,
+                stackFrames: AH
               })
             }
-          } catch (yV) {
-            this.logError(yV)
+          } catch (hH) {
+            this.logError(hH)
           }
         }))
       }
       destroy() {
-        var VV;
-        null === (VV = this.subscription) || void 0 === VV || VV.unsubscribe(), this.subscription = void 0
+        var HH;
+        null === (HH = this.subscription) || void 0 === HH || HH.unsubscribe(), this.subscription = void 0
       }
     };
-    Rx.defaultDisabledLevels = [qx.DEBUG, qx.TRACE, qx.LOG], Rx.consoleErrorPrefix = "console.error: ";
-    const gx = [];
-    var Dx = class extends ex {
+    lL.defaultDisabledLevels = [vL.DEBUG, vL.TRACE, vL.LOG], lL.consoleErrorPrefix = "console.error: ";
+    const KL = [];
+    var cL = class extends BL {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = xx
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = LL
       }
       initialize() {
         this.logDebug("Initializing"),
-          function(VV) {
-            const eV = window.onerror;
+          function(HH) {
+            const BH = window.onerror;
             window.onerror = function() {
-              for (var xV = arguments.length, JV = new Array(xV), YV = 0; YV < xV; YV++) JV[YV] = arguments[YV];
+              for (var LH = arguments.length, AH = new Array(LH), rH = 0; rH < LH; rH++) AH[rH] = arguments[rH];
               try {
                 const {
-                  value: eV,
-                  type: xV,
-                  stackFrames: YV
-                } = zx(JV), UV = JV[4];
-                if (eV) {
-                  const JV = {
-                    type: xV,
-                    stackFrames: YV
+                  value: BH,
+                  type: LH,
+                  stackFrames: rH
+                } = oL(AH), SH = AH[4];
+                if (BH) {
+                  const AH = {
+                    type: LH,
+                    stackFrames: rH
                   };
-                  null != UV && (JV.originalError = UV), VV.pushError(new Error(eV), JV)
+                  null != SH && (AH.originalError = SH), HH.pushError(new Error(BH), AH)
                 }
               } finally {
-                null === eV || void 0 === eV || eV.apply(window, JV)
+                null === BH || void 0 === BH || BH.apply(window, AH)
               }
             }
           }(this.api),
-          function(VV) {
-            const eV = eV => {
-              var xV;
-              let JV, YV, UV = eV;
-              if (UV.reason) UV = eV.reason;
-              else if (null === (xV = eV.detail) || void 0 === xV ? void 0 : xV.reason) {
-                var yV;
-                UV = null === (yV = eV.detail) || void 0 === yV ? void 0 : yV.reason
+          function(HH) {
+            const BH = BH => {
+              var LH;
+              let AH, rH, SH = BH;
+              if (SH.reason) SH = BH.reason;
+              else if (null === (LH = BH.detail) || void 0 === LH ? void 0 : LH.reason) {
+                var hH;
+                SH = null === (hH = BH.detail) || void 0 === hH ? void 0 : hH.reason
               }
-              let pV = [];
-              gV(UV) ? (JV = `Non-Error promise rejection captured with value: ${String(UV)}`, YV = "UnhandledRejection") : [JV, YV, pV] = Mx(UV), JV && VV.pushError(new Error(JV), {
-                type: YV,
-                stackFrames: pV
+              let tH = [];
+              KH(SH) ? (AH = `Non-Error promise rejection captured with value: ${String(SH)}`, rH = "UnhandledRejection") : [AH, rH, tH] = mL(SH), AH && HH.pushError(new Error(AH), {
+                type: rH,
+                stackFrames: tH
               })
             };
-            window.addEventListener("unhandledrejection", eV), gx.push(eV)
+            window.addEventListener("unhandledrejection", BH), KL.push(BH)
           }(this.api)
       }
     };
-    const ix = "unknown";
-    var Cx = class extends ex {
+    const eL = "unknown";
+    var qL = class extends BL {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = xx, this.waitingForActivation = !1, this.sendViewChangedEvent = VV => {
-          var eV;
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = LL, this.waitingForActivation = !1, this.sendViewChangedEvent = HH => {
+          var BH;
           if (this.waitingForActivation || document.prerendering) return;
-          const xV = VV.view;
-          if (xV && xV.name !== (null === (eV = this.notifiedView) || void 0 === eV ? void 0 : eV.name)) {
-            var JV, YV, UV;
-            const VV = null !== (JV = null === (YV = this.notifiedView) || void 0 === YV ? void 0 : YV.name) && void 0 !== JV ? JV : ix;
-            this.notifiedView = xV, this.api.pushEvent(Fe, {
-              fromView: VV,
-              toView: null !== (UV = xV.name) && void 0 !== UV ? UV : ix
+          const LH = HH.view;
+          if (LH && LH.name !== (null === (BH = this.notifiedView) || void 0 === BH ? void 0 : BH.name)) {
+            var AH, rH, SH;
+            const HH = null !== (AH = null === (rH = this.notifiedView) || void 0 === rH ? void 0 : rH.name) && void 0 !== AH ? AH : eL;
+            this.notifiedView = LH, this.api.pushEvent(TB, {
+              fromView: HH,
+              toView: null !== (SH = LH.name) && void 0 !== SH ? SH : eL
             }, void 0, {
               skipDedupe: !0
             })
@@ -1319,1292 +1319,1292 @@ export const modules = {
         this.waitingForActivation = !1, this.metas.removeListener(this.sendViewChangedEvent), document.removeEventListener("prerenderingchange", this.prerenderListener)
       }
     };
-    class ax {
+    class gL {
       t;
       o = 0;
       i = [];
-      l(VV) {
-        if (VV.hadRecentInput) return;
-        const eV = this.i[0],
-          xV = this.i.at(-1);
-        this.o && eV && xV && VV.startTime - xV.startTime < 1e3 && VV.startTime - eV.startTime < 5e3 ? (this.o += VV.value, this.i.push(VV)) : (this.o = VV.value, this.i = [VV]), this.t?.(VV)
+      l(HH) {
+        if (HH.hadRecentInput) return;
+        const BH = this.i[0],
+          LH = this.i.at(-1);
+        this.o && BH && LH && HH.startTime - LH.startTime < 1e3 && HH.startTime - BH.startTime < 5e3 ? (this.o += HH.value, this.i.push(HH)) : (this.o = HH.value, this.i = [HH]), this.t?.(HH)
       }
     }
-    const ox = () => {
-        const VV = performance.getEntriesByType("navigation")[0];
-        if (VV && VV.responseStart > 0 && VV.responseStart < performance.now()) return VV
+    const NL = () => {
+        const HH = performance.getEntriesByType("navigation")[0];
+        if (HH && HH.responseStart > 0 && HH.responseStart < performance.now()) return HH
       },
-      cx = VV => {
+      RL = HH => {
         if ("loading" === document.readyState) return "loading";
-        const eV = ox();
-        if (eV) {
-          if (VV < eV.domInteractive) return "loading";
-          if (0 === eV.domContentLoadedEventStart || VV < eV.domContentLoadedEventStart) return "dom-interactive";
-          if (0 === eV.domComplete || VV < eV.domComplete) return "dom-content-loaded"
+        const BH = NL();
+        if (BH) {
+          if (HH < BH.domInteractive) return "loading";
+          if (0 === BH.domContentLoadedEventStart || HH < BH.domContentLoadedEventStart) return "dom-interactive";
+          if (0 === BH.domComplete || HH < BH.domComplete) return "dom-content-loaded"
         }
         return "complete"
       },
-      hx = VV => {
-        const eV = VV.nodeName;
-        return 1 === VV.nodeType ? eV.toLowerCase() : eV.toUpperCase().replace(/^#/, "")
+      jL = HH => {
+        const BH = HH.nodeName;
+        return 1 === HH.nodeType ? BH.toLowerCase() : BH.toUpperCase().replace(/^#/, "")
       },
-      lx = VV => {
-        let eV = "";
+      nL = HH => {
+        let BH = "";
         try {
-          for (; 9 !== VV?.nodeType;) {
-            const xV = VV,
-              JV = xV.id ? "#" + xV.id : [hx(xV), ...Array.from(xV.classList ?? []).sort()].join(".");
-            if (eV.length + JV.length > 99) return eV || JV;
-            if (eV = eV ? JV + ">" + eV : JV, xV.id) break;
-            VV = xV.parentNode
+          for (; 9 !== HH?.nodeType;) {
+            const LH = HH,
+              AH = LH.id ? "#" + LH.id : [jL(LH), ...Array.from(LH.classList ?? []).sort()].join(".");
+            if (BH.length + AH.length > 99) return BH || AH;
+            if (BH = BH ? AH + ">" + BH : AH, LH.id) break;
+            HH = LH.parentNode
           }
         } catch {}
-        return eV
+        return BH
       },
-      Lx = new WeakMap;
+      FL = new WeakMap;
 
-    function fx(VV, eV) {
-      let xV = Lx.get(eV);
-      return xV || (xV = new WeakMap, Lx.set(eV, xV)), xV.get(VV) || xV.set(VV, new eV), xV.get(VV)
+    function DL(HH, BH) {
+      let LH = FL.get(BH);
+      return LH || (LH = new WeakMap, FL.set(BH, LH)), LH.get(HH) || LH.set(HH, new BH), LH.get(HH)
     }
-    let mx = -1;
-    const Kx = () => mx,
-      Hx = VV => {
-        addEventListener("pageshow", (eV => {
-          eV.persisted && (mx = eV.timeStamp, VV(eV))
+    let wL = -1;
+    const ZL = () => wL,
+      dL = HH => {
+        addEventListener("pageshow", (BH => {
+          BH.persisted && (wL = BH.timeStamp, HH(BH))
         }), !0)
       },
-      ux = (VV, eV, xV, JV) => {
-        let YV, UV;
-        return yV => {
-          eV.value >= 0 && (yV || JV) && (UV = eV.value - (YV ?? 0), (UV || void 0 === YV) && (YV = eV.value, eV.delta = UV, eV.rating = ((VV, eV) => VV > eV[1] ? "poor" : VV > eV[0] ? "needs-improvement" : "good")(eV.value, xV), VV(eV)))
+      aL = (HH, BH, LH, AH) => {
+        let rH, SH;
+        return hH => {
+          BH.value >= 0 && (hH || AH) && (SH = BH.value - (rH ?? 0), (SH || void 0 === rH) && (rH = BH.value, BH.delta = SH, BH.rating = ((HH, BH) => HH > BH[1] ? "poor" : HH > BH[0] ? "needs-improvement" : "good")(BH.value, LH), HH(BH)))
         }
       },
-      sx = VV => {
-        requestAnimationFrame((() => requestAnimationFrame((() => VV()))))
+      sL = HH => {
+        requestAnimationFrame((() => requestAnimationFrame((() => HH()))))
       },
-      Sx = () => ox()?.activationStart ?? 0;
-    let Ix = -1;
-    const dx = new Set,
-      Ox = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
-      VJ = VV => {
+      JL = () => NL()?.activationStart ?? 0;
+    let iL = -1;
+    const pL = new Set,
+      yL = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
+      HA = HH => {
         if ("hidden" === document.visibilityState) {
-          if ("visibilitychange" === VV.type)
-            for (const VV of dx) VV();
-          isFinite(Ix) || (Ix = "visibilitychange" === VV.type ? VV.timeStamp : 0, removeEventListener("prerenderingchange", VJ, !0))
+          if ("visibilitychange" === HH.type)
+            for (const HH of pL) HH();
+          isFinite(iL) || (iL = "visibilitychange" === HH.type ? HH.timeStamp : 0, removeEventListener("prerenderingchange", HA, !0))
         }
       },
-      eJ = function() {
-        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (Ix = 1 / 0), Ix < 0) {
-          const VV = Sx(),
-            eV = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((eV => "hidden" === eV.name && eV.startTime >= VV))?.startTime;
-          Ix = eV ?? Ox(), addEventListener("visibilitychange", VJ, !0), addEventListener("prerenderingchange", VJ, !0), Hx((() => {
+      BA = function() {
+        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (iL = 1 / 0), iL < 0) {
+          const HH = JL(),
+            BH = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((BH => "hidden" === BH.name && BH.startTime >= HH))?.startTime;
+          iL = BH ?? yL(), addEventListener("visibilitychange", HA, !0), addEventListener("prerenderingchange", HA, !0), dL((() => {
             setTimeout((() => {
-              Ix = Ox()
+              iL = yL()
             }))
           }))
         }
         return {
           get firstHiddenTime() {
-            return Ix
+            return iL
           },
-          onHidden(VV) {
-            dx.add(VV)
+          onHidden(HH) {
+            pL.add(HH)
           }
         }
       },
-      xJ = function(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          xV = arguments.length > 2 ? arguments[2] : void 0,
-          JV = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          YV = arguments.length > 4 ? arguments[4] : void 0,
-          UV = arguments.length > 5 ? arguments[5] : void 0,
-          yV = arguments.length > 6 ? arguments[6] : void 0;
-        const pV = ox(),
-          QV = pV?.navigationId || 0;
-        let nV = "navigate";
-        return xV ? nV = xV : Kx() >= 0 ? nV = "back-forward-cache" : pV && (document.prerendering || Sx() > 0 ? nV = "prerender" : document.wasDiscarded ? nV = "restore" : pV.type && (nV = pV.type.replace(/_/g, "-"))), {
-          name: VV,
-          value: eV,
+      LA = function(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          LH = arguments.length > 2 ? arguments[2] : void 0,
+          AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          rH = arguments.length > 4 ? arguments[4] : void 0,
+          SH = arguments.length > 5 ? arguments[5] : void 0,
+          hH = arguments.length > 6 ? arguments[6] : void 0;
+        const tH = NL(),
+          zH = tH?.navigationId || 0;
+        let CH = "navigate";
+        return LH ? CH = LH : ZL() >= 0 ? CH = "back-forward-cache" : tH && (document.prerendering || JL() > 0 ? CH = "prerender" : document.wasDiscarded ? CH = "restore" : tH.type && (CH = tH.type.replace(/_/g, "-"))), {
+          name: HH,
+          value: BH,
           rating: "good",
           delta: 0,
           entries: [],
           id: `v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,
-          navigationType: nV,
-          navigationId: JV || QV,
-          navigationInteractionId: YV,
-          navigationURL: UV || pV?.name,
-          navigationStartTime: yV || 0
+          navigationType: CH,
+          navigationId: AH || zH,
+          navigationInteractionId: rH,
+          navigationURL: SH || tH?.name,
+          navigationStartTime: hH || 0
         }
       },
-      JJ = function(VV, eV) {
-        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      AA = function(HH, BH) {
+        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         try {
-          const JV = VV.filter((VV => PerformanceObserver.supportedEntryTypes.includes(VV)));
-          if (JV.length > 0) {
-            const VV = new PerformanceObserver((VV => {
+          const AH = HH.filter((HH => PerformanceObserver.supportedEntryTypes.includes(HH)));
+          if (AH.length > 0) {
+            const HH = new PerformanceObserver((HH => {
               queueMicrotask((() => {
-                const xV = VV.getEntries();
-                JV.length > 1 && xV.sort(((VV, eV) => VV.startTime + VV.duration - (eV.startTime + eV.duration))), eV(xV)
+                const LH = HH.getEntries();
+                AH.length > 1 && LH.sort(((HH, BH) => HH.startTime + HH.duration - (BH.startTime + BH.duration))), BH(LH)
               }))
             }));
-            for (const eV of JV) VV.observe({
-              type: eV,
+            for (const BH of AH) HH.observe({
+              type: BH,
               buffered: !0,
-              ...xV
+              ...LH
             });
-            return VV
+            return HH
           }
         } catch {}
       },
-      YJ = VV => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && VV && VV.reportSoftNavs,
-      UJ = (VV, eV) => {
-        if (VV.set(eV.navigationId, eV), VV.size > 2) {
-          const eV = VV.keys().next().value;
-          void 0 !== eV && VV.delete(eV)
+      rA = HH => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && HH && HH.reportSoftNavs,
+      SA = (HH, BH) => {
+        if (HH.set(BH.navigationId, BH), HH.size > 2) {
+          const BH = HH.keys().next().value;
+          void 0 !== BH && HH.delete(BH)
         }
       },
-      yJ = VV => {
-        let eV = !1;
+      hA = HH => {
+        let BH = !1;
         return () => {
-          eV || (VV(), eV = !0)
+          BH || (HH(), BH = !0)
         }
       };
-    class pJ {
+    class tA {
       u
     }
-    const QJ = VV => {
-        document.prerendering ? addEventListener("prerenderingchange", VV, !0) : VV()
+    const zA = HH => {
+        document.prerendering ? addEventListener("prerenderingchange", HH, !0) : HH()
       },
-      nJ = [1800, 3e3],
-      wJ = function(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const xV = YJ(eV);
-        QJ((() => {
-          const JV = fx(eV, pJ),
-            YV = eJ();
-          let UV, yV = xJ("FCP");
-          const pV = JJ(["paint"], (VV => {
-            for (const eV of VV) "first-contentful-paint" === eV.name && (pV.disconnect(), eV.startTime < YV.firstHiddenTime && (yV.value = Math.max(eV.startTime - Sx(), 0), yV.entries.push(eV), yV.navigationId = eV.navigationId || yV.navigationId, UV(!0)))
+      CA = [1800, 3e3],
+      EA = function(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const LH = rA(BH);
+        zA((() => {
+          const AH = DL(BH, tA),
+            rH = BA();
+          let SH, hH = LA("FCP");
+          const tH = AA(["paint"], (HH => {
+            for (const BH of HH) "first-contentful-paint" === BH.name && (tH.disconnect(), BH.startTime < rH.firstHiddenTime && (hH.value = Math.max(BH.startTime - JL(), 0), hH.entries.push(BH), hH.navigationId = BH.navigationId || hH.navigationId, SH(!0)))
           }));
-          pV && (UV = ux(VV, yV, nJ, eV.reportAllChanges), Hx((xV => {
-            yV = xJ("FCP", -1, "back-forward-cache", yV.navigationId, yV.navigationInteractionId, yV.navigationURL, Kx()), UV = ux(VV, yV, nJ, eV.reportAllChanges), sx((() => {
-              yV.value = performance.now() - xV.timeStamp, UV(!0)
+          tH && (SH = aL(HH, hH, CA, BH.reportAllChanges), dL((LH => {
+            hH = LA("FCP", -1, "back-forward-cache", hH.navigationId, hH.navigationInteractionId, hH.navigationURL, ZL()), SH = aL(HH, hH, CA, BH.reportAllChanges), sL((() => {
+              hH.value = performance.now() - LH.timeStamp, SH(!0)
             }))
-          }))), xV && JJ(["soft-navigation"], (xV => {
-            xV.forEach((xV => {
-              JV.u && xV.navigationId && UJ(JV.u, xV);
-              const YV = Math.max((xV.presentationTime || xV.paintTime || 0) - xV.startTime, 0);
-              yV = xJ("FCP", YV, "soft-navigation", xV.navigationId, xV.interactionId, xV.name, xV.startTime), UV = ux(VV, yV, nJ, eV.reportAllChanges), UV(!0)
+          }))), LH && AA(["soft-navigation"], (LH => {
+            LH.forEach((LH => {
+              AH.u && LH.navigationId && SA(AH.u, LH);
+              const rH = Math.max((LH.presentationTime || LH.paintTime || 0) - LH.startTime, 0);
+              hH = LA("FCP", rH, "soft-navigation", LH.navigationId, LH.interactionId, LH.name, LH.startTime), SH = aL(HH, hH, CA, BH.reportAllChanges), SH(!0)
             }))
-          }), eV)
+          }), BH)
         }))
       },
-      ZJ = [.1, .25],
-      vJ = VV => VV.find((VV => 1 === VV.node?.nodeType)) || VV[0];
-    let rJ = 0,
-      kJ = 1 / 0,
-      bJ = 0;
-    const EJ = VV => {
-      for (const eV of VV) eV.interactionId && (kJ = Math.min(kJ, eV.interactionId), bJ = Math.max(bJ, eV.interactionId), rJ = bJ ? (bJ - kJ) / 7 + 1 : 0)
+      XA = [.1, .25],
+      GA = HH => HH.find((HH => 1 === HH.node?.nodeType)) || HH[0];
+    let YA = 0,
+      uA = 1 / 0,
+      QA = 0;
+    const WA = HH => {
+      for (const BH of HH) BH.interactionId && (uA = Math.min(uA, BH.interactionId), QA = Math.max(QA, BH.interactionId), YA = QA ? (QA - uA) / 7 + 1 : 0)
     };
-    let BJ;
-    const jJ = () => BJ ? rJ : performance.interactionCount ?? 0;
-    class qJ {
+    let MA;
+    const xA = () => MA ? YA : performance.interactionCount ?? 0;
+    class vA {
       h = 0;
       v = [];
       p = new Map;
       m;
       M;
       T() {
-        return jJ() - this.h
+        return xA() - this.h
       }
       D() {
-        this.h = jJ(), this.v.length = 0, this.p.clear()
+        this.h = xA(), this.v.length = 0, this.p.clear()
       }
-      S(VV) {
-        const eV = this.T(),
-          xV = Math.min(this.v.length - 1, Math.floor(eV / 50));
-        return !eV || -1 !== xV || "soft-navigation" !== VV && "back-forward-cache" !== VV ? this.v[xV] : {
+      S(HH) {
+        const BH = this.T(),
+          LH = Math.min(this.v.length - 1, Math.floor(BH / 50));
+        return !BH || -1 !== LH || "soft-navigation" !== HH && "back-forward-cache" !== HH ? this.v[LH] : {
           k: 8,
           id: -1,
           entries: []
         }
       }
-      l(VV) {
-        if (this.m?.(VV), !VV.interactionId) return;
-        const eV = this.v.at(-1);
-        let xV = this.p.get(VV.interactionId);
-        if (xV || this.v.length < 10 || VV.duration > eV.k) {
-          if (xV ? VV.duration > xV.k ? (xV.entries = [VV], xV.k = VV.duration) : VV.duration === xV.k && VV.startTime === xV.entries[0].startTime && xV.entries.push(VV) : (xV = {
-              id: VV.interactionId,
-              entries: [VV],
-              k: VV.duration
-            }, this.p.set(xV.id, xV), this.v.push(xV)), this.v.sort(((VV, eV) => eV.k - VV.k)), this.v.length > 10) {
-            const VV = this.v.splice(10);
-            for (const eV of VV) this.p.delete(eV.id)
+      l(HH) {
+        if (this.m?.(HH), !HH.interactionId) return;
+        const BH = this.v.at(-1);
+        let LH = this.p.get(HH.interactionId);
+        if (LH || this.v.length < 10 || HH.duration > BH.k) {
+          if (LH ? HH.duration > LH.k ? (LH.entries = [HH], LH.k = HH.duration) : HH.duration === LH.k && HH.startTime === LH.entries[0].startTime && LH.entries.push(HH) : (LH = {
+              id: HH.interactionId,
+              entries: [HH],
+              k: HH.duration
+            }, this.p.set(LH.id, LH), this.v.push(LH)), this.v.sort(((HH, BH) => BH.k - HH.k)), this.v.length > 10) {
+            const HH = this.v.splice(10);
+            for (const BH of HH) this.p.delete(BH.id)
           }
-          this.M?.(xV)
+          this.M?.(LH)
         }
       }
     }
-    const tJ = VV => {
-        const eV = "requestIdleCallback" in globalThis ? 1e3 : 0,
-          xV = globalThis.requestIdleCallback || setTimeout,
-          JV = globalThis.cancelIdleCallback || clearTimeout;
-        if ("hidden" === document.visibilityState) VV();
+    const PA = HH => {
+        const BH = "requestIdleCallback" in globalThis ? 1e3 : 0,
+          LH = globalThis.requestIdleCallback || setTimeout,
+          AH = globalThis.cancelIdleCallback || clearTimeout;
+        if ("hidden" === document.visibilityState) HH();
         else {
-          const YV = yJ(VV);
-          let UV = -1;
-          const yV = () => {
-            JV(UV), YV()
+          const rH = hA(HH);
+          let SH = -1;
+          const hH = () => {
+            AH(SH), rH()
           };
-          addEventListener("visibilitychange", yV, {
+          addEventListener("visibilitychange", hH, {
             once: !0,
             capture: !0
-          }), UV = xV((() => {
-            removeEventListener("visibilitychange", yV, {
+          }), SH = LH((() => {
+            removeEventListener("visibilitychange", hH, {
               capture: !0
-            }), YV()
+            }), rH()
           }), {
-            timeout: eV
+            timeout: BH
           })
         }
       },
-      FJ = [200, 500],
-      TJ = function(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const xV = fx(eV = Object.assign({}, eV), qJ);
-        let JV = [],
-          YV = [],
-          UV = 0;
-        const yV = new WeakMap,
-          pV = new WeakMap;
-        let QV = !1;
-        const nV = () => {
-            QV || (QV = !0, tJ(wV))
+      TA = [200, 500],
+      UA = function(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const LH = DL(BH = Object.assign({}, BH), vA);
+        let AH = [],
+          rH = [],
+          SH = 0;
+        const hH = new WeakMap,
+          tH = new WeakMap;
+        let zH = !1;
+        const CH = () => {
+            zH || (zH = !0, PA(EH))
           },
-          wV = () => {
-            const VV = new Set(xV.v.map((VV => yV.get(VV.entries[0])))),
-              eV = YV.length - 10;
-            YV = YV.filter(((xV, JV) => JV >= eV || VV.has(xV)));
-            const pV = new Set;
-            for (const xV of YV) {
-              const VV = ZV(xV.startTime, xV.processingEnd);
-              for (const eV of VV) pV.add(eV)
+          EH = () => {
+            const HH = new Set(LH.v.map((HH => hH.get(HH.entries[0])))),
+              BH = rH.length - 10;
+            rH = rH.filter(((LH, AH) => AH >= BH || HH.has(LH)));
+            const tH = new Set;
+            for (const LH of rH) {
+              const HH = XH(LH.startTime, LH.processingEnd);
+              for (const BH of HH) tH.add(BH)
             }
-            const nV = JV.length - 10;
-            JV = JV.filter(((VV, eV) => pV.has(VV) || eV >= nV && VV.startTime > UV)), QV = !1
+            const CH = AH.length - 10;
+            AH = AH.filter(((HH, BH) => tH.has(HH) || BH >= CH && HH.startTime > SH)), zH = !1
           };
-        xV.m = VV => {
-          const xV = VV.startTime + VV.duration;
-          let JV;
-          UV = Math.max(UV, VV.processingEnd);
-          for (let UV = YV.length - 1; UV >= 0; UV--) {
-            const yV = YV[UV];
-            if (Math.abs(xV - yV.renderTime) <= 8) {
-              JV = yV, JV.startTime = Math.min(VV.startTime, JV.startTime), JV.processingStart = Math.min(VV.processingStart, JV.processingStart), JV.processingEnd = Math.max(VV.processingEnd, JV.processingEnd), eV.includeProcessedEventEntries && JV.entries.push(VV);
+        LH.m = HH => {
+          const LH = HH.startTime + HH.duration;
+          let AH;
+          SH = Math.max(SH, HH.processingEnd);
+          for (let SH = rH.length - 1; SH >= 0; SH--) {
+            const hH = rH[SH];
+            if (Math.abs(LH - hH.renderTime) <= 8) {
+              AH = hH, AH.startTime = Math.min(HH.startTime, AH.startTime), AH.processingStart = Math.min(HH.processingStart, AH.processingStart), AH.processingEnd = Math.max(HH.processingEnd, AH.processingEnd), BH.includeProcessedEventEntries && AH.entries.push(HH);
               break
             }
           }
-          JV || (JV = {
-            startTime: VV.startTime,
-            processingStart: VV.processingStart,
-            processingEnd: VV.processingEnd,
-            renderTime: xV,
-            entries: eV.includeProcessedEventEntries ? [VV] : []
-          }, YV.push(JV)), VV.interactionId && yV.set(VV, JV), nV()
-        }, xV.M = VV => {
-          if (!pV.get(VV)) {
-            const xV = VV.entries.find((VV => VV.target))?.target;
-            if (xV) {
-              const JV = eV.generateTarget?.(xV) ?? lx(xV);
-              pV.set(VV, JV)
+          AH || (AH = {
+            startTime: HH.startTime,
+            processingStart: HH.processingStart,
+            processingEnd: HH.processingEnd,
+            renderTime: LH,
+            entries: BH.includeProcessedEventEntries ? [HH] : []
+          }, rH.push(AH)), HH.interactionId && hH.set(HH, AH), CH()
+        }, LH.M = HH => {
+          if (!tH.get(HH)) {
+            const LH = HH.entries.find((HH => HH.target))?.target;
+            if (LH) {
+              const AH = BH.generateTarget?.(LH) ?? nL(LH);
+              tH.set(HH, AH)
             } else {
-              const eV = VV.entries.find((VV => VV.targetSelector))?.targetSelector;
-              eV && pV.set(VV, eV)
+              const BH = HH.entries.find((HH => HH.targetSelector))?.targetSelector;
+              BH && tH.set(HH, BH)
             }
           }
         };
-        const ZV = (VV, eV) => {
-          const xV = [];
-          for (const YV of JV)
-            if (!(YV.startTime + YV.duration < VV)) {
-              if (YV.startTime > eV) break;
-              xV.push(YV)
-            } return xV
+        const XH = (HH, BH) => {
+          const LH = [];
+          for (const rH of AH)
+            if (!(rH.startTime + rH.duration < HH)) {
+              if (rH.startTime > BH) break;
+              LH.push(rH)
+            } return LH
         };
-        JJ(["long-animation-frame"], (VV => {
-            JV = JV.concat(VV), nV()
-          }), eV),
-          function(VV) {
-            let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        AA(["long-animation-frame"], (HH => {
+            AH = AH.concat(HH), CH()
+          }), BH),
+          function(HH) {
+            let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (!globalThis.PerformanceEventTiming || !("interactionId" in PerformanceEventTiming.prototype)) return;
-            const xV = eJ();
-            QJ((() => {
-              "interactionCount" in performance || BJ || (BJ = JJ(["event"], EJ, {
+            const LH = BA();
+            zA((() => {
+              "interactionCount" in performance || MA || (MA = AA(["event"], WA, {
                 durationThreshold: 0
               }));
-              let JV, YV = xJ("INP");
-              const UV = fx(eV, qJ),
-                yV = (xV, yV, pV, QV, nV) => {
-                  UV.D(), YV = xJ("INP", -1, xV, yV, pV, QV, nV), JV = ux(VV, YV, FJ, eV.reportAllChanges)
+              let AH, rH = LA("INP");
+              const SH = DL(BH, vA),
+                hH = (LH, hH, tH, zH, CH) => {
+                  SH.D(), rH = LA("INP", -1, LH, hH, tH, zH, CH), AH = aL(HH, rH, TA, BH.reportAllChanges)
                 },
-                pV = () => {
-                  const VV = UV.S(YV.navigationType);
-                  VV && VV.k !== YV.value && (YV.value = VV.k, YV.entries = VV.entries, JV())
+                tH = () => {
+                  const HH = SH.S(rH.navigationType);
+                  HH && HH.k !== rH.value && (rH.value = HH.k, rH.entries = HH.entries, AH())
                 },
-                QV = VV => {
-                  pV(), JV(!0), yV("soft-navigation", VV.navigationId, VV.interactionId, VV.name, VV.startTime)
+                zH = HH => {
+                  tH(), AH(!0), hH("soft-navigation", HH.navigationId, HH.interactionId, HH.name, HH.startTime)
                 },
-                nV = function(VV) {
-                  let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                  tJ((() => {
-                    for (const eV of VV) "soft-navigation" !== eV.entryType ? UV.l(eV) : QV(eV);
-                    pV(), eV && JV(!0)
+                CH = function(HH) {
+                  let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                  PA((() => {
+                    for (const BH of HH) "soft-navigation" !== BH.entryType ? SH.l(BH) : zH(BH);
+                    tH(), BH && AH(!0)
                   }))
                 },
-                wV = ["event", "first-input"];
-              YJ(eV) && wV.push("soft-navigation");
-              const ZV = JJ(wV, nV, {
-                ...eV,
-                durationThreshold: eV.durationThreshold ?? 40
+                EH = ["event", "first-input"];
+              rA(BH) && EH.push("soft-navigation");
+              const XH = AA(EH, CH, {
+                ...BH,
+                durationThreshold: BH.durationThreshold ?? 40
               });
-              JV = ux(VV, YV, FJ, eV.reportAllChanges), ZV && (xV.onHidden((() => {
-                nV(ZV.takeRecords(), !0)
-              })), Hx((() => {
-                yV("back-forward-cache", YV.navigationId, YV.navigationInteractionId, YV.navigationURL, Kx())
+              AH = aL(HH, rH, TA, BH.reportAllChanges), XH && (LH.onHidden((() => {
+                CH(XH.takeRecords(), !0)
+              })), dL((() => {
+                hH("back-forward-cache", rH.navigationId, rH.navigationInteractionId, rH.navigationURL, ZL())
               })))
             }))
-          }((eV => {
-            VV((VV => {
-              if (0 === VV.entries.length) {
-                const eV = VV.navigationStartTime || 0,
-                  xV = {
+          }((BH => {
+            HH((HH => {
+              if (0 === HH.entries.length) {
+                const BH = HH.navigationStartTime || 0,
+                  LH = {
                     processedEventEntries: [],
                     longAnimationFrameEntries: [],
                     inputDelay: 0,
                     processingDuration: 0,
-                    presentationDelay: VV.value,
-                    loadState: cx(eV)
+                    presentationDelay: HH.value,
+                    loadState: RL(BH)
                   };
-                return Object.assign(VV, {
-                  attribution: xV
+                return Object.assign(HH, {
+                  attribution: LH
                 })
               }
-              const eV = VV.entries[0],
-                JV = yV.get(eV),
-                YV = Math.max(JV.processingStart, eV.startTime),
-                UV = Math.max(eV.startTime + eV.duration, YV),
-                QV = Math.min(JV.processingEnd, UV),
-                nV = JV.entries.sort(((VV, eV) => VV.processingStart - eV.processingStart)),
-                wV = ZV(eV.startTime, QV),
-                vV = xV.p.get(eV.interactionId),
-                rV = {
-                  interactionTarget: pV.get(vV),
-                  interactionType: eV.name.startsWith("key") ? "keyboard" : "pointer",
-                  interactionTime: eV.startTime,
-                  nextPaintTime: UV,
-                  processedEventEntries: nV,
-                  longAnimationFrameEntries: wV,
-                  inputDelay: YV - eV.startTime,
-                  processingDuration: QV - YV,
-                  presentationDelay: UV - QV,
-                  loadState: cx(eV.startTime),
+              const BH = HH.entries[0],
+                AH = hH.get(BH),
+                rH = Math.max(AH.processingStart, BH.startTime),
+                SH = Math.max(BH.startTime + BH.duration, rH),
+                zH = Math.min(AH.processingEnd, SH),
+                CH = AH.entries.sort(((HH, BH) => HH.processingStart - BH.processingStart)),
+                EH = XH(BH.startTime, zH),
+                GH = LH.p.get(BH.interactionId),
+                YH = {
+                  interactionTarget: tH.get(GH),
+                  interactionType: BH.name.startsWith("key") ? "keyboard" : "pointer",
+                  interactionTime: BH.startTime,
+                  nextPaintTime: SH,
+                  processedEventEntries: CH,
+                  longAnimationFrameEntries: EH,
+                  inputDelay: rH - BH.startTime,
+                  processingDuration: zH - rH,
+                  presentationDelay: SH - zH,
+                  loadState: RL(BH.startTime),
                   longestScript: void 0,
                   totalScriptDuration: void 0,
                   totalStyleAndLayoutDuration: void 0,
                   totalPaintDuration: void 0,
                   totalUnattributedDuration: void 0
                 };
-              return (VV => {
-                const eV = VV.interactionTime,
-                  xV = VV.nextPaintTime;
-                if (!VV.longAnimationFrameEntries?.length || !eV || !xV) return;
-                const JV = VV.inputDelay,
-                  YV = VV.processingDuration;
-                let UV, yV, pV = 0,
-                  QV = 0,
-                  nV = 0,
-                  wV = 0;
-                for (const rV of VV.longAnimationFrameEntries) {
-                  QV = QV + rV.startTime + rV.duration - rV.styleAndLayoutStart;
-                  for (const VV of rV.scripts) {
-                    const xV = VV.startTime + VV.duration;
-                    if (xV < eV) continue;
-                    const nV = xV - Math.max(eV, VV.startTime),
-                      ZV = VV.duration ? nV / VV.duration * VV.forcedStyleAndLayoutDuration : 0;
-                    pV += nV - ZV, QV += ZV, nV > wV && (yV = VV.startTime < eV + JV ? "input-delay" : VV.startTime >= eV + JV + YV ? "presentation-delay" : "processing-duration", UV = VV, wV = nV)
+              return (HH => {
+                const BH = HH.interactionTime,
+                  LH = HH.nextPaintTime;
+                if (!HH.longAnimationFrameEntries?.length || !BH || !LH) return;
+                const AH = HH.inputDelay,
+                  rH = HH.processingDuration;
+                let SH, hH, tH = 0,
+                  zH = 0,
+                  CH = 0,
+                  EH = 0;
+                for (const YH of HH.longAnimationFrameEntries) {
+                  zH = zH + YH.startTime + YH.duration - YH.styleAndLayoutStart;
+                  for (const HH of YH.scripts) {
+                    const LH = HH.startTime + HH.duration;
+                    if (LH < BH) continue;
+                    const CH = LH - Math.max(BH, HH.startTime),
+                      XH = HH.duration ? CH / HH.duration * HH.forcedStyleAndLayoutDuration : 0;
+                    tH += CH - XH, zH += XH, CH > EH && (hH = HH.startTime < BH + AH ? "input-delay" : HH.startTime >= BH + AH + rH ? "presentation-delay" : "processing-duration", SH = HH, EH = CH)
                   }
                 }
-                const ZV = VV.longAnimationFrameEntries.at(-1),
-                  vV = ZV ? ZV.startTime + ZV.duration : 0;
-                vV >= eV + JV + YV && (nV = xV - vV), UV && yV && (VV.longestScript = {
-                  entry: UV,
-                  subpart: yV,
-                  intersectingDuration: wV
-                }), VV.totalScriptDuration = pV, VV.totalStyleAndLayoutDuration = QV, VV.totalPaintDuration = nV, VV.totalUnattributedDuration = xV - eV - pV - QV - nV
-              })(rV), Object.assign(VV, {
-                attribution: rV
+                const XH = HH.longAnimationFrameEntries.at(-1),
+                  GH = XH ? XH.startTime + XH.duration : 0;
+                GH >= BH + AH + rH && (CH = LH - GH), SH && hH && (HH.longestScript = {
+                  entry: SH,
+                  subpart: hH,
+                  intersectingDuration: EH
+                }), HH.totalScriptDuration = tH, HH.totalStyleAndLayoutDuration = zH, HH.totalPaintDuration = CH, HH.totalUnattributedDuration = LH - BH - tH - zH - CH
+              })(YH), Object.assign(HH, {
+                attribution: YH
               })
-            })(eV))
-          }), eV)
+            })(BH))
+          }), BH)
       };
-    class PJ {
+    class VA {
       m;
       u;
-      l(VV) {
-        this.m?.(VV)
+      l(HH) {
+        this.m?.(HH)
       }
     }
-    const AJ = [2500, 4e3];
-    let NJ = 50;
-    const XJ = [];
-    JJ(["resource"], (VV => {
-      for (const eV of VV) XJ.push(eV), XJ.length > NJ && XJ.shift()
+    const OA = [2500, 4e3];
+    let bA = 50;
+    const kA = [];
+    AA(["resource"], (HH => {
+      for (const BH of HH) kA.push(BH), kA.length > bA && kA.shift()
     }));
-    const MJ = [800, 1800],
-      zJ = VV => {
-        document.prerendering ? QJ((() => zJ(VV))) : "complete" !== document.readyState ? addEventListener("load", (() => zJ(VV)), !0) : setTimeout(VV)
+    const mA = [800, 1800],
+      oA = HH => {
+        document.prerendering ? zA((() => oA(HH))) : "complete" !== document.readyState ? addEventListener("load", (() => oA(HH)), !0) : setTimeout(HH)
       },
-      GJ = "load_state",
-      WJ = "time_to_first_byte";
-    var RJ = class {
-        constructor(VV, eV) {
-          this.corePushMeasurement = VV, this.webVitalConfig = eV
+      IA = "load_state",
+      fA = "time_to_first_byte";
+    var lA = class {
+        constructor(HH, BH) {
+          this.corePushMeasurement = HH, this.webVitalConfig = BH
         }
         initialize() {
           this.measureCLS(), this.measureFCP(), this.measureINP(), this.measureLCP(), this.measureTTFB()
         }
         measureCLS() {
-          var VV;
-          ! function(VV) {
-            let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const xV = fx(eV = Object.assign({}, eV), ax),
-              JV = new WeakMap;
-            xV.t = VV => {
-                if (VV?.sources?.length) {
-                  const xV = vJ(VV.sources),
-                    YV = xV?.node;
-                  if (YV) {
-                    const VV = eV.generateTarget?.(YV) ?? lx(YV);
-                    JV.set(xV, VV)
+          var HH;
+          ! function(HH) {
+            let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const LH = DL(BH = Object.assign({}, BH), gL),
+              AH = new WeakMap;
+            LH.t = HH => {
+                if (HH?.sources?.length) {
+                  const LH = GA(HH.sources),
+                    rH = LH?.node;
+                  if (rH) {
+                    const HH = BH.generateTarget?.(rH) ?? nL(rH);
+                    AH.set(LH, HH)
                   }
                 }
               },
-              function(VV) {
-                let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                const xV = eJ();
-                wJ(yJ((() => {
-                  let JV, YV = xJ("CLS", 0);
-                  const UV = fx(eV, ax),
-                    yV = (xV, yV, pV, QV, nV) => {
-                      YV = xJ("CLS", 0, xV, yV, pV, QV, nV), UV.o = 0, JV = ux(VV, YV, ZJ, eV.reportAllChanges)
+              function(HH) {
+                let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                const LH = BA();
+                EA(hA((() => {
+                  let AH, rH = LA("CLS", 0);
+                  const SH = DL(BH, gL),
+                    hH = (LH, hH, tH, zH, CH) => {
+                      rH = LA("CLS", 0, LH, hH, tH, zH, CH), SH.o = 0, AH = aL(HH, rH, XA, BH.reportAllChanges)
                     },
-                    pV = function() {
-                      let VV = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                      UV.o > YV.value && (YV.value = UV.o, YV.entries = UV.i), JV(VV)
+                    tH = function() {
+                      let HH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                      SH.o > rH.value && (rH.value = SH.o, rH.entries = SH.i), AH(HH)
                     },
-                    QV = VV => {
-                      pV(!0), yV("soft-navigation", VV.navigationId, VV.interactionId, VV.name, VV.startTime)
+                    zH = HH => {
+                      tH(!0), hH("soft-navigation", HH.navigationId, HH.interactionId, HH.name, HH.startTime)
                     },
-                    nV = VV => {
-                      for (const eV of VV) "soft-navigation" !== eV.entryType ? UV.l(eV) : QV(eV);
-                      pV()
+                    CH = HH => {
+                      for (const BH of HH) "soft-navigation" !== BH.entryType ? SH.l(BH) : zH(BH);
+                      tH()
                     },
-                    wV = ["layout-shift"];
-                  YJ(eV) && wV.push("soft-navigation");
-                  const ZV = JJ(wV, nV);
-                  ZV && (JV = ux(VV, YV, ZJ, eV.reportAllChanges), xV.onHidden((() => {
-                    nV(ZV.takeRecords()), JV(!0)
-                  })), Hx((() => {
-                    yV("back-forward-cache", YV.navigationId, YV.navigationInteractionId, YV.navigationURL, Kx()), sx(JV)
-                  })), setTimeout(JV))
+                    EH = ["layout-shift"];
+                  rA(BH) && EH.push("soft-navigation");
+                  const XH = AA(EH, CH);
+                  XH && (AH = aL(HH, rH, XA, BH.reportAllChanges), LH.onHidden((() => {
+                    CH(XH.takeRecords()), AH(!0)
+                  })), dL((() => {
+                    hH("back-forward-cache", rH.navigationId, rH.navigationInteractionId, rH.navigationURL, ZL()), sL(AH)
+                  })), setTimeout(AH))
                 })))
-              }((eV => {
-                VV((VV => {
-                  let eV = {};
-                  if (VV.entries.length) {
-                    const xV = VV.entries.reduce(((VV, eV) => VV.value > eV.value ? VV : eV));
-                    if (xV?.sources?.length) {
-                      const VV = vJ(xV.sources);
-                      VV && (eV = {
-                        largestShiftTarget: JV.get(VV),
-                        largestShiftTime: xV.startTime,
-                        largestShiftValue: xV.value,
-                        largestShiftSource: VV,
-                        largestShiftEntry: xV,
-                        loadState: cx(xV.startTime)
+              }((BH => {
+                HH((HH => {
+                  let BH = {};
+                  if (HH.entries.length) {
+                    const LH = HH.entries.reduce(((HH, BH) => HH.value > BH.value ? HH : BH));
+                    if (LH?.sources?.length) {
+                      const HH = GA(LH.sources);
+                      HH && (BH = {
+                        largestShiftTarget: AH.get(HH),
+                        largestShiftTime: LH.startTime,
+                        largestShiftValue: LH.value,
+                        largestShiftSource: HH,
+                        largestShiftEntry: LH,
+                        loadState: RL(LH.startTime)
                       })
                     }
                   }
-                  return Object.assign(VV, {
-                    attribution: eV
+                  return Object.assign(HH, {
+                    attribution: BH
                   })
-                })(eV))
-              }), eV)
-          }((VV => {
+                })(BH))
+              }), BH)
+          }((HH => {
             const {
-              loadState: eV,
-              largestShiftValue: xV,
-              largestShiftTime: JV,
-              largestShiftTarget: YV
-            } = VV.attribution, UV = this.buildInitialValues(VV);
-            this.addIfPresent(UV, "largest_shift_value", xV), this.addIfPresent(UV, "largest_shift_time", JV);
-            const yV = this.buildInitialContext(VV);
-            this.addIfPresent(yV, GJ, eV), this.addIfPresent(yV, "largest_shift_target", YV), this.pushMeasurement(UV, yV)
+              loadState: BH,
+              largestShiftValue: LH,
+              largestShiftTime: AH,
+              largestShiftTarget: rH
+            } = HH.attribution, SH = this.buildInitialValues(HH);
+            this.addIfPresent(SH, "largest_shift_value", LH), this.addIfPresent(SH, "largest_shift_time", AH);
+            const hH = this.buildInitialContext(HH);
+            this.addIfPresent(hH, IA, BH), this.addIfPresent(hH, "largest_shift_target", rH), this.pushMeasurement(SH, hH)
           }), {
-            reportAllChanges: null === (VV = this.webVitalConfig) || void 0 === VV ? void 0 : VV.reportAllChanges
+            reportAllChanges: null === (HH = this.webVitalConfig) || void 0 === HH ? void 0 : HH.reportAllChanges
           })
         }
         measureFCP() {
-          var VV;
-          ! function(VV) {
-            let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const xV = fx(eV = Object.assign({}, eV), pJ);
-            YJ(eV) && (xV.u = new Map), wJ((eV => {
-              VV((VV => {
-                let eV = {
+          var HH;
+          ! function(HH) {
+            let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const LH = DL(BH = Object.assign({}, BH), tA);
+            rA(BH) && (LH.u = new Map), EA((BH => {
+              HH((HH => {
+                let BH = {
                   timeToFirstByte: 0,
-                  firstByteToFCP: VV.value,
-                  loadState: cx(Kx())
+                  firstByteToFCP: HH.value,
+                  loadState: RL(ZL())
                 };
-                if ("soft-navigation" !== VV.navigationType) {
-                  if (VV.entries.length) {
-                    const xV = ox(),
-                      JV = VV.entries.at(-1);
-                    if (xV) {
-                      const YV = xV.responseStart,
-                        UV = xV.activationStart || 0,
-                        yV = Math.max(0, YV - UV);
-                      eV = {
-                        timeToFirstByte: yV,
-                        firstByteToFCP: VV.value - yV,
-                        loadState: cx(VV.entries[0].startTime),
-                        navigationEntry: xV,
-                        fcpEntry: JV
+                if ("soft-navigation" !== HH.navigationType) {
+                  if (HH.entries.length) {
+                    const LH = NL(),
+                      AH = HH.entries.at(-1);
+                    if (LH) {
+                      const rH = LH.responseStart,
+                        SH = LH.activationStart || 0,
+                        hH = Math.max(0, rH - SH);
+                      BH = {
+                        timeToFirstByte: hH,
+                        firstByteToFCP: HH.value - hH,
+                        loadState: RL(HH.entries[0].startTime),
+                        navigationEntry: LH,
+                        fcpEntry: AH
                       }
                     }
                   }
                 } else {
-                  const JV = xV.u?.get(VV.navigationId);
-                  JV && (eV = {
+                  const AH = LH.u?.get(HH.navigationId);
+                  AH && (BH = {
                     timeToFirstByte: 0,
-                    firstByteToFCP: VV.value,
+                    firstByteToFCP: HH.value,
                     loadState: "complete",
-                    navigationEntry: JV
+                    navigationEntry: AH
                   })
                 }
-                return Object.assign(VV, {
-                  attribution: eV
+                return Object.assign(HH, {
+                  attribution: BH
                 })
-              })(eV))
-            }), eV)
-          }((VV => {
+              })(BH))
+            }), BH)
+          }((HH => {
             const {
-              firstByteToFCP: eV,
-              timeToFirstByte: xV,
-              loadState: JV
-            } = VV.attribution, YV = this.buildInitialValues(VV);
-            this.addIfPresent(YV, "first_byte_to_fcp", eV), this.addIfPresent(YV, WJ, xV);
-            const UV = this.buildInitialContext(VV);
-            this.addIfPresent(UV, GJ, JV), this.pushMeasurement(YV, UV)
+              firstByteToFCP: BH,
+              timeToFirstByte: LH,
+              loadState: AH
+            } = HH.attribution, rH = this.buildInitialValues(HH);
+            this.addIfPresent(rH, "first_byte_to_fcp", BH), this.addIfPresent(rH, fA, LH);
+            const SH = this.buildInitialContext(HH);
+            this.addIfPresent(SH, IA, AH), this.pushMeasurement(rH, SH)
           }), {
-            reportAllChanges: null === (VV = this.webVitalConfig) || void 0 === VV ? void 0 : VV.reportAllChanges
+            reportAllChanges: null === (HH = this.webVitalConfig) || void 0 === HH ? void 0 : HH.reportAllChanges
           })
         }
         measureINP() {
-          var VV;
-          TJ((VV => {
-            var eV;
+          var HH;
+          UA((HH => {
+            var BH;
             const {
-              interactionTime: xV,
-              presentationDelay: JV,
-              inputDelay: YV,
-              processingDuration: UV,
-              nextPaintTime: yV,
-              loadState: pV,
-              interactionTarget: QV,
-              interactionType: nV,
-              totalScriptDuration: wV,
-              totalStyleAndLayoutDuration: ZV,
-              totalPaintDuration: vV,
-              totalUnattributedDuration: rV,
-              longestScript: kV
-            } = VV.attribution, bV = this.buildInitialValues(VV);
-            this.addIfPresent(bV, "interaction_time", xV), this.addIfPresent(bV, "presentation_delay", JV), this.addIfPresent(bV, "input_delay", YV), this.addIfPresent(bV, "processing_duration", UV), this.addIfPresent(bV, "next_paint_time", yV), this.addNumberIfDefined(bV, "total_script_duration", wV), this.addNumberIfDefined(bV, "total_style_and_layout_duration", ZV), this.addNumberIfDefined(bV, "total_paint_duration", vV), this.addNumberIfDefined(bV, "total_unattributed_duration", rV), this.addNumberIfDefined(bV, "longest_script_intersecting_duration", null === kV || void 0 === kV ? void 0 : kV.intersectingDuration);
-            const EV = this.buildInitialContext(VV);
-            this.addIfPresent(EV, GJ, pV), this.addIfPresent(EV, "interaction_target", QV), this.addIfPresent(EV, "interaction_type", nV), this.addIfPresent(EV, "longest_script_subpart", null === kV || void 0 === kV ? void 0 : kV.subpart), this.addIfPresent(EV, "longest_script_invoker_type", null === kV || void 0 === kV ? void 0 : kV.entry.invokerType), (null === (eV = this.webVitalConfig) || void 0 === eV ? void 0 : eV.trackAttributionSources) && (this.addIfPresent(EV, "longest_script_invoker", null === kV || void 0 === kV ? void 0 : kV.entry.invoker), this.addIfPresent(EV, "longest_script_source_url", null === kV || void 0 === kV ? void 0 : kV.entry.sourceURL), this.addIfPresent(EV, "longest_script_source_function_name", null === kV || void 0 === kV ? void 0 : kV.entry.sourceFunctionName), this.addIfPresent(EV, "longest_script_source_char_position", void 0 !== (null === kV || void 0 === kV ? void 0 : kV.entry.sourceCharPosition) ? String(kV.entry.sourceCharPosition) : void 0)), this.pushMeasurement(bV, EV)
+              interactionTime: LH,
+              presentationDelay: AH,
+              inputDelay: rH,
+              processingDuration: SH,
+              nextPaintTime: hH,
+              loadState: tH,
+              interactionTarget: zH,
+              interactionType: CH,
+              totalScriptDuration: EH,
+              totalStyleAndLayoutDuration: XH,
+              totalPaintDuration: GH,
+              totalUnattributedDuration: YH,
+              longestScript: uH
+            } = HH.attribution, QH = this.buildInitialValues(HH);
+            this.addIfPresent(QH, "interaction_time", LH), this.addIfPresent(QH, "presentation_delay", AH), this.addIfPresent(QH, "input_delay", rH), this.addIfPresent(QH, "processing_duration", SH), this.addIfPresent(QH, "next_paint_time", hH), this.addNumberIfDefined(QH, "total_script_duration", EH), this.addNumberIfDefined(QH, "total_style_and_layout_duration", XH), this.addNumberIfDefined(QH, "total_paint_duration", GH), this.addNumberIfDefined(QH, "total_unattributed_duration", YH), this.addNumberIfDefined(QH, "longest_script_intersecting_duration", null === uH || void 0 === uH ? void 0 : uH.intersectingDuration);
+            const WH = this.buildInitialContext(HH);
+            this.addIfPresent(WH, IA, tH), this.addIfPresent(WH, "interaction_target", zH), this.addIfPresent(WH, "interaction_type", CH), this.addIfPresent(WH, "longest_script_subpart", null === uH || void 0 === uH ? void 0 : uH.subpart), this.addIfPresent(WH, "longest_script_invoker_type", null === uH || void 0 === uH ? void 0 : uH.entry.invokerType), (null === (BH = this.webVitalConfig) || void 0 === BH ? void 0 : BH.trackAttributionSources) && (this.addIfPresent(WH, "longest_script_invoker", null === uH || void 0 === uH ? void 0 : uH.entry.invoker), this.addIfPresent(WH, "longest_script_source_url", null === uH || void 0 === uH ? void 0 : uH.entry.sourceURL), this.addIfPresent(WH, "longest_script_source_function_name", null === uH || void 0 === uH ? void 0 : uH.entry.sourceFunctionName), this.addIfPresent(WH, "longest_script_source_char_position", void 0 !== (null === uH || void 0 === uH ? void 0 : uH.entry.sourceCharPosition) ? String(uH.entry.sourceCharPosition) : void 0)), this.pushMeasurement(QH, WH)
           }), {
-            reportAllChanges: null === (VV = this.webVitalConfig) || void 0 === VV ? void 0 : VV.reportAllChanges
+            reportAllChanges: null === (HH = this.webVitalConfig) || void 0 === HH ? void 0 : HH.reportAllChanges
           })
         }
         measureLCP() {
-          var VV;
-          ! function(VV) {
-            let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            null != (eV = Object.assign({}, eV)).resourceBufferSize && (NJ = eV.resourceBufferSize);
-            const xV = fx(eV, PJ),
-              JV = new WeakMap;
-            YJ(eV) && (xV.u = new Map), xV.m = VV => {
-                const xV = VV.element;
-                if (xV) {
-                  const YV = eV.generateTarget?.(xV) ?? lx(xV);
-                  JV.set(VV, YV)
-                } else VV.id && JV.set(VV, `#${VV.id}`)
+          var HH;
+          ! function(HH) {
+            let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            null != (BH = Object.assign({}, BH)).resourceBufferSize && (bA = BH.resourceBufferSize);
+            const LH = DL(BH, VA),
+              AH = new WeakMap;
+            rA(BH) && (LH.u = new Map), LH.m = HH => {
+                const LH = HH.element;
+                if (LH) {
+                  const rH = BH.generateTarget?.(LH) ?? nL(LH);
+                  AH.set(HH, rH)
+                } else HH.id && AH.set(HH, `#${HH.id}`)
               },
-              function(VV) {
-                let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                  xV = !1;
-                const JV = YJ(eV);
-                QJ((() => {
-                  let YV, UV = eJ(),
-                    yV = xJ("LCP");
-                  const pV = fx(eV, PJ),
-                    QV = (JV, pV, QV, nV, wV) => {
-                      yV = xJ("LCP", -1, JV, pV, QV, nV, wV), YV = ux(VV, yV, AJ, eV.reportAllChanges), xV = !1, "soft-navigation" === JV && (UV = eJ(!0))
+              function(HH) {
+                let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                  LH = !1;
+                const AH = rA(BH);
+                zA((() => {
+                  let rH, SH = BA(),
+                    hH = LA("LCP");
+                  const tH = DL(BH, VA),
+                    zH = (AH, tH, zH, CH, EH) => {
+                      hH = LA("LCP", -1, AH, tH, zH, CH, EH), rH = aL(HH, hH, OA, BH.reportAllChanges), LH = !1, "soft-navigation" === AH && (SH = BA(!0))
                     },
-                    nV = VV => {
-                      pV.u && VV.navigationId && UJ(pV.u, VV), xV || YV(!0), QV("soft-navigation", VV.navigationId, VV.interactionId, VV.name, VV.startTime);
-                      const eV = VV.getLargestInteractionContentfulPaint?.();
-                      eV && wV([eV])
+                    CH = HH => {
+                      tH.u && HH.navigationId && SA(tH.u, HH), LH || rH(!0), zH("soft-navigation", HH.navigationId, HH.interactionId, HH.name, HH.startTime);
+                      const BH = HH.getLargestInteractionContentfulPaint?.();
+                      BH && EH([BH])
                     },
-                    wV = VV => {
-                      eV.reportAllChanges || JV || (VV = VV.slice(-1));
-                      for (const eV of VV) {
-                        if (!eV) continue;
-                        if ("soft-navigation" === eV.entryType) {
-                          nV(eV);
+                    EH = HH => {
+                      BH.reportAllChanges || AH || (HH = HH.slice(-1));
+                      for (const BH of HH) {
+                        if (!BH) continue;
+                        if ("soft-navigation" === BH.entryType) {
+                          CH(BH);
                           continue
                         }
-                        let VV = 0,
-                          xV = [],
-                          JV = eV.startTime;
-                        if ("largest-contentful-paint" === eV.entryType) VV = Math.max(eV.startTime - Sx(), 0), pV.l(eV), xV = [eV];
-                        else if ("interaction-contentful-paint" === eV.entryType) {
-                          const YV = eV;
-                          if (!yV.navigationId) continue;
-                          if ("interactionId" in YV && YV.interactionId != yV.navigationInteractionId) continue;
-                          JV = YV.largestContentfulPaint?.renderTime || 0, VV = Math.max(JV - eV.startTime, 0), YV.largestContentfulPaint && (pV.l(YV.largestContentfulPaint), xV = [YV.largestContentfulPaint])
+                        let HH = 0,
+                          LH = [],
+                          AH = BH.startTime;
+                        if ("largest-contentful-paint" === BH.entryType) HH = Math.max(BH.startTime - JL(), 0), tH.l(BH), LH = [BH];
+                        else if ("interaction-contentful-paint" === BH.entryType) {
+                          const rH = BH;
+                          if (!hH.navigationId) continue;
+                          if ("interactionId" in rH && rH.interactionId != hH.navigationInteractionId) continue;
+                          AH = rH.largestContentfulPaint?.renderTime || 0, HH = Math.max(AH - BH.startTime, 0), rH.largestContentfulPaint && (tH.l(rH.largestContentfulPaint), LH = [rH.largestContentfulPaint])
                         }
-                        JV < UV.firstHiddenTime && (yV.value = VV, yV.entries = xV, YV())
+                        AH < SH.firstHiddenTime && (hH.value = HH, hH.entries = LH, rH())
                       }
                     },
-                    ZV = ["largest-contentful-paint"];
-                  JV && ZV.push("interaction-contentful-paint", "soft-navigation");
-                  const vV = JJ(ZV, wV);
-                  if (vV) {
-                    YV = ux(VV, yV, AJ, eV.reportAllChanges);
-                    const UV = ["keydown", "click", "visibilitychange"],
-                      pV = VV => {
-                        if (VV.isTrusted && !xV) {
-                          const VV = yV.id;
-                          tJ((() => {
-                            if (!xV) {
-                              if (!JV) {
-                                vV.disconnect();
-                                for (const VV of UV) removeEventListener(VV, pV, {
+                    XH = ["largest-contentful-paint"];
+                  AH && XH.push("interaction-contentful-paint", "soft-navigation");
+                  const GH = AA(XH, EH);
+                  if (GH) {
+                    rH = aL(HH, hH, OA, BH.reportAllChanges);
+                    const SH = ["keydown", "click", "visibilitychange"],
+                      tH = HH => {
+                        if (HH.isTrusted && !LH) {
+                          const HH = hH.id;
+                          PA((() => {
+                            if (!LH) {
+                              if (!AH) {
+                                GH.disconnect();
+                                for (const HH of SH) removeEventListener(HH, tH, {
                                   capture: !0
                                 })
                               }
-                              VV === yV.id && (xV = !0, YV(!0))
+                              HH === hH.id && (LH = !0, rH(!0))
                             }
                           }))
                         }
                       };
-                    for (const VV of UV) addEventListener(VV, pV, {
+                    for (const HH of SH) addEventListener(HH, tH, {
                       capture: !0
                     });
-                    Hx((JV => {
-                      QV("back-forward-cache", yV.navigationId, yV.navigationInteractionId, yV.navigationURL, Kx()), YV = ux(VV, yV, AJ, eV.reportAllChanges), sx((() => {
-                        yV.value = performance.now() - JV.timeStamp, xV = !0, YV(!0)
+                    dL((AH => {
+                      zH("back-forward-cache", hH.navigationId, hH.navigationInteractionId, hH.navigationURL, ZL()), rH = aL(HH, hH, OA, BH.reportAllChanges), sL((() => {
+                        hH.value = performance.now() - AH.timeStamp, LH = !0, rH(!0)
                       }))
                     }))
                   }
                 }))
-              }((eV => {
-                VV((VV => {
-                  let eV = {
+              }((BH => {
+                HH((HH => {
+                  let BH = {
                     timeToFirstByte: 0,
                     resourceLoadDelay: 0,
                     resourceLoadDuration: 0,
-                    elementRenderDelay: VV.value
+                    elementRenderDelay: HH.value
                   };
-                  if (VV.entries.length) {
-                    const YV = VV.entries.at(-1),
-                      UV = VV => VV.name === YV.url && (VV.requestStart || VV.startTime) <= YV.startTime,
-                      yV = YV.url && (XJ.findLast(UV) || performance.getEntriesByType("resource").findLast(UV));
-                    let pV;
-                    eV.target = JV.get(YV), eV.lcpEntry = YV, YV.url && (eV.url = YV.url), yV && (eV.lcpResourceEntry = yV);
-                    let QV = 0,
-                      nV = 0;
-                    if ("soft-navigation" !== VV.navigationType ? (pV = ox(), QV = pV?.activationStart ?? 0, nV = pV?.responseStart ?? 0) : (QV = VV.navigationStartTime || 0, pV = xV.u?.get(VV.navigationId)), pV) {
-                      const xV = Math.max(0, nV - QV),
-                        JV = Math.max(xV, yV ? (yV.requestStart || yV.startTime) - QV : 0),
-                        YV = Math.min(VV.value, Math.max(JV, yV ? yV.responseEnd - QV : 0));
-                      eV = {
-                        ...eV,
-                        timeToFirstByte: xV,
-                        resourceLoadDelay: JV - xV,
-                        resourceLoadDuration: YV - JV,
-                        elementRenderDelay: VV.value - YV,
-                        navigationEntry: pV
+                  if (HH.entries.length) {
+                    const rH = HH.entries.at(-1),
+                      SH = HH => HH.name === rH.url && (HH.requestStart || HH.startTime) <= rH.startTime,
+                      hH = rH.url && (kA.findLast(SH) || performance.getEntriesByType("resource").findLast(SH));
+                    let tH;
+                    BH.target = AH.get(rH), BH.lcpEntry = rH, rH.url && (BH.url = rH.url), hH && (BH.lcpResourceEntry = hH);
+                    let zH = 0,
+                      CH = 0;
+                    if ("soft-navigation" !== HH.navigationType ? (tH = NL(), zH = tH?.activationStart ?? 0, CH = tH?.responseStart ?? 0) : (zH = HH.navigationStartTime || 0, tH = LH.u?.get(HH.navigationId)), tH) {
+                      const LH = Math.max(0, CH - zH),
+                        AH = Math.max(LH, hH ? (hH.requestStart || hH.startTime) - zH : 0),
+                        rH = Math.min(HH.value, Math.max(AH, hH ? hH.responseEnd - zH : 0));
+                      BH = {
+                        ...BH,
+                        timeToFirstByte: LH,
+                        resourceLoadDelay: AH - LH,
+                        resourceLoadDuration: rH - AH,
+                        elementRenderDelay: HH.value - rH,
+                        navigationEntry: tH
                       }
                     }
                   }
-                  return Object.assign(VV, {
-                    attribution: eV
+                  return Object.assign(HH, {
+                    attribution: BH
                   })
-                })(eV))
-              }), eV)
-          }((VV => {
-            var eV;
+                })(BH))
+              }), BH)
+          }((HH => {
+            var BH;
             const {
-              elementRenderDelay: xV,
-              resourceLoadDelay: JV,
-              resourceLoadDuration: YV,
-              timeToFirstByte: UV,
-              target: yV,
-              url: pV,
-              lcpResourceEntry: QV
-            } = VV.attribution, nV = this.buildInitialValues(VV);
-            this.addIfPresent(nV, "element_render_delay", xV), this.addIfPresent(nV, "resource_load_delay", JV), this.addIfPresent(nV, "resource_load_duration", YV), this.addIfPresent(nV, WJ, UV);
-            const wV = this.buildInitialContext(VV);
-            this.addIfPresent(wV, "element", yV), (null === (eV = this.webVitalConfig) || void 0 === eV ? void 0 : eV.trackAttributionSources) && (this.addIfPresent(wV, "resource_url", pV), this.addIfPresent(wV, "resource_delivery_type", null === QV || void 0 === QV ? void 0 : QV.deliveryType), this.addIfPresent(wV, "resource_initiator_type", null === QV || void 0 === QV ? void 0 : QV.initiatorType)), this.pushMeasurement(nV, wV)
+              elementRenderDelay: LH,
+              resourceLoadDelay: AH,
+              resourceLoadDuration: rH,
+              timeToFirstByte: SH,
+              target: hH,
+              url: tH,
+              lcpResourceEntry: zH
+            } = HH.attribution, CH = this.buildInitialValues(HH);
+            this.addIfPresent(CH, "element_render_delay", LH), this.addIfPresent(CH, "resource_load_delay", AH), this.addIfPresent(CH, "resource_load_duration", rH), this.addIfPresent(CH, fA, SH);
+            const EH = this.buildInitialContext(HH);
+            this.addIfPresent(EH, "element", hH), (null === (BH = this.webVitalConfig) || void 0 === BH ? void 0 : BH.trackAttributionSources) && (this.addIfPresent(EH, "resource_url", tH), this.addIfPresent(EH, "resource_delivery_type", null === zH || void 0 === zH ? void 0 : zH.deliveryType), this.addIfPresent(EH, "resource_initiator_type", null === zH || void 0 === zH ? void 0 : zH.initiatorType)), this.pushMeasurement(CH, EH)
           }), {
-            reportAllChanges: null === (VV = this.webVitalConfig) || void 0 === VV ? void 0 : VV.reportAllChanges
+            reportAllChanges: null === (HH = this.webVitalConfig) || void 0 === HH ? void 0 : HH.reportAllChanges
           })
         }
         measureTTFB() {
-          var VV;
-          ! function(VV) {
-            ! function(VV) {
-              let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const xV = YJ(eV);
-              let JV = xJ("TTFB"),
-                YV = ux(VV, JV, MJ, eV.reportAllChanges);
-              zJ((() => {
-                const UV = ox();
-                if (UV) {
-                  const yV = UV.responseStart;
-                  JV.value = Math.max(yV - Sx(), 0), JV.entries = [UV], YV(!0), Hx((() => {
-                    JV = xJ("TTFB", 0, "back-forward-cache", JV.navigationId, JV.navigationInteractionId, JV.navigationURL, Kx()), YV = ux(VV, JV, MJ, eV.reportAllChanges), YV(!0)
-                  })), xV && JJ(["soft-navigation"], (xV => {
-                    xV.forEach((xV => {
-                      xV.navigationId && (JV = xJ("TTFB", 0, "soft-navigation", xV.navigationId, xV.interactionId, xV.name, xV.startTime), JV.entries = [xV], YV = ux(VV, JV, MJ, eV.reportAllChanges), YV(!0))
+          var HH;
+          ! function(HH) {
+            ! function(HH) {
+              let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const LH = rA(BH);
+              let AH = LA("TTFB"),
+                rH = aL(HH, AH, mA, BH.reportAllChanges);
+              oA((() => {
+                const SH = NL();
+                if (SH) {
+                  const hH = SH.responseStart;
+                  AH.value = Math.max(hH - JL(), 0), AH.entries = [SH], rH(!0), dL((() => {
+                    AH = LA("TTFB", 0, "back-forward-cache", AH.navigationId, AH.navigationInteractionId, AH.navigationURL, ZL()), rH = aL(HH, AH, mA, BH.reportAllChanges), rH(!0)
+                  })), LH && AA(["soft-navigation"], (LH => {
+                    LH.forEach((LH => {
+                      LH.navigationId && (AH = LA("TTFB", 0, "soft-navigation", LH.navigationId, LH.interactionId, LH.name, LH.startTime), AH.entries = [LH], rH = aL(HH, AH, mA, BH.reportAllChanges), rH(!0))
                     }))
-                  }), eV)
+                  }), BH)
                 }
               }))
-            }((eV => {
-              VV((VV => {
-                const eV = VV.entries[0];
-                let xV = {
+            }((BH => {
+              HH((HH => {
+                const BH = HH.entries[0];
+                let LH = {
                   waitingDuration: 0,
                   cacheDuration: 0,
                   dnsDuration: 0,
                   connectionDuration: 0,
                   requestDuration: 0,
-                  navigationEntry: eV
+                  navigationEntry: BH
                 };
-                if (VV.entries.length && eV instanceof PerformanceNavigationTiming) {
-                  const JV = eV.activationStart || 0,
-                    YV = Math.max((eV.workerStart || eV.fetchStart || 0) - JV, 0),
-                    UV = Math.max(eV.domainLookupStart - JV, 0),
-                    yV = Math.max(eV.connectStart - JV, 0),
-                    pV = Math.max(eV.connectEnd - JV, 0);
-                  xV = {
-                    waitingDuration: YV,
-                    cacheDuration: UV - YV,
-                    dnsDuration: yV - UV,
-                    connectionDuration: pV - yV,
-                    requestDuration: VV.value - pV,
-                    navigationEntry: eV
+                if (HH.entries.length && BH instanceof PerformanceNavigationTiming) {
+                  const AH = BH.activationStart || 0,
+                    rH = Math.max((BH.workerStart || BH.fetchStart || 0) - AH, 0),
+                    SH = Math.max(BH.domainLookupStart - AH, 0),
+                    hH = Math.max(BH.connectStart - AH, 0),
+                    tH = Math.max(BH.connectEnd - AH, 0);
+                  LH = {
+                    waitingDuration: rH,
+                    cacheDuration: SH - rH,
+                    dnsDuration: hH - SH,
+                    connectionDuration: tH - hH,
+                    requestDuration: HH.value - tH,
+                    navigationEntry: BH
                   }
                 }
-                return Object.assign(VV, {
-                  attribution: xV
+                return Object.assign(HH, {
+                  attribution: LH
                 })
-              })(eV))
+              })(BH))
             }), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }((VV => {
+          }((HH => {
             const {
-              dnsDuration: eV,
-              connectionDuration: xV,
-              requestDuration: JV,
-              waitingDuration: YV,
-              cacheDuration: UV
-            } = VV.attribution, yV = this.buildInitialValues(VV);
-            this.addIfPresent(yV, "dns_duration", eV), this.addIfPresent(yV, "connection_duration", xV), this.addIfPresent(yV, "request_duration", JV), this.addIfPresent(yV, "waiting_duration", YV), this.addIfPresent(yV, "cache_duration", UV);
-            const pV = this.buildInitialContext(VV);
-            this.pushMeasurement(yV, pV)
+              dnsDuration: BH,
+              connectionDuration: LH,
+              requestDuration: AH,
+              waitingDuration: rH,
+              cacheDuration: SH
+            } = HH.attribution, hH = this.buildInitialValues(HH);
+            this.addIfPresent(hH, "dns_duration", BH), this.addIfPresent(hH, "connection_duration", LH), this.addIfPresent(hH, "request_duration", AH), this.addIfPresent(hH, "waiting_duration", rH), this.addIfPresent(hH, "cache_duration", SH);
+            const tH = this.buildInitialContext(HH);
+            this.pushMeasurement(hH, tH)
           }), {
-            reportAllChanges: null === (VV = this.webVitalConfig) || void 0 === VV ? void 0 : VV.reportAllChanges
+            reportAllChanges: null === (HH = this.webVitalConfig) || void 0 === HH ? void 0 : HH.reportAllChanges
           })
         }
-        buildInitialValues(VV) {
+        buildInitialValues(HH) {
           return {
-            [VV.name.toLowerCase()]: VV.value,
-            delta: VV.delta
+            [HH.name.toLowerCase()]: HH.value,
+            delta: HH.delta
           }
         }
-        buildInitialContext(VV) {
-          var eV;
-          const xV = null !== (eV = Ve("com.grafana.faro.lastNavigationId", IV)) && void 0 !== eV ? eV : ix;
+        buildInitialContext(HH) {
+          var BH;
+          const LH = null !== (BH = HB("com.grafana.faro.lastNavigationId", iH)) && void 0 !== BH ? BH : eL;
           return {
-            id: VV.id,
-            rating: VV.rating,
-            navigation_type: VV.navigationType,
-            navigation_entry_id: xV
+            id: HH.id,
+            rating: HH.rating,
+            navigation_type: HH.navigationType,
+            navigation_entry_id: LH
           }
         }
-        pushMeasurement(VV, eV) {
+        pushMeasurement(HH, BH) {
           this.corePushMeasurement({
             type: "web-vitals",
-            values: VV
+            values: HH
           }, {
-            context: eV
+            context: BH
           })
         }
-        addIfPresent(VV, eV, xV) {
-          xV && (VV[eV] = xV)
+        addIfPresent(HH, BH, LH) {
+          LH && (HH[BH] = LH)
         }
-        addNumberIfDefined(VV, eV, xV) {
-          void 0 !== xV && (VV[eV] = xV)
+        addNumberIfDefined(HH, BH, LH) {
+          void 0 !== LH && (HH[BH] = LH)
         }
       },
-      gJ = class extends ex {
+      KA = class extends BL {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = xx
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = LL
         }
         initialize() {
-          this.logDebug("Initializing"), new RJ(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
+          this.logDebug("Initializing"), new lA(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
         }
       };
-    const DJ = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
+    const cA = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
 
-    function iJ() {
-      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      for (const eV of VV)
-        if ("traceparent" === eV.name) {
-          if (!DJ.test(eV.description)) continue;
-          const [, VV, xV] = eV.description.split("-");
-          if (null != VV && null != xV) return {
-            traceId: VV,
-            spanId: xV
+    function eA() {
+      let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+      for (const BH of HH)
+        if ("traceparent" === BH.name) {
+          if (!cA.test(BH.description)) continue;
+          const [, HH, LH] = BH.description.split("-");
+          if (null != HH && null != LH) return {
+            traceId: HH,
+            spanId: LH
           };
           break
         }
     }
 
-    function CJ(VV) {
-      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function qA(HH) {
+      let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         wallNow: Date.now(),
         monoNow: performance.now()
       };
       const {
-        wallNow: xV,
-        monoNow: JV
-      } = eV;
-      return Math.min(xV, xV - (JV - VV))
+        wallNow: LH,
+        monoNow: AH
+      } = BH;
+      return Math.min(LH, LH - (AH - HH))
     }
 
-    function aJ(VV) {
-      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      for (const [xV, JV] of Object.entries(eV)) {
-        const eV = VV[xV];
-        return null != eV && (GV(JV) ? JV.includes(eV) : eV === JV)
+    function gA(HH) {
+      let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      for (const [LH, AH] of Object.entries(BH)) {
+        const BH = HH[LH];
+        return null != BH && (IH(AH) ? AH.includes(BH) : BH === AH)
       }
       return !0
     }
 
-    function oJ(VV) {
+    function NA(HH) {
       const {
-        connectEnd: eV,
-        connectStart: xV,
-        decodedBodySize: JV,
-        domainLookupEnd: YV,
-        domainLookupStart: UV,
-        duration: yV,
-        encodedBodySize: pV,
-        fetchStart: QV,
-        initiatorType: nV,
-        name: wV,
-        nextHopProtocol: ZV,
-        redirectEnd: vV,
-        redirectStart: rV,
-        renderBlockingStatus: kV,
-        requestStart: bV,
-        responseEnd: EV,
-        responseStart: BV,
-        responseStatus: jV,
-        secureConnectionStart: qV,
-        transferSize: tV,
-        workerStart: FV
-      } = VV;
+        connectEnd: BH,
+        connectStart: LH,
+        decodedBodySize: AH,
+        domainLookupEnd: rH,
+        domainLookupStart: SH,
+        duration: hH,
+        encodedBodySize: tH,
+        fetchStart: zH,
+        initiatorType: CH,
+        name: EH,
+        nextHopProtocol: XH,
+        redirectEnd: GH,
+        redirectStart: YH,
+        renderBlockingStatus: uH,
+        requestStart: QH,
+        responseEnd: WH,
+        responseStart: MH,
+        responseStatus: xH,
+        secureConnectionStart: vH,
+        transferSize: PH,
+        workerStart: TH
+      } = HH;
       return {
-        name: wV,
-        httpHost: hJ(wV),
-        duration: lJ(yV),
-        tcpHandshakeTime: lJ(eV - xV),
-        dnsLookupTime: lJ(YV - UV),
-        tlsNegotiationTime: lJ(eV - qV),
-        responseStatus: lJ(jV),
-        redirectTime: lJ(vV - rV),
-        requestTime: lJ(BV - bV),
-        responseTime: lJ(EV - BV),
-        fetchTime: lJ(EV - QV),
-        serviceWorkerTime: lJ(FV > 0 ? QV - FV : 0),
-        decodedBodySize: lJ(JV),
-        encodedBodySize: lJ(pV),
+        name: EH,
+        httpHost: jA(EH),
+        duration: nA(hH),
+        tcpHandshakeTime: nA(BH - LH),
+        dnsLookupTime: nA(rH - SH),
+        tlsNegotiationTime: nA(BH - vH),
+        responseStatus: nA(xH),
+        redirectTime: nA(GH - YH),
+        requestTime: nA(MH - QH),
+        responseTime: nA(WH - MH),
+        fetchTime: nA(WH - zH),
+        serviceWorkerTime: nA(TH > 0 ? zH - TH : 0),
+        decodedBodySize: nA(AH),
+        encodedBodySize: nA(tH),
         cacheHitStatus: function() {
-          let VV = "fullLoad";
-          0 === tV ? JV > 0 && (VV = "cache") : null != jV ? 304 === jV && (VV = "conditionalFetch") : pV > 0 && tV < pV && (VV = "conditionalFetch");
-          return VV
+          let HH = "fullLoad";
+          0 === PH ? AH > 0 && (HH = "cache") : null != xH ? 304 === xH && (HH = "conditionalFetch") : tH > 0 && PH < tH && (HH = "conditionalFetch");
+          return HH
         }(),
-        renderBlockingStatus: lJ(kV),
-        protocol: ZV,
-        initiatorType: nV,
+        renderBlockingStatus: nA(uH),
+        protocol: XH,
+        initiatorType: CH,
         visibilityState: document.visibilityState,
-        ttfb: lJ(BV - bV),
-        transferSize: lJ(tV)
+        ttfb: nA(MH - QH),
+        transferSize: nA(PH)
       }
     }
 
-    function cJ(VV) {
+    function RA(HH) {
       const {
-        activationStart: eV,
-        domComplete: xV,
-        domContentLoadedEventEnd: JV,
-        domContentLoadedEventStart: YV,
-        domInteractive: UV,
-        fetchStart: yV,
-        loadEventEnd: pV,
-        loadEventStart: QV,
-        responseStart: nV,
-        type: wV
-      } = VV, ZV = function() {
-        var VV;
-        return null != (null === (VV = performance.timing) || void 0 === VV ? void 0 : VV.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
+        activationStart: BH,
+        domComplete: LH,
+        domContentLoadedEventEnd: AH,
+        domContentLoadedEventStart: rH,
+        domInteractive: SH,
+        fetchStart: hH,
+        loadEventEnd: tH,
+        loadEventStart: zH,
+        responseStart: CH,
+        type: EH
+      } = HH, XH = function() {
+        var HH;
+        return null != (null === (HH = performance.timing) || void 0 === HH ? void 0 : HH.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
       }();
-      return we(we({}, oJ(VV)), {}, {
-        pageLoadTime: lJ(xV - yV),
-        documentParsingTime: lJ(ZV ? UV - ZV : null),
-        domProcessingTime: lJ(xV - UV),
-        domContentLoadHandlerTime: lJ(JV - YV),
-        onLoadTime: lJ(pV - QV),
-        ttfb: lJ(Math.max(nV - (null !== eV && void 0 !== eV ? eV : 0), 0)),
-        type: wV
+      return EB(EB({}, NA(HH)), {}, {
+        pageLoadTime: nA(LH - hH),
+        documentParsingTime: nA(XH ? SH - XH : null),
+        domProcessingTime: nA(LH - SH),
+        domContentLoadHandlerTime: nA(AH - rH),
+        onLoadTime: nA(tH - zH),
+        ttfb: nA(Math.max(CH - (null !== BH && void 0 !== BH ? BH : 0), 0)),
+        type: EH
       })
     }
 
-    function hJ(VV) {
+    function jA(HH) {
       try {
-        return new URL(VV).host || ix
-      } catch (eV) {
-        return ix
+        return new URL(HH).host || eL
+      } catch (BH) {
+        return eL
       }
     }
 
-    function lJ(VV) {
-      return null == VV ? ix : "number" === typeof VV ? Math.round(VV > 0 ? VV : 0).toString() : VV.toString()
+    function nA(HH) {
+      return null == HH ? eL : "number" === typeof HH ? Math.round(HH > 0 ? HH : 0).toString() : HH.toString()
     }
-    const LJ = {
+    const FA = {
       initiatorType: ["xmlhttprequest", "fetch"]
     };
 
-    function fJ(VV, eV, xV, JV, YV, UV, yV) {
+    function DA(HH, BH, LH, AH, rH, SH, hH) {
       try {
-        var pV = VV[UV](yV),
-          QV = pV.value
-      } catch (VV) {
-        return void xV(VV)
+        var tH = HH[SH](hH),
+          zH = tH.value
+      } catch (HH) {
+        return void LH(HH)
       }
-      pV.done ? eV(QV) : Promise.resolve(QV).then(JV, YV)
+      tH.done ? BH(zH) : Promise.resolve(zH).then(AH, rH)
     }
 
-    function mJ(VV) {
+    function wA(HH) {
       return function() {
-        var eV = this,
-          xV = arguments;
-        return new Promise((function(JV, YV) {
-          var UV = VV.apply(eV, xV);
+        var BH = this,
+          LH = arguments;
+        return new Promise((function(AH, rH) {
+          var SH = HH.apply(BH, LH);
 
-          function yV(VV) {
-            fJ(UV, JV, YV, yV, pV, "next", VV)
+          function hH(HH) {
+            DA(SH, AH, rH, hH, tH, "next", HH)
           }
 
-          function pV(VV) {
-            fJ(UV, JV, YV, yV, pV, "throw", VV)
+          function tH(HH) {
+            DA(SH, AH, rH, hH, tH, "throw", HH)
           }
-          yV(void 0)
+          hH(void 0)
         }))
       }
     }
-    const KJ = new jx;
-    var HJ = class extends ex {
+    const ZA = new xL;
+    var dA = class extends BL {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = xx
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = LL
       }
       initialize() {
-        var VV = this;
+        var HH = this;
         if (!("PerformanceObserver" in window)) return void this.logDebug("performance observer not supported. Disable performance instrumentation.");
-        let eV = !1;
-        const xV = () => {
-          ! function(VV) {
-            if ("complete" === document.readyState) VV();
+        let BH = !1;
+        const LH = () => {
+          ! function(HH) {
+            if ("complete" === document.readyState) HH();
             else {
-              const eV = () => {
-                "complete" === document.readyState && (VV(), document.removeEventListener("readystatechange", eV))
+              const BH = () => {
+                "complete" === document.readyState && (HH(), document.removeEventListener("readystatechange", BH))
               };
-              document.addEventListener("readystatechange", eV)
+              document.addEventListener("readystatechange", BH)
             }
-          }(mJ((function*() {
-            if (eV) return;
-            const xV = VV.api.pushEvent,
+          }(wA((function*() {
+            if (BH) return;
+            const LH = HH.api.pushEvent,
               {
-                faroNavigationId: JV
-              } = yield function(VV) {
-                let eV;
-                const xV = new Promise((VV => {
-                  eV = VV
+                faroNavigationId: AH
+              } = yield function(HH) {
+                let BH;
+                const LH = new Promise((HH => {
+                  BH = HH
                 }));
-                return new PerformanceObserver((xV => {
-                  var JV;
-                  const [YV] = xV.getEntries();
-                  if (null == YV || sV(YV.name)) return;
-                  const UV = YV.toJSON();
-                  let yV = iJ(null === UV || void 0 === UV ? void 0 : UV.serverTiming);
-                  const pV = null !== (JV = Ve("com.grafana.faro.lastNavigationId", IV)) && void 0 !== JV ? JV : ix,
-                    QV = we(we({}, cJ(UV)), {}, {
-                      faroNavigationId: Be(),
-                      faroPreviousNavigationId: pV
+                return new PerformanceObserver((LH => {
+                  var AH;
+                  const [rH] = LH.getEntries();
+                  if (null == rH || sH(rH.name)) return;
+                  const SH = rH.toJSON();
+                  let hH = eA(null === SH || void 0 === SH ? void 0 : SH.serverTiming);
+                  const tH = null !== (AH = HB("com.grafana.faro.lastNavigationId", iH)) && void 0 !== AH ? AH : eL,
+                    zH = EB(EB({}, RA(SH)), {}, {
+                      faroNavigationId: MB(),
+                      faroPreviousNavigationId: tH
                     });
-                  ee("com.grafana.faro.lastNavigationId", QV.faroNavigationId, IV), VV("faro.performance.navigation", QV, void 0, {
-                    spanContext: yV,
-                    timestampOverwriteMs: CJ(UV.startTime)
-                  }), eV(QV)
+                  BB("com.grafana.faro.lastNavigationId", zH.faroNavigationId, iH), HH("faro.performance.navigation", zH, void 0, {
+                    spanContext: hH,
+                    timestampOverwriteMs: qA(SH.startTime)
+                  }), BH(zH)
                 })).observe({
                   type: "navigation",
                   buffered: !0
-                }), xV
-              }(xV);
-            eV || null == JV || function(VV, eV, xV, JV) {
-              const YV = JV.trackResources;
-              new PerformanceObserver((JV => {
-                const UV = JV.getEntries(),
-                  yV = {
+                }), LH
+              }(LH);
+            BH || null == AH || function(HH, BH, LH, AH) {
+              const rH = AH.trackResources;
+              new PerformanceObserver((AH => {
+                const SH = AH.getEntries(),
+                  hH = {
                     wallNow: Date.now(),
                     monoNow: performance.now()
                   };
-                for (const pV of UV) {
-                  if (sV(pV.name)) continue;
-                  null === xV || void 0 === xV || xV.notify({
+                for (const tH of SH) {
+                  if (sH(tH.name)) continue;
+                  null === LH || void 0 === LH || LH.notify({
                     type: "resource"
                   });
-                  const JV = pV.toJSON();
-                  let UV = iJ(null === JV || void 0 === JV ? void 0 : JV.serverTiming);
-                  (null == YV && aJ(JV, LJ) || YV) && eV("faro.performance.resource", we(we({}, oJ(JV)), {}, {
-                    faroNavigationId: VV,
-                    faroResourceId: Be()
+                  const AH = tH.toJSON();
+                  let SH = eA(null === AH || void 0 === AH ? void 0 : AH.serverTiming);
+                  (null == rH && gA(AH, FA) || rH) && BH("faro.performance.resource", EB(EB({}, NA(AH)), {}, {
+                    faroNavigationId: HH,
+                    faroResourceId: MB()
                   }), void 0, {
-                    spanContext: UV,
-                    timestampOverwriteMs: CJ(JV.startTime, yV)
+                    spanContext: SH,
+                    timestampOverwriteMs: qA(AH.startTime, hH)
                   })
                 }
               })).observe({
                 type: "resource",
                 buffered: !0
               })
-            }(JV, xV, KJ, VV.config)
+            }(AH, LH, ZA, HH.config)
           })))
         };
         this.cancelInitialization = () => {
-          eV = !0, document.removeEventListener("prerenderingchange", xV)
-        }, document.prerendering ? document.addEventListener("prerenderingchange", xV, {
+          BH = !0, document.removeEventListener("prerenderingchange", LH)
+        }, document.prerendering ? document.addEventListener("prerenderingchange", LH, {
           once: !0
-        }) : xV()
+        }) : LH()
       }
       destroy() {
-        var VV;
-        null === (VV = this.cancelInitialization) || void 0 === VV || VV.call(this), this.cancelInitialization = void 0
+        var HH;
+        null === (HH = this.cancelInitialization) || void 0 === HH || HH.call(this), this.cancelInitialization = void 0
       }
     };
-    const uJ = "data-faro-user-action-name",
-      sJ = uJ.replace(/-name$/, "-timeout"),
-      SJ = 1e3;
+    const aA = "data-faro-user-action-name",
+      sA = aA.replace(/-name$/, "-timeout"),
+      JA = 1e3;
 
-    function IJ(VV) {
-      return `data-${(VV.startsWith("data-")?VV.slice(5):VV).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
+    function iA(HH) {
+      return `data-${(HH.startsWith("data-")?HH.slice(5):HH).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
     }
 
-    function dJ(VV) {
-      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
-        xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : fe;
-      if (void 0 === VV) return eV;
-      let JV = NaN;
+    function pA(HH) {
+      let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
+        LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : DB;
+      if (void 0 === HH) return BH;
+      let AH = NaN;
       try {
-        JV = "string" === typeof VV && "" === VV.trim() ? NaN : Number(VV)
-      } catch (YV) {}
-      return !Number.isFinite(JV) || JV <= 0 ? (xV(`initialActivityTimeout must be a finite number greater than zero; using ${eV} ms`), eV) : JV > 1e3 ? (xV(`initialActivityTimeout cannot exceed ${SJ} ms; clamping to the maximum`), SJ) : JV
+        AH = "string" === typeof HH && "" === HH.trim() ? NaN : Number(HH)
+      } catch (rH) {}
+      return !Number.isFinite(AH) || AH <= 0 ? (LH(`initialActivityTimeout must be a finite number greater than zero; using ${BH} ms`), BH) : AH > 1e3 ? (LH(`initialActivityTimeout cannot exceed ${JA} ms; clamping to the maximum`), JA) : AH
     }
 
-    function OJ(VV, eV, xV) {
-      return void 0 !== VV && window.clearTimeout(VV), window.setTimeout((() => {
-        eV()
-      }), xV)
+    function yA(HH, BH, LH) {
+      return void 0 !== HH && window.clearTimeout(HH), window.setTimeout((() => {
+        BH()
+      }), LH)
     }
 
-    function VY(VV) {
-      return VV.type === Bx
+    function Hr(HH) {
+      return HH.type === ML
     }
-    let eY, xY;
+    let Br, Lr;
 
-    function JY() {
-      return eY || (eY = new jx), xY || (xY = new MutationObserver(((VV, eV) => {
-        eY.notify({
+    function Ar() {
+      return Br || (Br = new xL), Lr || (Lr = new MutationObserver(((HH, BH) => {
+        Br.notify({
           type: "dom-mutation"
         })
-      })), xY.observe(document, {
+      })), Lr.observe(document, {
         attributes: !0,
         childList: !0,
         subtree: !0,
         characterData: !0
-      })), eY
+      })), Br
     }
-    const YY = "fetch",
-      UY = "xhr";
-    let yY, pY, QY, nY, wY = !1;
+    const rr = "fetch",
+      Sr = "xhr";
+    let hr, tr, zr, Cr, Er = !1;
 
-    function ZY() {
-      if (yY) return yY;
+    function Xr() {
+      if (hr) return hr;
 
-      function VV(VV) {
-        yY.notify({
-          type: Ex,
-          request: VV
+      function HH(HH) {
+        hr.notify({
+          type: WL,
+          request: HH
         })
       }
 
-      function eV(VV) {
-        yY.notify({
-          type: Bx,
-          request: VV
+      function BH(HH) {
+        hr.notify({
+          type: ML,
+          request: HH
         })
       }
-      return yY = new jx, wY || (! function(VV) {
+      return hr = new xL, Er || (! function(HH) {
         let {
-          onRequestEnd: eV,
-          onRequestStart: xV
-        } = VV;
-        QY || (QY = window.fetch);
+          onRequestEnd: BH,
+          onRequestStart: LH
+        } = HH;
+        zr || (zr = window.fetch);
         window.fetch = function() {
-          var VV, JV;
-          const YV = null !== (VV = SV(arguments[0])) && void 0 !== VV ? VV : "",
-            UV = sV(YV),
-            yV = (null !== (JV = arguments[1]) && void 0 !== JV ? JV : {}).method,
-            pV = Be();
-          return UV || xV({
-            url: YV,
-            method: yV,
-            requestId: pV,
-            apiType: YY
-          }), QY.apply(this, arguments).then((VV => (UV || eV({
-            url: YV,
-            method: yV,
-            requestId: pV,
-            apiType: YY
-          }), VV))).catch((VV => {
-            throw UV || eV({
-              url: YV,
-              method: yV,
-              requestId: pV,
-              apiType: YY
-            }), VV
+          var HH, AH;
+          const rH = null !== (HH = JH(arguments[0])) && void 0 !== HH ? HH : "",
+            SH = sH(rH),
+            hH = (null !== (AH = arguments[1]) && void 0 !== AH ? AH : {}).method,
+            tH = MB();
+          return SH || LH({
+            url: rH,
+            method: hH,
+            requestId: tH,
+            apiType: rr
+          }), zr.apply(this, arguments).then((HH => (SH || BH({
+            url: rH,
+            method: hH,
+            requestId: tH,
+            apiType: rr
+          }), HH))).catch((HH => {
+            throw SH || BH({
+              url: rH,
+              method: hH,
+              requestId: tH,
+              apiType: rr
+            }), HH
           }))
         }
       }({
-        onRequestStart: VV,
-        onRequestEnd: eV
-      }), function(VV) {
+        onRequestStart: HH,
+        onRequestEnd: BH
+      }), function(HH) {
         let {
-          onRequestStart: eV,
-          onRequestEnd: xV
-        } = VV;
-        pY || (pY = XMLHttpRequest.prototype.open);
+          onRequestStart: BH,
+          onRequestEnd: LH
+        } = HH;
+        tr || (tr = XMLHttpRequest.prototype.open);
         XMLHttpRequest.prototype.open = function() {
-          const VV = arguments[1],
-            JV = sV(VV),
-            YV = arguments[0],
-            UV = Be();
+          const HH = arguments[1],
+            AH = sH(HH),
+            rH = arguments[0],
+            SH = MB();
           this.addEventListener("loadstart", (function() {
-            JV || eV({
-              url: VV,
-              method: YV,
-              requestId: UV,
-              apiType: UY
+            AH || BH({
+              url: HH,
+              method: rH,
+              requestId: SH,
+              apiType: Sr
             })
           })), this.addEventListener("load", (function() {
-            JV || xV({
-              url: VV,
-              method: YV,
-              requestId: UV,
-              apiType: UY
+            AH || LH({
+              url: HH,
+              method: rH,
+              requestId: SH,
+              apiType: Sr
             })
           })), this.addEventListener("error", (function() {
-            JV || xV({
-              url: VV,
-              method: YV,
-              requestId: UV,
-              apiType: UY
+            AH || LH({
+              url: HH,
+              method: rH,
+              requestId: SH,
+              apiType: Sr
             })
           })), this.addEventListener("abort", (function() {
-            JV || xV({
-              url: VV,
-              method: YV,
-              requestId: UV,
-              apiType: UY
+            AH || LH({
+              url: HH,
+              method: rH,
+              requestId: SH,
+              apiType: Sr
             })
-          })), pY.apply(this, arguments)
+          })), tr.apply(this, arguments)
         }
       }({
-        onRequestStart: VV,
-        onRequestEnd: eV
-      }), wY = !0), yY
+        onRequestStart: HH,
+        onRequestEnd: BH
+      }), Er = !0), hr
     }
-    let vY, rY = !1;
-    let kY = function(VV) {
-      return VV[VV.Started = 0] = "Started", VV[VV.Halted = 1] = "Halted", VV[VV.Cancelled = 2] = "Cancelled", VV[VV.Ended = 3] = "Ended", VV
+    let Gr, Yr = !1;
+    let ur = function(HH) {
+      return HH[HH.Started = 0] = "Started", HH[HH.Halted = 1] = "Halted", HH[HH.Cancelled = 2] = "Cancelled", HH[HH.Ended = 3] = "Ended", HH
     }({});
-    var bY = class {
-      constructor(VV, eV) {
-        let xV = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
-        this.userAction = VV, this.logDebug = eV, this.initialActivityTimeout = xV, this.http = ZY(), this.dom = JY(), this.perf = (nY || (nY = new jx), rY || (vY = KJ.subscribe((VV => {
-          "resource" === VV.type && nY.notify({
+    var Qr = class {
+      constructor(HH, BH) {
+        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
+        this.userAction = HH, this.logDebug = BH, this.initialActivityTimeout = LH, this.http = Xr(), this.dom = Ar(), this.perf = (Cr || (Cr = new xL), Yr || (Gr = ZA.subscribe((HH => {
+          "resource" === HH.type && Cr.notify({
             type: "resource-entry"
           })
-        })), rY = !0), nY), this.isValid = !1, this.runningRequests = new Map
+        })), Yr = !0), Cr), this.isValid = !1, this.runningRequests = new Map
       }
       attach() {
-        this.allMonitorsSub = (new jx).merge(this.http, this.dom, this.perf).takeWhile((() => [kY.Started, kY.Halted].includes(this.userAction.getState()))).filter((VV => !!(this.userAction.getState() !== kY.Halted || VY(VV) && this.runningRequests.has(VV.request.requestId)))).subscribe((VV => {
-          (function(VV) {
-            return VV.type === Ex
-          })(VV) && this.runningRequests.set(VV.request.requestId, VV.request), VY(VV) && this.runningRequests.delete(VV.request.requestId), VY(VV) ? this.userAction.getState() === kY.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
-        })), this.stateSub = this.userAction.filter((VV => [kY.Ended, kY.Cancelled].includes(VV))).first().subscribe((() => this.cleanup())), this.startupTid = OJ(this.startupTid, (() => {
+        this.allMonitorsSub = (new xL).merge(this.http, this.dom, this.perf).takeWhile((() => [ur.Started, ur.Halted].includes(this.userAction.getState()))).filter((HH => !!(this.userAction.getState() !== ur.Halted || Hr(HH) && this.runningRequests.has(HH.request.requestId)))).subscribe((HH => {
+          (function(HH) {
+            return HH.type === WL
+          })(HH) && this.runningRequests.set(HH.request.requestId, HH.request), Hr(HH) && this.runningRequests.delete(HH.request.requestId), Hr(HH) ? this.userAction.getState() === ur.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
+        })), this.stateSub = this.userAction.filter((HH => [ur.Ended, ur.Cancelled].includes(HH))).first().subscribe((() => this.cleanup())), this.startupTid = yA(this.startupTid, (() => {
           this.logDebug("User action not sent; no DOM, resource, or HTTP activity:", this.userAction.name), this.cancelAction()
         }), this.initialActivityTimeout)
       }
       scheduleFollowUp() {
         this.clearTimer(this.followUpTid), this.followUpTid = window.setTimeout((() => {
-          this.userAction.getState() === kY.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
+          this.userAction.getState() === ur.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
         }), 100)
       }
       haltAction() {
-        this.userAction.getState() === kY.Started && (this.userAction.halt(), this.startHaltTimeout())
+        this.userAction.getState() === ur.Started && (this.userAction.halt(), this.startHaltTimeout())
       }
       startHaltTimeout() {
-        this.clearTimer(this.haltTid), this.haltTid = OJ(this.haltTid, (() => {
-          this.userAction.getState() === kY.Halted && this.endAction()
+        this.clearTimer(this.haltTid), this.haltTid = yA(this.haltTid, (() => {
+          this.userAction.getState() === ur.Halted && this.endAction()
         }), 1e4)
       }
       endAction() {
@@ -2614,183 +2614,183 @@ export const modules = {
         this.userAction.cancel(), this.cleanup()
       }
       cleanup() {
-        var VV, eV;
-        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (VV = this.allMonitorsSub) || void 0 === VV || VV.unsubscribe(), null === (eV = this.stateSub) || void 0 === eV || eV.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
+        var HH, BH;
+        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (HH = this.allMonitorsSub) || void 0 === HH || HH.unsubscribe(), null === (BH = this.stateSub) || void 0 === BH || BH.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
       }
-      clearTimer(VV) {
-        void 0 !== VV && window.clearTimeout(VV)
+      clearTimer(HH) {
+        void 0 !== HH && window.clearTimeout(HH)
       }
     };
 
-    function EY(VV) {
-      let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : fe;
-      var xV;
+    function Wr(HH) {
+      let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DB;
+      var LH;
       const {
-        api: JV,
-        config: YV,
-        internalLogger: UV
-      } = VV, yV = dJ(null === (xV = YV.userActionsInstrumentation) || void 0 === xV ? void 0 : xV.initialActivityTimeout, 100, eV);
+        api: AH,
+        config: rH,
+        internalLogger: SH
+      } = HH, hH = pA(null === (LH = rH.userActionsInstrumentation) || void 0 === LH ? void 0 : LH.initialActivityTimeout, 100, BH);
       return {
-        processUserEvent: function(VV) {
-          var eV, xV;
-          const UV = null !== (eV = null === (xV = YV.userActionsInstrumentation) || void 0 === xV ? void 0 : xV.dataAttributeName) && void 0 !== eV ? eV : uJ,
-            yV = VV.target;
-          if (!(yV instanceof Element)) return;
-          const pV = function(VV, eV) {
-              let xV = VV;
-              for (; xV;) {
-                if (xV.hasAttribute(eV)) return xV;
-                xV = xV.parentElement
+        processUserEvent: function(HH) {
+          var BH, LH;
+          const SH = null !== (BH = null === (LH = rH.userActionsInstrumentation) || void 0 === LH ? void 0 : LH.dataAttributeName) && void 0 !== BH ? BH : aA,
+            hH = HH.target;
+          if (!(hH instanceof Element)) return;
+          const tH = function(HH, BH) {
+              let LH = HH;
+              for (; LH;) {
+                if (LH.hasAttribute(BH)) return LH;
+                LH = LH.parentElement
               }
               return null
-            }(yV, IJ(UV)),
-            QV = function(VV, eV) {
-              if (!VV) return;
-              const xV = function(VV) {
-                  return IJ(VV).slice(5).replace(/-(.)/g, ((VV, eV) => eV.toUpperCase()))
-                }(eV),
-                JV = VV.dataset;
-              for (const YV in JV)
-                if (YV === xV) return JV[YV]
-            }(pV, UV);
-          if (!pV || !QV) return;
-          const nV = function(VV, eV) {
-            const xV = VV.getAttribute(function(VV) {
-              const eV = IJ(VV);
-              return eV.endsWith("-name") ? `${eV.slice(0,-5)}-timeout` : `${eV}-timeout`
-            }(eV));
-            return null === xV ? void 0 : Number(xV)
-          }(pV, UV);
-          JV.startUserAction(QV, {}, {
-            triggerName: VV.type,
-            initialActivityTimeout: nV
+            }(hH, iA(SH)),
+            zH = function(HH, BH) {
+              if (!HH) return;
+              const LH = function(HH) {
+                  return iA(HH).slice(5).replace(/-(.)/g, ((HH, BH) => BH.toUpperCase()))
+                }(BH),
+                AH = HH.dataset;
+              for (const rH in AH)
+                if (rH === LH) return AH[rH]
+            }(tH, SH);
+          if (!tH || !zH) return;
+          const CH = function(HH, BH) {
+            const LH = HH.getAttribute(function(HH) {
+              const BH = iA(HH);
+              return BH.endsWith("-name") ? `${BH.slice(0,-5)}-timeout` : `${BH}-timeout`
+            }(BH));
+            return null === LH ? void 0 : Number(LH)
+          }(tH, SH);
+          AH.startUserAction(zH, {}, {
+            triggerName: HH.type,
+            initialActivityTimeout: CH
           })
         },
-        processUserActionStarted: function(VV, xV) {
-          const JV = VV,
-            YV = dJ(xV, yV, eV);
-          new bY(JV, UV.debug, YV).attach()
+        processUserActionStarted: function(HH, LH) {
+          const AH = HH,
+            rH = pA(LH, hH, BH);
+          new Qr(AH, SH.debug, rH).attach()
         }
       }
     }
-    const BY = "user_action_start",
-      jY = {
+    const Mr = "user_action_start",
+      xr = {
         Normal: "normal",
         Critical: "critical"
       };
-    var qY = class {
+    var vr = class {
         constructor() {
           this.buffer = []
         }
-        addItem(VV) {
-          this.buffer.push(VV)
+        addItem(HH) {
+          this.buffer.push(HH)
         }
-        flushBuffer(VV) {
-          if (zV(VV))
-            for (const eV of this.buffer) VV(eV);
+        flushBuffer(HH) {
+          if (oH(HH))
+            for (const BH of this.buffer) HH(BH);
           this.buffer.length = 0
         }
         size() {
           return this.buffer.length
         }
       },
-      tY = class extends jx {
-        constructor(VV) {
+      Pr = class extends xL {
+        constructor(HH) {
           let {
-            name: eV,
-            parentId: xV,
-            trigger: JV,
-            transports: YV,
-            attributes: UV,
-            trackUserActionsExcludeItem: yV,
-            importance: pV = jY.Normal,
-            pushEvent: QV
-          } = VV;
-          super(), this.name = eV, this.attributes = UV, this.id = Be(), this.trigger = JV, this.parentId = null !== xV && void 0 !== xV ? xV : this.id, this.trackUserActionsExcludeItem = yV, this.importance = pV, this._pushEvent = QV, this._itemBuffer = new qY, this._transports = YV, this._state = 0, this._start()
+            name: BH,
+            parentId: LH,
+            trigger: AH,
+            transports: rH,
+            attributes: SH,
+            trackUserActionsExcludeItem: hH,
+            importance: tH = xr.Normal,
+            pushEvent: zH
+          } = HH;
+          super(), this.name = BH, this.attributes = SH, this.id = MB(), this.trigger = AH, this.parentId = null !== LH && void 0 !== LH ? LH : this.id, this.trackUserActionsExcludeItem = hH, this.importance = tH, this._pushEvent = zH, this._itemBuffer = new vr, this._transports = rH, this._state = 0, this._start()
         }
-        addItem(VV) {
-          return 0 === this._state && (this._itemBuffer.addItem(VV), !0)
+        addItem(HH) {
+          return 0 === this._state && (this._itemBuffer.addItem(HH), !0)
         }
         _start() {
-          this._state = 0, 0 === this._state && (this.startTime = ve(), this._startTimeMono = re())
+          this._state = 0, 0 === this._state && (this.startTime = GB(), this._startTimeMono = YB())
         }
         halt() {
           0 === this._state && (this._state = 1, this.notify(this._state))
         }
         cancel() {
-          0 === this._state && this._itemBuffer.flushBuffer((VV => {
-            this._transports.execute(VV)
+          0 === this._state && this._itemBuffer.flushBuffer((HH => {
+            this._transports.execute(HH)
           })), this._state = 2, this.notify(this._state)
         }
         end() {
           if (2 === this._state) return;
-          const VV = ve(),
-            eV = re() - this._startTimeMono;
-          this._state = 3, this._itemBuffer.flushBuffer((VV => {
-            if (function(VV, eV) {
-                return (null === eV || void 0 === eV ? void 0 : eV(VV)) || "measurement" === VV.type && "web-vitals" === VV.payload.type
-              }(VV, this.trackUserActionsExcludeItem)) return void this._transports.execute(VV);
-            const eV = de(de({}, VV), {}, {
-              payload: de(de({}, VV.payload), {}, {
+          const HH = GB(),
+            BH = YB() - this._startTimeMono;
+          this._state = 3, this._itemBuffer.flushBuffer((HH => {
+            if (function(HH, BH) {
+                return (null === BH || void 0 === BH ? void 0 : BH(HH)) || "measurement" === HH.type && "web-vitals" === HH.payload.type
+              }(HH, this.trackUserActionsExcludeItem)) return void this._transports.execute(HH);
+            const BH = pB(pB({}, HH), {}, {
+              payload: pB(pB({}, HH.payload), {}, {
                 action: {
                   parentId: this.id,
                   name: this.name
                 }
               })
             });
-            this._transports.execute(eV)
-          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", de({
+            this._transports.execute(BH)
+          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", pB({
             userActionName: this.name,
             userActionStartTime: this.startTime.toString(),
-            userActionEndTime: VV.toString(),
-            userActionDuration: eV.toString(),
+            userActionEndTime: HH.toString(),
+            userActionDuration: BH.toString(),
             userActionTrigger: this.trigger,
             userActionImportance: this.importance
-          }, Ce(this.attributes)), void 0, {
+          }, qB(this.attributes)), void 0, {
             timestampOverwriteMs: this.startTime,
-            customPayloadTransformer: VV => (VV.action = {
+            customPayloadTransformer: HH => (HH.action = {
               id: this.id,
               name: this.name
-            }, VV)
+            }, HH)
           })
         }
         getState() {
           return this._state
         }
       };
-    const FY = new jx;
+    const Tr = new xL;
 
-    function TY(VV, eV) {
-      return !!VV && (0 === (null === VV || void 0 === VV ? void 0 : VV.getState()) && (VV.addItem(eV), !0))
+    function Ur(HH, BH) {
+      return !!HH && (0 === (null === HH || void 0 === HH ? void 0 : HH.getState()) && (HH.addItem(BH), !0))
     }
-    var PY = class extends ex {
+    var Vr = class extends BL {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = xx
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = LL
         }
         initialize() {
           const {
-            processUserEvent: VV,
-            processUserActionStarted: eV
-          } = EY(bV, (VV => this.logWarn(VV)));
-          this._processUserEvent = VV, this._processKeydown = eV => {
-            [" ", "Enter"].includes(eV.key) && VV(eV)
-          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = FY.subscribe((VV => {
+            processUserEvent: HH,
+            processUserActionStarted: BH
+          } = Wr(QH, (HH => this.logWarn(HH)));
+          this._processUserEvent = HH, this._processKeydown = BH => {
+            [" ", "Enter"].includes(BH.key) && HH(BH)
+          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = Tr.subscribe((HH => {
             let {
-              type: xV,
-              userAction: JV,
-              initialActivityTimeout: YV
-            } = VV;
-            "user_action_start" === xV && eV(JV, YV)
+              type: LH,
+              userAction: AH,
+              initialActivityTimeout: rH
+            } = HH;
+            "user_action_start" === LH && BH(AH, rH)
           }))
         }
         destroy() {
-          var VV;
-          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (VV = this._userActionSub) || void 0 === VV || VV.unsubscribe()
+          var HH;
+          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (HH = this._userActionSub) || void 0 === HH || HH.unsubscribe()
         }
       },
-      AY = class extends ex {
+      Or = class extends BL {
         constructor() {
-          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = xx, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
+          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = LL, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
         }
         initialize() {
           document.addEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
@@ -2798,239 +2798,239 @@ export const modules = {
         destroy() {
           document.removeEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
         }
-        securitypolicyviolationHandler(VV) {
-          const eV = {
-            blockedURI: VV.blockedURI,
-            columnNumber: VV.columnNumber,
-            disposition: VV.disposition,
-            documentURI: VV.documentURI,
-            effectiveDirective: VV.effectiveDirective,
-            lineNumber: VV.lineNumber,
-            originalPolicy: VV.originalPolicy,
-            referrer: VV.referrer,
-            sample: VV.sample,
-            sourceFile: VV.sourceFile,
-            statusCode: VV.statusCode,
-            violatedDirective: VV.violatedDirective
+        securitypolicyviolationHandler(HH) {
+          const BH = {
+            blockedURI: HH.blockedURI,
+            columnNumber: HH.columnNumber,
+            disposition: HH.disposition,
+            documentURI: HH.documentURI,
+            effectiveDirective: HH.effectiveDirective,
+            lineNumber: HH.lineNumber,
+            originalPolicy: HH.originalPolicy,
+            referrer: HH.referrer,
+            sample: HH.sample,
+            sourceFile: HH.sourceFile,
+            statusCode: HH.statusCode,
+            violatedDirective: HH.violatedDirective
           };
-          this.api.pushEvent("securitypolicyviolation", Ce(eV))
+          this.api.pushEvent("securitypolicyviolation", qB(BH))
         }
       };
-    var NY = class extends jx {
-      constructor(VV, eV) {
-        var xV, JV, YV, UV;
-        super(), this._tracking = !1, this.eventsObservable = VV, this._options = {
-          inactivityMs: null !== (xV = null === eV || void 0 === eV ? void 0 : eV.inactivityMs) && void 0 !== xV ? xV : 100,
-          drainTimeoutMs: null !== (JV = null === eV || void 0 === eV ? void 0 : eV.drainTimeoutMs) && void 0 !== JV ? JV : 1e4,
-          isOperationStart: null !== (YV = null === eV || void 0 === eV ? void 0 : eV.isOperationStart) && void 0 !== YV ? YV : () => {},
-          isOperationEnd: null !== (UV = null === eV || void 0 === eV ? void 0 : eV.isOperationEnd) && void 0 !== UV ? UV : () => {}
+    var br = class extends xL {
+      constructor(HH, BH) {
+        var LH, AH, rH, SH;
+        super(), this._tracking = !1, this.eventsObservable = HH, this._options = {
+          inactivityMs: null !== (LH = null === BH || void 0 === BH ? void 0 : BH.inactivityMs) && void 0 !== LH ? LH : 100,
+          drainTimeoutMs: null !== (AH = null === BH || void 0 === BH ? void 0 : BH.drainTimeoutMs) && void 0 !== AH ? AH : 1e4,
+          isOperationStart: null !== (rH = null === BH || void 0 === BH ? void 0 : BH.isOperationStart) && void 0 !== rH ? rH : () => {},
+          isOperationEnd: null !== (SH = null === BH || void 0 === BH ? void 0 : BH.isOperationEnd) && void 0 !== SH ? SH : () => {}
         }, this._initialize()
       }
       _initialize() {
-        this.eventsObservable.filter((() => this._tracking)).subscribe((VV => {
-          var eV;
-          this._lastEventTime = re(), null === (eV = this._currentEvents) || void 0 === eV || eV.push(VV);
-          const xV = this._options.isOperationStart(VV);
-          var JV;
-          xV && (null === (JV = this._activeOperations) || void 0 === JV || JV.set(xV, !0));
-          const YV = this._options.isOperationEnd(VV);
-          var UV;
-          YV && (null === (UV = this._activeOperations) || void 0 === UV || UV.delete(YV));
+        this.eventsObservable.filter((() => this._tracking)).subscribe((HH => {
+          var BH;
+          this._lastEventTime = YB(), null === (BH = this._currentEvents) || void 0 === BH || BH.push(HH);
+          const LH = this._options.isOperationStart(HH);
+          var AH;
+          LH && (null === (AH = this._activeOperations) || void 0 === AH || AH.set(LH, !0));
+          const rH = this._options.isOperationEnd(HH);
+          var SH;
+          rH && (null === (SH = this._activeOperations) || void 0 === SH || SH.delete(rH));
           this._scheduleInactivityCheck()
         }))
       }
       startTracking() {
-        this._tracking || (this._tracking = !0, this._startTime = re(), this._lastEventTime = this._startTime, this.notify({
+        this._tracking || (this._tracking = !0, this._startTime = YB(), this._lastEventTime = this._startTime, this.notify({
           message: "tracking-started"
         }), this._currentEvents = [], this._activeOperations = new Map, this._scheduleInactivityCheck())
       }
       stopTracking() {
-        let VV;
-        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), VV = this.hasActiveOperations() ? re() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
+        let HH;
+        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), HH = this.hasActiveOperations() ? YB() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
           message: "tracking-ended",
           events: this._currentEvents,
-          duration: VV
+          duration: HH
         })
       }
       _scheduleInactivityCheck() {
-        this._inactivityTid = XY(this._inactivityTid, (() => {
+        this._inactivityTid = kr(this._inactivityTid, (() => {
           this.hasActiveOperations() ? this._startDrainTimeout() : this.stopTracking()
         }), this._options.inactivityMs)
       }
       _startDrainTimeout() {
-        this._drainTid = XY(this._drainTid, (() => {
+        this._drainTid = kr(this._drainTid, (() => {
           this.stopTracking()
         }), this._options.drainTimeoutMs)
       }
       hasActiveOperations() {
         return !!this._activeOperations && this._activeOperations.size > 0
       }
-      _clearTimer(VV) {
-        VV && clearTimeout(VV)
+      _clearTimer(HH) {
+        HH && clearTimeout(HH)
       }
     };
 
-    function XY(VV, eV, xV) {
-      return VV && clearTimeout(VV), VV = setTimeout((() => {
-        eV()
-      }), xV)
+    function kr(HH, BH, LH) {
+      return HH && clearTimeout(HH), HH = setTimeout((() => {
+        BH()
+      }), LH)
     }
-    let MY;
-    const zY = new Set,
-      GY = new Map;
-    let WY, RY, gY, DY, iY, CY, aY, oY, cY = !1;
-    var hY = class extends ex {
+    let mr;
+    const or = new Set,
+      Ir = new Map;
+    let fr, lr, Kr, cr, er, qr, gr, Nr, Rr = !1;
+    var jr = class extends BL {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = xx
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = LL
       }
       initialize() {
-        const VV = ZY(),
-          eV = JY(),
-          xV = function() {
-            function VV(VV, eV) {
-              const xV = null !== eV && void 0 !== eV ? eV : location.href;
-              xV !== RY && (WY.notify({
+        const HH = Xr(),
+          BH = Ar(),
+          LH = function() {
+            function HH(HH, BH) {
+              const LH = null !== BH && void 0 !== BH ? BH : location.href;
+              LH !== lr && (fr.notify({
                 type: "url-change",
-                from: RY,
-                to: xV,
-                trigger: VV
-              }), RY = xV)
+                from: lr,
+                to: LH,
+                trigger: HH
+              }), lr = LH)
             }
-            if (WY || (WY = new jx, RY = location.href), !cY)
+            if (fr || (fr = new xL, lr = location.href), !Rr)
               if ("navigation" in window && "NavigateEvent" in window) {
-                aY = eV => {
+                gr = BH => {
                   try {
-                    const xV = null === eV || void 0 === eV ? void 0 : eV.destination;
-                    (null === xV || void 0 === xV ? void 0 : xV.sameDocument) && "string" === typeof xV.url && VV("navigate", xV.url)
-                  } catch (xV) {}
-                }, window.navigation.addEventListener("navigate", aY);
-                const eV = window.NavigateEvent;
-                eV && eV.prototype && "function" === typeof eV.prototype.intercept && (oY || (oY = eV.prototype.intercept), eV.prototype.intercept = function(eV) {
+                    const LH = null === BH || void 0 === BH ? void 0 : BH.destination;
+                    (null === LH || void 0 === LH ? void 0 : LH.sameDocument) && "string" === typeof LH.url && HH("navigate", LH.url)
+                  } catch (LH) {}
+                }, window.navigation.addEventListener("navigate", gr);
+                const BH = window.NavigateEvent;
+                BH && BH.prototype && "function" === typeof BH.prototype.intercept && (Nr || (Nr = BH.prototype.intercept), BH.prototype.intercept = function(BH) {
                   try {
-                    const eV = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
-                      xV = null === this || void 0 === this ? void 0 : this.destination;
-                    eV && xV && !1 === xV.sameDocument && "string" === typeof xV.url && VV("navigate-intercept", xV.url)
-                  } catch (xV) {}
-                  return oY.call(this, eV)
-                }), cY = !0
-              } else gY || (gY = window.history.pushState), window.history.pushState = function() {
-                for (var eV = arguments.length, xV = new Array(eV), JV = 0; JV < eV; JV++) xV[JV] = arguments[JV];
-                const YV = gY.apply(window.history, xV);
-                return VV("pushState"), YV
-              }, DY || (DY = window.history.replaceState), window.history.replaceState = function() {
-                for (var eV = arguments.length, xV = new Array(eV), JV = 0; JV < eV; JV++) xV[JV] = arguments[JV];
-                const YV = DY.apply(window.history, xV);
-                return VV("replaceState"), YV
-              }, iY = () => VV("popstate"), CY = () => VV("hashchange"), window.addEventListener("popstate", iY), window.addEventListener("hashchange", CY), cY = !0;
-            return WY
+                    const BH = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
+                      LH = null === this || void 0 === this ? void 0 : this.destination;
+                    BH && LH && !1 === LH.sameDocument && "string" === typeof LH.url && HH("navigate-intercept", LH.url)
+                  } catch (LH) {}
+                  return Nr.call(this, BH)
+                }), Rr = !0
+              } else Kr || (Kr = window.history.pushState), window.history.pushState = function() {
+                for (var BH = arguments.length, LH = new Array(BH), AH = 0; AH < BH; AH++) LH[AH] = arguments[AH];
+                const rH = Kr.apply(window.history, LH);
+                return HH("pushState"), rH
+              }, cr || (cr = window.history.replaceState), window.history.replaceState = function() {
+                for (var BH = arguments.length, LH = new Array(BH), AH = 0; AH < BH; AH++) LH[AH] = arguments[AH];
+                const rH = cr.apply(window.history, LH);
+                return HH("replaceState"), rH
+              }, er = () => HH("popstate"), qr = () => HH("hashchange"), window.addEventListener("popstate", er), window.addEventListener("hashchange", qr), Rr = !0;
+            return fr
           }(),
-          JV = (YV = ["pointerdown", "keydown"], MY || (MY = new jx), YV.forEach((VV => {
-            if (!zY.has(VV)) {
-              const eV = () => {
-                MY.notify({
+          AH = (rH = ["pointerdown", "keydown"], mr || (mr = new xL), rH.forEach((HH => {
+            if (!or.has(HH)) {
+              const BH = () => {
+                mr.notify({
                   type: "interaction",
-                  name: VV
+                  name: HH
                 })
               };
-              window.addEventListener(VV, eV), zY.add(VV), GY.set(VV, eV)
+              window.addEventListener(HH, BH), or.add(HH), Ir.set(HH, BH)
             }
-          })), MY);
-        var YV;
-        const UV = new NY((new jx).merge(VV, eV, xV), {
+          })), mr);
+        var rH;
+        const SH = new br((new xL).merge(HH, BH, LH), {
           inactivityMs: 100,
           drainTimeoutMs: 1e4,
-          isOperationStart: VV => function(VV) {
-            return VV.type === Ex
-          }(VV) ? VV.request.requestId : void 0,
-          isOperationEnd: VV => function(VV) {
-            return VV.type === Bx
-          }(VV) ? VV.request.requestId : void 0
+          isOperationStart: HH => function(HH) {
+            return HH.type === WL
+          }(HH) ? HH.request.requestId : void 0,
+          isOperationEnd: HH => function(HH) {
+            return HH.type === ML
+          }(HH) ? HH.request.requestId : void 0
         });
-        UV.filter((VV => "tracking-ended" === VV.message)).subscribe((VV => {
-          var eV, xV;
-          if ((null === (eV = VV.events) || void 0 === eV ? void 0 : eV.some((VV => "url-change" === VV.type))) && (null === (xV = VV.events) || void 0 === xV ? void 0 : xV.some((VV => "dom-mutation" === VV.type)))) {
-            var JV;
-            const eV = null === (JV = VV.events) || void 0 === JV ? void 0 : JV.find((VV => "url-change" === VV.type));
-            bV.api.pushEvent("faro.navigation", {
-              fromUrl: null === eV || void 0 === eV ? void 0 : eV.from,
-              toUrl: null === eV || void 0 === eV ? void 0 : eV.to,
+        SH.filter((HH => "tracking-ended" === HH.message)).subscribe((HH => {
+          var BH, LH;
+          if ((null === (BH = HH.events) || void 0 === BH ? void 0 : BH.some((HH => "url-change" === HH.type))) && (null === (LH = HH.events) || void 0 === LH ? void 0 : LH.some((HH => "dom-mutation" === HH.type)))) {
+            var AH;
+            const BH = null === (AH = HH.events) || void 0 === AH ? void 0 : AH.find((HH => "url-change" === HH.type));
+            QH.api.pushEvent("faro.navigation", {
+              fromUrl: null === BH || void 0 === BH ? void 0 : BH.from,
+              toUrl: null === BH || void 0 === BH ? void 0 : BH.to,
               sameDocument: String(!0),
-              duration: VV.duration
+              duration: HH.duration
             })
           }
-        })), JV.subscribe((() => {
-          UV.startTracking()
+        })), AH.subscribe((() => {
+          SH.startTracking()
         }))
       }
     };
 
-    function lY() {
-      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const eV = [new PY, new Dx, new gJ, new Jx, new Cx, new hY];
-      return !1 !== VV.enablePerformanceInstrumentation && eV.unshift(new HJ), !1 !== VV.enableContentSecurityPolicyInstrumentation && eV.push(new AY), !1 !== VV.captureConsole && eV.push(new Rx), eV
+    function nr() {
+      let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const BH = [new Vr, new cL, new KA, new AL, new qL, new jr];
+      return !1 !== HH.enablePerformanceInstrumentation && BH.unshift(new dA), !1 !== HH.enableContentSecurityPolicyInstrumentation && BH.push(new Or), !1 !== HH.captureConsole && BH.push(new lL), BH
     }
-    var LY = xV(7246);
-    let fY, mY;
+    var Fr = LH(7240);
+    let Dr, wr;
 
-    function KY() {
-      const VV = "undefined" !== typeof navigator ? navigator.userAgent : "";
-      return fY === VV && mY || (mY = new LY.UAParser(VV).getResult(), fY = VV), mY
+    function Zr() {
+      const HH = "undefined" !== typeof navigator ? navigator.userAgent : "";
+      return Dr === HH && wr || (wr = new Fr.UAParser(HH).getResult(), Dr = HH), wr
     }
-    const HY = () => {
+    const dr = () => {
         const {
-          browser: VV,
-          os: eV,
-          ua: xV
-        } = KY(), {
-          name: JV,
-          version: YV
-        } = VV, {
-          name: UV,
-          version: yV
-        } = eV, pV = navigator.language, QV = xV.includes("Mobi"), nV = function() {
-          if (!JV || !YV) return;
+          browser: HH,
+          os: BH,
+          ua: LH
+        } = Zr(), {
+          name: AH,
+          version: rH
+        } = HH, {
+          name: SH,
+          version: hH
+        } = BH, tH = navigator.language, zH = LH.includes("Mobi"), CH = function() {
+          if (!AH || !rH) return;
           if ("userAgentData" in navigator && navigator.userAgentData) return navigator.userAgentData.brands
         }();
         return {
           browser: {
-            name: null !== JV && void 0 !== JV ? JV : ix,
-            version: null !== YV && void 0 !== YV ? YV : ix,
-            os: `${null!==UV&&void 0!==UV?UV:ix} ${null!==yV&&void 0!==yV?yV:ix}`,
-            userAgent: null !== xV && void 0 !== xV ? xV : ix,
-            language: null !== pV && void 0 !== pV ? pV : ix,
-            mobile: QV,
-            brands: null !== nV && void 0 !== nV ? nV : ix,
+            name: null !== AH && void 0 !== AH ? AH : eL,
+            version: null !== rH && void 0 !== rH ? rH : eL,
+            os: `${null!==SH&&void 0!==SH?SH:eL} ${null!==hH&&void 0!==hH?hH:eL}`,
+            userAgent: null !== LH && void 0 !== LH ? LH : eL,
+            language: null !== tH && void 0 !== tH ? tH : eL,
+            mobile: zH,
+            brands: null !== CH && void 0 !== CH ? CH : eL,
             viewportWidth: `${window.innerWidth}`,
             viewportHeight: `${window.innerHeight}`
           }
         }
       },
-      uY = () => {
+      ar = () => {
         const {
-          name: VV,
-          version: eV
-        } = KY().os;
-        if (!VV && !eV) return {};
-        const xV = {};
-        return VV && (xV.name = VV), eV && (xV.version = eV), {
-          os: xV
+          name: HH,
+          version: BH
+        } = Zr().os;
+        if (!HH && !BH) return {};
+        const LH = {};
+        return HH && (LH.name = HH), BH && (LH.version = BH), {
+          os: LH
         }
       };
 
-    function sY(VV) {
-      var eV, xV, JV;
+    function sr(HH) {
+      var BH, LH, AH;
       return {
-        id: null !== (eV = null === (xV = bV.config) || void 0 === xV || null === (xV = xV.sessionTracking) || void 0 === xV || null === (JV = xV.generateSessionId) || void 0 === JV ? void 0 : JV.call(xV)) && void 0 !== eV ? eV : Be(),
-        attributes: VV
+        id: null !== (BH = null === (LH = QH.config) || void 0 === LH || null === (LH = LH.sessionTracking) || void 0 === LH || null === (AH = LH.generateSessionId) || void 0 === AH ? void 0 : AH.call(LH)) && void 0 !== BH ? BH : MB(),
+        attributes: HH
       }
     }
-    const SY = () => ({
+    const Jr = () => ({
       sdk: {
         name: "faro-web",
-        version: xx
+        version: LL
       }
     });
-    var IY = class extends Vx {
+    var ir = class extends HL {
       isBatched() {
         return !1
       }
@@ -3038,10 +3038,10 @@ export const modules = {
         return []
       }
     };
-    let dY = function(VV) {
-      return VV.EXCEPTION = "exception", VV.LOG = "log", VV.MEASUREMENT = "measurement", VV.TRACE = "trace", VV.EVENT = "event", VV
+    let pr = function(HH) {
+      return HH.EXCEPTION = "exception", HH.LOG = "log", HH.MEASUREMENT = "measurement", HH.TRACE = "trace", HH.EVENT = "event", HH
     }({});
-    const OY = {
+    const yr = {
       exception: "exceptions",
       log: "logs",
       measurement: "measurements",
@@ -3049,356 +3049,356 @@ export const modules = {
       event: "events"
     };
 
-    function VU(VV, eV) {
-      var xV, JV;
-      if (void 0 === eV) return VV;
-      if (void 0 === VV) return {
-        resourceSpans: eV
+    function HS(HH, BH) {
+      var LH, AH;
+      if (void 0 === BH) return HH;
+      if (void 0 === HH) return {
+        resourceSpans: BH
       };
-      const YV = null === (xV = VV.resourceSpans) || void 0 === xV ? void 0 : xV[0];
-      if (void 0 === YV) return VV;
-      const UV = (null === YV || void 0 === YV ? void 0 : YV.scopeSpans) || [],
-        yV = (null === eV || void 0 === eV || null === (JV = eV[0]) || void 0 === JV ? void 0 : JV.scopeSpans) || [];
-      return de(de({}, VV), {}, {
-        resourceSpans: [de(de({}, YV), {}, {
-          scopeSpans: [...UV, ...yV]
+      const rH = null === (LH = HH.resourceSpans) || void 0 === LH ? void 0 : LH[0];
+      if (void 0 === rH) return HH;
+      const SH = (null === rH || void 0 === rH ? void 0 : rH.scopeSpans) || [],
+        hH = (null === BH || void 0 === BH || null === (AH = BH[0]) || void 0 === AH ? void 0 : AH.scopeSpans) || [];
+      return pB(pB({}, HH), {}, {
+        resourceSpans: [pB(pB({}, rH), {}, {
+          scopeSpans: [...SH, ...hH]
         })]
       })
     }
 
-    function eU(VV) {
-      let eV = {
+    function BS(HH) {
+      let BH = {
         meta: {}
       };
-      return void 0 !== VV[0] && (eV.meta = VV[0].meta), VV.forEach((VV => {
-        switch (VV.type) {
+      return void 0 !== HH[0] && (BH.meta = HH[0].meta), HH.forEach((HH => {
+        switch (HH.type) {
           case "log":
           case "event":
           case "exception":
           case "measurement": {
-            const xV = OY[VV.type],
-              JV = eV[xV];
-            eV = de(de({}, eV), {}, {
-              [xV]: void 0 === JV ? [VV.payload] : [...JV, VV.payload]
+            const LH = yr[HH.type],
+              AH = BH[LH];
+            BH = pB(pB({}, BH), {}, {
+              [LH]: void 0 === AH ? [HH.payload] : [...AH, HH.payload]
             });
             break
           }
           case "trace":
-            eV = de(de({}, eV), {}, {
-              traces: VU(eV.traces, VV.payload.resourceSpans)
+            BH = pB(pB({}, BH), {}, {
+              traces: HS(BH.traces, HH.payload.resourceSpans)
             })
         }
-      })), eV
+      })), BH
     }
-    var xU = class extends IY {
+    var LS = class extends ir {
       constructor() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        super(), this.options = VV, this.name = "@grafana/faro-web-sdk:transport-console", this.version = xx
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        super(), this.options = HH, this.name = "@grafana/faro-web-sdk:transport-console", this.version = LL
       }
-      send(VV) {
-        var eV;
-        return this.unpatchedConsole[null !== (eV = this.options.level) && void 0 !== eV ? eV : qx.DEBUG]("New event", eU([VV]))
+      send(HH) {
+        var BH;
+        return this.unpatchedConsole[null !== (BH = this.options.level) && void 0 !== BH ? BH : vL.DEBUG]("New event", BS([HH]))
       }
     };
-    const JU = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      YU = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      UU = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
-      yU = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      pU = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      QU = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const AS = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      rS = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      SS = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
+      hS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      tS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      zS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    function nU(VV) {
+    function CS(HH) {
       let {
-        weekday: eV,
-        day: xV,
-        month: JV,
-        year: YV,
-        hour: UV,
-        minute: yV,
-        second: pV
-      } = VV;
-      if (YV < 1900 || xV < 1 || UV > 23 || yV > 59 || pV > 60) return;
-      const QV = 60 === pV,
-        nV = new Date(0);
-      return nV.setUTCFullYear(YV, JV, xV), nV.setUTCHours(UV, yV, QV ? 59 : pV, 0), nV.getUTCDay() === eV && nV.getUTCDate() === xV && nV.getUTCMonth() === JV && nV.getUTCFullYear() === YV && nV.getUTCHours() === UV && nV.getUTCMinutes() === yV && nV.getUTCSeconds() === (QV ? 59 : pV) ? nV.getTime() + (QV ? 1e3 : 0) : void 0
+        weekday: BH,
+        day: LH,
+        month: AH,
+        year: rH,
+        hour: SH,
+        minute: hH,
+        second: tH
+      } = HH;
+      if (rH < 1900 || LH < 1 || SH > 23 || hH > 59 || tH > 60) return;
+      const zH = 60 === tH,
+        CH = new Date(0);
+      return CH.setUTCFullYear(rH, AH, LH), CH.setUTCHours(SH, hH, zH ? 59 : tH, 0), CH.getUTCDay() === BH && CH.getUTCDate() === LH && CH.getUTCMonth() === AH && CH.getUTCFullYear() === rH && CH.getUTCHours() === SH && CH.getUTCMinutes() === hH && CH.getUTCSeconds() === (zH ? 59 : tH) ? CH.getTime() + (zH ? 1e3 : 0) : void 0
     }
-    var wU = class {
-      constructor(VV) {
-        this.options = VV, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
+    var ES = class {
+      constructor(HH) {
+        this.options = HH, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
       }
       reserve() {
-        var VV = this;
+        var HH = this;
         if (this.admitted >= this.options.bufferSize) return;
         this.admitted++;
-        const eV = this.sequence++;
-        let xV = !1;
+        const BH = this.sequence++;
+        let LH = !1;
         return {
           deliver: function() {
-            var xV = mJ((function*(xV) {
-              const JV = VV.options.getNow();
-              let YV, UV = 0;
+            var LH = wA((function*(LH) {
+              const AH = HH.options.getNow();
+              let rH, SH = 0;
               for (;;) {
-                var yV, pV, QV;
-                const nV = VV.options.retry.maxAttempts - UV,
-                  wV = yield VV.runAttempt((() => xV(nV, VV.unloading)), UV > 0);
-                if (UV += wV.attemptsMade, "success" === wV.kind) return {
+                var hH, tH, zH;
+                const CH = HH.options.retry.maxAttempts - SH,
+                  EH = yield HH.runAttempt((() => LH(CH, HH.unloading)), SH > 0);
+                if (SH += EH.attemptsMade, "success" === EH.kind) return {
                   kind: "success",
-                  attempts: UV,
-                  elapsedTimeMs: VV.options.getNow() - JV
+                  attempts: SH,
+                  elapsedTimeMs: HH.options.getNow() - AH
                 };
-                if (YV = wV.failure, "terminal" === wV.kind || VV.unloading) return {
+                if (rH = EH.failure, "terminal" === EH.kind || HH.unloading) return {
                   kind: "terminal",
-                  attempts: UV,
-                  elapsedTimeMs: VV.options.getNow() - JV,
-                  failure: YV
+                  attempts: SH,
+                  elapsedTimeMs: HH.options.getNow() - AH,
+                  failure: rH
                 };
-                if (UV >= VV.options.retry.maxAttempts) return {
+                if (SH >= HH.options.retry.maxAttempts) return {
                   kind: "terminal",
-                  attempts: UV,
-                  elapsedTimeMs: VV.options.getNow() - JV,
-                  failure: YV,
+                  attempts: SH,
+                  elapsedTimeMs: HH.options.getNow() - AH,
+                  failure: rH,
                   reason: "retries-exhausted"
                 };
-                if (null != wV.retryAfterMs && wV.retryAfterMs > VV.options.retry.maxBackoffMs) return {
+                if (null != EH.retryAfterMs && EH.retryAfterMs > HH.options.retry.maxBackoffMs) return {
                   kind: "terminal",
-                  attempts: UV,
-                  elapsedTimeMs: VV.options.getNow() - JV,
-                  failure: YV,
+                  attempts: SH,
+                  elapsedTimeMs: HH.options.getNow() - AH,
+                  failure: rH,
                   reason: "retry-after-too-long"
                 };
-                const ZV = Math.min(null !== (yV = wV.retryAfterMs) && void 0 !== yV ? yV : VV.options.retry.initialBackoffMs * Math.pow(VV.options.retry.backoffMultiplier, UV - 1), VV.options.retry.maxBackoffMs);
-                if (null === (pV = (QV = VV.options).onRetry) || void 0 === pV || pV.call(QV, ZV, UV + 1), yield VV.waitForTurn(eV, ZV)) {
-                  const eV = VV.options.retry.maxAttempts - UV,
-                    YV = yield VV.runAttempt((() => xV(eV, !0)));
-                  return UV += YV.attemptsMade, {
-                    kind: "success" === YV.kind ? "success" : "terminal",
-                    attempts: UV,
-                    elapsedTimeMs: VV.options.getNow() - JV,
-                    failure: "success" === YV.kind ? void 0 : YV.failure
+                const XH = Math.min(null !== (hH = EH.retryAfterMs) && void 0 !== hH ? hH : HH.options.retry.initialBackoffMs * Math.pow(HH.options.retry.backoffMultiplier, SH - 1), HH.options.retry.maxBackoffMs);
+                if (null === (tH = (zH = HH.options).onRetry) || void 0 === tH || tH.call(zH, XH, SH + 1), yield HH.waitForTurn(BH, XH)) {
+                  const BH = HH.options.retry.maxAttempts - SH,
+                    rH = yield HH.runAttempt((() => LH(BH, !0)));
+                  return SH += rH.attemptsMade, {
+                    kind: "success" === rH.kind ? "success" : "terminal",
+                    attempts: SH,
+                    elapsedTimeMs: HH.options.getNow() - AH,
+                    failure: "success" === rH.kind ? void 0 : rH.failure
                   }
                 }
               }
             }));
-            return function(VV) {
-              return xV.apply(this, arguments)
+            return function(HH) {
+              return LH.apply(this, arguments)
             }
           }(),
           release: () => {
-            xV || (xV = !0, this.admitted--)
+            LH || (LH = !0, this.admitted--)
           }
         }
       }
       flush() {
         this.unloading = !0, this.nextSendAt = 0;
-        const VV = this.waiting.splice(0);
+        const HH = this.waiting.splice(0);
         null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0);
-        for (const eV of VV) eV.resolve(!0);
+        for (const BH of HH) BH.resolve(!0);
         this.runNextAttempt()
       }
       resume() {
         this.unloading = !1
       }
-      runAttempt(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return new Promise(((xV, JV) => {
+      runAttempt(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return new Promise(((LH, AH) => {
           this.attemptQueue.push({
             run: () => {
               this.inProgress++;
-              const eV = () => {
+              const BH = () => {
                 this.inProgress--, this.runNextAttempt()
               };
-              VV().then((VV => {
-                eV(), xV(VV)
-              }), (VV => {
-                eV(), JV(VV)
+              HH().then((HH => {
+                BH(), LH(HH)
+              }), (HH => {
+                BH(), AH(HH)
               }))
             },
-            isRedelivery: eV
+            isRedelivery: BH
           }), this.runNextAttempt()
         }))
       }
       runNextAttempt() {
         for (null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0); this.inProgress < this.options.concurrency && this.attemptQueue.length > 0;) {
-          const VV = this.options.getNow(),
-            eV = this.attemptQueue.findIndex((eV => {
+          const HH = this.options.getNow(),
+            BH = this.attemptQueue.findIndex((BH => {
               let {
-                isRedelivery: xV
-              } = eV;
-              return this.unloading || !xV || VV >= this.nextSendAt
+                isRedelivery: LH
+              } = BH;
+              return this.unloading || !LH || HH >= this.nextSendAt
             }));
-          if (eV < 0) return void(this.redeliveryTimer = setTimeout((() => {
+          if (BH < 0) return void(this.redeliveryTimer = setTimeout((() => {
             this.redeliveryTimer = void 0, this.runNextAttempt()
-          }), Math.max(0, this.nextSendAt - VV)));
-          const [xV] = this.attemptQueue.splice(eV, 1);
-          xV.isRedelivery && !this.unloading && (this.nextSendAt = VV + 1), xV.run()
+          }), Math.max(0, this.nextSendAt - HH)));
+          const [LH] = this.attemptQueue.splice(BH, 1);
+          LH.isRedelivery && !this.unloading && (this.nextSendAt = HH + 1), LH.run()
         }
       }
-      waitForTurn(VV, eV) {
-        const xV = Math.min(eV * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
-        return new Promise((eV => {
+      waitForTurn(HH, BH) {
+        const LH = Math.min(BH * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
+        return new Promise((BH => {
           this.waiting.push({
-            sequence: VV,
-            readyAt: this.options.getNow() + xV,
-            resolve: eV
-          }), this.waiting.sort(((VV, eV) => VV.readyAt === eV.readyAt ? VV.sequence - eV.sequence : VV.readyAt - eV.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
+            sequence: HH,
+            readyAt: this.options.getNow() + LH,
+            resolve: BH
+          }), this.waiting.sort(((HH, BH) => HH.readyAt === BH.readyAt ? HH.sequence - BH.sequence : HH.readyAt - BH.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
         }))
       }
       scheduleNext() {
         if (null != this.waitingTimer || 0 === this.waiting.length) return;
-        const VV = this.waiting[0],
-          eV = VV.readyAt;
+        const HH = this.waiting[0],
+          BH = HH.readyAt;
         this.waitingTimer = setTimeout((() => {
           this.waitingTimer = void 0;
-          const eV = this.waiting.indexOf(VV);
-          eV >= 0 && this.waiting.splice(eV, 1), VV.resolve(!1), this.scheduleNext()
-        }), Math.max(0, eV - this.options.getNow()))
+          const BH = this.waiting.indexOf(HH);
+          BH >= 0 && this.waiting.splice(BH, 1), HH.resolve(!1), this.scheduleNext()
+        }), Math.max(0, BH - this.options.getNow()))
       }
     };
 
-    function ZU(VV, eV) {
-      if (null == VV) return {};
-      var xV, JV, YV = function(VV, eV) {
-        if (null == VV) return {};
-        var xV = {};
-        for (var JV in VV)
-          if ({}.hasOwnProperty.call(VV, JV)) {
-            if (eV.includes(JV)) continue;
-            xV[JV] = VV[JV]
-          } return xV
-      }(VV, eV);
+    function XS(HH, BH) {
+      if (null == HH) return {};
+      var LH, AH, rH = function(HH, BH) {
+        if (null == HH) return {};
+        var LH = {};
+        for (var AH in HH)
+          if ({}.hasOwnProperty.call(HH, AH)) {
+            if (BH.includes(AH)) continue;
+            LH[AH] = HH[AH]
+          } return LH
+      }(HH, BH);
       if (Object.getOwnPropertySymbols) {
-        var UV = Object.getOwnPropertySymbols(VV);
-        for (JV = 0; JV < UV.length; JV++) xV = UV[JV], eV.includes(xV) || {}.propertyIsEnumerable.call(VV, xV) && (YV[xV] = VV[xV])
+        var SH = Object.getOwnPropertySymbols(HH);
+        for (AH = 0; AH < SH.length; AH++) LH = SH[AH], BH.includes(LH) || {}.propertyIsEnumerable.call(HH, LH) && (rH[LH] = HH[LH])
       }
-      return YV
+      return rH
     }
 
-    function vU(VV) {
+    function GS(HH) {
       const {
-        size: eV,
-        concurrency: xV
-      } = VV, JV = [];
-      let YV = 0;
-      const UV = () => {
-        if (YV < xV && JV.length) {
+        size: BH,
+        concurrency: LH
+      } = HH, AH = [];
+      let rH = 0;
+      const SH = () => {
+        if (rH < LH && AH.length) {
           const {
-            producer: VV,
-            resolve: eV,
-            reject: xV
-          } = JV.shift();
-          YV++, VV().then((VV => {
-            YV--, UV(), eV(VV)
-          }), (VV => {
-            YV--, UV(), xV(VV)
+            producer: HH,
+            resolve: BH,
+            reject: LH
+          } = AH.shift();
+          rH++, HH().then((HH => {
+            rH--, SH(), BH(HH)
+          }), (HH => {
+            rH--, SH(), LH(HH)
           }))
         }
       };
       return {
-        add: VV => {
-          if (JV.length + YV >= eV) throw new Error("Task buffer full");
-          return new Promise(((eV, xV) => {
-            JV.push({
-              producer: VV,
-              resolve: eV,
-              reject: xV
-            }), UV()
+        add: HH => {
+          if (AH.length + rH >= BH) throw new Error("Task buffer full");
+          return new Promise(((BH, LH) => {
+            AH.push({
+              producer: HH,
+              resolve: BH,
+              reject: LH
+            }), SH()
           }))
         }
       }
     }
-    const rU = ["headers"],
-      kU = ["keepalive", "signal"],
-      bU = new Set([408, 425, 429, 500, 502, 503, 504]),
-      EU = new Set([429, 503]);
-    let BU = 0,
-      jU = 0;
-    var qU = class extends Error {};
-    var tU = class extends IY {
-      constructor(VV) {
-        var eV, xV, JV, YV, UV, yV, pV, QV, nV, wV, ZV, vV, rV, kV, bV, EV, BV;
-        super(), this.options = VV, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = xx, this.pendingCustomSends = 0, this.getNow = null !== (eV = VV.getNow) && void 0 !== eV ? eV : Date.now, this.requestTimeoutMs = null !== (xV = VV.requestTimeoutMs) && void 0 !== xV ? xV : 1e4, this.compressionEnabled = null !== (JV = VV.requestCompression) && void 0 !== JV && JV && "undefined" !== typeof CompressionStream, VV.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new wU({
-          bufferSize: null !== (YV = VV.bufferSize) && void 0 !== YV ? YV : 30,
-          concurrency: null !== (UV = VV.concurrency) && void 0 !== UV ? UV : 5,
+    const YS = ["headers"],
+      uS = ["keepalive", "signal"],
+      QS = new Set([408, 425, 429, 500, 502, 503, 504]),
+      WS = new Set([429, 503]);
+    let MS = 0,
+      xS = 0;
+    var vS = class extends Error {};
+    var PS = class extends ir {
+      constructor(HH) {
+        var BH, LH, AH, rH, SH, hH, tH, zH, CH, EH, XH, GH, YH, uH, QH, WH, MH;
+        super(), this.options = HH, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = LL, this.pendingCustomSends = 0, this.getNow = null !== (BH = HH.getNow) && void 0 !== BH ? BH : Date.now, this.requestTimeoutMs = null !== (LH = HH.requestTimeoutMs) && void 0 !== LH ? LH : 1e4, this.compressionEnabled = null !== (AH = HH.requestCompression) && void 0 !== AH && AH && "undefined" !== typeof CompressionStream, HH.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new ES({
+          bufferSize: null !== (rH = HH.bufferSize) && void 0 !== rH ? rH : 30,
+          concurrency: null !== (SH = HH.concurrency) && void 0 !== SH ? SH : 5,
           retry: {
-            maxAttempts: null !== (yV = null === (pV = VV.retry) || void 0 === pV ? void 0 : pV.maxAttempts) && void 0 !== yV ? yV : 3,
-            initialBackoffMs: null !== (QV = null !== (nV = null === (wV = VV.retry) || void 0 === wV ? void 0 : wV.initialBackoffMs) && void 0 !== nV ? nV : VV.defaultRateLimitBackoffMs) && void 0 !== QV ? QV : 1e3,
-            maxBackoffMs: null !== (ZV = null === (vV = VV.retry) || void 0 === vV ? void 0 : vV.maxBackoffMs) && void 0 !== ZV ? ZV : 3e4,
-            backoffMultiplier: null !== (rV = null === (kV = VV.retry) || void 0 === kV ? void 0 : kV.backoffMultiplier) && void 0 !== rV ? rV : 2
+            maxAttempts: null !== (hH = null === (tH = HH.retry) || void 0 === tH ? void 0 : tH.maxAttempts) && void 0 !== hH ? hH : 3,
+            initialBackoffMs: null !== (zH = null !== (CH = null === (EH = HH.retry) || void 0 === EH ? void 0 : EH.initialBackoffMs) && void 0 !== CH ? CH : HH.defaultRateLimitBackoffMs) && void 0 !== zH ? zH : 1e3,
+            maxBackoffMs: null !== (XH = null === (GH = HH.retry) || void 0 === GH ? void 0 : GH.maxBackoffMs) && void 0 !== XH ? XH : 3e4,
+            backoffMultiplier: null !== (YH = null === (uH = HH.retry) || void 0 === uH ? void 0 : uH.backoffMultiplier) && void 0 !== YH ? YH : 2
           },
           getNow: this.getNow,
-          getRandom: null !== (bV = VV.getRandom) && void 0 !== bV ? bV : Math.random,
-          onRetry: (VV, eV) => {
-            this.logDebug(`Retrying failed request after ${VV}ms. Attempt ${eV}.`)
+          getRandom: null !== (QH = HH.getRandom) && void 0 !== QH ? QH : Math.random,
+          onRetry: (HH, BH) => {
+            this.logDebug(`Retrying failed request after ${HH}ms. Attempt ${BH}.`)
           }
-        }), this.customPromiseBuffer = vU({
-          size: null !== (EV = VV.bufferSize) && void 0 !== EV ? EV : 30,
-          concurrency: null !== (BV = VV.concurrency) && void 0 !== BV ? BV : 5
+        }), this.customPromiseBuffer = GS({
+          size: null !== (WH = HH.bufferSize) && void 0 !== WH ? WH : 30,
+          concurrency: null !== (MH = HH.concurrency) && void 0 !== MH ? MH : 5
         }), this.defaultPromiseBuffer = {
-          add: VV => {
-            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(VV);
-            const eV = this.deliveryQueue.reserve();
-            if (!eV) throw new Error("Task buffer full");
-            return this.runBufferedTask(eV, VV)
+          add: HH => {
+            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(HH);
+            const BH = this.deliveryQueue.reserve();
+            if (!BH) throw new Error("Task buffer full");
+            return this.runBufferedTask(BH, HH)
           }
-        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (VV => {
-          VV.persisted && this.deliveryQueue.resume()
+        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (HH => {
+          HH.persisted && this.deliveryQueue.resume()
         })))
       }
-      send(VV) {
-        var eV = this;
-        return mJ((function*() {
-          const xV = eV.promiseBuffer;
-          if (xV !== eV.defaultPromiseBuffer || xV.add !== eV.defaultBufferAdd) {
-            eV.pendingCustomSends++;
+      send(HH) {
+        var BH = this;
+        return wA((function*() {
+          const LH = BH.promiseBuffer;
+          if (LH !== BH.defaultPromiseBuffer || LH.add !== BH.defaultBufferAdd) {
+            BH.pendingCustomSends++;
             try {
-              yield xV.add((() => eV.deliver(VV)))
-            } catch (JV) {
-              eV.logError("Permanent delivery failure", {
-                error: JV,
+              yield LH.add((() => BH.deliver(HH)))
+            } catch (AH) {
+              BH.logError("Permanent delivery failure", {
+                error: AH,
                 attempts: 0,
                 elapsedTimeMs: 0
               })
             } finally {
-              eV.pendingCustomSends--
+              BH.pendingCustomSends--
             }
-          } else yield eV.deliver(VV)
+          } else yield BH.deliver(HH)
         }))()
       }
-      runBufferedTask(VV, eV) {
-        return mJ((function*() {
-          let xV;
+      runBufferedTask(HH, BH) {
+        return wA((function*() {
+          let LH;
           try {
-            return yield VV.deliver(mJ((function*() {
-              return xV = yield eV(), {
+            return yield HH.deliver(wA((function*() {
+              return LH = yield BH(), {
                 kind: "success",
                 attemptsMade: 1
               }
-            }))), xV
+            }))), LH
           } finally {
-            VV.release()
+            HH.release()
           }
         }))()
       }
-      deliver(VV) {
-        var eV = this;
-        return mJ((function*() {
-          const xV = eV.deliveryQueue.reserve();
-          if (xV) try {
-            const JV = yield eV.prepareRequest(VV), YV = yield xV.deliver(((VV, xV) => eV.performAttempt(JV, VV, xV)));
-            "terminal" === YV.kind && eV.logError("retries-exhausted" === YV.reason ? "Delivery retries exhausted" : "Permanent delivery failure", we(we({}, YV.failure), {}, {
-              reason: YV.reason,
-              attempts: YV.attempts,
-              elapsedTimeMs: YV.elapsedTimeMs
+      deliver(HH) {
+        var BH = this;
+        return wA((function*() {
+          const LH = BH.deliveryQueue.reserve();
+          if (LH) try {
+            const AH = yield BH.prepareRequest(HH), rH = yield LH.deliver(((HH, LH) => BH.performAttempt(AH, HH, LH)));
+            "terminal" === rH.kind && BH.logError("retries-exhausted" === rH.reason ? "Delivery retries exhausted" : "Permanent delivery failure", EB(EB({}, rH.failure), {}, {
+              reason: rH.reason,
+              attempts: rH.attempts,
+              elapsedTimeMs: rH.elapsedTimeMs
             }))
-          } catch (JV) {
-            eV.logError("Permanent delivery failure", {
-              error: JV,
+          } catch (AH) {
+            BH.logError("Permanent delivery failure", {
+              error: AH,
               attempts: 0,
               elapsedTimeMs: 0
             })
           } finally {
-            xV.release()
-          } else eV.logError("Permanent delivery failure", {
+            LH.release()
+          } else BH.logError("Permanent delivery failure", {
             error: "Reliable delivery queue is full",
             attempts: 0,
             elapsedTimeMs: 0
@@ -3406,477 +3406,477 @@ export const modules = {
         }))()
       }
       getIgnoreUrls() {
-        var VV;
-        return [this.options.url].concat(null !== (VV = this.config.ignoreUrls) && void 0 !== VV ? VV : [])
+        var HH;
+        return [this.options.url].concat(null !== (HH = this.config.ignoreUrls) && void 0 !== HH ? HH : [])
       }
       isBatched() {
         return !0
       }
-      prepareRequest(VV) {
-        var eV = this;
-        return mJ((function*() {
-          var xV, JV;
-          const YV = eU(VV),
-            UV = null === (xV = YV.meta.session) || void 0 === xV ? void 0 : xV.id,
-            yV = JSON.stringify(YV),
-            pV = null !== (JV = eV.options.requestOptions) && void 0 !== JV ? JV : {},
+      prepareRequest(HH) {
+        var BH = this;
+        return wA((function*() {
+          var LH, AH;
+          const rH = BS(HH),
+            SH = null === (LH = rH.meta.session) || void 0 === LH ? void 0 : LH.id,
+            hH = JSON.stringify(rH),
+            tH = null !== (AH = BH.options.requestOptions) && void 0 !== AH ? AH : {},
             {
-              headers: QV = {}
-            } = pV,
-            nV = ZU(pV, rU),
+              headers: zH = {}
+            } = tH,
+            CH = XS(tH, YS),
             {
-              keepalive: wV,
-              signal: ZV
-            } = nV,
-            vV = ZU(nV, kU),
-            rV = {};
-          for (const [VV, eV] of Object.entries(QV)) rV[VV] = "function" === typeof eV ? yield eV(): eV;
-          let kV = yV,
-            bV = function(VV) {
-              return "undefined" === typeof TextEncoder ? VV.length : (new TextEncoder).encode(VV).byteLength
-            }(yV);
-          const EV = {};
-          return eV.compressionEnabled && (kV = yield eV.compress(yV), bV = kV.size, EV["Content-Encoding"] = "gzip"), {
-            bodySize: bV,
-            sessionId: UV,
-            requestInit: we({
+              keepalive: EH,
+              signal: XH
+            } = CH,
+            GH = XS(CH, uS),
+            YH = {};
+          for (const [HH, BH] of Object.entries(zH)) YH[HH] = "function" === typeof BH ? yield BH(): BH;
+          let uH = hH,
+            QH = function(HH) {
+              return "undefined" === typeof TextEncoder ? HH.length : (new TextEncoder).encode(HH).byteLength
+            }(hH);
+          const WH = {};
+          return BH.compressionEnabled && (uH = yield BH.compress(hH), QH = uH.size, WH["Content-Encoding"] = "gzip"), {
+            bodySize: QH,
+            sessionId: SH,
+            requestInit: EB({
               method: "POST",
-              headers: we(we(we(we(we({
+              headers: EB(EB(EB(EB(EB({
                 "Content-Type": "application/json"
-              }, EV), rV), eV.options.apiKey ? {
-                "x-api-key": eV.options.apiKey
-              } : {}), UV ? {
-                "x-faro-session-id": UV
+              }, WH), YH), BH.options.apiKey ? {
+                "x-api-key": BH.options.apiKey
+              } : {}), SH ? {
+                "x-faro-session-id": SH
               } : {}), {}, {
-                "Idempotency-Key": Be(20)
+                "Idempotency-Key": MB(20)
               }),
-              body: kV
-            }, vV)
+              body: uH
+            }, GH)
           }
         }))()
       }
-      performAttempt(VV, eV, xV) {
-        var JV = this;
-        return mJ((function*() {
-          var YV;
-          const UV = null === (YV = JV.options.requestOptions) || void 0 === YV ? void 0 : YV.signal;
-          if (null === UV || void 0 === UV ? void 0 : UV.aborted) return {
+      performAttempt(HH, BH, LH) {
+        var AH = this;
+        return wA((function*() {
+          var rH;
+          const SH = null === (rH = AH.options.requestOptions) || void 0 === rH ? void 0 : rH.signal;
+          if (null === SH || void 0 === SH ? void 0 : SH.aborted) return {
             kind: "terminal",
             failure: {
-              error: UV.reason
+              error: SH.reason
             },
             attemptsMade: 0
           };
-          let yV = 0;
+          let hH = 0;
           try {
-            var pV;
-            const YV = yield JV.fetchWithKeepaliveFallback(VV.requestInit, VV.bodySize, !!xV || (null === (pV = JV.options.requestOptions) || void 0 === pV ? void 0 : pV.keepalive), eV, (() => yV++));
-            if (JV.handleResponse(YV, VV.sessionId), YV.status >= 200 && YV.status < 300) return {
+            var tH;
+            const rH = yield AH.fetchWithKeepaliveFallback(HH.requestInit, HH.bodySize, !!LH || (null === (tH = AH.options.requestOptions) || void 0 === tH ? void 0 : tH.keepalive), BH, (() => hH++));
+            if (AH.handleResponse(rH, HH.sessionId), rH.status >= 200 && rH.status < 300) return {
               kind: "success",
-              attemptsMade: yV
+              attemptsMade: hH
             };
-            const UV = {
-              status: YV.status
+            const SH = {
+              status: rH.status
             };
-            return !bU.has(YV.status) || xV ? {
+            return !QS.has(rH.status) || LH ? {
               kind: "terminal",
-              failure: UV,
-              attemptsMade: yV
+              failure: SH,
+              attemptsMade: hH
             } : {
               kind: "retry",
-              failure: UV,
-              attemptsMade: yV,
-              retryAfterMs: EU.has(YV.status) ? JV.getRetryAfterDelayMs(YV) : void 0
+              failure: SH,
+              attemptsMade: hH,
+              retryAfterMs: WS.has(rH.status) ? AH.getRetryAfterDelayMs(rH) : void 0
             }
-          } catch (QV) {
-            const VV = {
-              error: QV
+          } catch (zH) {
+            const HH = {
+              error: zH
             };
-            return (null === UV || void 0 === UV ? void 0 : UV.aborted) || !JV.isFetchNetworkError(QV) || xV ? {
+            return (null === SH || void 0 === SH ? void 0 : SH.aborted) || !AH.isFetchNetworkError(zH) || LH ? {
               kind: "terminal",
-              failure: VV,
-              attemptsMade: yV
+              failure: HH,
+              attemptsMade: hH
             } : {
               kind: "retry",
-              failure: VV,
-              attemptsMade: yV
+              failure: HH,
+              attemptsMade: hH
             }
           }
         }))()
       }
-      fetchWithKeepaliveFallback(VV, eV, xV, JV, YV) {
-        var UV = this;
-        return mJ((function*() {
-          const yV = UV.getNow(),
-            pV = UV.reserveKeepalive(eV, xV);
+      fetchWithKeepaliveFallback(HH, BH, LH, AH, rH) {
+        var SH = this;
+        return wA((function*() {
+          const hH = SH.getNow(),
+            tH = SH.reserveKeepalive(BH, LH);
           try {
-            return yield UV.fetchWithTimeout(we(we({}, VV), {}, {
-              keepalive: pV.keepalive
-            }), UV.requestTimeoutMs, YV)
-          } catch (nV) {
-            var QV;
-            if (pV.keepalive && JV > 1 && UV.isFetchNetworkError(nV) && !(nV instanceof qU) && !(null === (QV = UV.options.requestOptions) || void 0 === QV || null === (QV = QV.signal) || void 0 === QV ? void 0 : QV.aborted)) {
-              UV.logDebug("Retrying failed keepalive request with keepalive disabled.");
-              const eV = UV.requestTimeoutMs - (UV.getNow() - yV);
-              return UV.fetchWithTimeout(we(we({}, VV), {}, {
+            return yield SH.fetchWithTimeout(EB(EB({}, HH), {}, {
+              keepalive: tH.keepalive
+            }), SH.requestTimeoutMs, rH)
+          } catch (CH) {
+            var zH;
+            if (tH.keepalive && AH > 1 && SH.isFetchNetworkError(CH) && !(CH instanceof vS) && !(null === (zH = SH.options.requestOptions) || void 0 === zH || null === (zH = zH.signal) || void 0 === zH ? void 0 : zH.aborted)) {
+              SH.logDebug("Retrying failed keepalive request with keepalive disabled.");
+              const BH = SH.requestTimeoutMs - (SH.getNow() - hH);
+              return SH.fetchWithTimeout(EB(EB({}, HH), {}, {
                 keepalive: !1
-              }), eV, YV)
+              }), BH, rH)
             }
-            throw nV
+            throw CH
           } finally {
-            pV.release()
+            tH.release()
           }
         }))()
       }
-      fetchWithTimeout(VV, eV, xV) {
-        var JV = this;
-        return mJ((function*() {
-          var YV;
-          const UV = null === (YV = JV.options.requestOptions) || void 0 === YV ? void 0 : YV.signal;
-          if (JV.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return xV(), fetch(JV.options.url, we(we({}, VV), {}, {
-            signal: UV
+      fetchWithTimeout(HH, BH, LH) {
+        var AH = this;
+        return wA((function*() {
+          var rH;
+          const SH = null === (rH = AH.options.requestOptions) || void 0 === rH ? void 0 : rH.signal;
+          if (AH.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return LH(), fetch(AH.options.url, EB(EB({}, HH), {}, {
+            signal: SH
           }));
-          if (eV <= 0) throw new qU("Request timed out");
-          const yV = new AbortController,
-            pV = () => yV.abort(null === UV || void 0 === UV ? void 0 : UV.reason);
-          null === UV || void 0 === UV || UV.addEventListener("abort", pV, {
+          if (BH <= 0) throw new vS("Request timed out");
+          const hH = new AbortController,
+            tH = () => hH.abort(null === SH || void 0 === SH ? void 0 : SH.reason);
+          null === SH || void 0 === SH || SH.addEventListener("abort", tH, {
             once: !0
           });
-          let QV = !1;
-          const nV = setTimeout((() => {
-            QV = !0, yV.abort()
-          }), eV);
+          let zH = !1;
+          const CH = setTimeout((() => {
+            zH = !0, hH.abort()
+          }), BH);
           try {
-            return xV(), yield fetch(JV.options.url, we(we({}, VV), {}, {
-              signal: yV.signal
+            return LH(), yield fetch(AH.options.url, EB(EB({}, HH), {}, {
+              signal: hH.signal
             }))
-          } catch (wV) {
-            if (QV && !(null === UV || void 0 === UV ? void 0 : UV.aborted)) throw new qU("Request timed out");
-            throw wV
+          } catch (EH) {
+            if (zH && !(null === SH || void 0 === SH ? void 0 : SH.aborted)) throw new vS("Request timed out");
+            throw EH
           } finally {
-            clearTimeout(nV), null === UV || void 0 === UV || UV.removeEventListener("abort", pV)
+            clearTimeout(CH), null === SH || void 0 === SH || SH.removeEventListener("abort", tH)
           }
         }))()
       }
-      getRetryAfterDelayMs(VV) {
-        const eV = VV.headers.get("Retry-After");
-        if (!eV) return;
-        if (/^\d+$/.test(eV)) {
-          const VV = 1e3 * Number(eV);
-          return Number.isFinite(VV) ? VV : Number.POSITIVE_INFINITY
+      getRetryAfterDelayMs(HH) {
+        const BH = HH.headers.get("Retry-After");
+        if (!BH) return;
+        if (/^\d+$/.test(BH)) {
+          const HH = 1e3 * Number(BH);
+          return Number.isFinite(HH) ? HH : Number.POSITIVE_INFINITY
         }
-        const xV = this.getNow(),
-          JV = function(VV, eV) {
-            const xV = JU.exec(VV);
-            if (xV) {
-              const [, VV, eV, JV, YV, UV, yV, pV] = xV;
-              return nU({
-                weekday: yU.indexOf(VV),
-                day: Number(eV),
-                month: QU.indexOf(JV),
-                year: Number(YV),
-                hour: Number(UV),
-                minute: Number(yV),
-                second: Number(pV)
+        const LH = this.getNow(),
+          AH = function(HH, BH) {
+            const LH = AS.exec(HH);
+            if (LH) {
+              const [, HH, BH, AH, rH, SH, hH, tH] = LH;
+              return CS({
+                weekday: hS.indexOf(HH),
+                day: Number(BH),
+                month: zS.indexOf(AH),
+                year: Number(rH),
+                hour: Number(SH),
+                minute: Number(hH),
+                second: Number(tH)
               })
             }
-            const JV = YU.exec(VV);
-            if (JV) {
-              const [, VV, xV, yV, pV, QV, nV, wV] = JV, ZV = new Date(eV);
-              if (Number.isNaN(ZV.getTime())) return;
-              const vV = ZV.getUTCFullYear();
-              let rV = 100 * Math.floor(vV / 100) + Number(pV);
-              rV < vV && (rV += 100);
-              const kV = QU.indexOf(yV),
-                bV = {
-                  month: kV,
-                  day: Number(xV),
-                  hour: Number(QV),
-                  minute: Number(nV),
-                  second: Number(wV),
+            const AH = rS.exec(HH);
+            if (AH) {
+              const [, HH, LH, hH, tH, zH, CH, EH] = AH, XH = new Date(BH);
+              if (Number.isNaN(XH.getTime())) return;
+              const GH = XH.getUTCFullYear();
+              let YH = 100 * Math.floor(GH / 100) + Number(tH);
+              YH < GH && (YH += 100);
+              const uH = zS.indexOf(hH),
+                QH = {
+                  month: uH,
+                  day: Number(LH),
+                  hour: Number(zH),
+                  minute: Number(CH),
+                  second: Number(EH),
                   millisecond: 0
                 },
-                EV = {
-                  month: ZV.getUTCMonth(),
-                  day: ZV.getUTCDate(),
-                  hour: ZV.getUTCHours(),
-                  minute: ZV.getUTCMinutes(),
-                  second: ZV.getUTCSeconds(),
-                  millisecond: ZV.getUTCMilliseconds()
+                WH = {
+                  month: XH.getUTCMonth(),
+                  day: XH.getUTCDate(),
+                  hour: XH.getUTCHours(),
+                  minute: XH.getUTCMinutes(),
+                  second: XH.getUTCSeconds(),
+                  millisecond: XH.getUTCMilliseconds()
                 };
-              return (rV > vV + 50 || rV === vV + 50 && (UV = EV, ((YV = bV).month - UV.month || YV.day - UV.day || YV.hour - UV.hour || YV.minute - UV.minute || YV.second - UV.second || YV.millisecond - UV.millisecond) > 0)) && (rV -= 100), nU({
-                weekday: pU.indexOf(VV),
-                day: Number(xV),
-                month: kV,
-                year: rV,
-                hour: Number(QV),
-                minute: Number(nV),
-                second: Number(wV)
+              return (YH > GH + 50 || YH === GH + 50 && (SH = WH, ((rH = QH).month - SH.month || rH.day - SH.day || rH.hour - SH.hour || rH.minute - SH.minute || rH.second - SH.second || rH.millisecond - SH.millisecond) > 0)) && (YH -= 100), CS({
+                weekday: tS.indexOf(HH),
+                day: Number(LH),
+                month: uH,
+                year: YH,
+                hour: Number(zH),
+                minute: Number(CH),
+                second: Number(EH)
               })
             }
-            var YV, UV;
-            const yV = UU.exec(VV);
-            if (!yV) return;
-            const [, pV, QV, nV, wV, ZV, vV, rV, kV] = yV;
-            return nU({
-              weekday: yU.indexOf(pV),
-              day: Number(null !== nV && void 0 !== nV ? nV : wV),
-              month: QU.indexOf(QV),
-              year: Number(kV),
-              hour: Number(ZV),
-              minute: Number(vV),
-              second: Number(rV)
+            var rH, SH;
+            const hH = SS.exec(HH);
+            if (!hH) return;
+            const [, tH, zH, CH, EH, XH, GH, YH, uH] = hH;
+            return CS({
+              weekday: hS.indexOf(tH),
+              day: Number(null !== CH && void 0 !== CH ? CH : EH),
+              month: zS.indexOf(zH),
+              year: Number(uH),
+              hour: Number(XH),
+              minute: Number(GH),
+              second: Number(YH)
             })
-          }(eV, xV);
-        return null == JV ? void 0 : Math.max(0, JV - xV)
+          }(BH, LH);
+        return null == AH ? void 0 : Math.max(0, AH - LH)
       }
-      reserveKeepalive(VV, eV) {
-        if (!1 === eV || VV > 6e4 || BU + VV > 6e4 || jU >= 9) return {
+      reserveKeepalive(HH, BH) {
+        if (!1 === BH || HH > 6e4 || MS + HH > 6e4 || xS >= 9) return {
           keepalive: !1,
-          release: fe
+          release: DB
         };
-        BU += VV, jU++;
-        let xV = !1;
+        MS += HH, xS++;
+        let LH = !1;
         return {
           keepalive: !0,
           release: () => {
-            xV || (xV = !0, BU -= VV, jU--)
+            LH || (LH = !0, MS -= HH, xS--)
           }
         }
       }
-      handleResponse(VV, eV) {
-        202 === VV.status && "invalid" === VV.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), eV), VV.text().catch(fe)
+      handleResponse(HH, BH) {
+        202 === HH.status && "invalid" === HH.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), BH), HH.text().catch(DB)
       }
-      isFetchNetworkError(VV) {
-        return VV instanceof TypeError || VV instanceof qU || VV instanceof DOMException && "AbortError" === VV.name
+      isFetchNetworkError(HH) {
+        return HH instanceof TypeError || HH instanceof vS || HH instanceof DOMException && "AbortError" === HH.name
       }
-      compress(VV) {
-        return mJ((function*() {
-          const eV = [],
-            xV = new ReadableStream({
-              start(eV) {
-                eV.enqueue((new TextEncoder).encode(VV)), eV.close()
+      compress(HH) {
+        return wA((function*() {
+          const BH = [],
+            LH = new ReadableStream({
+              start(BH) {
+                BH.enqueue((new TextEncoder).encode(HH)), BH.close()
               }
             }).pipeThrough(new CompressionStream("gzip")).getReader();
           for (;;) {
             const {
-              done: VV,
-              value: JV
-            } = yield xV.read();
-            if (VV) return new Blob(eV);
-            eV.push(JV)
+              done: HH,
+              value: AH
+            } = yield LH.read();
+            if (HH) return new Blob(BH);
+            BH.push(AH)
           }
         }))()
       }
-      extendFaroSession(VV, eV, xV) {
-        var JV, YV;
-        const UV = VV.sessionTracking;
-        if (!(null === UV || void 0 === UV ? void 0 : UV.enabled)) return void eV("Session expired.");
+      extendFaroSession(HH, BH, LH) {
+        var AH, rH;
+        const SH = HH.sessionTracking;
+        if (!(null === SH || void 0 === SH ? void 0 : SH.enabled)) return void BH("Session expired.");
         const {
-          fetchUserSession: yV,
-          storeUserSession: pV
-        } = Le(UV), QV = null === (JV = this.metas.value.session) || void 0 === JV ? void 0 : JV.id, nV = null === (YV = yV()) || void 0 === YV ? void 0 : YV.sessionId;
-        xV && xV === QV && xV === nV ? (Ge({
-          fetchUserSession: yV,
-          storeUserSession: pV
+          fetchUserSession: hH,
+          storeUserSession: tH
+        } = FB(SH), zH = null === (AH = this.metas.value.session) || void 0 === AH ? void 0 : AH.id, CH = null === (rH = hH()) || void 0 === rH ? void 0 : rH.sessionId;
+        LH && LH === zH && LH === CH ? (IB({
+          fetchUserSession: hH,
+          storeUserSession: tH
         })({
           forceSessionExtend: !0
-        }), eV("Session expired; created new session.")) : eV("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
+        }), BH("Session expired; created new session.")) : BH("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
       }
     };
-    const FU = () => {
-      const VV = window.k6;
+    const TS = () => {
+      const HH = window.k6;
       return {
-        k6: we({
+        k6: EB({
           isK6Browser: !0
-        }, (null === VV || void 0 === VV ? void 0 : VV.testRunId) && {
-          testRunId: null === VV || void 0 === VV ? void 0 : VV.testRunId
+        }, (null === HH || void 0 === HH ? void 0 : HH.testRunId) && {
+          testRunId: null === HH || void 0 === HH ? void 0 : HH.testRunId
         })
       }
     };
-    let TU, PU;
+    let US, VS;
 
-    function AU() {
+    function OS() {
       let {
-        generatePageId: VV,
-        initialPageMeta: eV
+        generatePageId: HH,
+        initialPageMeta: BH
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return () => {
-        const xV = location.href;
-        return zV(VV) && TU !== xV && (TU = xV, PU = VV(location)), {
-          page: we(we({
-            url: xV
-          }, PU ? {
-            id: PU
-          } : {}), eV)
+        const LH = location.href;
+        return oH(HH) && US !== LH && (US = LH, VS = HH(location)), {
+          page: EB(EB({
+            url: LH
+          }, VS ? {
+            id: VS
+          } : {}), BH)
         }
       }
     }
 
-    function NU() {
-      let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Oe,
-        eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const xV = Ke;
-      return eV > 0 && (xV.error = eV >= 1 ? function() {
-        for (var eV = arguments.length, JV = new Array(eV), YV = 0; YV < eV; YV++) JV[YV] = arguments[YV];
-        VV.error(`${xV.prefix}\n`, ...JV)
-      } : fe, xV.warn = eV >= 2 ? function() {
-        for (var eV = arguments.length, JV = new Array(eV), YV = 0; YV < eV; YV++) JV[YV] = arguments[YV];
-        VV.warn(`${xV.prefix}\n`, ...JV)
-      } : fe, xV.info = eV >= 3 ? function() {
-        for (var eV = arguments.length, JV = new Array(eV), YV = 0; YV < eV; YV++) JV[YV] = arguments[YV];
-        VV.info(`${xV.prefix}\n`, ...JV)
-      } : fe, xV.debug = eV >= 4 ? function() {
-        for (var eV = arguments.length, JV = new Array(eV), YV = 0; YV < eV; YV++) JV[YV] = arguments[YV];
-        VV.debug(`${xV.prefix}\n`, ...JV)
-      } : fe), xV
+    function bS() {
+      let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yB,
+        BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const LH = ZB;
+      return BH > 0 && (LH.error = BH >= 1 ? function() {
+        for (var BH = arguments.length, AH = new Array(BH), rH = 0; rH < BH; rH++) AH[rH] = arguments[rH];
+        HH.error(`${LH.prefix}\n`, ...AH)
+      } : DB, LH.warn = BH >= 2 ? function() {
+        for (var BH = arguments.length, AH = new Array(BH), rH = 0; rH < BH; rH++) AH[rH] = arguments[rH];
+        HH.warn(`${LH.prefix}\n`, ...AH)
+      } : DB, LH.info = BH >= 3 ? function() {
+        for (var BH = arguments.length, AH = new Array(BH), rH = 0; rH < BH; rH++) AH[rH] = arguments[rH];
+        HH.info(`${LH.prefix}\n`, ...AH)
+      } : DB, LH.debug = BH >= 4 ? function() {
+        for (var BH = arguments.length, AH = new Array(BH), rH = 0; rH < BH; rH++) AH[rH] = arguments[rH];
+        HH.debug(`${LH.prefix}\n`, ...AH)
+      } : DB), LH
     }
-    const XU = "faro",
-      MU = {
+    const kS = "faro",
+      mS = {
         enabled: !0,
         sendTimeout: 250,
         itemLimit: 50
       },
-      zU = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
+      oS = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
 
-    function GU(VV) {
-      var eV, xV, YV, UV, yV, pV;
-      const QV = [],
-        wV = NU(VV.unpatchedConsole, VV.internalLoggerLevel);
-      VV.transports ? ((VV.url || VV.apiKey) && wV.error('if "transports" is defined, "url" and "apiKey" should not be defined'), QV.push(...VV.transports)) : VV.url ? QV.push(new tU({
-        url: VV.url,
-        apiKey: VV.apiKey,
-        requestCompression: VV.requestCompression
-      })) : wV.error('either "url" or "transports" must be defined');
+    function IS(HH) {
+      var BH, LH, rH, SH, hH, tH;
+      const zH = [],
+        EH = bS(HH.unpatchedConsole, HH.internalLoggerLevel);
+      HH.transports ? ((HH.url || HH.apiKey) && EH.error('if "transports" is defined, "url" and "apiKey" should not be defined'), zH.push(...HH.transports)) : HH.url ? zH.push(new PS({
+        url: HH.url,
+        apiKey: HH.apiKey,
+        requestCompression: HH.requestCompression
+      })) : EH.error('either "url" or "transports" must be defined');
       const {
-        dedupe: ZV = !0,
-        eventDomain: vV = JV,
-        globalObjectKey: rV = XU,
-        instrumentations: kV = lY(),
-        internalLoggerLevel: bV = He,
-        isolate: EV = !1,
-        logArgsSerializer: BV = Wx,
-        metas: jV = RU(VV),
-        paused: qV = !1,
-        preventGlobalExposure: tV = !1,
-        unpatchedConsole: FV = Oe,
-        url: TV,
-        experimental: PV
-      } = VV, AV = ZU(VV, zU), NV = null !== (eV = null === PV || void 0 === PV ? void 0 : PV.trackNavigation) && void 0 !== eV && eV, XV = {
-        dataAttributeName: IJ(null !== (xV = null === (YV = VV.userActionsInstrumentation) || void 0 === YV ? void 0 : YV.dataAttributeName) && void 0 !== xV ? xV : uJ),
-        excludeItem: null === (UV = VV.userActionsInstrumentation) || void 0 === UV ? void 0 : UV.excludeItem,
-        initialActivityTimeout: dJ(null === (yV = VV.userActionsInstrumentation) || void 0 === yV ? void 0 : yV.initialActivityTimeout, 100, (VV => wV.warn(VV)))
+        dedupe: XH = !0,
+        eventDomain: GH = AH,
+        globalObjectKey: YH = kS,
+        instrumentations: uH = nr(),
+        internalLoggerLevel: QH = dB,
+        isolate: WH = !1,
+        logArgsSerializer: MH = fL,
+        metas: xH = lS(HH),
+        paused: vH = !1,
+        preventGlobalExposure: PH = !1,
+        unpatchedConsole: TH = yB,
+        url: UH,
+        experimental: VH
+      } = HH, OH = XS(HH, oS), bH = null !== (BH = null === VH || void 0 === VH ? void 0 : VH.trackNavigation) && void 0 !== BH && BH, kH = {
+        dataAttributeName: iA(null !== (LH = null === (rH = HH.userActionsInstrumentation) || void 0 === rH ? void 0 : rH.dataAttributeName) && void 0 !== LH ? LH : aA),
+        excludeItem: null === (SH = HH.userActionsInstrumentation) || void 0 === SH ? void 0 : SH.excludeItem,
+        initialActivityTimeout: pA(null === (hH = HH.userActionsInstrumentation) || void 0 === hH ? void 0 : hH.initialActivityTimeout, 100, (HH => EH.warn(HH)))
       };
-      return we(we({}, AV), {}, {
-        batching: we(we({}, MU), VV.batching),
-        dedupe: ZV,
-        globalObjectKey: rV,
-        instrumentations: WU(kV, VV),
-        internalLoggerLevel: bV,
-        isolate: EV,
-        logArgsSerializer: BV,
-        metas: jV,
-        parseStacktrace: bx,
-        paused: qV,
-        preventGlobalExposure: tV,
-        transports: QV,
-        unpatchedConsole: FV,
-        eventDomain: vV,
-        ignoreUrls: [...null !== (pV = VV.ignoreUrls) && void 0 !== pV ? pV : [], ...TV ? [TV] : [], /\/collect(?:\/[\w]*)?$/],
-        sessionTracking: we(we(we({}, nV), VV.sessionTracking), gU({
-          trackGeolocation: VV.trackGeolocation,
-          sessionTracking: VV.sessionTracking
+      return EB(EB({}, OH), {}, {
+        batching: EB(EB({}, mS), HH.batching),
+        dedupe: XH,
+        globalObjectKey: YH,
+        instrumentations: fS(uH, HH),
+        internalLoggerLevel: QH,
+        isolate: WH,
+        logArgsSerializer: MH,
+        metas: xH,
+        parseStacktrace: QL,
+        paused: vH,
+        preventGlobalExposure: PH,
+        transports: zH,
+        unpatchedConsole: TH,
+        eventDomain: GH,
+        ignoreUrls: [...null !== (tH = HH.ignoreUrls) && void 0 !== tH ? tH : [], ...UH ? [UH] : [], /\/collect(?:\/[\w]*)?$/],
+        sessionTracking: EB(EB(EB({}, CH), HH.sessionTracking), KS({
+          trackGeolocation: HH.trackGeolocation,
+          sessionTracking: HH.sessionTracking
         })),
-        userActionsInstrumentation: XV,
+        userActionsInstrumentation: kH,
         experimental: {
-          trackNavigation: NV
+          trackNavigation: bH
         }
       })
     }
 
-    function WU(VV, eV) {
+    function fS(HH, BH) {
       let {
-        experimental: xV
-      } = eV;
-      var JV;
-      const YV = null !== (JV = null === xV || void 0 === xV ? void 0 : xV.trackNavigation) && void 0 !== JV && JV;
-      return VV.filter((VV => !("@grafana/faro-web-sdk:instrumentation-navigation" === VV.name && !YV)))
+        experimental: LH
+      } = BH;
+      var AH;
+      const rH = null !== (AH = null === LH || void 0 === LH ? void 0 : LH.trackNavigation) && void 0 !== AH && AH;
+      return HH.filter((HH => !("@grafana/faro-web-sdk:instrumentation-navigation" === HH.name && !rH)))
     }
 
-    function RU(VV) {
-      var eV, xV, JV;
+    function lS(HH) {
+      var BH, LH, AH;
       const {
-        page: YV,
-        generatePageId: UV
-      } = null !== (eV = null === VV || void 0 === VV ? void 0 : VV.pageTracking) && void 0 !== eV ? eV : {}, yV = [HY, uY, AU({
-        generatePageId: UV,
-        initialPageMeta: YV
-      }), ...null !== (xV = VV.metas) && void 0 !== xV ? xV : [], SY];
-      return MV(null === (JV = window) || void 0 === JV ? void 0 : JV.k6) ? [...yV, FU] : yV
+        page: rH,
+        generatePageId: SH
+      } = null !== (BH = null === HH || void 0 === HH ? void 0 : HH.pageTracking) && void 0 !== BH ? BH : {}, hH = [dr, ar, OS({
+        generatePageId: SH,
+        initialPageMeta: rH
+      }), ...null !== (LH = HH.metas) && void 0 !== LH ? LH : [], Jr];
+      return mH(null === (AH = window) || void 0 === AH ? void 0 : AH.k6) ? [...hH, TS] : hH
     }
 
-    function gU(VV) {
+    function KS(HH) {
       let {
-        trackGeolocation: eV,
-        sessionTracking: xV
-      } = VV;
-      var JV;
-      const YV = {};
-      return NV(eV) && (YV.geoLocationTrackingEnabled = eV), HV(YV) ? {} : {
-        session: we(we({}, null !== (JV = null === xV || void 0 === xV ? void 0 : xV.session) && void 0 !== JV ? JV : {}), {}, {
-          overrides: YV
+        trackGeolocation: BH,
+        sessionTracking: LH
+      } = HH;
+      var AH;
+      const rH = {};
+      return bH(BH) && (rH.geoLocationTrackingEnabled = BH), dH(rH) ? {} : {
+        session: EB(EB({}, null !== (AH = null === LH || void 0 === LH ? void 0 : LH.session) && void 0 !== AH ? AH : {}), {}, {
+          overrides: rH
         })
       }
     }
-    const DU = new WeakSet;
+    const cS = new WeakSet;
 
-    function iU(VV) {
-      return DU.add(VV), VV
+    function eS(HH) {
+      return cS.add(HH), HH
     }
 
-    function CU(VV, eV) {
-      if (VV.capture) return iU(VV.capture(eV));
-      const xV = iU(VV.value);
-      return null === eV || void 0 === eV || eV(), xV
+    function qS(HH, BH) {
+      if (HH.capture) return eS(HH.capture(BH));
+      const LH = eS(HH.value);
+      return null === BH || void 0 === BH || BH(), LH
     }
 
-    function aU(VV) {
-      const eV = `__faroBundleId_${VV}`,
-        xV = null === wV || void 0 === wV ? void 0 : wV[eV];
-      if ("string" === typeof xV && "" !== xV) return xV;
-      const JV = "undefined" !== typeof window ? window[eV] : void 0;
-      return "string" === typeof JV && "" !== JV ? JV : void 0
+    function gS(HH) {
+      const BH = `__faroBundleId_${HH}`,
+        LH = null === EH || void 0 === EH ? void 0 : EH[BH];
+      if ("string" === typeof LH && "" !== LH) return LH;
+      const AH = "undefined" !== typeof window ? window[BH] : void 0;
+      return "string" === typeof AH && "" !== AH ? AH : void 0
     }
 
-    function oU(VV) {
-      var eV, xV;
-      const JV = VV.config.app.name,
-        YV = JV ? function(VV) {
-          return null === wV || void 0 === wV ? void 0 : wV[`__faroGitHash_${VV}`]
-        }(JV) : void 0,
-        UV = {
+    function NS(HH) {
+      var BH, LH;
+      const AH = HH.config.app.name,
+        rH = AH ? function(HH) {
+          return null === EH || void 0 === EH ? void 0 : EH[`__faroGitHash_${HH}`]
+        }(AH) : void 0,
+        SH = {
           sdk: {
-            version: xx,
+            version: LL,
             name: "faro"
           },
-          app: de({
-            bundleId: JV && aU(JV)
-          }, void 0 !== YV ? {
-            gitHash: YV
+          app: pB({
+            bundleId: AH && gS(AH)
+          }, void 0 !== rH ? {
+            gitHash: rH
           } : {})
         },
-        yV = null === (eV = VV.config.sessionTracking) || void 0 === eV ? void 0 : eV.session;
-      yV && VV.api.setSession(yV), VV.config.app && (UV.app = de(de({}, VV.config.app), UV.app)), VV.config.user && (UV.user = VV.config.user), VV.config.view && (UV.view = VV.config.view), VV.metas.add(UV, ...null !== (xV = VV.config.metas) && void 0 !== xV ? xV : [])
+        hH = null === (BH = HH.config.sessionTracking) || void 0 === BH ? void 0 : BH.session;
+      hH && HH.api.setSession(hH), HH.config.app && (SH.app = pB(pB({}, HH.config.app), SH.app)), HH.config.user && (SH.user = HH.config.user), HH.config.view && (SH.view = HH.config.view), HH.metas.add(SH, ...null !== (LH = HH.config.metas) && void 0 !== LH ? LH : [])
     }
-    var cU = class {
-      constructor(VV, eV) {
-        var xV, JV;
-        this.signalBuffer = [], this.itemLimit = null !== (xV = null === eV || void 0 === eV ? void 0 : eV.itemLimit) && void 0 !== xV ? xV : 50, this.sendTimeout = null !== (JV = null === eV || void 0 === eV ? void 0 : eV.sendTimeout) && void 0 !== JV ? JV : 250, this.paused = (null === eV || void 0 === eV ? void 0 : eV.paused) || !1, this.sendFn = VV, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
+    var RS = class {
+      constructor(HH, BH) {
+        var LH, AH;
+        this.signalBuffer = [], this.itemLimit = null !== (LH = null === BH || void 0 === BH ? void 0 : BH.itemLimit) && void 0 !== LH ? LH : 50, this.sendTimeout = null !== (AH = null === BH || void 0 === BH ? void 0 : BH.sendTimeout) && void 0 !== AH ? AH : 250, this.paused = (null === BH || void 0 === BH ? void 0 : BH.paused) || !1, this.sendFn = HH, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.flush()
         }))
       }
-      addItem(VV) {
-        this.paused || (this.signalBuffer.push(VV), this.signalBuffer.length >= this.itemLimit && this.flush())
+      addItem(HH) {
+        this.paused || (this.signalBuffer.push(HH), this.signalBuffer.length >= this.itemLimit && this.flush())
       }
       start() {
         this.paused = !1, this.sendTimeout > 0 && (this.flushInterval = setInterval((() => this.flush()), this.sendTimeout))
@@ -3884,22 +3884,22 @@ export const modules = {
       pause() {
         this.paused = !0, clearInterval(this.flushInterval)
       }
-      groupItems(VV) {
-        const eV = new Map;
-        return VV.forEach((VV => {
-          const xV = JSON.stringify(VV.meta);
-          let JV = eV.get(xV);
-          JV = void 0 === JV ? [VV] : [...JV, VV], eV.set(xV, JV)
-        })), Array.from(eV.values())
+      groupItems(HH) {
+        const BH = new Map;
+        return HH.forEach((HH => {
+          const LH = JSON.stringify(HH.meta);
+          let AH = BH.get(LH);
+          AH = void 0 === AH ? [HH] : [...AH, HH], BH.set(LH, AH)
+        })), Array.from(BH.values())
       }
       flush() {
         if (this.paused || 0 === this.signalBuffer.length) return;
-        const VV = this.signalBuffer;
+        const HH = this.signalBuffer;
         this.signalBuffer = [];
         try {
-          this.groupItems(VV).forEach(this.sendFn)
-        } catch (eV) {
-          throw this.signalBuffer = [...VV, ...this.signalBuffer], this.trimBufferToLimit(), eV
+          this.groupItems(HH).forEach(this.sendFn)
+        } catch (BH) {
+          throw this.signalBuffer = [...HH, ...this.signalBuffer], this.trimBufferToLimit(), BH
         }
       }
       trimBufferToLimit() {
@@ -3907,710 +3907,710 @@ export const modules = {
       }
     };
 
-    function hU(VV, eV, xV, JV) {
-      var YV;
-      eV.debug("Initializing transports");
-      const UV = [];
-      let yV = [];
-      const pV = VV => {
-        let eV = VV;
-        for (const JV of yV) {
-          const VV = eV.map(JV).filter(Boolean);
-          if (0 === VV.length) return [];
-          eV = lU(VV, xV)
+    function jS(HH, BH, LH, AH) {
+      var rH;
+      BH.debug("Initializing transports");
+      const SH = [];
+      let hH = [];
+      const tH = HH => {
+        let BH = HH;
+        for (const AH of hH) {
+          const HH = BH.map(AH).filter(Boolean);
+          if (0 === HH.length) return [];
+          BH = nS(HH, LH)
         }
-        return eV
+        return BH
       };
-      let QV;
-      (null === (YV = xV.batching) || void 0 === YV ? void 0 : YV.enabled) && (QV = new cU((VV => {
-        const xV = pV(VV);
-        if (0 !== xV.length)
-          for (const JV of UV) eV.debug(`Transporting item using ${JV.name}\n`, xV), JV.isBatched() && JV.send(xV)
+      let zH;
+      (null === (rH = LH.batching) || void 0 === rH ? void 0 : rH.enabled) && (zH = new RS((HH => {
+        const LH = tH(HH);
+        if (0 !== LH.length)
+          for (const AH of SH) BH.debug(`Transporting item using ${AH.name}\n`, LH), AH.isBatched() && AH.send(LH)
       }), {
-        sendTimeout: xV.batching.sendTimeout,
-        itemLimit: xV.batching.itemLimit,
-        paused: xV.paused
+        sendTimeout: LH.batching.sendTimeout,
+        itemLimit: LH.batching.itemLimit,
+        paused: LH.paused
       }));
       return {
         add: function() {
-          eV.debug("Adding transports");
-          for (var YV = arguments.length, yV = new Array(YV), pV = 0; pV < YV; pV++) yV[pV] = arguments[pV];
-          yV.forEach((YV => {
-            eV.debug(`Adding "${YV.name}" transport`), UV.some((VV => VV === YV)) ? eV.warn(`Transport ${YV.name} is already added`) : (YV.unpatchedConsole = VV, YV.internalLogger = eV, YV.config = xV, YV.metas = JV, UV.push(YV))
+          BH.debug("Adding transports");
+          for (var rH = arguments.length, hH = new Array(rH), tH = 0; tH < rH; tH++) hH[tH] = arguments[tH];
+          hH.forEach((rH => {
+            BH.debug(`Adding "${rH.name}" transport`), SH.some((HH => HH === rH)) ? BH.warn(`Transport ${rH.name} is already added`) : (rH.unpatchedConsole = HH, rH.internalLogger = BH, rH.config = LH, rH.metas = AH, SH.push(rH))
           }))
         },
         addBeforeSendHooks: function() {
-          eV.debug("Adding beforeSendHooks\n", yV);
-          for (var VV = arguments.length, xV = new Array(VV), JV = 0; JV < VV; JV++) xV[JV] = arguments[JV];
-          xV.forEach((VV => {
-            VV && yV.push(VV)
+          BH.debug("Adding beforeSendHooks\n", hH);
+          for (var HH = arguments.length, LH = new Array(HH), AH = 0; AH < HH; AH++) LH[AH] = arguments[AH];
+          LH.forEach((HH => {
+            HH && hH.push(HH)
           }))
         },
-        getBeforeSendHooks: () => [...yV],
-        execute: VV => {
-          var YV;
-          if (!xV.paused && he(JV).shouldCapture()) {
-            if (ZV = VV.meta, !DU.has(ZV)) {
-              var yV, nV, wV;
-              const eV = null === (yV = JV.value.session) || void 0 === yV ? void 0 : yV.id,
-                YV = CU(JV);
-              if (xV.paused) return;
-              const UV = de({}, VV.meta);
-              (null === (nV = UV.session) || void 0 === nV ? void 0 : nV.id) === eV && (null === (wV = YV.session) || void 0 === wV ? void 0 : wV.id) !== eV && (void 0 === YV.session ? delete UV.session : UV.session = YV.session), VV = de(de({}, VV), {}, {
-                meta: iU(UV)
+        getBeforeSendHooks: () => [...hH],
+        execute: HH => {
+          var rH;
+          if (!LH.paused && jB(AH).shouldCapture()) {
+            if (XH = HH.meta, !cS.has(XH)) {
+              var hH, CH, EH;
+              const BH = null === (hH = AH.value.session) || void 0 === hH ? void 0 : hH.id,
+                rH = qS(AH);
+              if (LH.paused) return;
+              const SH = pB({}, HH.meta);
+              (null === (CH = SH.session) || void 0 === CH ? void 0 : CH.id) === BH && (null === (EH = rH.session) || void 0 === EH ? void 0 : EH.id) !== BH && (void 0 === rH.session ? delete SH.session : SH.session = rH.session), HH = pB(pB({}, HH), {}, {
+                meta: eS(SH)
               })
             }
-            var ZV;
-            (null === (YV = xV.batching) || void 0 === YV ? void 0 : YV.enabled) && (null === QV || void 0 === QV || QV.addItem(VV)), (VV => {
-              var JV;
-              if ((null === (JV = xV.batching) || void 0 === JV ? void 0 : JV.enabled) && UV.every((VV => VV.isBatched()))) return;
-              const [YV] = pV([VV]);
-              if (void 0 !== YV)
-                for (const pV of UV) {
-                  var yV;
-                  eV.debug(`Transporting item using ${pV.name}\n`, YV), pV.isBatched() ? (null === (yV = xV.batching) || void 0 === yV ? void 0 : yV.enabled) || pV.send([YV]) : pV.send(YV)
+            var XH;
+            (null === (rH = LH.batching) || void 0 === rH ? void 0 : rH.enabled) && (null === zH || void 0 === zH || zH.addItem(HH)), (HH => {
+              var AH;
+              if ((null === (AH = LH.batching) || void 0 === AH ? void 0 : AH.enabled) && SH.every((HH => HH.isBatched()))) return;
+              const [rH] = tH([HH]);
+              if (void 0 !== rH)
+                for (const tH of SH) {
+                  var hH;
+                  BH.debug(`Transporting item using ${tH.name}\n`, rH), tH.isBatched() ? (null === (hH = LH.batching) || void 0 === hH ? void 0 : hH.enabled) || tH.send([rH]) : tH.send(rH)
                 }
-            })(VV)
+            })(HH)
           }
         },
-        isPaused: () => xV.paused,
+        isPaused: () => LH.paused,
         pause: () => {
-          eV.debug("Pausing transports"), null === QV || void 0 === QV || QV.pause(), xV.paused = !0
+          BH.debug("Pausing transports"), null === zH || void 0 === zH || zH.pause(), LH.paused = !0
         },
         remove: function() {
-          eV.debug("Removing transports");
-          for (var VV = arguments.length, xV = new Array(VV), JV = 0; JV < VV; JV++) xV[JV] = arguments[JV];
-          xV.forEach((VV => {
-            eV.debug(`Removing "${VV.name}" transport`);
-            const xV = UV.indexOf(VV); - 1 !== xV ? UV.splice(xV, 1) : eV.warn(`Transport "${VV.name}" is not added`)
+          BH.debug("Removing transports");
+          for (var HH = arguments.length, LH = new Array(HH), AH = 0; AH < HH; AH++) LH[AH] = arguments[AH];
+          LH.forEach((HH => {
+            BH.debug(`Removing "${HH.name}" transport`);
+            const LH = SH.indexOf(HH); - 1 !== LH ? SH.splice(LH, 1) : BH.warn(`Transport "${HH.name}" is not added`)
           }))
         },
         removeBeforeSendHooks: function() {
-          for (var VV = arguments.length, xV = new Array(VV), JV = 0; JV < VV; JV++) xV[JV] = arguments[JV];
-          eV.debug("Removing beforeSendHooks"), yV = yV.filter((VV => !xV.includes(VV)))
+          for (var HH = arguments.length, LH = new Array(HH), AH = 0; AH < HH; AH++) LH[AH] = arguments[AH];
+          BH.debug("Removing beforeSendHooks"), hH = hH.filter((HH => !LH.includes(HH)))
         },
         get transports() {
-          return [...UV]
+          return [...SH]
         },
         unpause: () => {
-          eV.debug("Unpausing transports"), null === QV || void 0 === QV || QV.start(), xV.paused = !1
+          BH.debug("Unpausing transports"), null === zH || void 0 === zH || zH.start(), LH.paused = !1
         }
       }
     }
 
-    function lU(VV, eV) {
-      if (eV.preserveOriginalError)
-        for (const xV of VV) "exception" === xV.type && delete xV.payload.originalError;
-      return VV
+    function nS(HH, BH) {
+      if (BH.preserveOriginalError)
+        for (const LH of HH) "exception" === LH.type && delete LH.payload.originalError;
+      return HH
     }
-    let LU = Oe;
+    let FS = yB;
 
-    function fU(VV) {
-      var eV;
-      return LU = null !== (eV = VV.unpatchedConsole) && void 0 !== eV ? eV : LU, LU
+    function DS(HH) {
+      var BH;
+      return FS = null !== (BH = HH.unpatchedConsole) && void 0 !== BH ? BH : FS, FS
     }
-    let mU, KU = Ke;
+    let wS, ZS = ZB;
 
-    function HU(VV, eV) {
-      return KU = NU(VV, eV.internalLoggerLevel), KU
+    function dS(HH, BH) {
+      return ZS = bS(HH, BH.internalLoggerLevel), ZS
     }
 
-    function uU(VV) {
+    function aS(HH) {
       let {
-        internalLogger: eV,
-        config: xV,
-        metas: JV,
-        transports: YV,
-        tracesApi: UV,
-        userActionsApi: yV
-      } = VV;
-      var pV;
-      eV.debug("Initializing exceptions API");
-      let QV = null;
-      mU = null !== (pV = xV.parseStacktrace) && void 0 !== pV ? pV : mU;
-      const nV = VV => {
-          eV.debug("Changing stacktrace parser"), mU = null !== VV && void 0 !== VV ? VV : mU
+        internalLogger: BH,
+        config: LH,
+        metas: AH,
+        transports: rH,
+        tracesApi: SH,
+        userActionsApi: hH
+      } = HH;
+      var tH;
+      BH.debug("Initializing exceptions API");
+      let zH = null;
+      wS = null !== (tH = LH.parseStacktrace) && void 0 !== tH ? tH : wS;
+      const CH = HH => {
+          BH.debug("Changing stacktrace parser"), wS = null !== HH && void 0 !== HH ? HH : wS
         },
         {
-          ignoreErrors: wV = [],
-          preserveOriginalError: ZV
-        } = xV;
-      return nV(xV.parseStacktrace), {
-        changeStacktraceParser: nV,
-        getStacktraceParser: () => mU,
-        pushError: function(VV) {
+          ignoreErrors: EH = [],
+          preserveOriginalError: XH
+        } = LH;
+      return CH(LH.parseStacktrace), {
+        changeStacktraceParser: CH,
+        getStacktraceParser: () => wS,
+        pushError: function(HH) {
           let {
-            skipDedupe: pV,
-            stackFrames: nV,
-            type: vV,
-            context: rV,
-            spanContext: kV,
-            timestampOverwriteMs: bV,
-            originalError: EV,
-            fingerprint: BV,
-            fatal: jV
+            skipDedupe: tH,
+            stackFrames: CH,
+            type: GH,
+            context: YH,
+            spanContext: uH,
+            timestampOverwriteMs: QH,
+            originalError: WH,
+            fingerprint: MH,
+            fatal: xH
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (! function(VV, eV) {
+          if (! function(HH, BH) {
               const {
-                message: xV,
-                name: JV,
-                stack: YV
-              } = eV;
-              return UV = VV, yV = xV + " " + JV + " " + YV, UV.some((VV => TV(VV) ? yV.includes(VV) : !!yV.match(VV)));
-              var UV, yV
-            }(wV, null !== EV && void 0 !== EV ? EV : VV)) try {
-            var qV, tV;
-            if (!he(JV).shouldCapture()) return;
-            const wV = Ce(de(de({}, function(VV) {
-                let eV = VV.cause;
-                aV(eV) ? eV = VV.cause.toString() : null !== eV && (MV(VV.cause) || GV(VV.cause)) ? eV = ie(VV.cause) : null != eV && (eV = VV.cause.toString());
-                return null == eV ? {} : {
-                  cause: eV
+                message: LH,
+                name: AH,
+                stack: rH
+              } = BH;
+              return SH = HH, hH = LH + " " + AH + " " + rH, SH.some((HH => UH(HH) ? hH.includes(HH) : !!hH.match(HH)));
+              var SH, hH
+            }(EH, null !== WH && void 0 !== WH ? WH : HH)) try {
+            var vH, PH;
+            if (!jB(AH).shouldCapture()) return;
+            const EH = qB(pB(pB({}, function(HH) {
+                let BH = HH.cause;
+                gH(BH) ? BH = HH.cause.toString() : null !== BH && (mH(HH.cause) || IH(HH.cause)) ? BH = eB(HH.cause) : null != BH && (BH = HH.cause.toString());
+                return null == BH ? {} : {
+                  cause: BH
                 }
-              }(null !== EV && void 0 !== EV ? EV : VV)), null !== rV && void 0 !== rV ? rV : {})),
-              TV = de(de(de(de({
-                type: vV || VV.name || "Error",
-                value: VV.message,
-                timestamp: bV ? be(bV) : ke(),
-                trace: kV ? {
-                  trace_id: kV.traceId,
-                  span_id: kV.spanId
-                } : UV.getTraceContext()
-              }, HV(wV) ? {} : {
-                context: wV
-              }), ZV ? {
-                originalError: EV
-              } : {}), BV ? {
-                fingerprint: BV
-              } : {}), void 0 !== jV ? {
-                fatal: jV
+              }(null !== WH && void 0 !== WH ? WH : HH)), null !== YH && void 0 !== YH ? YH : {})),
+              UH = pB(pB(pB(pB({
+                type: GH || HH.name || "Error",
+                value: HH.message,
+                timestamp: QH ? QB(QH) : uB(),
+                trace: uH ? {
+                  trace_id: uH.traceId,
+                  span_id: uH.spanId
+                } : SH.getTraceContext()
+              }, dH(EH) ? {} : {
+                context: EH
+              }), XH ? {
+                originalError: WH
+              } : {}), MH ? {
+                fingerprint: MH
+              } : {}), void 0 !== xH ? {
+                fatal: xH
               } : {});
-            nV = null !== (qV = nV) && void 0 !== qV ? qV : VV.stack ? null === mU || void 0 === mU ? void 0 : mU(VV).frames : void 0, (null === nV || void 0 === nV ? void 0 : nV.length) && (TV.stacktrace = {
-              frames: nV
+            CH = null !== (vH = CH) && void 0 !== vH ? vH : HH.stack ? null === wS || void 0 === wS ? void 0 : wS(HH).frames : void 0, (null === CH || void 0 === CH ? void 0 : CH.length) && (UH.stacktrace = {
+              frames: CH
             });
-            const PV = {
-              type: TV.type,
-              value: TV.value,
-              stacktrace: TV.stacktrace,
-              context: TV.context,
-              fingerprint: TV.fingerprint,
-              fatal: null !== (tV = TV.fatal) && void 0 !== tV && tV
+            const VH = {
+              type: UH.type,
+              value: UH.value,
+              stacktrace: UH.stacktrace,
+              context: UH.context,
+              fingerprint: UH.fingerprint,
+              fatal: null !== (PH = UH.fatal) && void 0 !== PH && PH
             };
-            if (!pV && xV.dedupe && !FV(QV) && je(PV, QV)) return void eV.debug("Skipping error push because it is the same as the last one\n", TV);
-            const AV = QV,
-              NV = CU(JV);
-            if (QV !== AV && !pV && xV.dedupe && je(PV, QV)) return;
-            QV = PV;
-            const XV = {
-              meta: NV,
-              payload: TV,
+            if (!tH && LH.dedupe && !TH(zH) && xB(VH, zH)) return void BH.debug("Skipping error push because it is the same as the last one\n", UH);
+            const OH = zH,
+              bH = qS(AH);
+            if (zH !== OH && !tH && LH.dedupe && xB(VH, zH)) return;
+            zH = VH;
+            const kH = {
+              meta: bH,
+              payload: UH,
               type: "exception"
             };
-            eV.debug("Pushing exception\n", XV), TY(yV.getActiveUserAction(), XV) || YV.execute(XV)
-          } catch (PV) {
-            eV.error("Error pushing event", PV)
+            BH.debug("Pushing exception\n", kH), Ur(hH.getActiveUserAction(), kH) || rH.execute(kH)
+          } catch (VH) {
+            BH.error("Error pushing event", VH)
           }
         }
       }
     }
 
-    function sU(VV, eV, xV, JV, YV) {
-      eV.debug("Initializing API");
-      let UV = null;
-      const yV = function(VV) {
+    function sS(HH, BH, LH, AH, rH) {
+      BH.debug("Initializing API");
+      let SH = null;
+      const hH = function(HH) {
           let {
-            transports: eV,
-            internalLogger: xV,
-            config: JV,
-            pushEvent: YV
-          } = VV;
-          var UV;
-          const yV = null === (UV = JV.userActionsInstrumentation) || void 0 === UV ? void 0 : UV.excludeItem;
-          let pV;
-          const QV = () => pV;
+            transports: BH,
+            internalLogger: LH,
+            config: AH,
+            pushEvent: rH
+          } = HH;
+          var SH;
+          const hH = null === (SH = AH.userActionsInstrumentation) || void 0 === SH ? void 0 : SH.excludeItem;
+          let tH;
+          const zH = () => tH;
           return {
-            startUserAction: (VV, JV, UV) => {
-              if (void 0 === QV()) {
-                const xV = new tY({
-                  name: VV,
-                  transports: eV,
-                  attributes: JV,
-                  trigger: (null === UV || void 0 === UV ? void 0 : UV.triggerName) || "faroApiCall",
-                  importance: (null === UV || void 0 === UV ? void 0 : UV.importance) || jY.Normal,
-                  trackUserActionsExcludeItem: yV,
-                  pushEvent: YV
+            startUserAction: (HH, AH, SH) => {
+              if (void 0 === zH()) {
+                const LH = new Pr({
+                  name: HH,
+                  transports: BH,
+                  attributes: AH,
+                  trigger: (null === SH || void 0 === SH ? void 0 : SH.triggerName) || "faroApiCall",
+                  importance: (null === SH || void 0 === SH ? void 0 : SH.importance) || xr.Normal,
+                  trackUserActionsExcludeItem: hH,
+                  pushEvent: rH
                 });
-                return xV.filter((VV => [3, 2].includes(VV))).first().subscribe((() => {
-                  pV = void 0
-                })), FY.notify({
-                  type: BY,
-                  userAction: xV,
-                  initialActivityTimeout: null === UV || void 0 === UV ? void 0 : UV.initialActivityTimeout
-                }), pV = xV, pV
+                return LH.filter((HH => [3, 2].includes(HH))).first().subscribe((() => {
+                  tH = void 0
+                })), Tr.notify({
+                  type: Mr,
+                  userAction: LH,
+                  initialActivityTimeout: null === SH || void 0 === SH ? void 0 : SH.initialActivityTimeout
+                }), tH = LH, tH
               }
-              xV.error("Attempted to create a new user action while one is already running. This is not possible.")
+              LH.error("Attempted to create a new user action while one is already running. This is not possible.")
             },
-            getActiveUserAction: QV
+            getActiveUserAction: zH
           }
         }({
-          transports: YV,
-          config: xV,
-          internalLogger: eV,
-          pushEvent: (VV, xV, JV, YV) => {
-            UV ? UV(VV, xV, JV, YV) : eV.warn("pushEventImpl is not initialized. Event dropped:", {
-              name: VV,
-              attributes: xV,
-              domain: JV,
-              options: YV
+          transports: rH,
+          config: LH,
+          internalLogger: BH,
+          pushEvent: (HH, LH, AH, rH) => {
+            SH ? SH(HH, LH, AH, rH) : BH.warn("pushEventImpl is not initialized. Event dropped:", {
+              name: HH,
+              attributes: LH,
+              domain: AH,
+              options: rH
             })
           }
         }),
-        pV = function(VV, eV, xV, JV, YV) {
-          let UV;
-          return eV.debug("Initializing traces API"), {
-            getOTEL: () => UV,
+        tH = function(HH, BH, LH, AH, rH) {
+          let SH;
+          return BH.debug("Initializing traces API"), {
+            getOTEL: () => SH,
             getTraceContext: () => {
-              const VV = null === UV || void 0 === UV ? void 0 : UV.trace.getSpanContext(UV.context.active());
-              return VV ? {
-                trace_id: VV.traceId,
-                span_id: VV.spanId
+              const HH = null === SH || void 0 === SH ? void 0 : SH.trace.getSpanContext(SH.context.active());
+              return HH ? {
+                trace_id: HH.traceId,
+                span_id: HH.spanId
               } : void 0
             },
-            initOTEL: (VV, xV) => {
-              eV.debug("Initializing OpenTelemetry"), UV = {
-                trace: VV,
-                context: xV
+            initOTEL: (HH, LH) => {
+              BH.debug("Initializing OpenTelemetry"), SH = {
+                trace: HH,
+                context: LH
               }
             },
-            isOTELInitialized: () => !!UV,
-            pushTraces: VV => {
+            isOTELInitialized: () => !!SH,
+            pushTraces: HH => {
               try {
-                if (!he(JV).shouldCapture()) return;
-                const xV = {
+                if (!jB(AH).shouldCapture()) return;
+                const LH = {
                   type: "trace",
-                  payload: VV,
-                  meta: CU(JV)
+                  payload: HH,
+                  meta: qS(AH)
                 };
-                eV.debug("Pushing trace\n", xV), YV.execute(xV)
-              } catch (xV) {
-                eV.error("Error pushing trace\n", xV)
+                BH.debug("Pushing trace\n", LH), rH.execute(LH)
+              } catch (LH) {
+                BH.error("Error pushing trace\n", LH)
               }
             }
           }
-        }(0, eV, 0, JV, YV),
-        QV = {
-          unpatchedConsole: VV,
-          internalLogger: eV,
-          userActionsApi: yV,
-          config: xV,
-          metas: JV,
-          transports: YV,
-          tracesApi: pV
+        }(0, BH, 0, AH, rH),
+        zH = {
+          unpatchedConsole: HH,
+          internalLogger: BH,
+          userActionsApi: hH,
+          config: LH,
+          metas: AH,
+          transports: rH,
+          tracesApi: tH
         },
-        nV = function(VV) {
+        CH = function(HH) {
           let {
-            internalLogger: eV,
-            config: xV,
-            metas: JV,
-            transports: YV,
-            tracesApi: UV,
-            userActionsApi: yV
-          } = VV, pV = null;
+            internalLogger: BH,
+            config: LH,
+            metas: AH,
+            transports: rH,
+            tracesApi: SH,
+            userActionsApi: hH
+          } = HH, tH = null;
           return {
-            pushEvent: function(VV, QV, nV) {
+            pushEvent: function(HH, zH, CH) {
               let {
-                skipDedupe: wV,
-                spanContext: ZV,
-                timestampOverwriteMs: vV,
-                customPayloadTransformer: rV = VV => VV
+                skipDedupe: EH,
+                spanContext: XH,
+                timestampOverwriteMs: GH,
+                customPayloadTransformer: YH = HH => HH
               } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
               try {
-                if (!he(JV).shouldCapture()) return;
-                const kV = Ce(QV),
-                  bV = rV({
-                    name: VV,
-                    domain: null !== nV && void 0 !== nV ? nV : xV.eventDomain,
-                    attributes: HV(kV) ? void 0 : kV,
-                    timestamp: vV ? be(vV) : ke(),
-                    trace: ZV ? {
-                      trace_id: ZV.traceId,
-                      span_id: ZV.spanId
-                    } : UV.getTraceContext()
+                if (!jB(AH).shouldCapture()) return;
+                const uH = qB(zH),
+                  QH = YH({
+                    name: HH,
+                    domain: null !== CH && void 0 !== CH ? CH : LH.eventDomain,
+                    attributes: dH(uH) ? void 0 : uH,
+                    timestamp: GH ? QB(GH) : uB(),
+                    trace: XH ? {
+                      trace_id: XH.traceId,
+                      span_id: XH.spanId
+                    } : SH.getTraceContext()
                   }),
-                  EV = {
-                    name: bV.name,
-                    attributes: bV.attributes,
-                    domain: bV.domain
+                  WH = {
+                    name: QH.name,
+                    attributes: QH.attributes,
+                    domain: QH.domain
                   };
-                if (!wV && xV.dedupe && !FV(pV) && je(EV, pV)) return void eV.debug("Skipping event push because it is the same as the last one\n", bV);
-                const BV = pV,
-                  jV = CU(JV);
-                if (pV !== BV && !wV && xV.dedupe && je(EV, pV)) return;
-                pV = EV;
-                const qV = {
-                  meta: jV,
-                  payload: bV,
+                if (!EH && LH.dedupe && !TH(tH) && xB(WH, tH)) return void BH.debug("Skipping event push because it is the same as the last one\n", QH);
+                const MH = tH,
+                  xH = qS(AH);
+                if (tH !== MH && !EH && LH.dedupe && xB(WH, tH)) return;
+                tH = WH;
+                const vH = {
+                  meta: xH,
+                  payload: QH,
                   type: "event"
                 };
-                eV.debug("Pushing event\n", qV), TY(yV.getActiveUserAction(), qV) || YV.execute(qV)
-              } catch (kV) {
-                eV.error("Error pushing event", kV)
+                BH.debug("Pushing event\n", vH), Ur(hH.getActiveUserAction(), vH) || rH.execute(vH)
+              } catch (uH) {
+                BH.error("Error pushing event", uH)
               }
             }
           }
-        }(QV);
-      return UV = nV.pushEvent, de(de(de(de(de(de(de({}, pV), uU(QV)), function(VV) {
-        let eV, xV, JV, YV, {
-          internalLogger: UV,
-          metas: yV
-        } = VV;
-        UV.debug("Initializing meta API");
-        const pV = VV => {
-            xV && yV.remove(xV), xV = {
-              user: VV
-            }, yV.add(xV)
+        }(zH);
+      return SH = CH.pushEvent, pB(pB(pB(pB(pB(pB(pB({}, tH), aS(zH)), function(HH) {
+        let BH, LH, AH, rH, {
+          internalLogger: SH,
+          metas: hH
+        } = HH;
+        SH.debug("Initializing meta API");
+        const tH = HH => {
+            LH && hH.remove(LH), LH = {
+              user: HH
+            }, hH.add(LH)
           },
-          QV = (VV, xV) => {
-            var JV;
-            const YV = null === xV || void 0 === xV ? void 0 : xV.overrides,
-              UV = YV ? {
-                overrides: de(de({}, null === eV || void 0 === eV || null === (JV = eV.session) || void 0 === JV ? void 0 : JV.overrides), YV)
+          zH = (HH, LH) => {
+            var AH;
+            const rH = null === LH || void 0 === LH ? void 0 : LH.overrides,
+              SH = rH ? {
+                overrides: pB(pB({}, null === BH || void 0 === BH || null === (AH = BH.session) || void 0 === AH ? void 0 : AH.overrides), rH)
               } : {};
-            eV && yV.remove(eV), eV = {
-              session: de(de({}, HV(VV) ? void 0 : VV), UV)
-            }, yV.add(eV)
+            BH && hH.remove(BH), BH = {
+              session: pB(pB({}, dH(HH) ? void 0 : HH), SH)
+            }, hH.add(BH)
           },
-          nV = (VV, eV) => {
-            he(yV).notifySessionUpdate({
+          CH = (HH, BH) => {
+            jB(hH).notifySessionUpdate({
               type: "replace",
-              session: VV,
-              overrides: null === eV || void 0 === eV ? void 0 : eV.overrides
-            }), QV(VV, eV)
+              session: HH,
+              overrides: null === BH || void 0 === BH ? void 0 : BH.overrides
+            }), zH(HH, BH)
           },
-          wV = () => yV.value.session,
-          ZV = () => yV.value.page;
+          EH = () => hH.value.session,
+          XH = () => hH.value.page;
         return {
-          setUser: pV,
-          resetUser: pV,
-          setSession: nV,
-          resetSession: nV,
-          getSession: wV,
-          setView: (VV, eV) => {
-            var xV;
-            if ((null === eV || void 0 === eV ? void 0 : eV.overrides) && (he(yV).notifySessionUpdate({
+          setUser: tH,
+          resetUser: tH,
+          setSession: CH,
+          resetSession: CH,
+          getSession: EH,
+          setView: (HH, BH) => {
+            var LH;
+            if ((null === BH || void 0 === BH ? void 0 : BH.overrides) && (jB(hH).notifySessionUpdate({
                 type: "overrides",
-                overrides: eV.overrides
-              }), QV(wV(), {
-                overrides: eV.overrides
-              })), (null === JV || void 0 === JV || null === (xV = JV.view) || void 0 === xV ? void 0 : xV.name) === (null === VV || void 0 === VV ? void 0 : VV.name)) return;
-            const YV = JV;
-            JV = {
-              view: VV
-            }, yV.add(JV), YV && yV.remove(YV)
+                overrides: BH.overrides
+              }), zH(EH(), {
+                overrides: BH.overrides
+              })), (null === AH || void 0 === AH || null === (LH = AH.view) || void 0 === LH ? void 0 : LH.name) === (null === HH || void 0 === HH ? void 0 : HH.name)) return;
+            const rH = AH;
+            AH = {
+              view: HH
+            }, hH.add(AH), rH && hH.remove(rH)
           },
-          getView: () => yV.value.view,
-          setPage: VV => {
-            var eV;
-            const xV = TV(VV) ? de(de({}, null !== (eV = null === YV || void 0 === YV ? void 0 : YV.page) && void 0 !== eV ? eV : ZV()), {}, {
-              id: VV
-            }) : VV;
-            YV && yV.remove(YV), YV = {
-              page: xV
-            }, yV.add(YV)
+          getView: () => hH.value.view,
+          setPage: HH => {
+            var BH;
+            const LH = UH(HH) ? pB(pB({}, null !== (BH = null === rH || void 0 === rH ? void 0 : rH.page) && void 0 !== BH ? BH : XH()), {}, {
+              id: HH
+            }) : HH;
+            rH && hH.remove(rH), rH = {
+              page: LH
+            }, hH.add(rH)
           },
-          getPage: ZV
+          getPage: XH
         }
-      }(QV)), function(VV) {
+      }(zH)), function(HH) {
         let {
-          internalLogger: eV,
-          config: xV,
-          metas: JV,
-          transports: YV,
-          tracesApi: UV,
-          userActionsApi: yV
-        } = VV;
-        var pV;
-        eV.debug("Initializing logs API");
-        let QV = null;
-        const nV = null !== (pV = xV.logArgsSerializer) && void 0 !== pV ? pV : Wx;
+          internalLogger: BH,
+          config: LH,
+          metas: AH,
+          transports: rH,
+          tracesApi: SH,
+          userActionsApi: hH
+        } = HH;
+        var tH;
+        BH.debug("Initializing logs API");
+        let zH = null;
+        const CH = null !== (tH = LH.logArgsSerializer) && void 0 !== tH ? tH : fL;
         return {
-          pushLog: function(VV) {
+          pushLog: function(HH) {
             let {
-              context: pV,
-              level: wV,
-              skipDedupe: ZV,
-              spanContext: vV,
-              timestampOverwriteMs: rV
+              context: tH,
+              level: EH,
+              skipDedupe: XH,
+              spanContext: GH,
+              timestampOverwriteMs: YH
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!he(JV).shouldCapture()) return;
-              const kV = Ce(pV),
-                bV = {
-                  message: nV(VV),
-                  level: null !== wV && void 0 !== wV ? wV : "log",
-                  context: HV(kV) ? void 0 : kV,
-                  timestamp: rV ? be(rV) : ke(),
-                  trace: vV ? {
-                    trace_id: vV.traceId,
-                    span_id: vV.spanId
-                  } : UV.getTraceContext()
+              if (!jB(AH).shouldCapture()) return;
+              const uH = qB(tH),
+                QH = {
+                  message: CH(HH),
+                  level: null !== EH && void 0 !== EH ? EH : "log",
+                  context: dH(uH) ? void 0 : uH,
+                  timestamp: YH ? QB(YH) : uB(),
+                  trace: GH ? {
+                    trace_id: GH.traceId,
+                    span_id: GH.spanId
+                  } : SH.getTraceContext()
                 },
-                EV = {
-                  message: bV.message,
-                  level: bV.level,
-                  context: bV.context
+                WH = {
+                  message: QH.message,
+                  level: QH.level,
+                  context: QH.context
                 };
-              if (!ZV && xV.dedupe && !FV(QV) && je(EV, QV)) return void eV.debug("Skipping log push because it is the same as the last one\n", bV);
-              const BV = QV,
-                jV = CU(JV);
-              if (QV !== BV && !ZV && xV.dedupe && je(EV, QV)) return;
-              QV = EV;
-              const qV = {
+              if (!XH && LH.dedupe && !TH(zH) && xB(WH, zH)) return void BH.debug("Skipping log push because it is the same as the last one\n", QH);
+              const MH = zH,
+                xH = qS(AH);
+              if (zH !== MH && !XH && LH.dedupe && xB(WH, zH)) return;
+              zH = WH;
+              const vH = {
                 type: "log",
-                payload: bV,
-                meta: jV
+                payload: QH,
+                meta: xH
               };
-              eV.debug("Pushing log\n", qV), TY(yV.getActiveUserAction(), qV) || YV.execute(qV)
-            } catch (kV) {
-              eV.error("Error pushing log\n", kV)
+              BH.debug("Pushing log\n", vH), Ur(hH.getActiveUserAction(), vH) || rH.execute(vH)
+            } catch (uH) {
+              BH.error("Error pushing log\n", uH)
             }
           }
         }
-      }(QV)), function(VV) {
+      }(zH)), function(HH) {
         let {
-          internalLogger: eV,
-          config: xV,
-          metas: JV,
-          transports: YV,
-          tracesApi: UV,
-          userActionsApi: yV
-        } = VV;
-        eV.debug("Initializing measurements API");
-        let pV = null;
+          internalLogger: BH,
+          config: LH,
+          metas: AH,
+          transports: rH,
+          tracesApi: SH,
+          userActionsApi: hH
+        } = HH;
+        BH.debug("Initializing measurements API");
+        let tH = null;
         return {
-          pushMeasurement: function(VV) {
+          pushMeasurement: function(HH) {
             let {
-              skipDedupe: QV,
-              context: nV,
-              spanContext: wV,
-              timestampOverwriteMs: ZV
+              skipDedupe: zH,
+              context: CH,
+              spanContext: EH,
+              timestampOverwriteMs: XH
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!he(JV).shouldCapture()) return;
-              const vV = Ce(nV),
-                rV = de(de({}, VV), {}, {
-                  trace: wV ? {
-                    trace_id: wV.traceId,
-                    span_id: wV.spanId
-                  } : UV.getTraceContext(),
-                  timestamp: ZV ? be(ZV) : ke(),
-                  context: HV(vV) ? void 0 : vV
+              if (!jB(AH).shouldCapture()) return;
+              const GH = qB(CH),
+                YH = pB(pB({}, HH), {}, {
+                  trace: EH ? {
+                    trace_id: EH.traceId,
+                    span_id: EH.spanId
+                  } : SH.getTraceContext(),
+                  timestamp: XH ? QB(XH) : uB(),
+                  context: dH(GH) ? void 0 : GH
                 }),
-                kV = {
-                  type: rV.type,
-                  values: rV.values,
-                  context: rV.context
+                uH = {
+                  type: YH.type,
+                  values: YH.values,
+                  context: YH.context
                 };
-              if (!QV && xV.dedupe && !FV(pV) && je(kV, pV)) return void eV.debug("Skipping measurement push because it is the same as the last one\n", rV);
-              const bV = pV,
-                EV = CU(JV);
-              if (pV !== bV && !QV && xV.dedupe && je(kV, pV)) return;
-              pV = kV;
-              const BV = {
+              if (!zH && LH.dedupe && !TH(tH) && xB(uH, tH)) return void BH.debug("Skipping measurement push because it is the same as the last one\n", YH);
+              const QH = tH,
+                WH = qS(AH);
+              if (tH !== QH && !zH && LH.dedupe && xB(uH, tH)) return;
+              tH = uH;
+              const MH = {
                 type: "measurement",
-                payload: rV,
-                meta: EV
+                payload: YH,
+                meta: WH
               };
-              eV.debug("Pushing measurement\n", BV), TY(yV.getActiveUserAction(), BV) || YV.execute(BV)
-            } catch (vV) {
-              eV.error("Error pushing measurement\n", vV)
+              BH.debug("Pushing measurement\n", MH), Ur(hH.getActiveUserAction(), MH) || rH.execute(MH)
+            } catch (GH) {
+              BH.error("Error pushing measurement\n", GH)
             }
           }
         }
-      }(QV)), nV), yV)
+      }(zH)), CH), hH)
     }
 
-    function SU(VV) {
-      const eV = fU(VV),
-        xV = HU(eV, VV);
-      if (kV() && !VV.isolate) return void xV.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
-      xV.debug("Initializing");
-      const JV = function(VV, eV) {
-          let xV, JV = [],
-            YV = [],
-            UV = [],
-            yV = 0,
-            pV = 0;
-          const QV = () => JV.reduce(((VV, eV) => Object.assign(VV, zV(eV) ? eV() : eV)), {}),
-            nV = () => {
-              if (YV.length) {
-                const VV = QV();
-                YV.forEach((eV => eV(VV)))
+    function JS(HH) {
+      const BH = DS(HH),
+        LH = dS(BH, HH);
+      if (uH() && !HH.isolate) return void LH.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
+      LH.debug("Initializing");
+      const AH = function(HH, BH) {
+          let LH, AH = [],
+            rH = [],
+            SH = [],
+            hH = 0,
+            tH = 0;
+          const zH = () => AH.reduce(((HH, BH) => Object.assign(HH, oH(BH) ? BH() : BH)), {}),
+            CH = () => {
+              if (rH.length) {
+                const HH = zH();
+                rH.forEach((BH => BH(HH)))
               }
             };
           return {
             add: function() {
-              for (var VV = arguments.length, xV = new Array(VV), YV = 0; YV < VV; YV++) xV[YV] = arguments[YV];
-              eV.debug("Adding metas\n", xV), JV.push(...xV), nV()
+              for (var HH = arguments.length, LH = new Array(HH), rH = 0; rH < HH; rH++) LH[rH] = arguments[rH];
+              BH.debug("Adding metas\n", LH), AH.push(...LH), CH()
             },
             remove: function() {
-              for (var VV = arguments.length, xV = new Array(VV), YV = 0; YV < VV; YV++) xV[YV] = arguments[YV];
-              eV.debug("Removing metas\n", xV), JV = JV.filter((VV => !xV.includes(VV))), nV()
+              for (var HH = arguments.length, LH = new Array(HH), rH = 0; rH < HH; rH++) LH[rH] = arguments[rH];
+              BH.debug("Removing metas\n", LH), AH = AH.filter((HH => !LH.includes(HH))), CH()
             },
-            addListener: VV => {
-              eV.debug("Adding metas listener\n", VV), YV.push(VV)
+            addListener: HH => {
+              BH.debug("Adding metas listener\n", HH), rH.push(HH)
             },
-            removeListener: VV => {
-              eV.debug("Removing metas listener\n", VV), YV = YV.filter((eV => eV !== VV))
+            removeListener: HH => {
+              BH.debug("Removing metas listener\n", HH), rH = rH.filter((BH => BH !== HH))
             },
-            capture: VV => {
-              var eV;
-              const JV = void 0 !== xV,
-                YV = null !== (eV = xV) && void 0 !== eV ? eV : UV;
-              JV || (xV = YV, yV = 0, pV = YV.length);
+            capture: HH => {
+              var BH;
+              const AH = void 0 !== LH,
+                rH = null !== (BH = LH) && void 0 !== BH ? BH : SH;
+              AH || (LH = rH, hH = 0, tH = rH.length);
               try {
-                for (; yV < pV;) {
-                  const VV = YV[yV++];
-                  null === VV || void 0 === VV || VV()
+                for (; hH < tH;) {
+                  const HH = rH[hH++];
+                  null === HH || void 0 === HH || HH()
                 }
-                const eV = iU(QV());
-                return null === VV || void 0 === VV || VV(), eV
+                const BH = eS(zH());
+                return null === HH || void 0 === HH || HH(), BH
               } finally {
-                JV || (xV = void 0)
+                AH || (LH = void 0)
               }
             },
-            addCaptureListener: VV => {
-              UV.push(VV)
+            addCaptureListener: HH => {
+              SH.push(HH)
             },
-            removeCaptureListener: VV => {
-              UV = UV.filter((eV => eV !== VV))
+            removeCaptureListener: HH => {
+              SH = SH.filter((BH => BH !== HH))
             },
             get value() {
-              return QV()
+              return zH()
             }
           }
-        }(0, xV),
-        YV = hU(eV, xV, VV, JV),
-        UV = sU(eV, xV, VV, JV, YV),
-        yV = function(VV, eV, xV, JV, YV, UV) {
-          eV.debug("Initializing instrumentations");
-          const yV = [];
+        }(0, LH),
+        rH = jS(BH, LH, HH, AH),
+        SH = sS(BH, LH, HH, AH, rH),
+        hH = function(HH, BH, LH, AH, rH, SH) {
+          BH.debug("Initializing instrumentations");
+          const hH = [];
           return {
             add: function() {
-              eV.debug("Adding instrumentations");
-              for (var pV = arguments.length, QV = new Array(pV), nV = 0; nV < pV; nV++) QV[nV] = arguments[nV];
-              QV.forEach((pV => {
-                eV.debug(`Adding "${pV.name}" instrumentation`), yV.some((VV => VV.name === pV.name)) ? eV.warn(`Instrumentation ${pV.name} is already added`) : (pV.unpatchedConsole = VV, pV.internalLogger = eV, pV.config = xV, pV.metas = JV, pV.transports = YV, pV.api = UV, yV.push(pV), pV.initialize())
+              BH.debug("Adding instrumentations");
+              for (var tH = arguments.length, zH = new Array(tH), CH = 0; CH < tH; CH++) zH[CH] = arguments[CH];
+              zH.forEach((tH => {
+                BH.debug(`Adding "${tH.name}" instrumentation`), hH.some((HH => HH.name === tH.name)) ? BH.warn(`Instrumentation ${tH.name} is already added`) : (tH.unpatchedConsole = HH, tH.internalLogger = BH, tH.config = LH, tH.metas = AH, tH.transports = rH, tH.api = SH, hH.push(tH), tH.initialize())
               }))
             },
             get instrumentations() {
-              return [...yV]
+              return [...hH]
             },
             remove: function() {
-              eV.debug("Removing instrumentations");
-              for (var VV = arguments.length, xV = new Array(VV), JV = 0; JV < VV; JV++) xV[JV] = arguments[JV];
-              xV.forEach((VV => {
-                var xV, JV;
-                eV.debug(`Removing "${VV.name}" instrumentation`);
-                const YV = yV.reduce(((eV, xV, JV) => null === eV && xV.name === VV.name ? JV : null), null);
-                null !== YV ? (null === (xV = (JV = yV[YV]).destroy) || void 0 === xV || xV.call(JV), yV.splice(YV, 1)) : eV.warn(`Instrumentation "${VV.name}" is not added`)
+              BH.debug("Removing instrumentations");
+              for (var HH = arguments.length, LH = new Array(HH), AH = 0; AH < HH; AH++) LH[AH] = arguments[AH];
+              LH.forEach((HH => {
+                var LH, AH;
+                BH.debug(`Removing "${HH.name}" instrumentation`);
+                const rH = hH.reduce(((BH, LH, AH) => null === BH && LH.name === HH.name ? AH : null), null);
+                null !== rH ? (null === (LH = (AH = hH[rH]).destroy) || void 0 === LH || LH.call(AH), hH.splice(rH, 1)) : BH.warn(`Instrumentation "${HH.name}" is not added`)
               }))
             }
           }
-        }(eV, xV, VV, JV, YV, UV),
-        pV = EV(eV, xV, VV, JV, YV, UV, yV);
-      return oU(pV),
-        function(VV) {
-          VV.transports.add(...VV.config.transports), VV.transports.addBeforeSendHooks(VV.config.beforeSend)
-        }(pV),
-        function(VV) {
-          VV.instrumentations.add(...VV.config.instrumentations)
-        }(pV), pV
+        }(BH, LH, HH, AH, rH, SH),
+        tH = WH(BH, LH, HH, AH, rH, SH, hH);
+      return NS(tH),
+        function(HH) {
+          HH.transports.add(...HH.config.transports), HH.transports.addBeforeSendHooks(HH.config.beforeSend)
+        }(tH),
+        function(HH) {
+          HH.instrumentations.add(...HH.config.instrumentations)
+        }(tH), tH
     }
 
-    function IU(VV) {
-      const eV = GU(VV);
-      if (eV) return SU(eV)
+    function iS(HH) {
+      const BH = IS(HH);
+      if (BH) return JS(BH)
     }
   },
-  7246: function(VV, eV, xV) {
-    var JV;
-    ! function(YV, UV) {
-      var yV = "function",
-        pV = "undefined",
-        QV = "object",
-        nV = "string",
-        wV = "major",
-        ZV = "model",
-        vV = "name",
-        rV = "type",
-        kV = "vendor",
-        bV = "version",
-        EV = "architecture",
-        BV = "console",
-        jV = "mobile",
-        qV = "tablet",
-        tV = "smarttv",
-        FV = "wearable",
-        TV = "embedded",
-        PV = "Amazon",
-        AV = "Apple",
-        NV = "ASUS",
-        XV = "BlackBerry",
-        MV = "Browser",
-        zV = "Chrome",
-        GV = "Firefox",
-        WV = "Google",
-        RV = "Honor",
-        gV = "Huawei",
-        DV = "LG",
-        iV = "Microsoft",
-        CV = "Motorola",
-        aV = "Nvidia",
-        oV = "OnePlus",
-        cV = "Opera",
-        hV = "OPPO",
-        lV = "Samsung",
-        LV = "Sharp",
-        fV = "Sony",
-        mV = "Xiaomi",
-        KV = "Zebra",
-        HV = "Facebook",
-        uV = "Chromium OS",
-        sV = "Mac OS",
-        SV = " Browser",
-        IV = function(VV) {
-          for (var eV = {}, xV = 0; xV < VV.length; xV++) eV[VV[xV].toUpperCase()] = VV[xV];
-          return eV
+  7240: function(HH, BH, LH) {
+    var AH;
+    ! function(rH, SH) {
+      var hH = "function",
+        tH = "undefined",
+        zH = "object",
+        CH = "string",
+        EH = "major",
+        XH = "model",
+        GH = "name",
+        YH = "type",
+        uH = "vendor",
+        QH = "version",
+        WH = "architecture",
+        MH = "console",
+        xH = "mobile",
+        vH = "tablet",
+        PH = "smarttv",
+        TH = "wearable",
+        UH = "embedded",
+        VH = "Amazon",
+        OH = "Apple",
+        bH = "ASUS",
+        kH = "BlackBerry",
+        mH = "Browser",
+        oH = "Chrome",
+        IH = "Firefox",
+        fH = "Google",
+        lH = "Honor",
+        KH = "Huawei",
+        cH = "LG",
+        eH = "Microsoft",
+        qH = "Motorola",
+        gH = "Nvidia",
+        NH = "OnePlus",
+        RH = "Opera",
+        jH = "OPPO",
+        nH = "Samsung",
+        FH = "Sharp",
+        DH = "Sony",
+        wH = "Xiaomi",
+        ZH = "Zebra",
+        dH = "Facebook",
+        aH = "Chromium OS",
+        sH = "Mac OS",
+        JH = " Browser",
+        iH = function(HH) {
+          for (var BH = {}, LH = 0; LH < HH.length; LH++) BH[HH[LH].toUpperCase()] = HH[LH];
+          return BH
         },
-        dV = function(VV, eV) {
-          return typeof VV === nV && -1 !== OV(eV).indexOf(OV(VV))
+        pH = function(HH, BH) {
+          return typeof HH === CH && -1 !== yH(BH).indexOf(yH(HH))
         },
-        OV = function(VV) {
-          return VV.toLowerCase()
+        yH = function(HH) {
+          return HH.toLowerCase()
         },
-        Ve = function(VV, eV) {
-          if (typeof VV === nV) return VV = VV.replace(/^\s\s*/, ""), typeof eV === pV ? VV : VV.substring(0, 500)
+        HB = function(HH, BH) {
+          if (typeof HH === CH) return HH = HH.replace(/^\s\s*/, ""), typeof BH === tH ? HH : HH.substring(0, 500)
         },
-        ee = function(VV, eV) {
-          for (var xV, JV, YV, pV, nV, wV, ZV = 0; ZV < eV.length && !nV;) {
-            var vV = eV[ZV],
-              rV = eV[ZV + 1];
-            for (xV = JV = 0; xV < vV.length && !nV && vV[xV];)
-              if (nV = vV[xV++].exec(VV))
-                for (YV = 0; YV < rV.length; YV++) wV = nV[++JV], typeof(pV = rV[YV]) === QV && pV.length > 0 ? 2 === pV.length ? typeof pV[1] == yV ? this[pV[0]] = pV[1].call(this, wV) : this[pV[0]] = pV[1] : 3 === pV.length ? typeof pV[1] !== yV || pV[1].exec && pV[1].test ? this[pV[0]] = wV ? wV.replace(pV[1], pV[2]) : UV : this[pV[0]] = wV ? pV[1].call(this, wV, pV[2]) : UV : 4 === pV.length && (this[pV[0]] = wV ? pV[3].call(this, wV.replace(pV[1], pV[2])) : UV) : this[pV] = wV || UV;
-            ZV += 2
+        BB = function(HH, BH) {
+          for (var LH, AH, rH, tH, CH, EH, XH = 0; XH < BH.length && !CH;) {
+            var GH = BH[XH],
+              YH = BH[XH + 1];
+            for (LH = AH = 0; LH < GH.length && !CH && GH[LH];)
+              if (CH = GH[LH++].exec(HH))
+                for (rH = 0; rH < YH.length; rH++) EH = CH[++AH], typeof(tH = YH[rH]) === zH && tH.length > 0 ? 2 === tH.length ? typeof tH[1] == hH ? this[tH[0]] = tH[1].call(this, EH) : this[tH[0]] = tH[1] : 3 === tH.length ? typeof tH[1] !== hH || tH[1].exec && tH[1].test ? this[tH[0]] = EH ? EH.replace(tH[1], tH[2]) : SH : this[tH[0]] = EH ? tH[1].call(this, EH, tH[2]) : SH : 4 === tH.length && (this[tH[0]] = EH ? tH[3].call(this, EH.replace(tH[1], tH[2])) : SH) : this[tH] = EH || SH;
+            XH += 2
           }
         },
-        xe = function(VV, eV) {
-          for (var xV in eV)
-            if (typeof eV[xV] === QV && eV[xV].length > 0) {
-              for (var JV = 0; JV < eV[xV].length; JV++)
-                if (dV(eV[xV][JV], VV)) return "?" === xV ? UV : xV
-            } else if (dV(eV[xV], VV)) return "?" === xV ? UV : xV;
-          return eV.hasOwnProperty("*") ? eV["*"] : VV
+        LB = function(HH, BH) {
+          for (var LH in BH)
+            if (typeof BH[LH] === zH && BH[LH].length > 0) {
+              for (var AH = 0; AH < BH[LH].length; AH++)
+                if (pH(BH[LH][AH], HH)) return "?" === LH ? SH : LH
+            } else if (pH(BH[LH], HH)) return "?" === LH ? SH : LH;
+          return BH.hasOwnProperty("*") ? BH["*"] : HH
         },
-        Je = {
+        AB = {
           ME: "4.90",
           "NT 3.11": "NT3.51",
           "NT 4.0": "NT4.0",
@@ -4623,110 +4623,110 @@ export const modules = {
           10: ["NT 6.4", "NT 10.0"],
           RT: "ARM"
         },
-        Ye = {
+        rB = {
           browser: [
             [/\b(?:crmo|crios)\/([\w\.]+)/i],
-            [bV, [vV, "Chrome"]],
+            [QH, [GH, "Chrome"]],
             [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-            [bV, [vV, "Edge"]],
+            [QH, [GH, "Edge"]],
             [/(opera mini)\/([-\w\.]+)/i, /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i, /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i],
-            [vV, bV],
+            [GH, QH],
             [/opios[\/ ]+([\w\.]+)/i],
-            [bV, [vV, cV + " Mini"]],
+            [QH, [GH, RH + " Mini"]],
             [/\bop(?:rg)?x\/([\w\.]+)/i],
-            [bV, [vV, cV + " GX"]],
+            [QH, [GH, RH + " GX"]],
             [/\bopr\/([\w\.]+)/i],
-            [bV, [vV, cV]],
+            [QH, [GH, RH]],
             [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-            [bV, [vV, "Baidu"]],
+            [QH, [GH, "Baidu"]],
             [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
-            [bV, [vV, "Maxthon"]],
+            [QH, [GH, "Maxthon"]],
             [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i, /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i, /(?:ms|\()(ie) ([\w\.]+)/i, /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i, /(heytap|ovi|115)browser\/([\d\.]+)/i, /(weibo)__([\d\.]+)/i],
-            [vV, bV],
+            [GH, QH],
             [/quark(?:pc)?\/([-\w\.]+)/i],
-            [bV, [vV, "Quark"]],
+            [QH, [GH, "Quark"]],
             [/\bddg\/([\w\.]+)/i],
-            [bV, [vV, "DuckDuckGo"]],
+            [QH, [GH, "DuckDuckGo"]],
             [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-            [bV, [vV, "UC" + MV]],
+            [QH, [GH, "UC" + mH]],
             [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
-            [bV, [vV, "WeChat"]],
+            [QH, [GH, "WeChat"]],
             [/konqueror\/([\w\.]+)/i],
-            [bV, [vV, "Konqueror"]],
+            [QH, [GH, "Konqueror"]],
             [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-            [bV, [vV, "IE"]],
+            [QH, [GH, "IE"]],
             [/ya(?:search)?browser\/([\w\.]+)/i],
-            [bV, [vV, "Yandex"]],
+            [QH, [GH, "Yandex"]],
             [/slbrowser\/([\w\.]+)/i],
-            [bV, [vV, "Smart Lenovo " + MV]],
+            [QH, [GH, "Smart Lenovo " + mH]],
             [/(avast|avg)\/([\w\.]+)/i],
             [
-              [vV, /(.+)/, "$1 Secure " + MV], bV
+              [GH, /(.+)/, "$1 Secure " + mH], QH
             ],
             [/\bfocus\/([\w\.]+)/i],
-            [bV, [vV, GV + " Focus"]],
+            [QH, [GH, IH + " Focus"]],
             [/\bopt\/([\w\.]+)/i],
-            [bV, [vV, cV + " Touch"]],
+            [QH, [GH, RH + " Touch"]],
             [/coc_coc\w+\/([\w\.]+)/i],
-            [bV, [vV, "Coc Coc"]],
+            [QH, [GH, "Coc Coc"]],
             [/dolfin\/([\w\.]+)/i],
-            [bV, [vV, "Dolphin"]],
+            [QH, [GH, "Dolphin"]],
             [/coast\/([\w\.]+)/i],
-            [bV, [vV, cV + " Coast"]],
+            [QH, [GH, RH + " Coast"]],
             [/miuibrowser\/([\w\.]+)/i],
-            [bV, [vV, "MIUI" + SV]],
+            [QH, [GH, "MIUI" + JH]],
             [/fxios\/([\w\.-]+)/i],
-            [bV, [vV, GV]],
+            [QH, [GH, IH]],
             [/\bqihoobrowser\/?([\w\.]*)/i],
-            [bV, [vV, "360"]],
+            [QH, [GH, "360"]],
             [/\b(qq)\/([\w\.]+)/i],
             [
-              [vV, /(.+)/, "$1Browser"], bV
+              [GH, /(.+)/, "$1Browser"], QH
             ],
             [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
             [
-              [vV, /(.+)/, "$1" + SV], bV
+              [GH, /(.+)/, "$1" + JH], QH
             ],
             [/samsungbrowser\/([\w\.]+)/i],
-            [bV, [vV, lV + " Internet"]],
+            [QH, [GH, nH + " Internet"]],
             [/metasr[\/ ]?([\d\.]+)/i],
-            [bV, [vV, "Sogou Explorer"]],
+            [QH, [GH, "Sogou Explorer"]],
             [/(sogou)mo\w+\/([\d\.]+)/i],
             [
-              [vV, "Sogou Mobile"], bV
+              [GH, "Sogou Mobile"], QH
             ],
             [/(electron)\/([\w\.]+) safari/i, /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i, /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i],
-            [vV, bV],
+            [GH, QH],
             [/(lbbrowser|rekonq)/i, /\[(linkedin)app\]/i],
-            [vV],
+            [GH],
             [/ome\/([\w\.]+) \w* ?(iron) saf/i, /ome\/([\w\.]+).+qihu (360)[es]e/i],
-            [bV, vV],
+            [QH, GH],
             [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
             [
-              [vV, HV], bV
+              [GH, dH], QH
             ],
             [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /(daum)apps[\/ ]([\w\.]+)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
-            [vV, bV],
+            [GH, QH],
             [/\bgsa\/([\w\.]+) .*safari\//i],
-            [bV, [vV, "GSA"]],
+            [QH, [GH, "GSA"]],
             [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
-            [bV, [vV, "TikTok"]],
+            [QH, [GH, "TikTok"]],
             [/headlesschrome(?:\/([\w\.]+)| )/i],
-            [bV, [vV, zV + " Headless"]],
+            [QH, [GH, oH + " Headless"]],
             [/ wv\).+(chrome)\/([\w\.]+)/i],
             [
-              [vV, zV + " WebView"], bV
+              [GH, oH + " WebView"], QH
             ],
             [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-            [bV, [vV, "Android " + MV]],
+            [QH, [GH, "Android " + mH]],
             [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-            [vV, bV],
+            [GH, QH],
             [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
-            [bV, [vV, "Mobile Safari"]],
+            [QH, [GH, "Mobile Safari"]],
             [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
-            [bV, vV],
+            [QH, GH],
             [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-            [vV, [bV, xe, {
+            [GH, [QH, LB, {
               "1.0": "/8",
               1.2: "/1",
               1.3: "/3",
@@ -4737,642 +4737,642 @@ export const modules = {
               "?": "/"
             }]],
             [/(webkit|khtml)\/([\w\.]+)/i],
-            [vV, bV],
+            [GH, QH],
             [/(navigator|netscape\d?)\/([-\w\.]+)/i],
             [
-              [vV, "Netscape"], bV
+              [GH, "Netscape"], QH
             ],
             [/(wolvic|librewolf)\/([\w\.]+)/i],
-            [vV, bV],
+            [GH, QH],
             [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-            [bV, [vV, GV + " Reality"]],
+            [QH, [GH, IH + " Reality"]],
             [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /\b(links) \(([\w\.]+)/i],
-            [vV, [bV, /_/g, "."]],
+            [GH, [QH, /_/g, "."]],
             [/(cobalt)\/([\w\.]+)/i],
-            [vV, [bV, /master.|lts./, ""]]
+            [GH, [QH, /master.|lts./, ""]]
           ],
           cpu: [
             [/\b((amd|x|x86[-_]?|wow|win)64)\b/i],
             [
-              [EV, "amd64"]
+              [WH, "amd64"]
             ],
             [/(ia32(?=;))/i, /\b((i[346]|x)86)(pc)?\b/i],
             [
-              [EV, "ia32"]
+              [WH, "ia32"]
             ],
             [/\b(aarch64|arm(v?[89]e?l?|_?64))\b/i],
             [
-              [EV, "arm64"]
+              [WH, "arm64"]
             ],
             [/\b(arm(v[67])?ht?n?[fl]p?)\b/i],
             [
-              [EV, "armhf"]
+              [WH, "armhf"]
             ],
             [/( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i],
             [
-              [EV, "arm"]
+              [WH, "arm"]
             ],
             [/((ppc|powerpc)(64)?)( mac|;|\))/i],
             [
-              [EV, /ower/, "", OV]
+              [WH, /ower/, "", yH]
             ],
             [/ sun4\w[;\)]/i],
             [
-              [EV, "sparc"]
+              [WH, "sparc"]
             ],
             [/\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i],
             [
-              [EV, OV]
+              [WH, yH]
             ]
           ],
           device: [
             [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-            [ZV, [kV, lV],
-              [rV, qV]
+            [XH, [uH, nH],
+              [YH, vH]
             ],
             [/\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i, /samsung[- ]((?!sm-[lr])[-\w]+)/i, /sec-(sgh\w+)/i],
-            [ZV, [kV, lV],
-              [rV, jV]
+            [XH, [uH, nH],
+              [YH, xH]
             ],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-            [ZV, [kV, AV],
-              [rV, jV]
+            [XH, [uH, OH],
+              [YH, xH]
             ],
             [/\((ipad);[-\w\),; ]+apple/i, /applecoremedia\/[\w\.]+ \((ipad)/i, /\b(ipad)\d\d?,\d\d?[;\]].+ios/i],
-            [ZV, [kV, AV],
-              [rV, qV]
+            [XH, [uH, OH],
+              [YH, vH]
             ],
             [/(macintosh);/i],
-            [ZV, [kV, AV]],
+            [XH, [uH, OH]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-            [ZV, [kV, LV],
-              [rV, jV]
+            [XH, [uH, FH],
+              [YH, xH]
             ],
             [/\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i],
-            [ZV, [kV, RV],
-              [rV, qV]
+            [XH, [uH, lH],
+              [YH, vH]
             ],
             [/honor([-\w ]+)[;\)]/i],
-            [ZV, [kV, RV],
-              [rV, jV]
+            [XH, [uH, lH],
+              [YH, xH]
             ],
             [/\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i],
-            [ZV, [kV, gV],
-              [rV, qV]
+            [XH, [uH, KH],
+              [YH, vH]
             ],
             [/(?:huawei)([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i],
-            [ZV, [kV, gV],
-              [rV, jV]
+            [XH, [uH, KH],
+              [YH, xH]
             ],
             [/oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i, /\b((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i],
             [
-              [ZV, /_/g, " "],
-              [kV, mV],
-              [rV, qV]
+              [XH, /_/g, " "],
+              [uH, wH],
+              [YH, vH]
             ],
             [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite|pro)?)(?: bui|\))/i, / ([\w ]+) miui\/v?\d/i],
             [
-              [ZV, /_/g, " "],
-              [kV, mV],
-              [rV, jV]
+              [XH, /_/g, " "],
+              [uH, wH],
+              [YH, xH]
             ],
             [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-            [ZV, [kV, hV],
-              [rV, jV]
+            [XH, [uH, jH],
+              [YH, xH]
             ],
             [/\b(opd2(\d{3}a?))(?: bui|\))/i],
-            [ZV, [kV, xe, {
+            [XH, [uH, LB, {
                 OnePlus: ["304", "403", "203"],
-                "*": hV
+                "*": jH
               }],
-              [rV, qV]
+              [YH, vH]
             ],
             [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-            [ZV, [kV, "Vivo"],
-              [rV, jV]
+            [XH, [uH, "Vivo"],
+              [YH, xH]
             ],
             [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-            [ZV, [kV, "Realme"],
-              [rV, jV]
+            [XH, [uH, "Realme"],
+              [YH, xH]
             ],
             [/\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i, /\bmot(?:orola)?[- ](\w*)/i, /((?:moto(?! 360)[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i],
-            [ZV, [kV, CV],
-              [rV, jV]
+            [XH, [uH, qH],
+              [YH, xH]
             ],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [ZV, [kV, CV],
-              [rV, qV]
+            [XH, [uH, qH],
+              [YH, vH]
             ],
             [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [ZV, [kV, DV],
-              [rV, qV]
+            [XH, [uH, cH],
+              [YH, vH]
             ],
             [/(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i, /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i, /\blg-?([\d\w]+) bui/i],
-            [ZV, [kV, DV],
-              [rV, jV]
+            [XH, [uH, cH],
+              [YH, xH]
             ],
             [/(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i, /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i],
-            [ZV, [kV, "Lenovo"],
-              [rV, qV]
+            [XH, [uH, "Lenovo"],
+              [YH, vH]
             ],
             [/(nokia) (t[12][01])/i],
-            [kV, ZV, [rV, qV]],
+            [uH, XH, [YH, vH]],
             [/(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i, /nokia[-_ ]?(([-\w\. ]*))/i],
             [
-              [ZV, /_/g, " "],
-              [rV, jV],
-              [kV, "Nokia"]
+              [XH, /_/g, " "],
+              [YH, xH],
+              [uH, "Nokia"]
             ],
             [/(pixel (c|tablet))\b/i],
-            [ZV, [kV, WV],
-              [rV, qV]
+            [XH, [uH, fH],
+              [YH, vH]
             ],
             [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-            [ZV, [kV, WV],
-              [rV, jV]
+            [XH, [uH, fH],
+              [YH, xH]
             ],
             [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-            [ZV, [kV, fV],
-              [rV, jV]
+            [XH, [uH, DH],
+              [YH, xH]
             ],
             [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
             [
-              [ZV, "Xperia Tablet"],
-              [kV, fV],
-              [rV, qV]
+              [XH, "Xperia Tablet"],
+              [uH, DH],
+              [YH, vH]
             ],
             [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
-            [ZV, [kV, oV],
-              [rV, jV]
+            [XH, [uH, NH],
+              [YH, xH]
             ],
             [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-            [ZV, [kV, PV],
-              [rV, qV]
+            [XH, [uH, VH],
+              [YH, vH]
             ],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
-              [ZV, /(.+)/g, "Fire Phone $1"],
-              [kV, PV],
-              [rV, jV]
+              [XH, /(.+)/g, "Fire Phone $1"],
+              [uH, VH],
+              [YH, xH]
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
-            [ZV, kV, [rV, qV]],
+            [XH, uH, [YH, vH]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-            [ZV, [kV, XV],
-              [rV, jV]
+            [XH, [uH, kH],
+              [YH, xH]
             ],
             [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-            [ZV, [kV, NV],
-              [rV, qV]
+            [XH, [uH, bH],
+              [YH, vH]
             ],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [ZV, [kV, NV],
-              [rV, jV]
+            [XH, [uH, bH],
+              [YH, xH]
             ],
             [/(nexus 9)/i],
-            [ZV, [kV, "HTC"],
-              [rV, qV]
+            [XH, [uH, "HTC"],
+              [YH, vH]
             ],
             [/(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i, /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i, /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i],
-            [kV, [ZV, /_/g, " "],
-              [rV, jV]
+            [uH, [XH, /_/g, " "],
+              [YH, xH]
             ],
             [/droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i],
-            [ZV, [kV, "TCL"],
-              [rV, qV]
+            [XH, [uH, "TCL"],
+              [YH, vH]
             ],
             [/(itel) ((\w+))/i],
             [
-              [kV, OV], ZV, [rV, xe, {
+              [uH, yH], XH, [YH, LB, {
                 tablet: ["p10001l", "w7001"],
                 "*": "mobile"
               }]
             ],
             [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-            [ZV, [kV, "Acer"],
-              [rV, qV]
+            [XH, [uH, "Acer"],
+              [YH, vH]
             ],
             [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-            [ZV, [kV, "Meizu"],
-              [rV, jV]
+            [XH, [uH, "Meizu"],
+              [YH, xH]
             ],
             [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-            [ZV, [kV, "Ulefone"],
-              [rV, jV]
+            [XH, [uH, "Ulefone"],
+              [YH, xH]
             ],
             [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-            [ZV, [kV, "Energizer"],
-              [rV, jV]
+            [XH, [uH, "Energizer"],
+              [YH, xH]
             ],
             [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-            [ZV, [kV, "Cat"],
-              [rV, jV]
+            [XH, [uH, "Cat"],
+              [YH, xH]
             ],
             [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-            [ZV, [kV, "Smartfren"],
-              [rV, jV]
+            [XH, [uH, "Smartfren"],
+              [YH, xH]
             ],
             [/droid.+; (a(?:015|06[35]|142p?))/i],
-            [ZV, [kV, "Nothing"],
-              [rV, jV]
+            [XH, [uH, "Nothing"],
+              [YH, xH]
             ],
             [/; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i, /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i],
-            [ZV, [kV, "Archos"],
-              [rV, qV]
+            [XH, [uH, "Archos"],
+              [YH, vH]
             ],
             [/archos ([\w ]+)( b|\))/i, /; (ac[3-6]\d\w{2,8})( b|\))/i],
-            [ZV, [kV, "Archos"],
-              [rV, jV]
+            [XH, [uH, "Archos"],
+              [YH, xH]
             ],
             [/(imo) (tab \w+)/i, /(infinix) (x1101b?)/i],
-            [kV, ZV, [rV, qV]],
+            [uH, XH, [YH, vH]],
             [/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i, /; (hmd|imo) ([\w ]+?)(?: bui|\))/i, /(hp) ([\w ]+\w)/i, /(microsoft); (lumia[\w ]+)/i, /(lenovo)[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i, /(oppo) ?([\w ]+) bui/i],
-            [kV, ZV, [rV, jV]],
+            [uH, XH, [YH, xH]],
             [/(kobo)\s(ereader|touch)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i, /(nook)[\w ]+build\/(\w+)/i, /(dell) (strea[kpr\d ]*[\dko])/i, /(le[- ]+pan)[- ]+(\w{1,9}) bui/i, /(trinity)[- ]*(t\d{3}) bui/i, /(gigaset)[- ]+(q\w{1,9}) bui/i, /(vodafone) ([\w ]+)(?:\)| bui)/i],
-            [kV, ZV, [rV, qV]],
+            [uH, XH, [YH, vH]],
             [/(surface duo)/i],
-            [ZV, [kV, iV],
-              [rV, qV]
+            [XH, [uH, eH],
+              [YH, vH]
             ],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-            [ZV, [kV, "Fairphone"],
-              [rV, jV]
+            [XH, [uH, "Fairphone"],
+              [YH, xH]
             ],
             [/(u304aa)/i],
-            [ZV, [kV, "AT&T"],
-              [rV, jV]
+            [XH, [uH, "AT&T"],
+              [YH, xH]
             ],
             [/\bsie-(\w*)/i],
-            [ZV, [kV, "Siemens"],
-              [rV, jV]
+            [XH, [uH, "Siemens"],
+              [YH, xH]
             ],
             [/\b(rct\w+) b/i],
-            [ZV, [kV, "RCA"],
-              [rV, qV]
+            [XH, [uH, "RCA"],
+              [YH, vH]
             ],
             [/\b(venue[\d ]{2,7}) b/i],
-            [ZV, [kV, "Dell"],
-              [rV, qV]
+            [XH, [uH, "Dell"],
+              [YH, vH]
             ],
             [/\b(q(?:mv|ta)\w+) b/i],
-            [ZV, [kV, "Verizon"],
-              [rV, qV]
+            [XH, [uH, "Verizon"],
+              [YH, vH]
             ],
             [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-            [ZV, [kV, "Barnes & Noble"],
-              [rV, qV]
+            [XH, [uH, "Barnes & Noble"],
+              [YH, vH]
             ],
             [/\b(tm\d{3}\w+) b/i],
-            [ZV, [kV, "NuVision"],
-              [rV, qV]
+            [XH, [uH, "NuVision"],
+              [YH, vH]
             ],
             [/\b(k88) b/i],
-            [ZV, [kV, "ZTE"],
-              [rV, qV]
+            [XH, [uH, "ZTE"],
+              [YH, vH]
             ],
             [/\b(nx\d{3}j) b/i],
-            [ZV, [kV, "ZTE"],
-              [rV, jV]
+            [XH, [uH, "ZTE"],
+              [YH, xH]
             ],
             [/\b(gen\d{3}) b.+49h/i],
-            [ZV, [kV, "Swiss"],
-              [rV, jV]
+            [XH, [uH, "Swiss"],
+              [YH, xH]
             ],
             [/\b(zur\d{3}) b/i],
-            [ZV, [kV, "Swiss"],
-              [rV, qV]
+            [XH, [uH, "Swiss"],
+              [YH, vH]
             ],
             [/\b((zeki)?tb.*\b) b/i],
-            [ZV, [kV, "Zeki"],
-              [rV, qV]
+            [XH, [uH, "Zeki"],
+              [YH, vH]
             ],
             [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
             [
-              [kV, "Dragon Touch"], ZV, [rV, qV]
+              [uH, "Dragon Touch"], XH, [YH, vH]
             ],
             [/\b(ns-?\w{0,9}) b/i],
-            [ZV, [kV, "Insignia"],
-              [rV, qV]
+            [XH, [uH, "Insignia"],
+              [YH, vH]
             ],
             [/\b((nxa|next)-?\w{0,9}) b/i],
-            [ZV, [kV, "NextBook"],
-              [rV, qV]
+            [XH, [uH, "NextBook"],
+              [YH, vH]
             ],
             [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
             [
-              [kV, "Voice"], ZV, [rV, jV]
+              [uH, "Voice"], XH, [YH, xH]
             ],
             [/\b(lvtel\-)?(v1[12]) b/i],
             [
-              [kV, "LvTel"], ZV, [rV, jV]
+              [uH, "LvTel"], XH, [YH, xH]
             ],
             [/\b(ph-1) /i],
-            [ZV, [kV, "Essential"],
-              [rV, jV]
+            [XH, [uH, "Essential"],
+              [YH, xH]
             ],
             [/\b(v(100md|700na|7011|917g).*\b) b/i],
-            [ZV, [kV, "Envizen"],
-              [rV, qV]
+            [XH, [uH, "Envizen"],
+              [YH, vH]
             ],
             [/\b(trio[-\w\. ]+) b/i],
-            [ZV, [kV, "MachSpeed"],
-              [rV, qV]
+            [XH, [uH, "MachSpeed"],
+              [YH, vH]
             ],
             [/\btu_(1491) b/i],
-            [ZV, [kV, "Rotor"],
-              [rV, qV]
+            [XH, [uH, "Rotor"],
+              [YH, vH]
             ],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [ZV, [kV, aV],
-              [rV, qV]
+            [XH, [uH, gH],
+              [YH, vH]
             ],
             [/(sprint) (\w+)/i],
-            [kV, ZV, [rV, jV]],
+            [uH, XH, [YH, xH]],
             [/(kin\.[onetw]{3})/i],
             [
-              [ZV, /\./g, " "],
-              [kV, iV],
-              [rV, jV]
+              [XH, /\./g, " "],
+              [uH, eH],
+              [YH, xH]
             ],
             [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [ZV, [kV, KV],
-              [rV, qV]
+            [XH, [uH, ZH],
+              [YH, vH]
             ],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [ZV, [kV, KV],
-              [rV, jV]
+            [XH, [uH, ZH],
+              [YH, xH]
             ],
             [/smart-tv.+(samsung)/i],
-            [kV, [rV, tV]],
+            [uH, [YH, PH]],
             [/hbbtv.+maple;(\d+)/i],
             [
-              [ZV, /^/, "SmartTV"],
-              [kV, lV],
-              [rV, tV]
+              [XH, /^/, "SmartTV"],
+              [uH, nH],
+              [YH, PH]
             ],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
-              [kV, DV],
-              [rV, tV]
+              [uH, cH],
+              [YH, PH]
             ],
             [/(apple) ?tv/i],
-            [kV, [ZV, AV + " TV"],
-              [rV, tV]
+            [uH, [XH, OH + " TV"],
+              [YH, PH]
             ],
             [/crkey/i],
             [
-              [ZV, zV + "cast"],
-              [kV, WV],
-              [rV, tV]
+              [XH, oH + "cast"],
+              [uH, fH],
+              [YH, PH]
             ],
             [/droid.+aft(\w+)( bui|\))/i],
-            [ZV, [kV, PV],
-              [rV, tV]
+            [XH, [uH, VH],
+              [YH, PH]
             ],
             [/(shield \w+ tv)/i],
-            [ZV, [kV, aV],
-              [rV, tV]
+            [XH, [uH, gH],
+              [YH, PH]
             ],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-            [ZV, [kV, LV],
-              [rV, tV]
+            [XH, [uH, FH],
+              [YH, PH]
             ],
             [/(bravia[\w ]+)( bui|\))/i],
-            [ZV, [kV, fV],
-              [rV, tV]
+            [XH, [uH, DH],
+              [YH, PH]
             ],
             [/(mi(tv|box)-?\w+) bui/i],
-            [ZV, [kV, mV],
-              [rV, tV]
+            [XH, [uH, wH],
+              [YH, PH]
             ],
             [/Hbbtv.*(technisat) (.*);/i],
-            [kV, ZV, [rV, tV]],
+            [uH, XH, [YH, PH]],
             [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
             [
-              [kV, Ve],
-              [ZV, Ve],
-              [rV, tV]
+              [uH, HB],
+              [XH, HB],
+              [YH, PH]
             ],
             [/droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i],
-            [ZV, [rV, tV]],
+            [XH, [YH, PH]],
             [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
             [
-              [rV, tV]
+              [YH, PH]
             ],
             [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-            [kV, ZV, [rV, BV]],
+            [uH, XH, [YH, MH]],
             [/droid.+; (shield)( bui|\))/i],
-            [ZV, [kV, aV],
-              [rV, BV]
+            [XH, [uH, gH],
+              [YH, MH]
             ],
             [/(playstation \w+)/i],
-            [ZV, [kV, fV],
-              [rV, BV]
+            [XH, [uH, DH],
+              [YH, MH]
             ],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [ZV, [kV, iV],
-              [rV, BV]
+            [XH, [uH, eH],
+              [YH, MH]
             ],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
-            [ZV, [kV, lV],
-              [rV, FV]
+            [XH, [uH, nH],
+              [YH, TH]
             ],
             [/((pebble))app/i, /(asus|google|lg|oppo) ((pixel |zen)?watch[\w ]*)( bui|\))/i],
-            [kV, ZV, [rV, FV]],
+            [uH, XH, [YH, TH]],
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
-            [ZV, [kV, hV],
-              [rV, FV]
+            [XH, [uH, jH],
+              [YH, TH]
             ],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [ZV, [kV, AV],
-              [rV, FV]
+            [XH, [uH, OH],
+              [YH, TH]
             ],
             [/(opwwe\d{3})/i],
-            [ZV, [kV, oV],
-              [rV, FV]
+            [XH, [uH, NH],
+              [YH, TH]
             ],
             [/(moto 360)/i],
-            [ZV, [kV, CV],
-              [rV, FV]
+            [XH, [uH, qH],
+              [YH, TH]
             ],
             [/(smartwatch 3)/i],
-            [ZV, [kV, fV],
-              [rV, FV]
+            [XH, [uH, DH],
+              [YH, TH]
             ],
             [/(g watch r)/i],
-            [ZV, [kV, DV],
-              [rV, FV]
+            [XH, [uH, cH],
+              [YH, TH]
             ],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [ZV, [kV, KV],
-              [rV, FV]
+            [XH, [uH, ZH],
+              [YH, TH]
             ],
             [/droid.+; (glass) \d/i],
-            [ZV, [kV, WV],
-              [rV, FV]
+            [XH, [uH, fH],
+              [YH, TH]
             ],
             [/(pico) (4|neo3(?: link|pro)?)/i],
-            [kV, ZV, [rV, FV]],
+            [uH, XH, [YH, TH]],
             [/; (quest( \d| pro)?)/i],
-            [ZV, [kV, HV],
-              [rV, FV]
+            [XH, [uH, dH],
+              [YH, TH]
             ],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-            [kV, [rV, TV]],
+            [uH, [YH, UH]],
             [/(aeobc)\b/i],
-            [ZV, [kV, PV],
-              [rV, TV]
+            [XH, [uH, VH],
+              [YH, UH]
             ],
             [/(homepod).+mac os/i],
-            [ZV, [kV, AV],
-              [rV, TV]
+            [XH, [uH, OH],
+              [YH, UH]
             ],
             [/windows iot/i],
             [
-              [rV, TV]
+              [YH, UH]
             ],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
-            [ZV, [rV, jV]],
+            [XH, [YH, xH]],
             [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-            [ZV, [rV, qV]],
+            [XH, [YH, vH]],
             [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
             [
-              [rV, qV]
+              [YH, vH]
             ],
             [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
             [
-              [rV, jV]
+              [YH, xH]
             ],
             [/droid .+?; ([\w\. -]+)( bui|\))/i],
-            [ZV, [kV, "Generic"]]
+            [XH, [uH, "Generic"]]
           ],
           engine: [
             [/windows.+ edge\/([\w\.]+)/i],
-            [bV, [vV, "EdgeHTML"]],
+            [QH, [GH, "EdgeHTML"]],
             [/(arkweb)\/([\w\.]+)/i],
-            [vV, bV],
+            [GH, QH],
             [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-            [bV, [vV, "Blink"]],
+            [QH, [GH, "Blink"]],
             [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, /ekioh(flow)\/([\w\.]+)/i, /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i, /(icab)[\/ ]([23]\.[\d\.]+)/i, /\b(libweb)/i],
-            [vV, bV],
+            [GH, QH],
             [/ladybird\//i],
             [
-              [vV, "LibWeb"]
+              [GH, "LibWeb"]
             ],
             [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-            [bV, vV]
+            [QH, GH]
           ],
           os: [
             [/microsoft (windows) (vista|xp)/i],
-            [vV, bV],
+            [GH, QH],
             [/(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i],
-            [vV, [bV, xe, Je]],
+            [GH, [QH, LB, AB]],
             [/windows nt 6\.2; (arm)/i, /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
             [
-              [bV, xe, Je],
-              [vV, "Windows"]
+              [QH, LB, AB],
+              [GH, "Windows"]
             ],
             [/[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
             [
-              [bV, /_/g, "."],
-              [vV, "iOS"]
+              [QH, /_/g, "."],
+              [GH, "iOS"]
             ],
             [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
             [
-              [vV, sV],
-              [bV, /_/g, "."]
+              [GH, sH],
+              [QH, /_/g, "."]
             ],
             [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
-            [bV, vV],
+            [QH, GH],
             [/(ubuntu) ([\w\.]+) like android/i],
             [
-              [vV, /(.+)/, "$1 Touch"], bV
+              [GH, /(.+)/, "$1 Touch"], QH
             ],
             [/(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i],
-            [vV, bV],
+            [GH, QH],
             [/\(bb(10);/i],
-            [bV, [vV, XV]],
+            [QH, [GH, kH]],
             [/(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i],
-            [bV, [vV, "Symbian"]],
+            [QH, [GH, "Symbian"]],
             [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-            [bV, [vV, GV + " OS"]],
+            [QH, [GH, IH + " OS"]],
             [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-            [bV, [vV, "webOS"]],
+            [QH, [GH, "webOS"]],
             [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
-            [bV, [vV, "watchOS"]],
+            [QH, [GH, "watchOS"]],
             [/crkey\/([\d\.]+)/i],
-            [bV, [vV, zV + "cast"]],
+            [QH, [GH, oH + "cast"]],
             [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
             [
-              [vV, uV], bV
+              [GH, aH], QH
             ],
             [/panasonic;(viera)/i, /(netrange)mmh/i, /(nettv)\/(\d+\.[\w\.]+)/i, /(nintendo|playstation) ([wids345portablevuch]+)/i, /(xbox); +xbox ([^\);]+)/i, /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i, /(mint)[\/\(\) ]?(\w*)/i, /(mageia|vectorlinux)[; ]/i, /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i, /(hurd|linux)(?: arm\w*| x86\w*| ?)([\w\.]*)/i, /(gnu) ?([\w\.]*)/i, /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, /(haiku) (\w+)/i],
-            [vV, bV],
+            [GH, QH],
             [/(sunos) ?([\w\.\d]*)/i],
             [
-              [vV, "Solaris"], bV
+              [GH, "Solaris"], QH
             ],
             [/((?:open)?solaris)[-\/ ]?([\w\.]*)/i, /(aix) ((\d)(?=\.|\)| )[\w\.])*/i, /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i, /(unix) ?([\w\.]*)/i],
-            [vV, bV]
+            [GH, QH]
           ]
         },
-        Ue = function(VV, eV) {
-          if (typeof VV === QV && (eV = VV, VV = UV), !(this instanceof Ue)) return new Ue(VV, eV).getResult();
-          var xV = typeof YV !== pV && YV.navigator ? YV.navigator : UV,
-            JV = VV || (xV && xV.userAgent ? xV.userAgent : ""),
-            BV = xV && xV.userAgentData ? xV.userAgentData : UV,
-            tV = eV ? function(VV, eV) {
-              var xV = {};
-              for (var JV in VV) eV[JV] && eV[JV].length % 2 === 0 ? xV[JV] = eV[JV].concat(VV[JV]) : xV[JV] = VV[JV];
-              return xV
-            }(Ye, eV) : Ye,
-            FV = xV && xV.userAgent == JV;
+        SB = function(HH, BH) {
+          if (typeof HH === zH && (BH = HH, HH = SH), !(this instanceof SB)) return new SB(HH, BH).getResult();
+          var LH = typeof rH !== tH && rH.navigator ? rH.navigator : SH,
+            AH = HH || (LH && LH.userAgent ? LH.userAgent : ""),
+            MH = LH && LH.userAgentData ? LH.userAgentData : SH,
+            PH = BH ? function(HH, BH) {
+              var LH = {};
+              for (var AH in HH) BH[AH] && BH[AH].length % 2 === 0 ? LH[AH] = BH[AH].concat(HH[AH]) : LH[AH] = HH[AH];
+              return LH
+            }(rB, BH) : rB,
+            TH = LH && LH.userAgent == AH;
           return this.getBrowser = function() {
-            var VV, eV = {};
-            return eV[vV] = UV, eV[bV] = UV, ee.call(eV, JV, tV.browser), eV[wV] = typeof(VV = eV[bV]) === nV ? VV.replace(/[^\d\.]/g, "").split(".")[0] : UV, FV && xV && xV.brave && typeof xV.brave.isBrave == yV && (eV[vV] = "Brave"), eV
+            var HH, BH = {};
+            return BH[GH] = SH, BH[QH] = SH, BB.call(BH, AH, PH.browser), BH[EH] = typeof(HH = BH[QH]) === CH ? HH.replace(/[^\d\.]/g, "").split(".")[0] : SH, TH && LH && LH.brave && typeof LH.brave.isBrave == hH && (BH[GH] = "Brave"), BH
           }, this.getCPU = function() {
-            var VV = {};
-            return VV[EV] = UV, ee.call(VV, JV, tV.cpu), VV
+            var HH = {};
+            return HH[WH] = SH, BB.call(HH, AH, PH.cpu), HH
           }, this.getDevice = function() {
-            var VV = {};
-            return VV[kV] = UV, VV[ZV] = UV, VV[rV] = UV, ee.call(VV, JV, tV.device), FV && !VV[rV] && BV && BV.mobile && (VV[rV] = jV), FV && "Macintosh" == VV[ZV] && xV && typeof xV.standalone !== pV && xV.maxTouchPoints && xV.maxTouchPoints > 2 && (VV[ZV] = "iPad", VV[rV] = qV), VV
-          }, this.sk = function() {
-            var VV = {};
-            return VV[vV] = UV, VV[bV] = UV, ee.call(VV, JV, tV.engine), VV
+            var HH = {};
+            return HH[uH] = SH, HH[XH] = SH, HH[YH] = SH, BB.call(HH, AH, PH.device), TH && !HH[YH] && MH && MH.mobile && (HH[YH] = xH), TH && "Macintosh" == HH[XH] && LH && typeof LH.standalone !== tH && LH.maxTouchPoints && LH.maxTouchPoints > 2 && (HH[XH] = "iPad", HH[YH] = vH), HH
+          }, this.Iu = function() {
+            var HH = {};
+            return HH[GH] = SH, HH[QH] = SH, BB.call(HH, AH, PH.engine), HH
           }, this.getOS = function() {
-            var VV = {};
-            return VV[vV] = UV, VV[bV] = UV, ee.call(VV, JV, tV.os), FV && !VV[vV] && BV && BV.platform && "Unknown" != BV.platform && (VV[vV] = BV.platform.replace(/chrome os/i, uV).replace(/macos/i, sV)), VV
+            var HH = {};
+            return HH[GH] = SH, HH[QH] = SH, BB.call(HH, AH, PH.os), TH && !HH[GH] && MH && MH.platform && "Unknown" != MH.platform && (HH[GH] = MH.platform.replace(/chrome os/i, aH).replace(/macos/i, sH)), HH
           }, this.getResult = function() {
             return {
               ua: this.getUA(),
               browser: this.getBrowser(),
-              engine: this.sk(),
+              engine: this.Iu(),
               os: this.getOS(),
               device: this.getDevice(),
               cpu: this.getCPU()
             }
           }, this.getUA = function() {
-            return JV
-          }, this.setUA = function(VV) {
-            return JV = typeof VV === nV && VV.length > 500 ? Ve(VV, 500) : VV, this
-          }, this.setUA(JV), this
+            return AH
+          }, this.setUA = function(HH) {
+            return AH = typeof HH === CH && HH.length > 500 ? HB(HH, 500) : HH, this
+          }, this.setUA(AH), this
         };
-      Ue.VERSION = "1.0.41", Ue.BROWSER = IV([vV, bV, wV]), Ue.CPU = IV([EV]), Ue.DEVICE = IV([ZV, kV, rV, BV, jV, tV, qV, FV, TV]), Ue.ENGINE = Ue.OS = IV([vV, bV]), typeof eV !== pV ? (VV.exports && (eV = VV.exports = Ue), eV.UAParser = Ue) : xV.amdO ? (JV = function() {
-        return Ue
-      }.call(eV, xV, eV, VV)) === UV || (VV.exports = JV) : typeof YV !== pV && (YV.UAParser = Ue);
-      var ye = typeof YV !== pV && (YV.jQuery || YV.Zepto);
-      if (ye && !ye.ua) {
-        var pe = new Ue;
-        ye.ua = pe.getResult(), ye.ua.get = function() {
-          return pe.getUA()
-        }, ye.ua.set = function(VV) {
-          pe.setUA(VV);
-          var eV = pe.getResult();
-          for (var xV in eV) ye.ua[xV] = eV[xV]
+      SB.VERSION = "1.0.41", SB.BROWSER = iH([GH, QH, EH]), SB.CPU = iH([WH]), SB.DEVICE = iH([XH, uH, YH, MH, xH, PH, vH, TH, UH]), SB.ENGINE = SB.OS = iH([GH, QH]), typeof BH !== tH ? (HH.exports && (BH = HH.exports = SB), BH.UAParser = SB) : LH.amdO ? (AH = function() {
+        return SB
+      }.call(BH, LH, BH, HH)) === SH || (HH.exports = AH) : typeof rH !== tH && (rH.UAParser = SB);
+      var hB = typeof rH !== tH && (rH.jQuery || rH.Zepto);
+      if (hB && !hB.ua) {
+        var tB = new SB;
+        hB.ua = tB.getResult(), hB.ua.get = function() {
+          return tB.getUA()
+        }, hB.ua.set = function(HH) {
+          tB.setUA(HH);
+          var BH = tB.getResult();
+          for (var LH in BH) hB.ua[LH] = BH[LH]
         }
       }
     }("object" === typeof window ? window : this)
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);

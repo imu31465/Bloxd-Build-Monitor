@@ -1,262 +1,285 @@
 export const id = 22;
 export const ids = [22];
 export const modules = {
-  37756: (VV, eV, xV) => {
-    xV.d(eV, {
-      b: () => rV,
-      e: () => kV,
-      f: () => vV,
-      h: () => ZV
+  37472: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => WH,
+      e: () => MH,
+      i: () => GH,
+      k: () => XH
     });
-    var JV = xV(35300),
-      YV = xV(37762),
-      UV = xV(37771),
-      yV = xV(9335),
-      pV = xV(1542),
-      QV = xV(62),
-      nV = xV(78),
-      wV = xV(1321);
+    var AH = LH(34986),
+      rH = LH(37474),
+      SH = LH(37479),
+      hH = LH(9412),
+      tH = LH(1450),
+      zH = LH(45),
+      CH = LH(69),
+      EH = LH(1225);
 
-    function ZV() {
-      var VV;
-      return (0, pV.j)(YV.e, (0, YV.p)()), (0, wV.jsx)(wV.Fragment, {
-        children: null === (VV = (0, YV.p)()) || void 0 === VV ? void 0 : VV.content
+    function XH() {
+      var HH;
+      return (0, tH.e)(rH.b, (0, rH.p)()), (0, EH.jsx)(EH.Fragment, {
+        children: null === (HH = (0, rH.p)()) || void 0 === HH ? void 0 : HH.content
       })
     }
 
-    function vV(VV) {
-      var eV;
+    function GH(HH) {
+      var BH;
       let {
-        show: xV
-      } = VV;
-      (0, pV.j)(YV.e, (0, YV.p)());
-      const nV = null === (eV = (0, YV.p)()) || void 0 === eV ? void 0 : eV.menu;
-      return (0, QV.useEffect)((() => {
-        var VV;
-        xV || (null === nV || void 0 === nV || null === (VV = nV.onClose) || void 0 === VV || VV.call(nV), (0, UV.q)())
-      }), [xV, nV]), (0, QV.useEffect)((() => xV ? (0, yV.g)(UV.t, UV.g) : void 0), [xV]), (0, wV.jsx)(JV.c, {
-        showing: xV,
+        show: LH
+      } = HH;
+      (0, tH.e)(rH.b, (0, rH.p)());
+      const CH = null === (BH = (0, rH.p)()) || void 0 === BH ? void 0 : BH.menu;
+      return (0, zH.useEffect)((() => {
+        var HH;
+        LH || (null === CH || void 0 === CH || null === (HH = CH.onClose) || void 0 === HH || HH.call(CH), (0, SH.r)())
+      }), [LH, CH]), (0, zH.useEffect)((() => LH ? (0, hH.e)(SH.A, SH.g) : void 0), [LH]), (0, EH.jsx)(AH.e, {
+        showing: LH,
         globallyUniqueKey: "clientGameMenu",
-        children: null === nV || void 0 === nV ? void 0 : nV.content
+        children: null === CH || void 0 === CH ? void 0 : CH.content
       })
     }
+    const YH = new Map,
+      uH = new Set;
 
-    function rV(VV) {
+    function QH(HH, BH) {
+      BH ? YH.set(HH, BH) : YH.delete(HH);
+      for (const LH of uH) LH()
+    }
+
+    function WH(HH) {
       let {
-        placement: eV = "bottom"
-      } = VV;
-      return (0, wV.jsx)("div", {
-        id: `clientGameHud-${eV}`,
+        placement: BH = "bottom"
+      } = HH;
+      const LH = (0, zH.useRef)(null);
+      return (0, zH.useLayoutEffect)((() => {
+        const HH = LH.current;
+        return QH(BH, HH), () => {
+          YH.get(BH) === HH && QH(BH, null)
+        }
+      }), [BH]), (0, EH.jsx)("div", {
+        ref: LH,
+        id: `clientGameHud-${BH}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function kV(VV) {
+    function MH(HH) {
       let {
-        children: eV,
-        placement: xV = "bottom"
-      } = VV;
-      const [JV, YV] = (0, QV.useState)(null);
-      return (0, QV.useEffect)((() => {
-        YV(document.getElementById(`clientGameHud-${xV}`))
-      }), [xV]), JV ? (0, nV.createPortal)(eV, JV) : null
+        children: BH,
+        placement: LH = "bottom"
+      } = HH;
+      const [AH, rH] = (0, zH.useState)((() => {
+        var HH;
+        return null !== (HH = YH.get(LH)) && void 0 !== HH ? HH : null
+      }));
+      return (0, zH.useEffect)((() => {
+        const HH = () => {
+          var HH;
+          rH(null !== (HH = YH.get(LH)) && void 0 !== HH ? HH : null)
+        };
+        return uH.add(HH), HH(), () => {
+          uH.delete(HH)
+        }
+      }), [LH]), AH ? (0, CH.createPortal)(BH, AH) : null
     }
   },
-  35300: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV
+  34986: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => SH
     });
-    var JV = xV(5015),
-      YV = xV(5020);
+    var AH = LH(4947),
+      rH = LH(4951);
 
-    function UV(VV) {
+    function SH(HH) {
       let {
-        children: eV,
-        showing: xV,
-        globallyUniqueKey: UV,
-        alwaysMountChildren: yV = !1,
-        doGameplayStartStopOnShow: pV = !0,
-        keepsMovement: QV = !1
-      } = VV;
-      return (0, YV.b)(!0, xV, UV, QV), (0, JV.c)(pV, xV), xV || yV ? eV : null
+        children: BH,
+        showing: LH,
+        globallyUniqueKey: SH,
+        alwaysMountChildren: hH = !1,
+        doGameplayStartStopOnShow: tH = !0,
+        keepsMovement: zH = !1
+      } = HH;
+      return (0, rH.c)(!0, LH, SH, zH), (0, AH.e)(tH, LH), LH || hH ? BH : null
     }
   },
-  9335: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV,
-      g: () => YV
+  9412: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => SH,
+      e: () => rH
     });
-    let JV = null;
-    const YV = function(VV) {
-        const eV = {
-          cycle: VV,
+    let AH = null;
+    const rH = function(HH) {
+        const BH = {
+          cycle: HH,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return JV = eV, () => {
-          JV === eV && (JV = null)
+        return AH = BH, () => {
+          AH === BH && (AH = null)
         }
       },
-      UV = () => {
-        var VV;
-        return null !== (VV = JV) && void 0 !== VV && VV.canCycle() ? JV.cycle : null
+      SH = () => {
+        var HH;
+        return null !== (HH = AH) && void 0 !== HH && HH.canCycle() ? AH.cycle : null
       }
   },
-  37771: (VV, eV, xV) => {
-    xV.d(eV, {
-      c: () => UV,
-      g: () => bV,
-      j: () => EV,
-      m: () => pV,
-      o: () => vV,
-      q: () => BV,
-      r: () => ZV,
-      s: () => qV,
-      t: () => kV,
-      u: () => jV
+  37479: (HH, BH, LH) => {
+    LH.d(BH, {
+      A: () => uH,
+      C: () => xH,
+      c: () => SH,
+      g: () => QH,
+      j: () => WH,
+      k: () => tH,
+      n: () => GH,
+      r: () => MH,
+      t: () => XH,
+      x: () => vH
     });
-    var JV = xV(27),
-      YV = xV(32);
-    const UV = "clientGameInventoryButtonsChanged",
-      yV = new Map;
+    var AH = LH(15),
+      rH = LH(18);
+    const SH = "clientGameInventoryButtonsChanged",
+      hH = new Map;
 
-    function pV() {
-      return [...yV.values()].sort(((VV, eV) => {
-        var xV, JV;
-        return (null !== (xV = VV.order) && void 0 !== xV ? xV : 0) - (null !== (JV = eV.order) && void 0 !== JV ? JV : 0)
+    function tH() {
+      return [...hH.values()].sort(((HH, BH) => {
+        var LH, AH;
+        return (null !== (LH = HH.order) && void 0 !== LH ? LH : 0) - (null !== (AH = BH.order) && void 0 !== AH ? AH : 0)
       }))
     }
-    let QV = null;
+    let zH = null;
 
-    function nV(VV) {
-      QV = VV
+    function CH(HH) {
+      zH = HH
     }
-    let wV = !1;
+    let EH = !1;
 
-    function ZV(VV) {
-      wV = !0;
+    function XH(HH) {
+      EH = !0;
       try {
-        VV.onClick()
+        HH.onClick()
       } finally {
-        wV = !1
+        EH = !1
       }
-      VV.panel && "clientGame" === JV.b.get("openInGameMenuName") && nV(VV.id)
+      HH.panel && "clientGame" === AH.c.get("openInGameMenuName") && CH(HH.id)
     }
 
-    function vV() {
-      return wV
+    function GH() {
+      return EH
     }
 
-    function rV() {
-      return pV().filter((VV => VV.panel && !VV.disabled))
+    function YH() {
+      return tH().filter((HH => HH.panel && !HH.disabled))
     }
 
-    function kV(VV) {
-      const eV = rV(),
-        xV = eV.findIndex((VV => VV.id === QV));
-      return !(xV < 0 || eV.length < 2) && (ZV(eV[(xV + VV + eV.length) % eV.length]), !0)
+    function uH(HH) {
+      const BH = YH(),
+        LH = BH.findIndex((HH => HH.id === zH));
+      return !(LH < 0 || BH.length < 2) && (XH(BH[(LH + HH + BH.length) % BH.length]), !0)
     }
 
-    function bV() {
-      return null !== QV && rV().length > 1
+    function QH() {
+      return null !== zH && YH().length > 1
     }
 
-    function EV() {
-      nV(null)
+    function WH() {
+      CH(null)
     }
 
-    function BV() {
-      "inventory" !== JV.b.get("openInGameMenuName") && nV(null)
+    function MH() {
+      "inventory" !== AH.c.get("openInGameMenuName") && CH(null)
     }
 
-    function jV() {
-      const VV = QV;
-      return nV(null), VV
+    function xH() {
+      const HH = zH;
+      return CH(null), HH
     }
 
-    function qV(VV) {
-      return yV.set(VV.id, VV), YV.h.QZ(UV, pV(), !0), () => {
-        yV.get(VV.id) === VV && (yV.delete(VV.id), YV.h.QZ(UV, pV()))
+    function vH(HH) {
+      return hH.set(HH.id, HH), rH.k.AX(SH, tH(), !0), () => {
+        hH.get(HH.id) === HH && (hH.delete(HH.id), rH.k.AX(SH, tH()))
       }
     }
   },
-  37762: (VV, eV, xV) => {
-    xV.d(eV, {
-      e: () => pV,
-      h: () => jV,
-      i: () => EV,
-      m: () => BV,
-      o: () => vV,
-      p: () => nV,
-      r: () => bV,
-      v: () => rV,
-      z: () => wV
+  37474: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => tH,
+      c: () => xH,
+      g: () => WH,
+      j: () => MH,
+      n: () => GH,
+      p: () => CH,
+      t: () => QH,
+      u: () => YH,
+      v: () => EH
     });
-    var JV = xV(27),
-      YV = xV(32),
-      UV = xV(1332),
-      yV = xV(37771);
-    const pV = "clientGameUiChanged";
-    let QV = null;
+    var AH = LH(15),
+      rH = LH(18),
+      SH = LH(1241),
+      hH = LH(37479);
+    const tH = "clientGameUiChanged";
+    let zH = null;
 
-    function nV() {
-      return QV
+    function CH() {
+      return zH
     }
 
-    function wV(VV, eV) {
-      const xV = {
-        content: VV,
-        menu: eV
+    function EH(HH, BH) {
+      const LH = {
+        content: HH,
+        menu: BH
       };
-      return QV = xV, YV.h.QZ(pV, QV, !0), () => {
-        QV === xV && (QV = null, kV = !1, EV(), YV.h.QZ(pV, null))
+      return zH = LH, rH.k.AX(tH, zH, !0), () => {
+        zH === LH && (zH = null, uH = !1, WH(), rH.k.AX(tH, null))
       }
     }
-    let ZV = null;
+    let XH = null;
 
-    function vV() {
-      return ZV
+    function GH() {
+      return XH
     }
 
-    function rV(VV) {
-      return ZV = VV, () => {
-        ZV === VV && (ZV = null)
+    function YH(HH) {
+      return XH = HH, () => {
+        XH === HH && (XH = null)
       }
     }
-    let kV = !1;
+    let uH = !1;
 
-    function bV() {
-      const VV = JV.b.get("openInGameMenuName");
-      "clientGame" !== VV && (kV = "inventory" === VV), (0, yV.o)() || (0, yV.j)(), (0, UV.p)(UV.d), JV.b.set({
+    function QH() {
+      const HH = AH.c.get("openInGameMenuName");
+      "clientGame" !== HH && (uH = "inventory" === HH), (0, hH.n)() || (0, hH.j)(), (0, SH.x)(SH.d), AH.c.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function EV() {
-      qV(!1)
+    function WH() {
+      vH(!1)
     }
 
-    function BV() {
-      qV(kV)
+    function MH() {
+      vH(uH)
     }
 
-    function jV() {
-      kV && qV(!1)
+    function xH() {
+      uH && vH(!1)
     }
 
-    function qV(VV) {
-      "clientGame" === JV.b.get("openInGameMenuName") && JV.b.set({
-        openInGameMenuName: VV ? "inventory" : null
-      }), VV || (0, yV.j)(), kV = !1
+    function vH(HH) {
+      "clientGame" === AH.c.get("openInGameMenuName") && AH.c.set({
+        openInGameMenuName: HH ? "inventory" : null
+      }), HH || (0, hH.j)(), uH = !1
     }
   },
-  40706: (VV, eV, xV) => {
-    xV.r(eV), xV.d(eV, {
-      default: () => OV
+  40463: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      default: () => yH
     });
-    const JV = {
+    const AH = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -266,270 +289,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var YV = xV(62),
-      UV = xV(39192),
-      yV = xV(375);
-    const pV = ["Basic", "Rare", "Super"];
+    var rH = LH(45),
+      SH = LH(38905),
+      hH = LH(317);
+    const tH = ["Basic", "Rare", "Super"];
 
-    function QV(VV, eV) {
-      return `${"Basic"===eV?"":`${eV} `}${"Simple"===VV?"":`${VV} `}Lucky Block`
+    function zH(HH, BH) {
+      return `${"Basic"===BH?"":`${BH} `}${"Simple"===HH?"":`${HH} `}Lucky Block`
     }
-    const nV = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((VV => pV.map((eV => [QV(VV, eV), {
-      category: VV,
-      rarity: eV
+    const CH = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((HH => tH.map((BH => [zH(HH, BH), {
+      category: HH,
+      rarity: BH
     }])))));
-    nV.keys();
+    CH.keys();
 
-    function wV(VV) {
-      return nV.get(VV)
+    function EH(HH) {
+      return CH.get(HH)
     }
-    const ZV = "Obsidian",
-      vV = ["Cobweb"],
-      rV = [...["Red", "Blue", "Green", "Yellow"].map((VV => `${(0,yV.Y)(VV)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", ZV, ...vV];
+    const XH = "Obsidian",
+      GH = ["Cobweb"],
+      YH = [...["Red", "Blue", "Green", "Yellow"].map((HH => `${(0,hH.X)(HH)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", XH, ...GH];
 
-    function kV(VV) {
-      return rV.includes(VV)
+    function uH(HH) {
+      return YH.includes(HH)
     }
-    var bV = xV(657);
+    var QH = LH(619);
 
-    function EV(VV, eV) {
-      const xV = wV(VV);
-      if (xV) {
-        const VV = wV(eV);
-        if (!VV) return;
-        const JV = pV.length - 1 - pV.indexOf(VV.rarity);
-        return (VV.category === xV.category ? 0 : 1) * pV.length + JV
+    function WH(HH, BH) {
+      const LH = EH(HH);
+      if (LH) {
+        const HH = EH(BH);
+        if (!HH) return;
+        const AH = tH.length - 1 - tH.indexOf(HH.rarity);
+        return (HH.category === LH.category ? 0 : 1) * tH.length + AH
       }
-      if (!kV(VV)) return;
-      if (eV === VV) return 0;
-      const JV = VV => kV(VV) && !vV.includes(VV) && VV !== ZV;
-      return JV(VV) && JV(eV) ? 1 : void 0
+      if (!uH(HH)) return;
+      if (BH === HH) return 0;
+      const AH = HH => uH(HH) && !GH.includes(HH) && HH !== XH;
+      return AH(HH) && AH(BH) ? 1 : void 0
     }
-    const BV = [...Array.from({
-      length: bV.p - bV.n
-    }, ((VV, eV) => bV.n + eV)), ...Array.from({
-      length: bV.n
-    }, ((VV, eV) => eV))];
-    class jV {
-      constructor(VV) {
-        this.inventory = VV, this.pending = new Map
+    const MH = [...Array.from({
+      length: QH.p - QH.m
+    }, ((HH, BH) => QH.m + BH)), ...Array.from({
+      length: QH.m
+    }, ((HH, BH) => BH))];
+    class xH {
+      constructor(HH) {
+        this.inventory = HH, this.pending = new Map
       }
-      onPlace(VV) {
-        var eV;
-        const xV = this.inventory.selectedSlot(),
-          JV = this.inventory.itemAt(xV);
-        (null === JV || void 0 === JV ? void 0 : JV.name) === VV && (null !== (eV = JV.amount) && void 0 !== eV ? eV : 1) <= 1 && qV(VV) && this.pending.set(xV, VV)
+      onPlace(HH) {
+        var BH;
+        const LH = this.inventory.selectedSlot(),
+          AH = this.inventory.itemAt(LH);
+        (null === AH || void 0 === AH ? void 0 : AH.name) === HH && (null !== (BH = AH.amount) && void 0 !== BH ? BH : 1) <= 1 && vH(HH) && this.pending.set(LH, HH)
       }
-      onDrop(VV, eV) {
-        eV < bV.n && null === this.inventory.itemAt(eV) && qV(VV) && this.refill(eV, VV)
+      onDrop(HH, BH) {
+        BH < QH.m && null === this.inventory.itemAt(BH) && vH(HH) && this.refill(BH, HH)
       }
-      iZ() {
-        const VV = [...this.pending];
+      IX() {
+        const HH = [...this.pending];
         this.pending.clear();
-        for (const [eV, xV] of VV) null === this.inventory.itemAt(eV) && this.refill(eV, xV)
+        for (const [BH, LH] of HH) null === this.inventory.itemAt(BH) && this.refill(BH, LH)
       }
-      refill(VV, eV) {
-        const xV = function(VV, eV, xV, JV) {
-          let YV, UV = 1 / 0;
-          for (const yV of BV) {
-            if (yV === eV) continue;
-            const pV = JV(yV);
-            if (!pV || yV < bV.n && eV !== xV) continue;
-            const QV = EV(VV, pV.name);
-            void 0 !== QV && QV < UV && (YV = yV, UV = QV)
+      refill(HH, BH) {
+        const LH = function(HH, BH, LH, AH) {
+          let rH, SH = 1 / 0;
+          for (const hH of MH) {
+            if (hH === BH) continue;
+            const tH = AH(hH);
+            if (!tH || hH < QH.m && BH !== LH) continue;
+            const zH = WH(HH, tH.name);
+            void 0 !== zH && zH < SH && (rH = hH, SH = zH)
           }
-          return YV
-        }(eV, VV, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== xV && this.inventory.swap(VV, xV)
+          return rH
+        }(BH, HH, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== LH && this.inventory.swap(HH, LH)
       }
     }
 
-    function qV(VV) {
-      return !!wV(VV) || kV(VV)
+    function vH(HH) {
+      return !!EH(HH) || uH(HH)
     }
-    var tV = xV(37762),
-      FV = xV(78),
-      TV = xV(1146),
-      PV = xV.n(TV);
-    const AV = "Lucky Clover",
-      NV = {
+    var PH = LH(37474),
+      TH = LH(69),
+      UH = LH(1038),
+      VH = LH.n(UH);
+    const OH = "Lucky Clover",
+      bH = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function XV(VV) {
-      return NV[VV][0]
+    function kH(HH) {
+      return bH[HH][0]
     }
 
-    function MV(VV) {
-      return pV.filter((eV => VV >= XV(eV)))
+    function mH(HH) {
+      return tH.filter((BH => HH >= kH(BH)))
     }
-    var zV = xV(364),
-      GV = xV(2693),
-      WV = xV(27),
-      RV = xV(2880),
-      gV = xV(2039),
-      DV = xV(37756),
-      iV = xV(1414);
-    var CV = xV(1321);
-    const aV = {
-      Basic: yV.E.whiteUiText,
-      Rare: yV.E.goldUiText,
-      Super: yV.E.cyanUiText
+    var oH = LH(304),
+      IH = LH(2628),
+      fH = LH(15),
+      lH = LH(2817),
+      KH = LH(1986),
+      cH = LH(37472),
+      eH = LH(1315);
+    var qH = LH(1225);
+    const gH = {
+      Basic: hH.K.whiteUiText,
+      Rare: hH.K.goldUiText,
+      Super: hH.K.cyanUiText
     };
-    let oV = 1;
+    let NH = 1;
 
-    function cV() {
-      const VV = (0, GV.j)("currencyAmounts"),
-        eV = null === VV || void 0 === VV ? void 0 : VV.Clovers;
-      return !eV || eV.hidden ? null : (0, CV.jsx)(DV.e, {
-        children: (0, CV.jsx)(hV, {
-          amount: eV.amount
+    function RH() {
+      const HH = (0, IH.j)("currencyAmounts"),
+        BH = null === HH || void 0 === HH ? void 0 : HH.Clovers;
+      return !BH || BH.hidden ? null : (0, qH.jsx)(cH.e, {
+        children: (0, qH.jsx)(jH, {
+          amount: BH.amount
         })
       })
     }
 
-    function hV(VV) {
-      var eV, xV, JV;
+    function jH(HH) {
+      var BH, LH, AH;
       let {
-        amount: UV
-      } = VV;
+        amount: SH
+      } = HH;
       const {
-        openEverythingMenuName: QV
-      } = (0, WV.l)(["openEverythingMenuName"]), nV = (0, RV.b)(), [wV, ZV] = (0, YV.useState)(UV), [vV, rV] = (0, YV.useState)(null), [kV, bV] = (0, YV.useState)(0), [EV, BV] = (0, YV.useState)([]), jV = (0, YV.useRef)(UV), qV = (0, YV.useRef)(!1), tV = (0, YV.useRef)(null), TV = QV === zV.q.SHOP;
-      (0, YV.useEffect)((() => {
-        const VV = jV.current;
-        if (jV.current = UV, UV <= VV || TV) return void ZV(UV);
-        const eV = nV || EV.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (xV = UV - VV, JV = !qV.current, xV <= 0 || !JV && xV < 40 ? 0 : Math.min(4, Math.ceil(xV / 30)));
-        var xV, JV;
-        if (qV.current = !0, MV(UV).length > MV(VV).length && bV(oV++), eV > 0) {
-          const VV = [];
-          for (let xV = 0; xV < eV; xV++) VV.push({
-            id: oV++,
+        openEverythingMenuName: zH
+      } = (0, fH.m)(["openEverythingMenuName"]), CH = (0, lH.b)(), [EH, XH] = (0, rH.useState)(SH), [GH, YH] = (0, rH.useState)(null), [uH, QH] = (0, rH.useState)(0), [WH, MH] = (0, rH.useState)([]), xH = (0, rH.useRef)(SH), vH = (0, rH.useRef)(!1), PH = (0, rH.useRef)(null), UH = zH === oH.o.SHOP;
+      (0, rH.useEffect)((() => {
+        const HH = xH.current;
+        if (xH.current = SH, SH <= HH || UH) return void XH(SH);
+        const BH = CH || WH.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (LH = SH - HH, AH = !vH.current, LH <= 0 || !AH && LH < 40 ? 0 : Math.min(4, Math.ceil(LH / 30)));
+        var LH, AH;
+        if (vH.current = !0, mH(SH).length > mH(HH).length && QH(NH++), BH > 0) {
+          const HH = [];
+          for (let LH = 0; LH < BH; LH++) HH.push({
+            id: NH++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * xV
+            delayMs: 70 * LH
           });
-          BV((eV => [...eV, ...VV]))
+          MH((BH => [...BH, ...HH]))
         }
-        const YV = eV > 0 ? 600 : 0;
-        rV({
-          id: oV++,
-          delayMs: YV
+        const rH = BH > 0 ? 600 : 0;
+        YH({
+          id: NH++,
+          delayMs: rH
         });
-        const pV = performance.now() + YV;
-        let QV = 0;
-        const wV = eV => {
-          const xV = yV.b.clamp((eV - pV) / 600, 0, 1);
-          ZV(Math.round(VV + (UV - VV) * xV)), xV < 1 && (QV = requestAnimationFrame(wV))
+        const tH = performance.now() + rH;
+        let zH = 0;
+        const EH = BH => {
+          const LH = hH.d.clamp((BH - tH) / 600, 0, 1);
+          XH(Math.round(HH + (SH - HH) * LH)), LH < 1 && (zH = requestAnimationFrame(EH))
         };
-        return QV = requestAnimationFrame(wV), () => {
-          cancelAnimationFrame(QV)
+        return zH = requestAnimationFrame(EH), () => {
+          cancelAnimationFrame(zH)
         }
-      }), [UV, TV]);
-      const NV = function(VV) {
-          var eV;
-          const xV = null !== (eV = pV.find((eV => VV < XV(eV)))) && void 0 !== eV ? eV : "Super";
+      }), [SH, UH]);
+      const bH = function(HH) {
+          var BH;
+          const LH = null !== (BH = tH.find((BH => HH < kH(BH)))) && void 0 !== BH ? BH : "Super";
           return {
-            rarity: xV,
-            progress: yV.b.clamp(VV / XV(xV), 0, 1)
+            rarity: LH,
+            progress: hH.d.clamp(HH / kH(LH), 0, 1)
           }
-        }(wV),
-        GV = MV(wV).at(-1);
-      return (0, CV.jsxs)(CV.Fragment, {
-        children: [(0, CV.jsx)("div", {
+        }(EH),
+        IH = mH(EH).at(-1);
+      return (0, qH.jsxs)(qH.Fragment, {
+        children: [(0, qH.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, CV.jsxs)("div", {
-            className: PV()("LuckyCloverWallet", {
-              Capped: GV && "Basic" !== GV
+          children: (0, qH.jsxs)("div", {
+            className: VH()("LuckyCloverWallet", {
+              Capped: IH && "Basic" !== IH
             }),
-            style: GV && {
-              "--luckyTierColour": aV[GV]
+            style: IH && {
+              "--luckyTierColour": gH[IH]
             },
-            children: [(0, CV.jsx)("div", {
+            children: [(0, qH.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${NV.progress})`
+                transform: `scaleX(${bH.progress})`
               }
-            }), kV > 0 && (0, CV.jsx)("div", {
+            }), uH > 0 && (0, qH.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(eV=null===vV||void 0===vV?void 0:vV.delayMs)&&void 0!==eV?eV:0}ms`
+                animationDelay: `${null!==(BH=null===GH||void 0===GH?void 0:GH.delayMs)&&void 0!==BH?BH:0}ms`
               }
-            }, kV), (0, CV.jsx)("div", {
-              ref: tV,
-              className: PV()("LuckyCloverWalletIcon", vV && "Bounce"),
+            }, uH), (0, qH.jsx)("div", {
+              ref: PH,
+              className: VH()("LuckyCloverWalletIcon", GH && "Bounce"),
               style: {
-                animationDelay: `${null!==(JV=null===vV||void 0===vV?void 0:vV.delayMs)&&void 0!==JV?JV:0}ms`
+                animationDelay: `${null!==(AH=null===GH||void 0===GH?void 0:GH.delayMs)&&void 0!==AH?AH:0}ms`
               },
-              children: (0, CV.jsx)(gV.e, {
-                itemName: AV,
+              children: (0, qH.jsx)(KH.e, {
+                itemName: OH,
                 amount: 0
               })
-            }, null !== (xV = null === vV || void 0 === vV ? void 0 : vV.id) && void 0 !== xV ? xV : 0), (0, CV.jsx)("span", {
+            }, null !== (LH = null === GH || void 0 === GH ? void 0 : GH.id) && void 0 !== LH ? LH : 0), (0, qH.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: wV
-            }), GV && (0, CV.jsx)(iV.b, {
+              children: EH
+            }), IH && (0, qH.jsx)(eH.c, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, FV.createPortal)(EV.map((VV => (0, CV.jsx)(lV, {
-          flyer: VV,
-          target: tV,
+        }), (0, TH.createPortal)(WH.map((HH => (0, qH.jsx)(nH, {
+          flyer: HH,
+          target: PH,
           onDone: () => {
-            BV((eV => eV.filter((eV => eV.id !== VV.id))))
+            MH((BH => BH.filter((BH => BH.id !== HH.id))))
           }
-        }, VV.id))), document.body)]
+        }, HH.id))), document.body)]
       })
     }
 
-    function lV(VV) {
+    function nH(HH) {
       let {
-        flyer: eV,
-        target: xV,
-        onDone: JV
-      } = VV;
-      const UV = (0, YV.useRef)(null);
-      return (0, YV.useEffect)((() => {
-        var VV;
-        const YV = null === (VV = xV.current) || void 0 === VV ? void 0 : VV.getBoundingClientRect();
-        if (!UV.current || !YV) return void JV();
+        flyer: BH,
+        target: LH,
+        onDone: AH
+      } = HH;
+      const SH = (0, rH.useRef)(null);
+      return (0, rH.useEffect)((() => {
+        var HH;
+        const rH = null === (HH = LH.current) || void 0 === HH ? void 0 : HH.getBoundingClientRect();
+        if (!SH.current || !rH) return void AH();
         const {
-          x: yV,
-          y: pV
-        } = eV, QV = yV + 140 * (Math.random() - .5), nV = pV - 30 - 40 * Math.random(), wV = UV.current.animate([{
-          transform: `translate(${yV}px, ${pV}px) scale(0.3)`,
+          x: hH,
+          y: tH
+        } = BH, zH = hH + 140 * (Math.random() - .5), CH = tH - 30 - 40 * Math.random(), EH = SH.current.animate([{
+          transform: `translate(${hH}px, ${tH}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${QV}px, ${nV}px) scale(1.3)`,
+          transform: `translate(${zH}px, ${CH}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${YV.left}px, ${YV.top}px) scale(0.8)`,
+          transform: `translate(${rH.left}px, ${rH.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: eV.delayMs,
+          delay: BH.delayMs,
           fill: "backwards"
         });
-        return wV.onfinish = JV, () => {
-          wV.cancel()
+        return EH.onfinish = AH, () => {
+          EH.cancel()
         }
-      }), []), (0, CV.jsx)("div", {
-        ref: UV,
+      }), []), (0, qH.jsx)("div", {
+        ref: SH,
         className: "LuckyCloverFlying",
-        children: (0, CV.jsx)(gV.e, {
-          itemName: AV,
+        children: (0, qH.jsx)(KH.e, {
+          itemName: OH,
           amount: 0
         })
       })
     }
-    var LV = xV(32);
-    const fV = "luckyGearUpgradeView",
-      mV = {
+    var FH = LH(18);
+    const DH = "luckyGearUpgradeView",
+      wH = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -537,13 +560,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function KV(VV) {
-      var eV;
-      return null !== (eV = mV[VV.split(" ")[0]]) && void 0 !== eV ? eV : "#e07bff"
+    function ZH(HH) {
+      var BH;
+      return null !== (BH = wH[HH.split(" ")[0]]) && void 0 !== BH ? BH : "#e07bff"
     }
-    class HV {
-      constructor(VV, eV) {
-        this.selectedSlot = VV, this.itemAt = eV, this.rings = [], this.unseen = new Map, this.view = {
+    class dH {
+      constructor(HH, BH) {
+        this.selectedSlot = HH, this.itemAt = BH, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -551,200 +574,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      RZ(VV) {
-        let eV = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [xV, JV, YV] of VV) this.rings.push({
+      kX(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [LH, AH, rH] of HH) this.rings.push({
           id: this.nextId++,
-          slot: xV,
-          colour: KV(YV),
-          until: eV + 1200
-        }), xV !== this.selectedSlot() && this.unseen.set(xV, {
-          from: JV,
-          to: YV
+          slot: LH,
+          colour: ZH(rH),
+          until: BH + 1200
+        }), LH !== this.selectedSlot() && this.unseen.set(LH, {
+          from: AH,
+          to: rH
         });
-        this.QZ()
+        this.AX()
       }
-      iZ() {
-        let VV = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      IX() {
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const eV = this.rings.filter((eV => eV.until > VV));
-        let xV = eV.length !== this.rings.length;
-        this.rings = eV;
-        for (const [JV, {
-            from: YV,
-            to: UV
+        const BH = this.rings.filter((BH => BH.until > HH));
+        let LH = BH.length !== this.rings.length;
+        this.rings = BH;
+        for (const [AH, {
+            from: rH,
+            to: SH
           }] of this.unseen) {
-          const VV = this.itemAt(JV);
-          (JV === this.selectedSlot() || VV !== UV && VV !== YV) && (this.unseen.delete(JV), xV = !0)
+          const HH = this.itemAt(AH);
+          (AH === this.selectedSlot() || HH !== SH && HH !== rH) && (this.unseen.delete(AH), LH = !0)
         }
-        xV && this.QZ()
+        LH && this.AX()
       }
-      QZ() {
+      AX() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, LV.h.QZ(fV, this.view)
+        }, FH.k.AX(DH, this.view)
       }
     }
-    var uV = xV(1542);
+    var aH = LH(1450);
 
-    function sV(VV) {
-      return document.querySelector(`.HotBar [data-inven-idx="${VV}"]`)
+    function sH(HH) {
+      return document.querySelector(`.HotBar [data-inven-idx="${HH}"]`)
     }
 
-    function SV(VV) {
+    function JH(HH) {
       let {
-        ring: eV
-      } = VV;
-      const [xV, JV] = (0, YV.useState)(null);
-      return (0, YV.useLayoutEffect)((() => {
-        var VV, xV;
-        JV(null !== (VV = null === (xV = sV(eV.slot)) || void 0 === xV ? void 0 : xV.getBoundingClientRect()) && void 0 !== VV ? VV : null)
-      }), [eV]), xV ? (0, CV.jsx)("div", {
+        ring: BH
+      } = HH;
+      const [LH, AH] = (0, rH.useState)(null);
+      return (0, rH.useLayoutEffect)((() => {
+        var HH, LH;
+        AH(null !== (HH = null === (LH = sH(BH.slot)) || void 0 === LH ? void 0 : LH.getBoundingClientRect()) && void 0 !== HH ? HH : null)
+      }), [BH]), LH ? (0, qH.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: xV.left,
-          top: xV.top,
-          width: xV.width,
-          height: xV.height,
-          "--ringColour": eV.colour,
+          left: LH.left,
+          top: LH.top,
+          width: LH.width,
+          height: LH.height,
+          "--ringColour": BH.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function IV(VV) {
+    function iH(HH) {
       let {
-        slot: eV
-      } = VV;
-      const [xV, JV] = (0, YV.useState)(null);
-      return (0, YV.useLayoutEffect)((() => {
-        const VV = () => {
-          JV(sV(eV))
+        slot: BH
+      } = HH;
+      const [LH, AH] = (0, rH.useState)(null);
+      return (0, rH.useLayoutEffect)((() => {
+        const HH = () => {
+          AH(sH(BH))
         };
-        VV();
-        const xV = new MutationObserver(VV),
-          YV = document.querySelector(".BottomMiddleElements");
-        return YV && xV.observe(YV, {
+        HH();
+        const LH = new MutationObserver(HH),
+          rH = document.querySelector(".BottomMiddleElements");
+        return rH && LH.observe(rH, {
           childList: !0,
           subtree: !0
         }), () => {
-          xV.disconnect()
+          LH.disconnect()
         }
-      }), [eV]), xV ? (0, FV.createPortal)((0, CV.jsx)("div", {
+      }), [BH]), LH ? (0, TH.createPortal)((0, qH.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), xV) : null
+      }), LH) : null
     }
 
-    function dV(VV) {
+    function pH(HH) {
       let {
-        controller: eV
-      } = VV;
-      const xV = (0, uV.j)(fV, eV.getView());
-      return (0, CV.jsxs)(CV.Fragment, {
-        children: [xV.rings.map((VV => (0, CV.jsx)(SV, {
-          ring: VV
-        }, VV.id))), xV.unseenSlots.map((VV => (0, CV.jsx)(IV, {
-          slot: VV
-        }, VV)))]
+        controller: BH
+      } = HH;
+      const LH = (0, aH.e)(DH, BH.getView());
+      return (0, qH.jsxs)(qH.Fragment, {
+        children: [LH.rings.map((HH => (0, qH.jsx)(JH, {
+          ring: HH
+        }, HH.id))), LH.unseenSlots.map((HH => (0, qH.jsx)(iH, {
+          slot: HH
+        }, HH)))]
       })
     }
-    const OV = function(VV, eV, xV, yV) {
-      let pV, {
-          localPlayerId: QV
-        } = yV,
-        nV = null;
-      const wV = new jV({
-          itemAt: VV => pV.getItemSlot(QV, VV),
-          selectedSlot: () => pV.getSelectedInventorySlotI(QV),
-          swap: (VV, eV) => {
-            pV.swapInventorySlots(VV, eV)
+    const yH = function(HH, BH, LH, hH) {
+      let tH, {
+          localPlayerId: zH
+        } = hH,
+        CH = null;
+      const EH = new xH({
+          itemAt: HH => tH.getItemSlot(zH, HH),
+          selectedSlot: () => tH.getSelectedInventorySlotI(zH),
+          swap: (HH, BH) => {
+            tH.swapInventorySlots(HH, BH)
           }
         }),
-        ZV = new HV((() => pV.getSelectedInventorySlotI(QV)), (VV => {
-          var eV;
-          return null === (eV = pV.getItemSlot(QV, VV)) || void 0 === eV ? void 0 : eV.name
+        XH = new dH((() => tH.getSelectedInventorySlotI(zH)), (HH => {
+          var BH;
+          return null === (BH = tH.getItemSlot(zH, HH)) || void 0 === BH ? void 0 : BH.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, UV.d)()
+          placeAgainstBeds: (0, SH.e)()
         },
-        onCreate: VV => {
-          pV = VV, nV = (0, tV.z)((0, YV.createElement)(YV.Fragment, null, (0, YV.createElement)(cV), (0, YV.createElement)(dV, {
-            controller: ZV
+        onCreate: HH => {
+          tH = HH, CH = (0, PH.v)((0, rH.createElement)(rH.Fragment, null, (0, rH.createElement)(RH), (0, rH.createElement)(pH, {
+            controller: XH
           })))
         },
         onClose: () => {
-          var VV;
-          null === (VV = nV) || void 0 === VV || VV()
+          var HH;
+          null === (HH = CH) || void 0 === HH || HH()
         },
-        iZ: () => {
-          wV.iZ(), ZV.iZ()
+        IX: () => {
+          EH.IX(), XH.IX()
         },
-        onReceivedMessageFromServer: (VV, eV) => {
-          "luckyGearUpgrade" === VV && ZV.RZ(eV)
+        onReceivedMessageFromServer: (HH, BH) => {
+          "luckyGearUpgrade" === HH && XH.kX(BH)
         },
-        onPlayerChangeBlock: (VV, eV, xV, JV, YV, UV) => {
-          "Air" !== UV && wV.onPlace(UV)
+        onPlayerChangeBlock: (HH, BH, LH, AH, rH, SH) => {
+          "Air" !== SH && EH.onPlace(SH)
         },
-        onPlayerDropItem: (VV, eV, xV, JV) => {
-          wV.onDrop(eV, JV)
+        onPlayerDropItem: (HH, BH, LH, AH) => {
+          EH.onDrop(BH, AH)
         },
-        onPlayerAltAction: (VV, eV, xV, YV, UV, yV) => {
-          if (!yV || "Mesh" !== pV.getEntityType(yV)) return;
-          const QV = pV.getEntityName(yV),
-            nV = Object.values(JV).find((VV => VV.name === QV));
-          nV && pV.openShop(VV, !1, nV.shopTab)
+        onPlayerAltAction: (HH, BH, LH, rH, SH, hH) => {
+          if (!hH || "Mesh" !== tH.getEntityType(hH)) return;
+          const zH = tH.getEntityName(hH),
+            CH = Object.values(AH).find((HH => HH.name === zH));
+          CH && tH.openShop(HH, !1, CH.shopTab)
         }
       }
     }
   },
-  39192: (VV, eV, xV) => {
-    xV.d(eV, {
-      d: () => pV
+  38905: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => tH
     });
-    var JV = xV(375),
-      YV = xV(38114),
-      UV = xV(4952);
-    const yV = ["Leaf Bed", "_Leaf Bed Head", ...JV.Lc.flatMap((VV => [`${VV} Bed`, `_${VV} Bed Head`, `${VV} Strongbed`, `_${VV} Strongbed Head`]))];
+    var AH = LH(317),
+      rH = LH(37798),
+      SH = LH(4879);
+    const hH = ["Leaf Bed", "_Leaf Bed Head", ...AH.Mc.flatMap((HH => [`${HH} Bed`, `_${HH} Bed Head`, `${HH} Strongbed`, `_${HH} Strongbed Head`]))];
 
-    function pV() {
-      let VV;
+    function tH() {
+      let HH;
       return {
-        onCreate(eV) {
-          VV = eV
+        onCreate(BH) {
+          HH = BH
         },
-        altVetoBlocks: yV,
-        onPlayerAttemptAltAction(eV, xV, JV, yV, pV, QV) {
-          var nV;
-          if ((0, YV.d)(VV.getMetaInfo(pV).rootName) && !VV.isEntityInteractable(QV) && (0, UV.e)(null === (nV = VV.bJV(eV)) || void 0 === nV ? void 0 : nV.typeObj.type)) return "preventAction"
+        altVetoBlocks: hH,
+        onPlayerAttemptAltAction(BH, LH, AH, hH, tH, zH) {
+          var CH;
+          if ((0, rH.d)(HH.getMetaInfo(tH).rootName) && !HH.isEntityInteractable(zH) && (0, SH.e)(null === (CH = HH.yLH(BH)) || void 0 === CH ? void 0 : CH.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  38114: (VV, eV, xV) => {
-    function JV(VV) {
-      return VV.includes("Leaf Bed")
+  37798: (HH, BH, LH) => {
+    function AH(HH) {
+      return HH.includes("Leaf Bed")
     }
 
-    function YV(VV) {
-      return / Bed(?: Head)?(?:\||$)/.test(VV) && !JV(VV)
+    function rH(HH) {
+      return / Bed(?: Head)?(?:\||$)/.test(HH) && !AH(HH)
     }
 
-    function UV(VV) {
-      return VV.includes(" Strongbed")
+    function SH(HH) {
+      return HH.includes(" Strongbed")
     }
 
-    function yV(VV) {
-      return JV(VV) || YV(VV) || UV(VV)
+    function hH(HH) {
+      return AH(HH) || rH(HH) || SH(HH)
     }
-    xV.d(eV, {
-      d: () => yV,
-      e: () => JV,
-      f: () => UV,
-      j: () => YV
+    LH.d(BH, {
+      d: () => hH,
+      h: () => AH,
+      l: () => SH,
+      m: () => rH
     })
   }
 };
 Object.freeze(modules);
-for (const VV in modules) Object.freeze(modules[VV]);
+for (const HH in modules) Object.freeze(modules[HH]);
