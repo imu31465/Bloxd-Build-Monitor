@@ -1,19 +1,19 @@
 export const id = 675;
 export const ids = [675];
 export const modules = {
-  64104: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      lodPixelShaderWGSL: () => AU
+  64267: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      lodPixelShader: () => hH
     });
-    var cU = zU(40961);
-    const yU = "lodPixelShader",
-      QU = "const GammaEncodePowerApprox=1.0/2.2;varying vUV: vec2f;var textureSampler: texture_2d<f32>;uniform lod: f32;uniform gamma: i32;@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {let textureSize=textureDimensions(textureSampler);fragmentOutputs.color=textureLoad(textureSampler,vec2u(fragmentInputs.vUV*vec2f(textureSize)),u32(uniforms.lod));if (uniforms.gamma==0) {fragmentOutputs.color=vec4f(pow(fragmentOutputs.color.rgb,vec3f(GammaEncodePowerApprox)),fragmentOutputs.color.a);}}\n";
-    cU.b.ShadersStoreWGSL[yU] || (cU.b.ShadersStoreWGSL[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+    var AH = LH(41138);
+    const rH = "lodPixelShader",
+      SH = "precision highp float;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform sampler2D textureSampler;uniform float lod;uniform vec2 texSize;uniform int gamma;void main(void)\n{ivec2 textureDimensions=textureSize(textureSampler,0);gl_FragColor=texelFetch(textureSampler,ivec2(vUV*vec2(textureDimensions)),int(lod));if (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
+    AH.c.ShadersStore[rH] || (AH.c.ShadersStore[rH] = SH);
+    const hH = {
+      name: rH,
+      shader: SH
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

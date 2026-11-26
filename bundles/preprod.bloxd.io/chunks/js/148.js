@@ -1,895 +1,506 @@
 export const id = 148;
-export const ids = [148];
+export const ids = [148, 152, 153];
 export const modules = {
-  39586: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => DU,
-      h: () => NU,
-      k: () => IU,
-      m: () => tU,
-      q: () => YU,
-      r: () => EU,
-      s: () => AU,
-      v: () => pU
+  7155: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH
     });
-    var cU = zU(318),
-      yU = zU(1769);
-    const QU = "A valid external Instance reference no longer exists.";
-
-    function AU(UU) {
-      return UU.includes(QU)
-    }
-    const FU = [
-        [1e4, "<10s", "lt10s"],
-        [6e4, "<1m", "lt1m"],
-        [3e5, "<5m", "lt5m"],
-        [18e5, "<30m", "lt30m"],
-        [1 / 0, "30m+", "ge30m"]
-      ],
-      oU = [
-        [1e3, "lt1s"],
-        [2e3, "lt2s"],
-        [5e3, "lt5s"],
-        [1e4, "lt10s"],
-        [3e4, "lt30s"],
-        [1 / 0, "ge30s"]
-      ];
-    const DU = {
-      WebGPU: "WebGPU device lost",
-      WebGL2: "WebGL2 context lost"
+    var AH = LH(5520),
+      rH = LH(1225);
+    const SH = {
+      strict: "shaderPack:variantStrict",
+      nonStrict: "shaderPack:variantNonStrict",
+      terrain: "shaderPack:variantTerrain",
+      liquid: "shaderPack:variantLiquid",
+      model: "shaderPack:variantModel"
     };
 
-    function EU(UU, XU) {
-      return UU ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(UU) {
-        var XU;
-        const zU = null !== (XU = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(UU)) && void 0 !== XU ? XU : /failed with ([A-Z][A-Z0-9_]+)/.exec(UU);
-        return zU ? zU[1] : AU(UU) ? "gpu_process_lost" : "other"
-      }(XU)
-    }
-
-    function YU(UU) {
-      return `${(null===UU||void 0===UU?void 0:UU.vendor)||"unknown vendor"} ${(null===UU||void 0===UU?void 0:UU.architecture)||"unknown architecture"}`
-    }
-
-    function NU(UU) {
-      return gU(UU)[1]
-    }
-
-    function IU(UU) {
-      return gU(UU)[2]
-    }
-
-    function pU(UU, XU, zU) {
-      const yU = (0, cU.e)(),
-        QU = null !== yU && yU >= XU,
-        AU = document.hidden ? "hidden" : QU ? "shown" : "visible",
-        FU = QU ? zU - yU : null;
-      return {
-        page: null === FU ? AU : `${AU}${NU(FU)}`,
-        code: `${UU}_${null===FU?AU:`${AU}_${IU(FU)}`}_${aU(zU)}`
-      }
-    }
-
-    function aU(UU) {
-      if ((0, yU.e)()) return "ad_open";
-      const XU = (0, yU.b)();
-      return null === XU ? "ad_none" : `ad_${IU(UU-XU.endedAt)}_${XU.pageHid?"h":"v"}`
-    }
-
-    function tU(UU) {
-      return kU(oU, UU)[1]
-    }
-
-    function gU(UU) {
-      return kU(FU, UU)
-    }
-
-    function kU(UU, XU) {
-      var zU;
-      return null !== (zU = UU.find((UU => {
-        let [zU] = UU;
-        return XU < zU
-      }))) && void 0 !== zU ? zU : UU[UU.length - 1]
-    }
-  },
-  39876: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => oU
-    });
-    var cU = zU(9493),
-      yU = zU(37201),
-      QU = zU(39882);
-    const AU = {
-        seat: "seat_timeout",
-        socket_unopened: "socket_timeout_unopened",
-        socket: "socket_timeout"
-      },
-      FU = {
-        seat: "seat_lost",
-        socket_unopened: "socket_unopened",
-        socket: "socket_closed"
-      };
-
-    function oU(UU, XU) {
-      if (UU instanceof yU.c) return {
-        at: AU[XU],
-        code: 0
-      };
-      const zU = (0, cU.f)(UU),
-        oU = "number" === typeof zU ? zU : 0;
-      return null !== (0, QU.l)(oU).name ? {
-        at: "refused",
-        code: oU
-      } : {
-        at: FU[XU],
-        code: oU
-      }
-    }
-  },
-  9493: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => QU,
-      f: () => AU,
-      h: () => FU,
-      j: () => DU,
-      n: () => oU
-    });
-    var cU = zU(212),
-      yU = zU(5057);
-
-    function QU(UU) {
-      return AU(UU) === cU.e.gameOrPluginOnPlayerAuthRejected.code
-    }
-
-    function AU(UU) {
-      return "object" === typeof UU && null !== UU ? UU.code : void 0
-    }
-
-    function FU(UU) {
-      var XU;
-      return null !== (XU = Object.keys(yU.b).find((XU => yU.b[XU] === UU))) && void 0 !== XU ? XU : null
-    }
-
-    function oU(UU) {
-      return "notWhitelisted" === UU ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
-    }
-    const DU = {
-      private: "customLobby:cantJoinPrivate",
-      notWhitelisted: "customLobby:cantJoinNotWhitelisted",
-      banned: "customLobby:cantJoinBanned",
-      adminLocked: "customLobby:cantJoinAdminLocked"
-    }
-  },
-  39882: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => yU,
-      f: () => QU,
-      i: () => FU,
-      l: () => EU,
-      p: () => oU,
-      r: () => AU
-    });
-    var cU = zU(212);
-    const yU = 3e3,
-      QU = 15e3;
-
-    function AU(UU) {
-      const XU = UU.endsWith(cU.m);
-      return {
-        text: (XU ? UU.slice(0, -cU.m.length) : UU) || null,
-        dropsCache: XU
-      }
-    }
-    const FU = "Either your internet isn't working or this is a bug.";
-
-    function oU(UU, XU) {
-      const zU = EU(UU);
-      return null !== zU.name && "" === cU.e[zU.name].text && null !== XU ? XU : zU.reason
-    }
-    const DU = "You were removed from the game.";
-
-    function EU(UU) {
-      var XU;
-      let zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const yU = null !== (XU = Object.keys(cU.e).find((XU => cU.e[XU].code === UU))) && void 0 !== XU ? XU : null;
-      if (null === yU) return {
-        code: UU,
-        name: yU,
-        reason: null !== zU && void 0 !== zU ? zU : `${FU}\nCode: ${UU}`,
-        canReconnect: !1,
-        automaticallyReconnect: !1,
-        requiresRefresh: !1
-      };
-      const {
-        text: QU,
-        canReconnect: AU = !1
-      } = cU.e[yU], oU = UU === cU.e.outdatedVersion.code || UU === cU.e.loadRecaptchaError.code;
-      return {
-        code: UU,
-        name: yU,
-        reason: "" !== QU ? QU : null !== zU && void 0 !== zU ? zU : UU === cU.e.gameOrPluginKick.code ? DU : `Code: ${UU}`,
-        canReconnect: AU,
-        automaticallyReconnect: UU === cU.e.customGameUpdated.code || UU === cU.e.duplicateLobbyNameError.code,
-        requiresRefresh: oU
-      }
-    }
-  },
-  37564: (UU, XU, zU) => {
-    function cU(UU) {
-      return "fetch" === UU || "timeout" === UU || "integrity" === UU ? "download" : "browser"
-    }
-    zU.d(XU, {
-      e: () => yU,
-      i: () => FU,
-      k: () => DU,
-      o: () => AU,
-      r: () => oU,
-      u: () => cU,
-      v: () => QU
-    });
-    const yU = "https://discord.gg/playbloxd";
-
-    function QU(UU) {
-      return "download" === UU ? {
-        icon: "wifi",
-        title: "wasmScreens:downloadFailedTitle",
-        help: "wasmScreens:downloadFailedHelp",
-        helpValues: {},
-        discordLink: !1,
-        confirm: "general:tryAgain",
-        cancel: "general:back"
-      } : {
-        icon: "face-dizzy",
-        title: "wasmScreens:unsupportedTitle",
-        help: "wasmScreens:unsupportedHelp",
-        helpValues: {},
-        discordLink: !1,
-        confirm: "general:ok",
-        cancel: null
-      }
-    }
-
-    function AU() {
-      return {
-        icon: "face-dizzy",
-        title: "wasmScreens:noContextTitle",
-        help: "wasmScreens:noContextHelp",
-        helpValues: {},
-        discordLink: !1,
-        confirm: "general:tryAgain",
-        cancel: "general:back"
-      }
-    }
-
-    function FU(UU, XU) {
-      return {
-        icon: "face-dizzy",
-        title: "wasmScreens:crashTitle",
-        help: XU ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
-        helpValues: {
-          code: UU.code
-        },
-        discordLink: XU,
-        confirm: "general:reload",
-        cancel: "general:back"
-      }
-    }
-
-    function oU() {
-      return {
-        icon: "face-dizzy",
-        title: "wasmScreens:turnstilePageTitle",
-        help: "wasmScreens:turnstilePageHelp",
-        helpValues: {},
-        discordLink: !1,
-        confirm: "general:ok",
-        cancel: null
-      }
-    }
-
-    function DU(UU, XU, zU) {
-      return {
-        icon: "wifi",
-        title: "wasmScreens:disconnectedTitle",
-        help: zU ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
-        helpValues: {
-          reason: UU.reason
-        },
-        discordLink: null === UU.name,
-        confirm: XU ? "general:reconnect" : UU.requiresRefresh ? "general:reload" : "general:ok",
-        cancel: null
-      }
-    }
-  },
-  37014: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => hU,
-      g: () => cX,
-      i: () => KU,
-      k: () => XX,
-      n: () => bU,
-      q: () => TU
-    });
-    var cU = zU(3169),
-      yU = zU(3189),
-      QU = zU(7213),
-      AU = zU(5179),
-      FU = zU(3182),
-      oU = zU(3176);
-    const DU = "bloxd-wasmDownloaded",
-      EU = 12;
-
-    function YU(UU) {
-      return UU.pathname.slice(UU.pathname.lastIndexOf("/") + 1)
-    }
-
-    function NU() {
-      try {
-        if ("undefined" === typeof localStorage) return null;
-        const UU = JSON.parse(localStorage.getItem(DU) ?? "[]");
-        return Array.isArray(UU) ? UU.filter((UU => "string" === typeof UU)) : []
-      } catch (UU) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", UU), null
-      }
-    }
-    const IU = Reflect.apply,
-      pU = "undefined" === typeof Worker ? void 0 : Worker,
-      aU = pU?.prototype.postMessage,
-      tU = pU?.prototype.terminate,
-      gU = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      kU = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      GU = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      BU = function() {
-        try {
-          return (0, AU.i)(pU, "Worker", !0) && (0, AU.i)(aU, "postMessage") && (0, AU.i)(tU, "terminate") && (0, AU.i)(GU, "buffer") && void 0 !== gU && void 0 !== kU
-        } catch {
-          return !1
-        }
-      }();
-    let ZU = !1;
-
-    function RU() {
-      return BU && !ZU
-    }
-    class PU {
-      worker = null;
-      failed = !1;
-      constructor() {
-        if (RU()) try {
-          this.worker = dU(), IU(gU, this.worker, ["error", () => {
-            this.failed = !0
-          }])
-        } catch {
-          this.stop()
-        }
-      }
-      take() {
-        const UU = this.worker;
-        if (this.worker = null, null !== UU && this.failed) throw IU(tU, UU, []), new Error("it did not run");
-        return UU
-      }
-      stop() {
-        const UU = this.worker;
-        this.worker = null, null !== UU && IU(tU, UU, [])
-      }
-    }
-    class WU {
-      decoded;
-      worker;
-      reject;
-      constructor(UU, XU, zU, cU, QU) {
-        try {
-          this.worker = QU?.take() ?? dU()
-        } catch (DU) {
-          throw ZU = !0, new Error(`The zstd decoder's worker did not start: ${(0,FU.i)(DU)}`)
-        }
-        const AU = this.worker;
-        this.decoded = (0, yU.l)(((XU, yU) => {
-          this.reject = yU;
-          const QU = (UU, XU) => {
-            IU(gU, AU, [UU, XU])
-          };
-          QU("message", (UU => {
-            cU();
-            try {
-              const cU = IU(kU, UU, []);
-              if (!0 === cU) XU();
-              else {
-                if ("string" === typeof cU) throw cU.startsWith(FU.e) && (ZU = !0), new Error(cU);
-                zU(cU, IU(oU.B, cU, []))
-              }
-            } catch (DU) {
-              yU(DU)
-            }
-          })), QU("error", (() => {
-            ZU = !0, yU(new Error("The zstd decoder's worker did not run"))
-          })), QU("messageerror", (() => {
-            yU(new Error(`${UU}'s decoder sent a piece that could not be read`))
-          }))
-        })), (0, oU.cb)(this.decoded), IU(aU, AU, [
-          [UU, XU]
-        ])
-      }
-      push(UU) {
-        IU(aU, this.worker, [UU, [IU(GU, UU, [])]])
-      }
-      end() {
-        IU(aU, this.worker, [null])
-      }
-      markWorkerFailed() {
-        ZU = !0
-      }
-      fail(UU) {
-        this.reject(UU), this.terminate()
-      }
-      terminate() {
-        IU(tU, this.worker, [])
-      }
-    }
-
-    function dU() {
-      if (globalThis.Worker !== pU) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(zU.p + zU.u(79), zU.b), {
-        name: "wasmZstdDecoder",
-        type: "module"
-      })
-    }
-    const LU = Reflect.apply,
-      eU = ArrayBuffer,
-      CU = "undefined" === typeof Response ? void 0 : Response,
-      wU = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      qU = function() {
-        let UU;
-        void 0 !== wU && new wU({
-          __proto__: null,
-          start(XU) {
-            const {
-              enqueue: zU,
-              close: cU,
-              error: yU
-            } = Object.getPrototypeOf(XU);
-            UU = {
-              enqueue: zU,
-              close: cU,
-              error: yU
-            }
-          }
-        }, {
-          __proto__: null
-        });
-        return UU
-      }(),
-      OU = function() {
-        try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== qU && (0, AU.i)(CU, "Response", !0) && (0, AU.i)(wU, "ReadableStream", !0) && (0, AU.i)(qU.enqueue, "enqueue") && (0, AU.i)(qU.close, "close") && (0, AU.i)(qU.error, "error") && (0, AU.i)(oU.fb, "body") && (0, AU.i)(oU.X, "getReader") && (0, AU.i)(oU.eb, "read")
-        } catch {
-          return !1
-        }
-      }();
-    async function SU(UU, XU, zU, cU, QU, AU, DU) {
-      const EU = new eU(XU),
-        {
-          controller: YU,
-          compiled: NU
-        } = function(UU) {
-          try {
-            let UU;
-            const XU = new wU({
-                __proto__: null,
-                start(XU) {
-                  UU = XU
-                }
-              }, {
-                __proto__: null
-              }),
-              zU = new CU(XU, {
-                __proto__: null,
-                headers: {
-                  __proto__: null,
-                  "Content-Type": "application/wasm"
-                }
-              });
-            return {
-              controller: UU,
-              compiled: (0, oU.cb)((0, oU.G)((0, oU.lb)(zU)))
-            }
-          } catch (XU) {
-            throw new Error(`${UU} could not be streamed into a compile: ${(0,FU.i)(XU)}`)
-          }
-        }(UU),
-        {
-          enqueue: IU,
-          close: pU,
-          error: aU
-        } = qU,
-        tU = UU => {
-          try {
-            LU(aU, YU, [UU])
-          } catch {}
-        };
-      let gU = 0;
-      const kU = (zU, cU) => {
-        if (gU + cU > XU) throw new Error(`${UU} decoded past its module's ${XU} bytes`);
-        LU(oU.ib, new oU.l(EU), [new oU.l(zU), gU]);
-        try {
-          LU(IU, YU, [new oU.l(EU, gU, cU)])
-        } catch {}
-        gU += cU
-      };
-      let GU, BU;
-      try {
-        GU = new WU(UU, XU, kU, cU, DU)
-      } catch (dU) {
-        throw tU(dU), dU
-      }
-      const ZU = UU => {
-        GU.fail(UU), void 0 !== BU && rU(BU)
-      };
-      let RU = !1;
-      zU.addEventListener("abort", (() => {
-        RU && GU.markWorkerFailed(), ZU(new Error(`${UU} stalled`))
-      }), {
-        once: !0
-      }), (0, yU.x)(NU, (() => {}), ZU);
-      try {
-        let AU;
-        try {
-          AU = await fetch(UU, {
-            signal: zU
+    function hH(HH) {
+      let {
+        diagnostics: BH,
+        more: LH = 0,
+        t: hH
+      } = HH;
+      return (0, rH.jsxs)("ul", {
+        className: "ShaderPackDiagnostics",
+        children: [BH.map(((HH, BH) => {
+          const LH = (0, AH.f)(HH),
+            tH = function(HH, BH) {
+              const LH = (0, AH.d)(null !== HH && void 0 !== HH ? HH : []);
+              if (0 === LH.length) return null;
+              return LH.map((HH => HH.map((HH => BH(SH[HH]))).join(", "))).join("; ")
+            }(HH.variants, hH);
+          return (0, rH.jsxs)("li", {
+            children: [LH && (0, rH.jsx)("span", {
+              className: "ShaderPackDiagnosticLocation",
+              children: LH
+            }), HH.message, tH && (0, rH.jsx)("span", {
+              className: "ShaderPackDiagnosticVariants",
+              children: hH("shaderPack:onlyIn", {
+                variants: tH
+              })
+            })]
+          }, BH)
+        })), LH > 0 && (0, rH.jsx)("li", {
+          children: hH("shaderPack:moreErrors", {
+            count: String(LH)
           })
-        } catch (dU) {
-          throw new Error(`Fetching ${UU} failed: ${(0,FU.i)(dU)}`)
-        }
-        const {
-          ok: DU,
-          status: EU,
-          body: YU
-        } = function(UU, XU) {
-          try {
-            const {
-              ok: UU,
-              status: zU
-            } = XU;
-            return {
-              ok: UU,
-              status: zU,
-              body: LU(oU.fb, XU, [])
-            }
-          } catch {
-            throw new Error(`${UU} came in a response a page script made`)
-          }
-        }(UU, AU);
-        if (!DU) throw new Error(`Fetching ${UU} failed: HTTP ${EU}`);
-        cU();
-        const NU = LU(oU.X, YU, []);
-        BU = NU;
-        const IU = () => {
-          rU(NU)
-        };
-        for ((0, yU.x)(GU.decoded, IU, IU);;) {
-          let XU;
-          try {
-            XU = await LU(oU.eb, NU, [])
-          } catch (dU) {
-            throw new Error(`Downloading ${UU} failed: ${(0,FU.i)(dU)}`)
-          }
-          if (XU.done) break;
-          cU(), GU.push(XU.value)
-        }
-        if (RU = !0, GU.end(), await GU.decoded, QU(), gU !== XU) throw new Error(`${UU} ended before its module did`)
-      } catch (dU) {
-        throw tU(dU), ZU(dU), dU
-      }
-      GU.terminate();
-      try {
-        LU(pU, YU, [])
-      } catch {}
-      const PU = await NU;
-      return void 0 !== AU && await (0, oU.D)(UU, new oU.l(EU), {
-        sha256: AU.sha256,
-        onMismatch: () => {}
-      }), PU
-    }
-
-    function rU(UU) {
-      try {
-        (0, oU.cb)(UU.cancel())
-      } catch {}
-    }
-    const uU = ".zst.bin",
-      fU = 1e3;
-    let iU = null;
-
-    function HU(UU) {
-      return iU ??= function() {
-        const UU = new Map,
-          XU = "bloxd_wasm_webgpu:5162616,bloxd_wasm_webgl:5545132,bloxd_wasm_webgl1:4878547,bloxd_wasm_workers:203635,bloxd_wasm_models:478484,bloxd_wasm_client:3732288";
-        for (const zU of XU?.split(",") ?? []) {
-          const [XU = "", cU] = zU.split(":"), yU = Number(cU);
-          Number.isInteger(yU) && yU > 0 && UU.set(XU, yU)
-        }
-        return UU
-      }(), iU.get(UU)
-    }
-    async function MU(UU, XU) {
-      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const cU = HU(UU.name);
-      if (void 0 === cU) return vU(await VU(UU, XU, zU), "cold-wasm");
-      const QU = OU ? new PU : null;
-      let AU;
-      try {
-        if (DU = UU.url(), NU()?.includes(YU(DU)) && await async function(UU) {
-            const XU = new AbortController;
-            let zU;
-            const cU = (0, yU.l)((UU => {
-              zU = setTimeout((() => {
-                XU.abort(), UU(null)
-              }), fU)
-            }));
-            try {
-              const zU = fetch(UU.href, {
-                  cache: "only-if-cached",
-                  mode: "same-origin",
-                  signal: XU.signal
-                }),
-                QU = await (0, yU.u)([zU, cU]);
-              return !!QU?.ok && ((0, oU.cb)(QU.body.cancel()), !0)
-            } catch {
-              return !1
-            } finally {
-              clearTimeout(zU)
-            }
-          }(UU.url())) return QU?.stop(), await async function(UU, XU, zU, cU) {
-          let yU = !1;
-          const QU = zU && {
-            sha256: zU.sha256,
-            onMismatch: () => {
-              yU = !0
-            }
-          };
-          try {
-            return vU(await VU(UU, QU, cU), "warm")
-          } catch (AU) {
-            const cU = await sU(UU, XU, zU, null);
-            if (null === cU) throw yU && zU.onMismatch(), AU;
-            return console.warn(`${UU.url().href} from the HTTP cache failed: ${(0,FU.i)(AU)}: loaded its copy instead`), vU(cU, yU ? "warm-refused" : "warm-broken")
-          }
-        }(UU, cU, XU, zU);
-        AU = await sU(UU, cU, XU, QU)
-      } finally {
-        QU?.stop()
-      }
-      var DU;
-      return null !== AU ? vU(AU, "cold-worker") : vU(await VU(UU, XU, zU), "cold-wasm")
-    }
-
-    function vU(UU, XU) {
-      return {
-        __proto__: null,
-        module: UU,
-        path: XU
-      }
-    }
-
-    function VU(UU, XU, zU) {
-      return void 0 === HU(UU.name) ? (0, oU.M)(UU.url(), XU, zU) : (0, oU.M)(UU.url(), XU, {
-        ...zU,
-        hideThen: !0,
-        onDownloaded: () => {
-          ! function(UU) {
-            const XU = NU();
-            if (null === XU) return;
-            const zU = YU(UU),
-              cU = XU.filter((UU => UU !== zU));
-            cU.push(zU);
-            try {
-              localStorage.setItem(DU, JSON.stringify(cU.slice(-EU)))
-            } catch (yU) {
-              console.warn(`Bloxd wasm: ${zU} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, yU)
-            }
-          }(UU.url()), zU.onDownloaded?.()
-        }
+        })]
       })
     }
-    async function sU(UU, XU, zU, cU) {
-      if (!OU || !RU()) return null;
-      const yU = UU.url(),
-        QU = `${yU.href}${uU}`;
-      try {
-        return await (0, oU.jb)(QU, ((UU, yU, AU) => SU(QU, XU, UU, yU, AU, zU, cU)))
-      } catch (AU) {
-        return console.warn(`${(0,FU.i)(AU)}: loading ${yU.href} instead`), null
+  },
+  7161: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => UH,
+      f: () => VH
+    });
+    var AH = LH(45),
+      rH = LH(1038),
+      SH = LH.n(rH),
+      hH = LH(5446),
+      tH = LH(1313),
+      zH = LH(1315),
+      CH = LH(1123),
+      EH = LH(5531),
+      XH = LH(5523),
+      GH = LH(3514);
+    const YH = 33554432,
+      uH = 1024,
+      QH = 65536;
+    async function WH(HH) {
+      const BH = (0, GH.p)(HH);
+      if (BH) {
+        if (BH.size > YH) throw new GH.d("shaderPack:loadZipTooBig", {
+          megabytes: String(YH / 1048576)
+        });
+        return async function(HH) {
+          return MH((0, GH.g)(HH, uH).map((BH => ({
+            path: BH.path,
+            read: LH => (0, GH.l)(HH, BH, LH)
+          }))))
+        }(new Uint8Array(await BH.arrayBuffer()))
       }
+      return MH(HH.map((HH => ({
+        path: (0, GH.h)(HH),
+        read: BH => async function(HH, BH) {
+          return HH.size > BH ? null : new Uint8Array(await HH.arrayBuffer())
+        }(HH, BH)
+      }))))
     }
-    let nU = null,
-      mU = !1;
-    const lU = new Map,
-      xU = new Map;
-    let JU = null;
-
-    function jU(UU) {
-      const XU = XU => UU.filter((UU => lU.get(UU)?.state === XU)).length,
-        zU = XU("compiled");
-      return zU > 0 && zU === UU.length ? "compiled" : zU + XU("compiling") > 0 ? "compiling" : "none"
-    }
-
-    function KU() {
-      return JU ?? jU([...lU.keys()])
-    }
-
-    function bU(UU, XU, zU) {
-      return null === nU ? nU = UX(UU, XU, zU?.memoryMaximumBytes) : UU !== nU.build ? console.warn(`Bloxd wasm: ${UU.name} was asked for after ${nU.build.name} started loading, which this thread keeps`) : XU.name !== nU.workers.name && console.warn(`Bloxd wasm: ${XU.name} was asked for workers after ${nU.workers.name}, which this thread keeps`), zU?.reloadFailedDownload && !mU && (0, cU.gb)() && (mU = !0, nU = UX(nU.build, nU.workers, nU.memoryMaximumBytes)), nU.loaded
-    }
-
-    function TU(UU) {
-      return null === nU ? (0, yU.l)((UU => {
-        UU(!1)
-      })) : ((0, cU.cb)() && (nU = UX(nU.build, nU.workers, UU ?? nU.memoryMaximumBytes)), nU.loaded)
-    }
-
-    function hU(UU, XU) {
-      if (null !== nU) return (0, yU.h)([]);
-      const zU = UU.filter((UU => !lU.has(UU.name))).map((UU => {
-        const zU = new AbortController,
-          cU = {
-            compiled: VU(UU, (0, QU.e)(UU.name), {
-              priority: XU,
-              QU: zU.signal,
-              onDownloaded: () => {
-                cU.downloaded = !0
-              },
-              retries: {
-                onRetry: () => {
-                  cU.downloaded = !1, null !== nU && zU.abort()
-                }
-              }
-            }),
-            cancel: zU,
-            downloaded: !1,
-            state: "compiling"
-          };
-        return lU.set(UU.name, cU), (0, yU.l)((XU => {
-          (0, yU.x)(cU.compiled, (() => {
-            cU.downloaded = !0, cU.state = "compiled", XU()
-          }), (yU => {
-            cU.state = "failed", zU.signal.aborted || console.warn(`Bloxd wasm: ${UU.name}'s compile ahead of the load failed: the load compiles it afresh`, yU), XU()
-          }))
-        }))
-      }));
-      return (0, yU.h)(zU)
-    }
-
-    function UX(UU, XU, zU) {
-      JU ??= jU(XU.name === UU.name ? [UU.name] : [UU.name, XU.name]);
-      const QU = (0, cU.I)((async () => {
-        (0, AU.z)(), xU.clear();
-        const zU = zX(UU),
-          cU = XU.name === UU.name ? zU : zX(XU);
-        for (const {
-            cancel: UU
+    async function MH(HH) {
+      const BH = function(HH) {
+          const BH = HH.length > 0 ? HH[0].path.indexOf("/") : -1;
+          if (-1 === BH) return HH;
+          const LH = HH[0].path.slice(0, BH + 1);
+          if (!HH.every((HH => HH.path.startsWith(LH)))) return HH;
+          return HH.map((HH => ({
+            ...HH,
+            path: HH.path.slice(LH.length)
+          })))
+        }(HH.filter((HH => !(0, GH.f)(HH.path)))),
+        LH = BH.filter((HH => "pack.json" === HH.path.toLowerCase()));
+      if (0 === LH.length) throw new GH.d("shaderPack:loadNoManifest");
+      if (LH.length > 1) throw new GH.d("shaderPack:loadDuplicateManifest");
+      const AH = LH[0],
+        rH = await AH.read(QH);
+      if (null === rH) throw new GH.d("shaderPack:loadManifestTooBig", {
+        kilobytes: String(QH / 1024)
+      });
+      const SH = function(HH) {
+          let BH;
+          try {
+            BH = JSON.parse(HH)
+          } catch (tH) {
+            throw new GH.d("shaderPack:loadManifestNotJson", {
+              error: tH.message
+            }, {
+              cause: tH
+            })
           }
-          of lU.values()) UU.abort();
-        lU.clear(), await (0, yU.h)([zU, cU]);
-        const QU = await zU,
-          FU = await cU;
-        return (0, AU.z)(), {
-          module: QU,
-          workerModule: FU
-        }
-      }), UU, zU);
+          if ("object" !== typeof BH || null === BH || Array.isArray(BH)) throw new GH.d("shaderPack:loadManifestNotObject");
+          const {
+            apiVersion: LH,
+            name: AH,
+            author: rH,
+            description: SH,
+            keepCircleShadows: hH
+          } = BH;
+          if (void 0 === LH) throw new GH.d("shaderPack:loadNoApiVersion", {
+            version: String(XH.b)
+          });
+          if (!(0, XH.g)(LH)) throw new GH.d("shaderPack:loadWrongApiVersion", {
+            packVersion: JSON.stringify(LH),
+            version: String(XH.b)
+          });
+          if ("string" !== typeof AH || "" === AH.trim()) throw new GH.d("shaderPack:loadNoName");
+          if (void 0 !== rH && null !== rH && "string" !== typeof rH) throw new GH.d("shaderPack:loadAuthorNotString");
+          if (void 0 !== SH && null !== SH && "string" !== typeof SH) throw new GH.d("shaderPack:loadDescriptionNotString");
+          if (void 0 !== hH && "boolean" !== typeof hH) throw new GH.d("shaderPack:loadKeepCircleShadowsNotBoolean");
+          return {
+            apiVersion: LH,
+            name: AH,
+            author: "string" === typeof rH ? rH : null,
+            description: "string" === typeof SH && "" !== SH.trim() ? SH : null,
+            keepCircleShadows: !0 === hH
+          }
+        }(xH(rH, AH.path)),
+        hH = BH.filter((HH => HH.path.toLowerCase().endsWith(".wgsl"))).sort(((HH, BH) => (0, EH.j)(HH.path, BH.path)));
+      if (0 === hH.length) throw new GH.d("shaderPack:loadNoWgsl");
+      if (hH.length > EH.c) throw new GH.d("shaderPack:loadTooManyWgsl", {
+        count: String(EH.c)
+      });
+      const tH = hH.find(((HH, BH) => BH > 0 && HH.path === hH[BH - 1].path));
+      if (tH) throw new GH.d("shaderPack:loadDuplicatePath", {
+        path: tH.path
+      });
+      const zH = [];
+      let CH = EH.d;
+      for (const XH of hH) {
+        const HH = await XH.read(CH);
+        if (null === HH) throw new GH.d("shaderPack:loadSourceTooBig", {
+          kilobytes: String(EH.d / 1024)
+        });
+        CH -= HH.byteLength, zH.push({
+          path: XH.path,
+          source: xH(HH, XH.path)
+        })
+      }
       return {
-        build: UU,
-        workers: XU,
-        memoryMaximumBytes: zU,
-        loaded: QU
+        manifest: SH,
+        files: zH
       }
     }
 
-    function XX(UU) {
-      return xU.get(UU)
+    function xH(HH, BH) {
+      try {
+        return new TextDecoder("utf-8", {
+          fatal: !0
+        }).decode(HH)
+      } catch (LH) {
+        throw new GH.d("shaderPack:loadNotUtf8", {
+          path: BH
+        }, {
+          cause: LH
+        })
+      }
+    }
+    var vH = LH(5520),
+      PH = LH(5539),
+      TH = LH(1225);
+
+    function UH(HH) {
+      let {
+        busy: BH,
+        disabled: LH,
+        onFiles: AH
+      } = HH;
+      const {
+        t: rH
+      } = (0, CH.B)(), {
+        getRootProps: EH,
+        getInputProps: XH,
+        isDragActive: GH,
+        open: YH
+      } = (0, hH.c)({
+        onDrop: AH,
+        noClick: !0,
+        noKeyboard: !0,
+        useFsAccessApi: !1,
+        disabled: LH
+      });
+      return (0, TH.jsxs)("div", {
+        ...EH({
+          className: SH()("ShaderPackDropZone", {
+            ActiveDrag: GH,
+            Disabled: LH
+          })
+        }),
+        children: [(0, TH.jsx)("input", {
+          ...XH({
+            webkitdirectory: "true"
+          })
+        }), BH && (0, TH.jsx)(tH.d, {}), !BH && (0, TH.jsxs)(TH.Fragment, {
+          children: [(0, TH.jsx)("div", {
+            className: "ShaderPackDropZoneIcon",
+            children: (0, TH.jsx)(zH.c, {
+              name: "up-from-bracket"
+            })
+          }), (0, TH.jsx)("div", {
+            className: "ShaderPackDropZoneInstructions",
+            children: rH((0, PH.d)() ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
+          }), (0, TH.jsx)(PH.c, {
+            disabled: LH,
+            openFolderPicker: YH,
+            onFiles: AH
+          })]
+        })]
+      })
     }
 
-    function zX(UU) {
-      const XU = performance.now(),
-        zU = lU.get(UU.name);
-      lU.delete(UU.name);
-      const cU = !0 === zU?.downloaded ? zU : void 0;
-      return void 0 !== zU && void 0 === cU && zU.cancel.abort(), (0, yU.l)(((zU, QU) => {
-        const AU = (cU, yU) => {
-            xU.set(UU.name, {
-              path: yU,
-              ms: performance.now() - XU
-            }), zU(cU)
-          },
-          FU = () => {
-            (0, yU.x)(yX(UU), (UU => {
-              let {
-                module: XU,
-                path: zU
-              } = UU;
-              AU(XU, zU)
-            }), QU)
-          };
-        void 0 === cU ? FU() : (0, yU.x)(cU.compiled, (UU => {
-          AU(UU, "ahead")
-        }), FU)
+    function VH(HH) {
+      const {
+        t: BH
+      } = (0, CH.B)(), [LH, rH] = (0, AH.useState)(!1), [SH, hH] = (0, AH.useState)(null), tH = (0, AH.useRef)(!1);
+      return {
+        loading: LH,
+        error: SH,
+        setError: hH,
+        onFiles: async function(LH) {
+          if (!tH.current) {
+            tH.current = !0, rH(!0), hH(null);
+            try {
+              await HH(await WH(LH))
+            } catch (AH) {
+              AH instanceof GH.d ? hH((0, vH.i)(BH, AH.translationKey, AH.params)) : (console.error("Failed to load the shader pack", AH), hH(BH("shaderPack:unexpectedError")))
+            } finally {
+              tH.current = !1, rH(!1)
+            }
+          }
+        }
+      }
+    }
+  },
+  7201: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      forgetShaderPackActiveHint: () => oH,
+      isOtherApiVersion: () => OH,
+      isShaderPackActive: () => PH,
+      isShaderPackChangePending: () => VH,
+      markShaderPackChangePending: () => UH,
+      pageShaderPackValidationVersion: () => bH,
+      reconcileStoredShaderPackHint: () => mH,
+      removeShaderPack: () => vH,
+      replaceShaderPack: () => WH,
+      saveShaderPack: () => QH,
+      shaderPackNeedsCheck: () => kH,
+      storedPackOutcome: () => TH,
+      storedShaderPackFiles: () => GH,
+      toStoredShaderPack: () => XH
+    });
+    var AH = LH(5531),
+      rH = LH(5523),
+      SH = LH(30),
+      hH = LH(3831),
+      tH = LH(7209),
+      zH = LH(7179);
+    const CH = "shaderPackChangePending";
+    let EH = null;
+
+    function XH(HH, BH, LH) {
+      return {
+        manifest: HH.manifest,
+        files: (0, AH.t)(HH.files),
+        validation: BH,
+        ...LH && {
+          listing: LH
+        }
+      }
+    }
+
+    function GH(HH) {
+      return Object.keys(HH.files).map((BH => ({
+        path: BH,
+        source: HH.files[BH]
+      })))
+    }
+    let YH = Promise.resolve();
+
+    function uH(HH) {
+      const BH = YH.then(HH);
+      return YH = BH.catch((() => {})), BH
+    }
+
+    function QH(HH, BH) {
+      return uH((() => MH(HH, BH)))
+    }
+
+    function WH(HH, BH, LH) {
+      return uH((async () => JSON.stringify(await (0, tH.e)()) === JSON.stringify(HH) && (null === BH ? (await xH(), !0) : MH(BH, LH))))
+    }
+    async function MH(HH, BH) {
+      const LH = await SH.c.setItem(tH.c, HH);
+      return LH && IH(HH, BH), LH
+    }
+    async function xH() {
+      await SH.c.removeItem(tH.c), SH.e.removeItem(hH.d)
+    }
+
+    function vH() {
+      return uH(xH)
+    }
+
+    function PH(HH, BH) {
+      return "active" === TH(HH, BH).kind
+    }
+
+    function TH(HH, BH) {
+      var LH;
+      return null === HH ? {
+        kind: "none",
+        reason: "nothingStored"
+      } : OH(HH) ? {
+        kind: "none",
+        reason: "otherApiVersion"
+      } : !1 !== (null === (LH = HH.validation) || void 0 === LH ? void 0 : LH.ok) || HH.validation.fromRecheck ? null === BH ? {
+        kind: "none",
+        reason: "noCompiler"
+      } : kH(HH, BH) ? {
+        kind: "blocked",
+        messageKey: "shaderPack:failedUnchecked"
+      } : HH.validation.ok ? {
+        kind: "active"
+      } : {
+        kind: "blocked",
+        messageKey: "shaderPack:failedValidation"
+      } : {
+        kind: "none",
+        reason: "failedWhenLoaded"
+      }
+    }
+
+    function UH() {
+      SH.f.setItem(CH, performance.timeOrigin)
+    }
+
+    function VH() {
+      return SH.f.getItem(CH) === performance.timeOrigin
+    }
+
+    function OH(HH) {
+      return !(0, rH.g)(HH.manifest.apiVersion)
+    }
+
+    function bH(HH) {
+      return EH ??= HH.kN((0, zH.shaderPackTextures)()), EH
+    }
+
+    function kH(HH, BH) {
+      var LH;
+      return (null === (LH = HH.validation) || void 0 === LH ? void 0 : LH.headerVersion) !== bH(BH)
+    }
+
+    function mH(HH) {
+      return uH((async () => {
+        IH(await (0, tH.e)(!0), HH)
       }))
     }
-    async function cX(UU, XU) {
-      const {
-        module: zU
-      } = await yX(UU, {
-        retries: XU
-      });
-      return zU
+
+    function oH() {
+      return uH((async () => {
+        SH.e.removeItem(hH.d)
+      }))
     }
-    async function yX(UU) {
-      let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await MU(UU, (0, QU.e)(UU.name), XU)
+
+    function IH(HH, BH) {
+      PH(HH, BH) ? SH.e.setItem(hH.d, !0) : SH.e.removeItem(hH.d)
     }
   },
-  7213: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => AU
+  7179: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      loadShaderPackTextures: () => hH,
+      shaderPackTextures: () => tH
     });
-    var cU = zU(3176);
-    const yU = {
-      bloxd_wasm: () => "7f53022eec2cb692d1cd79c2eeeb6f8a7607270973e0f6e0c72df23cc86c2b9f",
-      bloxd_wasm_client: () => "57b44b4e08ce6b959c851fa76e413083d1b9237ff788a96d3931877841e31e3b",
-      bloxd_wasm_workers: () => "e095c7f514df56db3ce2e1ace2484bbfab4bed79f4fe2840e3f351e25bef8126",
-      bloxd_wasm_models: () => "d264f0be9eaf7df40aab32e155f7170e6a2029f73e36b3aa879f2b238d2f98c1",
-      bloxd_wasm_webgpu: () => "45fb92410826d4556fb1610a55c96252dff22810c6b27376d120613e28fb722d",
-      bloxd_wasm_webgl: () => "b3808b20b91fd2d43a5bb7c9219998b24db293acd36599f3cfc217aa2f03b9ee",
-      bloxd_wasm_webgl1: () => "955dabc5322d1e4788a42fc358c9d0d686dca5eaafd1809064b6bbdc73e56b76",
-      bloxd_wasm_replay: () => "13f05b235e8455220553f84808d39e41289fbb259c59a2477b25fa31ba963b54",
-      bloxd_wasm_recorder: () => "a55faba2add92e1697c15223e522d87ba7631a7aaeb806e24cd4da91de455075",
-      bloxd_wasm_anim: () => "9fd10823eecbab78e8d130701ec44bc31691f897e4963312a2cef80080a0b854",
-      bloxd_wasm_textures: () => "659ffb2c9bc8159fee909f52c433ec6a1a8921210ad3488ef78dfd6ff1c90774",
-      bloxd_wasm_shader_pack: () => "adccd38b5fea7520e10f50666ef79fc0704d8a73746e668ac8e591ff0037f1dc"
-    };
-    var QU = zU(5179);
+    var AH = LH(5531);
+    let rH = null,
+      SH = null;
 
-    function AU(UU) {
-      const XU = Object.prototype.hasOwnProperty.call(yU, UU) ? yU[UU]() : void 0;
-      if (void 0 !== XU) return {
-        sha256: XU,
-        onMismatch: QU.v
-      };
-      throw new cU.i(`${UU} has no release digest, so this build refuses it`)
+    function hH() {
+      return SH ??= Promise.all([LH.e(84), LH.e(206)]).then((() => LH(41802))).then((HH => {
+        let {
+          FORMER_BLOCK_IMAGE_NAMES: BH,
+          textureNameToIndex: LH,
+          textureAnimationData: SH
+        } = HH;
+        return rH ??= (0, AH.f)(LH, SH, BH), rH
+      })), SH
+    }
+
+    function tH() {
+      if (null === rH) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return rH
     }
   },
-  7233: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => cU,
-      f: () => AU,
-      j: () => FU,
-      k: () => yU,
-      o: () => QU
+  7196: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => zH,
+      d: () => tH
     });
-    const cU = ["terrain", "liquid", "model"];
-
-    function yU() {
-      const UU = [];
-      for (const XU of [!1, !0])
-        for (const zU of cU) UU.push({
-          strict: XU,
-          program: zU
-        });
-      return UU
+    var AH = LH(7201),
+      rH = LH(7179),
+      SH = LH(105);
+    const hH = 100;
+    async function tH(HH, BH) {
+      var LH;
+      let AH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (LH = navigator.gpu) && void 0 !== LH ? LH : null;
+      const hH = HH.YBH(BH, (0, rH.shaderPackTextures)());
+      if (hH.errors.length > 0) return CH(HH, hH.errors, hH.offInStrict);
+      const tH = await async function(HH) {
+        if (!HH) return null;
+        try {
+          const BH = await (0, SH.y)(HH);
+          return BH ? await BH.requestDevice() : null
+        } catch (BH) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", BH), null
+        }
+      }(AH);
+      if (!tH) return null;
+      let zH = !1;
+      tH.lost.then((() => {
+        zH = !0
+      }));
+      try {
+        const BH = await Promise.all(hH.validationModules.map((BH => async function(HH, BH, LH) {
+          BH.pushErrorScope("validation");
+          const AH = BH.createShaderModule({
+              code: LH.code
+            }),
+            rH = BH.popErrorScope(),
+            {
+              messages: SH
+            } = await AH.getCompilationInfo(),
+            hH = SH.filter((HH => "error" === HH.type)).map((BH => HH.mapValidationMessage(LH, BH))),
+            tH = await rH;
+          tH && 0 === hH.length && hH.push({
+            file: null,
+            line: 0,
+            message: tH.message,
+            variants: [LH.key]
+          });
+          return hH
+        }(HH, tH, BH))));
+        return zH ? null : CH(HH, HH.rrH(BH.flat()), hH.offInStrict)
+      } catch (EH) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", EH), null
+      } finally {
+        tH.destroy()
+      }
+    }
+    async function zH(HH, BH) {
+      var LH;
+      if (!(0, AH.shaderPackNeedsCheck)(HH, BH) || (0, AH.isOtherApiVersion)(HH)) return HH;
+      const rH = await tH(BH, (0, AH.storedShaderPackFiles)(HH));
+      if (!rH) return HH;
+      const SH = !1 === (null === (LH = HH.validation) || void 0 === LH ? void 0 : LH.ok) && !HH.validation.fromRecheck,
+        hH = {
+          ...HH,
+          validation: SH ? rH : {
+            ...rH,
+            fromRecheck: !0
+          }
+        };
+      return await (0, AH.replaceShaderPack)(HH, hH, BH) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), hH
     }
 
-    function QU(UU) {
-      return `${UU.strict?"strict":"allow"}.${UU.program}`
-    }
-
-    function AU(UU) {
-      return !UU.hooks.vertex && !UU.hooks.surface && !UU.hooks.light
-    }
-
-    function FU(UU, XU) {
-      return "off" !== XU && (null === UU || UU.some((UU => UU.key.strict === ("strict" === XU) && !AU(UU))))
+    function CH(HH, BH, LH) {
+      return {
+        headerVersion: (0, AH.pageShaderPackValidationVersion)(HH),
+        ok: 0 === BH.length,
+        errors: BH.slice(0, hH),
+        moreErrors: Math.max(0, BH.length - hH),
+        offInStrict: LH
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

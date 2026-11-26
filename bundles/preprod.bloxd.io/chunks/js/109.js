@@ -1,545 +1,560 @@
 export const id = 109;
 export const ids = [108, 109, 110];
 export const modules = {
-  37345: (UU, XU, zU) => {
-    function cU(UU, XU, zU, cU) {
-      return !(zU && !UU.aimable) && (!XU || UU.gun && "head" !== cU)
+  37496: (HH, BH, LH) => {
+    function AH(HH, BH, LH, AH) {
+      return !(LH && !HH.aimable) && (!BH || HH.gun && "head" !== AH)
     }
 
-    function yU(UU) {
-      return Math.max(.1 * UU, 1)
+    function rH(HH) {
+      return Math.max(.1 * HH, 1)
     }
 
-    function QU(UU, XU) {
-      return !UU && XU
+    function SH(HH, BH) {
+      return !HH && BH
     }
-    zU.d(XU, {
-      c: () => QU,
-      e: () => yU,
-      h: () => cU
+    LH.d(BH, {
+      b: () => SH,
+      d: () => rH,
+      f: () => AH
     })
   },
-  37354: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => FU,
-      d: () => AU
+  37504: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => tH,
+      i: () => hH
     });
-    let cU = null;
-    const yU = {
+    let AH = null;
+    const rH = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      QU = {
-        crosshairAccuracy: UU => {
-          const XU = yU.crosshairAccuracy.at(-1);
-          XU ? XU.hook(UU) : cU = UU
+      SH = {
+        crosshairAccuracy: HH => {
+          const BH = rH.crosshairAccuracy.at(-1);
+          BH ? BH.hook(HH) : AH = HH
         },
-        turnDamageIndicators: UU => {
-          var XU;
-          null === (XU = yU.turnDamageIndicators.at(-1)) || void 0 === XU || XU.hook(UU)
+        turnDamageIndicators: HH => {
+          var BH;
+          null === (BH = rH.turnDamageIndicators.at(-1)) || void 0 === BH || BH.hook(HH)
         }
       };
 
-    function AU(UU, XU) {
-      const zU = {
-          hook: XU
+    function hH(HH, BH) {
+      const LH = {
+          hook: BH
         },
-        AU = yU[UU];
-      if (AU.push(zU), "crosshairAccuracy" === UU && null !== cU) {
-        const UU = cU;
-        cU = null, QU.crosshairAccuracy(UU)
+        hH = rH[HH];
+      if (hH.push(LH), "crosshairAccuracy" === HH && null !== AH) {
+        const HH = AH;
+        AH = null, SH.crosshairAccuracy(HH)
       }
       return () => {
-        const UU = AU.indexOf(zU); - 1 !== UU && AU.splice(UU, 1)
+        const HH = hH.indexOf(LH); - 1 !== HH && hH.splice(HH, 1)
       }
     }
 
-    function FU() {
-      return QU
+    function tH() {
+      return SH
     }
   },
-  37148: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      countDecodesAs: () => YU,
-      decodedAudio: () => NU
+  34942: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => SH,
+      g: () => rH
     });
-    var cU = zU(3258),
-      yU = zU(5378);
-    const QU = yU.Howler,
-      AU = new Map;
-    let FU = 0;
-    const oU = {
+    var AH = LH(15);
+
+    function rH(HH, BH) {
+      return HH && !BH
+    }
+
+    function SH() {
+      return rH(AH.c.get("isTouchScreen"), AH.c.get("clientEscMenuOptions").touchActionButtons)
+    }
+  },
+  37326: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      countDecodesAs: () => XH,
+      decodedAudio: () => GH
+    });
+    var AH = LH(3263),
+      rH = LH(5335);
+    const SH = rH.Howler,
+      hH = new Map;
+    let tH = 0;
+    const zH = {
         song: 0,
         sound: 0
       },
-      DU = new WeakMap,
-      EU = new WeakSet;
+      CH = new WeakMap,
+      EH = new WeakSet;
 
-    function YU(UU, XU) {
-      return DU.set(UU, XU), UU
+    function XH(HH, BH) {
+      return CH.set(HH, BH), HH
     }
 
-    function NU() {
+    function GH() {
       return {
-        bytes: FU,
-        songsDecoded: oU.song,
-        soundsDecoded: oU.sound
+        bytes: tH,
+        songsDecoded: zH.song,
+        soundsDecoded: zH.sound
       }
     }
 
-    function IU(UU) {
-      if (EU.has(UU)) return;
-      EU.add(UU);
-      const XU = 1 === UU.decodeAudioData.length,
-        zU = UU.decodeAudioData.bind(UU);
-      UU.decodeAudioData = (UU, cU, yU) => {
-        const EU = UU => {
-          const XU = QU._howls.filter((UU => "loaded" !== UU._state));
+    function YH(HH) {
+      if (EH.has(HH)) return;
+      EH.add(HH);
+      const BH = 1 === HH.decodeAudioData.length,
+        LH = HH.decodeAudioData.bind(HH);
+      HH.decodeAudioData = (HH, AH, rH) => {
+        const EH = HH => {
+          const BH = SH._howls.filter((HH => "loaded" !== HH._state));
           try {
-            null === cU || void 0 === cU || cU(UU)
+            null === AH || void 0 === AH || AH(HH)
           } finally {
-            const zU = XU.find((UU => "loaded" === UU._state));
-            void 0 !== zU && "string" === typeof zU._src && function(UU, XU, zU) {
-              var cU;
-              FU += zU - (null !== (cU = AU.get(XU)) && void 0 !== cU ? cU : 0), AU.set(XU, zU);
-              const yU = DU.get(UU);
-              void 0 !== yU && oU[yU]++
-            }(zU, zU._src, UU.length * UU.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
+            const LH = BH.find((HH => "loaded" === HH._state));
+            void 0 !== LH && "string" === typeof LH._src && function(HH, BH, LH) {
+              var AH;
+              tH += LH - (null !== (AH = hH.get(BH)) && void 0 !== AH ? AH : 0), hH.set(BH, LH);
+              const rH = CH.get(HH);
+              void 0 !== rH && zH[rH]++
+            }(LH, LH._src, HH.length * HH.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-          return UU
+          return HH
         };
-        if (!XU) return zU(UU, EU, yU);
-        const YU = zU(UU).then(EU);
-        return YU.catch((UU => {
-          null === yU || void 0 === yU || yU(UU)
-        })), YU
+        if (!BH) return LH(HH, EH, rH);
+        const XH = LH(HH).then(EH);
+        return XH.catch((HH => {
+          null === rH || void 0 === rH || rH(HH)
+        })), XH
       }
-    }(0, cU.c)(NU);
-    const pU = yU.Howl.prototype,
-      aU = pU.init;
-    pU.init = function(UU) {
-      return yU.Howler.volume(), QU.ctx && IU(QU.ctx), aU.call(this, UU)
+    }(0, AH.h)(GH);
+    const uH = rH.Howl.prototype,
+      QH = uH.init;
+    uH.init = function(HH) {
+      return rH.Howler.volume(), SH.ctx && YH(SH.ctx), QH.call(this, HH)
     };
-    const tU = pU.unload;
-    pU.unload = function() {
-      const UU = this._src,
-        XU = tU.call(this);
-      if ("string" !== typeof UU) return XU;
-      const zU = AU.get(UU);
-      return void 0 !== zU && function(UU) {
-        return !QU._howls.some((XU => XU._src === UU || "string" === typeof XU._src && UU.indexOf(XU._src) >= 0))
-      }(UU) && (AU.delete(UU), FU -= zU), XU
+    const WH = uH.unload;
+    uH.unload = function() {
+      const HH = this._src,
+        BH = WH.call(this);
+      if ("string" !== typeof HH) return BH;
+      const LH = hH.get(HH);
+      return void 0 !== LH && function(HH) {
+        return !SH._howls.some((BH => BH._src === HH || "string" === typeof BH._src && HH.indexOf(BH._src) >= 0))
+      }(HH) && (hH.delete(HH), tH -= LH), BH
     }
   },
-  37514: (UU, XU, zU) => {
-    async function cU(UU) {
-      const XU = await fetch(UU, {
+  37652: (HH, BH, LH) => {
+    async function AH(HH) {
+      const BH = await fetch(HH, {
         priority: "low"
       });
-      if (!XU.ok) throw new Error(`Fetching ${UU} failed: HTTP ${XU.status}`);
-      const zU = XU.body.getReader();
-      for (; !(await zU.read()).done;);
+      if (!BH.ok) throw new Error(`Fetching ${HH} failed: HTTP ${BH.status}`);
+      const LH = BH.body.getReader();
+      for (; !(await LH.read()).done;);
     }
-    zU.d(XU, {
-      c: () => cU
+    LH.d(BH, {
+      c: () => AH
     })
   },
-  5378: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      Howl: () => yU.Howl,
-      Howler: () => yU.Howler,
-      musicOutput: () => tU,
-      readyAudioContext: () => gU
+  5335: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      Howl: () => rH.Howl,
+      Howler: () => rH.Howler,
+      musicOutput: () => WH,
+      readyAudioContext: () => MH
     });
-    var cU, yU = zU(5383),
-      QU = zU(3837),
-      AU = zU(5092);
-    const FU = yU.Howler;
+    var AH, rH = LH(5343),
+      SH = LH(3811),
+      hH = LH(5067);
+    const tH = rH.Howler;
 
-    function oU() {
-      var UU, XU;
-      if (FU.ctx || !FU.usingWebAudio || "undefined" === typeof AudioContext || !(0, AU.j)()) return;
-      const zU = navigator.audioSession;
-      let cU;
-      "auto" === (null === zU || void 0 === zU ? void 0 : zU.type) && (zU.type = "ambient");
+    function zH() {
+      var HH, BH;
+      if (tH.ctx || !tH.usingWebAudio || "undefined" === typeof AudioContext || !(0, hH.i)()) return;
+      const LH = navigator.audioSession;
+      let AH;
+      "auto" === (null === LH || void 0 === LH ? void 0 : LH.type) && (LH.type = "ambient");
       try {
-        cU = new AudioContext({
+        AH = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const yU = cU.createGain();
-      yU.gain.setValueAtTime(FU._muted ? 0 : null !== (UU = FU._volume) && void 0 !== UU ? UU : 1, cU.currentTime), yU.connect(cU.destination), FU.ctx = cU, FU.masterGain = yU, null === (XU = FU._setup) || void 0 === XU || XU.call(FU)
+      const rH = AH.createGain();
+      rH.gain.setValueAtTime(tH._muted ? 0 : null !== (HH = tH._volume) && void 0 !== HH ? HH : 1, AH.currentTime), rH.connect(AH.destination), tH.ctx = AH, tH.masterGain = rH, null === (BH = tH._setup) || void 0 === BH || BH.call(tH)
     }
-    FU._mobileUnloaded = !0;
-    const DU = FU.volume.bind(yU.Howler);
-    FU.volume = function() {
-      return oU(), DU(...arguments)
+    tH._mobileUnloaded = !0;
+    const CH = tH.volume.bind(rH.Howler);
+    tH.volume = function() {
+      return zH(), CH(...arguments)
     };
-    const EU = FU.mute.bind(yU.Howler);
-    FU.mute = UU => (oU(), EU(UU));
-    const YU = yU.Howl.prototype,
-      NU = YU.init;
+    const EH = tH.mute.bind(rH.Howler);
+    tH.mute = HH => (zH(), EH(HH));
+    const XH = rH.Howl.prototype,
+      GH = XH.init;
 
-    function IU() {
-      for (; FU._html5AudioPool.length < FU.html5PoolSize;) {
-        const UU = new Audio;
-        UU._unlocked = !0, FU._releaseHtml5Audio(UU)
+    function YH() {
+      for (; tH._html5AudioPool.length < tH.html5PoolSize;) {
+        const HH = new Audio;
+        HH._unlocked = !0, tH._releaseHtml5Audio(HH)
       }
-      for (const XU of FU._howls)
-        if (!XU._webAudio)
-          for (const zU of XU._getSoundIds()) {
-            var UU;
-            const cU = null === (UU = XU._soundById(zU)) || void 0 === UU ? void 0 : UU._node;
-            cU && !cU._unlocked && (cU._unlocked = !0, cU.load())
+      for (const BH of tH._howls)
+        if (!BH._webAudio)
+          for (const LH of BH._getSoundIds()) {
+            var HH;
+            const AH = null === (HH = BH._soundById(LH)) || void 0 === HH ? void 0 : HH._node;
+            AH && !AH._unlocked && (AH._unlocked = !0, AH.load())
           }
     }
-    YU.init = function(UU) {
-      return oU(), NU.call(this, UU)
-    }, (0, AU.j)() && (FU._unlockAudio = () => {
-      const UU = FU.ctx;
-      if (FU._audioUnlocked || !UU) return;
-      FU.autoUnlock = !1;
-      const XU = UU.createBuffer(1, 1, 22050);
-      FU._scratchBuffer = XU;
-      const zU = new AbortController;
-      let cU = "afterPaint";
-      const yU = () => {
-          var cU;
-          if (FU._audioUnlocked) return;
-          null === (cU = FU._autoResume) || void 0 === cU || cU.call(FU);
-          const yU = UU.createBufferSource();
-          yU.buffer = XU, yU.connect(UU.destination), yU.start(0), UU.resume().catch((() => {})), yU.onended = () => {
-            yU.disconnect(0), FU._audioUnlocked = !0, zU.abort();
-            for (const UU of FU._howls) UU._emit("unlock")
+    XH.init = function(HH) {
+      return zH(), GH.call(this, HH)
+    }, (0, hH.i)() && (tH._unlockAudio = () => {
+      const HH = tH.ctx;
+      if (tH._audioUnlocked || !HH) return;
+      tH.autoUnlock = !1;
+      const BH = HH.createBuffer(1, 1, 22050);
+      tH._scratchBuffer = BH;
+      const LH = new AbortController;
+      let AH = "afterPaint";
+      const rH = () => {
+          var AH;
+          if (tH._audioUnlocked) return;
+          null === (AH = tH._autoResume) || void 0 === AH || AH.call(tH);
+          const rH = HH.createBufferSource();
+          rH.buffer = BH, rH.connect(HH.destination), rH.start(0), HH.resume().catch((() => {})), rH.onended = () => {
+            rH.disconnect(0), tH._audioUnlocked = !0, LH.abort();
+            for (const HH of tH._howls) HH._emit("unlock")
           }
         },
-        oU = () => {
-          IU(), yU()
+        zH = () => {
+          YH(), rH()
         },
-        DU = XU => {
-          if (IU(), "inTap" === cU) {
-            if ("running" === UU.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), yU()
-          } else "afterPaint" === cU && (cU = "queued", (0, QU.d)(XU.timeStamp, (() => {
-            cU = "inTap", yU()
+        CH = BH => {
+          if (YH(), "inTap" === AH) {
+            if ("running" === HH.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), rH()
+          } else "afterPaint" === AH && (AH = "queued", (0, SH.c)(BH.timeStamp, (() => {
+            AH = "inTap", rH()
           })))
         };
-      for (const QU of ["touchstart", "touchend"]) document.addEventListener(QU, oU, {
+      for (const SH of ["touchstart", "touchend"]) document.addEventListener(SH, zH, {
         capture: !0,
-        signal: zU.signal
+        signal: LH.signal
       });
-      for (const QU of AU.c) document.addEventListener(QU, DU, {
+      for (const SH of hH.d) document.addEventListener(SH, CH, {
         capture: !0,
-        signal: zU.signal
+        signal: LH.signal
       })
     });
-    let pU = 0;
-    const aU = null === (cU = FU._autoSuspend) || void 0 === cU ? void 0 : cU.bind(yU.Howler);
+    let uH = 0;
+    const QH = null === (AH = tH._autoSuspend) || void 0 === AH ? void 0 : AH.bind(rH.Howler);
 
-    function tU() {
-      gU();
+    function WH() {
+      MH();
       const {
-        ctx: UU,
-        masterGain: XU
-      } = FU;
-      return UU && XU ? {
-        ctx: UU,
-        destination: XU,
-        holdAwake: UU => {
-          var XU, zU;
-          (pU += UU ? 1 : -1, UU) ? null === (XU = FU._autoResume) || void 0 === XU || XU.call(FU): null === (zU = FU._autoSuspend) || void 0 === zU || zU.call(FU)
+        ctx: HH,
+        masterGain: BH
+      } = tH;
+      return HH && BH ? {
+        ctx: HH,
+        destination: BH,
+        holdAwake: HH => {
+          var BH, LH;
+          (uH += HH ? 1 : -1, HH) ? null === (BH = tH._autoResume) || void 0 === BH || BH.call(tH): null === (LH = tH._autoSuspend) || void 0 === LH || LH.call(tH)
         },
         wake: () => {
-          var XU;
-          "running" !== UU.state && (null === (XU = FU._autoResume) || void 0 === XU || XU.call(FU), UU.resume().catch((() => {})))
+          var BH;
+          "running" !== HH.state && (null === (BH = tH._autoResume) || void 0 === BH || BH.call(tH), HH.resume().catch((() => {})))
         }
       } : null
     }
 
-    function gU() {
-      var UU;
-      (FU.volume(), FU.ctx && FU.autoUnlock) && (null === (UU = FU._unlockAudio) || void 0 === UU || UU.call(FU))
+    function MH() {
+      var HH;
+      (tH.volume(), tH.ctx && tH.autoUnlock) && (null === (HH = tH._unlockAudio) || void 0 === HH || HH.call(tH))
     }
-    aU && (FU._autoSuspend = () => pU > 0 ? yU.Howler : aU())
+    QH && (tH._autoSuspend = () => uH > 0 ? rH.Howler : QH())
   },
-  37502: (UU, XU, zU) => {
-    function cU(UU, XU) {
+  37648: (HH, BH, LH) => {
+    function AH(HH, BH) {
       let {
-        afterJoin: zU,
-        joining: cU,
-        idle: yU,
-        fetchFile: QU,
-        QU: AU = () => !1
-      } = XU;
-      const FU = XU => {
-        XU >= UU.length || AU() || zU((() => {
-          yU((() => {
-            AU() || (cU() ? FU(XU) : QU(UU[XU]).catch((() => {})).finally((() => {
-              FU(XU + 1)
+        afterJoin: LH,
+        joining: AH,
+        idle: rH,
+        fetchFile: SH,
+        xB: hH = () => !1
+      } = BH;
+      const tH = BH => {
+        BH >= HH.length || hH() || LH((() => {
+          rH((() => {
+            hH() || (AH() ? tH(BH) : SH(HH[BH]).catch((() => {})).finally((() => {
+              tH(BH + 1)
             })))
           }))
         }))
       };
-      FU(0)
+      tH(0)
     }
-    zU.d(XU, {
-      d: () => cU
+    LH.d(BH, {
+      b: () => AH
     })
   },
-  37495: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => cU
+  37642: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => AH
     });
-    const cU = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
+    const AH = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
   },
-  37507: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => EU,
-      e: () => YU
+  37650: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => EH,
+      i: () => XH
     });
-    var cU = zU(27),
-      yU = zU(37480),
-      QU = zU(4735),
-      AU = zU(37514),
-      FU = zU(5378),
-      oU = zU(264),
-      DU = zU(37502);
-    const EU = {
-        afterJoin: UU => {
-          (0, QU.d)(cU.e.get("gameState"), UU)
+    var AH = LH(15),
+      rH = LH(37617),
+      SH = LH(4727),
+      hH = LH(37652),
+      tH = LH(5335),
+      zH = LH(225),
+      CH = LH(37648);
+    const EH = {
+        afterJoin: HH => {
+          (0, SH.e)(AH.c.get("gameState"), HH)
         },
-        joining: () => (0, QU.g)(cU.e.get("gameState")),
-        idle: oU.b
+        joining: () => (0, SH.i)(AH.c.get("gameState")),
+        idle: zH.d
       },
-      YU = function(UU) {
-        const XU = new Set,
-          zU = new Set,
-          cU = XU => XU.flatMap((XU => {
-            const zU = (cU = (0, yU.y)(XU).src, QU = UU.canPlay, cU.find((UU => {
-              var XU;
-              const zU = null === (XU = /\.([^.]+)$/.exec(UU.split("?", 1)[0])) || void 0 === XU ? void 0 : XU[1];
-              return void 0 !== zU && QU(zU.toLowerCase())
+      XH = function(HH) {
+        const BH = new Set,
+          LH = new Set,
+          AH = BH => BH.flatMap((BH => {
+            const LH = (AH = (0, rH.v)(BH).src, SH = HH.canPlay, AH.find((HH => {
+              var BH;
+              const LH = null === (BH = /\.([^.]+)$/.exec(HH.split("?", 1)[0])) || void 0 === BH ? void 0 : BH[1];
+              return void 0 !== LH && SH(LH.toLowerCase())
             })));
-            var cU, QU;
-            return void 0 === zU ? [] : [zU]
+            var AH, SH;
+            return void 0 === LH ? [] : [LH]
           }));
-        return QU => {
-          var AU;
-          const FU = (0, yU.n)(QU),
-            oU = [];
-          XU.has(FU) || (XU.add(FU), oU.push(...cU((0, yU.r)(FU).filter((UU => UU !== QU)))));
-          const [EU, YU] = null !== (AU = [...yU.e].find((UU => {
-            let [, XU] = UU;
-            return XU.includes(FU)
-          }))) && void 0 !== AU ? AU : [void 0, []];
-          if (void 0 !== EU && !zU.has(EU)) {
-            zU.add(EU);
-            for (const UU of YU) XU.has(UU) || (XU.add(UU), oU.push(...cU((0, yU.r)(UU))))
+        return SH => {
+          var hH;
+          const tH = (0, rH.o)(SH),
+            zH = [];
+          BH.has(tH) || (BH.add(tH), zH.push(...AH((0, rH.p)(tH).filter((HH => HH !== SH)))));
+          const [EH, XH] = null !== (hH = [...rH.d].find((HH => {
+            let [, BH] = HH;
+            return BH.includes(tH)
+          }))) && void 0 !== hH ? hH : [void 0, []];
+          if (void 0 !== EH && !LH.has(EH)) {
+            LH.add(EH);
+            for (const HH of XH) BH.has(HH) || (BH.add(HH), zH.push(...AH((0, rH.p)(HH))))
           }
-          oU.length > 0 && (0, DU.d)(oU, UU)
+          zH.length > 0 && (0, CH.b)(zH, HH)
         }
       }({
-        ...EU,
-        fetchFile: AU.c,
-        canPlay: UU => !!FU.Howler.codecs(UU)
+        ...EH,
+        fetchFile: hH.c,
+        canPlay: HH => !!tH.Howler.codecs(HH)
       })
   },
-  37492: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => AU,
-      d: () => yU,
-      e: () => cU
+  37640: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => hH,
+      d: () => rH,
+      e: () => AH
     });
 
-    function cU(UU) {
-      return UU.replace(/[_\-\s]*\d+$/, "") || UU
+    function AH(HH) {
+      return HH.replace(/[_\-\s]*\d+$/, "") || HH
     }
 
-    function yU(UU, XU, zU) {
-      return zU <= 0 ? 0 : UU * zU / Math.max(XU, zU)
+    function rH(HH, BH, LH) {
+      return LH <= 0 ? 0 : HH * LH / Math.max(BH, LH)
     }
 
-    function QU(UU, XU) {
-      const zU = UU.getDurationMs();
-      return zU > 0 ? UU.loudness * Math.max(0, 1 - (XU - UU.startMs) / zU) : 0
+    function SH(HH, BH) {
+      const LH = HH.getDurationMs();
+      return LH > 0 ? HH.loudness * Math.max(0, 1 - (BH - HH.startMs) / LH) : 0
     }
-    class AU {
+    class hH {
       constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = UU, this.maxPerGroup = XU, this.voices = []
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = HH, this.maxPerGroup = BH, this.voices = []
       }
-      admit(UU) {
-        if (this.voices = this.voices.filter((UU => UU.isAlive())), null !== UU.group) {
-          const XU = this.voices.filter((XU => XU.group === UU.group));
-          if (XU.length >= this.maxPerGroup && !this.dropLeastWorth(XU, UU)) return !1
+      admit(HH) {
+        if (this.voices = this.voices.filter((HH => HH.isAlive())), null !== HH.group) {
+          const BH = this.voices.filter((BH => BH.group === HH.group));
+          if (BH.length >= this.maxPerGroup && !this.dropLeastWorth(BH, HH)) return !1
         }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, UU)) && (this.voices.push(UU), !0)
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, HH)) && (this.voices.push(HH), !0)
       }
-      dropLeastWorth(UU, XU) {
-        let zU = null,
-          cU = 1 / 0;
-        for (const yU of UU) {
-          if (!yU.canStop()) continue;
-          const UU = QU(yU, XU.startMs);
-          UU < cU && (zU = yU, cU = UU)
+      dropLeastWorth(HH, BH) {
+        let LH = null,
+          AH = 1 / 0;
+        for (const rH of HH) {
+          if (!rH.canStop()) continue;
+          const HH = SH(rH, BH.startMs);
+          HH < AH && (LH = rH, AH = HH)
         }
-        return !(!zU || XU.loudness < cU) && (this.voices.splice(this.voices.indexOf(zU), 1), zU.stop(), !0)
+        return !(!LH || BH.loudness < AH) && (this.voices.splice(this.voices.indexOf(LH), 1), LH.stop(), !0)
       }
     }
   },
-  37311: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => yU,
-      g: () => AU,
-      h: () => FU
+  37467: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => rH,
+      g: () => hH,
+      i: () => tH
     });
-    var cU = zU(31);
-    const yU = "touchSprintChanged";
-    let QU = !0;
+    var AH = LH(18);
+    const rH = "touchSprintChanged";
+    let SH = !0;
 
-    function AU() {
-      return QU
+    function hH() {
+      return SH
     }
 
-    function FU(UU) {
-      UU !== QU && (QU = UU, cU.k.UY(yU, UU))
+    function tH(HH) {
+      HH !== SH && (SH = HH, AH.k.AX(rH, HH))
     }
   },
-  37532: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => QU,
-      g: () => AU,
-      i: () => cU
+  37656: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => SH,
+      d: () => hH,
+      f: () => AH
     });
-    class cU {
-      constructor(UU) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = UU
+    class AH {
+      constructor(HH) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = HH
       }
-      setMultiplierType(UU, XU) {
-        var zU;
-        this.multipliers[UU] = XU, null === (zU = this._onUpdate) || void 0 === zU || zU.call(this)
+      setMultiplierType(HH, BH) {
+        var LH;
+        this.multipliers[HH] = BH, null === (LH = this._onUpdate) || void 0 === LH || LH.call(this)
       }
-      removeMultiplier(UU) {
-        var XU;
-        delete this.multipliers[UU], null === (XU = this._onUpdate) || void 0 === XU || XU.call(this)
+      removeMultiplier(HH) {
+        var BH;
+        delete this.multipliers[HH], null === (BH = this._onUpdate) || void 0 === BH || BH.call(this)
       }
-      getMultiplierType(UU) {
-        return this.multipliers[UU]
+      getMultiplierType(HH) {
+        return this.multipliers[HH]
       }
       getTotalMultipliedVal() {
-        let UU = 1;
-        for (const XU in this.multipliers) UU *= this.multipliers[XU];
-        return UU
+        let HH = 1;
+        for (const BH in this.multipliers) HH *= this.multipliers[BH];
+        return HH
       }
     }
-    class yU {
+    class rH {
       constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = UU
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = HH
       }
-      setBooleanType(UU, XU) {
-        const zU = this._getTotalBooleanVal();
-        this.booleans[UU] = !!XU;
-        const cU = this.getTotalBooleanVal();
-        var yU;
-        cU !== zU && (null === (yU = this._onUpdate) || void 0 === yU || yU.call(this, cU, this.booleans));
-        return cU
+      setBooleanType(HH, BH) {
+        const LH = this._getTotalBooleanVal();
+        this.booleans[HH] = !!BH;
+        const AH = this.getTotalBooleanVal();
+        var rH;
+        AH !== LH && (null === (rH = this._onUpdate) || void 0 === rH || rH.call(this, AH, this.booleans));
+        return AH
       }
-      removeBoolean(UU) {
-        const XU = this._getTotalBooleanVal();
-        delete this.booleans[UU];
-        const zU = this._getTotalBooleanVal();
-        var cU;
-        null !== zU && zU !== XU && (null === (cU = this._onUpdate) || void 0 === cU || cU.call(this, zU, this.booleans));
-        return null !== zU && void 0 !== zU && zU
+      removeBoolean(HH) {
+        const BH = this._getTotalBooleanVal();
+        delete this.booleans[HH];
+        const LH = this._getTotalBooleanVal();
+        var AH;
+        null !== LH && LH !== BH && (null === (AH = this._onUpdate) || void 0 === AH || AH.call(this, LH, this.booleans));
+        return null !== LH && void 0 !== LH && LH
       }
-      getBooleanType(UU) {
-        return this.booleans[UU]
+      getBooleanType(HH) {
+        return this.booleans[HH]
       }
       getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
       forceUpdate() {
-        var UU;
-        null === (UU = this._onUpdate) || void 0 === UU || UU.call(this, this.getTotalBooleanVal(), this.booleans)
+        var HH;
+        null === (HH = this._onUpdate) || void 0 === HH || HH.call(this, this.getTotalBooleanVal(), this.booleans)
       }
       _getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class QU extends yU {
+    class SH extends rH {
       getTotalBooleanVal() {
-        const UU = this._getTotalBooleanVal();
-        if (null === UU) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return UU
+        const HH = this._getTotalBooleanVal();
+        if (null === HH) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return HH
       }
       _getTotalBooleanVal() {
-        let UU = !1,
-          XU = !0;
-        for (const zU in this.booleans) UU = !0, XU &&= this.booleans[zU];
-        return UU ? XU : null
+        let HH = !1,
+          BH = !0;
+        for (const LH in this.booleans) HH = !0, BH &&= this.booleans[LH];
+        return HH ? BH : null
       }
     }
-    class AU extends yU {
+    class hH extends rH {
       getTotalBooleanVal() {
-        const UU = this._getTotalBooleanVal();
-        if (null === UU) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return UU
+        const HH = this._getTotalBooleanVal();
+        if (null === HH) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return HH
       }
       _getTotalBooleanVal() {
-        let UU = !1,
-          XU = !1;
-        for (const zU in this.booleans) UU = !0, XU ||= this.booleans[zU];
-        return UU ? XU : null
+        let HH = !1,
+          BH = !1;
+        for (const LH in this.booleans) HH = !0, BH ||= this.booleans[LH];
+        return HH ? BH : null
       }
     }
   },
-  37523: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => QU,
-      f: () => cU,
-      g: () => yU
+  37654: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => SH,
+      f: () => AH,
+      i: () => rH
     });
-    const cU = 15,
-      yU = 3,
-      QU = 30
+    const AH = 15,
+      rH = 3,
+      SH = 30
   },
-  7056: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU,
-      f: () => yU,
-      j: () => oU,
-      k: () => QU,
-      l: () => DU,
-      o: () => cU,
-      p: () => FU
+  7007: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH,
+      e: () => rH,
+      h: () => zH,
+      i: () => SH,
+      m: () => CH,
+      o: () => AH,
+      p: () => tH
     });
-    let cU = function(UU) {
-        return UU[UU.DEFAULT = 0] = "DEFAULT", UU[UU.BOAT = 1] = "BOAT", UU[UU.GLIDER = 2] = "GLIDER", UU[UU.BALLOON = 3] = "BALLOON", UU[UU.SLEEPING = 4] = "SLEEPING", UU[UU.RIDING_MOB = 5] = "RIDING_MOB", UU[UU.CAR = 6] = "CAR", UU[UU.HOVERCRAFT = 7] = "HOVERCRAFT", UU
+    let AH = function(HH) {
+        return HH[HH.DEFAULT = 0] = "DEFAULT", HH[HH.BOAT = 1] = "BOAT", HH[HH.GLIDER = 2] = "GLIDER", HH[HH.BALLOON = 3] = "BALLOON", HH[HH.SLEEPING = 4] = "SLEEPING", HH[HH.RIDING_MOB = 5] = "RIDING_MOB", HH[HH.CAR = 6] = "CAR", HH[HH.HOVERCRAFT = 7] = "HOVERCRAFT", HH
       }({}),
-      yU = function(UU) {
-        return UU[UU.WOOD = 0] = "WOOD", UU[UU.OBSIDIAN = 1] = "OBSIDIAN", UU[UU.SPEED = 2] = "SPEED", UU
+      rH = function(HH) {
+        return HH[HH.WOOD = 0] = "WOOD", HH[HH.OBSIDIAN = 1] = "OBSIDIAN", HH[HH.SPEED = 2] = "SPEED", HH
       }({}),
-      QU = function(UU) {
-        return UU[UU.WOOD = 0] = "WOOD", UU[UU.IRON = 1] = "IRON", UU[UU.GOLD = 2] = "GOLD", UU[UU.DIAMOND = 3] = "DIAMOND", UU
+      SH = function(HH) {
+        return HH[HH.WOOD = 0] = "WOOD", HH[HH.IRON = 1] = "IRON", HH[HH.GOLD = 2] = "GOLD", HH[HH.DIAMOND = 3] = "DIAMOND", HH
       }({}),
-      AU = function(UU) {
-        return UU[UU.YELLOW = 0] = "YELLOW", UU[UU.WHITE = 1] = "WHITE", UU[UU.RED = 2] = "RED", UU[UU.PURPLE = 3] = "PURPLE", UU[UU.PINK = 4] = "PINK", UU[UU.ORANGE = 5] = "ORANGE", UU[UU.MAGENTA = 6] = "MAGENTA", UU[UU.LIME = 7] = "LIME", UU[UU.LIGHT_GRAY = 8] = "LIGHT_GRAY", UU[UU.LIGHT_BLUE = 9] = "LIGHT_BLUE", UU[UU.GREEN = 10] = "GREEN", UU[UU.GRAY = 11] = "GRAY", UU[UU.CYAN = 12] = "CYAN", UU[UU.BROWN = 13] = "BROWN", UU[UU.BLUE = 14] = "BLUE", UU[UU.BLACK = 15] = "BLACK", UU
+      hH = function(HH) {
+        return HH[HH.YELLOW = 0] = "YELLOW", HH[HH.WHITE = 1] = "WHITE", HH[HH.RED = 2] = "RED", HH[HH.PURPLE = 3] = "PURPLE", HH[HH.PINK = 4] = "PINK", HH[HH.ORANGE = 5] = "ORANGE", HH[HH.MAGENTA = 6] = "MAGENTA", HH[HH.LIME = 7] = "LIME", HH[HH.LIGHT_GRAY = 8] = "LIGHT_GRAY", HH[HH.LIGHT_BLUE = 9] = "LIGHT_BLUE", HH[HH.GREEN = 10] = "GREEN", HH[HH.GRAY = 11] = "GRAY", HH[HH.CYAN = 12] = "CYAN", HH[HH.BROWN = 13] = "BROWN", HH[HH.BLUE = 14] = "BLUE", HH[HH.BLACK = 15] = "BLACK", HH
       }({}),
-      FU = function(UU) {
-        return UU[UU.ROTATION_1 = 0] = "ROTATION_1", UU[UU.ROTATION_2 = 1] = "ROTATION_2", UU[UU.ROTATION_3 = 2] = "ROTATION_3", UU[UU.ROTATION_4 = 3] = "ROTATION_4", UU
+      tH = function(HH) {
+        return HH[HH.ROTATION_1 = 0] = "ROTATION_1", HH[HH.ROTATION_2 = 1] = "ROTATION_2", HH[HH.ROTATION_3 = 2] = "ROTATION_3", HH[HH.ROTATION_4 = 3] = "ROTATION_4", HH
       }({}),
-      oU = function(UU) {
-        return UU[UU.KART = 0] = "KART", UU[UU.OFF_ROADER = 1] = "OFF_ROADER", UU[UU.CAR = 2] = "CAR", UU[UU.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", UU[UU.ARMORED_CAR = 4] = "ARMORED_CAR", UU[UU.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", UU[UU.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", UU[UU.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", UU
+      zH = function(HH) {
+        return HH[HH.KART = 0] = "KART", HH[HH.OFF_ROADER = 1] = "OFF_ROADER", HH[HH.CAR = 2] = "CAR", HH[HH.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", HH[HH.ARMORED_CAR = 4] = "ARMORED_CAR", HH[HH.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", HH[HH.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", HH[HH.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", HH
       }({});
-    cU.DEFAULT, cU.BOAT, yU.SPEED, cU.GLIDER, QU.DIAMOND, cU.BALLOON, AU.BLACK, cU.SLEEPING, FU.ROTATION_4, cU.RIDING_MOB, cU.CAR, oU.MOONSTONE_MINING_DRILL, cU.HOVERCRAFT;
-    let DU = function(UU) {
-      return UU[UU.NORMAL = 0] = "NORMAL", UU[UU.GLIDING = 1] = "GLIDING", UU[UU.FLOATING = 2] = "FLOATING", UU
+    AH.DEFAULT, AH.BOAT, rH.SPEED, AH.GLIDER, SH.DIAMOND, AH.BALLOON, hH.BLACK, AH.SLEEPING, tH.ROTATION_4, AH.RIDING_MOB, AH.CAR, zH.MOONSTONE_MINING_DRILL, AH.HOVERCRAFT;
+    let CH = function(HH) {
+      return HH[HH.NORMAL = 0] = "NORMAL", HH[HH.GLIDING = 1] = "GLIDING", HH[HH.FLOATING = 2] = "FLOATING", HH
     }({})
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

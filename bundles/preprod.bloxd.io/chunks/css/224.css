@@ -1,0 +1,679 @@
+@keyframes rainbowShimmer {
+  0% {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(88.88889%)
+  }
+}
+
+@keyframes rainbowShimmerPosition {
+  to {
+    background-position: -200% 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes loginResumeHighlight {
+
+  0%,
+  to {
+    filter: none;
+    transform: scale(1)
+  }
+
+  50% {
+    filter: drop-shadow(0 0 .8rem rgba(252, 211, 115, .9));
+    transform: scale(1.08)
+  }
+}
+
+.NewPlayerDealClock {
+  align-items: center;
+  background-color: #1a1f2e;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  color: #fff;
+  display: inline-flex;
+  font-size: 1rem;
+  font-weight: 900;
+  gap: .4rem;
+  padding: .15rem .6rem;
+  white-space: nowrap
+}
+
+.NewPlayerDealClock svg {
+  color: #ffb914;
+  height: .95em;
+  width: .95em
+}
+
+.NewPlayerDealClock.NewPlayerDealClockBig {
+  font-size: 1.2rem
+}
+
+.NewPlayerDealPacks {
+  grid-row-gap: .8rem;
+  align-items: stretch;
+  display: grid;
+  min-width: 0;
+  row-gap: .8rem
+}
+
+.NewPlayerDealPacks .NewPlayerDealPack {
+  align-items: center;
+  background: radial-gradient(circle at 50% 52%, #545efa, #463bd9 45%, #222a9f);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  display: flex;
+  gap: 1rem;
+  min-width: 0;
+  padding: .4rem .8rem
+}
+
+.NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealPackArt {
+  align-items: center;
+  display: flex;
+  flex: 0 0 7rem;
+  height: 5.2rem;
+  justify-content: center;
+  position: relative
+}
+
+.NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealPackArt img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain
+}
+
+.NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealPackArt .NewPlayerDealTag {
+  background-color: #ffb914;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #1a1f2e;
+  font-size: 1rem;
+  font-weight: 900;
+  left: -.6rem;
+  letter-spacing: .02em;
+  line-height: 1.15;
+  padding: .1rem .55rem;
+  position: absolute;
+  text-shadow: none;
+  text-transform: uppercase;
+  top: -.5rem;
+  transform: rotate(-7deg);
+  white-space: nowrap
+}
+
+.NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealPackText {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: .15rem;
+  min-width: 0
+}
+
+.NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealPackText .NewPlayerDealPackAmount {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-shadow: -1px -1px 0 #1a1f2e, -1px 0 0 #1a1f2e, -1px 1px 0 #1a1f2e, 0 -1px 0 #1a1f2e, 0 0 0 #1a1f2e, 0 1px 0 #1a1f2e, 1px -1px 0 #1a1f2e, 1px 0 0 #1a1f2e, 1px 1px 0 #1a1f2e
+}
+
+.NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealPackText .NewPlayerDealPackAmount .svg-inline--fa,
+.NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealPackText .NewPlayerDealPackAmount.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealPackText .NewPlayerDealPackAmount .svg-inline--fa path:only-of-type,
+.NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealPackText .NewPlayerDealPackAmount.svg-inline--fa path:only-of-type {
+  stroke: #1a1f2e;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealBuy {
+  flex: 0 0 11rem;
+  font-size: 1.15rem;
+  font-weight: 800
+}
+
+@media(pointer:coarse) {
+  .NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealBuy {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+.NewPlayerDealPacks .NewPlayerDealPack.NewPlayerDealPackHighlight {
+  animation: loginResumeHighlight .8s ease-in-out 3;
+  outline: 3px solid #fff;
+  outline-offset: -3px
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .NewPlayerDealPacks .NewPlayerDealPack {
+    gap: .5rem;
+    padding: .35rem .5rem
+  }
+
+  .NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealPackArt {
+    flex-basis: 4.6rem;
+    height: 3.8rem
+  }
+
+  .NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealPackArt .NewPlayerDealTag {
+    font-size: .8rem;
+    left: -.4rem;
+    padding: .02rem .3rem;
+    top: -.35rem
+  }
+
+  .NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealPackText .NewPlayerDealPackAmount {
+    font-size: 1.35rem
+  }
+
+  .NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealBuy {
+    flex: 0 0 7.6rem;
+    font-size: .9rem
+  }
+}
+
+.NewPlayerDealPacks .NewPlayerDealDivider {
+  display: flex;
+  justify-content: center;
+  padding: 0 1.1rem
+}
+
+.NewPlayerDealPacks .NewPlayerDealDivider i {
+  background-color: #ffb914;
+  display: block;
+  width: 4px
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .NewPlayerDealPacks .NewPlayerDealDivider {
+    padding: 0 .5rem
+  }
+}
+
+.NewPlayerDealPacks .NewPlayerDealUnder {
+  display: flex;
+  grid-column: 1/-1;
+  justify-content: center
+}
+
+.NewPlayerDealPacks .NewPlayerDealUnder .NewPlayerDealLimit {
+  background-color: #ffb914;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  color: #1a1f2e;
+  font-size: .95rem;
+  font-weight: 900;
+  letter-spacing: .02em;
+  padding: .1rem .7rem;
+  text-shadow: none;
+  white-space: nowrap
+}
+
+.NewPlayerDealPacks.NewPlayerDealPacksOne {
+  grid-template-columns: 1fr
+}
+
+.NewPlayerDealPacks.NewPlayerDealPacksTwo {
+  grid-template-columns: 1fr auto 1fr
+}
+
+.NewPlayerDealPacks.NewPlayerDealPacksTwo .NewPlayerDealPack {
+  flex-direction: column;
+  gap: .4rem;
+  padding: .6rem
+}
+
+.NewPlayerDealPacks.NewPlayerDealPacksTwo .NewPlayerDealPack .NewPlayerDealPackArt {
+  flex: 0 0 auto;
+  height: 6.5rem;
+  width: 9rem
+}
+
+.NewPlayerDealPacks.NewPlayerDealPacksTwo .NewPlayerDealPack .NewPlayerDealPackText {
+  align-items: center
+}
+
+.NewPlayerDealPacks.NewPlayerDealPacksTwo .NewPlayerDealPack .NewPlayerDealBuy {
+  align-self: stretch;
+  flex: 0 0 auto
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .NewPlayerDealPacks.NewPlayerDealPacksTwo .NewPlayerDealPack {
+    gap: .3rem;
+    padding: .4rem
+  }
+
+  .NewPlayerDealPacks.NewPlayerDealPacksTwo .NewPlayerDealPack .NewPlayerDealPackArt {
+    height: 4rem;
+    width: 5.5rem
+  }
+
+  .NewPlayerDealPacks.NewPlayerDealPacksTwo .NewPlayerDealPack .NewPlayerDealBuy {
+    font-size: .8rem
+  }
+}
+
+.NewPlayerDealNotice {
+  font-size: 1rem;
+  text-align: center
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.NewPlayerDealPopupPanel {
+  border: 1px solid #ffb914;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-shadow: 0 0 1rem rgba(255, 185, 20, .45), .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: border-box;
+  max-height: 94vh;
+  max-height: 94dvh;
+  max-width: 94vw;
+  overflow-y: auto;
+  padding: 1.6rem 1.6rem 1.2rem;
+  white-space: normal;
+  width: min(56rem, 94vw)
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.NewPlayerDealPopupPanel {
+    box-sizing: border-box;
+    max-width: none;
+    padding: 1.2rem .7rem .9rem;
+    width: calc(100vw - 2rem)
+  }
+}
+
+.NewPlayerDealPopup {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem
+}
+
+.NewPlayerDealPopup .NewPlayerDealPopupTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+  text-shadow: -2px -2px 0 #1a1f2e, -2px -1px 0 #1a1f2e, -2px 0 0 #1a1f2e, -2px 1px 0 #1a1f2e, -2px 2px 0 #1a1f2e, -1px -2px 0 #1a1f2e, -1px -1px 0 #1a1f2e, -1px 0 0 #1a1f2e, -1px 1px 0 #1a1f2e, -1px 2px 0 #1a1f2e, 0 -2px 0 #1a1f2e, 0 -1px 0 #1a1f2e, 0 0 0 #1a1f2e, 0 1px 0 #1a1f2e, 0 2px 0 #1a1f2e, 1px -2px 0 #1a1f2e, 1px -1px 0 #1a1f2e, 1px 0 0 #1a1f2e, 1px 1px 0 #1a1f2e, 1px 2px 0 #1a1f2e, 2px -2px 0 #1a1f2e, 2px -1px 0 #1a1f2e, 2px 0 0 #1a1f2e, 2px 1px 0 #1a1f2e, 2px 2px 0 #1a1f2e
+}
+
+.NewPlayerDealPopup .NewPlayerDealPopupTitle .svg-inline--fa,
+.NewPlayerDealPopup .NewPlayerDealPopupTitle.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.NewPlayerDealPopup .NewPlayerDealPopupTitle .svg-inline--fa path:only-of-type,
+.NewPlayerDealPopup .NewPlayerDealPopupTitle.svg-inline--fa path:only-of-type {
+  stroke: #1a1f2e;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 4px;
+  stroke-linejoin: round
+}
+
+.NewPlayerDealPopup .NewPlayerDealPopupSub {
+  font-size: 1.45rem;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: -1px -1px 0 #1a1f2e, -1px 0 0 #1a1f2e, -1px 1px 0 #1a1f2e, 0 -1px 0 #1a1f2e, 0 0 0 #1a1f2e, 0 1px 0 #1a1f2e, 1px -1px 0 #1a1f2e, 1px 0 0 #1a1f2e, 1px 1px 0 #1a1f2e
+}
+
+.NewPlayerDealPopup .NewPlayerDealPopupSub .svg-inline--fa,
+.NewPlayerDealPopup .NewPlayerDealPopupSub.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.NewPlayerDealPopup .NewPlayerDealPopupSub .svg-inline--fa path:only-of-type,
+.NewPlayerDealPopup .NewPlayerDealPopupSub.svg-inline--fa path:only-of-type {
+  stroke: #1a1f2e;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.NewPlayerDealPopup .NewPlayerDealPacks {
+  width: 100%
+}
+
+.NewPlayerDealPopup .NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealPackArt {
+  height: 8rem
+}
+
+.NewPlayerDealPopup .NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealPackText .NewPlayerDealPackAmount {
+  font-size: 2.2rem
+}
+
+.NewPlayerDealPopup .NewPlayerDealPacks.NewPlayerDealPacksOne .NewPlayerDealPack {
+  padding: 1rem 1.4rem
+}
+
+.NewPlayerDealPopup .NewPlayerDealPacks.NewPlayerDealPacksOne .NewPlayerDealPack .NewPlayerDealPackArt {
+  flex-basis: 12rem
+}
+
+.NewPlayerDealPopup .NewPlayerDealPacks.NewPlayerDealPacksOne .NewPlayerDealPack .NewPlayerDealPackText .NewPlayerDealPackAmount {
+  font-size: 2.6rem
+}
+
+.NewPlayerDealPopup .NewPlayerDealPacks.NewPlayerDealPacksTwo .NewPlayerDealPack .NewPlayerDealPackArt {
+  width: 12rem
+}
+
+.NewPlayerDealPopup .NewPlayerDealNoThanks {
+  font-size: 1.25rem;
+  width: 14rem
+}
+
+@media(pointer:coarse) {
+  .NewPlayerDealPopup .NewPlayerDealNoThanks {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .NewPlayerDealPopup {
+    gap: .6rem
+  }
+
+  .NewPlayerDealPopup .NewPlayerDealPopupTitle {
+    font-size: 2rem
+  }
+
+  .NewPlayerDealPopup .NewPlayerDealPopupSub {
+    font-size: 1.05rem
+  }
+
+  .NewPlayerDealPopup .NewPlayerDealPacks .NewPlayerDealPack .NewPlayerDealPackText .NewPlayerDealPackAmount,
+  .NewPlayerDealPopup .NewPlayerDealPacks.NewPlayerDealPacksOne .NewPlayerDealPack .NewPlayerDealPackText .NewPlayerDealPackAmount {
+    font-size: 1.5rem
+  }
+
+  .NewPlayerDealPopup .NewPlayerDealPacks.NewPlayerDealPacksOne .NewPlayerDealPack {
+    flex-direction: column;
+    padding: .8rem
+  }
+
+  .NewPlayerDealPopup .NewPlayerDealPacks.NewPlayerDealPacksOne .NewPlayerDealPack .NewPlayerDealPackArt {
+    flex: 0 0 auto;
+    height: 7rem;
+    width: 10rem
+  }
+
+  .NewPlayerDealPopup .NewPlayerDealPacks.NewPlayerDealPacksOne .NewPlayerDealPack .NewPlayerDealPackText {
+    align-items: center
+  }
+
+  .NewPlayerDealPopup .NewPlayerDealPacks.NewPlayerDealPacksOne .NewPlayerDealPack .NewPlayerDealBuy {
+    align-self: stretch;
+    flex: 0 0 auto
+  }
+
+  .NewPlayerDealPopup .NewPlayerDealPacks.NewPlayerDealPacksTwo .NewPlayerDealPack .NewPlayerDealPackArt {
+    height: 5rem;
+    width: 6rem
+  }
+
+  .NewPlayerDealPopup .NewPlayerDealNoThanks {
+    font-size: 1.1rem
+  }
+}
+
+.NewPlayerDealBanner {
+  grid-gap: .6rem 1.4rem;
+  align-items: center;
+  background: radial-gradient(circle at 50% 52%, #545efa, #463bd9 45%, #222a9f);
+  border: 1px solid #ffb914;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-shadow: 0 0 1rem rgba(255, 185, 20, .45), .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: border-box;
+  color: #fff;
+  display: grid;
+  gap: .6rem 1.4rem;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  padding: .7rem 1.2rem 1rem;
+  width: 100%
+}
+
+.NewPlayerDealBanner .NewPlayerDealBannerHead {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem
+}
+
+.NewPlayerDealBanner .NewPlayerDealBannerHead .NewPlayerDealBannerTitle {
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-shadow: -1px -1px 0 #1a1f2e, -1px 0 0 #1a1f2e, -1px 1px 0 #1a1f2e, 0 -1px 0 #1a1f2e, 0 0 0 #1a1f2e, 0 1px 0 #1a1f2e, 1px -1px 0 #1a1f2e, 1px 0 0 #1a1f2e, 1px 1px 0 #1a1f2e
+}
+
+.NewPlayerDealBanner .NewPlayerDealBannerHead .NewPlayerDealBannerTitle .svg-inline--fa,
+.NewPlayerDealBanner .NewPlayerDealBannerHead .NewPlayerDealBannerTitle.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.NewPlayerDealBanner .NewPlayerDealBannerHead .NewPlayerDealBannerTitle .svg-inline--fa path:only-of-type,
+.NewPlayerDealBanner .NewPlayerDealBannerHead .NewPlayerDealBannerTitle.svg-inline--fa path:only-of-type {
+  stroke: #1a1f2e;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.NewPlayerDealBanner .NewPlayerDealPacks .NewPlayerDealPack {
+  background: rgba(57, 73, 128, .4)
+}
+
+.NewPlayerDealBanner .NewPlayerDealPacks.NewPlayerDealPacksTwo .NewPlayerDealPack .NewPlayerDealBuy {
+  font-size: 1.05rem
+}
+
+.NewPlayerDealBanner .NewPlayerDealNotice {
+  grid-column: 1/-1
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .NewPlayerDealBanner {
+    gap: .5rem;
+    grid-template-columns: minmax(0, 1fr);
+    padding: .6rem .6rem .9rem
+  }
+
+  .NewPlayerDealBanner .NewPlayerDealBannerHead {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .3rem .6rem
+  }
+
+  .NewPlayerDealBanner .NewPlayerDealBannerHead .NewPlayerDealBannerTitle {
+    font-size: 1.35rem
+  }
+
+  .NewPlayerDealBanner .NewPlayerDealBannerHead .NewPlayerDealClock {
+    font-size: .85rem
+  }
+}
+
+@container dealBannerSlot (max-width: 44rem) {
+  .NewPlayerDealBanner {
+    gap: .5rem;
+    grid-template-columns: minmax(0, 1fr);
+    padding: .6rem .6rem .9rem
+  }
+
+  .NewPlayerDealBanner .NewPlayerDealBannerHead {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .3rem .6rem
+  }
+
+  .NewPlayerDealBanner .NewPlayerDealBannerHead .NewPlayerDealBannerTitle {
+    font-size: 1.35rem
+  }
+
+  .NewPlayerDealBanner .NewPlayerDealBannerHead .NewPlayerDealClock {
+    font-size: .85rem
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.NewPlayerDealAddedPopup {
+  white-space: normal
+}
+
+.NewPlayerDealAdded {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem
+}
+
+.NewPlayerDealAdded .NewPlayerDealAddedHead {
+  align-items: center;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 900;
+  gap: .5rem
+}
+
+.NewPlayerDealAdded .NewPlayerDealAddedHead svg {
+  color: #1dd06d
+}
+
+.NewPlayerDealAdded .NewPlayerDealAddedOk {
+  width: 12rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.NewPlayerDealGiftNoticePopup {
+  white-space: normal
+}
+
+.NewPlayerDealGiftNotice {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  min-width: 18rem
+}
+
+.NewPlayerDealGiftNotice .NewPlayerDealGiftNoticeRows {
+  grid-gap: .4rem 1.2rem;
+  align-items: center;
+  display: grid;
+  font-size: 1.2rem;
+  font-weight: 800;
+  gap: .4rem 1.2rem;
+  grid-template-columns: auto auto;
+  text-align: left
+}
+
+.NewPlayerDealGiftNotice .NewPlayerDealGiftNoticeRows .PremiumCurrencyAmount {
+  justify-self: end
+}
+
+.NewPlayerDealGiftNotice .NewPlayerDealGiftNoticeWhy {
+  color: #f2f2f2;
+  font-size: 1rem
+}
+
+.NewPlayerDealGiftNotice .NewPlayerDealGiftNoticeOk {
+  width: 12rem
+}

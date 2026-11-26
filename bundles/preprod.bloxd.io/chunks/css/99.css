@@ -2140,14 +2140,14 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   margin-bottom: .75rem
 }
 
-.InviteLinkInnerWrapper {
+.CopyTextRow {
   align-items: center;
   display: flex;
   flex-direction: row;
   max-width: 100%
 }
 
-.InviteLinkInner {
+.CopyTextRow .CopyTextRowText {
   background-color: #394980;
   border-color: #1a2139 #6578ba #6578ba #1a2139;
   border-radius: 0;
@@ -2162,12 +2162,12 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   white-space: nowrap
 }
 
-.InviteLinkCopyButton {
+.CopyTextRow .CopyTextRowButton {
   flex-shrink: 0
 }
 
 @media(pointer:coarse) {
-  .InviteLinkCopyButton {
+  .CopyTextRow .CopyTextRowButton {
     box-sizing: border-box;
     min-height: 44px;
     min-width: 44px

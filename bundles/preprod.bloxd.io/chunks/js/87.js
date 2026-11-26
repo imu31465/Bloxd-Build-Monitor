@@ -1,18 +1,18 @@
 export const id = 87;
 export const ids = [87];
 export const modules = {
-  37786: (UU, XU, zU) => {
-    if (zU.d(XU, {
-        e: () => oU,
-        i: () => yU,
-        j: () => AU,
-        m: () => QU,
-        o: () => ZU,
-        q: () => gU
-      }), 46 == zU.j) var cU = zU(37794);
-    const yU = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
-      QU = ["Blade", "Guard", "Handle"],
-      AU = {
+  37933: (HH, BH, LH) => {
+    if (LH.d(BH, {
+        e: () => zH,
+        g: () => rH,
+        j: () => hH,
+        m: () => SH,
+        p: () => TH,
+        t: () => MH
+      }), 46 == LH.j) var AH = LH(37941);
+    const rH = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
+      SH = ["Blade", "Guard", "Handle"],
+      hH = {
         Wood: {
           material: "Wood",
           baseSword: "Wood Sword",
@@ -131,59 +131,59 @@ export const modules = {
           handleReach: .5
         }
       },
-      FU = 4,
-      oU = "Coal",
-      DU = {
+      tH = 4,
+      zH = "Coal",
+      CH = {
         Blade: 1,
         Guard: .6,
         Handle: .4
       },
-      EU = 1.15,
-      YU = 1.35,
-      NU = .06,
-      IU = {
+      EH = 1.15,
+      XH = 1.35,
+      GH = .06,
+      YH = {
         defence: {
           name: "Bulwark",
           amount: .06,
-          describe: UU => `${WU(.06*UU)} less damage taken`
+          describe: HH => `${OH(.06*HH)} less damage taken`
         },
         coins: {
           name: "Midas",
           amount: 4,
-          describe: UU => `Mobs you slay drop ${Math.round(4*UU)}+ extra coins`
+          describe: HH => `Mobs you slay drop ${Math.round(4*HH)}+ extra coins`
         },
         crit: {
           name: "Keen Edge",
           chance: .12,
           amount: .6,
-          describe: UU => `${WU(.12*UU)} chance to strike for +60% damage`
+          describe: HH => `${OH(.12*HH)} chance to strike for +60% damage`
         },
         bossBane: {
           name: "Bossbane",
           amount: .2,
-          describe: UU => `+${WU(.2*UU)} damage to bosses`
+          describe: HH => `+${OH(.2*HH)} damage to bosses`
         },
         firePool: {
           name: "Magma Pool",
           chance: .15,
           amount: .12,
           cooldownMs: 3e3,
-          describe: UU => `${WU(.15*UU)} chance to leave a fire pool under the mob that burns for 3s`
+          describe: HH => `${OH(.15*HH)} chance to leave a fire pool under the mob that burns for 3s`
         },
         lifesteal: {
           name: "Bloodthirst",
           amount: .06,
-          describe: UU => `Heal ${WU(.06*UU)} of the damage you deal`
+          describe: HH => `Heal ${OH(.06*HH)} of the damage you deal`
         },
         starfall: {
           name: "Starfall",
           chance: .1,
           amount: .6,
           cooldownMs: 4e3,
-          describe: UU => `${WU(.1*UU)} chance to call a falling star that hits nearby mobs and slows them`
+          describe: HH => `${OH(.1*HH)} chance to call a falling star that hits nearby mobs and slows them`
         }
       },
-      pU = {
+      uH = {
         eclipseField: {
           name: "Eclipse Field",
           description: "Right-click: slow every mob within 6 blocks for 3s",
@@ -225,120 +225,120 @@ export const modules = {
           cooldownMs: 25e3
         }
       },
-      aU = 46 == zU.j ? cU.b : null,
-      tU = "skyblock:forged:";
+      QH = 46 == LH.j ? AH.d : null,
+      WH = "skyblock:forged:";
 
-    function gU(UU, XU) {
-      return `${UU} ${XU}`
+    function MH(HH, BH) {
+      return `${HH} ${BH}`
     }
-    yU.flatMap((UU => QU.map((XU => gU(UU, XU)))));
+    rH.flatMap((HH => SH.map((BH => MH(HH, BH)))));
 
-    function kU(UU) {
+    function xH(HH) {
       let {
-        blade: XU,
-        guard: zU,
-        handle: cU
-      } = UU;
-      return `${tU}${XU.toLowerCase()}-${zU.toLowerCase()}-${cU.toLowerCase()}`
+        blade: BH,
+        guard: LH,
+        handle: AH
+      } = HH;
+      return `${WH}${BH.toLowerCase()}-${LH.toLowerCase()}-${AH.toLowerCase()}`
     }
 
-    function GU(UU) {
-      if (! function(UU) {
-          return "string" === typeof UU && UU.startsWith(tU)
-        }(UU)) return null;
-      const XU = UU.slice(tU.length).split("-").map((UU => yU.find((XU => XU.toLowerCase() === UU))));
-      return 3 !== XU.length || XU.includes(void 0) ? null : {
-        blade: XU[0],
-        guard: XU[1],
-        handle: XU[2]
+    function vH(HH) {
+      if (! function(HH) {
+          return "string" === typeof HH && HH.startsWith(WH)
+        }(HH)) return null;
+      const BH = HH.slice(WH.length).split("-").map((HH => rH.find((BH => BH.toLowerCase() === HH))));
+      return 3 !== BH.length || BH.includes(void 0) ? null : {
+        blade: BH[0],
+        guard: BH[1],
+        handle: BH[2]
       }
     }
-    const BU = new Map;
+    const PH = new Map;
 
-    function ZU(UU) {
-      var XU;
-      let zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aU;
-      const cU = "string" === typeof UU ? GU(UU) : UU;
-      if (null === cU) return null;
-      const yU = kU(cU),
-        oU = zU === aU ? BU.get(yU) : void 0;
-      if (void 0 !== oU) return oU;
-      const tU = function(UU, XU) {
-        var zU, cU, yU, oU, aU, tU, gU, GU, BU;
+    function TH(HH) {
+      var BH;
+      let LH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : QH;
+      const AH = "string" === typeof HH ? vH(HH) : HH;
+      if (null === AH) return null;
+      const rH = xH(AH),
+        zH = LH === QH ? PH.get(rH) : void 0;
+      if (void 0 !== zH) return zH;
+      const WH = function(HH, BH) {
+        var LH, AH, rH, zH, QH, WH, MH, vH, PH;
         const {
-          blade: ZU,
-          guard: LU,
-          handle: eU
-        } = UU, CU = AU, wU = ZU === LU && LU === eU, qU = PU((1 + CU[ZU].bladeDamage) * (wU ? 1 + NU : 1)), OU = null !== (zU = XU.damageMultiplier) && void 0 !== zU ? zU : qU, SU = null !== (cU = XU.cooldownMultiplier) && void 0 !== cU ? cU : CU[eU].handleCooldown, rU = null !== (yU = XU.knockbackMultiplier) && void 0 !== yU ? yU : PU(1 + CU[eU].handleKnockback), uU = null !== (oU = XU.reachBonus) && void 0 !== oU ? oU : CU[eU].handleReach, fU = null !== (aU = XU.damageReduction) && void 0 !== aU ? aU : CU[LU].guardReduction, iU = null !== (tU = XU.traits) && void 0 !== tU ? tU : function(UU) {
-          const XU = {},
-            zU = {};
-          for (const FU of QU) {
-            var cU, yU;
-            const QU = AU[RU(UU, FU)].trait;
-            null !== QU && (XU[QU] = (null !== (cU = XU[QU]) && void 0 !== cU ? cU : 0) + DU[FU], zU[QU] = (null !== (yU = zU[QU]) && void 0 !== yU ? yU : 0) + 1)
+          blade: TH,
+          guard: kH,
+          handle: mH
+        } = HH, oH = hH, IH = TH === kH && kH === mH, fH = VH((1 + oH[TH].bladeDamage) * (IH ? 1 + GH : 1)), lH = null !== (LH = BH.damageMultiplier) && void 0 !== LH ? LH : fH, KH = null !== (AH = BH.cooldownMultiplier) && void 0 !== AH ? AH : oH[mH].handleCooldown, cH = null !== (rH = BH.knockbackMultiplier) && void 0 !== rH ? rH : VH(1 + oH[mH].handleKnockback), eH = null !== (zH = BH.reachBonus) && void 0 !== zH ? zH : oH[mH].handleReach, qH = null !== (QH = BH.damageReduction) && void 0 !== QH ? QH : oH[kH].guardReduction, gH = null !== (WH = BH.traits) && void 0 !== WH ? WH : function(HH) {
+          const BH = {},
+            LH = {};
+          for (const tH of SH) {
+            var AH, rH;
+            const SH = hH[UH(HH, tH)].trait;
+            null !== SH && (BH[SH] = (null !== (AH = BH[SH]) && void 0 !== AH ? AH : 0) + CH[tH], LH[SH] = (null !== (rH = LH[SH]) && void 0 !== rH ? rH : 0) + 1)
           }
-          for (const QU of Object.keys(XU)) {
-            const UU = 3 === zU[QU] ? YU : 2 === zU[QU] ? EU : 1;
-            XU[QU] = PU(XU[QU] * UU)
+          for (const SH of Object.keys(BH)) {
+            const HH = 3 === LH[SH] ? XH : 2 === LH[SH] ? EH : 1;
+            BH[SH] = VH(BH[SH] * HH)
           }
-          return XU
-        }(UU), HU = null !== (gU = XU.ability) && void 0 !== gU ? gU : null, MU = void 0 !== XU.name, vU = null !== (GU = XU.name) && void 0 !== GU ? GU : wU ? `Pure ${ZU} Sword` : `${CU[LU].epithet} ${ZU} Sword`, VU = null !== (BU = XU.lore) && void 0 !== BU ? BU : `Forged by the Forge Mother from a ${ZU.toLowerCase()} blade, ${LU.toLowerCase()} guard and ${eU.toLowerCase()} handle.`, sU = function(UU) {
+          return BH
+        }(HH), NH = null !== (MH = BH.ability) && void 0 !== MH ? MH : null, RH = void 0 !== BH.name, jH = null !== (vH = BH.name) && void 0 !== vH ? vH : IH ? `Pure ${TH} Sword` : `${oH[kH].epithet} ${TH} Sword`, nH = null !== (PH = BH.lore) && void 0 !== PH ? PH : `Forged by the Forge Mother from a ${TH.toLowerCase()} blade, ${kH.toLowerCase()} guard and ${mH.toLowerCase()} handle.`, FH = function(HH) {
           let {
-            blade: XU,
-            guard: zU,
-            handle: cU
-          } = UU;
-          const yU = AU;
-          return FU * (yU[XU].value + yU[zU].value + yU[cU].value)
-        }(UU), nU = CU[ZU].value + CU[LU].value + CU[eU].value, mU = MU ? "Tier 5" : nU <= 4 ? "Tier 1" : nU <= 8 ? "Tier 2" : nU <= 14 ? "Tier 3" : nU <= 22 ? "Tier 4" : "Tier 5", lU = [];
-        1 !== OU && lU.push(`${dU(OU-1)} damage`);
-        1 !== SU && lU.push(`${WU(1/SU-1)} faster strikes`);
-        1 !== rU && lU.push(`${dU(rU-1)} knockback`);
-        uU > 0 && lU.push(`+${uU} reach`);
-        fU > 0 && lU.push(`${WU(fU)} less damage taken while held`);
-        const xU = [];
-        for (const QU of Object.keys(iU)) xU.push(`${IU[QU].name}: ${IU[QU].describe(iU[QU])}`);
-        null !== HU && xU.push(`${pU[HU].name}: ${pU[HU].description}`);
-        return lU.push(...xU), {
-          id: kU(UU),
-          parts: UU,
-          baseSword: CU[ZU].baseSword,
-          displayName: vU,
-          lore: VU,
-          properties: lU,
-          effects: xU,
-          named: MU,
-          damageMultiplier: OU,
-          cooldownMultiplier: SU,
-          knockbackMultiplier: rU,
-          reachBonus: uU,
-          damageReduction: fU,
-          traits: iU,
-          ability: HU,
-          coalCost: sU,
-          enchantmentTier: mU,
-          powerMultiplier: PU(OU / SU)
+            blade: BH,
+            guard: LH,
+            handle: AH
+          } = HH;
+          const rH = hH;
+          return tH * (rH[BH].value + rH[LH].value + rH[AH].value)
+        }(HH), DH = oH[TH].value + oH[kH].value + oH[mH].value, wH = RH ? "Tier 5" : DH <= 4 ? "Tier 1" : DH <= 8 ? "Tier 2" : DH <= 14 ? "Tier 3" : DH <= 22 ? "Tier 4" : "Tier 5", ZH = [];
+        1 !== lH && ZH.push(`${bH(lH-1)} damage`);
+        1 !== KH && ZH.push(`${OH(1/KH-1)} faster strikes`);
+        1 !== cH && ZH.push(`${bH(cH-1)} knockback`);
+        eH > 0 && ZH.push(`+${eH} reach`);
+        qH > 0 && ZH.push(`${OH(qH)} less damage taken while held`);
+        const dH = [];
+        for (const SH of Object.keys(gH)) dH.push(`${YH[SH].name}: ${YH[SH].describe(gH[SH])}`);
+        null !== NH && dH.push(`${uH[NH].name}: ${uH[NH].description}`);
+        return ZH.push(...dH), {
+          id: xH(HH),
+          parts: HH,
+          baseSword: oH[TH].baseSword,
+          displayName: jH,
+          lore: nH,
+          properties: ZH,
+          effects: dH,
+          named: RH,
+          damageMultiplier: lH,
+          cooldownMultiplier: KH,
+          knockbackMultiplier: cH,
+          reachBonus: eH,
+          damageReduction: qH,
+          traits: gH,
+          ability: NH,
+          coalCost: FH,
+          enchantmentTier: wH,
+          powerMultiplier: VH(lH / KH)
         }
-      }(cU, null !== (XU = zU[yU]) && void 0 !== XU ? XU : {});
-      return zU === aU && BU.set(yU, tU), tU
+      }(AH, null !== (BH = LH[rH]) && void 0 !== BH ? BH : {});
+      return LH === QH && PH.set(rH, WH), WH
     }
 
-    function RU(UU, XU) {
-      return "Blade" === XU ? UU.blade : "Guard" === XU ? UU.guard : UU.handle
+    function UH(HH, BH) {
+      return "Blade" === BH ? HH.blade : "Guard" === BH ? HH.guard : HH.handle
     }
 
-    function PU(UU) {
-      return Math.round(100 * UU) / 100
+    function VH(HH) {
+      return Math.round(100 * HH) / 100
     }
 
-    function WU(UU) {
-      return `${Math.round(100*UU)}%`
+    function OH(HH) {
+      return `${Math.round(100*HH)}%`
     }
 
-    function dU(UU) {
-      return `${UU>=0?"+":""}${WU(UU)}`
+    function bH(HH) {
+      return `${HH>=0?"+":""}${OH(HH)}`
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

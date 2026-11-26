@@ -1,40 +1,46 @@
 export const id = 177;
 export const ids = [177];
 export const modules = {
-  9540: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      pageBody: () => cU
+  9648: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      pageBody: () => AH
     });
-    const cU = {
-      whatIs: ["Smash Lucky Blocks for random loot, funny surprises and some genuinely wild outcomes, then take on everyone else in a chaotic multiplayer PvP arena. In Bloxd Lucky Blocks Battlegrounds, whoever has the most kills when the arena resets wins the round. Lucky Bedwars is all about beds and Lucky Towers is about surviving on a pillar. This one's just a big arena where the Lucky Blocks never stop coming."],
-      howToPlay: ["You start in your own safe base, and nobody else can get in. Step out into the arena and a free Lucky Block lands with you every 15 seconds. Crack them open for weapons, armour, pets and surprises, then go and fight.", "Lucky Blocks, Weapon Lucky Blocks and Pet Lucky Blocks spawn on pads around the arena and come back every minute. Every 90 seconds an Ultra Lucky Block appears in the centre, and whoever grabs it first keeps it. You also get your own Ultra Lucky Block in your base every 5 minutes, and only you can see it. The arena resets every 15 minutes, and the player with the most kills wins the round. You keep your items through a reset, so you're ready to go straight away."],
-      features: ["Multiplayer Lucky Block PvP Arena", "A Free Lucky Block Every 15 Seconds", "Weapon and Pet Lucky Blocks on Pads Around the Map", "Ultra Lucky Block in the Centre Every 90 Seconds", "Your Own Ultra Lucky Block Every 5 Minutes", "Safe Personal Base Nobody Else Can Enter", "Kills Leaderboard and a New Round Every 15 Minutes"],
-      tips: ["Stay out in the arena. You don't get free Lucky Blocks while you're in your base", "The second the Ultra Lucky Block appears, head for the centre", "Open Pet Lucky Blocks for a pet that'll defend you from anyone who attacks you", "Need a breather? Go back to your base, because nobody can follow you in", "Inventory getting messy? Press F to clear it. You'll keep your armour, hotbar, arrows and firecrackers", "Pop home every 5 minutes to grab your own Ultra Lucky Block", "Watch the leaderboard on the right so you know who you need to beat"],
-      similarGames: ["luckyBedwars", "luckyTowers", "skywars", "bedwars"],
+    const AH = {
+      whatIs: ["Protect your bed, destroy theirs. That's the whole idea of Bedwars, the team PvP strategy mode that's free to play online. Every team starts on its own floating island with a bed to protect. Collect resources, buy gear and team upgrades, then bridge across to the other islands and destroy their beds. Once a team's bed is gone they can't respawn. The last team standing wins. Want every item to come from a Lucky Block instead of the shop? Try Lucky Bedwars."],
+      howToPlay: ["Play Bedwars Solos, Duos, Trios, 4v4, 4v4v4v4 or 1v1. Generators on your island drop Coal, Iron Bars and Diamond. Spend them at the Item Shop on blocks, weapons, armour and tools, or at the Upgrades shopkeeper on team upgrades like Protection, Damage, Feather Falling, Health Regeneration and an Alarm. The generators in the centre of the map drop Diamond and Moonstone for the most powerful items.", "As the match goes on, bed defences are unfortified, the Diamond and Moonstone generators level up, and eventually every bed is destroyed. Then the arena shrinks until only one team is left."],
+      features: ["Solos, Duos, Trios, 4v4v4v4 and 4v4", "Ranked Bedwars Lobby", "Team Upgrades: Protection, Damage, Feather Falling, Health Regeneration and Alarm", "Match Modifiers like Lucky Chaos, Weapon Roulette, Treasure Guardians and Specialists", "Dozens of Maps", "Leaderboards"],
+      tips: ["Rush other teams' beds before they can upgrade their defences", "Split up attack and defence with your team", "Upgrade your gear in the shop before leaving your island", "Bridging backwards is faster than ez bridging", "Fight for the centre generators, because Diamond and Moonstone buy the best gear", "Buy an Alarm so you know when enemies reach your base"],
+      similarGames: ["luckyBedwars", "skywars", "luckyTowers"],
       faq: [{
-        question: "What is Lucky Blocks Battlegrounds?",
-        answer: "A multiplayer lucky block PvP arena. You open Lucky Blocks for random loot, fight other players and try to end each 15-minute round with the most kills."
+        question: "What is Bedwars?",
+        answer: "Bedwars is a team PvP strategy game where you protect your bed and destroy everyone else's. Bloxd's version adds team upgrades, match modifiers and a Ranked lobby."
       }, {
-        question: "How do you win Lucky Blocks Battlegrounds?",
-        answer: "Get the most kills before the arena resets. That happens every 15 minutes, and the top player wins the round."
+        question: "How do you win Bedwars?",
+        answer: "Be the last team standing. Destroy the other teams' beds so they can't respawn, then eliminate them before the arena shrinks."
       }, {
-        question: "How do I get Lucky Blocks?",
-        answer: "You get a free one every 15 seconds while you're out in the arena. More spawn on pads around the map, and there's an Ultra Lucky Block in the centre every 90 seconds."
+        question: "What happens after your bed is destroyed?",
+        answer: "You can't respawn. If you die after your bed is gone, you become a spectator."
       }, {
-        question: "What is the Ultra Lucky Block?",
-        answer: "An extra-special Lucky Block. One shows up in the middle of the arena every 90 seconds for everyone to race for, and you get your own in your base every 5 minutes as well."
+        question: "What do the Bedwars generators do?",
+        answer: "Your island's generators drop Coal, Iron Bars and Diamond for items and upgrades. The generators in the centre drop Diamond and Moonstone for the most powerful items."
       }, {
-        question: "What's inside Bloxd lucky blocks?",
-        answer: "Pretty much anything, from weapons and armour to pets and funny surprises. Weapon Lucky Blocks and Pet Lucky Blocks give you a better chance of a weapon or a pet."
+        question: "What modes can I play in Bloxd Bedwars?",
+        answer: "Solos, Duos, Trios, 4v4, 4v4v4v4 and 1v1. There's also a Ranked Bedwars lobby if you want to climb the leaderboards."
       }, {
-        question: "Can other players attack me in my base?",
-        answer: "Nope. Other players can't get into your base, break its blocks or open its chests."
+        question: "What are match modifiers?",
+        answer: "Some matches add a twist. In Supercharged, every generator starts at Level 2. In Boom, explosives are half price. Weapon Roulette gives you a new random weapon every respawn, and in Specialists you pick a role with special perks."
       }, {
-        question: "Do I lose my items when the Lucky Block Battlegrounds arena resets?",
-        answer: "No, your inventory stays with you. Everyone's kills go back to zero for the new round, though."
+        question: "Can I attack my teammates?",
+        answer: "No, you can't attack players on your own team."
+      }, {
+        question: "How many Bedwars maps are there?",
+        answer: "Dozens, including Scary Hollow, Wood Factory, Ahoy!, Colosseum and Rooftops."
+      }, {
+        question: "What's the difference between Bedwars and Lucky Bedwars?",
+        answer: "In Bedwars you collect Coal, Iron Bars, Diamond and Moonstone from generators and choose what to buy. Lucky Bedwars hands out gear through Lucky Blocks instead, so no two matches play out the same."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

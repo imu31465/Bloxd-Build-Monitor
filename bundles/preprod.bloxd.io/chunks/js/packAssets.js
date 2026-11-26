@@ -1,291 +1,291 @@
 export const id = 52;
-export const ids = [52, 220];
+export const ids = [52, 226];
 export const modules = {
-  34956: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      packDisplayName: () => aU,
-      packModelMessage: () => tU,
-      packModelSummary: () => kU,
-      refusedPackModels: () => gU
+  35061: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      packDisplayName: () => QH,
+      packModelMessage: () => WH,
+      packModelSummary: () => xH,
+      refusedPackModels: () => MH
     });
-    var cU = zU(34959),
-      yU = zU(34968);
-    const QU = "DRACO",
-      AU = 0,
-      FU = 1,
-      oU = 0,
-      DU = 1,
-      EU = 32768;
+    var AH = LH(35067),
+      rH = LH(35071);
+    const SH = "DRACO",
+      hH = 0,
+      tH = 1,
+      zH = 0,
+      CH = 1,
+      EH = 32768;
 
-    function YU(UU) {
-      const XU = new DataView(UU.buffer, UU.byteOffset, UU.byteLength);
-      let zU = 0;
-      const cU = () => {
-          if (zU >= UU.byteLength) throw new RangeError("past the stream");
-          return UU[zU++]
+    function XH(HH) {
+      const BH = new DataView(HH.buffer, HH.byteOffset, HH.byteLength);
+      let LH = 0;
+      const AH = () => {
+          if (LH >= HH.byteLength) throw new RangeError("past the stream");
+          return HH[LH++]
         },
-        yU = () => {
-          if (zU + 4 > UU.byteLength) throw new RangeError("past the stream");
-          const cU = XU.getUint32(zU, !0);
-          return zU += 4, cU
+        rH = () => {
+          if (LH + 4 > HH.byteLength) throw new RangeError("past the stream");
+          const AH = BH.getUint32(LH, !0);
+          return LH += 4, AH
         },
-        YU = () => {
-          let UU = 0;
-          for (let XU = 0; XU < 35; XU += 7) {
-            const zU = cU();
-            if (UU += (127 & zU) * 2 ** XU, 0 === (128 & zU)) return UU
+        XH = () => {
+          let HH = 0;
+          for (let BH = 0; BH < 35; BH += 7) {
+            const LH = AH();
+            if (HH += (127 & LH) * 2 ** BH, 0 === (128 & LH)) return HH
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let UU = 0; UU < QU.length; UU++)
-          if (cU() !== QU.charCodeAt(UU)) return null;
-        const XU = cU(),
-          NU = cU(),
-          IU = cU(),
-          pU = cU(),
-          aU = cU() | cU() << 8;
-        if (2 !== XU) return null;
-        0 !== (aU & EU) && function(UU, XU, zU) {
-          const cU = () => {
-              XU(zU())
+        for (let HH = 0; HH < SH.length; HH++)
+          if (AH() !== SH.charCodeAt(HH)) return null;
+        const BH = AH(),
+          GH = AH(),
+          YH = AH(),
+          uH = AH(),
+          QH = AH() | AH() << 8;
+        if (2 !== BH) return null;
+        0 !== (QH & EH) && function(HH, BH, LH) {
+          const AH = () => {
+              BH(LH())
             },
-            yU = () => {
-              let zU = 1,
-                yU = !0;
-              for (; zU > 0;) {
-                zU--, yU || cU(), yU = !1;
-                const QU = UU();
-                for (let zU = 0; zU < QU; zU++) cU(), XU(UU());
-                zU += UU()
+            rH = () => {
+              let LH = 1,
+                rH = !0;
+              for (; LH > 0;) {
+                LH--, rH || AH(), rH = !1;
+                const SH = HH();
+                for (let LH = 0; LH < SH; LH++) AH(), BH(HH());
+                LH += HH()
               }
             },
-            QU = UU();
-          for (let AU = 0; AU < QU; AU++) UU(), yU();
-          yU()
-        }(YU, (XU => {
-          if (zU + XU > UU.byteLength) throw new RangeError("past the stream");
-          zU += XU
-        }), cU);
-        const tU = NU < 2 ? yU : YU;
-        if (IU === AU) return {
+            SH = HH();
+          for (let hH = 0; hH < SH; hH++) HH(), rH();
+          rH()
+        }(XH, (BH => {
+          if (LH + BH > HH.byteLength) throw new RangeError("past the stream");
+          LH += BH
+        }), AH);
+        const WH = GH < 2 ? rH : XH;
+        if (YH === hH) return {
           faces: 0,
-          vertices: yU(),
-          minor: NU
+          vertices: rH(),
+          minor: GH
         };
-        if (IU !== FU) return null;
-        if (pU === oU) {
+        if (YH !== tH) return null;
+        if (uH === zH) {
           return {
-            faces: tU(),
-            vertices: tU(),
-            minor: NU
+            faces: WH(),
+            vertices: WH(),
+            minor: GH
           }
         }
-        if (pU !== DU) return null;
-        cU(), NU < 2 && YU();
-        const gU = YU();
+        if (uH !== CH) return null;
+        AH(), GH < 2 && XH();
+        const MH = XH();
         return {
-          faces: YU(),
-          vertices: gU,
-          minor: NU
+          faces: XH(),
+          vertices: MH,
+          minor: GH
         }
       } catch {
         return null
       }
     }
 
-    function NU(UU, XU, zU) {
-      var cU, yU;
-      if (null === (cU = null === (yU = UU.extensionsUsed) || void 0 === yU ? void 0 : yU.includes("KHR_draco_mesh_compression")) || void 0 === cU || !cU) return null;
-      for (const aU of null !== (QU = UU.meshes) && void 0 !== QU ? QU : []) {
-        var QU;
-        for (const cU of aU.primitives) {
-          var AU, FU, oU, DU, EU, NU;
-          const yU = null === (AU = cU.extensions) || void 0 === AU ? void 0 : AU.KHR_draco_mesh_compression;
-          if ("object" !== typeof yU || null === yU) continue;
-          const QU = null === (FU = UU.bufferViews) || void 0 === FU ? void 0 : FU[yU.bufferView];
-          if (null === XU || void 0 === QU) return IU;
-          const aU = null !== (oU = QU.byteOffset) && void 0 !== oU ? oU : 0,
-            tU = YU(XU.subarray(aU, aU + QU.byteLength));
-          if (null === tU && !zU) continue;
-          const gU = null !== (DU = UU.accessors) && void 0 !== DU ? DU : [],
-            kU = null === (EU = gU[cU.attributes.POSITION]) || void 0 === EU ? void 0 : EU.count,
-            GU = void 0 === cU.indices ? 0 : null === (NU = gU[cU.indices]) || void 0 === NU ? void 0 : NU.count;
-          if (null === tU || void 0 === kU || void 0 === GU || 3 * tU.faces !== GU || tU.vertices > kU) return IU;
-          if (zU && tU.minor < 2) return pU
+    function GH(HH, BH, LH) {
+      var AH, rH;
+      if (null === (AH = null === (rH = HH.extensionsUsed) || void 0 === rH ? void 0 : rH.includes("KHR_draco_mesh_compression")) || void 0 === AH || !AH) return null;
+      for (const QH of null !== (SH = HH.meshes) && void 0 !== SH ? SH : []) {
+        var SH;
+        for (const AH of QH.primitives) {
+          var hH, tH, zH, CH, EH, GH;
+          const rH = null === (hH = AH.extensions) || void 0 === hH ? void 0 : hH.KHR_draco_mesh_compression;
+          if ("object" !== typeof rH || null === rH) continue;
+          const SH = null === (tH = HH.bufferViews) || void 0 === tH ? void 0 : tH[rH.bufferView];
+          if (null === BH || void 0 === SH) return YH;
+          const QH = null !== (zH = SH.byteOffset) && void 0 !== zH ? zH : 0,
+            WH = XH(BH.subarray(QH, QH + SH.byteLength));
+          if (null === WH && !LH) continue;
+          const MH = null !== (CH = HH.accessors) && void 0 !== CH ? CH : [],
+            xH = null === (EH = MH[AH.attributes.POSITION]) || void 0 === EH ? void 0 : EH.count,
+            vH = void 0 === AH.indices ? 0 : null === (GH = MH[AH.indices]) || void 0 === GH ? void 0 : GH.count;
+          if (null === WH || void 0 === xH || void 0 === vH || 3 * WH.faces !== vH || WH.vertices > xH) return YH;
+          if (LH && WH.minor < 2) return uH
         }
       }
       return null
     }
-    const IU = "has a Draco stream whose counts don't match its accessors",
-      pU = "has a Draco stream too old to decode: export it again";
+    const YH = "has a Draco stream whose counts don't match its accessors",
+      uH = "has a Draco stream too old to decode: export it again";
 
-    function aU(UU) {
-      var XU;
-      return null !== (XU = UU.name) && void 0 !== XU ? XU : UU.fromFolderName || UU.id
+    function QH(HH) {
+      var BH;
+      return null !== (BH = HH.name) && void 0 !== BH ? BH : HH.fromFolderName || HH.id
     }
 
-    function tU(UU, XU, zU) {
-      return `Texture pack "${UU}": model "${XU}" was not loaded because it ${zU}. The default model is used instead.`
+    function WH(HH, BH, LH) {
+      return `Texture pack "${HH}": model "${BH}" was not loaded because it ${LH}. The default model is used instead.`
     }
 
-    function gU(UU, XU, zU) {
+    function MH(HH, BH, LH) {
       let {
-        strictDraco: QU = !1
+        strictDraco: SH = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const AU = {};
-      for (const [FU, oU] of Object.entries(XU)) {
-        let XU;
-        if (oU.startsWith("data:")) try {
-          const UU = new Uint8Array((0, yU.p)(oU));
-          if (XU = (0, cU.d)(UU), null === XU) {
+      const hH = {};
+      for (const [tH, zH] of Object.entries(BH)) {
+        let BH;
+        if (zH.startsWith("data:")) try {
+          const HH = new Uint8Array((0, rH.q)(zH));
+          if (BH = (0, AH.b)(HH), null === BH) {
             const {
-              json: zU,
-              bin: cU
-            } = (0, yU.w)(UU);
-            XU = NU(zU, cU, QU)
+              json: LH,
+              bin: AH
+            } = (0, rH.z)(HH);
+            BH = GH(LH, AH, SH)
           }
         } catch {
-          XU = "is not a binary glTF 2.0 file"
-        } else XU = "loads data from outside the file";
-        XU && (AU[FU] = XU, zU && console.warn(tU(UU, FU, XU)))
+          BH = "is not a binary glTF 2.0 file"
+        } else BH = "loads data from outside the file";
+        BH && (hH[tH] = BH, LH && console.warn(WH(HH, tH, BH)))
       }
-      return AU
+      return hH
     }
 
-    function kU(UU, XU) {
-      const zU = Object.keys(XU);
-      if (0 === zU.length) return null;
-      if (1 === zU.length) return tU(UU, zU[0], XU[zU[0]]);
-      const cU = zU.map((UU => `"${UU}" ${XU[UU]}`)).join("; ");
-      return `Texture pack "${UU}": ${zU.length} models were not loaded (${cU}). The default models are used instead.`
+    function xH(HH, BH) {
+      const LH = Object.keys(BH);
+      if (0 === LH.length) return null;
+      if (1 === LH.length) return WH(HH, LH[0], BH[LH[0]]);
+      const AH = LH.map((HH => `"${HH}" ${BH[HH]}`)).join("; ");
+      return `Texture pack "${HH}": ${LH.length} models were not loaded (${AH}). The default models are used instead.`
     }
   },
-  64155: (UU, XU, zU) => {
-    zU.d(XU, {
-      packAssets: () => gU
+  64340: (HH, BH, LH) => {
+    LH.d(BH, {
+      packAssets: () => MH
     });
-    var cU = zU(2219),
-      yU = zU(2210),
-      QU = zU(34956),
-      AU = zU(3581),
-      FU = zU(3612);
+    var AH = LH(2227),
+      rH = LH(2215),
+      SH = LH(35061),
+      hH = LH(3569),
+      tH = LH(3597);
 
-    function oU(UU, XU, zU, cU) {
-      const yU = `${(0,AU.e)(UU,XU)}|sheets${zU}`;
-      return cU === FU.e ? yU : `${yU}|layers${cU}`
+    function zH(HH, BH, LH, AH) {
+      const rH = `${(0,hH.c)(HH,BH)}|sheets${LH}`;
+      return AH === tH.d ? rH : `${rH}|layers${AH}`
     }
-    var DU = zU(3617),
-      EU = zU(3548),
-      YU = zU(3534),
-      NU = zU(3590);
-    var IU = zU(53774);
-    const pU = 256;
-    let aU = null,
-      tU = null;
+    var CH = LH(3606),
+      EH = LH(3533),
+      XH = LH(3519),
+      GH = LH(3575);
+    var YH = LH(54576);
+    const uH = 256;
+    let QH = null,
+      WH = null;
 
-    function gU(UU) {
-      var XU;
-      let zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : FU.e;
-      if ((null === (XU = aU) || void 0 === XU ? void 0 : XU.pack) === UU.pack && aU.maxLayerWidth === zU) return aU.assets;
-      const gU = (0, IU.d)(UU.pack, (0, IU.l)(UU));
-      if (null === gU || !(0, yU.h)(gU)) return Promise.resolve(null);
-      const GU = async function(UU, XU, zU) {
-        var IU;
-        const aU = null !== (IU = UU.textureOverrides) && void 0 !== IU ? IU : {},
+    function MH(HH) {
+      var BH;
+      let LH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tH.d;
+      if ((null === (BH = QH) || void 0 === BH ? void 0 : BH.pack) === HH.pack && QH.maxLayerWidth === LH) return QH.assets;
+      const MH = (0, YH.e)(HH.pack, (0, YH.j)(HH));
+      if (null === MH || !(0, rH.d)(MH)) return Promise.resolve(null);
+      const vH = async function(HH, BH, LH) {
+        var YH;
+        const QH = null !== (YH = HH.textureOverrides) && void 0 !== YH ? YH : {},
           {
-            id: gU,
-            version: GU
-          } = UU.metaData,
-          BU = XU && gU !== cU.p.CUSTOM,
-          ZU = {};
-        BU && (tU = ZU);
-        let RU, PU, WU = BU ? await async function(UU, XU, zU, cU) {
-          const yU = oU(UU, XU, zU, FU.e),
-            QU = oU(UU, XU, zU, cU),
-            DU = await (0, AU.i)((UU => UU === yU || UU === QU));
-          return null !== DU && (cU === FU.e || DU.blockAtlasWidth <= cU) ? DU : null
-        }(gU, GU, pU, zU): null;
-        if (null === WU) {
+            id: MH,
+            version: vH
+          } = HH.metaData,
+          PH = BH && MH !== AH.l.CUSTOM,
+          TH = {};
+        PH && (WH = TH);
+        let UH, VH, OH = PH ? await async function(HH, BH, LH, AH) {
+          const rH = zH(HH, BH, LH, tH.d),
+            SH = zH(HH, BH, LH, AH),
+            CH = await (0, hH.h)((HH => HH === rH || HH === SH));
+          return null !== CH && (AH === tH.d || CH.blockAtlasWidth <= AH) ? CH : null
+        }(MH, vH, uH, LH): null;
+        if (null === OH) {
           const {
-            blockMetadata: UU,
-            getDefaultTexture: XU,
-            textureNameToIndex: QU
-          } = await (0, yU.n)(), FU = (0, EU.b)(UU, ((UU, zU) => ({
-            url: kU(aU, XU, UU, "block" === zU ? YU.f.BLOCK : YU.f.ITEM)
-          }))), DU = await
-          function(UU, XU, zU, cU, yU, QU) {
-            return (0, NU.e)((AU => AU.WasmTextureWorker.generateRequired(UU, XU, zU, cU, yU, QU)))
-          }(UU, QU, FU, gU === cU.b, zU, pU), IU = DU.assets;
-          WU = {
-            ...IU,
+            blockMetadata: HH,
+            getDefaultTexture: BH,
+            textureNameToIndex: SH
+          } = await (0, rH.i)(), tH = (0, EH.c)(HH, ((HH, LH) => ({
+            url: xH(QH, BH, HH, "block" === LH ? XH.g.BLOCK : XH.g.ITEM)
+          }))), CH = await
+          function(HH, BH, LH, AH, rH, SH) {
+            return (0, GH.c)((hH => hH.WasmTextureWorker.generateRequired(HH, BH, LH, AH, rH, SH)))
+          }(HH, SH, tH, MH === AH.e, LH, uH), YH = CH.assets;
+          OH = {
+            ...YH,
             averageColors: {}
-          }, RU = DU.averageColors(), BU && (PU = RU.then((async UU => {
-            null !== UU && tU === ZU && await
-            function(UU, XU, zU, cU, yU) {
-              return (0, AU.n)(oU(UU, XU, cU, yU), zU)
-            }(gU, GU, {
-              ...IU,
-              averageColors: UU
-            }, pU, DU.layerCap)
+          }, UH = CH.averageColors(), PH && (VH = UH.then((async HH => {
+            null !== HH && WH === TH && await
+            function(HH, BH, LH, AH, rH) {
+              return (0, hH.o)(zH(HH, BH, AH, rH), LH)
+            }(MH, vH, {
+              ...YH,
+              averageColors: HH
+            }, uH, CH.layerCap)
           })))
         }
-        return function(UU, XU) {
-          var zU, cU;
-          let yU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((FU = UU.averageColors, 0 === Object.keys(null !== FU && void 0 !== FU ? FU : {}).length ? null : UU.averageColors)),
-            AU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
-          var FU;
-          const oU = null !== (zU = XU.textureOverrides) && void 0 !== zU ? zU : {},
-            EU = null !== (cU = XU.modelOverrides) && void 0 !== cU ? cU : {},
-            YU = 0 === Object.keys(EU).length ? {} : (0, QU.refusedPackModels)((0, QU.packDisplayName)(XU.metaData), EU, !0, {
+        return function(HH, BH) {
+          var LH, AH;
+          let rH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((tH = HH.averageColors, 0 === Object.keys(null !== tH && void 0 !== tH ? tH : {}).length ? null : HH.averageColors)),
+            hH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
+          var tH;
+          const zH = null !== (LH = BH.textureOverrides) && void 0 !== LH ? LH : {},
+            EH = null !== (AH = BH.modelOverrides) && void 0 !== AH ? AH : {},
+            XH = 0 === Object.keys(EH).length ? {} : (0, SH.refusedPackModels)((0, SH.packDisplayName)(BH.metaData), EH, !0, {
               strictDraco: !0
             }),
             {
-              animatedBlockTextures: NU,
-              rotatedBlockTextures: IU
-            } = UU,
-            pU = UU => {
-              var XU, zU;
-              return null !== (XU = null !== (zU = NU[UU]) && void 0 !== zU ? zU : IU[UU]) && void 0 !== XU ? XU : null
+              animatedBlockTextures: GH,
+              rotatedBlockTextures: YH
+            } = HH,
+            uH = HH => {
+              var BH, LH;
+              return null !== (BH = null !== (LH = GH[HH]) && void 0 !== LH ? LH : YH[HH]) && void 0 !== BH ? BH : null
             };
           return {
             terrain: {
-              atlasSheets: UU.blockAtlasArr,
-              texture: pU
+              atlasSheets: HH.blockAtlasArr,
+              texture: uH
             },
-            sheetPixels: [...UU.blockAtlasPixels],
-            heldUntil: AU,
-            sheetLayout: UU.imagesPerAtlas,
-            sheetWidth: UU.blockAtlasWidth,
-            armourAtlasUrl: UU.armourAtlas,
-            texture: UU => {
-              var XU, zU;
-              return null !== (XU = null !== (zU = pU(UU)) && void 0 !== zU ? zU : (0, DU.b)(oU, UU)) && void 0 !== XU ? XU : null
+            sheetPixels: [...HH.blockAtlasPixels],
+            heldUntil: hH,
+            sheetLayout: HH.imagesPerAtlas,
+            sheetWidth: HH.blockAtlasWidth,
+            armourAtlasUrl: HH.armourAtlas,
+            texture: HH => {
+              var BH, LH;
+              return null !== (BH = null !== (LH = uH(HH)) && void 0 !== LH ? LH : (0, CH.c)(zH, HH)) && void 0 !== BH ? BH : null
             },
-            model: UU => void 0 === YU[UU] && EU[UU] || null,
-            averageColours: yU
+            model: HH => void 0 === XH[HH] && EH[HH] || null,
+            averageColours: rH
           }
-        }(WU, UU, RU, PU)
-      }(gU, null === UU.gameSource, zU), BU = {
-        pack: UU.pack,
-        maxLayerWidth: zU,
-        assets: GU
+        }(OH, HH, UH, VH)
+      }(MH, null === HH.gameSource, LH), PH = {
+        pack: HH.pack,
+        maxLayerWidth: LH,
+        assets: vH
       };
-      return aU = BU, GU.catch((() => {
-        aU === BU && (aU = null)
-      })), GU
+      return QH = PH, vH.catch((() => {
+        QH === PH && (QH = null)
+      })), vH
     }
 
-    function kU(UU, XU, cU, yU) {
-      const QU = (0, DU.b)(UU, cU);
-      if (QU) return QU;
+    function xH(HH, BH, AH, rH) {
+      const SH = (0, CH.c)(HH, AH);
+      if (SH) return SH;
       try {
-        return XU(cU, yU).url
+        return BH(AH, rH).url
       } catch {
-        return zU(3687)
+        return LH(3660)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

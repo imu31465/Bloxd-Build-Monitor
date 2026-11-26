@@ -1,89 +1,89 @@
 export const id = 122;
-export const ids = [122, 703];
+export const ids = [122, 706];
 export const modules = {
-  5505: (UU, XU, zU) => {
-    var cU = zU(5512);
+  5454: (HH, BH, LH) => {
+    var AH = LH(5462);
 
-    function yU() {}
+    function rH() {}
 
-    function QU() {}
-    QU.resetWarningCache = yU, UU.exports = function() {
-      function UU(UU, XU, zU, yU, QU, AU) {
-        if (AU !== cU) {
-          var FU = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw FU.name = "Invariant Violation", FU
+    function SH() {}
+    SH.resetWarningCache = rH, HH.exports = function() {
+      function HH(HH, BH, LH, rH, SH, hH) {
+        if (hH !== AH) {
+          var tH = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw tH.name = "Invariant Violation", tH
         }
       }
 
-      function XU() {
-        return UU
+      function BH() {
+        return HH
       }
-      UU.isRequired = UU;
-      var zU = {
-        array: UU,
-        bigint: UU,
-        bool: UU,
-        func: UU,
-        number: UU,
-        object: UU,
-        string: UU,
-        symbol: UU,
-        any: UU,
-        arrayOf: XU,
-        element: UU,
-        elementType: UU,
-        instanceOf: XU,
-        node: UU,
-        objectOf: XU,
-        oneOf: XU,
-        oneOfType: XU,
-        shape: XU,
-        exact: XU,
-        checkPropTypes: QU,
-        resetWarningCache: yU
+      HH.isRequired = HH;
+      var LH = {
+        array: HH,
+        bigint: HH,
+        bool: HH,
+        func: HH,
+        number: HH,
+        object: HH,
+        string: HH,
+        symbol: HH,
+        any: HH,
+        arrayOf: BH,
+        element: HH,
+        elementType: HH,
+        instanceOf: BH,
+        node: HH,
+        objectOf: BH,
+        oneOf: BH,
+        oneOfType: BH,
+        shape: BH,
+        exact: BH,
+        checkPropTypes: SH,
+        resetWarningCache: rH
       };
-      return zU.PropTypes = zU, zU
+      return LH.PropTypes = LH, LH
     }
   },
-  5499: (UU, XU, zU) => {
-    UU.exports = zU(5505)()
+  5450: (HH, BH, LH) => {
+    HH.exports = LH(5454)()
   },
-  5512: UU => {
-    UU.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  5462: HH => {
+    HH.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  7188: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      default: () => EU
+  7147: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      default: () => EH
     });
-    var cU = zU(1568),
-      yU = zU(1494),
-      QU = zU(1193),
-      AU = zU(7196),
-      FU = zU(7172),
-      oU = zU(7150),
-      DU = zU(1305);
+    var AH = LH(1509),
+      rH = LH(1455),
+      SH = LH(1123),
+      hH = LH(7149),
+      tH = LH(7129),
+      zH = LH(7111),
+      CH = LH(1225);
 
-    function EU() {
+    function EH() {
       const {
-        t: UU
-      } = (0, QU.I)(), XU = (0, cU.useNavigatePreserveSearch)();
-      return (0, FU.d)(), (0, DU.jsxs)("div", {
+        t: HH
+      } = (0, SH.B)(), BH = (0, AH.useNavigatePreserveSearch)();
+      return (0, tH.d)(), (0, CH.jsxs)("div", {
         className: "ShaderPackPublishPage AnimFadeIn",
-        children: [(0, DU.jsx)("div", {
+        children: [(0, CH.jsx)("div", {
           className: "ShaderPackPublishBack",
-          children: (0, DU.jsx)(yU.e, {
+          children: (0, CH.jsx)(rH.e, {
             onClick: () => {
-              XU(oU.T)
+              BH(zH.P)
             },
-            children: UU("shaderPackListing:backToPacks")
+            children: HH("shaderPackListing:backToPacks")
           })
-        }), (0, DU.jsx)("h1", {
+        }), (0, CH.jsx)("h1", {
           className: "ShaderPackPublishTitle",
-          children: UU("shaderPackListing:publishTitle")
-        }), (0, DU.jsx)(AU.ShaderPackPublishForm, {
+          children: HH("shaderPackListing:publishTitle")
+        }), (0, CH.jsx)(hH.ShaderPackPublishForm, {
           existing: null,
-          onPublished: UU => {
-            XU((0, oU.Z)(UU.packId), {
+          onPublished: HH => {
+            BH((0, zH.S)(HH.packId), {
               replace: !0
             })
           }
@@ -91,131 +91,131 @@ export const modules = {
       })
     }
   },
-  7172: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => NU,
-      e: () => IU,
-      g: () => YU,
-      h: () => pU
+  7129: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => GH,
+      g: () => YH,
+      i: () => XH,
+      k: () => uH
     });
-    var cU = zU(61),
-      yU = zU(7158),
-      QU = zU(1545),
-      AU = zU(7150),
-      FU = zU(7176),
-      oU = zU(1129);
-    const DU = "shaderPackListingView",
-      EU = "shaderPackListingFilterOpen";
+    var AH = LH(45),
+      rH = LH(7114),
+      SH = LH(1502),
+      hH = LH(7111),
+      tH = LH(7138),
+      zH = LH(1061);
+    const CH = "shaderPackListingView",
+      EH = "shaderPackListingFilterOpen";
 
-    function YU() {
-      var UU;
-      const [XU, zU] = (0, FU.d)(DU, yU.E[0]);
-      return [null !== (UU = yU.E.find((UU => UU === XU))) && void 0 !== UU ? UU : yU.E[0], zU]
+    function XH() {
+      var HH;
+      const [BH, LH] = (0, tH.b)(CH, rH.L[0]);
+      return [null !== (HH = rH.L.find((HH => HH === BH))) && void 0 !== HH ? HH : rH.L[0], LH]
     }
 
-    function NU() {
-      (0, cU.useEffect)((() => () => {
-        window.location.pathname.startsWith(AU.T) || (0, AU.k)()
+    function GH() {
+      (0, AH.useEffect)((() => () => {
+        window.location.pathname.startsWith(hH.P) || (0, hH.k)()
       }), [])
     }
 
-    function IU() {
-      return (0, FU.d)(EU, !1)
+    function YH() {
+      return (0, tH.b)(EH, !1)
     }
 
-    function pU() {
+    function uH() {
       const {
-        userContext: UU,
-        isUserContextUpdating: XU
-      } = (0, oU.d)(), [zU, yU] = (0, cU.useState)(null), AU = (0, cU.useRef)(new Set);
+        userContext: HH,
+        isUserContextUpdating: BH
+      } = (0, zH.e)(), [LH, rH] = (0, AH.useState)(null), hH = (0, AH.useRef)(new Set);
 
-      function FU(UU, XU) {
-        yU((zU => {
-          const cU = new Set(zU);
-          return XU ? cU.add(UU) : cU.delete(UU), cU
+      function tH(HH, BH) {
+        rH((LH => {
+          const AH = new Set(LH);
+          return BH ? AH.add(HH) : AH.delete(HH), AH
         }))
       }
-      return (0, cU.useEffect)((() => {
-        if (XU) return;
-        let zU = !1;
-        return QU.c.getFavouriteShaderPacks(UU).then((UU => {
-          zU || yU(new Set(UU))
-        })).catch((UU => {
-          console.error("Failed to get favourite shader packs", UU), zU || yU(new Set)
+      return (0, AH.useEffect)((() => {
+        if (BH) return;
+        let LH = !1;
+        return SH.d.getFavouriteShaderPacks(HH).then((HH => {
+          LH || rH(new Set(HH))
+        })).catch((HH => {
+          console.error("Failed to get favourite shader packs", HH), LH || rH(new Set)
         })), () => {
-          zU = !0
+          LH = !0
         }
-      }), [UU, XU]), {
-        isFavourite: UU => null === zU ? null : zU.has(UU),
-        toggle: function(XU) {
-          if (null === zU || AU.current.has(XU)) return;
-          AU.current.add(XU);
-          const cU = !zU.has(XU);
-          FU(XU, cU), (cU ? QU.c.favouriteShaderPack(UU, XU) : QU.c.unfavouriteShaderPack(UU, XU)).catch((UU => {
-            console.error("Failed to change a favourite shader pack", UU), FU(XU, !cU)
+      }), [HH, BH]), {
+        isFavourite: HH => null === LH ? null : LH.has(HH),
+        toggle: function(BH) {
+          if (null === LH || hH.current.has(BH)) return;
+          hH.current.add(BH);
+          const AH = !LH.has(BH);
+          tH(BH, AH), (AH ? SH.d.favouriteShaderPack(HH, BH) : SH.d.unfavouriteShaderPack(HH, BH)).catch((HH => {
+            console.error("Failed to change a favourite shader pack", HH), tH(BH, !AH)
           })).finally((() => {
-            AU.current.delete(XU)
+            hH.current.delete(BH)
           }))
         }
       }
     }
   },
-  7150: (UU, XU, zU) => {
-    zU.d(XU, {
-      $: () => FU,
-      D: () => gU,
-      F: () => eU,
-      I: () => EU,
-      K: () => wU,
-      N: () => aU,
-      Q: () => HU,
-      S: () => fU,
-      T: () => AU,
-      V: () => iU,
-      Z: () => oU,
-      bb: () => rU,
-      c: () => kU,
-      db: () => uU,
-      g: () => dU,
-      gb: () => GU,
-      h: () => tU,
-      jb: () => CU,
-      k: () => NU,
-      m: () => YU,
-      n: () => qU,
-      p: () => IU,
-      s: () => OU,
-      w: () => MU,
-      z: () => pU
+  7111: (HH, BH, LH) => {
+    LH.d(BH, {
+      B: () => mH,
+      F: () => EH,
+      I: () => IH,
+      L: () => QH,
+      M: () => NH,
+      N: () => qH,
+      P: () => hH,
+      R: () => gH,
+      S: () => zH,
+      T: () => tH,
+      X: () => cH,
+      _: () => eH,
+      ab: () => vH,
+      bb: () => oH,
+      e: () => xH,
+      h: () => bH,
+      j: () => WH,
+      k: () => GH,
+      m: () => XH,
+      n: () => fH,
+      p: () => YH,
+      q: () => lH,
+      s: () => RH,
+      w: () => uH,
+      z: () => MH
     });
-    var cU = zU(7158),
-      yU = zU(173),
-      QU = zU(4997);
-    const AU = "/shader-packs",
-      FU = `${AU}/publish`;
+    var AH = LH(7114),
+      rH = LH(152),
+      SH = LH(4969);
+    const hH = "/shader-packs",
+      tH = `${hH}/publish`;
 
-    function oU(UU) {
-      return `${AU}/${encodeURIComponent(UU)}`
+    function zH(HH) {
+      return `${hH}/${encodeURIComponent(HH)}`
     }
-    let DU = null;
+    let CH = null;
 
-    function EU(UU) {
-      DU = UU
-    }
-
-    function YU() {
-      return DU
+    function EH(HH) {
+      CH = HH
     }
 
-    function NU() {
-      DU = null
+    function XH() {
+      return CH
     }
 
-    function IU(UU) {
-      return UU.playerHasRank("developer") || UU.playerHasRank("admin")
+    function GH() {
+      CH = null
     }
-    const pU = ["terrain", "water", "models", "sunShadows", "strict"],
-      aU = {
+
+    function YH(HH) {
+      return HH.playerHasRank("developer") || HH.playerHasRank("admin")
+    }
+    const uH = ["terrain", "water", "models", "sunShadows", "strict"],
+      QH = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -223,89 +223,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function tU(UU, XU) {
-      return UU.withFeatures.includes(XU) ? "with" : UU.withoutFeatures.includes(XU) ? "without" : null
+    function WH(HH, BH) {
+      return HH.withFeatures.includes(BH) ? "with" : HH.withoutFeatures.includes(BH) ? "without" : null
     }
 
-    function gU(UU) {
-      return null === UU ? "with" : "with" === UU ? "without" : null
+    function MH(HH) {
+      return null === HH ? "with" : "with" === HH ? "without" : null
     }
 
-    function kU(UU) {
-      return "with" === UU ? "only" : null === UU ? "include" : void 0
+    function xH(HH) {
+      return "with" === HH ? "only" : null === HH ? "include" : void 0
     }
 
-    function GU(UU, XU) {
-      const zU = tU(UU, XU),
-        cU = UU => UU.filter((UU => UU !== XU));
+    function vH(HH, BH) {
+      const LH = WH(HH, BH),
+        AH = HH => HH.filter((HH => HH !== BH));
       return {
-        withFeatures: null === zU ? [...UU.withFeatures, XU] : cU(UU.withFeatures),
-        withoutFeatures: "with" === zU ? [...UU.withoutFeatures, XU] : cU(UU.withoutFeatures)
+        withFeatures: null === LH ? [...HH.withFeatures, BH] : AH(HH.withFeatures),
+        withoutFeatures: "with" === LH ? [...HH.withoutFeatures, BH] : AH(HH.withoutFeatures)
       }
     }
-    const BU = "section",
-      ZU = "sort",
-      RU = "filters",
-      PU = "q",
-      WU = "banned",
-      dU = "popular",
-      LU = "strict";
+    const PH = "section",
+      TH = "sort",
+      UH = "filters",
+      VH = "q",
+      OH = "banned",
+      bH = "popular",
+      kH = "strict";
 
-    function eU(UU) {
-      var XU, zU, yU;
-      const AU = UU.get(BU),
-        FU = (null !== (XU = UU.get(RU)) && void 0 !== XU ? XU : LU).split(","),
-        oU = UU.get(WU);
+    function mH(HH) {
+      var BH, LH, rH;
+      const hH = HH.get(PH),
+        tH = (null !== (BH = HH.get(UH)) && void 0 !== BH ? BH : kH).split(","),
+        zH = HH.get(OH);
       return {
-        section: "favourites" === AU || "mine" === AU ? AU : "explore",
-        sort: null !== (zU = cU.z.find((XU => XU === UU.get(ZU)))) && void 0 !== zU ? zU : dU,
-        withFeatures: pU.filter((UU => FU.includes(UU) && !FU.includes(`-${UU}`))),
-        withoutFeatures: pU.filter((UU => FU.includes(`-${UU}`))),
-        searchQuery: (null === (yU = UU.get(PU)) || void 0 === yU ? void 0 : yU.slice(0, cU.I)) || null,
-        pageNumber: (0, QU.e)(UU.get(QU.c)),
-        banned: "only" === oU ? "with" : "include" === oU ? null : "without"
+        section: "favourites" === hH || "mine" === hH ? hH : "explore",
+        sort: null !== (LH = AH.B.find((BH => BH === HH.get(TH)))) && void 0 !== LH ? LH : bH,
+        withFeatures: uH.filter((HH => tH.includes(HH) && !tH.includes(`-${HH}`))),
+        withoutFeatures: uH.filter((HH => tH.includes(`-${HH}`))),
+        searchQuery: (null === (rH = HH.get(VH)) || void 0 === rH ? void 0 : rH.slice(0, AH.P)) || null,
+        pageNumber: (0, SH.g)(HH.get(SH.c)),
+        banned: "only" === zH ? "with" : "include" === zH ? null : "without"
       }
     }
 
-    function CU(UU, XU) {
-      var zU;
-      const cU = SU(XU);
-      (0, QU.i)(UU, BU, "explore" === XU.section ? null : XU.section), (0, QU.i)(UU, ZU, XU.sort === dU ? null : XU.sort), (0, QU.i)(UU, RU, cU === LU ? null : cU), (0, QU.i)(UU, PU, XU.searchQuery), (0, QU.i)(UU, WU, null !== (zU = kU(XU.banned)) && void 0 !== zU ? zU : null), (0, QU.m)(UU, XU.pageNumber)
+    function oH(HH, BH) {
+      var LH;
+      const AH = KH(BH);
+      (0, SH.j)(HH, PH, "explore" === BH.section ? null : BH.section), (0, SH.j)(HH, TH, BH.sort === bH ? null : BH.sort), (0, SH.j)(HH, UH, AH === kH ? null : AH), (0, SH.j)(HH, VH, BH.searchQuery), (0, SH.j)(HH, OH, null !== (LH = xH(BH.banned)) && void 0 !== LH ? LH : null), (0, SH.m)(HH, BH.pageNumber)
     }
 
-    function wU(UU) {
-      const XU = new URLSearchParams;
-      return CU(XU, {
+    function IH(HH) {
+      const BH = new URLSearchParams;
+      return oH(BH, {
         section: "explore",
-        sort: dU,
-        withFeatures: "strict" === UU ? [UU] : [UU, "strict"],
+        sort: bH,
+        withFeatures: "strict" === HH ? [HH] : [HH, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${AU}?${XU.toString()}`
+      }), `${hH}?${BH.toString()}`
     }
 
-    function qU(UU) {
-      return SU(UU) === LU
+    function fH(HH) {
+      return KH(HH) === kH
     }
 
-    function OU(UU) {
-      return null !== UU.searchQuery || "with" === UU.banned || SU(UU) !== LU
+    function lH(HH) {
+      return null !== HH.searchQuery || "with" === HH.banned || KH(HH) !== kH
     }
 
-    function SU(UU) {
-      return pU.flatMap((XU => {
-        const zU = tU(UU, XU);
-        return "with" === zU ? [XU] : "without" === zU ? [`-${XU}`] : []
+    function KH(HH) {
+      return uH.flatMap((BH => {
+        const LH = WH(HH, BH);
+        return "with" === LH ? [BH] : "without" === LH ? [`-${BH}`] : []
       })).join(",")
     }
-    const rU = {
+    const cH = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      uU = {
+      eH = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -313,107 +313,107 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function fU(UU) {
-      return Math.round(100 * Math.max(0, 1 - 1 / UU))
+    function qH(HH) {
+      return Math.round(100 * Math.max(0, 1 - 1 / HH))
     }
 
-    function iU(UU, XU, zU, yU) {
-      const QU = [];
-      UU.isBanned && QU.push({
+    function gH(HH, BH, LH, rH) {
+      const SH = [];
+      HH.isBanned && SH.push({
         tone: "warning",
-        text: yU("shaderPackListing:ownerBanned"),
+        text: rH("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: AU
-      } = UU;
-      if (null === UU.brokenError || AU && !AU.error || QU.push({
+        pending: hH
+      } = HH;
+      if (null === HH.brokenError || hH && !hH.error || SH.push({
           tone: "warning",
-          text: yU("shaderPackListing:ownerBroken"),
-          detail: UU.brokenError
-        }), null !== AU && void 0 !== AU && AU.error) QU.push({
+          text: rH("shaderPackListing:ownerBroken"),
+          detail: HH.brokenError
+        }), null !== hH && void 0 !== hH && hH.error) SH.push({
         tone: "warning",
-        text: yU(XU ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, cU.l)(AU.error) ? null : AU.error
+        text: rH(BH ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, AH.o)(hH.error) ? null : hH.error
       });
-      else if (AU) {
-        const UU = null === AU.renderNotBefore ? 0 : AU.renderNotBefore - zU,
-          cU = String(Math.ceil(UU / 6e4)),
-          FU = yU(XU ? UU > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : UU > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: cU
+      else if (hH) {
+        const HH = null === hH.renderNotBefore ? 0 : hH.renderNotBefore - LH,
+          AH = String(Math.ceil(HH / 6e4)),
+          tH = rH(BH ? HH > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : HH > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: AH
           });
-        QU.push({
+        SH.push({
           tone: "info",
-          text: FU,
+          text: tH,
           detail: null
         })
       }
-      return UU.listed || QU.push({
+      return HH.listed || SH.push({
         tone: "info",
-        text: yU("shaderPackListing:ownerUnlisted"),
+        text: rH("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), QU
+      }), SH
     }
 
-    function HU(UU) {
-      return Math.max(1, Math.round(UU / 1024))
+    function NH(HH) {
+      return Math.max(1, Math.round(HH / 1024))
     }
 
-    function MU(UU, XU, zU) {
-      return UU instanceof yU.e && UU.errorMessageForUser ? UU.errorMessageForUser : XU(zU)
+    function RH(HH, BH, LH) {
+      return HH instanceof rH.e && HH.errorMessageForUser ? HH.errorMessageForUser : BH(LH)
     }
   },
-  7176: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => QU
+  7138: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => SH
     });
-    var cU = zU(61),
-      yU = zU(42);
+    var AH = LH(45),
+      rH = LH(30);
 
-    function QU(UU, XU) {
-      var zU;
-      const [QU, AU] = (0, cU.useState)(null !== (zU = yU.k.getItem(UU)) && void 0 !== zU ? zU : XU);
-      return [QU, XU => {
-        yU.k.setItem(UU, XU), AU(XU)
+    function SH(HH, BH) {
+      var LH;
+      const [SH, hH] = (0, AH.useState)(null !== (LH = rH.e.getItem(HH)) && void 0 !== LH ? LH : BH);
+      return [SH, BH => {
+        rH.e.setItem(HH, BH), hH(BH)
       }]
     }
   },
-  7253: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => yU,
-      f: () => QU
+  7209: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => rH,
+      e: () => SH
     });
-    var cU = zU(42);
-    const yU = "shaderPack";
-    async function QU() {
-      var UU;
-      let XU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (UU = await cU.g.getItem(yU, XU)) && void 0 !== UU ? UU : null
+    var AH = LH(30);
+    const rH = "shaderPack";
+    async function SH() {
+      var HH;
+      let BH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (HH = await AH.c.getItem(rH, BH)) && void 0 !== HH ? HH : null
     }
   },
-  7158: (UU, XU, zU) => {
-    zU.d(XU, {
-      B: () => FU,
-      C: () => AU,
-      E: () => cU,
-      H: () => NU,
-      I: () => EU,
-      M: () => BU,
-      N: () => YU,
-      O: () => DU,
-      c: () => pU,
-      f: () => tU,
-      h: () => aU,
-      i: () => IU,
-      l: () => GU,
-      o: () => RU,
-      r: () => oU,
-      s: () => yU,
-      v: () => ZU,
-      z: () => QU
+  7114: (HH, BH, LH) => {
+    LH.d(BH, {
+      B: () => SH,
+      F: () => tH,
+      H: () => hH,
+      L: () => AH,
+      M: () => GH,
+      P: () => EH,
+      Q: () => PH,
+      R: () => XH,
+      V: () => CH,
+      d: () => uH,
+      g: () => WH,
+      i: () => QH,
+      m: () => YH,
+      o: () => vH,
+      s: () => UH,
+      v: () => zH,
+      w: () => rH,
+      x: () => TH
     });
-    const cU = ["forest", "desert", "water", "night", "cave"];
-    const yU = {
+    const AH = ["forest", "desert", "water", "night", "cave"];
+    const rH = {
         full: {
           width: 3840,
           height: 2160
@@ -427,49 +427,49 @@ export const modules = {
           height: 360
         }
       },
-      QU = ["popular", "updated", "newest"],
-      AU = 3,
-      FU = 32,
-      oU = 300;
+      SH = ["popular", "updated", "newest"],
+      hH = 3,
+      tH = 32,
+      zH = 300;
 
-    function DU(UU, XU) {
-      return UU.slice(0, XU).replace(/[\uD800-\uDBFF]$/, "")
+    function CH(HH, BH) {
+      return HH.slice(0, BH).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const EU = 64,
-      YU = 512,
-      NU = 18e5;
+    const EH = 64,
+      XH = 512,
+      GH = 18e5;
 
-    function IU(UU) {
-      const XU = UU,
-        zU = null === XU || void 0 === XU ? void 0 : XU.files;
-      return "number" === typeof(null === XU || void 0 === XU ? void 0 : XU.apiVersion) && "string" === typeof XU.name && (null === XU.author || "string" === typeof XU.author) && (void 0 === XU.keepCircleShadows || "boolean" === typeof XU.keepCircleShadows) && "object" === typeof zU && null !== zU && Object.values(zU).every((UU => "string" === typeof UU))
+    function YH(HH) {
+      const BH = HH,
+        LH = null === BH || void 0 === BH ? void 0 : BH.files;
+      return "number" === typeof(null === BH || void 0 === BH ? void 0 : BH.apiVersion) && "string" === typeof BH.name && (null === BH.author || "string" === typeof BH.author) && (void 0 === BH.keepCircleShadows || "boolean" === typeof BH.keepCircleShadows) && "object" === typeof LH && null !== LH && Object.values(LH).every((HH => "string" === typeof HH))
     }
-    const pU = "Bloxdhub",
-      aU = "https://bloxdhub.com/shaders";
+    const uH = "Bloxdhub",
+      QH = "https://bloxdhub.com/shaders";
 
-    function tU(UU) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(UU)}`
+    function WH(HH) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(HH)}`
     }
-    const gU = "Screenshot generation failed.",
-      kU = "Its screenshots couldn't be generated:";
+    const MH = "Screenshot generation failed.",
+      xH = "Its screenshots couldn't be generated:";
 
-    function GU(UU) {
-      var XU;
-      return UU === gU || null !== (XU = null === UU || void 0 === UU ? void 0 : UU.startsWith(kU)) && void 0 !== XU && XU
-    }
-
-    function BU(UU, XU) {
-      return `shaderPacks/${UU}/${XU}.json`
+    function vH(HH) {
+      var BH;
+      return HH === MH || null !== (BH = null === HH || void 0 === HH ? void 0 : HH.startsWith(xH)) && void 0 !== BH && BH
     }
 
-    function ZU(UU, XU, zU, cU) {
-      return null === XU.renderId ? RU(UU, XU.baselineVersion, zU, cU) : `${UU}/${function(UU,XU,zU,cU){return`shaderPacks/${UU}/${XU}/${zU}-${cU}.webp`}(XU.packId,XU.renderId,zU,cU)}`
+    function PH(HH, BH) {
+      return `shaderPacks/${HH}/${BH}.json`
     }
 
-    function RU(UU, XU, zU, cU) {
-      return `${UU}/${function(UU,XU,zU){return`shaderPacks/baseline/${UU}/${XU}-${zU}.webp`}(XU,zU,cU)}`
+    function TH(HH, BH, LH, AH) {
+      return null === BH.renderId ? UH(HH, BH.baselineVersion, LH, AH) : `${HH}/${function(HH,BH,LH,AH){return`shaderPacks/${HH}/${BH}/${LH}-${AH}.webp`}(BH.packId,BH.renderId,LH,AH)}`
+    }
+
+    function UH(HH, BH, LH, AH) {
+      return `${HH}/${function(HH,BH,LH){return`shaderPacks/baseline/${HH}/${BH}-${LH}.webp`}(BH,LH,AH)}`
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

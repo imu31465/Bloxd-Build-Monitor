@@ -1,2240 +1,1512 @@
 export const id = 283;
 export const ids = [283];
 export const modules = {
-  42184: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => vU
+  41356: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => GH,
+      f: () => XH,
+      j: () => zH,
+      m: () => YH,
+      p: () => CH,
+      q: () => tH,
+      r: () => EH
     });
-    var cU = zU(41113),
-      yU = zU(41121),
-      QU = zU(37846),
-      AU = zU(37819),
-      FU = zU(37855),
-      oU = zU(41314),
-      DU = zU(41481),
-      EU = zU(41271),
-      YU = zU(41010),
-      NU = zU(37825);
-    class IU {
-      constructor() {
-        this._zoomStopsAnimation = !1, this._idleRotationSpeed = .05, this._idleRotationWaitTime = 2e3, this._idleRotationSpinupTime = 2e3, this.targetAlpha = null, this._attachedCamera = null, this._isPointerDown = !1, this._lastFrameTime = null, this._lastInteractionTime = -1 / 0, this._cameraRotationSpeed = 0, this._lastFrameRadius = 0
-      }
-      get name() {
-        return "AutoRotation"
-      }
-      set zoomStopsAnimation(UU) {
-        this._zoomStopsAnimation = UU
-      }
-      get zoomStopsAnimation() {
-        return this._zoomStopsAnimation
-      }
-      set idleRotationSpeed(UU) {
-        this._idleRotationSpeed = UU
-      }
-      get idleRotationSpeed() {
-        return this._idleRotationSpeed
-      }
-      set idleRotationWaitTime(UU) {
-        this._idleRotationWaitTime = UU
-      }
-      get idleRotationWaitTime() {
-        return this._idleRotationWaitTime
-      }
-      set idleRotationSpinupTime(UU) {
-        this._idleRotationSpinupTime = UU
-      }
-      get idleRotationSpinupTime() {
-        return this._idleRotationSpinupTime
-      }
-      get rotationInProgress() {
-        return Math.abs(this._cameraRotationSpeed) > 0
-      }
-      get attachedNode() {
-        return this._attachedCamera
-      }
-      init() {}
-      attach(UU) {
-        this._attachedCamera = UU;
-        const XU = this._attachedCamera.nS();
-        this._onPrePointerObservableObserver = XU.onPrePointerObservable.add((UU => {
-          UU.type !== EU.c.POINTERDOWN ? UU.type === EU.c.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
-        })), this._onAfterCheckInputsObserver = UU.onAfterCheckInputsObservable.add((() => {
-          if (this._reachTargetAlpha()) return;
-          const UU = YU.e.Now;
-          let XU = 0;
-          null != this._lastFrameTime && (XU = UU - this._lastFrameTime), this._lastFrameTime = UU, this._applyUserInteraction();
-          const zU = UU - this._lastInteractionTime - this._idleRotationWaitTime,
-            cU = Math.max(Math.min(zU / this._idleRotationSpinupTime, 1), 0);
-          this._cameraRotationSpeed = this._idleRotationSpeed * cU, this._attachedCamera && (this._attachedCamera.alpha -= this._cameraRotationSpeed * (XU / 1e3))
-        }))
-      }
-      detach() {
-        if (!this._attachedCamera) return;
-        const UU = this._attachedCamera.nS();
-        this._onPrePointerObservableObserver && UU.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._attachedCamera = null, this._lastFrameTime = null
-      }
-      resetLastInteractionTime(UU) {
-        this._lastInteractionTime = UU ?? YU.e.Now
-      }
-      _reachTargetAlpha() {
-        return !(!this._attachedCamera || null === this.targetAlpha) && Math.abs(this._attachedCamera.alpha - this.targetAlpha) < NU.c
-      }
-      _userIsZooming() {
-        return !!this._attachedCamera && 0 !== this._attachedCamera.inertialRadiusOffset
-      }
-      _shouldAnimationStopForInteraction() {
-        if (!this._attachedCamera) return !1;
-        let UU = !1;
-        return this._lastFrameRadius === this._attachedCamera.radius && 0 !== this._attachedCamera.inertialRadiusOffset && (UU = !0), this._lastFrameRadius = this._attachedCamera.radius, this._zoomStopsAnimation ? UU : this._userIsZooming()
-      }
-      _applyUserInteraction() {
-        this._userIsMoving() && !this._shouldAnimationStopForInteraction() && (this._lastInteractionTime = YU.e.Now)
-      }
-      _userIsMoving() {
-        return !!this._attachedCamera && (0 !== this._attachedCamera.inertialAlphaOffset || 0 !== this._attachedCamera.inertialBetaOffset || 0 !== this._attachedCamera.inertialRadiusOffset || 0 !== this._attachedCamera.inertialPanningX || 0 !== this._attachedCamera.inertialPanningY || this._isPointerDown)
-      }
-    }
-    zU(42190);
-    class pU {
-      constructor() {
-        this._easingMode = pU.EASINGMODE_EASEIN
-      }
-      setEasingMode(UU) {
-        const XU = Math.min(Math.max(UU, 0), 2);
-        this._easingMode = XU
-      }
-      getEasingMode() {
-        return this._easingMode
-      }
-      easeInCore(UU) {
-        throw new Error("You must implement this method")
-      }
-      ease(UU) {
-        switch (this._easingMode) {
-          case pU.EASINGMODE_EASEIN:
-            return this.easeInCore(UU);
-          case pU.EASINGMODE_EASEOUT:
-            return 1 - this.easeInCore(1 - UU)
+    var AH = LH(39595),
+      rH = LH(41364);
+
+    function SH(HH, BH, LH, AH) {
+      switch (BH) {
+        case 5120: {
+          let BH = HH.getInt8(LH);
+          return AH && (BH = Math.max(BH / 127, -1)), BH
         }
-        return UU >= .5 ? .5 * (1 - this.easeInCore(2 * (1 - UU))) + .5 : .5 * this.easeInCore(2 * UU)
-      }
-    }
-    pU.EASINGMODE_EASEIN = 0, pU.EASINGMODE_EASEOUT = 1, pU.EASINGMODE_EASEINOUT = 2;
-    var aU = zU(42195);
-    class tU {
-      constructor() {
-        this.transitionDuration = 450, this.lowerRadiusTransitionRange = 2, this.upperRadiusTransitionRange = -2, this._autoTransitionRange = !1, this._attachedCamera = null, this._radiusIsAnimating = !1, this._radiusBounceTransition = null, this._animatables = new Array
-      }
-      get name() {
-        return "Bouncing"
-      }
-      get autoTransitionRange() {
-        return this._autoTransitionRange
-      }
-      set autoTransitionRange(UU) {
-        if (this._autoTransitionRange === UU) return;
-        this._autoTransitionRange = UU;
-        const XU = this._attachedCamera;
-        XU && (UU ? this._onMeshTargetChangedObserver = XU.onMeshTargetChangedObservable.add((UU => {
-          if (UU && (UU.computeWorldMatrix(!0), UU.gM)) {
-            const XU = UU.gM().diagonalLength;
-            this.lowerRadiusTransitionRange = .05 * XU, this.upperRadiusTransitionRange = .05 * XU
-          }
-        })) : this._onMeshTargetChangedObserver && XU.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver))
-      }
-      get attachedNode() {
-        return this._attachedCamera
-      }
-      init() {}
-      attach(UU) {
-        this._attachedCamera = UU, this._onAfterCheckInputsObserver = UU.onAfterCheckInputsObservable.add((() => {
-          this._attachedCamera && (this._isRadiusAtLimit(this._attachedCamera.lowerRadiusLimit) && this._applyBoundRadiusAnimation(this.lowerRadiusTransitionRange), this._isRadiusAtLimit(this._attachedCamera.upperRadiusLimit) && this._applyBoundRadiusAnimation(this.upperRadiusTransitionRange))
-        }))
-      }
-      detach() {
-        this._attachedCamera && (this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null)
-      }
-      _isRadiusAtLimit(UU) {
-        return !!this._attachedCamera && (this._attachedCamera.radius === UU && !this._radiusIsAnimating)
-      }
-      _applyBoundRadiusAnimation(UU) {
-        if (!this._attachedCamera) return;
-        this._radiusBounceTransition || (tU.EasingFunction.setEasingMode(tU.EasingMode), this._radiusBounceTransition = aU.b.CreateAnimation("radius", aU.b.ANIMATIONTYPE_FLOAT, 60, tU.EasingFunction)), this._cachedWheelPrecision = this._attachedCamera.wheelPrecision, this._attachedCamera.wheelPrecision = 1 / 0, this._attachedCamera.inertialRadiusOffset = 0, this.stopAllAnimations(), this._radiusIsAnimating = !0;
-        const XU = aU.b.TransitionTo("radius", this._attachedCamera.radius + UU, this._attachedCamera, this._attachedCamera.nS(), 60, this._radiusBounceTransition, this.transitionDuration, (() => this._clearAnimationLocks()));
-        XU && this._animatables.push(XU)
-      }
-      _clearAnimationLocks() {
-        this._radiusIsAnimating = !1, this._attachedCamera && (this._attachedCamera.wheelPrecision = this._cachedWheelPrecision)
-      }
-      stopAllAnimations() {
-        for (this._attachedCamera && (this._attachedCamera.animations = []); this._animatables.length;) this._animatables[0].onAnimationEnd = null, this._animatables[0].stop(), this._animatables.shift()
-      }
-    }
-    tU.EasingFunction = new class extends pU {
-      constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        super(), this.amplitude = UU
-      }
-      easeInCore(UU) {
-        const XU = Math.max(0, this.amplitude);
-        return Math.pow(UU, 3) - UU * XU * Math.sin(3.141592653589793 * UU)
-      }
-    }(.3), tU.EasingMode = pU.EASINGMODE_EASEOUT;
-    class gU {
-      constructor() {
-        this.onTargetFramingAnimationEndObservable = new QU.e, this._mode = gU.FitFrustumSidesMode, this._radiusScale = 1, this._positionScale = .5, this._defaultElevation = .3, this._elevationReturnTime = 1500, this._elevationReturnWaitTime = 1e3, this._zoomStopsAnimation = !1, this._framingTime = 1500, this.autoCorrectCameraLimitsAndSensibility = !0, this._attachedCamera = null, this._isPointerDown = !1, this._lastInteractionTime = -1 / 0, this._animatables = new Array, this._betaIsAnimating = !1
-      }
-      get name() {
-        return "Framing"
-      }
-      set mode(UU) {
-        this._mode = UU
-      }
-      get mode() {
-        return this._mode
-      }
-      set radiusScale(UU) {
-        this._radiusScale = UU
-      }
-      get radiusScale() {
-        return this._radiusScale
-      }
-      set positionScale(UU) {
-        this._positionScale = UU
-      }
-      get positionScale() {
-        return this._positionScale
-      }
-      set defaultElevation(UU) {
-        this._defaultElevation = UU
-      }
-      get defaultElevation() {
-        return this._defaultElevation
-      }
-      set elevationReturnTime(UU) {
-        this._elevationReturnTime = UU
-      }
-      get elevationReturnTime() {
-        return this._elevationReturnTime
-      }
-      set elevationReturnWaitTime(UU) {
-        this._elevationReturnWaitTime = UU
-      }
-      get elevationReturnWaitTime() {
-        return this._elevationReturnWaitTime
-      }
-      set zoomStopsAnimation(UU) {
-        this._zoomStopsAnimation = UU
-      }
-      get zoomStopsAnimation() {
-        return this._zoomStopsAnimation
-      }
-      set framingTime(UU) {
-        this._framingTime = UU
-      }
-      get framingTime() {
-        return this._framingTime
-      }
-      get attachedNode() {
-        return this._attachedCamera
-      }
-      init() {}
-      attach(UU) {
-        this._attachedCamera = UU;
-        const XU = this._attachedCamera.nS();
-        gU.EasingFunction.setEasingMode(gU.EasingMode), this._onPrePointerObservableObserver = XU.onPrePointerObservable.add((UU => {
-          UU.type !== EU.c.POINTERDOWN ? UU.type === EU.c.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
-        })), this._onMeshTargetChangedObserver = UU.onMeshTargetChangedObservable.add((UU => {
-          UU && UU.gM && this.zoomOnMesh(UU, void 0, (() => {
-            this.onTargetFramingAnimationEndObservable.notifyObservers()
-          }))
-        })), this._onAfterCheckInputsObserver = UU.onAfterCheckInputsObservable.add((() => {
-          this._applyUserInteraction(), this._maintainCameraAboveGround()
-        }))
-      }
-      detach() {
-        if (!this._attachedCamera) return;
-        const UU = this._attachedCamera.nS();
-        this._onPrePointerObservableObserver && UU.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null
-      }
-      zoomOnMesh(UU) {
-        let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        UU.computeWorldMatrix(!0);
-        const cU = UU.gM().boundingBox;
-        this.zoomOnBoundingInfo(cU.minimumWorld, cU.maximumWorld, XU, zU)
-      }
-      zoomOnMeshHierarchy(UU) {
-        let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        UU.computeWorldMatrix(!0);
-        const cU = UU.getHierarchyBoundingVectors(!0);
-        this.zoomOnBoundingInfo(cU.min, cU.max, XU, zU)
-      }
-      zoomOnMeshesHierarchy(UU) {
-        let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const cU = new AU.q(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
-          yU = new AU.q(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-        for (let QU = 0; QU < UU.length; QU++) {
-          const XU = UU[QU].getHierarchyBoundingVectors(!0);
-          AU.q.CheckExtends(XU.min, cU, yU), AU.q.CheckExtends(XU.max, cU, yU)
+        case 5121: {
+          let BH = HH.getUint8(LH);
+          return AH && (BH /= 255), BH
         }
-        this.zoomOnBoundingInfo(cU, yU, XU, zU)
-      }
-      zoomOnBoundingInfo(UU, XU) {
-        let zU, cU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          yU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        if (!this._attachedCamera) return !1;
-        const QU = UU.y,
-          FU = QU + (XU.y - QU) * this._positionScale,
-          oU = XU.subtract(UU).scale(.5);
-        if (!isFinite(FU)) return !1;
-        if (cU) zU = new AU.q(0, FU, 0);
-        else {
-          const XU = UU.add(oU);
-          zU = new AU.q(XU.x, FU, XU.z)
+        case 5122: {
+          let BH = HH.getInt16(LH, !0);
+          return AH && (BH = Math.max(BH / 32767, -1)), BH
         }
-        this._vectorTransition || (this._vectorTransition = aU.b.CreateAnimation("target", aU.b.ANIMATIONTYPE_VECTOR3, 60, gU.EasingFunction)), this._betaIsAnimating = !0;
-        let DU = aU.b.TransitionTo("target", zU, this._attachedCamera, this._attachedCamera.nS(), 60, this._vectorTransition, this._framingTime);
-        DU && this._animatables.push(DU);
-        let EU = 0;
-        if (this._mode === gU.FitFrustumSidesMode) {
-          const zU = this._calculateLowerRadiusFromModelBoundingSphere(UU, XU);
-          this.autoCorrectCameraLimitsAndSensibility && (this._attachedCamera.lowerRadiusLimit = oU.length() + this._attachedCamera.minZ), EU = zU
-        } else this._mode === gU.IgnoreBoundsSizeMode && (EU = this._calculateLowerRadiusFromModelBoundingSphere(UU, XU), this.autoCorrectCameraLimitsAndSensibility && null === this._attachedCamera.lowerRadiusLimit && (this._attachedCamera.lowerRadiusLimit = this._attachedCamera.minZ));
-        if (this.autoCorrectCameraLimitsAndSensibility) {
-          const zU = XU.subtract(UU).length();
-          this._attachedCamera.panningSensibility = 5e3 / zU, this._attachedCamera.wheelPrecision = 100 / EU
+        case 5123: {
+          let BH = HH.getUint16(LH, !0);
+          return AH && (BH /= 65535), BH
         }
-        return this._radiusTransition || (this._radiusTransition = aU.b.CreateAnimation("radius", aU.b.ANIMATIONTYPE_FLOAT, 60, gU.EasingFunction)), DU = aU.b.TransitionTo("radius", EU, this._attachedCamera, this._attachedCamera.nS(), 60, this._radiusTransition, this._framingTime, (() => {
-          this.stopAllAnimations(), yU && yU(), this._attachedCamera && this._attachedCamera.useInputToRestoreState && this._attachedCamera.storeState()
-        })), DU && this._animatables.push(DU), !0
-      }
-      _calculateLowerRadiusFromModelBoundingSphere(UU, XU) {
-        const zU = this._attachedCamera;
-        if (!zU) return 0;
-        let cU = zU._calculateLowerRadiusFromModelBoundingSphere(UU, XU, this._radiusScale);
-        return zU.lowerRadiusLimit && this._mode === gU.IgnoreBoundsSizeMode && (cU = cU < zU.lowerRadiusLimit ? zU.lowerRadiusLimit : cU), zU.upperRadiusLimit && (cU = cU > zU.upperRadiusLimit ? zU.upperRadiusLimit : cU), cU
-      }
-      _maintainCameraAboveGround() {
-        if (this._elevationReturnTime < 0) return;
-        const UU = YU.e.Now - this._lastInteractionTime,
-          XU = .5 * Math.PI - this._defaultElevation,
-          zU = .5 * Math.PI;
-        if (this._attachedCamera && !this._betaIsAnimating && this._attachedCamera.beta > zU && UU >= this._elevationReturnWaitTime) {
-          this._betaIsAnimating = !0, this.stopAllAnimations(), this._betaTransition || (this._betaTransition = aU.b.CreateAnimation("beta", aU.b.ANIMATIONTYPE_FLOAT, 60, gU.EasingFunction));
-          const UU = aU.b.TransitionTo("beta", XU, this._attachedCamera, this._attachedCamera.nS(), 60, this._betaTransition, this._elevationReturnTime, (() => {
-            this._clearAnimationLocks(), this.stopAllAnimations()
-          }));
-          UU && this._animatables.push(UU)
-        }
-      }
-      _clearAnimationLocks() {
-        this._betaIsAnimating = !1
-      }
-      _applyUserInteraction() {
-        this.isUserIsMoving && (this._lastInteractionTime = YU.e.Now, this.stopAllAnimations(), this._clearAnimationLocks())
-      }
-      stopAllAnimations() {
-        for (this._attachedCamera && (this._attachedCamera.animations = []); this._animatables.length;) this._animatables[0] && (this._animatables[0].onAnimationEnd = null, this._animatables[0].stop()), this._animatables.shift()
-      }
-      get isUserIsMoving() {
-        return !!this._attachedCamera && (0 !== this._attachedCamera.inertialAlphaOffset || 0 !== this._attachedCamera.inertialBetaOffset || 0 !== this._attachedCamera.inertialRadiusOffset || 0 !== this._attachedCamera.inertialPanningX || 0 !== this._attachedCamera.inertialPanningY || this._isPointerDown)
-      }
-    }
-    gU.EasingFunction = new class extends pU {
-      constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-        super(), this.exponent = UU
-      }
-      easeInCore(UU) {
-        return this.exponent <= 0 ? UU : (Math.exp(this.exponent * UU) - 1) / (Math.exp(this.exponent) - 1)
-      }
-    }, gU.EasingMode = pU.EASINGMODE_EASEINOUT, gU.IgnoreBoundsSizeMode = 0, gU.FitFrustumSidesMode = 1;
-    var kU = zU(41309),
-      GU = zU(41301),
-      BU = zU(41323),
-      ZU = zU(41205);
-    let RU = (() => {
-        var UU;
-        let XU, zU = [],
-          QU = [];
-        return UU = class {
-          constructor() {
-            this._currentMousePointerIdDown = -1, this.buttons = (0, cU.n)(this, zU, [0, 1, 2]), this._pointerInput = (0, cU.n)(this, QU)
-          }
-          attachControl(UU) {
-            UU = ZU.j.BackCompatCameraNoPreventDefault(arguments);
-            const XU = this.camera.qp(),
-              zU = XU.getInputElement();
-            let cU = 0,
-              yU = null;
-            this._pointA = null, this._pointB = null, this._altKey = !1, this._ctrlKey = !1, this._metaKey = !1, this._shiftKey = !1, this._buttonsPressed = 0, this._pointerInput = QU => {
-              const AU = QU.event,
-                FU = "touch" === AU.pointerType;
-              if (QU.type !== EU.c.POINTERMOVE && -1 === this.buttons.indexOf(AU.button)) return;
-              const oU = AU.target;
-              if (this._altKey = AU.altKey, this._ctrlKey = AU.ctrlKey, this._metaKey = AU.metaKey, this._shiftKey = AU.shiftKey, this._buttonsPressed = AU.buttons, XU.isPointerLock) {
-                const UU = AU.movementX,
-                  XU = AU.movementY;
-                this.onTouch(null, UU, XU), this._pointA = null, this._pointB = null
-              } else {
-                if (QU.type !== EU.c.POINTERDOWN && QU.type !== EU.c.POINTERDOUBLETAP && FU && this._pointA?.pointerId !== AU.pointerId && this._pointB?.pointerId !== AU.pointerId) return;
-                if (QU.type !== EU.c.POINTERDOWN || -1 !== this._currentMousePointerIdDown && !FU)
-                  if (QU.type === EU.c.POINTERDOUBLETAP) this.onDoubleTap(AU.pointerType, AU);
-                  else if (QU.type !== EU.c.POINTERUP || this._currentMousePointerIdDown !== AU.pointerId && !FU) {
-                  if (QU.type === EU.c.POINTERMOVE)
-                    if (UU || AU.preventDefault(), this._pointA && null === this._pointB) {
-                      const UU = AU.clientX - this._pointA.x,
-                        XU = AU.clientY - this._pointA.y;
-                      this._pointA.x = AU.clientX, this._pointA.y = AU.clientY, this.onTouch(this._pointA, UU, XU)
-                    } else if (this._pointA && this._pointB) {
-                    const UU = this._pointA.pointerId === AU.pointerId ? this._pointA : this._pointB;
-                    UU.x = AU.clientX, UU.y = AU.clientY;
-                    const XU = this._pointA.x - this._pointB.x,
-                      zU = this._pointA.y - this._pointB.y,
-                      FU = XU * XU + zU * zU,
-                      oU = {
-                        x: (this._pointA.x + this._pointB.x) / 2,
-                        y: (this._pointA.y + this._pointB.y) / 2,
-                        pointerId: AU.pointerId,
-                        type: QU.type
-                      };
-                    this.onMultiTouch(this._pointA, this._pointB, cU, FU, yU, oU), yU = oU, cU = FU
-                  }
-                } else {
-                  try {
-                    oU?.releasePointerCapture(AU.pointerId)
-                  } catch (DU) {}
-                  FU || (this._pointB = null), XU._badOS ? this._pointA = this._pointB = null : this._pointB && this._pointA && this._pointA.pointerId == AU.pointerId ? (this._pointA = this._pointB, this._pointB = null) : this._pointA && this._pointB && this._pointB.pointerId == AU.pointerId ? this._pointB = null : this._pointA = this._pointB = null, (0 !== cU || yU) && (this.onMultiTouch(this._pointA, this._pointB, cU, 0, yU, null), cU = 0, yU = null), this._currentMousePointerIdDown = -1, this.onButtonUp(AU), UU || AU.preventDefault()
-                } else {
-                  try {
-                    oU?.setPointerCapture(AU.pointerId)
-                  } catch (DU) {}
-                  if (null === this._pointA) this._pointA = {
-                    x: AU.clientX,
-                    y: AU.clientY,
-                    pointerId: AU.pointerId,
-                    type: AU.pointerType,
-                    button: AU.button
-                  };
-                  else {
-                    if (null !== this._pointB) return;
-                    this._pointB = {
-                      x: AU.clientX,
-                      y: AU.clientY,
-                      pointerId: AU.pointerId,
-                      type: AU.pointerType,
-                      button: AU.button
-                    }
-                  } - 1 !== this._currentMousePointerIdDown || FU || (this._currentMousePointerIdDown = AU.pointerId), this.onButtonDown(AU), UU || (AU.preventDefault(), zU && zU.focus())
-                }
-              }
-            }, this._observer = this.camera.nS()._inputManager._addCameraPointerObserver(this._pointerInput, EU.c.POINTERDOWN | EU.c.POINTERUP | EU.c.POINTERMOVE | EU.c.POINTERDOUBLETAP), this._onLostFocus = () => {
-              this._pointA = this._pointB = null, cU = 0, yU = null, this.onLostFocus()
-            }, this._contextMenuBind = UU => this.onContextMenu(UU), zU && zU.addEventListener("contextmenu", this._contextMenuBind, !1);
-            const QU = this.camera.nS().qp().getHostWindow();
-            QU && ZU.j.RegisterTopRootEvents(QU, [{
-              name: "blur",
-              handler: this._onLostFocus
-            }])
-          }
-          detachControl() {
-            if (this._onLostFocus) {
-              const UU = this.camera.nS().qp().getHostWindow();
-              UU && ZU.j.UnregisterTopRootEvents(UU, [{
-                name: "blur",
-                handler: this._onLostFocus
-              }])
-            }
-            if (this._observer) {
-              if (this.camera.nS()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._contextMenuBind) {
-                const UU = this.camera.nS().qp().getInputElement();
-                UU && UU.removeEventListener("contextmenu", this._contextMenuBind)
-              }
-              this._onLostFocus = null
-            }
-            this._altKey = !1, this._ctrlKey = !1, this._metaKey = !1, this._shiftKey = !1, this._buttonsPressed = 0, this._currentMousePointerIdDown = -1
-          }
-          getClassName() {
-            return "BaseCameraPointersInput"
-          }
-          getSimpleName() {
-            return "pointers"
-          }
-          onDoubleTap(UU, XU) {}
-          onTouch(UU, XU, zU) {}
-          onMultiTouch(UU, XU, zU, cU, yU, QU) {}
-          onContextMenu(UU) {
-            UU.preventDefault()
-          }
-          onButtonDown(UU) {}
-          onButtonUp(UU) {}
-          onLostFocus() {}
-        }, (() => {
-          const AU = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-          XU = [(0, yU.I)()], (0, cU.j)(null, null, XU, {
-            kind: "field",
-            name: "buttons",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "buttons" in UU,
-              get: UU => UU.buttons,
-              set: (UU, XU) => {
-                UU.buttons = XU
-              }
-            },
-            metadata: AU
-          }, zU, QU), AU && Object.defineProperty(UU, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: AU
-          })
-        })(), UU
-      })(),
-      PU = (() => {
-        var UU;
-        let XU, zU, QU, AU = RU,
-          FU = [],
-          oU = [],
-          DU = [],
-          EU = [],
-          YU = [],
-          NU = [];
-        return UU = class extends AU {
-          constructor() {
-            super(...arguments), this.pinchZoom = (0, cU.n)(this, FU, !0), this.multiTouchPanning = ((0, cU.n)(this, oU), (0, cU.n)(this, DU, !0)), this.multiTouchPanAndZoom = ((0, cU.n)(this, EU), (0, cU.n)(this, YU, !0)), this._isPinching = ((0, cU.n)(this, NU), !1), this._twoFingerActivityCount = 0, this._shouldStartPinchZoom = !1
-          }
-          _computePinchZoom(UU, XU) {}
-          _computeMultiTouchPanning(UU, XU) {}
-          onMultiTouch(UU, XU, zU, cU, yU, QU) {
-            0 === zU && null === yU || 0 === cU && null === QU || (this.multiTouchPanAndZoom ? (this._computePinchZoom(zU, cU), this._computeMultiTouchPanning(yU, QU)) : this.multiTouchPanning && this.pinchZoom ? (this._twoFingerActivityCount++, this._isPinching || this._shouldStartPinchZoom ? (this._computePinchZoom(zU, cU), this._isPinching = !0) : this._computeMultiTouchPanning(yU, QU)) : this.multiTouchPanning ? this._computeMultiTouchPanning(yU, QU) : this.pinchZoom && this._computePinchZoom(zU, cU))
-          }
-          onButtonUp(UU) {
-            this._twoFingerActivityCount = 0, this._isPinching = !1
-          }
-          onLostFocus() {
-            this._twoFingerActivityCount = 0, this._isPinching = !1
-          }
-        }, (() => {
-          const IU = "function" === typeof Symbol && Symbol.metadata ? Object.create(AU[Symbol.metadata] ?? null) : void 0;
-          XU = [(0, yU.I)()], zU = [(0, yU.I)()], QU = [(0, yU.I)()], (0, cU.j)(null, null, XU, {
-            kind: "field",
-            name: "pinchZoom",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "pinchZoom" in UU,
-              get: UU => UU.pinchZoom,
-              set: (UU, XU) => {
-                UU.pinchZoom = XU
-              }
-            },
-            metadata: IU
-          }, FU, oU), (0, cU.j)(null, null, zU, {
-            kind: "field",
-            name: "multiTouchPanning",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "multiTouchPanning" in UU,
-              get: UU => UU.multiTouchPanning,
-              set: (UU, XU) => {
-                UU.multiTouchPanning = XU
-              }
-            },
-            metadata: IU
-          }, DU, EU), (0, cU.j)(null, null, QU, {
-            kind: "field",
-            name: "multiTouchPanAndZoom",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "multiTouchPanAndZoom" in UU,
-              get: UU => UU.multiTouchPanAndZoom,
-              set: (UU, XU) => {
-                UU.multiTouchPanAndZoom = XU
-              }
-            },
-            metadata: IU
-          }, YU, NU), IU && Object.defineProperty(UU, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: IU
-          })
-        })(), UU
-      })(),
-      WU = (() => {
-        var UU;
-        let XU, zU, QU, AU, FU, oU, DU, EU = PU,
-          YU = [],
-          NU = [],
-          IU = [],
-          pU = [],
-          aU = [],
-          tU = [],
-          gU = [],
-          kU = [],
-          GU = [],
-          BU = [],
-          ZU = [],
-          RU = [],
-          WU = [],
-          dU = [];
-        return UU = class extends EU {
-          constructor() {
-            super(...arguments), this.buttons = (0, cU.n)(this, YU, [0, 1, 2]), this.angularSensibilityX = ((0, cU.n)(this, NU), (0, cU.n)(this, IU, 1e3)), this.angularSensibilityY = ((0, cU.n)(this, pU), (0, cU.n)(this, aU, 1e3)), this.pinchPrecision = ((0, cU.n)(this, tU), (0, cU.n)(this, gU, 12)), this.pinchDeltaPercentage = ((0, cU.n)(this, kU), (0, cU.n)(this, GU, 0)), this.useNaturalPinchZoom = ((0, cU.n)(this, BU), (0, cU.n)(this, ZU, !1)), this.panningSensibility = ((0, cU.n)(this, RU), (0, cU.n)(this, WU, 1e3)), this.pinchInwards = ((0, cU.n)(this, dU), !0), this._activeEntry = null, this._pointerLockConditions = {
-              button: 0,
-              modifiers: {}
-            }, this._pointerModifiers = {
-              ctrl: !1,
-              alt: !1,
-              shift: !1
-            }, this._pointerConditions = {
-              modifiers: this._pointerModifiers
-            }
-          }
-          getClassName() {
-            return "ArcRotateCameraPointersInput"
-          }
-          _computeMultiTouchPanning(UU, XU) {
-            if (UU && XU) {
-              const zU = XU.x - UU.x,
-                cU = XU.y - UU.y,
-                yU = this.camera.movement.input.getEntry("pointer", "pan"),
-                QU = yU?.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
-              0 !== QU && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -zU * QU, this.camera.movement.panAccumulatedPixels.y += cU * QU)
-            }
-          }
-          _computePinchZoom(XU, zU) {
-            const cU = this.camera.radius || UU.MinimumRadiusForPinch;
-            if (this.useNaturalPinchZoom) this.camera.radius = cU * Math.sqrt(XU) / Math.sqrt(zU);
-            else if (this.pinchDeltaPercentage) {
-              const UU = .001 * (zU - XU) * cU * this.pinchDeltaPercentage;
-              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += UU
-            } else {
-              const UU = (zU - XU) / (this.pinchPrecision * (this.pinchInwards ? 1 : -1) * (this.angularSensibilityX + this.angularSensibilityY) / 2);
-              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += UU
-            }
-          }
-          onTouch(UU, XU, zU) {
-            const cU = this._activeEntry ?? (this.camera.qp().isPointerLock ? this.camera.movement.input.resolveInteraction("pointer", this._pointerLockConditions) : null);
-            if (cU)
-              if ("pan" === cU.interaction) {
-                const UU = cU.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
-                0 !== UU && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -XU * UU, this.camera.movement.panAccumulatedPixels.y += zU * UU)
-              } else if ("rotate" === cU.interaction) {
-              const UU = cU.iK ?? cU.sensitivity ?? 1 / this.angularSensibilityX,
-                yU = cU.VK ?? cU.sensitivity ?? 1 / this.angularSensibilityY;
-              this.camera.movement.activeInput = !0, this.camera.movement.rotationAccumulatedPixels.x += -XU * UU, this.camera.movement.rotationAccumulatedPixels.y += -zU * yU
-            }
-          }
-          onDoubleTap() {
-            this.camera.useInputToRestoreState && this.camera.restoreState()
-          }
-          onMultiTouch(UU, XU, zU, cU, yU, QU) {
-            this._shouldStartPinchZoom = this._twoFingerActivityCount < 20 && Math.abs(Math.sqrt(cU) - Math.sqrt(zU)) > this.camera.pinchToPanMaxDistance, super.onMultiTouch(UU, XU, zU, cU, yU, QU)
-          }
-          onButtonDown(UU) {
-            this._pointerConditions.button = UU.button, this._pointerModifiers.ctrl = UU.ctrlKey, this._pointerModifiers.alt = UU.altKey, this._pointerModifiers.shift = UU.shiftKey, this._activeEntry = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions), super.onButtonDown(UU)
-          }
-          onButtonUp(UU) {
-            this._activeEntry = null, super.onButtonUp(UU)
-          }
-          onLostFocus() {
-            this._activeEntry = null, super.onLostFocus()
-          }
-        }, (() => {
-          const PU = "function" === typeof Symbol && Symbol.metadata ? Object.create(EU[Symbol.metadata] ?? null) : void 0;
-          XU = [(0, yU.I)()], zU = [(0, yU.I)()], QU = [(0, yU.I)()], AU = [(0, yU.I)()], FU = [(0, yU.I)()], oU = [(0, yU.I)()], DU = [(0, yU.I)()], (0, cU.j)(null, null, XU, {
-            kind: "field",
-            name: "buttons",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "buttons" in UU,
-              get: UU => UU.buttons,
-              set: (UU, XU) => {
-                UU.buttons = XU
-              }
-            },
-            metadata: PU
-          }, YU, NU), (0, cU.j)(null, null, zU, {
-            kind: "field",
-            name: "angularSensibilityX",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "angularSensibilityX" in UU,
-              get: UU => UU.angularSensibilityX,
-              set: (UU, XU) => {
-                UU.angularSensibilityX = XU
-              }
-            },
-            metadata: PU
-          }, IU, pU), (0, cU.j)(null, null, QU, {
-            kind: "field",
-            name: "angularSensibilityY",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "angularSensibilityY" in UU,
-              get: UU => UU.angularSensibilityY,
-              set: (UU, XU) => {
-                UU.angularSensibilityY = XU
-              }
-            },
-            metadata: PU
-          }, aU, tU), (0, cU.j)(null, null, AU, {
-            kind: "field",
-            name: "pinchPrecision",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "pinchPrecision" in UU,
-              get: UU => UU.pinchPrecision,
-              set: (UU, XU) => {
-                UU.pinchPrecision = XU
-              }
-            },
-            metadata: PU
-          }, gU, kU), (0, cU.j)(null, null, FU, {
-            kind: "field",
-            name: "pinchDeltaPercentage",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "pinchDeltaPercentage" in UU,
-              get: UU => UU.pinchDeltaPercentage,
-              set: (UU, XU) => {
-                UU.pinchDeltaPercentage = XU
-              }
-            },
-            metadata: PU
-          }, GU, BU), (0, cU.j)(null, null, oU, {
-            kind: "field",
-            name: "useNaturalPinchZoom",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "useNaturalPinchZoom" in UU,
-              get: UU => UU.useNaturalPinchZoom,
-              set: (UU, XU) => {
-                UU.useNaturalPinchZoom = XU
-              }
-            },
-            metadata: PU
-          }, ZU, RU), (0, cU.j)(null, null, DU, {
-            kind: "field",
-            name: "panningSensibility",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "panningSensibility" in UU,
-              get: UU => UU.panningSensibility,
-              set: (UU, XU) => {
-                UU.panningSensibility = XU
-              }
-            },
-            metadata: PU
-          }, WU, dU), PU && Object.defineProperty(UU, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: PU
-          })
-        })(), UU.MinimumRadiusForPinch = .001, UU
-      })();
-    BU.d.ArcRotateCameraPointersInput = WU;
-    var dU = zU(41278);
-    let LU = (() => {
-      var UU;
-      let XU, zU, QU, FU, oU, DU, EU, YU, NU, IU, pU, aU = [],
-        tU = [],
-        gU = [],
-        kU = [],
-        GU = [],
-        BU = [],
-        RU = [],
-        PU = [],
-        WU = [],
-        LU = [],
-        eU = [],
-        CU = [],
-        wU = [],
-        qU = [],
-        OU = [],
-        SU = [],
-        rU = [],
-        uU = [],
-        fU = [],
-        iU = [],
-        HU = [];
-      return UU = class {
-        constructor() {
-          this.camera = (0, cU.n)(this, aU), this.keysUp = (0, cU.n)(this, tU, [38]), this.keysDown = ((0, cU.n)(this, gU), (0, cU.n)(this, kU, [40])), this.keysLeft = ((0, cU.n)(this, GU), (0, cU.n)(this, BU, [37])), this.keysRight = ((0, cU.n)(this, RU), (0, cU.n)(this, PU, [39])), this.keysReset = ((0, cU.n)(this, WU), (0, cU.n)(this, LU, [220])), this.keysZoomIn = ((0, cU.n)(this, eU), (0, cU.n)(this, CU, [187, 107])), this.keysZoomOut = ((0, cU.n)(this, wU), (0, cU.n)(this, qU, [189, 109])), this.panningSensibility = ((0, cU.n)(this, OU), (0, cU.n)(this, SU, 50)), this.zoomingSensibility = ((0, cU.n)(this, rU), (0, cU.n)(this, uU, 25)), this.angularSpeed = ((0, cU.n)(this, fU), (0, cU.n)(this, iU, .01)), this._useAltToZoom = ((0, cU.n)(this, HU), !0), this._keys = new Array, this._keyboardModifiers = {
-            ctrl: !1,
-            alt: !1
-          }, this._keyboardConditions = {
-            modifiers: this._keyboardModifiers
-          }, this._rotateDirection = new AU.m, this._panDirection = new AU.m
-        }
-        get useAltToZoom() {
-          return this._useAltToZoom
-        }
-        set useAltToZoom(UU) {
-          this._useAltToZoom = UU, this._applyUseAltToZoomToInputMap()
-        }
-        _applyUseAltToZoomToInputMap() {
-          if (!this.camera?.movement) return;
-          const UU = this.camera.movement.input,
-            XU = UU.getEntry("keyboard", "zoom", {
-              modifiers: {
-                alt: !0
-              }
-            });
-          !this._useAltToZoom && XU ? UU.inputMap.splice(UU.inputMap.indexOf(XU), 1) : this._useAltToZoom && !XU && UU.addEntry({
-            source: "keyboard",
-            modifiers: {
-              alt: !0
-            },
-            interaction: "zoom"
-          })
-        }
-        attachControl(UU) {
-          UU = ZU.j.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.nS(), this._engine = this._scene.qp(), this._applyUseAltToZoomToInputMap(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
-            this._keys.length = 0
-          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((XU => {
-            const zU = XU.event;
-            if (!zU.metaKey)
-              if (XU.type === dU.c.KEYDOWN) {
-                if (this._ctrlPressed = zU.ctrlKey, this._altPressed = zU.altKey, -1 !== this.keysUp.indexOf(zU.keyCode) || -1 !== this.keysDown.indexOf(zU.keyCode) || -1 !== this.keysLeft.indexOf(zU.keyCode) || -1 !== this.keysRight.indexOf(zU.keyCode) || -1 !== this.keysReset.indexOf(zU.keyCode) || -1 !== this.keysZoomIn.indexOf(zU.keyCode) || -1 !== this.keysZoomOut.indexOf(zU.keyCode)) {
-                  -1 === this._keys.indexOf(zU.keyCode) && this._keys.push(zU.keyCode), zU.preventDefault && (UU || zU.preventDefault())
-                }
-              } else if (-1 !== this.keysUp.indexOf(zU.keyCode) || -1 !== this.keysDown.indexOf(zU.keyCode) || -1 !== this.keysLeft.indexOf(zU.keyCode) || -1 !== this.keysRight.indexOf(zU.keyCode) || -1 !== this.keysReset.indexOf(zU.keyCode) || -1 !== this.keysZoomIn.indexOf(zU.keyCode) || -1 !== this.keysZoomOut.indexOf(zU.keyCode)) {
-              const XU = this._keys.indexOf(zU.keyCode);
-              XU >= 0 && this._keys.splice(XU, 1), zU.preventDefault && (UU || zU.preventDefault())
-            }
-          })))
-        }
-        detachControl() {
-          this._scene && (this._onKeyboardObserver && this._scene.onKeyboardObservable.remove(this._onKeyboardObserver), this._onCanvasBlurObserver && this._engine.onCanvasBlurObservable.remove(this._onCanvasBlurObserver), this._onKeyboardObserver = null, this._onCanvasBlurObserver = null), this._keys.length = 0
-        }
-        checkInputs() {
-          if (this._onKeyboardObserver) {
-            const UU = this.camera,
-              XU = UU.movement.input;
-            this._keyboardModifiers.ctrl = this._ctrlPressed, this._keyboardModifiers.alt = this._altPressed;
-            const zU = this._rotateDirection.set(0, 0),
-              cU = this._panDirection.set(0, 0);
-            let yU = 0,
-              QU = 0;
-            for (let AU = 0; AU < this._keys.length; AU++) {
-              const FU = this._keys[AU];
-              if (this._keyboardConditions.key = FU, -1 === this.keysReset.indexOf(FU)) {
-                const UU = XU.resolveInteraction("keyboard", this._keyboardConditions);
-                if (UU)
-                  if ("pan" === UU.interaction) QU = Math.max(QU, UU.sensitivity ?? 1 / this.panningSensibility), -1 !== this.keysLeft.indexOf(FU) ? cU.x -= 1 : -1 !== this.keysRight.indexOf(FU) ? cU.x += 1 : -1 !== this.keysUp.indexOf(FU) ? cU.y += 1 : -1 !== this.keysDown.indexOf(FU) && (cU.y -= 1);
-                  else if ("zoom" === UU.interaction) {
-                  const zU = UU.sensitivity ?? 1 / this.zoomingSensibility; - 1 !== this.keysUp.indexOf(FU) || -1 !== this.keysZoomIn.indexOf(FU) ? XU.handlers.zoom(zU) : -1 === this.keysDown.indexOf(FU) && -1 === this.keysZoomOut.indexOf(FU) || XU.handlers.zoom(-zU)
-                } else "rotate" === UU.interaction && (yU = Math.max(yU, UU.sensitivity ?? this.angularSpeed), -1 !== this.keysLeft.indexOf(FU) ? zU.x -= 1 : -1 !== this.keysRight.indexOf(FU) ? zU.x += 1 : -1 !== this.keysUp.indexOf(FU) ? zU.y -= 1 : -1 !== this.keysDown.indexOf(FU) && (zU.y += 1))
-              } - 1 !== this.keysReset.indexOf(FU) && UU.useInputToRestoreState && UU.restoreState()
-            }
-            0 === zU.x && 0 === zU.y || (zU.normalize().scaleInPlace(yU), XU.handlers.rotate(zU.x, zU.y)), 0 === cU.x && 0 === cU.y || (cU.normalize().scaleInPlace(QU), XU.handlers.pan(cU.x, cU.y))
-          }
-        }
-        getClassName() {
-          return "ArcRotateCameraKeyboardMoveInput"
-        }
-        getSimpleName() {
-          return "keyboard"
-        }
-      }, (() => {
-        const AU = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        XU = [(0, yU.I)()], zU = [(0, yU.I)()], QU = [(0, yU.I)()], FU = [(0, yU.I)()], oU = [(0, yU.I)()], DU = [(0, yU.I)()], EU = [(0, yU.I)()], YU = [(0, yU.I)()], NU = [(0, yU.I)()], IU = [(0, yU.I)()], pU = [(0, yU.I)()], (0, cU.j)(UU, null, pU, {
-          kind: "getter",
-          name: "useAltToZoom",
-          static: !1,
-          private: !1,
-          access: {
-            has: UU => "useAltToZoom" in UU,
-            get: UU => UU.useAltToZoom
-          },
-          metadata: AU
-        }, null, aU), (0, cU.j)(null, null, XU, {
-          kind: "field",
-          name: "keysUp",
-          static: !1,
-          private: !1,
-          access: {
-            has: UU => "keysUp" in UU,
-            get: UU => UU.keysUp,
-            set: (UU, XU) => {
-              UU.keysUp = XU
-            }
-          },
-          metadata: AU
-        }, tU, gU), (0, cU.j)(null, null, zU, {
-          kind: "field",
-          name: "keysDown",
-          static: !1,
-          private: !1,
-          access: {
-            has: UU => "keysDown" in UU,
-            get: UU => UU.keysDown,
-            set: (UU, XU) => {
-              UU.keysDown = XU
-            }
-          },
-          metadata: AU
-        }, kU, GU), (0, cU.j)(null, null, QU, {
-          kind: "field",
-          name: "keysLeft",
-          static: !1,
-          private: !1,
-          access: {
-            has: UU => "keysLeft" in UU,
-            get: UU => UU.keysLeft,
-            set: (UU, XU) => {
-              UU.keysLeft = XU
-            }
-          },
-          metadata: AU
-        }, BU, RU), (0, cU.j)(null, null, FU, {
-          kind: "field",
-          name: "keysRight",
-          static: !1,
-          private: !1,
-          access: {
-            has: UU => "keysRight" in UU,
-            get: UU => UU.keysRight,
-            set: (UU, XU) => {
-              UU.keysRight = XU
-            }
-          },
-          metadata: AU
-        }, PU, WU), (0, cU.j)(null, null, oU, {
-          kind: "field",
-          name: "keysReset",
-          static: !1,
-          private: !1,
-          access: {
-            has: UU => "keysReset" in UU,
-            get: UU => UU.keysReset,
-            set: (UU, XU) => {
-              UU.keysReset = XU
-            }
-          },
-          metadata: AU
-        }, LU, eU), (0, cU.j)(null, null, DU, {
-          kind: "field",
-          name: "keysZoomIn",
-          static: !1,
-          private: !1,
-          access: {
-            has: UU => "keysZoomIn" in UU,
-            get: UU => UU.keysZoomIn,
-            set: (UU, XU) => {
-              UU.keysZoomIn = XU
-            }
-          },
-          metadata: AU
-        }, CU, wU), (0, cU.j)(null, null, EU, {
-          kind: "field",
-          name: "keysZoomOut",
-          static: !1,
-          private: !1,
-          access: {
-            has: UU => "keysZoomOut" in UU,
-            get: UU => UU.keysZoomOut,
-            set: (UU, XU) => {
-              UU.keysZoomOut = XU
-            }
-          },
-          metadata: AU
-        }, qU, OU), (0, cU.j)(null, null, YU, {
-          kind: "field",
-          name: "panningSensibility",
-          static: !1,
-          private: !1,
-          access: {
-            has: UU => "panningSensibility" in UU,
-            get: UU => UU.panningSensibility,
-            set: (UU, XU) => {
-              UU.panningSensibility = XU
-            }
-          },
-          metadata: AU
-        }, SU, rU), (0, cU.j)(null, null, NU, {
-          kind: "field",
-          name: "zoomingSensibility",
-          static: !1,
-          private: !1,
-          access: {
-            has: UU => "zoomingSensibility" in UU,
-            get: UU => UU.zoomingSensibility,
-            set: (UU, XU) => {
-              UU.zoomingSensibility = XU
-            }
-          },
-          metadata: AU
-        }, uU, fU), (0, cU.j)(null, null, IU, {
-          kind: "field",
-          name: "angularSpeed",
-          static: !1,
-          private: !1,
-          access: {
-            has: UU => "angularSpeed" in UU,
-            get: UU => UU.angularSpeed,
-            set: (UU, XU) => {
-              UU.angularSpeed = XU
-            }
-          },
-          metadata: AU
-        }, iU, HU), AU && Object.defineProperty(UU, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: AU
-        })
-      })(), UU
-    })();
-    BU.d.ArcRotateCameraKeyboardMoveInput = LU;
-    var eU = zU(38505),
-      CU = zU(41283);
-    let wU = (() => {
-      var UU;
-      let XU, zU, QU, oU = [],
-        DU = [],
-        YU = [],
-        IU = [],
-        pU = [],
-        aU = [];
-      return UU = class {
-        constructor() {
-          this.wheelPrecision = (0, cU.n)(this, oU, 3), this.zoomToMouseLocation = ((0, cU.n)(this, DU), (0, cU.n)(this, YU, !1)), this.wheelDeltaPercentage = ((0, cU.n)(this, IU), (0, cU.n)(this, pU, 0)), this.customComputeDeltaFromMouseWheel = ((0, cU.n)(this, aU), null), this._viewOffset = new AU.q(0, 0, 0), this._globalOffset = new AU.q(0, 0, 0), this._inertialPanning = AU.q.Zero(), this._zoomToMouseRadiusOffset = 0
-        }
-        _computeDeltaFromMouseWheelLegacyEvent(UU, XU) {
-          let zU;
-          const cU = .01 * UU * this.wheelDeltaPercentage * XU;
-          return zU = UU > 0 ? cU / (1 + this.wheelDeltaPercentage) : cU * (1 + this.wheelDeltaPercentage), zU
-        }
-        attachControl(UU) {
-          UU = ZU.j.BackCompatCameraNoPreventDefault(arguments), this._wheel = XU => {
-            if (XU.type !== EU.c.POINTERWHEEL) return;
-            const zU = XU.event;
-            let cU;
-            const yU = zU.deltaMode === CU.b.DOM_DELTA_LINE ? 40 : 1,
-              QU = -zU.deltaY * yU;
-            if (this.customComputeDeltaFromMouseWheel) cU = this.customComputeDeltaFromMouseWheel(QU, this, zU);
-            else if (this.wheelDeltaPercentage) {
-              if (cU = this._computeDeltaFromMouseWheelLegacyEvent(QU, this.camera.radius), cU > 0) {
-                const UU = this.zoomToMouseLocation ? this._zoomToMouseRadiusOffset : this.camera.inertialRadiusOffset;
-                let XU = this.camera.radius,
-                  zU = UU + cU;
-                for (let cU = 0; cU < 20 && !(XU <= zU) && !(Math.abs(zU * this.camera.inertia) < .001); cU++) XU -= zU, zU *= this.camera.inertia;
-                XU = (0, FU.Clamp)(XU, 0, Number.MAX_VALUE), cU = this._computeDeltaFromMouseWheelLegacyEvent(QU, XU)
-              }
-            } else {
-              const UU = this.camera.movement.input.getEntry("wheel", "zoom");
-              cU = QU * (UU?.sensitivity ?? 1 / (40 * this.wheelPrecision))
-            }
-            cU && (this.zoomToMouseLocation ? (this._hitPlane || this._updateHitPlane(), this._zoomToMouse(cU)) : this.camera.movement.zoomAccumulatedPixels += cU), zU.preventDefault && (UU || zU.preventDefault())
-          }, this._observer = this.camera.nS()._inputManager._addCameraPointerObserver(this._wheel, EU.c.POINTERWHEEL), this.zoomToMouseLocation && this._inertialPanning.IUU(0)
-        }
-        detachControl() {
-          this._observer && (this.camera.nS()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null)
-        }
-        checkInputs() {
-          if (!this.zoomToMouseLocation) return;
-          const UU = this.camera;
-          if (Math.abs(this._zoomToMouseRadiusOffset) + this._inertialPanning.lengthSquared() + Math.abs(UU.inertialAlphaOffset) + Math.abs(UU.inertialBetaOffset) + Math.abs(UU.inertialRadiusOffset)) {
-            this._updateHitPlane(), UU.target.addInPlace(this._inertialPanning), UU.radius -= this._zoomToMouseRadiusOffset;
-            const XU = UU.movement.getFrameIndependentDecay(UU.inertia);
-            this._inertialPanning.scaleInPlace(XU), this._zoomToMouseRadiusOffset *= XU, this._zeroIfClose(this._inertialPanning), Math.abs(this._zoomToMouseRadiusOffset) < NU.c && (this._zoomToMouseRadiusOffset = 0)
-          }
-        }
-        getClassName() {
-          return "ArcRotateCameraMouseWheelInput"
-        }
-        getSimpleName() {
-          return "mousewheel"
-        }
-        _updateHitPlane() {
-          const UU = this.camera,
-            XU = UU.target.subtract(UU.position);
-          this._hitPlane = eU.d.FromPositionAndNormal(UU.target, XU)
-        }
-        _getPosition() {
-          const UU = this.camera,
-            XU = UU.nS(),
-            zU = XU.createPickingRay(XU.pointerX, XU.pointerY, AU.e.Identity(), UU, !1);
-          0 === UU.targetScreenOffset.x && 0 === UU.targetScreenOffset.y || (this._viewOffset.set(UU.targetScreenOffset.x, UU.targetScreenOffset.y, 0), UU.getViewMatrix().invertToRef(UU._cameraTransformMatrix), this._globalOffset = AU.q.TransformNormal(this._viewOffset, UU._cameraTransformMatrix), zU.origin.addInPlace(this._globalOffset));
-          let cU = 0;
-          return this._hitPlane && (cU = zU.intersectsPlane(this._hitPlane) ?? 0), zU.origin.addInPlace(zU.direction.scaleInPlace(cU))
-        }
-        _zoomToMouse(UU) {
-          const XU = this.camera,
-            zU = 1 - XU.inertia,
-            cU = XU.movement.getFrameIndependentInputScale(XU.inertia);
-          if (XU.lowerRadiusLimit) {
-            const yU = XU.lowerRadiusLimit ?? 0;
-            XU.radius - (this._zoomToMouseRadiusOffset + UU * cU) / zU < yU && (UU = ((XU.radius - yU) * zU - this._zoomToMouseRadiusOffset) / cU)
-          }
-          if (XU.upperRadiusLimit) {
-            const yU = XU.upperRadiusLimit ?? 0;
-            XU.radius - (this._zoomToMouseRadiusOffset + UU * cU) / zU > yU && (UU = ((XU.radius - yU) * zU - this._zoomToMouseRadiusOffset) / cU)
-          }
-          const yU = UU / zU / XU.radius,
-            QU = this._getPosition(),
-            FU = AU.l.Sp[6];
-          QU.subtractToRef(XU.target, FU), FU.scaleInPlace(yU), FU.scaleInPlace(zU), FU.scaleInPlace(cU), this._inertialPanning.addInPlace(FU), this._zoomToMouseRadiusOffset += UU * cU
-        }
-        _zeroIfClose(UU) {
-          Math.abs(UU.x) < NU.c && (UU.x = 0), Math.abs(UU.y) < NU.c && (UU.y = 0), Math.abs(UU.z) < NU.c && (UU.z = 0)
-        }
-      }, (() => {
-        const AU = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        XU = [(0, yU.I)()], zU = [(0, yU.I)()], QU = [(0, yU.I)()], (0, cU.j)(null, null, XU, {
-          kind: "field",
-          name: "wheelPrecision",
-          static: !1,
-          private: !1,
-          access: {
-            has: UU => "wheelPrecision" in UU,
-            get: UU => UU.wheelPrecision,
-            set: (UU, XU) => {
-              UU.wheelPrecision = XU
-            }
-          },
-          metadata: AU
-        }, oU, DU), (0, cU.j)(null, null, zU, {
-          kind: "field",
-          name: "zoomToMouseLocation",
-          static: !1,
-          private: !1,
-          access: {
-            has: UU => "zoomToMouseLocation" in UU,
-            get: UU => UU.zoomToMouseLocation,
-            set: (UU, XU) => {
-              UU.zoomToMouseLocation = XU
-            }
-          },
-          metadata: AU
-        }, YU, IU), (0, cU.j)(null, null, QU, {
-          kind: "field",
-          name: "wheelDeltaPercentage",
-          static: !1,
-          private: !1,
-          access: {
-            has: UU => "wheelDeltaPercentage" in UU,
-            get: UU => UU.wheelDeltaPercentage,
-            set: (UU, XU) => {
-              UU.wheelDeltaPercentage = XU
-            }
-          },
-          metadata: AU
-        }, pU, aU), AU && Object.defineProperty(UU, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: AU
-        })
-      })(), UU
-    })();
-    BU.d.ArcRotateCameraMouseWheelInput = wU;
-    var qU, OU, SU = zU(40989);
-    class rU extends BU.h {
-      constructor(UU) {
-        super(UU)
-      }
-      addMouseWheel() {
-        return this.add(new wU), this
-      }
-      addPointers() {
-        return this.add(new WU), this
-      }
-      addKeyboard() {
-        return this.add(new LU), this
-      }
-    }(qU = rU.prototype).addVRDeviceOrientation ?? (qU.addVRDeviceOrientation = (0, SU.k)("ArcRotateCameraInputsManager", "addVRDeviceOrientation")), (OU = rU.prototype).addGamepad ?? (OU.addGamepad = (0, SU.k)("ArcRotateCameraInputsManager", "addGamepad"));
-    var uU = zU(37863),
-      fU = zU(41319),
-      iU = zU(41321);
-    class HU extends fU.d {
-      constructor(UU, XU, zU) {
-        super(UU, XU, zU), this.input = new iU.d({
-          pan: (UU, XU) => {
-            this.panAccumulatedPixels.x += UU, this.panAccumulatedPixels.y += XU
-          },
-          rotate: (UU, XU) => {
-            this.rotationAccumulatedPixels.x += UU, this.rotationAccumulatedPixels.y += XU
-          },
-          zoom: UU => {
-            this.zoomAccumulatedPixels += UU
-          }
-        }, (() => this._createDefaultInputMap()))
-      }
-      _createDefaultInputMap() {
-        return [{
-          source: "pointer",
-          button: 0,
-          modifiers: {
-            ctrl: !0
-          },
-          interaction: "pan"
-        }, {
-          source: "pointer",
-          button: 0,
-          interaction: "rotate"
-        }, {
-          source: "pointer",
-          button: 2,
-          interaction: "pan"
-        }, {
-          source: "wheel",
-          interaction: "zoom"
-        }, {
-          source: "keyboard",
-          key: [187, 107, 189, 109],
-          interaction: "zoom"
-        }, {
-          source: "keyboard",
-          modifiers: {
-            ctrl: !0
-          },
-          interaction: "pan"
-        }, {
-          source: "keyboard",
-          modifiers: {
-            alt: !0
-          },
-          interaction: "zoom"
-        }, {
-          source: "keyboard",
-          interaction: "rotate"
-        }]
+        case 5131:
+          return (0, rH.d)(HH.getUint16(LH, !0));
+        case 5124:
+          return HH.getInt32(LH, !0);
+        case 5125:
+          return HH.getUint32(LH, !0);
+        case 5126:
+          return HH.getFloat32(LH, !0);
+        default:
+          throw new Error(`Invalid component type ${BH}`)
       }
     }
 
-    function MU(UU, XU) {
-      return isNaN(UU) ? XU : UU
+    function hH(HH, BH, LH, AH, SH) {
+      switch (BH) {
+        case 5120:
+          AH && (SH = Math.round(127 * SH)), HH.setInt8(LH, SH);
+          break;
+        case 5121:
+          AH && (SH = Math.round(255 * SH)), HH.setUint8(LH, SH);
+          break;
+        case 5122:
+          AH && (SH = Math.round(32767 * SH)), HH.setInt16(LH, SH, !0);
+          break;
+        case 5123:
+          AH && (SH = Math.round(65535 * SH)), HH.setUint16(LH, SH, !0);
+          break;
+        case 5131:
+          HH.setUint16(LH, (0, rH.f)(SH), !0);
+          break;
+        case 5124:
+          HH.setInt32(LH, SH, !0);
+          break;
+        case 5125:
+          HH.setUint32(LH, SH, !0);
+          break;
+        case 5126:
+          HH.setFloat32(LH, SH, !0);
+          break;
+        default:
+          throw new Error(`Invalid component type ${BH}`)
+      }
     }
-    let vU = (() => {
-        var UU;
-        let XU, zU, oU, EU, YU, pU, aU, BU, RU, PU, WU, dU, LU, eU, CU, wU, qU, OU, SU, uU, fU, iU, vU, VU, sU, nU, mU, lU, xU = GU.i,
-          JU = [],
-          jU = [],
-          KU = [],
-          bU = [],
-          TU = [],
-          hU = [],
-          UX = [],
-          XX = [],
-          zX = [],
-          cX = [],
-          yX = [],
-          QX = [],
-          AX = [],
-          FX = [],
-          oX = [],
-          DX = [],
-          EX = [],
-          YX = [],
-          NX = [],
-          IX = [],
-          pX = [],
-          aX = [],
-          tX = [],
-          gX = [],
-          kX = [],
-          GX = [],
-          BX = [],
-          ZX = [],
-          RX = [],
-          PX = [],
-          WX = [],
-          dX = [],
-          LX = [],
-          eX = [],
-          CX = [],
-          wX = [],
-          qX = [],
-          OX = [],
-          SX = [],
-          rX = [],
-          uX = [],
-          fX = [],
-          iX = [],
-          HX = [],
-          MX = [],
-          vX = [],
-          VX = [];
-        return UU = class extends xU {
-          get target() {
-            return this.eY
+
+    function tH(HH) {
+      switch (HH) {
+        case 5120:
+        case 5121:
+          return 1;
+        case 5122:
+        case 5123:
+        case 5131:
+          return 2;
+        case 5124:
+        case 5125:
+        case 5126:
+          return 4;
+        default:
+          throw new Error(`Invalid type '${HH}'`)
+      }
+    }
+
+    function zH(HH, BH, LH, AH, rH, zH, CH, EH) {
+      const XH = new Array(AH),
+        GH = new Array(AH);
+      if (HH instanceof Array) {
+        let rH = BH / 4;
+        const SH = LH / 4;
+        for (let BH = 0; BH < zH; BH += AH) {
+          for (let BH = 0; BH < AH; BH++) XH[BH] = GH[BH] = HH[rH + BH];
+          EH(GH, BH);
+          for (let BH = 0; BH < AH; BH++) XH[BH] !== GH[BH] && (HH[rH + BH] = GH[BH]);
+          rH += SH
+        }
+      } else {
+        const YH = ArrayBuffer.isView(HH) ? new DataView(HH.buffer, HH.byteOffset, HH.byteLength) : new DataView(HH),
+          uH = tH(rH);
+        for (let HH = 0; HH < zH; HH += AH) {
+          for (let HH = 0, LH = BH; HH < AH; HH++, LH += uH) XH[HH] = GH[HH] = SH(YH, rH, LH, CH);
+          EH(GH, HH);
+          for (let HH = 0, LH = BH; HH < AH; HH++, LH += uH) XH[HH] !== GH[HH] && hH(YH, rH, LH, CH, GH[HH]);
+          BH += LH
+        }
+      }
+    }
+
+    function CH(HH, BH, LH, rH, SH, hH, CH, EH) {
+      const XH = BH * tH(LH),
+        GH = CH * BH;
+      if (5126 !== LH || SH !== XH) {
+        const AH = new Float32Array(GH);
+        return zH(HH, rH, SH, BH, LH, GH, hH, ((HH, LH) => {
+          for (let rH = 0; rH < BH; rH++) AH[LH + rH] = HH[rH]
+        })), AH
+      }
+      if (!(HH instanceof Array || HH instanceof Float32Array) || 0 !== rH || HH.length !== GH) {
+        if (HH instanceof Array) {
+          const BH = rH / 4;
+          return HH.slice(BH, BH + GH)
+        }
+        if (ArrayBuffer.isView(HH)) {
+          const BH = HH.byteOffset + rH;
+          return 0 !== (3 & BH) && (AH.e.Warn("Float array must be aligned to 4-bytes border"), EH = !0), EH ? new Float32Array(HH.buffer.slice(BH, BH + GH * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(HH.buffer, BH, GH)
+        }
+        return new Float32Array(HH, rH, GH)
+      }
+      return EH ? HH.slice() : HH
+    }
+
+    function EH(HH, BH, LH, rH, SH, hH, CH) {
+      const EH = tH(LH),
+        XH = function(HH) {
+          switch (HH) {
+            case 5120:
+              return Int8Array;
+            case 5121:
+              return Uint8Array;
+            case 5122:
+              return Int16Array;
+            case 5123:
+            case 5131:
+              return Uint16Array;
+            case 5124:
+              return Int32Array;
+            case 5125:
+              return Uint32Array;
+            case 5126:
+              return Float32Array;
+            default:
+              throw new Error(`Invalid component type '${HH}'`)
           }
-          set target(UU) {
-            this.setTarget(UU)
+        }(LH),
+        GH = hH * BH;
+      if (Array.isArray(HH)) {
+        if (0 !== (3 & rH) || 0 !== (3 & SH)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
+        const AH = rH / 4,
+          tH = SH / 4;
+        if (AH + (hH - 1) * tH + BH > HH.length) throw new Error("Last accessed index is out of bounds.");
+        if (tH < BH) throw new Error("Data stride cannot be smaller than the component size.");
+        if (tH !== BH) {
+          const AH = new XH(GH);
+          return zH(HH, rH, SH, BH, LH, GH, !1, ((HH, LH) => {
+            for (let rH = 0; rH < BH; rH++) AH[LH + rH] = HH[rH]
+          })), AH
+        }
+        return new XH(HH.slice(AH, AH + GH))
+      }
+      let YH, uH = rH;
+      ArrayBuffer.isView(HH) ? (YH = HH.buffer, uH += HH.byteOffset) : YH = HH;
+      if (uH + (hH - 1) * SH + BH * EH > YH.byteLength) throw new Error("Last accessed byte is out of bounds.");
+      const QH = BH * EH;
+      if (SH < QH) throw new Error("Byte stride cannot be smaller than the component's byte size.");
+      if (SH !== QH) {
+        const HH = new XH(GH),
+          LH = new Uint8Array(YH, uH),
+          AH = new Uint8Array(HH.buffer),
+          rH = BH * EH;
+        for (let BH = 0, tH = 0, zH = 0; BH < hH; BH++, tH += SH, zH += rH) AH.set(LH.subarray(tH, tH + rH), zH);
+        return HH
+      }
+      return 1 !== EH && 0 !== (uH & EH - 1) && (AH.e.Warn("Array must be aligned to border of element size. Data will be copied."), CH = !0), CH ? new XH(YH.slice(uH, uH + GH * EH)) : new XH(YH, uH, GH)
+    }
+
+    function XH(HH, BH, LH, rH, SH, hH, CH, EH) {
+      const XH = BH * tH(LH),
+        GH = CH * BH;
+      if (EH.length !== GH) throw new Error("Output length is not valid");
+      if (5126 === LH && SH === XH)
+        if (HH instanceof Array) {
+          const BH = rH / 4;
+          EH.set(HH, BH)
+        } else if (ArrayBuffer.isView(HH)) {
+        const BH = HH.byteOffset + rH;
+        if (0 !== (3 & BH)) return AH.e.Warn("Float array must be aligned to 4-bytes border"), void EH.set(new Float32Array(HH.buffer.slice(BH, BH + GH * Float32Array.BYTES_PER_ELEMENT)));
+        const LH = new Float32Array(HH.buffer, BH, GH);
+        EH.set(LH)
+      } else {
+        const BH = new Float32Array(HH, rH, GH);
+        EH.set(BH)
+      } else zH(HH, rH, SH, BH, LH, GH, hH, ((HH, LH) => {
+        for (let AH = 0; AH < BH; AH++) EH[LH + AH] = HH[AH]
+      }))
+    }
+
+    function GH(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      if (Array.isArray(HH)) {
+        for (let rH = 0; rH < BH; rH++)
+          if (HH[LH + rH] - AH > 65535) return !0;
+        return !1
+      }
+      return 4 === HH.BYTES_PER_ELEMENT
+    }
+
+    function YH(HH) {
+      const BH = HH.buffer;
+      if (BH instanceof ArrayBuffer) return HH;
+      const LH = new ArrayBuffer(HH.byteLength);
+      return new Uint8Array(LH).set(new Uint8Array(BH, HH.byteOffset, HH.byteLength)), LH
+    }
+  },
+  41173: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => OH,
+      d: () => UH,
+      j: () => VH,
+      g: () => lH,
+      n: () => KH
+    });
+    class AH {
+      constructor() {
+        this.children = []
+      }
+      isValid(HH) {
+        return !0
+      }
+      process(HH, BH, LH) {
+        let AH = "";
+        if (this.line) {
+          let LH = this.line;
+          const rH = BH.processor;
+          if (rH) {
+            rH.lineProcessor && (LH = rH.lineProcessor(LH, BH.isFragment, BH.processingContext));
+            const AH = BH.processor?.attributeKeywordName ?? "attribute",
+              SH = BH.isFragment && BH.processor?.varyingFragmentKeywordName ? BH.processor?.varyingFragmentKeywordName : !BH.isFragment && BH.processor?.varyingVertexKeywordName ? BH.processor?.varyingVertexKeywordName : "varying";
+            if (!BH.isFragment && rH.attributeProcessor && this.line.startsWith(AH)) LH = rH.attributeProcessor(this.line, HH, BH.processingContext);
+            else if (rH.varyingProcessor && (rH.varyingCheck?.(this.line, BH.isFragment) || !rH.varyingCheck && this.line.startsWith(SH))) LH = rH.varyingProcessor(this.line, BH.isFragment, HH, BH.processingContext);
+            else if (rH.uniformProcessor && rH.uniformRegexp && rH.uniformRegexp.test(this.line)) BH.lookForClosingBracketForUniformBuffer || (LH = rH.uniformProcessor(this.line, BH.isFragment, HH, BH.processingContext));
+            else if (rH.uniformBufferProcessor && rH.uniformBufferRegexp && rH.uniformBufferRegexp.test(this.line)) BH.lookForClosingBracketForUniformBuffer || (LH = rH.uniformBufferProcessor(this.line, BH.isFragment, BH.processingContext), BH.lookForClosingBracketForUniformBuffer = !0);
+            else if (rH.textureProcessor && rH.textureRegexp && rH.textureRegexp.test(this.line)) LH = rH.textureProcessor(this.line, BH.isFragment, HH, BH.processingContext);
+            else if ((rH.uniformProcessor || rH.uniformBufferProcessor) && this.line.startsWith("uniform") && !BH.lookForClosingBracketForUniformBuffer) {
+              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? rH.uniformProcessor && (LH = rH.uniformProcessor(this.line, BH.isFragment, HH, BH.processingContext)) : rH.uniformBufferProcessor && (LH = rH.uniformBufferProcessor(this.line, BH.isFragment, BH.processingContext), BH.lookForClosingBracketForUniformBuffer = !0)
+            }
+            BH.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (BH.lookForClosingBracketForUniformBuffer = !1, rH.endOfUniformBufferProcessor && (LH = rH.endOfUniformBufferProcessor(this.line, BH.isFragment, BH.processingContext)))
           }
-          get targetHost() {
-            return this._targetHost
+          AH += LH + "\n"
+        }
+        for (const rH of this.children) AH += rH.process(HH, BH, LH);
+        return this.additionalDefineKey && (HH[this.additionalDefineKey] = this.additionalDefineValue || "true", LH[this.additionalDefineKey] = HH[this.additionalDefineKey]), AH
+      }
+    }
+    class rH {
+      constructor() {
+        this._lines = []
+      }
+      get currentLine() {
+        return this._lines[this.lineIndex]
+      }
+      get canRead() {
+        return this.lineIndex < this._lines.length - 1
+      }
+      set lines(HH) {
+        this._lines.length = 0;
+        for (const BH of HH) {
+          if (!BH || "\r" === BH) continue;
+          if ("#" === BH[0]) {
+            this._lines.push(BH);
+            continue
           }
-          set targetHost(UU) {
-            UU && this.setTarget(UU)
+          const HH = BH.trim();
+          if (!HH) continue;
+          if (HH.startsWith("//")) {
+            this._lines.push(BH);
+            continue
           }
-          getTarget() {
-            return this.target
+          const LH = HH.indexOf(";");
+          if (-1 === LH) this._lines.push(HH);
+          else if (LH === HH.length - 1) HH.length > 1 && this._lines.push(HH);
+          else {
+            const HH = BH.split(";");
+            for (let BH = 0; BH < HH.length; BH++) {
+              let LH = HH[BH];
+              LH && (LH = LH.trim(), LH && this._lines.push(LH + (BH !== HH.length - 1 ? ";" : "")))
+            }
           }
-          get position() {
-            return this._position
-          }
-          set position(UU) {
-            this.setPosition(UU)
-          }
-          set upVector(UU) {
-            this._upToYMatrix || (this._yToUpMatrix = new AU.e, this._upToYMatrix = new AU.e, this._upVector = AU.q.Zero()), UU.normalize(), this._upVector.YL(UU), this.setMatUp()
-          }
-          get upVector() {
-            return this._upVector
-          }
-          setMatUp() {
-            AU.e.RotationAlignToRef(AU.q.UpReadOnly, this._upVector, this._yToUpMatrix), AU.e.RotationAlignToRef(this._upVector, AU.q.UpReadOnly, this._upToYMatrix)
-          }
-          get inertialAlphaOffset() {
-            if (0 !== this._inertialAlphaOffset) return this._inertialAlphaOffset;
-            if (0 !== this.movement.rotationAccumulatedPixels.x) return this.movement.rotationAccumulatedPixels.x;
-            const UU = this.movement.rotationDeltaCurrentFrame.x;
-            return Math.abs(UU) < this._rotationEpsilon ? 0 : UU
-          }
-          set inertialAlphaOffset(UU) {
-            this._inertialAlphaOffset = UU, 0 === UU && this.movement.resetRotationVelocity()
-          }
-          get inertialBetaOffset() {
-            if (0 !== this._inertialBetaOffset) return this._inertialBetaOffset;
-            if (0 !== this.movement.rotationAccumulatedPixels.y) return this.movement.rotationAccumulatedPixels.y;
-            const UU = this.movement.rotationDeltaCurrentFrame.y;
-            return Math.abs(UU) < this._rotationEpsilon ? 0 : UU
-          }
-          set inertialBetaOffset(UU) {
-            this._inertialBetaOffset = UU, 0 === UU && this.movement.resetRotationVelocity()
-          }
-          get inertialRadiusOffset() {
-            if (0 !== this._inertialRadiusOffset) return this._inertialRadiusOffset;
-            if (0 !== this.movement.zoomAccumulatedPixels) return this.movement.zoomAccumulatedPixels;
-            const UU = this.movement.zoomDeltaCurrentFrame;
-            return Math.abs(UU) < this._rotationEpsilon ? 0 : UU
-          }
-          set inertialRadiusOffset(UU) {
-            this._inertialRadiusOffset = UU, 0 === UU && this.movement.resetZoomVelocity()
-          }
-          get panningInertia() {
-            return this._panningInertia
-          }
-          set panningInertia(UU) {
-            this._panningInertia = UU, this.movement && (this.movement.panInertia = UU)
-          }
-          get inertia() {
-            return this._inertia
-          }
-          set inertia(UU) {
-            this._inertia = UU, this.movement && (this.movement.rotationInertia = UU, this.movement.zoomInertia = UU)
-          }
-          get angularSensibilityX() {
-            const UU = this.inputs.attached.pointers;
-            return UU ? UU.angularSensibilityX : 0
-          }
-          set angularSensibilityX(UU) {
-            const XU = this.inputs.attached.pointers;
-            XU && (XU.angularSensibilityX = UU)
-          }
-          get angularSensibilityY() {
-            const UU = this.inputs.attached.pointers;
-            return UU ? UU.angularSensibilityY : 0
-          }
-          set angularSensibilityY(UU) {
-            const XU = this.inputs.attached.pointers;
-            XU && (XU.angularSensibilityY = UU)
-          }
-          get pinchPrecision() {
-            const UU = this.inputs.attached.pointers;
-            return UU ? UU.pinchPrecision : 0
-          }
-          set pinchPrecision(UU) {
-            const XU = this.inputs.attached.pointers;
-            XU && (XU.pinchPrecision = UU)
-          }
-          get pinchDeltaPercentage() {
-            const UU = this.inputs.attached.pointers;
-            return UU ? UU.pinchDeltaPercentage : 0
-          }
-          set pinchDeltaPercentage(UU) {
-            const XU = this.inputs.attached.pointers;
-            XU && (XU.pinchDeltaPercentage = UU)
-          }
-          get useNaturalPinchZoom() {
-            const UU = this.inputs.attached.pointers;
-            return !!UU && UU.useNaturalPinchZoom
-          }
-          set useNaturalPinchZoom(UU) {
-            const XU = this.inputs.attached.pointers;
-            XU && (XU.useNaturalPinchZoom = UU)
-          }
-          get panningSensibility() {
-            const UU = this.inputs.attached.pointers;
-            return UU ? UU.panningSensibility : 0
-          }
-          set panningSensibility(UU) {
-            const XU = this.inputs.attached.pointers;
-            XU && (XU.panningSensibility = UU)
-          }
-          get keysUp() {
-            const UU = this.inputs.attached.keyboard;
-            return UU ? UU.keysUp : []
-          }
-          set keysUp(UU) {
-            const XU = this.inputs.attached.keyboard;
-            XU && (XU.keysUp = UU)
-          }
-          get keysDown() {
-            const UU = this.inputs.attached.keyboard;
-            return UU ? UU.keysDown : []
-          }
-          set keysDown(UU) {
-            const XU = this.inputs.attached.keyboard;
-            XU && (XU.keysDown = UU)
-          }
-          get keysLeft() {
-            const UU = this.inputs.attached.keyboard;
-            return UU ? UU.keysLeft : []
-          }
-          set keysLeft(UU) {
-            const XU = this.inputs.attached.keyboard;
-            XU && (XU.keysLeft = UU)
-          }
-          get keysRight() {
-            const UU = this.inputs.attached.keyboard;
-            return UU ? UU.keysRight : []
-          }
-          set keysRight(UU) {
-            const XU = this.inputs.attached.keyboard;
-            XU && (XU.keysRight = UU)
-          }
-          get wheelPrecision() {
-            const UU = this.inputs.attached.mousewheel;
-            return UU ? UU.wheelPrecision : 0
-          }
-          set wheelPrecision(UU) {
-            const XU = this.inputs.attached.mousewheel;
-            XU && (XU.wheelPrecision = UU)
-          }
-          get zoomToMouseLocation() {
-            const UU = this.inputs.attached.mousewheel;
-            return !!UU && UU.zoomToMouseLocation
-          }
-          set zoomToMouseLocation(UU) {
-            const XU = this.inputs.attached.mousewheel;
-            XU && (XU.zoomToMouseLocation = UU)
-          }
-          get wheelDeltaPercentage() {
-            const UU = this.inputs.attached.mousewheel;
-            return UU ? UU.wheelDeltaPercentage : 0
-          }
-          set wheelDeltaPercentage(UU) {
-            const XU = this.inputs.attached.mousewheel;
-            XU && (XU.wheelDeltaPercentage = UU)
-          }
-          get _useCtrlForPanning() {
-            return this._useCtrlForPanningInternal
-          }
-          set _useCtrlForPanning(UU) {
-            this._useCtrlForPanningInternal = UU;
-            const XU = this.movement.input,
-              zU = XU.getEntry("keyboard", "pan", {
-                modifiers: {
-                  ctrl: !0
-                }
-              });
-            !UU && zU ? XU.inputMap.splice(XU.inputMap.indexOf(zU), 1) : UU && !zU && XU.addEntry({
-              source: "keyboard",
-              modifiers: {
-                ctrl: !0
-              },
-              interaction: "pan"
-            });
-            const cU = XU.getEntry("pointer", "pan", {
-              modifiers: {
-                ctrl: !0
+        }
+      }
+    }
+    class SH extends AH {
+      process(HH, BH, LH) {
+        for (let AH = 0; AH < this.children.length; AH++) {
+          const rH = this.children[AH];
+          if (rH.isValid(HH)) return rH.process(HH, BH, LH)
+        }
+        return ""
+      }
+    }
+    class hH extends AH {
+      isValid(HH) {
+        return this.testExpression.isTrue(HH)
+      }
+    }
+    class tH {
+      isTrue(HH) {
+        return !0
+      }
+      static postfixToInfix(HH) {
+        const BH = [];
+        for (const LH of HH)
+          if (void 0 === tH._OperatorPriority[LH]) BH.push(LH);
+          else {
+            const HH = BH[BH.length - 1],
+              AH = BH[BH.length - 2];
+            BH.length -= 2, BH.push(`(${AH}${LH}${HH})`)
+          } return BH[BH.length - 1]
+      }
+      static infixToPostfix(HH) {
+        const BH = tH._InfixToPostfixCache.get(HH);
+        if (BH) return BH.accessTime = Date.now(), BH.result;
+        if (!HH.includes("&&") && !HH.includes("||") && !HH.includes(")") && !HH.includes("(")) return [HH];
+        const LH = [];
+        let AH = -1;
+        const rH = () => {
+            EH = EH.trim(), "" !== EH && (LH.push(EH), EH = "")
+          },
+          SH = HH => {
+            AH < tH._Stack.length - 1 && (tH._Stack[++AH] = HH)
+          },
+          hH = () => tH._Stack[AH],
+          zH = () => -1 === AH ? "!!INVALID EXPRESSION!!" : tH._Stack[AH--];
+        let CH = 0,
+          EH = "";
+        for (; CH < HH.length;) {
+          const BH = HH.charAt(CH),
+            XH = CH < HH.length - 1 ? HH.substring(CH, 2 + CH) : "";
+          if ("(" === BH) EH = "", SH(BH);
+          else if (")" === BH) {
+            for (rH(); - 1 !== AH && "(" !== hH();) LH.push(zH());
+            zH()
+          } else if (tH._OperatorPriority[XH] > 1) {
+            for (rH(); - 1 !== AH && tH._OperatorPriority[hH()] >= tH._OperatorPriority[XH];) LH.push(zH());
+            SH(XH), CH++
+          } else EH += BH;
+          CH++
+        }
+        for (rH(); - 1 !== AH;) "(" === hH() ? zH() : LH.push(zH());
+        return tH._InfixToPostfixCache.size >= tH.InfixToPostfixCacheLimitSize && tH.ClearCache(), tH._InfixToPostfixCache.set(HH, {
+          result: LH,
+          accessTime: Date.now()
+        }), LH
+      }
+      static ClearCache() {
+        const HH = Array.from(tH._InfixToPostfixCache.entries()).sort(((HH, BH) => HH[1].accessTime - BH[1].accessTime));
+        for (let BH = 0; BH < tH.InfixToPostfixCacheCleanupSize; BH++) tH._InfixToPostfixCache.delete(HH[BH][0])
+      }
+    }
+    tH.InfixToPostfixCacheLimitSize = 5e4, tH.InfixToPostfixCacheCleanupSize = 25e3, tH._InfixToPostfixCache = new Map, tH._OperatorPriority = {
+      ")": 0,
+      "(": 1,
+      "||": 2,
+      "&&": 3
+    }, tH._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    class zH extends tH {
+      constructor(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        super(), this.define = HH, this.not = BH
+      }
+      isTrue(HH) {
+        let BH = void 0 !== HH[this.define];
+        return this.not && (BH = !BH), BH
+      }
+    }
+    class CH extends tH {
+      isTrue(HH) {
+        return this.leftOperand.isTrue(HH) || this.rightOperand.isTrue(HH)
+      }
+    }
+    class EH extends tH {
+      isTrue(HH) {
+        return this.leftOperand.isTrue(HH) && this.rightOperand.isTrue(HH)
+      }
+    }
+    class XH extends tH {
+      constructor(HH, BH, LH) {
+        super(), this.define = HH, this.operand = BH, this.testValue = LH
+      }
+      toString() {
+        return `${this.define} ${this.operand} ${this.testValue}`
+      }
+      isTrue(HH) {
+        let BH = !1;
+        const LH = parseInt(void 0 != HH[this.define] ? HH[this.define] : this.define),
+          AH = parseInt(void 0 != HH[this.testValue] ? HH[this.testValue] : this.testValue);
+        if (isNaN(LH) || isNaN(AH)) return !1;
+        switch (this.operand) {
+          case ">":
+            BH = LH > AH;
+            break;
+          case "<":
+            BH = LH < AH;
+            break;
+          case "<=":
+            BH = LH <= AH;
+            break;
+          case ">=":
+            BH = LH >= AH;
+            break;
+          case "==":
+            BH = LH === AH;
+            break;
+          case "!=":
+            BH = LH !== AH
+        }
+        return BH
+      }
+    }
+    var GH = LH(41169),
+      YH = LH(41164);
+    const uH = /defined\s*?\((.+?)\)/g,
+      QH = /defined\s*?\[(.+?)\]/g,
+      WH = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
+      MH = /__decl__/,
+      xH = /light\{X\}.(\w*)/g,
+      vH = /\{X\}/g,
+      PH = [],
+      TH = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
+
+    function UH(HH) {
+      HH.processor && HH.processor.initializeShaders && HH.processor.initializeShaders(HH.processingContext)
+    }
+
+    function VH(HH, BH, LH, AH) {
+      BH.processor?.preProcessShaderCode && (HH = BH.processor.preProcessShaderCode(HH, BH.isFragment)), lH(HH, BH, (HH => {
+        BH.processCodeAfterIncludes && (HH = BH.processCodeAfterIncludes(BH.isFragment ? "fragment" : "vertex", HH, BH.defines));
+        const rH = function(HH, BH, LH) {
+          let AH = function(HH, BH) {
+            if (BH.processor?.noPrecision) return HH;
+            const LH = BH.shouldUseHighPrecisionShader; - 1 === HH.indexOf("precision highp float") ? HH = LH ? "precision highp float;\n" + HH : "precision mediump float;\n" + HH : LH || (HH = HH.replace("precision highp float", "precision mediump float"));
+            return HH
+          }(HH, BH);
+          if (!BH.processor) return AH;
+          if (0 === BH.processor.shaderLanguage && -1 !== AH.indexOf("#version 3") && (AH = AH.replace("#version 300 es", ""), !BH.processor.parseGLES3)) return AH;
+          const rH = BH.defines,
+            SH = fH(BH, LH);
+          BH.processor.preProcessor && (AH = BH.processor.preProcessor(AH, rH, SH, BH.isFragment, BH.processingContext));
+          const hH = {};
+          AH = IH(AH, SH, BH, hH), BH.processor.postProcessor && (AH = BH.processor.postProcessor(AH, rH, BH.isFragment, BH.processingContext, LH ? {
+            drawBuffersExtensionDisabled: !LH.getCaps().drawBuffersExtension
+          } : {}, SH, hH));
+          LH?._features.needShaderCodeInlining && (AH = LH.inlineShaderCode(AH));
+          return AH
+        }(HH, BH, AH);
+        LH(rH, HH)
+      }))
+    }
+
+    function OH(HH, BH, LH) {
+      return LH.processor && LH.processor.finalizeShaders ? LH.processor.finalizeShaders(HH, BH, LH.processingContext) : {
+        vertexCode: HH,
+        fragmentCode: BH
+      }
+    }
+
+    function bH(HH) {
+      const BH = /defined\((.+)\)/.exec(HH);
+      if (BH && BH.length) return new zH(BH[1].trim(), "!" === HH[0]);
+      const LH = ["==", "!=", ">=", "<=", "<", ">"];
+      let AH = "",
+        rH = 0;
+      for (AH of LH)
+        if (rH = HH.indexOf(AH), rH > -1) break;
+      if (-1 === rH) return new zH(HH);
+      const SH = HH.substring(0, rH).trim(),
+        hH = HH.substring(rH + AH.length).trim();
+      return new XH(SH, AH, hH)
+    }
+
+    function kH(HH, BH) {
+      const LH = new hH,
+        AH = HH.substring(0, BH);
+      let rH = HH.substring(BH);
+      return rH = rH.substring(0, (rH.indexOf("//") + 1 || rH.length + 1) - 1).trim(), LH.testExpression = "#ifdef" === AH ? new zH(rH) : "#ifndef" === AH ? new zH(rH, !0) : function(HH) {
+        HH = HH.replace(uH, "defined[$1]");
+        const BH = tH.infixToPostfix(HH),
+          LH = [];
+        for (const rH of BH)
+          if ("||" !== rH && "&&" !== rH) LH.push(rH);
+          else if (LH.length >= 2) {
+          let HH = LH[LH.length - 1],
+            BH = LH[LH.length - 2];
+          LH.length -= 2;
+          const AH = "&&" == rH ? new EH : new CH;
+          "string" === typeof HH && (HH = HH.replace(QH, "defined($1)")), "string" === typeof BH && (BH = BH.replace(QH, "defined($1)")), AH.leftOperand = "string" === typeof BH ? bH(BH) : BH, AH.rightOperand = "string" === typeof HH ? bH(HH) : HH, LH.push(AH)
+        }
+        let AH = LH[LH.length - 1];
+        return "string" === typeof AH && (AH = AH.replace(QH, "defined($1)")), "string" === typeof AH ? bH(AH) : AH
+      }(rH), LH
+    }
+
+    function mH(HH, BH, LH, rH) {
+      let SH;
+      for (; oH(HH, LH, rH);) {
+        SH = HH.currentLine;
+        const hH = SH.substring(0, 5).toLowerCase();
+        if ("#else" === hH) {
+          const LH = new AH;
+          return BH.children.push(LH), void oH(HH, LH, rH)
+        }
+        if ("#elif" === hH) {
+          const HH = kH(SH, 5);
+          BH.children.push(HH), LH = HH
+        }
+      }
+    }
+
+    function oH(HH, BH, LH) {
+      for (; HH.canRead;) {
+        HH.lineIndex++;
+        const rH = HH.currentLine;
+        if (rH.indexOf("#") >= 0) {
+          const AH = TH.exec(rH);
+          if (AH && AH.length) {
+            switch (AH[0]) {
+              case "#ifdef": {
+                const AH = new SH;
+                BH.children.push(AH);
+                const hH = kH(rH, 6);
+                AH.children.push(hH), mH(HH, AH, hH, LH);
+                break
               }
-            });
-            !UU && cU ? XU.inputMap.splice(XU.inputMap.indexOf(cU), 1) : UU && !cU && XU.addEntry({
-              source: "pointer",
-              button: 0,
-              modifiers: {
-                ctrl: !0
-              },
-              interaction: "pan"
+              case "#else":
+              case "#elif":
+                return !0;
+              case "#endif":
+                return !1;
+              case "#ifndef": {
+                const AH = new SH;
+                BH.children.push(AH);
+                const hH = kH(rH, 7);
+                AH.children.push(hH), mH(HH, AH, hH, LH);
+                break
+              }
+              case "#if": {
+                const AH = new SH,
+                  hH = kH(rH, 3);
+                BH.children.push(AH), AH.children.push(hH), mH(HH, AH, hH, LH);
+                break
+              }
+            }
+            continue
+          }
+        }
+        const hH = new AH;
+        if (hH.line = rH, BH.children.push(hH), "#" === rH[0] && "d" === rH[1]) {
+          const HH = rH.replace(";", "").split(" ");
+          hH.additionalDefineKey = HH[1], 3 === HH.length && (hH.additionalDefineValue = HH[2])
+        }
+      }
+      return !1
+    }
+
+    function IH(HH, BH, LH, SH) {
+      const hH = new AH,
+        tH = new rH;
+      return tH.lineIndex = -1, tH.lines = HH.split("\n"), oH(tH, hH, SH), hH.process(BH, LH, SH)
+    }
+
+    function fH(HH, BH) {
+      const LH = HH.defines,
+        AH = {};
+      for (const rH of LH) {
+        const HH = rH.replace("#define", "").replace(";", "").trim().split(" ");
+        AH[HH[0]] = HH.length > 1 ? HH[1] : ""
+      }
+      return 0 === HH.processor?.shaderLanguage && (AH.GL_ES = "true"), AH.__VERSION__ = HH.version, AH[HH.platformName] = "true", (0, YH.f)(AH, BH?.isNDCHalfZRange, BH?.WrH, BH?.useExactSrgbConversions), AH
+    }
+
+    function lH(HH, BH, LH) {
+      let AH;
+      for (PH.length = 0; null !== (AH = WH.exec(HH));) PH.push(AH);
+      let rH = [HH],
+        SH = !1;
+      for (const tH of PH) {
+        let HH = tH[1];
+        if (-1 !== HH.indexOf("__decl__") && (HH = HH.replace(MH, ""), BH.supportsUniformBuffers && (HH = HH.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), HH += "Declaration"), !BH.includesShadersStore[HH]) {
+          const AH = BH.shadersRepository + "ShadersInclude/" + HH + ".fx";
+          return void KH.loadFile(AH, (AH => {
+            BH.includesShadersStore[HH] = AH, lH(rH.join(""), BH, LH)
+          }))
+        } {
+          let LH = BH.includesShadersStore[HH];
+          if (tH[2]) {
+            const HH = tH[3].split(",");
+            for (let BH = 0; BH < HH.length; BH += 2) {
+              const AH = new RegExp(HH[BH], "g"),
+                rH = HH[BH + 1];
+              LH = LH.replace(AH, rH)
+            }
+          }
+          if (tH[4]) {
+            const HH = tH[5];
+            if (-1 !== HH.indexOf("..")) {
+              const AH = HH.split(".."),
+                rH = parseInt(AH[0]);
+              let SH = parseInt(AH[1]),
+                hH = LH.slice(0);
+              LH = "", isNaN(SH) && (SH = BH.indexParameters[AH[1]]);
+              for (let HH = rH; HH < SH; HH++) BH.supportsUniformBuffers || (hH = hH.replace(xH, ((HH, BH) => BH + "{X}"))), LH += hH.replace(vH, HH.toString()) + "\n"
+            } else BH.supportsUniformBuffers || (LH = LH.replace(xH, ((HH, BH) => BH + "{X}"))), LH = LH.replace(vH, HH)
+          }
+          const AH = [];
+          for (const HH of rH) {
+            const BH = HH.split(tH[0]);
+            for (let HH = 0; HH < BH.length - 1; HH++) AH.push(BH[HH]), AH.push(LH);
+            AH.push(BH[BH.length - 1])
+          }
+          rH = AH, SH = SH || LH.indexOf("#include<") >= 0 || LH.indexOf("#include <") >= 0
+        }
+      }
+      PH.length = 0;
+      const hH = rH.join("");
+      SH ? lH(hH.toString(), BH, LH) : LH(hH)
+    }
+    const KH = {
+      loadFile: (HH, BH, LH, AH, rH, SH) => {
+        throw (0, GH.i)("FileTools")
+      }
+    }
+  },
+  41164: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => rH,
+      c: () => SH,
+      f: () => tH,
+      g: () => hH,
+      h: () => zH
+    });
+    var AH = LH(41169);
+    const rH = {};
+
+    function SH(HH, BH) {
+      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (BH ? BH + "\n" : "") + HH
+    }
+
+    function hH(HH, BH, LH, SH, hH, tH, zH) {
+      const CH = zH || rH.loadFile;
+      if (!CH) throw (0, AH.i)("FileTools");
+      return CH(HH, BH, LH, SH, hH, tH)
+    }
+
+    function tH(HH, BH, LH, AH) {
+      if (HH) return BH ? HH.IS_NDC_HALF_ZRANGE = "" : delete HH.IS_NDC_HALF_ZRANGE, LH ? HH.USE_REVERSE_DEPTHBUFFER = "" : delete HH.USE_REVERSE_DEPTHBUFFER, void(AH ? HH.USE_EXACT_SRGB_CONVERSIONS = "" : delete HH.USE_EXACT_SRGB_CONVERSIONS);
+      {
+        let HH = "";
+        return BH && (HH += "#define IS_NDC_HALF_ZRANGE"), LH && (HH && (HH += "\n"), HH += "#define USE_REVERSE_DEPTHBUFFER"), AH && (HH && (HH += "\n"), HH += "#define USE_EXACT_SRGB_CONVERSIONS"), HH
+      }
+    }
+
+    function zH(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        AH = arguments.length > 3 ? arguments[3] : void 0;
+      switch (HH) {
+        case 3: {
+          const HH = new Int8Array(BH);
+          return AH && HH.set(new Int8Array(AH)), HH
+        }
+        case 0: {
+          const HH = new Uint8Array(BH);
+          return AH && HH.set(new Uint8Array(AH)), HH
+        }
+        case 4: {
+          const HH = "number" !== typeof BH ? new Int16Array(BH) : new Int16Array(LH ? BH / 2 : BH);
+          return AH && HH.set(new Int16Array(AH)), HH
+        }
+        case 5:
+        case 8:
+        case 9:
+        case 10:
+        case 2: {
+          const HH = "number" !== typeof BH ? new Uint16Array(BH) : new Uint16Array(LH ? BH / 2 : BH);
+          return AH && HH.set(new Uint16Array(AH)), HH
+        }
+        case 6: {
+          const HH = "number" !== typeof BH ? new Int32Array(BH) : new Int32Array(LH ? BH / 4 : BH);
+          return AH && HH.set(new Int32Array(AH)), HH
+        }
+        case 7:
+        case 11:
+        case 12:
+        case 13:
+        case 14:
+        case 15: {
+          const HH = "number" !== typeof BH ? new Uint32Array(BH) : new Uint32Array(LH ? BH / 4 : BH);
+          return AH && HH.set(new Uint32Array(AH)), HH
+        }
+        case 1: {
+          const HH = "number" !== typeof BH ? new Float32Array(BH) : new Float32Array(LH ? BH / 4 : BH);
+          return AH && HH.set(new Float32Array(AH)), HH
+        }
+      }
+      const rH = new Uint8Array(BH);
+      return AH && rH.set(new Uint8Array(AH)), rH
+    }
+  },
+  41169: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => CH,
+      e: () => EH,
+      f: () => zH,
+      i: () => rH
+    });
+    const AH = {};
+
+    function rH(HH) {
+      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !AH[HH]) return AH[HH] = !0, `${HH} needs to be imported before as it contains a side-effect required by your code.`
+    }
+    const SH = {};
+    let hH = !1,
+      tH = 0;
+
+    function zH(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const AH = function() {
+        if ((LH || hH) && 0 === tH) {
+          const LH = `${HH}.${BH}`;
+          SH[LH] || (SH[LH] = !0, console.warn(`[Babylon.js] ${LH}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
+        }
+      };
+      return AH.__isSideEffectStub = !0, AH
+    }
+
+    function CH(HH) {
+      return !!HH && !HH.__isSideEffectStub
+    }
+
+    function EH(HH, BH) {
+      return {
+        get() {},
+        set(HH) {
+          Object.defineProperty(this, BH, {
+            value: HH,
+            writable: !0,
+            configurable: !0,
+            enumerable: !0
+          })
+        },
+        configurable: !0,
+        enumerable: !0
+      }
+    }
+  },
+  41154: (HH, BH, LH) => {
+    function AH() {
+      return "undefined" !== typeof window
+    }
+
+    function rH() {
+      return "undefined" !== typeof navigator
+    }
+
+    function SH() {
+      return "undefined" !== typeof document
+    }
+
+    function hH(HH) {
+      let BH = "",
+        LH = HH.firstChild;
+      for (; LH;) 3 === LH.nodeType && (BH += LH.textContent), LH = LH.nextSibling;
+      return BH
+    }
+    LH.d(BH, {
+      c: () => hH,
+      d: () => SH,
+      h: () => rH,
+      k: () => AH
+    })
+  },
+  41346: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => AH,
+      g: () => rH,
+      j: () => SH
+    });
+    class AH extends Error {}
+    AH._setPrototypeOf = Object.setPrototypeOf || ((HH, BH) => (HH.__proto__ = BH, HH));
+    const rH = {
+      MeshInvalidPositionsError: 0,
+      UnsupportedTextureError: 1e3,
+      GLTFLoaderUnexpectedMagicError: 2e3,
+      SceneLoaderError: 3e3,
+      LoadFileError: 4e3,
+      RequestFileError: 4001,
+      ReadFileError: 4002
+    };
+    class SH extends AH {
+      constructor(HH, BH, LH) {
+        super(HH), this.errorCode = BH, this.innerError = LH, this.name = "RuntimeError", AH._setPrototypeOf(this, SH.prototype)
+      }
+    }
+  },
+  41336: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => fH,
+      h: () => vH,
+      i: () => kH,
+      k: () => oH,
+      l: () => OH,
+      m: () => UH,
+      n: () => VH,
+      q: () => qH,
+      r: () => bH,
+      s: () => PH
+    });
+    var AH = LH(41339),
+      rH = LH(41154),
+      SH = LH(37997);
+    class hH {}
+    hH.FilesToLoad = {};
+    var tH = LH(41346),
+      zH = LH(41353),
+      CH = LH(37989),
+      EH = LH(41164),
+      XH = LH(41173),
+      GH = LH(39595),
+      YH = LH(41179),
+      uH = LH(41356);
+    const QH = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
+    class WH extends tH.j {
+      constructor(HH, BH) {
+        super(HH, tH.g.LoadFileError), this.name = "LoadFileError", tH.d._setPrototypeOf(this, WH.prototype), BH instanceof AH.d ? this.request = BH : this.file = BH
+      }
+    }
+    class MH extends tH.j {
+      constructor(HH, BH) {
+        super(HH, tH.g.RequestFileError), this.request = BH, this.name = "RequestFileError", tH.d._setPrototypeOf(this, MH.prototype)
+      }
+    }
+    class xH extends tH.j {
+      constructor(HH, BH) {
+        super(HH, tH.g.ReadFileError), this.file = BH, this.name = "ReadFileError", tH.d._setPrototypeOf(this, xH.prototype)
+      }
+    }
+    const vH = {
+        DefaultRetryStrategy: class {
+          static ExponentialBackoff() {
+            let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
+              BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
+            return (LH, AH, rH) => 0 !== AH.status || rH >= HH || -1 !== LH.indexOf("file:") ? -1 : Math.pow(2, rH) * BH
+          }
+        }.ExponentialBackoff(),
+        BaseUrl: "",
+        CorsBehavior: "anonymous",
+        PreprocessUrl: HH => HH,
+        ScriptBaseUrl: "",
+        ScriptPreprocessUrl: HH => HH,
+        CleanUrl: HH => HH = HH.replace(/#/gm, "%23")
+      },
+      PH = (HH, BH) => {
+        if ((!HH || 0 !== HH.indexOf("data:")) && vH.CorsBehavior)
+          if ("string" === typeof vH.CorsBehavior || vH.CorsBehavior instanceof String) BH.crossOrigin = vH.CorsBehavior;
+          else {
+            const LH = vH.CorsBehavior(HH);
+            LH && (BH.crossOrigin = LH)
+          }
+      },
+      TH = {
+        getRequiredSize: null
+      },
+      UH = function(HH, BH, LH, rH) {
+        let SH, tH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+          EH = arguments.length > 5 ? arguments[5] : void 0,
+          XH = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : CH.d.LastCreatedEngine;
+        if ("undefined" === typeof HTMLImageElement && !XH?._features.forceBitmapOverHTMLImageElement) return LH("LoadImage is only supported in web or BabylonNative environments."), null;
+        if (XH?._features.forceBitmapOverHTMLImageElement && "string" !== typeof HH && "undefined" !== typeof Blob) {
+          let AH;
+          if (HH instanceof Blob) AH = HH;
+          else {
+            const BH = HH instanceof ArrayBuffer ? HH : (0, uH.m)(HH);
+            AH = new Blob([BH], {
+              type: tH
             })
           }
-          get _panningMouseButton() {
-            return this._panningMouseButtonInternal
+          return XH.createImageBitmap(AH, {
+            premultiplyAlpha: "none",
+            colorSpaceConversion: "none",
+            ...EH
+          }).then(BH).catch((BH => {
+            LH && LH("Error while trying to load image: " + HH, BH)
+          })), null
+        }
+        let GH = !1;
+        if (HH instanceof ArrayBuffer || ArrayBuffer.isView(HH))
+          if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
+            let BH;
+            BH = HH instanceof ArrayBuffer ? HH : (0, uH.m)(HH), SH = URL.createObjectURL(new Blob([BH], {
+              type: tH
+            })), GH = !0
+          } else SH = `data:${tH};base64,` + (0, zH.f)(HH);
+        else HH instanceof Blob ? (SH = URL.createObjectURL(HH), GH = !0) : (SH = vH.CleanUrl(HH), SH = vH.PreprocessUrl(SH));
+        const YH = BH => {
+          if (LH) {
+            const AH = SH || HH.toString();
+            LH(`Error while trying to load image: ${0===AH.indexOf("http")||AH.length<=128?AH:AH.slice(0,128)+"..."}`, BH)
           }
-          set _panningMouseButton(UU) {
-            this._panningMouseButtonInternal = UU;
-            const XU = this.movement.input.getEntry("pointer", "pan", {
-              modifiers: {}
-            });
-            XU && (XU.button = UU)
+        };
+        if (XH?._features.forceBitmapOverHTMLImageElement) return OH(SH, (AH => {
+          XH.createImageBitmap(new Blob([AH], {
+            type: tH
+          }), {
+            premultiplyAlpha: "none",
+            colorSpaceConversion: "none",
+            ...EH
+          }).then((HH => {
+            BH(HH), GH && URL.revokeObjectURL(SH)
+          })).catch((BH => {
+            LH && LH("Error while trying to load image: " + HH, BH)
+          }))
+        }), void 0, rH || void 0, !0, ((HH, BH) => {
+          YH(BH)
+        })), null;
+        const QH = new Image;
+        if (TH.getRequiredSize) {
+          const BH = TH.getRequiredSize(HH);
+          BH.width && (QH.width = BH.width), BH.height && (QH.height = BH.height)
+        }
+        PH(SH, QH);
+        const WH = [],
+          MH = () => {
+            for (const HH of WH) HH.target.removeEventListener(HH.name, HH.handler);
+            WH.length = 0
+          };
+        WH.push({
+          target: QH,
+          name: "load",
+          handler: () => {
+            MH(), BH(QH), GH && QH.src && URL.revokeObjectURL(QH.src)
           }
-          get isInterpolating() {
-            return this._isInterpolating
+        }), WH.push({
+          target: QH,
+          name: "error",
+          handler: HH => {
+            MH(), YH(HH), GH && QH.src && URL.revokeObjectURL(QH.src)
           }
-          get bouncingBehavior() {
-            return this._bouncingBehavior
+        }), WH.push({
+          target: document,
+          name: "securitypolicyviolation",
+          handler: HH => {
+            if (HH.blockedURI !== QH.src || "XX" === HH.disposition) return;
+            MH();
+            const BH = new Error(`CSP violation of policy ${HH.effectiveDirective} ${HH.blockedURI}. Current policy is ${HH.originalPolicy}`);
+            CH.d.UseFallbackTexture = !1, YH(BH), GH && QH.src && URL.revokeObjectURL(QH.src), QH.src = ""
           }
-          get useBouncingBehavior() {
-            return null != this._bouncingBehavior
-          }
-          set useBouncingBehavior(UU) {
-            UU !== this.useBouncingBehavior && (UU ? (this._bouncingBehavior = new tU, this.addBehavior(this._bouncingBehavior)) : this._bouncingBehavior && (this.removeBehavior(this._bouncingBehavior), this._bouncingBehavior = null))
-          }
-          get framingBehavior() {
-            return this._framingBehavior
-          }
-          get useFramingBehavior() {
-            return null != this._framingBehavior
-          }
-          set useFramingBehavior(UU) {
-            UU !== this.useFramingBehavior && (UU ? (this._framingBehavior = new gU, this.addBehavior(this._framingBehavior)) : this._framingBehavior && (this.removeBehavior(this._framingBehavior), this._framingBehavior = null))
-          }
-          get autoRotationBehavior() {
-            return this._autoRotationBehavior
-          }
-          get useAutoRotationBehavior() {
-            return null != this._autoRotationBehavior
-          }
-          set useAutoRotationBehavior(UU) {
-            UU !== this.useAutoRotationBehavior && (UU ? (this._autoRotationBehavior = new IU, this.addBehavior(this._autoRotationBehavior)) : this._autoRotationBehavior && (this.removeBehavior(this._autoRotationBehavior), this._autoRotationBehavior = null))
-          }
-          constructor(UU, XU, zU, yU, FU, oU) {
-            var DU;
-            let EU = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-            super(UU, AU.q.Zero(), oU, EU), DU = this, this.alpha = ((0, cU.n)(this, JU), (0, cU.n)(this, jU, void 0)), this.beta = ((0, cU.n)(this, KU), (0, cU.n)(this, bU, void 0)), this.radius = ((0, cU.n)(this, TU), (0, cU.n)(this, hU, void 0)), this.overrideCloneAlphaBetaRadius = ((0, cU.n)(this, UX), (0, cU.n)(this, XX, void 0)), this.eY = ((0, cU.n)(this, zX), (0, cU.n)(this, cX, void 0)), this._targetHost = ((0, cU.n)(this, yX), (0, cU.n)(this, QX, void 0)), this._upToYMatrix = (0, cU.n)(this, AX), this._inertialAlphaOffset = 0, this._inertialBetaOffset = 0, this._inertialRadiusOffset = 0, this.lowerAlphaLimit = (0, cU.n)(this, FX, null), this.upperAlphaLimit = ((0, cU.n)(this, oX), (0, cU.n)(this, DX, null)), this.lowerBetaLimit = ((0, cU.n)(this, EX), (0, cU.n)(this, YX, .01)), this.upperBetaLimit = ((0, cU.n)(this, NX), (0, cU.n)(this, IX, Math.PI - .01)), this.lowerRadiusLimit = ((0, cU.n)(this, pX), (0, cU.n)(this, aX, null)), this.upperRadiusLimit = ((0, cU.n)(this, tX), (0, cU.n)(this, gX, null)), this.lowerTargetYLimit = ((0, cU.n)(this, kX), (0, cU.n)(this, GX, -1 / 0)), this.inertialPanningX = ((0, cU.n)(this, BX), (0, cU.n)(this, ZX, 0)), this.inertialPanningY = ((0, cU.n)(this, RX), (0, cU.n)(this, PX, 0)), this.pinchToPanMaxDistance = ((0, cU.n)(this, WX), (0, cU.n)(this, dX, 20)), this.panningDistanceLimit = ((0, cU.n)(this, LX), (0, cU.n)(this, eX, null)), this.panningOriginTarget = ((0, cU.n)(this, CX), (0, cU.n)(this, wX, AU.q.Zero())), this._panningInertia = ((0, cU.n)(this, qX), .9), this._inertia = .9, this.zoomOnFactor = (0, cU.n)(this, OX, 1), this.targetScreenOffset = ((0, cU.n)(this, SX), (0, cU.n)(this, rX, AU.m.Zero())), this.allowUpsideDown = ((0, cU.n)(this, uX), (0, cU.n)(this, fX, !0)), this.useInputToRestoreState = ((0, cU.n)(this, iX), (0, cU.n)(this, HX, !0)), this.restoreStateInterpolationFactor = ((0, cU.n)(this, MX), (0, cU.n)(this, vX, 0)), this._currentInterpolationFactor = ((0, cU.n)(this, VX), 0), this._viewMatrix = new AU.e, this._useCtrlForPanningInternal = !0, this._panningMouseButtonInternal = 2, this.panningAxis = new AU.q(1, 1, 0), this._transformedDirection = new AU.q, this.mapPanning = !1, this._isInterpolating = !1, this.onMeshTargetChangedObservable = new QU.e, this.checkCollisions = !1, this.collisionRadius = new AU.q(.5, .5, .5), this._previousPosition = AU.q.Zero(), this._collisionVelocity = AU.q.Zero(), this._newPosition = AU.q.Zero(), this._computationVector = AU.q.Zero(), this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget = new AU.q(NaN, NaN, NaN), this._goalTargetScreenOffset = new AU.m(NaN, NaN), this._onCollisionPositionChange = function(UU, XU) {
-              let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-              zU ? (DU.setPosition(XU), DU.wN && DU.wN(zU)) : DU._previousPosition.YL(DU._position);
-              const cU = Math.cos(DU.alpha),
-                yU = Math.sin(DU.alpha),
-                QU = Math.cos(DU.beta);
-              let AU = Math.sin(DU.beta);
-              0 === AU && (AU = 1e-4);
-              const FU = DU._getTargetPosition();
-              DU._computationVector.sUU(DU.radius * cU * AU, DU.radius * QU, DU.radius * yU * AU), FU.addToRef(DU._computationVector, DU._newPosition), DU._position.YL(DU._newPosition);
-              let oU = DU.upVector;
-              DU.allowUpsideDown && DU.beta < 0 && (oU = oU.clone(), oU = oU.fp()), DU._computeViewMatrix(DU._position, FU, oU), DU._viewMatrix.addAtIndex(12, DU.targetScreenOffset.x), DU._viewMatrix.addAtIndex(13, DU.targetScreenOffset.y), DU._collisionTriggered = !1
-            }, this.eY = AU.q.Zero(), FU && this.setTarget(FU), this.alpha = XU, this.beta = zU, this.radius = yU, this.getViewMatrix(), this.inputs = new rU(this), this.inputs.addKeyboard().addMouseWheel().addPointers(), this.movement = new HU(this.nS(), this._position), this.movement.rotationInertia = this._inertia, this.movement.zoomInertia = this._inertia, this.movement.panInertia = this._panningInertia
-          }
-          _initCache() {
-            super._initCache(), this._cache.eY = new AU.q(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.alpha = void 0, this._cache.beta = void 0, this._cache.radius = void 0, this._cache.targetScreenOffset = AU.m.Zero()
-          }
-          _updateCache(UU) {
-            UU || super._updateCache(), this._cache.eY.YL(this._getTargetPosition()), this._cache.alpha = this.alpha, this._cache.beta = this.beta, this._cache.radius = this.radius, this._cache.targetScreenOffset.YL(this.targetScreenOffset)
-          }
-          _getTargetPosition() {
-            if (this._targetHost && this._targetHost.getAbsolutePosition) {
-              const UU = this._targetHost.getAbsolutePosition();
-              this._targetBoundingCenter ? UU.addToRef(this._targetBoundingCenter, this.eY) : this.eY.YL(UU)
-            }
-            const UU = this._getLockedTargetPosition();
-            return UU || this.eY
-          }
-          storeState() {
-            return this._storedAlpha = this.alpha, this._storedBeta = this.beta, this._storedRadius = this.radius, this._storedTarget = this._getTargetPosition().clone(), this._storedTargetScreenOffset = this.targetScreenOffset.clone(), super.storeState()
-          }
-          _restoreStateValues() {
-            return this.hasStateStored() && this.restoreStateInterpolationFactor > NU.c && this.restoreStateInterpolationFactor < 1 ? (this.interpolateTo(this._storedAlpha, this._storedBeta, this._storedRadius, this._storedTarget, this._storedTargetScreenOffset, this.restoreStateInterpolationFactor), !0) : !!super._restoreStateValues() && (this.setTarget(this._storedTarget.clone()), this.alpha = this._storedAlpha, this.beta = this._storedBeta, this.radius = this._storedRadius, this.targetScreenOffset = this._storedTargetScreenOffset.clone(), this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, !0)
-          }
-          stopInterpolation() {
-            this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget.set(NaN, NaN, NaN), this._goalTargetScreenOffset.set(NaN, NaN)
-          }
-          interpolateTo() {
-            let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.alpha,
-              XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.beta,
-              zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.radius,
-              cU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.target,
-              yU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.targetScreenOffset,
-              QU = arguments.length > 5 ? arguments[5] : void 0;
-            this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, null != QU ? this._currentInterpolationFactor = QU : 0 !== this.restoreStateInterpolationFactor ? this._currentInterpolationFactor = this.restoreStateInterpolationFactor : this._currentInterpolationFactor = .1, this._goalAlpha = MU(UU, this._goalAlpha), this._goalBeta = MU(XU, this._goalBeta), this._goalRadius = MU(zU, this._goalRadius), this._goalTarget.set(MU(cU.x, this._goalTarget.x), MU(cU.y, this._goalTarget.y), MU(cU.z, this._goalTarget.z)), this._goalTargetScreenOffset.set(MU(yU.x, this._goalTargetScreenOffset.x), MU(yU.y, this._goalTargetScreenOffset.y)), this._goalAlpha = (0, FU.Clamp)(this._goalAlpha, this.lowerAlphaLimit ?? -1 / 0, this.upperAlphaLimit ?? 1 / 0), this._goalBeta = (0, FU.Clamp)(this._goalBeta, this.lowerBetaLimit ?? -1 / 0, this.upperBetaLimit ?? 1 / 0), this._goalRadius = (0, FU.Clamp)(this._goalRadius, this.lowerRadiusLimit ?? -1 / 0, this.upperRadiusLimit ?? 1 / 0), this._goalTarget.y = (0, FU.Clamp)(this._goalTarget.y, this.lowerTargetYLimit ?? -1 / 0, 1 / 0), this._isInterpolating = !0
-          }
-          _isSynchronizedViewMatrix() {
-            return !!super._isSynchronizedViewMatrix() && (this._cache.eY.equals(this._getTargetPosition()) && this._cache.alpha === this.alpha && this._cache.beta === this.beta && this._cache.radius === this.radius && this._cache.targetScreenOffset.equals(this.targetScreenOffset))
-          }
-          attachControl(UU, XU) {
-            let zU = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-              cU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
-            const yU = arguments;
-            XU = ZU.j.BackCompatCameraNoPreventDefault(yU), this._useCtrlForPanning = zU, this._panningMouseButton = cU, "boolean" === typeof yU[0] && (yU.length > 1 && (this._useCtrlForPanning = yU[1]), yU.length > 2 && (this._panningMouseButton = yU[2])), this.inputs.attachElement(XU), this._reset = () => {
-              this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0
-            }
-          }
-          detachControl() {
-            this.inputs.detachElement(), this._reset && this._reset()
-          }
-          _applyRotationAndZoomDelta(UU, XU, zU) {
-            const cU = this.invertRotation ? -1 : 1;
-            let yU = UU * this._calculateHandednessMultiplier();
-            this.beta < 0 && (yU *= -1), this.alpha += yU * cU, this.beta += XU * cU, this.radius -= zU
-          }
-          _applyPanDelta(UU, XU) {
-            const zU = AU.l.Sp[0].sUU(UU, XU, XU);
-            if (this._viewMatrix.invertToRef(this._cameraTransformMatrix), zU.multiplyInPlace(this.panningAxis), AU.q.TransformNormalToRef(zU, this._cameraTransformMatrix, this._transformedDirection), this.mapPanning) {
-              const UU = this.upVector,
-                XU = AU.q.CrossToRef(this._transformedDirection, UU, this._transformedDirection);
-              AU.q.CrossToRef(UU, XU, this._transformedDirection)
-            } else this.panningAxis.y || (this._transformedDirection.y = 0);
-            if (!this._targetHost)
-              if (null !== this.panningDistanceLimit) {
-                this._transformedDirection.addInPlace(this.eY);
-                AU.q.DistanceSquared(this._transformedDirection, this.panningOriginTarget) <= this.panningDistanceLimit * this.panningDistanceLimit && this.eY.YL(this._transformedDirection)
-              } else {
-                if (this.parent) {
-                  const UU = AU.l.Matrix[0];
-                  this.parent.getWorldMatrix().getRotationMatrixToRef(UU), UU.transposeToRef(UU), AU.q.TransformCoordinatesToRef(this._transformedDirection, UU, this._transformedDirection)
+        }), (() => {
+          for (const HH of WH) HH.target.addEventListener(HH.name, HH.handler)
+        })();
+        const xH = "blob:" === SH.substring(0, 5),
+          UH = "data:" === SH.substring(0, 5),
+          VH = () => {
+            xH || UH || !AH.d.IsCustomRequestAvailable ? QH.src = SH : OH(SH, ((HH, BH, LH) => {
+              const AH = new Blob([HH], {
+                  type: !tH && LH ? LH : tH
+                }),
+                rH = URL.createObjectURL(AH);
+              GH = !0, QH.src = rH
+            }), void 0, rH || void 0, !0, ((HH, BH) => {
+              YH(BH)
+            }))
+          },
+          bH = () => {
+            rH && rH.loadImage(SH, QH)
+          };
+        if (!xH && !UH && rH && rH.enableTexturesOffline) rH.open(bH, VH);
+        else {
+          if (-1 !== SH.indexOf("file:")) {
+            const HH = decodeURIComponent(SH.substring(5).toLowerCase());
+            if (hH.FilesToLoad[HH] && "undefined" !== typeof URL) {
+              try {
+                let BH;
+                try {
+                  BH = URL.createObjectURL(hH.FilesToLoad[HH])
+                } catch (kH) {
+                  BH = URL.createObjectURL(hH.FilesToLoad[HH])
                 }
-                this.eY.addInPlace(this._transformedDirection)
+                QH.src = BH, GH = !0
+              } catch (mH) {
+                QH.src = ""
               }
-          }
-          _checkInputs() {
-            if (this._collisionTriggered) return;
-            this.inputs.checkInputs();
-            let UU = !1;
-            this.movement.computeCurrentFrameDeltas();
-            const XU = this.movement.rotationDeltaCurrentFrame,
-              zU = this.movement.zoomDeltaCurrentFrame,
-              cU = this.movement.panDeltaCurrentFrame;
-            if (0 === XU.x && 0 === XU.y && 0 === zU && 0 === cU.x && 0 === cU.y || (UU = !0, 0 === XU.x && 0 === XU.y && 0 === zU || this._applyRotationAndZoomDelta(XU.x, XU.y, zU), 0 === cU.x && 0 === cU.y || this._applyPanDelta(cU.x, cU.y)), 0 === this._inertialAlphaOffset && 0 === this._inertialBetaOffset && 0 === this._inertialRadiusOffset || (this._applyRotationAndZoomDelta(this._inertialAlphaOffset, this._inertialBetaOffset, this._inertialRadiusOffset), this._inertialAlphaOffset *= this.inertia, this._inertialBetaOffset *= this.inertia, this._inertialRadiusOffset *= this.inertia, Math.abs(this._inertialAlphaOffset) < this._rotationEpsilon && (this._inertialAlphaOffset = 0), Math.abs(this._inertialBetaOffset) < this._rotationEpsilon && (this._inertialBetaOffset = 0), Math.abs(this._inertialRadiusOffset) < this._rotationEpsilon && (this._inertialRadiusOffset = 0), UU = !0), 0 !== this.inertialPanningX || 0 !== this.inertialPanningY) {
-              this._applyPanDelta(this.inertialPanningX, this.inertialPanningY), this.inertialPanningX *= this.panningInertia, this.inertialPanningY *= this.panningInertia;
-              const XU = this._panningEpsilon;
-              Math.abs(this.inertialPanningX) < XU && (this.inertialPanningX = 0), Math.abs(this.inertialPanningY) < XU && (this.inertialPanningY = 0), UU = !0
+              return QH
             }
-            if (UU) this.stopInterpolation();
-            else if (this._isInterpolating) {
-              let UU = !1;
-              const XU = this._scene.qp().getDeltaTime() / 1e3,
-                zU = 1 - Math.pow(2, -XU / this._currentInterpolationFactor),
-                cU = MU(this._goalRadius, this.radius);
-              if (!isNaN(this._goalTarget.x) || !isNaN(this._goalTarget.y) || !isNaN(this._goalTarget.z)) {
-                const XU = AU.l.Sp[0].set(MU(this._goalTarget.x, this.eY.x), MU(this._goalTarget.y, this.eY.y), MU(this._goalTarget.z, this.eY.z));
-                AU.q.LerpToRef(this.target, XU, zU, this.eY), 10 * AU.q.Distance(this.target, XU) / cU < NU.c ? (this._goalTarget.set(NaN, NaN, NaN), this.target.YL(XU), this.setTarget(this.target, !1, !0, !0)) : UU = !0
-              }
-              if (!isNaN(this._goalAlpha) || !isNaN(this._goalBeta)) {
-                const XU = AU.f.RotationAlphaBetaGammaToRef(MU(this._goalAlpha, this.alpha), MU(this._goalBeta, this.beta), 0, AU.l.Quaternion[0]),
-                  cU = AU.f.RotationAlphaBetaGammaToRef(this.alpha, this.beta, 0, AU.l.Quaternion[1]),
-                  yU = AU.f.SlerpToRef(cU, XU, zU, AU.l.Quaternion[2]);
-                yU.normalize();
-                const QU = yU.toAlphaBetaGammaToRef(AU.l.Sp[0]);
-                if (this.alpha = QU.x, this.beta = QU.y, yU.isApprox(XU, NU.c / 5)) {
-                  this._goalAlpha = NaN, this._goalBeta = NaN;
-                  const UU = XU.toAlphaBetaGammaToRef(AU.l.Sp[0]);
-                  this.alpha = UU.x, this.beta = UU.y
-                } else UU = !0
-              }
-              if (isNaN(this._goalRadius) || (this.radius += (cU - this.radius) * zU, Math.abs(cU / this.radius - 1) < NU.c ? (this._goalRadius = NaN, this.radius = cU) : UU = !0), !isNaN(this._goalTargetScreenOffset.x) || !isNaN(this._goalTargetScreenOffset.y)) {
-                const XU = AU.l.Vector2[0].set(MU(this._goalTargetScreenOffset.x, this.targetScreenOffset.x), MU(this._goalTargetScreenOffset.y, this.targetScreenOffset.y));
-                AU.m.LerpToRef(this.targetScreenOffset, XU, zU, this.targetScreenOffset), AU.m.Distance(this.targetScreenOffset, XU) < NU.c ? (this._goalTargetScreenOffset.set(NaN, NaN), this.targetScreenOffset.YL(XU)) : UU = !0
-              }
-              this._isInterpolating = UU
-            }
-            this._checkLimits(), super._checkInputs()
           }
-          _checkLimits() {
-            null === this.lowerBetaLimit || void 0 === this.lowerBetaLimit ? this.allowUpsideDown && this.beta > Math.PI && (this.beta = this.beta - 2 * Math.PI) : this.beta < this.lowerBetaLimit && (this.beta = this.lowerBetaLimit), null === this.upperBetaLimit || void 0 === this.upperBetaLimit ? this.allowUpsideDown && this.beta < -Math.PI && (this.beta = this.beta + 2 * Math.PI) : this.beta > this.upperBetaLimit && (this.beta = this.upperBetaLimit), null !== this.lowerAlphaLimit && this.alpha < this.lowerAlphaLimit && (this.alpha = this.lowerAlphaLimit), null !== this.upperAlphaLimit && this.alpha > this.upperAlphaLimit && (this.alpha = this.upperAlphaLimit), null !== this.lowerRadiusLimit && this.radius < this.lowerRadiusLimit && (this.radius = this.lowerRadiusLimit, this.inertialRadiusOffset = 0), null !== this.upperRadiusLimit && this.radius > this.upperRadiusLimit && (this.radius = this.upperRadiusLimit, this.inertialRadiusOffset = 0), this.target.y = Math.max(this.target.y, this.lowerTargetYLimit)
+          VH()
+        }
+        return QH
+      },
+      VH = (HH, BH, LH, AH, rH) => {
+        const hH = new FileReader,
+          tH = {
+            onCompleteObservable: new SH.d,
+            abort: () => hH.abort()
+          };
+        return hH.onloadend = () => tH.onCompleteObservable.notifyObservers(tH), rH && (hH.onerror = () => {
+          rH(new xH(`Unable to read ${HH.name}`, HH))
+        }), hH.onload = HH => {
+          BH(HH.target.result)
+        }, LH && (hH.onprogress = LH), AH ? hH.readAsArrayBuffer(HH) : hH.readAsText(HH), tH
+      },
+      OH = (HH, BH, LH, AH, rH, zH, CH) => {
+        if (HH.name) return VH(HH, BH, LH, rH, zH ? HH => {
+          zH(void 0, HH)
+        } : void 0);
+        const EH = HH;
+        if (-1 !== EH.indexOf("file:")) {
+          let HH = decodeURIComponent(EH.substring(5).toLowerCase());
+          0 === HH.indexOf("./") && (HH = HH.substring(2));
+          const AH = hH.FilesToLoad[HH];
+          if (AH) return VH(AH, BH, LH, rH, zH ? HH => zH(void 0, new WH(HH.message, HH.file)) : void 0)
+        }
+        const {
+          match: XH,
+          type: uH
+        } = IH(EH);
+        if (XH) {
+          const HH = {
+            onCompleteObservable: new SH.d,
+            abort: () => () => {}
+          };
+          try {
+            const HH = rH ? fH(EH) : lH(EH);
+            BH(HH, void 0, uH)
+          } catch (tH) {
+            zH ? zH(void 0, tH) : GH.e.Error(tH.message || "Failed to parse the Data URL")
           }
-          rebuildAnglesAndRadius() {
-            this._position.subtractToRef(this._getTargetPosition(), this._computationVector), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || AU.q.TransformCoordinatesToRef(this._computationVector, this._upToYMatrix, this._computationVector), this.radius = this._computationVector.length(), 0 === this.radius && (this.radius = 1e-4);
-            const UU = this.alpha;
-            var XU, zU;
-            this.alpha = function(UU) {
-              let XU = Math.PI / 2;
-              return 0 === UU.x && 0 === UU.z || (XU = Math.acos(UU.x / Math.sqrt(Math.pow(UU.x, 2) + Math.pow(UU.z, 2)))), UU.z < 0 && (XU = 2 * Math.PI - XU), XU
-            }(this._computationVector), this.beta = (XU = this._computationVector.y, zU = this.radius, Math.acos(XU / zU));
-            const cU = Math.round((UU - this.alpha) / (2 * Math.PI));
-            this.alpha += 2 * cU * Math.PI, this._checkLimits()
-          }
-          setPosition(UU) {
-            this._position.equals(UU) || (this._position.YL(UU), this.rebuildAnglesAndRadius())
-          }
-          setTarget(UU) {
-            let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              zU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-              cU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-            if (cU = this.overrideCloneAlphaBetaRadius ?? cU, UU.computeWorldMatrix) XU && UU.gM ? this._targetBoundingCenter = UU.gM().boundingBox.centerWorld.clone() : this._targetBoundingCenter = null, UU.computeWorldMatrix(), this._targetHost = UU, this.eY = this._getTargetPosition(), this.onMeshTargetChangedObservable.notifyObservers(this._targetHost);
-            else {
-              const XU = UU,
-                cU = this._getTargetPosition();
-              if (cU && !zU && cU.equals(XU)) return;
-              this._targetHost = null, this.eY = XU, this._targetBoundingCenter = null, this.onMeshTargetChangedObservable.notifyObservers(null)
-            }
-            cU || this.rebuildAnglesAndRadius()
-          }
-          _getViewMatrix() {
-            const UU = Math.cos(this.alpha),
-              XU = Math.sin(this.alpha),
-              zU = Math.cos(this.beta);
-            let cU = Math.sin(this.beta);
-            0 === cU && (cU = 1e-4), 0 === this.radius && (this.radius = 1e-4);
-            const yU = this._getTargetPosition();
-            if (this._computationVector.sUU(this.radius * UU * cU, this.radius * zU, this.radius * XU * cU), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || AU.q.TransformCoordinatesToRef(this._computationVector, this._yToUpMatrix, this._computationVector), yU.addToRef(this._computationVector, this._newPosition), this.nS().collisionsEnabled && this.checkCollisions) {
-              const UU = this.nS().collisionCoordinator;
-              this._collider || (this._collider = UU.createCollider()), this._collider._radius = this.collisionRadius, this._newPosition.subtractToRef(this._position, this._collisionVelocity), this._collisionTriggered = !0, UU.getNewPosition(this._position, this._collisionVelocity, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
-            } else {
-              this._position.YL(this._newPosition);
-              let UU = this.upVector;
-              this.allowUpsideDown && cU < 0 && (UU = UU.fp()), this._computeViewMatrix(this._position, yU, UU), this._viewMatrix.addAtIndex(12, this.targetScreenOffset.x), this._viewMatrix.addAtIndex(13, this.targetScreenOffset.y)
-            }
-            return this._currentTarget.YL(yU), this._viewMatrix
-          }
-          zoomOn(UU) {
-            let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            UU = UU || this.nS().meshes;
-            const zU = DU.b.MinMax(UU);
-            let cU = this._calculateLowerRadiusFromModelBoundingSphere(zU.min, zU.max);
-            if (cU = Math.max(Math.min(cU, this.upperRadiusLimit || Number.MAX_VALUE), this.lowerRadiusLimit || 0), this.radius = cU * this.zoomOnFactor, this.mode === kU.d.ORTHOGRAPHIC_CAMERA) {
-              const UU = this.nS().qp().getAspectRatio(this),
-                XU = cU * this.zoomOnFactor / 2;
-              this.orthoLeft = -XU * UU, this.orthoRight = XU * UU, this.orthoBottom = -XU, this.orthoTop = XU
-            }
-            this.focusOn({
-              min: zU.min,
-              max: zU.max,
-              distance: cU
-            }, XU)
-          }
-          focusOn(UU) {
-            let XU, zU, cU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (void 0 === UU.min) {
-              const cU = UU || this.nS().meshes;
-              XU = DU.b.MinMax(cU), zU = AU.q.Distance(XU.min, XU.max)
-            } else {
-              XU = UU, zU = UU.distance
-            }
-            this.eY = DU.b.Center(XU), cU || (this.maxZ = 2 * zU)
-          }
-          createRigCamera(XU, zU) {
-            let cU = 0;
-            switch (this.cameraRigMode) {
-              case kU.d.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
-              case kU.d.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
-              case kU.d.RIG_MODE_STEREOSCOPIC_OVERUNDER:
-              case kU.d.RIG_MODE_STEREOSCOPIC_INTERLACED:
-              case kU.d.RIG_MODE_VR:
-                cU = this._cameraRigParams.stereoHalfAngle * (0 === zU ? 1 : -1);
-                break;
-              case kU.d.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
-                cU = this._cameraRigParams.stereoHalfAngle * (0 === zU ? -1 : 1)
-            }
-            const yU = new UU(XU, this.alpha + cU, this.beta, this.radius, this.eY, this.nS());
-            return yU._cameraRigParams = {}, yU.isRigCamera = !0, yU.rigParent = this, yU.upVector = this.upVector, yU.mode = this.mode, yU.orthoLeft = this.orthoLeft, yU.orthoRight = this.orthoRight, yU.orthoBottom = this.orthoBottom, yU.orthoTop = this.orthoTop, yU
-          }
-          _updateRigCameras() {
-            const UU = this._rigCameras[0],
-              XU = this._rigCameras[1];
-            switch (UU.beta = XU.beta = this.beta, this.cameraRigMode) {
-              case kU.d.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
-              case kU.d.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
-              case kU.d.RIG_MODE_STEREOSCOPIC_OVERUNDER:
-              case kU.d.RIG_MODE_STEREOSCOPIC_INTERLACED:
-              case kU.d.RIG_MODE_VR:
-                UU.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle, XU.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle;
-                break;
-              case kU.d.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
-                UU.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle, XU.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle
-            }
-            super._updateRigCameras()
-          }
-          _calculateLowerRadiusFromModelBoundingSphere(UU, XU) {
-            let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-            const cU = AU.q.Distance(UU, XU),
-              yU = this.nS().qp().getAspectRatio(this),
-              QU = Math.tan(this.fov / 2),
-              FU = QU * yU,
-              oU = .5 * cU * zU,
-              DU = oU * Math.sqrt(1 + 1 / (FU * FU)),
-              EU = oU * Math.sqrt(1 + 1 / (QU * QU));
-            return Math.max(DU, EU)
-          }
-          dispose() {
-            this.inputs.clear(), super.dispose()
-          }
-          getClassName() {
-            return "ArcRotateCamera"
-          }
-        }, (() => {
-          const QU = "function" === typeof Symbol && Symbol.metadata ? Object.create(xU[Symbol.metadata] ?? null) : void 0;
-          XU = [(0, yU.I)()], zU = [(0, yU.I)()], oU = [(0, yU.I)()], EU = [(0, yU.I)()], YU = [(0, yU.F)("target")], pU = [(0, yU.t)("targetHost")], aU = [(0, yU.I)()], BU = [(0, yU.I)()], RU = [(0, yU.I)()], PU = [(0, yU.I)()], WU = [(0, yU.I)()], dU = [(0, yU.I)()], LU = [(0, yU.I)()], eU = [(0, yU.I)()], CU = [(0, yU.I)()], wU = [(0, yU.I)()], qU = [(0, yU.I)()], OU = [(0, yU.I)()], SU = [(0, yU.I)()], uU = [(0, yU.I)()], fU = [(0, yU.F)()], iU = [(0, yU.I)()], vU = [(0, yU.I)()], VU = [(0, yU.I)()], sU = [(0, yU.B)()], nU = [(0, yU.I)()], mU = [(0, yU.I)()], lU = [(0, yU.I)()], (0, cU.j)(UU, null, aU, {
-            kind: "getter",
-            name: "inertialAlphaOffset",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "inertialAlphaOffset" in UU,
-              get: UU => UU.inertialAlphaOffset
+          return YH.d.SetImmediate((() => {
+            HH.onCompleteObservable.notifyObservers(HH)
+          })), HH
+        }
+        return bH(EH, ((HH, LH) => {
+          BH(HH, LH?.responseURL, LH?.getResponseHeader("content-type"))
+        }), LH, AH, rH, zH ? HH => {
+          zH(HH.request, new WH(HH.message, HH.request))
+        } : void 0, CH)
+      },
+      bH = (HH, BH, LH, hH, tH, zH, EH) => {
+        null !== hH && (hH ?? (hH = CH.d.LastCreatedScene?.offlineProvider)), HH = vH.CleanUrl(HH), HH = vH.PreprocessUrl(HH);
+        const XH = vH.BaseUrl + HH;
+        let YH = !1;
+        const uH = {
+            onCompleteObservable: new SH.d,
+            abort: () => YH = !0
+          },
+          QH = () => {
+            let HH, SH = new AH.d,
+              hH = null;
+            const CH = () => {
+              SH && (LH && SH.removeEventListener("progress", LH), HH && SH.removeEventListener("readystatechange", HH), SH.removeEventListener("loadend", QH))
+            };
+            let QH = () => {
+              CH(), uH.onCompleteObservable.notifyObservers(uH), uH.onCompleteObservable.clear(), LH = void 0, HH = null, QH = null, zH = void 0, EH = void 0, BH = void 0
+            };
+            uH.abort = () => {
+              YH = !0, QH && QH(), SH && SH.readyState !== (XMLHttpRequest.DONE || 4) && SH.abort(), null !== hH && (clearTimeout(hH), hH = null), SH = null
+            };
+            const WH = HH => {
+                const BH = HH.message || "Unknown error";
+                zH && SH ? zH(new MH(BH, SH)) : GH.e.Error(BH)
+              },
+              xH = GH => {
+                if (SH) {
+                  if (SH.open("GET", XH), EH) try {
+                    EH(SH)
+                  } catch (uH) {
+                    return void WH(uH)
+                  }
+                  tH && (SH.responseType = "arraybuffer"), LH && SH.addEventListener("progress", LH), QH && SH.addEventListener("loadend", QH), HH = () => {
+                    if (!YH && SH && SH.readyState === (XMLHttpRequest.DONE || 4)) {
+                      if (HH && SH.removeEventListener("readystatechange", HH), SH.status >= 200 && SH.status < 300 || 0 === SH.status && (!(0, rH.k)() || mH())) {
+                        const HH = tH ? SH.response : SH.responseText;
+                        if (null !== HH) {
+                          try {
+                            BH && BH(HH, SH)
+                          } catch (uH) {
+                            WH(uH)
+                          }
+                          return
+                        }
+                      }
+                      const LH = vH.DefaultRetryStrategy;
+                      if (LH) {
+                        const HH = LH(XH, SH, GH);
+                        if (-1 !== HH) return CH(), SH = new AH.d, void(hH = setTimeout((() => xH(GH + 1)), HH))
+                      }
+                      const EH = new MH("Error status: " + SH.status + " " + SH.statusText + " - Unable to load " + XH, SH);
+                      zH && zH(EH)
+                    }
+                  }, SH.addEventListener("readystatechange", HH), SH.send()
+                }
+              };
+            xH(0)
+          };
+        if (hH && hH.enableSceneOffline && !HH.startsWith("blob:")) {
+          const AH = HH => {
+              HH && HH.status > 400 ? zH && zH(HH) : QH()
             },
-            metadata: QU
-          }, null, JU), (0, cU.j)(UU, null, BU, {
-            kind: "getter",
-            name: "inertialBetaOffset",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "inertialBetaOffset" in UU,
-              get: UU => UU.inertialBetaOffset
-            },
-            metadata: QU
-          }, null, JU), (0, cU.j)(UU, null, RU, {
-            kind: "getter",
-            name: "inertialRadiusOffset",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "inertialRadiusOffset" in UU,
-              get: UU => UU.inertialRadiusOffset
-            },
-            metadata: QU
-          }, null, JU), (0, cU.j)(UU, null, iU, {
-            kind: "getter",
-            name: "panningInertia",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "panningInertia" in UU,
-              get: UU => UU.panningInertia
-            },
-            metadata: QU
-          }, null, JU), (0, cU.j)(UU, null, vU, {
-            kind: "getter",
-            name: "zoomToMouseLocation",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "zoomToMouseLocation" in UU,
-              get: UU => UU.zoomToMouseLocation
-            },
-            metadata: QU
-          }, null, JU), (0, cU.j)(null, null, XU, {
-            kind: "field",
-            name: "alpha",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "alpha" in UU,
-              get: UU => UU.alpha,
-              set: (UU, XU) => {
-                UU.alpha = XU
-              }
-            },
-            metadata: QU
-          }, jU, KU), (0, cU.j)(null, null, zU, {
-            kind: "field",
-            name: "beta",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "beta" in UU,
-              get: UU => UU.beta,
-              set: (UU, XU) => {
-                UU.beta = XU
-              }
-            },
-            metadata: QU
-          }, bU, TU), (0, cU.j)(null, null, oU, {
-            kind: "field",
-            name: "radius",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "radius" in UU,
-              get: UU => UU.radius,
-              set: (UU, XU) => {
-                UU.radius = XU
-              }
-            },
-            metadata: QU
-          }, hU, UX), (0, cU.j)(null, null, EU, {
-            kind: "field",
-            name: "overrideCloneAlphaBetaRadius",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "overrideCloneAlphaBetaRadius" in UU,
-              get: UU => UU.overrideCloneAlphaBetaRadius,
-              set: (UU, XU) => {
-                UU.overrideCloneAlphaBetaRadius = XU
-              }
-            },
-            metadata: QU
-          }, XX, zX), (0, cU.j)(null, null, YU, {
-            kind: "field",
-            name: "eY",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "eY" in UU,
-              get: UU => UU.eY,
-              set: (UU, XU) => {
-                UU.eY = XU
-              }
-            },
-            metadata: QU
-          }, cX, yX), (0, cU.j)(null, null, pU, {
-            kind: "field",
-            name: "_targetHost",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "_targetHost" in UU,
-              get: UU => UU._targetHost,
-              set: (UU, XU) => {
-                UU._targetHost = XU
-              }
-            },
-            metadata: QU
-          }, QX, AX), (0, cU.j)(null, null, PU, {
-            kind: "field",
-            name: "lowerAlphaLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "lowerAlphaLimit" in UU,
-              get: UU => UU.lowerAlphaLimit,
-              set: (UU, XU) => {
-                UU.lowerAlphaLimit = XU
-              }
-            },
-            metadata: QU
-          }, FX, oX), (0, cU.j)(null, null, WU, {
-            kind: "field",
-            name: "upperAlphaLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "upperAlphaLimit" in UU,
-              get: UU => UU.upperAlphaLimit,
-              set: (UU, XU) => {
-                UU.upperAlphaLimit = XU
-              }
-            },
-            metadata: QU
-          }, DX, EX), (0, cU.j)(null, null, dU, {
-            kind: "field",
-            name: "lowerBetaLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "lowerBetaLimit" in UU,
-              get: UU => UU.lowerBetaLimit,
-              set: (UU, XU) => {
-                UU.lowerBetaLimit = XU
-              }
-            },
-            metadata: QU
-          }, YX, NX), (0, cU.j)(null, null, LU, {
-            kind: "field",
-            name: "upperBetaLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "upperBetaLimit" in UU,
-              get: UU => UU.upperBetaLimit,
-              set: (UU, XU) => {
-                UU.upperBetaLimit = XU
-              }
-            },
-            metadata: QU
-          }, IX, pX), (0, cU.j)(null, null, eU, {
-            kind: "field",
-            name: "lowerRadiusLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "lowerRadiusLimit" in UU,
-              get: UU => UU.lowerRadiusLimit,
-              set: (UU, XU) => {
-                UU.lowerRadiusLimit = XU
-              }
-            },
-            metadata: QU
-          }, aX, tX), (0, cU.j)(null, null, CU, {
-            kind: "field",
-            name: "upperRadiusLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "upperRadiusLimit" in UU,
-              get: UU => UU.upperRadiusLimit,
-              set: (UU, XU) => {
-                UU.upperRadiusLimit = XU
-              }
-            },
-            metadata: QU
-          }, gX, kX), (0, cU.j)(null, null, wU, {
-            kind: "field",
-            name: "lowerTargetYLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "lowerTargetYLimit" in UU,
-              get: UU => UU.lowerTargetYLimit,
-              set: (UU, XU) => {
-                UU.lowerTargetYLimit = XU
-              }
-            },
-            metadata: QU
-          }, GX, BX), (0, cU.j)(null, null, qU, {
-            kind: "field",
-            name: "inertialPanningX",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "inertialPanningX" in UU,
-              get: UU => UU.inertialPanningX,
-              set: (UU, XU) => {
-                UU.inertialPanningX = XU
-              }
-            },
-            metadata: QU
-          }, ZX, RX), (0, cU.j)(null, null, OU, {
-            kind: "field",
-            name: "inertialPanningY",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "inertialPanningY" in UU,
-              get: UU => UU.inertialPanningY,
-              set: (UU, XU) => {
-                UU.inertialPanningY = XU
-              }
-            },
-            metadata: QU
-          }, PX, WX), (0, cU.j)(null, null, SU, {
-            kind: "field",
-            name: "pinchToPanMaxDistance",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "pinchToPanMaxDistance" in UU,
-              get: UU => UU.pinchToPanMaxDistance,
-              set: (UU, XU) => {
-                UU.pinchToPanMaxDistance = XU
-              }
-            },
-            metadata: QU
-          }, dX, LX), (0, cU.j)(null, null, uU, {
-            kind: "field",
-            name: "panningDistanceLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "panningDistanceLimit" in UU,
-              get: UU => UU.panningDistanceLimit,
-              set: (UU, XU) => {
-                UU.panningDistanceLimit = XU
-              }
-            },
-            metadata: QU
-          }, eX, CX), (0, cU.j)(null, null, fU, {
-            kind: "field",
-            name: "panningOriginTarget",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "panningOriginTarget" in UU,
-              get: UU => UU.panningOriginTarget,
-              set: (UU, XU) => {
-                UU.panningOriginTarget = XU
-              }
-            },
-            metadata: QU
-          }, wX, qX), (0, cU.j)(null, null, VU, {
-            kind: "field",
-            name: "zoomOnFactor",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "zoomOnFactor" in UU,
-              get: UU => UU.zoomOnFactor,
-              set: (UU, XU) => {
-                UU.zoomOnFactor = XU
-              }
-            },
-            metadata: QU
-          }, OX, SX), (0, cU.j)(null, null, sU, {
-            kind: "field",
-            name: "targetScreenOffset",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "targetScreenOffset" in UU,
-              get: UU => UU.targetScreenOffset,
-              set: (UU, XU) => {
-                UU.targetScreenOffset = XU
-              }
-            },
-            metadata: QU
-          }, rX, uX), (0, cU.j)(null, null, nU, {
-            kind: "field",
-            name: "allowUpsideDown",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "allowUpsideDown" in UU,
-              get: UU => UU.allowUpsideDown,
-              set: (UU, XU) => {
-                UU.allowUpsideDown = XU
-              }
-            },
-            metadata: QU
-          }, fX, iX), (0, cU.j)(null, null, mU, {
-            kind: "field",
-            name: "useInputToRestoreState",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "useInputToRestoreState" in UU,
-              get: UU => UU.useInputToRestoreState,
-              set: (UU, XU) => {
-                UU.useInputToRestoreState = XU
-              }
-            },
-            metadata: QU
-          }, HX, MX), (0, cU.j)(null, null, lU, {
-            kind: "field",
-            name: "restoreStateInterpolationFactor",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "restoreStateInterpolationFactor" in UU,
-              get: UU => UU.restoreStateInterpolationFactor,
-              set: (UU, XU) => {
-                UU.restoreStateInterpolationFactor = XU
-              }
-            },
-            metadata: QU
-          }, vX, VX), QU && Object.defineProperty(UU, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: QU
-          })
-        })(), UU
-      })(),
-      VU = !1;
-    VU || (VU = !0, oU.e.AddNodeConstructor("ArcRotateCamera", ((UU, XU) => () => new vU(UU, 0, 0, 1, AU.q.Zero(), XU))), (0, uU.h)("BABYLON.ArcRotateCamera", vU))
-  },
-  41331: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => cU.d
-    });
-    var cU = zU(41340);
-    (0, cU.f)()
-  },
-  41340: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => EU,
-      f: () => NU
-    });
-    var cU = zU(41113),
-      yU = zU(41121),
-      QU = zU(37819),
-      AU = zU(37923),
-      FU = zU(41346),
-      oU = zU(41314),
-      DU = zU(37863);
-    let EU = (() => {
-        var UU;
-        let XU, zU, oU = FU.b,
-          DU = [],
-          EU = [],
-          YU = [],
-          NU = [];
-        return UU = class extends oU {
-          constructor(UU, XU, zU, yU) {
-            super(UU, zU, yU), this.groundColor = (0, cU.n)(this, DU, new AU.b(0, 0, 0)), this.direction = ((0, cU.n)(this, EU), (0, cU.n)(this, YU, void 0)), (0, cU.n)(this, NU), this.direction = XU || QU.q.Up()
-          }
-          _buildUniformLayout() {
-            this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
-          }
-          getClassName() {
-            return "HemisphericLight"
-          }
-          setDirectionToTarget(UU) {
-            return this.direction = QU.q.Normalize(UU.subtract(QU.q.Zero())), this.direction
-          }
-          getShadowGenerator() {
-            return null
-          }
-          transferToEffect(UU, XU) {
-            const zU = QU.q.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", zU.x, zU.y, zU.z, 0, XU), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), XU), this
-          }
-          transferToNodeMaterialEffect(UU, XU) {
-            const zU = QU.q.Normalize(this.direction);
-            return UU.setFloat3(XU, zU.x, zU.y, zU.z), this
-          }
-          computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = QU.e.Identity()), this._worldMatrix
-          }
-          getTypeID() {
-            return FU.b.LIGHTTYPEID_HEMISPHERICLIGHT
-          }
-          prepareLightSpecificDefines(UU, XU) {
-            UU["HEMILIGHT" + XU] = !0
-          }
-        }, (() => {
-          const QU = "function" === typeof Symbol && Symbol.metadata ? Object.create(oU[Symbol.metadata] ?? null) : void 0;
-          XU = [(0, yU.m)()], zU = [(0, yU.F)()], (0, cU.j)(null, null, XU, {
-            kind: "field",
-            name: "groundColor",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "groundColor" in UU,
-              get: UU => UU.groundColor,
-              set: (UU, XU) => {
-                UU.groundColor = XU
-              }
-            },
-            metadata: QU
-          }, DU, EU), (0, cU.j)(null, null, zU, {
-            kind: "field",
-            name: "direction",
-            static: !1,
-            private: !1,
-            access: {
-              has: UU => "direction" in UU,
-              get: UU => UU.direction,
-              set: (UU, XU) => {
-                UU.direction = XU
-              }
-            },
-            metadata: QU
-          }, YU, NU), QU && Object.defineProperty(UU, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: QU
-          })
-        })(), UU
-      })(),
-      YU = !1;
+            rH = () => {
+              hH && hH.loadFile(vH.BaseUrl + HH, (HH => {
+                !YH && BH && BH(HH), uH.onCompleteObservable.notifyObservers(uH)
+              }), LH ? HH => {
+                !YH && LH && LH(HH)
+              } : void 0, AH, tH)
+            };
+          hH.open(rH, AH)
+        } else QH();
+        return uH
+      },
+      kH = HH => {
+        const {
+          match: BH,
+          type: LH
+        } = IH(HH);
+        if (BH) return LH || void 0;
+        const AH = HH.lastIndexOf(".");
+        switch (HH.substring(AH + 1).toLowerCase()) {
+          case "glb":
+            return "model/gltf-binary";
+          case "bin":
+            return "application/octet-stream";
+          case "XN":
+            return "model/gltf+json";
+          case "jpg":
+          case "jpeg":
+            return "image/jpeg";
+          case "png":
+            return "image/png";
+          case "webp":
+            return "image/webp";
+          case "ktx":
+            return "image/ktx";
+          case "ktx2":
+            return "image/ktx2";
+          case "avif":
+            return "image/avif";
+          default:
+            return
+        }
+      },
+      mH = () => "undefined" !== typeof location && "file:" === location.protocol,
+      oH = HH => QH.test(HH),
+      IH = HH => {
+        const BH = QH.exec(HH);
+        if (null === BH || 0 === BH.length) return {
+          match: !1,
+          type: ""
+        };
+        return {
+          match: !0,
+          type: BH[0].replace("data:", "").replace(";base64,", "")
+        }
+      };
 
-    function NU() {
-      YU || (YU = !0, oU.e.AddNodeConstructor("Light_Type_3", ((UU, XU) => () => new EU(UU, QU.q.Zero(), XU))), (0, DU.h)("BABYLON.HemisphericLight", EU))
+    function fH(HH) {
+      return (0, zH.b)(HH.split(",")[1])
     }
+    const lH = HH => (0, zH.d)(HH.split(",")[1]);
+    let KH;
+    const cH = (HH, BH, LH, AH, rH, SH, hH, tH, zH, CH) => {
+      KH = {
+        DecodeBase64UrlToBinary: HH,
+        DecodeBase64UrlToString: BH,
+        DefaultRetryStrategy: LH.DefaultRetryStrategy,
+        BaseUrl: LH.BaseUrl,
+        CorsBehavior: LH.CorsBehavior,
+        PreprocessUrl: LH.PreprocessUrl,
+        IsBase64DataUrl: AH,
+        IsFileURL: rH,
+        LoadFile: SH,
+        LoadImage: hH,
+        ReadFile: tH,
+        RequestFile: zH,
+        SetCorsBehavior: CH
+      }, Object.defineProperty(KH, "DefaultRetryStrategy", {
+        get: function() {
+          return LH.DefaultRetryStrategy
+        },
+        set: function(HH) {
+          LH.DefaultRetryStrategy = HH
+        }
+      }), Object.defineProperty(KH, "BaseUrl", {
+        get: function() {
+          return LH.BaseUrl
+        },
+        set: function(HH) {
+          LH.BaseUrl = HH
+        }
+      }), Object.defineProperty(KH, "PreprocessUrl", {
+        get: function() {
+          return LH.PreprocessUrl
+        },
+        set: function(HH) {
+          LH.PreprocessUrl = HH
+        }
+      }), Object.defineProperty(KH, "CorsBehavior", {
+        get: function() {
+          return LH.CorsBehavior
+        },
+        set: function(HH) {
+          LH.CorsBehavior = HH
+        }
+      })
+    };
+    let eH = !1;
+
+    function qH() {
+      eH || (eH = !0, cH(fH, lH, vH, oH, mH, OH, UH, VH, bH, PH), EH.b.loadFile = OH, EH.b.loadImage = UH, XH.n.loadFile = OH)
+    }
+  },
+  41364: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => tH,
+      e: () => SH,
+      f: () => hH
+    });
+    let AH = null;
+
+    function rH() {
+      if (AH) return AH;
+      const HH = new ArrayBuffer(4),
+        BH = new Float32Array(HH),
+        LH = new Uint32Array(HH),
+        rH = new Uint32Array(512),
+        SH = new Uint32Array(512);
+      for (let AH = 0; AH < 256; ++AH) {
+        const HH = AH - 127;
+        HH < -24 ? (rH[AH] = 0, rH[256 | AH] = 32768, SH[AH] = 24, SH[256 | AH] = 24) : HH < -14 ? (rH[AH] = 1024 >> -HH - 14, rH[256 | AH] = 1024 >> -HH - 14 | 32768, SH[AH] = -HH - 1, SH[256 | AH] = -HH - 1) : HH <= 15 ? (rH[AH] = HH + 15 << 10, rH[256 | AH] = HH + 15 << 10 | 32768, SH[AH] = 13, SH[256 | AH] = 13) : HH < 128 ? (rH[AH] = 31744, rH[256 | AH] = 64512, SH[AH] = 24, SH[256 | AH] = 24) : (rH[AH] = 31744, rH[256 | AH] = 64512, SH[AH] = 13, SH[256 | AH] = 13)
+      }
+      const hH = new Uint32Array(2048),
+        tH = new Uint32Array(64),
+        zH = new Uint32Array(64);
+      for (let AH = 1; AH < 1024; ++AH) {
+        let HH = AH << 13,
+          BH = 0;
+        for (; 0 === (8388608 & HH);) HH <<= 1, BH -= 8388608;
+        HH &= -8388609, BH += 947912704, hH[AH] = HH | BH
+      }
+      for (let AH = 1024; AH < 2048; ++AH) hH[AH] = 939524096 + (AH - 1024 << 13);
+      for (let AH = 1; AH < 31; ++AH) tH[AH] = AH << 23;
+      tH[31] = 1199570944, tH[32] = 2147483648;
+      for (let AH = 33; AH < 63; ++AH) tH[AH] = 2147483648 + (AH - 32 << 23);
+      tH[63] = 3347054592;
+      for (let AH = 1; AH < 64; ++AH) 32 !== AH && (zH[AH] = 1024);
+      return AH = {
+        floatView: BH,
+        uint32View: LH,
+        baseTable: rH,
+        shiftTable: SH,
+        mantissaTable: hH,
+        exponentTable: tH,
+        offsetTable: zH
+      }, AH
+    }
+    const SH = 65504;
+
+    function hH(HH) {
+      const BH = rH();
+      BH.floatView[0] = HH;
+      const LH = BH.uint32View[0],
+        AH = LH >> 23 & 511;
+      return BH.baseTable[AH] + ((8388607 & LH) >> BH.shiftTable[AH])
+    }
+
+    function tH(HH) {
+      const BH = rH();
+      return BH.uint32View[0] = BH.mantissaTable[BH.offsetTable[HH >> 10] + (1023 & HH)] + BH.exponentTable[HH >> 10], BH.floatView[0]
+    }
+  },
+  41353: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => SH,
+      d: () => rH,
+      f: () => AH
+    });
+    const AH = HH => {
+        const BH = ArrayBuffer.isView(HH) ? new Uint8Array(HH.buffer, HH.byteOffset, HH.byteLength) : new Uint8Array(HH);
+        return "function" === typeof BH.toBase64 ? BH.toBase64() : function(HH) {
+          const BH = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          let LH, AH, rH, SH, hH, tH, zH, CH = "",
+            EH = 0;
+          for (; EH < HH.length;) LH = HH[EH++], AH = EH < HH.length ? HH[EH++] : Number.NaN, rH = EH < HH.length ? HH[EH++] : Number.NaN, SH = LH >> 2, hH = (3 & LH) << 4 | AH >> 4, tH = (15 & AH) << 2 | rH >> 6, zH = 63 & rH, isNaN(AH) ? tH = zH = 64 : isNaN(rH) && (zH = 64), CH += BH.charAt(SH) + BH.charAt(hH) + BH.charAt(tH) + BH.charAt(zH);
+          return CH
+        }(BH)
+      },
+      rH = HH => atob(HH),
+      SH = HH => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(HH).buffer : function(HH) {
+        const BH = rH(HH),
+          LH = BH.length,
+          AH = new Uint8Array(new ArrayBuffer(LH));
+        for (let rH = 0; rH < LH; rH++) AH[rH] = BH.charCodeAt(rH);
+        return AH.buffer
+      }(HH)
+  },
+  41179: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => rH,
+      f: () => hH
+    });
+    let AH = [];
+    class rH {
+      static SetImmediate(HH) {
+        0 === AH.length && setTimeout((() => {
+          const HH = AH;
+          AH = [];
+          for (const BH of HH) BH()
+        }), 1), AH.push(HH)
+      }
+    }
+
+    function SH(HH, BH, LH) {
+      try {
+        if (HH()) return BH(), !0
+      } catch (AH) {
+        return LH?.(AH), !0
+      }
+      return !1
+    }
+    const hH = function(HH, BH, LH) {
+      let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
+        rH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
+        hH = arguments.length > 6 ? arguments[6] : void 0;
+      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && SH(HH, BH, LH)) return null;
+      const tH = setInterval((() => {
+        SH(HH, BH, LH) ? clearInterval(tH) : (rH -= AH, rH < 0 && (clearInterval(tH), LH?.(new Error("Operation timed out after maximum retries. " + (hH || "")), !0)))
+      }), AH);
+      return () => clearInterval(tH)
+    }
+  },
+  41339: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => AH
+    });
+    class AH {
+      constructor() {
+        this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
+      }
+      static get IsCustomRequestAvailable() {
+        return Object.keys(AH.CustomRequestHeaders).length > 0 || AH.CustomRequestModifiers.length > 0
+      }
+      static _CleanUrl(HH) {
+        return HH = (HH = HH.replace("file:http:", "http:")).replace("file:https:", "https:")
+      }
+      static _ShouldSkipRequestModifications(HH) {
+        return AH.SkipRequestModificationForBabylonCDN && (HH.includes("preview.babylonjs.com") || HH.includes("cdn.babylonjs.com"))
+      }
+      static _CollectCustomizations(HH) {
+        const BH = {
+          ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
+        };
+        if (AH._ShouldSkipRequestModifications(HH)) return {
+          url: HH,
+          headers: BH
+        };
+        for (const rH in AH.CustomRequestHeaders) {
+          const HH = AH.CustomRequestHeaders[rH];
+          HH && (BH[rH] = HH)
+        }
+        const LH = {
+          setRequestHeader: (HH, LH) => {
+            BH[HH] = LH
+          }
+        };
+        for (const rH of AH.CustomRequestModifiers) {
+          if (AH._ShouldSkipRequestModifications(HH)) break;
+          const BH = rH(LH, HH);
+          "string" === typeof BH && (HH = BH)
+        }
+        return {
+          url: HH,
+          headers: BH
+        }
+      }
+      static async FetchAsync(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const LH = BH.method ?? "GET";
+        if ("undefined" !== typeof fetch) {
+          const {
+            url: rH,
+            headers: SH
+          } = AH._CollectCustomizations(AH._CleanUrl(HH), BH.headers ?? {});
+          return await fetch(rH, {
+            method: LH,
+            headers: SH,
+            body: BH.body ?? void 0
+          })
+        }
+        return await new Promise(((rH, SH) => {
+          const hH = new AH;
+          hH.responseType = "arraybuffer", hH.addEventListener("readystatechange", (() => {
+            if (4 === hH.readyState)
+              if (hH.status >= 200 && hH.status < 300) {
+                const HH = "undefined" !== typeof Headers ? new Headers : void 0,
+                  BH = hH.getResponseHeader("Content-Type");
+                BH && HH && HH.set("Content-Type", BH), "undefined" !== typeof Response ? rH(new Response(hH.response, {
+                  status: hH.status,
+                  statusText: hH.statusText,
+                  headers: HH
+                })) : rH({
+                  ok: !0,
+                  status: hH.status,
+                  statusText: hH.statusText,
+                  headers: {
+                    get: HH => hH.getResponseHeader(HH)
+                  },
+                  arrayBuffer: async () => await Promise.resolve(hH.response)
+                })
+              } else SH(new Error(`HTTP ${hH.status} loading '${hH.requestURL}': ${hH.statusText}`))
+          })), hH.open(LH, HH, BH.headers), hH.send(BH.body ?? null)
+        }))
+      }
+      get requestURL() {
+        return this._requestURL
+      }
+      get onprogress() {
+        return this._xhr.onprogress
+      }
+      set onprogress(HH) {
+        this._xhr.onprogress = HH
+      }
+      get readyState() {
+        return this._xhr.readyState
+      }
+      get status() {
+        return this._xhr.status
+      }
+      get statusText() {
+        return this._xhr.statusText
+      }
+      get response() {
+        return this._xhr.response
+      }
+      get responseURL() {
+        return this._xhr.responseURL
+      }
+      get responseText() {
+        return this._xhr.responseText
+      }
+      get responseType() {
+        return this._xhr.responseType
+      }
+      set responseType(HH) {
+        this._xhr.responseType = HH
+      }
+      get timeout() {
+        return this._xhr.timeout
+      }
+      set timeout(HH) {
+        this._xhr.timeout = HH
+      }
+      addEventListener(HH, BH, LH) {
+        this._xhr.addEventListener(HH, BH, LH)
+      }
+      removeEventListener(HH, BH, LH) {
+        this._xhr.removeEventListener(HH, BH, LH)
+      }
+      abort() {
+        this._xhr.abort()
+      }
+      send(HH) {
+        this._xhr.send(HH)
+      }
+      open(HH, BH, LH) {
+        const {
+          url: rH,
+          headers: SH
+        } = AH._CollectCustomizations(BH, LH);
+        this._requestURL = AH._CleanUrl(rH), this._xhr.open(HH, this._requestURL, !0);
+        for (const AH in SH) this._xhr.setRequestHeader(AH, SH[AH])
+      }
+      setRequestHeader(HH, BH) {
+        this._xhr.setRequestHeader(HH, BH)
+      }
+      getResponseHeader(HH) {
+        return this._xhr.getResponseHeader(HH)
+      }
+    }
+    AH.CustomRequestHeaders = {}, AH.CustomRequestModifiers = new Array, AH.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

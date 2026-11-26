@@ -1,156 +1,1043 @@
+/*! For license information please see cwj32u.298.7e30732e.chunk.js.LICENSE.txt */
 export const id = 298;
 export const ids = [298];
 export const modules = {
-  42162: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      BloxdInformation: () => IU
+  41842: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      getAnalytics: () => dB,
+      getGoogleAnalyticsClientId: () => iB,
+      initializeAnalytics: () => aB,
+      isSupported: () => sB,
+      logEvent: () => LL,
+      setAnalyticsCollectionEnabled: () => HL,
+      setConsent: () => AL,
+      setCurrentScreen: () => JB,
+      setDefaultEventParameters: () => BL,
+      setUserId: () => pB,
+      setUserProperties: () => yB,
+      settings: () => wB
     });
-    var cU = zU(1193),
-      yU = zU(61),
-      QU = zU(97),
-      AU = zU(1494),
-      FU = zU(142),
-      oU = zU(1390),
-      DU = zU(1305);
-    const EU = (0, yU.lazy)((() => Promise.all([zU.e(135), zU.e(699)]).then((() => zU(7117))))),
-      YU = (0, yU.lazy)((() => zU.e(137).then((() => zU(7129)))));
+    var AH = LH(41817),
+      rH = LH(41836),
+      SH = LH(41831),
+      hH = LH(41822);
+    let tH, zH;
+    const CH = new WeakMap,
+      EH = new WeakMap,
+      XH = new WeakMap,
+      GH = new WeakMap,
+      YH = new WeakMap;
+    let uH = {
+      get(HH, BH, LH) {
+        if (HH instanceof IDBTransaction) {
+          if ("done" === BH) return EH.get(HH);
+          if ("objectStoreNames" === BH) return HH.objectStoreNames || XH.get(HH);
+          if ("store" === BH) return LH.objectStoreNames[1] ? void 0 : LH.objectStore(LH.objectStoreNames[0])
+        }
+        return MH(HH[BH])
+      },
+      set: (HH, BH, LH) => (HH[BH] = LH, !0),
+      has: (HH, BH) => HH instanceof IDBTransaction && ("done" === BH || "store" === BH) || BH in HH
+    };
 
-    function NU() {
-      return (0, DU.jsxs)("div", {
-        className: "LegalText",
-        children: [(0, DU.jsx)("div", {
-          className: "BloxdInformationHeader FullyFancyText",
-          children: "Security Exploit Bounty Program"
-        }), (0, DU.jsx)("p", {
-          children: "We have a program for reporting security exploits. Find an important security flaw in Bloxd? Report it through the process below. Please include steps to reproduce the exploit, including any relevant code if the exploit requires it. You will receive the reward if we verify and fix the exploit."
-        }), (0, DU.jsx)("h3", {
-          children: "1. How to Report"
-        }), (0, DU.jsxs)("p", {
-          children: ["Please follow the instructions on", " ", (0, DU.jsx)("a", {
-            href: "https://forms.gle/wUL8WiH3LbGiJBzF7",
-            target: "_blank",
-            rel: "noreferrer",
-            children: "this form"
-          }), " ", "to report the exploit."]
-        }), (0, DU.jsx)("h3", {
-          children: "2. Frequently Asked Questions"
-        }), (0, DU.jsx)("p", {
-          children: (0, DU.jsx)("b", {
-            children: "Q: When can I expect a response?"
-          })
-        }), (0, DU.jsx)("p", {
-          children: "A: If you've left any contact details, you will typically receive a response within two to four weeks, but we will try to respond as soon as possible."
-        }), (0, DU.jsx)("p", {
-          children: (0, DU.jsx)("b", {
-            children: "Q: Can I remain anonymous?"
-          })
-        }), (0, DU.jsx)("p", {
-          children: "A: Yes, but we will be unable to contact you for rewards if you do not leave any contact details."
-        }), (0, DU.jsx)("p", {
-          children: (0, DU.jsx)("b", {
-            children: "Q: What if multiple people report the same exploit, complete with repro steps?"
-          })
-        }), (0, DU.jsx)("p", {
-          children: "A: Typically, only the first reporter will receive the reward."
-        }), (0, DU.jsx)("p", {
-          children: (0, DU.jsx)("b", {
-            children: "Q: What is out of scope?"
-          })
-        }), (0, DU.jsxs)("p", {
-          children: ["A:", (0, DU.jsxs)("ul", {
-            children: [(0, DU.jsx)("li", {
-              children: "Social engineering / phishing"
-            }), (0, DU.jsx)("li", {
-              children: "DDoS attacks. If an attack requires a large number of computers to hit our servers with packets, it is out of scope. However, if a single computer/script can execute the attack, it is in scope of this programme."
-            }), (0, DU.jsx)("li", {
-              children: "Use of stolen credentials"
-            }), (0, DU.jsx)("li", {
-              children: "Data that is already public or user-supplied (e.g. usernames, chat, etc)"
-            }), (0, DU.jsx)("li", {
-              children: "Non-security related bugs - please report in #report-a-bug in our discord"
-            })]
-          })]
-        }), (0, DU.jsx)("p", {
-          children: (0, DU.jsx)("b", {
-            children: "Q: I'm banned in Bloxd, am I still eligible to submit exploits through this program?"
-          })
-        }), (0, DU.jsx)("p", {
-          children: "A: Yes, as long as you follow the rules laid out with respect to the exploit you are reporting. I.e. don't abuse or share the exploit, etc."
-        })]
+    function QH(HH) {
+      return HH !== IDBDatabase.prototype.transaction || "objectStoreNames" in IDBTransaction.prototype ? (zH || (zH = [IDBCursor.prototype.advance, IDBCursor.prototype.continue, IDBCursor.prototype.continuePrimaryKey])).includes(HH) ? function() {
+        for (var BH = arguments.length, LH = new Array(BH), AH = 0; AH < BH; AH++) LH[AH] = arguments[AH];
+        return HH.apply(xH(this), LH), MH(CH.get(this))
+      } : function() {
+        for (var BH = arguments.length, LH = new Array(BH), AH = 0; AH < BH; AH++) LH[AH] = arguments[AH];
+        return MH(HH.apply(xH(this), LH))
+      } : function(BH) {
+        for (var LH = arguments.length, AH = new Array(LH > 1 ? LH - 1 : 0), rH = 1; rH < LH; rH++) AH[rH - 1] = arguments[rH];
+        const SH = HH.call(xH(this), BH, ...AH);
+        return XH.set(SH, BH.sort ? BH.sort() : [BH]), MH(SH)
+      }
+    }
+
+    function WH(HH) {
+      return "function" === typeof HH ? QH(HH) : (HH instanceof IDBTransaction && function(HH) {
+        if (EH.has(HH)) return;
+        const BH = new Promise(((BH, LH) => {
+          const AH = () => {
+              HH.removeEventListener("complete", rH), HH.removeEventListener("error", SH), HH.removeEventListener("abort", SH)
+            },
+            rH = () => {
+              BH(), AH()
+            },
+            SH = () => {
+              LH(HH.error || new DOMException("AbortError", "AbortError")), AH()
+            };
+          HH.addEventListener("complete", rH), HH.addEventListener("error", SH), HH.addEventListener("abort", SH)
+        }));
+        EH.set(HH, BH)
+      }(HH), BH = HH, (tH || (tH = [IDBDatabase, IDBObjectStore, IDBIndex, IDBCursor, IDBTransaction])).some((HH => BH instanceof HH)) ? new Proxy(HH, uH) : HH);
+      var BH
+    }
+
+    function MH(HH) {
+      if (HH instanceof IDBRequest) return function(HH) {
+        const BH = new Promise(((BH, LH) => {
+          const AH = () => {
+              HH.removeEventListener("success", rH), HH.removeEventListener("error", SH)
+            },
+            rH = () => {
+              BH(MH(HH.result)), AH()
+            },
+            SH = () => {
+              LH(HH.error), AH()
+            };
+          HH.addEventListener("success", rH), HH.addEventListener("error", SH)
+        }));
+        return BH.then((BH => {
+          BH instanceof IDBCursor && CH.set(BH, HH)
+        })).catch((() => {})), YH.set(BH, HH), BH
+      }(HH);
+      if (GH.has(HH)) return GH.get(HH);
+      const BH = WH(HH);
+      return BH !== HH && (GH.set(HH, BH), YH.set(BH, HH)), BH
+    }
+    const xH = HH => YH.get(HH);
+    const vH = ["get", "getKey", "getAll", "getAllKeys", "count"],
+      PH = ["put", "add", "delete", "clear"],
+      TH = new Map;
+
+    function UH(HH, BH) {
+      if (!(HH instanceof IDBDatabase) || BH in HH || "string" !== typeof BH) return;
+      if (TH.get(BH)) return TH.get(BH);
+      const LH = BH.replace(/FromIndex$/, ""),
+        AH = BH !== LH,
+        rH = PH.includes(LH);
+      if (!(LH in (AH ? IDBIndex : IDBObjectStore).prototype) || !rH && !vH.includes(LH)) return;
+      const SH = async function(HH) {
+        const BH = this.transaction(HH, rH ? "readwrite" : "readonly");
+        let SH = BH.store;
+        for (var hH = arguments.length, tH = new Array(hH > 1 ? hH - 1 : 0), zH = 1; zH < hH; zH++) tH[zH - 1] = arguments[zH];
+        return AH && (SH = SH.index(tH.shift())), (await Promise.all([SH[LH](...tH), rH && BH.done]))[0]
+      };
+      return TH.set(BH, SH), SH
+    }
+    uH = (HH => ({
+      ...HH,
+      get: (BH, LH, AH) => UH(BH, LH) || HH.get(BH, LH, AH),
+      has: (BH, LH) => !!UH(BH, LH) || HH.has(BH, LH)
+    }))(uH);
+    const VH = "@firebase/installations",
+      OH = "0.6.4",
+      bH = 1e4,
+      kH = `w:${OH}`,
+      mH = "FIS_v2",
+      oH = 36e5,
+      IH = {
+        "missing-app-config-values": 'Missing App configuration value: "{$valueName}"',
+        "not-registered": "Firebase Installation is not registered.",
+        "installation-not-found": "Firebase Installation not found.",
+        "request-failed": '{$requestName} request failed with error "{$serverCode} {$serverStatus}: {$serverMessage}"',
+        "app-offline": "Could not process request. Application offline.",
+        "delete-pending-registration": "Can't delete installation while there is a pending registration request."
+      },
+      fH = new SH.h("installations", "Installations", IH);
+
+    function lH(HH) {
+      return HH instanceof SH.j && HH.code.includes("request-failed")
+    }
+
+    function KH(HH) {
+      let {
+        projectId: BH
+      } = HH;
+      return `https://firebaseinstallations.googleapis.com/v1/projects/${BH}/installations`
+    }
+
+    function cH(HH) {
+      return {
+        token: HH.token,
+        requestStatus: 2,
+        expiresIn: (BH = HH.expiresIn, Number(BH.replace("s", "000"))),
+        creationTime: Date.now()
+      };
+      var BH
+    }
+    async function eH(HH, BH) {
+      const LH = (await BH.json()).error;
+      return fH.create("request-failed", {
+        requestName: HH,
+        serverCode: LH.code,
+        serverMessage: LH.message,
+        serverStatus: LH.status
       })
     }
 
-    function IU() {
-      const {
-        t: UU
-      } = (0, cU.I)(), [XU, zU] = (0, yU.useState)("partnersAndCredits"), IU = {
-        partnersAndCredits: {
-          title: QU.featureFlags.usePartnerLinks ? UU("homePage:partnersAndCredits") : UU("homePage:credits"),
-          content: (0, DU.jsxs)(DU.Fragment, {
-            children: [(0, DU.jsx)("div", {
-              className: "BloxdInformationHeader FullyFancyText",
-              children: QU.featureFlags.usePartnerLinks ? UU("homePage:partnersAndCredits") : UU("homePage:credits")
-            }), QU.featureFlags.usePartnerLinks && "\n\t\t\t\t\tPartners:\n\n\t\t\t\t\tcrazygames.com - https://www.crazygames.com/c/io\n\t\t\t\t\tnow.gg - https://now.gg/\n\t\t\t\t\tminijuegos.com - https://www.minijuegos.com/\n\t\t\t\t\tkevin.games - https://kevin.games/\n\t\t\t\t\tsilvergames.com - https://www.silvergames.com/\n\t\t\t\t\tplay123.com - https://play123.com/\n\n\t\t\t\t\t", "\n\t\t\t\t\t\tCool sites:\n\n\t\t\t\t\t\tBloxd Youtube Videos - https://www.youtube.com/ (duh)\n\n\t\t\t\t\t", '\n\t\t\t\t\tCredits:\n\n\t\t\t\t\tMusic:\n\t\t\t\t\tSignificant amount of music by Adigold on envato elements. Titles by Adigold:\n\t\t\t\t\tA Place to be Free\n\t\t\t\t\tButterfly Effect\n\t\t\t\t\tDreamless Sleep\n\t\t\t\t\tFrozen Pulse\n\t\t\t\t\tFrozen Skies\n\t\t\t\t\tHealing Thoughts\n\t\t\t\t\tHere Forever\n\t\t\t\t\tJust a Little Hope\n\t\t\t\t\tJust Like Heaven\n\t\t\t\t\tMemories Remain\n\t\t\t\t\tPlace to be\n\t\t\t\t\tThe Riverside\n\t\t\t\t\tThe Wonder\n\t\t\t\t\tVetrar\n\t\t\t\t\tFurther titles:\n\t\t\t\t\thighway-1-retro-gaming-version: Accessible on lonepeakmusic\'s bandcamp\n\t\t\t\t\theroic-demise-updated-version: Accessible on opengameart\n\t\t\t\t\thappy-arcade-tune: Accessible on opengameart\n\t\t\t\t\ttown-theme-rpg: Accessible on opengameart\n\t\t\t\t\t5-chiptunes-action: Accessible on opengameart\n\t\t\t\t\tslow-motion: Accessible on bensound - royalty free music section\n\t\t\t\t\tI Have Often Told You Stories (guitar instrumental) by Ivan Chew (c) copyright 2013 Licensed under a Creative Commons Attribution (3.0) license. Accessible on ccmixter under "ramblinglibrarian"\n\t\t\t\t\tReverie (small theme) by _ghost (c) copyright 2010 Licensed under a Creative Commons Attribution (3.0) license. Ft: Pitx. Accessible on ccmixter under "_ghost"\n\t\t\t\t\tSilence Await by Analog By Nature (c) copyright 2008 Licensed under a Creative Commons Attribution (3.0) license. Ft: oldDog. Accessible on ccmixter under "cdk"\n\t\t\t\t\tEthereal Space by Snowflake (c) copyright 2011 Licensed under a Creative Commons Attribution (3.0) license. Ft: Zep Hurme. Accessible on ccmixter under "snowflake"\n\t\t\t\t\tbuild-up-scenes-battle-ship: By Hot_Dope. Accessible on pixabay\n\t\t\t\t\tRaise The Sails: By SergePavkinMusic. Accessible on pixabay\n\t\t\t\t\tThe Epic Adventure: By The_Mountain. Accessible on pixabay\n\t\t\t\t\tCorsairs: By StudioKolomna. Accessible on uppbeat\n\t\t\t\t\tI am the Sea - Epic Pirate Battle Music. Supported by #TheROOMnoCopyRMusic\n\t\t\t\t\tPirates by Mojo Productions\n\t\t\t\t\tSneaky Jazz by Mojo Productions\n\t\t\t\t\tThe Sneaky by Mojo Productions\n\t\t\t\t\tThe Sneaky Jazz by Mojo Productions\n\t\t\t\t\tSpooky Scary Skeletons - 3mp1r3 Orchestral Cover (Instrumental): By 3MP-The-Rook (c) copyright 2021 Licensed under a Creative Commons Attribution (3.0) license. Accessible on newgrounds\n\n\n\t\t\t\t\tSkybox:\n\t\t\t\t\tspace-skyboxes-0. By StumpyStrust. Accessible on opengameart\n\t\t\t\t\tinterstellar-skybox. By Jockum Skoglund (hipshot). Accessible on opengameart\n\t\t\t\t\tgloomy-skybox. By Spiney. Accessible on opengameart\n\n\n\t\t\t\t\tMap builds:\n\t\t\t\t\tjar9 - Medieval Castle\n\t\t\t\t\tjar9 - Iron Man\'s Mansion\n\t\t\t\t\tjar9 - Hawaiian pineapple resort\n\t\t\t\t\tNot_Tred - Pyrage and The Century\n\t\t\t\t\tBubblesAndSuch - Hide and Seek Office map\n\t\t\t\t\tWeark - Dinosaur Murder Mystery map\n\t\t\t\t\tMavers - Jungle Theme Skywars map\n\t\t\t\t\tPigiama-Party-Crew - Skywars Castle map\n\t\t\t\t\tPigiama-Party-Crew - Skywars frozen map\n\t\t\t\t\tPartyFinger - Skywars Mushroom map\n\t\t\t\t\tSadClown - Skywars Simple Lego map\n\t\t\t\t\tP2H - Hide and Seek Western map (made for bloxd)\n\t\t\t\t\tjanuaryboy - Double Trouble pirates map (made for bloxd)\n\t\t\t\t\tjanuaryboy - Stowaway Seas pirates map (made for bloxd)\n\t\t\t\t\tjanuaryboy - Woesome Waters pirates map (made for bloxd)\n\t\t\t\t\tLadyHaley - Capture the Flag\n\n\n\t\t\t\t\tHome Screen Builds:\n\t\t\t\t\taxchitectmc (arch): valley town\n\t\t\t\t\tbush_man_ (B0ZO): Reactor Island / Elver\n\t\t\t\t\titz_parkour_queen (!Kat)\n\t\t\t\t\tthe_ccccc_83959 (the_ccccc)\n\t\t\t\t\tsnapshot0378 (AspectOfEntity)\n\t\t\t\t\tbanshee_61108 (Banshee)\n\t\t\t\t\tcreativeartisan856888 (L16_F51620)\n\t\t\t\t\tblazingcharlie (BlazingCharlie)\n\t\t\t\t\tkentaki65501 (\ud835\ude10\ud835\ude15\ud835\ude10\ud835\ude1b\ud835\ude10\ud835\ude08\ud835\ude13"\ud835\ude12")\n\n\n\t\t\t\t\tCharacter model:\n\t\t\t\t\tkenney bundle accessible on itch\n\n\n\t\t\t\t\tTextures:\n\t\t\t\t\tDronyazka\n\t\t\t\t\t1qayesy\n\t\t\t\t\tBlocd\n\t\t\t\t\tJanuaryBoy\n\t\t\t\t\tvinivieira\n\t\t\t\t\thttps://doughnutdev.itch.io/\n\t\t\t\t\tDigs - digs-simple-pack\n\t\t\t\t\thttps://dafluffypotato.itch.io/pixel-country-flags\n\n\n\t\t\t\t\tPet Paintings:\n\t\t\t\t\tJanuaryBoy\n\n\n\t\t\t\t\tSounds:\n\t\t\t\t\tgamemasteraudio\n\t\t\t\t\tSn0wShepherd - snowsong-total-sound-and-music-resource-pack\n\t\t\t\t\tFrawzy - enhanced-audio pack - accessible on curseforge\n\t\t\t\t\tOreCruncher (and sub contributors) - accessible on github via the OreCruncher/DynamicSurroundings repo\n\t\t\t\t\tWistanSound - pig, cow & sheep sounds pack\n\t\t\t\t\tKenney - rpg-audio pack - accessible on kenney.nl\n\n\n\t\t\t\t\tTranslations:\n\t\t\t\t\tArabic: GoldWaterMelon, MemeYou, faresaliahmed1234, Bloxd Builder, Toast123, Exinvity, Bruhbro, Coffee\n\t\t\t\t\tGerman: random, 1qayesy, LordDarknessYT, BRELJIS, Black_White, FJGaming, Tabby bee, Cougaran, SUPERJERRY, DigitalDragon\n\t\t\t\t\tSpanish: locomoco330, perky.11, mash_the_idiot, kilmepls, cisaa, Patata, MrT3, Sameiflovi, Monty Mole, MisterCasino\n\t\t\t\t\tFrench: .frenchgamer., ImBoop, Bloxd Builder, Elforeve, JaClol, lews123, LeVraiZouzou, Kontroleuh, kilmepls, _LightningStrike_, the_ccccc, ga\xeb, M.K, BearsBoi\n\t\t\t\t\tHindi: F22 Raptor, ObiloxYT, MucknDuck, SHUSH XD, __DUCK__\n\t\t\t\t\tIndonesian: zash, bool bola, kevin143, fedortam, Image\'s_MxD, THESECONDONE, Mozzy\n\t\t\t\t\tItalian: Star_mario, NAME VIOLTION4, Trespasser, Gabriel, Cougaran\n\t\t\t\t\tJapanese: tomoru1741, httpsnet, namu_namu, aaa_second, another_sky, pockymouse, Interactive\n\t\t\t\t\tDutch: brickswizard, Ryobagyatt-bloxd, MONKE, Thijssiee, Zethal_\n\t\t\t\t\tPortuguese: Da59Gigas, kilmepls, coding.cannoli\n\t\t\t\t\tPortuguese (Brazil): vinivieira, Muffinscott, pompom, kilmepls, noselastic, icyrlq, tokachiri\n\t\t\t\t\tRussian: Ryno2024, FOG_Batman17_WM, Bush, imlaggingbad, NahBro, Riddle, timofeycacti\n\t\t\t\t\tTamil: heheboi420, Tridentify\n\t\t\t\t\tTurkish: 1qayesy, iharqv, FOG_Batman17_WM, aryosta\n\t\t\t\t\tVietnamese: andye_da_Grass, that_asian_guy, ckn, Bready, Appa\n\t\t\t\t\tChinese (Simplified): AQLI, KHROTU, G2Lighter, Always yxZ, Baklava, Ender_, \u03c4Sean\ud83c\udde8\ud83c\uddf3\u03c4, ACreativeGoddess\n\t\t\t\t\tChinese (Traditional): AQLI, hkxd123, Jas_Mine_, Axolotl_Fox, happygamer, immortal, Idolized, Huh?\n\t\t\t\t\tUkrainian: xnutella, Ryno2024, shadow cat, Riddle\n\t\t\t\t\tPolish: PKcomander, ashxlek, tokachiri, LSVJ, 3ndii1337\n\t\t\t\t\tKorean: bobuk, Interactive\n\n\n\t\t\t\t\tMisc:\n\t\t\t\t\tMonogram font - https://datagoblin.itch.io/monogram\n\t\t\t\t\tTreasure Chests - DanSevenStar.xyz - treasure-chest-pixel-art-animation - accessible on opengameart\n\t\t\t\t\tTouch scroll icon created by Those Icons - accessible on Flaticon in the free-icons category under the "scroll" name\n\t\t\t\t\tThis product makes use of GeoLite2 data created by MaxMind, available from https://www.maxmind.com\n\t\t\t\t\t']
-          })
+    function qH(HH) {
+      let {
+        apiKey: BH
+      } = HH;
+      return new Headers({
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "x-goog-api-key": BH
+      })
+    }
+
+    function gH(HH, BH) {
+      let {
+        refreshToken: LH
+      } = BH;
+      const AH = qH(HH);
+      return AH.append("Authorization", function(HH) {
+        return `${mH} ${HH}`
+      }(LH)), AH
+    }
+    async function NH(HH) {
+      const BH = await HH();
+      return BH.status >= 500 && BH.status < 600 ? HH() : BH
+    }
+
+    function RH(HH) {
+      return new Promise((BH => {
+        setTimeout(BH, HH)
+      }))
+    }
+    const jH = /^[cdef][\w-]{21}$/;
+
+    function nH() {
+      try {
+        const HH = new Uint8Array(17);
+        (self.crypto || self.msCrypto).getRandomValues(HH), HH[0] = 112 + HH[0] % 16;
+        const BH = function(HH) {
+          const BH = (LH = HH, btoa(String.fromCharCode(...LH)).replace(/\+/g, "-").replace(/\//g, "_"));
+          var LH;
+          return BH.substr(0, 22)
+        }(HH);
+        return jH.test(BH) ? BH : ""
+      } catch (HH) {
+        return ""
+      }
+    }
+
+    function FH(HH) {
+      return `${HH.appName}!${HH.appId}`
+    }
+    const DH = new Map;
+
+    function wH(HH, BH) {
+      const LH = FH(HH);
+      ZH(LH, BH),
+        function(HH, BH) {
+          const LH = aH();
+          LH && LH.postMessage({
+            key: HH,
+            fid: BH
+          });
+          sH()
+        }(LH, BH)
+    }
+
+    function ZH(HH, BH) {
+      const LH = DH.get(HH);
+      if (LH)
+        for (const AH of LH) AH(BH)
+    }
+    let dH = null;
+
+    function aH() {
+      return !dH && "BroadcastChannel" in self && (dH = new BroadcastChannel("[Firebase] FID Change"), dH.onmessage = HH => {
+        ZH(HH.data.key, HH.data.fid)
+      }), dH
+    }
+
+    function sH() {
+      0 === DH.size && dH && (dH.close(), dH = null)
+    }
+    const JH = "firebase-installations-store";
+    let iH = null;
+
+    function pH() {
+      return iH || (iH = function(HH, BH) {
+        let {
+          blocked: LH,
+          upgrade: AH,
+          blocking: rH,
+          terminated: SH
+        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const hH = indexedDB.open(HH, BH),
+          tH = MH(hH);
+        return AH && hH.addEventListener("upgradeneeded", (HH => {
+          AH(MH(hH.result), HH.oldVersion, HH.newVersion, MH(hH.transaction))
+        })), LH && hH.addEventListener("blocked", (() => LH())), tH.then((HH => {
+          SH && HH.addEventListener("close", (() => SH())), rH && HH.addEventListener("versionchange", (() => rH()))
+        })).catch((() => {})), tH
+      }("firebase-installations-database", 1, {
+        upgrade: (HH, BH) => {
+          if (0 === BH) HH.createObjectStore(JH)
+        }
+      })), iH
+    }
+    async function yH(HH, BH) {
+      const LH = FH(HH),
+        AH = (await pH()).transaction(JH, "readwrite"),
+        rH = AH.objectStore(JH),
+        SH = await rH.get(LH);
+      return await rH.put(BH, LH), await AH.done, SH && SH.fid === BH.fid || wH(HH, BH.fid), BH
+    }
+    async function HB(HH) {
+      const BH = FH(HH),
+        LH = (await pH()).transaction(JH, "readwrite");
+      await LH.objectStore(JH).delete(BH), await LH.done
+    }
+    async function BB(HH, BH) {
+      const LH = FH(HH),
+        AH = (await pH()).transaction(JH, "readwrite"),
+        rH = AH.objectStore(JH),
+        SH = await rH.get(LH),
+        hH = BH(SH);
+      return void 0 === hH ? await rH.delete(LH) : await rH.put(hH, LH), await AH.done, !hH || SH && SH.fid === hH.fid || wH(HH, hH.fid), hH
+    }
+    async function LB(HH) {
+      let BH;
+      const LH = await BB(HH.appConfig, (LH => {
+        const AH = function(HH) {
+            const BH = HH || {
+              fid: nH(),
+              registrationStatus: 0
+            };
+            return SB(BH)
+          }(LH),
+          rH = function(HH, BH) {
+            if (0 === BH.registrationStatus) {
+              if (!navigator.onLine) {
+                return {
+                  installationEntry: BH,
+                  registrationPromise: Promise.reject(fH.create("app-offline"))
+                }
+              }
+              const LH = {
+                  fid: BH.fid,
+                  registrationStatus: 1,
+                  registrationTime: Date.now()
+                },
+                AH = async function(HH, BH) {
+                  try {
+                    const LH = await async function(HH, BH) {
+                      let {
+                        appConfig: LH,
+                        heartbeatServiceProvider: AH
+                      } = HH, {
+                        fid: rH
+                      } = BH;
+                      const SH = KH(LH),
+                        hH = qH(LH),
+                        tH = AH.getImmediate({
+                          optional: !0
+                        });
+                      if (tH) {
+                        const HH = await tH.getHeartbeatsHeader();
+                        HH && hH.append("x-firebase-client", HH)
+                      }
+                      const zH = {
+                          fid: rH,
+                          authVersion: mH,
+                          appId: LH.appId,
+                          sdkVersion: kH
+                        },
+                        CH = {
+                          method: "POST",
+                          headers: hH,
+                          body: JSON.stringify(zH)
+                        },
+                        EH = await NH((() => fetch(SH, CH)));
+                      if (EH.ok) {
+                        const HH = await EH.json();
+                        return {
+                          fid: HH.fid || rH,
+                          registrationStatus: 2,
+                          refreshToken: HH.refreshToken,
+                          authToken: cH(HH.authToken)
+                        }
+                      }
+                      throw await eH("Create Installation", EH)
+                    }(HH, BH);
+                    return yH(HH.appConfig, LH)
+                  } catch (LH) {
+                    throw lH(LH) && 409 === LH.customData.serverCode ? await HB(HH.appConfig) : await yH(HH.appConfig, {
+                      fid: BH.fid,
+                      registrationStatus: 0
+                    }), LH
+                  }
+                }(HH, LH);
+              return {
+                installationEntry: LH,
+                registrationPromise: AH
+              }
+            }
+            return 1 === BH.registrationStatus ? {
+              installationEntry: BH,
+              registrationPromise: AB(HH)
+            } : {
+              installationEntry: BH
+            }
+          }(HH, AH);
+        return BH = rH.registrationPromise, rH.installationEntry
+      }));
+      return "" === LH.fid ? {
+        installationEntry: await BH
+      } : {
+        installationEntry: LH,
+        registrationPromise: BH
+      }
+    }
+    async function AB(HH) {
+      let BH = await rB(HH.appConfig);
+      for (; 1 === BH.registrationStatus;) await RH(100), BH = await rB(HH.appConfig);
+      if (0 === BH.registrationStatus) {
+        const {
+          installationEntry: BH,
+          registrationPromise: LH
+        } = await LB(HH);
+        return LH || BH
+      }
+      return BH
+    }
+
+    function rB(HH) {
+      return BB(HH, (HH => {
+        if (!HH) throw fH.create("installation-not-found");
+        return SB(HH)
+      }))
+    }
+
+    function SB(HH) {
+      return 1 === (BH = HH).registrationStatus && BH.registrationTime + bH < Date.now() ? {
+        fid: HH.fid,
+        registrationStatus: 0
+      } : HH;
+      var BH
+    }
+    async function hB(HH, BH) {
+      let {
+        appConfig: LH,
+        heartbeatServiceProvider: AH
+      } = HH;
+      const rH = function(HH, BH) {
+          let {
+            fid: LH
+          } = BH;
+          return `${KH(HH)}/${LH}/authTokens:generate`
+        }(LH, BH),
+        SH = gH(LH, BH),
+        hH = AH.getImmediate({
+          optional: !0
+        });
+      if (hH) {
+        const HH = await hH.getHeartbeatsHeader();
+        HH && SH.append("x-firebase-client", HH)
+      }
+      const tH = {
+          installation: {
+            sdkVersion: kH,
+            appId: LH.appId
+          }
         },
-        bloxdIngameRules: {
-          title: UU("homePage:bloxdIngameRules"),
-          content: (0, DU.jsxs)(DU.Fragment, {
-            children: [(0, DU.jsx)("div", {
-              className: "BloxdInformationHeader FullyFancyText",
-              children: UU("homePage:bloxdIngameRules")
-            }), "\n\t\t\t\t\t1. Be respectful of others.\n\n\t\t\t\t\t2. Don't harass or bully other players.\n\n\t\t\t\t\t3. Discriminatory jokes and hate speech (attacks on an individual or group based on their race, ethnicity, national origin, sex, gender, sexual orientation, religious affiliation, or disabilities) is not allowed.\n\n\t\t\t\t\t4. Cursing is not allowed, avoiding the swear filter is not allowed.\n\n\t\t\t\t\t5. Spamming is not allowed in any form.\n\n\t\t\t\t\t6. Don't post links.\n\n\t\t\t\t\t7. Don't do anything NSFW related or sexually suggestive.\n\n\t\t\t\t\t8. Online dating is not allowed.\n\n\t\t\t\t\t9. Don't use any offensive/inappropriate names.\n\n\t\t\t\t\t10. Don't impersonate staff or developers. This can include players if the player is clearly trying to impersonate you.\n\n\t\t\t\t\t11. No Hacking/Cheating/Autoclicking. Some clicking techniques such as drag clicking can be detected as autoclicking. Be careful using these techniques, if you are banned for autoclicking, you will not be unbanned.\n\n\t\t\t\t\t12. Creating, sharing, or using bloxd userscripts, extensions or other modifications is not allowed.\n\n\t\t\t\t\t13. Don't create boards/signs with inappropriate text.\n\n\t\t\t\t\t14. Don't create worlds lobbies for inappropriate purposes.\n\n\t\t\t\t\t15. Don't evade mutes or bans using alt accounts. Doing so will result in more action against your main account.\n\n\t\t\t\t\t16. Don't exploit duplication bugs. If you discover a serverside way to duplicate items, e.g.: the duped items stay when you leave and rejoin, then please carefully follow all the instructions in our Security Exploit Bounty Program.\n\n\t\t\t\t\t17. Don't trade ingame items for gift purchases (e.g. superrank).\n\t\t\t\t\t\n\t\t\t\t\t18. Advocating for or encouraging any of the above rule breaking is not allowed.\n\t\t\t\t"]
-          })
+        zH = {
+          method: "POST",
+          headers: SH,
+          body: JSON.stringify(tH)
         },
-        privacyPolicy: {
-          title: UU("homePage:privacyPolicy"),
-          content: (0, DU.jsx)(yU.Suspense, {
-            fallback: null,
-            children: (0, DU.jsx)(EU, {})
-          })
-        },
-        termsOfService: {
-          title: UU("homePage:termsOfService"),
-          content: (0, DU.jsx)(yU.Suspense, {
-            fallback: null,
-            children: (0, DU.jsx)(YU, {})
-          })
-        },
-        securityExploitBounties: {
-          title: UU("homePage:securityExploitBounties"),
-          content: (0, DU.jsx)(NU, {})
+        CH = await NH((() => fetch(rH, zH)));
+      if (CH.ok) {
+        return cH(await CH.json())
+      }
+      throw await eH("Generate Auth Token", CH)
+    }
+    async function tB(HH) {
+      let BH, LH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const AH = await BB(HH.appConfig, (AH => {
+        if (!CB(AH)) throw fH.create("not-registered");
+        const rH = AH.authToken;
+        if (!LH && function(HH) {
+            return 2 === HH.requestStatus && ! function(HH) {
+              const BH = Date.now();
+              return BH < HH.creationTime || HH.creationTime + HH.expiresIn < BH + oH
+            }(HH)
+          }(rH)) return AH;
+        if (1 === rH.requestStatus) return BH = async function(HH, BH) {
+          let LH = await zB(HH.appConfig);
+          for (; 1 === LH.authToken.requestStatus;) await RH(100), LH = await zB(HH.appConfig);
+          const AH = LH.authToken;
+          return 0 === AH.requestStatus ? tB(HH, BH) : AH
+        }(HH, LH), AH;
+        {
+          if (!navigator.onLine) throw fH.create("app-offline");
+          const LH = function(HH) {
+            const BH = {
+              requestStatus: 1,
+              requestTime: Date.now()
+            };
+            return Object.assign(Object.assign({}, HH), {
+              authToken: BH
+            })
+          }(AH);
+          return BH = async function(HH, BH) {
+            try {
+              const LH = await hB(HH, BH),
+                AH = Object.assign(Object.assign({}, BH), {
+                  authToken: LH
+                });
+              return await yH(HH.appConfig, AH), LH
+            } catch (LH) {
+              if (!lH(LH) || 401 !== LH.customData.serverCode && 404 !== LH.customData.serverCode) {
+                const LH = Object.assign(Object.assign({}, BH), {
+                  authToken: {
+                    requestStatus: 0
+                  }
+                });
+                await yH(HH.appConfig, LH)
+              } else await HB(HH.appConfig);
+              throw LH
+            }
+          }(HH, LH), LH
+        }
+      }));
+      return BH ? await BH : AH.authToken
+    }
+
+    function zB(HH) {
+      return BB(HH, (HH => {
+        if (!CB(HH)) throw fH.create("not-registered");
+        const BH = HH.authToken;
+        return 1 === (LH = BH).requestStatus && LH.requestTime + bH < Date.now() ? Object.assign(Object.assign({}, HH), {
+          authToken: {
+            requestStatus: 0
+          }
+        }) : HH;
+        var LH
+      }))
+    }
+
+    function CB(HH) {
+      return void 0 !== HH && 2 === HH.registrationStatus
+    }
+    async function EB(HH) {
+      let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const LH = HH;
+      await async function(HH) {
+        const {
+          registrationPromise: BH
+        } = await LB(HH);
+        BH && await BH
+      }(LH);
+      return (await tB(LH, BH)).token
+    }
+
+    function XB(HH) {
+      return fH.create("missing-app-config-values", {
+        valueName: HH
+      })
+    }
+    const GB = "installations",
+      YB = HH => {
+        const BH = HH.getProvider("app").getImmediate(),
+          LH = function(HH) {
+            if (!HH || !HH.options) throw XB("App Configuration");
+            if (!HH.name) throw XB("App Name");
+            const BH = ["projectId", "apiKey", "appId"];
+            for (const LH of BH)
+              if (!HH.options[LH]) throw XB(LH);
+            return {
+              appName: HH.name,
+              projectId: HH.options.projectId,
+              apiKey: HH.options.apiKey,
+              appId: HH.options.appId
+            }
+          }(BH);
+        return {
+          app: BH,
+          appConfig: LH,
+          heartbeatServiceProvider: (0, AH.r)(BH, "heartbeat"),
+          _delete: () => Promise.resolve()
+        }
+      },
+      uB = HH => {
+        const BH = HH.getProvider("app").getImmediate(),
+          LH = (0, AH.r)(BH, GB).getImmediate();
+        return {
+          getId: () => async function(HH) {
+            const BH = HH,
+              {
+                installationEntry: LH,
+                registrationPromise: AH
+              } = await LB(BH);
+            return AH ? AH.catch(console.error) : tB(BH).catch(console.error), LH.fid
+          }(LH),
+          getToken: HH => EB(LH, HH)
         }
       };
-      return (0, DU.jsxs)("div", {
-        className: "BloxdInformation",
-        children: [(0, DU.jsxs)("div", {
-          className: "BloxdInformationSectionList",
-          children: [Object.keys(IU).map((cU => (0, DU.jsx)(AU.O, {
-            active: XU === cU,
-            onClick: () => {
-              zU(cU)
-            },
-            children: UU(IU[cU].title)
-          }, cU))), QU.featureFlags.usePartnerLinks && (0, DU.jsx)(DU.Fragment, {
-            children: (0, DU.jsxs)(AU.O, {
-              onClick: () => {
-                window.open("https://www.crazygames.com/c/io")
-              },
-              children: [(0, DU.jsx)(oU.d, {
-                name: "arrow-up-right-from-square"
-              }), " Crazy Games"]
-            })
-          })]
-        }), (0, DU.jsx)("div", {
-          className: "BloxdInformationContentWrapper",
-          children: IU[XU].content
-        }), (0, DU.jsxs)("div", {
-          className: "BloxdInformationText",
-          children: ["SiteUsed: ", FU.siteUsed, " | SubSiteUsed: ", FU.subsiteUsed]
-        })]
+    (0, AH.u)(new hH.f(GB, YB, "PUBLIC")), (0, AH.u)(new hH.f("installations-internal", uB, "PRIVATE")), (0, AH.L)(VH, OH), (0, AH.L)(VH, OH, "esm2017");
+    const QB = "analytics",
+      WB = "https://www.googletagmanager.com/gtag/js",
+      MB = new rH.g("@firebase/analytics"),
+      xB = {
+        "already-exists": "A Firebase Analytics instance with the appId {$id}  already exists. Only one Firebase Analytics instance can be created for each appId.",
+        "already-initialized": "initializeAnalytics() cannot be called again with different options than those it was initially called with. It can be called again with the same options to return the existing instance, or getAnalytics() can be used to get a reference to the already-intialized instance.",
+        "already-initialized-settings": "Firebase Analytics has already been initialized.settings() must be called before initializing any Analytics instanceor it will have no effect.",
+        "interop-component-reg-failed": "Firebase Analytics Interop Component failed to instantiate: {$reason}",
+        "invalid-analytics-context": "Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
+        "indexeddb-unavailable": "IndexedDB unavailable or restricted in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
+        "fetch-throttle": "The config fetch request timed out while in an exponential backoff state. Unix timestamp in milliseconds when fetch request throttling ends: {$throttleEndTimeMillis}.",
+        "config-fetch-failed": "Dynamic config fetch failed: [{$httpStatus}] {$responseMessage}",
+        "no-api-key": 'The "apiKey" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid API key.',
+        "no-app-id": 'The "appId" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid app ID.',
+        "no-client-id": 'The "client_id" field is empty.',
+        "invalid-gtag-resource": "Trusted Types detected an invalid gtag resource: {$gtagURL}."
+      },
+      vB = new SH.h("analytics", "Analytics", xB);
+
+    function PB(HH) {
+      if (!HH.startsWith(WB)) {
+        const BH = vB.create("invalid-gtag-resource", {
+          gtagURL: HH
+        });
+        return MB.warn(BH.message), ""
+      }
+      return HH
+    }
+
+    function TB(HH) {
+      return Promise.all(HH.map((HH => HH.catch((HH => HH)))))
+    }
+
+    function UB(HH, BH) {
+      const LH = function(HH, BH) {
+          let LH;
+          return window.trustedTypes && (LH = window.trustedTypes.createPolicy(HH, BH)), LH
+        }("firebase-js-sdk-policy", {
+          createScriptURL: PB
+        }),
+        AH = document.createElement("script"),
+        rH = `${WB}?l=${HH}&id=${BH}`;
+      AH.src = LH ? null === LH || void 0 === LH ? void 0 : LH.createScriptURL(rH) : rH, AH.async = !0, document.head.appendChild(AH)
+    }
+
+    function VB(HH, BH, LH, AH) {
+      return async function(rH) {
+        try {
+          for (var SH = arguments.length, hH = new Array(SH > 1 ? SH - 1 : 0), tH = 1; tH < SH; tH++) hH[tH - 1] = arguments[tH];
+          if ("event" === rH) {
+            const [AH, rH] = hH;
+            await async function(HH, BH, LH, AH, rH) {
+              try {
+                let SH = [];
+                if (rH && rH.send_to) {
+                  let HH = rH.send_to;
+                  Array.isArray(HH) || (HH = [HH]);
+                  const AH = await TB(LH);
+                  for (const LH of HH) {
+                    const HH = AH.find((HH => HH.measurementId === LH)),
+                      rH = HH && BH[HH.appId];
+                    if (!rH) {
+                      SH = [];
+                      break
+                    }
+                    SH.push(rH)
+                  }
+                }
+                0 === SH.length && (SH = Object.values(BH)), await Promise.all(SH), HH("event", AH, rH || {})
+              } catch (SH) {
+                MB.error(SH)
+              }
+            }(HH, BH, LH, AH, rH)
+          } else if ("config" === rH) {
+            const [rH, SH] = hH;
+            await async function(HH, BH, LH, AH, rH, SH) {
+              const hH = AH[rH];
+              try {
+                if (hH) await BH[hH];
+                else {
+                  const HH = (await TB(LH)).find((HH => HH.measurementId === rH));
+                  HH && await BH[HH.appId]
+                }
+              } catch (tH) {
+                MB.error(tH)
+              }
+              HH("config", rH, SH)
+            }(HH, BH, LH, AH, rH, SH)
+          } else if ("consent" === rH) {
+            const [BH] = hH;
+            HH("consent", "update", BH)
+          } else if ("get" === rH) {
+            const [BH, LH, AH] = hH;
+            HH("get", BH, LH, AH)
+          } else if ("set" === rH) {
+            const [BH] = hH;
+            HH("set", BH)
+          } else HH(rH, ...hH)
+        } catch (zH) {
+          MB.error(zH)
+        }
+      }
+    }
+    const OB = new class {
+      constructor() {
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e3;
+        this.throttleMetadata = HH, this.intervalMillis = BH
+      }
+      getThrottleMetadata(HH) {
+        return this.throttleMetadata[HH]
+      }
+      setThrottleMetadata(HH, BH) {
+        this.throttleMetadata[HH] = BH
+      }
+      deleteThrottleMetadata(HH) {
+        delete this.throttleMetadata[HH]
+      }
+    };
+
+    function bB(HH) {
+      return new Headers({
+        Accept: "application/json",
+        "x-goog-api-key": HH
       })
     }
+    async function kB(HH) {
+      let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : OB,
+        LH = arguments.length > 2 ? arguments[2] : void 0;
+      const {
+        appId: AH,
+        apiKey: rH,
+        measurementId: SH
+      } = HH.options;
+      if (!AH) throw vB.create("no-app-id");
+      if (!rH) {
+        if (SH) return {
+          measurementId: SH,
+          appId: AH
+        };
+        throw vB.create("no-api-key")
+      }
+      const hH = BH.getThrottleMetadata(AH) || {
+          backoffCount: 0,
+          throttleEndTimeMillis: Date.now()
+        },
+        tH = new oB;
+      return setTimeout((async () => {
+        tH.abort()
+      }), void 0 !== LH ? LH : 6e4), mB({
+        appId: AH,
+        apiKey: rH,
+        measurementId: SH
+      }, hH, tH, BH)
+    }
+    async function mB(HH, BH, LH) {
+      let {
+        throttleEndTimeMillis: AH,
+        backoffCount: rH
+      } = BH, hH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : OB;
+      var tH;
+      const {
+        appId: zH,
+        measurementId: CH
+      } = HH;
+      try {
+        await
+        function(HH, BH) {
+          return new Promise(((LH, AH) => {
+            const rH = Math.max(BH - Date.now(), 0),
+              SH = setTimeout(LH, rH);
+            HH.addEventListener((() => {
+              clearTimeout(SH), AH(vB.create("fetch-throttle", {
+                throttleEndTimeMillis: BH
+              }))
+            }))
+          }))
+        }(LH, AH)
+      } catch (EH) {
+        if (CH) return MB.warn(`Timed out fetching this Firebase app's measurement ID from the server. Falling back to the measurement ID ${CH} provided in the "measurementId" field in the local Firebase config. [${null===EH||void 0===EH?void 0:EH.message}]`), {
+          appId: zH,
+          measurementId: CH
+        };
+        throw EH
+      }
+      try {
+        const BH = await async function(HH) {
+          var BH;
+          const {
+            appId: LH,
+            apiKey: AH
+          } = HH, rH = {
+            method: "GET",
+            headers: bB(AH)
+          }, SH = "https://firebase.googleapis.com/v1alpha/projects/-/apps/{app-id}/webConfig".replace("{app-id}", LH), hH = await fetch(SH, rH);
+          if (200 !== hH.status && 304 !== hH.status) {
+            let HH = "";
+            try {
+              const LH = await hH.json();
+              (null === (BH = LH.error) || void 0 === BH ? void 0 : BH.message) && (HH = LH.error.message)
+            } catch (tH) {}
+            throw vB.create("config-fetch-failed", {
+              httpStatus: hH.status,
+              responseMessage: HH
+            })
+          }
+          return hH.json()
+        }(HH);
+        return hH.deleteThrottleMetadata(zH), BH
+      } catch (EH) {
+        const BH = EH;
+        if (! function(HH) {
+            if (!(HH instanceof SH.j) || !HH.customData) return !1;
+            const BH = Number(HH.customData.httpStatus);
+            return 429 === BH || 500 === BH || 503 === BH || 504 === BH
+          }(BH)) {
+          if (hH.deleteThrottleMetadata(zH), CH) return MB.warn(`Failed to fetch this Firebase app's measurement ID from the server. Falling back to the measurement ID ${CH} provided in the "measurementId" field in the local Firebase config. [${null===BH||void 0===BH?void 0:BH.message}]`), {
+            appId: zH,
+            measurementId: CH
+          };
+          throw EH
+        }
+        const AH = 503 === Number(null === (tH = null === BH || void 0 === BH ? void 0 : BH.customData) || void 0 === tH ? void 0 : tH.httpStatus) ? (0, SH.w)(rH, hH.intervalMillis, 30) : (0, SH.w)(rH, hH.intervalMillis),
+          XH = {
+            throttleEndTimeMillis: Date.now() + AH,
+            backoffCount: rH + 1
+          };
+        return hH.setThrottleMetadata(zH, XH), MB.debug(`Calling attemptFetch again in ${AH} millis`), mB(HH, XH, LH, hH)
+      }
+    }
+    class oB {
+      constructor() {
+        this.listeners = []
+      }
+      addEventListener(HH) {
+        this.listeners.push(HH)
+      }
+      abort() {
+        this.listeners.forEach((HH => HH()))
+      }
+    }
+    let IB, fB;
+
+    function lB(HH) {
+      fB = HH
+    }
+
+    function KB(HH) {
+      IB = HH
+    }
+    async function cB(HH, BH, LH, AH, rH, hH, tH) {
+      var zH;
+      const CH = kB(HH);
+      CH.then((BH => {
+        LH[BH.measurementId] = BH.appId, HH.options.measurementId && BH.measurementId !== HH.options.measurementId && MB.warn(`The measurement ID in the local Firebase config (${HH.options.measurementId}) does not match the measurement ID fetched from the server (${BH.measurementId}). To ensure analytics events are always sent to the correct Analytics property, update the measurement ID field in the local config or remove it from the local config.`)
+      })).catch((HH => MB.error(HH))), BH.push(CH);
+      const EH = async function() {
+        if (!(0, SH.db)()) return MB.warn(vB.create("indexeddb-unavailable", {
+          errorInfo: "IndexedDB is not available in this environment."
+        }).message), !1;
+        try {
+          await (0, SH.qb)()
+        } catch (HH) {
+          return MB.warn(vB.create("indexeddb-unavailable", {
+            errorInfo: null === HH || void 0 === HH ? void 0 : HH.toString()
+          }).message), !1
+        }
+        return !0
+      }().then((HH => HH ? AH.getId() : void 0)), [XH, GH] = await Promise.all([CH, EH]);
+      (function(HH) {
+        const BH = window.document.getElementsByTagName("script");
+        for (const LH of Object.values(BH))
+          if (LH.src && LH.src.includes(WB) && LH.src.includes(HH)) return LH;
+        return null
+      })(hH) || UB(hH, XH.measurementId), fB && (rH("consent", "default", fB), lB(void 0)), rH("js", new Date);
+      const YH = null !== (zH = null === tH || void 0 === tH ? void 0 : tH.config) && void 0 !== zH ? zH : {};
+      return YH.origin = "firebase", YH.update = !0, null != GH && (YH.firebase_id = GH), rH("config", XH.measurementId, YH), IB && (rH("set", IB), KB(void 0)), XH.measurementId
+    }
+    class eB {
+      constructor(HH) {
+        this.app = HH
+      }
+      _delete() {
+        return delete qB[this.app.options.appId], Promise.resolve()
+      }
+    }
+    let qB = {},
+      gB = [];
+    const NB = {};
+    let RB, jB, nB = "dataLayer",
+      FB = "gtag",
+      DB = !1;
+
+    function wB(HH) {
+      if (DB) throw vB.create("already-initialized");
+      HH.dataLayerName && (nB = HH.dataLayerName), HH.gtagName && (FB = HH.gtagName)
+    }
+
+    function ZB(HH, BH, LH) {
+      ! function() {
+        const HH = [];
+        if ((0, SH.V)() && HH.push("This is a browser extension environment."), (0, SH.n)() || HH.push("Cookies are not available."), HH.length > 0) {
+          const BH = HH.map(((HH, BH) => `(${BH+1}) ${HH}`)).join(" "),
+            LH = vB.create("invalid-analytics-context", {
+              errorInfo: BH
+            });
+          MB.warn(LH.message)
+        }
+      }();
+      const AH = HH.options.appId;
+      if (!AH) throw vB.create("no-app-id");
+      if (!HH.options.apiKey) {
+        if (!HH.options.measurementId) throw vB.create("no-api-key");
+        MB.warn(`The "apiKey" field is empty in the local Firebase config. This is needed to fetch the latest measurement ID for this Firebase app. Falling back to the measurement ID ${HH.options.measurementId} provided in the "measurementId" field in the local Firebase config.`)
+      }
+      if (null != qB[AH]) throw vB.create("already-exists", {
+        id: AH
+      });
+      if (!DB) {
+        ! function(HH) {
+          let BH = [];
+          Array.isArray(window[HH]) ? BH = window[HH] : window[HH] = BH
+        }(nB);
+        const {
+          wrappedGtag: HH,
+          gtagCore: BH
+        } = function(HH, BH, LH, AH, rH) {
+          let SH = function() {
+            for (var HH = arguments.length, BH = new Array(HH), LH = 0; LH < HH; LH++) BH[LH] = arguments[LH];
+            window[AH].push(arguments)
+          };
+          return window[rH] && "function" === typeof window[rH] && (SH = window[rH]), window[rH] = VB(SH, HH, BH, LH), {
+            gtagCore: SH,
+            wrappedGtag: window[rH]
+          }
+        }(qB, gB, NB, nB, FB);
+        jB = HH, RB = BH, DB = !0
+      }
+      qB[AH] = cB(HH, gB, NB, BH, RB, nB, LH);
+      return new eB(HH)
+    }
+
+    function dB() {
+      let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, AH.H)();
+      HH = (0, SH.P)(HH);
+      const BH = (0, AH.r)(HH, QB);
+      return BH.isInitialized() ? BH.getImmediate() : aB(HH)
+    }
+
+    function aB(HH) {
+      let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const LH = (0, AH.r)(HH, QB);
+      if (LH.isInitialized()) {
+        const HH = LH.getImmediate();
+        if ((0, SH.D)(BH, LH.getOptions())) return HH;
+        throw vB.create("already-initialized")
+      }
+      return LH.initialize({
+        options: BH
+      })
+    }
+    async function sB() {
+      if ((0, SH.V)()) return !1;
+      if (!(0, SH.n)()) return !1;
+      if (!(0, SH.db)()) return !1;
+      try {
+        return await (0, SH.qb)()
+      } catch (HH) {
+        return !1
+      }
+    }
+
+    function JB(HH, BH, LH) {
+      HH = (0, SH.P)(HH), async function(HH, BH, LH, AH) {
+        if (AH && AH.global) return HH("set", {
+          screen_name: LH
+        }), Promise.resolve();
+        HH("config", await BH, {
+          update: !0,
+          screen_name: LH
+        })
+      }(jB, qB[HH.app.options.appId], BH, LH).catch((HH => MB.error(HH)))
+    }
+    async function iB(HH) {
+      return HH = (0, SH.P)(HH), async function(HH, BH) {
+        const LH = await BH;
+        return new Promise(((BH, AH) => {
+          HH("get", LH, "client_id", (HH => {
+            HH || AH(vB.create("no-client-id")), BH(HH)
+          }))
+        }))
+      }(jB, qB[HH.app.options.appId])
+    }
+
+    function pB(HH, BH, LH) {
+      HH = (0, SH.P)(HH), async function(HH, BH, LH, AH) {
+        if (AH && AH.global) return HH("set", {
+          user_id: LH
+        }), Promise.resolve();
+        HH("config", await BH, {
+          update: !0,
+          user_id: LH
+        })
+      }(jB, qB[HH.app.options.appId], BH, LH).catch((HH => MB.error(HH)))
+    }
+
+    function yB(HH, BH, LH) {
+      HH = (0, SH.P)(HH), async function(HH, BH, LH, AH) {
+        if (AH && AH.global) {
+          const BH = {};
+          for (const HH of Object.keys(LH)) BH[`user_properties.${HH}`] = LH[HH];
+          return HH("set", BH), Promise.resolve()
+        }
+        HH("config", await BH, {
+          update: !0,
+          user_properties: LH
+        })
+      }(jB, qB[HH.app.options.appId], BH, LH).catch((HH => MB.error(HH)))
+    }
+
+    function HL(HH, BH) {
+      HH = (0, SH.P)(HH), async function(HH, BH) {
+        const LH = await HH;
+        window[`ga-disable-${LH}`] = !BH
+      }(qB[HH.app.options.appId], BH).catch((HH => MB.error(HH)))
+    }
+
+    function BL(HH) {
+      jB ? jB("set", HH) : KB(HH)
+    }
+
+    function LL(HH, BH, LH, AH) {
+      HH = (0, SH.P)(HH), async function(HH, BH, LH, AH, rH) {
+        if (rH && rH.global) HH("event", LH, AH);
+        else {
+          const rH = await BH;
+          HH("event", LH, Object.assign(Object.assign({}, AH), {
+            send_to: rH
+          }))
+        }
+      }(jB, qB[HH.app.options.appId], BH, LH, AH).catch((HH => MB.error(HH)))
+    }
+
+    function AL(HH) {
+      jB ? jB("consent", "update", HH) : lB(HH)
+    }
+    const rL = "@firebase/analytics",
+      SL = "0.10.0";
+    (0, AH.u)(new hH.f(QB, ((HH, BH) => {
+      let {
+        options: LH
+      } = BH;
+      return ZB(HH.getProvider("app").getImmediate(), HH.getProvider("installations-internal").getImmediate(), LH)
+    }), "PUBLIC")), (0, AH.u)(new hH.f("analytics-internal", (function(HH) {
+      try {
+        const BH = HH.getProvider(QB).getImmediate();
+        return {
+          logEvent: (HH, LH, AH) => LL(BH, HH, LH, AH)
+        }
+      } catch (BH) {
+        throw vB.create("interop-component-reg-failed", {
+          reason: BH
+        })
+      }
+    }), "PRIVATE")), (0, AH.L)(rL, SL), (0, AH.L)(rL, SL, "esm2017")
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

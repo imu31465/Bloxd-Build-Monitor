@@ -1,377 +1,377 @@
 export const id = 94;
 export const ids = [94];
 export const modules = {
-  5262: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => cU,
-      e: () => AU,
-      i: () => tU,
-      k: () => aU,
-      l: () => FU,
-      n: () => yU,
-      r: () => QU,
-      u: () => pU,
-      w: () => IU,
-      y: () => NU
+  5218: (HH, BH, LH) => {
+    LH.d(BH, {
+      D: () => GH,
+      c: () => AH,
+      e: () => hH,
+      f: () => WH,
+      j: () => QH,
+      l: () => tH,
+      p: () => rH,
+      r: () => SH,
+      v: () => uH,
+      z: () => YH
     });
-    const cU = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+    const AH = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function yU(UU) {
+    function rH(HH) {
       try {
-        return decodeURIComponent(UU.slice(1))
+        return decodeURIComponent(HH.slice(1))
       } catch {
-        return UU.slice(1)
+        return HH.slice(1)
       }
     }
 
-    function QU(UU) {
-      return UU.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    function SH(HH) {
+      return HH.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
     }
-    const AU = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${cU.source}`, "g");
+    const hH = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${AH.source}`, "g");
 
-    function FU(UU, XU) {
-      return 2 === UU.length ? XU.replace(/^ (.*) $/, "$1") : XU
-    }
-
-    function oU(UU) {
-      return "" === UU.trim()
+    function tH(HH, BH) {
+      return 2 === HH.length ? BH.replace(/^ (.*) $/, "$1") : BH
     }
 
-    function DU(UU) {
-      const XU = [];
-      for (const zU of UU.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) XU.length > 0 && XU[XU.length - 1].endsWith("\\") ? XU[XU.length - 1] += `|${zU}` : XU.push(zU);
-      return XU.map((UU => UU.trim().replaceAll("\\|", "|")))
+    function zH(HH) {
+      return "" === HH.trim()
     }
-    const EU = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-    function YU(UU) {
-      const XU = [],
-        zU = [{
+    function CH(HH) {
+      const BH = [];
+      for (const LH of HH.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) BH.length > 0 && BH[BH.length - 1].endsWith("\\") ? BH[BH.length - 1] += `|${LH}` : BH.push(LH);
+      return BH.map((HH => HH.trim().replaceAll("\\|", "|")))
+    }
+    const EH = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function XH(HH) {
+      const BH = [],
+        LH = [{
           indent: -1,
-          items: XU
+          items: BH
         }];
-      let cU = null;
-      for (const yU of UU) {
-        const UU = yU.match(EU);
-        if (!UU) {
-          cU && (cU.text += ` ${yU.trim()}`);
+      let AH = null;
+      for (const rH of HH) {
+        const HH = rH.match(EH);
+        if (!HH) {
+          AH && (AH.text += ` ${rH.trim()}`);
           continue
         }
-        const XU = UU[1].replace(/\t/g, "  ").length;
-        for (; XU <= zU[zU.length - 1].indent;) zU.pop();
-        cU = {
-          text: UU[3].trim(),
+        const BH = HH[1].replace(/\t/g, "  ").length;
+        for (; BH <= LH[LH.length - 1].indent;) LH.pop();
+        AH = {
+          text: HH[3].trim(),
           children: []
-        }, zU[zU.length - 1].items.push(cU), zU.push({
-          indent: XU,
-          items: cU.children
+        }, LH[LH.length - 1].items.push(AH), LH.push({
+          indent: BH,
+          items: AH.children
         })
       }
-      return XU
+      return BH
     }
 
-    function NU(UU) {
-      const XU = UU.replace(/\r\n/g, "\n").split("\n"),
-        zU = [];
-      let cU = 0;
-      for (; cU < XU.length;) {
-        const UU = XU[cU];
-        if (oU(UU)) {
-          cU++;
+    function GH(HH) {
+      const BH = HH.replace(/\r\n/g, "\n").split("\n"),
+        LH = [];
+      let AH = 0;
+      for (; AH < BH.length;) {
+        const HH = BH[AH];
+        if (zH(HH)) {
+          AH++;
           continue
         }
-        const yU = UU.match(/^\s*```\s*(\w*)\s*$/);
-        if (yU) {
-          const UU = [];
-          for (cU++; cU < XU.length && !/^\s*```\s*$/.test(XU[cU]);) UU.push(XU[cU]), cU++;
-          cU++, zU.push({
+        const rH = HH.match(/^\s*```\s*(\w*)\s*$/);
+        if (rH) {
+          const HH = [];
+          for (AH++; AH < BH.length && !/^\s*```\s*$/.test(BH[AH]);) HH.push(BH[AH]), AH++;
+          AH++, LH.push({
             kind: "code",
-            lang: yU[1] || "text",
-            code: UU.join("\n").replace(/\s+$/, "")
+            lang: rH[1] || "text",
+            code: HH.join("\n").replace(/\s+$/, "")
           });
           continue
         }
-        const AU = UU.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (AU) {
-          const UU = AU[2].trim();
-          zU.push({
+        const hH = HH.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (hH) {
+          const HH = hH[2].trim();
+          LH.push({
             kind: "heading",
-            level: AU[1].length,
-            text: UU,
-            anchor: QU(UU)
-          }), cU++;
+            level: hH[1].length,
+            text: HH,
+            anchor: SH(HH)
+          }), AH++;
           continue
         }
-        if (/^\s*(-{3,}|\*{3,})\s*$/.test(UU)) {
-          zU.push({
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(HH)) {
+          LH.push({
             kind: "rule"
-          }), cU++;
+          }), AH++;
           continue
         }
-        if (UU.trim().startsWith("|") && cU + 1 < XU.length && /^\s*\|[\s:|-]+\|\s*$/.test(XU[cU + 1])) {
-          const yU = DU(UU),
-            QU = [];
-          for (cU += 2; cU < XU.length && XU[cU].trim().startsWith("|");) QU.push(DU(XU[cU])), cU++;
-          zU.push({
+        if (HH.trim().startsWith("|") && AH + 1 < BH.length && /^\s*\|[\s:|-]+\|\s*$/.test(BH[AH + 1])) {
+          const rH = CH(HH),
+            SH = [];
+          for (AH += 2; AH < BH.length && BH[AH].trim().startsWith("|");) SH.push(CH(BH[AH])), AH++;
+          LH.push({
             kind: "table",
-            header: yU,
-            rows: QU
+            header: rH,
+            rows: SH
           });
           continue
         }
-        if (UU.startsWith(">")) {
-          const UU = [];
-          for (; cU < XU.length && XU[cU].startsWith(">");) UU.push(XU[cU].replace(/^>\s?/, "")), cU++;
-          zU.push({
+        if (HH.startsWith(">")) {
+          const HH = [];
+          for (; AH < BH.length && BH[AH].startsWith(">");) HH.push(BH[AH].replace(/^>\s?/, "")), AH++;
+          LH.push({
             kind: "quote",
-            blocks: NU(UU.join("\n"))
+            blocks: GH(HH.join("\n"))
           });
           continue
         }
-        if (EU.test(UU)) {
-          const yU = [],
-            QU = /^\s*\d+\./.test(UU);
-          for (; cU < XU.length && !oU(XU[cU]) && (EU.test(XU[cU]) || /^\s+\S/.test(XU[cU]));) yU.push(XU[cU]), cU++;
-          zU.push({
+        if (EH.test(HH)) {
+          const rH = [],
+            SH = /^\s*\d+\./.test(HH);
+          for (; AH < BH.length && !zH(BH[AH]) && (EH.test(BH[AH]) || /^\s+\S/.test(BH[AH]));) rH.push(BH[AH]), AH++;
+          LH.push({
             kind: "list",
-            ordered: QU,
-            items: YU(yU)
+            ordered: SH,
+            items: XH(rH)
           });
           continue
         }
-        const FU = [];
-        for (; cU < XU.length && !oU(XU[cU]) && !/^\s*```/.test(XU[cU]) && !/^#{1,6}\s/.test(XU[cU]) && !XU[cU].startsWith(">") && !EU.test(XU[cU]) && (!XU[cU].trim().startsWith("|") || 0 !== FU.length);) FU.push(XU[cU].trim()), cU++;
-        0 === FU.length && (FU.push(XU[cU].trim()), cU++), zU.push({
+        const tH = [];
+        for (; AH < BH.length && !zH(BH[AH]) && !/^\s*```/.test(BH[AH]) && !/^#{1,6}\s/.test(BH[AH]) && !BH[AH].startsWith(">") && !EH.test(BH[AH]) && (!BH[AH].trim().startsWith("|") || 0 !== tH.length);) tH.push(BH[AH].trim()), AH++;
+        0 === tH.length && (tH.push(BH[AH].trim()), AH++), LH.push({
           kind: "paragraph",
-          text: FU.join(" ")
+          text: tH.join(" ")
         })
       }
-      return zU
+      return LH
     }
 
-    function IU(UU) {
-      let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const zU = NU(UU);
-      let cU = "";
-      const yU = [],
-        QU = [],
-        AU = new Map;
-      for (const DU of zU) {
-        if ("heading" === DU.kind) {
-          var FU;
-          const UU = (null !== (FU = AU.get(DU.anchor)) && void 0 !== FU ? FU : 0) + 1;
-          AU.set(DU.anchor, UU), UU > 1 && (DU.anchor = `${DU.anchor}-${UU}`)
+    function YH(HH) {
+      let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const LH = GH(HH);
+      let AH = "";
+      const rH = [],
+        SH = [],
+        hH = new Map;
+      for (const CH of LH) {
+        if ("heading" === CH.kind) {
+          var tH;
+          const HH = (null !== (tH = hH.get(CH.anchor)) && void 0 !== tH ? tH : 0) + 1;
+          hH.set(CH.anchor, HH), HH > 1 && (CH.anchor = `${CH.anchor}-${HH}`)
         }
-        if ("heading" === DU.kind && 1 === DU.level && !cU) {
-          cU = DU.text;
+        if ("heading" === CH.kind && 1 === CH.level && !AH) {
+          AH = CH.text;
           continue
         }
-        if ("heading" === DU.kind && DU.level <= XU) {
-          QU.push({
-            heading: DU,
+        if ("heading" === CH.kind && CH.level <= BH) {
+          SH.push({
+            heading: CH,
             blocks: []
           });
           continue
         }
-        const UU = QU.at(-1);
-        UU ? UU.blocks.push(DU) : yU.push(DU)
+        const HH = SH.at(-1);
+        HH ? HH.blocks.push(CH) : rH.push(CH)
       }
-      const oU = UU => {
+      const zH = HH => {
         for (;
-          "rule" === (null === (XU = UU.at(-1)) || void 0 === XU ? void 0 : XU.kind);) {
-          var XU;
-          UU.pop()
+          "rule" === (null === (BH = HH.at(-1)) || void 0 === BH ? void 0 : BH.kind);) {
+          var BH;
+          HH.pop()
         }
       };
-      oU(yU);
-      for (const DU of QU) oU(DU.blocks);
+      zH(rH);
+      for (const CH of SH) zH(CH.blocks);
       return {
-        title: cU,
-        intro: yU,
-        sections: QU
+        title: AH,
+        intro: rH,
+        sections: SH
       }
     }
 
-    function pU(UU) {
+    function uH(HH) {
       return [{
         heading: null,
-        blocks: UU.intro
-      }, ...UU.sections.map((UU => ({
-        heading: UU.heading,
-        blocks: UU.blocks
+        blocks: HH.intro
+      }, ...HH.sections.map((HH => ({
+        heading: HH.heading,
+        blocks: HH.blocks
       })))]
     }
 
-    function aU(UU) {
-      return UU.flatMap((UU => "code" === UU.kind ? [UU] : "quote" === UU.kind ? aU(UU.blocks) : []))
+    function QH(HH) {
+      return HH.flatMap((HH => "code" === HH.kind ? [HH] : "quote" === HH.kind ? QH(HH.blocks) : []))
     }
 
-    function tU(UU) {
-      switch (UU.kind) {
+    function WH(HH) {
+      switch (HH.kind) {
         case "heading":
         case "paragraph":
-          return UU.text;
+          return HH.text;
         case "code":
-          return UU.code;
+          return HH.code;
         case "table":
-          return [UU.header, ...UU.rows].map((UU => UU.join(" "))).join(" ");
+          return [HH.header, ...HH.rows].map((HH => HH.join(" "))).join(" ");
         case "list": {
-          const XU = UU => UU.map((UU => `${UU.text} ${XU(UU.children)}`)).join(" ");
-          return XU(UU.items)
+          const BH = HH => HH.map((HH => `${HH.text} ${BH(HH.children)}`)).join(" ");
+          return BH(HH.items)
         }
         case "quote":
-          return UU.blocks.map(tU).join(" ");
+          return HH.blocks.map(WH).join(" ");
         case "rule":
           return ""
       }
     }
   },
-  7082: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => YU,
-      g: () => AU,
-      j: () => FU
+  7029: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => XH,
+      h: () => hH,
+      l: () => tH
     });
-    zU(7079);
-    var cU = zU(61),
-      yU = zU(5262),
-      QU = zU(1305);
-    const AU = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    LH(7025);
+    var AH = LH(45),
+      rH = LH(5218),
+      SH = LH(1225);
+    const hH = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function FU(UU, XU) {
-      return UU === XU ? UU : `${UU} (${XU})`
+    function tH(HH, BH) {
+      return HH === BH ? HH : `${HH} (${BH})`
     }
 
-    function oU(UU) {
-      const XU = [];
-      let zU = 0;
-      for (const cU of UU.matchAll(AU)) {
-        cU.index > zU && XU.push(UU.slice(zU, cU.index));
-        const [, yU, AU, oU, DU, EU, YU] = cU;
-        void 0 !== yU ? XU.push(FU(yU, AU)) : void 0 !== oU || void 0 !== DU ? XU.push((0, QU.jsx)("strong", {
-          children: null !== oU && void 0 !== oU ? oU : DU
-        }, cU.index)) : void 0 !== EU ? XU.push((0, QU.jsx)("em", {
-          children: EU
-        }, cU.index)) : XU.push((0, QU.jsx)("code", {
-          children: YU
-        }, cU.index)), zU = cU.index + cU[0].length
+    function zH(HH) {
+      const BH = [];
+      let LH = 0;
+      for (const AH of HH.matchAll(hH)) {
+        AH.index > LH && BH.push(HH.slice(LH, AH.index));
+        const [, rH, hH, zH, CH, EH, XH] = AH;
+        void 0 !== rH ? BH.push(tH(rH, hH)) : void 0 !== zH || void 0 !== CH ? BH.push((0, SH.jsx)("strong", {
+          children: null !== zH && void 0 !== zH ? zH : CH
+        }, AH.index)) : void 0 !== EH ? BH.push((0, SH.jsx)("em", {
+          children: EH
+        }, AH.index)) : BH.push((0, SH.jsx)("code", {
+          children: XH
+        }, AH.index)), LH = AH.index + AH[0].length
       }
-      return zU < UU.length && XU.push(UU.slice(zU)), XU
+      return LH < HH.length && BH.push(HH.slice(LH)), BH
     }
 
-    function DU(UU, XU) {
-      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const cU = UU.map(((UU, XU) => (0, QU.jsxs)("li", {
-        children: [oU(UU.text), UU.children.length > 0 && DU(UU.children, !1)]
-      }, XU)));
-      return XU ? (0, QU.jsx)("ol", {
-        start: zU,
-        children: cU
-      }) : (0, QU.jsx)("ul", {
-        children: cU
+    function CH(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const AH = HH.map(((HH, BH) => (0, SH.jsxs)("li", {
+        children: [zH(HH.text), HH.children.length > 0 && CH(HH.children, !1)]
+      }, BH)));
+      return BH ? (0, SH.jsx)("ol", {
+        start: LH,
+        children: AH
+      }) : (0, SH.jsx)("ul", {
+        children: AH
       })
     }
 
-    function EU(UU, XU) {
-      switch (UU.kind) {
+    function EH(HH, BH) {
+      switch (HH.kind) {
         case "heading":
-          return UU.level <= 2 ? (0, QU.jsx)("h3", {
-            children: oU(UU.text)
-          }, XU) : (0, QU.jsx)("h4", {
-            children: oU(UU.text)
-          }, XU);
+          return HH.level <= 2 ? (0, SH.jsx)("h3", {
+            children: zH(HH.text)
+          }, BH) : (0, SH.jsx)("h4", {
+            children: zH(HH.text)
+          }, BH);
         case "paragraph":
-          return (0, QU.jsx)("p", {
-            children: oU(UU.text)
-          }, XU);
+          return (0, SH.jsx)("p", {
+            children: zH(HH.text)
+          }, BH);
         case "list":
-          return (0, QU.jsx)(cU.Fragment, {
-            children: DU(UU.items, UU.ordered)
-          }, XU);
+          return (0, SH.jsx)(AH.Fragment, {
+            children: CH(HH.items, HH.ordered)
+          }, BH);
         case "quote":
-          return (0, QU.jsx)("blockquote", {
-            children: UU.blocks.map(((UU, XU) => EU(UU, XU)))
-          }, XU);
+          return (0, SH.jsx)("blockquote", {
+            children: HH.blocks.map(((HH, BH) => EH(HH, BH)))
+          }, BH);
         case "code":
-          return (0, QU.jsx)("pre", {
-            children: (0, QU.jsx)("code", {
-              children: UU.code
+          return (0, SH.jsx)("pre", {
+            children: (0, SH.jsx)("code", {
+              children: HH.code
             })
-          }, XU);
+          }, BH);
         case "table":
-          return (0, QU.jsxs)("table", {
-            children: [(0, QU.jsx)("thead", {
-              children: (0, QU.jsx)("tr", {
-                children: UU.header.map(((UU, XU) => (0, QU.jsx)("th", {
-                  children: oU(UU)
-                }, XU)))
+          return (0, SH.jsxs)("table", {
+            children: [(0, SH.jsx)("thead", {
+              children: (0, SH.jsx)("tr", {
+                children: HH.header.map(((HH, BH) => (0, SH.jsx)("th", {
+                  children: zH(HH)
+                }, BH)))
               })
-            }), (0, QU.jsx)("tbody", {
-              children: UU.rows.map(((UU, XU) => (0, QU.jsx)("tr", {
-                children: UU.map(((UU, XU) => (0, QU.jsx)("td", {
-                  children: oU(UU)
-                }, XU)))
-              }, XU)))
+            }), (0, SH.jsx)("tbody", {
+              children: HH.rows.map(((HH, BH) => (0, SH.jsx)("tr", {
+                children: HH.map(((HH, BH) => (0, SH.jsx)("td", {
+                  children: zH(HH)
+                }, BH)))
+              }, BH)))
             })]
-          }, XU);
+          }, BH);
         case "rule":
-          return (0, QU.jsx)("hr", {}, XU)
+          return (0, SH.jsx)("hr", {}, BH)
       }
     }
 
-    function YU(UU) {
+    function XH(HH) {
       let {
-        markdown: XU
-      } = UU, zU = 0;
-      return (0, QU.jsx)("div", {
+        markdown: BH
+      } = HH, LH = 0;
+      return (0, SH.jsx)("div", {
         className: "StudioAiAnswerText",
-        children: (0, yU.y)(XU).map(((UU, XU) => {
-          if ("list" !== UU.kind || !UU.ordered) return zU = 0, EU(UU, XU);
-          const yU = zU + 1;
-          return zU += UU.items.length, (0, QU.jsx)(cU.Fragment, {
-            children: DU(UU.items, !0, yU)
-          }, XU)
+        children: (0, rH.D)(BH).map(((HH, BH) => {
+          if ("list" !== HH.kind || !HH.ordered) return LH = 0, EH(HH, BH);
+          const rH = LH + 1;
+          return LH += HH.items.length, (0, SH.jsx)(AH.Fragment, {
+            children: CH(HH.items, !0, rH)
+          }, BH)
         }))
       })
     }
   },
-  7070: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => kU,
-      h: () => GU,
-      e: () => ZU,
-      k: () => pU
+  7017: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => xH,
+      f: () => vH,
+      e: () => TH,
+      h: () => uH
     });
-    var cU = zU(1220),
-      yU = zU(7031),
-      QU = zU(5387);
-    const AU = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+    var AH = LH(1148),
+      rH = LH(6987),
+      SH = LH(5347);
+    const hH = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
 
-    function FU(UU) {
-      return (0, QU.e)(UU, AU, (XU => !/^my/i.test(XU[0]) || !/follow $/i.test(UU.slice(0, XU.index)))).length > 0
+    function tH(HH) {
+      return (0, SH.c)(HH, hH, (BH => !/^my/i.test(BH[0]) || !/follow $/i.test(HH.slice(0, BH.index)))).length > 0
     }
-    const oU = /\byou(?:r|'re|'ll)?\b/i,
-      DU = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      EU = 2;
+    const zH = /\byou(?:r|'re|'ll)?\b/i,
+      CH = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      EH = 2;
 
-    function YU(UU) {
-      return function(UU) {
-        const XU = [];
-        let zU = !1;
-        for (const cU of UU.split("\n")) {
-          if (/^\s*(```|~~~)/.test(cU)) {
-            zU = !zU;
+    function XH(HH) {
+      return function(HH) {
+        const BH = [];
+        let LH = !1;
+        for (const AH of HH.split("\n")) {
+          if (/^\s*(```|~~~)/.test(AH)) {
+            LH = !LH;
             continue
           }
-          if (zU || /^\s*>/.test(cU)) continue;
-          const UU = cU.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          XU.push(...(0, yU.p)(UU))
+          if (LH || /^\s*>/.test(AH)) continue;
+          const HH = AH.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          BH.push(...(0, rH.l)(HH))
         }
-        return XU
-      }(UU).filter((UU => FU(UU) || DU.test(UU) && !oU.test(UU)))
+        return BH
+      }(HH).filter((HH => tH(HH) || CH.test(HH) && !zH.test(HH)))
     }
-    const NU = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      IU = [{
+    const GH = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      YH = [{
         name: "Qwen3.6-27B",
         temperature: .7,
         reasoningEffort: "none"
@@ -384,317 +384,317 @@ export const modules = {
         temperature: .15
       }];
 
-    function pU(UU) {
-      const XU = IU.findIndex((XU => XU.name === UU));
-      return -1 === XU ? IU.length : XU
+    function uH(HH) {
+      const BH = YH.findIndex((BH => BH.name === HH));
+      return -1 === BH ? YH.length : BH
     }
-    const aU = 2500,
-      tU = 12e4;
-    class gU extends Error {
-      constructor(UU) {
-        super(`Studio AI chat ${UU}`), this.reason = UU
+    const QH = 2500,
+      WH = 12e4;
+    class MH extends Error {
+      constructor(HH) {
+        super(`Studio AI chat ${HH}`), this.reason = HH
       }
     }
 
-    function kU(UU, XU) {
-      const zU = new AbortController,
-        cU = () => {
-          zU.abort()
+    function xH(HH, BH) {
+      const LH = new AbortController,
+        AH = () => {
+          LH.abort()
         },
-        yU = setTimeout(cU, UU);
-      return null !== XU && void 0 !== XU && XU.aborted && cU(), null === XU || void 0 === XU || XU.addEventListener("abort", cU, {
+        rH = setTimeout(AH, HH);
+      return null !== BH && void 0 !== BH && BH.aborted && AH(), null === BH || void 0 === BH || BH.addEventListener("abort", AH, {
         once: !0
       }), {
-        signal: zU.signal,
+        signal: LH.signal,
         clear: () => {
-          clearTimeout(yU), null === XU || void 0 === XU || XU.removeEventListener("abort", cU)
+          clearTimeout(rH), null === BH || void 0 === BH || BH.removeEventListener("abort", AH)
         }
       }
     }
 
-    function GU(UU, XU, zU) {
-      return new Promise(((yU, QU) => {
-        const AU = new AbortController,
-          FU = () => {
-            AU.abort(), QU((0, cU.e)(zU))
+    function vH(HH, BH, LH) {
+      return new Promise(((rH, SH) => {
+        const hH = new AbortController,
+          tH = () => {
+            hH.abort(), SH((0, AH.g)(LH))
           };
-        if (null !== zU && void 0 !== zU && zU.aborted) return void FU();
-        null === zU || void 0 === zU || zU.addEventListener("abort", FU, {
+        if (null !== LH && void 0 !== LH && LH.aborted) return void tH();
+        null === LH || void 0 === LH || LH.addEventListener("abort", tH, {
           once: !0
         });
-        const oU = IU.map((() => !1));
-        let DU = null;
-        const EU = IU.map((() => !1)),
-          YU = IU.map((() => !1));
-        IU.forEach(((cU, NU) => {
-          const pU = kU(tU, AU.signal);
-          RU(cU, [{
+        const zH = YH.map((() => !1));
+        let CH = null;
+        const EH = YH.map((() => !1)),
+          XH = YH.map((() => !1));
+        YH.forEach(((AH, GH) => {
+          const uH = xH(WH, hH.signal);
+          UH(AH, [{
             role: "user",
-            content: UU
-          }], pU.signal).then((UU => {
-            AU.signal.aborted || ("busy" === UU || "failed" === UU ? (EU[NU] = "busy" === UU, YU[NU] = !0) : null !== UU && (null === DU || NU < DU.rank) && (DU = {
-              rank: NU,
+            content: HH
+          }], uH.signal).then((HH => {
+            hH.signal.aborted || ("busy" === HH || "failed" === HH ? (EH[GH] = "busy" === HH, XH[GH] = !0) : null !== HH && (null === CH || GH < CH.rank) && (CH = {
+              rank: GH,
               answer: {
-                text: UU.text,
-                model: cU.name
+                text: HH.text,
+                model: AH.name
               }
-            }, XU(DU.answer)))
-          }), (UU => {
-            AU.signal.aborted || (YU[NU] = !0, console.warn(`Studio AI: ${cU.name} couldn't be reached`, UU))
+            }, BH(CH.answer)))
+          }), (HH => {
+            hH.signal.aborted || (XH[GH] = !0, console.warn(`Studio AI: ${AH.name} couldn't be reached`, HH))
           })).finally((() => {
-            pU.clear(), oU[NU] = !0, AU.signal.aborted || (() => {
-              var UU, XU;
-              const cU = null !== (UU = null === (XU = DU) || void 0 === XU ? void 0 : XU.rank) && void 0 !== UU ? UU : IU.length;
-              oU.slice(0, cU).includes(!1) || (null === zU || void 0 === zU || zU.removeEventListener("abort", FU), AU.abort(), null !== DU ? yU({
-                ...DU.answer,
-                isFinal: !YU.slice(0, DU.rank).includes(!0)
-              }) : QU(new gU(EU.includes(!0) ? "busy" : "failed")))
+            uH.clear(), zH[GH] = !0, hH.signal.aborted || (() => {
+              var HH, BH;
+              const AH = null !== (HH = null === (BH = CH) || void 0 === BH ? void 0 : BH.rank) && void 0 !== HH ? HH : YH.length;
+              zH.slice(0, AH).includes(!1) || (null === LH || void 0 === LH || LH.removeEventListener("abort", tH), hH.abort(), null !== CH ? rH({
+                ...CH.answer,
+                isFinal: !XH.slice(0, CH.rank).includes(!0)
+              }) : SH(new MH(EH.includes(!0) ? "busy" : "failed")))
             })()
-          })).catch((UU => {
-            console.error("Studio AI: showing an answer failed", UU)
+          })).catch((HH => {
+            console.error("Studio AI: showing an answer failed", HH)
           }))
         }))
       }))
     }
 
-    function BU(UU) {
-      var XU, zU;
-      return "length" === (null === UU || void 0 === UU || null === (XU = UU.choices) || void 0 === XU || null === (zU = XU[0]) || void 0 === zU ? void 0 : zU.finish_reason)
+    function PH(HH) {
+      var BH, LH;
+      return "length" === (null === HH || void 0 === HH || null === (BH = HH.choices) || void 0 === BH || null === (LH = BH[0]) || void 0 === LH ? void 0 : LH.finish_reason)
     }
-    async function ZU(UU, XU, zU) {
-      const cU = IU.find((XU => XU.name === UU));
-      if (void 0 === cU) return "failed";
-      const yU = kU(tU, zU);
+    async function TH(HH, BH, LH) {
+      const AH = YH.find((BH => BH.name === HH));
+      if (void 0 === AH) return "failed";
+      const rH = xH(WH, LH);
       try {
-        const UU = await RU(cU, XU, yU.signal);
-        return null !== UU && "object" === typeof UU ? UU.isCutOff ? (console.warn(`Studio AI: ${cU.name}'s answer was cut off at the token limit`), null) : {
-          text: UU.text
-        } : UU
+        const HH = await UH(AH, BH, rH.signal);
+        return null !== HH && "object" === typeof HH ? HH.isCutOff ? (console.warn(`Studio AI: ${AH.name}'s answer was cut off at the token limit`), null) : {
+          text: HH.text
+        } : HH
       } finally {
-        yU.clear()
+        rH.clear()
       }
     }
-    async function RU(UU, XU, zU) {
-      const cU = await fetch(NU, {
+    async function UH(HH, BH, LH) {
+      const AH = await fetch(GH, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: UU.name,
-          messages: XU,
-          max_tokens: aU,
-          temperature: UU.temperature,
-          reasoning_effort: UU.reasoningEffort
+          model: HH.name,
+          messages: BH,
+          max_tokens: QH,
+          temperature: HH.temperature,
+          reasoning_effort: HH.reasoningEffort
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: zU
+        signal: LH
       });
-      if (429 === cU.status) return "busy";
-      if (!cU.ok) return console.warn(`Studio AI: ${UU.name} answered ${cU.status}`), "failed";
-      const yU = await cU.json().catch((() => null)),
-        QU = function(UU) {
-          var XU, zU, cU;
-          const yU = null === UU || void 0 === UU || null === (XU = UU.choices) || void 0 === XU || null === (zU = XU[0]) || void 0 === zU || null === (cU = zU.message) || void 0 === cU ? void 0 : cU.content;
-          if ("string" !== typeof yU) return null;
-          const QU = yU.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === QU ? null : QU
-        }(yU);
-      return null !== QU && function(UU) {
-        const XU = YU(UU);
-        return XU.length >= EU || XU.some((UU => FU(UU)))
-      }(QU) ? (console.warn(`Studio AI: ${UU.name} thought out loud instead of answering`), "failed") : null === QU ? null : {
-        text: QU,
-        isCutOff: BU(yU)
+      if (429 === AH.status) return "busy";
+      if (!AH.ok) return console.warn(`Studio AI: ${HH.name} answered ${AH.status}`), "failed";
+      const rH = await AH.json().catch((() => null)),
+        SH = function(HH) {
+          var BH, LH, AH;
+          const rH = null === HH || void 0 === HH || null === (BH = HH.choices) || void 0 === BH || null === (LH = BH[0]) || void 0 === LH || null === (AH = LH.message) || void 0 === AH ? void 0 : AH.content;
+          if ("string" !== typeof rH) return null;
+          const SH = rH.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === SH ? null : SH
+        }(rH);
+      return null !== SH && function(HH) {
+        const BH = XH(HH);
+        return BH.length >= EH || BH.some((HH => tH(HH)))
+      }(SH) ? (console.warn(`Studio AI: ${HH.name} thought out loud instead of answering`), "failed") : null === SH ? null : {
+        text: SH,
+        isCutOff: PH(rH)
       }
     }
   },
-  7031: (UU, XU, zU) => {
-    zU.d(XU, {
-      A: () => RU,
-      E: () => tU,
-      G: () => GU,
-      K: () => ZU,
-      O: () => kU,
-      R: () => YU,
-      U: () => DU,
-      W: () => IU,
-      b: () => pU,
-      f: () => FU,
-      h: () => AU,
-      l: () => aU,
-      n: () => NU,
-      p: () => EU,
-      t: () => QU,
-      x: () => yU,
-      z: () => BU
+  6987: (HH, BH, LH) => {
+    LH.d(BH, {
+      C: () => TH,
+      E: () => xH,
+      F: () => XH,
+      I: () => CH,
+      L: () => YH,
+      b: () => uH,
+      d: () => tH,
+      e: () => hH,
+      f: () => QH,
+      h: () => GH,
+      l: () => EH,
+      n: () => SH,
+      p: () => rH,
+      t: () => PH,
+      u: () => UH,
+      w: () => WH,
+      y: () => vH
     });
-    var cU = zU(5387);
-    const yU = 2e3,
-      QU = 2e4;
+    var AH = LH(5347);
+    const rH = 2e3,
+      SH = 2e4;
 
-    function AU(UU) {
-      return UU.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    function hH(HH) {
+      return HH.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     }
 
-    function FU(UU) {
-      return UU.replace(/\$/g, "\\$")
+    function tH(HH) {
+      return HH.replace(/\$/g, "\\$")
     }
-    const oU = /[.!?](?=\s|\*|_|$)|\n|$/g;
+    const zH = /[.!?](?=\s|\*|_|$)|\n|$/g;
 
-    function DU(UU, XU) {
-      oU.lastIndex = XU;
-      const zU = oU.exec(UU);
-      return zU.index + zU[0].length
-    }
-
-    function EU(UU) {
-      return (0, cU.C)(UU, /\s+/g, (0, cU.v)(".!?")).flatMap((UU => UU.split("\n")))
+    function CH(HH, BH) {
+      zH.lastIndex = BH;
+      const LH = zH.exec(HH);
+      return LH.index + LH[0].length
     }
 
-    function YU(UU, XU) {
-      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : XU;
-      const cU = [...UU.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((UU => UU.index)),
-        yU = cU.filter((UU => UU < XU)),
-        QU = cU.find((UU => UU >= zU));
-      return [0 === yU.length ? 0 : yU.at(-1) + 1, void 0 === QU ? UU.length : QU + 1]
+    function EH(HH) {
+      return (0, AH.s)(HH, /\s+/g, (0, AH.n)(".!?")).flatMap((HH => HH.split("\n")))
     }
 
-    function NU(UU, XU) {
-      const zU = UU.charCodeAt(XU - 1);
-      return UU.slice(0, XU > 0 && XU < UU.length && zU >= 55296 && zU <= 56319 ? XU - 1 : XU)
+    function XH(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : BH;
+      const AH = [...HH.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((HH => HH.index)),
+        rH = AH.filter((HH => HH < BH)),
+        SH = AH.find((HH => HH >= LH));
+      return [0 === rH.length ? 0 : rH.at(-1) + 1, void 0 === SH ? HH.length : SH + 1]
     }
 
-    function IU(UU, XU) {
-      return `${XU}${UU.replace(/\\/g,"\\\\").split(XU).join(`\\${XU}`)}${XU}`
+    function GH(HH, BH) {
+      const LH = HH.charCodeAt(BH - 1);
+      return HH.slice(0, BH > 0 && BH < HH.length && LH >= 55296 && LH <= 56319 ? BH - 1 : BH)
     }
 
-    function pU(UU) {
-      return UU.charAt(0).toUpperCase() + UU.slice(1)
+    function YH(HH, BH) {
+      return `${BH}${HH.replace(/\\/g,"\\\\").split(BH).join(`\\${BH}`)}${BH}`
     }
 
-    function aU(UU) {
-      return Math.round(UU).toLocaleString("en-US")
+    function uH(HH) {
+      return HH.charAt(0).toUpperCase() + HH.slice(1)
     }
 
-    function tU(UU) {
-      return UU.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((UU => "" !== UU))
-    }
-    const gU = 3;
-
-    function kU(UU, XU) {
-      return tU(UU).filter((UU => UU.length >= gU && !/\d/.test(UU))).map((UU => `${UU} ${XU}`))
+    function QH(HH) {
+      return Math.round(HH).toLocaleString("en-US")
     }
 
-    function GU(UU) {
-      return UU.split(/[\s:_]+/).filter((UU => "" !== UU)).map(AU).join("[`:_\\s]+")
+    function WH(HH) {
+      return HH.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((HH => "" !== HH))
+    }
+    const MH = 3;
+
+    function xH(HH, BH) {
+      return WH(HH).filter((HH => HH.length >= MH && !/\d/.test(HH))).map((HH => `${HH} ${BH}`))
     }
 
-    function BU(UU) {
-      return tU(UU.split(".").pop())
+    function vH(HH) {
+      return HH.split(/[\s:_]+/).filter((HH => "" !== HH)).map(hH).join("[`:_\\s]+")
     }
 
-    function ZU(UU) {
-      return UU.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    function PH(HH) {
+      return WH(HH.split(".").pop())
     }
 
-    function RU(UU) {
-      let XU = null;
+    function TH(HH) {
+      return HH.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function UH(HH) {
+      let BH = null;
       return () => {
-        const zU = XU ??= UU();
-        return zU.catch((() => {
-          XU === zU && (XU = null)
-        })), zU
+        const LH = BH ??= HH();
+        return LH.catch((() => {
+          BH === LH && (BH = null)
+        })), LH
       }
     }
   },
-  5387: (UU, XU, zU) => {
-    function cU(UU) {
+  5347: (HH, BH, LH) => {
+    function AH(HH) {
       return {
-        notAfter: UU
+        notAfter: HH
       }
     }
-    zU.d(XU, {
-      C: () => YU,
-      d: () => oU,
-      e: () => DU,
-      i: () => FU,
-      j: () => cU,
-      n: () => yU,
-      r: () => QU,
-      v: () => AU,
-      z: () => EU
+    LH.d(BH, {
+      b: () => zH,
+      c: () => CH,
+      g: () => tH,
+      i: () => AH,
+      j: () => rH,
+      k: () => SH,
+      n: () => hH,
+      o: () => EH,
+      s: () => XH
     });
-    const yU = cU("\\w$."),
-      QU = cU("\\w.,");
+    const rH = AH("\\w$."),
+      SH = AH("\\w.,");
 
-    function AU(UU) {
-      return XU => oU(XU, UU)
+    function hH(HH) {
+      return BH => zH(BH, HH)
     }
 
-    function FU(UU) {
-      return XU => !UU.test(XU.input.slice(0, XU.index))
+    function tH(HH) {
+      return BH => !HH.test(BH.input.slice(0, BH.index))
     }
 
-    function oU(UU, XU) {
-      return UU.index > 0 && new RegExp(`[${XU}]`).test(UU.input[UU.index - 1])
+    function zH(HH, BH) {
+      return HH.index > 0 && new RegExp(`[${BH}]`).test(HH.input[HH.index - 1])
     }
 
-    function DU(UU, XU, zU) {
-      return function(UU) {
-        return void 0 !== UU && "function" !== typeof UU
-      }(zU) ? function(UU, XU, zU) {
-        const cU = XU.flags.replace(/[gy]/g, ""),
-          yU = new RegExp(`[^${zU}](?:${XU.source})`, `${cU}g`),
-          QU = [],
-          AU = zU => {
-            const cU = zU.index + zU[0].length;
-            return ("" === zU[0] ? NU(UU, XU, cU) : cU) - 1
+    function CH(HH, BH, LH) {
+      return function(HH) {
+        return void 0 !== HH && "function" !== typeof HH
+      }(LH) ? function(HH, BH, LH) {
+        const AH = BH.flags.replace(/[gy]/g, ""),
+          rH = new RegExp(`[^${LH}](?:${BH.source})`, `${AH}g`),
+          SH = [],
+          hH = LH => {
+            const AH = LH.index + LH[0].length;
+            return ("" === LH[0] ? GH(HH, BH, AH) : AH) - 1
           },
-          FU = new RegExp(`(?:${XU.source})`, `${cU}y`).exec(UU);
-        if (FU) {
-          if (QU.push(FU), !XU.global) return QU;
-          yU.lastIndex = AU(FU)
+          tH = new RegExp(`(?:${BH.source})`, `${AH}y`).exec(HH);
+        if (tH) {
+          if (SH.push(tH), !BH.global) return SH;
+          rH.lastIndex = hH(tH)
         }
-        for (let oU = yU.exec(UU); oU; oU = yU.exec(UU)) {
-          const zU = NU(UU, XU, oU.index) - oU.index;
-          if (oU[0] = oU[0].slice(zU), oU.index += zU, QU.push(oU), !XU.global) break;
-          yU.lastIndex = AU(oU)
+        for (let zH = rH.exec(HH); zH; zH = rH.exec(HH)) {
+          const LH = GH(HH, BH, zH.index) - zH.index;
+          if (zH[0] = zH[0].slice(LH), zH.index += LH, SH.push(zH), !BH.global) break;
+          rH.lastIndex = hH(zH)
         }
-        return QU
-      }(UU, XU, zU.notAfter) : function(UU, XU, zU) {
-        const cU = new RegExp(XU.source, `${XU.flags.replace(/[gy]/g,"")}g`),
-          yU = [];
-        for (let QU = cU.exec(UU); QU; QU = cU.exec(UU))
-          if (!zU || zU(QU)) {
-            if (yU.push(QU), !XU.global) break;
-            "" === QU[0] && (cU.lastIndex = NU(UU, XU, cU.lastIndex))
-          } else cU.lastIndex = NU(UU, XU, QU.index);
-        return yU
-      }(UU, XU, zU)
+        return SH
+      }(HH, BH, LH.notAfter) : function(HH, BH, LH) {
+        const AH = new RegExp(BH.source, `${BH.flags.replace(/[gy]/g,"")}g`),
+          rH = [];
+        for (let SH = AH.exec(HH); SH; SH = AH.exec(HH))
+          if (!LH || LH(SH)) {
+            if (rH.push(SH), !BH.global) break;
+            "" === SH[0] && (AH.lastIndex = GH(HH, BH, AH.lastIndex))
+          } else AH.lastIndex = GH(HH, BH, SH.index);
+        return rH
+      }(HH, BH, LH)
     }
 
-    function EU(UU, XU, zU, cU) {
-      let yU = "",
-        QU = 0;
-      for (const AU of DU(UU, XU, zU)) yU += UU.slice(QU, AU.index) + cU(AU), QU = AU.index + AU[0].length;
-      return yU + UU.slice(QU)
+    function EH(HH, BH, LH, AH) {
+      let rH = "",
+        SH = 0;
+      for (const hH of CH(HH, BH, LH)) rH += HH.slice(SH, hH.index) + AH(hH), SH = hH.index + hH[0].length;
+      return rH + HH.slice(SH)
     }
 
-    function YU(UU, XU, zU) {
-      const cU = [];
-      let yU = 0;
-      for (const QU of DU(UU, XU, zU)) cU.push(UU.slice(yU, QU.index)), yU = QU.index + QU[0].length;
-      return [...cU, UU.slice(yU)]
+    function XH(HH, BH, LH) {
+      const AH = [];
+      let rH = 0;
+      for (const SH of CH(HH, BH, LH)) AH.push(HH.slice(rH, SH.index)), rH = SH.index + SH[0].length;
+      return [...AH, HH.slice(rH)]
     }
 
-    function NU(UU, XU, zU) {
-      var cU;
-      return zU + (XU.unicode && (null !== (cU = UU.codePointAt(zU)) && void 0 !== cU ? cU : 0) > 65535 ? 2 : 1)
+    function GH(HH, BH, LH) {
+      var AH;
+      return LH + (BH.unicode && (null !== (AH = HH.codePointAt(LH)) && void 0 !== AH ? AH : 0) > 65535 ? 2 : 1)
     }
   },
-  7079: () => {}
+  7025: () => {}
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

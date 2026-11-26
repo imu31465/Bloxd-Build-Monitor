@@ -1,373 +1,373 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  41618: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      startWasmPadGameplay: () => HU
+  41856: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      startWasmPadGameplay: () => NH
     });
-    zU(41624);
-    var cU = zU(41633),
-      yU = zU(41640),
-      QU = zU(2032),
-      AU = zU(41652),
-      FU = zU(5326),
-      oU = zU(5312),
-      DU = zU(41657),
-      EU = zU(41660),
-      YU = zU(5336),
-      NU = zU(41727),
-      IU = zU(2588),
-      pU = zU(9431),
-      aU = zU(41636),
-      tU = zU(9404),
-      gU = zU(39926);
-    const kU = UU => {
-        const XU = YU.c.indexOf(UU);
-        if (XU < 0) throw new Error(`No core action "${UU}"`);
-        return XU
+    LH(41860);
+    var AH = LH(41864),
+      rH = LH(41884),
+      SH = LH(2036),
+      hH = LH(41898),
+      tH = LH(5268),
+      zH = LH(5255),
+      CH = LH(41905),
+      EH = LH(41911),
+      XH = LH(5279),
+      GH = LH(41985),
+      YH = LH(2605),
+      uH = LH(9543),
+      QH = LH(41871),
+      WH = LH(9522),
+      MH = LH(40035);
+    const xH = HH => {
+        const BH = XH.c.indexOf(HH);
+        if (BH < 0) throw new Error(`No core action "${HH}"`);
+        return BH
       },
-      GU = kU("primary-fire"),
-      BU = kU("alt-fire"),
-      ZU = kU("mid-fire"),
-      RU = kU("jump"),
-      PU = kU("ReloadGun"),
-      WU = kU("SwapCameraZoom"),
-      dU = kU("TouchAction1"),
-      LU = {
-        SpecialAction1: kU("SpecialAction1"),
-        SpecialAction2: kU("SpecialAction2")
+      vH = xH("primary-fire"),
+      PH = xH("alt-fire"),
+      TH = xH("mid-fire"),
+      UH = xH("jump"),
+      VH = xH("ReloadGun"),
+      OH = xH("SwapCameraZoom"),
+      bH = xH("TouchAction1"),
+      kH = {
+        SpecialAction1: xH("SpecialAction1"),
+        SpecialAction2: xH("SpecialAction2")
       },
-      eU = (UU, XU) => {
-        (0, IU.y)(FU.K.PadAction, UU, 0, 0, (0, IU.v)(XU, performance.now()))
+      mH = (HH, BH) => {
+        (0, YH.w)(tH.M.PadAction, HH, 0, 0, (0, YH.u)(BH, performance.now()))
       },
-      CU = UU => {
-        eU(UU, AU.Bd.Down)
+      oH = HH => {
+        mH(HH, hH.xd.Down)
       },
-      wU = UU => {
-        eU(UU, 0)
+      IH = HH => {
+        mH(HH, 0)
       },
-      qU = UU => {
-        CU(UU), wU(UU)
+      fH = HH => {
+        oH(HH), IH(HH)
       },
-      OU = () => {
-        const UU = (0, EU.f)();
-        return null !== UU && void 0 !== UU && UU.isCoreRunning ? UU : null
+      lH = () => {
+        const HH = (0, EH.i)();
+        return null !== HH && void 0 !== HH && HH.isCoreRunning ? HH : null
       },
-      SU = UU => AU.w.playerFlags(UU.api.apiView, 0),
-      rU = UU => null !== UU && AU.w.targetBlockId(UU.api.apiView, 0) !== AU.cd,
-      uU = () => {
-        const UU = (0, pU.b)(),
-          XU = new aU.c;
-        let zU = !1;
-        const cU = (UU, XU) => {
-            (0, IU.y)(FU.K.PadLook, AU.Hd.Rate, UU, XU, 0)
+      KH = HH => hH.y.playerFlags(HH.api.apiView, 0),
+      cH = HH => null !== HH && hH.y.targetBlockId(HH.api.apiView, 0) !== hH.cd,
+      eH = () => {
+        const HH = (0, uH.d)(),
+          BH = new QH.b;
+        let LH = !1;
+        const AH = (HH, BH) => {
+            (0, YH.w)(tH.M.PadLook, hH.Hd.Rate, HH, BH, 0)
           },
-          yU = () => {
-            zU = !1, XU.reset(), cU(0, 0)
+          rH = () => {
+            LH = !1, BH.reset(), AH(0, 0)
           };
         return {
-          update: (yU, QU, oU) => {
-            zU || (UU.discardPending(), zU = !0);
-            const DU = (0, aU.n)(XU, yU, QU, oU, performance.now());
-            cU(DU.yawRadPerSec, DU.pitchRadPerSec);
-            const EU = UU.drainLookDelta();
-            0 === EU.zq && 0 === EU.Qq || (0, IU.y)(FU.K.PadLook, AU.Hd.Gyro, EU.zq, EU.Qq, 0)
+          update: (rH, SH, zH) => {
+            LH || (HH.discardPending(), LH = !0);
+            const CH = (0, QH.q)(BH, rH, SH, zH, performance.now());
+            AH(CH.yawRadPerSec, CH.pitchRadPerSec);
+            const EH = HH.drainLookDelta();
+            0 === EH.lq && 0 === EH.Fq || (0, YH.w)(tH.M.PadLook, hH.Hd.Gyro, EH.lq, EH.Fq, 0)
           },
-          release: yU,
-          uninstall: yU
+          release: rH,
+          uninstall: rH
         }
       },
-      fU = () => {
-        const UU = OU();
-        return null !== UU && 0 !== (SU(UU) & AU.Od.PadSneakToggled)
+      qH = () => {
+        const HH = lH();
+        return null !== HH && 0 !== (KH(HH) & hH.Md.PadSneakToggled)
       },
-      iU = () => {
-        const UU = (UU => {
-          const XU = UU => function() {
-            return (0, NU.c)(), UU(...arguments)
+      gH = () => {
+        const HH = (HH => {
+          const BH = HH => function() {
+            return (0, GH.c)(), HH(...arguments)
           };
           return {
-            primaryFireDown: XU((UU => (eU(GU, AU.Bd.Down | (UU ? AU.Bd.Repeat : 0)), 0))),
-            primaryFireUp: XU((() => {
-              wU(GU)
+            primaryFireDown: BH((HH => (mH(vH, hH.xd.Down | (HH ? hH.xd.Repeat : 0)), 0))),
+            primaryFireUp: BH((() => {
+              IH(vH)
             })),
-            altFireDown: XU((() => (CU(BU), 0))),
-            altFireUp: XU((() => {
-              wU(BU)
+            altFireDown: BH((() => (oH(PH), 0))),
+            altFireUp: BH((() => {
+              IH(PH)
             })),
-            jumpDown: XU((() => {
-              qU(RU)
+            jumpDown: BH((() => {
+              fH(UH)
             })),
-            specialActionDown: XU((UU => {
-              CU(LU[UU])
+            specialActionDown: BH((HH => {
+              oH(kH[HH])
             })),
-            specialActionUp: XU((UU => {
-              wU(LU[UU])
+            specialActionUp: BH((HH => {
+              IH(kH[HH])
             })),
-            reloadGun: XU((() => {
-              qU(PU)
+            reloadGun: BH((() => {
+              fH(VH)
             })),
-            dropItem: XU((UU => {
-              eU(AU.Ed.Drop, AU.Bd.Down | (UU ? AU.Bd.Stack : 0))
+            dropItem: BH((HH => {
+              mH(hH.Ad.Drop, hH.xd.Down | (HH ? hH.xd.Stack : 0))
             })),
-            swapCameraZoom: XU((() => {
-              qU(WU)
+            swapCameraZoom: BH((() => {
+              fH(OH)
             })),
-            pickBlock: XU((() => (qU(ZU), rU(UU()))))
+            pickBlock: BH((() => (fH(TH), cH(HH()))))
           }
-        })(OU);
-        let XU = !1,
-          zU = null;
-        const cU = () => {
-          var UU;
-          null === (UU = zU) || void 0 === UU || UU(), zU = null
+        })(lH);
+        let BH = !1,
+          LH = null;
+        const AH = () => {
+          var HH;
+          null === (HH = LH) || void 0 === HH || HH(), LH = null
         };
         return {
-          bodies: () => UU,
-          look: uU(),
-          move: (UU, zU) => {
-            var yU;
-            cU();
+          bodies: () => HH,
+          look: eH(),
+          move: (HH, LH) => {
+            var rH;
+            AH();
             const {
-              bits: QU,
-              flips: FU
-            } = (UU => {
-              if (null === UU) return {
-                bits: AU.Gd.Peek,
+              bits: SH,
+              flips: tH
+            } = (HH => {
+              if (null === HH) return {
+                bits: hH.Ed.Peek,
                 flips: 0
               };
-              const XU = UU.sneakHeld ? AU.Gd.SneakHeld : 0;
-              return "hold" === UU.mode ? {
-                bits: XU | AU.Gd.SneakHoldMode,
-                flips: UU.sneakTogglePressed ? 1 : 0
+              const BH = HH.sneakHeld ? hH.Ed.SneakHeld : 0;
+              return "hold" === HH.mode ? {
+                bits: BH | hH.Ed.SneakHoldMode,
+                flips: HH.sneakTogglePressed ? 1 : 0
               } : {
-                bits: XU,
-                flips: UU.sneakPressed || UU.sneakTogglePressed ? 1 : 0
+                bits: BH,
+                flips: HH.sneakPressed || HH.sneakTogglePressed ? 1 : 0
               }
-            })(zU);
-            null !== (yU = OU()) && void 0 !== yU && yU.padMove(UU.x, UU.y, UU.magnitude, UU.headingOffset, (UU => AU.Gd.Active | (UU.jumpHeld ? AU.Gd.JumpHeld : 0) | (UU.jumpPressed ? AU.Gd.JumpPressed : 0) | (UU.running ? AU.Gd.Running : 0) | (UU.sprintHeld ? AU.Gd.SprintHeld : 0))(UU) | QU, FU) && (XU = !0), (0, tU.f)(fU())
+            })(LH);
+            null !== (rH = lH()) && void 0 !== rH && rH.padMove(HH.x, HH.y, HH.magnitude, HH.headingOffset, (HH => hH.Ed.Active | (HH.jumpHeld ? hH.Ed.JumpHeld : 0) | (HH.jumpPressed ? hH.Ed.JumpPressed : 0) | (HH.running ? hH.Ed.Running : 0) | (HH.sprintHeld ? hH.Ed.SprintHeld : 0))(HH) | SH, tH) && (BH = !0), (0, WH.h)(qH())
           },
           stopMoving: () => {
-            var UU;
-            XU && (XU = !(null !== (UU = OU()) && void 0 !== UU && UU.padMove(0, 0, 0, 0, 0, 0)), cU(), zU = (0, oU.t)((() => {
-              cU(), (0, tU.f)(fU())
+            var HH;
+            BH && (BH = !(null !== (HH = lH()) && void 0 !== HH && HH.padMove(0, 0, 0, 0, 0, 0)), AH(), LH = (0, zH.v)((() => {
+              AH(), (0, WH.h)(qH())
             })))
           },
-          uninstall: cU,
-          deviceChanged: UU => {
-            var zU;
-            "touch" === UU ? ((0, tU.f)(!1), null !== (zU = OU()) && void 0 !== zU && zU.padMove(0, 0, 0, 0, AU.Gd.EndToggle, 0) && (XU = !1)) : "gamepad" === UU && (0, tU.f)(fU())
+          uninstall: AH,
+          deviceChanged: HH => {
+            var LH;
+            "touch" === HH ? ((0, WH.h)(!1), null !== (LH = lH()) && void 0 !== LH && LH.padMove(0, 0, 0, 0, hH.Ed.EndToggle, 0) && (BH = !1)) : "gamepad" === HH && (0, WH.h)(qH())
           },
-          hasPlayer: () => null !== OU(),
+          hasPlayer: () => null !== lH(),
           isPlayerDead: () => {
-            var UU;
-            return !1 === (null === (UU = OU()) || void 0 === UU ? void 0 : UU.localPlayerAlive())
+            var HH;
+            return !1 === (null === (HH = lH()) || void 0 === HH ? void 0 : HH.localPlayerAlive())
           },
           isReplayMode: () => {
-            const UU = OU();
-            return null !== UU && 0 !== (SU(UU) & AU.Od.Replay)
+            const HH = lH();
+            return null !== HH && 0 !== (KH(HH) & hH.Md.Replay)
           },
           isFreeCameraOn: () => {
-            const UU = OU();
-            return null !== UU && 0 !== (SU(UU) & AU.Od.FreeCam)
+            const HH = lH();
+            return null !== HH && 0 !== (KH(HH) & hH.Md.FreeCam)
           },
-          targetsBlock: () => rU(OU()),
+          targetsBlock: () => cH(lH()),
           selectedSlotEmpty: () => {
-            var UU;
-            return !(null !== (UU = OU()) && void 0 !== UU && UU.items.uD())
+            var HH;
+            return !(null !== (HH = lH()) && void 0 !== HH && HH.items.LX())
           },
-          pickBlockAllowed: () => !!QU.d.get("creative") && !!QU.d.get("canPickBlocks"),
-          scrollHotbar: UU => {
-            eU(AU.Ed.Hotbar, AU.Bd.Down | (UU > 0 ? AU.Bd.Next : 0))
+          pickBlockAllowed: () => !!SH.e.get("creative") && !!SH.e.get("canPickBlocks"),
+          scrollHotbar: HH => {
+            mH(hH.Ad.Hotbar, hH.xd.Down | (HH > 0 ? hH.xd.Next : 0))
           },
-          hasFullInventory: DU.n,
-          hasLobbyTab: () => (0, gU.c)({
-            lobbyLeaderboardInfo: QU.d.get("lobbyLeaderboardInfo"),
-            lobbyManage: QU.d.get("lobbyManage")
+          hasFullInventory: CH.m,
+          hasLobbyTab: () => (0, MH.e)({
+            lobbyLeaderboardInfo: SH.e.get("lobbyLeaderboardInfo"),
+            lobbyManage: SH.e.get("lobbyManage")
           }),
           contextActionInputs: () => {
-            var UU, XU, zU, cU;
-            const yU = OU();
+            var HH, BH, LH, AH;
+            const rH = lH();
             return {
-              holdingGun: !1 !== (null === yU || void 0 === yU ? void 0 : yU.localPlayerAlive()) && "Gun" === (null === yU || void 0 === yU || null === (UU = yU.items.uD()) || void 0 === UU || null === (XU = UU.typeObj) || void 0 === XU ? void 0 : XU.type),
-              customButtons: null !== (zU = QU.d.get("customButtons")) && void 0 !== zU ? zU : null,
-              touchscreenActionButton: null !== (cU = QU.d.get("touchscreenActionButton")) && void 0 !== cU ? cU : null
+              holdingGun: !1 !== (null === rH || void 0 === rH ? void 0 : rH.localPlayerAlive()) && "Gun" === (null === rH || void 0 === rH || null === (HH = rH.items.LX()) || void 0 === HH || null === (BH = HH.typeObj) || void 0 === BH ? void 0 : BH.type),
+              customButtons: null !== (LH = SH.e.get("customButtons")) && void 0 !== LH ? LH : null,
+              touchscreenActionButton: null !== (AH = SH.e.get("touchscreenActionButton")) && void 0 !== AH ? AH : null
             }
           },
-          pressTouchButton: UU => {
-            UU ? CU(dU) : wU(dU)
+          pressTouchButton: HH => {
+            HH ? oH(bH) : IH(bH)
           }
         }
       },
-      HU = () => {
-        const UU = (0, yU.e)(iU()),
-          XU = (0, cU.e)(),
-          zU = null;
+      NH = () => {
+        const HH = (0, rH.d)(gH()),
+          BH = (0, AH.e)(),
+          LH = null;
         return () => {
-          UU(), XU(), null === zU || void 0 === zU || zU()
+          HH(), BH(), null === LH || void 0 === LH || LH()
         }
       }
   },
-  5312: (UU, XU, zU) => {
-    zU.d(XU, {
-      B: () => kU,
-      D: () => AU,
-      H: () => FU,
-      L: () => dU,
-      b: () => WU,
-      c: () => BU,
-      f: () => qU,
-      h: () => wU,
-      j: () => gU,
-      m: () => RU,
-      n: () => GU,
-      r: () => ZU,
-      t: () => LU,
-      x: () => eU,
-      y: () => CU
+  5255: (HH, BH, LH) => {
+    LH.d(BH, {
+      D: () => oH,
+      F: () => xH,
+      J: () => hH,
+      L: () => tH,
+      P: () => bH,
+      c: () => OH,
+      d: () => PH,
+      e: () => fH,
+      g: () => IH,
+      k: () => MH,
+      n: () => UH,
+      p: () => vH,
+      r: () => TH,
+      v: () => kH,
+      z: () => mH
     });
-    var cU = zU(5315);
-    const yU = {
+    var AH = LH(5260);
+    const rH = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let QU = yU;
+    let SH = rH;
 
-    function AU(UU) {
-      QU = null !== UU && void 0 !== UU ? UU : yU
+    function hH(HH) {
+      SH = null !== HH && void 0 !== HH ? HH : rH
     }
 
-    function FU() {
-      return QU
+    function tH() {
+      return SH
     }
-    const oU = new Set,
-      DU = new Set;
-    let EU = -1;
-    const YU = new Set,
-      NU = new Set;
-    let IU = 0,
-      pU = 0;
-    const aU = new Set,
-      tU = new Set;
+    const zH = new Set,
+      CH = new Set;
+    let EH = -1;
+    const XH = new Set,
+      GH = new Set;
+    let YH = 0,
+      uH = 0;
+    const QH = new Set,
+      WH = new Set;
 
-    function gU(UU) {
-      return oU.add(UU), () => {
-        oU.delete(UU)
+    function MH(HH) {
+      return zH.add(HH), () => {
+        zH.delete(HH)
       }
     }
 
-    function kU(UU, XU) {
-      for (const cU of oU) try {
-        cU(UU)
-      } catch (zU) {
-        XU(zU)
+    function xH(HH, BH) {
+      for (const AH of zH) try {
+        AH(HH)
+      } catch (LH) {
+        BH(LH)
       }
     }
 
-    function GU(UU) {
-      return DU.add(UU), () => {
-        DU.delete(UU)
+    function vH(HH) {
+      return CH.add(HH), () => {
+        CH.delete(HH)
       }
     }
 
-    function BU(UU, XU) {
-      const zU = EU < 0 ? 0 : UU - EU;
-      EU = UU;
-      for (const yU of DU) try {
-        yU(zU)
-      } catch (cU) {
-        XU(cU)
+    function PH(HH, BH) {
+      const LH = EH < 0 ? 0 : HH - EH;
+      EH = HH;
+      for (const rH of CH) try {
+        rH(LH)
+      } catch (AH) {
+        BH(AH)
       }
     }
 
-    function ZU(UU) {
-      return YU.add(UU), () => {
-        YU.delete(UU)
+    function TH(HH) {
+      return XH.add(HH), () => {
+        XH.delete(HH)
       }
     }
 
-    function RU(UU) {
-      return NU.add(UU), () => {
-        NU.delete(UU)
+    function UH(HH) {
+      return GH.add(HH), () => {
+        GH.delete(HH)
       }
     }
-    let PU = 0;
+    let VH = 0;
 
-    function WU(UU) {
-      PU += UU
+    function OH(HH) {
+      VH += HH
     }
 
-    function dU() {
-      const UU = PU;
-      return PU = 0, UU
+    function bH() {
+      const HH = VH;
+      return VH = 0, HH
     }
 
-    function LU(UU) {
-      return aU.add(UU), () => {
-        aU.delete(UU)
-      }
-    }
-
-    function eU(UU) {
-      return tU.add(UU), () => {
-        tU.delete(UU)
+    function kH(HH) {
+      return QH.add(HH), () => {
+        QH.delete(HH)
       }
     }
 
-    function CU() {
-      IU = 0, pU = 0, EU = -1
+    function mH(HH) {
+      return WH.add(HH), () => {
+        WH.delete(HH)
+      }
     }
 
-    function wU(UU, XU) {
-      if ("paced" === UU) return pU += XU, null;
-      if ("drawn" !== UU && "skipped" !== UU) return null;
-      const zU = XU + pU;
-      return pU = 0, zU
+    function oH() {
+      YH = 0, uH = 0, EH = -1
     }
 
-    function qU(UU, XU, zU, yU) {
-      const QU = (0, cU.j)(XU),
-        AU = UU > 0 ? performance.now() : 0;
-      for (let cU = 0; cU < UU; cU++)
-        for (const UU of aU) try {
-          UU()
-        } catch (FU) {
-          yU(FU)
+    function IH(HH, BH) {
+      if ("paced" === HH) return uH += BH, null;
+      if ("drawn" !== HH && "skipped" !== HH) return null;
+      const LH = BH + uH;
+      return uH = 0, LH
+    }
+
+    function fH(HH, BH, LH, rH) {
+      const SH = (0, AH.e)(BH),
+        hH = HH > 0 ? performance.now() : 0;
+      for (let AH = 0; AH < HH; AH++)
+        for (const HH of QH) try {
+          HH()
+        } catch (tH) {
+          rH(tH)
         }
-      if (UU > 0 && WU(performance.now() - AU), null !== zU) {
-        for (const UU of YU) try {
-          UU(zU)
-        } catch (FU) {
-          yU(FU)
+      if (HH > 0 && OH(performance.now() - hH), null !== LH) {
+        for (const HH of XH) try {
+          HH(LH)
+        } catch (tH) {
+          rH(tH)
         }
-        IU += zU
+        YH += LH
       }
-      if ("drawn" === XU) {
-        const UU = IU;
-        IU = 0;
-        for (const XU of NU) try {
-          XU(UU)
-        } catch (FU) {
-          yU(FU)
+      if ("drawn" === BH) {
+        const HH = YH;
+        YH = 0;
+        for (const BH of GH) try {
+          BH(HH)
+        } catch (tH) {
+          rH(tH)
         }
       }
-      for (const cU of tU) try {
-        cU(UU, QU)
-      } catch (FU) {
-        yU(FU)
+      for (const AH of WH) try {
+        AH(HH, SH)
+      } catch (tH) {
+        rH(tH)
       }
     }
   },
-  5336: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => yU,
-      g: () => QU,
-      h: () => AU,
-      j: () => cU,
-      n: () => FU
+  5279: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => rH,
+      f: () => SH,
+      i: () => hH,
+      j: () => AH,
+      k: () => tH
     });
-    const cU = {
+    const AH = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -564,8 +564,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      yU = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      QU = {
+      rH = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      SH = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -628,160 +628,160 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      AU = {
+      hH = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      FU = [16]
+      tH = [16]
   },
-  41727: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU,
-      d: () => QU,
-      f: () => yU
+  41985: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => hH,
+      d: () => SH,
+      g: () => rH
     });
-    let cU = null;
+    let AH = null;
 
-    function yU(UU) {
-      cU = UU
+    function rH(HH) {
+      AH = HH
     }
 
-    function QU(UU) {
-      cU === UU && (cU = null)
+    function SH(HH) {
+      AH === HH && (AH = null)
     }
 
-    function AU() {
-      var UU;
-      null === (UU = cU) || void 0 === UU || UU()
+    function hH() {
+      var HH;
+      null === (HH = AH) || void 0 === HH || HH()
     }
   },
-  5342: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => FU,
-      e: () => AU,
-      f: () => DU
+  5288: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => tH,
+      g: () => hH,
+      k: () => CH
     });
-    var cU = zU(2580),
-      yU = zU(2588);
-    const QU = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var AH = LH(2600),
+      rH = LH(2605);
+    const SH = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function AU(UU) {
-      return UU instanceof HTMLElement && (!!(UU.isContentEditable || UU instanceof HTMLTextAreaElement || UU instanceof HTMLSelectElement) || UU instanceof HTMLInputElement && !QU.has(UU.type))
+    function hH(HH) {
+      return HH instanceof HTMLElement && (!!(HH.isContentEditable || HH instanceof HTMLTextAreaElement || HH instanceof HTMLSelectElement) || HH instanceof HTMLInputElement && !SH.has(HH.type))
     }
 
-    function FU(UU) {
-      let XU = null;
-      const zU = zU => {
-          const yU = AU(zU);
-          yU !== XU && (XU = yU, UU(cU.j.UiCapture, cU.F.Keyboard, 0, 0, yU ? cU.F.Keyboard : 0))
+    function tH(HH) {
+      let BH = null;
+      const LH = LH => {
+          const rH = hH(LH);
+          rH !== BH && (BH = rH, HH(AH.g.UiCapture, AH.w.Keyboard, 0, 0, rH ? AH.w.Keyboard : 0))
         },
-        yU = UU => {
-          zU(UU.target)
+        rH = HH => {
+          LH(HH.target)
         },
-        QU = UU => {
-          zU(UU.relatedTarget)
+        SH = HH => {
+          LH(HH.relatedTarget)
         },
-        FU = () => {
-          zU(document.activeElement)
+        tH = () => {
+          LH(document.activeElement)
         },
-        oU = {
+        zH = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", yU, oU), document.addEventListener("focusout", QU, oU), document.addEventListener("keydown", FU, oU), zU(document.activeElement), () => {
-        document.removeEventListener("focusin", yU, oU), document.removeEventListener("focusout", QU, oU), document.removeEventListener("keydown", FU, oU)
+      return document.addEventListener("focusin", rH, zH), document.addEventListener("focusout", SH, zH), document.addEventListener("keydown", tH, zH), LH(document.activeElement), () => {
+        document.removeEventListener("focusin", rH, zH), document.removeEventListener("focusout", SH, zH), document.removeEventListener("keydown", tH, zH)
       }
     }
-    const oU = new Map;
+    const zH = new Map;
 
-    function DU(UU, XU) {
-      var zU;
-      let cU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      oU.set(cU, (null !== (zU = oU.get(cU)) && void 0 !== zU ? zU : 0) & ~UU | XU & UU);
-      let QU = 0;
-      for (const yU of oU.values()) QU |= yU;
-      return (0, yU.J)(UU, QU & UU)
+    function CH(HH, BH) {
+      var LH;
+      let AH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      zH.set(AH, (null !== (LH = zH.get(AH)) && void 0 !== LH ? LH : 0) & ~HH | BH & HH);
+      let SH = 0;
+      for (const rH of zH.values()) SH |= rH;
+      return (0, rH.E)(HH, SH & HH)
     }
   },
-  37662: (UU, XU, zU) => {
-    function cU(UU) {
-      return UU.includes("Leaf Bed")
+  37798: (HH, BH, LH) => {
+    function AH(HH) {
+      return HH.includes("Leaf Bed")
     }
 
-    function yU(UU) {
-      return / Bed(?: Head)?(?:\||$)/.test(UU) && !cU(UU)
+    function rH(HH) {
+      return / Bed(?: Head)?(?:\||$)/.test(HH) && !AH(HH)
     }
 
-    function QU(UU) {
-      return UU.includes(" Strongbed")
+    function SH(HH) {
+      return HH.includes(" Strongbed")
     }
 
-    function AU(UU) {
-      return cU(UU) || yU(UU) || QU(UU)
+    function hH(HH) {
+      return AH(HH) || rH(HH) || SH(HH)
     }
-    zU.d(XU, {
-      b: () => AU,
-      c: () => cU,
-      g: () => QU,
-      j: () => yU
+    LH.d(BH, {
+      d: () => hH,
+      h: () => AH,
+      l: () => SH,
+      m: () => rH
     })
   },
-  37659: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => DU
+  37793: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => CH
     });
-    var cU = zU(37662),
-      yU = zU(9782);
-    const QU = [],
-      AU = [],
-      FU = [],
-      oU = [];
-    for (const EU of Object.keys(yU.l))(0, cU.c)(EU) ? QU.push(EU) : (0, cU.j)(EU) && AU.push(EU), (0, cU.g)(EU) && FU.push(EU), (EU.includes(" Bed Head") || EU.includes(" Strongbed Head")) && oU.push(EU);
-    const DU = {
-      leafBeds: QU,
-      woolBeds: AU,
-      strongBeds: FU,
-      beds: [...QU, ...AU, ...FU],
-      bedHeads: oU,
+    var AH = LH(37798),
+      rH = LH(9940);
+    const SH = [],
+      hH = [],
+      tH = [],
+      zH = [];
+    for (const EH of Object.keys(rH.l))(0, AH.h)(EH) ? SH.push(EH) : (0, AH.m)(EH) && hH.push(EH), (0, AH.l)(EH) && tH.push(EH), (EH.includes(" Bed Head") || EH.includes(" Strongbed Head")) && zH.push(EH);
+    const CH = {
+      leafBeds: SH,
+      woolBeds: hH,
+      strongBeds: tH,
+      beds: [...SH, ...hH, ...tH],
+      bedHeads: zH,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  7056: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU,
-      f: () => yU,
-      j: () => oU,
-      k: () => QU,
-      l: () => DU,
-      o: () => cU,
-      p: () => FU
+  7007: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH,
+      e: () => rH,
+      h: () => zH,
+      i: () => SH,
+      m: () => CH,
+      o: () => AH,
+      p: () => tH
     });
-    let cU = function(UU) {
-        return UU[UU.DEFAULT = 0] = "DEFAULT", UU[UU.BOAT = 1] = "BOAT", UU[UU.GLIDER = 2] = "GLIDER", UU[UU.BALLOON = 3] = "BALLOON", UU[UU.SLEEPING = 4] = "SLEEPING", UU[UU.RIDING_MOB = 5] = "RIDING_MOB", UU[UU.CAR = 6] = "CAR", UU[UU.HOVERCRAFT = 7] = "HOVERCRAFT", UU
+    let AH = function(HH) {
+        return HH[HH.DEFAULT = 0] = "DEFAULT", HH[HH.BOAT = 1] = "BOAT", HH[HH.GLIDER = 2] = "GLIDER", HH[HH.BALLOON = 3] = "BALLOON", HH[HH.SLEEPING = 4] = "SLEEPING", HH[HH.RIDING_MOB = 5] = "RIDING_MOB", HH[HH.CAR = 6] = "CAR", HH[HH.HOVERCRAFT = 7] = "HOVERCRAFT", HH
       }({}),
-      yU = function(UU) {
-        return UU[UU.WOOD = 0] = "WOOD", UU[UU.OBSIDIAN = 1] = "OBSIDIAN", UU[UU.SPEED = 2] = "SPEED", UU
+      rH = function(HH) {
+        return HH[HH.WOOD = 0] = "WOOD", HH[HH.OBSIDIAN = 1] = "OBSIDIAN", HH[HH.SPEED = 2] = "SPEED", HH
       }({}),
-      QU = function(UU) {
-        return UU[UU.WOOD = 0] = "WOOD", UU[UU.IRON = 1] = "IRON", UU[UU.GOLD = 2] = "GOLD", UU[UU.DIAMOND = 3] = "DIAMOND", UU
+      SH = function(HH) {
+        return HH[HH.WOOD = 0] = "WOOD", HH[HH.IRON = 1] = "IRON", HH[HH.GOLD = 2] = "GOLD", HH[HH.DIAMOND = 3] = "DIAMOND", HH
       }({}),
-      AU = function(UU) {
-        return UU[UU.YELLOW = 0] = "YELLOW", UU[UU.WHITE = 1] = "WHITE", UU[UU.RED = 2] = "RED", UU[UU.PURPLE = 3] = "PURPLE", UU[UU.PINK = 4] = "PINK", UU[UU.ORANGE = 5] = "ORANGE", UU[UU.MAGENTA = 6] = "MAGENTA", UU[UU.LIME = 7] = "LIME", UU[UU.LIGHT_GRAY = 8] = "LIGHT_GRAY", UU[UU.LIGHT_BLUE = 9] = "LIGHT_BLUE", UU[UU.GREEN = 10] = "GREEN", UU[UU.GRAY = 11] = "GRAY", UU[UU.CYAN = 12] = "CYAN", UU[UU.BROWN = 13] = "BROWN", UU[UU.BLUE = 14] = "BLUE", UU[UU.BLACK = 15] = "BLACK", UU
+      hH = function(HH) {
+        return HH[HH.YELLOW = 0] = "YELLOW", HH[HH.WHITE = 1] = "WHITE", HH[HH.RED = 2] = "RED", HH[HH.PURPLE = 3] = "PURPLE", HH[HH.PINK = 4] = "PINK", HH[HH.ORANGE = 5] = "ORANGE", HH[HH.MAGENTA = 6] = "MAGENTA", HH[HH.LIME = 7] = "LIME", HH[HH.LIGHT_GRAY = 8] = "LIGHT_GRAY", HH[HH.LIGHT_BLUE = 9] = "LIGHT_BLUE", HH[HH.GREEN = 10] = "GREEN", HH[HH.GRAY = 11] = "GRAY", HH[HH.CYAN = 12] = "CYAN", HH[HH.BROWN = 13] = "BROWN", HH[HH.BLUE = 14] = "BLUE", HH[HH.BLACK = 15] = "BLACK", HH
       }({}),
-      FU = function(UU) {
-        return UU[UU.ROTATION_1 = 0] = "ROTATION_1", UU[UU.ROTATION_2 = 1] = "ROTATION_2", UU[UU.ROTATION_3 = 2] = "ROTATION_3", UU[UU.ROTATION_4 = 3] = "ROTATION_4", UU
+      tH = function(HH) {
+        return HH[HH.ROTATION_1 = 0] = "ROTATION_1", HH[HH.ROTATION_2 = 1] = "ROTATION_2", HH[HH.ROTATION_3 = 2] = "ROTATION_3", HH[HH.ROTATION_4 = 3] = "ROTATION_4", HH
       }({}),
-      oU = function(UU) {
-        return UU[UU.KART = 0] = "KART", UU[UU.OFF_ROADER = 1] = "OFF_ROADER", UU[UU.CAR = 2] = "CAR", UU[UU.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", UU[UU.ARMORED_CAR = 4] = "ARMORED_CAR", UU[UU.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", UU[UU.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", UU[UU.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", UU
+      zH = function(HH) {
+        return HH[HH.KART = 0] = "KART", HH[HH.OFF_ROADER = 1] = "OFF_ROADER", HH[HH.CAR = 2] = "CAR", HH[HH.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", HH[HH.ARMORED_CAR = 4] = "ARMORED_CAR", HH[HH.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", HH[HH.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", HH[HH.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", HH
       }({});
-    cU.DEFAULT, cU.BOAT, yU.SPEED, cU.GLIDER, QU.DIAMOND, cU.BALLOON, AU.BLACK, cU.SLEEPING, FU.ROTATION_4, cU.RIDING_MOB, cU.CAR, oU.MOONSTONE_MINING_DRILL, cU.HOVERCRAFT;
-    let DU = function(UU) {
-      return UU[UU.NORMAL = 0] = "NORMAL", UU[UU.GLIDING = 1] = "GLIDING", UU[UU.FLOATING = 2] = "FLOATING", UU
+    AH.DEFAULT, AH.BOAT, rH.SPEED, AH.GLIDER, SH.DIAMOND, AH.BALLOON, hH.BLACK, AH.SLEEPING, tH.ROTATION_4, AH.RIDING_MOB, AH.CAR, zH.MOONSTONE_MINING_DRILL, AH.HOVERCRAFT;
+    let CH = function(HH) {
+      return HH[HH.NORMAL = 0] = "NORMAL", HH[HH.GLIDING = 1] = "GLIDING", HH[HH.FLOATING = 2] = "FLOATING", HH
     }({})
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

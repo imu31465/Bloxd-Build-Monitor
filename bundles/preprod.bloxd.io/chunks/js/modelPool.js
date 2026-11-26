@@ -1,26 +1,26 @@
 export const id = 50;
 export const ids = [50];
 export const modules = {
-  53818: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      MODELS_MODULE_RETRY_DELAYS_MS: () => aU,
-      pageModelPool: () => kU
+  54607: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      MODELS_MODULE_RETRY_DELAYS_MS: () => QH,
+      pageModelPool: () => xH
     });
-    var cU = zU(3176),
-      yU = zU(37014),
-      QU = zU(41959),
-      AU = zU(4800),
-      FU = zU(4809),
-      oU = zU(3604),
-      DU = zU(3217),
-      EU = zU(41886),
-      YU = zU(41889),
-      NU = zU(36981),
-      IU = zU(42029);
-    class pU {
-      constructor(UU) {
-        this.opts = UU, this.queue = [], this.slots = [], this.stopped = null, this.create = null, this.nextSeq = 0, this.jobLosses = 0, this.resting = !1;
-        for (let XU = 0; XU < Math.max(1, UU.count); XU++) this.slots.push({
+    var AH = LH(3171),
+      rH = LH(37083),
+      SH = LH(42172),
+      hH = LH(4786),
+      tH = LH(4802),
+      zH = LH(3595),
+      CH = LH(3206),
+      EH = LH(42125),
+      XH = LH(42129),
+      GH = LH(37037),
+      YH = LH(42256);
+    class uH {
+      constructor(HH) {
+        this.opts = HH, this.queue = [], this.slots = [], this.stopped = null, this.create = null, this.nextSeq = 0, this.jobLosses = 0, this.resting = !1;
+        for (let BH = 0; BH < Math.max(1, HH.count); BH++) this.slots.push({
           worker: null,
           starting: !1,
           timer: null,
@@ -33,15 +33,15 @@ export const modules = {
         this.pump()
       }
       get pending() {
-        return this.queue.length + this.slots.filter((UU => null !== UU.job)).length
+        return this.queue.length + this.slots.filter((HH => null !== HH.job)).length
       }
-      build(UU, XU) {
-        return null !== this.stopped ? Promise.resolve((0, YU.s)(UU, this.stopped)) : new Promise((zU => {
+      build(HH, BH) {
+        return null !== this.stopped ? Promise.resolve((0, XH.p)(HH, this.stopped)) : new Promise((LH => {
           this.queue.push({
-            word: UU,
-            glb: XU,
+            word: HH,
+            glb: BH,
             attempts: 0,
-            resolve: zU
+            resolve: LH
           }), this.pump()
         }))
       }
@@ -55,152 +55,152 @@ export const modules = {
         this.fail(null)
       }
       pump() {
-        const UU = this.resting && 0 === this.queue.length;
-        for (const XU of this.slots) {
+        const HH = this.resting && 0 === this.queue.length;
+        for (const BH of this.slots) {
           if (null !== this.stopped) return;
-          if (XU.gaveUp || XU.starting) continue;
-          if (null === XU.worker) {
-            UU || this.start(XU);
+          if (BH.gaveUp || BH.starting) continue;
+          if (null === BH.worker) {
+            HH || this.start(BH);
             continue
           }
-          if (UU) {
-            null === XU.job && this.end(XU);
+          if (HH) {
+            null === BH.job && this.end(BH);
             continue
           }
-          const zU = null === XU.job ? this.queue.shift() : void 0;
-          void 0 !== zU && this.run(XU, XU.worker, zU)
+          const LH = null === BH.job ? this.queue.shift() : void 0;
+          void 0 !== LH && this.run(BH, BH.worker, LH)
         }
       }
-      start(UU) {
-        if (UU.losses >= 6) return UU.gaveUp = !0, void(this.slots.every((UU => UU.gaveUp)) && this.fail(new Error("every model worker went 6 times with no file built")));
-        UU.starting = !0, this.create ??= this.opts.loadWorker(), Promise.all([this.create, this.opts.module]).then((XU => {
-          let [zU, cU] = XU;
-          null === this.stopped && this.launch(UU, zU, cU)
-        }), (UU => {
-          this.fail(UU)
+      start(HH) {
+        if (HH.losses >= 6) return HH.gaveUp = !0, void(this.slots.every((HH => HH.gaveUp)) && this.fail(new Error("every model worker went 6 times with no file built")));
+        HH.starting = !0, this.create ??= this.opts.loadWorker(), Promise.all([this.create, this.opts.module]).then((BH => {
+          let [LH, AH] = BH;
+          null === this.stopped && this.launch(HH, LH, AH)
+        }), (HH => {
+          this.fail(HH)
         }))
       }
-      launch(UU, XU, zU) {
-        let cU;
+      launch(HH, BH, LH) {
+        let AH;
         try {
-          cU = XU()
-        } catch (yU) {
-          return void this.lose(UU, `a model worker could not be created (${String(yU)})`)
+          AH = BH()
+        } catch (rH) {
+          return void this.lose(HH, `a model worker could not be created (${String(rH)})`)
         }
-        UU.worker = cU, UU.timer = new IU.i(3e4, (XU => {
-          UU.timer = null, this.lose(UU, `a model worker did not start: ${(0,IU.k)(XU)}`)
-        }), void 0, this.opts.visibility), cU.onmessage = XU => {
+        HH.worker = AH, HH.timer = new YH.j(3e4, (BH => {
+          HH.timer = null, this.lose(HH, `a model worker did not start: ${(0,YH.m)(BH)}`)
+        }), void 0, this.opts.visibility), AH.onmessage = BH => {
           let {
-            data: zU
-          } = XU;
-          this.answered(UU, zU)
-        }, cU.onerror = XU => {
-          this.lose(UU, UU.starting ? `a model worker failed to start: ${XU.message}` : `a model worker failed: ${XU.message}`)
-        }, cU.postMessage({
+            data: LH
+          } = BH;
+          this.answered(HH, LH)
+        }, AH.onerror = BH => {
+          this.lose(HH, HH.starting ? `a model worker failed to start: ${BH.message}` : `a model worker failed: ${BH.message}`)
+        }, AH.postMessage({
           type: "start",
-          module: zU
+          module: LH
         })
       }
-      end(UU) {
-        const XU = UU.worker;
-        null !== XU && (XU.onmessage = null, XU.onerror = null, XU.terminate()), UU.worker = null, UU.startedAt = void 0
+      end(HH) {
+        const BH = HH.worker;
+        null !== BH && (BH.onmessage = null, BH.onerror = null, BH.terminate()), HH.worker = null, HH.startedAt = void 0
       }
-      clearTimer(UU) {
-        var XU;
-        null === (XU = UU.timer) || void 0 === XU || XU.cancel(), UU.timer = null
+      clearTimer(HH) {
+        var BH;
+        null === (BH = HH.timer) || void 0 === BH || BH.cancel(), HH.timer = null
       }
-      answered(UU, XU) {
-        if ("lost" === XU.type) return void this.lose(UU, XU.reason);
-        if (UU.starting) return "started" !== XU.type ? void this.lose(UU, `a model worker answered ${XU.type} before it started`) : (this.clearTimer(UU), UU.starting = !1, UU.startedAt = performance.now(), void this.pump());
-        const zU = UU.job;
-        null !== zU && "started" !== XU.type && XU.seq === UU.seq && ("trapped" !== XU.type ? (UU.job = null, UU.losses = 0, this.jobLosses = 0, zU.resolve(new Uint8Array(XU.record)), this.pump()) : this.lose(UU, XU.trap))
+      answered(HH, BH) {
+        if ("lost" === BH.type) return void this.lose(HH, BH.reason);
+        if (HH.starting) return "started" !== BH.type ? void this.lose(HH, `a model worker answered ${BH.type} before it started`) : (this.clearTimer(HH), HH.starting = !1, HH.startedAt = performance.now(), void this.pump());
+        const LH = HH.job;
+        null !== LH && "started" !== BH.type && BH.seq === HH.seq && ("trapped" !== BH.type ? (HH.job = null, HH.losses = 0, this.jobLosses = 0, LH.resolve(new Uint8Array(BH.record)), this.pump()) : this.lose(HH, BH.trap))
       }
-      run(UU, XU, zU) {
-        const cU = this.nextSeq++;
-        UU.seq = cU, UU.job = zU, zU.attempts++;
-        const yU = zU.glb.slice();
-        XU.postMessage({
+      run(HH, BH, LH) {
+        const AH = this.nextSeq++;
+        HH.seq = AH, HH.job = LH, LH.attempts++;
+        const rH = LH.glb.slice();
+        BH.postMessage({
           type: "job",
-          seq: cU,
-          word: zU.word,
-          glb: yU.buffer
-        }, [yU.buffer])
+          seq: AH,
+          word: LH.word,
+          glb: rH.buffer
+        }, [rH.buffer])
       }
-      lose(UU, XU) {
-        this.clearTimer(UU), void 0 !== UU.startedAt && performance.now() - UU.startedAt >= 6e4 && (UU.losses = 0), this.end(UU), UU.starting = !1;
-        const zU = UU.job;
-        UU.job = null, null === zU && UU.losses++, this.opts.onWorkerLost(XU), null !== zU && (zU.attempts < 2 ? this.queue.unshift(zU) : zU.resolve((0, YU.o)(zU.word, XU)), 0 === (zU.word & EU.d) && ++this.jobLosses >= 32) ? this.fail(new Error("model workers were lost on 32 jobs with no file built")) : this.pump()
+      lose(HH, BH) {
+        this.clearTimer(HH), void 0 !== HH.startedAt && performance.now() - HH.startedAt >= 6e4 && (HH.losses = 0), this.end(HH), HH.starting = !1;
+        const LH = HH.job;
+        HH.job = null, null === LH && HH.losses++, this.opts.onWorkerLost(BH), null !== LH && (LH.attempts < 2 ? this.queue.unshift(LH) : LH.resolve((0, XH.m)(LH.word, BH)), 0 === (LH.word & EH.e) && ++this.jobLosses >= 32) ? this.fail(new Error("model workers were lost on 32 jobs with no file built")) : this.pump()
       }
-      fail(UU) {
+      fail(HH) {
         if (null !== this.stopped) return;
-        this.stopped = null === UU ? "the model workers stopped" : `the model workers could not start: ${(0,NU.l)(UU)}`;
-        const XU = this.stopped,
-          zU = UU => {
-            UU.resolve((0, YU.s)(UU.word, XU))
+        this.stopped = null === HH ? "the model workers stopped" : `the model workers could not start: ${(0,GH.k)(HH)}`;
+        const BH = this.stopped,
+          LH = HH => {
+            HH.resolve((0, XH.p)(HH.word, BH))
           };
-        for (const yU of this.slots) {
-          var cU;
-          this.clearTimer(yU), null === (cU = yU.worker) || void 0 === cU || cU.terminate(), yU.worker = null, null !== yU.job && zU(yU.job), yU.job = null
+        for (const rH of this.slots) {
+          var AH;
+          this.clearTimer(rH), null === (AH = rH.worker) || void 0 === AH || AH.terminate(), rH.worker = null, null !== rH.job && LH(rH.job), rH.job = null
         }
-        this.queue.splice(0).forEach(zU), null !== UU && this.opts.onUnavailable(UU)
+        this.queue.splice(0).forEach(LH), null !== HH && this.opts.onUnavailable(HH)
       }
     }
-    const aU = [...cU.t, 5e3, 15e3, 3e4];
-    let tU = null;
-    const gU = new Set;
+    const QH = [...AH.v, 5e3, 15e3, 3e4];
+    let WH = null;
+    const MH = new Set;
 
-    function kU(UU) {
-      return gU.add(UU), tU ??= function() {
-        let UU = "fix" === (0, FU.o)() || (0, FU.d)() || (0, AU.l)() ? 1 : (XU = navigator.hardwareConcurrency, EU = "deviceMemory" in navigator ? navigator.deviceMemory : void 0, XU > 2 && !(0, DU.v)(EU) ? 2 : 1);
-        var XU, EU;
-        const YU = new pU({
-          module: (0, yU.g)(QU.e, {
-            delays: aU,
-            onRetry: (UU, XU) => {
-              tU === YU && GU((zU => {
-                zU.onModuleRetry(UU, XU)
+    function xH(HH) {
+      return MH.add(HH), WH ??= function() {
+        let HH = "fix" === (0, tH.i)() || (0, tH.e)() || (0, hH.k)() ? 1 : (BH = navigator.hardwareConcurrency, EH = "deviceMemory" in navigator ? navigator.deviceMemory : void 0, BH > 2 && !(0, CH.s)(EH) ? 2 : 1);
+        var BH, EH;
+        const XH = new uH({
+          module: (0, rH.e)(SH.d, {
+            delays: QH,
+            onRetry: (HH, BH) => {
+              WH === XH && vH((LH => {
+                LH.onModuleRetry(HH, BH)
               }))
             }
           }),
           loadWorker: async () => {
-            const [UU] = await Promise.all([zU.e(51).then((() => zU(64157))), (0, oU.j)()]);
-            return UU.createModelWorker
+            const [HH] = await Promise.all([LH.e(51).then((() => LH(64345))), (0, zH.l)()]);
+            return HH.createModelWorker
           },
-          count: UU,
-          onUnavailable: UU => {
-            if (tU === YU) {
-              tU = null;
-              const XU = function(UU) {
-                return UU instanceof cU.e ? [QU.e.url().href] : void 0
-              }(UU);
-              GU((zU => {
-                zU.onUnavailable(UU, XU)
+          count: HH,
+          onUnavailable: HH => {
+            if (WH === XH) {
+              WH = null;
+              const BH = function(HH) {
+                return HH instanceof AH.e ? [SH.d.url().href] : void 0
+              }(HH);
+              vH((LH => {
+                LH.onUnavailable(HH, BH)
               }))
             }
           },
-          onWorkerLost: UU => {
-            tU === YU && GU((XU => {
-              XU.onWorkerLost(UU)
+          onWorkerLost: HH => {
+            WH === XH && vH((BH => {
+              BH.onWorkerLost(HH)
             }))
           }
         });
-        return YU
+        return XH
       }(), {
-        pool: tU,
+        pool: WH,
         unlisten: () => {
-          gU.delete(UU)
+          MH.delete(HH)
         }
       }
     }
 
-    function GU(UU) {
-      for (const zU of [...gU]) try {
-        UU(zU)
-      } catch (XU) {
-        console.error("[pageModelPool] a listener threw", XU)
+    function vH(HH) {
+      for (const LH of [...MH]) try {
+        HH(LH)
+      } catch (BH) {
+        console.error("[pageModelPool] a listener threw", BH)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

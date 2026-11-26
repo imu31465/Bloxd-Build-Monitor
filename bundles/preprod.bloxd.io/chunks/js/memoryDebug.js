@@ -1,66 +1,66 @@
 export const id = 47;
 export const ids = [47];
 export const modules = {
-  5213: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      startMemoryDebug: () => EU
+  5173: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      startMemoryDebug: () => EH
     });
-    var cU = zU(3169),
-      yU = zU(3099);
-    const QU = 6e4,
-      AU = 5,
-      FU = ["wasmMainMiB", "wasmWorkersMiB", "jsHeapMiB", "gpuMiB", "footprintMiB", "footprintBudgetMiB", "decodedAudioMiB", "storedChunks", "knownChunks", "liveParticleSystems", "renderDistance", "sheds", "gcFull60s", "gcHighS"];
-    var oU = zU(691);
-    const DU = [];
+    var AH = LH(3168),
+      rH = LH(3105);
+    const SH = 6e4,
+      hH = 5,
+      tH = ["wasmMainMiB", "wasmWorkersMiB", "jsHeapMiB", "gpuMiB", "footprintMiB", "footprintBudgetMiB", "decodedAudioMiB", "storedChunks", "knownChunks", "liveParticleSystems", "renderDistance", "sheds", "gcFull60s", "gcHighS"];
+    var zH = LH(644);
+    const CH = [];
 
-    function EU() {
-      (0, yU.t)() && (0, yU.w)(NU), YU(), setInterval(YU, QU)
+    function EH() {
+      (0, rH.s)() && (0, rH.y)(GH), XH(), setInterval(XH, SH)
     }
 
-    function YU() {
-      var UU;
+    function XH() {
+      var HH;
       const {
-        client: XU,
-        playedS: zU,
-        snapshot: QU
-      } = (0, oU.t)(), EU = null !== (UU = QU.wasmMainMiB) && void 0 !== UU ? UU : function() {
+        client: BH,
+        playedS: LH,
+        snapshot: SH
+      } = (0, zH.n)(), EH = null !== (HH = SH.wasmMainMiB) && void 0 !== HH ? HH : function() {
         try {
-          return (0, oU.X)((0, cU.x)().buffer.byteLength)
+          return (0, zH.Q)((0, AH.u)().buffer.byteLength)
         } catch {
           return null
         }
-      }(), YU = function(UU) {
+      }(), XH = function(HH) {
         let {
-          client: XU,
-          playedS: zU,
-          hidden: cU,
-          snapshot: yU
-        } = UU;
-        const QU = [`client=${null!==XU&&void 0!==XU?XU:"none"}`];
-        null !== zU && QU.push(`playedS=${zU}`);
-        const AU = yU.pageAgeS;
-        "number" === typeof AU && QU.push(`pageAgeS=${AU}`), QU.push("hidden=" + (cU ? 1 : 0));
-        for (const oU of FU) {
-          const UU = yU[oU];
-          "number" === typeof UU && Number.isFinite(UU) && QU.push(`${oU}=${UU}`)
+          client: BH,
+          playedS: LH,
+          hidden: AH,
+          snapshot: rH
+        } = HH;
+        const SH = [`client=${null!==BH&&void 0!==BH?BH:"none"}`];
+        null !== LH && SH.push(`playedS=${LH}`);
+        const hH = rH.pageAgeS;
+        "number" === typeof hH && SH.push(`pageAgeS=${hH}`), SH.push("hidden=" + (AH ? 1 : 0));
+        for (const zH of tH) {
+          const HH = rH[zH];
+          "number" === typeof HH && Number.isFinite(HH) && SH.push(`${zH}=${HH}`)
         }
-        return QU.join(" ")
+        return SH.join(" ")
       }({
-        client: XU,
-        playedS: zU,
+        client: BH,
+        playedS: LH,
         hidden: document.hidden,
         snapshot: {
-          ...QU,
-          wasmMainMiB: EU
+          ...SH,
+          wasmMainMiB: EH
         }
       });
-      (0, yU.t)() ? (DU.push(YU), DU.length >= AU && NU()) : (0, yU.l)("memory", YU)
+      (0, rH.s)() ? (CH.push(XH), CH.length >= hH && GH()) : (0, rH.j)("memory", XH)
     }
 
-    function NU() {
-      for (const UU of DU.splice(0))(0, yU.l)("memory", UU)
+    function GH() {
+      for (const HH of CH.splice(0))(0, rH.j)("memory", HH)
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

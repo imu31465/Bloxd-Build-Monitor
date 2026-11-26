@@ -1,590 +1,708 @@
 export const id = 239;
 export const ids = [239];
 export const modules = {
-  37604: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => WU,
-      d: () => RU,
-      h: () => PU,
-      k: () => pU
+  37201: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      CreateCustomLobby: () => IH
     });
-    var cU = zU(1106),
-      yU = zU.n(cU),
-      QU = zU(61),
-      AU = zU(73),
-      FU = zU(1427),
-      oU = zU(1494),
-      DU = zU(1420),
-      EU = zU(1294),
-      YU = zU(1193),
-      NU = zU(37612),
-      IU = zU(1305);
+    LH(37210);
+    var AH = LH(5037),
+      rH = LH(45),
+      SH = LH(1706),
+      hH = LH(1038),
+      tH = LH.n(hH),
+      zH = LH(3473),
+      CH = LH(1070),
+      EH = LH(1131),
+      XH = LH(4991),
+      GH = LH(1455),
+      YH = LH(37215),
+      uH = LH(1123),
+      QH = LH(1306),
+      WH = LH(1509),
+      MH = LH(15),
+      xH = LH(1457),
+      vH = LH(619),
+      PH = LH(5405),
+      TH = LH(761),
+      UH = LH(1182),
+      VH = LH(1168),
+      OH = LH(5418),
+      bH = LH(1315),
+      kH = LH(37219),
+      mH = LH(37228),
+      oH = LH(1225);
 
-    function pU(UU) {
-      const [XU, zU] = (0, QU.useState)((() => (0, NU.l)(UU)));
-      return (0, QU.useEffect)((() => (zU((0, NU.l)(UU)), (0, NU.L)((() => {
-        zU((0, NU.l)(UU))
-      })))), [UU]), XU
-    }
-
-    function aU(UU, XU) {
-      "function" === typeof UU ? UU(XU) : UU && (UU.current = XU)
-    }
-
-    function tU(UU) {
+    function IH(HH) {
+      var BH, LH, hH, IH;
       let {
-        tutorial: XU,
-        step: zU,
-        enabled: cU = !0
-      } = UU;
-      const yU = pU(XU);
-      return cU && yU === zU
-    }
-
-    function gU(UU, XU) {
-      const zU = (0, NU.p)(UU),
-        cU = zU.indexOf(XU);
-      return !zU.slice(cU + 1).some((XU => (0, NU.z)(UU, XU)))
-    }
-
-    function kU(UU, XU, zU, cU) {
-      let {
-        tutorial: yU,
-        step: QU,
-        waitForClick: AU = !1,
-        onPrevious: FU
-      } = UU;
-      const oU = XU && (0, NU.w)(yU, QU),
-        DU = XU && !gU(yU, QU),
-        YU = AU ? cU : zU;
-      let IU = null;
-      oU ? IU = () => {
-        null === FU || void 0 === FU || FU(), (0, NU.t)(yU, QU)
-      } : DU && (IU = () => {
-        (0, NU.j)(yU)
-      }), (0, EU.t)("popup", null !== YU && void 0 !== YU ? YU : zU, IU, XU && null !== YU, null, oU ? void 0 : "controller:menusSkipTutorial")
-    }
-
-    function GU(UU) {
-      let {
-        tutorial: XU,
-        step: zU,
-        text: cU,
-        waitForClick: yU = !1,
-        onPrevious: QU
-      } = UU;
+        gameNameWithVariation: fH,
+        close: lH,
+        initialDefaultGamemode: KH
+      } = HH;
       const {
-        t: AU
-      } = (0, YU.I)(), FU = gU(XU, zU);
-      return (0, IU.jsxs)(IU.Fragment, {
-        children: [(0, IU.jsx)("div", {
-          className: "TutorialStepText",
-          children: cU
-        }), (0, IU.jsxs)("div", {
-          className: "TutorialStepButtons",
-          children: [(0, NU.w)(XU, zU) && (0, IU.jsx)(oU.j, {
-            className: "TutorialStepButton",
-            onClick: () => {
-              null === QU || void 0 === QU || QU(), (0, NU.t)(XU, zU)
-            },
-            children: AU("tutorial:back")
-          }), !yU && (0, IU.jsx)(oU.f, {
-            className: "TutorialStepButton",
-            onClick: () => {
-              (0, NU.d)(zU)
-            },
-            padDefaultFocus: !0,
-            children: AU(FU ? "tutorial:done" : "tutorial:next")
-          }), !FU && (0, IU.jsx)(oU.j, {
-            className: "TutorialStepButton",
-            onClick: () => {
-              (0, NU.j)(XU)
-            },
-            children: AU("tutorial:skip")
-          })]
-        })]
-      })
-    }
-    const BU = 6;
-
-    function ZU(UU) {
-      let {
-        rect: XU,
-        margin: zU
-      } = UU;
-      const cU = Math.max(0, XU.top - zU),
-        yU = XU.bottom + zU,
-        QU = Math.max(0, XU.left - zU),
-        AU = XU.right + zU;
-      return (0, IU.jsxs)(IU.Fragment, {
-        children: [(0, IU.jsx)("div", {
-          className: "TutorialSpotlightBackdrop",
-          style: {
-            top: 0,
-            left: 0,
-            right: 0,
-            height: cU
-          }
-        }), (0, IU.jsx)("div", {
-          className: "TutorialSpotlightBackdrop",
-          style: {
-            top: yU,
-            left: 0,
-            right: 0,
-            bottom: 0
-          }
-        }), (0, IU.jsx)("div", {
-          className: "TutorialSpotlightBackdrop",
-          style: {
-            top: cU,
-            left: 0,
-            width: QU,
-            height: yU - cU
-          }
-        }), (0, IU.jsx)("div", {
-          className: "TutorialSpotlightBackdrop",
-          style: {
-            top: cU,
-            left: AU,
-            right: 0,
-            height: yU - cU
-          }
-        })]
-      })
-    }
-
-    function RU(UU) {
-      let {
-        target: XU,
-        placement: zU,
-        boxRef: cU,
-        className: oU,
-        spotlight: EU = !0,
-        spotlightMargin: YU = BU,
-        children: NU
-      } = UU;
-      const {
-        getArrowProps: pU,
-        getTooltipProps: aU,
-        setTooltipRef: tU,
-        setTriggerRef: gU,
-        update: kU
-      } = (0, FU.e)({
-        placement: zU,
-        trigger: null,
-        visible: !0,
-        interactive: !0,
-        closeOnOutsideClick: !1,
-        offset: [0, YU]
+        t: cH
+      } = (0, uH.B)(), eH = (0, WH.useNavigatePreserveSearch)(), [qH, gH] = (0, rH.useState)("Enter"), [NH, RH] = (0, rH.useState)(""), jH = rH.useRef(null), nH = null === (BH = TH.b[fH]) || void 0 === BH ? void 0 : BH.showWorldsInsteadOfCustomLobbies, FH = nH ? 1 : null === (LH = TH.b[fH]) || void 0 === LH ? void 0 : LH.customLobbyCustomSchematicLimit, [DH, wH] = (0, rH.useState)(!nH);
+      KH || (KH = "classic_creative" === fH || "classic_creativeFlat" === fH ? "creative" : "classic" === fH ? "peaceful" : "survival");
+      const ZH = {
+        baseOptions: {
+          gameNameWithVariation: nH ? "classic" : fH,
+          name: "",
+          visibility: "unlisted"
+        },
+        listedOptions: {
+          description: "",
+          color: "",
+          emojis: ""
+        },
+        mapOptions: {
+          mapType: "classic_creativeFlat" === fH ? "flat" : "default",
+          schematicIdList: []
+        },
+        worldOptions: null
+      };
+      nH && (ZH.worldOptions = {
+        defaultGamemode: KH,
+        disableProtectors: !1,
+        spawnProtection: !0,
+        disableTpRequests: !1,
+        disableTribeCreation: !1,
+        disableLobbySpawn: !1,
+        voidDeathHeight: -1e4,
+        worldBorder: null,
+        disableFallDamage: !0,
+        disableMobs: !1,
+        worldGenSeed: "",
+        enableSmpMarketplace: !1,
+        enableSurvivalGuns: !1,
+        enableSpawnReset: !1,
+        enableDayNight: !0
       });
-      (0, QU.useLayoutEffect)((() => {
-        gU(XU)
-      }), [XU, gU]);
-      const GU = function(UU, XU) {
-        const [zU, cU] = (0, QU.useState)(null);
-        return (0, QU.useEffect)((() => {
-          if (!XU || !UU) return void cU(null);
-          let zU = 0,
-            yU = null;
-          const QU = () => {
-            const XU = UU.getBoundingClientRect();
-            yU && XU.left === yU.left && XU.top === yU.top && XU.width === yU.width && XU.height === yU.height || (yU = XU, cU(XU)), zU = requestAnimationFrame(QU)
-          };
-          return QU(), () => {
-            cancelAnimationFrame(zU)
+      const [dH, aH] = (0, rH.useState)(ZH), [sH, JH] = (0, rH.useState)(null);
+
+      function iH(HH, BH) {
+        aH({
+          ...dH,
+          baseOptions: {
+            ...dH.baseOptions,
+            [HH]: BH
           }
-        }), [UU, XU]), zU
-      }(XU, EU);
-      (0, QU.useEffect)((() => {
-        null === kU || void 0 === kU || kU()
-      }), [GU, kU]), (0, QU.useEffect)((() => {
-        if (EU || !XU || !kU) return;
-        const UU = new ResizeObserver((() => {
-          kU()
-        }));
-        return UU.observe(XU), XU.parentElement && UU.observe(XU.parentElement), () => {
-          UU.disconnect()
-        }
-      }), [XU, EU, kU]), (0, QU.useEffect)((() => {
-        EU && (null === XU || void 0 === XU || XU.scrollIntoView({
-          block: "nearest",
-          inline: "nearest"
+        })
+      }
+
+      function pH(HH, BH) {
+        aH({
+          ...dH,
+          listedOptions: {
+            ...dH.listedOptions,
+            [HH]: BH
+          }
+        })
+      }
+
+      function yH(HH, BH) {
+        aH({
+          ...dH,
+          worldOptions: {
+            ...dH.worldOptions,
+            [HH]: BH
+          }
+        })
+      }
+
+      function HB(HH) {
+        aH({
+          ...dH,
+          mapOptions: {
+            ...dH.mapOptions,
+            ...HH
+          }
+        })
+      }(0, rH.useEffect)((() => {
+        XH.e.getNewStarterName().then((HH => {
+          aH((BH => "" !== BH.baseOptions.name ? BH : {
+            ...BH,
+            baseOptions: {
+              ...BH.baseOptions,
+              name: HH
+            }
+          }))
+        })).catch((HH => {
+          console.error("Error getting new starter name:", HH)
         }))
-      }), [XU, EU]);
-      const RU = (0, QU.useCallback)((UU => {
-        tU(UU), cU && (cU.current = UU)
-      }), [tU, cU]);
-      return (0, AU.createPortal)((0, IU.jsxs)(IU.Fragment, {
-        children: [GU && (0, IU.jsx)(ZU, {
-          rect: GU,
-          margin: YU
-        }), (0, IU.jsxs)("div", {
-          ref: RU,
-          ...aU({
-            className: yU()("tooltip-container SmallTextLight TutorialStep", oU)
-          }),
-          children: [NU, (0, IU.jsx)("div", {
-            ...pU({
-              className: "tooltip-arrow"
+      }), []), (0, rH.useEffect)((() => {
+        "customSchematic" === dH.mapOptions.mapType && null === sH && (0, CH.postJsonWithMetricsCookiesAndJsonResponse)(`${EH.clientSideServerUrls.indexUrl}/index/schematic/get-owned-schematics`, {}, {
+          retries: 0,
+          minTimeout: 3e3
+        }).then((HH => {
+          JH(HH)
+        }))
+      }), [dH.mapOptions.mapType, sH]);
+      const BB = {
+          tpRequests: {
+            isEnabled: () => !dH.worldOptions.disableTpRequests,
+            vI: HH => {
+              yH("disableTpRequests", !HH)
+            }
+          },
+          spawnProtection: {
+            isEnabled: () => dH.worldOptions.spawnProtection,
+            vI: HH => {
+              yH("spawnProtection", HH)
+            }
+          },
+          spawnReset: {
+            isEnabled: () => dH.worldOptions.enableSpawnReset,
+            vI: HH => {
+              yH("enableSpawnReset", HH)
+            }
+          },
+          smpMarketplace: {
+            isEnabled: () => dH.worldOptions.enableSmpMarketplace,
+            vI: HH => {
+              yH("enableSmpMarketplace", HH)
+            }
+          },
+          survivalGuns: {
+            isEnabled: () => dH.worldOptions.enableSurvivalGuns,
+            vI: HH => {
+              yH("enableSurvivalGuns", HH)
+            }
+          },
+          fallDamage: {
+            isEnabled: () => !dH.worldOptions.disableFallDamage,
+            vI: HH => {
+              yH("disableFallDamage", !HH)
+            }
+          },
+          dayNight: {
+            isEnabled: () => dH.worldOptions.enableDayNight,
+            vI: HH => {
+              yH("enableDayNight", HH)
+            }
+          }
+        },
+        LB = "Enter" !== qH,
+        AB = (0, oH.jsx)(PH.g, {
+          className: "NameInput",
+          label: "general:name",
+          disabled: "Enter" !== qH,
+          children: (0, oH.jsx)(SH.e, {
+            domRef: jH,
+            onValueChange: (HH, BH) => {
+              const LH = (0, VH.tb)(HH);
+              iH("name", LH), jH.current.value = LH
+            },
+            maxLength: VH.R,
+            defaultValue: dH.baseOptions.name
+          })
+        });
+      return (0, oH.jsxs)("div", {
+        className: tH()("CreateCustomLobby", {
+          CreateCustomLobbySuccess: "Success" === qH,
+          AdvancedMode: DH
+        }),
+        children: ["Success" === qH && (0, oH.jsxs)("div", {
+          className: "CreateCustomLobbySuccessOverlay",
+          children: [(0, oH.jsxs)("div", {
+            className: "CreateCustomLobbySuccessTitle FullyFancyText AnimFadeInScaleUp",
+            children: [(0, oH.jsx)(bH.c, {
+              name: "check"
+            }), (0, oH.jsx)(xH.e, {})]
+          }), (0, oH.jsx)("div", {
+            className: "CreateCustomLobbySuccessButtons AnimFadeInScaleUp",
+            children: (0, oH.jsx)(GH.u, {
+              padDefaultFocus: !0,
+              onClick: () => {
+                (0, MH.l)("worldCreation"), eH((0, QH.b)(fH, dH.baseOptions.name))
+              },
+              children: cH("homePage:joinLobbyName", {
+                lobbyName: dH.baseOptions.name
+              })
             })
           })]
+        }), (0, oH.jsx)("div", {
+          className: "CreateCustomLobbyTitleContainer",
+          children: (0, oH.jsx)("div", {
+            className: "CreateCustomLobbyTitle",
+            children: cH(nH ? "homePage:createWorld" : "homePage:createCustomLobby")
+          })
+        }), (0, oH.jsx)(mH.c, {
+          locked: LB,
+          children: (0, oH.jsxs)("div", {
+            className: "CreateCustomLobbyFields",
+            children: [!DH && AB, DH && (0, oH.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, oH.jsx)("div", {
+                className: "SectionTitle",
+                children: cH("customLobby:generalOptions")
+              }), (0, oH.jsxs)("div", {
+                className: "SectionBody",
+                children: [AB, (0, oH.jsx)(PH.g, {
+                  label: "customLobby:visibility",
+                  circleInfoText: cH("customLobby:visibilityDescription"),
+                  disabled: "Enter" !== qH,
+                  children: (0, oH.jsx)(zH.b, {
+                    options: AH.t.map((HH => ({
+                      value: HH,
+                      label: AH.f[HH]
+                    }))),
+                    value: dH.baseOptions.visibility,
+                    onChange: HH => {
+                      iH("visibility", HH.value)
+                    }
+                  })
+                })]
+              })]
+            }), nH && (0, oH.jsx)(kH.c, {
+              value: dH.worldOptions.defaultGamemode,
+              onChange: HH => {
+                yH("defaultGamemode", HH)
+              },
+              showAll: DH,
+              disabled: LB
+            }), (nH || !(0, vH.M)(FH) && FH > 0) && (0, oH.jsx)(kH.d, {
+              mapTypes: nH ? AH.K : AH.p,
+              value: dH.mapOptions.mapType,
+              onChange: HH => {
+                const BH = {
+                  mapType: HH
+                };
+                "customSchematic" !== HH && (BH.schematicIdList = []), HB(BH)
+              },
+              showAll: DH,
+              disabled: LB,
+              children: "customSchematic" === dH.mapOptions.mapType && (0, oH.jsxs)(oH.Fragment, {
+                children: [(0, oH.jsxs)("div", {
+                  className: "SchematicListTitle AnimFadeIn",
+                  children: [nH && cH("customLobby:selectWorldSchematic"), !nH && cH("customLobby:selectCustomLobbySchematics", {
+                    schematicLimit: FH
+                  })]
+                }), (0, oH.jsx)("div", {
+                  className: tH()("SchematicListContainer AnimFadeIn", {
+                    SchematicListContainerDisabled: "Enter" !== qH
+                  }),
+                  children: (0, oH.jsx)(YH.b, {
+                    loading: null === sH,
+                    schematics: null !== sH && void 0 !== sH ? sH : [],
+                    onSchematicPicked: function(HH) {
+                      const BH = dH.mapOptions.schematicIdList;
+                      if (BH.includes(HH.schematicId)) HB({
+                        schematicIdList: BH.filter((BH => BH !== HH.schematicId))
+                      });
+                      else {
+                        if (FH && dH.mapOptions.schematicIdList.length >= FH) return;
+                        HB({
+                          schematicIdList: [...dH.mapOptions.schematicIdList, HH.schematicId]
+                        })
+                      }
+                    },
+                    selectedSchematicIdList: dH.mapOptions.schematicIdList,
+                    disableAutoExport: !0
+                  })
+                })]
+              })
+            }), DH && (0, oH.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, oH.jsx)("div", {
+                className: "SectionTitle",
+                children: cH("customLobby:listedOptions")
+              }), (0, oH.jsxs)("div", {
+                className: "SectionBody",
+                children: [(0, oH.jsx)(PH.g, {
+                  label: "general:description",
+                  className: "CustomLobbyDescription",
+                  disabled: "Enter" !== qH,
+                  children: (0, oH.jsx)(SH.e, {
+                    onValueChange: (HH, BH) => {
+                      pH("description", HH)
+                    },
+                    maxLength: 100,
+                    defaultValue: dH.listedOptions.description
+                  })
+                }), (0, oH.jsx)(PH.g, {
+                  label: "general:color",
+                  circleInfoText: "customLobby:lobbyColorDescription",
+                  disabled: "Enter" !== qH,
+                  children: (0, oH.jsx)("div", {
+                    className: "OtherInput",
+                    children: (0, oH.jsx)("input", {
+                      type: "color",
+                      value: dH.listedOptions.color,
+                      onChange: HH => {
+                        pH("color", HH.target.value)
+                      }
+                    })
+                  })
+                }), (0, oH.jsx)(PH.g, {
+                  label: "general:emojis",
+                  circleInfoText: "customLobby:lobbyEmojisDescription",
+                  disabled: "Enter" !== qH,
+                  children: (0, oH.jsx)(SH.e, {
+                    onValueChange: (HH, BH) => {
+                      pH("emojis", HH)
+                    },
+                    maxLength: 6,
+                    defaultValue: dH.listedOptions.emojis
+                  })
+                })]
+              })]
+            }), DH && nH && (0, oH.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, oH.jsx)("div", {
+                className: "SectionTitle",
+                children: cH("customLobby:advancedOptions")
+              }), (0, oH.jsxs)("div", {
+                className: "SectionBody",
+                children: [(0, oH.jsx)(PH.g, {
+                  label: "classic:worldGenSeed",
+                  disabled: "Enter" !== qH,
+                  children: (0, oH.jsx)(SH.e, {
+                    onValueChange: (HH, BH) => {
+                      yH("worldGenSeed", HH)
+                    },
+                    maxLength: VH.R
+                  })
+                }), (0, oH.jsx)(PH.g, {
+                  label: "classic:disableProtectors",
+                  disabled: "Enter" !== qH,
+                  children: (0, oH.jsx)(PH.e, {
+                    checked: dH.worldOptions.disableProtectors,
+                    setChecked: HH => {
+                      yH("disableProtectors", HH)
+                    }
+                  })
+                }), (0, oH.jsx)(PH.g, {
+                  label: "classic:disableTribeCreation",
+                  disabled: "Enter" !== qH,
+                  children: (0, oH.jsx)(PH.e, {
+                    checked: dH.worldOptions.disableTribeCreation,
+                    setChecked: HH => {
+                      yH("disableTribeCreation", HH)
+                    }
+                  })
+                }), (0, oH.jsx)(PH.g, {
+                  label: "classic:voidDeathHeight",
+                  circleInfoText: "classic:voidDeathHeightDescription",
+                  disabled: "Enter" !== qH,
+                  children: (0, oH.jsx)("input", {
+                    type: "number",
+                    max: UH.B,
+                    value: null !== (hH = dH.worldOptions.voidDeathHeight) && void 0 !== hH ? hH : "",
+                    onChange: HH => {
+                      const BH = parseInt(HH.target.value);
+                      yH("voidDeathHeight", isNaN(BH) ? null : BH)
+                    }
+                  })
+                }), (0, oH.jsx)(PH.g, {
+                  label: "classic:disableLobbySpawn",
+                  disabled: "Enter" !== qH,
+                  children: (0, oH.jsx)(PH.e, {
+                    checked: dH.worldOptions.disableLobbySpawn,
+                    setChecked: HH => {
+                      yH("disableLobbySpawn", HH)
+                    }
+                  })
+                }), (0, oH.jsx)(PH.g, {
+                  label: "classic:worldBorder",
+                  circleInfoText: "classic:worldBorderDescription",
+                  disabled: "Enter" !== qH,
+                  children: (0, oH.jsx)("input", {
+                    type: "number",
+                    min: UH.I,
+                    max: UH.F,
+                    value: null !== (IH = dH.worldOptions.worldBorder) && void 0 !== IH ? IH : "",
+                    onChange: HH => {
+                      const BH = parseInt(HH.target.value);
+                      yH("worldBorder", isNaN(BH) ? null : BH)
+                    }
+                  })
+                }), (0, oH.jsx)(PH.g, {
+                  label: "classic:disableMobs",
+                  disabled: "Enter" !== qH,
+                  children: (0, oH.jsx)(PH.e, {
+                    checked: dH.worldOptions.disableMobs,
+                    setChecked: HH => {
+                      yH("disableMobs", HH)
+                    }
+                  })
+                })]
+              })]
+            }), nH && (0, oH.jsx)(OH.d, {
+              callbacks: BB,
+              disabled: "Enter" !== qH,
+              advancedMode: DH
+            })]
+          })
+        }), (0, oH.jsxs)("div", {
+          className: "CreateCustomLobbyFooter",
+          children: [(0, oH.jsx)(GH.u, {
+            className: "CreateCustomLobbyButton",
+            padDefaultFocus: !0,
+            loading: "Enter" !== qH,
+            onClick: () => {
+              !async function() {
+                if ("Enter" === qH) {
+                  gH("Loading"), RH("");
+                  try {
+                    await XH.e.createCustomLobby(dH), gH("Success")
+                  } catch (HH) {
+                    RH(HH.message), console.error(HH.message), gH("Enter")
+                  }
+                }
+              }()
+            },
+            children: cH("general:create")
+          }), nH && (0, oH.jsx)("div", {
+            className: "CreateCustomLobbyAdvancedToggle",
+            "data-pad-ignore": LB || void 0,
+            children: (0, oH.jsx)(PH.g, {
+              label: "customLobby:showAdvancedOptions",
+              disabled: LB,
+              onLabelClick: () => {
+                wH(!DH)
+              },
+              children: (0, oH.jsx)(PH.e, {
+                checked: DH,
+                setChecked: wH
+              })
+            })
+          }), NH && (0, oH.jsx)("div", {
+            className: "CreateCustomLobbyError AnimFadeInScaleUp",
+            children: NH
+          })]
         })]
-      }), (0, DU.e)())
+      })
     }
-    const PU = (0, QU.forwardRef)((function(UU, XU) {
+  },
+  37228: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => zH
+    });
+    var AH = LH(1038),
+      rH = LH.n(AH),
+      SH = LH(45),
+      hH = LH(4978),
+      tH = LH(1225);
+
+    function zH(HH) {
       let {
-        placement: zU = "right",
-        children: cU,
-        ...yU
-      } = UU;
-      const AU = tU(yU),
-        FU = (0, QU.useRef)(null),
-        oU = (0, QU.useRef)(null);
-      kU(yU, AU, FU, oU);
-      const [DU, EU] = (0, QU.useState)(null), YU = cU.ref, NU = (0, QU.useCallback)((UU => {
-        oU.current = UU, EU(UU), aU(XU, UU), aU(YU, UU)
-      }), [XU, YU]);
-      return (0, IU.jsxs)(IU.Fragment, {
-        children: [(0, QU.cloneElement)(cU, {
-          ref: NU
-        }), AU && (0, IU.jsx)(RU, {
-          target: DU,
-          placement: zU,
-          boxRef: FU,
-          children: (0, IU.jsx)(GU, {
-            ...yU
-          })
+        locked: BH,
+        children: LH
+      } = HH;
+      const AH = (0, SH.useRef)(null),
+        zH = (0, hH.d)(AH, "y");
+      return (0, tH.jsx)("div", {
+        ref: AH,
+        className: rH()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: zH.before,
+          CreateCustomLobbyBodyMoreBelow: zH.after
+        }),
+        "data-pad-ignore": BH || void 0,
+        children: LH
+      })
+    }
+  },
+  37215: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => EH,
+      d: () => GH
+    });
+    var AH = LH(45),
+      rH = LH(1352),
+      SH = LH(1123),
+      hH = LH(1313),
+      tH = LH(3872),
+      zH = LH(5399),
+      CH = LH(1225);
+
+    function EH(HH) {
+      let {
+        loading: BH,
+        schematics: LH,
+        onSchematicPicked: AH,
+        selectedSchematicIdList: rH = [],
+        disableAutoExport: zH
+      } = HH;
+      const {
+        t: EH
+      } = (0, SH.B)();
+      return (0, CH.jsxs)("div", {
+        className: "SchematicList",
+        children: [BH && (0, CH.jsx)(hH.d, {}), !BH && 0 === LH.length && (0, CH.jsx)("div", {
+          className: "NoSchematicsText",
+          children: EH("worldBuilder:noSavedSchematic")
+        }), !BH && LH.map((HH => (0, CH.jsx)(tH.d, {
+          source: {
+            type: "schematic",
+            schematic: HH
+          },
+          gameWidth: "25%",
+          useLongRatio: !0,
+          onClick: () => {
+            AH(HH)
+          },
+          isSelected: rH.includes(HH.schematicId),
+          hideCcu: !0,
+          hideFavourites: !0,
+          showPublishedChip: !0,
+          hideUnpublishedChip: !0,
+          disabled: HH.isAutoExported && zH,
+          disabledReason: "worldBuilder:autoExportDisabled"
+        }, HH.schematicId)))]
+      })
+    }
+
+    function XH(HH) {
+      let {
+        ownedSchematics: BH,
+        currentWorldSchematicId: LH,
+        onClose: rH
+      } = HH;
+      const {
+        t: hH
+      } = (0, SH.B)(), [tH, XH] = (0, AH.useState)(null);
+      return (0, CH.jsxs)("div", {
+        className: "SchematicListWindow",
+        children: [null === tH && (0, CH.jsxs)(CH.Fragment, {
+          children: [(0, CH.jsx)("h1", {
+            className: "SchematicPopupTitle",
+            children: hH("worldBuilder:schematicList")
+          }), (0, CH.jsx)("h2", {
+            className: "SchematicPopupSubtitle",
+            children: hH("worldBuilder:clickSchematicForOptions")
+          }), (0, CH.jsx)("div", {
+            className: "SchematicPopupSchematicListContainer",
+            children: (0, CH.jsx)(EH, {
+              loading: !1,
+              schematics: BH,
+              onSchematicPicked: HH => {
+                XH(HH)
+              },
+              disableAutoExport: !1
+            })
+          })]
+        }), null !== tH && (0, CH.jsx)(zH.h, {
+          schematic: tH,
+          inSourceWorld: tH.schematicId === LH,
+          onSchematicUpdate: HH => {
+            XH(HH)
+          },
+          onClose: () => {
+            XH(null), rH()
+          }
         })]
       })
-    }));
+    }
 
-    function WU(UU) {
-      const XU = tU(UU),
-        zU = (0, QU.useRef)(null);
-      return kU(UU, XU, zU, null), XU ? (0, AU.createPortal)((0, IU.jsx)("div", {
-        className: "TutorialCentreBackdrop",
-        children: (0, IU.jsx)("div", {
-          ref: zU,
-          className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
-          children: (0, IU.jsx)(GU, {
-            ...UU
-          })
-        })
-      }), (0, DU.e)()) : null
+    function GH(HH) {
+      let {
+        ownedSchematics: BH,
+        currentWorldSchematicId: LH,
+        onClose: AH
+      } = HH;
+      rH.NotificationProvider.showCustomPopup({
+        body: HH => (0, CH.jsx)(XH, {
+          ownedSchematics: BH,
+          currentWorldSchematicId: LH,
+          onClose: HH
+        }),
+        middleScreenPopupClassName: "SchematicPopup",
+        onClose: AH,
+        unlockPointerKey: "schematicListPopup"
+      })
     }
   },
-  37334: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => QU,
-      i: () => aU,
-      l: () => tU,
-      o: () => FU,
-      r: () => NU,
-      t: () => gU,
-      v: () => YU,
-      w: () => GU,
-      x: () => pU,
-      y: () => kU
+  37219: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => CH,
+      d: () => EH
     });
-    var cU = zU(27),
-      yU = zU(31);
-    const QU = "clientGameInventoryButtonsChanged",
-      AU = new Map;
+    LH(45);
+    var AH = LH(1038),
+      rH = LH.n(AH),
+      SH = LH(5037),
+      hH = LH(304),
+      tH = LH(1123),
+      zH = LH(1225);
 
-    function FU() {
-      return [...AU.values()].sort(((UU, XU) => {
-        var zU, cU;
-        return (null !== (zU = UU.order) && void 0 !== zU ? zU : 0) - (null !== (cU = XU.order) && void 0 !== cU ? cU : 0)
-      }))
-    }
-    let oU = null;
-
-    function DU(UU) {
-      oU = UU
-    }
-    let EU = !1;
-
-    function YU(UU) {
-      EU = !0;
-      try {
-        UU.onClick()
-      } finally {
-        EU = !1
-      }
-      UU.panel && "clientGame" === cU.e.get("openInGameMenuName") && DU(UU.id)
-    }
-
-    function NU() {
-      return EU
-    }
-
-    function IU() {
-      return FU().filter((UU => UU.panel && !UU.disabled))
-    }
-
-    function pU(UU) {
-      const XU = IU(),
-        zU = XU.findIndex((UU => UU.id === oU));
-      return !(zU < 0 || XU.length < 2) && (YU(XU[(zU + UU + XU.length) % XU.length]), !0)
-    }
-
-    function aU() {
-      return null !== oU && IU().length > 1
-    }
-
-    function tU() {
-      DU(null)
-    }
-
-    function gU() {
-      "inventory" !== cU.e.get("openInGameMenuName") && DU(null)
-    }
-
-    function kU() {
-      const UU = oU;
-      return DU(null), UU
-    }
-
-    function GU(UU) {
-      return AU.set(UU.id, UU), yU.k.UY(QU, FU(), !0), () => {
-        AU.get(UU.id) === UU && (AU.delete(UU.id), yU.k.UY(QU, FU()))
-      }
-    }
-  },
-  37325: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => FU,
-      h: () => kU,
-      j: () => tU,
-      l: () => gU,
-      n: () => NU,
-      o: () => DU,
-      r: () => aU,
-      t: () => IU,
-      u: () => EU
-    });
-    var cU = zU(27),
-      yU = zU(31),
-      QU = zU(1310),
-      AU = zU(37334);
-    const FU = "clientGameUiChanged";
-    let oU = null;
-
-    function DU() {
-      return oU
-    }
-
-    function EU(UU, XU) {
-      const zU = {
-        content: UU,
-        menu: XU
-      };
-      return oU = zU, yU.k.UY(FU, oU, !0), () => {
-        oU === zU && (oU = null, pU = !1, tU(), yU.k.UY(FU, null))
-      }
-    }
-    let YU = null;
-
-    function NU() {
-      return YU
-    }
-
-    function IU(UU) {
-      return YU = UU, () => {
-        YU === UU && (YU = null)
-      }
-    }
-    let pU = !1;
-
-    function aU() {
-      const UU = cU.e.get("openInGameMenuName");
-      "clientGame" !== UU && (pU = "inventory" === UU), (0, AU.r)() || (0, AU.l)(), (0, QU.u)(QU.c), cU.e.set({
-        openInGameMenuName: "clientGame",
-        openEverythingMenuName: null
+    function CH(HH) {
+      let {
+        value: BH,
+        onChange: LH,
+        showAll: AH,
+        disabled: CH = !1
+      } = HH;
+      const {
+        t: EH
+      } = (0, tH.B)();
+      return (0, zH.jsxs)("div", {
+        className: rH()("BloxdForm GamemodeForm", {
+          BasicOptions: !AH
+        }),
+        children: [(0, zH.jsx)("div", {
+          className: "SectionTitle",
+          children: EH("classic:defaultGamemode")
+        }), (0, zH.jsx)("div", {
+          className: "SectionBody",
+          children: SH.H.map((HH => AH || (0, SH.y)(HH) ? (0, zH.jsx)("button", {
+            type: "button",
+            className: rH()("WorldGamemode", {
+              Selected: BH === HH
+            }),
+            disabled: CH,
+            onClick: () => {
+              LH(HH)
+            },
+            style: {
+              "--background-image": `url(${hH.w[HH]})`
+            },
+            children: hH.s[HH]
+          }, HH) : null))
+        })]
       })
     }
 
-    function tU() {
-      GU(!1)
-    }
-
-    function gU() {
-      GU(pU)
-    }
-
-    function kU() {
-      pU && GU(!1)
-    }
-
-    function GU(UU) {
-      "clientGame" === cU.e.get("openInGameMenuName") && cU.e.set({
-        openInGameMenuName: UU ? "inventory" : null
-      }), UU || (0, AU.l)(), pU = !1
+    function EH(HH) {
+      let {
+        mapTypes: BH,
+        value: LH,
+        onChange: AH,
+        showAll: CH,
+        disabled: EH = !1,
+        children: XH
+      } = HH;
+      const {
+        t: GH
+      } = (0, tH.B)();
+      return (0, zH.jsxs)("div", {
+        className: rH()("BloxdForm MapTypeForm", {
+          BasicOptions: !CH
+        }),
+        children: [(0, zH.jsx)("div", {
+          className: "SectionTitle",
+          children: GH("customLobby:mapType")
+        }), (0, zH.jsx)("div", {
+          className: "SectionBody",
+          children: BH.map((HH => CH || (0, SH.A)(HH) ? (0, zH.jsx)("button", {
+            type: "button",
+            className: rH()("MapType", {
+              Selected: LH === HH
+            }),
+            disabled: EH,
+            onClick: () => {
+              AH(HH)
+            },
+            style: {
+              "--background-image": `url(${hH.n[HH]})`
+            },
+            children: hH.j[HH]
+          }, HH) : null))
+        }), XH]
+      })
     }
   },
-  37612: (UU, XU, zU) => {
-    zU.d(XU, {
-      D: () => uU,
-      G: () => fU,
-      I: () => iU,
-      J: () => rU,
-      L: () => HU,
-      b: () => oU,
-      d: () => CU,
-      h: () => FU,
-      j: () => SU,
-      l: () => LU,
-      p: () => RU,
-      t: () => OU,
-      w: () => qU,
-      z: () => dU
-    });
-    var cU = zU(42);
-    const yU = {
-        codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
-        worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
-      },
-      QU = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
-      AU = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
-      FU = QU.filter((UU => "docsButton" !== UU)),
-      oU = AU.filter((UU => "aiHelperButton" !== UU)),
-      DU = "codeEditorTutorials",
-      EU = {
-        codeBlockIntro: "codeBlockIntroShown",
-        worldCodeIntro: "worldCodeIntroShown"
-      },
-      YU = {
-        welcome: "welcomeComplete",
-        docsOverview: "docsOverviewComplete",
-        aiHelperOverview: "aiHelperOverviewComplete"
-      };
-    let NU = null,
-      IU = null;
-    const pU = new Set,
-      aU = new Set;
-    let tU = null;
-    const gU = new Set,
-      kU = new Set;
-
-    function GU() {
-      kU.forEach((UU => {
-        UU()
-      }))
-    }
-
-    function BU() {
-      if (!NU) {
-        const UU = cU.k.getItem(DU);
-        NU = {
-          codeBlockIntroShown: !1,
-          worldCodeIntroShown: !1,
-          welcomeComplete: !1,
-          docsOverviewComplete: !1,
-          aiHelperOverviewComplete: !1,
-          ..."object" === typeof UU && null !== UU ? UU : {}
-        }
-      }
-      return NU
-    }
-
-    function ZU(UU) {
-      const XU = BU();
-      XU[UU] || (NU = {
-        ...XU,
-        [UU]: !0
-      }, cU.k.setItem(DU, NU))
-    }
-
-    function RU(UU) {
-      return "docsOverview" === UU ? QU : "aiHelperOverview" === UU ? AU : IU ? yU[IU] : []
-    }
-
-    function PU(UU) {
-      return ("worldCodeButton" !== UU || !BU().worldCodeIntroShown) && !gU.has(UU)
-    }
-
-    function WU(UU) {
-      var XU;
-      return (null === (XU = tU) || void 0 === XU ? void 0 : XU.name) === UU ? tU.stepsDone : pU
-    }
-
-    function dU(UU, XU) {
-      if (! function(UU) {
-          return tU ? tU.name === UU : "welcome" === UU
-        }(UU) || !PU(XU) || WU(UU).has(XU)) return !1;
-      if (tU) return !0;
-      const zU = EU[XU];
-      return zU ? !BU()[zU] || aU.has(XU) : !BU()[YU[UU]]
-    }
-
-    function LU(UU) {
-      var XU;
-      return null !== (XU = RU(UU).find((XU => dU(UU, XU)))) && void 0 !== XU ? XU : null
-    }
-
-    function eU(UU) {
-      var XU;
-      ZU(YU[UU]), (null === (XU = tU) || void 0 === XU ? void 0 : XU.name) === UU && (tU = null)
-    }
-
-    function CU(UU) {
-      const XU = (tU ? [tU.name] : ["welcome", "docsOverview"]).find((XU => LU(XU) === UU));
-      if (!XU) return;
-      WU(XU).add(UU);
-      const zU = EU[UU];
-      zU && (ZU(zU), tU || aU.add(UU)), null === LU(XU) && eU(XU), GU()
-    }
-
-    function wU(UU, XU) {
-      const zU = RU(UU),
-        cU = WU(UU);
-      for (let yU = zU.indexOf(XU) - 1; yU >= 0; yU--)
-        if (cU.has(zU[yU]) && PU(zU[yU])) return zU[yU];
-      return null
-    }
-
-    function qU(UU, XU) {
-      return null !== wU(UU, XU)
-    }
-
-    function OU(UU, XU) {
-      const zU = wU(UU, XU);
-      zU && (WU(UU).delete(zU), GU())
-    }
-
-    function SU(UU) {
-      eU(UU), "welcome" === UU && RU("welcome").forEach((UU => {
-        const XU = EU[UU];
-        XU && ZU(XU)
-      })), GU()
-    }
-
-    function rU(UU) {
-      tU = {
-        name: UU,
-        stepsDone: new Set
-      }, GU()
-    }
-
-    function uU() {
-      (tU || 0 !== pU.size || 0 !== aU.size) && (tU = null, pU.clear(), aU.clear(), GU())
-    }
-
-    function fU(UU, XU) {
-      const zU = XU ? UU : IU === UU ? null : IU;
-      zU !== IU && (IU = zU, GU())
-    }
-
-    function iU(UU, XU) {
-      gU.has(UU) === XU && (XU ? gU.delete(UU) : gU.add(UU), GU())
-    }
-
-    function HU(UU) {
-      return kU.add(UU), () => {
-        kU.delete(UU)
-      }
-    }
-  }
+  37210: () => {}
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

@@ -1,53 +1,53 @@
 export const id = 100;
 export const ids = [100];
 export const modules = {
-  5303: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => BU,
-      g: () => gU
+  5253: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => PH,
+      f: () => MH
     });
-    var cU = zU(1340),
-      yU = zU(31);
-    var QU = zU(344);
-    var AU = zU(646);
-    var FU = zU(2580),
-      oU = zU(5312),
-      DU = zU(5329),
-      EU = zU(5342);
-    class YU {
-      constructor(UU, XU, zU, cU, yU, QU) {
-        this.id = UU, this.type = XU, this.parameters = zU, this.tearDownNotification = cU, this.onDonePromise = yU, this.resolveRequest = QU
+    var AH = LH(1280),
+      rH = LH(18);
+    var SH = LH(317);
+    var hH = LH(619);
+    var tH = LH(2600),
+      zH = LH(5255),
+      CH = LH(5275),
+      EH = LH(5288);
+    class XH {
+      constructor(HH, BH, LH, AH, rH, SH) {
+        this.id = HH, this.type = BH, this.parameters = LH, this.tearDownNotification = AH, this.onDonePromise = rH, this.resolveRequest = SH
       }
     }
-    const NU = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
-    class IU {
-      constructor(UU, XU, zU, cU, yU, QU) {
-        this.id = UU, this.type = XU, this.parameters = zU, this.resolveRequest = cU, this.onDonePromise = yU, this.tearDownNotification = QU, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
-        const AU = gU[XU];
-        if (!AU) throw console.error(`No QTE implementation registered for type: ${XU}`), new Error(`No QTE implementation registered for type: ${XU}`);
-        this.implementation = new AU(zU, (UU => {
-          this.isCompleted = !0, this.resolveRequest(UU)
+    const GH = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
+    class YH {
+      constructor(HH, BH, LH, AH, rH, SH) {
+        this.id = HH, this.type = BH, this.parameters = LH, this.resolveRequest = AH, this.onDonePromise = rH, this.tearDownNotification = SH, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
+        const hH = MH[BH];
+        if (!hH) throw console.error(`No QTE implementation registered for type: ${BH}`), new Error(`No QTE implementation registered for type: ${BH}`);
+        this.implementation = new hH(LH, (HH => {
+          this.isCompleted = !0, this.resolveRequest(HH)
         }), this.tearDownNotification), this.setupInputHandlers()
       }
       setupInputHandlers() {
-        this.mouseSub = yU.k.subscribe("QTEMouseState", (UU => {
+        this.mouseSub = rH.k.subscribe("QTEMouseState", (HH => {
           let {
-            isDown: XU
-          } = UU;
-          this.isCompleted || this.implementation.handleMouseInput(XU)
-        })), this.stopInputActions = (0, DU.k)((UU => {
-          this.isCompleted || !NU.has(UU.action) && !(0, DU.g)(UU) || this.implementation.handleMouseInput(UU.down)
-        })), this.tickSub = yU.k.subscribe("noaTick", (UU => {
+            isDown: BH
+          } = HH;
+          this.isCompleted || this.implementation.handleMouseInput(BH)
+        })), this.stopInputActions = (0, CH.k)((HH => {
+          this.isCompleted || !GH.has(HH.action) && !(0, CH.i)(HH) || this.implementation.handleMouseInput(HH.down)
+        })), this.tickSub = rH.k.subscribe("noaTick", (HH => {
           if (this.isCompleted) return;
-          const XU = UU / 1e3;
-          this.implementation.handleTick(XU)
-        })), this.stopShellTicks = (0, oU.t)((() => {
-          this.isCompleted || this.implementation.handleTick(FU.z / 1e3)
+          const BH = HH / 1e3;
+          this.implementation.handleTick(BH)
+        })), this.stopShellTicks = (0, zH.v)((() => {
+          this.isCompleted || this.implementation.handleTick(tH.o / 1e3)
         }))
       }
       cleanup() {
-        var UU, XU;
-        this.mouseSub && (yU.k.unsubscribe(this.mouseSub), this.mouseSub = null), null === (UU = this.stopInputActions) || void 0 === UU || UU.call(this), this.stopInputActions = null, null === (XU = this.stopShellTicks) || void 0 === XU || XU.call(this), this.stopShellTicks = null, this.tickSub && (yU.k.unsubscribe(this.tickSub), this.tickSub = null)
+        var HH, BH;
+        this.mouseSub && (rH.k.unsubscribe(this.mouseSub), this.mouseSub = null), null === (HH = this.stopInputActions) || void 0 === HH || HH.call(this), this.stopInputActions = null, null === (BH = this.stopShellTicks) || void 0 === BH || BH.call(this), this.stopShellTicks = null, this.tickSub && (rH.k.unsubscribe(this.tickSub), this.tickSub = null)
       }
       async waitUntilDone() {
         await this.onDonePromise
@@ -59,28 +59,28 @@ export const modules = {
         this.isCompleted = !0, this.cleanup(), this.implementation.tearDown()
       }
     }
-    const pU = new cU.e,
-      aU = new Map;
-    let tU = null;
-    const gU = {
+    const uH = new AH.b,
+      QH = new Map;
+    let WH = null;
+    const MH = {
       progressBar: class {
-        constructor(UU, XU, zU) {
-          var cU, yU, QU, AU;
-          this.resolveRequest = XU, this.tearDownNotification = zU, this.progress = 0, this.rz = void 0, this.uz = void 0, this.fz = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
-          const FU = UU;
-          this.rz = null !== (cU = FU.rz) && void 0 !== cU ? cU : .075, this.uz = null !== (yU = FU.uz) && void 0 !== yU ? yU : 1, this.progress = null !== (QU = FU.Sz) && void 0 !== QU ? QU : 30, this.fz = null !== (AU = FU.fz) && void 0 !== AU && AU, this.parameters = FU
+        constructor(HH, BH, LH) {
+          var AH, rH, SH, hH;
+          this.resolveRequest = BH, this.tearDownNotification = LH, this.progress = 0, this.nH = void 0, this.FH = void 0, this.DH = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
+          const tH = HH;
+          this.nH = null !== (AH = tH.nH) && void 0 !== AH ? AH : .075, this.FH = null !== (rH = tH.FH) && void 0 !== rH ? rH : 1, this.progress = null !== (SH = tH.jH) && void 0 !== SH ? SH : 30, this.DH = null !== (hH = tH.DH) && void 0 !== hH && hH, this.parameters = tH
         }
-        handleMouseInput(UU) {
-          UU && !this.isCompleted && (this.clickCount++, this.progress += this.uz, this.progress >= 100 && this.complete(!0))
+        handleMouseInput(HH) {
+          HH && !this.isCompleted && (this.clickCount++, this.progress += this.FH, this.progress >= 100 && this.complete(!0))
         }
         handleTick() {
           if (!this.isCompleted)
-            if (this.progress -= this.rz, this.fz && this.progress <= 0) this.complete(!1);
+            if (this.progress -= this.nH, this.DH && this.progress <= 0) this.complete(!1);
             else if (this.progress <= 0) this.progress = 0;
           else if (this.progress >= 100) return void this.complete(!0)
         }
-        complete(UU) {
-          this.isCompleted = !0, this.resolveRequest(UU)
+        complete(HH) {
+          this.isCompleted = !0, this.resolveRequest(HH)
         }
         getState() {
           return {
@@ -98,30 +98,30 @@ export const modules = {
         }
       },
       timedClick: class {
-        constructor(UU, XU, zU) {
-          var cU;
-          this.resolveRequest = XU, this.tearDownNotification = zU, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = UU, this.timeWindowMs = null !== (cU = this.parameters.vz) && void 0 !== cU ? cU : 3e3, this.startTime = Date.now()
+        constructor(HH, BH, LH) {
+          var AH;
+          this.resolveRequest = BH, this.tearDownNotification = LH, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = HH, this.timeWindowMs = null !== (AH = this.parameters.sH) && void 0 !== AH ? AH : 3e3, this.startTime = Date.now()
         }
-        handleMouseInput(UU) {
-          if (!UU || this.isCompleted) return;
+        handleMouseInput(HH) {
+          if (!HH || this.isCompleted) return;
           Date.now() - this.startTime <= this.timeWindowMs && this.complete(!0)
         }
         handleTick() {
           if (this.isCompleted) return;
           Date.now() - this.startTime > this.timeWindowMs && this.complete(!1)
         }
-        complete(UU) {
-          this.isCompleted = !0, this.resolveRequest(UU)
+        complete(HH) {
+          this.isCompleted = !0, this.resolveRequest(HH)
         }
         getState() {
-          const UU = Date.now() - this.startTime,
-            XU = Math.max(0, this.timeWindowMs - UU);
+          const HH = Date.now() - this.startTime,
+            BH = Math.max(0, this.timeWindowMs - HH);
           return {
             type: this.type,
             parameters: this.parameters,
             state: {
-              timeRemaining: XU,
-              vz: this.timeWindowMs
+              timeRemaining: BH,
+              sH: this.timeWindowMs
             },
             isActive: !0
           }
@@ -131,49 +131,49 @@ export const modules = {
         }
       },
       gravityBar: class {
-        constructor(UU, XU, zU) {
-          var cU;
-          this.resolveRequest = XU, this.tearDownNotification = zU, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
-          const yU = UU;
+        constructor(HH, BH, LH) {
+          var AH;
+          this.resolveRequest = BH, this.tearDownNotification = LH, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
+          const rH = HH;
           this.parameters = {
-            ...yU,
-            mz: QU.d.clamp(yU.mz, .05, 1)
-          }, this.progress = null !== (cU = yU.Sz) && void 0 !== cU ? cU : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+            ...rH,
+            yH: SH.d.clamp(rH.yH, .05, 1)
+          }, this.progress = null !== (AH = rH.jH) && void 0 !== AH ? AH : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
-        handleMouseInput(UU) {
-          this.isMouseDown = UU
+        handleMouseInput(HH) {
+          this.isMouseDown = HH
         }
-        handleTick(UU) {
-          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(UU))
+        handleTick(HH) {
+          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(HH))
         }
         updateMover() {
           this.ticksUntilDirectionChange--, (this.ticksUntilDirectionChange <= 0 || Math.abs(this.moverPosition - this.moverTarget) < .02) && this.pickNewMoverTarget();
-          const UU = Math.sign(this.moverTarget - this.moverPosition);
-          this.moverPosition += UU * this.parameters.lz * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
+          const HH = Math.sign(this.moverTarget - this.moverPosition);
+          this.moverPosition += HH * this.parameters.HB * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
         }
         pickNewMoverTarget() {
           this.moverTarget = Math.random(), this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
         randomNumTicksUntilDirectionChange() {
-          const UU = QU.d.clamp(1 - .7 * this.parameters.xz, 0, 1.4);
-          return Math.floor(60 * UU + 40 * Math.random())
+          const HH = SH.d.clamp(1 - .7 * this.parameters.BB, 0, 1.4);
+          return Math.floor(60 * HH + 40 * Math.random())
         }
         updateCatchZone() {
-          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.Jz : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = QU.d.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
-          const UU = this.parameters.mz / 2,
-            XU = UU,
-            zU = 1 - UU;
-          this.catchZonePosition <= XU ? (this.catchZonePosition = XU, this.catchZoneVelocity = 0) : this.catchZonePosition >= zU && (this.catchZonePosition = zU, this.catchZoneVelocity = 0)
+          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.LB : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = SH.d.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
+          const HH = this.parameters.yH / 2,
+            BH = HH,
+            LH = 1 - HH;
+          this.catchZonePosition <= BH ? (this.catchZonePosition = BH, this.catchZoneVelocity = 0) : this.catchZonePosition >= LH && (this.catchZonePosition = LH, this.catchZoneVelocity = 0)
         }
         isMoverInCatchZone() {
-          const UU = this.parameters.mz / 2;
-          return this.moverPosition >= this.catchZonePosition - UU && this.moverPosition <= this.catchZonePosition + UU
+          const HH = this.parameters.yH / 2;
+          return this.moverPosition >= this.catchZonePosition - HH && this.moverPosition <= this.catchZonePosition + HH
         }
-        updateProgress(UU) {
-          this.isMoverInCatchZone() ? this.progress += this.parameters.jz * UU : this.progress -= this.parameters.Kz * UU, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.fz && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
+        updateProgress(HH) {
+          this.isMoverInCatchZone() ? this.progress += this.parameters.AB * HH : this.progress -= this.parameters.rB * HH, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.DH && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
         }
-        complete(UU) {
-          this.isCompleted = !0, this.resolveRequest(UU)
+        complete(HH) {
+          this.isCompleted = !0, this.resolveRequest(HH)
         }
         getState() {
           return {
@@ -181,7 +181,7 @@ export const modules = {
             parameters: this.parameters,
             state: {
               catchZonePosition: this.catchZonePosition,
-              mz: this.parameters.mz,
+              yH: this.parameters.yH,
               moverPosition: this.moverPosition,
               progress: this.progress,
               isCatching: this.isMoverInCatchZone()
@@ -194,38 +194,38 @@ export const modules = {
         }
       },
       precisionBar: class {
-        constructor(UU, XU, zU) {
-          var cU, yU, AU, FU, oU;
-          this.resolveRequest = XU, this.tearDownNotification = zU, this.startTime = void 0, this.speed = void 0, this.Tz = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
-          const DU = UU;
+        constructor(HH, BH, LH) {
+          var AH, rH, hH, tH, zH;
+          this.resolveRequest = BH, this.tearDownNotification = LH, this.startTime = void 0, this.speed = void 0, this.hB = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
+          const CH = HH;
           this.parameters = {
-            ...DU,
-            speed: null !== (cU = DU.speed) && void 0 !== cU ? cU : .5,
-            Tz: QU.d.clamp(DU.Tz, .05, 1),
-            label: null !== (yU = DU.label) && void 0 !== yU ? yU : [{
+            ...CH,
+            speed: null !== (AH = CH.speed) && void 0 !== AH ? AH : .5,
+            hB: SH.d.clamp(CH.hB, .05, 1),
+            label: null !== (rH = CH.label) && void 0 !== rH ? rH : [{
               str: "Click when the marker is within the green zone."
             }],
-            icon: null !== (AU = DU.icon) && void 0 !== AU ? AU : null,
-            scale: null !== (FU = DU.scale) && void 0 !== FU ? FU : 1,
-            rotation: null !== (oU = DU.rotation) && void 0 !== oU ? oU : 0
-          }, this.speed = this.parameters.speed, this.Tz = this.parameters.Tz, this.startTime = Date.now()
+            icon: null !== (hH = CH.icon) && void 0 !== hH ? hH : null,
+            scale: null !== (tH = CH.scale) && void 0 !== tH ? tH : 1,
+            rotation: null !== (zH = CH.rotation) && void 0 !== zH ? zH : 0
+          }, this.speed = this.parameters.speed, this.hB = this.parameters.hB, this.startTime = Date.now()
         }
-        handleMouseInput(UU) {
-          if (UU) {
+        handleMouseInput(HH) {
+          if (HH) {
             this.updateMarkerPosition();
-            const UU = Math.abs(this.markerPosition - .5) <= this.Tz / 2;
-            this.complete(UU)
+            const HH = Math.abs(this.markerPosition - .5) <= this.hB / 2;
+            this.complete(HH)
           }
         }
         handleTick() {
           this.isCompleted || this.updateMarkerPosition()
         }
         updateMarkerPosition() {
-          const UU = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
-          this.markerPosition = UU <= .5 ? 2 * UU : 2 - 2 * UU
+          const HH = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
+          this.markerPosition = HH <= .5 ? 2 * HH : 2 - 2 * HH
         }
-        complete(UU) {
-          this.isCompleted = !0, this.resolveRequest(UU)
+        complete(HH) {
+          this.isCompleted = !0, this.resolveRequest(HH)
         }
         getState() {
           return this.updateMarkerPosition(), {
@@ -242,29 +242,29 @@ export const modules = {
         }
       },
       rhythmClick: class {
-        constructor(UU, XU, zU) {
-          this.resolveRequest = XU, this.tearDownNotification = zU, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = UU, this.shrinkStartTime = Date.now()
+        constructor(HH, BH, LH) {
+          this.resolveRequest = BH, this.tearDownNotification = LH, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = HH, this.shrinkStartTime = Date.now()
         }
-        handleMouseInput(UU) {
-          if (!UU || this.isCompleted) return;
-          const XU = this.getOuterCircleProgress();
-          if (XU <= this.parameters.zc && XU >= -this.parameters.zc) {
-            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.Uc) return void this.complete(!0)
+        handleMouseInput(HH) {
+          if (!HH || this.isCompleted) return;
+          const BH = this.getOuterCircleProgress();
+          if (BH <= this.parameters.EB && BH >= -this.parameters.EB) {
+            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.zB) return void this.complete(!0)
           } else this.handleMiss();
           this.shrinkStartTime = Date.now()
         }
         handleMiss() {
-          this.misses++, this.lastClickResult = !1, !(0, AU.P)(this.parameters.yc) && this.misses > this.parameters.yc ? this.complete(!1) : this.shrinkStartTime = Date.now()
+          this.misses++, this.lastClickResult = !1, !(0, hH.M)(this.parameters.XB) && this.misses > this.parameters.XB ? this.complete(!1) : this.shrinkStartTime = Date.now()
         }
         handleTick() {
           if (this.isCompleted) return;
-          this.getOuterCircleProgress() < -this.parameters.zc && this.handleMiss()
+          this.getOuterCircleProgress() < -this.parameters.EB && this.handleMiss()
         }
         getOuterCircleProgress() {
-          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.Xc
+          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.CB
         }
-        complete(UU) {
-          this.isCompleted = !0, this.resolveRequest(UU)
+        complete(HH) {
+          this.isCompleted = !0, this.resolveRequest(HH)
         }
         getState() {
           return {
@@ -273,7 +273,7 @@ export const modules = {
             state: {
               outerCircleProgress: this.getOuterCircleProgress(),
               successes: this.successes,
-              Uc: this.parameters.Uc,
+              zB: this.parameters.zB,
               misses: this.misses,
               lastClickResult: this.lastClickResult
             },
@@ -286,61 +286,61 @@ export const modules = {
       }
     };
 
-    function kU() {
-      (0, EU.f)(FU.F.Qte, tU ? FU.F.Qte : 0), tU ? yU.k.UY("qteStateUpdated", tU.getState()) : yU.k.UY("qteStateUpdated", {
+    function xH() {
+      (0, EH.k)(tH.w.Qte, WH ? tH.w.Qte : 0), WH ? rH.k.AX("qteStateUpdated", WH.getState()) : rH.k.AX("qteStateUpdated", {
         type: null,
         typeSpecificParameters: null,
         isActive: !1
       })
     }
-    class GU {
-      constructor(UU, XU) {
-        this.resultPromise = UU, this.tearDownQTE = XU
+    class vH {
+      constructor(HH, BH) {
+        this.resultPromise = HH, this.tearDownQTE = BH
       }
-      static create(UU, XU, zU) {
-        const cU = Promise.race([UU, XU]);
-        return new GU(cU, zU)
+      static create(HH, BH, LH) {
+        const AH = Promise.race([HH, BH]);
+        return new vH(AH, LH)
       }
       async getResult() {
         return await this.resultPromise
       }
     }
-    class BU {
-      static queueQTE(UU, XU, zU) {
-        let cU, yU;
-        const QU = new Promise((UU => {
-            cU = UU
+    class PH {
+      static queueQTE(HH, BH, LH) {
+        let AH, rH;
+        const SH = new Promise((HH => {
+            AH = HH
           })),
-          AU = new Promise((UU => {
-            yU = () => {
-              UU("qteTornDown")
+          hH = new Promise((HH => {
+            rH = () => {
+              HH("qteTornDown")
             }
           })),
-          FU = Promise.race([QU, AU]).then((() => {})),
-          oU = new YU(UU, XU, zU, yU, FU, cU);
-        return aU.set(UU, oU), pU.enqueue(oU), tU || this.processNextQTE(), GU.create(QU, AU, yU)
+          tH = Promise.race([SH, hH]).then((() => {})),
+          zH = new XH(HH, BH, LH, rH, tH, AH);
+        return QH.set(HH, zH), uH.enqueue(zH), WH || this.processNextQTE(), vH.create(SH, hH, rH)
       }
       static async processNextQTE() {
-        if (tU || pU.kY()) return void(pU.kY() && tU && (tU = null, kU()));
-        const UU = await pU.dequeue();
-        if (!aU.has(UU.id)) return void await this.processNextQTE();
-        aU.delete(UU.id);
-        const XU = new IU(UU.id, UU.type, UU.parameters, UU.resolveRequest, UU.onDonePromise, UU.tearDownNotification);
-        tU = XU, kU();
+        if (WH || uH.TX()) return void(uH.TX() && WH && (WH = null, xH()));
+        const HH = await uH.dequeue();
+        if (!QH.has(HH.id)) return void await this.processNextQTE();
+        QH.delete(HH.id);
+        const BH = new YH(HH.id, HH.type, HH.parameters, HH.resolveRequest, HH.onDonePromise, HH.tearDownNotification);
+        WH = BH, xH();
         try {
-          await XU.waitUntilDone()
-        } catch (zU) {
-          console.error("Error while waiting for QTE to resolve:", zU.stack)
+          await BH.waitUntilDone()
+        } catch (LH) {
+          console.error("Error while waiting for QTE to resolve:", LH.stack)
         }
-        tU === XU && (tU.cleanup(), tU = null, kU()), await this.processNextQTE()
+        WH === BH && (WH.cleanup(), WH = null, xH()), await this.processNextQTE()
       }
-      static cancelQTE(UU) {
-        if (tU && tU.id === UU) return tU.tearDown(), tU = null, kU(), void this.processNextQTE();
-        const XU = aU.get(UU);
-        XU && (aU.delete(UU), XU.tearDownNotification())
+      static cancelQTE(HH) {
+        if (WH && WH.id === HH) return WH.tearDown(), WH = null, xH(), void this.processNextQTE();
+        const BH = QH.get(HH);
+        BH && (QH.delete(HH), BH.tearDownNotification())
       }
       static getCurrentState() {
-        return tU ? tU.getState() : {
+        return WH ? WH.getState() : {
           type: null,
           parameters: null,
           state: null,
@@ -348,209 +348,209 @@ export const modules = {
         }
       }
       static reset() {
-        tU && (tU.tearDown(), tU = null), aU.forEach(((UU, XU) => {
-          this.cancelQTE(XU)
-        })), pU.emptyQueue(), aU.clear(), kU()
+        WH && (WH.tearDown(), WH = null), QH.forEach(((HH, BH) => {
+          this.cancelQTE(BH)
+        })), uH.emptyQueue(), QH.clear(), xH()
       }
     }
   },
-  5312: (UU, XU, zU) => {
-    zU.d(XU, {
-      B: () => kU,
-      D: () => AU,
-      H: () => FU,
-      L: () => dU,
-      b: () => WU,
-      c: () => BU,
-      f: () => qU,
-      h: () => wU,
-      j: () => gU,
-      m: () => RU,
-      n: () => GU,
-      r: () => ZU,
-      t: () => LU,
-      x: () => eU,
-      y: () => CU
+  5255: (HH, BH, LH) => {
+    LH.d(BH, {
+      D: () => oH,
+      F: () => xH,
+      J: () => hH,
+      L: () => tH,
+      P: () => bH,
+      c: () => OH,
+      d: () => PH,
+      e: () => fH,
+      g: () => IH,
+      k: () => MH,
+      n: () => UH,
+      p: () => vH,
+      r: () => TH,
+      v: () => kH,
+      z: () => mH
     });
-    var cU = zU(5315);
-    const yU = {
+    var AH = LH(5260);
+    const rH = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let QU = yU;
+    let SH = rH;
 
-    function AU(UU) {
-      QU = null !== UU && void 0 !== UU ? UU : yU
+    function hH(HH) {
+      SH = null !== HH && void 0 !== HH ? HH : rH
     }
 
-    function FU() {
-      return QU
+    function tH() {
+      return SH
     }
-    const oU = new Set,
-      DU = new Set;
-    let EU = -1;
-    const YU = new Set,
-      NU = new Set;
-    let IU = 0,
-      pU = 0;
-    const aU = new Set,
-      tU = new Set;
+    const zH = new Set,
+      CH = new Set;
+    let EH = -1;
+    const XH = new Set,
+      GH = new Set;
+    let YH = 0,
+      uH = 0;
+    const QH = new Set,
+      WH = new Set;
 
-    function gU(UU) {
-      return oU.add(UU), () => {
-        oU.delete(UU)
+    function MH(HH) {
+      return zH.add(HH), () => {
+        zH.delete(HH)
       }
     }
 
-    function kU(UU, XU) {
-      for (const cU of oU) try {
-        cU(UU)
-      } catch (zU) {
-        XU(zU)
+    function xH(HH, BH) {
+      for (const AH of zH) try {
+        AH(HH)
+      } catch (LH) {
+        BH(LH)
       }
     }
 
-    function GU(UU) {
-      return DU.add(UU), () => {
-        DU.delete(UU)
+    function vH(HH) {
+      return CH.add(HH), () => {
+        CH.delete(HH)
       }
     }
 
-    function BU(UU, XU) {
-      const zU = EU < 0 ? 0 : UU - EU;
-      EU = UU;
-      for (const yU of DU) try {
-        yU(zU)
-      } catch (cU) {
-        XU(cU)
+    function PH(HH, BH) {
+      const LH = EH < 0 ? 0 : HH - EH;
+      EH = HH;
+      for (const rH of CH) try {
+        rH(LH)
+      } catch (AH) {
+        BH(AH)
       }
     }
 
-    function ZU(UU) {
-      return YU.add(UU), () => {
-        YU.delete(UU)
+    function TH(HH) {
+      return XH.add(HH), () => {
+        XH.delete(HH)
       }
     }
 
-    function RU(UU) {
-      return NU.add(UU), () => {
-        NU.delete(UU)
+    function UH(HH) {
+      return GH.add(HH), () => {
+        GH.delete(HH)
       }
     }
-    let PU = 0;
+    let VH = 0;
 
-    function WU(UU) {
-      PU += UU
+    function OH(HH) {
+      VH += HH
     }
 
-    function dU() {
-      const UU = PU;
-      return PU = 0, UU
+    function bH() {
+      const HH = VH;
+      return VH = 0, HH
     }
 
-    function LU(UU) {
-      return aU.add(UU), () => {
-        aU.delete(UU)
-      }
-    }
-
-    function eU(UU) {
-      return tU.add(UU), () => {
-        tU.delete(UU)
+    function kH(HH) {
+      return QH.add(HH), () => {
+        QH.delete(HH)
       }
     }
 
-    function CU() {
-      IU = 0, pU = 0, EU = -1
+    function mH(HH) {
+      return WH.add(HH), () => {
+        WH.delete(HH)
+      }
     }
 
-    function wU(UU, XU) {
-      if ("paced" === UU) return pU += XU, null;
-      if ("drawn" !== UU && "skipped" !== UU) return null;
-      const zU = XU + pU;
-      return pU = 0, zU
+    function oH() {
+      YH = 0, uH = 0, EH = -1
     }
 
-    function qU(UU, XU, zU, yU) {
-      const QU = (0, cU.j)(XU),
-        AU = UU > 0 ? performance.now() : 0;
-      for (let cU = 0; cU < UU; cU++)
-        for (const UU of aU) try {
-          UU()
-        } catch (FU) {
-          yU(FU)
+    function IH(HH, BH) {
+      if ("paced" === HH) return uH += BH, null;
+      if ("drawn" !== HH && "skipped" !== HH) return null;
+      const LH = BH + uH;
+      return uH = 0, LH
+    }
+
+    function fH(HH, BH, LH, rH) {
+      const SH = (0, AH.e)(BH),
+        hH = HH > 0 ? performance.now() : 0;
+      for (let AH = 0; AH < HH; AH++)
+        for (const HH of QH) try {
+          HH()
+        } catch (tH) {
+          rH(tH)
         }
-      if (UU > 0 && WU(performance.now() - AU), null !== zU) {
-        for (const UU of YU) try {
-          UU(zU)
-        } catch (FU) {
-          yU(FU)
+      if (HH > 0 && OH(performance.now() - hH), null !== LH) {
+        for (const HH of XH) try {
+          HH(LH)
+        } catch (tH) {
+          rH(tH)
         }
-        IU += zU
+        YH += LH
       }
-      if ("drawn" === XU) {
-        const UU = IU;
-        IU = 0;
-        for (const XU of NU) try {
-          XU(UU)
-        } catch (FU) {
-          yU(FU)
+      if ("drawn" === BH) {
+        const HH = YH;
+        YH = 0;
+        for (const BH of GH) try {
+          BH(HH)
+        } catch (tH) {
+          rH(tH)
         }
       }
-      for (const cU of tU) try {
-        cU(UU, QU)
-      } catch (FU) {
-        yU(FU)
+      for (const AH of WH) try {
+        AH(HH, SH)
+      } catch (tH) {
+        rH(tH)
       }
     }
   },
-  5329: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => oU,
-      g: () => QU,
-      k: () => FU
+  5275: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => zH,
+      i: () => SH,
+      k: () => tH
     });
-    var cU = zU(2580),
-      yU = zU(5336);
+    var AH = LH(2600),
+      rH = LH(5279);
 
-    function QU(UU) {
+    function SH(HH) {
       let {
-        action: XU,
-        flags: zU
-      } = UU;
-      return "mid-fire" === XU && 0 !== (zU & cU.c.AltLeftClick)
+        action: BH,
+        flags: LH
+      } = HH;
+      return "mid-fire" === BH && 0 !== (LH & AH.c.AltLeftClick)
     }
-    const AU = new Set;
+    const hH = new Set;
 
-    function FU(UU) {
-      return AU.add(UU), () => {
-        AU.delete(UU)
+    function tH(HH) {
+      return hH.add(HH), () => {
+        hH.delete(HH)
       }
     }
 
-    function oU(UU) {
-      const XU = yU.c[255 & UU];
-      if (void 0 === XU) return;
-      const zU = UU >>> 8 & 255,
-        QU = {
-          action: XU,
-          down: 0 !== (zU & cU.c.Down),
-          flags: zU,
-          press: UU >>> 16
+    function zH(HH) {
+      const BH = rH.c[255 & HH];
+      if (void 0 === BH) return;
+      const LH = HH >>> 8 & 255,
+        SH = {
+          action: BH,
+          down: 0 !== (LH & AH.c.Down),
+          flags: LH,
+          press: HH >>> 16
         };
-      for (const cU of AU) cU(QU)
+      for (const AH of hH) AH(SH)
     }
   },
-  5336: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => yU,
-      g: () => QU,
-      h: () => AU,
-      j: () => cU,
-      n: () => FU
+  5279: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => rH,
+      f: () => SH,
+      i: () => hH,
+      j: () => AH,
+      k: () => tH
     });
-    const cU = {
+    const AH = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -747,8 +747,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      yU = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      QU = {
+      rH = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      SH = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -811,63 +811,63 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      AU = {
+      hH = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      FU = [16]
+      tH = [16]
   },
-  5342: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => FU,
-      e: () => AU,
-      f: () => DU
+  5288: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => tH,
+      g: () => hH,
+      k: () => CH
     });
-    var cU = zU(2580),
-      yU = zU(2588);
-    const QU = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var AH = LH(2600),
+      rH = LH(2605);
+    const SH = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function AU(UU) {
-      return UU instanceof HTMLElement && (!!(UU.isContentEditable || UU instanceof HTMLTextAreaElement || UU instanceof HTMLSelectElement) || UU instanceof HTMLInputElement && !QU.has(UU.type))
+    function hH(HH) {
+      return HH instanceof HTMLElement && (!!(HH.isContentEditable || HH instanceof HTMLTextAreaElement || HH instanceof HTMLSelectElement) || HH instanceof HTMLInputElement && !SH.has(HH.type))
     }
 
-    function FU(UU) {
-      let XU = null;
-      const zU = zU => {
-          const yU = AU(zU);
-          yU !== XU && (XU = yU, UU(cU.j.UiCapture, cU.F.Keyboard, 0, 0, yU ? cU.F.Keyboard : 0))
+    function tH(HH) {
+      let BH = null;
+      const LH = LH => {
+          const rH = hH(LH);
+          rH !== BH && (BH = rH, HH(AH.g.UiCapture, AH.w.Keyboard, 0, 0, rH ? AH.w.Keyboard : 0))
         },
-        yU = UU => {
-          zU(UU.target)
+        rH = HH => {
+          LH(HH.target)
         },
-        QU = UU => {
-          zU(UU.relatedTarget)
+        SH = HH => {
+          LH(HH.relatedTarget)
         },
-        FU = () => {
-          zU(document.activeElement)
+        tH = () => {
+          LH(document.activeElement)
         },
-        oU = {
+        zH = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", yU, oU), document.addEventListener("focusout", QU, oU), document.addEventListener("keydown", FU, oU), zU(document.activeElement), () => {
-        document.removeEventListener("focusin", yU, oU), document.removeEventListener("focusout", QU, oU), document.removeEventListener("keydown", FU, oU)
+      return document.addEventListener("focusin", rH, zH), document.addEventListener("focusout", SH, zH), document.addEventListener("keydown", tH, zH), LH(document.activeElement), () => {
+        document.removeEventListener("focusin", rH, zH), document.removeEventListener("focusout", SH, zH), document.removeEventListener("keydown", tH, zH)
       }
     }
-    const oU = new Map;
+    const zH = new Map;
 
-    function DU(UU, XU) {
-      var zU;
-      let cU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      oU.set(cU, (null !== (zU = oU.get(cU)) && void 0 !== zU ? zU : 0) & ~UU | XU & UU);
-      let QU = 0;
-      for (const yU of oU.values()) QU |= yU;
-      return (0, yU.J)(UU, QU & UU)
+    function CH(HH, BH) {
+      var LH;
+      let AH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      zH.set(AH, (null !== (LH = zH.get(AH)) && void 0 !== LH ? LH : 0) & ~HH | BH & HH);
+      let SH = 0;
+      for (const rH of zH.values()) SH |= rH;
+      return (0, rH.E)(HH, SH & HH)
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

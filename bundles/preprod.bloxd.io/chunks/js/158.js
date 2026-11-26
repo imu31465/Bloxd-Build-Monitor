@@ -1,276 +1,146 @@
 export const id = 158;
 export const ids = [158];
 export const modules = {
-  7307: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      BloxdDiscordActivitySdk: () => GU
+  7246: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      BloxdDiscordSDK: () => QH,
+      DiscordLoginCancelledError: () => uH,
+      discordPopupTimeoutMs: () => YH
     });
-    var cU = zU(7310),
-      yU = zU(1241),
-      QU = zU(1193),
-      AU = zU(646),
-      FU = zU(1266),
-      oU = zU(1800),
-      DU = zU(1360),
-      EU = zU(825),
-      YU = zU(27),
-      NU = zU(1211),
-      IU = zU(2494),
-      pU = function(UU) {
-        return UU.APPLICATION_COMMANDS = "applications.commands", UU.IDENTIFY = "identify", UU.EMAIL = "email", UU.GUILDS = "guilds", UU.READ_DM_CHANNELS = "dm_channels.read", UU.WRITE_ACTIVITIES = "rpc.activities.write", UU
-      }(pU || {}),
-      aU = function(UU) {
-        return UU[UU.CLOSE_NORMAL = 1e3] = "CLOSE_NORMAL", UU[UU.CLOSE_UNSUPPORTED = 1003] = "CLOSE_UNSUPPORTED", UU[UU.CLOSE_ABNORMAL = 1006] = "CLOSE_ABNORMAL", UU[UU.INVALID_CLIENTID = 4e3] = "INVALID_CLIENTID", UU[UU.INVALID_ORIGIN = 4001] = "INVALID_ORIGIN", UU[UU.RATELIMITED = 4002] = "RATELIMITED", UU[UU.TOKEN_REVOKED = 4003] = "TOKEN_REVOKED", UU[UU.INVALID_VERSION = 4004] = "INVALID_VERSION", UU[UU.INVALID_ENCODING = 4005] = "INVALID_ENCODING", UU
-      }(aU || {}),
-      tU = function(UU) {
-        return UU[UU.PLAYING = 0] = "PLAYING", UU[UU.STREAMING = 1] = "STREAMING", UU[UU.LISTENING = 2] = "LISTENING", UU[UU.WATCHING = 3] = "WATCHING", UU[UU.CUSTOM = 4] = "CUSTOM", UU[UU.COMPETING = 5] = "COMPETING", UU
-      }(tU || {});
-    const gU = {
-        Minigames: "Playing",
-        Puzzle: "Solving",
-        Escape: "Escaping",
-        Parkour: "Parkouring",
-        "Cool Parkour": "Parkouring",
-        "Two Player Parkour": "Parkouring",
-        "Clutch Parkour": "Parkouring",
-        "Challenging Parkour": "Parkouring",
-        "Progressive Parkour": "Parkouring",
-        "Themed Parkour": "Parkouring",
-        Obby: "Parkouring",
-        Tower: "Climbing",
-        Roleplay: "Roleplaying",
-        Arena: "Battling",
-        Duels: "Duelling",
-        Shooting: "Shooting",
-        Survival: "Surviving",
-        Simulator: "Grinding",
-        Tycoon: "Building",
-        Clicker: "Clicking",
-        PvE: "Battling",
-        Building: "Building",
-        Horror: "Surviving",
-        "Lucky Block": "Battling",
-        Racing: "Racing",
-        Driving: "Driving",
-        "Cool Build": "Building",
-        Adventure: "Adventuring",
-        Other: "Being mischievous"
-      },
-      kU = {
-        goalRush: "Playing",
-        heroesvbrainrots: "Battling",
-        hideseek: "Playing",
-        bingo: "Playing"
-      };
-    class GU {
-      constructor(UU) {
-        this.discordSdk = UU, this.guildNameCache = {}, this.startTime = Date.now(), this.cachedAccessToken = null, this.activityUpdateId = 0
+    var AH = LH(152),
+      rH = LH(1177),
+      SH = LH(1070),
+      hH = LH(1080),
+      tH = LH.n(hH),
+      zH = LH(1131),
+      CH = LH(30),
+      EH = LH(619),
+      XH = LH(1352),
+      GH = LH(1139);
+    const YH = 6e5;
+    class uH extends Error {
+      constructor() {
+        super(...arguments), this.name = SH.discordLoginCancelledErrorName
       }
-      static async setup() {
-        console.log("Setting up Discord SDK with client id", NU.d.discordClientID);
-        const UU = new cU.e(NU.d.discordClientID);
-        let XU = !1;
-        setTimeout((() => {
-          XU || (console.warn("Discord SDK took too long to initialize"), (0, oU.reloadBloxd)())
-        }), 15e3), await UU.ready(), XU = !0;
-        try {
-          const {
-            enabled: XU
-          } = await UU.commands.encourageHardwareAcceleration();
-          XU || console.warn("Hardware acceleration not enabled in the Discord client")
-        } catch (yU) {
-          console.error("Failed to encourage hardware acceleration in the Discord client", yU)
-        }
-        const zU = new GU(UU);
-        return zU.isMobilePlatform() && (zU.applyDiscordSafeAreaNotch(), window.addEventListener("resize", (() => {
-          zU.applyDiscordSafeAreaNotch()
-        }))), zU
-      }
-      async updateActivityDescription(UU) {
-        const XU = ++this.activityUpdateId;
-        let zU, cU;
-        switch (UU) {
-          case "homePage":
-            zU = "Chilling in the Main Menu";
-            break;
-          case "inGame": {
-            const UU = await this.getInGameDescriptions();
-            zU = UU.primary, cU = UU.secondary;
-            break
-          }
-        }
-        XU === this.activityUpdateId && await this.discordSdk.commands.setActivity({
-          activity: {
-            type: tU.PLAYING,
-            details: zU,
-            state: cU,
-            assets: {
-              large_image: "icon",
-              large_text: zU
-            },
-            timestamps: {
-              start: this.startTime
-            }
-          }
-        }).catch((UU => {
-          console.error(`Failed to update Discord activity rich presence with description="${zU}":`, UU)
+    }
+    class QH {
+      constructor() {
+        this.popupWindowPromise = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindow = null, this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.bloxdDiscordRefreshTokenKey = "4PSIDTCPM", this.discordRedirectUrl = rH.l[GH.e.clientEnvironment];
+        const HH = new URL(this.discordRedirectUrl).origin;
+        window.addEventListener("message", (BH => {
+          var LH;
+          if (BH.origin !== HH || "oauth_authentication_discord" !== (null === (LH = BH.data) || void 0 === LH ? void 0 : LH.type)) return;
+          if ("string" !== typeof BH.data.code || !BH.data.code) return void this.failPopup(new uH("Discord authentication was cancelled on Discord"));
+          const AH = this.popupWindowPromiseResolve;
+          this.resetPopupState(), null === AH || void 0 === AH || AH(BH.data.code)
         }))
       }
-      async getInGameDescriptions() {
-        const UU = (0, DU.b)(),
-          {
-            verb: XU,
-            title: zU
-          } = await this.getGameVerbAndTitle(UU.requestedGameNameWithVariation);
-        if ((0, DU.f)(UU)) return {
-          primary: `${XU} in a Discord World`
-        };
-        const cU = `${XU} in ${zU}`;
-        return (0, AU.P)(UU.lobbyName) ? {
-          primary: cU
-        } : {
-          primary: cU,
-          secondary: `Lobby ${UU.lobbyName}`
-        }
+      resetPopupState() {
+        null !== this.popupWindowCheckInterval && window.clearInterval(this.popupWindowCheckInterval), null !== this.popupWindowTimeout && window.clearTimeout(this.popupWindowTimeout), this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindowPromise = null, this.popupWindow = null
       }
-      async getGameVerbAndTitle(UU) {
-        var XU;
-        const zU = "Playing";
-        if ((0, AU.P)(UU)) return {
-          verb: zU,
-          title: "Bloxd"
-        };
-        const cU = (0, EU.m)(UU);
-        var yU;
-        if (null !== cU) return {
-          verb: null !== (yU = kU[UU]) && void 0 !== yU ? yU : gU[cU.type],
-          title: await (0, QU.E)(FU.d.ENGLISH, cU.title)
-        };
-        const oU = await (0, IU.c)(UU);
-        return {
-          verb: null !== (XU = oU && gU[oU.gameCategory]) && void 0 !== XU ? XU : zU,
-          title: (null === oU || void 0 === oU ? void 0 : oU.name) || "a Custom World"
-        }
+      failPopup(HH) {
+        var BH;
+        const LH = this.popupWindowPromiseReject;
+        null === (BH = this.popupWindow) || void 0 === BH || BH.close(), this.resetPopupState(), null === LH || void 0 === LH || LH(HH)
       }
-      getCurrentChannelType() {
+      openDiscordOAuthWindow() {
+        const HH = GH.e.discordClientID;
+        return window.open(`https://discord.com/oauth2/authorize?response_type=code&client_id=${HH}&scope=identify%20guilds&redirect_uri=${this.discordRedirectUrl}&integration_type=0`, "oauth_authentication", `popup,width=480,height=720,top=${window.screen.height/2-360},left=${window.screen.width/2-240}`)
+      }
+      async showDiscordAuthPrompt() {
+        return new Promise(((HH, BH) => {
+          XH.NotificationProvider.showPromptPopup({
+            title: "Discord Login Required",
+            confirmText: "Continue",
+            confirmTooltip: "Open Discord login window",
+            cancelText: "Cancel",
+            cancelTooltip: "Cancel Discord login"
+          }).getResult().then((LH => {
+            !0 === LH ? HH() : BH(new uH("Discord login was cancelled"))
+          })).catch(BH)
+        }))
+      }
+      signInWithPopup() {
+        if (null !== this.popupWindowPromise) return this.popupWindowPromise;
+        const HH = new Promise(((HH, BH) => {
+          this.popupWindowPromiseResolve = HH, this.popupWindowPromiseReject = BH
+        }));
+        return this.popupWindowPromise = HH, CH.b.removeItem(this.bloxdDiscordRefreshTokenKey), this.popupWindowTimeout = window.setTimeout((() => {
+          this.failPopup(new Error("Discord authentication timed out"))
+        }), YH), this.openPopup(HH).catch((BH => {
+          this.popupWindowPromise === HH && this.failPopup(BH instanceof Error ? BH : new Error(String(BH)))
+        })), HH
+      }
+      async openPopup(HH) {
+        let BH = this.openDiscordOAuthWindow();
+        if (!BH) {
+          if (await this.showDiscordAuthPrompt(), this.popupWindowPromise !== HH) return;
+          BH = this.openDiscordOAuthWindow()
+        }
+        if (console.log("Discord OAuth window opened:", BH), !BH) throw new Error("Failed to open Discord authentication popup - popup may have been blocked");
+        this.popupWindow = BH;
+        const LH = window.setInterval((() => {
+          BH.closed && this.popupWindowPromise === HH && (window.clearInterval(LH), this.popupWindowCheckInterval = null, window.setTimeout((() => {
+            this.popupWindowPromise === HH && this.failPopup(new uH("Discord authentication was cancelled - popup window was closed"))
+          }), 1e3))
+        }), 200);
+        this.popupWindowCheckInterval = LH
+      }
+      async exchangeAuthorizationCodeForAccessToken(HH, BH) {
         const {
-          channelId: UU,
-          guildId: XU
-        } = this.getCurrentChannelAndGuild();
-        return null !== XU ? yU.d.GUILD : null !== UU ? yU.d.DM : null
+          accessToken: LH,
+          refreshToken: AH
+        } = await tH()((async () => await (0, SH.postJsonWithMetricsCookiesAndJsonResponse)(`${zH.clientSideServerUrls.indexUrl}/index/discord/log-event`, {
+          authorizationCode: HH,
+          bloxdClientEnvironment: GH.e.clientEnvironment,
+          instanceId: null
+        }, {
+          retries: 0
+        }, BH.getMetricsCookies())), {
+          retries: 3
+        });
+        return CH.b.setItem(this.bloxdDiscordRefreshTokenKey, AH), LH
       }
-      getRequiredScopeForCurrentChannel() {
-        const UU = this.getCurrentChannelType(),
-          XU = [pU.APPLICATION_COMMANDS, pU.IDENTIFY, pU.EMAIL, pU.GUILDS, pU.WRITE_ACTIVITIES];
-        switch (UU) {
-          case yU.d.DM:
-          case yU.d.GUILD:
-            return [...XU];
-          default:
-            throw new Error(`Unknown Discord channel type: ${UU}`)
-        }
+      hasCurrentUser() {
+        const HH = CH.b.getItem(this.bloxdDiscordRefreshTokenKey);
+        return !(0, EH.M)(HH)
       }
-      getCurrentChannelAndGuild() {
-        const {
-          channelId: UU,
-          guildId: XU
-        } = this.discordSdk;
-        return {
-          channelId: null !== UU && void 0 !== UU ? UU : null,
-          guildId: null !== XU && void 0 !== XU ? XU : null
-        }
-      }
-      getInstanceId() {
-        return this.discordSdk.instanceId
-      }
-      async askDiscordUserForAuthorization() {
-        const UU = this.getRequiredScopeForCurrentChannel(),
-          {
-            code: XU
-          } = await this.discordSdk.commands.authorize({
-            client_id: NU.d.discordClientID,
-            response_type: "code",
-            state: "",
-            prompt: "none",
-            scope: UU
-          });
-        return XU
-      }
-      getCachedAccessToken() {
-        return this.cachedAccessToken
-      }
-      setCachedAccessToken(UU) {
-        this.cachedAccessToken = UU
-      }
-      registerGuild(UU, XU) {
-        this.guildNameCache[UU] = XU
-      }
-      async authenticate(UU) {
-        return this.discordSdk.commands.authenticate({
-          access_token: UU
-        }).then((UU => null !== UU))
-      }
-      async getUserLocale() {
+      async getCurrentUser(HH) {
+        const BH = CH.b.getItem(this.bloxdDiscordRefreshTokenKey);
+        if (!BH) return null;
+        let LH;
         try {
-          const {
-            locale: UU
-          } = await this.discordSdk.commands.userSettingsGetLocale();
-          return UU
-        } catch (UU) {
-          return console.error("Failed to get user locale from Discord:", UU.stack), null
+          const AH = await tH()((async () => {
+            try {
+              return await (0, SH.postJsonWithMetricsCookiesAndJsonResponse)(`${zH.clientSideServerUrls.indexUrl}/index/discord/collect-event`, {
+                refreshToken: BH
+              }, {
+                retries: 0
+              }, HH.getMetricsCookies())
+            } catch (LH) {
+              if (WH(LH)) throw new(tH().AbortError)(LH);
+              throw LH
+            }
+          }), {
+            retries: 3
+          });
+          LH = AH.accessToken, CH.b.setItem(this.bloxdDiscordRefreshTokenKey, AH.refreshToken)
+        } catch (AH) {
+          return WH(AH) ? (CH.b.removeItem(this.bloxdDiscordRefreshTokenKey), null) : (console.error("Failed to refresh Discord access token:", AH), null)
+        }
+        return {
+          accessToken: LH
         }
       }
-      async getChannelName(UU) {
-        return this.discordSdk.commands.getChannel({
-          channel_id: UU
-        }).then((UU => UU.name)).catch((UU => "Your Current Discord Chat"))
+      signOut() {
+        this.failPopup(new uH("Signed out of Discord during login")), CH.b.removeItem(this.bloxdDiscordRefreshTokenKey)
       }
-      async getDiscordContextFromChannelId(UU) {
-        const XU = await this.getChannelName(UU);
-        return yU.i.from({
-          type: yU.d.DM,
-          channelId: UU,
-          channelName: XU
-        })
-      }
-      getDiscordContextFromGuildId(UU) {
-        const XU = this.guildNameCache[UU];
-        return (0, AU.P)(XU) ? null : yU.f.from({
-          type: yU.d.GUILD,
-          guildId: UU,
-          guildName: XU
-        })
-      }
-      async getCurrentDiscordContext() {
-        const {
-          channelId: UU,
-          guildId: XU
-        } = this.getCurrentChannelAndGuild();
-        return null !== XU ? this.getDiscordContextFromGuildId(XU) : null !== UU ? this.getDiscordContextFromChannelId(UU) : null
-      }
-      exit(UU) {
-        console.log("Exiting Discord Activity:", UU), this.discordSdk.close(aU.CLOSE_NORMAL, UU)
-      }
-      isMobilePlatform() {
-        return this.discordSdk.platform === cU.i.MOBILE
-      }
-      applyDiscordSafeAreaNotch() {
-        const UU = getComputedStyle(document.documentElement),
-          XU = (XU, zU) => {
-            const cU = parseFloat(UU.getPropertyValue(`--discord-safe-area-inset-${XU}`));
-            return isNaN(cU) || 0 === zU ? 0 : cU / zU * 100
-          };
-        YU.e.set({
-          notchSize: {
-            top: XU("top", window.innerHeight),
-            right: Math.max(XU("right", window.innerWidth), 7),
-            bottom: 0,
-            left: XU("left", window.innerWidth)
-          }
-        })
-      }
+    }
+
+    function WH(HH) {
+      return HH instanceof AH.e && 435 === HH.httpCode
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

@@ -1,184 +1,186 @@
 export const id = 118;
 export const ids = [118];
 export const modules = {
-  5458: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => YU,
-      g: () => EU,
-      j: () => NU
+  5405: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => XH,
+      g: () => EH,
+      i: () => GH
     });
-    zU(5465);
-    var cU = zU(1193),
-      yU = zU(1106),
-      QU = zU.n(yU),
-      AU = zU(1420),
-      FU = (zU(61), zU(4775)),
-      oU = zU(1390),
-      DU = zU(1305);
+    LH(5410);
+    var AH = LH(1123),
+      rH = LH(1038),
+      SH = LH.n(rH),
+      hH = LH(1365),
+      tH = (LH(45), LH(4745)),
+      zH = LH(1315),
+      CH = LH(1225);
 
-    function EU(UU) {
+    function EH(HH) {
       let {
-        children: XU,
-        label: zU,
-        className: yU,
-        circleInfoText: FU,
-        disabled: EU,
-        onLabelClick: YU
-      } = UU;
+        children: BH,
+        label: LH,
+        className: rH,
+        circleInfoText: tH,
+        disabled: EH,
+        onLabelClick: XH
+      } = HH;
       const {
-        t: NU
-      } = (0, cU.I)(), IU = (0, DU.jsxs)("div", {
-        className: QU()("Label", {
-          ClickableLabel: void 0 !== YU
+        t: GH
+      } = (0, AH.B)(), YH = (0, CH.jsxs)("div", {
+        className: SH()("Label", {
+          ClickableLabel: void 0 !== XH
         }),
-        onClick: YU,
-        children: [NU(zU), FU && (0, DU.jsx)(oU.d, {
+        onClick: XH,
+        children: [GH(LH), tH && (0, CH.jsx)(zH.c, {
           name: "circle-info"
         })]
       });
-      return (0, DU.jsxs)("div", {
-        className: QU()("LabeledInput", {
-          [yU]: yU,
-          DisabledLabelInput: EU
+      return (0, CH.jsxs)("div", {
+        className: SH()("LabeledInput", {
+          [rH]: rH,
+          DisabledLabelInput: EH
         }),
-        children: [FU && (0, DU.jsx)(AU.d, {
-          tooltipInner: (0, DU.jsx)("div", {
+        children: [tH && (0, CH.jsx)(hH.g, {
+          tooltipInner: (0, CH.jsx)("div", {
             className: "LabeledInputTooltip",
-            children: NU(FU)
+            children: GH(tH)
           }),
-          children: IU
-        }), !FU && IU, XU]
+          children: YH
+        }), !tH && YH, BH]
       })
     }
 
-    function YU(UU) {
+    function XH(HH) {
       let {
-        checked: XU,
-        setChecked: zU
-      } = UU;
-      return (0, DU.jsx)("div", {
+        checked: BH,
+        setChecked: LH,
+        disabled: AH = !1
+      } = HH;
+      return (0, CH.jsx)("div", {
         className: "OtherInput ClickableOtherInput",
         "data-pad-focusable": !0,
-        onClick: UU => {
-          zU(!XU)
+        "aria-disabled": AH || void 0,
+        onClick: HH => {
+          AH || LH(!BH)
         },
-        children: (0, DU.jsx)(FU.d, {
-          checked: XU,
-          onChange: UU => {
-            zU(UU.target.checked)
+        children: (0, CH.jsx)(tH.d, {
+          checked: BH,
+          onChange: HH => {
+            LH(HH.target.checked)
           },
-          disabled: !1
+          disabled: AH
         })
       })
     }
 
-    function NU(UU) {
+    function GH(HH) {
       let {
-        checked: XU,
-        setChecked: zU,
-        disabled: cU
-      } = UU;
-      return (0, DU.jsx)("div", {
-        className: QU()("SwitchContainer", {
-          SwitchContainerDisabled: cU
+        checked: BH,
+        setChecked: LH,
+        disabled: AH
+      } = HH;
+      return (0, CH.jsx)("div", {
+        className: SH()("SwitchContainer", {
+          SwitchContainerDisabled: AH
         }),
         onClick: () => {
-          cU || zU(!XU)
+          AH || LH(!BH)
         },
-        children: (0, DU.jsx)(FU.d, {
+        children: (0, CH.jsx)(tH.d, {
           className: "SwitchCheckbox",
-          checked: XU,
-          onChange: UU => {
-            zU(UU.target.checked)
+          checked: BH,
+          onChange: HH => {
+            LH(HH.target.checked)
           },
-          disabled: !!cU
+          disabled: !!AH
         })
       })
     }
   },
-  5471: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => DU
+  5418: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => CH
     });
-    var cU = zU(1106),
-      yU = zU.n(cU),
-      QU = zU(5057),
-      AU = zU(1193),
-      FU = zU(1305);
-    const oU = [...QU.j, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var AH = LH(1038),
+      rH = LH.n(AH),
+      SH = LH(5037),
+      hH = LH(1123),
+      tH = LH(1225);
+    const zH = [...SH.n, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function DU(UU) {
+    function CH(HH) {
       const {
-        disabled: XU,
-        hideWrapper: zU
-      } = UU, {
-        t: cU
-      } = (0, AU.I)(), DU = UU.advancedMode ? oU.map((XU => [XU, UU.callbacks[XU]])) : QU.j.map((XU => [XU, UU.callbacks[XU]])), YU = (0, FU.jsx)("div", {
-        className: yU()("PluginsGrid", {
-          SectionBody: !zU
+        disabled: BH,
+        hideWrapper: LH
+      } = HH, {
+        t: AH
+      } = (0, hH.B)(), CH = HH.advancedMode ? zH.map((BH => [BH, HH.callbacks[BH]])) : SH.n.map((BH => [BH, HH.callbacks[BH]])), XH = (0, tH.jsx)("div", {
+        className: rH()("PluginsGrid", {
+          SectionBody: !LH
         }),
-        children: DU.map((UU => {
-          let [zU, cU] = UU;
-          return (0, FU.jsx)(EU, {
-            plugin: zU,
-            callbacks: cU,
-            disabled: XU
-          }, zU)
+        children: CH.map((HH => {
+          let [LH, AH] = HH;
+          return (0, tH.jsx)(EH, {
+            plugin: LH,
+            callbacks: AH,
+            disabled: BH
+          }, LH)
         }))
       });
-      return zU ? YU : (0, FU.jsxs)("div", {
+      return LH ? XH : (0, tH.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, FU.jsx)("div", {
+        children: [(0, tH.jsx)("div", {
           className: "SectionTitle",
-          children: cU("worldBuilder:pluginsSection")
-        }), YU]
+          children: AH("worldBuilder:pluginsSection")
+        }), XH]
       })
     }
 
-    function EU(UU) {
+    function EH(HH) {
       let {
-        plugin: XU,
+        plugin: BH,
         callbacks: {
-          isEnabled: zU,
-          YC: cU
+          isEnabled: LH,
+          vI: AH
         },
-        disabled: QU
-      } = UU;
+        disabled: SH
+      } = HH;
       const {
-        t: oU
-      } = (0, AU.I)(), DU = zU();
-      return (0, FU.jsxs)("div", {
-        className: yU()("PluginCard", {
-          PluginCardEnabled: DU,
-          PluginCardDisabledForm: QU
+        t: zH
+      } = (0, hH.B)(), CH = LH();
+      return (0, tH.jsxs)("div", {
+        className: rH()("PluginCard", {
+          PluginCardEnabled: CH,
+          PluginCardDisabledForm: SH
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": QU || void 0,
+        "aria-disabled": SH || void 0,
         onClick: () => {
-          QU || cU(!DU)
+          SH || AH(!CH)
         },
-        children: [(0, FU.jsx)("div", {
+        children: [(0, tH.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, FU.jsx)("img", {
-            src: `/textures/games/classic/customGames/${XU}.png`,
-            alt: XU
+          children: (0, tH.jsx)("img", {
+            src: `/textures/games/classic/customGames/${BH}.png`,
+            alt: BH
           })
-        }), (0, FU.jsxs)("div", {
+        }), (0, tH.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, FU.jsx)("div", {
+          children: [(0, tH.jsx)("div", {
             className: "PluginCardTitle",
-            children: oU(YU[XU])
-          }), (0, FU.jsx)("div", {
+            children: zH(XH[BH])
+          }), (0, tH.jsx)("div", {
             className: "PluginCardDescription",
-            children: oU(NU[XU])
+            children: zH(GH[BH])
           })]
-        }), (0, FU.jsx)("span", {
+        }), (0, tH.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: oU(DU ? "general:on" : "general:off")
+          children: zH(CH ? "general:on" : "general:off")
         })]
       })
     }
-    const YU = {
+    const XH = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -187,7 +189,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      NU = {
+      GH = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -197,691 +199,813 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  5454: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => DX,
-      c: () => oX,
-      d: () => FX,
-      f: () => EX
+  5436: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => CH
     });
-    var cU = zU(61),
-      yU = zU(1410),
-      QU = zU(1494),
-      AU = zU(1726),
-      FU = zU(1193),
-      oU = zU(1384),
-      DU = zU(1420),
-      EU = zU(1390),
-      YU = zU(1236),
-      NU = zU(1106),
-      IU = zU.n(NU),
-      pU = zU(320),
-      aU = zU(5057),
-      tU = zU(1258),
-      gU = zU(5458),
-      kU = zU(3490),
-      GU = zU(5471),
-      BU = zU(1305);
+    var AH = LH(1038),
+      rH = LH.n(AH),
+      SH = LH(1123),
+      hH = LH(1315),
+      tH = LH(1225);
 
-    function ZU(UU) {
+    function zH(HH) {
       let {
-        icon: XU,
-        title: zU,
-        disabled: cU,
-        children: yU
-      } = UU;
-      return (0, BU.jsxs)("div", {
-        className: IU()("ManageCard", {
-          ManageCardDisabled: cU
+        textKey: BH,
+        allowed: LH
+      } = HH;
+      const {
+        t: AH
+      } = (0, SH.B)();
+      return (0, tH.jsxs)("li", {
+        className: rH()("PolicyListItem", LH ? "Allowed" : "NotAllowed"),
+        children: [(0, tH.jsx)(hH.c, {
+          name: LH ? "check" : "x"
+        }), (0, tH.jsx)("span", {
+          children: AH(BH)
+        })]
+      })
+    }
+
+    function CH(HH) {
+      let {
+        allowed: BH,
+        notAllowed: LH
+      } = HH;
+      return (0, tH.jsxs)("ul", {
+        className: "PolicyList",
+        children: [BH.map((HH => (0, tH.jsx)(zH, {
+          textKey: HH,
+          allowed: !0
+        }, HH))), LH.map((HH => (0, tH.jsx)(zH, {
+          textKey: HH,
+          allowed: !1
+        }, HH)))]
+      })
+    }
+  },
+  5431: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => PH,
+      e: () => TH
+    });
+    var AH = LH(45),
+      rH = LH(1038),
+      SH = LH.n(rH),
+      hH = LH(69),
+      tH = LH(2363),
+      zH = LH(1123),
+      CH = LH(5405),
+      EH = LH(1315),
+      XH = LH(1361),
+      GH = LH(1455),
+      YH = LH(4978),
+      uH = LH(5436),
+      QH = LH(1225);
+
+    function WH(HH) {
+      return (0, hH.createPortal)((0, QH.jsx)(XH.e, {
+        ...HH
+      }), document.body)
+    }
+    const MH = tH.u.map((HH => `worldBuilder:publishingPolicy_${HH}`)),
+      xH = Object.keys(tH.y).map((HH => `worldBuilder:publishingPolicy_${HH}`));
+
+    function vH(HH) {
+      let {
+        onScrolledToEnd: BH
+      } = HH;
+      const LH = (0, AH.useRef)(null),
+        {
+          after: rH
+        } = (0, YH.d)(LH, "y");
+      return (0, AH.useEffect)((() => {
+        rH || null === BH || void 0 === BH || BH()
+      }), [rH, BH]), (0, QH.jsx)("div", {
+        ref: LH,
+        className: SH()("PublishingPolicyRows", {
+          PublishingPolicyRowsMoreBelow: rH
         }),
-        children: [(0, BU.jsxs)("div", {
-          className: "ManageCardHead",
-          children: [(0, BU.jsx)("div", {
-            className: "ManageCardIcon",
-            children: (0, BU.jsx)(EU.d, {
-              name: XU
-            })
-          }), (0, BU.jsx)("div", {
-            children: (0, BU.jsx)("h2", {
-              className: "ManageCardTitle",
-              children: zU
+        tabIndex: 0,
+        "data-pad-focusable": !0,
+        children: (0, QH.jsx)(uH.e, {
+          allowed: MH,
+          notAllowed: xH
+        })
+      })
+    }
+
+    function PH(HH) {
+      let {
+        onAnswer: BH
+      } = HH;
+      const [LH, rH] = (0, AH.useState)(!1), [SH, hH] = (0, AH.useState)(!1), tH = (0, AH.useCallback)((() => {
+        hH(!0)
+      }), []);
+      return (0, QH.jsx)(WH, {
+        close: () => {
+          BH(!1)
+        },
+        disableExitButton: !0,
+        body: (0, QH.jsxs)(XH.m, {
+          className: "PublishingPolicyPopup",
+          title: "worldBuilder:publishingPolicy",
+          padStartsOn: "content",
+          confirm: {
+            text: "worldBuilder:publishAsGame",
+            disabled: !LH,
+            onClick: () => {
+              BH(!0)
+            }
+          },
+          cancel: {
+            text: "general:cancel",
+            onClick: () => {
+              BH(!1)
+            }
+          },
+          children: [(0, QH.jsx)(vH, {
+            onScrolledToEnd: tH
+          }), (0, QH.jsx)(CH.g, {
+            className: "PublishingPolicyAgree",
+            label: SH ? "worldBuilder:agreeToPublishingPolicy" : "worldBuilder:scrollToAgreeToPublishingPolicy",
+            disabled: !SH,
+            onLabelClick: () => {
+              rH(!LH)
+            },
+            children: (0, QH.jsx)(CH.e, {
+              checked: LH,
+              setChecked: rH,
+              disabled: !SH
             })
           })]
-        }), (0, BU.jsxs)("div", {
+        })
+      })
+    }
+
+    function TH() {
+      const {
+        t: HH
+      } = (0, zH.B)(), [BH, LH] = (0, AH.useState)(!1);
+      return (0, QH.jsxs)(QH.Fragment, {
+        children: [(0, QH.jsxs)(GH.W, {
+          className: "PublishingPolicyLink",
+          onClick: () => {
+            LH(!0)
+          },
+          children: [(0, QH.jsx)(EH.c, {
+            name: "shield-halved"
+          }), " ", HH("worldBuilder:publishingPolicy")]
+        }), BH && (0, QH.jsx)(WH, {
+          close: () => {
+            LH(!1)
+          },
+          body: (0, QH.jsx)(XH.m, {
+            className: "PublishingPolicyPopup",
+            title: "worldBuilder:publishingPolicy",
+            children: (0, QH.jsx)(vH, {})
+          })
+        })]
+      })
+    }
+  },
+  5399: (HH, BH, LH) => {
+    LH.d(BH, {
+      h: () => XB,
+      b: () => EB,
+      f: () => CB,
+      k: () => GB
+    });
+    var AH = LH(45),
+      rH = LH(1352),
+      SH = LH(1455),
+      hH = LH(1706),
+      tH = LH(1123),
+      zH = LH(1313),
+      CH = LH(1365),
+      EH = LH(1315),
+      XH = LH(1168),
+      GH = LH(1038),
+      YH = LH.n(GH),
+      uH = LH(304),
+      QH = LH(5037),
+      WH = LH(1182),
+      MH = LH(5405),
+      xH = LH(3473),
+      vH = LH(5418),
+      PH = LH(1225);
+
+    function TH(HH) {
+      let {
+        icon: BH,
+        title: LH,
+        disabled: AH,
+        children: rH
+      } = HH;
+      return (0, PH.jsxs)("div", {
+        className: YH()("ManageCard", {
+          ManageCardDisabled: AH
+        }),
+        children: [(0, PH.jsxs)("div", {
+          className: "ManageCardHead",
+          children: [(0, PH.jsx)("div", {
+            className: "ManageCardIcon",
+            children: (0, PH.jsx)(EH.c, {
+              name: BH
+            })
+          }), (0, PH.jsx)("div", {
+            children: (0, PH.jsx)("h2", {
+              className: "ManageCardTitle",
+              children: LH
+            })
+          })]
+        }), (0, PH.jsxs)("div", {
           className: "ManageCardBody",
-          children: [yU, cU && (0, BU.jsx)("div", {
+          children: [rH, AH && (0, PH.jsx)("div", {
             className: "ManageCardDisabledOverlay"
           })]
         })]
       })
     }
 
-    function RU(UU) {
+    function UH(HH) {
       let {
-        label: XU,
-        caption: zU,
-        children: cU
-      } = UU;
-      return (0, BU.jsxs)("div", {
+        label: BH,
+        caption: LH,
+        children: AH
+      } = HH;
+      return (0, PH.jsxs)("div", {
         className: "ManageStackedField",
-        children: [(0, BU.jsx)("div", {
+        children: [(0, PH.jsx)("div", {
           className: "ManageStackedFieldLabel",
-          children: XU
-        }), cU, zU && (0, BU.jsx)("div", {
+          children: BH
+        }), AH, LH && (0, PH.jsx)("div", {
           className: "ManageStackedFieldCaption",
-          children: zU
+          children: LH
         })]
       })
     }
 
-    function PU(UU) {
+    function VH(HH) {
       let {
-        label: XU,
-        caption: zU,
-        disabled: cU,
-        children: yU
-      } = UU;
-      return (0, BU.jsxs)("div", {
-        className: IU()("ManageField", {
-          ManageFieldDisabled: cU
+        label: BH,
+        caption: LH,
+        disabled: AH,
+        children: rH
+      } = HH;
+      return (0, PH.jsxs)("div", {
+        className: YH()("ManageField", {
+          ManageFieldDisabled: AH
         }),
-        children: [(0, BU.jsxs)("div", {
+        children: [(0, PH.jsxs)("div", {
           className: "ManageFieldText",
-          children: [(0, BU.jsx)("div", {
+          children: [(0, PH.jsx)("div", {
             className: "ManageFieldLabel",
-            children: XU
-          }), (0, BU.jsx)("div", {
+            children: BH
+          }), (0, PH.jsx)("div", {
             className: "ManageFieldCaption",
-            children: zU
+            children: LH
           })]
-        }), (0, BU.jsx)("div", {
+        }), (0, PH.jsx)("div", {
           className: "ManageFieldControl",
-          children: yU
+          children: rH
         })]
       })
     }
 
-    function WU(UU) {
-      var XU, zU;
+    function OH(HH) {
+      var BH, LH;
       let {
-        schematicData: cU,
-        updateSchematicData: yU,
-        publishFormEnabled: QU,
-        formEnabled: AU
-      } = UU;
+        schematicData: AH,
+        updateSchematicData: rH,
+        publishFormEnabled: SH,
+        formEnabled: hH
+      } = HH;
       const {
-        t: oU
-      } = (0, FU.I)(), DU = !QU, EU = {
+        t: zH
+      } = (0, tH.B)(), CH = !SH, EH = {
         tpRequests: {
-          isEnabled: () => !cU.disableTpRequests,
-          YC: UU => yU("disableTpRequests", !UU)
+          isEnabled: () => !AH.disableTpRequests,
+          vI: HH => rH("disableTpRequests", !HH)
         },
         spawnProtection: {
-          isEnabled: () => !cU.disableSpawnProtection,
-          YC: UU => yU("disableSpawnProtection", !UU)
+          isEnabled: () => !AH.disableSpawnProtection,
+          vI: HH => rH("disableSpawnProtection", !HH)
         },
         spawnReset: {
-          isEnabled: () => !!cU.enableSpawnReset,
-          YC: UU => yU("enableSpawnReset", UU)
+          isEnabled: () => !!AH.enableSpawnReset,
+          vI: HH => rH("enableSpawnReset", HH)
         },
         smpMarketplace: {
-          isEnabled: () => !!cU.enableSmpMarketplace,
-          YC: UU => yU("enableSmpMarketplace", UU)
+          isEnabled: () => !!AH.enableSmpMarketplace,
+          vI: HH => rH("enableSmpMarketplace", HH)
         },
         survivalGuns: {
-          isEnabled: () => !!cU.enableSurvivalGuns,
-          YC: UU => yU("enableSurvivalGuns", UU)
+          isEnabled: () => !!AH.enableSurvivalGuns,
+          vI: HH => rH("enableSurvivalGuns", HH)
         },
         fallDamage: {
-          isEnabled: () => !cU.disableFallDamage,
-          YC: UU => yU("disableFallDamage", !UU)
+          isEnabled: () => !AH.disableFallDamage,
+          vI: HH => rH("disableFallDamage", !HH)
         },
         dayNight: {
-          isEnabled: () => !!cU.enableDayNight,
-          YC: UU => yU("enableDayNight", UU)
+          isEnabled: () => !!AH.enableDayNight,
+          vI: HH => rH("enableDayNight", HH)
         }
       };
-      return (0, BU.jsxs)(BU.Fragment, {
-        children: [!1 === cU.schematicContainsSpawnBlock && (0, BU.jsx)("div", {
+      return (0, PH.jsxs)(PH.Fragment, {
+        children: [!1 === AH.schematicContainsSpawnBlock && (0, PH.jsx)("div", {
           className: "ManageWarningBanner",
-          children: oU("worldBuilder:mustContainSpawnBlock")
-        }), (0, BU.jsxs)("div", {
+          children: zH("worldBuilder:mustContainSpawnBlock")
+        }), (0, PH.jsxs)("div", {
           className: "ManageSettingsGrid",
-          children: [(0, BU.jsxs)(ZU, {
+          children: [(0, PH.jsxs)(TH, {
             icon: "globe",
-            title: oU("worldBuilder:worldRulesSection"),
-            disabled: !AU,
-            children: [(0, BU.jsx)(PU, {
-              label: oU("classic:defaultGamemode"),
-              caption: oU("classic:defaultGamemodeDescription"),
-              disabled: DU,
-              children: (0, BU.jsx)(kU.d, {
+            title: zH("worldBuilder:worldRulesSection"),
+            disabled: !hH,
+            children: [(0, PH.jsx)(VH, {
+              label: zH("classic:defaultGamemode"),
+              caption: zH("classic:defaultGamemodeDescription"),
+              disabled: CH,
+              children: (0, PH.jsx)(xH.b, {
                 controlClassName: "ManageDropdown",
-                options: aU.E.map((UU => ({
-                  value: UU,
-                  label: pU.u[UU]
+                options: QH.H.map((HH => ({
+                  value: HH,
+                  label: uH.s[HH]
                 }))),
-                value: cU.defaultGamemode,
-                onChange: UU => yU("defaultGamemode", UU.value)
+                value: AH.defaultGamemode,
+                onChange: HH => rH("defaultGamemode", HH.value)
               })
-            }), (0, BU.jsx)(PU, {
-              label: oU("classic:voidDeathHeight"),
-              caption: oU("classic:voidDeathHeightDescription"),
-              disabled: DU,
-              children: (0, BU.jsxs)("div", {
+            }), (0, PH.jsx)(VH, {
+              label: zH("classic:voidDeathHeight"),
+              caption: zH("classic:voidDeathHeightDescription"),
+              disabled: CH,
+              children: (0, PH.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, BU.jsx)("input", {
+                children: [(0, PH.jsx)("input", {
                   type: "number",
-                  max: tU.D,
-                  value: null !== (XU = cU.voidDeathHeight) && void 0 !== XU ? XU : "",
-                  onChange: UU => {
-                    const XU = parseInt(UU.target.value);
-                    yU("voidDeathHeight", XU)
+                  max: WH.B,
+                  value: null !== (BH = AH.voidDeathHeight) && void 0 !== BH ? BH : "",
+                  onChange: HH => {
+                    const BH = parseInt(HH.target.value);
+                    rH("voidDeathHeight", BH)
                   }
-                }), (0, BU.jsx)("span", {
+                }), (0, PH.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: oU("worldBuilder:blocksUnit")
+                  children: zH("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, BU.jsx)(PU, {
-              label: oU("classic:worldBorder"),
-              caption: oU("classic:worldBorderDescription"),
-              disabled: DU,
-              children: (0, BU.jsxs)("div", {
+            }), (0, PH.jsx)(VH, {
+              label: zH("classic:worldBorder"),
+              caption: zH("classic:worldBorderDescription"),
+              disabled: CH,
+              children: (0, PH.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, BU.jsx)("input", {
+                children: [(0, PH.jsx)("input", {
                   type: "number",
-                  min: tU.J,
-                  max: tU.F,
-                  placeholder: oU("worldBuilder:noWorldBorderLimit"),
-                  value: null !== (zU = cU.worldBorder) && void 0 !== zU ? zU : "",
-                  onChange: UU => {
-                    const XU = parseInt(UU.target.value);
-                    yU("worldBorder", isNaN(XU) ? null : XU)
+                  min: WH.I,
+                  max: WH.F,
+                  placeholder: zH("worldBuilder:noWorldBorderLimit"),
+                  value: null !== (LH = AH.worldBorder) && void 0 !== LH ? LH : "",
+                  onChange: HH => {
+                    const BH = parseInt(HH.target.value);
+                    rH("worldBorder", isNaN(BH) ? null : BH)
                   }
-                }), (0, BU.jsx)("span", {
+                }), (0, PH.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: oU("worldBuilder:blocksUnit")
+                  children: zH("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, BU.jsx)(PU, {
-              label: oU("classic:disableMobs"),
-              caption: oU("classic:disableMobsDescription"),
-              disabled: DU,
-              children: (0, BU.jsx)(gU.j, {
-                checked: cU.disableMobs,
-                setChecked: UU => yU("disableMobs", UU),
-                disabled: DU
+            }), (0, PH.jsx)(VH, {
+              label: zH("classic:disableMobs"),
+              caption: zH("classic:disableMobsDescription"),
+              disabled: CH,
+              children: (0, PH.jsx)(MH.i, {
+                checked: AH.disableMobs,
+                setChecked: HH => rH("disableMobs", HH),
+                disabled: CH
               })
             })]
-          }), (0, BU.jsxs)(ZU, {
+          }), (0, PH.jsxs)(TH, {
             icon: "user-group",
-            title: oU("worldBuilder:playerAndLobbySection"),
-            disabled: !AU,
-            children: [(0, BU.jsx)(PU, {
-              label: oU("classic:disableKeepInventory"),
-              caption: oU("classic:disableKeepInventoryDescription"),
-              disabled: DU,
-              children: (0, BU.jsx)(gU.j, {
-                checked: cU.disableKeepInventory,
-                setChecked: UU => yU("disableKeepInventory", UU),
-                disabled: DU
+            title: zH("worldBuilder:playerAndLobbySection"),
+            disabled: !hH,
+            children: [(0, PH.jsx)(VH, {
+              label: zH("classic:disableKeepInventory"),
+              caption: zH("classic:disableKeepInventoryDescription"),
+              disabled: CH,
+              children: (0, PH.jsx)(MH.i, {
+                checked: AH.disableKeepInventory,
+                setChecked: HH => rH("disableKeepInventory", HH),
+                disabled: CH
               })
-            }), (0, BU.jsx)(PU, {
-              label: oU("classic:persistInventory"),
-              caption: oU("classic:persistInventoryDescription"),
-              disabled: DU,
-              children: (0, BU.jsx)(kU.d, {
+            }), (0, PH.jsx)(VH, {
+              label: zH("classic:persistInventory"),
+              caption: zH("classic:persistInventoryDescription"),
+              disabled: CH,
+              children: (0, PH.jsx)(xH.b, {
                 controlClassName: "ManageDropdown",
-                options: aU.n.map((UU => ({
-                  value: UU,
-                  label: pU.k[UU]
+                options: QH.o.map((HH => ({
+                  value: HH,
+                  label: uH.i[HH]
                 }))),
-                value: cU.persistInventory,
-                onChange: UU => yU("persistInventory", UU.value)
+                value: AH.persistInventory,
+                onChange: HH => rH("persistInventory", HH.value)
               })
-            }), (0, BU.jsx)(PU, {
-              label: oU("classic:persistWorld"),
-              caption: oU("classic:persistWorldDescription"),
-              disabled: DU,
-              children: (0, BU.jsx)(gU.j, {
-                checked: cU.persistWorld,
-                setChecked: UU => yU("persistWorld", UU),
-                disabled: DU
+            }), (0, PH.jsx)(VH, {
+              label: zH("classic:persistWorld"),
+              caption: zH("classic:persistWorldDescription"),
+              disabled: CH,
+              children: (0, PH.jsx)(MH.i, {
+                checked: AH.persistWorld,
+                setChecked: HH => rH("persistWorld", HH),
+                disabled: CH
               })
-            }), (0, BU.jsx)(PU, {
-              label: oU("classic:disableLobbySpawn"),
-              caption: oU("classic:disableLobbySpawnDescription"),
-              disabled: DU,
-              children: (0, BU.jsx)(gU.j, {
-                checked: cU.disableLobbySpawn,
-                setChecked: UU => yU("disableLobbySpawn", UU),
-                disabled: DU
+            }), (0, PH.jsx)(VH, {
+              label: zH("classic:disableLobbySpawn"),
+              caption: zH("classic:disableLobbySpawnDescription"),
+              disabled: CH,
+              children: (0, PH.jsx)(MH.i, {
+                checked: AH.disableLobbySpawn,
+                setChecked: HH => rH("disableLobbySpawn", HH),
+                disabled: CH
               })
-            }), (0, BU.jsx)(PU, {
-              label: oU("classic:hideLobbyCode"),
-              caption: oU("classic:hideLobbyCodeDescription"),
-              disabled: DU,
-              children: (0, BU.jsx)(gU.j, {
-                checked: cU.hideLobbyCode,
-                setChecked: UU => yU("hideLobbyCode", UU),
-                disabled: DU
+            }), (0, PH.jsx)(VH, {
+              label: zH("classic:hideLobbyCode"),
+              caption: zH("classic:hideLobbyCodeDescription"),
+              disabled: CH,
+              children: (0, PH.jsx)(MH.i, {
+                checked: AH.hideLobbyCode,
+                setChecked: HH => rH("hideLobbyCode", HH),
+                disabled: CH
               })
             })]
           })]
-        }), (0, BU.jsx)(ZU, {
+        }), (0, PH.jsx)(TH, {
           icon: "layer-group",
-          title: oU("worldBuilder:pluginsSection"),
-          disabled: !AU,
-          children: (0, BU.jsx)(GU.b, {
-            callbacks: EU,
-            disabled: DU,
+          title: zH("worldBuilder:pluginsSection"),
+          disabled: !hH,
+          children: (0, PH.jsx)(vH.d, {
+            callbacks: EH,
+            disabled: CH,
             advancedMode: !0,
             hideWrapper: !0
           })
         })]
       })
     }
-    var dU = zU(5478),
-      LU = zU(1624),
-      eU = zU(1545),
-      CU = zU(3873),
-      wU = zU(1129),
-      qU = zU(5424),
-      OU = zU(5490),
-      SU = zU(1498),
-      rU = zU(5487);
-    const uU = 50,
-      fU = .3;
-    async function iU(UU) {
-      const XU = await
-      function(UU) {
-        return new Promise(((XU, zU) => {
-          const cU = new FileReader;
-          cU.onload = () => XU(cU.result), cU.onerror = zU, cU.readAsDataURL(UU)
+    var bH = LH(5426),
+      kH = LH(1594),
+      mH = LH(1502),
+      oH = LH(3879),
+      IH = LH(1061),
+      fH = LH(5383),
+      lH = LH(5446),
+      KH = LH(1457),
+      cH = LH(5438),
+      eH = LH(5436);
+    const qH = 50,
+      gH = .3;
+    async function NH(HH) {
+      const BH = await
+      function(HH) {
+        return new Promise(((BH, LH) => {
+          const AH = new FileReader;
+          AH.onload = () => BH(AH.result), AH.onerror = LH, AH.readAsDataURL(HH)
         }))
-      }(UU), zU = await
-      function(UU) {
-        return new Promise(((XU, zU) => {
-          const cU = new Image;
-          cU.onload = () => XU(cU), cU.onerror = () => zU(new Error("Failed to load image")), cU.src = UU
+      }(HH), LH = await
+      function(HH) {
+        return new Promise(((BH, LH) => {
+          const AH = new Image;
+          AH.onload = () => BH(AH), AH.onerror = () => LH(new Error("Failed to load image")), AH.src = HH
         }))
-      }(XU);
-      if (zU.naturalHeight > zU.naturalWidth) throw new HU;
-      const cU = 1024 * uU,
+      }(BH);
+      if (LH.naturalHeight > LH.naturalWidth) throw new RH;
+      const AH = 1024 * qH,
         {
-          dataUrl: yU,
-          finalQuality: QU
-        } = function(UU, XU) {
-          const zU = document.createElement("canvas");
-          zU.width = UU.naturalWidth, zU.height = UU.naturalHeight, zU.getContext("2d").drawImage(UU, 0, 0);
-          let cU = .92,
-            yU = zU.toDataURL("image/jpeg", cU);
-          for (; .75 * yU.length > XU && cU > .05;) cU -= .05, yU = zU.toDataURL("image/jpeg", cU);
+          dataUrl: rH,
+          finalQuality: SH
+        } = function(HH, BH) {
+          const LH = document.createElement("canvas");
+          LH.width = HH.naturalWidth, LH.height = HH.naturalHeight, LH.getContext("2d").drawImage(HH, 0, 0);
+          let AH = .92,
+            rH = LH.toDataURL("image/jpeg", AH);
+          for (; .75 * rH.length > BH && AH > .05;) AH -= .05, rH = LH.toDataURL("image/jpeg", AH);
           return {
-            dataUrl: yU,
-            finalQuality: cU
+            dataUrl: rH,
+            finalQuality: AH
           }
-        }(zU, cU);
-      if (Math.ceil(.75 * yU.length) > cU) throw new MU;
+        }(LH, AH);
+      if (Math.ceil(.75 * rH.length) > AH) throw new jH;
       return {
-        base64Jpg: yU,
-        heavilyCompressed: QU < fU
+        base64Jpg: rH,
+        heavilyCompressed: SH < gH
       }
     }
-    class HU extends Error {}
-    class MU extends Error {}
+    class RH extends Error {}
+    class jH extends Error {}
 
-    function vU(UU) {
-      var XU;
+    function nH(HH) {
+      var BH;
       let {
-        schematicId: zU,
-        hasReadUploadPolicy: yU,
-        onPolicyValidationError: oU,
-        onThumbnailReady: DU
-      } = UU;
+        schematicId: LH,
+        hasReadUploadPolicy: rH,
+        onPolicyValidationError: zH,
+        onThumbnailReady: CH
+      } = HH;
       const {
-        t: NU
-      } = (0, FU.I)(), [pU, aU] = (0, cU.useState)(null), [tU, gU] = (0, cU.useState)(""), [kU, GU] = (0, cU.useState)(""), [ZU, RU] = (0, cU.useState)(!0), [PU, WU] = (0, cU.useState)(!1), dU = (0, cU.useRef)(!1), [LU, eU] = (0, cU.useState)(null), [CU, wU] = (0, cU.useState)(!1), [qU, SU] = (0, cU.useState)(!1), rU = (0, cU.useRef)(0), {
-        getRootProps: uU,
-        getInputProps: fU,
-        isDragActive: vU
-      } = (0, OU.b)({
+        t: GH
+      } = (0, tH.B)(), [uH, QH] = (0, AH.useState)(null), [WH, MH] = (0, AH.useState)(""), [xH, vH] = (0, AH.useState)(""), [TH, UH] = (0, AH.useState)(!0), [VH, OH] = (0, AH.useState)(!1), bH = (0, AH.useRef)(!1), [kH, mH] = (0, AH.useState)(null), [oH, IH] = (0, AH.useState)(!1), [fH, KH] = (0, AH.useState)(!1), cH = (0, AH.useRef)(0), {
+        getRootProps: eH,
+        getInputProps: qH,
+        isDragActive: gH
+      } = (0, lH.c)({
         accept: {
           "image/*": [".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp"]
         },
         multiple: !1,
-        onDrop: async UU => {
-          if (0 === UU.length) return;
-          const XU = UU[0],
-            zU = ++rU.current;
-          eU(null), wU(!1), aU(null), gU(XU.name);
+        onDrop: async HH => {
+          if (0 === HH.length) return;
+          const BH = HH[0],
+            LH = ++cH.current;
+          mH(null), IH(!1), QH(null), MH(BH.name);
           try {
-            const UU = await iU(XU);
-            if (zU !== rU.current) return;
-            aU(UU), wU(UU.heavilyCompressed)
-          } catch (cU) {
-            if (zU !== rU.current) return;
-            eU(NU(cU instanceof HU ? "thumbnail:portraitImagesNotAllowed" : cU instanceof MU ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
+            const HH = await NH(BH);
+            if (LH !== cH.current) return;
+            QH(HH), IH(HH.heavilyCompressed)
+          } catch (AH) {
+            if (LH !== cH.current) return;
+            mH(GH(AH instanceof RH ? "thumbnail:portraitImagesNotAllowed" : AH instanceof jH ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
           }
         },
         useFsAccessApi: !1
-      }), VU = tU.length <= 30 ? tU : `${tU.slice(0,27)}...`, sU = null !== (XU = null === pU || void 0 === pU ? void 0 : pU.base64Jpg) && void 0 !== XU ? XU : null, nU = kU.trim(), mU = nU.length >= YU.j && nU.length <= YU.i, lU = qU && !pU && !LU, xU = qU && !mU;
-      return (0, BU.jsxs)("div", {
+      }), nH = WH.length <= 30 ? WH : `${WH.slice(0,27)}...`, FH = null !== (BH = null === uH || void 0 === uH ? void 0 : uH.base64Jpg) && void 0 !== BH ? BH : null, DH = xH.trim(), wH = DH.length >= XH.l && DH.length <= XH.j, ZH = fH && !uH && !kH, dH = fH && !wH;
+      return (0, PH.jsxs)("div", {
         className: "ThumbnailUploadContainer",
-        children: [(0, BU.jsxs)("div", {
-          ...uU({
-            className: IU()("ThumbnailUploadDropzone", {
-              ActiveDrag: vU,
-              ValidationError: lU
+        children: [(0, PH.jsxs)("div", {
+          ...eH({
+            className: YH()("ThumbnailUploadDropzone", {
+              ActiveDrag: gH,
+              ValidationError: ZH
             })
           }),
-          children: [(0, BU.jsx)("input", {
-            ...fU()
-          }), !vU && sU ? (0, BU.jsxs)(BU.Fragment, {
-            children: [(0, BU.jsxs)("div", {
+          children: [(0, PH.jsx)("input", {
+            ...qH()
+          }), !gH && FH ? (0, PH.jsxs)(PH.Fragment, {
+            children: [(0, PH.jsxs)("div", {
               className: "ThumbnailAspectPreviews",
-              children: [(0, BU.jsxs)("div", {
+              children: [(0, PH.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, BU.jsx)("div", {
+                children: [(0, PH.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "1:1"
-                }), (0, BU.jsx)("div", {
+                }), (0, PH.jsx)("div", {
                   className: "ThumbnailAspectFrame Square",
-                  children: (0, BU.jsx)("img", {
-                    src: sU,
+                  children: (0, PH.jsx)("img", {
+                    src: FH,
                     alt: "1:1 preview"
                   })
                 })]
-              }), (0, BU.jsxs)("div", {
+              }), (0, PH.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, BU.jsx)("div", {
+                children: [(0, PH.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "16:9"
-                }), (0, BU.jsx)("div", {
+                }), (0, PH.jsx)("div", {
                   className: "ThumbnailAspectFrame Wide",
-                  children: (0, BU.jsx)("img", {
-                    src: sU,
+                  children: (0, PH.jsx)("img", {
+                    src: FH,
                     alt: "16:9 preview"
                   })
                 })]
               })]
-            }), (0, BU.jsxs)("div", {
-              children: [(0, BU.jsx)("div", {
+            }), (0, PH.jsxs)("div", {
+              children: [(0, PH.jsx)("div", {
                 className: "ThumbnailUploadInstructions Active",
-                children: VU
-              }), (0, BU.jsx)("div", {
+                children: nH
+              }), (0, PH.jsx)("div", {
                 className: "ThumbnailUploadInstructions Preview",
-                children: NU("thumbnail:preview")
+                children: GH("thumbnail:preview")
               })]
             })]
-          }) : (0, BU.jsxs)(BU.Fragment, {
-            children: [(0, BU.jsx)("div", {
+          }) : (0, PH.jsxs)(PH.Fragment, {
+            children: [(0, PH.jsx)("div", {
               className: "ThumbnailUploadIcon",
-              children: (0, BU.jsx)(EU.d, {
+              children: (0, PH.jsx)(EH.c, {
                 name: "image"
               })
-            }), (0, BU.jsx)("div", {
+            }), (0, PH.jsx)("div", {
               className: "ThumbnailUploadInstructions",
-              children: NU("thumbnail:dragImageHere")
+              children: GH("thumbnail:dragImageHere")
             })]
           })]
-        }), lU && (0, BU.jsx)("div", {
+        }), ZH && (0, PH.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: NU("thumbnail:imageRequired")
-        }), (0, BU.jsx)(AU.e, {
-          className: IU()("ThumbnailUploadNameInput", {
-            ValidationError: xU
+          children: GH("thumbnail:imageRequired")
+        }), (0, PH.jsx)(hH.e, {
+          className: YH()("ThumbnailUploadNameInput", {
+            ValidationError: dH
           }),
-          placeholderText: NU("thumbnail:thumbnailName"),
-          defaultValue: kU,
-          onValueChange: UU => {
-            GU(UU)
+          placeholderText: GH("thumbnail:thumbnailName"),
+          defaultValue: xH,
+          onValueChange: HH => {
+            vH(HH)
           },
-          maxLength: YU.i
-        }), xU && (0, BU.jsx)("div", {
+          maxLength: XH.j
+        }), dH && (0, PH.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: NU("thumbnail:nameRequired", {
-            min: YU.j,
-            max: YU.i
+          children: GH("thumbnail:nameRequired", {
+            min: XH.l,
+            max: XH.j
           })
-        }), (0, BU.jsxs)("label", {
+        }), (0, PH.jsxs)("label", {
           className: "ThumbnailUploadCheckbox",
-          children: [(0, BU.jsx)("input", {
+          children: [(0, PH.jsx)("input", {
             type: "checkbox",
-            checked: ZU,
-            onChange: UU => {
-              RU(UU.target.checked)
+            checked: TH,
+            onChange: HH => {
+              UH(HH.target.checked)
             }
-          }), NU("thumbnail:setAsThumbnailOnceApproved")]
-        }), CU && (0, BU.jsx)("div", {
+          }), GH("thumbnail:setAsThumbnailOnceApproved")]
+        }), oH && (0, PH.jsx)("div", {
           className: "ThumbnailUploadWarning",
-          children: NU("thumbnail:heavyCompressionWarning")
-        }), LU && (0, BU.jsx)("div", {
+          children: GH("thumbnail:heavyCompressionWarning")
+        }), kH && (0, PH.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: LU
-        }), (0, BU.jsx)(QU.l, {
-          disabled: PU,
+          children: kH
+        }), (0, PH.jsx)(SH.u, {
+          disabled: VH,
           className: "ThumbnailUploadButton",
           onClick: async () => {
-            if (SU(!0), !dU.current && pU && mU && yU) {
-              dU.current = !0, WU(!0), eU(null);
+            if (KH(!0), !bH.current && uH && wH && rH) {
+              bH.current = !0, OH(!0), mH(null);
               try {
-                await DU(pU.base64Jpg, nU, ZU ? zU : null)
-              } catch (UU) {
-                eU(UU.errorMessageForUser ? NU(UU.errorMessageForUser, UU.errorMessageTranslationParams) : NU("thumbnail:failedToUploadImage"))
+                await CH(uH.base64Jpg, DH, TH ? LH : null)
+              } catch (HH) {
+                mH(HH.errorMessageForUser ? GH(HH.errorMessageForUser, HH.errorMessageTranslationParams) : GH("thumbnail:failedToUploadImage"))
               } finally {
-                dU.current = !1, WU(!1)
+                bH.current = !1, OH(!1)
               }
-            } else yU || oU()
+            } else rH || zH()
           },
-          children: NU(PU ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
+          children: GH(VH ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
         })]
       })
     }
-    const VU = 2e3;
+    const FH = 2e3;
 
-    function sU(UU) {
+    function DH(HH) {
       let {
-        schematicId: XU,
-        ownedThumbnailCount: zU,
-        onClose: yU,
-        onThumbnailReady: QU
-      } = UU;
+        schematicId: BH,
+        ownedThumbnailCount: LH,
+        onClose: rH,
+        onThumbnailReady: SH
+      } = HH;
       const {
-        t: AU
-      } = (0, FU.I)(), {
-        userContext: DU
-      } = (0, wU.d)(), [NU, pU] = (0, cU.useState)(!1), [aU, tU] = (0, cU.useState)(!1), [gU, kU] = (0, cU.useState)(!1), GU = (0, cU.useRef)(), {
-        loading: ZU,
-        eligibility: RU
-      } = (0, rU.e)(), PU = (0, rU.h)();
-      (0, cU.useEffect)((() => () => {
-        clearTimeout(GU.current)
+        t: hH
+      } = (0, tH.B)(), {
+        userContext: CH
+      } = (0, IH.e)(), [GH, uH] = (0, AH.useState)(!1), [QH, WH] = (0, AH.useState)(!1), [MH, xH] = (0, AH.useState)(!1), vH = (0, AH.useRef)(), {
+        loading: TH,
+        eligibility: UH
+      } = (0, cH.c)(), VH = (0, cH.d)();
+      (0, AH.useEffect)((() => () => {
+        clearTimeout(vH.current)
       }), []);
-      const WU = [];
-      DU.isLoggedIn() || WU.push(AU("thumbnail:mustBeLoggedInToUpload")), zU >= YU.N && WU.push(AU("thumbnail:thumbnailLimitReachedPleaseDelete", {
-        max: YU.N
+      const OH = [];
+      CH.isLoggedIn() || OH.push(hH("thumbnail:mustBeLoggedInToUpload")), LH >= XH.Y && OH.push(hH("thumbnail:thumbnailLimitReachedPleaseDelete", {
+        max: XH.Y
       }));
-      const dU = null === RU || void 0 === RU ? void 0 : RU.thumbnailUploadWait;
-      if (dU && WU.push(PU("accountAge" === dU.reason ? "thumbnail:accountTooNewUntil" : "thumbnail:uploadCooldownUntil", dU.until)), !NU && WU.length > 0) return (0, BU.jsxs)("div", {
+      const bH = null === UH || void 0 === UH ? void 0 : UH.thumbnailUploadWait;
+      if (bH && OH.push(VH("accountAge" === bH.reason ? "thumbnail:accountTooNewUntil" : "thumbnail:uploadCooldownUntil", bH.until)), !GH && OH.length > 0) return (0, PH.jsxs)("div", {
         className: "ThumbnailUploaderInner",
-        children: [(0, BU.jsx)("h1", {
+        children: [(0, PH.jsx)("h1", {
           className: "SchematicPopupTitle",
-          children: AU("thumbnail:cannotUploadThumbnail")
-        }), WU.map((UU => (0, BU.jsxs)("div", {
+          children: hH("thumbnail:cannotUploadThumbnail")
+        }), OH.map((HH => (0, PH.jsxs)("div", {
           className: "CannotUploadThumbnailItem",
-          children: [(0, BU.jsx)(EU.d, {
+          children: [(0, PH.jsx)(EH.c, {
             name: "triangle-exclamation"
-          }), (0, BU.jsx)("span", {
-            children: UU
+          }), (0, PH.jsx)("span", {
+            children: HH
           })]
-        }, UU)))]
+        }, HH)))]
       });
-      if (ZU) return (0, BU.jsx)("div", {
+      if (TH) return (0, PH.jsx)("div", {
         className: "ThumbnailUploaderInner",
-        children: (0, BU.jsx)(oU.b, {})
+        children: (0, PH.jsx)(zH.d, {})
       });
-      return (0, BU.jsxs)("div", {
-        className: IU()("ThumbnailUploaderInner", {
-          ThumbnailUploaderSuccess: NU
+      return (0, PH.jsxs)("div", {
+        className: YH()("ThumbnailUploaderInner", {
+          ThumbnailUploaderSuccess: GH
         }),
-        children: [NU && (0, BU.jsxs)("div", {
+        children: [GH && (0, PH.jsxs)("div", {
           className: "ThumbnailUploadSuccessOverlay",
-          children: [(0, BU.jsxs)("div", {
+          children: [(0, PH.jsxs)("div", {
             className: "ThumbnailUploadSuccessIcon FullyFancyText AnimFadeInScaleUp",
-            children: [(0, BU.jsx)(EU.d, {
+            children: [(0, PH.jsx)(EH.c, {
               name: "check"
-            }), (0, BU.jsx)(SU.e, {})]
-          }), (0, BU.jsx)("div", {
+            }), (0, PH.jsx)(KH.e, {})]
+          }), (0, PH.jsx)("div", {
             className: "ThumbnailUploadSuccessText AnimFadeInScaleUp",
-            children: AU("thumbnail:thumbnailUploaded")
+            children: hH("thumbnail:thumbnailUploaded")
           })]
-        }), (0, BU.jsx)("h1", {
+        }), (0, PH.jsx)("h1", {
           className: "SchematicPopupTitle",
-          children: AU("thumbnail:uploadThumbnail")
-        }), (0, BU.jsxs)("div", {
+          children: hH("thumbnail:uploadThumbnail")
+        }), (0, PH.jsxs)("div", {
           className: "ThumbnailUploaderBody",
-          children: [(0, BU.jsxs)("div", {
+          children: [(0, PH.jsxs)("div", {
             className: "ThumbnailUploaderLeft",
-            children: [(0, BU.jsx)("h3", {
+            children: [(0, PH.jsx)("h3", {
               className: "SchematicPopupSubtitle",
-              children: AU("thumbnail:chooseImage", {
-                maxSizeKb: uU
+              children: hH("thumbnail:chooseImage", {
+                maxSizeKb: qH
               })
-            }), (0, BU.jsx)(vU, {
-              schematicId: XU,
-              hasReadUploadPolicy: aU,
+            }), (0, PH.jsx)(nH, {
+              schematicId: BH,
+              hasReadUploadPolicy: QH,
               onPolicyValidationError: () => {
-                kU(!0)
+                xH(!0)
               },
-              onThumbnailReady: async (UU, XU, zU) => {
-                await QU(UU, XU, zU), pU(!0), GU.current = setTimeout(yU, VU)
+              onThumbnailReady: async (HH, BH, LH) => {
+                await SH(HH, BH, LH), uH(!0), vH.current = setTimeout(rH, FH)
               }
             })]
-          }), (0, BU.jsxs)("div", {
+          }), (0, PH.jsxs)("div", {
             className: "ThumbnailUploadPolicy",
-            children: [(0, BU.jsx)("h3", {
+            children: [(0, PH.jsx)("h3", {
               className: "ThumbnailUploadPolicyTitle",
-              children: AU("thumbnail:uploadPolicy")
-            }), (0, BU.jsxs)("ul", {
-              className: "ThumbnailUploadPolicyList",
-              children: [(0, BU.jsxs)("li", {
-                className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, BU.jsx)(EU.d, {
-                  name: "check"
-                }), (0, BU.jsx)("span", {
-                  children: AU("thumbnail:policyFollowGuidelines")
-                })]
-              }), (0, BU.jsxs)("li", {
-                className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, BU.jsx)(EU.d, {
-                  name: "check"
-                }), (0, BU.jsx)("span", {
-                  children: AU("thumbnail:policyInGameAssets")
-                })]
-              }), (0, BU.jsxs)("li", {
-                className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, BU.jsx)(EU.d, {
-                  name: "check"
-                }), (0, BU.jsx)("span", {
-                  children: AU("thumbnail:policyLimitText")
-                })]
-              }), (0, BU.jsxs)("li", {
-                className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, BU.jsx)(EU.d, {
-                  name: "x"
-                }), (0, BU.jsx)("span", {
-                  children: AU("thumbnail:policyCopyrightContent")
-                })]
-              }), (0, BU.jsxs)("li", {
-                className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, BU.jsx)(EU.d, {
-                  name: "x"
-                }), (0, BU.jsx)("span", {
-                  children: AU("thumbnail:policyOutOfGameAssets")
-                })]
-              }), (0, BU.jsxs)("li", {
-                className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, BU.jsx)(EU.d, {
-                  name: "x"
-                }), (0, BU.jsx)("span", {
-                  children: AU("thumbnail:policyBloxdTags")
-                })]
-              }), (0, BU.jsxs)("li", {
-                className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, BU.jsx)(EU.d, {
-                  name: "x"
-                }), (0, BU.jsx)("span", {
-                  children: AU("thumbnail:policyMustReflectGame")
-                })]
-              })]
-            }), (0, BU.jsxs)("label", {
-              className: IU()("ThumbnailUploadCheckbox Policy", {
-                ValidationError: gU && !aU
+              children: hH("thumbnail:uploadPolicy")
+            }), (0, PH.jsx)(eH.e, {
+              allowed: ["thumbnail:policyFollowGuidelines", "thumbnail:policyInGameAssets", "thumbnail:policyLimitText"],
+              notAllowed: ["thumbnail:policyCopyrightContent", "thumbnail:policyOutOfGameAssets", "thumbnail:policyBloxdTags", "thumbnail:policyMustReflectGame"]
+            }), (0, PH.jsxs)("label", {
+              className: YH()("ThumbnailUploadCheckbox Policy", {
+                ValidationError: MH && !QH
               }),
-              children: [(0, BU.jsx)("input", {
+              children: [(0, PH.jsx)("input", {
                 type: "checkbox",
-                checked: aU,
-                onChange: UU => {
-                  tU(UU.target.checked)
+                checked: QH,
+                onChange: HH => {
+                  WH(HH.target.checked)
                 }
-              }), AU("thumbnail:agreeToUploadPolicy")]
-            }), gU && !aU && (0, BU.jsx)("div", {
+              }), hH("thumbnail:agreeToUploadPolicy")]
+            }), MH && !QH && (0, PH.jsx)("div", {
               className: "ThumbnailPolicyError",
-              children: AU("thumbnail:policyRequired")
+              children: hH("thumbnail:policyRequired")
             })]
           })]
         })]
       })
     }
 
-    function nU(UU) {
+    function wH(HH) {
       let {
-        imageUrl: XU,
-        thumbnailName: zU,
-        onClose: cU
-      } = UU;
+        imageUrl: BH,
+        thumbnailName: LH,
+        onClose: AH
+      } = HH;
       const {
-        t: yU
-      } = (0, FU.I)();
-      return (0, BU.jsxs)("div", {
+        t: rH
+      } = (0, tH.B)();
+      return (0, PH.jsxs)("div", {
         className: "ThumbnailDeleteConfirm",
-        children: [(0, BU.jsx)("div", {
+        children: [(0, PH.jsx)("div", {
           className: "ThumbnailDeleteConfirmTitle",
-          children: yU("thumbnail:deleteThumbnail")
-        }), (0, BU.jsxs)("div", {
+          children: rH("thumbnail:deleteThumbnail")
+        }), (0, PH.jsxs)("div", {
           className: "ThumbnailDeleteConfirmImageContainer",
-          children: [null !== XU && (0, BU.jsx)("img", {
+          children: [null !== BH && (0, PH.jsx)("img", {
             className: "ThumbnailDeleteConfirmImage",
-            src: XU,
-            alt: zU
-          }), (0, BU.jsx)("div", {
+            src: BH,
+            alt: LH
+          }), (0, PH.jsx)("div", {
             className: "ThumbnailGridItemLabel",
-            children: zU
+            children: LH
           })]
-        }), (0, BU.jsx)("div", {
+        }), (0, PH.jsx)("div", {
           className: "ThumbnailDeleteConfirmSubtitle",
-          children: yU("thumbnail:deleteThumbnailConfirmation")
-        }), (0, BU.jsxs)("div", {
+          children: rH("thumbnail:deleteThumbnailConfirmation")
+        }), (0, PH.jsxs)("div", {
           className: "ThumbnailDeleteConfirmButtons",
-          children: [(0, BU.jsxs)(QU.G, {
+          children: [(0, PH.jsxs)(SH.O, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => cU(!0),
-            children: [(0, BU.jsx)(EU.d, {
+            onClick: () => AH(!0),
+            children: [(0, PH.jsx)(EH.c, {
               name: "trash-can"
-            }), " ", yU("general:delete")]
-          }), (0, BU.jsx)(QU.j, {
+            }), " ", rH("general:delete")]
+          }), (0, PH.jsx)(SH.m, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => cU(!1),
-            children: yU("general:cancel")
+            onClick: () => AH(!1),
+            children: rH("general:cancel")
           })]
         })]
       })
     }
-    var mU = zU(220);
-    const lU = ["thumbnail:policyFollowGuidelines"],
-      xU = {
+    var ZH = LH(186);
+    const dH = ["thumbnail:policyFollowGuidelines"],
+      aH = {
         "custom-game-bad-thumbnail": {
           policyRows: ["thumbnail:rejectionBreaksUploadPolicy"],
           example: null,
@@ -903,793 +1027,797 @@ export const modules = {
           fix: "thumbnail:rejectionUnauthorisedBrandingFix"
         },
         "thumbnail-sexual-content": {
-          policyRows: lU,
+          policyRows: dH,
           example: "thumbnail:rejectionSexualExample",
           fix: "thumbnail:rejectionSexualFix"
         },
         "thumbnail-substances-content": {
-          policyRows: lU,
+          policyRows: dH,
           example: "thumbnail:rejectionSubstancesExample",
           fix: "thumbnail:rejectionSubstancesFix"
         },
         "thumbnail-violent-gore-content": {
-          policyRows: lU,
+          policyRows: dH,
           example: "thumbnail:rejectionViolenceExample",
           fix: "thumbnail:rejectionViolenceFix"
         }
       };
 
-    function JU(UU) {
+    function sH(HH) {
       let {
-        rejectedThumbnails: XU,
-        isAcknowledging: zU,
-        onAcknowledge: cU
-      } = UU;
+        rejectedThumbnails: BH,
+        isAcknowledging: LH,
+        onAcknowledge: AH
+      } = HH;
       const {
-        t: yU
-      } = (0, FU.I)();
-      return (0, BU.jsxs)("div", {
+        t: rH
+      } = (0, tH.B)();
+      return (0, PH.jsxs)("div", {
         className: "ManageWarningBanner ThumbnailRejectionNotice",
-        children: [(0, BU.jsx)("div", {
+        children: [(0, PH.jsx)("div", {
           className: "ThumbnailRejectionNoticeTitle",
-          children: yU("thumbnail:rejectedByModerators")
-        }), XU.map((UU => (0, BU.jsx)(jU, {
-          rejected: UU
-        }, UU.thumbnail.id))), (0, BU.jsx)(QU.l, {
+          children: rH("thumbnail:rejectedByModerators")
+        }), BH.map((HH => (0, PH.jsx)(JH, {
+          rejected: HH
+        }, HH.thumbnail.id))), (0, PH.jsx)(SH.u, {
           className: "ThumbnailRejectionNoticeButton",
-          onClick: cU,
-          disabled: zU,
-          children: zU ? (0, BU.jsx)(oU.b, {}) : yU("thumbnail:gotIt")
+          onClick: AH,
+          disabled: LH,
+          children: LH ? (0, PH.jsx)(zH.d, {}) : rH("thumbnail:gotIt")
         })]
       })
     }
 
-    function jU(UU) {
-      var XU;
+    function JH(HH) {
+      var BH;
       let {
         rejected: {
-          thumbnail: zU,
-          rejection: cU
+          thumbnail: LH,
+          rejection: AH
         }
-      } = UU;
+      } = HH;
       const {
-        t: yU
-      } = (0, FU.I)(), QU = null !== (XU = (0, mU.b)(xU, cU.policyId)) && void 0 !== XU ? XU : xU["custom-game-bad-thumbnail"], AU = new Date(cU.at).toLocaleDateString();
-      return (0, BU.jsxs)("div", {
+        t: rH
+      } = (0, tH.B)(), SH = null !== (BH = (0, ZH.d)(aH, AH.policyId)) && void 0 !== BH ? BH : aH["custom-game-bad-thumbnail"], hH = new Date(AH.at).toLocaleDateString();
+      return (0, PH.jsxs)("div", {
         className: "RejectedThumbnail",
-        children: [(0, BU.jsxs)("div", {
+        children: [(0, PH.jsxs)("div", {
           className: "RejectedThumbnailImage",
-          children: [null !== zU.preview && (0, BU.jsx)("img", {
-            src: zU.preview,
-            alt: zU.name
-          }), null === zU.preview && (0, BU.jsx)(EU.d, {
+          children: [null !== LH.preview && (0, PH.jsx)("img", {
+            src: LH.preview,
+            alt: LH.name
+          }), null === LH.preview && (0, PH.jsx)(EH.c, {
             name: "image-slash"
           })]
-        }), (0, BU.jsxs)("div", {
+        }), (0, PH.jsxs)("div", {
           className: "RejectedThumbnailDetails",
-          children: [(0, BU.jsx)("div", {
+          children: [(0, PH.jsx)("div", {
             className: "RejectedThumbnailName",
-            children: zU.name
-          }), (0, BU.jsx)("div", {
-            children: null !== cU.gameName ? yU("thumbnail:rejectedGameAndDate", {
-              game: cU.gameName,
-              date: AU
-            }) : AU
-          }), null !== cU.reason && (0, BU.jsx)("div", {
-            children: yU("creatorModeration:moderatorNote", {
-              reason: cU.reason
+            children: LH.name
+          }), (0, PH.jsx)("div", {
+            children: null !== AH.gameName ? rH("thumbnail:rejectedGameAndDate", {
+              game: AH.gameName,
+              date: hH
+            }) : hH
+          }), null !== AH.reason && (0, PH.jsx)("div", {
+            children: rH("creatorModeration:moderatorNote", {
+              reason: AH.reason
             })
-          }), QU.policyRows.length > 0 && (0, BU.jsx)("ul", {
+          }), SH.policyRows.length > 0 && (0, PH.jsx)("ul", {
             className: "RejectedThumbnailPolicyRows",
-            children: QU.policyRows.map((UU => (0, BU.jsxs)("li", {
-              children: [(0, BU.jsx)(EU.d, {
+            children: SH.policyRows.map((HH => (0, PH.jsxs)("li", {
+              children: [(0, PH.jsx)(EH.c, {
                 name: "x"
-              }), (0, BU.jsx)("span", {
-                children: yU(UU)
+              }), (0, PH.jsx)("span", {
+                children: rH(HH)
               })]
-            }, UU)))
-          }), (0, BU.jsxs)("div", {
-            children: [null !== QU.example && null === cU.reason && `${yU(QU.example)} `, yU(QU.fix)]
+            }, HH)))
+          }), (0, PH.jsxs)("div", {
+            children: [null !== SH.example && null === AH.reason && `${rH(SH.example)} `, rH(SH.fix)]
           })]
         })]
       })
     }
-    var KU = zU(1203);
+    var iH = LH(1131);
 
-    function bU(UU) {
-      return null !== UU.preview ? UU.preview : UU.approved ? `${KU.clientSideServerUrls.s3Url}/${(0,LU.d)(UU.id)}` : null
+    function pH(HH) {
+      return null !== HH.preview ? HH.preview : HH.approved ? `${iH.clientSideServerUrls.s3Url}/${(0,kH.c)(HH.id)}` : null
     }
 
-    function TU(UU) {
-      return null !== UU.pendingKey ? {
-        pendingKey: UU.pendingKey
+    function yH(HH) {
+      return null !== HH.pendingKey ? {
+        pendingKey: HH.pendingKey
       } : {
-        thumbnailId: UU.id
+        thumbnailId: HH.id
       }
     }
 
-    function hU(UU) {
-      var XU, zU;
+    function HB(HH) {
+      var BH, LH;
       let {
-        schematicData: AU,
-        updateSchematicData: DU,
-        publishFormEnabled: YU,
-        onClose: NU
-      } = UU;
+        schematicData: hH,
+        updateSchematicData: CH,
+        publishFormEnabled: XH,
+        onClose: GH
+      } = HH;
       const {
-        t: pU
-      } = (0, FU.I)(), {
-        userContext: aU,
-        isUserContextUpdating: tU
-      } = (0, wU.d)(), gU = (0, CU.b)(), [kU, GU] = (0, cU.useState)([]), [ZU, RU] = (0, cU.useState)([]), [PU, WU] = (0, cU.useState)(!0), [dU, LU] = (0, cU.useState)(!1), [OU, SU] = (0, cU.useState)(null !== (XU = AU.customThumbnailId) && void 0 !== XU ? XU : null), [rU, uU] = (0, cU.useState)(null), fU = (0, cU.useRef)(null !== (zU = AU.customThumbnailId) && void 0 !== zU ? zU : null), iU = (0, cU.useRef)(0), HU = (0, cU.useRef)(null), MU = (0, cU.useRef)(null), vU = (0, cU.useRef)(null), VU = (0, cU.useRef)(!1);
+        t: uH
+      } = (0, tH.B)(), {
+        userContext: QH,
+        isUserContextUpdating: WH
+      } = (0, IH.e)(), MH = (0, oH.c)(), [xH, vH] = (0, AH.useState)([]), [TH, UH] = (0, AH.useState)([]), [VH, OH] = (0, AH.useState)(!0), [bH, kH] = (0, AH.useState)(!1), [lH, KH] = (0, AH.useState)(null !== (BH = hH.customThumbnailId) && void 0 !== BH ? BH : null), [cH, eH] = (0, AH.useState)(null), qH = (0, AH.useRef)(null !== (LH = hH.customThumbnailId) && void 0 !== LH ? LH : null), gH = (0, AH.useRef)(0), NH = (0, AH.useRef)(null), RH = (0, AH.useRef)(null), jH = (0, AH.useRef)(null), nH = (0, AH.useRef)(!1);
 
-      function mU(UU, XU) {
-        vU.current && (clearTimeout(vU.current), vU.current = null), uU(UU), null !== UU && XU && (vU.current = setTimeout((() => {
-          uU(null), vU.current = null
+      function FH(HH, BH) {
+        jH.current && (clearTimeout(jH.current), jH.current = null), eH(HH), null !== HH && BH && (jH.current = setTimeout((() => {
+          eH(null), jH.current = null
         }), 5e3))
-      }(0, cU.useEffect)((() => () => {
-        clearTimeout(MU.current), clearTimeout(vU.current)
+      }(0, AH.useEffect)((() => () => {
+        clearTimeout(RH.current), clearTimeout(jH.current)
       }), []);
-      const lU = (0, cU.useCallback)((() => {
-        WU(!0), eU.c.getOwnedThumbnails(aU).then((UU => {
-          const XU = [],
-            zU = [];
-          for (const cU of UU.thumbnails) cU.rejection ? XU.push({
-            thumbnail: cU,
-            rejection: cU.rejection
-          }) : zU.push(cU);
-          XU.sort(((UU, XU) => XU.rejection.at - UU.rejection.at)), zU.sort(((UU, XU) => {
-            const zU = UU.approved ? 1 : 0,
-              cU = (XU.approved ? 1 : 0) - zU;
-            return 0 !== cU ? cU : XU.lastUpdatedAt - UU.lastUpdatedAt
-          })), RU(XU), GU(zU)
-        })).catch((UU => {
-          console.error("Failed to fetch thumbnails:", UU)
+      const ZH = (0, AH.useCallback)((() => {
+        OH(!0), mH.d.getOwnedThumbnails(QH).then((HH => {
+          const BH = [],
+            LH = [];
+          for (const AH of HH.thumbnails) AH.rejection ? BH.push({
+            thumbnail: AH,
+            rejection: AH.rejection
+          }) : LH.push(AH);
+          BH.sort(((HH, BH) => BH.rejection.at - HH.rejection.at)), LH.sort(((HH, BH) => {
+            const LH = HH.approved ? 1 : 0,
+              AH = (BH.approved ? 1 : 0) - LH;
+            return 0 !== AH ? AH : BH.lastUpdatedAt - HH.lastUpdatedAt
+          })), UH(BH), vH(LH)
+        })).catch((HH => {
+          console.error("Failed to fetch thumbnails:", HH)
         })).finally((() => {
-          WU(!1)
+          OH(!1)
         }))
-      }), [aU]);
-      async function xU(UU, XU, zU) {
-        return eU.c.uploadSchematicThumbnail(aU, UU, XU, zU).then((() => {
-          mU({
-            text: pU("thumbnail:uploadedAwaitingModeration"),
+      }), [QH]);
+      async function dH(HH, BH, LH) {
+        return mH.d.uploadSchematicThumbnail(QH, HH, BH, LH).then((() => {
+          FH({
+            text: uH("thumbnail:uploadedAwaitingModeration"),
             type: "success"
-          }, !0), lU()
+          }, !0), ZH()
         }))
       }
 
-      function jU() {
-        iU.current = Date.now(), MU.current = null;
-        const UU = HU.current;
-        HU.current = null, mU({
-          text: pU("thumbnail:settingThumbnail"),
+      function aH() {
+        gH.current = Date.now(), RH.current = null;
+        const HH = NH.current;
+        NH.current = null, FH({
+          text: uH("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), eU.c.setSchematicThumbnail(aU, AU.schematicId, UU).then((() => {
-          gU.current && (mU({
-            text: pU("thumbnail:thumbnailUpdated"),
+        }, !1), mH.d.setSchematicThumbnail(QH, hH.schematicId, HH).then((() => {
+          MH.current && (FH({
+            text: uH("thumbnail:thumbnailUpdated"),
             type: "success"
-          }, !0), fU.current = UU, DU("customThumbnailId", UU), DU("customThumbnailBlurhash", void 0), DU("customThumbnailVariants", void 0))
-        })).catch((UU => {
-          gU.current && (mU({
-            text: UU.errorMessageForUser ? pU(UU.errorMessageForUser, UU.errorMessageTranslationParams) : pU("thumbnail:failedToSetThumbnail"),
+          }, !0), qH.current = HH, CH("customThumbnailId", HH), CH("customThumbnailBlurhash", void 0), CH("customThumbnailVariants", void 0))
+        })).catch((HH => {
+          MH.current && (FH({
+            text: HH.errorMessageForUser ? uH(HH.errorMessageForUser, HH.errorMessageTranslationParams) : uH("thumbnail:failedToSetThumbnail"),
             type: "error"
-          }, !0), SU(fU.current))
+          }, !0), KH(qH.current))
         }))
       }
 
-      function KU(UU) {
-        SU(UU), HU.current = UU;
-        const XU = Date.now() - iU.current;
-        XU >= 1e3 ? jU() : (mU({
-          text: pU("thumbnail:settingThumbnail"),
+      function JH(HH) {
+        KH(HH), NH.current = HH;
+        const BH = Date.now() - gH.current;
+        BH >= 1e3 ? aH() : (FH({
+          text: uH("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), MU.current || (MU.current = setTimeout((() => {
-          jU()
-        }), 1e3 - XU)))
+        }, !1), RH.current || (RH.current = setTimeout((() => {
+          aH()
+        }), 1e3 - BH)))
       }
-      return (0, cU.useEffect)((() => {
-        !1 === tU && lU()
-      }), [tU, lU]), (0, BU.jsxs)("div", {
+      return (0, AH.useEffect)((() => {
+        !1 === WH && ZH()
+      }), [WH, ZH]), (0, PH.jsxs)("div", {
         className: "BloxdForm ThumbnailSection",
-        children: [(0, BU.jsxs)("div", {
+        children: [(0, PH.jsxs)("div", {
           className: "SectionTitle",
-          children: [pU("thumbnail:gameThumbnail"), rU && (0, BU.jsx)("span", {
-            className: IU()("ThumbnailActionMsg", `ThumbnailActionMsg--${rU.type}`),
-            children: rU.text
+          children: [uH("thumbnail:gameThumbnail"), cH && (0, PH.jsx)("span", {
+            className: YH()("ThumbnailActionMsg", `ThumbnailActionMsg--${cH.type}`),
+            children: cH.text
           })]
-        }), (0, BU.jsxs)("div", {
+        }), (0, PH.jsxs)("div", {
           className: "SectionBody",
-          children: [ZU.length > 0 && (0, BU.jsx)(JU, {
-            rejectedThumbnails: ZU,
-            isAcknowledging: dU,
+          children: [TH.length > 0 && (0, PH.jsx)(sH, {
+            rejectedThumbnails: TH,
+            isAcknowledging: bH,
             onAcknowledge: async function() {
-              LU(!0);
-              const UU = await Promise.allSettled(ZU.map((UU => {
+              kH(!0);
+              const HH = await Promise.allSettled(TH.map((HH => {
                 let {
-                  thumbnail: XU
-                } = UU;
-                return eU.c.deleteSchematicThumbnail(aU, TU(XU))
+                  thumbnail: BH
+                } = HH;
+                return mH.d.deleteSchematicThumbnail(QH, yH(BH))
               })));
-              if (!gU.current) return;
-              LU(!1);
-              const XU = UU.filter((UU => "rejected" === UU.status));
-              XU.length > 0 && (console.error("Failed to acknowledge some thumbnail rejections:", XU), mU({
-                text: pU("thumbnail:failedToHideRejections"),
+              if (!MH.current) return;
+              kH(!1);
+              const BH = HH.filter((HH => "rejected" === HH.status));
+              BH.length > 0 && (console.error("Failed to acknowledge some thumbnail rejections:", BH), FH({
+                text: uH("thumbnail:failedToHideRejections"),
                 type: "error"
-              }, !0)), lU()
+              }, !0)), ZH()
             }
-          }), (0, BU.jsxs)("div", {
+          }), (0, PH.jsxs)("div", {
             className: "ThumbnailGrid",
-            children: [(0, BU.jsxs)("div", {
-              className: IU()("ThumbnailGridItem ThumbnailGridItemDefault", {
-                ThumbnailGridItemSelected: null === OU
+            children: [(0, PH.jsxs)("div", {
+              className: YH()("ThumbnailGridItem ThumbnailGridItemDefault", {
+                ThumbnailGridItemSelected: null === lH
               }),
-              onClick: () => KU(null),
-              children: [(0, BU.jsx)(qU.d, {
+              onClick: () => JH(null),
+              children: [(0, PH.jsx)(fH.b, {
                 game: {
-                  schematicId: AU.schematicId,
-                  imageBlurhash: AU.imageBlurhash
+                  schematicId: hH.schematicId,
+                  imageBlurhash: hH.imageBlurhash
                 }
-              }), (0, BU.jsx)("div", {
+              }), (0, PH.jsx)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailDefaultLabel",
-                children: pU("general:default")
+                children: uH("general:default")
               })]
-            }), PU && (0, BU.jsx)(oU.b, {}), kU.map((UU => {
-              var XU;
-              const zU = bU(UU);
-              return (0, BU.jsxs)("div", {
-                className: IU()("ThumbnailGridItem", {
-                  ThumbnailGridItemSelected: UU.approved && OU === UU.id,
-                  ThumbnailGridItemPending: !UU.approved
+            }), VH && (0, PH.jsx)(zH.d, {}), xH.map((HH => {
+              var BH;
+              const LH = pH(HH);
+              return (0, PH.jsxs)("div", {
+                className: YH()("ThumbnailGridItem", {
+                  ThumbnailGridItemSelected: HH.approved && lH === HH.id,
+                  ThumbnailGridItemPending: !HH.approved
                 }),
                 onClick: () => {
-                  UU.approved && KU(UU.id)
+                  HH.approved && JH(HH.id)
                 },
-                children: [null !== zU && (0, BU.jsx)("img", {
-                  src: zU,
-                  alt: UU.name
-                }), (0, BU.jsx)(QU.G, {
+                children: [null !== LH && (0, PH.jsx)("img", {
+                  src: LH,
+                  alt: HH.name
+                }), (0, PH.jsx)(SH.O, {
                   className: "ThumbnailDeleteButton",
-                  onClick: XU => async function(UU, XU) {
-                    UU.stopPropagation();
-                    const zU = await yU.NotificationProvider.showCustomPopup({
-                        body: UU => (0, BU.jsx)(nU, {
-                          imageUrl: bU(XU),
-                          thumbnailName: XU.name,
-                          onClose: XU => {
-                            XU && (VU.current = !0), UU()
+                  onClick: BH => async function(HH, BH) {
+                    HH.stopPropagation();
+                    const LH = await rH.NotificationProvider.showCustomPopup({
+                        body: HH => (0, PH.jsx)(wH, {
+                          imageUrl: pH(BH),
+                          thumbnailName: BH.name,
+                          onClose: BH => {
+                            BH && (nH.current = !0), HH()
                           }
                         }),
                         middleScreenPopupClassName: "ThumbnailDeleteConfirmPopup",
-                        onClose: NU
+                        onClose: GH
                       }).getResult(),
-                      cU = VU.current;
-                    VU.current = !1, cU && !0 === zU && (gU.current && mU({
-                      text: pU("thumbnail:deletingThumbnail"),
+                      AH = nH.current;
+                    nH.current = !1, AH && !0 === LH && (MH.current && FH({
+                      text: uH("thumbnail:deletingThumbnail"),
                       type: "info"
-                    }, !1), eU.c.deleteSchematicThumbnail(aU, TU(XU)).then((() => {
-                      gU.current && (mU({
-                        text: pU("thumbnail:thumbnailDeleted"),
+                    }, !1), mH.d.deleteSchematicThumbnail(QH, yH(BH)).then((() => {
+                      MH.current && (FH({
+                        text: uH("thumbnail:thumbnailDeleted"),
                         type: "success"
-                      }, !0), null !== XU.id && fU.current === XU.id && KU(null), lU())
-                    })).catch((UU => {
-                      gU.current && mU({
-                        text: UU.errorMessageForUser ? pU(UU.errorMessageForUser, UU.errorMessageTranslationParams) : pU("thumbnail:failedToDeleteThumbnail"),
+                      }, !0), null !== BH.id && qH.current === BH.id && JH(null), ZH())
+                    })).catch((HH => {
+                      MH.current && FH({
+                        text: HH.errorMessageForUser ? uH(HH.errorMessageForUser, HH.errorMessageTranslationParams) : uH("thumbnail:failedToDeleteThumbnail"),
                         type: "error"
                       }, !0)
                     })))
-                  }(XU, UU),
-                  children: (0, BU.jsx)(EU.d, {
+                  }(BH, HH),
+                  children: (0, PH.jsx)(EH.c, {
                     name: "trash-can"
                   })
-                }), UU.approved && (0, BU.jsx)("div", {
+                }), HH.approved && (0, PH.jsx)("div", {
                   className: "ThumbnailGridItemLabel",
-                  children: UU.name
-                }), !UU.approved && (0, BU.jsx)("div", {
+                  children: HH.name
+                }), !HH.approved && (0, PH.jsx)("div", {
                   className: "ThumbnailUnapprovedIcon",
-                  children: (0, BU.jsx)(EU.d, {
+                  children: (0, PH.jsx)(EH.c, {
                     name: "hourglass-clock"
                   })
-                }), !UU.approved && (0, BU.jsxs)("div", {
+                }), !HH.approved && (0, PH.jsxs)("div", {
                   className: "ThumbnailGridItemLabel ThumbnailPendingLabel",
-                  children: [UU.name, (0, BU.jsx)("br", {}), pU("thumbnail:pendingApproval")]
+                  children: [HH.name, (0, PH.jsx)("br", {}), uH("thumbnail:pendingApproval")]
                 })]
-              }, null !== (XU = UU.id) && void 0 !== XU ? XU : UU.pendingKey)
-            })), (0, BU.jsxs)("div", {
-              className: IU()("ThumbnailGridItem ThumbnailUploadTile", {
-                ThumbnailUploadTileDisabled: !YU
+              }, null !== (BH = HH.id) && void 0 !== BH ? BH : HH.pendingKey)
+            })), (0, PH.jsxs)("div", {
+              className: YH()("ThumbnailGridItem ThumbnailUploadTile", {
+                ThumbnailUploadTileDisabled: !XH
               }),
               onClick: () => {
-                YU && function(UU) {
+                XH && function(HH) {
                   let {
-                    schematicId: XU,
-                    ownedThumbnailCount: zU,
-                    onThumbnailReady: cU,
-                    onClose: QU
-                  } = UU;
-                  yU.NotificationProvider.showCustomPopup({
-                    body: UU => (0, BU.jsx)(sU, {
-                      schematicId: XU,
-                      ownedThumbnailCount: zU,
-                      onClose: UU,
-                      onThumbnailReady: cU
+                    schematicId: BH,
+                    ownedThumbnailCount: LH,
+                    onThumbnailReady: AH,
+                    onClose: SH
+                  } = HH;
+                  rH.NotificationProvider.showCustomPopup({
+                    body: HH => (0, PH.jsx)(DH, {
+                      schematicId: BH,
+                      ownedThumbnailCount: LH,
+                      onClose: HH,
+                      onThumbnailReady: AH
                     }),
                     middleScreenPopupClassName: "SchematicThumbnailPopup",
-                    onClose: QU,
+                    onClose: SH,
                     unlockPointerKey: "schematicThumbnailUploaderPopup"
                   })
                 }({
-                  schematicId: AU.schematicId,
-                  ownedThumbnailCount: kU.length,
-                  onThumbnailReady: xU,
-                  onClose: NU
+                  schematicId: hH.schematicId,
+                  ownedThumbnailCount: xH.length,
+                  onThumbnailReady: dH,
+                  onClose: GH
                 })
               },
-              children: [(0, BU.jsx)(EU.d, {
+              children: [(0, PH.jsx)(EH.c, {
                 name: "plus"
-              }), (0, BU.jsx)("div", {
+              }), (0, PH.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: pU("thumbnail:uploadThumbnail")
+                children: uH("thumbnail:uploadThumbnail")
               })]
             })]
           })]
         })]
       })
     }
-    var UX = zU(2219),
-      XX = zU(5527),
-      zX = zU(5536),
-      cX = zU(5593);
+    var BB = LH(2227),
+      LB = LH(5473),
+      AB = LH(5476),
+      rB = LH(5517);
 
-    function yX(UU) {
+    function SB(HH) {
       let {
-        schematicData: XU,
-        setTexturePack: zU,
-        initializeTexturePack: yU,
-        publishFormEnabled: QU
-      } = UU;
+        schematicData: BH,
+        setTexturePack: LH,
+        initializeTexturePack: rH,
+        publishFormEnabled: SH
+      } = HH;
       const {
-        t: AU
-      } = (0, FU.I)(), [oU, DU] = (0, cU.useState)(null), [EU, YU] = (0, cU.useState)(null), [NU, pU] = (0, cU.useState)(!1), aU = (0, CU.b)(), tU = QU && !NU, gU = XU.customTexturePackKey;
+        t: hH
+      } = (0, tH.B)(), [zH, CH] = (0, AH.useState)(null), [EH, XH] = (0, AH.useState)(null), [GH, uH] = (0, AH.useState)(!1), QH = (0, oH.c)(), WH = SH && !GH, MH = BH.customTexturePackKey;
 
-      function kU(UU) {
-        var XU;
-        DU(UU.metaData.id), YU(null !== (XU = UU.metaData.fromFolderName) && void 0 !== XU ? XU : null), (UU.metaData.id !== UX.p.CUSTOM || UU.metaData.fromFolderName) && zU(UU)
+      function xH(HH) {
+        var BH;
+        CH(HH.metaData.id), XH(null !== (BH = HH.metaData.fromFolderName) && void 0 !== BH ? BH : null), (HH.metaData.id !== BB.l.CUSTOM || HH.metaData.fromFolderName) && LH(HH)
       }
-      return (0, cU.useEffect)((() => {
-        gU && (pU(!0), (0, XX.c)(gU).then((UU => {
-          var XU;
-          aU.current && (UU ? (DU(UU.metaData.id), YU(null !== (XU = UU.metaData.fromFolderName) && void 0 !== XU ? XU : null), yU(UU)) : console.error(`No texture pack at ${gU}`))
-        })).catch((UU => {
-          console.error("Error fetching texture pack: ", UU)
+      return (0, AH.useEffect)((() => {
+        MH && (uH(!0), (0, LB.b)(MH).then((HH => {
+          var BH;
+          QH.current && (HH ? (CH(HH.metaData.id), XH(null !== (BH = HH.metaData.fromFolderName) && void 0 !== BH ? BH : null), rH(HH)) : console.error(`No texture pack at ${MH}`))
+        })).catch((HH => {
+          console.error("Error fetching texture pack: ", HH)
         })).finally((() => {
-          pU(!1)
+          uH(!1)
         })))
-      }), [gU, yU, aU]), (0, BU.jsxs)("div", {
+      }), [MH, rH, QH]), (0, PH.jsxs)("div", {
         className: "BloxdForm TexturePackSection",
-        children: [(0, BU.jsx)("div", {
+        children: [(0, PH.jsx)("div", {
           className: "SectionTitle",
-          children: AU("customTexturePack:customTexturePack")
-        }), (0, BU.jsxs)("div", {
+          children: hH("customTexturePack:customTexturePack")
+        }), (0, PH.jsxs)("div", {
           className: "TexturePackList",
-          children: [(0, BU.jsx)("div", {
-            className: IU()("TexturePack", {
-              Selected: null === oU && !NU,
-              Disabled: !tU
+          children: [(0, PH.jsx)("div", {
+            className: YH()("TexturePack", {
+              Selected: null === zH && !GH,
+              Disabled: !WH
             }),
             onClick: () => {
-              tU && (DU(null), zU(null), YU(null))
+              WH && (CH(null), LH(null), XH(null))
             },
-            children: (0, BU.jsx)("div", {
+            children: (0, PH.jsx)("div", {
               className: "TexturePackName",
               children: "No Override"
             })
-          }), Object.values(UX.p).map((UU => (0, BU.jsx)(zX.h, {
-            id: UU,
-            isSelected: UU === oU,
-            setSelected: kU,
-            disabled: !tU
-          }, UU)))]
-        }), oU === UX.p.CUSTOM && (0, BU.jsx)(cX.b, {
-          folderName: EU,
-          onTexturePackUpdated: kU,
-          disabled: !tU,
+          }), Object.values(BB.l).map((HH => (0, PH.jsx)(AB.g, {
+            id: HH,
+            isSelected: HH === zH,
+            setSelected: xH,
+            disabled: !WH
+          }, HH)))]
+        }), zH === BB.l.CUSTOM && (0, PH.jsx)(rB.b, {
+          folderName: EH,
+          onTexturePackUpdated: xH,
+          disabled: !WH,
           maxFileSizeMb: 25,
           packOwner: "customGame"
         })]
       })
     }
-    var QX = zU(5632);
+    var hB = LH(5560);
 
-    function AX(UU) {
-      var XU;
+    function tB(HH) {
+      var BH;
       let {
-        gameCategory: zU,
-        setGameCategory: cU,
-        disabled: yU
-      } = UU;
-      const AU = null !== (XU = (0, pU.ib)(zU)) && void 0 !== XU ? XU : "other";
-      return (0, BU.jsxs)("div", {
+        gameCategory: LH,
+        setGameCategory: AH,
+        disabled: rH
+      } = HH;
+      const hH = null !== (BH = (0, uH.nb)(LH)) && void 0 !== BH ? BH : "other";
+      return (0, PH.jsxs)("div", {
         className: "GameCategoryPicker",
-        children: [(0, BU.jsx)(gU.g, {
+        children: [(0, PH.jsx)(MH.g, {
           label: "worldBuilder:gameCategoryGroup",
           className: "GameCategoryGroup",
-          disabled: yU,
-          children: (0, BU.jsx)(kU.d, {
-            options: pU.Y.map((UU => ({
-              value: UU,
-              label: pU.X[UU]
+          disabled: rH,
+          children: (0, PH.jsx)(xH.b, {
+            options: uH.bb.map((HH => ({
+              value: HH,
+              label: uH.ab[HH]
             }))),
-            value: AU,
-            onChange: UU => {
-              UU.value !== AU && cU(pU.S[UU.value][0])
+            value: hH,
+            onChange: HH => {
+              HH.value !== hH && AH(uH.X[HH.value][0])
             }
           })
-        }), (0, BU.jsx)(gU.g, {
+        }), (0, PH.jsx)(MH.g, {
           label: "worldBuilder:gameCategory",
           className: "GameCategory",
-          disabled: yU,
-          children: (0, BU.jsx)("div", {
+          disabled: rH,
+          children: (0, PH.jsx)("div", {
             className: "GameCategoryOptions",
-            children: pU.S[AU].map((UU => (0, BU.jsx)(QU.O, {
-              active: UU === zU,
+            children: uH.X[hH].map((HH => (0, PH.jsx)(SH.W, {
+              active: HH === LH,
               onClick: () => {
-                cU(UU)
+                AH(HH)
               },
-              children: (0, pU.gb)(UU)
-            }, UU)))
+              children: (0, uH.mb)(HH)
+            }, HH)))
           })
         })]
       })
     }
+    var zB = LH(5431);
 
-    function FX(UU) {
+    function CB(HH) {
       let {
-        editor: XU,
-        onClose: zU
-      } = UU;
+        editor: BH,
+        onClose: LH
+      } = HH;
       const {
-        t: cU
-      } = (0, FU.I)(), {
-        schematicData: yU,
-        updateSchematicData: QU,
-        publishFormEnabled: oU,
-        formEnabled: DU
-      } = XU;
-      return (0, BU.jsxs)(BU.Fragment, {
-        children: [(0, BU.jsxs)(ZU, {
+        t: AH
+      } = (0, tH.B)(), {
+        schematicData: rH,
+        updateSchematicData: SH,
+        publishFormEnabled: zH,
+        formEnabled: CH
+      } = BH;
+      return (0, PH.jsxs)(PH.Fragment, {
+        children: [(0, PH.jsxs)(TH, {
           icon: "pen-to-square",
-          title: cU("worldBuilder:basicsSection"),
-          disabled: !DU,
-          children: [(0, BU.jsx)(RU, {
-            label: cU("general:name"),
-            caption: cU("worldBuilder:schematicNameTagsHint"),
-            children: (0, BU.jsx)(AU.e, {
+          title: AH("worldBuilder:basicsSection"),
+          disabled: !CH,
+          children: [(0, PH.jsx)(UH, {
+            label: AH("general:name"),
+            caption: AH("worldBuilder:schematicNameTagsHint"),
+            children: (0, PH.jsx)(hH.e, {
               className: "SchematicPageName",
-              defaultValue: yU.name,
-              onValueChange: UU => QU("name", UU),
-              placeholderText: cU("worldBuilder:schematicNamePlaceholder"),
-              maxLength: YU.eb
+              defaultValue: rH.name,
+              onValueChange: HH => SH("name", HH),
+              placeholderText: AH("worldBuilder:schematicNamePlaceholder"),
+              maxLength: XH.qb
             })
-          }), (0, BU.jsx)(RU, {
-            label: cU("general:description"),
-            children: (0, BU.jsx)(AU.e, {
+          }), (0, PH.jsx)(UH, {
+            label: AH("general:description"),
+            children: (0, PH.jsx)(hH.e, {
               className: "SchematicPageDescription",
               useTextarea: !0,
-              defaultValue: yU.description,
-              onValueChange: UU => QU("description", UU),
-              placeholderText: cU("worldBuilder:schematicDescriptionPlaceholder"),
-              maxLength: YU.cb
+              defaultValue: rH.description,
+              onValueChange: HH => SH("description", HH),
+              placeholderText: AH("worldBuilder:schematicDescriptionPlaceholder"),
+              maxLength: XH.nb
             })
-          }), (0, BU.jsx)(AX, {
-            gameCategory: yU.gameCategory,
-            setGameCategory: UU => QU("gameCategory", UU),
-            disabled: !oU
-          }), !0 === yU.gamePublished && (0, BU.jsx)(hU, {
-            schematicData: yU,
-            updateSchematicData: QU,
-            publishFormEnabled: oU,
+          }), (0, PH.jsx)(tB, {
+            gameCategory: rH.gameCategory,
+            setGameCategory: HH => SH("gameCategory", HH),
+            disabled: !zH
+          }), !0 === rH.gamePublished && (0, PH.jsx)(HB, {
+            schematicData: rH,
+            updateSchematicData: SH,
+            publishFormEnabled: zH,
             onClose: function() {
-              null === zU || void 0 === zU || zU()
+              null === LH || void 0 === LH || LH()
             }
-          })]
-        }), (0, BU.jsx)(WU, {
-          schematicData: yU,
-          updateSchematicData: QU,
-          publishFormEnabled: oU,
-          formEnabled: DU
-        }), !0 === yU.gamePublished && (0, BU.jsx)(ZU, {
+          }), (0, PH.jsx)(zB.e, {})]
+        }), (0, PH.jsx)(OH, {
+          schematicData: rH,
+          updateSchematicData: SH,
+          publishFormEnabled: zH,
+          formEnabled: CH
+        }), !0 === rH.gamePublished && (0, PH.jsx)(TH, {
           icon: "palette",
-          title: cU("worldBuilder:texturePackSection"),
-          disabled: !DU,
-          children: (0, BU.jsx)(yX, {
-            schematicData: yU,
-            setTexturePack: XU.setTexturePack,
-            initializeTexturePack: XU.initializeTexturePack,
-            publishFormEnabled: oU
+          title: AH("worldBuilder:texturePackSection"),
+          disabled: !CH,
+          children: (0, PH.jsx)(SB, {
+            schematicData: rH,
+            setTexturePack: BH.setTexturePack,
+            initializeTexturePack: BH.initializeTexturePack,
+            publishFormEnabled: zH
           })
         })]
       })
     }
 
-    function oX(UU) {
+    function EB(HH) {
       let {
-        editor: XU
-      } = UU;
+        editor: BH
+      } = HH;
       const {
-        t: zU
-      } = (0, FU.I)(), {
-        schematicData: cU,
-        formEnabled: yU,
-        hasUnsavedChanges: AU,
-        publishSuspendedUntil: YU
-      } = XU, NU = (0, rU.l)(), IU = !0 === cU.gamePublished ? YU : null, pU = yU && AU && null === IU;
-      return (0, BU.jsxs)("footer", {
+        t: LH
+      } = (0, tH.B)(), {
+        schematicData: AH,
+        formEnabled: rH,
+        hasUnsavedChanges: hH,
+        publishSuspendedUntil: XH
+      } = BH, GH = (0, cH.g)(), YH = !0 === AH.gamePublished ? XH : null, uH = rH && hH && null === YH;
+      return (0, PH.jsxs)("footer", {
         className: "SchematicPageFooter",
-        children: [null !== IU && (0, BU.jsx)("div", {
+        children: [null !== YH && (0, PH.jsx)("div", {
           className: "SchematicPageFooterNotice",
-          children: NU(IU)
-        }), yU && AU && null === IU && (0, BU.jsxs)("div", {
+          children: GH(YH)
+        }), rH && hH && null === YH && (0, PH.jsxs)("div", {
           className: "SchematicPageFooterStatus",
-          children: [(0, BU.jsx)("span", {
+          children: [(0, PH.jsx)("span", {
             className: "SchematicPageFooterStatusDot"
-          }), zU("worldBuilder:unsavedChanges")]
-        }), (0, BU.jsx)(DU.d, {
-          tooltipInner: (0, BU.jsx)("div", {
+          }), LH("worldBuilder:unsavedChanges")]
+        }), (0, PH.jsx)(CH.g, {
+          tooltipInner: (0, PH.jsx)("div", {
             className: "SaveButtonTooltip",
-            children: zU(yU && !AU ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
+            children: LH(rH && !hH ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
           }),
-          children: (0, BU.jsxs)(QU.f, {
+          children: (0, PH.jsxs)(SH.i, {
             className: "SaveChangesButton",
-            onClick: () => XU.saveSchematic(cU.gamePublished),
-            disabled: !pU,
-            children: [(0, BU.jsxs)("span", {
-              className: yU ? "" : "SaveChangesButtonBodyHidden",
-              children: [(0, BU.jsx)(EU.d, {
+            onClick: () => BH.saveSchematic(AH.gamePublished),
+            disabled: !uH,
+            children: [(0, PH.jsxs)("span", {
+              className: rH ? "" : "SaveChangesButtonBodyHidden",
+              children: [(0, PH.jsx)(EH.c, {
                 name: "wrench"
-              }), " ", zU("worldBuilder:saveChanges")]
-            }), !yU && (0, BU.jsx)(oU.b, {})]
+              }), " ", LH("worldBuilder:saveChanges")]
+            }), !rH && (0, PH.jsx)(zH.d, {})]
           })
         })]
       })
     }
 
-    function DX(UU) {
+    function XB(HH) {
       let {
-        schematic: XU,
-        onSchematicUpdate: zU,
-        onClose: yU,
-        inSourceWorld: AU
-      } = UU;
+        schematic: BH,
+        onSchematicUpdate: LH,
+        onClose: rH,
+        inSourceWorld: hH
+      } = HH;
       const {
-        t: oU
-      } = (0, FU.I)();
+        t: zH
+      } = (0, tH.B)();
 
-      function DU() {
-        null === yU || void 0 === yU || yU()
+      function CH() {
+        null === rH || void 0 === rH || rH()
       }
-      const EU = (0, QX.b)(XU, {
-        onNavigateAway: DU,
-        inSourceWorld: AU
+      const EH = (0, hB.d)(BH, {
+        onNavigateAway: CH,
+        inSourceWorld: hH
       });
-      return (0, cU.useEffect)((() => {
-        null === zU || void 0 === zU || zU(EU.schematicData)
-      }), [EU.schematicData, zU]), (0, BU.jsxs)("div", {
+      return (0, AH.useEffect)((() => {
+        null === LH || void 0 === LH || LH(EH.schematicData)
+      }), [EH.schematicData, LH]), (0, PH.jsxs)("div", {
         className: "SchematicPage SchematicPagePopupVariant",
-        children: [(0, BU.jsxs)("div", {
+        children: [(0, PH.jsxs)("div", {
           className: "SchematicPageBody",
-          children: [(0, BU.jsx)(QU.e, {
-            onClick: DU,
-            children: oU("worldBuilder:back")
-          }), (0, BU.jsx)(ZU, {
+          children: [(0, PH.jsx)(SH.e, {
+            onClick: CH,
+            children: zH("worldBuilder:back")
+          }), (0, PH.jsx)(TH, {
             icon: "rocket-launch",
-            title: oU("worldBuilder:actionsSection"),
-            disabled: !EU.formEnabled,
-            children: (0, BU.jsx)(dU.e, {
-              editor: EU
+            title: zH("worldBuilder:actionsSection"),
+            disabled: !EH.formEnabled,
+            children: (0, PH.jsx)(bH.c, {
+              editor: EH
             })
-          }), (0, BU.jsx)(FX, {
-            editor: EU,
-            onClose: DU
+          }), (0, PH.jsx)(CB, {
+            editor: EH,
+            onClose: CH
           })]
-        }), (0, BU.jsx)(oX, {
-          editor: EU
+        }), (0, PH.jsx)(EB, {
+          editor: EH
         })]
       })
     }
 
-    function EX(UU) {
+    function GB(HH) {
       let {
-        schematic: XU,
-        onSchematicUpdate: zU,
-        onClose: cU,
-        inSourceWorld: QU
-      } = UU;
-      yU.NotificationProvider.showCustomPopup({
-        body: UU => (0, BU.jsx)(DX, {
-          schematic: XU,
-          onSchematicUpdate: zU,
-          onClose: UU,
-          inSourceWorld: QU
+        schematic: BH,
+        onSchematicUpdate: LH,
+        onClose: AH,
+        inSourceWorld: SH
+      } = HH;
+      rH.NotificationProvider.showCustomPopup({
+        body: HH => (0, PH.jsx)(XB, {
+          schematic: BH,
+          onSchematicUpdate: LH,
+          onClose: HH,
+          inSourceWorld: SH
         }),
         middleScreenPopupClassName: "SchematicPopup",
-        onClose: cU,
+        onClose: AH,
         unlockPointerKey: "schematicPagePopup"
       })
     }
   },
-  5478: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => NU
+  5426: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => YH
     });
-    var cU = zU(1106),
-      yU = zU.n(cU),
-      QU = zU(1193),
-      AU = zU(1390),
-      FU = zU(1494),
-      oU = zU(1420),
-      DU = zU(1384),
-      EU = zU(5487),
-      YU = zU(1305);
+    var AH = LH(1038),
+      rH = LH.n(AH),
+      SH = LH(1123),
+      hH = LH(1315),
+      tH = LH(1455),
+      zH = LH(1365),
+      CH = LH(1313),
+      EH = LH(5431),
+      XH = LH(5438),
+      GH = LH(1225);
 
-    function NU(UU) {
+    function YH(HH) {
       let {
-        editor: XU,
-        className: zU,
-        publishRefusal: cU = null
-      } = UU;
+        editor: BH,
+        className: LH,
+        publishRefusal: AH = null
+      } = HH;
       const {
-        t: NU
-      } = (0, QU.I)(), {
-        schematicData: IU,
-        formEnabled: pU,
-        publishFormEnabled: aU,
-        publishSuspendedUntil: tU
-      } = XU, gU = !pU || !aU, kU = (0, EU.l)();
-      return (0, YU.jsxs)("div", {
-        className: yU()("PublishButtonContainer", zU),
-        children: [XU.canEditSourceWorld && (0, YU.jsxs)(FU.f, {
-          onClick: XU.editSourceWorld,
-          disabled: gU,
-          children: [(0, YU.jsx)(AU.d, {
+        t: YH
+      } = (0, SH.B)(), {
+        schematicData: uH,
+        formEnabled: QH,
+        publishFormEnabled: WH,
+        publishSuspendedUntil: MH
+      } = BH, xH = !QH || !WH, vH = (0, XH.g)();
+      return (0, GH.jsxs)("div", {
+        className: rH()("PublishButtonContainer", LH),
+        children: [BH.canEditSourceWorld && (0, GH.jsxs)(tH.i, {
+          onClick: BH.editSourceWorld,
+          disabled: xH,
+          children: [(0, GH.jsx)(hH.c, {
             name: "edit"
-          }), " ", NU("worldBuilder:editSourceWorld")]
-        }), !IU.gamePublished && (0, YU.jsx)(oU.d, {
-          tooltipInner: (0, YU.jsx)("div", {
+          }), " ", YH("worldBuilder:editSourceWorld")]
+        }), !uH.gamePublished && (0, GH.jsx)(zH.g, {
+          tooltipInner: (0, GH.jsx)("div", {
             className: "PublishButtonTooltip",
-            children: null !== cU && void 0 !== cU ? cU : NU("worldBuilder:publishAsGameDescription")
+            children: null !== AH && void 0 !== AH ? AH : YH("worldBuilder:publishAsGameDescription")
           }),
-          children: (0, YU.jsxs)(FU.l, {
-            onClick: () => XU.saveSchematic(!0),
-            disabled: gU || null !== cU || null !== tU,
-            children: [(0, YU.jsx)(AU.d, {
+          children: (0, GH.jsxs)(tH.u, {
+            onClick: () => BH.saveSchematic(!0),
+            disabled: xH || null !== AH || null !== MH,
+            children: [(0, GH.jsx)(hH.c, {
               name: "rocket-launch"
-            }), " ", NU("worldBuilder:publishAsGame"), " ", (0, YU.jsx)(AU.d, {
+            }), " ", YH("worldBuilder:publishAsGame"), " ", (0, GH.jsx)(hH.c, {
               name: "info-circle"
             })]
           })
-        }), !0 === IU.gamePublished && (0, YU.jsxs)(YU.Fragment, {
-          children: [(0, YU.jsx)(oU.d, {
-            tooltipInner: (0, YU.jsx)("div", {
+        }), !0 === uH.gamePublished && (0, GH.jsxs)(GH.Fragment, {
+          children: [(0, GH.jsx)(zH.g, {
+            tooltipInner: (0, GH.jsx)("div", {
               className: "PublishButtonTooltip",
-              children: NU("worldBuilder:unpublishAsGameDescription")
+              children: YH("worldBuilder:unpublishAsGameDescription")
             }),
-            children: (0, YU.jsxs)(FU.G, {
-              onClick: XU.unpublishSchematic,
-              disabled: gU,
-              children: [(0, YU.jsx)(AU.d, {
+            children: (0, GH.jsxs)(tH.O, {
+              onClick: BH.unpublishSchematic,
+              disabled: xH,
+              children: [(0, GH.jsx)(hH.c, {
                 name: "rocket-launch"
-              }), " ", NU("worldBuilder:unpublishAsGame"), " ", (0, YU.jsx)(AU.d, {
+              }), " ", YH("worldBuilder:unpublishAsGame"), " ", (0, GH.jsx)(hH.c, {
                 name: "info-circle"
               })]
             })
-          }), (0, YU.jsxs)(FU.f, {
-            onClick: XU.playGame,
-            disabled: gU,
-            children: [(0, YU.jsx)(AU.d, {
+          }), (0, GH.jsxs)(tH.i, {
+            onClick: BH.playGame,
+            disabled: xH,
+            children: [(0, GH.jsx)(hH.c, {
               name: "joystick"
-            }), " ", NU("general:playGame")]
+            }), " ", YH("general:playGame")]
           })]
-        }), !pU && (0, YU.jsx)(DU.b, {
+        }), !QH && (0, GH.jsx)(CH.d, {
           loaderType: "Secondary"
-        }), !IU.gamePublished && null !== tU && (0, YU.jsx)("div", {
+        }), !uH.gamePublished && null !== MH && (0, GH.jsx)("div", {
           className: "PublishSuspendedNotice",
-          children: kU(tU)
+          children: vH(MH)
+        }), BH.askingPublishingPolicy && (0, GH.jsx)(EH.c, {
+          onAnswer: BH.answerPublishingPolicy
         })]
       })
     }
   },
-  5527: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => yU
+  5473: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => rH
     });
-    var cU = zU(1203);
-    async function yU(UU) {
-      const XU = await fetch(`${cU.clientSideServerUrls.s3Url}/${UU}`, {
+    var AH = LH(1131);
+    async function rH(HH) {
+      const BH = await fetch(`${AH.clientSideServerUrls.s3Url}/${HH}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === XU.status || 403 === XU.status) return null;
-      if (!XU.ok) throw new Error(`Failed to download the texture pack (${XU.status})`);
-      return await XU.json()
+      if (404 === BH.status || 403 === BH.status) return null;
+      if (!BH.ok) throw new Error(`Failed to download the texture pack (${BH.status})`);
+      return await BH.json()
     }
   },
-  5487: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => FU,
-      h: () => oU,
-      l: () => DU
+  5438: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => tH,
+      d: () => zH,
+      g: () => CH
     });
-    var cU = zU(61),
-      yU = zU(1545),
-      QU = zU(1193),
-      AU = zU(1129);
+    var AH = LH(45),
+      rH = LH(1502),
+      SH = LH(1123),
+      hH = LH(1061);
 
-    function FU() {
-      let UU = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+    function tH() {
+      let HH = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
       const {
-        userContext: XU
-      } = (0, AU.d)(), [zU, QU] = (0, cU.useState)((() => ({
-        loading: UU && XU.isLoggedIn(),
+        userContext: BH
+      } = (0, hH.e)(), [LH, SH] = (0, AH.useState)((() => ({
+        loading: HH && BH.isLoggedIn(),
         eligibility: null
       })));
-      if ((0, cU.useEffect)((() => {
-          if (!UU || !XU.isLoggedIn()) return void QU({
+      if ((0, AH.useEffect)((() => {
+          if (!HH || !BH.isLoggedIn()) return void SH({
             loading: !1,
             eligibility: null
           });
-          let zU = !1;
-          return yU.c.getCreatorEligibility(XU).then((UU => {
-            zU || QU({
+          let LH = !1;
+          return rH.d.getCreatorEligibility(BH).then((HH => {
+            LH || SH({
               loading: !1,
-              eligibility: UU
+              eligibility: HH
             })
-          })).catch((UU => {
-            console.warn("Failed to load creator eligibility", UU), zU || QU({
+          })).catch((HH => {
+            console.warn("Failed to load creator eligibility", HH), LH || SH({
               loading: !1,
               eligibility: null
             })
           })), () => {
-            zU = !0
+            LH = !0
           }
-        }), [XU, UU]), null === zU.eligibility) return zU;
-      const FU = Date.now(),
+        }), [BH, HH]), null === LH.eligibility) return LH;
+      const tH = Date.now(),
         {
-          thumbnailUploadWait: oU,
-          publishSuspendedUntil: DU
-        } = zU.eligibility;
+          thumbnailUploadWait: zH,
+          publishSuspendedUntil: CH
+        } = LH.eligibility;
       return {
-        loading: zU.loading,
+        loading: LH.loading,
         eligibility: {
-          thumbnailUploadWait: null !== oU && oU.until > FU ? oU : null,
-          publishSuspendedUntil: null !== DU && DU > FU ? DU : null
+          thumbnailUploadWait: null !== zH && zH.until > tH ? zH : null,
+          publishSuspendedUntil: null !== CH && CH > tH ? CH : null
         }
       }
     }
 
-    function oU() {
+    function zH() {
       const {
-        t: UU,
-        selectedLanguage: XU
-      } = (0, QU.I)();
-      return (zU, cU) => UU(zU, {
-        date: (0, QU.f)(XU.code, zU, cU, {
+        t: HH,
+        selectedLanguage: BH
+      } = (0, SH.B)();
+      return (LH, AH) => HH(LH, {
+        date: (0, SH.h)(BH.code, LH, AH, {
           dateStyle: "medium",
           timeStyle: "short"
         })
       })
     }
 
-    function DU() {
+    function CH() {
       const {
-        t: UU,
-        selectedLanguage: XU
-      } = (0, QU.I)();
-      return zU => {
-        const cU = "worldBuilder:publishSuspended";
-        return UU(cU, {
-          date: (0, QU.f)(XU.code, cU, zU, {
+        t: HH,
+        selectedLanguage: BH
+      } = (0, SH.B)();
+      return LH => {
+        const AH = "worldBuilder:publishSuspended";
+        return HH(AH, {
+          date: (0, SH.h)(BH.code, AH, LH, {
             dateStyle: "medium",
             timeStyle: "short",
             timeZone: "UTC"
@@ -1698,118 +1826,120 @@ export const modules = {
       }
     }
   },
-  5632: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => kU
+  5560: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => vH
     });
-    var cU = zU(61),
-      yU = zU(1376),
-      QU = zU(1079),
-      AU = zU(173),
-      FU = zU(1596),
-      oU = zU(27),
-      DU = zU(2005),
-      EU = zU(1545),
-      YU = zU(5026),
-      NU = zU(1410),
-      IU = zU(1936),
-      pU = zU(1129),
-      aU = zU(1568),
-      tU = zU(5487);
+    var AH = LH(45),
+      rH = LH(1306),
+      SH = LH(1005),
+      hH = LH(152),
+      tH = LH(2363),
+      zH = LH(1543),
+      CH = LH(15),
+      EH = LH(1998),
+      XH = LH(1502),
+      GH = LH(4991),
+      YH = LH(1352),
+      uH = LH(1922),
+      QH = LH(1061),
+      WH = LH(1509),
+      MH = LH(5438);
 
-    function gU(UU, XU) {
+    function xH(HH, BH) {
       return {
-        schematicId: UU.schematicId,
-        name: UU.name,
-        description: UU.description,
-        gamePublished: XU,
-        gameCategory: UU.gameCategory,
-        defaultGamemode: UU.defaultGamemode,
-        voidDeathHeight: UU.voidDeathHeight,
-        disableKeepInventory: UU.disableKeepInventory,
-        disableTpRequests: UU.disableTpRequests,
-        disableLobbySpawn: UU.disableLobbySpawn,
-        disableMobs: UU.disableMobs,
-        disableSpawnProtection: UU.disableSpawnProtection,
-        disableFallDamage: UU.disableFallDamage,
-        worldBorder: UU.worldBorder,
-        hideLobbyCode: UU.hideLobbyCode,
-        enableSmpMarketplace: UU.enableSmpMarketplace,
-        enableSurvivalGuns: UU.enableSurvivalGuns,
-        enableSpawnReset: UU.enableSpawnReset,
-        enableDayNight: UU.enableDayNight,
-        persistWorld: UU.persistWorld,
-        persistInventory: UU.persistInventory
+        schematicId: HH.schematicId,
+        name: HH.name,
+        description: HH.description,
+        gamePublished: BH,
+        gameCategory: HH.gameCategory,
+        defaultGamemode: HH.defaultGamemode,
+        voidDeathHeight: HH.voidDeathHeight,
+        disableKeepInventory: HH.disableKeepInventory,
+        disableTpRequests: HH.disableTpRequests,
+        disableLobbySpawn: HH.disableLobbySpawn,
+        disableMobs: HH.disableMobs,
+        disableSpawnProtection: HH.disableSpawnProtection,
+        disableFallDamage: HH.disableFallDamage,
+        worldBorder: HH.worldBorder,
+        hideLobbyCode: HH.hideLobbyCode,
+        enableSmpMarketplace: HH.enableSmpMarketplace,
+        enableSurvivalGuns: HH.enableSurvivalGuns,
+        enableSpawnReset: HH.enableSpawnReset,
+        enableDayNight: HH.enableDayNight,
+        persistWorld: HH.persistWorld,
+        persistInventory: HH.persistInventory
       }
     }
 
-    function kU(UU) {
-      var XU, zU;
+    function vH(HH) {
+      var BH, LH;
       let {
-        onNavigateAway: kU,
-        inSourceWorld: GU = !1,
-        canManage: BU = !0
+        onNavigateAway: vH,
+        inSourceWorld: PH = !1,
+        canManage: TH = !0
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
       const {
-        userContext: ZU
-      } = (0, pU.d)(), RU = (0, aU.useNavigatePreserveSearch)(), [PU, WU] = (0, cU.useState)({
-        ...UU
-      }), [dU, LU] = (0, cU.useState)("Enter"), [eU, CU] = (0, cU.useState)(void 0), wU = (0, cU.useRef)(gU(UU, UU.gamePublished)), qU = (0, cU.useRef)(void 0), OU = "Enter" === dU, SU = null !== (XU = null === (zU = (0, tU.e)(BU).eligibility) || void 0 === zU ? void 0 : zU.publishSuspendedUntil) && void 0 !== XU ? XU : null, rU = ZU.playerHasRank("developer") || ZU.playerHasRank("admin") || "Enter" === dU && !1 !== PU.schematicContainsSpawnBlock, uU = void 0 !== eU && eU !== qU.current || JSON.stringify(gU(PU, PU.gamePublished)) !== JSON.stringify(wU.current);
+        userContext: UH
+      } = (0, QH.e)(), VH = (0, WH.useNavigatePreserveSearch)(), [OH, bH] = (0, AH.useState)({
+        ...HH
+      }), [kH, mH] = (0, AH.useState)("Enter"), [oH, IH] = (0, AH.useState)(void 0), [fH, lH] = (0, AH.useState)(!1), KH = (0, AH.useRef)(xH(HH, HH.gamePublished)), cH = (0, AH.useRef)(void 0), eH = "Enter" === kH, qH = null !== (BH = null === (LH = (0, MH.c)(TH).eligibility) || void 0 === LH ? void 0 : LH.publishSuspendedUntil) && void 0 !== BH ? BH : null, gH = UH.playerHasRank("developer") || UH.playerHasRank("admin") || "Enter" === kH && !1 !== OH.schematicContainsSpawnBlock, NH = void 0 !== oH && oH !== cH.current || JSON.stringify(xH(OH, OH.gamePublished)) !== JSON.stringify(KH.current);
 
-      function fU(UU, XU) {
-        WU((zU => ({
-          ...zU,
-          [UU]: XU
+      function RH(HH, BH) {
+        bH((LH => ({
+          ...LH,
+          [HH]: BH
         })))
       }
-      const iU = (0, cU.useCallback)((UU => {
-        qU.current = UU, CU(UU)
+      const jH = (0, AH.useCallback)((HH => {
+        cH.current = HH, IH(HH)
       }), []);
 
-      function HU() {
-        return (0, FU.A)((0, QU.w)(PU.schematicId), PU)
+      function nH() {
+        return (0, zH.z)((0, SH.t)(OH.schematicId), OH)
       }
 
-      function MU(UU) {
-        LU("Loading");
-        const XU = gU(PU, UU),
-          zU = eU !== qU.current ? eU : void 0;
-        EU.c.updateSchematic(ZU, XU, zU).then((zU => {
+      function FH(HH, BH) {
+        mH("Loading");
+        const LH = xH(OH, HH),
+          AH = oH !== cH.current ? oH : void 0;
+        XH.d.updateSchematic(UH, LH, AH, BH).then((BH => {
           let {
-            customTexturePackKey: cU
-          } = zU;
-          LU("Success"), fU("customTexturePackKey", cU), wU.current = XU, qU.current = void 0, CU(void 0), !UU || PU.gamePublished || kU || IU.f.showGamePublished(PU.name, HU()), setTimeout((() => {
-            fU("gamePublished", UU), LU("Enter")
+            customTexturePackKey: AH
+          } = BH;
+          mH("Success"), RH("customTexturePackKey", AH), KH.current = LH, cH.current = void 0, IH(void 0), !HH || OH.gamePublished || vH || uH.h.showGamePublished(OH.name, nH()), setTimeout((() => {
+            RH("gamePublished", HH), mH("Enter")
           }), 1e3)
-        })).catch((UU => {
-          var XU;
-          (console.error("Failed to save schematic:", UU), LU("Error"), UU instanceof AU.e && UU.errorMessageForUser) && NU.NotificationProvider.showAlertPopup({
+        })).catch((HH => {
+          if (HH instanceof hH.e && HH.errorMessageForUser === tH.C && void 0 === BH) return mH("Enter"), void lH(!0);
+          var LH;
+          (console.error("Failed to save schematic:", HH), mH("Error"), HH instanceof hH.e && HH.errorMessageForUser) && YH.NotificationProvider.showAlertPopup({
             title: "worldBuilder:changesNotSaved",
-            subtitle: UU.errorMessageForUser,
+            subtitle: HH.errorMessageForUser,
             textOpts: {
-              subtitle: null !== (XU = UU.errorMessageTranslationParams) && void 0 !== XU ? XU : void 0
+              subtitle: null !== (LH = HH.errorMessageTranslationParams) && void 0 !== LH ? LH : void 0
             },
             confirmText: "general:ok"
           });
           setTimeout((() => {
-            LU("Enter")
+            mH("Enter")
           }), 1e3)
         }))
       }
       return {
-        schematicData: PU,
-        updateSchematicData: fU,
-        setTexturePack: CU,
-        initializeTexturePack: iU,
-        updateState: dU,
-        formEnabled: OU,
-        publishFormEnabled: rU,
-        hasUnsavedChanges: uU,
-        publishSuspendedUntil: SU,
-        canEditSourceWorld: !GU,
-        saveSchematic: MU,
+        schematicData: OH,
+        updateSchematicData: RH,
+        setTexturePack: IH,
+        initializeTexturePack: jH,
+        updateState: kH,
+        formEnabled: eH,
+        publishFormEnabled: gH,
+        hasUnsavedChanges: NH,
+        publishSuspendedUntil: qH,
+        canEditSourceWorld: !PH,
+        saveSchematic: FH,
         unpublishSchematic: function() {
-          NU.NotificationProvider.showPromptPopup({
+          YH.NotificationProvider.showPromptPopup({
             icon: "rocket-launch",
             title: "worldBuilder:unpublishAsGameConfirmTitle",
             subtitle: "worldBuilder:unpublishAsGameConfirmSubtitle",
@@ -1817,30 +1947,34 @@ export const modules = {
             cancelText: "general:cancel",
             destructive: !0,
             unlockPointerKey: "unpublishGamePrompt"
-          }).getResult().then((UU => {
-            !0 === UU && MU(!1)
+          }).getResult().then((HH => {
+            !0 === HH && FH(!1)
           }))
         },
+        askingPublishingPolicy: fH,
+        answerPublishingPolicy: function(HH) {
+          lH(!1), HH && FH(!0, tH.D)
+        },
         editSourceWorld: function() {
-          LU("Loading"), YU.d.getSourceWorld(PU.schematicId).then((UU => {
-            DU.gameBridge.send("leaveGame", {
+          mH("Loading"), GH.e.getSourceWorld(OH.schematicId).then((HH => {
+            EH.gameBridge.send("leaveGame", {
               reloadPath: "/"
-            }), (0, oU.n)("other"), RU((0, yU.b)("classic", UU)), null === kU || void 0 === kU || kU()
-          })).catch((UU => {
-            console.error("Failed to get source world:", UU), LU("Error"), setTimeout((() => {
-              LU("Enter")
+            }), (0, CH.l)("other"), VH((0, rH.b)("classic", HH)), null === vH || void 0 === vH || vH()
+          })).catch((HH => {
+            console.error("Failed to get source world:", HH), mH("Error"), setTimeout((() => {
+              mH("Enter")
             }), 1e3)
           }))
         },
         playGame: function() {
-          DU.gameBridge.send("leaveGame", {
+          EH.gameBridge.send("leaveGame", {
             reloadPath: "/"
-          }), RU(HU()), null === kU || void 0 === kU || kU()
+          }), VH(nH()), null === vH || void 0 === vH || vH()
         }
       }
     }
   },
-  5465: () => {}
+  5410: () => {}
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

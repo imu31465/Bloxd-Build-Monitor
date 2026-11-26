@@ -1,330 +1,465 @@
 export const id = 144;
 export const ids = [144];
 export const modules = {
-  44448: (UU, XU, zU) => {
-    zU.d(XU, {
-      startHarnessShaderPack: () => YU
+  42378: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      ShaderPackCategory: () => lH
     });
-    var cU = zU(7158),
-      yU = zU(5608),
-      QU = zU(7233),
-      AU = zU(7209),
-      FU = zU(5603),
-      oU = zU(40071),
-      DU = zU(7219),
-      EU = zU(7242);
-    async function YU(UU, XU) {
+    var AH = LH(45),
+      rH = LH(1520),
+      SH = LH(1455),
+      hH = LH(1509),
+      tH = LH(1123),
+      zH = LH(81),
+      CH = LH(15),
+      EH = LH(1659),
+      XH = LH(7165),
+      GH = LH(293),
+      YH = LH(7201),
+      uH = LH(7196),
+      QH = LH(7209),
+      WH = LH(7111),
+      MH = LH(5478),
+      xH = LH(5520),
+      vH = LH(7161),
+      PH = LH(3835);
+
+    function TH(HH, BH) {
+      const LH = (0, YH.storedPackOutcome)(HH, BH);
+      return "none" !== LH.kind || "noCompiler" === LH.reason
+    }
+    var UH = LH(1038),
+      VH = LH.n(UH),
+      OH = LH(5523),
+      bH = LH(1315),
+      kH = LH(7155),
+      mH = LH(1225);
+    const oH = {
+      ready: "shaderPack:statusReady",
+      readyAfterReload: "shaderPack:statusReadyAfterReload",
+      noWebGpu: "shaderPack:statusNoWebGpu",
+      offNoWebGpu: "shaderPack:statusOffNoWebGpu",
+      failed: "shaderPack:statusFailed",
+      failedRecheck: "shaderPack:statusFailedRecheck",
+      wrongApiVersion: "shaderPack:statusWrongApiVersion",
+      checking: "shaderPack:statusChecking",
+      unchecked: "shaderPack:statusUnchecked",
+      noCompiler: "shaderPack:statusNoCompiler"
+    };
+
+    function IH(HH, BH) {
+      return "failedRecheck" === HH && BH.listing ? "shaderPack:statusFailedRecheckListed" : oH[HH]
+    }
+
+    function fH(HH) {
+      let {
+        stored: BH,
+        checking: LH,
+        webGpuUsable: AH,
+        changePending: rH,
+        compiler: SH,
+        t: hH
+      } = HH;
+      const tH = function(HH, BH, LH, AH, rH) {
+          const SH = (0, YH.storedPackOutcome)(HH, rH);
+          return "none" === SH.kind ? "noCompiler" === SH.reason ? BH ? "checking" : "noCompiler" : "otherApiVersion" === SH.reason ? "wrongApiVersion" : "failed" : (0, PH.i)() ? "harnessBuild" : "blocked" === SH.kind ? (0, YH.shaderPackNeedsCheck)(HH, rH) ? BH ? "checking" : !1 === LH ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === LH ? "offNoWebGpu" : AH ? "readyAfterReload" : "ready"
+        }(BH, LH, AH, rH, SH),
+        zH = "failed" === tH || "failedRecheck" === tH,
+        CH = zH || "wrongApiVersion" === tH || "noCompiler" === tH,
+        EH = "ready" === tH || "readyAfterReload" === tH ? BH.validation.offInStrict : [];
+      return (0, mH.jsxs)(mH.Fragment, {
+        children: [(0, mH.jsxs)("div", {
+          className: VH()("ShaderPackStatus", {
+            Ready: "ready" === tH,
+            Failed: CH
+          }),
+          children: ["ready" === tH && (0, mH.jsx)(bH.c, {
+            name: "circle-check"
+          }), CH && (0, mH.jsx)(bH.c, {
+            name: "triangle-exclamation"
+          }), "harnessBuild" === tH ? (0, PH.e)() : hH(IH(tH, BH), {
+            packVersion: String(BH.manifest.apiVersion),
+            version: String(OH.b)
+          })]
+        }), zH && (0, mH.jsx)(kH.d, {
+          diagnostics: BH.validation.errors,
+          more: BH.validation.moreErrors,
+          t: hH
+        }), EH.length > 0 && (0, mH.jsxs)(mH.Fragment, {
+          children: [(0, mH.jsxs)("div", {
+            className: "ShaderPackStatus OffInStrict",
+            children: [(0, mH.jsx)(bH.c, {
+              name: "triangle-exclamation"
+            }), hH("shaderPack:offInStrict")]
+          }), (0, mH.jsx)(kH.d, {
+            diagnostics: EH,
+            t: hH
+          })]
+        })]
+      })
+    }
+
+    function lH(HH) {
+      let {
+        setApplySettingsCallback: BH
+      } = HH;
       const {
-        stored: zU,
-        info: YU
-      } = await async function(UU, XU) {
-        const zU = await async function(UU) {
-          const XU = await fetch(UU);
-          if (!XU.ok) throw new Error(`Couldn't fetch the shader pack at ${UU}: HTTP ${XU.status}`);
-          const zU = await XU.json();
-          if (!(0, cU.i)(zU)) throw new Error(`The shader pack at ${UU} isn't a shader pack listing source`);
-          return zU
-        }(UU);
-        if (!(0, FU.i)(zU.apiVersion)) throw new Error(`The pack is for shader pack API version ${zU.apiVersion}; this build runs version ${FU.d}`);
-        const oU = {
-            manifest: {
-              apiVersion: zU.apiVersion,
-              name: zU.name,
-              author: zU.author,
-              description: null,
-              keepCircleShadows: !0 === zU.keepCircleShadows
-            },
-            files: zU.files,
-            validation: null
-          },
-          YU = {
-            url: UU,
-            name: zU.name,
-            features: [],
-            errors: [],
-            runsInMode: !1
-          },
-          NU = (0, yU.r)(zU.files);
-        if ("string" === typeof NU) return YU.errors = [{
-          file: null,
-          line: 0,
-          message: NU
-        }], {
-          stored: oU,
-          info: YU
-        };
-        const IU = await (0, AU.loadPageShaderPackCompiler)();
-        if (!IU) throw new Error("The shader pack compiler couldn't load");
-        const pU = await (0, EU.h)(IU, NU);
-        if (!pU) throw new Error("No WebGPU device could validate the shader pack");
-        if (YU.errors = [...pU.errors], pU.ok) {
-          const UU = IU.bUU(NU, (0, DU.shaderPackTextures)());
-          YU.features = (0, yU.q)(UU), YU.runsInMode = (0, QU.j)(UU.variants, XU)
-        }
-        return {
-          stored: {
-            ...oU,
-            validation: pU
-          },
-          info: YU
-        }
-      }(UU, XU), [NU] = YU.errors;
-      if (NU) {
-        const UU = null === NU.file ? "" : `${NU.file}:${NU.line}: `,
-          XU = YU.errors.length > 1 ? ` (${YU.errors.length-1} more)` : "";
-        return {
-          info: YU,
-          problem: `The shader pack doesn't compile: ${UU}${NU.message}${XU}`
-        }
-      }
-      return YU.runsInMode ? ((0, oU.setHarnessUrlShaderPack)(zU, XU), {
-        info: YU,
-        problem: null
-      }) : {
-        info: YU,
-        problem: `The shader pack runs nothing in ${XU} mode`
-      }
-    }
-  },
-  7251: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      forgetShaderPackActiveHint: () => CU,
-      isOtherApiVersion: () => WU,
-      isShaderPackActive: () => BU,
-      isShaderPackChangePending: () => PU,
-      markShaderPackChangePending: () => RU,
-      pageShaderPackValidationVersion: () => dU,
-      reconcileStoredShaderPackHint: () => eU,
-      removeShaderPack: () => GU,
-      replaceShaderPack: () => tU,
-      saveShaderPack: () => aU,
-      shaderPackNeedsCheck: () => LU,
-      storedPackOutcome: () => ZU,
-      storedShaderPackFiles: () => NU,
-      toStoredShaderPack: () => YU
-    });
-    var cU = zU(5608),
-      yU = zU(5603),
-      QU = zU(42),
-      AU = zU(3849),
-      FU = zU(7253),
-      oU = zU(7219);
-    const DU = "shaderPackChangePending";
-    let EU = null;
-
-    function YU(UU, XU, zU) {
-      return {
-        manifest: UU.manifest,
-        files: (0, cU.u)(UU.files),
-        validation: XU,
-        ...zU && {
-          listing: zU
-        }
-      }
-    }
-
-    function NU(UU) {
-      return Object.keys(UU.files).map((XU => ({
-        path: XU,
-        source: UU.files[XU]
-      })))
-    }
-    let IU = Promise.resolve();
-
-    function pU(UU) {
-      const XU = IU.then(UU);
-      return IU = XU.catch((() => {})), XU
-    }
-
-    function aU(UU, XU) {
-      return pU((() => gU(UU, XU)))
-    }
-
-    function tU(UU, XU, zU) {
-      return pU((async () => JSON.stringify(await (0, FU.f)()) === JSON.stringify(UU) && (null === XU ? (await kU(), !0) : gU(XU, zU))))
-    }
-    async function gU(UU, XU) {
-      const zU = await QU.g.setItem(FU.e, UU);
-      return zU && wU(UU, XU), zU
-    }
-    async function kU() {
-      await QU.g.removeItem(FU.e), QU.k.removeItem(AU.b)
-    }
-
-    function GU() {
-      return pU(kU)
-    }
-
-    function BU(UU, XU) {
-      return "active" === ZU(UU, XU).kind
-    }
-
-    function ZU(UU, XU) {
-      var zU;
-      return null === UU ? {
-        kind: "none",
-        reason: "nothingStored"
-      } : WU(UU) ? {
-        kind: "none",
-        reason: "otherApiVersion"
-      } : !1 !== (null === (zU = UU.validation) || void 0 === zU ? void 0 : zU.ok) || UU.validation.fromRecheck ? null === XU ? {
-        kind: "none",
-        reason: "noCompiler"
-      } : LU(UU, XU) ? {
-        kind: "blocked",
-        messageKey: "shaderPack:failedUnchecked"
-      } : UU.validation.ok ? {
-        kind: "active"
-      } : {
-        kind: "blocked",
-        messageKey: "shaderPack:failedValidation"
-      } : {
-        kind: "none",
-        reason: "failedWhenLoaded"
-      }
-    }
-
-    function RU() {
-      QU.n.setItem(DU, performance.timeOrigin)
-    }
-
-    function PU() {
-      return QU.n.getItem(DU) === performance.timeOrigin
-    }
-
-    function WU(UU) {
-      return !(0, yU.i)(UU.manifest.apiVersion)
-    }
-
-    function dU(UU) {
-      return EU ??= UU.mq((0, oU.shaderPackTextures)()), EU
-    }
-
-    function LU(UU, XU) {
-      var zU;
-      return (null === (zU = UU.validation) || void 0 === zU ? void 0 : zU.headerVersion) !== dU(XU)
-    }
-
-    function eU(UU) {
-      return pU((async () => {
-        wU(await (0, FU.f)(!0), UU)
-      }))
-    }
-
-    function CU() {
-      return pU((async () => {
-        QU.k.removeItem(AU.b)
-      }))
-    }
-
-    function wU(UU, XU) {
-      BU(UU, XU) ? QU.k.setItem(AU.b, !0) : QU.k.removeItem(AU.b)
-    }
-  },
-  7242: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => oU,
-      h: () => FU
-    });
-    var cU = zU(7251),
-      yU = zU(7219),
-      QU = zU(123);
-    const AU = 100;
-    async function FU(UU, XU) {
-      var zU;
-      let cU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (zU = navigator.gpu) && void 0 !== zU ? zU : null;
-      const AU = UU.bUU(XU, (0, yU.shaderPackTextures)());
-      if (AU.errors.length > 0) return DU(UU, AU.errors, AU.offInStrict);
-      const FU = await async function(UU) {
-        if (!UU) return null;
-        try {
-          const XU = await (0, QU.q)(UU);
-          return XU ? await XU.requestDevice() : null
-        } catch (XU) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", XU), null
-        }
-      }(cU);
-      if (!FU) return null;
-      let oU = !1;
-      FU.lost.then((() => {
-        oU = !0
+        t: LH
+      } = (0, tH.B)(), [rH, hH] = (0, AH.useState)(null), [CH, EH] = (0, AH.useState)(null), [PH, UH] = (0, AH.useState)(null), [VH] = (0, AH.useState)(GH.l), [OH, bH] = (0, AH.useState)(!0), [kH, oH] = (0, AH.useState)(!1), {
+        loading: IH,
+        error: lH,
+        setError: cH,
+        onFiles: eH
+      } = (0, vH.f)((async HH => {
+        const BH = await (0, XH.loadPageShaderPackCompiler)();
+        if (!BH) return void cH(LH("shaderPack:compilerUnavailable"));
+        EH(BH);
+        const AH = (0, YH.toStoredShaderPack)(HH, await (0, uH.d)(BH, HH.files));
+        await (0, YH.saveShaderPack)(AH, BH) ? (hH(AH), qH(rH, AH, BH)) : cH(LH("shaderPack:saveFailed"))
       }));
-      try {
-        const XU = await Promise.all(AU.validationModules.map((XU => async function(UU, XU, zU) {
-          XU.pushErrorScope("validation");
-          const cU = XU.createShaderModule({
-              code: zU.code
-            }),
-            yU = XU.popErrorScope(),
-            {
-              messages: QU
-            } = await cU.getCompilationInfo(),
-            AU = QU.filter((UU => "error" === UU.type)).map((XU => UU.mapValidationMessage(zU, XU))),
-            FU = await yU;
-          FU && 0 === AU.length && AU.push({
-            file: null,
-            line: 0,
-            message: FU.message,
-            variants: [zU.key]
-          });
-          return AU
-        }(UU, FU, XU))));
-        return oU ? null : DU(UU, UU.scU(XU.flat()), AU.offInStrict)
-      } catch (EU) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", EU), null
-      } finally {
-        FU.destroy()
+
+      function qH(HH, LH, AH) {
+        (function(HH, BH, LH, AH) {
+          return LH || TH(HH, AH) || TH(BH, AH)
+        })(HH, LH, (0, YH.isShaderPackChangePending)(), AH) && ((0, YH.markShaderPackChangePending)(), BH((() => MH.i)))
       }
-    }
-    async function oU(UU, XU) {
-      var zU;
-      if (!(0, cU.shaderPackNeedsCheck)(UU, XU) || (0, cU.isOtherApiVersion)(UU)) return UU;
-      const yU = await FU(XU, (0, cU.storedShaderPackFiles)(UU));
-      if (!yU) return UU;
-      const QU = !1 === (null === (zU = UU.validation) || void 0 === zU ? void 0 : zU.ok) && !UU.validation.fromRecheck,
-        AU = {
-          ...UU,
-          validation: QU ? yU : {
-            ...yU,
-            fromRecheck: !0
+      return (0, AH.useEffect)((() => {
+        let HH = !1;
+        return async function() {
+          const BH = (0, zH.hasUsableWebGpuAdapter)(),
+            LH = await (0, QH.e)();
+          if (HH) return;
+          hH(LH), oH(!0), bH(!1);
+          const AH = null !== LH ? (0, XH.loadPageShaderPackCompiler)() : null,
+            rH = await BH;
+          if (HH) return;
+          UH(rH);
+          const SH = await AH;
+          if (!HH && (EH(SH), null !== LH && rH && null !== SH && (0, YH.shaderPackNeedsCheck)(LH, SH))) {
+            const BH = await (0, uH.b)(LH, SH);
+            HH || hH((HH => HH === LH ? BH : HH))
           }
-        };
-      return await (0, cU.replaceShaderPack)(UU, AU, XU) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), AU
+        }().catch((BH => {
+          console.error("Failed to load the stored shader pack", BH), HH || cH(LH("shaderPack:unexpectedError"))
+        })).finally((() => {
+          HH || (bH(!1), oH(!1))
+        })), () => {
+          HH = !0
+        }
+      }), []), (0, mH.jsxs)("div", {
+        className: "ShaderPackCategory SettingsMenuRightInner",
+        children: [(0, mH.jsx)("div", {
+          className: "ShaderPackIntro",
+          children: LH("shaderPack:intro")
+        }), (0, mH.jsx)(KH, {
+          to: WH.P,
+          className: "ShaderPackBrowseLink",
+          children: (0, mH.jsx)(SH.u, {
+            className: "ShaderPackBrowseButton",
+            children: LH("shaderPackListing:browse")
+          })
+        }), !1 === PH && (0, mH.jsx)("div", {
+          className: "SettingsBoxWarning",
+          children: LH(VH ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), null !== lH && (0, mH.jsxs)("div", {
+          className: "ShaderPackCategoryError",
+          children: [LH("general:error"), ": ", lH]
+        }), rH && (0, mH.jsxs)("div", {
+          className: "SettingBox ShaderPackSummary",
+          children: [(0, mH.jsxs)("div", {
+            className: "ShaderPackSummaryHeader",
+            children: [(0, mH.jsxs)("div", {
+              children: [(0, mH.jsx)("div", {
+                className: "ShaderPackName",
+                children: rH.manifest.name
+              }), rH.manifest.author && (0, mH.jsx)("div", {
+                className: "ShaderPackAuthor",
+                children: (0, xH.i)(LH, "shaderPack:byAuthor", {
+                  author: rH.manifest.author
+                })
+              }), rH.manifest.description && (0, mH.jsx)("div", {
+                className: "ShaderPackDescription",
+                children: rH.manifest.description
+              }), rH.listing && (0, mH.jsx)("div", {
+                className: "ShaderPackAuthor",
+                children: (0, mH.jsx)(KH, {
+                  to: (0, WH.S)(rH.listing.packId),
+                  className: "ShaderPackListingLink",
+                  children: LH("shaderPackListing:openPackPage")
+                })
+              })]
+            }), (0, mH.jsx)(SH.S, {
+              disabled: OH || IH,
+              onClick: async function() {
+                bH(!0), cH(null), await (0, YH.removeShaderPack)(), hH(null), bH(!1), qH(rH, null, CH)
+              },
+              children: LH("shaderPack:removePack")
+            })]
+          }), (0, mH.jsx)(fH, {
+            stored: rH,
+            checking: kH,
+            webGpuUsable: PH,
+            changePending: (0, YH.isShaderPackChangePending)(),
+            compiler: CH,
+            t: LH
+          })]
+        }), (0, mH.jsx)(vH.b, {
+          busy: OH || IH || kH,
+          disabled: OH || IH || kH || !0 !== PH,
+          onFiles: eH
+        })]
+      })
     }
 
-    function DU(UU, XU, zU) {
-      return {
-        headerVersion: (0, cU.pageShaderPackValidationVersion)(UU),
-        ok: 0 === XU.length,
-        errors: XU.slice(0, AU),
-        moreErrors: Math.max(0, XU.length - AU),
-        offInStrict: zU
-      }
+    function KH(HH) {
+      let {
+        to: BH,
+        className: LH,
+        children: AH
+      } = HH;
+      const {
+        gameState: SH
+      } = (0, CH.m)(["gameState"]), {
+        pathname: tH,
+        search: zH
+      } = (0, rH.s)(), XH = "landingPage" !== SH && "studio" !== SH;
+      return (0, mH.jsx)(hH.LinkPreserveSearch, {
+        to: BH,
+        className: LH,
+        target: XH ? "_blank" : void 0,
+        onClick: () => {
+          XH || ((0, WH.F)(`${tH}${zH}`), (0, EH.g)())
+        },
+        children: AH
+      })
     }
   },
-  7158: (UU, XU, zU) => {
-    zU.d(XU, {
-      B: () => FU,
-      C: () => AU,
-      E: () => cU,
-      H: () => NU,
-      I: () => EU,
-      M: () => BU,
-      N: () => YU,
-      O: () => DU,
-      c: () => pU,
-      f: () => tU,
-      h: () => aU,
-      i: () => IU,
-      l: () => GU,
-      o: () => RU,
-      r: () => oU,
-      s: () => yU,
-      v: () => ZU,
-      z: () => QU
+  7111: (HH, BH, LH) => {
+    LH.d(BH, {
+      B: () => mH,
+      F: () => EH,
+      I: () => IH,
+      L: () => QH,
+      M: () => NH,
+      N: () => qH,
+      P: () => hH,
+      R: () => gH,
+      S: () => zH,
+      T: () => tH,
+      X: () => cH,
+      _: () => eH,
+      ab: () => vH,
+      bb: () => oH,
+      e: () => xH,
+      h: () => bH,
+      j: () => WH,
+      k: () => GH,
+      m: () => XH,
+      n: () => fH,
+      p: () => YH,
+      q: () => lH,
+      s: () => RH,
+      w: () => uH,
+      z: () => MH
     });
-    const cU = ["forest", "desert", "water", "night", "cave"];
-    const yU = {
+    var AH = LH(7114),
+      rH = LH(152),
+      SH = LH(4969);
+    const hH = "/shader-packs",
+      tH = `${hH}/publish`;
+
+    function zH(HH) {
+      return `${hH}/${encodeURIComponent(HH)}`
+    }
+    let CH = null;
+
+    function EH(HH) {
+      CH = HH
+    }
+
+    function XH() {
+      return CH
+    }
+
+    function GH() {
+      CH = null
+    }
+
+    function YH(HH) {
+      return HH.playerHasRank("developer") || HH.playerHasRank("admin")
+    }
+    const uH = ["terrain", "water", "models", "sunShadows", "strict"],
+      QH = {
+        terrain: "shaderPackListing:filterTerrain",
+        water: "shaderPackListing:filterWater",
+        models: "shaderPackListing:filterModels",
+        sunShadows: "shaderPackListing:filterShadows",
+        strict: "shaderPackListing:filterAllGames"
+      };
+
+    function WH(HH, BH) {
+      return HH.withFeatures.includes(BH) ? "with" : HH.withoutFeatures.includes(BH) ? "without" : null
+    }
+
+    function MH(HH) {
+      return null === HH ? "with" : "with" === HH ? "without" : null
+    }
+
+    function xH(HH) {
+      return "with" === HH ? "only" : null === HH ? "include" : void 0
+    }
+
+    function vH(HH, BH) {
+      const LH = WH(HH, BH),
+        AH = HH => HH.filter((HH => HH !== BH));
+      return {
+        withFeatures: null === LH ? [...HH.withFeatures, BH] : AH(HH.withFeatures),
+        withoutFeatures: "with" === LH ? [...HH.withoutFeatures, BH] : AH(HH.withoutFeatures)
+      }
+    }
+    const PH = "section",
+      TH = "sort",
+      UH = "filters",
+      VH = "q",
+      OH = "banned",
+      bH = "popular",
+      kH = "strict";
+
+    function mH(HH) {
+      var BH, LH, rH;
+      const hH = HH.get(PH),
+        tH = (null !== (BH = HH.get(UH)) && void 0 !== BH ? BH : kH).split(","),
+        zH = HH.get(OH);
+      return {
+        section: "favourites" === hH || "mine" === hH ? hH : "explore",
+        sort: null !== (LH = AH.B.find((BH => BH === HH.get(TH)))) && void 0 !== LH ? LH : bH,
+        withFeatures: uH.filter((HH => tH.includes(HH) && !tH.includes(`-${HH}`))),
+        withoutFeatures: uH.filter((HH => tH.includes(`-${HH}`))),
+        searchQuery: (null === (rH = HH.get(VH)) || void 0 === rH ? void 0 : rH.slice(0, AH.P)) || null,
+        pageNumber: (0, SH.g)(HH.get(SH.c)),
+        banned: "only" === zH ? "with" : "include" === zH ? null : "without"
+      }
+    }
+
+    function oH(HH, BH) {
+      var LH;
+      const AH = KH(BH);
+      (0, SH.j)(HH, PH, "explore" === BH.section ? null : BH.section), (0, SH.j)(HH, TH, BH.sort === bH ? null : BH.sort), (0, SH.j)(HH, UH, AH === kH ? null : AH), (0, SH.j)(HH, VH, BH.searchQuery), (0, SH.j)(HH, OH, null !== (LH = xH(BH.banned)) && void 0 !== LH ? LH : null), (0, SH.m)(HH, BH.pageNumber)
+    }
+
+    function IH(HH) {
+      const BH = new URLSearchParams;
+      return oH(BH, {
+        section: "explore",
+        sort: bH,
+        withFeatures: "strict" === HH ? [HH] : [HH, "strict"],
+        withoutFeatures: [],
+        searchQuery: null,
+        pageNumber: 1,
+        banned: "without"
+      }), `${hH}?${BH.toString()}`
+    }
+
+    function fH(HH) {
+      return KH(HH) === kH
+    }
+
+    function lH(HH) {
+      return null !== HH.searchQuery || "with" === HH.banned || KH(HH) !== kH
+    }
+
+    function KH(HH) {
+      return uH.flatMap((BH => {
+        const LH = WH(HH, BH);
+        return "with" === LH ? [BH] : "without" === LH ? [`-${BH}`] : []
+      })).join(",")
+    }
+    const cH = {
+        popular: "shaderPackListing:sortPopular",
+        updated: "shaderPackListing:sortUpdated",
+        newest: "shaderPackListing:sortNewest"
+      },
+      eH = {
+        forest: "shaderPackListing:viewForest",
+        desert: "shaderPackListing:viewDesert",
+        water: "shaderPackListing:viewWater",
+        night: "shaderPackListing:viewNight",
+        cave: "shaderPackListing:viewCave"
+      };
+
+    function qH(HH) {
+      return Math.round(100 * Math.max(0, 1 - 1 / HH))
+    }
+
+    function gH(HH, BH, LH, rH) {
+      const SH = [];
+      HH.isBanned && SH.push({
+        tone: "warning",
+        text: rH("shaderPackListing:ownerBanned"),
+        detail: null
+      });
+      const {
+        pending: hH
+      } = HH;
+      if (null === HH.brokenError || hH && !hH.error || SH.push({
+          tone: "warning",
+          text: rH("shaderPackListing:ownerBroken"),
+          detail: HH.brokenError
+        }), null !== hH && void 0 !== hH && hH.error) SH.push({
+        tone: "warning",
+        text: rH(BH ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, AH.o)(hH.error) ? null : hH.error
+      });
+      else if (hH) {
+        const HH = null === hH.renderNotBefore ? 0 : hH.renderNotBefore - LH,
+          AH = String(Math.ceil(HH / 6e4)),
+          tH = rH(BH ? HH > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : HH > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: AH
+          });
+        SH.push({
+          tone: "info",
+          text: tH,
+          detail: null
+        })
+      }
+      return HH.listed || SH.push({
+        tone: "info",
+        text: rH("shaderPackListing:ownerUnlisted"),
+        detail: null
+      }), SH
+    }
+
+    function NH(HH) {
+      return Math.max(1, Math.round(HH / 1024))
+    }
+
+    function RH(HH, BH, LH) {
+      return HH instanceof rH.e && HH.errorMessageForUser ? HH.errorMessageForUser : BH(LH)
+    }
+  },
+  7114: (HH, BH, LH) => {
+    LH.d(BH, {
+      B: () => SH,
+      F: () => tH,
+      H: () => hH,
+      L: () => AH,
+      M: () => GH,
+      P: () => EH,
+      Q: () => PH,
+      R: () => XH,
+      V: () => CH,
+      d: () => uH,
+      g: () => WH,
+      i: () => QH,
+      m: () => YH,
+      o: () => vH,
+      s: () => UH,
+      v: () => zH,
+      w: () => rH,
+      x: () => TH
+    });
+    const AH = ["forest", "desert", "water", "night", "cave"];
+    const rH = {
         full: {
           width: 3840,
           height: 2160
@@ -338,49 +473,49 @@ export const modules = {
           height: 360
         }
       },
-      QU = ["popular", "updated", "newest"],
-      AU = 3,
-      FU = 32,
-      oU = 300;
+      SH = ["popular", "updated", "newest"],
+      hH = 3,
+      tH = 32,
+      zH = 300;
 
-    function DU(UU, XU) {
-      return UU.slice(0, XU).replace(/[\uD800-\uDBFF]$/, "")
+    function CH(HH, BH) {
+      return HH.slice(0, BH).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const EU = 64,
-      YU = 512,
-      NU = 18e5;
+    const EH = 64,
+      XH = 512,
+      GH = 18e5;
 
-    function IU(UU) {
-      const XU = UU,
-        zU = null === XU || void 0 === XU ? void 0 : XU.files;
-      return "number" === typeof(null === XU || void 0 === XU ? void 0 : XU.apiVersion) && "string" === typeof XU.name && (null === XU.author || "string" === typeof XU.author) && (void 0 === XU.keepCircleShadows || "boolean" === typeof XU.keepCircleShadows) && "object" === typeof zU && null !== zU && Object.values(zU).every((UU => "string" === typeof UU))
+    function YH(HH) {
+      const BH = HH,
+        LH = null === BH || void 0 === BH ? void 0 : BH.files;
+      return "number" === typeof(null === BH || void 0 === BH ? void 0 : BH.apiVersion) && "string" === typeof BH.name && (null === BH.author || "string" === typeof BH.author) && (void 0 === BH.keepCircleShadows || "boolean" === typeof BH.keepCircleShadows) && "object" === typeof LH && null !== LH && Object.values(LH).every((HH => "string" === typeof HH))
     }
-    const pU = "Bloxdhub",
-      aU = "https://bloxdhub.com/shaders";
+    const uH = "Bloxdhub",
+      QH = "https://bloxdhub.com/shaders";
 
-    function tU(UU) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(UU)}`
+    function WH(HH) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(HH)}`
     }
-    const gU = "Screenshot generation failed.",
-      kU = "Its screenshots couldn't be generated:";
+    const MH = "Screenshot generation failed.",
+      xH = "Its screenshots couldn't be generated:";
 
-    function GU(UU) {
-      var XU;
-      return UU === gU || null !== (XU = null === UU || void 0 === UU ? void 0 : UU.startsWith(kU)) && void 0 !== XU && XU
-    }
-
-    function BU(UU, XU) {
-      return `shaderPacks/${UU}/${XU}.json`
+    function vH(HH) {
+      var BH;
+      return HH === MH || null !== (BH = null === HH || void 0 === HH ? void 0 : HH.startsWith(xH)) && void 0 !== BH && BH
     }
 
-    function ZU(UU, XU, zU, cU) {
-      return null === XU.renderId ? RU(UU, XU.baselineVersion, zU, cU) : `${UU}/${function(UU,XU,zU,cU){return`shaderPacks/${UU}/${XU}/${zU}-${cU}.webp`}(XU.packId,XU.renderId,zU,cU)}`
+    function PH(HH, BH) {
+      return `shaderPacks/${HH}/${BH}.json`
     }
 
-    function RU(UU, XU, zU, cU) {
-      return `${UU}/${function(UU,XU,zU){return`shaderPacks/baseline/${UU}/${XU}-${zU}.webp`}(XU,zU,cU)}`
+    function TH(HH, BH, LH, AH) {
+      return null === BH.renderId ? UH(HH, BH.baselineVersion, LH, AH) : `${HH}/${function(HH,BH,LH,AH){return`shaderPacks/${HH}/${BH}/${LH}-${AH}.webp`}(BH.packId,BH.renderId,LH,AH)}`
+    }
+
+    function UH(HH, BH, LH, AH) {
+      return `${HH}/${function(HH,BH,LH){return`shaderPacks/baseline/${HH}/${BH}-${LH}.webp`}(BH,LH,AH)}`
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

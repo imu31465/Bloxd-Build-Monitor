@@ -1,196 +1,196 @@
 export const id = 18;
 export const ids = [18];
 export const modules = {
-  37318: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => tU,
-      e: () => gU,
-      f: () => NU,
-      h: () => YU
+  37472: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => WH,
+      e: () => MH,
+      i: () => GH,
+      k: () => XH
     });
-    var cU = zU(34859),
-      yU = zU(37325),
-      QU = zU(37334),
-      AU = zU(9282),
-      FU = zU(1492),
-      oU = zU(61),
-      DU = zU(73),
-      EU = zU(1305);
+    var AH = LH(34986),
+      rH = LH(37474),
+      SH = LH(37479),
+      hH = LH(9412),
+      tH = LH(1450),
+      zH = LH(45),
+      CH = LH(69),
+      EH = LH(1225);
 
-    function YU() {
-      var UU;
-      return (0, FU.j)(yU.d, (0, yU.o)()), (0, EU.jsx)(EU.Fragment, {
-        children: null === (UU = (0, yU.o)()) || void 0 === UU ? void 0 : UU.content
+    function XH() {
+      var HH;
+      return (0, tH.e)(rH.b, (0, rH.p)()), (0, EH.jsx)(EH.Fragment, {
+        children: null === (HH = (0, rH.p)()) || void 0 === HH ? void 0 : HH.content
       })
     }
 
-    function NU(UU) {
-      var XU;
+    function GH(HH) {
+      var BH;
       let {
-        show: zU
-      } = UU;
-      (0, FU.j)(yU.d, (0, yU.o)());
-      const DU = null === (XU = (0, yU.o)()) || void 0 === XU ? void 0 : XU.menu;
-      return (0, oU.useEffect)((() => {
-        var UU;
-        zU || (null === DU || void 0 === DU || null === (UU = DU.onClose) || void 0 === UU || UU.call(DU), (0, QU.t)())
-      }), [zU, DU]), (0, oU.useEffect)((() => zU ? (0, AU.d)(QU.x, QU.i) : void 0), [zU]), (0, EU.jsx)(cU.e, {
-        showing: zU,
+        show: LH
+      } = HH;
+      (0, tH.e)(rH.b, (0, rH.p)());
+      const CH = null === (BH = (0, rH.p)()) || void 0 === BH ? void 0 : BH.menu;
+      return (0, zH.useEffect)((() => {
+        var HH;
+        LH || (null === CH || void 0 === CH || null === (HH = CH.onClose) || void 0 === HH || HH.call(CH), (0, SH.r)())
+      }), [LH, CH]), (0, zH.useEffect)((() => LH ? (0, hH.e)(SH.A, SH.g) : void 0), [LH]), (0, EH.jsx)(AH.e, {
+        showing: LH,
         globallyUniqueKey: "clientGameMenu",
-        children: null === DU || void 0 === DU ? void 0 : DU.content
+        children: null === CH || void 0 === CH ? void 0 : CH.content
       })
     }
-    const IU = new Map,
-      pU = new Set;
+    const YH = new Map,
+      uH = new Set;
 
-    function aU(UU, XU) {
-      XU ? IU.set(UU, XU) : IU.delete(UU);
-      for (const zU of pU) zU()
+    function QH(HH, BH) {
+      BH ? YH.set(HH, BH) : YH.delete(HH);
+      for (const LH of uH) LH()
     }
 
-    function tU(UU) {
+    function WH(HH) {
       let {
-        placement: XU = "bottom"
-      } = UU;
-      const zU = (0, oU.useRef)(null);
-      return (0, oU.useLayoutEffect)((() => {
-        const UU = zU.current;
-        return aU(XU, UU), () => {
-          IU.get(XU) === UU && aU(XU, null)
+        placement: BH = "bottom"
+      } = HH;
+      const LH = (0, zH.useRef)(null);
+      return (0, zH.useLayoutEffect)((() => {
+        const HH = LH.current;
+        return QH(BH, HH), () => {
+          YH.get(BH) === HH && QH(BH, null)
         }
-      }), [XU]), (0, EU.jsx)("div", {
-        ref: zU,
-        id: `clientGameHud-${XU}`,
+      }), [BH]), (0, EH.jsx)("div", {
+        ref: LH,
+        id: `clientGameHud-${BH}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function gU(UU) {
+    function MH(HH) {
       let {
-        children: XU,
-        placement: zU = "bottom"
-      } = UU;
-      const [cU, yU] = (0, oU.useState)((() => {
-        var UU;
-        return null !== (UU = IU.get(zU)) && void 0 !== UU ? UU : null
+        children: BH,
+        placement: LH = "bottom"
+      } = HH;
+      const [AH, rH] = (0, zH.useState)((() => {
+        var HH;
+        return null !== (HH = YH.get(LH)) && void 0 !== HH ? HH : null
       }));
-      return (0, oU.useEffect)((() => {
-        const UU = () => {
-          var UU;
-          yU(null !== (UU = IU.get(zU)) && void 0 !== UU ? UU : null)
+      return (0, zH.useEffect)((() => {
+        const HH = () => {
+          var HH;
+          rH(null !== (HH = YH.get(LH)) && void 0 !== HH ? HH : null)
         };
-        return pU.add(UU), UU(), () => {
-          pU.delete(UU)
+        return uH.add(HH), HH(), () => {
+          uH.delete(HH)
         }
-      }), [zU]), cU ? (0, DU.createPortal)(XU, cU) : null
+      }), [LH]), AH ? (0, CH.createPortal)(BH, AH) : null
     }
   },
-  34859: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => QU
+  34986: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => SH
     });
-    var cU = zU(4977),
-      yU = zU(4982);
+    var AH = LH(4947),
+      rH = LH(4951);
 
-    function QU(UU) {
+    function SH(HH) {
       let {
-        children: XU,
-        showing: zU,
-        globallyUniqueKey: QU,
-        alwaysMountChildren: AU = !1,
-        doGameplayStartStopOnShow: FU = !0,
-        keepsMovement: oU = !1
-      } = UU;
-      return (0, yU.c)(!0, zU, QU, oU), (0, cU.d)(FU, zU), zU || AU ? XU : null
+        children: BH,
+        showing: LH,
+        globallyUniqueKey: SH,
+        alwaysMountChildren: hH = !1,
+        doGameplayStartStopOnShow: tH = !0,
+        keepsMovement: zH = !1
+      } = HH;
+      return (0, rH.c)(!0, LH, SH, zH), (0, AH.e)(tH, LH), LH || hH ? BH : null
     }
   },
-  37418: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => QU,
-      f: () => AU,
-      h: () => FU,
-      j: () => oU
+  37569: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => SH,
+      f: () => hH,
+      i: () => tH,
+      k: () => zH
     });
-    var cU = zU(61),
-      yU = zU(3478);
-    const QU = 8,
-      AU = "InGameHeaderContainer",
-      FU = "TopRightElements";
+    var AH = LH(45),
+      rH = LH(3465);
+    const SH = 8,
+      hH = "InGameHeaderContainer",
+      tH = "TopRightElements";
 
-    function oU(UU) {
-      const [XU] = (0, yU.e)(), [zU, oU] = (0, cU.useState)(!1);
-      return (0, cU.useLayoutEffect)((() => {
-        if (!UU) return;
-        const XU = document.querySelector(`.${AU}`),
-          zU = document.querySelector(`.${FU}`),
-          cU = () => {
-            const cU = UU.getBoundingClientRect(),
-              yU = XU ? XU.getBoundingClientRect().right : 0,
-              AU = zU ? zU.getBoundingClientRect().left : window.innerWidth,
-              FU = cU.left < yU + QU,
-              DU = cU.right > AU - QU;
-            oU(FU || DU)
+    function zH(HH) {
+      const [BH] = (0, rH.b)(), [LH, zH] = (0, AH.useState)(!1);
+      return (0, AH.useLayoutEffect)((() => {
+        if (!HH) return;
+        const BH = document.querySelector(`.${hH}`),
+          LH = document.querySelector(`.${tH}`),
+          AH = () => {
+            const AH = HH.getBoundingClientRect(),
+              rH = BH ? BH.getBoundingClientRect().right : 0,
+              hH = LH ? LH.getBoundingClientRect().left : window.innerWidth,
+              tH = AH.left < rH + SH,
+              CH = AH.right > hH - SH;
+            zH(tH || CH)
           };
-        cU();
-        const yU = new ResizeObserver(cU);
-        return yU.observe(UU), XU && yU.observe(XU), zU && yU.observe(zU), () => {
-          yU.disconnect()
+        AH();
+        const rH = new ResizeObserver(AH);
+        return rH.observe(HH), BH && rH.observe(BH), LH && rH.observe(LH), () => {
+          rH.disconnect()
         }
-      }), [UU, XU]), zU
+      }), [HH, BH]), LH
     }
   },
-  40278: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => AU,
-      h: () => yU,
-      i: () => QU
+  40413: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => hH,
+      g: () => rH,
+      h: () => SH
     });
-    var cU = zU(61);
+    var AH = LH(45);
 
-    function yU(UU) {
-      return FU(UU, oU)
+    function rH(HH) {
+      return tH(HH, zH)
     }
 
-    function QU(UU) {
-      return FU(UU, DU)
+    function SH(HH) {
+      return tH(HH, CH)
     }
 
-    function AU(UU) {
-      return `${Math.floor(UU/60)}:${String(UU%60).padStart(2,"0")}`
+    function hH(HH) {
+      return `${Math.floor(HH/60)}:${String(HH%60).padStart(2,"0")}`
     }
 
-    function FU(UU, XU) {
-      const [, zU] = (0, cU.useState)(null);
-      return (0, cU.useEffect)((() => {
-        if (0 === UU) return;
-        const cU = window.setInterval((() => {
-          const cU = XU(UU);
-          zU((XU => (null === XU || void 0 === XU ? void 0 : XU.endsAt) === UU && XU.value === cU ? XU : {
-            endsAt: UU,
-            value: cU
+    function tH(HH, BH) {
+      const [, LH] = (0, AH.useState)(null);
+      return (0, AH.useEffect)((() => {
+        if (0 === HH) return;
+        const AH = window.setInterval((() => {
+          const AH = BH(HH);
+          LH((BH => (null === BH || void 0 === BH ? void 0 : BH.endsAt) === HH && BH.value === AH ? BH : {
+            endsAt: HH,
+            value: AH
           }))
         }), 250);
         return () => {
-          window.clearInterval(cU)
+          window.clearInterval(AH)
         }
-      }), [UU, XU]), XU(UU)
+      }), [HH, BH]), BH(HH)
     }
 
-    function oU(UU) {
-      return (UU - performance.now()) / 1e3
+    function zH(HH) {
+      return (HH - performance.now()) / 1e3
     }
 
-    function DU(UU) {
-      return Math.max(0, Math.ceil(oU(UU)))
+    function CH(HH) {
+      return Math.max(0, Math.ceil(zH(HH)))
     }
   },
-  37414: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => yU
+  37565: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => rH
     });
-    const cU = [{
+    const AH = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -207,286 +207,286 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function yU(UU, XU, zU) {
-      const yU = Math.abs(UU - XU),
-        QU = Date.now() - zU;
-      for (const AU of cU)
-        if (UU < AU.maxDist) return yU >= AU.hardUpdateDist || QU > AU.timeBetweenSoftChecks && yU >= AU.softUpdateDist;
+    function rH(HH, BH, LH) {
+      const rH = Math.abs(HH - BH),
+        SH = Date.now() - LH;
+      for (const hH of AH)
+        if (HH < hH.maxDist) return rH >= hH.hardUpdateDist || SH > hH.timeBetweenSoftChecks && rH >= hH.softUpdateDist;
       return !1
     }
   },
-  9282: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => QU,
-      d: () => yU
+  9412: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => SH,
+      e: () => rH
     });
-    let cU = null;
-    const yU = function(UU) {
-        const XU = {
-          cycle: UU,
+    let AH = null;
+    const rH = function(HH) {
+        const BH = {
+          cycle: HH,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return cU = XU, () => {
-          cU === XU && (cU = null)
+        return AH = BH, () => {
+          AH === BH && (AH = null)
         }
       },
-      QU = () => {
-        var UU;
-        return null !== (UU = cU) && void 0 !== UU && UU.canCycle() ? cU.cycle : null
+      SH = () => {
+        var HH;
+        return null !== (HH = AH) && void 0 !== HH && HH.canCycle() ? AH.cycle : null
       }
   },
-  39331: (UU, XU, zU) => {
-    function cU(UU, XU, zU) {
-      var cU;
+  39425: (HH, BH, LH) => {
+    function AH(HH, BH, LH) {
+      var AH;
       const {
-        width: yU,
-        height: QU
-      } = zU, AU = null !== (cU = UU.text) && void 0 !== cU ? cU : UU, FU = (AU.x / 100 - .5) * yU, oU = (AU.y / 100 - .5) * QU, DU = yU / 2 - XU.x;
-      if (null !== UU.text && Math.abs(FU) <= DU && oU >= XU.top - QU / 2 && oU <= QU / 2 - XU.bottom) return {
-        x: AU.x,
-        y: AU.y
+        width: rH,
+        height: SH
+      } = LH, hH = null !== (AH = HH.text) && void 0 !== AH ? AH : HH, tH = (hH.x / 100 - .5) * rH, zH = (hH.y / 100 - .5) * SH, CH = rH / 2 - BH.x;
+      if (null !== HH.text && Math.abs(tH) <= CH && zH >= BH.top - SH / 2 && zH <= SH / 2 - BH.bottom) return {
+        x: hH.x,
+        y: hH.y
       };
-      const EU = Math.min(0 === FU ? 1 / 0 : DU / Math.abs(FU), oU > 0 ? (QU / 2 - XU.bottom) / oU : oU < 0 ? (XU.top - QU / 2) / oU : 1 / 0);
-      return !Number.isFinite(EU) || EU < 0 ? {
+      const EH = Math.min(0 === tH ? 1 / 0 : CH / Math.abs(tH), zH > 0 ? (SH / 2 - BH.bottom) / zH : zH < 0 ? (BH.top - SH / 2) / zH : 1 / 0);
+      return !Number.isFinite(EH) || EH < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + FU * EU / yU * 100,
-        y: 50 + oU * EU / QU * 100
+        x: 50 + tH * EH / rH * 100,
+        y: 50 + zH * EH / SH * 100
       }
     }
-    zU.d(XU, {
-      d: () => cU
+    LH.d(BH, {
+      e: () => AH
     })
   },
-  37334: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => QU,
-      i: () => aU,
-      l: () => tU,
-      o: () => FU,
-      r: () => NU,
-      t: () => gU,
-      v: () => YU,
-      w: () => GU,
-      x: () => pU,
-      y: () => kU
+  37479: (HH, BH, LH) => {
+    LH.d(BH, {
+      A: () => uH,
+      C: () => xH,
+      c: () => SH,
+      g: () => QH,
+      j: () => WH,
+      k: () => tH,
+      n: () => GH,
+      r: () => MH,
+      t: () => XH,
+      x: () => vH
     });
-    var cU = zU(27),
-      yU = zU(31);
-    const QU = "clientGameInventoryButtonsChanged",
-      AU = new Map;
+    var AH = LH(15),
+      rH = LH(18);
+    const SH = "clientGameInventoryButtonsChanged",
+      hH = new Map;
 
-    function FU() {
-      return [...AU.values()].sort(((UU, XU) => {
-        var zU, cU;
-        return (null !== (zU = UU.order) && void 0 !== zU ? zU : 0) - (null !== (cU = XU.order) && void 0 !== cU ? cU : 0)
+    function tH() {
+      return [...hH.values()].sort(((HH, BH) => {
+        var LH, AH;
+        return (null !== (LH = HH.order) && void 0 !== LH ? LH : 0) - (null !== (AH = BH.order) && void 0 !== AH ? AH : 0)
       }))
     }
-    let oU = null;
+    let zH = null;
 
-    function DU(UU) {
-      oU = UU
+    function CH(HH) {
+      zH = HH
     }
-    let EU = !1;
+    let EH = !1;
 
-    function YU(UU) {
-      EU = !0;
+    function XH(HH) {
+      EH = !0;
       try {
-        UU.onClick()
+        HH.onClick()
       } finally {
-        EU = !1
+        EH = !1
       }
-      UU.panel && "clientGame" === cU.e.get("openInGameMenuName") && DU(UU.id)
+      HH.panel && "clientGame" === AH.c.get("openInGameMenuName") && CH(HH.id)
     }
 
-    function NU() {
-      return EU
+    function GH() {
+      return EH
     }
 
-    function IU() {
-      return FU().filter((UU => UU.panel && !UU.disabled))
+    function YH() {
+      return tH().filter((HH => HH.panel && !HH.disabled))
     }
 
-    function pU(UU) {
-      const XU = IU(),
-        zU = XU.findIndex((UU => UU.id === oU));
-      return !(zU < 0 || XU.length < 2) && (YU(XU[(zU + UU + XU.length) % XU.length]), !0)
+    function uH(HH) {
+      const BH = YH(),
+        LH = BH.findIndex((HH => HH.id === zH));
+      return !(LH < 0 || BH.length < 2) && (XH(BH[(LH + HH + BH.length) % BH.length]), !0)
     }
 
-    function aU() {
-      return null !== oU && IU().length > 1
+    function QH() {
+      return null !== zH && YH().length > 1
     }
 
-    function tU() {
-      DU(null)
+    function WH() {
+      CH(null)
     }
 
-    function gU() {
-      "inventory" !== cU.e.get("openInGameMenuName") && DU(null)
+    function MH() {
+      "inventory" !== AH.c.get("openInGameMenuName") && CH(null)
     }
 
-    function kU() {
-      const UU = oU;
-      return DU(null), UU
+    function xH() {
+      const HH = zH;
+      return CH(null), HH
     }
 
-    function GU(UU) {
-      return AU.set(UU.id, UU), yU.k.UY(QU, FU(), !0), () => {
-        AU.get(UU.id) === UU && (AU.delete(UU.id), yU.k.UY(QU, FU()))
+    function vH(HH) {
+      return hH.set(HH.id, HH), rH.k.AX(SH, tH(), !0), () => {
+        hH.get(HH.id) === HH && (hH.delete(HH.id), rH.k.AX(SH, tH()))
       }
     }
   },
-  37325: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => FU,
-      h: () => kU,
-      j: () => tU,
-      l: () => gU,
-      n: () => NU,
-      o: () => DU,
-      r: () => aU,
-      t: () => IU,
-      u: () => EU
+  37474: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => tH,
+      c: () => xH,
+      g: () => WH,
+      j: () => MH,
+      n: () => GH,
+      p: () => CH,
+      t: () => QH,
+      u: () => YH,
+      v: () => EH
     });
-    var cU = zU(27),
-      yU = zU(31),
-      QU = zU(1310),
-      AU = zU(37334);
-    const FU = "clientGameUiChanged";
-    let oU = null;
+    var AH = LH(15),
+      rH = LH(18),
+      SH = LH(1241),
+      hH = LH(37479);
+    const tH = "clientGameUiChanged";
+    let zH = null;
 
-    function DU() {
-      return oU
+    function CH() {
+      return zH
     }
 
-    function EU(UU, XU) {
-      const zU = {
-        content: UU,
-        menu: XU
+    function EH(HH, BH) {
+      const LH = {
+        content: HH,
+        menu: BH
       };
-      return oU = zU, yU.k.UY(FU, oU, !0), () => {
-        oU === zU && (oU = null, pU = !1, tU(), yU.k.UY(FU, null))
+      return zH = LH, rH.k.AX(tH, zH, !0), () => {
+        zH === LH && (zH = null, uH = !1, WH(), rH.k.AX(tH, null))
       }
     }
-    let YU = null;
+    let XH = null;
 
-    function NU() {
-      return YU
+    function GH() {
+      return XH
     }
 
-    function IU(UU) {
-      return YU = UU, () => {
-        YU === UU && (YU = null)
+    function YH(HH) {
+      return XH = HH, () => {
+        XH === HH && (XH = null)
       }
     }
-    let pU = !1;
+    let uH = !1;
 
-    function aU() {
-      const UU = cU.e.get("openInGameMenuName");
-      "clientGame" !== UU && (pU = "inventory" === UU), (0, AU.r)() || (0, AU.l)(), (0, QU.u)(QU.c), cU.e.set({
+    function QH() {
+      const HH = AH.c.get("openInGameMenuName");
+      "clientGame" !== HH && (uH = "inventory" === HH), (0, hH.n)() || (0, hH.j)(), (0, SH.x)(SH.d), AH.c.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function tU() {
-      GU(!1)
+    function WH() {
+      vH(!1)
     }
 
-    function gU() {
-      GU(pU)
+    function MH() {
+      vH(uH)
     }
 
-    function kU() {
-      pU && GU(!1)
+    function xH() {
+      uH && vH(!1)
     }
 
-    function GU(UU) {
-      "clientGame" === cU.e.get("openInGameMenuName") && cU.e.set({
-        openInGameMenuName: UU ? "inventory" : null
-      }), UU || (0, AU.l)(), pU = !1
+    function vH(HH) {
+      "clientGame" === AH.c.get("openInGameMenuName") && AH.c.set({
+        openInGameMenuName: HH ? "inventory" : null
+      }), HH || (0, hH.j)(), uH = !1
     }
   },
-  40281: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => oU
+  40419: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => zH
     });
-    var cU = zU(37414),
-      yU = zU(1193),
-      QU = zU(1266),
-      AU = zU(39278),
-      FU = zU(39331);
-    class oU {
-      constructor(UU, XU) {
-        var zU;
-        this.classes = UU, this.distanceKey = XU, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var AH = LH(37565),
+      rH = LH(1123),
+      SH = LH(1194),
+      hH = LH(39370),
+      tH = LH(39425);
+    class zH {
+      constructor(HH, BH) {
+        var LH;
+        this.classes = HH, this.distanceKey = BH, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.kp = !1, this.QG = () => {
+        }, this.render = null, this.Mu = !1, this.Av = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.QG), null === (zU = window.visualViewport) || void 0 === zU || zU.addEventListener("resize", this.QG)
+        }, window.addEventListener("resize", this.Av), null === (LH = window.visualViewport) || void 0 === LH || LH.addEventListener("resize", this.Av)
       }
-      bindMarker(UU) {
-        const XU = this.refs.get(UU);
-        if (XU) return XU;
-        const zU = XU => {
-          var cU;
-          null === (cU = this.markers.get(UU)) || void 0 === cU || cU.stopObserving(), this.markers.delete(UU), XU && !this.kp ? (this.markers.set(UU, this.mount(XU)), this.refs.set(UU, zU)) : this.refs.delete(UU)
+      bindMarker(HH) {
+        const BH = this.refs.get(HH);
+        if (BH) return BH;
+        const LH = BH => {
+          var AH;
+          null === (AH = this.markers.get(HH)) || void 0 === AH || AH.stopObserving(), this.markers.delete(HH), BH && !this.Mu ? (this.markers.set(HH, this.mount(BH)), this.refs.set(HH, LH)) : this.refs.delete(HH)
         };
-        return this.refs.set(UU, zU), zU
+        return this.refs.set(HH, LH), LH
       }
       hasMarkers() {
         return this.markers.size > 0
       }
-      setRender(UU) {
-        this.render = UU
+      setRender(HH) {
+        this.render = HH
       }
-      update(UU, XU, zU, cU, yU) {
-        const QU = this.markers.get(UU);
-        QU && (QU.target ??= [0, 0, 0], QU.target[0] = XU, QU.target[1] = zU, QU.target[2] = cU, this.place(QU), this.dc(QU, yU && Math.hypot(XU - yU[0], zU - yU[1], cU - yU[2])))
+      update(HH, BH, LH, AH, rH) {
+        const SH = this.markers.get(HH);
+        SH && (SH.target ??= [0, 0, 0], SH.target[0] = BH, SH.target[1] = LH, SH.target[2] = AH, this.place(SH), this.eA(SH, rH && Math.hypot(BH - rH[0], LH - rH[1], AH - rH[2])))
       }
       dispose() {
-        var UU;
-        this.kp = !0, window.removeEventListener("resize", this.QG), null === (UU = window.visualViewport) || void 0 === UU || UU.removeEventListener("resize", this.QG);
-        for (const XU of this.markers.values()) XU.stopObserving();
+        var HH;
+        this.Mu = !0, window.removeEventListener("resize", this.Av), null === (HH = window.visualViewport) || void 0 === HH || HH.removeEventListener("resize", this.Av);
+        for (const BH of this.markers.values()) BH.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(UU) {
+      place(HH) {
         const {
-          render: XU,
-          viewport: zU
+          render: BH,
+          viewport: LH
         } = this;
-        if (!XU || !UU.target) return;
-        const cU = (50 - XU.screenBandPct.y) / 100 * zU.height,
-          yU = {
-            x: UU.halfSize.width + 8,
-            top: UU.halfSize.height + 8,
-            bottom: UU.halfSize.height + UU.labelsBelow + cU
+        if (!BH || !HH.target) return;
+        const AH = (50 - BH.screenBandPct.y) / 100 * LH.height,
+          rH = {
+            x: HH.halfSize.width + 8,
+            top: HH.halfSize.height + 8,
+            bottom: HH.halfSize.height + HH.labelsBelow + AH
           },
-          QU = XU.projectWorldPosToViewport(UU.target),
-          oU = null !== QU && void 0 !== QU ? QU : XU.projectWorldPosToScreenPos(UU.target),
-          DU = (0, FU.d)({
-            x: oU.x,
-            y: oU.y,
-            text: QU
-          }, yU, zU);
-        (0, AU.d)(UU.root, Math.round(100 * DU.x) / 100, Math.round(100 * DU.y) / 100)
+          SH = BH.projectWorldPosToViewport(HH.target),
+          zH = null !== SH && void 0 !== SH ? SH : BH.projectWorldPosToScreenPos(HH.target),
+          CH = (0, tH.e)({
+            x: zH.x,
+            y: zH.y,
+            text: SH
+          }, rH, LH);
+        (0, hH.d)(HH.root, Math.round(100 * CH.x) / 100, Math.round(100 * CH.y) / 100)
       }
-      dc(UU, XU) {
-        if (null === XU) return void(null !== UU.metres && (UU.metres = null, UU.distance.textContent = ""));
-        const zU = Date.now();
-        (null === UU.metres || (0, cU.b)(XU, UU.metres, UU.metresShownAt)) && (UU.metres = Math.round(XU), UU.metresShownAt = zU, UU.distance.textContent = (0, yU.A)(QU.h.get().getCurrentLanguageCode(), this.distanceKey, {
-          distance: String(UU.metres)
+      eA(HH, BH) {
+        if (null === BH) return void(null !== HH.metres && (HH.metres = null, HH.distance.textContent = ""));
+        const LH = Date.now();
+        (null === HH.metres || (0, AH.e)(BH, HH.metres, HH.metresShownAt)) && (HH.metres = Math.round(BH), HH.metresShownAt = LH, HH.distance.textContent = (0, rH.u)(SH.g.get().getCurrentLanguageCode(), this.distanceKey, {
+          distance: String(HH.metres)
         }))
       }
-      mount(UU) {
-        const XU = {
-            root: UU,
-            distance: UU.querySelector(`.${this.classes.distance}`),
+      mount(HH) {
+        const BH = {
+            root: HH,
+            distance: HH.querySelector(`.${this.classes.distance}`),
             halfSize: {
               width: 0,
               height: 0
@@ -497,35 +497,35 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          zU = UU.querySelector(`.${this.classes.labels}`),
-          cU = new ResizeObserver((() => {
-            XU.halfSize = {
-              width: Math.max(UU.offsetWidth, zU.offsetWidth) / 2,
-              height: UU.offsetHeight / 2
-            }, XU.labelsBelow = zU.offsetTop + zU.offsetHeight - UU.offsetHeight, this.place(XU)
+          LH = HH.querySelector(`.${this.classes.labels}`),
+          AH = new ResizeObserver((() => {
+            BH.halfSize = {
+              width: Math.max(HH.offsetWidth, LH.offsetWidth) / 2,
+              height: HH.offsetHeight / 2
+            }, BH.labelsBelow = LH.offsetTop + LH.offsetHeight - HH.offsetHeight, this.place(BH)
           }));
-        return cU.observe(UU, {
+        return AH.observe(HH, {
           box: "border-box"
-        }), cU.observe(zU, {
+        }), AH.observe(LH, {
           box: "border-box"
-        }), XU.stopObserving = () => {
-          cU.disconnect()
-        }, XU
+        }), BH.stopObserving = () => {
+          AH.disconnect()
+        }, BH
       }
     }
   },
-  40275: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      default: () => IX
+  40411: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      default: () => YB
     });
-    const cU = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes", "hat", "back"];
-    var yU = zU(61),
-      QU = zU(37325),
-      AU = zU(37756),
-      FU = zU(37345),
-      oU = zU(1800),
-      DU = zU(31);
-    const EU = {
+    const AH = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes", "hat", "back"];
+    var rH = LH(45),
+      SH = LH(37474),
+      hH = LH(37912),
+      tH = LH(37496),
+      zH = LH(1789),
+      CH = LH(18);
+    const EH = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -551,284 +551,284 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const YU = 32;
+    const XH = 32;
 
-    function NU(UU, XU, zU, cU) {
+    function GH(HH, BH, LH, AH) {
       return {
         tag: "line",
         attrs: {
-          x1: UU,
-          y1: XU,
-          x2: zU,
-          y2: cU,
+          x1: HH,
+          y1: BH,
+          x2: LH,
+          y2: AH,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function IU(UU) {
+    function YH(HH) {
       return {
         tag: "circle",
         attrs: {
-          cx: YU,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : YU,
-          r: UU,
+          cx: XH,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : XH,
+          r: HH,
           class: "Fill"
         }
       }
     }
 
-    function pU(UU, XU) {
+    function uH(HH, BH) {
       return {
         tag: "path",
         attrs: {
-          d: UU,
-          "stroke-width": XU
+          d: HH,
+          "stroke-width": BH
         }
       }
     }
 
-    function aU(UU, XU, zU) {
+    function QH(HH, BH, LH) {
       return {
         tag: "circle",
         attrs: {
-          cx: YU,
-          cy: YU,
-          r: UU,
-          "stroke-width": XU,
-          class: zU
+          cx: XH,
+          cy: XH,
+          r: HH,
+          "stroke-width": BH,
+          class: LH
         }
       }
     }
 
-    function tU(UU, XU, zU) {
+    function WH(HH, BH, LH) {
       return {
         tag: "text",
         attrs: {
-          x: UU,
-          y: XU,
+          x: HH,
+          y: BH,
           class: "Fill Label"
         },
-        text: zU
+        text: LH
       }
     }
-    const gU = {
-      pistol: UU => [NU(YU, YU - UU - 5, YU, YU - UU), NU(YU - UU - 5, YU, YU - UU, YU), NU(YU + UU, YU, YU + UU + 5, YU), IU(1.4)],
-      rifle: UU => [NU(YU, YU - UU - 8, YU, YU - UU), NU(YU, YU + UU, YU, YU + UU + 8), NU(YU - UU - 8, YU, YU - UU, YU), NU(YU + UU, YU, YU + UU + 8, YU), IU(1)],
-      smg: UU => {
-        const XU = Math.PI / 2,
-          zU = [];
-        for (let AU = 0; AU < 4; AU++) zU.push((yU = AU * XU + .35, QU = (AU + 1) * XU - .35, pU(`M${YU+(cU=6+UU)*Math.cos(yU)} ${YU+cU*Math.sin(yU)} A${cU} ${cU} 0 0 1 ${YU+cU*Math.cos(QU)} ${YU+cU*Math.sin(QU)}`, 2)));
-        var cU, yU, QU;
-        return [...zU, IU(1.4)]
+    const MH = {
+      pistol: HH => [GH(XH, XH - HH - 5, XH, XH - HH), GH(XH - HH - 5, XH, XH - HH, XH), GH(XH + HH, XH, XH + HH + 5, XH), YH(1.4)],
+      rifle: HH => [GH(XH, XH - HH - 8, XH, XH - HH), GH(XH, XH + HH, XH, XH + HH + 8), GH(XH - HH - 8, XH, XH - HH, XH), GH(XH + HH, XH, XH + HH + 8, XH), YH(1)],
+      smg: HH => {
+        const BH = Math.PI / 2,
+          LH = [];
+        for (let hH = 0; hH < 4; hH++) LH.push((rH = hH * BH + .35, SH = (hH + 1) * BH - .35, uH(`M${XH+(AH=6+HH)*Math.cos(rH)} ${XH+AH*Math.sin(rH)} A${AH} ${AH} 0 0 1 ${XH+AH*Math.cos(SH)} ${XH+AH*Math.sin(SH)}`, 2)));
+        var AH, rH, SH;
+        return [...LH, YH(1.4)]
       },
-      shotgun: UU => [aU(UU, 3, "Ring Outline"), aU(UU, 1.5, "Ring")],
-      marksman: UU => [pU(`M${26-UU/2} ${39+UU/2} L32 33 L${38+UU/2} ${39+UU/2}`, 2), NU(14 - UU, YU, 24 - UU, YU, 1.5), NU(40 + UU, YU, 50 + UU, YU, 1.5), NU(14 - UU, 30, 14 - UU, 34, 1.5), NU(50 + UU, 30, 50 + UU, 34, 1.5)],
-      machineGun: UU => {
-        const XU = 10 + UU,
-          zU = [];
-        for (const [cU, yU] of [
+      shotgun: HH => [QH(HH, 3, "Ring Outline"), QH(HH, 1.5, "Ring")],
+      marksman: HH => [uH(`M${26-HH/2} ${39+HH/2} L32 33 L${38+HH/2} ${39+HH/2}`, 2), GH(14 - HH, XH, 24 - HH, XH, 1.5), GH(40 + HH, XH, 50 + HH, XH, 1.5), GH(14 - HH, 30, 14 - HH, 34, 1.5), GH(50 + HH, 30, 50 + HH, 34, 1.5)],
+      machineGun: HH => {
+        const BH = 10 + HH,
+          LH = [];
+        for (const [AH, rH] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) zU.push(pU(`M${YU+cU*XU} ${YU+yU*(XU-5)} L${YU+cU*XU} ${YU+yU*XU} L${YU+cU*(XU-5)} ${YU+yU*XU}`, 2));
-        return [...zU, NU(YU, 28, YU, 36, 1.5), NU(28, YU, 36, YU, 1.5)]
+          ]) LH.push(uH(`M${XH+AH*BH} ${XH+rH*(BH-5)} L${XH+AH*BH} ${XH+rH*BH} L${XH+AH*(BH-5)} ${XH+rH*BH}`, 2));
+        return [...LH, GH(XH, 28, XH, 36, 1.5), GH(28, XH, 36, XH, 1.5)]
       },
-      launcher: () => [NU(14, 30, 50, 30, 1.5), NU(YU, 24, YU, 52, 1.5), NU(28, 38, 36, 38, 1.5), NU(29, 44, 35, 44, 1.5), NU(30, 50, 34, 50, 1.5), tU(38, 40, "100"), tU(37, 46, "200"), IU(1.4, 30)],
-      melee: () => [pU("M32 26 L38 32 L32 38 L26 32 Z", 1.5), IU(1.2)],
-      throwable: () => [IU(1.6)]
+      launcher: () => [GH(14, 30, 50, 30, 1.5), GH(XH, 24, XH, 52, 1.5), GH(28, 38, 36, 38, 1.5), GH(29, 44, 35, 44, 1.5), GH(30, 50, 34, 50, 1.5), WH(38, 40, "100"), WH(37, 46, "200"), YH(1.4, 30)],
+      melee: () => [uH("M32 26 L38 32 L32 38 L26 32 Z", 1.5), YH(1.2)],
+      throwable: () => [YH(1.6)]
     };
 
-    function kU(UU) {
+    function xH(HH) {
       let {
-        tag: XU,
-        attrs: zU,
-        text: cU
-      } = UU, yU = `<${XU}`;
-      for (const [QU, AU] of Object.entries(zU)) yU += ` ${QU}="${AU}"`;
-      return void 0 === cU ? `${yU}/>` : `${yU}>${cU}</${XU}>`
+        tag: BH,
+        attrs: LH,
+        text: AH
+      } = HH, rH = `<${BH}`;
+      for (const [SH, hH] of Object.entries(LH)) rH += ` ${SH}="${hH}"`;
+      return void 0 === AH ? `${rH}/>` : `${rH}>${AH}</${BH}>`
     }
-    class GU {
-      constructor(UU, XU) {
-        this.api = UU, this.localPlayerId = XU, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = UU => {
-          this.element = UU, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, UU && !this.enabled && (UU.style.display = "none")
+    class vH {
+      constructor(HH, BH) {
+        this.api = HH, this.localPlayerId = BH, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = HH => {
+          this.element = HH, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, HH && !this.enabled && (HH.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, oU.getRemInPx)()))
-        }, this.tokens = [DU.k.subscribe("aimingOverlay", (UU => {
-          this.sniperOverlay = "sniper" === UU
-        })), DU.k.subscribe("mouseState", (UU => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, zH.getRemInPx)()))
+        }, this.tokens = [CH.k.subscribe("aimingOverlay", (HH => {
+          this.sniperOverlay = "sniper" === HH
+        })), CH.k.subscribe("mouseState", (HH => {
           let {
-            isDown: XU
-          } = UU;
-          this.mouseDown = XU
+            isDown: BH
+          } = HH;
+          this.mouseDown = BH
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      YC(UU) {
-        UU !== this.enabled && (this.enabled = UU, this.drawnVisible = null, UU || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      vI(HH) {
+        HH !== this.enabled && (this.enabled = HH, this.drawnVisible = null, HH || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(UU, XU) {
-        var zU, cU;
+      frame(HH, BH) {
+        var LH, AH;
         if (!this.enabled) return;
         const {
-          api: yU
-        } = this, QU = yU.isAlive(this.localPlayerId) && null !== (zU = null === (cU = yU.HzU(this.localPlayerId)) || void 0 === cU ? void 0 : cU.name) && void 0 !== zU ? zU : null, AU = (FU = QU) && EU[FU] || null;
-        var FU;
-        if (this.setOwnsCrosshair(null !== AU), !this.element) return;
-        const oU = yU.getHeldGunInaccuracy(),
-          DU = null !== oU,
-          YU = null !== AU && !this.sniperOverlay && yU.isCrosshairShown();
-        if (YU !== this.drawnVisible && (this.drawnVisible = YU, this.element.style.display = YU ? "block" : "none"), !YU) return;
-        const NU = DU ? function(UU) {
-            return "launcher" === UU || "melee" === UU || "throwable" === UU ? "none" : "shotgun" === UU ? "cone" : "offset"
-          }(AU) : "none",
-          IU = null !== oU && void 0 !== oU ? oU : 0;
-        "cone" === NU ? this.drawCone(AU, this.coneRadiusVh(IU, XU) * this.gapPerVh, UU) : (this.coneDrawn = !1, this.draw(AU, "none" === NU ? 2 : this.offsetGap(IU)));
-        const pU = !DU && this.mouseDown;
-        pU !== this.drawnPressed && (this.drawnPressed = pU, this.element.classList.toggle("Pressed", pU))
+          api: rH
+        } = this, SH = rH.isAlive(this.localPlayerId) && null !== (LH = null === (AH = rH.yLH(this.localPlayerId)) || void 0 === AH ? void 0 : AH.name) && void 0 !== LH ? LH : null, hH = (tH = SH) && EH[tH] || null;
+        var tH;
+        if (this.setOwnsCrosshair(null !== hH), !this.element) return;
+        const zH = rH.getHeldGunInaccuracy(),
+          CH = null !== zH,
+          XH = null !== hH && !this.sniperOverlay && rH.isCrosshairShown();
+        if (XH !== this.drawnVisible && (this.drawnVisible = XH, this.element.style.display = XH ? "block" : "none"), !XH) return;
+        const GH = CH ? function(HH) {
+            return "launcher" === HH || "melee" === HH || "throwable" === HH ? "none" : "shotgun" === HH ? "cone" : "offset"
+          }(hH) : "none",
+          YH = null !== zH && void 0 !== zH ? zH : 0;
+        "cone" === GH ? this.drawCone(hH, this.coneRadiusVh(YH, BH) * this.gapPerVh, HH) : (this.coneDrawn = !1, this.draw(hH, "none" === GH ? 2 : this.offsetGap(YH)));
+        const uH = !CH && this.mouseDown;
+        uH !== this.drawnPressed && (this.drawnPressed = uH, this.element.classList.toggle("Pressed", uH))
       }
       dispose() {
-        for (const UU of this.tokens) DU.k.unsubscribe(UU);
+        for (const HH of this.tokens) CH.k.unsubscribe(HH);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(UU, XU) {
-        var zU, cU;
-        UU !== this.drawnFamily ? (this.drawnFamily = UU, this.drawnGap = XU, this.element.innerHTML = function(UU, XU) {
-          return `<svg viewBox="0 0 64 64">${gU[UU](XU).map(kU).join("")}</svg>`
-        }(UU, XU), this.shapes = Array.from(null !== (zU = null === (cU = this.element.firstElementChild) || void 0 === cU ? void 0 : cU.children) && void 0 !== zU ? zU : [])) : XU !== this.drawnGap && (this.drawnGap = XU, function(UU, XU, zU) {
-          const cU = gU[XU](zU);
-          for (let yU = 0; yU < cU.length; yU++)
-            for (const [XU, zU] of Object.entries(cU[yU].attrs)) {
-              const cU = String(zU);
-              UU[yU].getAttribute(XU) !== cU && UU[yU].setAttribute(XU, cU)
+      draw(HH, BH) {
+        var LH, AH;
+        HH !== this.drawnFamily ? (this.drawnFamily = HH, this.drawnGap = BH, this.element.innerHTML = function(HH, BH) {
+          return `<svg viewBox="0 0 64 64">${MH[HH](BH).map(xH).join("")}</svg>`
+        }(HH, BH), this.shapes = Array.from(null !== (LH = null === (AH = this.element.firstElementChild) || void 0 === AH ? void 0 : AH.children) && void 0 !== LH ? LH : [])) : BH !== this.drawnGap && (this.drawnGap = BH, function(HH, BH, LH) {
+          const AH = MH[BH](LH);
+          for (let rH = 0; rH < AH.length; rH++)
+            for (const [BH, LH] of Object.entries(AH[rH].attrs)) {
+              const AH = String(LH);
+              HH[rH].getAttribute(BH) !== AH && HH[rH].setAttribute(BH, AH)
             }
-        }(this.shapes, UU, XU))
+        }(this.shapes, HH, BH))
       }
-      drawCone(UU, XU, zU) {
-        UU === this.drawnFamily && this.coneDrawn ? this.shownRadius += (XU - this.shownRadius) * (1 - Math.exp(-zU / 80)) : this.shownRadius = XU, this.coneDrawn = !0, this.draw(UU, Math.round(4 * this.shownRadius) / 4)
+      drawCone(HH, BH, LH) {
+        HH === this.drawnFamily && this.coneDrawn ? this.shownRadius += (BH - this.shownRadius) * (1 - Math.exp(-LH / 80)) : this.shownRadius = BH, this.coneDrawn = !0, this.draw(HH, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(UU, XU) {
-        if (!(XU > 0)) return 1;
-        const zU = UU * AU.k / 2;
-        return Math.max(50 * Math.tan(zU) / XU, 1)
+      coneRadiusVh(HH, BH) {
+        if (!(BH > 0)) return 1;
+        const LH = HH * hH.j / 2;
+        return Math.max(50 * Math.tan(LH) / BH, 1)
       }
-      offsetGap(UU) {
-        const XU = 2 + ((0, FU.e)(UU) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * XU) / 2)
+      offsetGap(HH) {
+        const BH = 2 + ((0, tH.d)(HH) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * BH) / 2)
       }
-      setOwnsCrosshair(UU) {
-        UU !== this.ownsCrosshair && (this.ownsCrosshair = UU, document.body.classList.toggle("FrontlineCustomCrosshair", UU))
+      setOwnsCrosshair(HH) {
+        HH !== this.ownsCrosshair && (this.ownsCrosshair = HH, document.body.classList.toggle("FrontlineCustomCrosshair", HH))
       }
     }
-    const BU = "FrontlineCustomDamage",
-      ZU = .45,
-      RU = .2;
-    class PU {
-      constructor(UU, XU) {
-        this.api = UU, this.localPlayerId = XU, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+    const PH = "FrontlineCustomDamage",
+      TH = .45,
+      UH = .2;
+    class VH {
+      constructor(HH, BH) {
+        this.api = HH, this.localPlayerId = BH, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.sU = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = UU => {
-          var XU, zU;
-          this.clearHits(), this.root = UU, this.lowLayer = null !== (XU = null === UU || void 0 === UU ? void 0 : UU.querySelector(".FrontlineDamageLow")) && void 0 !== XU ? XU : null, this.arcLayer = null !== (zU = null === UU || void 0 === UU ? void 0 : UU.querySelector(".FrontlineDamageArcs")) && void 0 !== zU ? zU : null, this.showRoot(), this.drawLow()
-        }, this.token = DU.k.subscribe("damagedByOtherPlayer", (UU => {
+        }, this.maxHealth = null, this.PA = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = HH => {
+          var BH, LH;
+          this.clearHits(), this.root = HH, this.lowLayer = null !== (BH = null === HH || void 0 === HH ? void 0 : HH.querySelector(".FrontlineDamageLow")) && void 0 !== BH ? BH : null, this.arcLayer = null !== (LH = null === HH || void 0 === HH ? void 0 : HH.querySelector(".FrontlineDamageArcs")) && void 0 !== LH ? LH : null, this.showRoot(), this.drawLow()
+        }, this.token = CH.k.subscribe("damagedByOtherPlayer", (HH => {
           let {
-            direction: XU,
-            vU: zU
-          } = UU;
-          this.onHurt(XU, zU)
-        })), this.syncHealth(), document.body.classList.add(BU)
+            direction: BH,
+            xA: LH
+          } = HH;
+          this.onHurt(BH, LH)
+        })), this.syncHealth(), document.body.classList.add(PH)
       }
-      YC(UU) {
-        UU !== this.enabled && (this.enabled = UU, document.body.classList.toggle(BU, UU), UU || this.clearHits(), this.showRoot())
+      vI(HH) {
+        HH !== this.enabled && (this.enabled = HH, document.body.classList.toggle(PH, HH), HH || this.clearHits(), this.showRoot())
       }
-      frame(UU) {
-        this.syncHealth(), this.cameraHeading = UU;
-        for (const XU of this.arcs) this.drawArcAngle(XU)
+      frame(HH) {
+        this.syncHealth(), this.cameraHeading = HH;
+        for (const BH of this.arcs) this.drawArcAngle(BH)
       }
       dispose() {
-        DU.k.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(BU)
+        CH.k.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(PH)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const UU = this.api.getClientOption(this.localPlayerId, "_health"),
-          XU = this.api.getClientOption(this.localPlayerId, "_shield"),
-          zU = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(UU, this.readHealth) && Object.is(XU, this.readShield) && Object.is(zU, this.readMaxHealth)) return;
-        if (this.readHealth = UU, this.readShield = XU, this.readMaxHealth = zU, null === UU || void 0 === UU || !zU) return this.lastHealthPool = null, this.maxHealth = null, this.sU = 1, this.dead = !1, void this.drawLow();
-        const cU = UU + (null !== XU && void 0 !== XU ? XU : 0);
-        if (null !== this.lastHealthPool && cU < this.lastHealthPool) {
-          const UU = performance.now(),
-            XU = (this.lastHealthPool - cU) / zU;
-          this.lastDrop = UU - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + XU,
+        const HH = this.api.getClientOption(this.localPlayerId, "_health"),
+          BH = this.api.getClientOption(this.localPlayerId, "_shield"),
+          LH = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(HH, this.readHealth) && Object.is(BH, this.readShield) && Object.is(LH, this.readMaxHealth)) return;
+        if (this.readHealth = HH, this.readShield = BH, this.readMaxHealth = LH, null === HH || void 0 === HH || !LH) return this.lastHealthPool = null, this.maxHealth = null, this.PA = 1, this.dead = !1, void this.drawLow();
+        const AH = HH + (null !== BH && void 0 !== BH ? BH : 0);
+        if (null !== this.lastHealthPool && AH < this.lastHealthPool) {
+          const HH = performance.now(),
+            BH = (this.lastHealthPool - AH) / LH;
+          this.lastDrop = HH - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + BH,
             at: this.lastDrop.at
           } : {
-            frac: XU,
-            at: UU
+            frac: BH,
+            at: HH
           }
         }
-        this.dead = UU <= 0, this.dead && this.clearHits(), this.lastHealthPool = cU, this.maxHealth = zU, this.sU = UU > 0 ? UU / zU : 1, this.drawLow()
+        this.dead = HH <= 0, this.dead && this.clearHits(), this.lastHealthPool = AH, this.maxHealth = LH, this.PA = HH > 0 ? HH / LH : 1, this.drawLow()
       }
-      onHurt(UU, XU) {
+      onHurt(HH, BH) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const zU = Math.min(1, this.takeDamageFrac(XU) / .3);
-        null !== UU && this.showArc(UU, zU), this.flashEdge(null === UU ? null : UU - this.cameraHeading, .4 + .6 * zU)
+        const LH = Math.min(1, this.takeDamageFrac(BH) / .3);
+        null !== HH && this.showArc(HH, LH), this.flashEdge(null === HH ? null : HH - this.cameraHeading, .4 + .6 * LH)
       }
-      takeDamageFrac(UU) {
-        if (void 0 !== UU && this.maxHealth) return UU / this.maxHealth;
+      takeDamageFrac(HH) {
+        if (void 0 !== HH && this.maxHealth) return HH / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: XU
+          frac: BH
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, XU
+        }, BH
       }
       drawLow() {
         if (!this.lowLayer) return;
-        const UU = dU((ZU - this.sU) / .25),
-          XU = dU((RU - this.sU) / .15000000000000002),
-          zU = this.sU < ZU;
-        this.lowLayer.classList.toggle("Active", zU), this.lowLayer.classList.toggle("Critical", this.sU < RU), this.lowLayer.style.opacity = String(zU ? .55 + .3 * UU + .15 * XU : 0)
+        const HH = bH((TH - this.PA) / .25),
+          BH = bH((UH - this.PA) / .15000000000000002),
+          LH = this.PA < TH;
+        this.lowLayer.classList.toggle("Active", LH), this.lowLayer.classList.toggle("Critical", this.PA < UH), this.lowLayer.style.opacity = String(LH ? .55 + .3 * HH + .15 * BH : 0)
       }
-      showArc(UU, XU) {
-        var zU, cU;
+      showArc(HH, BH) {
+        var LH, AH;
         if (!this.arcLayer) return;
-        let yU = this.arcs.find((XU => WU(XU.direction, UU) < .6));
-        if (!yU) {
-          const XU = document.createElement("div");
-          XU.className = "FrontlineDamageArc", XU.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(XU), yU = {
-            element: XU,
-            direction: UU,
+        let rH = this.arcs.find((BH => OH(BH.direction, HH) < .6));
+        if (!rH) {
+          const BH = document.createElement("div");
+          BH.className = "FrontlineDamageArc", BH.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(BH), rH = {
+            element: BH,
+            direction: HH,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(yU)
+          }, this.arcs.push(rH)
         }
-        yU.direction = UU, this.drawArcAngle(yU);
-        const QU = yU.fade ? Number(getComputedStyle(yU.element).opacity) : 0;
-        null === (zU = yU.fade) || void 0 === zU || zU.cancel(), null === (cU = yU.pop) || void 0 === cU || cU.cancel(), yU.element.style.opacity = "1";
-        const AU = yU.element.animate([{
-          opacity: QU
+        rH.direction = HH, this.drawArcAngle(rH);
+        const SH = rH.fade ? Number(getComputedStyle(rH.element).opacity) : 0;
+        null === (LH = rH.fade) || void 0 === LH || LH.cancel(), null === (AH = rH.pop) || void 0 === AH || AH.cancel(), rH.element.style.opacity = "1";
+        const hH = rH.element.animate([{
+          opacity: SH
         }, {
           opacity: 1
         }], 144);
-        yU.fade = AU, yU.pop = yU.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * XU
+        rH.fade = hH, rH.pop = rH.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * BH
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const FU = yU;
-        AU.onfinish = () => {
-          if (FU.fade !== AU) return;
-          const UU = FU.element.animate([{
+        const tH = rH;
+        hH.onfinish = () => {
+          if (tH.fade !== hH) return;
+          const HH = tH.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -838,129 +838,129 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          UU.startTime = AU.startTime, FU.fade = UU, UU.onfinish = () => {
-            FU.fade === UU && (FU.element.remove(), LU(this.arcs, FU))
+          HH.startTime = hH.startTime, tH.fade = HH, HH.onfinish = () => {
+            tH.fade === HH && (tH.element.remove(), kH(this.arcs, tH))
           }
         }
       }
-      drawArcAngle(UU) {
-        const XU = UU.direction - this.cameraHeading;
-        (null === UU.drawnAngle || Math.abs(XU - UU.drawnAngle) > .005) && (UU.drawnAngle = XU, UU.element.style.rotate = `${XU}rad`)
+      drawArcAngle(HH) {
+        const BH = HH.direction - this.cameraHeading;
+        (null === HH.drawnAngle || Math.abs(BH - HH.drawnAngle) > .005) && (HH.drawnAngle = BH, HH.element.style.rotate = `${BH}rad`)
       }
-      flashEdge(UU, XU) {
-        var zU, cU, yU;
+      flashEdge(HH, BH) {
+        var LH, AH, rH;
         if (!this.root) return;
-        let QU = this.flashes.find((XU => null === XU.angle || null === UU ? XU.angle === UU : WU(XU.angle, UU) < .5));
-        if (!QU) {
-          const XU = document.createElement("div");
-          XU.className = "FrontlineDamageFlash";
-          const zU = XU.appendChild(document.createElement("div"));
-          zU.className = "FrontlineDamageFlashGlow", this.root.insertBefore(XU, this.arcLayer), QU = {
-            element: XU,
-            glow: zU,
-            angle: UU,
+        let SH = this.flashes.find((BH => null === BH.angle || null === HH ? BH.angle === HH : OH(BH.angle, HH) < .5));
+        if (!SH) {
+          const BH = document.createElement("div");
+          BH.className = "FrontlineDamageFlash";
+          const LH = BH.appendChild(document.createElement("div"));
+          LH.className = "FrontlineDamageFlashGlow", this.root.insertBefore(BH, this.arcLayer), SH = {
+            element: BH,
+            glow: LH,
+            angle: HH,
             level: 0,
             animation: null
-          }, this.flashes.push(QU)
+          }, this.flashes.push(SH)
         }
-        const AU = null === (zU = QU.animation) || void 0 === zU || null === (cU = zU.effect) || void 0 === cU ? void 0 : cU.getComputedTiming().progress,
-          FU = null === AU || void 0 === AU ? 0 : QU.level * (1 - AU);
-        QU.level = Math.min(1, Math.max(XU, FU + .6 * XU)), QU.angle = UU;
+        const hH = null === (LH = SH.animation) || void 0 === LH || null === (AH = LH.effect) || void 0 === AH ? void 0 : AH.getComputedTiming().progress,
+          tH = null === hH || void 0 === hH ? 0 : SH.level * (1 - hH);
+        SH.level = Math.min(1, Math.max(BH, tH + .6 * BH)), SH.angle = HH;
         const {
-          x: oU,
-          y: DU,
-          rx: EU,
-          ry: YU
-        } = function(UU, XU) {
-          const zU = window.innerWidth,
-            cU = window.innerHeight;
-          if (null === UU) return {
-            x: zU / 2,
-            y: cU / 2,
+          x: zH,
+          y: CH,
+          rx: EH,
+          ry: XH
+        } = function(HH, BH) {
+          const LH = window.innerWidth,
+            AH = window.innerHeight;
+          if (null === HH) return {
+            x: LH / 2,
+            y: AH / 2,
             rx: 0,
             ry: 0
           };
-          const yU = Math.sin(UU),
-            QU = -Math.cos(UU),
-            AU = zU / 2 / Math.max(1e-6, Math.abs(yU)),
-            FU = cU / 2 / Math.max(1e-6, Math.abs(QU)),
-            oU = Math.min(AU, FU),
-            DU = Math.round(zU / 2 + yU * oU),
-            EU = Math.round(cU / 2 + QU * oU),
-            YU = cU / 100 * (.85 + .25 * XU),
-            NU = AU <= FU,
-            IU = Math.round((NU ? 30 : 74) * YU),
-            pU = Math.round((NU ? 58 : 26) * YU);
+          const rH = Math.sin(HH),
+            SH = -Math.cos(HH),
+            hH = LH / 2 / Math.max(1e-6, Math.abs(rH)),
+            tH = AH / 2 / Math.max(1e-6, Math.abs(SH)),
+            zH = Math.min(hH, tH),
+            CH = Math.round(LH / 2 + rH * zH),
+            EH = Math.round(AH / 2 + SH * zH),
+            XH = AH / 100 * (.85 + .25 * BH),
+            GH = hH <= tH,
+            YH = Math.round((GH ? 30 : 74) * XH),
+            uH = Math.round((GH ? 58 : 26) * XH);
           return {
-            x: DU,
-            y: EU,
-            rx: IU,
-            ry: pU
+            x: CH,
+            y: EH,
+            rx: YH,
+            ry: uH
           }
-        }(UU, QU.level), {
-          style: NU
-        } = QU.glow;
-        QU.glow.classList.toggle("Everywhere", null === UU), NU.setProperty("--glowX", `${oU}px`), NU.setProperty("--glowY", `${DU}px`), NU.setProperty("--glowRx", `${EU}px`), NU.setProperty("--glowRy", `${YU}px`), QU.element.style.transformOrigin = `${oU}px ${DU}px`, null === (yU = QU.animation) || void 0 === yU || yU.cancel();
-        const IU = QU.element.animate([{
+        }(HH, SH.level), {
+          style: GH
+        } = SH.glow;
+        SH.glow.classList.toggle("Everywhere", null === HH), GH.setProperty("--glowX", `${zH}px`), GH.setProperty("--glowY", `${CH}px`), GH.setProperty("--glowRx", `${EH}px`), GH.setProperty("--glowRy", `${XH}px`), SH.element.style.transformOrigin = `${zH}px ${CH}px`, null === (rH = SH.animation) || void 0 === rH || rH.cancel();
+        const YH = SH.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: QU.level,
+          opacity: SH.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * QU.level,
+          opacity: .8 * SH.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * QU.level
+          duration: 520 + 180 * SH.level
         });
-        QU.animation = IU;
-        const pU = QU;
-        IU.onfinish = () => {
-          pU.animation === IU && (pU.element.remove(), LU(this.flashes, pU))
+        SH.animation = YH;
+        const uH = SH;
+        YH.onfinish = () => {
+          uH.animation === YH && (uH.element.remove(), kH(this.flashes, uH))
         }
       }
       clearHits() {
-        for (const cU of this.arcs) {
-          var UU, XU;
-          null === (UU = cU.fade) || void 0 === UU || UU.cancel(), cU.fade = null, null === (XU = cU.pop) || void 0 === XU || XU.cancel(), cU.element.remove()
+        for (const AH of this.arcs) {
+          var HH, BH;
+          null === (HH = AH.fade) || void 0 === HH || HH.cancel(), AH.fade = null, null === (BH = AH.pop) || void 0 === BH || BH.cancel(), AH.element.remove()
         }
         this.arcs.length = 0;
-        for (const cU of this.flashes) {
-          var zU;
-          null === (zU = cU.animation) || void 0 === zU || zU.cancel(), cU.element.remove()
+        for (const AH of this.flashes) {
+          var LH;
+          null === (LH = AH.animation) || void 0 === LH || LH.cancel(), AH.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function WU(UU, XU) {
-      return Math.abs(Math.atan2(Math.sin(UU - XU), Math.cos(UU - XU)))
+    function OH(HH, BH) {
+      return Math.abs(Math.atan2(Math.sin(HH - BH), Math.cos(HH - BH)))
     }
 
-    function dU(UU) {
-      return Math.max(0, Math.min(1, UU))
+    function bH(HH) {
+      return Math.max(0, Math.min(1, HH))
     }
 
-    function LU(UU, XU) {
-      const zU = UU.indexOf(XU); - 1 !== zU && UU.splice(zU, 1)
+    function kH(HH, BH) {
+      const LH = HH.indexOf(BH); - 1 !== LH && HH.splice(LH, 1)
     }
-    var eU = zU(1106),
-      CU = zU.n(eU),
-      wU = zU(37318),
-      qU = zU(37418),
-      OU = zU(1193),
-      SU = zU(1492),
-      rU = zU(40278);
-    const uU = "frontlineHudChanged",
-      fU = "frontlineScoreboardChanged";
-    class iU {
+    var mH = LH(1038),
+      oH = LH.n(mH),
+      IH = LH(37472),
+      fH = LH(37569),
+      lH = LH(1123),
+      KH = LH(1450),
+      cH = LH(40413);
+    const eH = "frontlineHudChanged",
+      qH = "frontlineScoreboardChanged";
+    class gH {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -973,86 +973,86 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      PY(UU) {
-        this.wire = UU, DU.k.UY(uU, UU, !0)
+      kX(HH) {
+        this.wire = HH, CH.k.AX(eH, HH, !0)
       }
-      receiveScoreboard(UU) {
-        let XU = "scoreboard" === UU[0] ? performance.now() + UU[5] : 0;
-        const zU = this.scoreboard.endsAt;
-        0 !== XU && 0 !== zU && Math.abs(XU - zU) < 1e3 && (XU = zU), this.scoreboard = {
-          wire: UU,
-          endsAt: XU
-        }, DU.k.UY(fU, this.scoreboard, !0)
+      receiveScoreboard(HH) {
+        let BH = "scoreboard" === HH[0] ? performance.now() + HH[5] : 0;
+        const LH = this.scoreboard.endsAt;
+        0 !== BH && 0 !== LH && Math.abs(BH - LH) < 1e3 && (BH = LH), this.scoreboard = {
+          wire: HH,
+          endsAt: BH
+        }, CH.k.AX(qH, this.scoreboard, !0)
       }
     }
-    var HU = zU(1305);
-    const MU = {
+    var NH = LH(1225);
+    const RH = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function vU(UU) {
+    function jH(HH) {
       let {
-        className: XU,
-        point: zU
-      } = UU;
-      const [cU, yU, QU, AU, FU, oU] = zU;
-      return (0, HU.jsxs)("div", {
-        className: CU()(XU, `Owner-${yU||"None"}`, `Leader-${AU||"None"}`, {
-          Contested: FU,
-          Here: oU
+        className: BH,
+        point: LH
+      } = HH;
+      const [AH, rH, SH, hH, tH, zH] = LH;
+      return (0, NH.jsxs)("div", {
+        className: oH()(BH, `Owner-${rH||"None"}`, `Leader-${hH||"None"}`, {
+          Contested: tH,
+          Here: zH
         }),
-        children: [(0, HU.jsx)("span", {
+        children: [(0, NH.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: cU
-        }), (0, HU.jsx)("i", {
+          children: AH
+        }), (0, NH.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${QU}%`
+            width: `${SH}%`
           }
         })]
       })
     }
-    const VU = (0, yU.memo)((function(UU) {
+    const nH = (0, rH.memo)((function(HH) {
         let {
-          points: XU,
-          markers: zU
-        } = UU;
+          points: BH,
+          markers: LH
+        } = HH;
         const {
-          t: cU
-        } = (0, OU.I)();
-        return XU ? (0, HU.jsx)("div", {
+          t: AH
+        } = (0, lH.B)();
+        return BH ? (0, NH.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: XU.map((UU => {
-            const [XU, , , , , , , yU] = UU;
-            return (0, HU.jsxs)("div", {
-              ref: zU.points.bindMarker(XU),
+          children: BH.map((HH => {
+            const [BH, , , , , , , rH] = HH;
+            return (0, NH.jsxs)("div", {
+              ref: LH.points.bindMarker(BH),
               className: "FrontlinePointMarker",
-              children: [(0, HU.jsx)(vU, {
+              children: [(0, NH.jsx)(jH, {
                 className: "FrontlinePointMarkerTile",
-                point: UU
-              }), (0, HU.jsxs)("div", {
+                point: HH
+              }), (0, NH.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [yU && (0, HU.jsx)("span", {
-                  className: CU()("FrontlinePointMarkerHomeTurf", `Team-${yU}`),
-                  children: cU("frontlineHud:homeTurf", {
-                    team: cU(MU[yU])
+                children: [rH && (0, NH.jsx)("span", {
+                  className: oH()("FrontlinePointMarkerHomeTurf", `Team-${rH}`),
+                  children: AH("frontlineHud:homeTurf", {
+                    team: AH(RH[rH])
                   })
-                }), (0, HU.jsx)("span", {
+                }), (0, NH.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, XU)
+            }, BH)
           }))
         }) : null
       })),
-      sU = {
+      FH = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      nU = {
+      DH = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -1060,269 +1060,269 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function mU(UU) {
+    function wH(HH) {
       let {
-        hud: XU,
-        crosshair: zU,
-        damage: cU,
-        markers: yU
-      } = UU;
-      const QU = (0, SU.j)(uU, XU.getWire()),
-        AU = (0, SU.j)(fU, XU.getScoreboard());
-      return (0, HU.jsxs)(HU.Fragment, {
-        children: [(0, HU.jsx)(lU, {
-          damage: cU
-        }), (0, HU.jsx)(VU, {
-          points: "scoreboard" === AU.wire[0] ? AU.wire[6] : null,
-          markers: yU
-        }), (0, HU.jsx)(JU, {
-          view: AU
-        }), (0, HU.jsx)("div", {
+        hud: BH,
+        crosshair: LH,
+        damage: AH,
+        markers: rH
+      } = HH;
+      const SH = (0, KH.e)(eH, BH.getWire()),
+        hH = (0, KH.e)(qH, BH.getScoreboard());
+      return (0, NH.jsxs)(NH.Fragment, {
+        children: [(0, NH.jsx)(ZH, {
+          damage: AH
+        }), (0, NH.jsx)(nH, {
+          points: "scoreboard" === hH.wire[0] ? hH.wire[6] : null,
+          markers: rH
+        }), (0, NH.jsx)(aH, {
+          view: hH
+        }), (0, NH.jsx)("div", {
           className: "FrontlineReticle",
-          ref: zU.bindElement
-        }), (0, HU.jsx)(wU.e, {
-          children: (0, HU.jsx)(xU, {
-            wire: QU
+          ref: LH.bindElement
+        }), (0, NH.jsx)(IH.e, {
+          children: (0, NH.jsx)(dH, {
+            wire: SH
           })
         })]
       })
     }
-    const lU = (0, yU.memo)((function(UU) {
+    const ZH = (0, rH.memo)((function(HH) {
         let {
-          damage: XU
-        } = UU;
-        return (0, HU.jsxs)("div", {
+          damage: BH
+        } = HH;
+        return (0, NH.jsxs)("div", {
           className: "FrontlineDamage",
-          ref: XU.bindElement,
-          children: [(0, HU.jsx)("div", {
+          ref: BH.bindElement,
+          children: [(0, NH.jsx)("div", {
             className: "FrontlineDamageLow",
-            children: (0, HU.jsx)("div", {
+            children: (0, NH.jsx)("div", {
               className: "FrontlineDamageShade"
             })
-          }), (0, HU.jsx)("div", {
+          }), (0, NH.jsx)("div", {
             className: "FrontlineDamageArcs"
           })]
         })
       })),
-      xU = (0, yU.memo)((function(UU) {
+      dH = (0, rH.memo)((function(HH) {
         let {
-          wire: XU
-        } = UU;
+          wire: BH
+        } = HH;
         const {
-          t: zU
-        } = (0, OU.I)();
-        if ("capture" === XU[0]) {
-          const [, UU, cU, yU, QU, AU, FU] = XU, oU = Math.round(yU / 100 * 24);
-          return (0, HU.jsxs)("div", {
-            className: CU()("FrontlinePlate", `Status-${cU}`, `Leader-${QU||"None"}`),
-            children: [(0, HU.jsx)(TU, {}), (0, HU.jsxs)("div", {
+          t: LH
+        } = (0, lH.B)();
+        if ("capture" === BH[0]) {
+          const [, HH, AH, rH, SH, hH, tH] = BH, zH = Math.round(rH / 100 * 24);
+          return (0, NH.jsxs)("div", {
+            className: oH()("FrontlinePlate", `Status-${AH}`, `Leader-${SH||"None"}`),
+            children: [(0, NH.jsx)(pH, {}), (0, NH.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, HU.jsx)("span", {
+              children: [(0, NH.jsx)("span", {
                 className: "FrontlineObjective",
-                children: UU
-              }), (0, HU.jsxs)("div", {
+                children: HH
+              }), (0, NH.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, HU.jsx)("div", {
+                children: [(0, NH.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: zU("frontlineHud:objective", {
-                    point: UU,
-                    friendly: AU,
-                    enemy: FU
+                  children: LH("frontlineHud:objective", {
+                    point: HH,
+                    friendly: hH,
+                    enemy: tH
                   })
-                }), (0, HU.jsx)("div", {
+                }), (0, NH.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: zU(sU[cU])
+                  children: LH(FH[AH])
                 })]
-              }), (0, HU.jsxs)("span", {
+              }), (0, NH.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(yU).padStart(3, "0"), (0, HU.jsx)("small", {
+                children: [String(rH).padStart(3, "0"), (0, NH.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, HU.jsx)(KU, {
+            }), (0, NH.jsx)(JH, {
               segments: 24,
-              lit: oU
+              lit: zH
             })]
           })
         }
-        if ("alert" === XU[0]) {
-          const [, UU, cU, yU] = XU;
-          return (0, HU.jsxs)("div", {
-            className: CU()("FrontlinePlate", "FrontlineAlert", `Tone-${yU}`),
-            children: [(0, HU.jsx)(TU, {}), (0, HU.jsx)("div", {
+        if ("alert" === BH[0]) {
+          const [, HH, AH, rH] = BH;
+          return (0, NH.jsxs)("div", {
+            className: oH()("FrontlinePlate", "FrontlineAlert", `Tone-${rH}`),
+            children: [(0, NH.jsx)(pH, {}), (0, NH.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: zU(nU[UU])
-            }), (0, HU.jsx)("div", {
+              children: LH(DH[HH])
+            }), (0, NH.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: cU
+              children: AH
             })]
           })
         }
         return null
       })),
-      JU = (0, yU.memo)((function(UU) {
+      aH = (0, rH.memo)((function(HH) {
         let {
-          view: XU
-        } = UU;
+          view: BH
+        } = HH;
         const {
-          t: zU
-        } = (0, OU.I)(), cU = (0, yU.useRef)(null), QU = function(UU, XU) {
-          const [zU, cU] = (0, yU.useState)(!1);
-          return (0, yU.useLayoutEffect)((() => {
-            const XU = UU.current;
-            if (!XU) return;
-            const zU = document.querySelector(`.${qU.f}`),
-              yU = document.querySelector(`.${qU.h}`),
-              QU = () => {
-                var UU;
-                const QU = XU.querySelector(".FrontlineTeamTrack"),
-                  AU = (0, oU.getRemInPx)(),
-                  FU = XU.getBoundingClientRect().width - 2 * (null !== (UU = null === QU || void 0 === QU ? void 0 : QU.getBoundingClientRect().width) && void 0 !== UU ? UU : 0),
-                  DU = window.innerWidth / 2,
-                  EU = zU ? zU.getBoundingClientRect().right : 0,
-                  YU = yU ? yU.getBoundingClientRect().left : window.innerWidth,
-                  NU = Math.min(DU - EU, YU - DU) - qU.d - FU / 2,
-                  IU = NU < 6 * AU,
-                  pU = IU ? (window.innerWidth - FU) / 2 - qU.d : NU;
-                XU.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(pU,14*AU)))}px`), cU(IU)
+          t: LH
+        } = (0, lH.B)(), AH = (0, rH.useRef)(null), SH = function(HH, BH) {
+          const [LH, AH] = (0, rH.useState)(!1);
+          return (0, rH.useLayoutEffect)((() => {
+            const BH = HH.current;
+            if (!BH) return;
+            const LH = document.querySelector(`.${fH.f}`),
+              rH = document.querySelector(`.${fH.i}`),
+              SH = () => {
+                var HH;
+                const SH = BH.querySelector(".FrontlineTeamTrack"),
+                  hH = (0, zH.getRemInPx)(),
+                  tH = BH.getBoundingClientRect().width - 2 * (null !== (HH = null === SH || void 0 === SH ? void 0 : SH.getBoundingClientRect().width) && void 0 !== HH ? HH : 0),
+                  CH = window.innerWidth / 2,
+                  EH = LH ? LH.getBoundingClientRect().right : 0,
+                  XH = rH ? rH.getBoundingClientRect().left : window.innerWidth,
+                  GH = Math.min(CH - EH, XH - CH) - fH.e - tH / 2,
+                  YH = GH < 6 * hH,
+                  uH = YH ? (window.innerWidth - tH) / 2 - fH.e : GH;
+                BH.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(uH,14*hH)))}px`), AH(YH)
               };
-            QU();
-            const AU = new ResizeObserver(QU);
-            for (const UU of [XU, zU, yU]) UU && AU.observe(UU);
-            return window.addEventListener("resize", QU), () => {
-              AU.disconnect(), window.removeEventListener("resize", QU)
+            SH();
+            const hH = new ResizeObserver(SH);
+            for (const HH of [BH, LH, rH]) HH && hH.observe(HH);
+            return window.addEventListener("resize", SH), () => {
+              hH.disconnect(), window.removeEventListener("resize", SH)
             }
-          }), [UU, XU]), zU
-        }(cU, "scoreboard" === XU.wire[0]);
-        if ("scoreboard" !== XU.wire[0]) return null;
-        const [, AU, FU, DU, EU, , YU] = XU.wire, NU = "Red" === AU ? "Blue" : "Red";
-        return (0, HU.jsxs)("div", {
-          className: CU()("FrontlineScoreboardContainer", {
-            Below: QU
+          }), [HH, BH]), LH
+        }(AH, "scoreboard" === BH.wire[0]);
+        if ("scoreboard" !== BH.wire[0]) return null;
+        const [, hH, tH, CH, EH, , XH] = BH.wire, GH = "Red" === hH ? "Blue" : "Red";
+        return (0, NH.jsxs)("div", {
+          className: oH()("FrontlineScoreboardContainer", {
+            Below: SH
           }),
-          children: [(0, HU.jsxs)("div", {
-            ref: cU,
+          children: [(0, NH.jsxs)("div", {
+            ref: AH,
             className: "FrontlineScoreboard",
-            children: [(0, HU.jsx)(TU, {}), (0, HU.jsx)(jU, {
-              team: AU,
-              tickets: FU,
-              goal: EU,
+            children: [(0, NH.jsx)(pH, {}), (0, NH.jsx)(sH, {
+              team: hH,
+              tickets: tH,
+              goal: EH,
               side: "Friendly"
-            }), (0, HU.jsx)("div", {
+            }), (0, NH.jsx)("div", {
               className: "FrontlinePoints",
-              children: YU.map((UU => (0, HU.jsx)(vU, {
+              children: XH.map((HH => (0, NH.jsx)(jH, {
                 className: "FrontlinePoint",
-                point: UU
-              }, UU[0])))
-            }), (0, HU.jsx)(jU, {
-              team: NU,
-              tickets: DU,
-              goal: EU,
+                point: HH
+              }, HH[0])))
+            }), (0, NH.jsx)(sH, {
+              team: GH,
+              tickets: CH,
+              goal: EH,
               side: "Enemy"
             })]
-          }), (0, HU.jsxs)("div", {
+          }), (0, NH.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, HU.jsx)(bU, {
-              endsAt: XU.endsAt
-            }), (0, HU.jsx)("div", {
+            children: [(0, NH.jsx)(iH, {
+              endsAt: BH.endsAt
+            }), (0, NH.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: zU("frontlineHud:ticketGoal", {
-                goal: EU
+              children: LH("frontlineHud:ticketGoal", {
+                goal: EH
               })
             })]
           })]
         })
       }));
 
-    function jU(UU) {
+    function sH(HH) {
       let {
-        team: XU,
-        tickets: zU,
-        goal: cU,
-        side: yU
-      } = UU;
+        team: BH,
+        tickets: LH,
+        goal: AH,
+        side: rH
+      } = HH;
       const {
-        t: QU
-      } = (0, OU.I)(), AU = String(zU).padStart(3, "0"), FU = AU.search(/[1-9]/), oU = -1 === FU ? AU : AU.slice(0, FU), DU = Math.min(20, Math.floor(zU / cU * 20));
-      return (0, HU.jsxs)("div", {
-        className: CU()("FrontlineTeamScore", yU, `Team-${XU}`),
-        children: [(0, HU.jsxs)("div", {
+        t: SH
+      } = (0, lH.B)(), hH = String(LH).padStart(3, "0"), tH = hH.search(/[1-9]/), zH = -1 === tH ? hH : hH.slice(0, tH), CH = Math.min(20, Math.floor(LH / AH * 20));
+      return (0, NH.jsxs)("div", {
+        className: oH()("FrontlineTeamScore", rH, `Team-${BH}`),
+        children: [(0, NH.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, HU.jsx)("span", {
+          children: [(0, NH.jsx)("span", {
             className: "Lead",
-            children: oU
-          }), -1 !== FU && AU.slice(FU)]
-        }), (0, HU.jsxs)("div", {
+            children: zH
+          }), -1 !== tH && hH.slice(tH)]
+        }), (0, NH.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, HU.jsx)("div", {
+          children: [(0, NH.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: QU(MU[XU])
-          }), (0, HU.jsx)(KU, {
+            children: SH(RH[BH])
+          }), (0, NH.jsx)(JH, {
             segments: 20,
-            lit: DU
+            lit: CH
           })]
         })]
       })
     }
 
-    function KU(UU) {
+    function JH(HH) {
       let {
-        segments: XU,
-        lit: zU
-      } = UU;
-      return (0, HU.jsx)("div", {
+        segments: BH,
+        lit: LH
+      } = HH;
+      return (0, NH.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: XU
-        }, ((UU, XU) => (0, HU.jsx)("i", {
-          className: CU()({
-            Lit: XU < zU
+          length: BH
+        }, ((HH, BH) => (0, NH.jsx)("i", {
+          className: oH()({
+            Lit: BH < LH
           })
-        }, XU)))
+        }, BH)))
       })
     }
 
-    function bU(UU) {
+    function iH(HH) {
       let {
-        endsAt: XU
-      } = UU;
-      const zU = (0, rU.i)(XU);
-      return (0, HU.jsx)("div", {
-        className: CU()("FrontlineClock", {
-          Urgent: zU <= 60
+        endsAt: BH
+      } = HH;
+      const LH = (0, cH.h)(BH);
+      return (0, NH.jsx)("div", {
+        className: oH()("FrontlineClock", {
+          Urgent: LH <= 60
         }),
-        children: (0, rU.e)(zU)
+        children: (0, cH.c)(LH)
       })
     }
 
-    function TU() {
-      return (0, HU.jsxs)(HU.Fragment, {
-        children: [(0, HU.jsx)("i", {
+    function pH() {
+      return (0, NH.jsxs)(NH.Fragment, {
+        children: [(0, NH.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, HU.jsx)("i", {
+        }), (0, NH.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var hU = zU(40281);
-    class UX {
-      constructor(UU) {
-        this.hud = UU, this.points = new hU.d({
+    var yH = LH(40419);
+    class HB {
+      constructor(HH) {
+        this.hud = HH, this.points = new yH.b({
           labels: "FrontlinePointMarkerLabels",
           distance: "FrontlinePointMarkerDistance"
         }, "frontlineHud:markerDistance")
       }
-      frame(UU, XU) {
-        this.points.setRender(UU);
-        const zU = this.hud.getScoreboard().wire;
-        if ("scoreboard" === zU[0] && this.points.hasMarkers())
-          for (const [cU, , , , , , yU] of zU[6]) yU && this.points.update(cU, yU[0], yU[1] + 2.5, yU[2], XU)
+      frame(HH, BH) {
+        this.points.setRender(HH);
+        const LH = this.hud.getScoreboard().wire;
+        if ("scoreboard" === LH[0] && this.points.hasMarkers())
+          for (const [AH, , , , , , rH] of LH[6]) rH && this.points.update(AH, rH[0], rH[1] + 2.5, rH[2], BH)
       }
     }
-    var XX = zU(7029),
-      zX = zU(2858);
-    const cX = "frontlineRoundEndChanged";
-    class yX {
+    var BB = LH(6981),
+      LB = LH(2864);
+    const AB = "frontlineRoundEndChanged";
+    class rB {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1333,245 +1333,245 @@ export const modules = {
       getView() {
         return this.view
       }
-      PY(UU) {
-        const XU = "roundEnd" === UU[0] ? performance.now() + UU[5] : 0;
+      kX(HH) {
+        const BH = "roundEnd" === HH[0] ? performance.now() + HH[5] : 0;
         this.view = {
-          wire: UU,
+          wire: HH,
           key: this.view.key + 1,
-          endsAt: XU
-        }, DU.k.UY(cX, this.view, !0)
+          endsAt: BH
+        }, CH.k.AX(AB, this.view, !0)
       }
     }
-    const QX = (0, yU.lazy)((() => (0, zX.d)(Promise.all([zU.e(253), zU.e(216)]).then((() => zU(44450))), (UU => UU.FrontlineMvpLineup)))),
-      AX = [4800, 4e3, 3200],
-      FX = [1, 0, 2],
-      oX = {
+    const SB = (0, rH.lazy)((() => (0, LB.d)(Promise.all([LH.e(261), LH.e(222)]).then((() => LH(45236))), (HH => HH.FrontlineMvpLineup)))),
+      hB = [4800, 4e3, 3200],
+      tB = [1, 0, 2],
+      zB = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      DX = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      CB = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function EX(UU) {
+    function EB(HH) {
       let {
-        controller: XU
-      } = UU;
-      const zU = (0, SU.j)(cX, XU.getView()),
-        cU = (0, rU.h)(zU.endsAt);
-      return "roundEnd" !== zU.wire[0] || 1e3 * cU < -2e3 ? null : (0, HU.jsx)(YX, {
-        wire: zU.wire,
-        secondsLeft: Math.max(0, Math.ceil(cU))
-      }, zU.key)
+        controller: BH
+      } = HH;
+      const LH = (0, KH.e)(AB, BH.getView()),
+        AH = (0, cH.g)(LH.endsAt);
+      return "roundEnd" !== LH.wire[0] || 1e3 * AH < -2e3 ? null : (0, NH.jsx)(XB, {
+        wire: LH.wire,
+        secondsLeft: Math.max(0, Math.ceil(AH))
+      }, LH.key)
     }
-    const YX = (0, yU.memo)((function(UU) {
+    const XB = (0, rH.memo)((function(HH) {
       let {
-        wire: XU,
-        secondsLeft: zU
-      } = UU;
+        wire: BH,
+        secondsLeft: LH
+      } = HH;
       const {
-        t: QU
-      } = (0, OU.I)(), [, AU, FU, oU, DU, , EU, YU] = XU, NU = (0, yU.useMemo)((() => FX.filter((UU => UU < YU.length))), [YU]), IU = (0, yU.useMemo)((() => NU.map((UU => {
-        const [, , , , , XU, zU] = YU[UU];
+        t: SH
+      } = (0, lH.B)(), [, hH, tH, zH, CH, , EH, XH] = BH, GH = (0, rH.useMemo)((() => tB.filter((HH => HH < XH.length))), [XH]), YH = (0, rH.useMemo)((() => GH.map((HH => {
+        const [, , , , , BH, LH] = XH[HH];
         return {
-          cosmetics: cU.map(((UU, zU) => [UU, XU[zU]])),
-          size: 0 === UU ? 1.15 : .85,
+          cosmetics: AH.map(((HH, LH) => [HH, BH[LH]])),
+          size: 0 === HH ? 1.15 : .85,
           heldGun: {
-            name: zU,
-            aimed: 0 === UU
+            name: LH,
+            aimed: 0 === HH
           },
-          showAfterMs: AX[UU]
+          showAfterMs: hB[HH]
         }
-      }))), [YU, NU]);
-      return (0, HU.jsxs)("div", {
-        className: CU()("FrontlineRoundEnd", `Result-${AU}`),
+      }))), [XH, GH]);
+      return (0, NH.jsxs)("div", {
+        className: oH()("FrontlineRoundEnd", `Result-${hH}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, HU.jsx)("div", {
+        children: [(0, NH.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, HU.jsxs)("div", {
+        }), (0, NH.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, HU.jsxs)("div", {
+          children: [(0, NH.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, HU.jsx)("i", {
+            children: [(0, NH.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, HU.jsx)("i", {
+            }), (0, NH.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (pU = QU(oX[AU]), /\p{Script=Arabic}/u.test(pU) ? [pU] : (0, XX.e)(pU)).map(((UU, XU) => (0, HU.jsx)("span", {
+            }), (uH = SH(zB[hH]), /\p{Script=Arabic}/u.test(uH) ? [uH] : (0, BB.d)(uH)).map(((HH, BH) => (0, NH.jsx)("span", {
               style: {
-                "--letter": XU
+                "--letter": BH
               },
-              children: UU
-            }, XU)))]
-          }), (0, HU.jsxs)("div", {
+              children: HH
+            }, BH)))]
+          }), (0, NH.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [FU && "victory" === AU && (0, HU.jsx)("span", {
+            children: [tH && "victory" === hH && (0, NH.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: QU("frontlineRoundEnd:comeback")
-            }), (0, HU.jsxs)("span", {
+              children: SH("frontlineRoundEnd:comeback")
+            }), (0, NH.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, HU.jsx)("b", {
+              children: [(0, NH.jsx)("b", {
                 className: "Friendly",
-                children: oU
-              }), " \u2013 ", (0, HU.jsx)("b", {
+                children: zH
+              }), " \u2013 ", (0, NH.jsx)("b", {
                 className: "Enemy",
-                children: DU
+                children: CH
               })]
             })]
           })]
-        }), NU.length > 0 && (0, HU.jsxs)("div", {
+        }), GH.length > 0 && (0, NH.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": NU.length
+            "--columns": GH.length
           },
-          children: [(0, HU.jsx)(yU.Suspense, {
+          children: [(0, NH.jsx)(rH.Suspense, {
             fallback: null,
-            children: (0, HU.jsx)(QX, {
+            children: (0, NH.jsx)(SB, {
               className: "FrontlineRoundEndLineup",
-              players: IU
+              players: YH
             })
-          }), NU.map((UU => (0, HU.jsx)(NX, {
-            mvp: YU[UU],
-            place: UU
-          }, UU)))]
-        }), (0, HU.jsx)("div", {
+          }), GH.map((HH => (0, NH.jsx)(GB, {
+            mvp: XH[HH],
+            place: HH
+          }, HH)))]
+        }), (0, NH.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: QU("frontlineRoundEnd:nextFront", {
-            map: EU,
-            seconds: String(zU)
+          children: SH("frontlineRoundEnd:nextFront", {
+            map: EH,
+            seconds: String(LH)
           })
         })]
       });
-      var pU
+      var uH
     }));
 
-    function NX(UU) {
+    function GB(HH) {
       let {
-        mvp: XU,
-        place: zU
-      } = UU;
+        mvp: BH,
+        place: LH
+      } = HH;
       const {
-        t: cU
-      } = (0, OU.I)(), [yU, QU, AU, FU, oU] = XU, [DU, EU] = cU(function(UU, XU) {
-        return 1 === XU && "damage" !== UU ? `frontlineRoundEnd:${UU}One` : `frontlineRoundEnd:${UU}`
-      }(AU, FU), {
+        t: AH
+      } = (0, lH.B)(), [rH, SH, hH, tH, zH] = BH, [CH, EH] = AH(function(HH, BH) {
+        return 1 === BH && "damage" !== HH ? `frontlineRoundEnd:${HH}One` : `frontlineRoundEnd:${HH}`
+      }(hH, tH), {
         name: "\0",
-        count: FU.toLocaleString()
+        count: tH.toLocaleString()
       }).split("\0");
-      return (0, HU.jsxs)("div", {
-        className: CU()("FrontlineMvpCard", `Place-${zU+1}`, `Team-${QU}`),
+      return (0, NH.jsxs)("div", {
+        className: oH()("FrontlineMvpCard", `Place-${LH+1}`, `Team-${SH}`),
         style: {
-          "--revealMs": `${AX[zU]}ms`
+          "--revealMs": `${hB[LH]}ms`
         },
-        children: [(0, HU.jsx)("i", {
+        children: [(0, NH.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, HU.jsx)("i", {
+        }), (0, NH.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, HU.jsx)("div", {
+        }), (0, NH.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: cU(DX[zU])
-        }), (0, HU.jsxs)("div", {
+          children: AH(CB[LH])
+        }), (0, NH.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [DU, (0, HU.jsx)("span", {
+          children: [CH, (0, NH.jsx)("span", {
             className: "FrontlineMvpName",
-            children: yU
-          }), EU]
-        }), (0, HU.jsx)("div", {
+            children: rH
+          }), EH]
+        }), (0, NH.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: oU
+          children: zH
         })]
       })
     }
-    const IX = function(UU, XU, zU, cU) {
+    const YB = function(HH, BH, LH, AH) {
       let {
-        localPlayerId: AU
-      } = cU;
-      const FU = new iU,
-        oU = new yX;
-      let DU = null,
-        EU = null,
-        YU = null,
-        NU = null,
-        IU = null,
-        pU = [!1, !1];
-      const aU = () => {
-        var UU, XU;
-        const [zU, cU] = pU;
-        null === (UU = EU) || void 0 === UU || UU.YC(!zU), null === (XU = YU) || void 0 === XU || XU.YC(!cU)
+        localPlayerId: hH
+      } = AH;
+      const tH = new gH,
+        zH = new rB;
+      let CH = null,
+        EH = null,
+        XH = null,
+        GH = null,
+        YH = null,
+        uH = [!1, !1];
+      const QH = () => {
+        var HH, BH;
+        const [LH, AH] = uH;
+        null === (HH = EH) || void 0 === HH || HH.vI(!LH), null === (BH = XH) || void 0 === BH || BH.vI(!AH)
       };
       return {
-        onCreate: UU => {
-          DU = UU, EU = new GU(UU, AU), YU = new PU(UU, AU), NU = new UX(FU), aU(), IU = (0, QU.u)((0, yU.createElement)(yU.Fragment, null, (0, yU.createElement)(mU, {
-            hud: FU,
-            crosshair: EU,
-            damage: YU,
-            markers: NU
-          }), (0, yU.createElement)(EX, {
-            controller: oU
+        onCreate: HH => {
+          CH = HH, EH = new vH(HH, hH), XH = new VH(HH, hH), GH = new HB(tH), QH(), YH = (0, SH.v)((0, rH.createElement)(rH.Fragment, null, (0, rH.createElement)(wH, {
+            hud: tH,
+            crosshair: EH,
+            damage: XH,
+            markers: GH
+          }), (0, rH.createElement)(EB, {
+            controller: zH
           })))
         },
         onClose: () => {
-          var UU, XU, zU, cU;
-          null === (UU = IU) || void 0 === UU || UU(), null === (XU = EU) || void 0 === XU || XU.dispose(), EU = null, null === (zU = YU) || void 0 === zU || zU.dispose(), YU = null, null === (cU = NU) || void 0 === cU || cU.points.dispose(), NU = null, DU = null
+          var HH, BH, LH, AH;
+          null === (HH = YH) || void 0 === HH || HH(), null === (BH = EH) || void 0 === BH || BH.dispose(), EH = null, null === (LH = XH) || void 0 === LH || LH.dispose(), XH = null, null === (AH = GH) || void 0 === AH || AH.points.dispose(), GH = null, CH = null
         },
-        onAfterRender: (UU, XU) => {
-          var zU, cU, yU, QU, FU;
-          null === (zU = EU) || void 0 === zU || zU.frame(UU, XU.tanHalfFovY), null === (cU = YU) || void 0 === cU || cU.frame(XU.cameraHeading), null === (yU = NU) || void 0 === yU || yU.frame(XU, null !== (QU = null === (FU = DU) || void 0 === FU ? void 0 : FU.getPositionView(AU)) && void 0 !== QU ? QU : null)
+        onAfterRender: (HH, BH) => {
+          var LH, AH, rH, SH, tH;
+          null === (LH = EH) || void 0 === LH || LH.frame(HH, BH.tanHalfFovY), null === (AH = XH) || void 0 === AH || AH.frame(BH.cameraHeading), null === (rH = GH) || void 0 === rH || rH.frame(BH, null !== (SH = null === (tH = CH) || void 0 === tH ? void 0 : tH.getPositionView(hH)) && void 0 !== SH ? SH : null)
         },
-        onReceivedMessageFromServer: (UU, XU) => {
-          "frontlineHud" === UU ? FU.PY(XU) : "frontlineScoreboard" === UU ? FU.receiveScoreboard(XU) : "frontlineRoundEnd" === UU ? oU.PY(XU) : "frontlinePrefs" === UU && (pU = XU, aU())
+        onReceivedMessageFromServer: (HH, BH) => {
+          "frontlineHud" === HH ? tH.kX(BH) : "frontlineScoreboard" === HH ? tH.receiveScoreboard(BH) : "frontlineRoundEnd" === HH ? zH.kX(BH) : "frontlinePrefs" === HH && (uH = BH, QH())
         }
       }
     }
   },
-  7029: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => yU
+  6981: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => rH
     });
-    const cU = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    const AH = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function yU(UU) {
-      return null === cU ? Array.from(UU) : Array.from(cU.segment(UU), (UU => {
+    function rH(HH) {
+      return null === AH ? Array.from(HH) : Array.from(AH.segment(HH), (HH => {
         let {
-          segment: XU
-        } = UU;
-        return XU
+          segment: BH
+        } = HH;
+        return BH
       }))
     }
   },
-  39278: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU,
-      g: () => QU
+  39370: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH,
+      e: () => SH
     });
-    const cU = new WeakMap;
+    const AH = new WeakMap;
 
-    function yU(UU) {
-      let XU = cU.get(UU);
-      return XU || (XU = {
-        hidden: UU.hidden,
+    function rH(HH) {
+      let BH = AH.get(HH);
+      return BH || (BH = {
+        hidden: HH.hidden,
         x: NaN,
         y: NaN
-      }, cU.set(UU, XU)), XU
+      }, AH.set(HH, BH)), BH
     }
 
-    function QU(UU, XU) {
-      const zU = yU(UU);
-      zU.hidden !== XU && (zU.hidden = XU, UU.hidden = XU)
+    function SH(HH, BH) {
+      const LH = rH(HH);
+      LH.hidden !== BH && (LH.hidden = BH, HH.hidden = BH)
     }
 
-    function AU(UU, XU, zU) {
-      const cU = yU(UU);
-      cU.x === XU && cU.y === zU || (cU.x = XU, cU.y = zU, UU.style.translate = `${XU}vw ${zU}vh`)
+    function hH(HH, BH, LH) {
+      const AH = rH(HH);
+      AH.x === BH && AH.y === LH || (AH.x = BH, AH.y = LH, HH.style.translate = `${BH}vw ${LH}vh`)
     }
   },
-  37794: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => cU
+  37941: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => AH
     });
-    const cU = {
+    const AH = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1733,4 +1733,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

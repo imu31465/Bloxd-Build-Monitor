@@ -1,40 +1,40 @@
 export const id = 185;
 export const ids = [185];
 export const modules = {
-  9579: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      pageBody: () => cU
+  9686: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      pageBody: () => AH
     });
-    const cU = {
-      whatIs: ["One block, floating in the sky, with a nametag that says \"I'm your One Block, break me!\" That's how every Bloxd One Block island starts. Break it and it comes straight back as something new, so you keep getting blocks, items and chests. Survive up there, unlock new phases, and slowly turn your tiny island into an empire."],
-      howToPlay: ["Break your One Block. Then break it again. And again. The more blocks you mine, the more phases you unlock, from the Forest and Plains right up to the Volcano and the Moon. Each phase changes what your block turns into, so there's always something new popping up. Once every phase is unlocked, you can switch between them whenever you like.", "To get going, collect 3 Gold Coins from chests. Then bridge over to the portal island nearby and walk into your portal. It takes you to One Village, the Hub. There you can spend coins in the shops, leave them with Bling Bling the banker, do daily and weekly quests and upgrade the guilds. When you're done, type /home or use a portal to head back to your island."],
-      features: ["17 Phases to Unlock, from Forest to the Moon", "Super Mining, Super Digging and Mega Chop Skills", "One Village Hub with Shops, a Bank and Treasure Chests", "Daily and Weekly Quests", "Painter's, Monster Hunter's and Farmer's Guilds", "Chat Events like Trivia, Unscramble and Type the Fastest", "Crops, a Rotating Trader and Double Drop Chance", "Gold Portal Skins for Saving Coins", "Visit Friends' Islands and Keep Multiple Island Saves"],
-      tips: ["Open every chest you find. That's where your Gold Coins come from.", "Put your coins in the bank, where your balance stays safe forever.", "Save 1,000, 50,000 or 1,000,000 coins in the bank to unlock gold portal skins.", "Level up your skills, then right click to use them. They've got a cooldown, so pick your moment.", "Use Mega Chop on trees to find way more chests.", "Only switch on Allow Edit for people you trust. Anyone with it can take your blocks.", "Lost? Type /home and you'll be straight back on your island."],
-      similarGames: ["skyblock", "skyIslands", "classic_survival"],
+    const AH = {
+      whatIs: ["What if the mobs had guns, and so did you? Bloxd Survival with Guns takes the classic Bloxd Survival world and adds craftable guns and armed mobs. You still mine, craft and build in a shared multiplayer world. The difference is you can also craft guns and vehicles to defend your base, explore further and take on whatever comes at you."],
+      howToPlay: ["Start off by gathering wood. Your first gun, the M1911, only takes 10 Maple Wood Planks. Mine Messy Stone, iron, gold, diamonds and moonstone to craft stronger Bloxd guns, like the AK-47, the Striker-12, the AWP and even the Minigun.", "Be careful, because the mobs are armed too. Draugr Zombies, Skeletons, Huntresses and Knights all carry guns, and so do Frost mobs and the Cave, Frost and Magma Golems. Tame animals by feeding them and they'll get guns of their own to fight alongside you. Farm pets start off small, while wild and spirit pets carry stronger guns. You can also craft cars, karts, speedboats and hovercraft to get around quickly."],
+      features: ["17 Craftable Guns, from the M1911 to the Minigun", "Armed Mobs That Fight Back", "Tame Pets That Fight with Guns", "Craftable Vehicles: Cars, Karts, Speedboats and Hovercraft", "Salvage Guns Back into Materials", "Gunfights on Top of Mining, Crafting and Base Building", "Persistent Multiplayer World"],
+      tips: ["Make an M1911 from 10 Maple Wood Planks as soon as you spawn", "Mine iron and gold early on to unlock better guns", "Feed a Sheep an Apple to tame it and get your first armed pet", "Save up Diamonds and Gold Bars for a Deagle", "Got guns you don't use anymore? Salvage them to get your materials back", "Build away from spawn, because public lobbies reset the area near it", "Put down a Protector made from diamonds to keep your base safe"],
+      similarGames: ["classic_survival", "shooting", "classic_survivalDayNight", "classic"],
       faq: [{
-        question: "What is Bloxd One Block?",
-        answer: "A sky challenge where you start on a single floating block. Break it to get new blocks, items and chests, unlock phases and grow your island into an empire."
+        question: "What is Bloxd Survival with Guns?",
+        answer: "It's Bloxd Survival, but with craftable guns and armed mobs. You mine, craft, build and team up or battle in a shared multiplayer world."
       }, {
-        question: "Is Bloxd One Block a skyblock game?",
-        answer: "Sort of. You start with one block in the sky and build everything from there. Bloxd Skyblock is a different mode, though: that one's an RPG with skills, quests and dungeons, while One Block is all about breaking your block to unlock 17 phases."
+        question: "How do you make a gun in Bloxd Survival with Guns?",
+        answer: "Craft an M1911 from 10 Maple Wood Planks. Stronger guns need materials like Iron Bars, Gold Bars, Diamonds and Moonstone."
       }, {
-        question: "How many phases are in Bloxd One Block?",
-        answer: "17, from Forest and Plains through Ocean, Desert and Dungeon to the Volcano and the Moon. Mine enough blocks to unlock each one. When you've got them all, you can change phase."
+        question: "How many guns are there in Survival with Guns?",
+        answer: "17 craftable guns, ranging from the M1911 and MP40 up to the AWP and the Minigun."
       }, {
-        question: "How do I get to the Hub in One Block?",
-        answer: "Grab 3 Gold Coins from chests, bridge over to the portal island nearby and walk into your portal. Type /home to come back."
+        question: "Do mobs carry guns in Bloxd?",
+        answer: "They do. Each type of hostile mob carries its own guns. Draugr Skeletons have AK-47s and MP40s, for example, and Magma Golems carry a Minigun."
       }, {
-        question: "Where do One Block coins come from?",
-        answer: "Chests from your One Block and the Hub treasure chests, daily and weekly quests, or watching an ad for coins."
+        question: "Can my pets use guns?",
+        answer: "Yes. Tamed pets get guns and fight by your side. They won't hurt you or your other pets."
       }, {
-        question: "How do I open my portal in One Block?",
-        answer: "Type /open in chat. You can also add visitors in your island access settings, even if your portal is closed."
+        question: "Can I turn guns on in a private server?",
+        answer: "Yes. Private servers have a setting that turns on gun crafting and using. When it's on, mobs and pets get guns too."
       }, {
-        question: "Can I have more than one island?",
-        answer: "Yes. The Island Manager lets you create new islands, rename them, load another save or delete one, up to a maximum number of islands."
+        question: "How is Survival with Guns different from regular Survival?",
+        answer: "The world, mining and building all work the same. On top of that you can craft 17 guns and vehicles, mobs carry guns, and tamed pets fight alongside you with guns of their own."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

@@ -1,271 +1,271 @@
 export const id = 5;
 export const ids = [5];
 export const modules = {
-  53719: (UU, XU, zU) => {
-    UU.exports = zU.p + "static/media/bloxd_wasm_anim_bg.ee7886aed49a713814db.wasm"
+  54523: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/bloxd_wasm_anim_bg.e5e945593b3735e46b1d.wasm"
   },
-  53713: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      BloxdAnimWasmError: () => uU,
-      compileAnimationPackInWasm: () => MU
+  54514: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      BloxdAnimWasmError: () => eH,
+      compileAnimationPackInWasm: () => RH
     });
-    var cU = {};
+    var AH = {};
 
-    function yU(UU, XU, zU, cU, yU, QU) {
-      const AU = kU(UU, eU.SEUw),
-        FU = CU,
-        oU = kU(XU, eU.SEUw),
-        DU = CU,
-        EU = kU(zU, eU.SEUw),
-        YU = CU,
-        NU = kU(cU, eU.SEUw),
-        pU = CU,
-        aU = kU(yU, eU.SEUw),
-        tU = CU;
-      var GU = gU(QU) ? 0 : function(UU, XU) {
-          const zU = XU(1 * UU.length, 1) >>> 0;
-          return IU().set(UU, zU / 1), CU = UU.length, zU
-        }(QU, eU.SEUw),
-        ZU = CU;
-      const RU = eU.ksq9(AU, FU, oU, DU, EU, YU, NU, pU, aU, tU, GU, ZU);
-      if (RU[3]) throw BU(RU[2]);
-      var PU, WU, dU = (PU = RU[0], WU = RU[1], PU >>>= 0, IU().subarray(PU / 1, PU / 1 + WU)).slice();
-      return eU.H6L1(RU[0], 1 * RU[1], 1), dU
+    function rH(HH, BH, LH, AH, rH, SH) {
+      const hH = xH(HH, mH.fj4T),
+        tH = oH,
+        zH = xH(BH, mH.fj4T),
+        CH = oH,
+        EH = xH(LH, mH.fj4T),
+        XH = oH,
+        GH = xH(AH, mH.fj4T),
+        uH = oH,
+        QH = xH(rH, mH.fj4T),
+        WH = oH;
+      var vH = MH(SH) ? 0 : function(HH, BH) {
+          const LH = BH(1 * HH.length, 1) >>> 0;
+          return YH().set(HH, LH / 1), oH = HH.length, LH
+        }(SH, mH.fj4T),
+        TH = oH;
+      const UH = mH.Qfkv(hH, tH, zH, CH, EH, XH, GH, uH, QH, WH, vH, TH);
+      if (UH[3]) throw PH(UH[2]);
+      var VH, OH, bH = (VH = UH[0], OH = UH[1], VH >>>= 0, YH().subarray(VH / 1, VH / 1 + OH)).slice();
+      return mH.VmYL(UH[0], 1 * UH[1], 1), bH
     }
 
-    function QU(UU, XU) {
-      const zU = GU(UU, eU.SEUw, eU.BLfe),
-        cU = CU,
-        yU = eU.NhqF(zU, cU, XU);
-      if (yU[1]) throw BU(yU[0])
+    function SH(HH, BH) {
+      const LH = vH(HH, mH.fj4T, mH.QyXH),
+        AH = oH,
+        rH = mH.orv7(LH, AH, BH);
+      if (rH[1]) throw PH(rH[0])
     }
 
-    function AU() {
-      eU.UqBt()
+    function hH() {
+      mH.fUtg()
     }
 
-    function FU() {
+    function tH() {
       return {
         __proto__: null,
-        rFNH: {
+        phGC: {
           __proto__: null,
-          XKDW: function(UU, XU) {
-            return oU(Error(YU(UU, XU)))
+          ZrJ5: function(HH, BH) {
+            return zH(Error(XH(HH, BH)))
           },
-          J5n4: function(UU, XU) {
-            const zU = pU(XU),
-              cU = "string" === typeof zU ? zU : void 0;
-            var yU = gU(cU) ? 0 : GU(cU, eU.SEUw, eU.BLfe),
-              QU = CU;
-            EU().setInt32(UU + 4, QU, !0), EU().setInt32(UU + 0, yU, !0)
+          N2Ik: function(HH, BH) {
+            const LH = uH(BH),
+              AH = "string" === typeof LH ? LH : void 0;
+            var rH = MH(AH) ? 0 : vH(AH, mH.fj4T, mH.QyXH),
+              SH = oH;
+            EH().setInt32(HH + 4, SH, !0), EH().setInt32(HH + 0, rH, !0)
           },
-          WHKN: function(UU, XU) {
-            throw new Error(YU(UU, XU))
+          v7cC: function(HH, BH) {
+            throw new Error(XH(HH, BH))
           },
-          genL: function(UU, XU) {
-            console.error(YU(UU, XU))
+          tMGH: function(HH, BH) {
+            console.error(XH(HH, BH))
           },
-          fw0z: function(UU) {
-            BU(UU)
+          NyhK: function(HH) {
+            PH(HH)
           }
         }
       }
     }
 
-    function oU(UU) {
-      tU === aU.length && aU.push(aU.length + 1);
-      const XU = tU;
-      return tU = aU[XU], aU[XU] = UU, XU
+    function zH(HH) {
+      WH === QH.length && QH.push(QH.length + 1);
+      const BH = WH;
+      return WH = QH[BH], QH[BH] = HH, BH
     }
-    zU.r(cU), zU.d(cU, {
-      wFU: () => yU,
-      FD: () => QU,
-      default: () => OU,
-      initSync: () => qU,
-      HD: () => AU
+    LH.r(AH), LH.d(AH, {
+      DtH: () => rH,
+      qt: () => SH,
+      default: () => lH,
+      initSync: () => fH,
+      LC: () => hH
     });
-    let DU = null;
+    let CH = null;
 
-    function EU() {
-      return null !== DU && DU.buffer === eU.memory.buffer || (DU = new DataView(eU.memory.buffer)), DU
+    function EH() {
+      return null !== CH && CH.buffer === mH.memory.buffer || (CH = new DataView(mH.memory.buffer)), CH
     }
 
-    function YU(UU, XU) {
-      return function(UU, XU) {
-        PU += XU, PU >= RU && (ZU = new TextDecoder("utf-8", {
+    function XH(HH, BH) {
+      return function(HH, BH) {
+        VH += BH, VH >= UH && (TH = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), ZU.decode(), PU = XU);
-        return ZU.decode(IU().subarray(UU, UU + XU))
-      }(UU >>> 0, XU)
+        }), TH.decode(), VH = BH);
+        return TH.decode(YH().subarray(HH, HH + BH))
+      }(HH >>> 0, BH)
     }
-    let NU = null;
+    let GH = null;
 
-    function IU() {
-      return null !== NU && 0 !== NU.byteLength || (NU = new Uint8Array(eU.memory.buffer)), NU
-    }
-
-    function pU(UU) {
-      return aU[UU]
-    }
-    let aU = new Array(1024).fill(void 0);
-    aU.push(void 0, null, !0, !1);
-    let tU = aU.length;
-
-    function gU(UU) {
-      return void 0 === UU || null === UU
+    function YH() {
+      return null !== GH && 0 !== GH.byteLength || (GH = new Uint8Array(mH.memory.buffer)), GH
     }
 
-    function kU(UU, XU) {
-      const zU = XU(4 * UU.length, 4) >>> 0,
-        cU = EU();
-      for (let yU = 0; yU < UU.length; yU++) cU.setUint32(zU + 4 * yU, oU(UU[yU]), !0);
-      return CU = UU.length, zU
+    function uH(HH) {
+      return QH[HH]
+    }
+    let QH = new Array(1024).fill(void 0);
+    QH.push(void 0, null, !0, !1);
+    let WH = QH.length;
+
+    function MH(HH) {
+      return void 0 === HH || null === HH
     }
 
-    function GU(UU, XU, zU) {
-      if (void 0 === zU) {
-        const zU = WU.encode(UU),
-          cU = XU(zU.length, 1) >>> 0;
-        return IU().subarray(cU, cU + zU.length).set(zU), CU = zU.length, cU
+    function xH(HH, BH) {
+      const LH = BH(4 * HH.length, 4) >>> 0,
+        AH = EH();
+      for (let rH = 0; rH < HH.length; rH++) AH.setUint32(LH + 4 * rH, zH(HH[rH]), !0);
+      return oH = HH.length, LH
+    }
+
+    function vH(HH, BH, LH) {
+      if (void 0 === LH) {
+        const LH = OH.encode(HH),
+          AH = BH(LH.length, 1) >>> 0;
+        return YH().subarray(AH, AH + LH.length).set(LH), oH = LH.length, AH
       }
-      let cU = UU.length,
-        yU = XU(cU, 1) >>> 0;
-      const QU = IU();
-      let AU = 0;
-      for (; AU < cU; AU++) {
-        const XU = UU.charCodeAt(AU);
-        if (XU > 127) break;
-        QU[yU + AU] = XU
+      let AH = HH.length,
+        rH = BH(AH, 1) >>> 0;
+      const SH = YH();
+      let hH = 0;
+      for (; hH < AH; hH++) {
+        const BH = HH.charCodeAt(hH);
+        if (BH > 127) break;
+        SH[rH + hH] = BH
       }
-      if (AU !== cU) {
-        0 !== AU && (UU = UU.slice(AU)), yU = zU(yU, cU, cU = AU + 3 * UU.length, 1) >>> 0;
-        const XU = IU().subarray(yU + AU, yU + cU);
-        AU += WU.encodeInto(UU, XU).written, yU = zU(yU, cU, AU, 1) >>> 0
+      if (hH !== AH) {
+        0 !== hH && (HH = HH.slice(hH)), rH = LH(rH, AH, AH = hH + 3 * HH.length, 1) >>> 0;
+        const BH = YH().subarray(rH + hH, rH + AH);
+        hH += OH.encodeInto(HH, BH).written, rH = LH(rH, AH, hH, 1) >>> 0
       }
-      return CU = AU, yU
+      return oH = hH, rH
     }
 
-    function BU(UU) {
-      const XU = pU(UU);
-      return function(UU) {
-        UU < 1028 || (aU[UU] = tU, tU = UU)
-      }(UU), XU
+    function PH(HH) {
+      const BH = uH(HH);
+      return function(HH) {
+        HH < 1028 || (QH[HH] = WH, WH = HH)
+      }(HH), BH
     }
-    let ZU = new TextDecoder("utf-8", {
+    let TH = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    ZU.decode();
-    const RU = 2146435072;
-    let PU = 0;
-    const WU = new TextEncoder;
-    "encodeInto" in WU || (WU.encodeInto = function(UU, XU) {
-      const zU = WU.encode(UU);
-      return XU.set(zU), {
-        read: UU.length,
-        written: zU.length
+    TH.decode();
+    const UH = 2146435072;
+    let VH = 0;
+    const OH = new TextEncoder;
+    "encodeInto" in OH || (OH.encodeInto = function(HH, BH) {
+      const LH = OH.encode(HH);
+      return BH.set(LH), {
+        read: HH.length,
+        written: LH.length
       }
     });
-    let dU, LU, eU, CU = 0;
+    let bH, kH, mH, oH = 0;
 
-    function wU(UU, XU) {
-      return LU = UU, eU = UU.exports, dU = XU, DU = null, NU = null, eU.TOf1(), eU
+    function IH(HH, BH) {
+      return kH = HH, mH = HH.exports, bH = BH, CH = null, GH = null, mH.UarT(), mH
     }
 
-    function qU(UU) {
-      if (void 0 !== eU) return eU;
-      void 0 !== UU && (Object.getPrototypeOf(UU) === Object.prototype ? ({
-        module: UU
-      } = UU) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const XU = FU();
-      UU instanceof WebAssembly.Module || (UU = new WebAssembly.Module(UU));
-      return wU(new WebAssembly.Instance(UU, XU), UU)
+    function fH(HH) {
+      if (void 0 !== mH) return mH;
+      void 0 !== HH && (Object.getPrototypeOf(HH) === Object.prototype ? ({
+        module: HH
+      } = HH) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const BH = tH();
+      HH instanceof WebAssembly.Module || (HH = new WebAssembly.Module(HH));
+      return IH(new WebAssembly.Instance(HH, BH), HH)
     }
-    async function OU(UU) {
-      if (void 0 !== eU) return eU;
-      void 0 !== UU && (Object.getPrototypeOf(UU) === Object.prototype ? ({
-        module_or_path: UU
-      } = UU) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const XU = FU();
-      ("string" === typeof UU || "function" === typeof Request && UU instanceof Request || "function" === typeof URL && UU instanceof URL) && (UU = fetch(UU));
+    async function lH(HH) {
+      if (void 0 !== mH) return mH;
+      void 0 !== HH && (Object.getPrototypeOf(HH) === Object.prototype ? ({
+        module_or_path: HH
+      } = HH) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const BH = tH();
+      ("string" === typeof HH || "function" === typeof Request && HH instanceof Request || "function" === typeof URL && HH instanceof URL) && (HH = fetch(HH));
       const {
-        instance: zU,
-        module: cU
-      } = await async function(UU, XU) {
-        if ("function" === typeof Response && UU instanceof Response) {
-          if (!UU.ok) throw new Error(`failed to fetch Wasm: ${UU.status} ${UU.statusText} fetching '${UU.url}'`);
+        instance: LH,
+        module: AH
+      } = await async function(HH, BH) {
+        if ("function" === typeof Response && HH instanceof Response) {
+          if (!HH.ok) throw new Error(`failed to fetch Wasm: ${HH.status} ${HH.statusText} fetching '${HH.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(UU, XU)
-          } catch (zU) {
-            if (! function(UU) {
-                switch (UU) {
+            return await WebAssembly.instantiateStreaming(HH, BH)
+          } catch (LH) {
+            if (! function(HH) {
+                switch (HH) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(UU.type) || "application/wasm" === UU.headers.get("Content-Type")) throw zU;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", zU)
+              }(HH.type) || "application/wasm" === HH.headers.get("Content-Type")) throw LH;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", LH)
           }
-          const cU = await UU.arrayBuffer();
-          return await WebAssembly.instantiate(cU, XU)
+          const AH = await HH.arrayBuffer();
+          return await WebAssembly.instantiate(AH, BH)
         } {
-          const zU = await WebAssembly.instantiate(UU, XU);
-          return zU instanceof WebAssembly.Instance ? {
-            instance: zU,
-            module: UU
-          } : zU
+          const LH = await WebAssembly.instantiate(HH, BH);
+          return LH instanceof WebAssembly.Instance ? {
+            instance: LH,
+            module: HH
+          } : LH
         }
-      }(await UU, XU);
-      return wU(zU, cU)
+      }(await HH, BH);
+      return IH(LH, AH)
     }
-    var SU = zU(3176),
-      rU = zU(7213);
-    class uU extends Error {
+    var KH = LH(3171),
+      cH = LH(7172);
+    class eH extends Error {
       stage;
-      constructor(UU, XU) {
-        super((0, SU.J)(UU, XU), {
-          cause: XU
-        }), this.name = "BloxdAnimWasmError", this.stage = UU
+      constructor(HH, BH) {
+        super((0, KH.F)(HH, BH), {
+          cause: BH
+        }), this.name = "BloxdAnimWasmError", this.stage = HH
       }
     }
-    let fU = null,
-      iU = null;
+    let qH = null,
+      gH = null;
 
-    function HU() {
-      if (iU) throw iU
+    function NH() {
+      if (gH) throw gH
     }
-    async function MU(UU, XU, yU) {
-      HU();
-      const QU = await (fU ??= (async () => {
-        let UU;
+    async function RH(HH, BH, rH) {
+      NH();
+      const SH = await (qH ??= (async () => {
+        let HH;
         try {
-          UU = await (0, SU.M)(new zU.U(zU(53719)), (0, rU.e)("bloxd_wasm_anim"))
-        } catch (XU) {
-          throw new uU((0, SU.T)(XU), XU)
+          HH = await (0, KH.J)(new LH.U(LH(54523)), (0, cH.c)("bloxd_wasm_anim"))
+        } catch (BH) {
+          throw new eH((0, KH.O)(BH), BH)
         }
         try {
-          await OU({
-            module_or_path: UU
+          await lH({
+            module_or_path: HH
           })
-        } catch (XU) {
-          throw new uU("instantiate", XU)
+        } catch (BH) {
+          throw new eH("instantiate", BH)
         }
-        return cU
-      })(), fU.catch((() => {
-        fU = null
-      })), fU);
-      HU();
+        return AH
+      })(), qH.catch((() => {
+        qH = null
+      })), qH);
+      NH();
       try {
-        return QU.wFU(Object.entries(UU).flat(), [...XU.mobTypes], [...XU.vehicleTypes], [...XU.mobAiStates], [...XU.playerPoses], "builtIns" in yU ? yU.builtIns : void 0)
-      } catch (AU) {
-        const UU = new uU("call", AU);
-        throw AU instanceof WebAssembly.RuntimeError && (iU = UU), UU
+        return SH.DtH(Object.entries(HH).flat(), [...BH.mobTypes], [...BH.vehicleTypes], [...BH.mobAiStates], [...BH.playerPoses], "builtIns" in rH ? rH.builtIns : void 0)
+      } catch (hH) {
+        const HH = new eH("call", hH);
+        throw hH instanceof WebAssembly.RuntimeError && (gH = HH), HH
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

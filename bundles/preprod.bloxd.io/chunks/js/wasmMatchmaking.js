@@ -1,30 +1,30 @@
-/*! For license information please see fecih8.wasmMatchmaking.52bde7c6.chunk.js.LICENSE.txt */
+/*! For license information please see cwj32u.wasmMatchmaking.2c92509d.chunk.js.LICENSE.txt */
 export const id = 74;
-export const ids = [74];
+export const ids = [74, 176];
 export const modules = {
-  37250: (UU, XU) => {
-    function zU(UU) {
-      if (UU && "object" === typeof UU) {
-        var XU = UU.which || UU.keyCode || UU.charCode;
-        XU && (UU = XU)
+  37424: (HH, BH) => {
+    function LH(HH) {
+      if (HH && "object" === typeof HH) {
+        var BH = HH.which || HH.keyCode || HH.charCode;
+        BH && (HH = BH)
       }
-      if ("number" === typeof UU) return AU[UU];
-      var zU, QU = String(UU);
-      return (zU = cU[QU.toLowerCase()]) ? zU : (zU = yU[QU.toLowerCase()]) || (1 === QU.length ? QU.charCodeAt(0) : void 0)
+      if ("number" === typeof HH) return hH[HH];
+      var LH, SH = String(HH);
+      return (LH = AH[SH.toLowerCase()]) ? LH : (LH = rH[SH.toLowerCase()]) || (1 === SH.length ? SH.charCodeAt(0) : void 0)
     }
-    zU.isEventKey = function(UU, XU) {
-      if (UU && "object" === typeof UU) {
-        var zU = UU.which || UU.keyCode || UU.charCode;
-        if (null === zU || void 0 === zU) return !1;
-        if ("string" === typeof XU) {
-          var QU;
-          if (QU = cU[XU.toLowerCase()]) return QU === zU;
-          if (QU = yU[XU.toLowerCase()]) return QU === zU
-        } else if ("number" === typeof XU) return XU === zU;
+    LH.isEventKey = function(HH, BH) {
+      if (HH && "object" === typeof HH) {
+        var LH = HH.which || HH.keyCode || HH.charCode;
+        if (null === LH || void 0 === LH) return !1;
+        if ("string" === typeof BH) {
+          var SH;
+          if (SH = AH[BH.toLowerCase()]) return SH === LH;
+          if (SH = rH[BH.toLowerCase()]) return SH === LH
+        } else if ("number" === typeof BH) return BH === LH;
         return !1
       }
     };
-    var cU = (XU = UU.exports = zU).code = XU.codes = {
+    var AH = (BH = HH.exports = LH).code = BH.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      yU = XU.aliases = {
+      rH = BH.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (QU = 97; QU < 123; QU++) cU[String.fromCharCode(QU)] = QU - 32;
-    for (var QU = 48; QU < 58; QU++) cU[QU - 48] = QU;
-    for (QU = 1; QU < 13; QU++) cU["f" + QU] = QU + 111;
-    for (QU = 0; QU < 10; QU++) cU["numpad " + QU] = QU + 96;
-    var AU = XU.names = XU.title = {};
-    for (QU in cU) AU[cU[QU]] = QU;
-    for (var FU in yU) cU[FU] = yU[FU]
+    for (SH = 97; SH < 123; SH++) AH[String.fromCharCode(SH)] = SH - 32;
+    for (var SH = 48; SH < 58; SH++) AH[SH - 48] = SH;
+    for (SH = 1; SH < 13; SH++) AH["f" + SH] = SH + 111;
+    for (SH = 0; SH < 10; SH++) AH["numpad " + SH] = SH + 96;
+    var hH = BH.names = BH.title = {};
+    for (SH in AH) hH[AH[SH]] = SH;
+    for (var tH in rH) AH[tH] = rH[tH]
   },
-  37429: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => AU
+  37578: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => hH
     });
-    var cU = zU(61);
-    const yU = cU.useLayoutEffect;
-    const QU = function(UU) {
-      var XU = (0, cU.useRef)(UU);
-      return yU((function() {
-        XU.current = UU
-      })), XU
+    var AH = LH(45);
+    const rH = AH.useLayoutEffect;
+    const SH = function(HH) {
+      var BH = (0, AH.useRef)(HH);
+      return rH((function() {
+        BH.current = HH
+      })), BH
     };
-    var AU = function(UU) {
-      var XU = QU(UU);
-      (0, cU.useEffect)((function() {
-        var UU = function(UU) {
-          var zU;
-          if (null != XU.current && (zU = XU.current(UU)), UU.defaultPrevented && (UU.returnValue = ""), "string" === typeof zU) return UU.returnValue = zU, zU
+    var hH = function(HH) {
+      var BH = SH(HH);
+      (0, AH.useEffect)((function() {
+        var HH = function(HH) {
+          var LH;
+          if (null != BH.current && (LH = BH.current(HH)), HH.defaultPrevented && (HH.returnValue = ""), "string" === typeof LH) return HH.returnValue = LH, LH
         };
-        return window.addEventListener("beforeunload", UU),
+        return window.addEventListener("beforeunload", HH),
           function() {
-            window.removeEventListener("beforeunload", UU)
+            window.removeEventListener("beforeunload", HH)
           }
       }), [])
     }
   },
-  37301: UU => {
-    var XU, zU = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      cU = /OS X/.test(zU),
-      yU = /Opera/.test(zU),
-      QU = !/like Gecko/.test(zU) && !yU,
-      AU = UU.exports = {
-        0: cU ? "<menu>" : "<UNK>",
+  37461: HH => {
+    var BH, LH = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      AH = /OS X/.test(LH),
+      rH = /Opera/.test(LH),
+      SH = !/like Gecko/.test(LH) && !rH,
+      hH = HH.exports = {
+        0: AH ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: cU ? "<meta>" : "<menu>",
+        93: AH ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: cU && QU ? "-" : "<volume-mute>",
+        173: AH && SH ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: yU ? "`" : "<unicode>",
+        231: rH ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,307 +234,308 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (XU = 58; XU < 65; ++XU) AU[XU] = String.fromCharCode(XU);
-    for (XU = 48; XU < 58; ++XU) AU[XU] = XU - 48 + "";
-    for (XU = 65; XU < 91; ++XU) AU[XU] = String.fromCharCode(XU);
-    for (XU = 96; XU < 106; ++XU) AU[XU] = "<num-" + (XU - 96) + ">";
-    for (XU = 112; XU < 136; ++XU) AU[XU] = "F" + (XU - 111)
+    for (BH = 58; BH < 65; ++BH) hH[BH] = String.fromCharCode(BH);
+    for (BH = 48; BH < 58; ++BH) hH[BH] = BH - 48 + "";
+    for (BH = 65; BH < 91; ++BH) hH[BH] = String.fromCharCode(BH);
+    for (BH = 96; BH < 106; ++BH) hH[BH] = "<num-" + (BH - 96) + ">";
+    for (BH = 112; BH < 136; ++BH) hH[BH] = "F" + (BH - 111)
   },
-  37318: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => tU,
-      e: () => gU,
-      f: () => NU,
-      h: () => YU
+  37472: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => WH,
+      e: () => MH,
+      i: () => GH,
+      k: () => XH
     });
-    var cU = zU(34859),
-      yU = zU(37325),
-      QU = zU(37334),
-      AU = zU(9282),
-      FU = zU(1492),
-      oU = zU(61),
-      DU = zU(73),
-      EU = zU(1305);
+    var AH = LH(34986),
+      rH = LH(37474),
+      SH = LH(37479),
+      hH = LH(9412),
+      tH = LH(1450),
+      zH = LH(45),
+      CH = LH(69),
+      EH = LH(1225);
 
-    function YU() {
-      var UU;
-      return (0, FU.j)(yU.d, (0, yU.o)()), (0, EU.jsx)(EU.Fragment, {
-        children: null === (UU = (0, yU.o)()) || void 0 === UU ? void 0 : UU.content
+    function XH() {
+      var HH;
+      return (0, tH.e)(rH.b, (0, rH.p)()), (0, EH.jsx)(EH.Fragment, {
+        children: null === (HH = (0, rH.p)()) || void 0 === HH ? void 0 : HH.content
       })
     }
 
-    function NU(UU) {
-      var XU;
+    function GH(HH) {
+      var BH;
       let {
-        show: zU
-      } = UU;
-      (0, FU.j)(yU.d, (0, yU.o)());
-      const DU = null === (XU = (0, yU.o)()) || void 0 === XU ? void 0 : XU.menu;
-      return (0, oU.useEffect)((() => {
-        var UU;
-        zU || (null === DU || void 0 === DU || null === (UU = DU.onClose) || void 0 === UU || UU.call(DU), (0, QU.t)())
-      }), [zU, DU]), (0, oU.useEffect)((() => zU ? (0, AU.d)(QU.x, QU.i) : void 0), [zU]), (0, EU.jsx)(cU.e, {
-        showing: zU,
+        show: LH
+      } = HH;
+      (0, tH.e)(rH.b, (0, rH.p)());
+      const CH = null === (BH = (0, rH.p)()) || void 0 === BH ? void 0 : BH.menu;
+      return (0, zH.useEffect)((() => {
+        var HH;
+        LH || (null === CH || void 0 === CH || null === (HH = CH.onClose) || void 0 === HH || HH.call(CH), (0, SH.r)())
+      }), [LH, CH]), (0, zH.useEffect)((() => LH ? (0, hH.e)(SH.A, SH.g) : void 0), [LH]), (0, EH.jsx)(AH.e, {
+        showing: LH,
         globallyUniqueKey: "clientGameMenu",
-        children: null === DU || void 0 === DU ? void 0 : DU.content
+        children: null === CH || void 0 === CH ? void 0 : CH.content
       })
     }
-    const IU = new Map,
-      pU = new Set;
+    const YH = new Map,
+      uH = new Set;
 
-    function aU(UU, XU) {
-      XU ? IU.set(UU, XU) : IU.delete(UU);
-      for (const zU of pU) zU()
+    function QH(HH, BH) {
+      BH ? YH.set(HH, BH) : YH.delete(HH);
+      for (const LH of uH) LH()
     }
 
-    function tU(UU) {
+    function WH(HH) {
       let {
-        placement: XU = "bottom"
-      } = UU;
-      const zU = (0, oU.useRef)(null);
-      return (0, oU.useLayoutEffect)((() => {
-        const UU = zU.current;
-        return aU(XU, UU), () => {
-          IU.get(XU) === UU && aU(XU, null)
+        placement: BH = "bottom"
+      } = HH;
+      const LH = (0, zH.useRef)(null);
+      return (0, zH.useLayoutEffect)((() => {
+        const HH = LH.current;
+        return QH(BH, HH), () => {
+          YH.get(BH) === HH && QH(BH, null)
         }
-      }), [XU]), (0, EU.jsx)("div", {
-        ref: zU,
-        id: `clientGameHud-${XU}`,
+      }), [BH]), (0, EH.jsx)("div", {
+        ref: LH,
+        id: `clientGameHud-${BH}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function gU(UU) {
+    function MH(HH) {
       let {
-        children: XU,
-        placement: zU = "bottom"
-      } = UU;
-      const [cU, yU] = (0, oU.useState)((() => {
-        var UU;
-        return null !== (UU = IU.get(zU)) && void 0 !== UU ? UU : null
+        children: BH,
+        placement: LH = "bottom"
+      } = HH;
+      const [AH, rH] = (0, zH.useState)((() => {
+        var HH;
+        return null !== (HH = YH.get(LH)) && void 0 !== HH ? HH : null
       }));
-      return (0, oU.useEffect)((() => {
-        const UU = () => {
-          var UU;
-          yU(null !== (UU = IU.get(zU)) && void 0 !== UU ? UU : null)
+      return (0, zH.useEffect)((() => {
+        const HH = () => {
+          var HH;
+          rH(null !== (HH = YH.get(LH)) && void 0 !== HH ? HH : null)
         };
-        return pU.add(UU), UU(), () => {
-          pU.delete(UU)
+        return uH.add(HH), HH(), () => {
+          uH.delete(HH)
         }
-      }), [zU]), cU ? (0, DU.createPortal)(XU, cU) : null
+      }), [LH]), AH ? (0, CH.createPortal)(BH, AH) : null
     }
   },
-  9282: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => QU,
-      d: () => yU
+  9412: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => SH,
+      e: () => rH
     });
-    let cU = null;
-    const yU = function(UU) {
-        const XU = {
-          cycle: UU,
+    let AH = null;
+    const rH = function(HH) {
+        const BH = {
+          cycle: HH,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return cU = XU, () => {
-          cU === XU && (cU = null)
+        return AH = BH, () => {
+          AH === BH && (AH = null)
         }
       },
-      QU = () => {
-        var UU;
-        return null !== (UU = cU) && void 0 !== UU && UU.canCycle() ? cU.cycle : null
+      SH = () => {
+        var HH;
+        return null !== (HH = AH) && void 0 !== HH && HH.canCycle() ? AH.cycle : null
       }
   },
-  9505: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => QU,
-      h: () => yU
+  9634: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => SH,
+      f: () => rH
     });
-    let cU = !1;
+    let AH = !1;
 
-    function yU() {
-      cU = !0
+    function rH() {
+      AH = !0
     }
 
-    function QU() {
-      return cU
+    function SH() {
+      return AH
     }
   },
-  37152: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      InGameUi: () => ZU.e,
-      LobbyLeaderboard: () => RU.d,
-      loadCharacterCustomisationUI: () => PU,
-      loadCharacterPreview: () => WU,
-      matchmakeAndPlay: () => CU,
-      matchmakeForAhead: () => FU.c,
-      setUpGame: () => dU
+  37330: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      InGameUi: () => TH.e,
+      LobbyLeaderboard: () => UH.b,
+      loadCharacterCustomisationUI: () => VH,
+      loadCharacterPreview: () => OH,
+      matchmakeAndPlay: () => oH,
+      matchmakeForAhead: () => tH.d,
+      setUpGame: () => bH
     });
-    var cU = zU(1262),
-      yU = zU(173),
-      QU = zU(27),
-      AU = zU(37159),
-      FU = zU(37167),
-      oU = zU(2032),
-      DU = zU(37203);
+    var AH = LH(1188),
+      rH = LH(152),
+      SH = LH(15),
+      hH = LH(37336),
+      tH = LH(37339),
+      zH = LH(2036),
+      CH = LH(37368);
 
-    function EU() {
-      return !1 !== oU.d.get("canCustomiseChar")
+    function EH() {
+      return !1 !== zH.e.get("canCustomiseChar")
     }
-    let YU = !1;
-    var NU = zU(1360),
-      IU = zU(1266),
-      pU = zU(264),
-      aU = zU(3964),
-      tU = zU(9505),
-      gU = zU(9502);
+    let XH = !1;
+    var GH = LH(1297),
+      YH = LH(1194),
+      uH = LH(225),
+      QH = LH(3961),
+      WH = LH(9634),
+      MH = LH(9631);
 
-    function kU() {
-      (0, tU.e)() || (0, gU.d)().catch((UU => {
-        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", UU)
+    function xH() {
+      (0, WH.c)() || (0, MH.loadWasmPlayAhead)().catch((HH => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", HH)
       }))
     }
-    var GU = zU(3837),
-      BU = zU(1819);
-    var ZU = zU(37213),
-      RU = zU(37737);
+    var vH = LH(3811),
+      PH = LH(1812);
+    var TH = LH(37375),
+      UH = LH(37874);
 
-    function PU() {
-      return zU.e(235).then((() => zU(43979)))
+    function VH() {
+      return Promise.all([LH.e(170), LH.e(236)]).then((() => LH(44789)))
     }
 
-    function WU() {
-      return zU.e(598).then((() => zU(43986)))
+    function OH() {
+      return Promise.all([LH.e(170), LH.e(237)]).then((() => LH(44796)))
     }
 
-    function dU() {
-      return (0, gU.k)()
+    function bH() {
+      return (0, MH.loadWasmPreviews)()
     }
-    YU || (YU = !0, document.addEventListener("keydown", (UU => {
-        (0, DU.c)(UU, EU)
+    XH || (XH = !0, document.addEventListener("keydown", (HH => {
+        (0, CH.d)(HH, EH)
       }))),
-      function(UU) {
-        var XU;
-        return !0 !== (null === UU || void 0 === UU ? void 0 : UU.saveData) && !/2g$/.test(null !== (XU = null === UU || void 0 === UU ? void 0 : UU.effectiveType) && void 0 !== XU ? XU : "")
-      }(navigator.connection) && (0, aU.g)((() => {
-        (0, tU.e)() || Promise.all([zU.e(89), zU.e(103), zU.e(228), zU.e(227), zU.e(148), zU.e(153), zU.e(70)]).then((() => zU(42151))).then((async UU => {
-          if ((0, tU.e)()) return;
-          const XU = UU.startLoadAheadOfJoin({
-            joinStarted: tU.e,
-            language: IU.h.get().getCurrentLanguageCode()
+      function(HH) {
+        var BH;
+        return !0 !== (null === HH || void 0 === HH ? void 0 : HH.saveData) && !/2g$/.test(null !== (BH = null === HH || void 0 === HH ? void 0 : HH.effectiveType) && void 0 !== BH ? BH : "")
+      }(navigator.connection) && (0, QH.d)((() => {
+        (0, WH.c)() || Promise.all([LH.e(89), LH.e(103), LH.e(234), LH.e(233), LH.e(150), LH.e(155), LH.e(70)]).then((() => LH(42355))).then((async HH => {
+          if ((0, WH.c)()) return;
+          const BH = HH.startLoadAheadOfJoin({
+            joinStarted: WH.c,
+            language: YH.g.get().getCurrentLanguageCode()
           });
-          (0, pU.b)((() => {
-            (0, tU.e)() || UU.probeWebgl2AheadOfJoin()
-          })), await XU, (0, pU.b)(kU)
-        }), (UU => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", UU)
+          (0, uH.d)((() => {
+            (0, WH.c)() || HH.probeWebgl2AheadOfJoin()
+          })), await BH, (0, uH.d)(xH)
+        }), (HH => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", HH)
         }))
       }));
-    const LU = QU.e.get("router");
-    null === LU ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function UU(XU) {
-      if ((0, BU.c)(XU.state.location.pathname)) return void(0, gU.g)().catch((() => {}));
-      const zU = XU.subscribe((cU => {
-        (0, BU.c)(cU.location.pathname) && (zU(), (0, GU.g)().then((() => {
-          UU(XU)
+    const kH = SH.c.get("router");
+    null === kH ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function HH(BH) {
+      if ((0, PH.c)(BH.state.location.pathname)) return void(0, MH.loadWasmPlay)().catch((() => {}));
+      const LH = BH.subscribe((AH => {
+        (0, PH.c)(AH.location.pathname) && (LH(), (0, vH.e)().then((() => {
+          HH(BH)
         })))
       }))
-    }(LU), (0, AU.c)();
-    const eU = (0, FU.b)((async function(UU, XU) {
+    }(kH), (0, hH.b)();
+    const mH = (0, tH.b)((async function(HH, BH) {
       let {
-        place: zU,
-        userContext: QU,
-        direct: AU,
-        matchedAt: FU,
-        rematch: oU
-      } = UU;
-      const DU = AU ? 1 / 0 : FU;
-      let EU;
+        place: LH,
+        userContext: SH,
+        direct: hH,
+        matchedAt: tH,
+        rematch: zH
+      } = HH;
+      const CH = hH ? 1 / 0 : tH;
+      let EH;
       try {
-        EU = await (0, gU.g)()
-      } catch (YU) {
-        return console.error("The wasm client did not load:", YU), (0, NU.o)({
+        EH = await (0, MH.loadWasmPlay)()
+      } catch (XH) {
+        return console.error("The wasm client did not load:", XH), (0, GH.p)({
           websocketUrl: null
-        }), cU.c.errorWithCode(String(YU), yU.m.CONNECT_TO_GAME_SERVER, {
-          error: YU,
-          severity: XU.aborted ? "low" : "medium",
-          QU: XU.aborted
+        }), AH.e.errorWithCode(String(XH), rH.h.CONNECT_TO_GAME_SERVER, {
+          error: XH,
+          severity: BH.aborted ? "low" : "medium",
+          xB: BH.aborted
         })
       }
-      return EU.playWasmGame({
-        userContext: QU,
-        place: zU,
-        matchedAt: DU,
-        rematch: oU
-      }, XU)
+      return EH.playWasmGame({
+        userContext: SH,
+        place: LH,
+        matchedAt: CH,
+        rematch: zH
+      }, BH)
     }));
 
-    function CU() {
-      return (0, gU.g)().catch((() => {})), eU(...arguments)
+    function oH() {
+      return (0, MH.loadWasmPlay)().catch((() => {})), mH(...arguments)
     }
   },
-  9502: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => IU,
-      g: () => NU,
-      k: () => pU
+  9631: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      loadWasmPlay: () => GH,
+      loadWasmPlayAhead: () => YH,
+      loadWasmPreviews: () => uH
     });
-    var cU = zU(3519),
-      yU = zU(2410),
-      QU = zU(2210),
-      AU = zU(5085),
-      FU = zU(3887),
-      oU = zU(9505);
-    let DU = null;
+    var AH = LH(3503),
+      rH = LH(2413),
+      SH = LH(2215),
+      hH = LH(5062),
+      tH = LH(3892),
+      zH = LH(9634);
+    let CH = null;
 
-    function EU() {
-      return Promise.all([zU.e(86), zU.e(89), zU.e(103), zU.e(228), zU.e(227), zU.e(148), zU.e(212), zU.e(234), zU.e(153), zU.e(101), zU.e(236), zU.e(75)]).then((() => zU(41736)))
+    function EH() {
+      return Promise.all([LH.e(86), LH.e(89), LH.e(103), LH.e(234), LH.e(233), LH.e(150), LH.e(216), LH.e(243), LH.e(155), LH.e(101), LH.e(244), LH.e(75)]).then((() => LH(42e3)))
     }
 
-    function YU() {
-      Promise.all([zU.e(84), zU.e(87), zU.e(85), zU.e(86), zU.e(103), zU.e(100), zU.e(294), zU.e(203), zU.e(242), zU.e(268), zU.e(236), zU.e(54)]).then((() => zU(42104))).catch((() => {}))
+    function XH() {
+      Promise.all([LH.e(84), LH.e(87), LH.e(85), LH.e(86), LH.e(103), LH.e(100), LH.e(300), LH.e(207), LH.e(250), LH.e(274), LH.e(244), LH.e(54)]).then((() => LH(42318))).catch((() => {}))
     }
 
-    function NU() {
-      return AU.e.cancelDownloadForJoin(), (0, FU.e)(), (0, yU.g)(), (0, oU.h)(), (0, QU.l)(), YU(), Promise.all([zU.e(89), zU.e(103), zU.e(228), zU.e(227), zU.e(148), zU.e(153), zU.e(70)]).then((() => zU(42151))).then((UU => {
+    function GH() {
+      return hH.b.cancelDownloadForJoin(), (0, tH.e)(), (0, rH.f)(), (0, zH.f)(), (0, SH.g)(), XH(), Promise.all([LH.e(89), LH.e(103), LH.e(234), LH.e(233), LH.e(150), LH.e(155), LH.e(70)]).then((() => LH(42355))).then((HH => {
         let {
-          startJoinLoad: XU
-        } = UU;
-        XU()
-      }), (() => {})), DU ??= EU().then((UU => (UU.startWasmPlay(), UU.followPageUiPack((UU => {
-        cU.c.showGamePack(UU)
-      })), UU)), (UU => {
-        throw DU = null, UU
-      })), DU
+          startJoinLoad: BH
+        } = HH;
+        BH()
+      }), (() => {})), CH ??= EH().then((HH => (HH.startWasmPlay(), HH.followPageUiPack((HH => {
+        AH.b.showGamePack(HH)
+      })), HH)), (HH => {
+        throw CH = null, HH
+      })), CH
     }
 
-    function IU() {
-      return YU(), zU.e(296).then((() => zU(42154))).catch((() => {})), EU().then((() => {}))
+    function YH() {
+      return XH(), LH.e(124).then((() => LH(42361))).catch((() => {})), EH().then((() => {}))
     }
 
-    function pU() {
-      return EU().then((UU => {
-        UU.startWasmPreviews(), UU.prefetchWasmPreviews()
+    function uH() {
+      return EH().then((HH => {
+        HH.startWasmPreviews(), HH.prefetchWasmPreviews()
       }))
     }
   },
-  37564: (UU, XU, zU) => {
-    function cU(UU) {
-      return "fetch" === UU || "timeout" === UU || "integrity" === UU ? "download" : "browser"
+  37702: (HH, BH, LH) => {
+    function AH(HH) {
+      return "fetch" === HH || "timeout" === HH || "integrity" === HH ? "download" : "browser"
     }
-    zU.d(XU, {
-      e: () => yU,
-      i: () => FU,
-      k: () => DU,
-      o: () => AU,
-      r: () => oU,
-      u: () => cU,
-      v: () => QU
+    LH.d(BH, {
+      d: () => rH,
+      e: () => zH,
+      g: () => EH,
+      h: () => tH,
+      l: () => hH,
+      n: () => CH,
+      o: () => AH,
+      r: () => SH
     });
-    const yU = "https://discord.gg/playbloxd";
+    const rH = "https://discord.gg/playbloxd";
 
-    function QU(UU) {
-      return "download" === UU ? {
+    function SH(HH, BH) {
+      return "download" === HH ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -542,10 +543,18 @@ export const modules = {
         discordLink: !1,
         confirm: "general:tryAgain",
         cancel: "general:back"
+      } : "memory" === HH || "noContext" === HH || "graphicsLost" === HH ? {
+        icon: "face-dizzy",
+        title: `wasmUnsupported:${HH}Title`,
+        help: `wasmUnsupported:${HH}Help${BH?"App":""}`,
+        helpValues: {},
+        discordLink: !1,
+        confirm: "general:tryAgain",
+        cancel: "general:back"
       } : {
         icon: "face-dizzy",
-        title: "wasmScreens:unsupportedTitle",
-        help: "wasmScreens:unsupportedHelp",
+        title: BH ? "wasmUnsupported:titleApp" : "wasmUnsupported:title",
+        help: BH ? "wasmUnsupported:helpApp" : "wasmUnsupported:" + ("noWebAssembly" === HH ? "noWebAssemblyHelp" : "help"),
         helpValues: {},
         discordLink: !1,
         confirm: "general:ok",
@@ -553,7 +562,14 @@ export const modules = {
       }
     }
 
-    function AU() {
+    function hH(HH, BH) {
+      return {
+        ...SH(HH, BH),
+        help: BH ? "wasmUnsupported:stillBlockedHelpApp" : `wasmUnsupported:${HH}StillHelp`
+      }
+    }
+
+    function tH() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:noContextTitle",
@@ -565,21 +581,21 @@ export const modules = {
       }
     }
 
-    function FU(UU, XU) {
+    function zH(HH, BH) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: XU ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: BH ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: UU.code
+          code: HH.code
         },
-        discordLink: XU,
+        discordLink: BH,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function oU() {
+    function CH() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -591,29 +607,150 @@ export const modules = {
       }
     }
 
-    function DU(UU, XU, zU) {
+    function EH(HH, BH, LH) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: zU ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: LH ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: UU.reason
+          reason: HH.reason
         },
-        discordLink: null === UU.name,
-        confirm: XU ? "general:reconnect" : UU.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === HH.name,
+        confirm: BH ? "general:reconnect" : HH.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   },
-  9894: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => yU,
-      f: () => QU
+  37146: (HH, BH, LH) => {
+    LH.d(BH, {
+      C: () => uH,
+      E: () => QH,
+      F: () => MH,
+      c: () => AH,
+      e: () => XH,
+      g: () => rH,
+      h: () => GH,
+      l: () => WH,
+      n: () => EH,
+      r: () => xH,
+      u: () => zH,
+      y: () => CH,
+      z: () => YH
     });
-    var cU = zU(9834);
-    const yU = "Air",
-      QU = Object.freeze(new cU.g(yU, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    const AH = [{
+      numLines: 7,
+      charsPerLine: 16,
+      uiFontSize: 3.3,
+      ingameFontSize: 25
+    }, {
+      numLines: 5,
+      charsPerLine: 11,
+      uiFontSize: 4.6,
+      ingameFontSize: 36
+    }, {
+      numLines: 3,
+      charsPerLine: 7,
+      uiFontSize: 7.5,
+      ingameFontSize: 58
+    }];
+
+    function rH(HH, BH) {
+      const {
+        numLines: LH,
+        charsPerLine: rH
+      } = AH[BH];
+      return vH(HH, LH, rH, !1)
+    }
+    const SH = 7 / 8,
+      hH = .25,
+      tH = 8;
+
+    function zH(HH, BH) {
+      return {
+        width: Math.min(HH, tH) - 2 * hH,
+        height: Math.min(BH, tH) - 2 * hH
+      }
+    }
+
+    function CH(HH, BH, LH) {
+      const rH = zH(HH, BH),
+        {
+          numLines: hH,
+          charsPerLine: tH
+        } = AH[LH];
+      return {
+        numLines: Math.max(1, Math.floor(hH / SH * rH.height)),
+        charsPerLine: Math.max(1, Math.floor(tH * rH.width))
+      }
+    }
+
+    function EH(HH, BH, LH, AH) {
+      const {
+        numLines: rH,
+        charsPerLine: SH
+      } = CH(LH, AH, BH);
+      return vH(HH, rH, SH, !1)
+    }
+    const XH = 32e3;
+
+    function GH(HH) {
+      return HH.slice(0, XH)
+    }
+    const YH = 512e3,
+      uH = 64,
+      QH = YH;
+
+    function WH(HH, BH) {
+      const LH = Math.max(0, QH - BH),
+        AH = Math.min(YH, LH);
+      return HH.slice(0, AH)
+    }
+    const MH = {
+      book: {
+        numLines: 13,
+        charsPerLine: 19,
+        uiFontSize: 1.95
+      },
+      qh: {
+        numLines: 1,
+        charsPerLine: 19,
+        uiFontSize: 1.95
+      },
+      nameTag: {
+        numLines: 1,
+        charsPerLine: 13,
+        uiFontSize: 4.6
+      }
+    };
+
+    function xH(HH, BH) {
+      const {
+        numLines: LH,
+        charsPerLine: AH
+      } = MH[BH];
+      return vH(HH, LH, AH, !1)
+    }
+
+    function vH(HH, BH, LH, AH, rH) {
+      (rH || AH) && (HH = HH.slice(0, null !== rH && void 0 !== rH ? rH : BH * LH));
+      const SH = HH.split("\n");
+      if (SH.length > BH && SH.splice(BH, SH.length - BH), !AH)
+        for (let hH = 0; hH < SH.length; hH++) {
+          const HH = SH[hH];
+          HH.length > LH && (SH[hH] = HH.substring(0, LH), SH.length < BH && SH.splice(hH + 1, 0, HH.substring(LH)))
+        }
+      return SH.join("\n")
+    }
+  },
+  10030: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => rH,
+      f: () => SH
+    });
+    var AH = LH(9979);
+    const rH = "Air",
+      SH = Object.freeze(new AH.f(rH, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

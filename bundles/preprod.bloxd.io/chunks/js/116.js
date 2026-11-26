@@ -1,472 +1,472 @@
 export const id = 116;
 export const ids = [116];
 export const modules = {
-  5424: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => NU
+  5383: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => GH
     });
-    var cU = zU(1106),
-      yU = zU.n(cU),
-      QU = zU(1390),
-      AU = zU(1384),
-      FU = zU(3887),
-      oU = zU(142),
-      DU = zU(3929),
-      EU = zU(3914),
-      YU = zU(1305);
+    var AH = LH(1038),
+      rH = LH.n(AH),
+      SH = LH(1315),
+      hH = LH(1313),
+      tH = LH(3892),
+      zH = LH(120),
+      CH = LH(3924),
+      EH = LH(3917),
+      XH = LH(1225);
 
-    function NU(UU) {
+    function GH(HH) {
       let {
-        game: XU
-      } = UU;
-      const zU = (0, oU.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        cU = (0, DU.c)(XU, zU),
-        NU = (0, FU.f)(cU),
-        IU = void 0 !== NU.blurhash;
-      return (0, YU.jsxs)("div", {
+        game: BH
+      } = HH;
+      const LH = (0, zH.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        AH = (0, CH.h)(BH, LH),
+        GH = (0, tH.g)(AH),
+        YH = void 0 !== GH.blurhash;
+      return (0, XH.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [NU.isLoading && !IU && (0, YU.jsx)(AU.b, {
+        children: [GH.isLoading && !YH && (0, XH.jsx)(hH.d, {
           loaderType: "Secondary"
-        }), !NU.failed && (null !== NU.src || IU) && (0, YU.jsx)("div", {
-          className: yU()("SchematicImage", EU.i, {
-            SchematicImageFadeIn: NU.fadeIn && !IU
+        }), !GH.failed && (null !== GH.src || YH) && (0, XH.jsx)("div", {
+          className: rH()("SchematicImage", EH.i, {
+            SchematicImageFadeIn: GH.fadeIn && !YH
           }),
-          style: (0, EU.h)(NU),
-          children: (0, YU.jsx)(EU.d, {
-            image: NU
+          style: (0, EH.f)(GH),
+          children: (0, XH.jsx)(EH.e, {
+            image: GH
           })
-        }), NU.failed && (0, YU.jsx)("div", {
+        }), GH.failed && (0, XH.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, YU.jsx)(QU.d, {
+          children: (0, XH.jsx)(SH.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  5593: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => tU
+  5517: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => WH
     });
-    var cU = zU(61),
-      yU = zU(1106),
-      QU = zU.n(yU),
-      AU = zU(5490),
-      FU = zU(1384),
-      oU = zU(1193),
-      DU = zU(3526),
-      EU = zU(3673),
-      YU = zU(1390),
-      NU = zU(3528),
-      IU = zU(5597),
-      pU = zU(5617),
-      aU = zU(1305);
+    var AH = LH(45),
+      rH = LH(1038),
+      SH = LH.n(rH),
+      hH = LH(5446),
+      tH = LH(1313),
+      zH = LH(1123),
+      CH = LH(3508),
+      EH = LH(3651),
+      XH = LH(1315),
+      GH = LH(3514),
+      YH = LH(5520),
+      uH = LH(5539),
+      QH = LH(1225);
 
-    function tU(UU) {
+    function WH(HH) {
       let {
-        folderName: XU,
-        onTexturePackUpdated: yU,
-        disabled: tU = !1,
-        maxFileSizeMb: gU,
-        packOwner: kU
-      } = UU;
+        folderName: BH,
+        onTexturePackUpdated: rH,
+        disabled: WH = !1,
+        maxFileSizeMb: MH,
+        packOwner: xH
+      } = HH;
       const {
-        t: GU
-      } = (0, oU.I)(), [BU, ZU] = (0, cU.useState)(!1), [RU, PU] = (0, cU.useState)(null), [WU, dU] = (0, cU.useState)(null), LU = (0, cU.useRef)(null);
-      async function eU(UU) {
-        ZU(!0);
+        t: vH
+      } = (0, zH.B)(), [PH, TH] = (0, AH.useState)(!1), [UH, VH] = (0, AH.useState)(null), [OH, bH] = (0, AH.useState)(null), kH = (0, AH.useRef)(null);
+      async function mH(HH) {
+        TH(!0);
         try {
-          const XU = await (0, DU.n)(UU);
-          if ("customGame" === kU && (0, EU.n)(XU)) return void PU(GU(EU.d));
-          if (void 0 !== gU) {
-            const UU = JSON.stringify(XU).length / 1048576;
-            if (UU > gU) return void PU(GU("customTexturePack:packTooBig", {
-              size: UU.toFixed(1),
-              max: gU
+          const BH = await (0, CH.q)(HH);
+          if ("customGame" === xH && (0, EH.j)(BH)) return void VH(vH(EH.d));
+          if (void 0 !== MH) {
+            const HH = JSON.stringify(BH).length / 1048576;
+            if (HH > MH) return void VH(vH("customTexturePack:packTooBig", {
+              size: HH.toFixed(1),
+              max: MH
             }))
           }
-          PU(null), dU(null), yU(XU), LU.current = XU,
-            function(UU, XU) {
-              const cU = UU.modelOverrides;
-              cU && Promise.all([zU.e(221), zU.e(220)]).then((() => zU(34956))).then((zU => {
+          VH(null), bH(null), rH(BH), kH.current = BH,
+            function(HH, BH) {
+              const AH = HH.modelOverrides;
+              AH && Promise.all([LH.e(227), LH.e(226)]).then((() => LH(35061))).then((LH => {
                 let {
-                  packDisplayName: yU,
-                  refusedPackModels: QU,
-                  packModelSummary: AU
-                } = zU;
-                const FU = yU(UU.metaData);
-                XU(AU(FU, QU(FU, cU, !1)))
-              })).catch((UU => {
-                console.error("Checking the texture pack's models failed:", UU)
+                  packDisplayName: rH,
+                  refusedPackModels: SH,
+                  packModelSummary: hH
+                } = LH;
+                const tH = rH(HH.metaData);
+                BH(hH(tH, SH(tH, AH, !1)))
+              })).catch((HH => {
+                console.error("Checking the texture pack's models failed:", HH)
               }))
-            }(XU, (UU => {
-              LU.current === XU && dU(UU)
+            }(BH, (HH => {
+              kH.current === BH && bH(HH)
             }))
-        } catch (XU) {
-          if (XU instanceof NU.e) {
-            const UU = "customTexturePack:invalidPack" !== XU.translationKey || (0, pU.h)() ? XU.translationKey : "customTexturePack:invalidPackZip";
-            PU((0, IU.i)(GU, UU, XU.params))
-          } else console.error("Couldn't read the texture pack", XU), PU(GU("customTexturePack:errorTitle"))
+        } catch (BH) {
+          if (BH instanceof GH.d) {
+            const HH = "customTexturePack:invalidPack" !== BH.translationKey || (0, uH.d)() ? BH.translationKey : "customTexturePack:invalidPackZip";
+            VH((0, YH.i)(vH, HH, BH.params))
+          } else console.error("Couldn't read the texture pack", BH), VH(vH("customTexturePack:errorTitle"))
         } finally {
-          ZU(!1)
+          TH(!1)
         }
       }
       const {
-        getRootProps: CU,
-        getInputProps: wU,
-        isDragActive: qU,
-        open: OU
-      } = (0, AU.b)({
-        onDrop: eU,
+        getRootProps: oH,
+        getInputProps: IH,
+        isDragActive: fH,
+        open: lH
+      } = (0, hH.c)({
+        onDrop: mH,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: tU
+        disabled: WH
       });
-      return (0, aU.jsxs)("div", {
+      return (0, QH.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, aU.jsxs)("div", {
+        children: [(0, QH.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [GU("settingsMenu:customTextureWarning"), ".", (0, aU.jsx)("br", {}), GU("settingsMenu:viewDocumentation"), ":", " ", (0, aU.jsx)("a", {
+          children: [vH("settingsMenu:customTextureWarning"), ".", (0, QH.jsx)("br", {}), vH("settingsMenu:viewDocumentation"), ":", " ", (0, QH.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), RU && (0, aU.jsxs)("div", {
+        }), UH && (0, QH.jsxs)("div", {
           className: "CustomTextureError",
-          children: [GU("general:error"), ": ", RU]
-        }), WU && (0, aU.jsx)("div", {
+          children: [vH("general:error"), ": ", UH]
+        }), OH && (0, QH.jsx)("div", {
           className: "CustomTextureError",
-          children: WU
-        }), (0, aU.jsxs)("div", {
-          ...CU({
-            className: QU()("CustomTextureFolderUpload", {
-              ActiveDrag: qU,
-              Disabled: tU
+          children: OH
+        }), (0, QH.jsxs)("div", {
+          ...oH({
+            className: SH()("CustomTextureFolderUpload", {
+              ActiveDrag: fH,
+              Disabled: WH
             })
           }),
-          children: [(0, aU.jsx)("input", {
-            ...wU({
+          children: [(0, QH.jsx)("input", {
+            ...IH({
               webkitdirectory: "true"
             })
-          }), BU && (0, aU.jsx)("div", {
+          }), PH && (0, QH.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, aU.jsx)(FU.b, {})
-          }), !BU && !qU && XU && (0, aU.jsxs)(aU.Fragment, {
-            children: [(0, aU.jsx)("div", {
+            children: (0, QH.jsx)(tH.d, {})
+          }), !PH && !fH && BH && (0, QH.jsxs)(QH.Fragment, {
+            children: [(0, QH.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, aU.jsx)(YU.d, {
+              children: (0, QH.jsx)(XH.c, {
                 name: "folder-image"
               })
-            }), (0, aU.jsx)("div", {
+            }), (0, QH.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: XU
+              children: BH
             })]
-          }), !BU && (qU || !XU) && (0, aU.jsxs)(aU.Fragment, {
-            children: [(0, aU.jsx)("div", {
+          }), !PH && (fH || !BH) && (0, QH.jsxs)(QH.Fragment, {
+            children: [(0, QH.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, aU.jsx)(YU.d, {
+              children: (0, QH.jsx)(XH.c, {
                 name: "up-from-bracket"
               })
-            }), (0, aU.jsx)("div", {
+            }), (0, QH.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
-              children: GU((0, pU.h)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
+              children: vH((0, uH.d)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
             })]
-          }), !BU && (0, aU.jsx)(pU.e, {
-            disabled: tU,
-            openFolderPicker: OU,
-            onFiles: UU => {
-              eU(UU)
+          }), !PH && (0, QH.jsx)(uH.c, {
+            disabled: WH,
+            openFolderPicker: lH,
+            onFiles: HH => {
+              mH(HH)
             }
           })]
         })]
       })
     }
   },
-  5617: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => EU,
-      h: () => DU
+  5539: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => EH,
+      d: () => CH
     });
-    var cU = zU(61),
-      yU = zU(1494),
-      QU = zU(1193),
-      AU = zU(97),
-      FU = zU(3498),
-      oU = zU(1305);
+    var AH = LH(45),
+      rH = LH(1455),
+      SH = LH(1123),
+      hH = LH(81),
+      tH = LH(3484),
+      zH = LH(1225);
 
-    function DU() {
-      return !(0, AU.isMobile)()
+    function CH() {
+      return !(0, hH.isMobile)()
     }
 
-    function EU(UU) {
+    function EH(HH) {
       let {
-        disabled: XU,
-        openFolderPicker: zU,
-        onFiles: AU
-      } = UU;
+        disabled: BH,
+        openFolderPicker: LH,
+        onFiles: hH
+      } = HH;
       const {
-        t: EU
-      } = (0, QU.I)(), YU = (0, cU.useRef)(null);
-      return (0, oU.jsxs)("div", {
+        t: EH
+      } = (0, SH.B)(), XH = (0, AH.useRef)(null);
+      return (0, zH.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, oU.jsx)("input", {
-          ref: YU,
+        children: [(0, zH.jsx)("input", {
+          ref: XH,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(UU) {
-            const XU = Array.from(UU.target.files);
-            UU.target.value = "", AU(XU)
+          onChange: function(HH) {
+            const BH = Array.from(HH.target.files);
+            HH.target.value = "", hH(BH)
           }
-        }), DU() && (0, oU.jsx)(yU.f, {
-          disabled: XU,
-          onClick: zU,
-          children: EU("general:chooseFolder")
-        }), (0, oU.jsx)(yU.f, {
-          disabled: XU,
+        }), CH() && (0, zH.jsx)(rH.i, {
+          disabled: BH,
+          onClick: LH,
+          children: EH("general:chooseFolder")
+        }), (0, zH.jsx)(rH.i, {
+          disabled: BH,
           onClick: () => {
-            (0, FU.g)(YU.current)
+            (0, tH.g)(XH.current)
           },
-          children: EU("general:chooseZip")
+          children: EH("general:chooseZip")
         })]
       })
     }
   },
-  5540: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => pU,
-      i: () => BU,
-      j: () => aU,
-      k: () => GU
+  5478: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => uH,
+      e: () => PH,
+      f: () => QH,
+      i: () => vH
     });
-    var cU = zU(61),
-      yU = zU(5548),
-      QU = zU(4775),
-      AU = zU(1420),
-      FU = zU(5581),
-      oU = zU(1106),
-      DU = zU.n(oU),
-      EU = zU(1410),
-      YU = zU(1800),
-      NU = zU(5588),
-      IU = zU(1305);
+    var AH = LH(45),
+      rH = LH(5485),
+      SH = LH(4745),
+      hH = LH(1365),
+      tH = LH(5506),
+      zH = LH(1038),
+      CH = LH.n(zH),
+      EH = LH(1352),
+      XH = LH(1789),
+      GH = LH(5513),
+      YH = LH(1225);
 
-    function pU(UU) {
+    function uH(HH) {
       let {
-        label: XU,
-        onClick: zU,
-        checked: cU,
-        circleInfoText: yU,
-        className: FU,
-        disabled: oU,
-        note: EU
-      } = UU;
-      return (0, IU.jsxs)("div", {
-        "aria-disabled": oU || void 0,
+        label: BH,
+        onClick: LH,
+        checked: AH,
+        circleInfoText: rH,
+        className: tH,
+        disabled: zH,
+        note: EH
+      } = HH;
+      return (0, YH.jsxs)("div", {
+        "aria-disabled": zH || void 0,
         "data-pad-focusable": !0,
-        className: DU()("SettingBox CheckboxContainer", {
-          [FU]: FU,
-          SettingBoxDisabled: oU
+        className: CH()("SettingBox CheckboxContainer", {
+          [tH]: tH,
+          SettingBoxDisabled: zH
         }),
         onClick: () => {
-          oU || zU(!cU)
+          zH || LH(!AH)
         },
-        children: [(0, IU.jsxs)("div", {
+        children: [(0, YH.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, IU.jsx)("label", {
+          children: [(0, YH.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, IU.jsx)(QU.d, {
+            children: (0, YH.jsx)(SH.d, {
               className: "SettingsCheckbox",
-              checked: cU,
-              disabled: oU,
+              checked: AH,
+              disabled: zH,
               onChange: () => {}
             })
-          }), (0, IU.jsxs)("div", {
+          }), (0, YH.jsxs)("div", {
             className: "CheckboxText",
-            children: [XU, yU && (0, IU.jsx)("span", {
-              onClick: UU => UU.stopPropagation(),
-              children: (0, IU.jsx)(AU.c, {
+            children: [BH, rH && (0, YH.jsx)("span", {
+              onClick: HH => HH.stopPropagation(),
+              children: (0, YH.jsx)(hH.e, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: yU
+                hoverInfo: rH
               })
             })]
           })]
-        }), EU && (0, IU.jsx)("div", {
+        }), EH && (0, YH.jsx)("div", {
           className: "SettingNote",
-          children: EU
+          children: EH
         })]
       })
     }
 
-    function aU(UU) {
+    function QH(HH) {
       let {
-        name: XU,
-        onChange: zU,
-        min: yU,
-        max: QU,
-        step: FU,
-        initValue: oU,
-        circleInfoText: EU,
-        format: YU,
-        className: NU,
-        padStep: pU,
-        disabled: aU = !1,
-        selectableMax: tU,
-        cappedNote: gU,
-        note: GU,
-        onChangeComplete: BU
-      } = UU;
-      const [ZU, RU] = (0, cU.useState)(oU), PU = (0, cU.useRef)(oU);
-      (0, cU.useEffect)((() => {
-        PU.current = oU, RU(oU)
-      }), [oU]);
-      const WU = void 0 !== tU && tU < QU,
-        dU = WU ? {
-          "--slider-selectable": (tU - yU) / (QU - yU)
+        name: BH,
+        onChange: LH,
+        min: rH,
+        max: SH,
+        step: tH,
+        initValue: zH,
+        circleInfoText: EH,
+        format: XH,
+        className: GH,
+        padStep: uH,
+        disabled: QH = !1,
+        selectableMax: WH,
+        cappedNote: MH,
+        note: vH,
+        onChangeComplete: PH
+      } = HH;
+      const [TH, UH] = (0, AH.useState)(zH), VH = (0, AH.useRef)(zH);
+      (0, AH.useEffect)((() => {
+        VH.current = zH, UH(zH)
+      }), [zH]);
+      const OH = void 0 !== WH && WH < SH,
+        bH = OH ? {
+          "--slider-selectable": (WH - rH) / (SH - rH)
         } : void 0,
-        LU = WU && gU ? gU : GU;
-      return (0, IU.jsxs)("div", {
-        className: DU()("SettingBox SettingsSliderDiv", {
-          [NU]: NU,
-          SettingBoxDisabled: aU,
-          SliderCapped: WU
+        kH = OH && MH ? MH : vH;
+      return (0, YH.jsxs)("div", {
+        className: CH()("SettingBox SettingsSliderDiv", {
+          [GH]: GH,
+          SettingBoxDisabled: QH,
+          SliderCapped: OH
         }),
-        style: dU,
-        children: [(0, IU.jsxs)("div", {
+        style: bH,
+        children: [(0, YH.jsxs)("div", {
           className: "SliderText",
-          children: [`${XU}: ${YU?YU(ZU):ZU}`, EU && (0, IU.jsx)(AU.c, {
+          children: [`${BH}: ${XH?XH(TH):TH}`, EH && (0, YH.jsx)(hH.e, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: EU
+            hoverInfo: EH
           })]
-        }), (0, IU.jsx)("div", {
+        }), (0, YH.jsx)("div", {
           className: "SliderDiv",
-          children: (0, IU.jsx)(kU, {
-            value: ZU,
-            min: yU,
-            max: QU,
-            step: FU,
-            onChange: UU => {
-              if (WU && UU >= tU && ZU === tU) return;
-              const XU = WU ? Math.min(UU, tU) : UU;
-              PU.current = XU, RU(XU), zU(XU)
+          children: (0, YH.jsx)(xH, {
+            value: TH,
+            min: rH,
+            max: SH,
+            step: tH,
+            onChange: HH => {
+              if (OH && HH >= WH && TH === WH) return;
+              const BH = OH ? Math.min(HH, WH) : HH;
+              VH.current = BH, UH(BH), LH(BH)
             },
-            onChangeComplete: BU && (() => {
-              BU(PU.current)
+            onChangeComplete: PH && (() => {
+              PH(VH.current)
             }),
-            format: YU,
-            padStep: pU,
-            disabled: aU
+            format: XH,
+            padStep: uH,
+            disabled: QH
           })
-        }), LU && (0, IU.jsx)("div", {
+        }), kH && (0, YH.jsx)("div", {
           className: "SettingNote",
-          children: LU
+          children: kH
         })]
       })
     }
-    const tU = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const WH = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function gU(UU) {
-      var XU;
-      return (null !== (XU = String(UU).split(".")[1]) && void 0 !== XU ? XU : "").length
+    function MH(HH) {
+      var BH;
+      return (null !== (BH = String(HH).split(".")[1]) && void 0 !== BH ? BH : "").length
     }
 
-    function kU(UU) {
+    function xH(HH) {
       let {
-        value: XU,
-        min: zU,
-        max: QU,
-        step: AU,
-        onChange: FU,
-        orientation: oU,
-        reverse: DU,
-        setIsChanging: EU,
-        tooltip: YU,
-        labels: pU,
-        handleLabel: aU,
-        format: kU,
-        onChangeStart: GU,
-        onChangeComplete: BU,
-        padStep: ZU,
-        disabled: RU = !1
-      } = UU;
-      const PU = (0, cU.useRef)(null),
-        WU = (0, cU.useRef)(null);
-      (0, cU.useLayoutEffect)((() => {
-        var UU, XU, zU;
-        const cU = null !== (UU = null === (XU = PU.current) || void 0 === XU ? void 0 : XU.querySelector(".rangeslider")) && void 0 !== UU ? UU : null;
-        null === cU || void 0 === cU || cU.setAttribute("data-pad-slider", ""), null === cU || void 0 === cU || cU.setAttribute("data-pad-focusable", ""), null === cU || void 0 === cU || null === (zU = cU.querySelector(".rangeslider__handle")) || void 0 === zU || zU.setAttribute("data-pad-slider-handle", ""), WU.current = cU
-      }), []), (0, cU.useLayoutEffect)((() => {
-        var UU, XU;
-        RU ? null === (UU = WU.current) || void 0 === UU || UU.setAttribute("aria-disabled", "true") : null === (XU = WU.current) || void 0 === XU || XU.removeAttribute("aria-disabled")
-      }), [RU]);
-      const dU = Math.max(gU(AU), gU(zU)),
-        LU = UU => {
-          if (UU >= QU) return QU;
-          if (UU <= zU) return zU;
-          const XU = Number((Math.round((UU - zU) / AU) * AU + zU).toFixed(dU));
-          return Math.min(QU, Math.max(zU, XU))
+        value: BH,
+        min: LH,
+        max: SH,
+        step: hH,
+        onChange: tH,
+        orientation: zH,
+        reverse: CH,
+        setIsChanging: EH,
+        tooltip: XH,
+        labels: uH,
+        handleLabel: QH,
+        format: xH,
+        onChangeStart: vH,
+        onChangeComplete: PH,
+        padStep: TH,
+        disabled: UH = !1
+      } = HH;
+      const VH = (0, AH.useRef)(null),
+        OH = (0, AH.useRef)(null);
+      (0, AH.useLayoutEffect)((() => {
+        var HH, BH, LH;
+        const AH = null !== (HH = null === (BH = VH.current) || void 0 === BH ? void 0 : BH.querySelector(".rangeslider")) && void 0 !== HH ? HH : null;
+        null === AH || void 0 === AH || AH.setAttribute("data-pad-slider", ""), null === AH || void 0 === AH || AH.setAttribute("data-pad-focusable", ""), null === AH || void 0 === AH || null === (LH = AH.querySelector(".rangeslider__handle")) || void 0 === LH || LH.setAttribute("data-pad-slider-handle", ""), OH.current = AH
+      }), []), (0, AH.useLayoutEffect)((() => {
+        var HH, BH;
+        UH ? null === (HH = OH.current) || void 0 === HH || HH.setAttribute("aria-disabled", "true") : null === (BH = OH.current) || void 0 === BH || BH.removeAttribute("aria-disabled")
+      }), [UH]);
+      const bH = Math.max(MH(hH), MH(LH)),
+        kH = HH => {
+          if (HH >= SH) return SH;
+          if (HH <= LH) return LH;
+          const BH = Number((Math.round((HH - LH) / hH) * hH + LH).toFixed(bH));
+          return Math.min(SH, Math.max(LH, BH))
         },
-        eU = (0, cU.useRef)(BU);
-      eU.current = BU, (0, cU.useEffect)((() => {
-        const UU = PU.current;
-        if (!UU) return;
-        const XU = UU => {
-          var XU;
-          tU.has(UU.key) && (null === (XU = eU.current) || void 0 === XU || XU.call(eU))
+        mH = (0, AH.useRef)(PH);
+      mH.current = PH, (0, AH.useEffect)((() => {
+        const HH = VH.current;
+        if (!HH) return;
+        const BH = HH => {
+          var BH;
+          WH.has(HH.key) && (null === (BH = mH.current) || void 0 === BH || BH.call(mH))
         };
-        return UU.addEventListener("keyup", XU), () => {
-          UU.removeEventListener("keyup", XU)
+        return HH.addEventListener("keyup", BH), () => {
+          HH.removeEventListener("keyup", BH)
         }
       }), []);
-      const CU = (0, cU.useRef)(!1);
-      return (0, NU.h)(WU, {
-        adjust: UU => {
-          if (RU) return;
-          const cU = null !== ZU && void 0 !== ZU ? ZU : Math.max(AU, Math.round((QU - zU) / 20 / AU) * AU),
-            yU = LU(XU + UU * cU * (DU ? -1 : 1));
-          yU !== XU && (null === GU || void 0 === GU || GU(), FU(yU), null === BU || void 0 === BU || BU())
+      const oH = (0, AH.useRef)(!1);
+      return (0, GH.h)(OH, {
+        adjust: HH => {
+          if (UH) return;
+          const AH = null !== TH && void 0 !== TH ? TH : Math.max(hH, Math.round((SH - LH) / 20 / hH) * hH),
+            rH = kH(BH + HH * AH * (CH ? -1 : 1));
+          rH !== BH && (null === vH || void 0 === vH || vH(), tH(rH), null === PH || void 0 === PH || PH())
         },
-        setFraction: UU => {
-          if (RU) return;
-          const cU = LU(zU + (DU ? 1 - UU : UU) * (QU - zU));
-          cU !== XU && (CU.current || (CU.current = !0, null === GU || void 0 === GU || GU()), FU(cU))
+        setFraction: HH => {
+          if (UH) return;
+          const AH = kH(LH + (CH ? 1 - HH : HH) * (SH - LH));
+          AH !== BH && (oH.current || (oH.current = !0, null === vH || void 0 === vH || vH()), tH(AH))
         },
         endDrag: () => {
-          CU.current && (CU.current = !1, null === BU || void 0 === BU || BU())
+          oH.current && (oH.current = !1, null === PH || void 0 === PH || PH())
         }
-      }), (0, IU.jsx)("div", {
-        ref: PU,
+      }), (0, YH.jsx)("div", {
+        ref: VH,
         style: {
           display: "contents"
         },
-        children: (0, IU.jsx)(yU.c, {
-          value: XU,
-          min: zU,
-          max: QU,
-          step: AU,
-          onChange: UU => {
-            FU(LU(UU))
+        children: (0, YH.jsx)(rH.c, {
+          value: BH,
+          min: LH,
+          max: SH,
+          step: hH,
+          onChange: HH => {
+            tH(kH(HH))
           },
-          orientation: oU,
-          reverse: DU,
-          tooltip: YU,
-          labels: pU,
-          handleLabel: aU,
-          format: kU,
+          orientation: zH,
+          reverse: CH,
+          tooltip: XH,
+          labels: uH,
+          handleLabel: QH,
+          format: xH,
           onChangeStart: () => {
-            null === GU || void 0 === GU || GU(), null === EU || void 0 === EU || EU(!0)
+            null === vH || void 0 === vH || vH(), null === EH || void 0 === EH || EH(!0)
           },
           onChangeComplete: () => {
-            null === EU || void 0 === EU || EU(!1), null === BU || void 0 === BU || BU()
+            null === EH || void 0 === EH || EH(!1), null === PH || void 0 === PH || PH()
           }
         })
       })
     }
-    async function GU() {
-      const UU = EU.NotificationProvider.showPromptPopup({
+    async function vH() {
+      const HH = EH.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -474,75 +474,75 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await UU.getResult() && (0, YU.reloadBloxd)()
+      !0 === await HH.getResult() && (0, XH.reloadBloxd)()
     }
 
-    function BU(UU) {
+    function PH(HH) {
       let {
-        label: XU,
-        options: zU,
-        value: cU,
-        onChange: yU,
-        circleInfoText: QU
-      } = UU;
-      return (0, IU.jsxs)("div", {
+        label: BH,
+        options: LH,
+        value: AH,
+        onChange: rH,
+        circleInfoText: SH
+      } = HH;
+      return (0, YH.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, IU.jsxs)("div", {
+        children: [(0, YH.jsxs)("div", {
           className: "SliderText",
-          children: [XU, QU && (0, IU.jsx)(AU.c, {
+          children: [BH, SH && (0, YH.jsx)(hH.e, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: QU
+            hoverInfo: SH
           })]
-        }), (0, IU.jsx)(FU.d, {
-          ariaLabel: XU,
-          options: zU,
-          value: cU,
-          onChange: yU
+        }), (0, YH.jsx)(tH.b, {
+          ariaLabel: BH,
+          options: LH,
+          value: AH,
+          onChange: rH
         })]
       })
     }
   },
-  5536: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => tU,
-      h: () => gU
+  5476: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => WH,
+      g: () => MH
     });
-    var cU = zU(3526),
-      yU = zU(2219),
-      QU = zU(61),
-      AU = zU(1106),
-      FU = zU.n(AU),
-      oU = zU(1384),
-      DU = zU(3519),
-      EU = zU(1410),
-      YU = zU(5540),
-      NU = zU(5593),
-      IU = zU(687),
-      pU = zU(5621),
-      aU = zU(1305);
+    var AH = LH(3508),
+      rH = LH(2227),
+      SH = LH(45),
+      hH = LH(1038),
+      tH = LH.n(hH),
+      zH = LH(1313),
+      CH = LH(3503),
+      EH = LH(1352),
+      XH = LH(5478),
+      GH = LH(5517),
+      YH = LH(642),
+      uH = LH(5547),
+      QH = LH(1225);
 
-    function tU(UU) {
-      var XU;
+    function WH(HH) {
+      var BH;
       let {
-        setApplySettingsCallback: zU
-      } = UU;
-      const [, AU] = (0, QU.useReducer)((UU => UU + 1), 0), FU = (0, QU.useRef)(!1), oU = (0, QU.useRef)(null);
+        setApplySettingsCallback: LH
+      } = HH;
+      const [, hH] = (0, SH.useReducer)((HH => HH + 1), 0), tH = (0, SH.useRef)(!1), zH = (0, SH.useRef)(null);
 
-      function tU(UU, XU) {
-        DU.c.setFromJson(UU, "player");
-        const cU = DU.c.saveTexturePack();
-        if (IU.H) {
-          const UU = DU.c.toJson();
-          cU.then((XU => {
-            XU && (0, pU.d)(UU)
+      function WH(HH, BH) {
+        CH.b.setFromJson(HH, "player");
+        const AH = CH.b.saveTexturePack();
+        if (YH.K) {
+          const HH = CH.b.toJson();
+          AH.then((BH => {
+            BH && (0, uH.b)(HH)
           }))
-        } else FU.current ||= XU, oU.current !== DU.c.getId() || DU.c.getId() === yU.p.CUSTOM && FU.current ? zU((() => YU.k)) : zU(null);
-        AU()
+        } else tH.current ||= BH, zH.current !== CH.b.getId() || CH.b.getId() === rH.l.CUSTOM && tH.current ? LH((() => XH.i)) : LH(null);
+        hH()
       }
-      async function kU(UU) {
-        if (DU.c.getId() !== UU.metaData.id) {
-          if (DU.c.getId() === yU.p.CUSTOM && DU.c.getFromFolderName()) {
-            const UU = EU.NotificationProvider.showPromptPopup({
+      async function xH(HH) {
+        if (CH.b.getId() !== HH.metaData.id) {
+          if (CH.b.getId() === rH.l.CUSTOM && CH.b.getFromFolderName()) {
+            const HH = EH.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -551,29 +551,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await UU.getResult()) return
+            if (!0 !== await HH.getResult()) return
           }
-          tU(UU, !1)
+          WH(HH, !1)
         }
-      }(0, QU.useEffect)((() => {
-        oU.current = DU.c.getId()
+      }(0, SH.useEffect)((() => {
+        zH.current = CH.b.getId()
       }), []);
-      const GU = cU.d,
-        BU = [GU, ...Object.values(yU.p).filter((UU => UU !== GU))];
-      return (0, aU.jsx)(aU.Fragment, {
-        children: (0, aU.jsxs)("div", {
+      const vH = AH.c,
+        PH = [vH, ...Object.values(rH.l).filter((HH => HH !== vH))];
+      return (0, QH.jsx)(QH.Fragment, {
+        children: (0, QH.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, aU.jsx)("div", {
+          children: [(0, QH.jsx)("div", {
             className: "TexturePackList",
-            children: BU.map((UU => (0, aU.jsx)(gU, {
-              id: UU,
-              isSelected: UU === DU.c.getId(),
-              setSelected: kU
-            }, UU)))
-          }), DU.c.getId() === yU.p.CUSTOM && (0, aU.jsx)(NU.b, {
-            folderName: null !== (XU = DU.c.getFromFolderName()) && void 0 !== XU ? XU : null,
-            onTexturePackUpdated: function(UU) {
-              tU(UU, !0)
+            children: PH.map((HH => (0, QH.jsx)(MH, {
+              id: HH,
+              isSelected: HH === CH.b.getId(),
+              setSelected: xH
+            }, HH)))
+          }), CH.b.getId() === rH.l.CUSTOM && (0, QH.jsx)(GH.b, {
+            folderName: null !== (BH = CH.b.getFromFolderName()) && void 0 !== BH ? BH : null,
+            onTexturePackUpdated: function(HH) {
+              WH(HH, !0)
             },
             packOwner: "player"
           })]
@@ -581,417 +581,417 @@ export const modules = {
       })
     }
 
-    function gU(UU) {
+    function MH(HH) {
       let {
-        id: XU,
-        isSelected: zU,
-        setSelected: AU,
-        disabled: DU = !1
-      } = UU;
-      const [EU, YU] = (0, QU.useState)(!0), [NU, IU] = (0, QU.useState)(""), [pU, tU] = (0, QU.useState)(""), [gU, kU] = (0, QU.useState)(""), GU = (0, QU.useRef)({});
-      return (0, QU.useEffect)((() => {
-        (0, cU.m)(XU).then((UU => {
-          var XU;
-          UU && (GU.current = UU, YU(!1), IU(GU.current.metaData.name), tU(GU.current.metaData.author), kU(null !== (XU = GU.current.metaData.previewImage) && void 0 !== XU ? XU : ""))
-        })).catch((UU => {
-          console.warn(`Failed to fetch texture pack ${XU}`, UU)
+        id: BH,
+        isSelected: LH,
+        setSelected: hH,
+        disabled: CH = !1
+      } = HH;
+      const [EH, XH] = (0, SH.useState)(!0), [GH, YH] = (0, SH.useState)(""), [uH, WH] = (0, SH.useState)(""), [MH, xH] = (0, SH.useState)(""), vH = (0, SH.useRef)({});
+      return (0, SH.useEffect)((() => {
+        (0, AH.o)(BH).then((HH => {
+          var BH;
+          HH && (vH.current = HH, XH(!1), YH(vH.current.metaData.name), WH(vH.current.metaData.author), xH(null !== (BH = vH.current.metaData.previewImage) && void 0 !== BH ? BH : ""))
+        })).catch((HH => {
+          console.warn(`Failed to fetch texture pack ${BH}`, HH)
         }))
-      }), [XU]), (0, aU.jsxs)("div", {
+      }), [BH]), (0, QH.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": DU || void 0,
-        className: FU()("TexturePack", {
-          Selected: zU,
-          Custom: XU === yU.p.CUSTOM,
-          Disabled: DU
+        "aria-disabled": CH || void 0,
+        className: tH()("TexturePack", {
+          Selected: LH,
+          Custom: BH === rH.l.CUSTOM,
+          Disabled: CH
         }),
         onClick: () => {
-          EU || DU || AU(GU.current)
+          EH || CH || hH(vH.current)
         },
-        children: [(0, aU.jsx)("div", {
+        children: [(0, QH.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: gU ? `url(${gU})` : void 0
+            backgroundImage: MH ? `url(${MH})` : void 0
           }
-        }), EU && (0, aU.jsx)("div", {
+        }), EH && (0, QH.jsx)("div", {
           className: "TexturePackName",
-          children: (0, aU.jsx)(oU.b, {})
-        }), !EU && NU && (0, aU.jsx)("div", {
+          children: (0, QH.jsx)(zH.d, {})
+        }), !EH && GH && (0, QH.jsx)("div", {
           className: "TexturePackName",
-          children: NU
-        }), !EU && pU && (0, aU.jsx)("div", {
+          children: GH
+        }), !EH && uH && (0, QH.jsx)("div", {
           className: "TexturePackAuthor",
-          children: pU
+          children: uH
         })]
       })
     }
   },
-  5597: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => FU,
-      e: () => AU,
-      i: () => QU
+  5520: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => tH,
+      f: () => hH,
+      i: () => SH
     });
-    var cU = zU(5603);
-    const yU = [UU => UU.strict ? "strict" : "nonStrict", UU => UU.program];
+    var AH = LH(5523);
+    const rH = [HH => HH.strict ? "strict" : "nonStrict", HH => HH.program];
 
-    function QU(UU, XU) {
-      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const cU = {};
-      for (const yU in zU) cU[yU] = `\0${yU}\0`;
-      return UU(XU, cU).replace(/\0(\w+)\0/g, ((UU, XU) => zU[XU]))
+    function SH(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const AH = {};
+      for (const rH in LH) AH[rH] = `\0${rH}\0`;
+      return HH(BH, AH).replace(/\0(\w+)\0/g, ((HH, BH) => LH[BH]))
     }
 
-    function AU(UU) {
-      return null === UU.file ? null : UU.line > 0 ? `${UU.file}:${UU.line}` : UU.file
+    function hH(HH) {
+      return null === HH.file ? null : HH.line > 0 ? `${HH.file}:${HH.line}` : HH.file
     }
 
-    function FU(UU) {
-      const XU = new Map(UU.map((UU => [oU(UU).join("."), UU])));
-      if (0 === XU.size) return [];
-      const zU = EU([...XU.values()]);
-      return 0 === zU[0].length ? [] : zU
+    function tH(HH) {
+      const BH = new Map(HH.map((HH => [zH(HH).join("."), HH])));
+      if (0 === BH.size) return [];
+      const LH = EH([...BH.values()]);
+      return 0 === LH[0].length ? [] : LH
     }
 
-    function oU(UU) {
-      return yU.map((XU => XU(UU)))
+    function zH(HH) {
+      return rH.map((BH => BH(HH)))
     }
-    const DU = yU.map((UU => new Set(cU.e.map(UU)).size));
+    const CH = rH.map((HH => new Set(AH.e.map(HH)).size));
 
-    function EU(UU) {
-      const XU = yU.map((XU => new Set(UU.map(XU)))),
-        zU = XU.reduce(((UU, XU) => UU * XU.size), 1),
-        cU = XU.every(((UU, XU) => 1 === UU.size || UU.size === DU[XU]));
-      if (zU === UU.length && cU) return [yU.filter(((UU, zU) => 1 === XU[zU].size)).map((XU => XU(UU[0])))];
-      let QU = null;
-      for (let AU = 0; AU < yU.length; AU++) {
-        if (1 === XU[AU].size) continue;
-        const zU = YU(UU, yU[AU]).flatMap(EU);
-        (null === QU || zU.length < QU.length) && (QU = zU)
+    function EH(HH) {
+      const BH = rH.map((BH => new Set(HH.map(BH)))),
+        LH = BH.reduce(((HH, BH) => HH * BH.size), 1),
+        AH = BH.every(((HH, BH) => 1 === HH.size || HH.size === CH[BH]));
+      if (LH === HH.length && AH) return [rH.filter(((HH, LH) => 1 === BH[LH].size)).map((BH => BH(HH[0])))];
+      let SH = null;
+      for (let hH = 0; hH < rH.length; hH++) {
+        if (1 === BH[hH].size) continue;
+        const LH = XH(HH, rH[hH]).flatMap(EH);
+        (null === SH || LH.length < SH.length) && (SH = LH)
       }
-      return QU
+      return SH
     }
 
-    function YU(UU, XU) {
-      const zU = new Map;
-      for (const yU of UU) {
-        var cU;
-        const UU = XU(yU);
-        zU.set(UU, [...null !== (cU = zU.get(UU)) && void 0 !== cU ? cU : [], yU])
+    function XH(HH, BH) {
+      const LH = new Map;
+      for (const rH of HH) {
+        var AH;
+        const HH = BH(rH);
+        LH.set(HH, [...null !== (AH = LH.get(HH)) && void 0 !== AH ? AH : [], rH])
       }
-      return [...zU.values()]
+      return [...LH.values()]
     }
   },
-  5581: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU
+  5506: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => hH
     });
-    var cU = zU(1106),
-      yU = zU.n(cU),
-      QU = zU(1305);
+    var AH = LH(1038),
+      rH = LH.n(AH),
+      SH = LH(1225);
 
-    function AU(UU) {
+    function hH(HH) {
       let {
-        options: XU,
-        value: zU,
-        onChange: cU,
-        ariaLabel: AU,
-        className: FU,
-        reselectable: oU = !1,
-        keepsFocus: DU = !1,
-        padTabs: EU
-      } = UU;
-      const YU = void 0 !== EU;
-      return (0, QU.jsx)("div", {
-        className: yU()("SegmentedToggle", FU),
+        options: BH,
+        value: LH,
+        onChange: AH,
+        ariaLabel: hH,
+        className: tH,
+        reselectable: zH = !1,
+        keepsFocus: CH = !1,
+        padTabs: EH
+      } = HH;
+      const XH = void 0 !== EH;
+      return (0, SH.jsx)("div", {
+        className: rH()("SegmentedToggle", tH),
         role: "group",
-        "aria-label": AU,
-        "data-pad-tabs": EU,
-        children: XU.map((UU => {
-          const XU = UU.value === zU;
-          return (0, QU.jsx)("button", {
+        "aria-label": hH,
+        "data-pad-tabs": EH,
+        children: BH.map((HH => {
+          const BH = HH.value === LH;
+          return (0, SH.jsx)("button", {
             type: "button",
-            "aria-pressed": XU,
-            "data-pad-tab": YU || void 0,
-            "data-pad-selected": YU && XU ? "true" : void 0,
-            "data-pad-default-focus": YU && XU || void 0,
-            "aria-label": UU.ariaLabel,
-            title: UU.ariaLabel,
-            className: yU()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: XU
+            "aria-pressed": BH,
+            "data-pad-tab": XH || void 0,
+            "data-pad-selected": XH && BH ? "true" : void 0,
+            "data-pad-default-focus": XH && BH || void 0,
+            "aria-label": HH.ariaLabel,
+            title: HH.ariaLabel,
+            className: rH()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: BH
             }),
-            onMouseDown: DU ? UU => {
-              UU.preventDefault()
+            onMouseDown: CH ? HH => {
+              HH.preventDefault()
             } : void 0,
             onClick: () => {
-              XU && !oU || cU(UU.value)
+              BH && !zH || AH(HH.value)
             },
-            children: UU.label
-          }, UU.value)
+            children: HH.label
+          }, HH.value)
         }))
       })
     }
   },
-  5588: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => QU,
-      h: () => AU
+  5513: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => SH,
+      h: () => hH
     });
-    var cU = zU(61);
-    const yU = new WeakMap,
-      QU = UU => {
-        var XU;
-        const zU = UU.closest("[data-pad-slider]");
-        return zU && null !== (XU = yU.get(zU)) && void 0 !== XU ? XU : null
+    var AH = LH(45);
+    const rH = new WeakMap,
+      SH = HH => {
+        var BH;
+        const LH = HH.closest("[data-pad-slider]");
+        return LH && null !== (BH = rH.get(LH)) && void 0 !== BH ? BH : null
       },
-      AU = (UU, XU) => {
-        const zU = (0, cU.useRef)(XU);
-        zU.current = XU, (0, cU.useEffect)((() => {
-          if (UU.current) return ((UU, XU) => (yU.set(UU, XU), () => {
-            yU.get(UU) === XU && yU.delete(UU)
-          }))(UU.current, {
-            adjust: UU => {
-              zU.current.adjust(UU)
+      hH = (HH, BH) => {
+        const LH = (0, AH.useRef)(BH);
+        LH.current = BH, (0, AH.useEffect)((() => {
+          if (HH.current) return ((HH, BH) => (rH.set(HH, BH), () => {
+            rH.get(HH) === BH && rH.delete(HH)
+          }))(HH.current, {
+            adjust: HH => {
+              LH.current.adjust(HH)
             },
-            setFraction: UU => {
-              zU.current.setFraction(UU)
+            setFraction: HH => {
+              LH.current.setFraction(HH)
             },
             endDrag: () => {
-              zU.current.endDrag()
+              LH.current.endDrag()
             }
           })
-        }), [UU])
+        }), [HH])
       }
   },
-  5603: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => cU.j,
-      e: () => yU,
-      i: () => cU.o
+  5523: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => AH.e,
+      e: () => rH,
+      g: () => AH.l
     });
-    var cU = zU(5608);
-    const yU = [!1, !0].flatMap((UU => ["terrain", "liquid", "model"].map((XU => ({
-      strict: UU,
-      program: XU
+    var AH = LH(5531);
+    const rH = [!1, !0].flatMap((HH => ["terrain", "liquid", "model"].map((BH => ({
+      strict: HH,
+      program: BH
     })))))
   },
-  5629: (UU, XU, zU) => {
-    function cU(UU, XU) {
-      return yU(UU, XU)
+  5554: (HH, BH, LH) => {
+    function AH(HH, BH) {
+      return rH(HH, BH)
     }
 
-    function yU(UU, XU) {
-      if (UU === XU) return !0;
-      if ("object" !== typeof UU || "object" !== typeof XU || null === UU || null === XU || Array.isArray(UU) !== Array.isArray(XU)) return !1;
-      const zU = UU,
-        cU = XU,
-        QU = Object.keys(zU);
-      return QU.length === Object.keys(cU).length && QU.every((UU => Object.prototype.hasOwnProperty.call(cU, UU) && yU(zU[UU], cU[UU])))
+    function rH(HH, BH) {
+      if (HH === BH) return !0;
+      if ("object" !== typeof HH || "object" !== typeof BH || null === HH || null === BH || Array.isArray(HH) !== Array.isArray(BH)) return !1;
+      const LH = HH,
+        AH = BH,
+        SH = Object.keys(LH);
+      return SH.length === Object.keys(AH).length && SH.every((HH => Object.prototype.hasOwnProperty.call(AH, HH) && rH(LH[HH], AH[HH])))
     }
-    zU.d(XU, {
-      d: () => cU
+    LH.d(BH, {
+      c: () => AH
     })
   },
-  5621: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU,
-      g: () => FU
+  5547: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => hH,
+      c: () => tH
     });
-    var cU = zU(2219),
-      yU = zU(5629);
-    let QU = null;
+    var AH = LH(2227),
+      rH = LH(5554);
+    let SH = null;
 
-    function AU(UU) {
-      QU = {
-        pack: UU.metaData.id === cU.b ? null : UU
+    function hH(HH) {
+      SH = {
+        pack: HH.metaData.id === AH.e ? null : HH
       }
     }
 
-    function FU(UU) {
-      return !(null === QU || !(0, yU.d)(QU.pack, UU)) && (QU = null, !0)
+    function tH(HH) {
+      return !(null === SH || !(0, rH.c)(SH.pack, HH)) && (SH = null, !0)
     }
   },
-  5608: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => FU,
-      h: () => AU,
-      j: () => cU,
-      k: () => aU,
-      m: () => YU,
-      o: () => yU,
-      q: () => QU,
-      r: () => DU,
-      u: () => EU,
-      y: () => NU
+  5531: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => tH,
+      d: () => hH,
+      e: () => AH,
+      f: () => QH,
+      j: () => XH,
+      l: () => rH,
+      n: () => SH,
+      q: () => CH,
+      t: () => EH,
+      u: () => GH
     });
-    const cU = 5;
+    const AH = 5;
 
-    function yU(UU) {
-      return UU === cU
+    function rH(HH) {
+      return HH === AH
     }
 
-    function QU(UU) {
-      return [...UU.features]
+    function SH(HH) {
+      return [...HH.features]
     }
-    const AU = 262144,
-      FU = 256,
-      oU = 256;
+    const hH = 262144,
+      tH = 256,
+      zH = 256;
 
-    function DU(UU) {
-      if ("object" !== typeof UU || null === UU || Array.isArray(UU)) return "The pack has no files.";
-      const XU = [];
-      for (const [zU, cU] of Object.entries(UU)) {
-        if ("string" !== typeof cU) return `${zU} isn't text.`;
-        XU.push({
-          path: zU,
-          source: cU
+    function CH(HH) {
+      if ("object" !== typeof HH || null === HH || Array.isArray(HH)) return "The pack has no files.";
+      const BH = [];
+      for (const [LH, AH] of Object.entries(HH)) {
+        if ("string" !== typeof AH) return `${LH} isn't text.`;
+        BH.push({
+          path: LH,
+          source: AH
         })
       }
-      return XU.sort(((UU, XU) => YU(UU.path, XU.path))),
-        function(UU) {
-          if (0 === UU.length) return "The pack has no .wgsl files.";
-          if (UU.length > FU) return `The pack has more than ${FU} .wgsl files.`;
-          const XU = new Set;
+      return BH.sort(((HH, BH) => XH(HH.path, BH.path))),
+        function(HH) {
+          if (0 === HH.length) return "The pack has no .wgsl files.";
+          if (HH.length > tH) return `The pack has more than ${tH} .wgsl files.`;
+          const BH = new Set;
           for (const {
-              path: zU
+              path: LH
             }
-            of UU) {
-            const UU = IU(zU);
-            if (null !== UU) return UU;
-            if (XU.has(zU)) return `The pack has two files at ${zU}.`;
-            XU.add(zU)
+            of HH) {
+            const HH = YH(LH);
+            if (null !== HH) return HH;
+            if (BH.has(LH)) return `The pack has two files at ${LH}.`;
+            BH.add(LH)
           }
-          return NU(UU) > AU ? `The pack's .wgsl files are over ${AU/1024} KB in total.` : null
-        }(XU) ?? XU
+          return GH(HH) > hH ? `The pack's .wgsl files are over ${hH/1024} KB in total.` : null
+        }(BH) ?? BH
     }
 
-    function EU(UU) {
-      const XU = {};
-      for (const zU of UU) XU[zU.path] = zU.source;
-      return XU
+    function EH(HH) {
+      const BH = {};
+      for (const LH of HH) BH[LH.path] = LH.source;
+      return BH
     }
 
-    function YU(UU, XU) {
-      return UU < XU ? -1 : UU > XU ? 1 : 0
+    function XH(HH, BH) {
+      return HH < BH ? -1 : HH > BH ? 1 : 0
     }
 
-    function NU(UU) {
-      const XU = new TextEncoder;
-      let zU = 0;
+    function GH(HH) {
+      const BH = new TextEncoder;
+      let LH = 0;
       for (const {
-          source: cU
+          source: AH
         }
-        of UU) zU += XU.encode(cU).byteLength;
-      return zU
+        of HH) LH += BH.encode(AH).byteLength;
+      return LH
     }
 
-    function IU(UU) {
-      if (!UU.toLowerCase().endsWith(".wgsl")) return `${UU} isn't a .wgsl file.`;
-      if (UU.length > oU) return `A file path is over ${oU} characters.`;
-      if (UU.includes("\\") || /[\u0000-\u001f]/.test(UU)) return `${UU} isn't a valid file path.`;
-      return UU.split("/").some((UU => "" === UU || "." === UU || ".." === UU)) ? `${UU} isn't a valid file path.` : null
+    function YH(HH) {
+      if (!HH.toLowerCase().endsWith(".wgsl")) return `${HH} isn't a .wgsl file.`;
+      if (HH.length > zH) return `A file path is over ${zH} characters.`;
+      if (HH.includes("\\") || /[\u0000-\u001f]/.test(HH)) return `${HH} isn't a valid file path.`;
+      return HH.split("/").some((HH => "" === HH || "." === HH || ".." === HH)) ? `${HH} isn't a valid file path.` : null
     }
-    const pU = /^(.*)\[rot\[([1-4])$/;
+    const uH = /^(.*)\[rot\[([1-4])$/;
 
-    function aU(UU, XU) {
-      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const cU = new Map;
-      XU.forEach(((UU, XU) => {
+    function QH(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const AH = new Map;
+      BH.forEach(((HH, BH) => {
         let {
-          numAnimStates: zU,
-          animStartIdx: yU
-        } = UU;
-        for (let QU = 1; QU < zU; QU++) cU.set(yU + QU - 1, XU)
+          numAnimStates: LH,
+          animStartIdx: rH
+        } = HH;
+        for (let SH = 1; SH < LH; SH++) AH.set(rH + SH - 1, BH)
       }));
-      const yU = Object.entries(UU),
-        QU = new Map;
-      for (const [aU, tU] of yU) {
-        const UU = pU.exec(aU);
-        "1" === UU?.[2] && QU.set(UU[1], tU + 1)
+      const rH = Object.entries(HH),
+        SH = new Map;
+      for (const [QH, WH] of rH) {
+        const HH = uH.exec(QH);
+        "1" === HH?.[2] && SH.set(HH[1], WH + 1)
       }
-      const AU = UU => {
-          const XU = pU.exec(UU);
-          return XU && QU.has(XU[1]) ? {
-            root: XU[1],
-            rotation: Number(XU[2]) - 1
+      const hH = HH => {
+          const BH = uH.exec(HH);
+          return BH && SH.has(BH[1]) ? {
+            root: BH[1],
+            rotation: Number(BH[2]) - 1
           } : null
         },
-        FU = new Set(yU.map((UU => {
-          let [XU] = UU;
-          return AU(XU)?.root ?? XU
+        tH = new Set(rH.map((HH => {
+          let [BH] = HH;
+          return hH(BH)?.root ?? BH
         }))),
-        oU = (UU, zU) => {
-          const cU = UU.replace(/_?0$/, "");
-          return (XU[zU]?.numAnimStates ?? 0) > 1 && !FU.has(cU) ? cU : UU
+        zH = (HH, LH) => {
+          const AH = HH.replace(/_?0$/, "");
+          return (BH[LH]?.numAnimStates ?? 0) > 1 && !tH.has(AH) ? AH : HH
         },
-        DU = new Map;
-      for (const [pU, aU] of yU) DU.set(aU, oU(AU(pU)?.root ?? pU, aU));
-      const EU = yU.reduce(((UU, XU) => {
-          let [, zU] = XU;
-          return Math.max(UU, zU + 1)
+        CH = new Map;
+      for (const [uH, QH] of rH) CH.set(QH, zH(hH(uH)?.root ?? uH, QH));
+      const EH = rH.reduce(((HH, BH) => {
+          let [, LH] = BH;
+          return Math.max(HH, LH + 1)
         }), 0),
-        YU = Array.from({
-          length: EU
-        }, ((UU, XU) => ({
-          id: XU + 1,
+        XH = Array.from({
+          length: EH
+        }, ((HH, BH) => ({
+          id: BH + 1,
           rotation: 0
         }))),
-        NU = new Map,
-        IU = new Map;
-      for (const [pU, aU] of yU) {
-        const UU = AU(pU),
-          XU = cU.get(aU);
-        if (void 0 !== XU) {
-          const zU = DU.get(XU);
-          IU.set(pU, {
-            name: pU,
-            texture: zU,
+        GH = new Map,
+        YH = new Map;
+      for (const [uH, QH] of rH) {
+        const HH = hH(uH),
+          BH = AH.get(QH);
+        if (void 0 !== BH) {
+          const LH = CH.get(BH);
+          YH.set(uH, {
+            name: uH,
+            texture: LH,
             kind: "frame"
-          }), UU && !IU.has(UU.root) && IU.set(UU.root, {
-            name: UU.root,
-            texture: zU,
+          }), HH && !YH.has(HH.root) && YH.set(HH.root, {
+            name: HH.root,
+            texture: LH,
             kind: "frame"
           });
           continue
         }
-        const zU = DU.get(aU),
-          yU = UU?.root ?? pU;
-        if (zU !== yU && IU.set(yU, {
-            name: yU,
-            texture: zU,
+        const LH = CH.get(QH),
+          rH = HH?.root ?? uH;
+        if (LH !== rH && YH.set(rH, {
+            name: rH,
+            texture: LH,
             kind: "frame"
-          }), UU) {
-          const XU = QU.get(UU.root);
-          YU[aU] = {
-            id: XU,
-            rotation: UU.rotation
-          }, NU.set(zU, XU), IU.set(pU, {
-            name: pU,
-            texture: zU,
+          }), HH) {
+          const BH = SH.get(HH.root);
+          XH[QH] = {
+            id: BH,
+            rotation: HH.rotation
+          }, GH.set(LH, BH), YH.set(uH, {
+            name: uH,
+            texture: LH,
             kind: "rotation"
           })
-        } else NU.set(zU, aU + 1)
+        } else GH.set(LH, QH + 1)
       }
-      for (const pU of NU.keys()) IU.delete(pU);
-      for (const [pU, aU] of zU) {
-        const UU = NU.get(aU);
-        void 0 === UU || NU.has(pU) || (NU.set(pU, UU), IU.delete(pU))
+      for (const uH of GH.keys()) YH.delete(uH);
+      for (const [uH, QH] of LH) {
+        const HH = GH.get(QH);
+        void 0 === HH || GH.has(uH) || (GH.set(uH, HH), YH.delete(uH))
       }
       return {
-        named: [...NU].sort(((UU, XU) => {
-          let [zU] = UU, [cU] = XU;
-          return zU < cU ? -1 : zU > cU ? 1 : 0
-        })).map((UU => {
-          let [XU, zU] = UU;
+        named: [...GH].sort(((HH, BH) => {
+          let [LH] = HH, [AH] = BH;
+          return LH < AH ? -1 : LH > AH ? 1 : 0
+        })).map((HH => {
+          let [BH, LH] = HH;
           return {
-            name: XU,
-            id: zU
+            name: BH,
+            id: LH
           }
         })),
-        aliases: [...IU.values()],
-        layers: YU
+        aliases: [...YH.values()],
+        layers: XH
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

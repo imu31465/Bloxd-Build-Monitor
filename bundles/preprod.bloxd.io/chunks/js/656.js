@@ -1,77 +1,105 @@
 export const id = 656;
 export const ids = [656];
 export const modules = {
-  45165: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
+  45824: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH
     });
-    var cU = zU(40961);
-    const yU = "clipPlaneFragment",
-      QU = "#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6)\nif (false) {}\n#endif\n#ifdef CLIPPLANE\nelse if (fragmentInputs.fClipDistance>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE2\nelse if (fragmentInputs.fClipDistance2>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE3\nelse if (fragmentInputs.fClipDistance3>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE4\nelse if (fragmentInputs.fClipDistance4>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE5\nelse if (fragmentInputs.fClipDistance5>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE6\nelse if (fragmentInputs.fClipDistance6>0.0)\n{discard;}\n#endif\n";
-    cU.b.IncludesShadersStoreWGSL[yU] || (cU.b.IncludesShadersStoreWGSL[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+    var AH = LH(41138);
+    const rH = "clipPlaneVertex",
+      SH = "#ifdef CLIPPLANE\nvertexOutputs.fClipDistance=dot(worldPos,uniforms.vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nvertexOutputs.fClipDistance2=dot(worldPos,uniforms.vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nvertexOutputs.fClipDistance3=dot(worldPos,uniforms.vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nvertexOutputs.fClipDistance4=dot(worldPos,uniforms.vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nvertexOutputs.fClipDistance5=dot(worldPos,uniforms.vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nvertexOutputs.fClipDistance6=dot(worldPos,uniforms.vClipPlane6);\n#endif\n";
+    AH.c.IncludesShadersStoreWGSL[rH] || (AH.c.IncludesShadersStoreWGSL[rH] = SH);
+    const hH = {
+      name: rH,
+      shader: SH
     }
   },
-  45154: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU
+  45746: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH
     });
-    var cU = zU(40961);
-    const yU = "clipPlaneFragmentDeclaration",
-      QU = "#ifdef CLIPPLANE\nvarying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nvarying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nvarying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nvarying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nvarying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nvarying fClipDistance6: f32;\n#endif\n";
-    cU.b.IncludesShadersStoreWGSL[yU] || (cU.b.IncludesShadersStoreWGSL[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+    var AH = LH(41138);
+    const rH = "clipPlaneVertexDeclaration",
+      SH = "#ifdef CLIPPLANE\nuniform vClipPlane: vec4<f32>;varying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nuniform vClipPlane2: vec4<f32>;varying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nuniform vClipPlane3: vec4<f32>;varying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nuniform vClipPlane4: vec4<f32>;varying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nuniform vClipPlane5: vec4<f32>;varying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nuniform vClipPlane6: vec4<f32>;varying fClipDistance6: f32;\n#endif\n";
+    AH.c.IncludesShadersStoreWGSL[rH] || (AH.c.IncludesShadersStoreWGSL[rH] = SH);
+    const hH = {
+      name: rH,
+      shader: SH
     }
   },
-  45205: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => AU
+  45831: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => hH
     });
-    var cU = zU(40961);
-    const yU = "fogFragment",
-      QU = "#ifdef FOG\nvar fog: f32=CalcFogFactor();\n#ifdef PBR\nfog=toLinearSpace(fog);\n#endif\ncolor= vec4f(mix(uniforms.vFogColor,color.rgb,fog),color.a);\n#endif\n";
-    cU.b.IncludesShadersStoreWGSL[yU] || (cU.b.IncludesShadersStoreWGSL[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+    var AH = LH(41138);
+    const rH = "fogVertex",
+      SH = "#ifdef FOG\n#ifdef SCENE_UBO\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#else\nvertexOutputs.vFogDistance=(uniforms.view*worldPos).xyz;\n#endif\n#endif\n";
+    AH.c.IncludesShadersStoreWGSL[rH] || (AH.c.IncludesShadersStoreWGSL[rH] = SH);
+    const hH = {
+      name: rH,
+      shader: SH
     }
   },
-  45158: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => AU
+  45748: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH
     });
-    var cU = zU(40961);
-    const yU = "fogFragmentDeclaration",
-      QU = "#ifdef FOG\n#define FOGMODE_NONE 0.\n#define FOGMODE_EXP 1.\n#define FOGMODE_EXP2 2.\n#define FOGMODE_LINEAR 3.\nconst E=2.71828;uniform vFogInfos: vec4f;uniform vFogColor: vec3f;varying vFogDistance: vec3f;fn CalcFogFactor()->f32\n{var fogCoeff: f32=1.0;var fogStart: f32=uniforms.vFogInfos.y;var fogEnd: f32=uniforms.vFogInfos.z;var fogDensity: f32=uniforms.vFogInfos.w;var fogDistance: f32=length(fragmentInputs.vFogDistance);if (FOGMODE_LINEAR==uniforms.vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);}\nelse if (FOGMODE_EXP==uniforms.vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDensity);}\nelse if (FOGMODE_EXP2==uniforms.vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDistance*fogDensity*fogDensity);}\nreturn clamp(fogCoeff,0.0,1.0);}\n#endif\n";
-    cU.b.IncludesShadersStoreWGSL[yU] || (cU.b.IncludesShadersStoreWGSL[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+    var AH = LH(41138);
+    const rH = "fogVertexDeclaration",
+      SH = "#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n";
+    AH.c.IncludesShadersStoreWGSL[rH] || (AH.c.IncludesShadersStoreWGSL[rH] = SH);
+    const hH = {
+      name: rH,
+      shader: SH
     }
   },
-  45229: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      colorPixelShaderWGSL: () => YU
+  45764: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => hH
     });
-    var cU = zU(40961),
-      yU = zU(45154),
-      QU = zU(45158),
-      AU = zU(45165),
-      FU = zU(45205);
-    const oU = "colorPixelShader",
-      DU = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\n#define VERTEXCOLOR\nvarying vColor: vec4f;\n#else\nuniform color: vec4f;\n#endif\n#include<clipPlaneFragmentDeclaration>\n#include<fogFragmentDeclaration>\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\n#include<clipPlaneFragment>\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nfragmentOutputs.color=input.vColor;\n#else\nfragmentOutputs.color=uniforms.color;\n#endif\n#include<fogFragment>(color,fragmentOutputs.color)\n#define CUSTOM_FRAGMENT_MAIN_END\n}";
-    cU.b.ShadersStoreWGSL[oU] || (cU.b.ShadersStoreWGSL[oU] = DU);
-    const EU = [yU.d, QU.e, AU.c, FU.b];
-    for (const NU of EU) cU.b.IncludesShadersStoreWGSL[NU.name] || (cU.b.IncludesShadersStoreWGSL[NU.name] = NU.shader);
-    const YU = {
-      name: oU,
-      shader: DU
+    var AH = LH(41138);
+    const rH = "logDepthDeclaration",
+      SH = "#ifdef LOGARITHMICDEPTH\nuniform logarithmicDepthConstant: f32;varying vFragmentDepth: f32;\n#endif\n";
+    AH.c.IncludesShadersStoreWGSL[rH] || (AH.c.IncludesShadersStoreWGSL[rH] = SH);
+    const hH = {
+      name: rH,
+      shader: SH
+    }
+  },
+  45842: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => hH
+    });
+    var AH = LH(41138);
+    const rH = "logDepthVertex",
+      SH = "#ifdef LOGARITHMICDEPTH\nvertexOutputs.vFragmentDepth=1.0+vertexOutputs.position.w;vertexOutputs.position.z=log2(max(0.000001,vertexOutputs.vFragmentDepth))*uniforms.logarithmicDepthConstant;\n#endif\n";
+    AH.c.IncludesShadersStoreWGSL[rH] || (AH.c.IncludesShadersStoreWGSL[rH] = SH);
+    const hH = {
+      name: rH,
+      shader: SH
+    }
+  },
+  64172: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      skyVertexShaderWGSL: () => YH
+    });
+    var AH = LH(41138),
+      rH = LH(45764),
+      SH = LH(45746),
+      hH = LH(45748),
+      tH = LH(45824),
+      zH = LH(45842),
+      CH = LH(45831);
+    const EH = "skyVertexShader",
+      XH = "attribute position: vec3f;\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\nuniform world: mat4x4f;uniform view: mat4x4f;uniform viewProjection: mat4x4f;\n#ifdef POINTSIZE\nuniform pointSize: f32;\n#endif\nvarying vPositionW: vec3f;\n#ifdef VERTEXCOLOR\nvarying vColor: vec4f;\n#endif\n#include<logDepthDeclaration>\n#include<clipPlaneVertexDeclaration>\n#include<fogVertexDeclaration>\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvertexOutputs.position=uniforms.viewProjection*uniforms.world* vec4f(vertexInputs.position,1.0);var worldPos: vec4f=uniforms.world* vec4f(vertexInputs.position,1.0);vertexOutputs.vPositionW= worldPos.xyz;\n#include<clipPlaneVertex>\n#include<logDepthVertex>\n#include<fogVertex>\n#ifdef VERTEXCOLOR\nvertexOutputs.vColor=vertexInputs.color;\n#endif\n#define CUSTOM_VERTEX_MAIN_END\n}\n";
+    AH.c.ShadersStoreWGSL[EH] || (AH.c.ShadersStoreWGSL[EH] = XH);
+    const GH = [rH.e, SH.d, hH.d, tH.d, zH.b, CH.b];
+    for (const uH of GH) AH.c.IncludesShadersStoreWGSL[uH.name] || (AH.c.IncludesShadersStoreWGSL[uH.name] = uH.shader);
+    const YH = {
+      name: EH,
+      shader: XH
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

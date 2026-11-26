@@ -1,188 +1,776 @@
 export const id = 624;
 export const ids = [624];
 export const modules = {
-  44745: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => AU
+  45326: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      ReadExrDataAsync: () => XB,
+      _ExrTextureLoader: () => EB
     });
-    var cU = zU(40961);
-    const yU = "decalFragmentDeclaration",
-      QU = "#ifdef DECAL\nuniform vec4 vDecalInfos;\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+    var AH = LH(39595),
+      rH = LH(38002),
+      SH = LH(41364);
+    const hH = 4,
+      tH = 4,
+      zH = 1,
+      CH = 2,
+      EH = 8,
+      XH = 65536,
+      GH = XH >> 3,
+      YH = 14,
+      uH = 65537,
+      QH = 1 << YH,
+      WH = QH - 1,
+      MH = 59,
+      xH = 63,
+      vH = 2 + xH - MH;
+    var PH, TH;
+
+    function UH(HH, BH) {
+      const LH = new Uint8Array(HH);
+      let AH = 0;
+      for (; 0 != LH[BH.value + AH];) AH += 1;
+      const rH = (new TextDecoder).decode(LH.slice(BH.value, BH.value + AH));
+      return BH.value = BH.value + AH + 1, rH
     }
-  },
-  44850: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "depthPrePass",
-      QU = "#ifdef DEPTHPREPASS\ngl_FragColor=vec4(0.,0.,0.,1.0);return;\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+
+    function VH(HH, BH) {
+      const LH = HH.getInt32(BH.value, !0);
+      return BH.value += hH, LH
     }
-  },
-  44767: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "lightFragmentDeclaration",
-      QU = "#ifdef LIGHT{X}\nuniform vec4 vLightData{X};uniform vec4 vLightDiffuse{X};\n#ifdef SPECULARTERM\nuniform vec4 vLightSpecular{X};\n#else\nvec4 vLightSpecular{X}=vec4(0.);\n#endif\n#ifdef SHADOW{X}\n#ifdef SHADOWCSM{X}\nuniform mat4 lightMatrix{X}[SHADOWCSMNUM_CASCADES{X}];uniform float viewFrustumZ{X}[SHADOWCSMNUM_CASCADES{X}];uniform float frustumLengths{X}[SHADOWCSMNUM_CASCADES{X}];uniform float cascadeBlendFactor{X};varying vec4 vPositionFromLight{X}[SHADOWCSMNUM_CASCADES{X}];varying float vDepthMetric{X}[SHADOWCSMNUM_CASCADES{X}];varying vec4 vPositionFromCamera{X};\n#if defined(SHADOWPCSS{X})\nuniform highp sampler2DArrayShadow shadowTexture{X};uniform highp sampler2DArray depthTexture{X};uniform vec2 lightSizeUVCorrection{X}[SHADOWCSMNUM_CASCADES{X}];uniform float depthCorrection{X}[SHADOWCSMNUM_CASCADES{X}];uniform float penumbraDarkness{X};\n#elif defined(SHADOWPCF{X})\nuniform highp sampler2DArrayShadow shadowTexture{X};\n#else\nuniform highp sampler2DArray shadowTexture{X};\n#endif\n#ifdef SHADOWCSMDEBUG{X}\nconst vec3 vCascadeColorsMultiplier{X}[8]=vec3[8]\n(\nvec3 ( 1.5,0.0,0.0 ),\nvec3 ( 0.0,1.5,0.0 ),\nvec3 ( 0.0,0.0,5.5 ),\nvec3 ( 1.5,0.0,5.5 ),\nvec3 ( 1.5,1.5,0.0 ),\nvec3 ( 1.0,1.0,1.0 ),\nvec3 ( 0.0,1.0,5.5 ),\nvec3 ( 0.5,3.5,0.75 )\n);vec3 shadowDebug{X};\n#endif\n#ifdef SHADOWCSMUSESHADOWMAXZ{X}\nint index{X}=-1;\n#else\nint index{X}=SHADOWCSMNUM_CASCADES{X}-1;\n#endif\nfloat diff{X}=0.;\n#elif defined(SHADOWCUBE{X})\nuniform samplerCube shadowTexture{X};\n#else\nvarying vec4 vPositionFromLight{X};varying float vDepthMetric{X};\n#if defined(SHADOWPCSS{X})\nuniform highp sampler2DShadow shadowTexture{X};uniform highp sampler2D depthTexture{X};\n#elif defined(SHADOWPCF{X})\nuniform highp sampler2DShadow shadowTexture{X};\n#else\nuniform sampler2D shadowTexture{X};\n#endif\nuniform mat4 lightMatrix{X};\n#endif\nuniform vec4 shadowsInfo{X};uniform vec2 depthValues{X};\n#endif\n#ifdef SPOTLIGHT{X}\nuniform vec4 vLightDirection{X};uniform vec4 vLightFalloff{X};\n#elif defined(POINTLIGHT{X})\nuniform vec4 vLightFalloff{X};\n#elif defined(HEMILIGHT{X})\nuniform vec3 vLightGround{X};\n#endif\n#ifdef AREALIGHT{X}\nuniform vec4 vLightWidth{X};uniform vec4 vLightHeight{X};\n#ifdef RECTAREALIGHTEMISSIONTEXTURE{X}\nuniform sampler2D rectAreaLightEmissionTexture{X};\n#endif\n#endif\n#ifdef IESLIGHTTEXTURE{X}\nuniform sampler2D iesLightTexture{X};\n#endif\n#ifdef PROJECTEDLIGHTTEXTURE{X}\nuniform mat4 textureProjectionMatrix{X};uniform sampler2D projectionLightTexture{X};\n#endif\n#ifdef CLUSTLIGHT{X}\nuniform vec2 vSliceData{X};uniform vec2 vSliceRanges{X}[CLUSTLIGHT_SLICES];uniform sampler2D lightDataTexture{X};uniform highp sampler2D tileMaskTexture{X};\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+
+    function OH(HH, BH) {
+      const LH = HH.getUint32(BH.value, !0);
+      return BH.value += hH, LH
     }
-  },
-  44774: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "lightUboDeclaration",
-      QU = "#ifdef LIGHT{X}\nuniform Light{X}\n{vec4 vLightData;vec4 vLightDiffuse;vec4 vLightSpecular;\n#ifdef SPOTLIGHT{X}\nvec4 vLightDirection;vec4 vLightFalloff;\n#elif defined(POINTLIGHT{X})\nvec4 vLightFalloff;\n#elif defined(HEMILIGHT{X})\nvec3 vLightGround;\n#elif defined(CLUSTLIGHT{X})\nvec2 vSliceData;vec2 vSliceRanges[CLUSTLIGHT_SLICES];\n#endif\n#if defined(AREALIGHT{X}) && defined(AREALIGHTUSED) && defined(AREALIGHTSUPPORTED)\nvec4 vLightWidth;vec4 vLightHeight;\n#endif\nvec4 shadowsInfo;vec2 depthValues;} light{X};\n#ifdef IESLIGHTTEXTURE{X}\nuniform sampler2D iesLightTexture{X};\n#endif\n#ifdef RECTAREALIGHTEMISSIONTEXTURE{X}\nuniform sampler2D rectAreaLightEmissionTexture{X};\n#endif\n#ifdef PROJECTEDLIGHTTEXTURE{X}\nuniform mat4 textureProjectionMatrix{X};uniform sampler2D projectionLightTexture{X};\n#endif\n#ifdef CLUSTLIGHT{X}\nuniform sampler2D lightDataTexture{X};uniform highp sampler2D tileMaskTexture{X};\n#endif\n#ifdef SHADOW{X}\n#ifdef SHADOWCSM{X}\nuniform mat4 lightMatrix{X}[SHADOWCSMNUM_CASCADES{X}];uniform float viewFrustumZ{X}[SHADOWCSMNUM_CASCADES{X}];uniform float frustumLengths{X}[SHADOWCSMNUM_CASCADES{X}];uniform float cascadeBlendFactor{X};varying vec4 vPositionFromLight{X}[SHADOWCSMNUM_CASCADES{X}];varying float vDepthMetric{X}[SHADOWCSMNUM_CASCADES{X}];varying vec4 vPositionFromCamera{X};\n#if defined(SHADOWPCSS{X})\nuniform highp sampler2DArrayShadow shadowTexture{X};uniform highp sampler2DArray depthTexture{X};uniform vec2 lightSizeUVCorrection{X}[SHADOWCSMNUM_CASCADES{X}];uniform float depthCorrection{X}[SHADOWCSMNUM_CASCADES{X}];uniform float penumbraDarkness{X};\n#elif defined(SHADOWPCF{X})\nuniform highp sampler2DArrayShadow shadowTexture{X};\n#else\nuniform highp sampler2DArray shadowTexture{X};\n#endif\n#ifdef SHADOWCSMDEBUG{X}\nconst vec3 vCascadeColorsMultiplier{X}[8]=vec3[8]\n(\nvec3 ( 1.5,0.0,0.0 ),\nvec3 ( 0.0,1.5,0.0 ),\nvec3 ( 0.0,0.0,5.5 ),\nvec3 ( 1.5,0.0,5.5 ),\nvec3 ( 1.5,1.5,0.0 ),\nvec3 ( 1.0,1.0,1.0 ),\nvec3 ( 0.0,1.0,5.5 ),\nvec3 ( 0.5,3.5,0.75 )\n);vec3 shadowDebug{X};\n#endif\n#ifdef SHADOWCSMUSESHADOWMAXZ{X}\nint index{X}=-1;\n#else\nint index{X}=SHADOWCSMNUM_CASCADES{X}-1;\n#endif\nfloat diff{X}=0.;\n#elif defined(SHADOWCUBE{X})\nuniform samplerCube shadowTexture{X}; \n#else\nvarying vec4 vPositionFromLight{X};varying float vDepthMetric{X};\n#if defined(SHADOWPCSS{X})\nuniform highp sampler2DShadow shadowTexture{X};uniform highp sampler2D depthTexture{X};\n#elif defined(SHADOWPCF{X})\nuniform highp sampler2DShadow shadowTexture{X};\n#else\nuniform sampler2D shadowTexture{X};\n#endif\nuniform mat4 lightMatrix{X};\n#endif\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+
+    function bH(HH, BH) {
+      const LH = HH.getUint8(BH.value);
+      return BH.value += zH, LH
     }
-  },
-  44776: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "ltcHelperFunctions",
-      QU = "vec2 LTCUv( const in vec3 N,const in vec3 V,const in float roughness ) {const float LUTSIZE=64.0;const float LUTSCALE=( LUTSIZE-1.0 )/LUTSIZE;const float LUTBIAS=0.5/LUTSIZE;float dotNV=saturate( dot( N,V ) );vec2 uv=vec2( roughness,sqrt( 1.0-dotNV ) );uv=uv*LUTSCALE+LUTBIAS;return uv;}\nfloat LTCClippedSphereFormFactor( const in vec3 f ) {float l=length( f );return max( ( l*l+f.z )/( l+1.0 ),0.0 );}\nvec3 LTCEdgeVectorFormFactor( const in vec3 v1,const in vec3 v2 ) {float x=dot( v1,v2 );float y=abs( x );float a=0.8543985+( 0.4965155+0.0145206*y )*y;float b=3.4175940+( 4.1616724+y )*y;float v=a/b;float thetaSintheta=0.0;if( x>0.0 )\n{thetaSintheta=v;}\nelse\n{thetaSintheta=0.5*inversesqrt( max( 1.0-x*x,1e-7 ) )-v;}\nreturn cross( v1,v2 )*thetaSintheta;}\nvec3 LTCEvaluate( const in vec3 N,const in vec3 V,const in vec3 P,const in mat3 mInv,const in vec3 rectCoords[ 4 ] ) {vec3 v1=rectCoords[ 1 ]-rectCoords[ 0 ];vec3 v2=rectCoords[ 3 ]-rectCoords[ 0 ];vec3 lightNormal=cross( v1,v2 );if( dot( lightNormal,P-rectCoords[ 0 ] )<0.0 ) return vec3( 0.0 );vec3 T1,T2;T1=normalize( V-N*dot( V,N ) );T2=- cross( N,T1 ); \nmat3 mat=mInv*transposeMat3( mat3( T1,T2,N ) );vec3 coords[ 4 ];coords[ 0 ]=mat*( rectCoords[ 0 ]-P );coords[ 1 ]=mat*( rectCoords[ 1 ]-P );coords[ 2 ]=mat*( rectCoords[ 2 ]-P );coords[ 3 ]=mat*( rectCoords[ 3 ]-P );coords[ 0 ]=normalize( coords[ 0 ] );coords[ 1 ]=normalize( coords[ 1 ] );coords[ 2 ]=normalize( coords[ 2 ] );coords[ 3 ]=normalize( coords[ 3 ] );vec3 vectorFormFactor=vec3( 0.0 );vectorFormFactor+=LTCEdgeVectorFormFactor( coords[ 0 ],coords[ 1 ] );vectorFormFactor+=LTCEdgeVectorFormFactor( coords[ 1 ],coords[ 2 ] );vectorFormFactor+=LTCEdgeVectorFormFactor( coords[ 2 ],coords[ 3 ] );vectorFormFactor+=LTCEdgeVectorFormFactor( coords[ 3 ],coords[ 0 ] );float result=LTCClippedSphereFormFactor( vectorFormFactor );return vec3( result );}\nvec3 FetchDiffuseFilteredTexture(sampler2D texLightFiltered,vec3 p1_,vec3 p2_,vec3 p3_,vec3 p4_)\n{vec3 V1=p2_-p1_;vec3 V2=p4_-p1_;vec3 planeOrtho=(cross(V1,V2));float planeAreaSquared=dot(planeOrtho,planeOrtho);float planeDistxPlaneArea=dot(planeOrtho,p1_);vec3 P=planeDistxPlaneArea*planeOrtho/planeAreaSquared-p1_;float dot_V1_V2=dot(V1,V2);float inv_dot_V1_V1=1.0/dot(V1,V1);vec3 V2_=V2-V1*dot_V1_V2*inv_dot_V1_V1;vec2 Puv;Puv.y=dot(V2_,P)/dot(V2_,V2_);Puv.x=dot(V1,P)*inv_dot_V1_V1-dot_V1_V2*inv_dot_V1_V1*Puv.y ;float d=abs(planeDistxPlaneArea)/pow(planeAreaSquared,0.75);float sampleLOD=log(2048.0*d)/log(3.0);vec2 sampleUV=vec2(0.125,0.125)+(vec2(0.75)*Puv);sampleUV.x=1.0-sampleUV.x;return texture2DLodEXT(texLightFiltered,sampleUV,sampleLOD).rgb;}\nvec3 LTCEvaluateWithEmission( const in vec3 N,const in vec3 V,const in vec3 P,const in mat3 mInv,const in vec3 rectCoords[ 4 ],const in sampler2D texFilteredMap ) {vec3 v1=rectCoords[ 1 ]-rectCoords[ 0 ];vec3 v2=rectCoords[ 3 ]-rectCoords[ 0 ];vec3 lightNormal=cross( v1,v2 );if( dot( lightNormal,P-rectCoords[ 0 ] )<0.0 ) return vec3( 0.0 );vec3 T1,T2;T1=normalize( V-N*dot( V,N ) );T2=- cross( N,T1 ); \nmat3 mat=mInv*transposeMat3( mat3( T1,T2,N ) );vec3 coords[ 4 ];coords[ 0 ]=mat*( rectCoords[ 0 ]-P );coords[ 1 ]=mat*( rectCoords[ 1 ]-P );coords[ 2 ]=mat*( rectCoords[ 2 ]-P );coords[ 3 ]=mat*( rectCoords[ 3 ]-P );vec3 textureLight=FetchDiffuseFilteredTexture(texFilteredMap,coords[0],coords[1],coords[2],coords[3]);coords[ 0 ]=normalize( coords[ 0 ] );coords[ 1 ]=normalize( coords[ 1 ] );coords[ 2 ]=normalize( coords[ 2 ] );coords[ 3 ]=normalize( coords[ 3 ] );vec3 vectorFormFactor=vec3( 0.0 );vectorFormFactor+=LTCEdgeVectorFormFactor( coords[ 0 ],coords[ 1 ] );vectorFormFactor+=LTCEdgeVectorFormFactor( coords[ 1 ],coords[ 2 ] );vectorFormFactor+=LTCEdgeVectorFormFactor( coords[ 2 ],coords[ 3 ] );vectorFormFactor+=LTCEdgeVectorFormFactor( coords[ 3 ],coords[ 0 ] );float result=LTCClippedSphereFormFactor( vectorFormFactor );return vec3( result )*textureLight;}\nstruct areaLightData\n{vec3 Diffuse;vec3 Specular;vec4 Fresnel;};\n#define inline\nareaLightData computeAreaLightSpecularDiffuseFresnel(const in sampler2D ltc1,const in sampler2D ltc2,const in vec3 viewDir,const in vec3 normal,const in vec3 position,const in vec3 lightPos,const in vec3 halfWidth,const in vec3 halfHeight,const in float roughness) \n{areaLightData result;vec3 rectCoords[ 4 ];rectCoords[ 0 ]=lightPos+halfWidth-halfHeight; \nrectCoords[ 1 ]=lightPos-halfWidth-halfHeight;rectCoords[ 2 ]=lightPos-halfWidth+halfHeight;rectCoords[ 3 ]=lightPos+halfWidth+halfHeight;\n#ifdef SPECULARTERM\nvec2 uv=LTCUv( normal,viewDir,roughness );vec4 t1=texture2D( ltc1,uv );vec4 t2=texture2D( ltc2,uv );mat3 mInv=mat3(\nvec3( t1.x,0,t1.y ),\nvec3( 0,1, 0 ),\nvec3( t1.z,0,t1.w )\n);result.Specular=LTCEvaluate( normal,viewDir,position,mInv,rectCoords );result.Fresnel=t2;\n#endif\nresult.Diffuse=LTCEvaluate( normal,viewDir,position,mat3( 1.0 ),rectCoords );return result;}\n#define inline\nareaLightData computeAreaLightSpecularDiffuseFresnelWithEmission(const in sampler2D ltc1,const in sampler2D ltc2,const in sampler2D texFilteredMap,const in vec3 viewDir,const in vec3 normal,const in vec3 position,const in vec3 lightPos,const in vec3 halfWidth,const in vec3 halfHeight,const in float roughness) \n{areaLightData result;vec3 rectCoords[ 4 ];rectCoords[ 0 ]=lightPos+halfWidth-halfHeight; \nrectCoords[ 1 ]=lightPos-halfWidth-halfHeight;rectCoords[ 2 ]=lightPos-halfWidth+halfHeight;rectCoords[ 3 ]=lightPos+halfWidth+halfHeight;\n#ifdef SPECULARTERM\nvec2 uv=LTCUv( normal,viewDir,roughness );vec4 t1=texture2D( ltc1,uv );vec4 t2=texture2D( ltc2,uv );mat3 mInv=mat3(\nvec3( t1.x,0,t1.y ),\nvec3( 0,1, 0 ),\nvec3( t1.z,0,t1.w )\n);result.Specular=LTCEvaluateWithEmission( normal,viewDir,position,mInv,rectCoords,texFilteredMap );result.Fresnel=t2;\n#endif\nresult.Diffuse=LTCEvaluateWithEmission( normal,viewDir,position,mat3( 1.0 ),rectCoords,texFilteredMap );return result;}";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+
+    function kH(HH, BH) {
+      const LH = HH.getUint16(BH.value, !0);
+      return BH.value += CH, LH
     }
-  },
-  44620: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "mainUVVaryingDeclaration",
-      QU = "#ifdef MAINUV{X}\nvarying vec2 vMainUV{X};\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+
+    function mH(HH, BH) {
+      const LH = HH[BH.value];
+      return BH.value += zH, LH
     }
-  },
-  44575: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "meshUboDeclaration",
-      QU = "#ifdef WEBGL2\nuniform mat4 world;uniform float visibility;\n#else\nlayout(std140,column_major) uniform;uniform Mesh\n{mat4 world;float visibility;};\n#endif\n#define WORLD_UBO\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+
+    function oH(HH, BH) {
+      let LH;
+      return LH = "getBigInt64" in DataView.prototype ? Number(HH.getBigInt64(BH.value, !0)) : HH.getUint32(BH.value + 4, !0) + Number(HH.getUint32(BH.value, !0) << 32), BH.value += EH, LH
     }
-  },
-  44764: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "oitDeclaration",
-      QU = "#ifdef ORDER_INDEPENDENT_TRANSPARENCY\n#extension GL_EXT_draw_buffers : require\nlayout(location=0) out vec2 depth; \nlayout(location=1) out vec4 frontColor;layout(location=2) out vec4 backColor;\n#define MAX_DEPTH 99999.0\nhighp vec4 gl_FragColor;uniform sampler2D oitDepthSampler;uniform sampler2D oitFrontColorSampler;\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+
+    function IH(HH, BH) {
+      const LH = HH.getFloat32(BH.value, !0);
+      return BH.value += tH, LH
     }
-  },
-  44875: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "oitFragment",
-      QU = "#ifdef ORDER_INDEPENDENT_TRANSPARENCY\nfloat fragDepth=gl_FragCoord.z; \n#ifdef ORDER_INDEPENDENT_TRANSPARENCY_16BITS\nuint halfFloat=packHalf2x16(vec2(fragDepth));vec2 full=unpackHalf2x16(halfFloat);fragDepth=full.x;\n#endif\nivec2 fragCoord=ivec2(gl_FragCoord.xy);vec2 lastDepth=texelFetch(oitDepthSampler,fragCoord,0).rg;vec4 lastFrontColor=texelFetch(oitFrontColorSampler,fragCoord,0);depth.rg=vec2(-MAX_DEPTH);frontColor=lastFrontColor;backColor=vec4(0.0);\n#ifdef USE_REVERSE_DEPTHBUFFER\nfloat furthestDepth=-lastDepth.x;float nearestDepth=lastDepth.y;\n#else\nfloat nearestDepth=-lastDepth.x;float furthestDepth=lastDepth.y;\n#endif\nfloat alphaMultiplier=1.0-lastFrontColor.a;\n#ifdef USE_REVERSE_DEPTHBUFFER\nif (fragDepth>nearestDepth || fragDepth<furthestDepth) {\n#else\nif (fragDepth<nearestDepth || fragDepth>furthestDepth) {\n#endif\nreturn;}\n#ifdef USE_REVERSE_DEPTHBUFFER\nif (fragDepth<nearestDepth && fragDepth>furthestDepth) {\n#else\nif (fragDepth>nearestDepth && fragDepth<furthestDepth) {\n#endif\ndepth.rg=vec2(-fragDepth,fragDepth);return;}\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+
+    function fH(HH, BH) {
+      return (0, SH.d)(kH(HH, BH))
     }
-  },
-  44798: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "reflectionFunction",
-      QU = "vec3 computeFixedEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 direction)\n{float lon=atan(direction.z,direction.x);float lat=acos(direction.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(s,t,0); }\nvec3 computeMirroredFixedEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 direction)\n{float lon=atan(direction.z,direction.x);float lat=acos(direction.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(1.0-s,t,0); }\nvec3 computeEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 cameraToVertex=normalize(worldPos.xyz-eyePosition);vec3 r=normalize(reflect(cameraToVertex,worldNormal));r=vec3(reflectionMatrix*vec4(r,0));float lon=atan(r.z,r.x);float lat=acos(r.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(s,t,0);}\nvec3 computeSphericalCoords(vec4 worldPos,vec3 worldNormal,mat4 view,mat4 reflectionMatrix)\n{vec3 viewDir=normalize(vec3(view*worldPos));vec3 viewNormal=normalize(vec3(view*vec4(worldNormal,0.0)));vec3 r=reflect(viewDir,viewNormal);r=vec3(reflectionMatrix*vec4(r,0));r.z=r.z-1.0;float m=2.0*length(r);return vec3(r.x/m+0.5,1.0-r.y/m-0.5,0);}\nvec3 computePlanarCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 viewDir=worldPos.xyz-eyePosition;vec3 coords=normalize(reflect(viewDir,worldNormal));return vec3(reflectionMatrix*vec4(coords,1));}\nvec3 computeCubicCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 viewDir=normalize(worldPos.xyz-eyePosition);vec3 coords=reflect(viewDir,worldNormal);coords=vec3(reflectionMatrix*vec4(coords,0));\n#ifdef INVERTCUBICMAP\ncoords.y*=-1.0;\n#endif\nreturn coords;}\nvec3 computeCubicLocalCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix,vec3 reflectionSize,vec3 reflectionPosition)\n{vec3 viewDir=normalize(worldPos.xyz-eyePosition);vec3 coords=reflect(viewDir,worldNormal);coords=parallaxCorrectNormal(worldPos.xyz,coords,reflectionSize,reflectionPosition);coords=vec3(reflectionMatrix*vec4(coords,0));\n#ifdef INVERTCUBICMAP\ncoords.y*=-1.0;\n#endif\nreturn coords;}\nvec3 computeProjectionCoords(vec4 worldPos,mat4 view,mat4 reflectionMatrix)\n{return vec3(reflectionMatrix*(view*worldPos));}\nvec3 computeSkyBoxCoords(vec3 positionW,mat4 reflectionMatrix)\n{return vec3(reflectionMatrix*vec4(positionW,1.));}\n#ifdef REFLECTION\nvec3 computeReflectionCoords(vec4 worldPos,vec3 worldNormal)\n{\n#ifdef REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED\nvec3 direction=normalize(vDirectionW);return computeMirroredFixedEquirectangularCoords(worldPos,worldNormal,direction);\n#endif\n#ifdef REFLECTIONMAP_EQUIRECTANGULAR_FIXED\nvec3 direction=normalize(vDirectionW);return computeFixedEquirectangularCoords(worldPos,worldNormal,direction);\n#endif\n#ifdef REFLECTIONMAP_EQUIRECTANGULAR\nreturn computeEquirectangularCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_SPHERICAL\nreturn computeSphericalCoords(worldPos,worldNormal,view,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_PLANAR\nreturn computePlanarCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_CUBIC\n#ifdef USE_LOCAL_REFLECTIONMAP_CUBIC\nreturn computeCubicLocalCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix,vReflectionSize,vReflectionPosition);\n#else\nreturn computeCubicCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#endif\n#ifdef REFLECTIONMAP_PROJECTION\nreturn computeProjectionCoords(worldPos,view,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nreturn computeSkyBoxCoords(vPositionUVW,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_EXPLICIT\nreturn vec3(0,0,0);\n#endif\n}\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+
+    function lH(HH, BH) {
+      return (0, SH.f)((0, rH.Clamp)(IH(HH, BH), -SH.e, SH.e))
     }
-  },
-  44791: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "samplerFragmentDeclaration",
-      QU = "#ifdef _DEFINENAME_\n#if _DEFINENAME_DIRECTUV==1\n#define v_VARYINGNAME_UV vMainUV1\n#elif _DEFINENAME_DIRECTUV==2\n#define v_VARYINGNAME_UV vMainUV2\n#elif _DEFINENAME_DIRECTUV==3\n#define v_VARYINGNAME_UV vMainUV3\n#elif _DEFINENAME_DIRECTUV==4\n#define v_VARYINGNAME_UV vMainUV4\n#elif _DEFINENAME_DIRECTUV==5\n#define v_VARYINGNAME_UV vMainUV5\n#elif _DEFINENAME_DIRECTUV==6\n#define v_VARYINGNAME_UV vMainUV6\n#else\nvarying vec2 v_VARYINGNAME_UV;\n#endif\nuniform sampler2D _SAMPLERNAME_Sampler;\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+
+    function KH(HH, BH, LH, AH) {
+      switch (LH) {
+        case "string":
+        case "stringvector":
+        case "iccProfile":
+          return function(HH, BH, LH) {
+            const AH = (new TextDecoder).decode(new Uint8Array(HH).slice(BH.value, BH.value + LH));
+            return BH.value = BH.value + LH, AH
+          }(HH.buffer, BH, AH);
+        case "chlist":
+          return function(HH, BH, LH) {
+            const AH = BH.value,
+              rH = [];
+            for (; BH.value < AH + LH - 1;) {
+              const LH = UH(HH.buffer, BH),
+                AH = VH(HH, BH),
+                SH = bH(HH, BH);
+              BH.value += 3;
+              const hH = VH(HH, BH),
+                tH = VH(HH, BH);
+              rH.push({
+                name: LH,
+                pixelType: AH,
+                pLinear: SH,
+                xSampling: hH,
+                ySampling: tH
+              })
+            }
+            return BH.value += 1, rH
+          }(HH, BH, AH);
+        case "chromaticities":
+          return function(HH, BH) {
+            return {
+              redX: IH(HH, BH),
+              redY: IH(HH, BH),
+              greenX: IH(HH, BH),
+              greenY: IH(HH, BH),
+              blueX: IH(HH, BH),
+              blueY: IH(HH, BH),
+              whiteX: IH(HH, BH),
+              whiteY: IH(HH, BH)
+            }
+          }(HH, BH);
+        case "compression":
+          return function(HH, BH) {
+            return bH(HH, BH)
+          }(HH, BH);
+        case "box2i":
+          return function(HH, BH) {
+            return {
+              xMin: VH(HH, BH),
+              yMin: VH(HH, BH),
+              xMax: VH(HH, BH),
+              yMax: VH(HH, BH)
+            }
+          }(HH, BH);
+        case "lineOrder":
+          return function(HH, BH) {
+            const LH = bH(HH, BH);
+            return TH[LH]
+          }(HH, BH);
+        case "float":
+          return IH(HH, BH);
+        case "v2f":
+          return function(HH, BH) {
+            return [IH(HH, BH), IH(HH, BH)]
+          }(HH, BH);
+        case "v3f":
+          return function(HH, BH) {
+            return [IH(HH, BH), IH(HH, BH), IH(HH, BH)]
+          }(HH, BH);
+        case "int":
+          return VH(HH, BH);
+        case "rational":
+          return function(HH, BH) {
+            return [VH(HH, BH), OH(HH, BH)]
+          }(HH, BH);
+        case "timecode":
+          return function(HH, BH) {
+            return [OH(HH, BH), OH(HH, BH)]
+          }(HH, BH);
+        case "preview":
+          return BH.value += AH, "skipped";
+        default:
+          return void(BH.value += AH)
+      }
     }
-  },
-  44571: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "sceneUboDeclaration",
-      QU = "layout(std140,column_major) uniform;uniform Scene {mat4 viewProjection;\n#ifdef MULTIVIEW\nmat4 viewProjectionR;\n#endif \nmat4 view;mat4 projection;vec4 vEyePosition;mat4 inverseProjection;};\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+
+    function cH(HH) {
+      for (let BH = 1; BH < HH.length; BH++) {
+        const LH = HH[BH - 1] + HH[BH] - 128;
+        HH[BH] = LH
+      }
     }
-  },
-  44782: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "shadowsFragmentFunctions",
-      QU = "#ifdef SHADOWS\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\n#define TEXTUREFUNC(s,c,l) texture2DLodEXT(s,c,l)\n#else\n#define TEXTUREFUNC(s,c,b) texture2D(s,c,b)\n#endif\n#ifndef SHADOWFLOAT\nfloat unpack(vec4 color)\n{const vec4 bit_shift=vec4(1.0/(255.0*255.0*255.0),1.0/(255.0*255.0),1.0/255.0,1.0);return dot(color,bit_shift);}\n#endif\nfloat computeFallOff(float value,vec2 clipSpace,float frustumEdgeFalloff)\n{float mask=smoothstep(1.0-frustumEdgeFalloff,1.00000012,clamp(dot(clipSpace,clipSpace),0.,1.));return mix(value,1.0,mask);}\n#define inline\nfloat computeShadowCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float darkness,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);depth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;\n#ifndef SHADOWFLOAT\nfloat shadow=unpack(textureCube(shadowSampler,directionToLight));\n#else\nfloat shadow=textureCube(shadowSampler,directionToLight).x;\n#endif\nreturn depth>shadow ? darkness : 1.0;}\n#define inline\nfloat computeShadowWithPoissonSamplingCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float mapSize,float darkness,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);depth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;float visibility=1.;vec3 poissonDisk[4];poissonDisk[0]=vec3(-1.0,1.0,-1.0);poissonDisk[1]=vec3(1.0,-1.0,-1.0);poissonDisk[2]=vec3(-1.0,-1.0,-1.0);poissonDisk[3]=vec3(1.0,-1.0,1.0);\n#ifndef SHADOWFLOAT\nif (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[0]*mapSize))<depth) visibility-=0.25;if (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[1]*mapSize))<depth) visibility-=0.25;if (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[2]*mapSize))<depth) visibility-=0.25;if (unpack(textureCube(shadowSampler,directionToLight+poissonDisk[3]*mapSize))<depth) visibility-=0.25;\n#else\nif (textureCube(shadowSampler,directionToLight+poissonDisk[0]*mapSize).x<depth) visibility-=0.25;if (textureCube(shadowSampler,directionToLight+poissonDisk[1]*mapSize).x<depth) visibility-=0.25;if (textureCube(shadowSampler,directionToLight+poissonDisk[2]*mapSize).x<depth) visibility-=0.25;if (textureCube(shadowSampler,directionToLight+poissonDisk[3]*mapSize).x<depth) visibility-=0.25;\n#endif\nreturn min(1.0,visibility+darkness);}\n#define inline\nfloat computeShadowWithESMCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float darkness,float depthScale,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);float shadowPixelDepth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;\n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(textureCube(shadowSampler,directionToLight));\n#else\nfloat shadowMapSample=textureCube(shadowSampler,directionToLight).x;\n#endif\nfloat esm=1.0-clamp(exp(min(87.,depthScale*shadowPixelDepth))*shadowMapSample,0.,1.-darkness);return esm;}\n#define inline\nfloat computeShadowWithCloseESMCube(vec3 worldPos,vec3 lightPosition,samplerCube shadowSampler,float darkness,float depthScale,vec2 depthValues)\n{vec3 directionToLight=worldPos-lightPosition;float depth=length(directionToLight);depth=(depth+depthValues.x)/(depthValues.y);float shadowPixelDepth=clamp(depth,0.,1.0);directionToLight=normalize(directionToLight);directionToLight.y=-directionToLight.y;\n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(textureCube(shadowSampler,directionToLight));\n#else\nfloat shadowMapSample=textureCube(shadowSampler,directionToLight).x;\n#endif\nfloat esm=clamp(exp(min(87.,-depthScale*(shadowPixelDepth-shadowMapSample))),darkness,1.);return esm;}\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\n#define inline\nfloat computeShadowCSM(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);vec3 uvLayer=vec3(uv.x,uv.y,layer);float shadowPixelDepth=clamp(depthMetric,0.,1.0);\n#ifndef SHADOWFLOAT\nfloat shadow=unpack(texture2D(shadowSampler,uvLayer));\n#else\nfloat shadow=texture2D(shadowSampler,uvLayer).x;\n#endif\nreturn shadowPixelDepth>shadow ? computeFallOff(darkness,clipSpace.xy,frustumEdgeFalloff) : 1.;}\n#endif\n#define inline\nfloat computeShadow(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0);\n#ifndef SHADOWFLOAT\nfloat shadow=unpack(TEXTUREFUNC(shadowSampler,uv,0.));\n#else\nfloat shadow=TEXTUREFUNC(shadowSampler,uv,0.).x;\n#endif\nreturn shadowPixelDepth>shadow ? computeFallOff(darkness,clipSpace.xy,frustumEdgeFalloff) : 1.;}}\n#define inline\nfloat computeShadowWithPoissonSampling(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float mapSize,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0);float visibility=1.;vec2 poissonDisk[4];poissonDisk[0]=vec2(-0.94201624,-0.39906216);poissonDisk[1]=vec2(0.94558609,-0.76890725);poissonDisk[2]=vec2(-0.094184101,-0.92938870);poissonDisk[3]=vec2(0.34495938,0.29387760);\n#ifndef SHADOWFLOAT\nif (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[0]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;if (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[1]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;if (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[2]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;if (unpack(TEXTUREFUNC(shadowSampler,uv+poissonDisk[3]*mapSize,0.))<shadowPixelDepth) visibility-=0.25;\n#else\nif (TEXTUREFUNC(shadowSampler,uv+poissonDisk[0]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;if (TEXTUREFUNC(shadowSampler,uv+poissonDisk[1]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;if (TEXTUREFUNC(shadowSampler,uv+poissonDisk[2]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;if (TEXTUREFUNC(shadowSampler,uv+poissonDisk[3]*mapSize,0.).x<shadowPixelDepth) visibility-=0.25;\n#endif\nreturn computeFallOff(min(1.0,visibility+darkness),clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithESM(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float darkness,float depthScale,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0);\n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(TEXTUREFUNC(shadowSampler,uv,0.));\n#else\nfloat shadowMapSample=TEXTUREFUNC(shadowSampler,uv,0.).x;\n#endif\nfloat esm=1.0-clamp(exp(min(87.,depthScale*shadowPixelDepth))*shadowMapSample,0.,1.-darkness);return computeFallOff(esm,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithCloseESM(vec4 vPositionFromLight,float depthMetric,sampler2D shadowSampler,float darkness,float depthScale,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec2 uv=0.5*clipSpace.xy+vec2(0.5);if (uv.x<0. || uv.x>1.0 || uv.y<0. || uv.y>1.0)\n{return 1.0;}\nelse\n{float shadowPixelDepth=clamp(depthMetric,0.,1.0); \n#ifndef SHADOWFLOAT\nfloat shadowMapSample=unpack(TEXTUREFUNC(shadowSampler,uv,0.));\n#else\nfloat shadowMapSample=TEXTUREFUNC(shadowSampler,uv,0.).x;\n#endif\nfloat esm=clamp(exp(min(87.,-depthScale*(shadowPixelDepth-shadowMapSample))),darkness,1.);return computeFallOff(esm,clipSpace.xy,frustumEdgeFalloff);}}\n#ifdef IS_NDC_HALF_ZRANGE\n#define ZINCLIP clipSpace.z\n#else\n#define ZINCLIP uvDepth.z\n#endif\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\n#define SMALLEST_ABOVE_ZERO 1.1754943508e-38\n#define GREATEST_LESS_THAN_ONE 0.99999994\n#define DISABLE_UNIFORMITY_ANALYSIS\n#define inline\nfloat computeShadowWithCSMPCF1(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArrayShadow shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec4 uvDepthLayer=vec4(uvDepth.x,uvDepth.y,layer,uvDepth.z);float shadow=texture2D(shadowSampler,uvDepthLayer);shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}\n#define inline\nfloat computeShadowWithCSMPCF3(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArrayShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=3.-2.*st;vec2 uvw1=1.+2.*st;vec2 u=vec2((2.-st.x)/uvw0.x-1.,st.x/uvw1.x+1.)*shadowMapSizeAndInverse.y;vec2 v=vec2((2.-st.y)/uvw0.y-1.,st.y/uvw1.y+1.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[0]),layer,uvDepth.z));shadow+=uvw1.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[0]),layer,uvDepth.z));shadow+=uvw0.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[1]),layer,uvDepth.z));shadow+=uvw1.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[1]),layer,uvDepth.z));shadow=shadow/16.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}\n#define inline\nfloat computeShadowWithCSMPCF5(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArrayShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=4.-3.*st;vec2 uvw1=vec2(7.);vec2 uvw2=1.+3.*st;vec3 u=vec3((3.-2.*st.x)/uvw0.x-2.,(3.+st.x)/uvw1.x,st.x/uvw2.x+2.)*shadowMapSizeAndInverse.y;vec3 v=vec3((3.-2.*st.y)/uvw0.y-2.,(3.+st.y)/uvw1.y,st.y/uvw2.y+2.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[0]),layer,uvDepth.z));shadow+=uvw1.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[0]),layer,uvDepth.z));shadow+=uvw2.x*uvw0.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[2],v[0]),layer,uvDepth.z));shadow+=uvw0.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[1]),layer,uvDepth.z));shadow+=uvw1.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[1]),layer,uvDepth.z));shadow+=uvw2.x*uvw1.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[2],v[1]),layer,uvDepth.z));shadow+=uvw0.x*uvw2.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[0],v[2]),layer,uvDepth.z));shadow+=uvw1.x*uvw2.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[1],v[2]),layer,uvDepth.z));shadow+=uvw2.x*uvw2.y*texture2D(shadowSampler,vec4(base_uv.xy+vec2(u[2],v[2]),layer,uvDepth.z));shadow=shadow/144.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}\n#define inline\nfloat computeShadowWithPCF1(vec4 vPositionFromLight,float depthMetric,highp sampler2DShadow shadowSampler,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {float shadow=TEXTUREFUNC(shadowSampler,uvDepth,0.);shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithPCF3(vec4 vPositionFromLight,float depthMetric,highp sampler2DShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {vec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=3.-2.*st;vec2 uvw1=1.+2.*st;vec2 u=vec2((2.-st.x)/uvw0.x-1.,st.x/uvw1.x+1.)*shadowMapSizeAndInverse.y;vec2 v=vec2((2.-st.y)/uvw0.y-1.,st.y/uvw1.y+1.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[0]),uvDepth.z),0.);shadow+=uvw1.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[0]),uvDepth.z),0.);shadow+=uvw0.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[1]),uvDepth.z),0.);shadow+=uvw1.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[1]),uvDepth.z),0.);shadow=shadow/16.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithPCF5(vec4 vPositionFromLight,float depthMetric,highp sampler2DShadow shadowSampler,vec2 shadowMapSizeAndInverse,float darkness,float frustumEdgeFalloff)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {vec2 uv=uvDepth.xy*shadowMapSizeAndInverse.x; \nuv+=0.5; \nvec2 st=fract(uv); \nvec2 base_uv=floor(uv)-0.5; \nbase_uv*=shadowMapSizeAndInverse.y; \nvec2 uvw0=4.-3.*st;vec2 uvw1=vec2(7.);vec2 uvw2=1.+3.*st;vec3 u=vec3((3.-2.*st.x)/uvw0.x-2.,(3.+st.x)/uvw1.x,st.x/uvw2.x+2.)*shadowMapSizeAndInverse.y;vec3 v=vec3((3.-2.*st.y)/uvw0.y-2.,(3.+st.y)/uvw1.y,st.y/uvw2.y+2.)*shadowMapSizeAndInverse.y;float shadow=0.;shadow+=uvw0.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[0]),uvDepth.z),0.);shadow+=uvw1.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[0]),uvDepth.z),0.);shadow+=uvw2.x*uvw0.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[2],v[0]),uvDepth.z),0.);shadow+=uvw0.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[1]),uvDepth.z),0.);shadow+=uvw1.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[1]),uvDepth.z),0.);shadow+=uvw2.x*uvw1.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[2],v[1]),uvDepth.z),0.);shadow+=uvw0.x*uvw2.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[0],v[2]),uvDepth.z),0.);shadow+=uvw1.x*uvw2.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[1],v[2]),uvDepth.z),0.);shadow+=uvw2.x*uvw2.y*TEXTUREFUNC(shadowSampler,vec3(base_uv.xy+vec2(u[2],v[2]),uvDepth.z),0.);shadow=shadow/144.;shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\nconst vec3 PoissonSamplers32[64]=vec3[64](\nvec3(0.06407013,0.05409927,0.),\nvec3(0.7366577,0.5789394,0.),\nvec3(-0.6270542,-0.5320278,0.),\nvec3(-0.4096107,0.8411095,0.),\nvec3(0.6849564,-0.4990818,0.),\nvec3(-0.874181,-0.04579735,0.),\nvec3(0.9989998,0.0009880066,0.),\nvec3(-0.004920578,-0.9151649,0.),\nvec3(0.1805763,0.9747483,0.),\nvec3(-0.2138451,0.2635818,0.),\nvec3(0.109845,0.3884785,0.),\nvec3(0.06876755,-0.3581074,0.),\nvec3(0.374073,-0.7661266,0.),\nvec3(0.3079132,-0.1216763,0.),\nvec3(-0.3794335,-0.8271583,0.),\nvec3(-0.203878,-0.07715034,0.),\nvec3(0.5912697,0.1469799,0.),\nvec3(-0.88069,0.3031784,0.),\nvec3(0.5040108,0.8283722,0.),\nvec3(-0.5844124,0.5494877,0.),\nvec3(0.6017799,-0.1726654,0.),\nvec3(-0.5554981,0.1559997,0.),\nvec3(-0.3016369,-0.3900928,0.),\nvec3(-0.5550632,-0.1723762,0.),\nvec3(0.925029,0.2995041,0.),\nvec3(-0.2473137,0.5538505,0.),\nvec3(0.9183037,-0.2862392,0.),\nvec3(0.2469421,0.6718712,0.),\nvec3(0.3916397,-0.4328209,0.),\nvec3(-0.03576927,-0.6220032,0.),\nvec3(-0.04661255,0.7995201,0.),\nvec3(0.4402924,0.3640312,0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.),\nvec3(0.)\n);const vec3 PoissonSamplers64[64]=vec3[64](\nvec3(-0.613392,0.617481,0.),\nvec3(0.170019,-0.040254,0.),\nvec3(-0.299417,0.791925,0.),\nvec3(0.645680,0.493210,0.),\nvec3(-0.651784,0.717887,0.),\nvec3(0.421003,0.027070,0.),\nvec3(-0.817194,-0.271096,0.),\nvec3(-0.705374,-0.668203,0.),\nvec3(0.977050,-0.108615,0.),\nvec3(0.063326,0.142369,0.),\nvec3(0.203528,0.214331,0.),\nvec3(-0.667531,0.326090,0.),\nvec3(-0.098422,-0.295755,0.),\nvec3(-0.885922,0.215369,0.),\nvec3(0.566637,0.605213,0.),\nvec3(0.039766,-0.396100,0.),\nvec3(0.751946,0.453352,0.),\nvec3(0.078707,-0.715323,0.),\nvec3(-0.075838,-0.529344,0.),\nvec3(0.724479,-0.580798,0.),\nvec3(0.222999,-0.215125,0.),\nvec3(-0.467574,-0.405438,0.),\nvec3(-0.248268,-0.814753,0.),\nvec3(0.354411,-0.887570,0.),\nvec3(0.175817,0.382366,0.),\nvec3(0.487472,-0.063082,0.),\nvec3(-0.084078,0.898312,0.),\nvec3(0.488876,-0.783441,0.),\nvec3(0.470016,0.217933,0.),\nvec3(-0.696890,-0.549791,0.),\nvec3(-0.149693,0.605762,0.),\nvec3(0.034211,0.979980,0.),\nvec3(0.503098,-0.308878,0.),\nvec3(-0.016205,-0.872921,0.),\nvec3(0.385784,-0.393902,0.),\nvec3(-0.146886,-0.859249,0.),\nvec3(0.643361,0.164098,0.),\nvec3(0.634388,-0.049471,0.),\nvec3(-0.688894,0.007843,0.),\nvec3(0.464034,-0.188818,0.),\nvec3(-0.440840,0.137486,0.),\nvec3(0.364483,0.511704,0.),\nvec3(0.034028,0.325968,0.),\nvec3(0.099094,-0.308023,0.),\nvec3(0.693960,-0.366253,0.),\nvec3(0.678884,-0.204688,0.),\nvec3(0.001801,0.780328,0.),\nvec3(0.145177,-0.898984,0.),\nvec3(0.062655,-0.611866,0.),\nvec3(0.315226,-0.604297,0.),\nvec3(-0.780145,0.486251,0.),\nvec3(-0.371868,0.882138,0.),\nvec3(0.200476,0.494430,0.),\nvec3(-0.494552,-0.711051,0.),\nvec3(0.612476,0.705252,0.),\nvec3(-0.578845,-0.768792,0.),\nvec3(-0.772454,-0.090976,0.),\nvec3(0.504440,0.372295,0.),\nvec3(0.155736,0.065157,0.),\nvec3(0.391522,0.849605,0.),\nvec3(-0.620106,-0.328104,0.),\nvec3(0.789239,-0.419965,0.),\nvec3(-0.545396,0.538133,0.),\nvec3(-0.178564,-0.596057,0.)\n);\n#define inline\nfloat computeShadowWithCSMPCSS(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,int searchTapCount,int pcfTapCount,vec3[64] poissonSamplers,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));\n#ifdef USE_REVERSE_DEPTHBUFFER\nuvDepth.z=clamp(ZINCLIP,SMALLEST_ABOVE_ZERO,1.);\n#else\nuvDepth.z=clamp(ZINCLIP,0.,GREATEST_LESS_THAN_ONE);\n#endif\nvec4 uvDepthLayer=vec4(uvDepth.x,uvDepth.y,layer,uvDepth.z);float blockerDepth=0.0;float sumBlockerDepth=0.0;float numBlocker=0.0;for (int i=0; i<searchTapCount; i ++) {blockerDepth=texture2D(depthSampler,vec3(uvDepth.xy+(lightSizeUV*lightSizeUVCorrection*shadowMapSizeInverse*PoissonSamplers32[i].xy),layer)).r;if (blockerDepth<depthMetric) {sumBlockerDepth+=blockerDepth;numBlocker++;}}\nfloat avgBlockerDepth=sumBlockerDepth/numBlocker;float AAOffset=shadowMapSizeInverse*10.;float penumbraRatio=((depthMetric-avgBlockerDepth)*depthCorrection+AAOffset);vec4 filterRadius=vec4(penumbraRatio*lightSizeUV*lightSizeUVCorrection*shadowMapSizeInverse,0.,0.);float random=getRand(vPositionFromLight.xy);float rotationAngle=random*3.1415926;vec2 rotationVector=vec2(cos(rotationAngle),sin(rotationAngle));float shadow=0.;for (int i=0; i<pcfTapCount; i++) {vec4 offset=vec4(poissonSamplers[i],0.);offset=vec4(offset.x*rotationVector.x-offset.y*rotationVector.y,offset.y*rotationVector.x+offset.x*rotationVector.y,0.,0.);shadow+=texture2D(shadowSampler,uvDepthLayer+offset*filterRadius);}\nshadow/=float(pcfTapCount);shadow=mix(shadow,1.,min((depthMetric-avgBlockerDepth)*depthCorrection*penumbraDarkness,1.));shadow=mix(darkness,1.,shadow);if (numBlocker<1.0) {return 1.0;}\nelse\n{return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}\n#define inline\nfloat computeShadowWithPCSS(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,int searchTapCount,int pcfTapCount,vec3[64] poissonSamplers)\n{vec3 clipSpace=vPositionFromLight.xyz/vPositionFromLight.w;vec3 uvDepth=vec3(0.5*clipSpace.xyz+vec3(0.5));uvDepth.z=ZINCLIP;if (depthMetric<0.0 || depthMetric>1.0 || uvDepth.x<0. || uvDepth.x>1.0 || uvDepth.y<0. || uvDepth.y>1.0) {return 1.0;} else {float blockerDepth=0.0;float sumBlockerDepth=0.0;float numBlocker=0.0;for (int i=0; i<searchTapCount; i ++) {blockerDepth=TEXTUREFUNC(depthSampler,uvDepth.xy+(lightSizeUV*shadowMapSizeInverse*PoissonSamplers32[i].xy),0.).r;if (blockerDepth<depthMetric) {sumBlockerDepth+=blockerDepth;numBlocker++;}}\nif (numBlocker<1.0) {return 1.0;}\nelse\n{float avgBlockerDepth=sumBlockerDepth/numBlocker;float AAOffset=shadowMapSizeInverse*10.;float penumbraRatio=((depthMetric-avgBlockerDepth)+AAOffset);float filterRadius=penumbraRatio*lightSizeUV*shadowMapSizeInverse;float random=getRand(vPositionFromLight.xy);float rotationAngle=random*3.1415926;vec2 rotationVector=vec2(cos(rotationAngle),sin(rotationAngle));float shadow=0.;for (int i=0; i<pcfTapCount; i++) {vec3 offset=poissonSamplers[i];offset=vec3(offset.x*rotationVector.x-offset.y*rotationVector.y,offset.y*rotationVector.x+offset.x*rotationVector.y,0.);shadow+=TEXTUREFUNC(shadowSampler,uvDepth+offset*filterRadius,0.);}\nshadow/=float(pcfTapCount);shadow=mix(shadow,1.,depthMetric-avgBlockerDepth);shadow=mix(darkness,1.,shadow);return computeFallOff(shadow,clipSpace.xy,frustumEdgeFalloff);}}}\n#define inline\nfloat computeShadowWithPCSS16(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff)\n{return computeShadowWithPCSS(vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,16,PoissonSamplers32);}\n#define inline\nfloat computeShadowWithPCSS32(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff)\n{return computeShadowWithPCSS(vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,32,PoissonSamplers32);}\n#define inline\nfloat computeShadowWithPCSS64(vec4 vPositionFromLight,float depthMetric,sampler2D depthSampler,highp sampler2DShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff)\n{return computeShadowWithPCSS(vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,32,64,PoissonSamplers64);}\n#define inline\nfloat computeShadowWithCSMPCSS16(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{return computeShadowWithCSMPCSS(layer,vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,16,PoissonSamplers32,lightSizeUVCorrection,depthCorrection,penumbraDarkness);}\n#define inline\nfloat computeShadowWithCSMPCSS32(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{return computeShadowWithCSMPCSS(layer,vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,16,32,PoissonSamplers32,lightSizeUVCorrection,depthCorrection,penumbraDarkness);}\n#define inline\nfloat computeShadowWithCSMPCSS64(float layer,vec4 vPositionFromLight,float depthMetric,highp sampler2DArray depthSampler,highp sampler2DArrayShadow shadowSampler,float shadowMapSizeInverse,float lightSizeUV,float darkness,float frustumEdgeFalloff,vec2 lightSizeUVCorrection,float depthCorrection,float penumbraDarkness)\n{return computeShadowWithCSMPCSS(layer,vPositionFromLight,depthMetric,depthSampler,shadowSampler,shadowMapSizeInverse,lightSizeUV,darkness,frustumEdgeFalloff,32,64,PoissonSamplers64,lightSizeUVCorrection,depthCorrection,penumbraDarkness);}\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+
+    function eH(HH, BH) {
+      let LH = 0,
+        AH = Math.floor((HH.length + 1) / 2),
+        rH = 0;
+      const SH = HH.length - 1;
+      for (; !(rH > SH) && (BH[rH++] = HH[LH++], !(rH > SH));) BH[rH++] = HH[AH++]
+    }! function(HH) {
+      HH[HH.NO_COMPRESSION = 0] = "NO_COMPRESSION", HH[HH.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", HH[HH.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", HH[HH.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", HH[HH.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", HH[HH.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
+    }(PH || (PH = {})),
+    function(HH) {
+      HH[HH.INCREASING_Y = 0] = "INCREASING_Y", HH[HH.DECREASING_Y = 1] = "DECREASING_Y"
+    }(TH || (TH = {}));
+    const qH = 20000630;
+
+    function gH(HH, BH) {
+      if (HH.getUint32(0, !0) != qH) throw new Error("Incorrect OpenEXR format");
+      const LH = HH.getUint8(4),
+        rH = HH.getUint8(5),
+        SH = {
+          singleTile: !!(2 & rH),
+          longName: !!(4 & rH),
+          deepFormat: !!(8 & rH),
+          multiPart: !!(16 & rH)
+        };
+      BH.value = 8;
+      const hH = {};
+      let tH = !0;
+      for (; tH;) {
+        const LH = UH(HH.buffer, BH);
+        if (LH) {
+          const rH = UH(HH.buffer, BH),
+            SH = KH(HH, BH, rH, OH(HH, BH));
+          void 0 === SH ? AH.e.Warn(`Unknown header attribute type ${rH}'.`) : hH[LH] = SH
+        } else tH = !1
+      }
+      if (0 != (-5 & rH)) throw new Error("Unsupported file format");
+      return {
+        version: LH,
+        spec: SH,
+        ...hH
+      }
     }
-  },
-  44818: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "textureRepetitionFunctions",
-      QU = "#if TEXTURE_REPETITION_MODE>0\nvec4 _texRepHash4(vec2 p) {return fract(sin(vec4(\n1.0+dot(p,vec2(37.0,17.0)),\n2.0+dot(p,vec2(11.0,47.0)),\n3.0+dot(p,vec2(41.0,29.0)),\n4.0+dot(p,vec2(23.0,31.0))\n))*103.0);}\n#endif\n#if TEXTURE_REPETITION_MODE==1\nvec4 _texRepSample(sampler2D samp,vec2 uv) {float k=texture2D(samp,0.005*uv).x;float index=k*8.0;float f=fract(index);float i=floor(index+0.5);float ib=floor(index);f=min(f,1.0-f)*2.0;vec2 offa=sin(vec2(3.0,7.0)*i);vec2 offb=sin(vec2(3.0,7.0)*ib);vec2 dx=dFdx(uv);vec2 dy=dFdy(uv);vec4 cola=textureGrad(samp,uv+0.3*offa,dx,dy);vec4 colb=textureGrad(samp,uv+0.3*offb,dx,dy);float colSum=cola.x+cola.y+cola.z-colb.x-colb.y-colb.z;return mix(cola,colb,smoothstep(0.2,0.8,f-0.1*colSum));}\n#elif TEXTURE_REPETITION_MODE==2\n#ifndef TEXTURE_REPETITION_M_PI\n#define TEXTURE_REPETITION_M_PI 3.14159265358979\n#endif\nvec2 _texRepHexHash(vec2 p) {vec2 r=mat2(127.1,269.5,311.7,183.3)*p;return fract(sin(r)*43758.5453);}\nvoid _texRepTriangleGrid(\nout float w1,out float w2,out float w3,\nout ivec2 vertex1,out ivec2 vertex2,out ivec2 vertex3,\nvec2 st\n) {st*=2.0*sqrt(3.0);mat2 gridToSkewedGrid=mat2(1.0,0.0,-0.57735027,1.15470054);vec2 skewedCoord=gridToSkewedGrid*st;ivec2 baseId=ivec2(floor(skewedCoord));vec3 temp=vec3(fract(skewedCoord),0.0);temp.z=1.0-temp.x-temp.y;float s=step(0.0,-temp.z);float s2=2.0*s-1.0;w1=-temp.z*s2;w2=s-temp.y*s2;w3=s-temp.x*s2;vertex1=baseId+ivec2(int(s),int(s));vertex2=baseId+ivec2(int(s),int(1.0-s));vertex3=baseId+ivec2(int(1.0-s),int(s));}\nvec2 _texRepMakeCenST(ivec2 Vertex) {mat2 invSkewMat=mat2(1.0,0.0,0.5,1.0/1.15470054);return (invSkewMat*vec2(Vertex))/(2.0*sqrt(3.0));}\nmat2 _texRepLoadRot2x2(ivec2 idx,float rotStr) {float angle=float(abs(idx.x*idx.y)+abs(idx.x+idx.y))+TEXTURE_REPETITION_M_PI;angle=mod(angle,2.0*TEXTURE_REPETITION_M_PI);if (angle<0.0) angle+=2.0*TEXTURE_REPETITION_M_PI;if (angle>TEXTURE_REPETITION_M_PI) angle-=TEXTURE_REPETITION_M_PI;angle*=rotStr;float cs=cos(angle);float si=sin(angle);return mat2(cs,si,-si,cs);}\nvec3 _texRepGain3(vec3 x,float r) {float k=log(1.0-r)/log(0.5);vec3 s=2.0*step(0.5,x);vec3 m=2.0*(1.0-s);vec3 res=0.5*s+0.25*m*pow(max(vec3(0.0),s+x*m),vec3(k));return res/(res.x+res.y+res.z);}\nvec4 _texRepSample(sampler2D samp,vec2 uv) {float rotStrength=vTextureRepetitionHexTilingParams.x;float fallOffContrast=vTextureRepetitionHexTilingParams.y;float expVal=vTextureRepetitionHexTilingParams.z;float r=vTextureRepetitionHexTilingParams.w;vec2 dSTdx=dFdx(uv);vec2 dSTdy=dFdy(uv);float w1,w2,w3;ivec2 vertex1,vertex2,vertex3;_texRepTriangleGrid(w1,w2,w3,vertex1,vertex2,vertex3,uv);mat2 rot1=_texRepLoadRot2x2(vertex1,rotStrength);mat2 rot2=_texRepLoadRot2x2(vertex2,rotStrength);mat2 rot3=_texRepLoadRot2x2(vertex3,rotStrength);vec2 cen1=_texRepMakeCenST(vertex1);vec2 cen2=_texRepMakeCenST(vertex2);vec2 cen3=_texRepMakeCenST(vertex3);vec2 st1=(uv-cen1)*rot1+cen1+_texRepHexHash(vec2(vertex1));vec2 st2=(uv-cen2)*rot2+cen2+_texRepHexHash(vec2(vertex2));vec2 st3=(uv-cen3)*rot3+cen3+_texRepHexHash(vec2(vertex3));vec4 c1=textureGrad(samp,st1,dSTdx*rot1,dSTdy*rot1);vec4 c2=textureGrad(samp,st2,dSTdx*rot2,dSTdy*rot2);vec4 c3=textureGrad(samp,st3,dSTdx*rot3,dSTdy*rot3);vec3 Lw=vec3(0.299,0.587,0.114);vec3 Dw=vec3(dot(c1.rgb,Lw),dot(c2.rgb,Lw),dot(c3.rgb,Lw));Dw=mix(vec3(1.0),Dw,fallOffContrast);vec3 W=Dw*pow(vec3(w1,w2,w3),vec3(expVal));W/=(W.x+W.y+W.z);if (r != 0.5) {W=_texRepGain3(W,r);}\nreturn W.x*c1+W.y*c2+W.z*c3;}\n#elif TEXTURE_REPETITION_MODE==3\nvec4 _texRepSample(sampler2D samp,vec2 uv) {vec2 iuv=floor(uv);vec2 fuv=fract(uv);vec4 ofa=_texRepHash4(iuv+vec2(0.0,0.0));vec4 ofb=_texRepHash4(iuv+vec2(1.0,0.0));vec4 ofc=_texRepHash4(iuv+vec2(0.0,1.0));vec4 ofd=_texRepHash4(iuv+vec2(1.0,1.0));vec2 dx=dFdx(uv);vec2 dy=dFdy(uv);ofa.zw=sign(ofa.zw-0.5);ofb.zw=sign(ofb.zw-0.5);ofc.zw=sign(ofc.zw-0.5);ofd.zw=sign(ofd.zw-0.5);vec2 uva=uv*ofa.zw+ofa.xy; vec2 ddxa=dx*ofa.zw; vec2 ddya=dy*ofa.zw;vec2 uvb=uv*ofb.zw+ofb.xy; vec2 ddxb=dx*ofb.zw; vec2 ddyb=dy*ofb.zw;vec2 uvc=uv*ofc.zw+ofc.xy; vec2 ddxc=dx*ofc.zw; vec2 ddyc=dy*ofc.zw;vec2 uvd=uv*ofd.zw+ofd.xy; vec2 ddxd=dx*ofd.zw; vec2 ddyd=dy*ofd.zw;vec2 b=smoothstep(0.25,0.75,fuv);return mix(\nmix(textureGrad(samp,uva,ddxa,ddya),textureGrad(samp,uvb,ddxb,ddyb),b.x),\nmix(textureGrad(samp,uvc,ddxc,ddyc),textureGrad(samp,uvd,ddxd,ddyd),b.x),\nb.y\n);}\n#elif TEXTURE_REPETITION_MODE==4\nvec4 _texRepSample(sampler2D samp,vec2 uv) {vec2 p=floor(uv);vec2 f=fract(uv);vec2 dx=dFdx(uv);vec2 dy=dFdy(uv);vec4 va=vec4(0.0);float wt=0.0;float w2=0.0;for (int j=-1; j<=1; j++) {for (int i=-1; i<=1; i++) {vec2 g=vec2(float(i),float(j));vec4 o=_texRepHash4(p+g);vec2 r=g-f+o.xy;float d=dot(r,r);float w=exp(-5.0*d);vec4 c=textureGrad(samp,uv+o.zw,dx,dy);va+=w*c;wt+=w;w2+=w*w;}}\nfloat mean=0.3;vec4 res=mean+(va-wt*mean)/sqrt(w2);return mix(va/wt,res,0.4);}\n#endif\n#if TEXTURE_REPETITION_MODE>0\n#define TEXRD(s,uv) _texRepSample(s,uv)\n#else\n#define TEXRD(s,uv) texture2D(s,uv)\n#endif\n#define TEXRD_DEFINED\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+    const NH = 32768,
+      RH = 65535;
+
+    function jH(HH, BH, LH, AH, rH) {
+      for (; LH < HH;) BH = BH << 8 | mH(AH, rH), LH += 8;
+      return {
+        l: BH >> (LH -= HH) & (1 << HH) - 1,
+        c: BH,
+        lc: LH
+      }
+    }
+
+    function nH(HH, BH, LH, AH) {
+      return {
+        c: HH = HH << 8 | mH(LH, AH),
+        lc: BH += 8
+      }
+    }
+
+    function FH(HH, BH, LH, AH, rH, SH, hH, tH, zH) {
+      if (HH == BH) {
+        if (AH < 8) {
+          const HH = nH(LH, AH, rH, SH);
+          LH = HH.c, AH = HH.lc
+        }
+        let HH = LH >> (AH -= 8);
+        if (HH = new Uint8Array([HH])[0], tH.value + HH > zH) return null;
+        const BH = hH[tH.value - 1];
+        for (; HH-- > 0;) hH[tH.value++] = BH
+      } else {
+        if (!(tH.value < zH)) return null;
+        hH[tH.value++] = HH
+      }
+      return {
+        c: LH,
+        lc: AH
+      }
+    }
+    const DH = new Array(59);
+
+    function wH(HH, BH, LH, AH, rH, SH) {
+      const hH = BH;
+      let tH = 0,
+        zH = 0;
+      for (; AH <= rH; AH++) {
+        if (hH.value - BH.value > LH) return;
+        let CH = jH(6, tH, zH, HH, hH);
+        const EH = CH.l;
+        if (tH = CH.c, zH = CH.lc, SH[AH] = EH, EH == xH) {
+          if (hH.value - BH.value > LH) throw new Error("Error in HufUnpackEncTable");
+          CH = jH(8, tH, zH, HH, hH);
+          let EH = CH.l + vH;
+          if (tH = CH.c, zH = CH.lc, AH + EH > rH + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; EH--;) SH[AH++] = 0;
+          AH--
+        } else if (EH >= MH) {
+          let HH = EH - MH + 2;
+          if (AH + HH > rH + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; HH--;) SH[AH++] = 0;
+          AH--
+        }
+      }! function(HH) {
+        for (let LH = 0; LH <= 58; ++LH) DH[LH] = 0;
+        for (let LH = 0; LH < uH; ++LH) DH[HH[LH]] += 1;
+        let BH = 0;
+        for (let LH = 58; LH > 0; --LH) {
+          const HH = BH + DH[LH] >> 1;
+          DH[LH] = BH, BH = HH
+        }
+        for (let LH = 0; LH < uH; ++LH) {
+          const BH = HH[LH];
+          BH > 0 && (HH[LH] = BH | DH[BH]++ << 6)
+        }
+      }(SH)
+    }
+
+    function ZH(HH) {
+      return 63 & HH
+    }
+
+    function dH(HH) {
+      return HH >> 6
+    }
+
+    function aH(HH, BH, LH, AH, rH, SH) {
+      const hH = LH.value,
+        tH = OH(BH, LH),
+        zH = OH(BH, LH);
+      LH.value += 4;
+      const CH = OH(BH, LH);
+      if (LH.value += 4, tH < 0 || tH >= uH || zH < 0 || zH >= uH) throw new Error("Wrong HUF_ENCSIZE");
+      const EH = new Array(uH),
+        XH = new Array(QH);
+      ! function(HH) {
+        for (let BH = 0; BH < QH; BH++) HH[BH] = {}, HH[BH].len = 0, HH[BH].lit = 0, HH[BH].p = null
+      }(XH);
+      if (wH(HH, LH, AH - (LH.value - hH), tH, zH, EH), CH > 8 * (AH - (LH.value - hH))) throw new Error("Wrong hufUncompress");
+      ! function(HH, BH, LH, AH) {
+        for (; BH <= LH; BH++) {
+          const LH = dH(HH[BH]),
+            rH = ZH(HH[BH]);
+          if (LH >> rH) throw new Error("Invalid table entry");
+          if (rH > YH) {
+            const HH = AH[LH >> rH - YH];
+            if (HH.len) throw new Error("Invalid table entry");
+            if (HH.lit++, HH.p) {
+              const BH = HH.p;
+              HH.p = new Array(HH.lit);
+              for (let LH = 0; LH < HH.lit - 1; ++LH) HH.p[LH] = BH[LH]
+            } else HH.p = new Array(1);
+            HH.p[HH.lit - 1] = BH
+          } else if (rH) {
+            let HH = 0;
+            for (let SH = 1 << YH - rH; SH > 0; SH--) {
+              const SH = AH[(LH << YH - rH) + HH];
+              if (SH.len || SH.p) throw new Error("Invalid table entry");
+              SH.len = rH, SH.lit = BH, HH++
+            }
+          }
+        }
+      }(EH, tH, zH, XH),
+      function(HH, BH, LH, AH, rH, SH, hH, tH, zH) {
+        let CH = 0,
+          EH = 0;
+        const XH = hH,
+          GH = Math.trunc(AH.value + (rH + 7) / 8);
+        for (; AH.value < GH;) {
+          let rH = nH(CH, EH, LH, AH);
+          for (CH = rH.c, EH = rH.lc; EH >= YH;) {
+            const hH = BH[CH >> EH - YH & WH];
+            if (hH.len) {
+              EH -= hH.len;
+              const HH = FH(hH.lit, SH, CH, EH, LH, AH, tH, zH, XH);
+              HH && (CH = HH.c, EH = HH.lc)
+            } else {
+              if (!hH.p) throw new Error("hufDecode issues");
+              let BH;
+              for (BH = 0; BH < hH.lit; BH++) {
+                const YH = ZH(HH[hH.p[BH]]);
+                for (; EH < YH && AH.value < GH;) rH = nH(CH, EH, LH, AH), CH = rH.c, EH = rH.lc;
+                if (EH >= YH && dH(HH[hH.p[BH]]) == (CH >> EH - YH & (1 << YH) - 1)) {
+                  EH -= YH;
+                  const HH = FH(hH.p[BH], SH, CH, EH, LH, AH, tH, zH, XH);
+                  HH && (CH = HH.c, EH = HH.lc);
+                  break
+                }
+              }
+              if (BH == hH.lit) throw new Error("HufDecode issues")
+            }
+          }
+        }
+        const uH = 8 - rH & 7;
+        for (CH >>= uH, EH -= uH; EH > 0;) {
+          const HH = BH[CH << YH - EH & WH];
+          if (!HH.len) throw new Error("HufDecode issues");
+          {
+            EH -= HH.len;
+            const BH = FH(HH.lit, SH, CH, EH, LH, AH, tH, zH, XH);
+            BH && (CH = BH.c, EH = BH.lc)
+          }
+        }
+      }(EH, XH, HH, LH, CH, zH, SH, rH, {
+        value: 0
+      })
+    }
+
+    function sH(HH) {
+      return 65535 & HH
+    }
+
+    function JH(HH) {
+      const BH = sH(HH);
+      return BH > 32767 ? BH - 65536 : BH
+    }
+
+    function iH(HH, BH) {
+      const LH = JH(HH),
+        AH = JH(BH),
+        rH = LH + (1 & AH) + (AH >> 1);
+      return {
+        a: rH,
+        b: rH - AH
+      }
+    }
+
+    function pH(HH, BH) {
+      const LH = sH(HH),
+        AH = sH(BH),
+        rH = LH - (AH >> 1) & RH;
+      return {
+        a: AH + rH - NH & RH,
+        b: rH
+      }
+    }
+
+    function yH(HH, BH, LH, AH, rH, SH, hH) {
+      const tH = hH < 16384,
+        zH = LH > rH ? rH : LH;
+      let CH, EH, XH = 1;
+      for (; XH <= zH;) XH <<= 1;
+      for (XH >>= 1, CH = XH, XH >>= 1; XH >= 1;) {
+        EH = 0;
+        const hH = EH + SH * (rH - CH),
+          zH = SH * XH,
+          GH = SH * CH,
+          YH = AH * XH,
+          uH = AH * CH;
+        let QH, WH, MH, xH;
+        for (; EH <= hH; EH += GH) {
+          let rH = EH;
+          const SH = EH + AH * (LH - CH);
+          for (; rH <= SH; rH += uH) {
+            const LH = rH + YH,
+              AH = rH + zH,
+              SH = AH + YH;
+            if (tH) {
+              let hH = iH(HH[rH + BH], HH[AH + BH]);
+              QH = hH.a, MH = hH.b, hH = iH(HH[LH + BH], HH[SH + BH]), WH = hH.a, xH = hH.b, hH = iH(QH, WH), HH[rH + BH] = hH.a, HH[LH + BH] = hH.b, hH = iH(MH, xH), HH[AH + BH] = hH.a, HH[SH + BH] = hH.b
+            } else {
+              let hH = pH(HH[rH + BH], HH[AH + BH]);
+              QH = hH.a, MH = hH.b, hH = pH(HH[LH + BH], HH[SH + BH]), WH = hH.a, xH = hH.b, hH = pH(QH, WH), HH[rH + BH] = hH.a, HH[LH + BH] = hH.b, hH = pH(MH, xH), HH[AH + BH] = hH.a, HH[SH + BH] = hH.b
+            }
+          }
+          if (LH & XH) {
+            const LH = rH + zH;
+            let AH;
+            AH = tH ? iH(HH[rH + BH], HH[LH + BH]) : pH(HH[rH + BH], HH[LH + BH]), QH = AH.a, HH[LH + BH] = AH.b, HH[rH + BH] = QH
+          }
+        }
+        if (rH & XH) {
+          let rH = EH;
+          const SH = EH + AH * (LH - CH);
+          for (; rH <= SH; rH += uH) {
+            const LH = rH + YH;
+            let AH;
+            AH = tH ? iH(HH[rH + BH], HH[LH + BH]) : pH(HH[rH + BH], HH[LH + BH]), QH = AH.a, HH[LH + BH] = AH.b, HH[rH + BH] = QH
+          }
+        }
+        CH = XH, XH >>= 1
+      }
+      return EH
+    }
+
+    function HB(HH) {
+      return new DataView(HH.array.buffer, HH.offset.value, HH.size)
+    }
+
+    function BB(HH) {
+      const BH = HH.viewer.buffer.slice(HH.offset.value, HH.offset.value + HH.size),
+        LH = new Uint8Array(function(HH) {
+          let BH = HH.byteLength;
+          const LH = [];
+          let AH = 0;
+          const rH = new DataView(HH);
+          for (; BH > 0;) {
+            const HH = rH.getInt8(AH++);
+            if (HH < 0) {
+              const SH = -HH;
+              BH -= SH + 1;
+              for (let HH = 0; HH < SH; HH++) LH.push(rH.getUint8(AH++))
+            } else {
+              const SH = HH;
+              BH -= 2;
+              const hH = rH.getUint8(AH++);
+              for (let HH = 0; HH < SH + 1; HH++) LH.push(hH)
+            }
+          }
+          return LH
+        }(BH)),
+        AH = new Uint8Array(LH.length);
+      return cH(LH), eH(LH, AH), new DataView(AH.buffer)
+    }
+
+    function LB(HH) {
+      const BH = HH.array.slice(HH.offset.value, HH.offset.value + HH.size),
+        LH = fflate.unzlibSync(BH),
+        AH = new Uint8Array(LH.length);
+      return cH(LH), eH(LH, AH), new DataView(AH.buffer)
+    }
+
+    function AB(HH) {
+      const BH = HH.array.slice(HH.offset.value, HH.offset.value + HH.size),
+        LH = fflate.unzlibSync(BH),
+        AH = HH.lines * HH.channels * HH.width,
+        rH = 1 == HH.type ? new Uint16Array(AH) : new Uint32Array(AH);
+      let SH = 0,
+        hH = 0;
+      const tH = new Array(4);
+      for (let zH = 0; zH < HH.lines; zH++)
+        for (let BH = 0; BH < HH.channels; BH++) {
+          let BH = 0;
+          switch (HH.type) {
+            case 1:
+              tH[0] = SH, tH[1] = tH[0] + HH.width, SH = tH[1] + HH.width;
+              for (let AH = 0; AH < HH.width; ++AH) {
+                BH += LH[tH[0]++] << 8 | LH[tH[1]++], rH[hH] = BH, hH++
+              }
+              break;
+            case 2:
+              tH[0] = SH, tH[1] = tH[0] + HH.width, tH[2] = tH[1] + HH.width, SH = tH[2] + HH.width;
+              for (let AH = 0; AH < HH.width; ++AH) {
+                BH += LH[tH[0]++] << 24 | LH[tH[1]++] << 16 | LH[tH[2]++] << 8, rH[hH] = BH, hH++
+              }
+          }
+        }
+      return new DataView(rH.buffer)
+    }
+
+    function rB(HH) {
+      const BH = HH.viewer,
+        LH = {
+          value: HH.offset.value
+        },
+        AH = new Uint16Array(HH.width * HH.scanlineBlockSize * (HH.channels * HH.type)),
+        rH = new Uint8Array(GH);
+      let SH = 0;
+      const hH = new Array(HH.channels);
+      for (let CH = 0; CH < HH.channels; CH++) hH[CH] = {}, hH[CH].start = SH, hH[CH].end = hH[CH].start, hH[CH].nx = HH.width, hH[CH].ny = HH.lines, hH[CH].size = HH.type, SH += hH[CH].nx * hH[CH].ny * hH[CH].size;
+      const tH = kH(BH, LH),
+        zH = kH(BH, LH);
+      if (zH >= GH) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
+      if (tH <= zH)
+        for (let CH = 0; CH < zH - tH + 1; CH++) rH[CH + tH] = bH(BH, LH);
+      const EH = new Uint16Array(XH),
+        YH = function(HH, BH) {
+          let LH = 0;
+          for (let rH = 0; rH < XH; ++rH)(0 == rH || HH[rH >> 3] & 1 << (7 & rH)) && (BH[LH++] = rH);
+          const AH = LH - 1;
+          for (; LH < XH;) BH[LH++] = 0;
+          return AH
+        }(rH, EH),
+        uH = OH(BH, LH);
+      aH(HH.array, BH, LH, uH, AH, SH);
+      for (let CH = 0; CH < HH.channels; ++CH) {
+        const HH = hH[CH];
+        for (let BH = 0; BH < hH[CH].size; ++BH) yH(AH, HH.start + BH, HH.nx, HH.size, HH.ny, HH.nx * HH.size, YH)
+      }! function(HH, BH, LH) {
+        for (let AH = 0; AH < LH; ++AH) BH[AH] = HH[BH[AH]]
+      }(EH, AH, SH);
+      let QH = 0;
+      const WH = new Uint8Array(AH.buffer.byteLength);
+      for (let XH = 0; XH < HH.lines; XH++)
+        for (let BH = 0; BH < HH.channels; BH++) {
+          const HH = hH[BH],
+            LH = HH.nx * HH.size,
+            rH = new Uint8Array(AH.buffer, HH.end * CH, LH * CH);
+          WH.set(rH, QH), QH += LH * CH, HH.end += LH
+        }
+      return new DataView(WH.buffer)
+    }
+    var SB, hB = LH(41387);
+    ! function(HH) {
+      HH[HH.Float = 0] = "Float", HH[HH.HalfFloat = 1] = "HalfFloat"
+    }(SB || (SB = {}));
+    class tB {}
+    async function zB(HH, BH, LH, AH) {
+      const rH = {
+        size: 0,
+        viewer: BH,
+        array: new Uint8Array(BH.buffer),
+        offset: LH,
+        width: HH.dataWindow.xMax - HH.dataWindow.xMin + 1,
+        height: HH.dataWindow.yMax - HH.dataWindow.yMin + 1,
+        channels: HH.channels.length,
+        channelLineOffsets: {},
+        scanOrder: () => 0,
+        bytesPerLine: 0,
+        outLineWidth: 0,
+        lines: 0,
+        scanlineBlockSize: 0,
+        inputSize: null,
+        type: 0,
+        uncompress: null,
+        getter: () => 0,
+        format: 5,
+        outputChannels: 0,
+        decodeChannels: {},
+        blockCount: null,
+        byteArray: null,
+        linearSpace: !1,
+        textureType: 0
+      };
+      switch (HH.compression) {
+        case PH.NO_COMPRESSION:
+          rH.lines = 1, rH.uncompress = HB;
+          break;
+        case PH.RLE_COMPRESSION:
+          rH.lines = 1, rH.uncompress = BB;
+          break;
+        case PH.ZIPS_COMPRESSION:
+          rH.lines = 1, rH.uncompress = LB, await hB.i.LoadScriptAsync(tB.FFLATEUrl);
+          break;
+        case PH.ZIP_COMPRESSION:
+          rH.lines = 16, rH.uncompress = LB, await hB.i.LoadScriptAsync(tB.FFLATEUrl);
+          break;
+        case PH.PIZ_COMPRESSION:
+          rH.lines = 32, rH.uncompress = rB;
+          break;
+        case PH.PXR24_COMPRESSION:
+          rH.lines = 16, rH.uncompress = AB, await hB.i.LoadScriptAsync(tB.FFLATEUrl);
+          break;
+        default:
+          throw new Error(PH[HH.compression] + " is unsupported")
+      }
+      rH.scanlineBlockSize = rH.lines;
+      const SH = {};
+      for (const tH of HH.channels) switch (tH.name) {
+        case "R":
+        case "G":
+        case "B":
+        case "A":
+        case "Y":
+          SH[tH.name] = !0, rH.type = tH.pixelType
+      }
+      let hH = !1;
+      if (SH.R && SH.G && SH.B && SH.A) rH.outputChannels = 4, rH.decodeChannels = {
+        R: 0,
+        G: 1,
+        B: 2,
+        A: 3
+      };
+      else if (SH.R && SH.G && SH.B) hH = !0, rH.outputChannels = 4, rH.decodeChannels = {
+        R: 0,
+        G: 1,
+        B: 2,
+        A: 3
+      };
+      else if (SH.R && SH.G) rH.outputChannels = 2, rH.decodeChannels = {
+        R: 0,
+        G: 1
+      };
+      else if (SH.R) rH.outputChannels = 1, rH.decodeChannels = {
+        R: 0
+      };
+      else {
+        if (!SH.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
+        rH.outputChannels = 1, rH.decodeChannels = {
+          Y: 0
+        }
+      }
+      if (1 === rH.type) switch (AH) {
+        case SB.Float:
+          rH.getter = fH, rH.inputSize = CH;
+          break;
+        case SB.HalfFloat:
+          rH.getter = kH, rH.inputSize = CH
+      } else {
+        if (2 !== rH.type) throw new Error("Unsupported pixelType " + rH.type + " for " + HH.compression);
+        switch (AH) {
+          case SB.Float:
+            rH.getter = IH, rH.inputSize = tH;
+            break;
+          case SB.HalfFloat:
+            rH.getter = lH, rH.inputSize = tH
+        }
+      }
+      rH.blockCount = rH.height / rH.scanlineBlockSize;
+      for (let tH = 0; tH < rH.blockCount; tH++) oH(BH, LH);
+      const zH = rH.width * rH.height * rH.outputChannels;
+      switch (AH) {
+        case SB.Float:
+          rH.byteArray = new Float32Array(zH), rH.textureType = 1, hH && rH.byteArray.fill(1, 0, zH);
+          break;
+        case SB.HalfFloat:
+          rH.byteArray = new Uint16Array(zH), rH.textureType = 2, hH && rH.byteArray.fill(15360, 0, zH);
+          break;
+        default:
+          throw new Error("Unsupported type: " + AH)
+      }
+      let EH = 0;
+      for (const tH of HH.channels) void 0 !== rH.decodeChannels[tH.name] && (rH.channelLineOffsets[tH.name] = EH * rH.width), EH += 2 * tH.pixelType;
+      return rH.bytesPerLine = rH.width * EH, rH.outLineWidth = rH.width * rH.outputChannels, "INCREASING_Y" === HH.lineOrder ? rH.scanOrder = HH => HH : rH.scanOrder = HH => rH.height - 1 - HH, 4 == rH.outputChannels ? (rH.format = 5, rH.linearSpace = !0) : (rH.format = 6, rH.linearSpace = !1), rH
+    }
+
+    function CB(HH, BH, LH, AH) {
+      const rH = {
+        value: 0
+      };
+      for (let SH = 0; SH < HH.height / HH.scanlineBlockSize; SH++) {
+        const hH = VH(LH, AH) - BH.dataWindow.yMin;
+        HH.size = OH(LH, AH), HH.lines = hH + HH.scanlineBlockSize > HH.height ? HH.height - hH : HH.scanlineBlockSize;
+        const tH = HH.size < HH.lines * HH.bytesPerLine && HH.uncompress ? HH.uncompress(HH) : HB(HH);
+        AH.value += HH.size;
+        for (let LH = 0; LH < HH.scanlineBlockSize; LH++) {
+          const AH = SH * HH.scanlineBlockSize,
+            hH = LH + HH.scanOrder(AH);
+          if (hH >= HH.height) continue;
+          const zH = LH * HH.bytesPerLine,
+            CH = (HH.height - 1 - hH) * HH.outLineWidth;
+          for (let LH = 0; LH < HH.channels; LH++) {
+            const AH = BH.channels[LH].name,
+              SH = HH.channelLineOffsets[AH],
+              hH = HH.decodeChannels[AH];
+            if (void 0 !== hH) {
+              rH.value = zH + SH;
+              for (let BH = 0; BH < HH.width; BH++) {
+                const LH = CH + BH * HH.outputChannels + hH;
+                HH.byteArray && (HH.byteArray[LH] = HH.getter(tH, rH))
+              }
+            }
+          }
+        }
+      }
+    }
+    tB.DefaultOutputType = SB.HalfFloat, tB.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
+    class EB {
+      constructor() {
+        this.supportCascades = !1
+      }
+      loadCubeData(HH, BH, LH, AH, rH) {
+        throw ".exr not supported in Cube."
+      }
+      loadData(HH, BH, LH) {
+        const rH = new DataView(HH.buffer),
+          SH = {
+            value: 0
+          },
+          hH = gH(rH, SH);
+        zB(hH, rH, SH, tB.DefaultOutputType).then((HH => {
+          CB(HH, hH, rH, SH);
+          const AH = hH.dataWindow.xMax - hH.dataWindow.xMin + 1,
+            tH = hH.dataWindow.yMax - hH.dataWindow.yMin + 1;
+          LH(AH, tH, BH.generateMipMaps, !1, (() => {
+            const LH = BH.Iu();
+            BH.format = hH.format, BH.type = HH.textureType, BH.invertY = !1, BH._gammaSpace = !hH.linearSpace, HH.byteArray && LH._uploadDataToTextureDirectly(BH, HH.byteArray, 0, 0, void 0, !0)
+          }))
+        })).catch((HH => {
+          AH.e.Error("Failed to load EXR texture: ", HH)
+        }))
+      }
+    }
+    async function XB(HH) {
+      const BH = new DataView(HH),
+        LH = {
+          value: 0
+        },
+        rH = gH(BH, LH);
+      try {
+        const HH = await zB(rH, BH, LH, SB.Float);
+        return CB(HH, rH, BH, LH), HH.byteArray ? {
+          width: rH.dataWindow.xMax - rH.dataWindow.xMin + 1,
+          height: rH.dataWindow.yMax - rH.dataWindow.yMin + 1,
+          data: new Float32Array(HH.byteArray)
+        } : (AH.e.Error("Failed to decode EXR data: No byte array available."), {
+          width: 0,
+          height: 0,
+          data: null
+        })
+      } catch (SH) {
+        AH.e.Error("Failed to load EXR data: ", SH)
+      }
+      return {
+        width: 0,
+        height: 0,
+        data: null
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

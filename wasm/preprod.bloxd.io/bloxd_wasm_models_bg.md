@@ -1,21 +1,13 @@
 # WASM module: `bloxd_wasm_models_bg`
 
-> environment **preprod.bloxd.io** · build `fecih8.fbb4bdb3` · analyzed 2026-11-26T22:08:29+09:00
-> source: https://preprod.bloxd.io/static/media/bloxd_wasm_models_bg.2bf764b975051a969c78.wasm
-> 478,484 bytes (467.3 KB) · sha256 `d264f0be9eaf7df4…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **preprod.bloxd.io** · build `cwj32u.ae3e40c2` · analyzed 2026-11-27T00:54:30+09:00
+> source: https://preprod.bloxd.io/static/media/bloxd_wasm_models_bg.75ba595cf1465bb9af8f.wasm
+> 478,484 bytes (467.3 KB) · sha256 `dafa53585131db41…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
 
 ## Changes since the previous archived build
 
-- size 311,549 → 478,484 bytes (+166,935)
-- defined functions 220 → 290
-- imported functions 27 → 5
-- code bytes 249,657 → 399,466
-- data bytes 58,757 → 76,035
-- name-section module id `cb8c4682c8c60e15.1165` → `606105bdfbeb0b64.893`
-- import signatures: -1 × `(i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)`; -15 × `(i32) -> (i32)`; -1 × `(i32 i32 i32) -> ()`
-- export identifiers rotated by the obfuscator: 1/23 names kept (identifier names are randomly assigned per build; compare signatures instead)
-- new embedded strings: `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `9I?KSCA;=U{23456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`ab`; `Attribute seam right-swing traversal did not terminateAttrib`; `Bit stream end position overflowBit stream size too largeBit`
-- removed embedded strings: `                                `; ` index out of bounds: the len is `; `!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!""""""""""""""""""""""""""""`; `" out of range for slice of length `; `################################`; `#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQR`
+- name-section module id `606105bdfbeb0b64.893` → `5124ccbbffa5589b.893` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- export identifiers rotated by the obfuscator: 1/22 names kept (identifier names are randomly assigned per build; compare signatures instead)
 
 ## Overview
 
@@ -29,7 +21,7 @@
 | Data segments / bytes | 195 / 76,035 |
 | Element segments / entries | 1 / 46 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `606105bdfbeb0b64.893` |
+| name-section module id | `5124ccbbffa5589b.893` |
 | Sections | 12 |
 
 ## Sections
@@ -59,11 +51,11 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `trRv.cDyr` | func | `(i32) -> ()` |
-| 1 | `trRv.Qkoq` | func | `(i32) -> ()` |
-| 2 | `trRv.VjOM` | func | `(i32 i32) -> ()` |
-| 3 | `trRv.g9GT` | func | `(i32 i32) -> (i32)` |
-| 4 | `trRv.ezQ8` | func | `(i32 i32) -> ()` |
+| 0 | `aKSR.BKjh` | func | `(i32) -> ()` |
+| 1 | `aKSR.Oawr` | func | `(i32) -> ()` |
+| 2 | `aKSR.vlcw` | func | `(i32 i32) -> ()` |
+| 3 | `aKSR.tlhT` | func | `(i32 i32) -> (i32)` |
+| 4 | `aKSR.bCSp` | func | `(i32 i32) -> ()` |
 
 ## Exports
 
@@ -71,28 +63,28 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `L95Z` | func | 137 | `(i32 i32) -> ()` |
-| `qHZe` | func | 290 | `(i32) -> (i32)` |
-| `ZcPY` | func | 213 | `(i32) -> (i32)` |
-| `Q1qx` | func | 74 | `() -> (i32)` |
-| `t3jp` | func | 291 | `(i32) -> ()` |
-| `uXhy` | func | 256 | `(i32 i32 i32) -> (i32 i32)` |
-| `Vrct` | func | 246 | `(i32 i32) -> (i32)` |
-| `aLOq` | func | 220 | `(i32) -> ()` |
-| `nUgp` | func | 245 | `() -> ()` |
-| `rwPz` | func | 93 | `() -> (i32)` |
-| `cRuX` | func | 245 | `() -> ()` |
-| `F0lI` | func | 252 | `(i32 i32 i32 i32) -> (i32 i32)` |
-| `GZo5` | global | 1 | `` |
-| `x8jZ` | func | 258 | `() -> (i32 i32)` |
-| `wJ7Z` | func | 273 | `(i32 i32 i32) -> ()` |
-| `zzSa` | func | 267 | `() -> (i32)` |
-| `UD6z` | func | 152 | `() -> (i32)` |
-| `EREe` | global | 2 | `` |
-| `RtUT` | func | 49 | `() -> (i32)` |
-| `ib9k` | func | 248 | `(i32 i32 i32 i32) -> (i32)` |
 | `memory` | memory | 0 | `` |
-| `FtLd` | func | 293 | `() -> (i32)` |
+| `KRNz` | func | 213 | `(i32) -> (i32)` |
+| `hBxT` | func | 258 | `() -> (i32 i32)` |
+| `vJc1` | func | 290 | `(i32) -> (i32)` |
+| `Bipb` | func | 291 | `(i32) -> ()` |
+| `XEwI` | func | 49 | `() -> (i32)` |
+| `Pxmq` | global | 1 | `` |
+| `nxcV` | func | 256 | `(i32 i32 i32) -> (i32 i32)` |
+| `QPYJ` | func | 246 | `(i32 i32) -> (i32)` |
+| `nbty` | func | 248 | `(i32 i32 i32 i32) -> (i32)` |
+| `jL6Z` | func | 245 | `() -> ()` |
+| `Hd21` | func | 245 | `() -> ()` |
+| `saVX` | func | 267 | `() -> (i32)` |
+| `dJ42` | func | 273 | `(i32 i32 i32) -> ()` |
+| `xTuM` | func | 252 | `(i32 i32 i32 i32) -> (i32 i32)` |
+| `r2e0` | global | 2 | `` |
+| `Rm8j` | func | 93 | `() -> (i32)` |
+| `X8jq` | func | 137 | `(i32 i32) -> ()` |
+| `sh9H` | func | 293 | `() -> (i32)` |
+| `VDFQ` | func | 220 | `(i32) -> ()` |
+| `Md7l` | func | 152 | `() -> (i32)` |
+| `CCTi` | func | 74 | `() -> (i32)` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 

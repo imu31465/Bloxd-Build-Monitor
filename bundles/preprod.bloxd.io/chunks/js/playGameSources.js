@@ -1,183 +1,184 @@
 export const id = 54;
 export const ids = [54];
 export const modules = {
-  40521: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => oU,
-      f: () => QU,
-      j: () => yU
+  40679: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => zH,
+      c: () => SH,
+      d: () => rH
     });
-    const cU = 6e3;
+    const AH = 6e3;
 
-    function yU(UU, XU) {
-      return [Math.floor(UU[0] / XU) * XU, Math.floor(UU[1] / XU) * XU, Math.floor(UU[2] / XU) * XU]
+    function rH(HH, BH) {
+      return [Math.floor(HH[0] / BH) * BH, Math.floor(HH[1] / BH) * BH, Math.floor(HH[2] / BH) * BH]
     }
 
-    function QU(UU) {
-      const XU = (null !== UU && void 0 !== UU ? UU : "").match(/-?\d+(?:\.\d+)?/g);
-      return XU && XU.length >= 3 ? [Number(XU[0]), Number(XU[1]), Number(XU[2])] : null
+    function SH(HH) {
+      const BH = (null !== HH && void 0 !== HH ? HH : "").match(/-?\d+(?:\.\d+)?/g);
+      return BH && BH.length >= 3 ? [Number(BH[0]), Number(BH[1]), Number(BH[2])] : null
     }
 
-    function AU(UU, XU) {
-      return UU === XU ? String(UU) : `${UU}-${XU}`
+    function hH(HH, BH) {
+      return HH === BH ? String(HH) : `${HH}-${BH}`
     }
 
-    function FU(UU, XU, zU, cU) {
-      const yU = [];
-      let QU = new Map;
-      for (let AU = UU[2]; AU < UU[2] + XU; AU++) {
-        const FU = new Map;
-        let oU = UU[0];
-        for (; oU < UU[0] + XU;) {
-          const yU = cU(oU, zU, AU);
-          let DU = oU;
-          for (; DU + 1 < UU[0] + XU && cU(DU + 1, zU, AU) === yU;) DU++;
-          if (null !== yU) {
-            const UU = `${oU} ${DU} ${yU}`,
-              XU = QU.get(UU);
-            XU ? (XU.z1 = AU, QU.delete(UU), FU.set(UU, XU)) : FU.set(UU, {
-              x0: oU,
-              x1: DU,
-              z0: AU,
-              z1: AU,
-              name: yU
+    function tH(HH, BH, LH, AH) {
+      const rH = [];
+      let SH = new Map;
+      for (let hH = HH[2]; hH < HH[2] + BH; hH++) {
+        const tH = new Map;
+        let zH = HH[0];
+        for (; zH < HH[0] + BH;) {
+          const rH = AH(zH, LH, hH);
+          let CH = zH;
+          for (; CH + 1 < HH[0] + BH && AH(CH + 1, LH, hH) === rH;) CH++;
+          if (null !== rH) {
+            const HH = `${zH} ${CH} ${rH}`,
+              BH = SH.get(HH);
+            BH ? (BH.z1 = hH, SH.delete(HH), tH.set(HH, BH)) : tH.set(HH, {
+              x0: zH,
+              x1: CH,
+              z0: hH,
+              z1: hH,
+              name: rH
             })
           }
-          oU = DU + 1
+          zH = CH + 1
         }
-        yU.push(...QU.values()), QU = FU
+        rH.push(...SH.values()), SH = tH
       }
-      return yU.push(...QU.values()), yU.sort(((UU, XU) => UU.z0 - XU.z0 || UU.x0 - XU.x0)).map((UU => `x${AU(UU.x0,UU.x1)} z${AU(UU.z0,UU.z1)} ${UU.name}`))
+      return rH.push(...SH.values()), rH.sort(((HH, BH) => HH.z0 - BH.z0 || HH.x0 - BH.x0)).map((HH => `x${hH(HH.x0,HH.x1)} z${hH(HH.z0,HH.z1)} ${HH.name}`))
     }
 
-    function oU(UU, XU, zU, yU) {
-      let QU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : cU;
-      const oU = [UU[0] + XU - 1, UU[1] + XU - 1, UU[2] + XU - 1],
-        DU = null !== yU && yU.every(((XU, zU) => Math.floor(XU) >= UU[zU] && Math.floor(XU) <= oU[zU])),
-        EU = [`The chunk from ${UU.join(" ")} to ${oU.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-      null !== yU && EU.push(`The player's feet are at ${yU.map(Math.floor).join(" ")}, ${DU?"in this chunk":"outside this chunk"}.`);
-      const YU = [];
-      for (let cU = UU[1]; cU <= oU[1]; cU++) {
-        const yU = FU(UU, XU, cU, zU).join("; "),
-          QU = YU[YU.length - 1];
-        (null === QU || void 0 === QU ? void 0 : QU.boxes) === yU ? QU.to = cU : YU.push({
-          from: cU,
-          to: cU,
-          boxes: yU
+    function zH(HH, BH, LH, rH) {
+      let SH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : AH;
+      const zH = [HH[0] + BH - 1, HH[1] + BH - 1, HH[2] + BH - 1],
+        CH = null !== rH && rH.every(((BH, LH) => Math.floor(BH) >= HH[LH] && Math.floor(BH) <= zH[LH])),
+        EH = [`The chunk from ${HH.join(" ")} to ${zH.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+      null !== rH && EH.push(`The player's feet are at ${rH.map(Math.floor).join(" ")}, ${CH?"in this chunk":"outside this chunk"}.`);
+      const XH = [];
+      for (let AH = HH[1]; AH <= zH[1]; AH++) {
+        const rH = tH(HH, BH, AH, LH).join("; "),
+          SH = XH[XH.length - 1];
+        (null === SH || void 0 === SH ? void 0 : SH.boxes) === rH ? SH.to = AH : XH.push({
+          from: AH,
+          to: AH,
+          boxes: rH
         })
       }
-      const NU = YU.filter((UU => "" !== UU.boxes));
-      0 === NU.length && EU.push("It is all air.");
-      let IU = EU.join("\n").length;
-      for (const cU of NU) {
-        const UU = `y${AU(cU.from,cU.to)}: ${cU.boxes}`;
-        if (IU += UU.length + 1, IU > QU) {
-          EU.push(`Cut short: the layers from y${cU.from} up aren't shown, as there are too many blocks.`);
+      const GH = XH.filter((HH => "" !== HH.boxes));
+      0 === GH.length && EH.push("It is all air.");
+      let YH = EH.join("\n").length;
+      for (const AH of GH) {
+        const HH = `y${hH(AH.from,AH.to)}: ${AH.boxes}`;
+        if (YH += HH.length + 1, YH > SH) {
+          EH.push(`Cut short: the layers from y${AH.from} up aren't shown, as there are too many blocks.`);
           break
         }
-        EU.push(UU)
+        EH.push(HH)
       }
-      return EU.join("\n")
+      return EH.join("\n")
     }
   },
-  9364: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => yU
+  9491: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => rH
     });
-    var cU = zU(27);
+    var AH = LH(15);
 
-    function yU() {
-      return !cU.e.get("isTouchScreen") && null !== document.pointerLockElement
+    function rH() {
+      return !AH.c.get("isTouchScreen") && null !== document.pointerLockElement
     }
   },
-  37677: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => AU,
-      d: () => QU,
-      h: () => yU
+  37812: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => hH,
+      d: () => SH,
+      g: () => rH
     });
-    const cU = [.25, .5, 1, 2, 4, 8, 16];
+    const AH = [.25, .5, 1, 2, 4, 8, 16];
 
-    function yU(UU, XU) {
-      const zU = cU;
-      let yU = zU.indexOf(UU);
-      return -1 === yU && (yU = zU.findIndex((XU => XU >= UU)), -1 === yU && (yU = zU.length - 1)), "up" === XU ? zU[Math.min(yU + 1, zU.length - 1)] : zU[Math.max(yU - 1, 0)]
+    function rH(HH, BH) {
+      const LH = AH;
+      let rH = LH.indexOf(HH);
+      return -1 === rH && (rH = LH.findIndex((BH => BH >= HH)), -1 === rH && (rH = LH.length - 1)), "up" === BH ? LH[Math.min(rH + 1, LH.length - 1)] : LH[Math.max(rH - 1, 0)]
     }
 
-    function QU(UU) {
-      return UU <= cU[0]
+    function SH(HH) {
+      return HH <= AH[0]
     }
 
-    function AU(UU) {
-      return UU >= cU[cU.length - 1]
+    function hH(HH) {
+      return HH >= AH[AH.length - 1]
     }
   },
-  37211: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => yU,
-      g: () => QU
+  37373: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => rH,
+      e: () => SH
     });
-    let cU = !1;
+    let AH = !1;
 
-    function yU() {
-      return cU
+    function rH() {
+      return AH
     }
 
-    function QU(UU) {
-      return cU !== UU && (cU = UU, !0)
+    function SH(HH) {
+      return AH !== HH && (AH = HH, !0)
     }
   },
-  39852: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => QU
+  39936: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => SH
     });
-    var cU = zU(31),
-      yU = zU(2032);
+    var AH = LH(18),
+      rH = LH(2036);
 
-    function QU(UU) {
+    function SH(HH) {
       let {
-        taskId: XU,
-        progress: zU
-      } = UU;
-      const cU = yU.d.get("_tasks");
-      null !== cU && void 0 !== cU && cU[XU] && yU.d.apply({
+        taskId: BH,
+        progress: LH
+      } = HH;
+      const AH = rH.e.get("_tasks");
+      null !== AH && void 0 !== AH && AH[BH] && rH.e.apply({
         _tasks: {
-          ...cU,
-          [XU]: {
-            ...cU[XU],
-            progress: zU
+          ...AH,
+          [BH]: {
+            ...AH[BH],
+            progress: LH
           }
         }
       })
     }
-    cU.k.subscribe("clientTaskProgress", (UU => {
-      QU(UU)
+    AH.k.subscribe("clientTaskProgress", (HH => {
+      SH(HH)
     }))
   },
-  40496: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => NU,
-      f: () => pU,
-      i: () => DU,
-      j: () => YU,
-      m: () => oU,
-      p: () => AU,
-      q: () => EU,
-      u: () => aU
+  40649: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => YH,
+      i: () => QH,
+      j: () => CH,
+      l: () => XH,
+      m: () => GH,
+      o: () => zH,
+      q: () => hH,
+      u: () => EH,
+      v: () => WH
     });
-    var cU = zU(2032),
-      yU = zU(31),
-      QU = zU(2044);
-    const AU = (0, QU.p)((function() {
-        var UU, XU, zU, yU;
+    var AH = LH(2036),
+      rH = LH(18),
+      SH = LH(2045);
+    const hH = (0, SH.n)((function() {
+        var HH, BH, LH, rH;
         return {
-          health: null !== (UU = cU.d.get("_health")) && void 0 !== UU ? UU : null,
-          maxHealth: null !== (XU = cU.d.get("_totalMaxHealth")) && void 0 !== XU ? XU : null,
-          shield: null !== (zU = cU.d.get("_shield")) && void 0 !== zU ? zU : null,
-          maxShield: null !== (yU = cU.d.get("maxShield")) && void 0 !== yU ? yU : null
+          health: null !== (HH = AH.e.get("_health")) && void 0 !== HH ? HH : null,
+          maxHealth: null !== (BH = AH.e.get("_totalMaxHealth")) && void 0 !== BH ? BH : null,
+          shield: null !== (LH = AH.e.get("_shield")) && void 0 !== LH ? LH : null,
+          maxShield: null !== (rH = AH.e.get("maxShield")) && void 0 !== rH ? rH : null
         }
-      }), [], (0, QU.o)("_health", "_totalMaxHealth", "_shield", "maxShield")),
-      FU = [{
+      }), [], (0, SH.l)("_health", "_totalMaxHealth", "_shield", "maxShield")),
+      tH = [{
         canFly: !1,
         flying: !1
       }, {
@@ -191,957 +192,966 @@ export const modules = {
         flying: !0
       }];
 
-    function oU(UU, XU) {
-      return FU[(UU ? 2 : 0) + (XU ? 1 : 0)]
+    function zH(HH, BH) {
+      return tH[(HH ? 2 : 0) + (BH ? 1 : 0)]
     }
-    const DU = (0, QU.p)((function() {
-      var UU;
-      return null !== (UU = cU.d.get("_aura")) && void 0 !== UU ? UU : null
-    }), [], (0, QU.o)("_aura"));
+    const CH = (0, SH.n)((function() {
+      var HH;
+      return null !== (HH = AH.e.get("_aura")) && void 0 !== HH ? HH : null
+    }), [], (0, SH.l)("_aura"));
 
-    function EU(UU) {
+    function EH(HH) {
       return {
-        watch: XU => (0, yU.n)("shotPlayer", (zU => {
+        watch: BH => (0, rH.m)("shotPlayer", (LH => {
           let {
-            playerId: cU,
-            damage: yU,
-            wasCrit: QU,
-            distance: AU
-          } = zU;
-          UU(cU) && XU({
-            damage: yU,
-            wasCrit: QU,
-            distance: AU
+            playerId: AH,
+            damage: rH,
+            wasCrit: SH,
+            distance: hH
+          } = LH;
+          HH(AH) && BH({
+            damage: rH,
+            wasCrit: SH,
+            distance: hH
           })
         }))
       }
     }
 
-    function YU(UU) {
-      return (0, QU.e)("chat", (XU => {
+    function XH(HH) {
+      return (0, SH.b)("chat", (BH => {
         let {
-          serverChatMsgId: zU,
-          worldCodeLineId: cU,
-          content: yU,
-          chatterEId: QU,
-          chatterObjectsToReplay: AU
-        } = XU;
+          serverChatMsgId: LH,
+          worldCodeLineId: AH,
+          content: rH,
+          chatterEId: SH,
+          chatterObjectsToReplay: hH
+        } = BH;
         return {
-          serverChatMsgId: null !== zU && void 0 !== zU ? zU : null,
-          worldCodeLineId: null !== cU && void 0 !== cU ? cU : null,
-          content: yU,
-          author: QU ? UU(QU) : null,
-          hiddenFromReplay: !0 === AU
+          serverChatMsgId: null !== LH && void 0 !== LH ? LH : null,
+          worldCodeLineId: null !== AH && void 0 !== AH ? AH : null,
+          content: rH,
+          author: SH ? HH(SH) : null,
+          hiddenFromReplay: !0 === hH
         }
       }))
     }
-    class NU {
+    const GH = (0, SH.b)("chatRemoved");
+    class YH {
       constructor() {
         this.shown = null, this.needed = null, this.neededSince = 0
       }
-      update(UU) {
-        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-        const zU = this.shown;
-        return UU !== this.needed && (this.needed = UU, this.neededSince = XU, null === UU && (this.shown = null)), this.shown !== this.needed && XU - this.neededSince > 200 && (this.shown = this.needed), this.shown !== zU
+      update(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+        const LH = this.shown;
+        return HH !== this.needed && (this.needed = HH, this.neededSince = BH, null === HH && (this.shown = null)), this.shown !== this.needed && BH - this.neededSince > 200 && (this.shown = this.needed), this.shown !== LH
       }
     }
 
-    function IU(UU) {
+    function uH(HH) {
       return [{
-        translationKey: `touchKeys:${UU}`
+        translationKey: `touchKeys:${HH}`
       }]
     }
-    const pU = {
-      open: IU("open"),
-      close: IU("close"),
-      milk: IU("milk"),
-      shear: IU("shear"),
-      tame: IU("tame"),
-      feed: IU("feed"),
-      ride: IU("ride")
+    const QH = {
+      open: uH("open"),
+      close: uH("close"),
+      milk: uH("milk"),
+      shear: uH("shear"),
+      tame: uH("tame"),
+      feed: uH("feed"),
+      ride: uH("ride")
     };
 
-    function aU(UU) {
+    function WH(HH) {
       return [{
         translationKey: "touchKeys:tameWith"
       }, " ", {
-        icon: UU
+        icon: HH
       }]
     }
   },
-  42147: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => FU,
-      f: () => AU
+  37174: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => tH,
+      f: () => hH
     });
-    var cU = zU(3664);
-    let yU = null,
-      QU = null;
+    var AH = LH(3648);
+    let rH = null,
+      SH = null;
 
-    function AU() {
-      return QU ??= zU.e(229).then((() => zU(37027))).then((UU => {
+    function hH() {
+      return SH ??= LH.e(235).then((() => LH(37091))).then((HH => {
         let {
-          ITEM_SPRITES: XU,
-          ITEM_SPRITES_WITHOUT_FILE: zU,
-          ITEM_FILES_WITHOUT_SPRITE: QU
-        } = UU;
-        yU = function(UU, XU, zU) {
-          const yU = new Set,
-            QU = (0, cU.w)(XU);
-          let AU = 0;
-          for (const [cU, FU] of UU.entries()) cU === QU[AU] ? AU++ : yU.add(FU);
-          if ("" !== zU)
-            for (const FU of zU.split(cU.r)) yU.add(FU);
-          return yU
-        }(XU.split(cU.r), zU, QU)
-      }), (UU => {
-        throw QU = null, UU
-      })), QU
+          ITEM_SPRITES: BH,
+          ITEM_SPRITES_WITHOUT_FILE: LH,
+          ITEM_FILES_WITHOUT_SPRITE: SH
+        } = HH;
+        rH = function(HH, BH, LH) {
+          const rH = new Set,
+            SH = (0, AH.v)(BH);
+          let hH = 0;
+          for (const [AH, tH] of HH.entries()) AH === SH[hH] ? hH++ : rH.add(tH);
+          if ("" !== LH)
+            for (const tH of LH.split(AH.q)) rH.add(tH);
+          return rH
+        }(BH.split(AH.q), LH, SH)
+      }), (HH => {
+        throw SH = null, HH
+      })), SH
     }
 
-    function FU(UU) {
-      var XU, zU;
-      return null !== (XU = null === (zU = yU) || void 0 === zU ? void 0 : zU.has(UU)) && void 0 !== XU && XU
+    function tH(HH) {
+      var BH, LH;
+      return null !== (BH = null === (LH = rH) || void 0 === LH ? void 0 : LH.has(HH)) && void 0 !== BH && BH
     }
   },
-  40513: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => cU,
-      g: () => QU,
-      h: () => yU
+  40669: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => AH,
+      d: () => SH,
+      e: () => rH
     });
-    const cU = 128;
+    const AH = 128;
 
-    function yU(UU, XU, zU, cU) {
-      const yU = 2 * XU - 1,
-        QU = 1 - 2 * zU,
-        AU = UU(0) - yU * UU(3),
-        FU = UU(4) - yU * UU(7),
-        oU = UU(8) - yU * UU(11),
-        DU = UU(1) - QU * UU(3),
-        EU = UU(5) - QU * UU(7),
-        YU = UU(9) - QU * UU(11);
-      cU[0] = FU * YU - oU * EU, cU[1] = oU * DU - AU * YU, cU[2] = AU * EU - FU * DU;
-      const NU = cU[0] * UU(3) + cU[1] * UU(7) + cU[2] * UU(11) < 0 ? -1 : 1,
-        IU = Math.hypot(cU[0], cU[1], cU[2]) * NU;
-      return cU[0] /= IU, cU[1] /= IU, cU[2] /= IU, cU
+    function rH(HH, BH, LH, AH) {
+      const rH = 2 * BH - 1,
+        SH = 1 - 2 * LH,
+        hH = HH(0) - rH * HH(3),
+        tH = HH(4) - rH * HH(7),
+        zH = HH(8) - rH * HH(11),
+        CH = HH(1) - SH * HH(3),
+        EH = HH(5) - SH * HH(7),
+        XH = HH(9) - SH * HH(11);
+      AH[0] = tH * XH - zH * EH, AH[1] = zH * CH - hH * XH, AH[2] = hH * EH - tH * CH;
+      const GH = AH[0] * HH(3) + AH[1] * HH(7) + AH[2] * HH(11) < 0 ? -1 : 1,
+        YH = Math.hypot(AH[0], AH[1], AH[2]) * GH;
+      return AH[0] /= YH, AH[1] /= YH, AH[2] /= YH, AH
     }
 
-    function QU(UU, XU, zU, cU, yU, QU) {
-      const AU = [Math.floor(XU[0]), Math.floor(XU[1]), Math.floor(XU[2])],
-        FU = [0, 0, 0],
-        oU = [1 / 0, 1 / 0, 1 / 0],
-        DU = [1 / 0, 1 / 0, 1 / 0];
-      for (let NU = 0; NU < 3; NU++) FU[NU] = Math.sign(zU[NU]), 0 !== FU[NU] && (DU[NU] = Math.abs(1 / zU[NU]), oU[NU] = (AU[NU] + (FU[NU] > 0 ? 1 : 0) - XU[NU]) / zU[NU]);
-      let EU = 0,
-        YU = Math.abs(zU[0]) > Math.abs(zU[1]) ? 0 : 1;
-      for (Math.abs(zU[2]) > Math.abs(zU[YU]) && (YU = 2); EU <= cU;) {
-        if (UU(AU[0], AU[1], AU[2])) return yU[0] = AU[0], yU[1] = AU[1], yU[2] = AU[2], QU[0] = 0, QU[1] = 0, QU[2] = 0, QU[YU] = -FU[YU], !0;
-        YU = oU[0] < oU[1] ? 0 : 1, oU[2] < oU[YU] && (YU = 2), EU = oU[YU], AU[YU] += FU[YU], oU[YU] += DU[YU]
+    function SH(HH, BH, LH, AH, rH, SH) {
+      const hH = [Math.floor(BH[0]), Math.floor(BH[1]), Math.floor(BH[2])],
+        tH = [0, 0, 0],
+        zH = [1 / 0, 1 / 0, 1 / 0],
+        CH = [1 / 0, 1 / 0, 1 / 0];
+      for (let GH = 0; GH < 3; GH++) tH[GH] = Math.sign(LH[GH]), 0 !== tH[GH] && (CH[GH] = Math.abs(1 / LH[GH]), zH[GH] = (hH[GH] + (tH[GH] > 0 ? 1 : 0) - BH[GH]) / LH[GH]);
+      let EH = 0,
+        XH = Math.abs(LH[0]) > Math.abs(LH[1]) ? 0 : 1;
+      for (Math.abs(LH[2]) > Math.abs(LH[XH]) && (XH = 2); EH <= AH;) {
+        if (HH(hH[0], hH[1], hH[2])) return rH[0] = hH[0], rH[1] = hH[1], rH[2] = hH[2], SH[0] = 0, SH[1] = 0, SH[2] = 0, SH[XH] = -tH[XH], !0;
+        XH = zH[0] < zH[1] ? 0 : 1, zH[2] < zH[XH] && (XH = 2), EH = zH[XH], hH[XH] += tH[XH], zH[XH] += CH[XH]
       }
       return !1
     }
   },
-  37110: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => eU,
-      f: () => CU,
-      i: () => ZU,
-      j: () => GU,
-      m: () => RU
+  37294: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => mH,
+      f: () => oH,
+      g: () => TH,
+      j: () => vH,
+      m: () => UH
     });
-    var cU = zU(287),
-      yU = zU(97);
-    const QU = new(zU(37112).b)(new URL(zU.p + zU.u(3), zU.b), {
+    var AH = LH(257),
+      rH = LH(81);
+    const SH = new(LH(37297).b)(new URL(LH.p + LH.u(3), LH.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var AU = zU(1877),
-      FU = zU(2215);
-    const oU = 1e4,
-      DU = 3e4;
-    let EU = null,
-      YU = null,
-      NU = null,
-      IU = !1,
-      pU = 0;
-    const aU = new Map;
-    let tU = null;
-    const gU = new Map,
-      kU = new Map;
+    var hH = LH(1863),
+      tH = LH(2219);
+    const zH = 1e4,
+      CH = 3e4;
+    let EH = null,
+      XH = null,
+      GH = null,
+      YH = !1,
+      uH = 0;
+    const QH = new Map;
+    let WH = null;
+    const MH = new Map,
+      xH = new Map;
 
-    function GU(UU) {
-      const XU = new Promise(((XU, zU) => {
-        const cU = new Image;
-        cU.crossOrigin = "anonymous", cU.fetchPriority = "high", cU.onload = () => {
-          XU(cU)
-        }, cU.onerror = () => {
-          zU(new Error(`A block icon's texture did not load: ${UU.slice(0,100)}`))
-        }, cU.src = UU
+    function vH(HH) {
+      const BH = new Promise(((BH, LH) => {
+        const AH = new Image;
+        AH.crossOrigin = "anonymous", AH.fetchPriority = "high", AH.onload = () => {
+          BH(AH)
+        }, AH.onerror = () => {
+          LH(new Error(`A block icon's texture did not load: ${HH.slice(0,100)}`))
+        }, AH.src = HH
       }));
-      return (0, FU.h)(XU)
+      return (0, tH.f)(BH)
     }
 
-    function BU(UU) {
-      var XU, zU;
-      IU || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${UU}`), IU = !0, null === (XU = EU) || void 0 === XU || XU.terminate(), EU = null, YU = null, gU.clear(), kU.clear();
-      for (const cU of aU.values()) cU(null);
-      aU.clear(), null === (zU = tU) || void 0 === zU || zU()
+    function PH(HH) {
+      var BH, LH;
+      YH || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${HH}`), YH = !0, null === (BH = EH) || void 0 === BH || BH.terminate(), EH = null, XH = null, MH.clear(), xH.clear();
+      for (const AH of QH.values()) AH(null);
+      QH.clear(), null === (LH = WH) || void 0 === LH || LH()
     }
 
-    function ZU() {
-      return null !== YU
+    function TH() {
+      return null !== XH
     }
 
-    function RU() {
-      return NU ??= async function() {
+    function UH() {
+      return GH ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === cU.d.ios_icon_worker_v1 && (0, yU.isWebKit)()) return;
+        if ("page" === AH.e.ios_icon_worker_v1 && (0, rH.isWebKit)()) return;
         try {
-          EU = await async function() {
-            return await QU.ready(), QU.start()
+          EH = await async function() {
+            return await SH.ready(), SH.start()
           }()
-        } catch (FU) {
-          return void BU(`did not start (${String(FU)})`)
+        } catch (tH) {
+          return void PH(`did not start (${String(tH)})`)
         }
-        let UU = () => {};
-        const XU = new Promise((XU => {
-          UU = XU
+        let HH = () => {};
+        const BH = new Promise((BH => {
+          HH = BH
         }));
-        EU.onmessage = XU => {
+        EH.onmessage = BH => {
           let {
-            data: zU
-          } = XU;
-          if ("started" === zU.type) YU = EU, UU();
-          else if ("failed" === zU.type) BU(`failed a draw (${zU.message})`);
+            data: LH
+          } = BH;
+          if ("started" === LH.type) XH = EH, HH();
+          else if ("failed" === LH.type) PH(`failed a draw (${LH.message})`);
           else {
-            var cU, yU;
-            null === (cU = aU.get(zU.id)) || void 0 === cU || cU(zU.url), aU.delete(zU.id), null === (yU = tU) || void 0 === yU || yU()
+            var AH, rH;
+            null === (AH = QH.get(LH.id)) || void 0 === AH || AH(LH.url), QH.delete(LH.id), null === (rH = WH) || void 0 === rH || rH()
           }
-        }, EU.onerror = XU => {
-          XU.preventDefault(), BU(`stopped (${XU.message||"its script did not load or run"})`), UU()
+        }, EH.onerror = BH => {
+          BH.preventDefault(), PH(`stopped (${BH.message||"its script did not load or run"})`), HH()
         };
-        const zU = `did not start in ${DU/1e3} s`;
-        await (0, AU.l)(XU, DU, zU).catch((() => {
-          BU(zU)
+        const LH = `did not start in ${CH/1e3} s`;
+        await (0, hH.j)(BH, CH, LH).catch((() => {
+          PH(LH)
         }))
-      }(), NU
+      }(), GH
     }
 
-    function PU() {
-      if (null !== tU || 0 === aU.size) return;
-      const UU = new Promise((UU => {
-          tU = UU
+    function VH() {
+      if (null !== WH || 0 === QH.size) return;
+      const HH = new Promise((HH => {
+          WH = HH
         })),
-        XU = `did not answer in ${oU/1e3} s`;
-      (0, AU.l)(UU, oU, XU).then((() => {
-        tU = null, PU()
+        BH = `did not answer in ${zH/1e3} s`;
+      (0, hH.j)(HH, zH, BH).then((() => {
+        WH = null, VH()
       }), (() => {
-        tU = null, BU(XU)
+        WH = null, PH(BH)
       }))
     }
 
-    function WU(UU, XU) {
-      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      UU.postMessage(XU, zU)
+    function OH(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      HH.postMessage(BH, LH)
     }
 
-    function dU(UU, XU, zU, cU) {
-      let yU = XU.get(zU);
-      return void 0 === yU && (yU = cU().then((async XU => {
+    function bH(HH, BH, LH, AH) {
+      let rH = BH.get(LH);
+      return void 0 === rH && (rH = AH().then((async BH => {
         let {
-          image: zU,
-          request: cU
-        } = XU;
+          image: LH,
+          request: AH
+        } = BH;
         try {
-          const XU = await createImageBitmap(zU);
-          WU(UU, cU(XU), [XU])
-        } catch (yU) {
-          BU(`could not take an image (${String(yU)})`)
+          const BH = await createImageBitmap(LH);
+          OH(HH, AH(BH), [BH])
+        } catch (rH) {
+          PH(`could not take an image (${String(rH)})`)
         }
-      })), yU.catch((() => {
-        XU.get(zU) === yU && XU.delete(zU)
-      })), XU.set(zU, yU)), yU
+      })), rH.catch((() => {
+        BH.get(LH) === rH && BH.delete(LH)
+      })), BH.set(LH, rH)), rH
     }
-    async function LU(UU, XU) {
-      RU();
-      const zU = YU;
-      if (null === zU) return null;
-      if (await UU(zU), YU !== zU) return null;
-      const cU = ++pU;
-      return new Promise((UU => {
-        aU.set(cU, UU), WU(zU, XU(cU)), PU()
+    async function kH(HH, BH) {
+      UH();
+      const LH = XH;
+      if (null === LH) return null;
+      if (await HH(LH), XH !== LH) return null;
+      const AH = ++uH;
+      return new Promise((HH => {
+        QH.set(AH, HH), OH(LH, BH(AH)), VH()
       }))
     }
 
-    function eU(UU, XU, zU) {
-      return LU((XU => Promise.all([UU.top, UU.left, UU.right].map((UU => function(UU, XU) {
-        return dU(UU, gU, XU, (async () => ({
-          image: await GU(XU),
-          request: UU => ({
+    function mH(HH, BH, LH) {
+      return kH((BH => Promise.all([HH.top, HH.left, HH.right].map((HH => function(HH, BH) {
+        return bH(HH, MH, BH, (async () => ({
+          image: await vH(BH),
+          request: HH => ({
             type: "texture",
-            url: XU,
-            bitmap: UU
+            url: BH,
+            bitmap: HH
           })
         })))
-      }(XU, UU))))), (cU => ({
+      }(BH, HH))))), (AH => ({
         type: "draw",
-        id: cU,
-        ...UU,
-        size: XU,
-        outlineWidth: zU
+        id: AH,
+        ...HH,
+        size: BH,
+        outlineWidth: LH
       })))
     }
 
-    function CU(UU, XU, zU, cU) {
-      return LU((zU => function(UU, XU, zU) {
-        return dU(UU, kU, XU, (async () => {
+    function oH(HH, BH, LH, AH) {
+      return kH((LH => function(HH, BH, LH) {
+        return bH(HH, xH, BH, (async () => {
           const {
-            texture: UU,
-            ...cU
-          } = await zU();
+            texture: HH,
+            ...AH
+          } = await LH();
           return {
-            image: await GU(UU),
-            request: UU => ({
+            image: await vH(HH),
+            request: HH => ({
               type: "model",
-              name: XU,
-              bitmap: UU,
-              geometry: cU
+              name: BH,
+              bitmap: HH,
+              geometry: AH
             })
           }
         }))
-      }(zU, UU, XU)), (XU => ({
+      }(LH, HH, BH)), (BH => ({
         type: "drawModel",
-        id: XU,
-        name: UU,
-        size: zU,
-        outlineWidth: cU
+        id: BH,
+        name: HH,
+        size: LH,
+        outlineWidth: AH
       })))
     }
   },
-  40488: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => yU
+  40641: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => rH
     });
-    var cU = zU(1974);
+    var AH = LH(1962);
 
-    function yU(UU, XU, zU) {
-      return (0, cU.m)(UU, XU) < zU
+    function rH(HH, BH, LH) {
+      return (0, AH.j)(HH, BH) < LH
     }
   },
-  9287: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => yU
+  9419: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => rH
     });
-    var cU = zU(1272);
+    var AH = LH(1196);
 
-    function yU(UU, XU) {
-      var zU, yU;
+    function rH(HH, BH) {
+      var LH, rH;
       try {
-        const zU = (0, cU.d)();
-        if ("function" === typeof zU) {
-          const cU = new zU(UU, XU);
-          if (cU.type === UU) return cU
+        const LH = (0, AH.d)();
+        if ("function" === typeof LH) {
+          const AH = new LH(HH, BH);
+          if (AH.type === HH) return AH
         }
       } catch {}
-      const QU = document.createEvent("Event");
-      return QU.initEvent(UU, null !== (zU = null === XU || void 0 === XU ? void 0 : XU.bubbles) && void 0 !== zU && zU, null !== (yU = null === XU || void 0 === XU ? void 0 : XU.cancelable) && void 0 !== yU && yU), QU
+      const SH = document.createEvent("Event");
+      return SH.initEvent(HH, null !== (LH = null === BH || void 0 === BH ? void 0 : BH.bubbles) && void 0 !== LH && LH, null !== (rH = null === BH || void 0 === BH ? void 0 : BH.cancelable) && void 0 !== rH && rH), SH
     }
   },
-  39847: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => EU
+  39928: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => EH
     });
-    var cU = zU(1236),
-      yU = zU(1376),
-      QU = zU(27),
-      AU = zU(1349),
-      FU = zU(1360),
-      oU = zU(1568),
-      DU = zU(37181);
+    var AH = LH(1168),
+      rH = LH(1306),
+      SH = LH(15),
+      hH = LH(1287),
+      tH = LH(1297),
+      zH = LH(1509),
+      CH = LH(37345);
 
-    function EU(UU) {
+    function EH(HH) {
       let {
-        nU: XU,
-        mU: zU
-      } = UU;
-      const EU = null !== XU && void 0 !== XU ? XU : (0, FU.b)().gameNameWithVariation;
-      (0, cU.E)(EU) && ((0, DU.l)(), (0, AU.bb)((() => {
-        console.log("Received matchmaking order from game server to game", XU), (0, QU.n)("inGameReplay"), (0, oU.navigatePreserveSearch)((0, yU.b)(EU, null !== zU && void 0 !== zU ? zU : void 0))
+        KL: BH,
+        cL: LH
+      } = HH;
+      const EH = null !== BH && void 0 !== BH ? BH : (0, tH.c)().gameNameWithVariation;
+      (0, AH.J)(EH) && ((0, CH.j)(), (0, hH.ab)((() => {
+        console.log("Received matchmaking order from game server to game", BH), (0, SH.l)("inGameReplay"), (0, zH.navigatePreserveSearch)((0, rH.b)(EH, null !== LH && void 0 !== LH ? LH : void 0))
       }), "video_start"))
     }
   },
-  40039: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => QU
+  40147: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => SH
     });
-    var cU = zU(31),
-      yU = zU(2058);
+    var AH = LH(18),
+      rH = LH(2064);
 
-    function QU(UU) {
-      var XU, zU;
-      const QU = (0, yU.p)(null !== (XU = null === (zU = yU.w.toggleFreeCam) || void 0 === zU ? void 0 : zU[0]) && void 0 !== XU ? XU : null);
-      cU.k.UY("showBottomMessage", {
-        message: `Free Camera ${UU?"Enabled":"Disabled"}${QU?` - Press ${QU} to toggle`:""}`,
+    function SH(HH) {
+      var BH, LH;
+      const SH = (0, rH.p)(null !== (BH = null === (LH = rH.w.toggleFreeCam) || void 0 === LH ? void 0 : LH[0]) && void 0 !== BH ? BH : null);
+      AH.k.AX("showBottomMessage", {
+        message: `Free Camera ${HH?"Enabled":"Disabled"}${SH?` - Press ${SH} to toggle`:""}`,
         timeoutLength: 2e3,
         type: "Warning"
       })
     }
   },
-  39841: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => EU,
-      i: () => oU,
-      j: () => DU,
-      k: () => YU
+  39921: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => EH,
+      f: () => zH,
+      i: () => CH,
+      m: () => XH
     });
-    var cU = zU(2005),
-      yU = zU(31),
-      QU = zU(1410),
-      AU = zU(1274);
-    const FU = new Map;
+    var AH = LH(1998),
+      rH = LH(18),
+      SH = LH(1352),
+      hH = LH(1204);
+    const tH = new Map;
 
-    function oU(UU, XU) {
-      yU.k.UY("newUiRequest", {
-        id: UU,
-        clientParameters: XU
+    function zH(HH, BH) {
+      rH.k.AX("newUiRequest", {
+        id: HH,
+        clientParameters: BH
       }, !0)
     }
 
-    function DU(UU) {
-      yU.k.UY("removeUiRequest", UU, !0);
-      const XU = FU.get(UU);
-      XU && (XU.tearDownNotification(), FU.delete(UU))
+    function CH(HH) {
+      rH.k.AX("removeUiRequest", HH, !0);
+      const BH = tH.get(HH);
+      BH && (BH.tearDownNotification(), tH.delete(HH))
     }
 
-    function EU() {
-      yU.k.UY("clearUiRequests");
-      for (const UU of FU.values()) UU.tearDownNotification();
-      FU.clear()
+    function EH() {
+      rH.k.AX("clearUiRequests");
+      for (const HH of tH.values()) HH.tearDownNotification();
+      tH.clear()
     }
 
-    function YU(UU, XU, zU, yU) {
-      const oU = "string" === typeof XU ? {
-          translationKey: XU
-        } : XU,
-        DU = QU.NotificationProvider.showPromptPopup({
-          title: oU.translationKey,
+    function XH(HH, BH, LH, rH) {
+      const zH = "string" === typeof BH ? {
+          translationKey: BH
+        } : BH,
+        CH = SH.NotificationProvider.showPromptPopup({
+          title: zH.translationKey,
           textOpts: {
-            title: (0, AU.e)(oU.params, cU.gameBridge.latest("hiddenPlayerNames"))
+            title: (0, hH.g)(zH.params, AH.gameBridge.latest("hiddenPlayerNames"))
           },
           confirmText: "general:yes",
           cancelText: "general:no",
-          destructive: zU,
+          destructive: LH,
           unlockPointerKey: "uiRequestPopup"
         });
-      FU.set(UU, DU), DU.getResult().then((XU => {
-        FU.delete(UU), "notificationTornDown" !== XU && yU(XU)
+      tH.set(HH, CH), CH.getResult().then((BH => {
+        tH.delete(HH), "notificationTornDown" !== BH && rH(BH)
       }))
     }
   },
-  40517: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => YU,
-      e: () => NU
+  40677: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => XH,
+      g: () => GH
     });
-    var cU = zU(212),
-      yU = zU(40521);
-    const QU = 20;
+    var AH = LH(176),
+      rH = LH(40679);
+    const SH = 20;
 
-    function AU(UU) {
-      return UU.map(Math.floor).join(" ")
+    function hH(HH) {
+      return HH.map(Math.floor).join(" ")
     }
 
-    function FU(UU) {
-      return null === UU.amount || 1 === UU.amount ? UU.name : `${UU.amount} ${UU.name}`
+    function tH(HH) {
+      return null === HH.amount || 1 === HH.amount ? HH.name : `${HH.amount} ${HH.name}`
     }
-    var oU = zU(40525),
-      DU = zU(2032),
-      EU = zU(1360);
+    var zH = LH(40687),
+      CH = LH(2036),
+      EH = LH(1297);
 
-    function YU(UU, XU) {
-      if (!UU) return oU.b;
-      const zU = UU.playerFeet();
-      if (!zU) return "The player isn't in the world yet, so no blocks can be seen.";
-      const QU = cU.f.aY,
-        AU = (0, yU.j)(null !== XU && void 0 !== XU ? XU : zU, QU),
-        FU = UU.chunkBlocks(AU);
-      return FU ? (0, yU.d)(AU, QU, ((XU, zU, cU) => {
-        const yU = FU(XU, zU, cU);
-        return 0 === yU ? null : UU.blockName(yU).split("|")[0]
-      }), zU) : `The chunk from ${AU.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${zU.map(Math.floor).join(" ")}.`
+    function XH(HH, BH) {
+      if (!HH) return zH.d;
+      const LH = HH.playerFeet();
+      if (!LH) return "The player isn't in the world yet, so no blocks can be seen.";
+      const SH = AH.g.xX,
+        hH = (0, rH.d)(null !== BH && void 0 !== BH ? BH : LH, SH),
+        tH = HH.chunkBlocks(hH);
+      return tH ? (0, rH.b)(hH, SH, ((BH, LH, AH) => {
+        const rH = tH(BH, LH, AH);
+        return 0 === rH ? null : HH.blockName(rH).split("|")[0]
+      }), LH) : `The chunk from ${hH.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${LH.map(Math.floor).join(" ")}.`
     }
 
-    function NU(UU) {
-      var XU, zU, cU;
-      if (!UU) return oU.e;
-      const yU = UU.playerFeet();
-      if (!yU) return "The player isn't in the world yet, so nothing in it can be seen.";
+    function GH(HH) {
+      var BH, LH, AH;
+      if (!HH) return zH.f;
+      const rH = HH.playerFeet();
+      if (!rH) return "The player isn't in the world yet, so nothing in it can be seen.";
       const {
-        slots: YU,
-        heldSlot: NU
-      } = UU.inventory();
-      return function(UU) {
-        const XU = [];
-        null !== UU.game && XU.push(`Game: ${UU.game}.`);
-        const zU = null === UU.health ? "" : `, health ${Math.round(UU.health)}${null===UU.maxHealth?"":` of ${Math.round(UU.maxHealth)}`}`;
-        XU.push(`The player (the creator) stands at ${AU(UU.position)}${zU}, ${UU.creative?"in":"not in"} creative mode.`);
-        const cU = UU.slots[UU.heldSlot];
-        XU.push(cU ? `Holding (slot ${UU.heldSlot}): ${FU(cU)}.` : `Holding nothing (slot ${UU.heldSlot} is empty).`);
-        const yU = UU.slots.flatMap(((UU, XU) => UU ? [`slot ${XU}: ${FU(UU)}`] : []));
-        XU.push(yU.length > 0 ? `Inventory: ${yU.join(", ")}.` : "Inventory: empty.");
-        const oU = XU => Math.hypot(XU.position[0] - UU.position[0], XU.position[1] - UU.position[1], XU.position[2] - UU.position[2]),
-          DU = [...UU.nearby].sort(((UU, XU) => oU(UU) - oU(XU)));
-        if (0 === DU.length) XU.push("No other players or mobs are near enough to see.");
+        slots: XH,
+        heldSlot: GH
+      } = HH.inventory();
+      return function(HH) {
+        const BH = [];
+        null !== HH.game && BH.push(`Game: ${HH.game}.`);
+        const LH = null === HH.health ? "" : `, health ${Math.round(HH.health)}${null===HH.maxHealth?"":` of ${Math.round(HH.maxHealth)}`}`;
+        BH.push(`The player (the creator) stands at ${hH(HH.position)}${LH}, ${HH.creative?"in":"not in"} creative mode.`);
+        const AH = HH.slots[HH.heldSlot];
+        BH.push(AH ? `Holding (slot ${HH.heldSlot}): ${tH(AH)}.` : `Holding nothing (slot ${HH.heldSlot} is empty).`);
+        const rH = HH.slots.flatMap(((HH, BH) => HH ? [`slot ${BH}: ${tH(HH)}`] : []));
+        BH.push(rH.length > 0 ? `Inventory: ${rH.join(", ")}.` : "Inventory: empty.");
+        const zH = BH => Math.hypot(BH.position[0] - HH.position[0], BH.position[1] - HH.position[1], BH.position[2] - HH.position[2]),
+          CH = [...HH.nearby].sort(((HH, BH) => zH(HH) - zH(BH)));
+        if (0 === CH.length) BH.push("No other players or mobs are near enough to see.");
         else {
-          XU.push("Near them, nearest first:");
-          for (const UU of DU.slice(0, QU)) {
-            const zU = "player" === UU.kind ? `player "${UU.name||"?"}"` : UU.name && UU.name !== UU.kind ? `${UU.kind} "${UU.name}"` : UU.kind,
-              cU = Math.round(oU(UU));
-            XU.push(`- ${zU} at ${AU(UU.position)}, ${cU} block${1===cU?"":"s"} away`)
+          BH.push("Near them, nearest first:");
+          for (const HH of CH.slice(0, SH)) {
+            const LH = "player" === HH.kind ? `player "${HH.name||"?"}"` : HH.name && HH.name !== HH.kind ? `${HH.kind} "${HH.name}"` : HH.kind,
+              AH = Math.round(zH(HH));
+            BH.push(`- ${LH} at ${hH(HH.position)}, ${AH} block${1===AH?"":"s"} away`)
           }
-          DU.length > QU && XU.push(`- and ${DU.length-QU} more further away`)
+          CH.length > SH && BH.push(`- and ${CH.length-SH} more further away`)
         }
-        return UU.droppedItems > 0 && XU.push(`${UU.droppedItems} dropped item${1===UU.droppedItems?" is":"s are"} on the ground nearby.`), XU.join("\n")
+        return HH.droppedItems > 0 && BH.push(`${HH.droppedItems} dropped item${1===HH.droppedItems?" is":"s are"} on the ground nearby.`), BH.join("\n")
       }({
-        game: null !== (XU = (0, EU.b)().gameNameWithVariation) && void 0 !== XU ? XU : null,
-        position: yU,
-        health: null !== (zU = DU.d.get("_health")) && void 0 !== zU ? zU : null,
-        maxHealth: null !== (cU = DU.d.get("_totalMaxHealth")) && void 0 !== cU ? cU : null,
-        creative: !0 === DU.d.get("creative"),
-        heldSlot: NU,
-        slots: YU,
-        nearby: UU.nearby(),
-        droppedItems: UU.droppedItems()
+        game: null !== (BH = (0, EH.c)().gameNameWithVariation) && void 0 !== BH ? BH : null,
+        position: rH,
+        health: null !== (LH = CH.e.get("_health")) && void 0 !== LH ? LH : null,
+        maxHealth: null !== (AH = CH.e.get("_totalMaxHealth")) && void 0 !== AH ? AH : null,
+        creative: !0 === CH.e.get("creative"),
+        heldSlot: GH,
+        slots: XH,
+        nearby: HH.nearby(),
+        droppedItems: HH.droppedItems()
       })
     }
   },
-  41976: (UU, XU, zU) => {
-    zU.d(XU, {
-      A: () => KU,
-      B: () => fU,
-      F: () => wU,
-      H: () => uU,
-      J: () => CU,
-      N: () => mU,
-      P: () => nU,
-      Q: () => OU,
-      b: () => lU,
-      c: () => HU,
-      g: () => LU,
-      h: () => xU,
-      k: () => eU,
-      o: () => dU,
-      p: () => iU,
-      s: () => qU,
-      w: () => rU,
-      x: () => SU
+  42192: (HH, BH, LH) => {
+    LH.d(BH, {
+      B: () => JH,
+      E: () => qH,
+      F: () => IH,
+      G: () => eH,
+      J: () => oH,
+      N: () => wH,
+      P: () => DH,
+      S: () => lH,
+      d: () => ZH,
+      f: () => NH,
+      g: () => kH,
+      i: () => dH,
+      k: () => mH,
+      o: () => bH,
+      q: () => gH,
+      r: () => fH,
+      u: () => cH,
+      x: () => KH
     });
-    var cU = zU(1444),
-      yU = zU(31),
-      QU = zU(1310),
-      AU = zU(2580),
-      FU = zU(5342),
-      oU = zU(5312);
-    let DU, EU = !1,
-      YU = !1,
-      NU = !1,
-      IU = !1;
-    const pU = 1300,
-      aU = 3e3;
-    let tU = 0,
-      gU = !1,
-      kU = !1,
-      GU = 0;
-    const BU = 2;
-    let ZU = !1,
-      RU = !1;
-    const PU = new Set,
-      WU = new Set;
+    var AH = LH(1390),
+      rH = LH(18),
+      SH = LH(1241),
+      hH = LH(2600),
+      tH = LH(5288),
+      zH = LH(5255);
+    let CH, EH = !1,
+      XH = !1,
+      GH = !1,
+      YH = !1;
+    const uH = 1300,
+      QH = 3e3;
+    let WH = 0,
+      MH = !1,
+      xH = !1,
+      vH = 0;
+    const PH = 2;
+    let TH = !1,
+      UH = !1;
+    const VH = new Set,
+      OH = new Set;
 
-    function dU() {
-      return EU
+    function bH() {
+      return EH
     }
 
-    function LU() {
-      return kU
+    function kH() {
+      return xH
     }
 
-    function eU() {
-      return RU
+    function mH() {
+      return UH
     }
 
-    function CU() {
-      return (0, QU.w)() && !RU
+    function oH() {
+      return (0, SH.A)() && !UH
     }
 
-    function wU(UU) {
-      let XU = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (UU !== RU) {
-        RU = UU;
-        for (const UU of [...WU]) UU(RU);
-        XU && nU()
+    function IH(HH) {
+      let BH = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (HH !== UH) {
+        UH = HH;
+        for (const HH of [...OH]) HH(UH);
+        BH && DH()
       }
     }
 
-    function qU(UU) {
-      return WU.add(UU), () => {
-        WU.delete(UU)
+    function fH(HH) {
+      return OH.add(HH), () => {
+        OH.delete(HH)
       }
     }
 
-    function OU() {
-      (0, FU.f)(AU.F.Menu, (0, QU.w)() ? 0 : AU.F.Menu)
+    function lH() {
+      (0, tH.k)(hH.w.Menu, (0, SH.A)() ? 0 : hH.w.Menu)
     }
 
-    function SU() {
-      kU = !1, GU = 0, OU(), nU()
+    function KH() {
+      xH = !1, vH = 0, lH(), DH()
     }
 
-    function rU(UU) {
-      return PU.add(UU), () => {
-        PU.delete(UU)
+    function cH(HH) {
+      return VH.add(HH), () => {
+        VH.delete(HH)
       }
     }
 
-    function uU(UU) {
-      YU = !1, UU !== EU && (EU = UU, IU = !1, clearTimeout(DU), NU = !EU && ZU, EU ? (gU = !1, kU = !1, GU = 0) : CU() && !ZU && (kU = !0), ZU = !1, EU && !CU() && jU(), bU(), NU && nU())
+    function eH(HH) {
+      XH = !1, HH !== EH && (EH = HH, YH = !1, clearTimeout(CH), GH = !EH && TH, EH ? (MH = !1, xH = !1, vH = 0) : oH() && !TH && (xH = !0), TH = !1, EH && !oH() && sH(), iH(), GH && DH())
     }
 
-    function fU(UU) {
-      UU !== gU && (gU = UU, UU || nU())
+    function qH(HH) {
+      HH !== MH && (MH = HH, HH || DH())
     }
 
-    function iU() {
-      YU = !1, IU || !0 !== VU() || (IU = !0, clearTimeout(DU), DU = setTimeout(MU, pU))
+    function gH() {
+      XH = !1, YH || !0 !== nH() || (YH = !0, clearTimeout(CH), CH = setTimeout(RH, uH))
     }
 
-    function HU() {
-      return (!YU || performance.now() - tU > aU) && (YU = (0, oU.H)().lockPointer(), tU = performance.now()), YU
+    function NH() {
+      return (!XH || performance.now() - WH > QH) && (XH = (0, zH.L)().lockPointer(), WH = performance.now()), XH
     }
 
-    function MU() {
-      vU() && sU() && HU()
+    function RH() {
+      jH() && FH() && NH()
     }
 
-    function vU() {
-      return CU() && !EU && !gU && !(0, cU.n)()
+    function jH() {
+      return oH() && !EH && !MH && !(0, AH.m)()
     }
 
-    function VU() {
-      var UU;
-      return "undefined" === typeof navigator || null === (UU = navigator.userActivation) || void 0 === UU ? void 0 : UU.isActive
+    function nH() {
+      var HH;
+      return "undefined" === typeof navigator || null === (HH = navigator.userActivation) || void 0 === HH ? void 0 : HH.isActive
     }
 
-    function sU() {
-      return NU && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== VU()
+    function FH() {
+      return GH && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== nH()
     }
 
-    function nU() {
-      CU() ? vU() && !kU && sU() && HU() : EU && !ZU && jU()
+    function DH() {
+      oH() ? jH() && !xH && FH() && NH() : EH && !TH && sH()
     }
 
-    function mU() {
-      kU ? navigator.vendor.startsWith("Apple") ? JU() : GU = BU : nU()
+    function wH() {
+      xH ? navigator.vendor.startsWith("Apple") ? aH() : vH = PH : DH()
     }
 
-    function lU() {
-      GU > 0 && 0 === --GU && JU()
+    function ZH() {
+      vH > 0 && 0 === --vH && aH()
     }
 
-    function xU() {
-      GU = 0
+    function dH() {
+      vH = 0
     }
 
-    function JU() {
-      vU() && !0 === VU() && HU()
+    function aH() {
+      jH() && !0 === nH() && NH()
     }
 
-    function jU() {
-      ZU = !0, (0, oU.H)().unlockPointer()
+    function sH() {
+      TH = !0, (0, zH.L)().unlockPointer()
     }
 
-    function KU() {
-      YU = !1, NU = !1, IU = !1, clearTimeout(DU), gU = !1, kU = !1, GU = 0, ZU = !1;
-      const UU = EU;
-      EU = !1, UU && bU()
+    function JH() {
+      XH = !1, GH = !1, YH = !1, clearTimeout(CH), MH = !1, xH = !1, vH = 0, TH = !1;
+      const HH = EH;
+      EH = !1, HH && iH()
     }
 
-    function bU() {
-      for (const UU of [...PU]) UU(EU);
-      yU.k.UY("pointerLockUpdate", EU)
+    function iH() {
+      for (const HH of [...VH]) HH(EH);
+      rH.k.AX("pointerLockUpdate", EH)
     }
   },
-  41742: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => NU,
-      f: () => FU,
-      h: () => YU,
-      l: () => DU,
-      m: () => AU,
-      o: () => EU,
-      r: () => oU
+  42002: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => GH,
+      g: () => tH,
+      j: () => XH,
+      n: () => CH,
+      p: () => hH,
+      r: () => EH,
+      t: () => zH
     });
-    let cU = null,
-      yU = null,
-      QU = null;
+    let AH = null,
+      rH = null,
+      SH = null;
 
-    function AU(UU) {
-      cU = UU
+    function hH(HH) {
+      AH = HH
     }
 
-    function FU() {
-      return cU
+    function tH() {
+      return AH
     }
 
-    function oU(UU) {
-      yU = UU
+    function zH(HH) {
+      rH = HH
     }
 
-    function DU() {
-      return yU
+    function CH() {
+      return rH
     }
 
-    function EU(UU) {
-      QU = UU
+    function EH(HH) {
+      SH = HH
     }
 
-    function YU() {
-      return QU
+    function XH() {
+      return SH
     }
 
-    function NU() {
-      var UU, XU;
-      return !0 === (null === (UU = yU) || void 0 === UU || null === (XU = UU.currentViewer) || void 0 === XU ? void 0 : XU.inPlayback)
+    function GH() {
+      var HH, BH;
+      return !0 === (null === (HH = rH) || void 0 === HH || null === (BH = HH.currentViewer) || void 0 === BH ? void 0 : BH.inPlayback)
     }
   },
-  42104: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      attachPlayGameSources: () => lc,
-      playGameSources: () => mc
+  42318: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      attachPlayGameSources: () => ZA,
+      playGameSources: () => wA
     });
-    var cU = zU(2005),
-      yU = zU(41742),
-      QU = zU(5312),
-      AU = zU(41660),
-      FU = zU(42091),
-      oU = zU(40496),
-      DU = zU(31),
-      EU = zU(5326),
-      YU = zU(5318),
-      NU = zU(41685),
-      IU = zU(41717),
-      pU = zU(42112),
-      aU = zU(41695);
-    (0, aU.m)(EU.oc.Chat, (UU => {
-      if (UU.payloadKind !== YU.jc.Msgpack) return;
-      const XU = function(UU) {
-        if (null === UU || "object" !== typeof UU || !("content" in UU)) return null;
+    var AH = LH(1998),
+      rH = LH(42002),
+      SH = LH(5255),
+      hH = LH(41911),
+      tH = LH(42304),
+      zH = LH(40649),
+      CH = LH(18),
+      EH = LH(5268),
+      XH = LH(5265),
+      GH = LH(41946),
+      YH = LH(41972),
+      uH = LH(42327),
+      QH = LH(41954);
+    (0, QH.k)(EH.nc.Chat, (HH => {
+      if (HH.payloadKind !== XH.jc.Msgpack) return;
+      const BH = function(HH) {
+        if (null === HH || "object" !== typeof HH || !("content" in HH)) return null;
         const {
-          chatMsgId: XU,
-          worldCodeLineId: zU,
-          content: cU,
-          chatterEId: yU,
-          chatterObjectsToReplay: QU
-        } = UU;
+          chatMsgId: BH,
+          worldCodeLineId: LH,
+          content: AH,
+          chatterEId: rH,
+          chatterObjectsToReplay: SH
+        } = HH;
         return {
-          serverChatMsgId: null !== XU && void 0 !== XU ? XU : void 0,
-          worldCodeLineId: null !== zU && void 0 !== zU ? zU : void 0,
-          content: cU,
-          chatterEId: void 0 === yU || null === yU ? void 0 : String(yU),
-          chatterObjectsToReplay: QU
+          serverChatMsgId: null !== BH && void 0 !== BH ? BH : void 0,
+          worldCodeLineId: null !== LH && void 0 !== LH ? LH : void 0,
+          content: AH,
+          chatterEId: void 0 === rH || null === rH ? void 0 : String(rH),
+          chatterObjectsToReplay: SH
         }
-      }((0, NU.d)(UU.payload));
-      null !== XU && DU.k.UY("chat", XU, !0)
-    }));
-    const tU = {
-        chatReceived: (0, oU.j)((function(UU) {
-          var XU, zU, cU;
-          return {
-            id: UU,
-            name: null !== (XU = pU.d.getName(UU)) && void 0 !== XU ? XU : null,
-            local: (0, IU.d)() === UU,
-            profileEffect: null !== (zU = null === (cU = (0, pU.g)(UU)) || void 0 === cU ? void 0 : cU.profileEffect) && void 0 !== zU ? zU : null
-          }
-        }))
-      },
-      gU = {
-        sendChatMessage(UU) {
-          var XU, zU;
-          let {
-            TE: cU,
-            channelName: yU
-          } = UU;
-          return null !== (XU = null === (zU = (0, AU.f)()) || void 0 === zU ? void 0 : zU.clientApi.sendChat(cU, yU)) && void 0 !== XU && XU
-        }
-      };
-    var kU = zU(212),
-      GU = zU(2032),
-      BU = zU(41652),
-      ZU = zU(40488);
-    const RU = [0, 0, 0],
-      PU = {
-        codeBlockClickable(UU) {
-          var XU;
-          const zU = (0, AU.f)();
-          if (null === zU || void 0 === zU || !zU.isSessionLive) return !1;
-          const cU = zU.api;
-          if (0 !== (BU.w.playerFlags(cU.apiView, 0) & BU.Od.Crouching)) return !1;
-          const yU = cU.queries.directorEntity(cU.localId) >= BU.wb.BYTES ? cU.memoryData(cU.scratch(), BU.wb.BYTES, 8, "the local player's DirectorEntity") : null;
-          if (null === yU) return !1;
-          for (let QU = 0; QU < 3; QU++) RU[QU] = BU.wb.feet(yU, 0, QU);
-          return RU[1] += BU.wb.eyeHeight(yU, 0), (0, ZU.c)(RU, UU, null !== (XU = GU.d.get("blockReach")) && void 0 !== XU ? XU : kU.f.Qg)
-        }
-      },
-      WU = {
-        clickCodeBlock(UU) {
-          var XU;
-          null === (XU = (0, AU.f)()) || void 0 === XU || XU.clickCodeBlock(UU)
-        }
-      };
-    var dU = zU(41670),
-      LU = zU(42121),
-      eU = zU(1079),
-      CU = zU(39861),
-      wU = zU(5303),
-      qU = zU(41676),
-      OU = zU(41667),
-      SU = zU(41680);
-
-    function rU(UU) {
-      if (null === UU) return null;
-      const XU = [];
-      for (const zU of UU) {
-        const UU = Object.keys(zU)[0];
-        if ("VX" === UU) {
-          const {
-            str: UU,
-            style: cU,
-            clickableUrl: yU
-          } = zU.VX, QU = Object.keys(UU)[0], AU = UU[QU];
-          "string" !== QU && "styledEntityName" !== QU && "styledTranslatedText" !== QU || XU.push({
-            str: AU,
-            style: cU,
-            clickableUrl: yU
-          })
-        } else XU.push(zU[UU])
+      }((0, GH.e)(HH.payload));
+      null !== BH && CH.k.AX("chat", BH, !0)
+    })), (0, QH.k)(EH.nc.ChatRemoved, (HH => {
+      if (HH.payloadKind === XH.jc.Msgpack) {
+        const {
+          chatMsgId: BH
+        } = (0, GH.e)(HH.payload);
+        CH.k.AX("chatRemoved", BH, !0)
       }
-      return XU
+    }));
+    const WH = {
+        chatReceived: (0, zH.l)((function(HH) {
+          var BH, LH, AH;
+          return {
+            id: HH,
+            name: null !== (BH = uH.f.getName(HH)) && void 0 !== BH ? BH : null,
+            local: (0, YH.f)() === HH,
+            profileEffect: null !== (LH = null === (AH = (0, uH.j)(HH)) || void 0 === AH ? void 0 : AH.profileEffect) && void 0 !== LH ? LH : null
+          }
+        })),
+        chatRemoved: zH.m
+      },
+      MH = {
+        sendChatMessage(HH) {
+          var BH, LH;
+          let {
+            kt: AH,
+            channelName: rH
+          } = HH;
+          return null !== (BH = null === (LH = (0, hH.i)()) || void 0 === LH ? void 0 : LH.clientApi.sendChat(AH, rH)) && void 0 !== BH && BH
+        }
+      };
+    var xH = LH(176),
+      vH = LH(2036),
+      PH = LH(41898),
+      TH = LH(40641);
+    const UH = [0, 0, 0],
+      VH = {
+        codeBlockClickable(HH) {
+          var BH;
+          const LH = (0, hH.i)();
+          if (null === LH || void 0 === LH || !LH.isSessionLive) return !1;
+          const AH = LH.api;
+          if (0 !== (PH.y.playerFlags(AH.apiView, 0) & PH.Md.Crouching)) return !1;
+          const rH = AH.queries.directorEntity(AH.localId) >= PH.vb.BYTES ? AH.memoryData(AH.scratch(), PH.vb.BYTES, 8, "the local player's DirectorEntity") : null;
+          if (null === rH) return !1;
+          for (let SH = 0; SH < 3; SH++) UH[SH] = PH.vb.feet(rH, 0, SH);
+          return UH[1] += PH.vb.eyeHeight(rH, 0), (0, TH.c)(UH, HH, null !== (BH = vH.e.get("blockReach")) && void 0 !== BH ? BH : xH.g.yW)
+        }
+      },
+      OH = {
+        clickCodeBlock(HH) {
+          var BH;
+          null === (BH = (0, hH.i)()) || void 0 === BH || BH.clickCodeBlock(HH)
+        }
+      };
+    var bH = LH(41922),
+      kH = LH(42330),
+      mH = LH(1005),
+      oH = LH(39948),
+      IH = LH(5253),
+      fH = LH(41933),
+      lH = LH(41920),
+      KH = LH(41940);
+
+    function cH(HH) {
+      if (null === HH) return null;
+      const BH = [];
+      for (const LH of HH) {
+        const HH = Object.keys(LH)[0];
+        if ("wH" === HH) {
+          const {
+            str: HH,
+            style: AH,
+            clickableUrl: rH
+          } = LH.wH, SH = Object.keys(HH)[0], hH = HH[SH];
+          "string" !== SH && "styledEntityName" !== SH && "styledTranslatedText" !== SH || BH.push({
+            str: hH,
+            style: AH,
+            clickableUrl: rH
+          })
+        } else BH.push(LH[HH])
+      }
+      return BH
     }
-    const uU = {
-      screenPos(UU) {
-        var XU, zU;
-        return null !== (XU = null === (zU = (0, AU.f)()) || void 0 === zU ? void 0 : zU.renderFrame.projectWorldPosToScreenPos(UU)) && void 0 !== XU ? XU : {
+    const eH = {
+      screenPos(HH) {
+        var BH, LH;
+        return null !== (BH = null === (LH = (0, hH.i)()) || void 0 === LH ? void 0 : LH.renderFrame.projectWorldPosToScreenPos(HH)) && void 0 !== BH ? BH : {
           x: 0,
           y: 0
         }
       }
     };
-    let fU = !1;
+    let qH = !1;
 
-    function iU() {
-      fU || (fU = !0, (0, aU.m)(EU.oc.ProgressBarUpdate, (UU => {
-        const XU = (0, SU.f)(UU);
-        (0, SU.b)(XU) && DU.k.UY("progressBarUpdate", XU, !0)
-      })), (0, aU.m)(qU.y, (UU => {
-        const XU = (0, SU.d)(qU.y, UU);
-        XU && DU.k.UY("middleScreenBarInitiate", {
-          duration: XU.Mc,
-          vc: XU.vc,
-          horizBarRemOffset: XU.Vc
+    function gH() {
+      qH || (qH = !0, (0, QH.k)(EH.nc.ProgressBarUpdate, (HH => {
+        const BH = (0, KH.i)(HH);
+        (0, KH.c)(BH) && CH.k.AX("progressBarUpdate", BH, !0)
+      })), (0, QH.k)(fH.u, (HH => {
+        const BH = (0, KH.f)(fH.u, HH);
+        BH && CH.k.AX("middleScreenBarInitiate", {
+          duration: BH.gS,
+          NS: BH.NS,
+          horizBarRemOffset: BH.RS
         }, !0)
-      })), (0, aU.m)(EU.oc.RemoveMiddleScreenBar, (() => {
-        DU.k.UY("middleScreenBarRemove")
-      })), (0, aU.m)(qU.$, (UU => {
-        const XU = (0, SU.d)(qU.$, UU);
-        if (XU) {
-          var zU;
-          const UU = XU.iU ? null === (zU = (0, AU.f)()) || void 0 === zU ? void 0 : zU.renderFrame.projectDirectionToScreenPos(XU.iU) : void 0;
-          DU.k.UY("sendHitmarker", {
-            yX: XU.yX,
-            screenPos: UU
+      })), (0, QH.k)(EH.nc.RemoveMiddleScreenBar, (() => {
+        CH.k.AX("middleScreenBarRemove")
+      })), (0, QH.k)(fH.$, (HH => {
+        const BH = (0, KH.f)(fH.$, HH);
+        if (BH) {
+          var LH;
+          const HH = BH.QA ? null === (LH = (0, hH.i)()) || void 0 === LH ? void 0 : LH.renderFrame.projectDirectionToScreenPos(BH.QA) : void 0;
+          CH.k.AX("sendHitmarker", {
+            aA: BH.aA,
+            screenPos: HH
           }, !0)
         }
-      })), (0, aU.m)(qU.eb, (UU => {
-        const XU = (0, SU.d)(qU.eb, UU);
-        if (XU) {
+      })), (0, QH.k)(fH.db, (HH => {
+        const BH = (0, KH.f)(fH.db, HH);
+        if (BH) {
           const {
-            id: UU,
-            position: zU,
-            style: cU,
-            Pc: yU,
-            dc: QU
-          } = XU;
-          DU.k.UY("setDirectionArrow", {
-            id: UU,
-            position: zU,
-            style: cU,
-            text: rU(yU),
-            dc: QU
+            id: HH,
+            position: LH,
+            style: AH,
+            KA: rH,
+            eA: SH
+          } = BH;
+          CH.k.AX("setDirectionArrow", {
+            id: HH,
+            position: LH,
+            style: AH,
+            text: cH(rH),
+            eA: SH
           }, !0)
         }
-      })), (0, aU.m)(qU.g, (UU => {
-        const XU = (0, SU.d)(qU.g, UU);
-        XU && DU.k.UY("clearDirectionArrow", {
-          id: XU.id
+      })), (0, QH.k)(fH.e, (HH => {
+        const BH = (0, KH.f)(fH.e, HH);
+        BH && CH.k.AX("clearDirectionArrow", {
+          id: BH.id
         }, !0)
-      })), (0, aU.m)(qU.p, (UU => {
-        const XU = (0, SU.d)(qU.p, UU);
-        XU && DU.k.UY("flyingMiddleMessage", {
-          content: rU(XU.vX),
-          nX: XU.nX,
-          mX: XU.mX
+      })), (0, QH.k)(fH.l, (HH => {
+        const BH = (0, KH.f)(fH.l, HH);
+        BH && CH.k.AX("flyingMiddleMessage", {
+          content: cH(BH.Zr),
+          dr: BH.dr,
+          ar: BH.ar
         }, !0)
-      })), (0, aU.m)(EU.oc.WorldVariation, (UU => {
-        const XU = (0, SU.f)(UU);
-        if ("string" === typeof XU) {
-          const UU = XU === eU.e ? null : {
-            message: `Currently loaded as variation: ${XU}`,
+      })), (0, QH.k)(EH.nc.WorldVariation, (HH => {
+        const BH = (0, KH.i)(HH);
+        if ("string" === typeof BH) {
+          const HH = BH === mH.g ? null : {
+            message: `Currently loaded as variation: ${BH}`,
             type: "Warning"
           };
-          DU.k.UY("showPermanentBottomMessage", UU, !0)
+          CH.k.AX("showPermanentBottomMessage", HH, !0)
         }
-      })), (0, aU.m)(qU.I, (UU => {
-        const XU = (0, SU.d)(qU.I, UU);
-        XU && function(UU, XU) {
+      })), (0, QH.k)(fH.F, (HH => {
+        const BH = (0, KH.f)(fH.F, HH);
+        BH && function(HH, BH) {
           const {
-            type: zU,
-            params: cU
-          } = (0, CU.g)(XU), yU = {
-            ...cU
+            type: LH,
+            params: AH
+          } = (0, oH.d)(BH), rH = {
+            ...AH
           };
-          for (const QU of CU.d) yU[QU] && (yU[QU] = rU(yU[QU]));
-          wU.e.queueQTE(UU, zU, yU).getResult().then((XU => {
-            var zU;
-            "boolean" === typeof XU && (null === (zU = (0, AU.f)()) || void 0 === zU || zU.send(OU.b.QteResponse, {
-              qteId: UU,
-              qteResponse: XU
+          for (const SH of oH.c) rH[SH] && (rH[SH] = cH(rH[SH]));
+          IH.d.queueQTE(HH, LH, rH).getResult().then((BH => {
+            var LH;
+            "boolean" === typeof BH && (null === (LH = (0, hH.i)()) || void 0 === LH || LH.send(lH.d.QteResponse, {
+              qteId: HH,
+              qteResponse: BH
             }))
           }))
-        }(XU.id, XU.Cz)
-      })), (0, aU.m)(qU.U, (UU => {
-        const XU = (0, SU.d)(qU.U, UU);
-        "number" === typeof XU && wU.e.cancelQTE(XU)
-      })), (0, aU.e)((() => {
-        wU.e.reset()
-      })), (0, aU.i)((() => {
-        wU.e.reset()
-      })), (0, aU.m)(EU.oc.EditItemCraftingRecipes, (UU => {
-        const XU = (0, SU.f)(UU);
-        (0, SU.b)(XU) && DU.k.UY("craftingRecipesEdited", {
-          itemName: XU.craftingRecipeItemName,
-          recipesForItem: XU.recipesForItem
+        }(BH.id, BH.qH)
+      })), (0, QH.k)(fH.U, (HH => {
+        const BH = (0, KH.f)(fH.U, HH);
+        "number" === typeof BH && IH.d.cancelQTE(BH)
+      })), (0, QH.g)((() => {
+        IH.d.reset()
+      })), (0, QH.j)((() => {
+        IH.d.reset()
+      })), (0, QH.k)(EH.nc.EditItemCraftingRecipes, (HH => {
+        const BH = (0, KH.i)(HH);
+        (0, KH.c)(BH) && CH.k.AX("craftingRecipesEdited", {
+          itemName: BH.craftingRecipeItemName,
+          recipesForItem: BH.recipesForItem
         })
-      })), (0, aU.m)(qU.S, (UU => {
-        const XU = (0, SU.d)(qU.S, UU);
-        XU && DU.k.UY("craftingRecipesEdited", {
-          itemName: XU.DU,
+      })), (0, QH.k)(fH.R, (HH => {
+        const BH = (0, KH.f)(fH.R, HH);
+        BH && CH.k.AX("craftingRecipesEdited", {
+          itemName: BH.kA,
           recipesForItem: []
         })
       })))
     }
-    var HU = zU(27);
-    const MU = [{
+    var NH = LH(15);
+    const RH = [{
       allowed: !1,
       movesFly: !1
     }, {
@@ -1155,1646 +1165,1646 @@ export const modules = {
       movesFly: !0
     }];
 
-    function vU(UU) {
-      return BU.w.playerFlags(UU.api.apiView, 0)
+    function jH(HH) {
+      return PH.y.playerFlags(HH.api.apiView, 0)
     }
-    const VU = {
-        freeCamera: (0, IU.c)((UU => () => {
-          const XU = UU.isSessionLive && 0 !== (vU(UU) & BU.Od.FreeCamMoves),
-            zU = UU.freeCameraAllowed() && null === HU.e.get("scriptedCameraFacing");
-          return MU[(zU ? 2 : 0) + (XU ? 1 : 0)]
-        }), MU[0], (UU => (0, QU.r)(UU)))
+    const nH = {
+        freeCamera: (0, YH.c)((HH => () => {
+          const BH = HH.isSessionLive && 0 !== (jH(HH) & PH.Md.FreeCamMoves),
+            LH = HH.freeCameraAllowed() && null === NH.c.get("scriptedCameraFacing");
+          return RH[(LH ? 2 : 0) + (BH ? 1 : 0)]
+        }), RH[0], (HH => (0, SH.r)(HH)))
       },
-      sU = {
-        setFreeCameraMovesFly: UU => {
-          var XU;
-          null === (XU = (0, AU.f)()) || void 0 === XU || XU.setFreeCameraMovesFly(UU)
+      FH = {
+        setFreeCameraMovesFly: HH => {
+          var BH;
+          null === (BH = (0, hH.i)()) || void 0 === BH || BH.setFreeCameraMovesFly(HH)
         }
       },
-      nU = {
+      DH = {
         freeCameraPos: () => {
-          const UU = (0, AU.f)();
-          return null !== UU && void 0 !== UU && UU.isSessionLive && UU.renderFrame.hasView && 0 !== (vU(UU) & BU.Od.FreeCam) ? UU.renderFrame.cameraPosition : null
+          const HH = (0, hH.i)();
+          return null !== HH && void 0 !== HH && HH.isSessionLive && HH.renderFrame.hasView && 0 !== (jH(HH) & PH.Md.FreeCam) ? HH.renderFrame.cameraPosition : null
         }
       };
-    var mU = zU(40039);
-    let lU = !1,
-      xU = !1;
+    var wH = LH(40147);
+    let ZH = !1,
+      dH = !1;
 
-    function JU() {
-      const UU = (0, AU.f)();
-      if (null === UU || void 0 === UU || !UU.isSessionLive) return void(lU = !1);
-      const XU = 0 !== (BU.w.playerFlags(UU.api.apiView, 0) & BU.Od.FreeCam);
-      XU !== lU && (lU = XU, (0, mU.e)(XU))
+    function aH() {
+      const HH = (0, hH.i)();
+      if (null === HH || void 0 === HH || !HH.isSessionLive) return void(ZH = !1);
+      const BH = 0 !== (PH.y.playerFlags(HH.api.apiView, 0) & PH.Md.FreeCam);
+      BH !== ZH && (ZH = BH, (0, wH.b)(BH))
     }
-    var jU = zU(344),
-      KU = zU(37756),
-      bU = zU(2044);
-    var TU = zU(42125),
-      hU = zU(41708);
-    const UX = {
+    var sH = LH(317),
+      JH = LH(37912),
+      iH = LH(2045);
+    var pH = LH(42337),
+      yH = LH(41968);
+    const HB = {
       interactPrompt: null,
       blockText: null,
       neededTool: null
     };
-    let XX = "off";
+    let BB = "off";
 
-    function zX(UU) {
-      var XU;
-      return null === UU ? null : {
-        label: null !== (XU = (0, TU.b)(UU, "interactionPrompt")) && void 0 !== XU ? XU : null
+    function LB(HH) {
+      var BH;
+      return null === HH ? null : {
+        label: null !== (BH = (0, pH.d)(HH, "interactionPrompt")) && void 0 !== BH ? BH : null
       }
     }
-    const cX = new Map([
-      [BU.zc.Open, {
-        label: oU.f.open
+    const AB = new Map([
+      [PH.Ac.Open, {
+        label: zH.i.open
       }],
-      [BU.zc.Close, {
-        label: oU.f.close
+      [PH.Ac.Close, {
+        label: zH.i.close
       }],
-      [BU.zc.Milk, {
-        label: oU.f.milk
+      [PH.Ac.Milk, {
+        label: zH.i.milk
       }],
-      [BU.zc.Shear, {
-        label: oU.f.shear
+      [PH.Ac.Shear, {
+        label: zH.i.shear
       }],
-      [BU.zc.Tame, {
-        label: oU.f.tame
+      [PH.Ac.Tame, {
+        label: zH.i.tame
       }],
-      [BU.zc.Feed, {
-        label: oU.f.feed
+      [PH.Ac.Feed, {
+        label: zH.i.feed
       }],
-      [BU.zc.Ride, {
-        label: oU.f.ride
+      [PH.Ac.Ride, {
+        label: zH.i.ride
       }]
     ]);
-    class yX {
+    class rB {
       constructor() {
-        this.target = UX, this.yF = BU.cd, this.optionName = null, this.pickaxe = new oU.b
+        this.target = HB, this.ph = PH.cd, this.optionName = null, this.pickaxe = new zH.e
       }
-      read(UU) {
-        var XU;
-        const zU = BU.w.targetBlockId(UU.api.apiView, 0);
-        zU !== this.yF && (this.yF = zU, this.optionName = zU === BU.cd ? null : `${UU.tables.getMetaInfo(zU).rootName}CrosshairText`);
-        const cU = null === this.optionName ? null : null !== (XU = UU.tables.getClientOption(this.optionName)) && void 0 !== XU ? XU : null;
-        this.pickaxe.update(function(UU, XU) {
-          var zU, cU, yU;
-          if (0 === (BU.w.playerFlags(UU.api.apiView, 0) & BU.Od.Breaking) || XU === BU.cd || 0 === XU) return null;
+      read(HH) {
+        var BH;
+        const LH = PH.y.targetBlockId(HH.api.apiView, 0);
+        LH !== this.ph && (this.ph = LH, this.optionName = LH === PH.cd ? null : `${HH.tables.getMetaInfo(LH).rootName}CrosshairText`);
+        const AH = null === this.optionName ? null : null !== (BH = HH.tables.getClientOption(this.optionName)) && void 0 !== BH ? BH : null;
+        this.pickaxe.update(function(HH, BH) {
+          var LH, AH, rH;
+          if (0 === (PH.y.playerFlags(HH.api.apiView, 0) & PH.Md.Breaking) || BH === PH.cd || 0 === BH) return null;
           const {
-            tables: QU
-          } = UU;
-          if (!0 === QU.getClientOption("creative")) return null;
-          const AU = QU.nameOfId(XU),
-            FU = null === (zU = UU.items.uD()) || void 0 === zU ? void 0 : zU.name,
-            oU = null !== (cU = QU.getItemStat(AU, "harvestLevel")) && void 0 !== cU ? cU : 0;
-          return (0, jU.Ic)({
-            blockHarvestType: QU.getDefaultItemStat(AU, "harvestType"),
-            blockHarvestLevel: QU.getDefaultItemStat(AU, "harvestLevel"),
-            harvestLevel: oU,
-            heldToolType: void 0 === FU ? void 0 : QU.getDefaultItemStat(FU, "harvests"),
-            heldToolLevel: void 0 === FU ? void 0 : QU.getDefaultItemStat(FU, "level")
-          }) && null !== (yU = KU.r[oU]) && void 0 !== yU ? yU : null
-        }(UU, zU)), UU.watchPromptPick(XX);
-        const yU = "touch" === XX ? function(UU) {
-          var XU;
-          const zU = UU.interactLabel;
-          return zU === BU.zc.Entity ? zX(UU.promptEntity) : zU === BU.zc.TameWith ? {
-            label: (0, oU.u)(UU.tables.nameOfId(UU.interactIcon))
-          } : null !== (XU = cX.get(zU)) && void 0 !== XU ? XU : null
-        }(UU) : zX(UU.promptEntity);
-        return this.target = (0, bU.q)(this.target, {
-          interactPrompt: yU,
-          blockText: cU,
+            tables: SH
+          } = HH;
+          if (!0 === SH.getClientOption("creative")) return null;
+          const hH = SH.nameOfId(BH),
+            tH = null === (LH = HH.items.LX()) || void 0 === LH ? void 0 : LH.name,
+            zH = null !== (AH = SH.getItemStat(hH, "harvestLevel")) && void 0 !== AH ? AH : 0;
+          return (0, sH.Gc)({
+            blockHarvestType: SH.getDefaultItemStat(hH, "harvestType"),
+            blockHarvestLevel: SH.getDefaultItemStat(hH, "harvestLevel"),
+            harvestLevel: zH,
+            heldToolType: void 0 === tH ? void 0 : SH.getDefaultItemStat(tH, "harvests"),
+            heldToolLevel: void 0 === tH ? void 0 : SH.getDefaultItemStat(tH, "level")
+          }) && null !== (rH = JH.p[zH]) && void 0 !== rH ? rH : null
+        }(HH, LH)), HH.watchPromptPick(BB);
+        const rH = "touch" === BB ? function(HH) {
+          var BH;
+          const LH = HH.interactLabel;
+          return LH === PH.Ac.Entity ? LB(HH.promptEntity) : LH === PH.Ac.TameWith ? {
+            label: (0, zH.v)(HH.tables.nameOfId(HH.interactIcon))
+          } : null !== (BH = AB.get(LH)) && void 0 !== BH ? BH : null
+        }(HH) : LB(HH.promptEntity);
+        return this.target = (0, iH.r)(this.target, {
+          interactPrompt: rH,
+          blockText: AH,
           neededTool: this.pickaxe.shown
         }), this.target
       }
     }
-    let QX = null;
-    const AX = {
+    let SB = null;
+    const hB = {
       current: () => {
-        var UU, XU;
-        return null !== (UU = null === (XU = QX) || void 0 === XU ? void 0 : XU.target) && void 0 !== UU ? UU : UX
+        var HH, BH;
+        return null !== (HH = null === (BH = SB) || void 0 === BH ? void 0 : BH.target) && void 0 !== HH ? HH : HB
       },
-      watch: UU => {
-        const XU = new yX;
-        QX = XU;
-        const zU = (0, IU.e)((zU => {
-          let cU = XU.read(zU);
-          UU(cU);
-          const yU = (0, QU.t)((() => {
-            const yU = XU.read(zU);
-            yU !== cU && (cU = yU, UU(yU))
+      watch: HH => {
+        const BH = new rB;
+        SB = BH;
+        const LH = (0, YH.i)((LH => {
+          let AH = BH.read(LH);
+          HH(AH);
+          const rH = (0, SH.v)((() => {
+            const rH = BH.read(LH);
+            rH !== AH && (AH = rH, HH(rH))
           }));
           return () => {
-            yU(), zU.watchPromptPick("off")
+            rH(), LH.watchPromptPick("off")
           }
         }));
         return () => {
-          zU(), QX === XU && (QX = null)
+          LH(), SB === BH && (SB = null)
         }
       }
     };
-    let FX = 0,
-      oX = 0;
-    const DX = {
-        health: oU.p,
-        aura: oU.i,
-        hotbar: hU.e.states.hotbar,
-        heldItemAim: hU.e.states.heldItemAim,
-        crouching: (0, IU.c)((UU => function(UU) {
-          const XU = () => 0 !== (BU.w.playerFlags(UU.apiView, 0) & BU.Od.Crouching);
+    let tB = 0,
+      zB = 0;
+    const CB = {
+        health: zH.q,
+        aura: zH.j,
+        hotbar: yH.e.states.hotbar,
+        heldItemAim: yH.e.states.heldItemAim,
+        crouching: (0, YH.c)((HH => function(HH) {
+          const BH = () => 0 !== (PH.y.playerFlags(HH.apiView, 0) & PH.Md.Crouching);
           return {
-            current: XU,
-            watch(UU) {
-              let zU = XU();
-              return (0, QU.r)((() => {
-                const cU = XU();
-                cU !== zU && (zU = cU, UU(cU))
+            current: BH,
+            watch(HH) {
+              let LH = BH();
+              return (0, SH.r)((() => {
+                const AH = BH();
+                AH !== LH && (LH = AH, HH(AH))
               }))
             }
           }
-        }(UU.api).current), !1, (UU => (0, QU.r)(UU))),
-        flight: (0, IU.c)((UU => () => function(UU) {
-          const XU = BU.w.playerFlags(UU.apiView, 0);
-          return (0, oU.m)(0 !== (XU & BU.Od.CanFly), 0 !== (XU & BU.Od.Flying))
-        }(UU.api)), (0, oU.m)(!1, !1), (UU => (0, QU.r)(UU))),
-        gliderBoostFuel: (0, IU.c)((UU => () => BU.w.gliderBoostFuel(UU.api.apiView, 0)), 0, (UU => (0, QU.r)(UU))),
-        crosshairTarget: AX
+        }(HH.api).current), !1, (HH => (0, SH.r)(HH))),
+        flight: (0, YH.c)((HH => () => function(HH) {
+          const BH = PH.y.playerFlags(HH.apiView, 0);
+          return (0, zH.o)(0 !== (BH & PH.Md.CanFly), 0 !== (BH & PH.Md.Flying))
+        }(HH.api)), (0, zH.o)(!1, !1), (HH => (0, SH.r)(HH))),
+        gliderBoostFuel: (0, YH.c)((HH => () => PH.y.gliderBoostFuel(HH.api.apiView, 0)), 0, (HH => (0, SH.r)(HH))),
+        crosshairTarget: hB
       },
-      EX = {
-        hotbarSlotRequested: hU.e.events.hotbarSlotRequested,
-        hotbarScrolled: hU.e.events.hotbarScrolled,
-        numberKeyPressed: hU.e.events.numberKeyPressed,
-        shotDamageToShow: (0, oU.q)((UU => !0 === (0, TU.b)(UU, "showDamageAmounts")))
+      EB = {
+        hotbarSlotRequested: yH.e.events.hotbarSlotRequested,
+        hotbarScrolled: yH.e.events.hotbarScrolled,
+        numberKeyPressed: yH.e.events.numberKeyPressed,
+        shotDamageToShow: (0, zH.u)((HH => !0 === (0, pH.d)(HH, "showDamageAmounts")))
       },
-      YX = {
-        selectHotbarSlot: hU.e.commands.selectHotbarSlot,
-        setCrosshairInteractPrompt: UU => {
-          XX = UU
+      XB = {
+        selectHotbarSlot: yH.e.commands.selectHotbarSlot,
+        setCrosshairInteractPrompt: HH => {
+          BB = HH
         }
       },
-      NX = {
+      GB = {
         momentumFrac: function() {
-          var UU, XU, zU;
-          const cU = (0, AU.f)(),
-            yU = performance.now(),
-            QU = null === cU || void 0 === cU || null === (UU = cU.items.uD()) || void 0 === UU || null === (XU = UU.attributes) || void 0 === XU || null === (zU = XU.customAttributes) || void 0 === zU ? void 0 : zU.enchantments;
-          return FX = null !== cU && null !== QU && void 0 !== QU && QU.Momentum ? 0 !== (BU.w.playerFlags(cU.api.apiView, 0) & BU.Od.Breaking) ? Math.max(0, BU.w.momentumFrac(cU.api.apiView, 0)) : Math.max(0, FX - (yU - oX) / 1500) : 0, oX = yU, FX
+          var HH, BH, LH;
+          const AH = (0, hH.i)(),
+            rH = performance.now(),
+            SH = null === AH || void 0 === AH || null === (HH = AH.items.LX()) || void 0 === HH || null === (BH = HH.attributes) || void 0 === BH || null === (LH = BH.customAttributes) || void 0 === LH ? void 0 : LH.enchantments;
+          return tB = null !== AH && null !== SH && void 0 !== SH && SH.Momentum ? 0 !== (PH.y.playerFlags(AH.api.apiView, 0) & PH.Md.Breaking) ? Math.max(0, PH.y.momentumFrac(AH.api.apiView, 0)) : Math.max(0, tB - (rH - zB) / 1500) : 0, zB = rH, tB
         }
       };
-    var IX = zU(41657);
-    const pX = {
-      lobbyManage(UU) {
-        var XU;
-        null === (XU = (0, AU.f)()) || void 0 === XU || XU.send(OU.b.LobbyManage, UU)
+    var YB = LH(41905);
+    const uB = {
+      lobbyManage(HH) {
+        var BH;
+        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.LobbyManage, HH)
       }
     };
-    var aX = zU(1258),
-      tX = zU(37211),
-      gX = zU(9364),
-      kX = zU(1680),
-      GX = zU(2580),
-      BX = zU(5329);
-    let ZX = !1;
+    var QB = LH(1182),
+      WB = LH(37373),
+      MB = LH(9491),
+      xB = LH(1659),
+      vB = LH(2600),
+      PB = LH(5275);
+    let TB = !1;
 
-    function RX(UU) {
-      ZX = UU
+    function UB(HH) {
+      TB = HH
     }
 
-    function PX() {
-      "inGame" !== HU.e.get("gameState") || (0, kX.q)() || DU.k.UY("ctrlCrouchWithoutFullscreen")
+    function VB() {
+      "inGame" !== NH.c.get("gameState") || (0, xB.x)() || CH.k.AX("ctrlCrouchWithoutFullscreen")
     }
-    let WX = !1;
-    const dX = {
+    let OB = !1;
+    const bB = {
         OpenEmoteWheel: () => {
-          RX(!0), WX = !0, queueMicrotask((() => {
-            WX && (WX = !1, DU.k.UY("requestEmoteWheelHoldOpen"))
+          UB(!0), OB = !0, queueMicrotask((() => {
+            OB && (OB = !1, CH.k.AX("requestEmoteWheelHoldOpen"))
           }))
         },
         ToggleFullCoordinateOverlay: () => {
-          DU.k.UY("toggleFullCoordinateOverlay")
+          CH.k.AX("toggleFullCoordinateOverlay")
         },
         KeyYPressed: () => {
-          (0, tX.e)() || DU.k.UY("YKeyPressed")
+          (0, WB.c)() || CH.k.AX("YKeyPressed")
         },
         KeyXPressed: () => {
-          (0, tX.e)() || DU.k.UY("XKeyPressed")
+          (0, WB.c)() || CH.k.AX("XKeyPressed")
         },
-        CtrlCrouch: PX,
+        CtrlCrouch: VB,
         "primary-fire": () => {
-          DU.k.UY("mouseState", {
-            PA: aX.b.DownFirePrimary,
+          CH.k.AX("mouseState", {
+            eE: QB.e.DownFirePrimary,
             isDown: !0
           })
         },
         "alt-fire": () => {
-          DU.k.UY("mouseState", {
-            PA: aX.b.DownFireSecondary,
+          CH.k.AX("mouseState", {
+            eE: QB.e.DownFireSecondary,
             isDown: !0
           })
         },
         TouchHold: () => {
-          DU.k.UY("mouseState", {
-            PA: aX.b.TouchDownLong,
+          CH.k.AX("mouseState", {
+            eE: QB.e.TouchDownLong,
             isDown: !0
           })
         }
       },
-      LX = {
+      kB = {
         OpenEmoteWheel: () => {
-          RX(!1), WX ? (WX = !1, (0, gX.e)() || DU.k.UY("requestEmoteWheelHoldOpen")) : DU.k.UY("requestEmoteWheelHoldRelease")
+          UB(!1), OB ? (OB = !1, (0, MB.d)() || CH.k.AX("requestEmoteWheelHoldOpen")) : CH.k.AX("requestEmoteWheelHoldRelease")
         },
-        CtrlCrouch: PX,
+        CtrlCrouch: VB,
         "primary-fire": () => {
-          DU.k.UY("mouseState", {
-            PA: aX.b.UpFirePrimary,
+          CH.k.AX("mouseState", {
+            eE: QB.e.UpFirePrimary,
             isDown: !1
           })
         },
         "alt-fire": () => {
-          DU.k.UY("mouseState", {
-            PA: aX.b.UpFireSecondary,
+          CH.k.AX("mouseState", {
+            eE: QB.e.UpFireSecondary,
             isDown: !1
           })
         },
         TouchDig: () => {
-          DU.k.UY("mouseState", {
-            PA: aX.b.UpFirePrimary,
+          CH.k.AX("mouseState", {
+            eE: QB.e.UpFirePrimary,
             isDown: !1
           })
         }
       };
-    let eX = !1;
+    let mB = !1;
 
-    function CX() {
-      eX || (eX = !0, (0, BX.k)((UU => {
-        if ((0, yU.e)()) return;
-        const XU = (0, BX.g)(UU) ? "primary-fire" : UU.action;
-        var zU;
-        if (UU.down) {
-          if (0 === (UU.flags & GX.c.Synthetic)) {
-            var cU;
-            null === (cU = dX[XU]) || void 0 === cU || cU.call(dX)
+    function oB() {
+      mB || (mB = !0, (0, PB.k)((HH => {
+        if ((0, rH.c)()) return;
+        const BH = (0, PB.i)(HH) ? "primary-fire" : HH.action;
+        var LH;
+        if (HH.down) {
+          if (0 === (HH.flags & vB.c.Synthetic)) {
+            var AH;
+            null === (AH = bB[BH]) || void 0 === AH || AH.call(bB)
           }
-        } else null === (zU = LX[XU]) || void 0 === zU || zU.call(LX)
+        } else null === (LH = kB[BH]) || void 0 === LH || LH.call(kB)
       })))
     }
-    var wX = zU(320),
-      qX = zU(97),
-      OX = zU(42),
-      SX = zU(41976),
-      rX = zU(1360),
-      uX = zU(2601);
-    let fX = !1;
-    const iX = {
-      sendCodeCollab(UU) {
-        var XU;
-        null === (XU = (0, AU.f)()) || void 0 === XU || XU.send(OU.b.CodeCollab, (0, OU.m)(UU), (0, uX.h)(UU))
+    var IB = LH(304),
+      fB = LH(81),
+      lB = LH(30),
+      KB = LH(42192),
+      cB = LH(1297),
+      eB = LH(2619);
+    let qB = !1;
+    const gB = {
+      sendCodeCollab(HH) {
+        var BH;
+        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.CodeCollab, (0, lH.l)(HH), (0, eB.i)(HH))
       }
     };
-    var HX = zU(39926),
-      MX = zU(9287);
-    let vX = null,
-      VX = !1,
-      sX = null;
+    var NB = LH(40035),
+      RB = LH(9419);
+    let jB = null,
+      nB = !1,
+      FB = null;
 
-    function nX() {
-      return "inGame" === HU.e.get("gameState") && !(0, tX.e)()
+    function DB() {
+      return "inGame" === NH.c.get("gameState") && !(0, WB.c)()
     }
-    const mX = {
-        OpenInventory: UU => {
-          (0, kX.A)(UU, "inventory", (0, IX.n)())
+    const wB = {
+        OpenInventory: HH => {
+          (0, xB.F)(HH, "inventory", (0, YB.m)())
         },
-        OpenShop: UU => {
-          vX && nX() && (0, kX.x)(UU, wX.s.SHOP, !vX.shopIsEmpty(GU.d.get("shopInfo")))
+        OpenShop: HH => {
+          jB && DB() && (0, xB.B)(HH, IB.o.SHOP, !jB.shopIsEmpty(vH.e.get("shopInfo")))
         },
-        OpenLobbyLeaderboard: UU => {
-          nX() && (0, kX.x)(UU, wX.s.LOBBY_LEADERBOARD, (0, HX.c)({
-            lobbyLeaderboardInfo: GU.d.get("lobbyLeaderboardInfo"),
-            lobbyManage: GU.d.get("lobbyManage")
+        OpenLobbyLeaderboard: HH => {
+          DB() && (0, xB.B)(HH, IB.o.LOBBY_LEADERBOARD, (0, NB.e)({
+            lobbyLeaderboardInfo: vH.e.get("lobbyLeaderboardInfo"),
+            lobbyManage: vH.e.get("lobbyManage")
           }))
         },
-        OpenTasksAndLeaderboard: UU => {
-          var XU;
-          const zU = null === (XU = vX) || void 0 === XU ? void 0 : XU.getClientGameMapKey();
-          zU ? (0, kX.C)(UU, !0, zU) : (0, kX.A)(UU, "retentionFeatures", !(!GU.d.get("_tasks") && !GU.d.get("_availableLeaderboards")))
+        OpenTasksAndLeaderboard: HH => {
+          var BH;
+          const LH = null === (BH = jB) || void 0 === BH ? void 0 : BH.getClientGameMapKey();
+          LH ? (0, xB.H)(HH, !0, LH) : (0, xB.F)(HH, "retentionFeatures", !(!vH.e.get("_tasks") && !vH.e.get("_availableLeaderboards")))
         },
-        OpenInviteLink: UU => {
-          (0, kX.A)(UU, "inviteLink", qX.featureFlags.canUseInviteLinks)
+        OpenInviteLink: HH => {
+          (0, xB.F)(HH, "inviteLink", fB.featureFlags.canUseInviteLinks)
         },
-        OpenCodeEditor: UU => {
-          nX() && function(UU) {
-            const XU = (0, AU.f)(),
-              zU = null !== XU && void 0 !== XU && XU.isSessionLive ? XU.api : null,
-              cU = zU ? zU.wG(zU.localId) : null;
-            (0, kX.C)(UU, null !== cU && (0, uX.d)((0, rX.b)()), (() => {
-              (0, uX.l)(cU)
+        OpenCodeEditor: HH => {
+          DB() && function(HH) {
+            const BH = (0, hH.i)(),
+              LH = null !== BH && void 0 !== BH && BH.isSessionLive ? BH.api : null,
+              AH = LH ? LH.hT(LH.localId) : null;
+            (0, xB.H)(HH, null !== AH && (0, eB.e)((0, cB.c)()), (() => {
+              (0, eB.m)(AH)
             }))
-          }(UU)
+          }(HH)
         },
         HideUi: () => {
-          DU.k.UY("showUi", !1)
+          CH.k.AX("showUi", !1)
         }
       },
-      lX = {
+      ZB = {
         HideUi: () => {
-          DU.k.UY("showUi", !0)
+          CH.k.AX("showUi", !0)
         }
       };
 
-    function xX() {
-      VX || (VX = !0, zU.e(171).then((() => zU(63270))).then((UU => {
-        vX = UU
-      }), (UU => {
-        console.error("[bloxd-wasm-client] the menu keys' checks did not load", UU)
-      })), (0, SX.w)((UU => {
-        UU || !(0, SX.g)() || (0, qX.isMobile)() || !OX.k.getItem("disableFullscreen") || (0, kX.p)() || HU.e.set({
-          openEverythingMenuName: wX.s.SETTINGS
+    function dB() {
+      nB || (nB = !0, LH.e(173).then((() => LH(64066))).then((HH => {
+        jB = HH
+      }), (HH => {
+        console.error("[bloxd-wasm-client] the menu keys' checks did not load", HH)
+      })), (0, KB.u)((HH => {
+        HH || !(0, KB.g)() || (0, fB.isMobile)() || !lB.e.getItem("disableFullscreen") || (0, xB.t)() || NH.c.set({
+          openEverythingMenuName: IB.o.SETTINGS
         })
-      })), (0, BX.k)((UU => {
+      })), (0, PB.k)((HH => {
         let {
-          action: XU,
-          down: zU,
-          press: cU
-        } = UU;
-        var QU, AU;
-        (0, yU.e)() || (zU ? null === (QU = mX[XU]) || void 0 === QU || QU.call(mX, function(UU) {
-          var XU;
-          if (0 === UU || (null === (XU = sX) || void 0 === XU ? void 0 : XU.press) !== UU) {
-            const XU = {
-              press: UU,
-              event: (0, MX.b)("inputAction")
+          action: BH,
+          down: LH,
+          press: AH
+        } = HH;
+        var SH, hH;
+        (0, rH.c)() || (LH ? null === (SH = wB[BH]) || void 0 === SH || SH.call(wB, function(HH) {
+          var BH;
+          if (0 === HH || (null === (BH = FB) || void 0 === BH ? void 0 : BH.press) !== HH) {
+            const BH = {
+              press: HH,
+              event: (0, RB.c)("inputAction")
             };
-            sX = XU, queueMicrotask((() => {
-              sX === XU && (sX = null)
+            FB = BH, queueMicrotask((() => {
+              FB === BH && (FB = null)
             }))
           }
-          return sX.event
-        }(cU)) : null === (AU = lX[XU]) || void 0 === AU || AU.call(lX))
+          return FB.event
+        }(AH)) : null === (hH = ZB[BH]) || void 0 === hH || hH.call(ZB))
       })))
     }
-    var JX = zU(39852),
-      jX = zU(39847),
-      KX = zU(39841);
-    const bX = {
-      completeTask(UU) {
-        var XU;
-        null === (XU = (0, AU.f)()) || void 0 === XU || XU.send(OU.b.CompleteTask, (0, OU.o)(UU))
+    var aB = LH(39936),
+      sB = LH(39928),
+      JB = LH(39921);
+    const iB = {
+      completeTask(HH) {
+        var BH;
+        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.CompleteTask, (0, lH.o)(HH))
       },
-      setServerCookie(UU) {
-        var XU;
+      setServerCookie(HH) {
+        var BH;
         let {
-          key: zU,
-          value: cU
-        } = UU;
-        null === (XU = (0, AU.f)()) || void 0 === XU || XU.send(OU.b.GeneralCookieSet, (0, OU.v)({
-          pA: zU,
-          aA: cU
+          key: LH,
+          value: AH
+        } = HH;
+        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.GeneralCookieSet, (0, lH.t)({
+          Ft: LH,
+          Dt: AH
         }))
       },
-      answerUiRequest(UU) {
-        var XU;
+      answerUiRequest(HH) {
+        var BH;
         let {
-          id: zU,
-          KD: cU
-        } = UU;
-        null === (XU = (0, AU.f)()) || void 0 === XU || XU.send(OU.b.UiRequestResp, (0, OU.V)({
-          iA: zU,
-          HA: cU,
-          MA: 5
+          id: LH,
+          XE: AH
+        } = HH;
+        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.UiRequestResp, (0, lH._)({
+          Ih: LH,
+          fh: AH,
+          Kh: 5
         }))
       },
-      chooseRewardedAd(UU) {
-        var XU;
+      chooseRewardedAd(HH) {
+        var BH;
         let {
-          id: zU,
-          KD: cU
-        } = UU;
-        null === (XU = (0, AU.f)()) || void 0 === XU || XU.send(OU.b.UiRequestResponded, (0, OU.U)({
-          id: zU,
-          KD: cU
+          id: LH,
+          XE: AH
+        } = HH;
+        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.UiRequestResponded, (0, lH.Z)({
+          id: LH,
+          XE: AH
         }))
       },
-      requestLeaderboard(UU) {
-        var XU;
+      requestLeaderboard(HH) {
+        var BH;
         let {
-          category: zU,
-          timeframe: cU,
-          seeTop: yU
-        } = UU;
-        null === (XU = (0, AU.f)()) || void 0 === XU || XU.send(OU.b.LeaderboardRequest, {
-          category: zU,
-          timeframe: cU,
-          seeTop: yU
+          category: LH,
+          timeframe: AH,
+          seeTop: rH
+        } = HH;
+        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.LeaderboardRequest, {
+          category: LH,
+          timeframe: AH,
+          seeTop: rH
         })
       }
     };
-    let TX = !1;
-    const hX = kU.f.zg / 2,
-      Uz = [hX, -hX, -hX, -hX, hX, hX, -hX, hX],
-      Xz = [0, 0, 0];
+    let pB = !1;
+    const yB = xH.g.JW / 2,
+      HL = [yB, -yB, -yB, -yB, yB, yB, -yB, yB],
+      BL = [0, 0, 0];
 
-    function zz(UU, XU, zU) {
-      for (let cU = 0; cU < UU.length; cU += 2)
-        if (UU[cU] === XU && UU[cU + 1] === zU) return !0;
+    function LL(HH, BH, LH) {
+      for (let AH = 0; AH < HH.length; AH += 2)
+        if (HH[AH] === BH && HH[AH + 1] === LH) return !0;
       return !1
     }
-    const cz = {
+    const AL = {
       blocksStandingOn: function() {
-        const UU = (0, AU.f)();
-        if (null === UU) return [];
+        const HH = (0, hH.i)();
+        if (null === HH) return [];
         const {
-          api: XU,
-          chunks: zU,
-          tables: cU
-        } = UU;
-        if (!XU.readPosition(XU.localId, Xz)) return [];
-        const [yU, QU, FU] = Xz, oU = Math.ceil(QU) - 1, DU = [], EU = [];
-        for (let AU = 0; AU < Uz.length; AU += 2) {
-          const UU = yU + Uz[AU],
-            XU = FU + Uz[AU + 1];
-          if (Number.isInteger(UU) || Number.isInteger(XU)) continue;
-          const QU = Math.floor(UU),
-            YU = Math.floor(XU);
-          if (zz(EU, QU, YU)) continue;
-          const NU = zU.yF(QU, oU, YU);
-          cU.isSolidBlockId(NU) && (EU.push(QU, YU), DU.push(cU.nameOfId(NU)))
+          api: BH,
+          chunks: LH,
+          tables: AH
+        } = HH;
+        if (!BH.readPosition(BH.localId, BL)) return [];
+        const [rH, SH, tH] = BL, zH = Math.ceil(SH) - 1, CH = [], EH = [];
+        for (let hH = 0; hH < HL.length; hH += 2) {
+          const HH = rH + HL[hH],
+            BH = tH + HL[hH + 1];
+          if (Number.isInteger(HH) || Number.isInteger(BH)) continue;
+          const SH = Math.floor(HH),
+            XH = Math.floor(BH);
+          if (LL(EH, SH, XH)) continue;
+          const GH = LH.ph(SH, zH, XH);
+          AH.isSolidBlockId(GH) && (EH.push(SH, XH), CH.push(AH.nameOfId(GH)))
         }
-        return DU
+        return CH
       },
       dropAhead: function() {
-        const UU = (0, AU.f)();
-        return null !== UU && 0 !== (BU.w.playerFlags(UU.api.apiView, 0) & BU.Od.DropAhead)
+        const HH = (0, hH.i)();
+        return null !== HH && 0 !== (PH.y.playerFlags(HH.api.apiView, 0) & PH.Md.DropAhead)
       }
     };
-    var yz = zU(37677),
-      Qz = zU(39900),
-      Az = zU(1410),
-      Fz = zU(41725);
-    const oz = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
-      Dz = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
+    var rL = LH(37812),
+      SL = LH(40018),
+      hL = LH(1352),
+      tL = LH(41981);
+    const zL = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
+      CL = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
 
-    function Ez() {
-      const UU = new Set;
+    function EL() {
+      const HH = new Set;
       return {
-        add: XU => (UU.add(XU), () => {
-          UU.delete(XU)
+        add: BH => (HH.add(BH), () => {
+          HH.delete(BH)
         }),
         fire() {
-          for (const XU of UU) XU()
+          for (const BH of HH) BH()
         }
       }
     }
-    const Yz = Object.freeze([]);
+    const XL = Object.freeze([]);
 
-    function Nz(UU, XU) {
-      let zU, {
-        rereads: cU,
-        followLocalId: yU
-      } = XU;
-      const AU = () => (zU = (0, bU.q)(zU, UU()), zU);
+    function GL(HH, BH) {
+      let LH, {
+        rereads: AH,
+        followLocalId: rH
+      } = BH;
+      const hH = () => (LH = (0, iH.r)(LH, HH()), LH);
       return {
-        current: AU,
-        watch(UU) {
-          const XU = (0, pU.b)((XU => {
-            cU(XU) && UU(AU())
+        current: hH,
+        watch(HH) {
+          const BH = (0, uH.d)((BH => {
+            AH(BH) && HH(hH())
           }));
-          if (!yU) return XU;
-          let zU = (0, IU.d)();
-          const FU = (0, QU.t)((() => {
-            const XU = (0, IU.d)();
-            XU !== zU && (zU = XU, UU(AU()))
+          if (!rH) return BH;
+          let LH = (0, YH.f)();
+          const tH = (0, SH.v)((() => {
+            const BH = (0, YH.f)();
+            BH !== LH && (LH = BH, HH(hH()))
           }));
           return () => {
-            XU(), FU()
+            BH(), tH()
           }
         }
       }
     }
-    const Iz = {
-        players: Nz((function() {
-          const UU = pU.d.ids(),
-            XU = {};
-          for (const QU of UU) {
-            var zU, cU, yU;
-            XU[QU] = {
-              name: null !== (zU = pU.d.getName(QU)) && void 0 !== zU ? zU : null,
-              ranks: null !== (cU = pU.d.getSetting(QU, "ranks")) && void 0 !== cU ? cU : Yz,
-              cosmetics: null !== (yU = (0, pU.g)(QU)) && void 0 !== yU ? yU : null
+    const YL = {
+        players: GL((function() {
+          const HH = uH.f.ids(),
+            BH = {};
+          for (const SH of HH) {
+            var LH, AH, rH;
+            BH[SH] = {
+              name: null !== (LH = uH.f.getName(SH)) && void 0 !== LH ? LH : null,
+              ranks: null !== (AH = uH.f.getSetting(SH, "ranks")) && void 0 !== AH ? AH : XL,
+              cosmetics: null !== (rH = (0, uH.j)(SH)) && void 0 !== rH ? rH : null
             }
           }
           return {
-            ids: UU,
-            byId: XU,
-            localId: (0, IU.d)()
+            ids: HH,
+            byId: BH,
+            localId: (0, YH.f)()
           }
         }), {
-          rereads: UU => "roster" !== UU.kind || UU.members || UU.settings.has("ranks"),
+          rereads: HH => "roster" !== HH.kind || HH.members || HH.settings.has("ranks"),
           followLocalId: !0
         }),
-        lobbyLeaderboardRows: Nz((function() {
-          const UU = {};
-          for (const yU of pU.d.ids()) {
-            var XU, zU, cU;
-            UU[yU] = {
-              colour: null !== (XU = pU.d.getSetting(yU, "colorInLobbyLeaderboard")) && void 0 !== XU ? XU : null,
-              values: null !== (zU = pU.d.getSetting(yU, "lobbyLeaderboardValues")) && void 0 !== zU ? zU : null,
-              tags: null !== (cU = pU.d.getSetting(yU, "lobbyLeaderboardTags")) && void 0 !== cU ? cU : null
+        lobbyLeaderboardRows: GL((function() {
+          const HH = {};
+          for (const rH of uH.f.ids()) {
+            var BH, LH, AH;
+            HH[rH] = {
+              colour: null !== (BH = uH.f.getSetting(rH, "colorInLobbyLeaderboard")) && void 0 !== BH ? BH : null,
+              values: null !== (LH = uH.f.getSetting(rH, "lobbyLeaderboardValues")) && void 0 !== LH ? LH : null,
+              tags: null !== (AH = uH.f.getSetting(rH, "lobbyLeaderboardTags")) && void 0 !== AH ? AH : null
             }
           }
-          return UU
+          return HH
         }), {
-          rereads: function(UU) {
-            if ("roster" !== UU.kind) return "reset" === UU.kind;
+          rereads: function(HH) {
+            if ("roster" !== HH.kind) return "reset" === HH.kind;
             const {
-              members: XU,
-              settings: zU
-            } = UU;
-            return XU || zU.has("colorInLobbyLeaderboard") || zU.has("lobbyLeaderboardValues") || zU.has("lobbyLeaderboardTags")
+              members: BH,
+              settings: LH
+            } = HH;
+            return BH || LH.has("colorInLobbyLeaderboard") || LH.has("lobbyLeaderboardValues") || LH.has("lobbyLeaderboardTags")
           },
           followLocalId: !1
         })
       },
-      pz = {
+      uL = {
         cosmeticsUpdated: {
-          watch: UU => (0, pU.b)((XU => {
-            if ("cosmetics" !== XU.kind) return;
-            const zU = (0, IU.d)();
-            UU(XU.updates.map((UU => {
+          watch: HH => (0, uH.d)((BH => {
+            if ("cosmetics" !== BH.kind) return;
+            const LH = (0, YH.f)();
+            HH(BH.updates.map((HH => {
               let {
-                AU: XU,
-                FU: cU,
-                oU: yU
-              } = UU;
+                Ah: BH,
+                rh: AH,
+                Sh: rH
+              } = HH;
               return {
-                local: XU === zU,
-                FU: cU,
-                oU: yU
+                local: BH === LH,
+                rh: AH,
+                Sh: rH
               }
             })))
           }))
         }
       };
-    var az = zU(3221),
-      tz = zU(1800),
-      gz = zU(702),
-      kz = zU(42020);
-    let Gz = !1,
-      Bz = null;
-    const Zz = {
-      setShopOpen(UU) {
-        var XU;
-        null === (XU = (0, AU.f)()) || void 0 === XU || XU.send(OU.b.ShopMenuChanged, (0, OU.N)(UU))
+    var QL = LH(3209),
+      WL = LH(1789),
+      ML = LH(656),
+      xL = LH(42248);
+    let vL = !1,
+      PL = null;
+    const TL = {
+      setShopOpen(HH) {
+        var BH;
+        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.ShopMenuChanged, (0, lH.S)(HH))
       },
-      buyShopItem(UU) {
-        var XU;
+      buyShopItem(HH) {
+        var BH;
         let {
-          categoryKey: zU,
-          itemKey: cU,
-          userInput: yU
-        } = UU;
-        null === (XU = (0, AU.f)()) || void 0 === XU || XU.send(OU.b.ItemBought, {
-          categoryKey: zU,
-          itemKey: cU,
-          shopVersion: GU.d.get("_shopVersion"),
-          userInput: yU
+          categoryKey: LH,
+          itemKey: AH,
+          userInput: rH
+        } = HH;
+        null === (BH = (0, hH.i)()) || void 0 === BH || BH.send(lH.d.ItemBought, {
+          categoryKey: LH,
+          itemKey: AH,
+          shopVersion: vH.e.get("_shopVersion"),
+          userInput: rH
         })
       }
     };
-    let Rz = !1;
-    var Pz = zU(5342);
-    const Wz = GX.F.LookFrozen | GX.F.ClicksSuppressed;
+    let UL = !1;
+    var VL = LH(5288);
+    const OL = vB.w.LookFrozen | vB.w.ClicksSuppressed;
 
-    function dz(UU, XU) {
-      var zU;
-      null !== (zU = (0, AU.f)()) && void 0 !== zU && zU.send(UU, XU) || console.warn(`[bloxd-wasm-client] message ${UU} not sent: no live game or the core's command ring is full`)
-    }(0, aU.m)(qU.ib, (UU => {
-      const XU = (0, SU.d)(qU.ib, UU);
-      void 0 !== XU && DU.k.UY("setDiscordReportKey", XU)
+    function bL(HH, BH) {
+      var LH;
+      null !== (LH = (0, hH.i)()) && void 0 !== LH && LH.send(HH, BH) || console.warn(`[bloxd-wasm-client] message ${HH} not sent: no live game or the core's command ring is full`)
+    }(0, QH.k)(fH.eb, (HH => {
+      const BH = (0, KH.f)(fH.eb, HH);
+      void 0 !== BH && CH.k.AX("setDiscordReportKey", BH)
     }));
-    const Lz = {
-      ignorePlayer(UU) {
-        dz(OU.b.IgnoreUser, (0, OU.y)({
-          bD: UU
+    const kL = {
+      ignorePlayer(HH) {
+        bL(lH.d.IgnoreUser, (0, lH.x)({
+          Jt: HH
         }))
       },
-      reportPlayer(UU) {
+      reportPlayer(HH) {
         let {
-          playerId: XU,
-          chatMsgId: zU,
-          policy: cU,
-          details: yU
-        } = UU;
-        dz(OU.b.UserReport, (0, OU.db)({
-          GD: XU,
-          BD: zU,
-          policy: cU,
-          ZD: yU
+          playerId: BH,
+          chatMsgId: LH,
+          policy: AH,
+          details: rH
+        } = HH;
+        bL(lH.d.UserReport, (0, lH.kb)({
+          ah: BH,
+          sh: LH,
+          policy: AH,
+          Jh: rH
         }))
       },
-      reportWorldCodeChat(UU) {
+      reportWorldCodeChat(HH) {
         let {
-          chatMsgId: XU,
-          policy: zU,
-          details: cU
-        } = UU;
-        dz(OU.b.UserReport, (0, OU.db)({
-          GD: "",
-          BD: XU,
-          policy: zU,
-          ZD: cU
+          chatMsgId: BH,
+          policy: LH,
+          details: AH
+        } = HH;
+        bL(lH.d.UserReport, (0, lH.kb)({
+          ah: "",
+          sh: BH,
+          policy: LH,
+          Jh: AH
         }))
       },
-      requestDiscordReportKey(UU) {
-        dz(OU.b.ReqDiscordReportKey, (0, OU.G)(UU))
+      requestDiscordReportKey(HH) {
+        bL(lH.d.ReqDiscordReportKey, (0, lH.L)(HH))
       },
-      reportLobbyOrGame(UU) {
+      reportLobbyOrGame(HH) {
         let {
-          target: XU,
-          policy: zU,
-          details: cU
-        } = UU;
-        "customGame" === XU ? dz(OU.b.CustomGameReport, (0, OU.r)({
-          policy: zU,
-          ZD: cU
-        })) : dz(OU.b.LobbyReport, (0, OU.A)({
-          policy: zU,
-          ZD: cU
+          target: BH,
+          policy: LH,
+          details: AH
+        } = HH;
+        "customGame" === BH ? bL(lH.d.CustomGameReport, (0, lH.p)({
+          policy: LH,
+          Jh: AH
+        })) : bL(lH.d.LobbyReport, (0, lH.A)({
+          policy: LH,
+          Jh: AH
         }))
       },
-      updateMyCosmetic(UU) {
-        dz(OU.b.UpdateMyCosmetic, (0, OU.$)(UU))
+      updateMyCosmetic(HH) {
+        bL(lH.d.UpdateMyCosmetic, (0, lH.jb)(HH))
       },
-      holdEmoteWheel(UU) {
-        !UU || ZX ? (0, Pz.f)(Wz, UU ? Wz : 0) : DU.k.UY("requestEmoteWheelHoldRelease")
+      holdEmoteWheel(HH) {
+        !HH || TB ? (0, VL.k)(OL, HH ? OL : 0) : CH.k.AX("requestEmoteWheelHoldRelease")
       }
     };
-    var ez = zU(42127),
-      Cz = zU(9782),
-      wz = zU(40513);
-    const qz = [0, 0, 0],
-      Oz = [0, 0, 0],
-      Sz = [0, 0, 0],
-      rz = {
-        blockAtViewPoint(UU) {
+    var mL = LH(42339),
+      oL = LH(9940),
+      IL = LH(40669);
+    const fL = [0, 0, 0],
+      lL = [0, 0, 0],
+      KL = [0, 0, 0],
+      cL = {
+        blockAtViewPoint(HH) {
           let {
-            x: XU,
-            y: zU
-          } = UU;
-          const cU = (0, AU.f)();
-          if (null === cU || void 0 === cU || !cU.renderFrame.hasView) return null;
+            x: BH,
+            y: LH
+          } = HH;
+          const AH = (0, hH.i)();
+          if (null === AH || void 0 === AH || !AH.renderFrame.hasView) return null;
           const {
-            renderFrame: yU,
-            clientApi: QU,
-            api: FU
-          } = cU;
-          let oU = 0;
-          return (0, wz.g)(((UU, XU, zU) => (oU = QU.getBlockId(UU, XU, zU), 0 !== oU)), yU.cameraPosition, (0, wz.h)((UU => BU.w.viewProj(FU.apiView, 0, UU)), XU, zU, qz), wz.c, Oz, Sz) ? {
-            pos: [Oz[0], Oz[1], Oz[2]],
-            normal: [Sz[0], Sz[1], Sz[2]],
-            name: (0, Cz.f)(oU)
+            renderFrame: rH,
+            clientApi: SH,
+            api: tH
+          } = AH;
+          let zH = 0;
+          return (0, IL.d)(((HH, BH, LH) => (zH = SH.getBlockId(HH, BH, LH), 0 !== zH)), rH.cameraPosition, (0, IL.e)((HH => PH.y.viewProj(tH.apiView, 0, HH)), BH, LH, fL), IL.b, lL, KL) ? {
+            pos: [lL[0], lL[1], lL[2]],
+            normal: [KL[0], KL[1], KL[2]],
+            name: (0, oL.d)(zH)
           } : null
         }
       },
-      uz = {
-        setBlockHighlight(UU) {
-          var XU;
-          null === (XU = (0, AU.f)()) || void 0 === XU || XU.setBlockHighlight(UU)
+      eL = {
+        setBlockHighlight(HH) {
+          var BH;
+          null === (BH = (0, hH.i)()) || void 0 === BH || BH.setBlockHighlight(HH)
         }
       };
-    var fz = zU(2014),
-      iz = zU(42010),
-      Hz = zU(42133),
-      Mz = zU(2049),
-      vz = zU(37110),
-      Vz = zU(264);
-    const sz = {
+    var qL = LH(2010),
+      gL = LH(42234),
+      NL = LH(42343),
+      RL = LH(2054),
+      jL = LH(37294),
+      nL = LH(225);
+    const FL = {
         icon: ".EntireInventoryWrapper .InvenBodyRight .InvenItem .DrawnBlockIcon",
         fallbackRem: 3.4,
         asked: new Set
       },
-      nz = {
+      DL = {
         icon: ".EntireInventoryWrapper .LazyLoadedItemWrapper .InvenItem .DrawnBlockIcon",
-        fallbackRem: .9 * sz.fallbackRem,
+        fallbackRem: .9 * FL.fallbackRem,
         asked: new Set
       },
-      mz = 2e3,
-      lz = 4;
-    let xz = [],
-      Jz = !1,
-      jz = !1,
-      Kz = !1;
-    const bz = new Set,
-      Tz = [];
-    let hz = 0,
-      Uc = null;
+      wL = 2e3,
+      ZL = 4;
+    let dL = [],
+      aL = !1,
+      sL = !1,
+      JL = !1;
+    const iL = new Set,
+      pL = [];
+    let yL = 0,
+      HA = null;
 
-    function Xc() {
-      return Jz && (0, vz.i)()
+    function BA() {
+      return aL && (0, jL.g)()
     }
 
-    function zc() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : cU.gameBridge.latest("inventory");
-      if (Kz && !jz) {
-        for (const zU of UU.player) {
-          var XU;
-          if (null !== zU) cc(null !== (XU = zU.icon) && void 0 !== XU ? XU : zU.name, sz)
+    function LA() {
+      let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : AH.gameBridge.latest("inventory");
+      if (JL && !sL) {
+        for (const LH of HH.player) {
+          var BH;
+          if (null !== LH) AA(null !== (BH = LH.icon) && void 0 !== BH ? BH : LH.name, FL)
         }
-        for (const UU of [...BU.L, ...xz]) cc(UU, nz);
-        Qc()
+        for (const HH of [...PH.K, ...dL]) AA(HH, DL);
+        SA()
       }
     }
 
-    function cc(UU, XU) {
-      XU.asked.has(UU) || bz.has(UU) || ("model" === cU.gameBridge.lookup("itemIcon", UU).kind ? (XU.asked.add(UU), Tz.push({
-        name: UU,
-        slot: XU
-      })) : bz.add(UU))
+    function AA(HH, BH) {
+      BH.asked.has(HH) || iL.has(HH) || ("model" === AH.gameBridge.lookup("itemIcon", HH).kind ? (BH.asked.add(HH), pL.push({
+        name: HH,
+        slot: BH
+      })) : iL.add(HH))
     }
 
-    function yc(UU) {
-      xz = UU, zc()
+    function rA(HH) {
+      dL = HH, LA()
     }
 
-    function Qc() {
-      !Kz || jz || null !== Uc || 0 === Tz.length || hz >= lz || (Uc = (0, Vz.b)((() => {
-        Uc = null;
-        const UU = Tz.shift();
-        void 0 !== UU && Kz && (hz++, async function(UU, XU) {
-          var zU, yU;
-          if (await (0, vz.m)(), !Kz) return void XU.asked.delete(UU);
-          if (!(0, vz.i)()) return void(jz = !0);
-          const QU = window.devicePixelRatio,
-            AU = null !== (zU = null === (yU = document.querySelector(XU.icon)) || void 0 === yU ? void 0 : yU.getBoundingClientRect().width) && void 0 !== zU ? zU : 0,
-            FU = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16,
-            oU = Math.round((AU > 0 ? AU : XU.fallbackRem * FU) * QU);
+    function SA() {
+      !JL || sL || null !== HA || 0 === pL.length || yL >= ZL || (HA = (0, nL.d)((() => {
+        HA = null;
+        const HH = pL.shift();
+        void 0 !== HH && JL && (yL++, async function(HH, BH) {
+          var LH, rH;
+          if (await (0, jL.m)(), !JL) return void BH.asked.delete(HH);
+          if (!(0, jL.g)()) return void(sL = !0);
+          const SH = window.devicePixelRatio,
+            hH = null !== (LH = null === (rH = document.querySelector(BH.icon)) || void 0 === rH ? void 0 : rH.getBoundingClientRect().width) && void 0 !== LH ? LH : 0,
+            tH = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16,
+            zH = Math.round((hH > 0 ? hH : BH.fallbackRem * tH) * SH);
           try {
-            await cU.gameBridge.query("blockIcon", {
-              name: UU,
-              size: oU,
-              lineWidth: (0, Mz.b)(QU)
-            }) || XU.asked.delete(UU)
+            await AH.gameBridge.query("blockIcon", {
+              name: HH,
+              size: zH,
+              lineWidth: (0, RL.e)(SH)
+            }) || BH.asked.delete(HH)
           } catch {
-            XU.asked.delete(UU)
+            BH.asked.delete(HH)
           }
-        }(UU.name, UU.slot).finally((() => {
-          hz--, Qc()
-        })), Qc())
+        }(HH.name, HH.slot).finally((() => {
+          yL--, SA()
+        })), SA())
       }), {
-        timeoutMs: mz
+        timeoutMs: wL
       }))
     }
-    var Ac = zU(4929),
-      Fc = zU(4899),
-      oc = zU(42138),
-      Dc = zU(3660),
-      Ec = zU(3664);
-    let Yc = null,
-      Nc = null;
+    var hA = LH(4895),
+      tA = LH(4875),
+      zA = LH(42352),
+      CA = LH(3639),
+      EA = LH(3648);
+    let XA = null,
+      GA = null;
 
-    function Ic(UU) {
-      const XU = UU.startsWith(Ec.n),
-        [zU, cU = zU, yU = zU] = (XU ? UU.slice(Ec.n.length) : UU).split(Ec.k);
+    function YA(HH) {
+      const BH = HH.startsWith(EA.f),
+        [LH, AH = LH, rH = LH] = (BH ? HH.slice(EA.f.length) : HH).split(EA.e);
       return {
-        top: zU,
-        left: cU,
-        right: yU,
-        half: XU
+        top: LH,
+        left: AH,
+        right: rH,
+        half: BH
       }
     }
 
-    function pc(UU) {
-      const XU = null === Yc ? void 0 : (0, Dc.c)(UU),
-        zU = void 0 === XU ? 0 : Yc.codes[XU];
-      return 0 === zU ? void 0 : Yc.pool[zU - 1]
+    function uA(HH) {
+      const BH = null === XA ? void 0 : (0, CA.e)(HH),
+        LH = void 0 === BH ? 0 : XA.codes[BH];
+      return 0 === LH ? void 0 : XA.pool[LH - 1]
     }
-    var ac = zU(3656),
-      tc = zU(4890),
-      gc = zU(4920),
-      kc = zU(42059),
-      Gc = zU(42141);
-    const Bc = "item:";
-    let Zc = null,
-      Rc = null,
-      Pc = null,
-      Wc = null,
-      dc = !1,
-      Lc = !1;
+    var QA = LH(3637),
+      WA = LH(4863),
+      MA = LH(4888),
+      xA = LH(37162),
+      vA = LH(37169);
+    const PA = "item:";
+    let TA = null,
+      UA = null,
+      VA = null,
+      OA = null,
+      bA = !1,
+      kA = !1;
 
-    function ec() {
-      return Lc || (Lc = !0, (0, gc.l)().then((UU => {
-        UU && (0, fz.e)()
-      }))), Pc ??= Promise.all([(0, ac.h)(), (Nc ??= zU.e(1).then((() => zU(63291))).then((UU => {
+    function mA() {
+      return kA || (kA = !0, (0, MA.p)().then((HH => {
+        HH && (0, qL.e)()
+      }))), VA ??= Promise.all([(0, QA.h)(), (GA ??= LH.e(1).then((() => LH(64087))).then((HH => {
         let {
-          BLOCK_FACE_RUNS: XU,
-          BLOCK_FACES: zU,
-          MAX_FACE_ITEM_ID: cU
-        } = UU;
-        Yc = {
-          codes: (0, Ec.y)(XU, cU + 1),
-          pool: zU.split(Ec.r).map(Ic)
+          BLOCK_FACE_RUNS: BH,
+          BLOCK_FACES: LH,
+          MAX_FACE_ITEM_ID: AH
+        } = HH;
+        XA = {
+          codes: (0, EA.x)(BH, AH + 1),
+          pool: LH.split(EA.q).map(YA)
         }
-      }), (UU => {
-        throw Nc = null, UU
-      })), Nc), (0, Gc.e)(), zU.e(215).then((() => zU(34884)))]).then((UU => {
-        let [, , XU, zU] = UU;
-        XU.followBundledTextures(), Zc = XU, Rc = zU, (0, fz.e)()
-      }), (UU => {
-        Pc = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", UU)
-      })), Pc
+      }), (HH => {
+        throw GA = null, HH
+      })), GA), (0, vA.g)(), LH.e(220).then((() => LH(35006)))]).then((HH => {
+        let [, , BH, LH] = HH;
+        BH.followBundledTextures(), TA = BH, UA = LH, (0, qL.e)()
+      }), (HH => {
+        VA = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", HH)
+      })), VA
     }
 
-    function Cc(UU) {
-      var XU, zU;
-      return null !== (XU = null === (zU = (0, kc.i)()) || void 0 === zU ? void 0 : zU.textureUrl(UU)) && void 0 !== XU ? XU : Zc.itemSpriteUrl(UU)
+    function oA(HH) {
+      var BH, LH;
+      return null !== (BH = null === (LH = (0, xA.k)()) || void 0 === LH ? void 0 : LH.textureUrl(HH)) && void 0 !== BH ? BH : TA.itemSpriteUrl(HH)
     }
 
-    function wc(UU) {
-      var XU, zU;
-      return null !== (XU = null === (zU = (0, kc.i)()) || void 0 === zU ? void 0 : zU.textureUrl(UU)) && void 0 !== XU ? XU : Zc.blockTextureUrl(UU)
+    function IA(HH) {
+      var BH, LH;
+      return null !== (BH = null === (LH = (0, xA.k)()) || void 0 === LH ? void 0 : LH.textureUrl(HH)) && void 0 !== BH ? BH : TA.blockTextureUrl(HH)
     }
 
-    function qc(UU) {
-      var XU;
-      return null !== (XU = (0, ac.e)(UU)) && void 0 !== XU ? XU : UU
+    function fA(HH) {
+      var BH;
+      return null !== (BH = (0, QA.d)(HH)) && void 0 !== BH ? BH : HH
     }
 
-    function Oc(UU, XU) {
-      var zU, cU, yU;
-      return null !== (zU = null !== (cU = null !== (yU = wc(UU)) && void 0 !== yU ? yU : null === XU || void 0 === XU ? void 0 : XU.rotated[UU]) && void 0 !== cU ? cU : null === XU || void 0 === XU ? void 0 : XU.animated[UU]) && void 0 !== zU ? zU : Zc.notFoundUrl()
+    function lA(HH, BH) {
+      var LH, AH, rH;
+      return null !== (LH = null !== (AH = null !== (rH = IA(HH)) && void 0 !== rH ? rH : null === BH || void 0 === BH ? void 0 : BH.rotated[HH]) && void 0 !== AH ? AH : null === BH || void 0 === BH ? void 0 : BH.animated[HH]) && void 0 !== LH ? LH : TA.notFoundUrl()
     }
 
-    function Sc(UU) {
-      return void 0 !== (0, Dc.c)(UU) ? UU : /^[1-9][0-9]*$/.test(UU) ? (0, Dc.f)(Number(UU)) : void 0
+    function KA(HH) {
+      return void 0 !== (0, CA.e)(HH) ? HH : /^[1-9][0-9]*$/.test(HH) ? (0, CA.h)(Number(HH)) : void 0
     }
 
-    function rc(UU) {
-      var XU;
-      if (UU.startsWith(Bc)) {
-        var zU;
-        const XU = (0, ac.e)(UU.slice(5));
-        return null !== (zU = void 0 === XU ? null : Cc(XU)) && void 0 !== zU ? zU : Zc.notFoundUrl()
+    function cA(HH) {
+      var BH;
+      if (HH.startsWith(PA)) {
+        var LH;
+        const BH = (0, QA.d)(HH.slice(5));
+        return null !== (LH = void 0 === BH ? null : oA(BH)) && void 0 !== LH ? LH : TA.notFoundUrl()
       }
-      return null !== (XU = Zc.particleUrl(UU)) && void 0 !== XU ? XU : Zc.notFoundUrl()
+      return null !== (BH = TA.particleUrl(HH)) && void 0 !== BH ? BH : TA.notFoundUrl()
     }
 
-    function uc(UU, XU) {
-      return "StairsBlock" === UU ? UU : XU ? "SlabBlock" : "CubeBlock"
+    function eA(HH, BH) {
+      return "StairsBlock" === HH ? HH : BH ? "SlabBlock" : "CubeBlock"
     }
-    const fc = {
-        async blockIcon(UU) {
-          var XU;
+    const qA = {
+        async blockIcon(HH) {
+          var BH;
           let {
-            name: cU,
-            size: yU,
-            lineWidth: QU
-          } = UU;
-          await ec();
-          const AU = null !== (XU = Sc(cU)) && void 0 !== XU ? XU : cU,
-            FU = (0, gc.f)(AU, yU, QU);
-          if (null !== FU) return FU;
-          const oU = pc(AU),
-            DU = (0, Dc.c)(AU),
-            EU = void 0 === DU || null === Rc ? void 0 : Rc.itemTypeNameOf(DU);
-          if (null === Zc || void 0 === oU) return "";
-          const YU = [oU.top, oU.left, oU.right].some((UU => null === wc(UU))),
-            NU = YU ? await (Wc ??= zU.e(222).then((() => zU(34975))).then((UU => (dc && (dc = !1, (0, fz.e)()), {
-              rotated: UU.rotatedBlockTextures,
-              animated: UU.animatedBlockTextures
-            })), (UU => (Wc = null, dc = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", UU), null))), Wc) : null;
-          if (YU && null === NU) return "";
-          const IU = {
-              top: Oc(oU.top, NU),
-              left: Oc(oU.left, NU),
-              right: Oc(oU.right, NU),
-              itemType: uc(EU, oU.half)
+            name: AH,
+            size: rH,
+            lineWidth: SH
+          } = HH;
+          await mA();
+          const hH = null !== (BH = KA(AH)) && void 0 !== BH ? BH : AH,
+            tH = (0, MA.h)(hH, rH, SH);
+          if (null !== tH) return tH;
+          const zH = uA(hH),
+            CH = (0, CA.e)(hH),
+            EH = void 0 === CH || null === UA ? void 0 : UA.itemTypeNameOf(CH);
+          if (null === TA || void 0 === zH) return "";
+          const XH = [zH.top, zH.left, zH.right].some((HH => null === IA(HH))),
+            GH = XH ? await (OA ??= LH.e(228).then((() => LH(35079))).then((HH => (bA && (bA = !1, (0, qL.e)()), {
+              rotated: HH.rotatedBlockTextures,
+              animated: HH.animatedBlockTextures
+            })), (HH => (OA = null, bA = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", HH), null))), OA) : null;
+          if (XH && null === GH) return "";
+          const YH = {
+              top: lA(zH.top, GH),
+              left: lA(zH.left, GH),
+              right: lA(zH.right, GH),
+              itemType: eA(EH, zH.half)
             },
-            pU = (0, kc.h)(),
-            aU = 0 === pU ? AU : `${AU}#${pU}`;
-          return (await (0, tc.e)()).drawBlockIconUrl(aU, yU, QU, (() => IU))
+            uH = (0, xA.h)(),
+            QH = 0 === uH ? hH : `${hH}#${uH}`;
+          return (await (0, WA.e)()).drawBlockIconUrl(QH, rH, SH, (() => YH))
         }
       },
-      ic = {
-        itemIcon: function(UU) {
-          var XU, zU, yU, QU;
-          if (null === Zc) return ec(), cU.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(UU);
-          if ((0, Fc.i)(UU)) return {
+      gA = {
+        itemIcon: function(HH) {
+          var BH, LH, rH, SH;
+          if (null === TA) return mA(), AH.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(HH);
+          if ((0, tA.k)(HH)) return {
             kind: "icon",
-            url: null !== (zU = null !== (yU = null === (QU = (0, kc.i)()) || void 0 === QU ? void 0 : QU.textureUrl(UU)) && void 0 !== yU ? yU : Zc.ingameIconUrl(UU)) && void 0 !== zU ? zU : Zc.notFoundUrl()
+            url: null !== (LH = null !== (rH = null === (SH = (0, xA.k)()) || void 0 === SH ? void 0 : SH.textureUrl(HH)) && void 0 !== rH ? rH : TA.ingameIconUrl(HH)) && void 0 !== LH ? LH : TA.notFoundUrl()
           };
-          if (UU.startsWith(Fc.d)) return {
+          if (HH.startsWith(tA.d)) return {
             kind: "icon",
-            url: rc(UU.slice(Fc.d.length))
+            url: cA(HH.slice(tA.d.length))
           };
-          if (0 === (0, Dc.i)()) return (0, oc.d)(), cU.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(UU);
-          const AU = null !== (XU = Sc(UU)) && void 0 !== XU ? XU : UU,
-            FU = (0, Dc.c)(AU),
-            oU = void 0 === FU ? void 0 : Rc.itemTypeNameOf(FU);
-          if (void 0 !== pc(AU)) return {
+          if (0 === (0, CA.j)()) return (0, zA.e)(), AH.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(HH);
+          const hH = null !== (BH = KA(HH)) && void 0 !== BH ? BH : HH,
+            tH = (0, CA.e)(hH),
+            zH = void 0 === tH ? void 0 : UA.itemTypeNameOf(tH);
+          if (void 0 !== uA(hH)) return {
             kind: "drawnBlock"
           };
-          const DU = function(UU) {
-            var XU;
-            return null !== (XU = Cc(qc(UU))) && void 0 !== XU ? XU : Zc.notFoundUrl()
-          }(AU);
-          if ((0, gc.k)(AU) && ! function(UU) {
-              const XU = (0, kc.i)();
-              return null !== XU && (null !== XU.textureUrl(qc(UU)) || (0, gc.d)(UU).some((UU => null !== XU.modelUrl(UU))))
-            }(AU)) return {
+          const CH = function(HH) {
+            var BH;
+            return null !== (BH = oA(fA(HH))) && void 0 !== BH ? BH : TA.notFoundUrl()
+          }(hH);
+          if ((0, MA.n)(hH) && ! function(HH) {
+              const BH = (0, xA.k)();
+              return null !== BH && (null !== BH.textureUrl(fA(HH)) || (0, MA.d)(HH).some((HH => null !== BH.modelUrl(HH))))
+            }(hH)) return {
             kind: "model",
-            url: DU,
-            drawn: (0, gc.i)(AU)
+            url: CH,
+            drawn: (0, MA.k)(hH)
           };
-          if ("Gun" === oU) return {
+          if ("Gun" === zH) return {
             kind: "gun",
-            url: DU
+            url: CH
           };
-          if (void 0 !== FU && "GrayscaleArmour" === Rc.itemTypeOf(FU) || Object.hasOwn(Ac.e, AU)) {
-            var EU;
-            const XU = null !== (EU = (0, Ac.i)(UU)) && void 0 !== EU ? EU : (0, Ac.i)(AU);
-            if (XU) return {
+          if (void 0 !== tH && "GrayscaleArmour" === UA.itemTypeOf(tH) || Object.hasOwn(hA.c, hH)) {
+            var EH;
+            const BH = null !== (EH = (0, hA.g)(HH)) && void 0 !== EH ? EH : (0, hA.g)(hH);
+            if (BH) return {
               kind: "item",
-              url: DU,
-              tint: XU
+              url: CH,
+              tint: BH
             }
           }
           return {
             kind: "item",
-            url: DU
+            url: CH
           }
         },
-        hasIcon: function(UU) {
-          return void 0 !== Sc(UU) || (0, Fc.i)(UU) || UU.startsWith(Fc.d)
+        hasIcon: function(HH) {
+          return void 0 !== KA(HH) || (0, tA.k)(HH) || HH.startsWith(tA.d)
         },
-        isItemName: function(UU) {
-          return void 0 !== Sc(UU)
+        isItemName: function(HH) {
+          return void 0 !== KA(HH)
         }
       };
 
-    function Hc() {
-      (0, cU.installPageSources)({
+    function NA() {
+      (0, AH.installPageSources)({
         commands: {
-          ...cU.DEFAULT_CLIENT_PAGE_SOURCES.commands,
-          setChunkAddDistance: iz.l,
-          prewarmCreativeIcons: yc
+          ...AH.DEFAULT_CLIENT_PAGE_SOURCES.commands,
+          setChunkAddDistance: gL.r,
+          prewarmCreativeIcons: rA
         },
-        queries: fc,
+        queries: qA,
         lookups: {
-          ...cU.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
-          ...ic,
-          nG: iz.f,
-          drawCallStats: Hz.k,
-          iconsDrawAhead: Xc
+          ...AH.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
+          ...gA,
+          jT: gL.g,
+          drawCallStats: NL.j,
+          iconsDrawAhead: BA
         }
-      }), (0, fz.e)(), ec(), Jz || (Jz = !0, DU.k.subscribe("gameJoined", (() => {
-        var UU;
-        Kz = !1, null === (UU = Uc) || void 0 === UU || UU(), Uc = null;
+      }), (0, qL.e)(), mA(), aL || (aL = !0, CH.k.subscribe("gameJoined", (() => {
+        var HH;
+        JL = !1, null === (HH = HA) || void 0 === HH || HH(), HA = null;
         for (const {
-            name: XU,
-            slot: zU
+            name: BH,
+            slot: LH
           }
-          of Tz.splice(0)) zU.asked.delete(XU)
-      })), DU.k.subscribe("gamePlayable", (() => {
-        Kz = !0, zc()
-      })), cU.gameBridge.subscribe("inventory", zc), cU.gameBridge.subscribe("itemIconsVersion", (() => {
-        bz.clear(), zc()
+          of pL.splice(0)) LH.asked.delete(BH)
+      })), CH.k.subscribe("gamePlayable", (() => {
+        JL = !0, LA()
+      })), AH.gameBridge.subscribe("inventory", LA), AH.gameBridge.subscribe("itemIconsVersion", (() => {
+        iL.clear(), LA()
       })))
     }
-    var Mc = zU(633),
-      vc = zU(40517);
+    var RA = LH(609),
+      jA = LH(40677);
 
-    function Vc(UU) {
-      if (null === UU || void 0 === UU || !UU.isCoreRunning) return null;
+    function nA(HH) {
+      if (null === HH || void 0 === HH || !HH.isCoreRunning) return null;
       const {
-        api: XU,
-        chunks: zU,
-        items: cU,
-        tables: yU
-      } = UU;
+        api: BH,
+        chunks: LH,
+        items: AH,
+        tables: rH
+      } = HH;
       return {
         playerFeet() {
-          const UU = XU.wG(XU.localId);
-          return null !== UU && void 0 !== UU && UU.every(Number.isFinite) ? UU : null
+          const HH = BH.hT(BH.localId);
+          return null !== HH && void 0 !== HH && HH.every(Number.isFinite) ? HH : null
         },
-        chunkBlocks: UU => zU.isLoaded(UU[0], UU[1], UU[2]) ? (UU, XU, cU) => zU.yF(UU, XU, cU) : null,
-        blockName: UU => yU.nameOfId(UU),
+        chunkBlocks: HH => LH.isLoaded(HH[0], HH[1], HH[2]) ? (HH, BH, AH) => LH.ph(HH, BH, AH) : null,
+        blockName: HH => rH.nameOfId(HH),
         inventory: () => ({
-          slots: cU.playerItems().map((UU => UU ? {
-            name: UU.name,
-            amount: UU.amount
+          slots: AH.playerItems().map((HH => HH ? {
+            name: HH.name,
+            amount: HH.amount
           } : null)),
-          heldSlot: cU.selectedSlot
+          heldSlot: AH.selectedSlot
         }),
         nearby() {
-          const zU = [];
-          for (let yU = 0; yU < XU.idStr.length; yU++) {
-            var cU;
-            const QU = XU.idStr[yU],
-              AU = XU.serverIds[yU],
-              FU = XU.kinds[yU];
-            if (null === QU || XU.isLocal(AU) || FU >>> BU.d !== BU.s.Lifeform) continue;
-            const oU = XU.wG(AU),
-              DU = Mc.h[FU & BU.f];
-            oU && void 0 !== DU && zU.push({
-              kind: "Player" === DU ? "player" : DU,
-              name: null !== (cU = UU.clientApi.getEntityName(QU)) && void 0 !== cU ? cU : null,
-              position: oU
+          const LH = [];
+          for (let rH = 0; rH < BH.idStr.length; rH++) {
+            var AH;
+            const SH = BH.idStr[rH],
+              hH = BH.serverIds[rH],
+              tH = BH.kinds[rH];
+            if (null === SH || BH.isLocal(hH) || tH >>> PH.d !== PH.v.Lifeform) continue;
+            const zH = BH.hT(hH),
+              CH = RA.j[tH & PH.g];
+            zH && void 0 !== CH && LH.push({
+              kind: "Player" === CH ? "player" : CH,
+              name: null !== (AH = HH.clientApi.getEntityName(SH)) && void 0 !== AH ? AH : null,
+              position: zH
             })
           }
-          return zU
+          return LH
         },
         droppedItems() {
-          let UU = 0;
-          for (let zU = 0; zU < XU.idStr.length; zU++) null !== XU.idStr[zU] && XU.kinds[zU] >>> BU.d === BU.s.Item && UU++;
-          return UU
+          let HH = 0;
+          for (let LH = 0; LH < BH.idStr.length; LH++) null !== BH.idStr[LH] && BH.kinds[LH] >>> PH.d === PH.v.Item && HH++;
+          return HH
         }
       }
     }
-    const sc = {
-        worldCodeAiChunk: UU => Promise.resolve((0, vc.d)(Vc((0, AU.f)()), UU)),
-        worldCodeAiGameState: () => Promise.resolve((0, vc.e)(Vc((0, AU.f)())))
+    const FA = {
+        worldCodeAiChunk: HH => Promise.resolve((0, jA.e)(nA((0, hH.i)()), HH)),
+        worldCodeAiGameState: () => Promise.resolve((0, jA.g)(nA((0, hH.i)())))
       },
-      nc = function(UU) {
-        const XU = Ez(),
-          cU = Ez(),
-          yU = new Set,
-          QU = new Set,
-          AU = () => {
-            var XU, zU;
-            return null !== (XU = null === (zU = UU.runtime()) || void 0 === zU ? void 0 : zU.currentViewer) && void 0 !== XU ? XU : null
+      DA = function(HH) {
+        const BH = EL(),
+          AH = EL(),
+          rH = new Set,
+          SH = new Set,
+          hH = () => {
+            var BH, LH;
+            return null !== (BH = null === (LH = HH.runtime()) || void 0 === LH ? void 0 : LH.currentViewer) && void 0 !== BH ? BH : null
           };
-        let FU = null,
-          oU = null;
-        const EU = (UU, XU) => ({
-            current: UU,
-            watch(zU) {
-              let cU = UU();
-              return XU.add((() => {
-                const XU = UU();
-                XU !== cU && (cU = XU, zU(XU))
+        let tH = null,
+          zH = null;
+        const EH = (HH, BH) => ({
+            current: HH,
+            watch(LH) {
+              let AH = HH();
+              return BH.add((() => {
+                const BH = HH();
+                BH !== AH && (AH = BH, LH(BH))
               }))
             }
           }),
-          NU = UU => ({
-            watch: XU => (UU.add(XU), () => {
-              UU.delete(XU)
+          GH = HH => ({
+            watch: BH => (HH.add(BH), () => {
+              HH.delete(BH)
             })
           }),
-          IU = UU => {
-            const XU = AU(),
-              zU = null === XU || void 0 === XU ? void 0 : XU.view;
-            XU && zU && XU.seek(Math.max(0, Math.min(zU.totalTicks - 1, zU.LY + UU * YU.Cd)))
+          YH = HH => {
+            const BH = hH(),
+              LH = null === BH || void 0 === BH ? void 0 : BH.view;
+            BH && LH && BH.seek(Math.max(0, Math.min(LH.totalTicks - 1, LH.IX + HH * XH.wd)))
           },
-          pU = {
-            replay: EU((() => {
-              var UU;
-              const XU = AU(),
-                zU = null !== (UU = null === XU || void 0 === XU ? void 0 : XU.view) && void 0 !== UU ? UU : null;
-              return null === XU || null === zU || zU.state === YU.od.None ? (FU = null, null) : (FU = (0, bU.q)(FU, {
-                id: XU.id,
-                LY: zU.LY,
-                totalTicks: zU.totalTicks,
-                bq: YU.Cd,
-                playing: zU.state === YU.od.Playing,
-                speed: zU.speed,
-                cameraMode: zU.cameraMode,
-                freecam: "freecam" === zU.cameraMode
-              }), FU)
-            }), XU),
-            replayEdits: EU((() => {
-              var UU;
-              const XU = AU(),
-                zU = null !== (UU = null === XU || void 0 === XU ? void 0 : XU.view) && void 0 !== UU ? UU : null;
-              return null === XU || null === zU || zU.state === YU.od.None ? (oU = null, null) : (oU = (0, bU.q)(oU, {
-                cameraKeyframes: [...XU.keyframes],
-                playbackMark: zU.mark,
-                fileName: XU.fileName,
-                unsavedChanges: XU.unsavedChanges,
-                suggestSaveAs: XU.suggestSaveAs
-              }), oU)
-            }), XU),
-            replayRecorder: EU((() => {
-              var XU, zU;
-              return null !== (XU = null === (zU = UU.runtime()) || void 0 === zU ? void 0 : zU.recorder.current) && void 0 !== XU ? XU : Fz.b.states.replayRecorder.current()
-            }), cU),
+          uH = {
+            replay: EH((() => {
+              var HH;
+              const BH = hH(),
+                LH = null !== (HH = null === BH || void 0 === BH ? void 0 : BH.view) && void 0 !== HH ? HH : null;
+              return null === BH || null === LH || LH.state === XH.hd.None ? (tH = null, null) : (tH = (0, iH.r)(tH, {
+                id: BH.id,
+                IX: LH.IX,
+                totalTicks: LH.totalTicks,
+                oN: XH.wd,
+                playing: LH.state === XH.hd.Playing,
+                speed: LH.speed,
+                cameraMode: LH.cameraMode,
+                freecam: "freecam" === LH.cameraMode
+              }), tH)
+            }), BH),
+            replayEdits: EH((() => {
+              var HH;
+              const BH = hH(),
+                LH = null !== (HH = null === BH || void 0 === BH ? void 0 : BH.view) && void 0 !== HH ? HH : null;
+              return null === BH || null === LH || LH.state === XH.hd.None ? (zH = null, null) : (zH = (0, iH.r)(zH, {
+                cameraKeyframes: [...BH.keyframes],
+                playbackMark: LH.mark,
+                fileName: BH.fileName,
+                unsavedChanges: BH.unsavedChanges,
+                suggestSaveAs: BH.suggestSaveAs
+              }), zH)
+            }), BH),
+            replayRecorder: EH((() => {
+              var BH, LH;
+              return null !== (BH = null === (LH = HH.runtime()) || void 0 === LH ? void 0 : LH.recorder.current) && void 0 !== BH ? BH : tL.c.states.replayRecorder.current()
+            }), AH),
             replayVideoExporting: {
-              current: Qz.d,
-              watch: UU => (0, DU.n)("replayViewer|videoExportChanged", (() => {
-                UU((0, Qz.d)())
+              current: SL.e,
+              watch: HH => (0, CH.m)("replayViewer|videoExportChanged", (() => {
+                HH((0, SL.e)())
               }))
             }
           },
-          aU = {
-            replayUiActionRequested: NU(QU),
-            replayViewerRequested: NU(yU)
+          QH = {
+            replayUiActionRequested: GH(SH),
+            replayViewerRequested: GH(rH)
           },
-          tU = UU => {
-            for (const XU of yU) XU(UU)
+          WH = HH => {
+            for (const BH of rH) BH(HH)
           },
-          gU = () => {
-            var cU;
-            !0 === (null === (cU = AU()) || void 0 === cU ? void 0 : cU.isOpen) && Promise.all([zU.e(111), zU.e(78)]).then((() => zU(63276))).then((zU => {
+          MH = () => {
+            var AH;
+            !0 === (null === (AH = hH()) || void 0 === AH ? void 0 : AH.isOpen) && Promise.all([LH.e(111), LH.e(78)]).then((() => LH(64074))).then((LH => {
               let {
-                startWasmReplayVideoExport: cU
-              } = zU;
-              return cU({
-                viewer: AU,
+                startWasmReplayVideoExport: AH
+              } = LH;
+              return AH({
+                viewer: hH,
                 canvas: () => {
-                  var XU, zU;
-                  return null !== (XU = null === (zU = UU.canvas) || void 0 === zU ? void 0 : zU.call(UU)) && void 0 !== XU ? XU : null
+                  var BH, LH;
+                  return null !== (BH = null === (LH = HH.canvas) || void 0 === LH ? void 0 : LH.call(HH)) && void 0 !== BH ? BH : null
                 },
-                watchViewer: XU.add,
-                requestViewer: tU
+                watchViewer: BH.add,
+                requestViewer: WH
               })
-            }), (UU => {
-              console.error("Couldn't load the video export", UU), Az.NotificationProvider.showAlertPopup({
+            }), (HH => {
+              console.error("Couldn't load the video export", HH), hL.NotificationProvider.showAlertPopup({
                 title: "Video export failed",
                 subtitle: "Check your connection, then try again."
               })
-            })).catch((UU => {
-              console.error("The video export failed", UU)
+            })).catch((HH => {
+              console.error("The video export failed", HH)
             }))
           },
-          kU = {
-            replayAction(UU) {
-              if ((0, Qz.d)()) return;
-              const XU = AU();
-              switch (UU) {
+          xH = {
+            replayAction(HH) {
+              if ((0, SL.e)()) return;
+              const BH = hH();
+              switch (HH) {
                 case "replaySkipBack":
-                  IU(-1);
+                  YH(-1);
                   break;
                 case "replaySkipForward":
-                  IU(1);
+                  YH(1);
                   break;
                 case "replaySpeedUp":
                 case "replaySpeedDown":
-                  null !== XU && void 0 !== XU && XU.view && XU.setSpeed((0, yz.h)(XU.view.speed, "replaySpeedUp" === UU ? "up" : "down"));
+                  null !== BH && void 0 !== BH && BH.view && BH.setSpeed((0, rL.g)(BH.view.speed, "replaySpeedUp" === HH ? "up" : "down"));
                   break;
                 case "replayRecordKeyframe":
-                  null === XU || void 0 === XU || XU.addKeyframe()
+                  null === BH || void 0 === BH || BH.addKeyframe()
               }
             },
-            setReplayPlaying(UU) {
-              var XU, zU;
-              (0, Qz.d)() || (UU ? null === (XU = AU()) || void 0 === XU || XU.play() : null === (zU = AU()) || void 0 === zU || zU.pause())
+            setReplayPlaying(HH) {
+              var BH, LH;
+              (0, SL.e)() || (HH ? null === (BH = hH()) || void 0 === BH || BH.play() : null === (LH = hH()) || void 0 === LH || LH.pause())
             },
-            seekReplay(UU) {
-              var XU;
+            seekReplay(HH) {
+              var BH;
               let {
-                LY: zU,
-                ignorePlaybackMark: cU
-              } = UU;
-              null === (XU = AU()) || void 0 === XU || XU.seek(zU, null !== cU && void 0 !== cU && cU)
+                IX: LH,
+                ignorePlaybackMark: AH
+              } = HH;
+              null === (BH = hH()) || void 0 === BH || BH.seek(LH, null !== AH && void 0 !== AH && AH)
             },
-            setReplayCameraMode(UU) {
-              var XU;
-              null === (XU = AU()) || void 0 === XU || XU.setCameraMode(UU)
+            setReplayCameraMode(HH) {
+              var BH;
+              null === (BH = hH()) || void 0 === BH || BH.setCameraMode(HH)
             },
             syncReplayCameraMode() {},
-            setReplayCameraKeyframe(UU) {
-              var XU;
-              null === (XU = AU()) || void 0 === XU || XU.setKeyframe(UU)
+            setReplayCameraKeyframe(HH) {
+              var BH;
+              null === (BH = hH()) || void 0 === BH || BH.setKeyframe(HH)
             },
-            moveReplayCameraKeyframe(UU) {
-              var XU;
+            moveReplayCameraKeyframe(HH) {
+              var BH;
               let {
-                from: zU,
-                to: cU
-              } = UU;
-              null === (XU = AU()) || void 0 === XU || XU.moveKeyframe(zU, cU)
+                from: LH,
+                to: AH
+              } = HH;
+              null === (BH = hH()) || void 0 === BH || BH.moveKeyframe(LH, AH)
             },
-            deleteReplayCameraKeyframes(UU) {
-              var XU;
+            deleteReplayCameraKeyframes(HH) {
+              var BH;
               let {
-                start: zU,
-                end: cU
-              } = UU;
-              null === (XU = AU()) || void 0 === XU || XU.deleteKeyframes(zU, cU)
+                start: LH,
+                end: AH
+              } = HH;
+              null === (BH = hH()) || void 0 === BH || BH.deleteKeyframes(LH, AH)
             },
-            setReplayPlaybackMark(UU) {
-              var XU;
-              null === (XU = AU()) || void 0 === XU || XU.setMark(UU)
+            setReplayPlaybackMark(HH) {
+              var BH;
+              null === (BH = hH()) || void 0 === BH || BH.setMark(HH)
             },
-            cropReplay(UU) {
-              var XU, zU;
+            cropReplay(HH) {
+              var BH, LH;
               let {
-                start: cU,
-                end: yU
-              } = UU;
-              return !(0, Qz.d)() && (null !== (XU = null === (zU = AU()) || void 0 === zU ? void 0 : zU.crop(cU, yU)) && void 0 !== XU && XU)
+                start: AH,
+                end: rH
+              } = HH;
+              return !(0, SL.e)() && (null !== (BH = null === (LH = hH()) || void 0 === LH ? void 0 : LH.crop(AH, rH)) && void 0 !== BH && BH)
             },
-            holdReplayForShaderPackFailure(UU) {
-              const XU = AU();
-              XU && (XU.holdForShaderPackFailure(), function(UU) {
-                zU.e(128).then((() => zU(40071))).then((XU => {
+            holdReplayForShaderPackFailure(HH) {
+              const BH = hH();
+              BH && (BH.holdForShaderPackFailure(), function(HH) {
+                LH.e(130).then((() => LH(40182))).then((BH => {
                   let {
-                    shaderPackPage: zU
-                  } = XU;
-                  zU.block(UU)
-                })).catch((UU => {
-                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", UU)
+                    shaderPackPage: LH
+                  } = BH;
+                  LH.block(HH)
+                })).catch((HH => {
+                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", HH)
                 }))
-              }(UU))
+              }(HH))
             },
             exportReplayVideo() {
-              gU()
+              MH()
             },
             toggleRecording() {
-              var XU;
-              null === (XU = UU.runtime()) || void 0 === XU || XU.recorder.toggleRecording()
+              var BH;
+              null === (BH = HH.runtime()) || void 0 === BH || BH.recorder.toggleRecording()
             },
             saveClip() {
-              var XU;
-              null === (XU = UU.runtime()) || void 0 === XU || XU.recorder.saveClip()
+              var BH;
+              null === (BH = HH.runtime()) || void 0 === BH || BH.recorder.saveClip()
             },
-            setRecorderPrefs(XU) {
-              var zU;
+            setRecorderPrefs(BH) {
+              var LH;
               let {
-                clipping: cU,
-                clipSeconds: yU
-              } = XU;
-              null === (zU = UU.runtime()) || void 0 === zU || zU.recorder.setPrefs(cU, yU)
+                clipping: AH,
+                clipSeconds: rH
+              } = BH;
+              null === (LH = HH.runtime()) || void 0 === LH || LH.recorder.setPrefs(AH, rH)
             },
-            setReplayViewerOpen(XU) {
-              var zU;
-              (0, tX.g)(XU) && (null === (zU = UU.runtime()) || void 0 === zU || zU.recorder.viewerShown(XU))
+            setReplayViewerOpen(BH) {
+              var LH;
+              (0, WB.e)(BH) && (null === (LH = HH.runtime()) || void 0 === LH || LH.recorder.viewerShown(BH))
             },
-            recordFlyingMiddleText(XU) {
-              var zU;
+            recordFlyingMiddleText(BH) {
+              var LH;
               let {
-                content: cU,
-                nX: yU,
-                angle: QU,
-                mX: AU
-              } = XU;
-              null === (zU = UU.runtime()) || void 0 === zU || zU.recorder.recordFlyingText(JSON.stringify(cU), yU, QU, AU)
+                content: AH,
+                dr: rH,
+                angle: SH,
+                ar: hH
+              } = BH;
+              null === (LH = HH.runtime()) || void 0 === LH || LH.recorder.recordFlyingText(JSON.stringify(AH), rH, SH, hH)
             },
-            dragReplayCamera(XU) {
-              var zU;
+            dragReplayCamera(BH) {
+              var LH;
               let {
-                dx: cU,
-                dy: yU
-              } = XU;
-              null === (zU = UU.freecam()) || void 0 === zU || zU.drag(cU, yU)
+                dx: AH,
+                dy: rH
+              } = BH;
+              null === (LH = HH.freecam()) || void 0 === LH || LH.drag(AH, rH)
             },
-            moveReplayFreecam(XU) {
-              var zU;
-              null === (zU = UU.freecam()) || void 0 === zU || zU.move(XU)
+            moveReplayFreecam(BH) {
+              var LH;
+              null === (LH = HH.freecam()) || void 0 === LH || LH.move(BH)
             },
-            holdReplayFreecamVertical(XU) {
-              var zU;
+            holdReplayFreecamVertical(BH) {
+              var LH;
               let {
-                action: cU,
-                uD: yU
-              } = XU;
-              null === (zU = UU.freecam()) || void 0 === zU || zU.holdVertical(cU, yU)
+                action: AH,
+                LX: rH
+              } = BH;
+              null === (LH = HH.freecam()) || void 0 === LH || LH.holdVertical(AH, rH)
             }
           },
-          GU = UU => {
-            var XU;
-            const zU = AU(),
-              cU = null !== (XU = null === zU || void 0 === zU ? void 0 : zU.view) && void 0 !== XU ? XU : null;
-            oz.has(UU) ? (UU => {
-              for (const XU of QU) XU(UU)
-            })(UU) : Dz.has(UU) ? kU.replayAction(UU) : "replayPlayPause" === UU ? zU && cU && cU.state !== YU.od.None && kU.setReplayPlaying(cU.state !== YU.od.Playing) : "replayChangeCameraMode" === UU ? null === zU || void 0 === zU || zU.cycleCameraMode() : "replayExit" === UU ? !0 === (null === zU || void 0 === zU ? void 0 : zU.inPlayback) && (0, rX.j)("/") : "replayExportVideo" === UU && gU()
+          vH = HH => {
+            var BH;
+            const LH = hH(),
+              AH = null !== (BH = null === LH || void 0 === LH ? void 0 : LH.view) && void 0 !== BH ? BH : null;
+            zL.has(HH) ? (HH => {
+              for (const BH of SH) BH(HH)
+            })(HH) : CL.has(HH) ? xH.replayAction(HH) : "replayPlayPause" === HH ? LH && AH && AH.state !== XH.hd.None && xH.setReplayPlaying(AH.state !== XH.hd.Playing) : "replayChangeCameraMode" === HH ? null === LH || void 0 === LH || LH.cycleCameraMode() : "replayExit" === HH ? !0 === (null === LH || void 0 === LH ? void 0 : LH.inPlayback) && (0, cB.j)("/") : "replayExportVideo" === HH && MH()
           };
-        let BU = !1;
+        let PH = !1;
         return {
-          states: pU,
-          events: aU,
-          commands: kU,
+          states: uH,
+          events: QH,
+          commands: xH,
           lookups: {
             replayCamera() {
-              var XU, zU, cU;
-              return !0 !== (null === (XU = AU()) || void 0 === XU ? void 0 : XU.isOpen) ? null : null !== (zU = null === (cU = UU.cameraView) || void 0 === cU ? void 0 : cU.call(UU)) && void 0 !== zU ? zU : null
+              var BH, LH, AH;
+              return !0 !== (null === (BH = hH()) || void 0 === BH ? void 0 : BH.isOpen) ? null : null !== (LH = null === (AH = HH.cameraView) || void 0 === AH ? void 0 : AH.call(HH)) && void 0 !== LH ? LH : null
             },
             leaveGameReloadsPage() {
-              var UU;
-              return !0 === (null === (UU = AU()) || void 0 === UU ? void 0 : UU.inPlayback)
+              var HH;
+              return !0 === (null === (HH = hH()) || void 0 === HH ? void 0 : HH.inPlayback)
             }
           },
           feed: {
             viewerChanged: () => {
-              var UU;
-              const zU = !0 === (null === (UU = AU()) || void 0 === UU ? void 0 : UU.inPlayback);
-              zU !== BU && (BU = zU, DU.k.UY("connectedGameChanged")), XU.fire()
+              var HH;
+              const LH = !0 === (null === (HH = hH()) || void 0 === HH ? void 0 : HH.inPlayback);
+              LH !== PH && (PH = LH, CH.k.AX("connectedGameChanged")), BH.fire()
             },
-            recorderChanged: cU.fire,
-            keyDown: UU => {
-              var XU;
-              switch (UU) {
+            recorderChanged: AH.fire,
+            keyDown: HH => {
+              var BH;
+              switch (HH) {
                 case "recordGame":
-                  return void kU.toggleRecording();
+                  return void xH.toggleRecording();
                 case "recordClip":
-                  return void((0, tX.e)() || kU.saveClip())
-              }(0, Qz.d)() || ("replayViewerOpen" !== UU ? UU.startsWith("replay") && ((0, tX.e)() || !0 === (null === (XU = AU()) || void 0 === XU ? void 0 : XU.inPlayback)) && GU(UU) : tU("toggle"))
+                  return void((0, WB.c)() || xH.saveClip())
+              }(0, SL.e)() || ("replayViewerOpen" !== HH ? HH.startsWith("replay") && ((0, WB.c)() || !0 === (null === (BH = hH()) || void 0 === BH ? void 0 : BH.inPlayback)) && vH(HH) : WH("toggle"))
             }
           }
         }
       }({
-        runtime: yU.l,
+        runtime: rH.n,
         cameraView: () => {
-          var UU;
-          const XU = null === (UU = (0, AU.f)()) || void 0 === UU ? void 0 : UU.renderFrame;
-          if (!XU) return null;
-          const [zU, cU, yU] = XU.cameraPosition, [QU, FU, oU] = XU.cameraDirection;
+          var HH;
+          const BH = null === (HH = (0, hH.i)()) || void 0 === HH ? void 0 : HH.renderFrame;
+          if (!BH) return null;
+          const [LH, AH, rH] = BH.cameraPosition, [SH, tH, zH] = BH.cameraDirection;
           return {
-            position: [zU, cU, yU],
-            direction: [QU, FU, oU]
+            position: [LH, AH, rH],
+            direction: [SH, tH, zH]
           }
         },
         canvas: () => {
-          var UU, XU, zU;
-          return null !== (UU = null === (XU = (zU = (0, QU.H)()).canvas) || void 0 === XU ? void 0 : XU.call(zU)) && void 0 !== UU ? UU : null
+          var HH, BH, LH;
+          return null !== (HH = null === (BH = (LH = (0, SH.L)()).canvas) || void 0 === BH ? void 0 : BH.call(LH)) && void 0 !== HH ? HH : null
         },
-        freecam: yU.h
+        freecam: rH.j
       }),
-      mc = {
+      wA = {
         states: {
-          ...DX,
-          ...IX.l,
-          ...nc.states,
-          ...Iz,
-          ...VU
+          ...CB,
+          ...YB.k,
+          ...DA.states,
+          ...YL,
+          ...nH
         },
         events: {
-          ...EX,
-          ...tU,
-          ...IX.h,
-          ...LU.b,
-          ...ez.f,
-          ...nc.events,
-          ...pz,
-          ...dU.i
+          ...EB,
+          ...WH,
+          ...YB.g,
+          ...kH.c,
+          ...mL.g,
+          ...DA.events,
+          ...uL,
+          ...bH.j
         },
         commands: {
-          ...WU,
-          ...YX,
-          ...gU,
-          ...IX.e,
-          ...bX,
-          ...Lz,
-          ...dU.h,
-          ...iX,
-          ...nc.commands,
-          ...Zz,
-          ...sU,
-          ...uz,
-          ...pX
+          ...OH,
+          ...XB,
+          ...MH,
+          ...YB.e,
+          ...iB,
+          ...kL,
+          ...bH.f,
+          ...gB,
+          ...DA.commands,
+          ...TL,
+          ...FH,
+          ...eL,
+          ...uB
         },
         queries: {
-          ...IX.j,
-          ...sc
+          ...YB.h,
+          ...FA
         },
         lookups: {
-          ...NX,
-          ...uU,
-          ...ez.j,
-          ...nc.lookups,
-          ...PU,
-          ...cz,
-          ...rz,
-          ...nU
+          ...GB,
+          ...eH,
+          ...mL.k,
+          ...DA.lookups,
+          ...VH,
+          ...AL,
+          ...cL,
+          ...DH
         }
       };
 
-    function lc() {
-      (0, FU.d)(aU.o), (0, yU.m)(nc.feed), (0, LU.f)(), TX || (TX = !0, (0, aU.m)(qU.k, (UU => {
-        const XU = (0, SU.d)(qU.k, UU);
-        "string" === typeof XU && Promise.resolve().then((() => zU(4010))).then((UU => {
+    function ZA() {
+      (0, tH.e)(QH.l), (0, rH.p)(DA.feed), (0, kH.d)(), pB || (pB = !0, (0, QH.k)(fH.j, (HH => {
+        const BH = (0, KH.f)(fH.j, HH);
+        "string" === typeof BH && Promise.resolve().then((() => LH(4019))).then((HH => {
           let {
-            onCosmeticPackGranted: zU
-          } = UU;
-          zU(XU)
+            onCosmeticPackGranted: LH
+          } = HH;
+          LH(BH)
         }))
-      })), (0, aU.m)(qU.cb, (UU => {
-        const XU = (0, SU.d)(qU.cb, UU);
-        "number" === typeof XU && DU.k.UY("serverUpdating", Date.now() + XU, !0)
-      })), (0, aU.m)(qU.H, (UU => {
-        const XU = (0, SU.d)(qU.H, UU);
-        if ((0, SU.b)(XU)) {
+      })), (0, QH.k)(fH.ab, (HH => {
+        const BH = (0, KH.f)(fH.ab, HH);
+        "number" === typeof BH && CH.k.AX("serverUpdating", Date.now() + BH, !0)
+      })), (0, QH.k)(fH.D, (HH => {
+        const BH = (0, KH.f)(fH.D, HH);
+        if ((0, KH.c)(BH)) {
           const {
-            nU: UU,
-            mU: zU
-          } = XU;
-          (0, jX.e)({
-            nU: "string" === typeof UU ? UU : null,
-            mU: "string" === typeof zU ? zU : null
+            KL: HH,
+            cL: LH
+          } = BH;
+          (0, sB.b)({
+            KL: "string" === typeof HH ? HH : null,
+            cL: "string" === typeof LH ? LH : null
           })
         }
-      })), (0, aU.m)(EU.oc.NewUiRequest, (UU => {
-        const XU = (0, SU.f)(UU);
-        (0, SU.b)(XU) && "number" === typeof XU.id && (0, SU.b)(XU.clientParameters) && (0, KX.i)(XU.id, XU.clientParameters)
-      })), (0, aU.m)(qU.V, (UU => {
-        const XU = (0, SU.d)(qU.V, UU);
-        "number" === typeof XU && (0, KX.j)(XU)
-      })), (0, aU.i)(KX.e), (0, aU.m)(EU.oc.UiRequestPopup, (UU => {
-        const XU = (0, SU.f)(UU);
-        if ((0, SU.b)(XU) && "number" === typeof XU.id && ("string" === typeof XU.text || (0, SU.b)(XU.text) && "string" === typeof XU.text.translationKey)) {
-          const UU = XU.id;
-          (0, KX.k)(UU, XU.text, !0 === XU.destructive, (XU => {
-            bX.answerUiRequest({
-              id: UU,
-              KD: XU
+      })), (0, QH.k)(EH.nc.NewUiRequest, (HH => {
+        const BH = (0, KH.i)(HH);
+        (0, KH.c)(BH) && "number" === typeof BH.id && (0, KH.c)(BH.clientParameters) && (0, JB.f)(BH.id, BH.clientParameters)
+      })), (0, QH.k)(fH.V, (HH => {
+        const BH = (0, KH.f)(fH.V, HH);
+        "number" === typeof BH && (0, JB.i)(BH)
+      })), (0, QH.j)(JB.b), (0, QH.k)(EH.nc.UiRequestPopup, (HH => {
+        const BH = (0, KH.i)(HH);
+        if ((0, KH.c)(BH) && "number" === typeof BH.id && ("string" === typeof BH.text || (0, KH.c)(BH.text) && "string" === typeof BH.text.translationKey)) {
+          const HH = BH.id;
+          (0, JB.m)(HH, BH.text, !0 === BH.destructive, (BH => {
+            iB.answerUiRequest({
+              id: HH,
+              XE: BH
             })
           }))
         }
-      })), (0, aU.m)(EU.oc.TopRightHelper, (UU => {
-        const XU = (0, SU.f)(UU);
-        void 0 !== XU && DU.k.UY("TopRightHelper", XU, !0)
-      })), (0, aU.m)(EU.oc.TaskProgress, (UU => {
-        const XU = (0, SU.f)(UU);
-        (0, SU.b)(XU) && "string" === typeof XU.taskId && "number" === typeof XU.progress && (0, JX.c)({
-          taskId: XU.taskId,
-          progress: XU.progress
+      })), (0, QH.k)(EH.nc.TopRightHelper, (HH => {
+        const BH = (0, KH.i)(HH);
+        void 0 !== BH && CH.k.AX("TopRightHelper", BH, !0)
+      })), (0, QH.k)(EH.nc.TaskProgress, (HH => {
+        const BH = (0, KH.i)(HH);
+        (0, KH.c)(BH) && "string" === typeof BH.taskId && "number" === typeof BH.progress && (0, aB.b)({
+          taskId: BH.taskId,
+          progress: BH.progress
         })
-      }))), Rz || (Rz = !0, (0, aU.m)(qU.s, (UU => {
-        const XU = (0, SU.d)(qU.s, UU);
-        (0, SU.b)(XU) && DU.k.UY("showShopFromServer", {
-          toggle: XU.fc,
-          Hc: XU.Hc
+      }))), UL || (UL = !0, (0, QH.k)(fH.n, (HH => {
+        const BH = (0, KH.f)(fH.n, HH);
+        (0, KH.c)(BH) && CH.k.AX("showShopFromServer", {
+          toggle: BH.eS,
+          qS: BH.qS
         }, !0)
-      })), (0, aU.m)(EU.oc.OverShopInfo, (UU => {
-        const XU = (0, SU.f)(UU);
-        (0, SU.b)(XU) && DU.k.UY("overShopInfo", XU.info, !0)
-      })), (0, aU.m)(EU.oc.ShowShopTutorial, (() => {
-        DU.k.UY("showShopTutorial", null, !0)
-      }))), Gz || (Gz = !0, (0, aU.e)((() => {
-        var UU;
-        (0, az.resetLeaveEvents)(), null === (UU = Bz) || void 0 === UU || UU(), Bz = (0, aU.b)() ? (0, gz.j)(aU.b) : null, (0, aU.b)() || DU.k.Rk()
-      })), (0, aU.m)(EU.oc.SetCookie, (UU => {
-        const XU = (0, SU.f)(UU),
-          zU = (0, rX.b)().gameNameWithVariation;
-        (0, SU.b)(XU) && "string" === typeof XU.key && null !== zU && (0, tz.setCookie)(zU, XU.key, XU.value)
-      })), (0, aU.m)(EU.oc.LeaveValues, (UU => {
-        const XU = (0, SU.f)(UU);
-        if ((0, SU.b)(XU) && "string" === typeof XU.leaveEventType) {
+      })), (0, QH.k)(EH.nc.OverShopInfo, (HH => {
+        const BH = (0, KH.i)(HH);
+        (0, KH.c)(BH) && CH.k.AX("overShopInfo", BH.info, !0)
+      })), (0, QH.k)(EH.nc.ShowShopTutorial, (() => {
+        CH.k.AX("showShopTutorial", null, !0)
+      }))), vL || (vL = !0, (0, QH.g)((() => {
+        var HH;
+        (0, QL.resetLeaveEvents)(), null === (HH = PL) || void 0 === HH || HH(), PL = (0, QH.d)() ? (0, ML.g)(QH.d) : null, (0, QH.d)() || CH.k.Hx()
+      })), (0, QH.k)(EH.nc.SetCookie, (HH => {
+        const BH = (0, KH.i)(HH),
+          LH = (0, cB.c)().gameNameWithVariation;
+        (0, KH.c)(BH) && "string" === typeof BH.key && null !== LH && (0, WL.setCookie)(LH, BH.key, BH.value)
+      })), (0, QH.k)(EH.nc.LeaveValues, (HH => {
+        const BH = (0, KH.i)(HH);
+        if ((0, KH.c)(BH) && "string" === typeof BH.leaveEventType) {
           const {
-            leaveEventType: UU,
-            category: zU,
-            subCategory: cU,
-            value: yU
-          } = XU;
-          (0, az.updateLeaveValue)({
-            leaveEventType: UU,
-            category: zU,
-            subCategory: cU,
-            value: yU
+            leaveEventType: HH,
+            category: LH,
+            subCategory: AH,
+            value: rH
+          } = BH;
+          (0, QL.updateLeaveValue)({
+            leaveEventType: HH,
+            category: LH,
+            subCategory: AH,
+            value: rH
           })
         }
-      })), (0, aU.m)(EU.oc.CustomAnalyticsEvent, (UU => {
-        const XU = (0, SU.f)(UU);
-        if ((0, SU.b)(XU) && "string" === typeof XU.cat1) {
+      })), (0, QH.k)(EH.nc.CustomAnalyticsEvent, (HH => {
+        const BH = (0, KH.i)(HH);
+        if ((0, KH.c)(BH) && "string" === typeof BH.cat1) {
           const {
-            cat1: UU,
-            cat2: zU,
-            cat3: cU,
-            value: yU
-          } = XU;
-          (0, az.logCustomAnalyticsEvent)({
-            cat1: UU,
-            cat2: zU,
-            cat3: cU,
-            value: yU
+            cat1: HH,
+            cat2: LH,
+            cat3: AH,
+            value: rH
+          } = BH;
+          (0, QL.logCustomAnalyticsEvent)({
+            cat1: HH,
+            cat2: LH,
+            cat3: AH,
+            value: rH
           })
         }
-      })), (0, aU.m)(EU.oc.ProgressionEvent, (UU => {
-        const XU = (0, SU.f)(UU);
-        if ((0, SU.b)(XU)) {
+      })), (0, QH.k)(EH.nc.ProgressionEvent, (HH => {
+        const BH = (0, KH.i)(HH);
+        if ((0, KH.c)(BH)) {
           const {
-            type: UU,
-            location1: zU,
-            location2: cU,
-            location3: yU,
-            score: QU
-          } = XU;
-          (0, az.logProgressionEvent)({
-            type: UU,
-            location1: zU,
-            location2: cU,
-            location3: yU,
-            score: QU
+            type: HH,
+            location1: LH,
+            location2: AH,
+            location3: rH,
+            score: SH
+          } = BH;
+          (0, QL.logProgressionEvent)({
+            type: HH,
+            location1: LH,
+            location2: AH,
+            location3: rH,
+            score: SH
           })
         }
-      })), (0, aU.m)(EU.oc.ResourceEvent, (UU => {
-        const XU = (0, SU.f)(UU);
-        if ((0, SU.b)(XU)) {
+      })), (0, QH.k)(EH.nc.ResourceEvent, (HH => {
+        const BH = (0, KH.i)(HH);
+        if ((0, KH.c)(BH)) {
           const {
-            type: UU,
-            resourceType: zU,
-            amount: cU,
-            category: yU,
-            itemName: QU
-          } = XU;
-          (0, az.logResourceEvent)({
-            type: UU,
-            resourceType: zU,
-            amount: cU,
-            category: yU,
-            itemName: QU
+            type: HH,
+            resourceType: LH,
+            amount: AH,
+            category: rH,
+            itemName: SH
+          } = BH;
+          (0, QL.logResourceEvent)({
+            type: HH,
+            resourceType: LH,
+            amount: AH,
+            category: rH,
+            itemName: SH
           })
         }
-      })), (0, aU.m)(EU.oc.LeaderboardResponse, (UU => {
-        const XU = (0, SU.f)(UU);
-        if ((0, SU.b)(XU)) {
+      })), (0, QH.k)(EH.nc.LeaderboardResponse, (HH => {
+        const BH = (0, KH.i)(HH);
+        if ((0, KH.c)(BH)) {
           const {
-            category: UU,
-            timeframe: zU,
-            data: cU
-          } = XU;
-          DU.k.UY("leaderboardResponse", {
-            category: UU,
-            timeframe: zU,
-            data: cU
+            category: HH,
+            timeframe: LH,
+            data: AH
+          } = BH;
+          CH.k.AX("leaderboardResponse", {
+            category: HH,
+            timeframe: LH,
+            data: AH
           })
         }
-      })), (0, aU.m)(qU.C, (UU => {
-        const XU = (0, SU.d)(qU.C, UU);
-        "string" === typeof XU && (0, kz.c)(UU.conn, XU)
-      })), (0, aU.m)(qU.F, (UU => {
-        const XU = (0, SU.d)(qU.F, UU);
-        "string" === typeof XU && console.error(`[logErrorToConsole]: ${XU}`)
-      }))), iU(), (0, ez.b)(), fX || (fX = !0, (0, aU.m)(qU.j, (UU => {
-        const XU = (0, SU.d)(qU.j, UU);
-        void 0 !== XU && (0, uX.o)(XU)
-      }))), xX(), CX(), xU || (xU = !0, (0, QU.r)(JU)), cU.gameBridge.attach(mc), Hc()
+      })), (0, QH.k)(fH.y, (HH => {
+        const BH = (0, KH.f)(fH.y, HH);
+        "string" === typeof BH && (0, xL.d)(HH.conn, BH)
+      })), (0, QH.k)(fH.z, (HH => {
+        const BH = (0, KH.f)(fH.z, HH);
+        "string" === typeof BH && console.error(`[logErrorToConsole]: ${BH}`)
+      }))), gH(), (0, mL.d)(), qB || (qB = !0, (0, QH.k)(fH.i, (HH => {
+        const BH = (0, KH.f)(fH.i, HH);
+        void 0 !== BH && (0, eB.n)(BH)
+      }))), dB(), oB(), dH || (dH = !0, (0, SH.r)(aH)), AH.gameBridge.attach(wA), NA()
     }
   },
-  42059: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => EU,
-      h: () => oU,
-      i: () => FU,
-      k: () => DU
+  37162: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => EH,
+      h: () => zH,
+      k: () => tH,
+      l: () => CH
     });
-    var cU = zU(2014);
-    let yU = null,
-      QU = 0;
-    const AU = new Set;
+    var AH = LH(2010);
+    let rH = null,
+      SH = 0;
+    const hH = new Set;
 
-    function FU() {
-      return yU
+    function tH() {
+      return rH
     }
 
-    function oU() {
-      return QU
+    function zH() {
+      return SH
     }
 
-    function DU(UU) {
-      yU = UU, QU++, (0, cU.e)();
-      for (const XU of AU) XU()
+    function CH(HH) {
+      rH = HH, SH++, (0, AH.e)();
+      for (const BH of hH) BH()
     }
 
-    function EU(UU) {
-      AU.add(UU)
+    function EH(HH) {
+      hH.add(HH)
     }
   },
-  42141: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU,
-      e: () => FU
+  37169: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => hH,
+      g: () => tH
     });
-    var cU = zU(42147);
-    let yU = null,
-      QU = null;
+    var AH = LH(37174);
+    let rH = null,
+      SH = null;
 
-    function AU() {
-      return yU ??= zU.e(73).then((() => zU(63299))).catch((UU => {
-        throw yU = null, UU
-      })), yU
+    function hH() {
+      return rH ??= LH.e(73).then((() => LH(42483))).catch((HH => {
+        throw rH = null, HH
+      })), rH
     }
 
-    function FU() {
-      return QU ??= Promise.all([AU(), (0, cU.f)()]).then((UU => {
-        let [XU] = UU;
-        return XU
-      }), (UU => {
-        throw QU = null, UU
-      })), QU
+    function tH() {
+      return SH ??= Promise.all([hH(), (0, AH.f)()]).then((HH => {
+        let [BH] = HH;
+        return BH
+      }), (HH => {
+        throw SH = null, HH
+      })), SH
     }
   },
-  37112: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => yU
+  37297: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => rH
     });
-    const cU = {
-      wait: function(UU) {
-        return new Promise((XU => {
-          setTimeout(XU, UU)
+    const AH = {
+      wait: function(HH) {
+        return new Promise((BH => {
+          setTimeout(BH, HH)
         }))
       },
       stallMs: 2e4
     };
-    class yU {
-      constructor(UU) {
-        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : cU;
-        this.url = UU, this.options = XU, this.timing = zU, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = UU
+    class rH {
+      constructor(HH) {
+        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : AH;
+        this.url = HH, this.options = BH, this.timing = LH, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = HH
       }
       ready() {
         if (null === this.fetched) {
-          const UU = new AbortController;
-          this.fetchAbort = UU, this.fetched = this.fetchWithRetries(UU.signal).then((XU => (this.fetchAbort === UU && (this.fetchAbort = null), XU)))
+          const HH = new AbortController;
+          this.fetchAbort = HH, this.fetched = this.fetchWithRetries(HH.signal).then((BH => (this.fetchAbort === HH && (this.fetchAbort = null), BH)))
         }
         return this.fetched
       }
@@ -2810,56 +2820,56 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(UU) {
-        for (let XU = 0;; XU++) {
-          const zU = new URL(this.url);
-          if (XU > 0 && zU.searchParams.set("cache-bust", `${Date.now()}-${XU}`), await this.fetchWhole(zU, UU)) return this.scriptUrl = zU, !0;
-          if (XU >= 3 || UU.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** XU), UU.aborted) return !1
+      async fetchWithRetries(HH) {
+        for (let BH = 0;; BH++) {
+          const LH = new URL(this.url);
+          if (BH > 0 && LH.searchParams.set("cache-bust", `${Date.now()}-${BH}`), await this.fetchWhole(LH, HH)) return this.scriptUrl = LH, !0;
+          if (BH >= 3 || HH.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** BH), HH.aborted) return !1
         }
       }
-      async fetchWhole(UU, XU) {
-        const zU = new AbortController;
-        let cU;
-        const yU = () => {
-            clearTimeout(cU), cU = setTimeout((() => {
-              zU.abort()
+      async fetchWhole(HH, BH) {
+        const LH = new AbortController;
+        let AH;
+        const rH = () => {
+            clearTimeout(AH), AH = setTimeout((() => {
+              LH.abort()
             }), this.timing.stallMs)
           },
-          QU = () => {
-            zU.abort()
+          SH = () => {
+            LH.abort()
           };
-        XU.addEventListener("abort", QU, {
+        BH.addEventListener("abort", SH, {
           once: !0
-        }), yU();
+        }), rH();
         try {
-          var AU;
-          const XU = await fetch(UU, {
-            signal: zU.signal
+          var hH;
+          const BH = await fetch(HH, {
+            signal: LH.signal
           });
-          if (!XU.ok) return !1;
-          const cU = null === (AU = XU.body) || void 0 === AU ? void 0 : AU.getReader();
-          if (!cU) return !1;
+          if (!BH.ok) return !1;
+          const AH = null === (hH = BH.body) || void 0 === hH ? void 0 : hH.getReader();
+          if (!AH) return !1;
           for (;;) {
             const {
-              done: UU
-            } = await cU.read();
-            if (UU) return !0;
-            yU()
+              done: HH
+            } = await AH.read();
+            if (HH) return !0;
+            rH()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(cU), XU.removeEventListener("abort", QU)
+          clearTimeout(AH), BH.removeEventListener("abort", SH)
         }
       }
     }
   },
-  37794: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => cU
+  37941: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => AH
     });
-    const cU = {
+    const AH = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -3019,21 +3029,21 @@ export const modules = {
       }
     }
   },
-  39861: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => cU,
-      g: () => yU
+  39948: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => AH,
+      d: () => rH
     });
-    const cU = ["description", "label"];
+    const AH = ["description", "label"];
 
-    function yU(UU) {
-      const XU = UU.type;
+    function rH(HH) {
+      const BH = HH.type;
       return {
-        type: XU,
-        params: UU[XU]
+        type: BH,
+        params: HH[BH]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

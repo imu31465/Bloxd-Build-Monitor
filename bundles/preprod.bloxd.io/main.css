@@ -2406,6 +2406,17 @@ a {
   --buttonBottomColour: #2671d7
 }
 
+.HyperButton {
+  --buttonNormalColour: #2e80ee;
+  --buttonHoverColour: #4f94f1;
+  --buttonTopColour: #3fd2f2;
+  --buttonBottomColour: #222a9f
+}
+
+.HyperButton:not(.DisabledNewButton) {
+  background-image: linear-gradient(180deg, transparent 50%, rgba(70, 59, 217, .75))
+}
+
 .PurpleButton {
   --buttonNormalColour: #9b39d5;
   --buttonHoverColour: #ad50e3;
@@ -6770,6 +6781,13 @@ a {
   border: none;
   border-radius: 0;
   width: min(100%, 53.3333333333vh)
+}
+
+.HyperRankLogo {
+  display: inline-block;
+  height: 1em;
+  vertical-align: -.125em;
+  width: auto
 }
 
 .ProfilePicture {
@@ -11969,6 +11987,21 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   height: 100%
 }
 
+.SuperRankPerksTable.SuperRankPerksTableHyper tr td {
+  height: 1px
+}
+
+.SuperRankPerksTable.SuperRankPerksTableHyper tr td .PerkContainer .Perk {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex
+}
+
+.SuperRankPerksTable.SuperRankPerksTableHyper tr:last-of-type .PerkContainer,
+.SuperRankPerksTable.SuperRankPerksTableHyper tr:last-of-type .PerkContainer .Perk.FreePerk {
+  height: 100%
+}
+
 .SdkPrivacyLinks {
   display: contents
 }
@@ -12769,6 +12802,153 @@ html[data-app-covered=skipped] .WholeAppWrapper {
   transform-origin: left center;
   transition-property: transform;
   transition-timing-function: ease-out
+}
+
+.LoadingCharacters {
+  --tag-room: 4.5rem;
+  align-self: stretch;
+  flex: 1 1 20rem;
+  margin: var(--tag-room) 1rem 2rem;
+  max-height: 46vh;
+  min-height: 8rem;
+  position: relative
+}
+
+.LoadingCharacters.LoadingCharactersLarge {
+  max-height: 52vh
+}
+
+.LoadingCharacters .LoadingFigure {
+  bottom: 0;
+  position: absolute
+}
+
+.LoadingCharacters .LoadingFigure:after {
+  background: radial-gradient(closest-side, rgba(26, 31, 46, .7), rgba(26, 31, 46, 0));
+  bottom: -2.5%;
+  content: "";
+  height: 7%;
+  left: 12%;
+  pointer-events: none;
+  position: absolute;
+  right: 12%;
+  z-index: -1
+}
+
+.LoadingCharacters .LoadingFigure {
+  cursor: grab;
+  touch-action: none
+}
+
+.LoadingCharacters .LoadingFigure .LoadingFigureModel,
+.LoadingCharacters .LoadingFigure .LoadingFigureOutline,
+.LoadingCharacters .LoadingFigure .LoadingFigureStill {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%
+}
+
+.LoadingCharacters .LoadingFigure .LoadingFigureStill {
+  object-fit: contain;
+  pointer-events: none
+}
+
+.LoadingCharacters .LoadingFigure .LoadingFigureOutline {
+  fill: #394980;
+  height: auto;
+  inset: 0 22% 4%;
+  width: auto
+}
+
+.LoadingCharacters .LoadingFigure .LoadingFigureModel {
+  visibility: hidden
+}
+
+.LoadingCharacters .LoadingFigure .LoadingFigureModel.LoadingFigureModelShown {
+  visibility: visible
+}
+
+.LoadingCharacters .LoadingFigure .LoadingFigureOverHead {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-50%)
+}
+
+.LoadingCharacters .LoadingFigure .LoadingFigureOverHead .LoadingFigureNametag {
+  display: block;
+  max-width: none
+}
+
+.LoadingCharacters .LoadingFigure .LoadingFigureOverHead .LoadingFigureName {
+  background-color: rgba(26, 31, 46, .6);
+  color: #fff;
+  padding: .1em .4em;
+  white-space: nowrap
+}
+
+.LoadingCharacters .LoadingFigure .LoadingCharacterCustomise {
+  position: relative
+}
+
+@media(pointer:coarse) {
+  .LoadingCharacters .LoadingFigure .LoadingCharacterCustomise:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.LoadingCharacters .LoadingFigure .LoadingCharacterCustomise {
+  align-items: center;
+  color: #cfcfcf;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.3rem;
+  gap: .4em;
+  margin-bottom: .5rem;
+  pointer-events: auto
+}
+
+@media(hover:hover) {
+  .LoadingCharacters .LoadingFigure .LoadingCharacterCustomise:hover {
+    color: #fff;
+    text-decoration: underline
+  }
+}
+
+.LoadingCharacters .LoadingFigure .LoadingCharacterCustomise.pad-focused {
+  color: #fff;
+  text-decoration: underline
+}
+
+@media(hover:none) {
+  .LoadingCharacters .LoadingFigure .LoadingCharacterCustomise:active {
+    color: #fff;
+    text-decoration: underline
+  }
+}
+
+.LoadingCharacters .LoadingFigure .LoadingCharacterCustomise:focus-visible {
+  color: #fff;
+  text-decoration: underline
+}
+
+.LoadingCharacters .LoadingCharactersMore {
+  bottom: 0;
+  color: #cfcfcf;
+  font-size: 1.3rem;
+  position: absolute;
+  white-space: nowrap
+}
+
+.LoadingCharacters .LoadingCharactersMore.LoadingCharactersMoreUnder {
+  bottom: -2rem;
+  transform: translateX(-50%)
 }
 
 .ReconnectingOverlay {
@@ -14774,7 +14954,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   position: relative
 }
 
-.SeasonPassRewardTile.SeasonPassRewardTile-super {
+.SeasonPassRewardTile.SeasonPassRewardTile-hyper {
   background-color: #604c20
 }
 
@@ -14788,8 +14968,8 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   font-size: 1.1rem
 }
 
-.SeasonPassRewardTile.SeasonPassRewardTile-small .SeasonPassRewardTileStateMark,
-.SeasonPassRewardTile.SeasonPassRewardTile-small .SeasonPassRewardTileSuperMark {
+.SeasonPassRewardTile.SeasonPassRewardTile-small .SeasonPassRewardTileHyperMark,
+.SeasonPassRewardTile.SeasonPassRewardTile-small .SeasonPassRewardTileStateMark {
   font-size: .55rem
 }
 
@@ -14864,7 +15044,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   z-index: 1
 }
 
-.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTileSuperMark {
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTileHyperMark {
   font-size: .9rem;
   right: .4rem;
   top: .3rem
@@ -14904,7 +15084,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   background-color: #394980
 }
 
-.SeasonPassRewardTile.SeasonPassRewardTile-large.SeasonPassRewardTile-needsSuper {
+.SeasonPassRewardTile.SeasonPassRewardTile-large.SeasonPassRewardTile-needsHyper {
   border: 1px solid #0f0f0f;
   outline: 3px solid #ffb914;
   outline-offset: 1px
@@ -14930,7 +15110,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   width: 1.8em
 }
 
-.SeasonPassRewardTile .SeasonPassRewardTileSuperMark {
+.SeasonPassRewardTile .SeasonPassRewardTileHyperMark {
   color: #ffb914;
   font-size: .65rem;
   position: absolute;
@@ -14975,7 +15155,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   width: 1.1rem
 }
 
-.SeasonPassRewardTile.SeasonPassRewardTile-needsSuper {
+.SeasonPassRewardTile.SeasonPassRewardTile-needsHyper {
   border: 2px solid #fcd373
 }
 
@@ -17607,7 +17787,7 @@ html[data-app-covered] .WholeAppWrapper .YoutubeHomepageSection .YoutubeTile.You
   width: 3.4rem
 }
 
-.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripRewardSuper {
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripRewardHyper {
   --reward-fill: #604c20
 }
 

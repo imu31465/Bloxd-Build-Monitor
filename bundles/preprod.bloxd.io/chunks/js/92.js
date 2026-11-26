@@ -1,272 +1,272 @@
 export const id = 92;
 export const ids = [92, 108];
 export const modules = {
-    5358: (UU, XU, zU) => {
-      zU.d(XU, {
-        d: () => tU,
-        f: () => gU
+    5308: (HH, BH, LH) => {
+      LH.d(BH, {
+        e: () => WH,
+        h: () => MH
       });
-      var cU = zU(1106),
-        yU = zU.n(cU),
-        QU = zU(61),
-        AU = zU(1193),
-        FU = zU(5360),
-        oU = zU(1978),
-        DU = zU(2616),
-        EU = zU(5364),
-        YU = zU(1305);
-      const NU = new WeakMap;
-      let IU = 0;
+      var AH = LH(1038),
+        rH = LH.n(AH),
+        SH = LH(45),
+        hH = LH(1123),
+        tH = LH(5314),
+        zH = LH(1967),
+        CH = LH(2628),
+        EH = LH(5319),
+        XH = LH(1225);
+      const GH = new WeakMap;
+      let YH = 0;
 
-      function pU(UU) {
-        let XU = NU.get(UU);
-        return void 0 === XU && (XU = IU++, NU.set(UU, XU)), XU
+      function uH(HH) {
+        let BH = GH.get(HH);
+        return void 0 === BH && (BH = YH++, GH.set(HH, BH)), BH
       }
 
-      function aU(UU) {
+      function QH(HH) {
         let {
-          piece: XU
-        } = UU;
-        return "space" === XU.kind ? (0, YU.jsx)(YU.Fragment, {
-          children: XU.text
-        }) : (0, YU.jsx)("span", {
+          piece: BH
+        } = HH;
+        return "space" === BH.kind ? (0, XH.jsx)(XH.Fragment, {
+          children: BH.text
+        }) : (0, XH.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${XU.delayMs}ms`
+            "--word-delay": `${BH.delayMs}ms`
           },
-          children: (0, YU.jsx)(FU.e, {
-            text: "icon" === XU.kind ? `[[${XU.icon}]]` : XU.text
+          children: (0, XH.jsx)(tH.b, {
+            text: "icon" === BH.kind ? `[[${BH.icon}]]` : BH.text
           })
         })
       }
 
-      function tU(UU) {
+      function WH(HH) {
         let {
-          display: XU
-        } = UU;
+          display: BH
+        } = HH;
         const {
-          selectedLanguage: zU
-        } = (0, AU.I)(), cU = (0, QU.useMemo)((() => (0, EU.d)((0, EU.g)(XU).plan.pieces)), [XU, zU.code]);
-        return (0, YU.jsxs)("div", {
-          className: yU()("Dialogue", {
-            DialogueAnimateIn: !1 !== XU.animateIn
+          selectedLanguage: LH
+        } = (0, hH.B)(), AH = (0, SH.useMemo)((() => (0, EH.b)((0, EH.d)(BH).plan.pieces)), [BH, LH.code]);
+        return (0, XH.jsxs)("div", {
+          className: rH()("Dialogue", {
+            DialogueAnimateIn: !1 !== BH.animateIn
           }),
-          children: [XU.speakerName && (0, YU.jsx)(oU.d, {
-            text: XU.speakerName,
+          children: [BH.speakerName && (0, XH.jsx)(zH.b, {
+            text: BH.speakerName,
             className: "DialogueSpeaker"
-          }), (0, YU.jsx)("p", {
+          }), (0, XH.jsx)("p", {
             className: "DialogueLine",
-            children: cU.map(((UU, XU) => 1 === UU.length && "space" === UU[0].kind ? UU[0].text : (0, YU.jsx)("span", {
+            children: AH.map(((HH, BH) => 1 === HH.length && "space" === HH[0].kind ? HH[0].text : (0, XH.jsx)("span", {
               className: "DialogueGlue",
-              children: UU.map(((UU, XU) => (0, YU.jsx)(aU, {
-                piece: UU
-              }, XU)))
-            }, XU)))
+              children: HH.map(((HH, BH) => (0, XH.jsx)(QH, {
+                piece: HH
+              }, BH)))
+            }, BH)))
           })]
         })
       }
-      const gU = (0, QU.memo)((function() {
-        const UU = (0, DU.f)("dialogue");
-        return (0, YU.jsx)("div", {
+      const MH = (0, SH.memo)((function() {
+        const HH = (0, CH.j)("dialogue");
+        return (0, XH.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: UU && (0, YU.jsx)(tU, {
-            display: UU
-          }, pU(UU))
+          children: HH && (0, XH.jsx)(WH, {
+            display: HH
+          }, uH(HH))
         })
       }))
     },
-    5226: (UU, XU, zU) => {
-        zU.r(XU), zU.d(XU, {
-          default: () => hQ
+    5188: (HH, BH, LH) => {
+        LH.r(BH), LH.d(BH, {
+          default: () => yS
         });
-        var cU = zU(61),
-          yU = zU(1106),
-          QU = zU.n(yU),
-          AU = zU(1574),
-          FU = zU(1577),
-          oU = zU(27),
-          DU = zU(73),
-          EU = zU(5235),
-          YU = zU(5251),
-          NU = zU(5253),
-          IU = zU(4771),
-          pU = zU(1305);
-        const aU = "/textures/docs/icons";
+        var AH = LH(45),
+          rH = LH(1038),
+          SH = LH.n(rH),
+          hH = LH(1511),
+          tH = LH(1520),
+          zH = LH(15),
+          CH = LH(69),
+          EH = LH(5194),
+          XH = LH(5207),
+          GH = LH(5214),
+          YH = LH(4740),
+          uH = LH(1225);
+        const QH = "/textures/docs/icons";
 
-        function tU(UU) {
+        function WH(HH) {
           let {
-            name: XU,
-            isTinted: zU,
-            className: cU,
-            style: yU
-          } = UU;
-          const AU = `${aU}/${XU}.png`;
-          return zU ? (0, pU.jsxs)("span", {
-            className: QU()("DocsPixelIcon", "Tinted", cU),
+            name: BH,
+            isTinted: LH,
+            className: AH,
+            style: rH
+          } = HH;
+          const hH = `${QH}/${BH}.png`;
+          return LH ? (0, uH.jsxs)("span", {
+            className: SH()("DocsPixelIcon", "Tinted", AH),
             "aria-hidden": "true",
-            style: yU,
-            children: [(0, pU.jsx)("span", {
+            style: rH,
+            children: [(0, uH.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${AU}")`,
-                WebkitMaskImage: `url("${AU}")`
+                maskImage: `url("${hH}")`,
+                WebkitMaskImage: `url("${hH}")`
               }
-            }), (0, pU.jsx)("img", {
-              src: AU,
+            }), (0, uH.jsx)("img", {
+              src: hH,
               alt: ""
             })]
-          }) : (0, pU.jsx)("img", {
-            className: QU()("DocsPixelIcon", cU),
-            src: AU,
+          }) : (0, uH.jsx)("img", {
+            className: SH()("DocsPixelIcon", AH),
+            src: hH,
             alt: "",
             "aria-hidden": "true",
-            style: yU
+            style: rH
           })
         }
-        const gU = 1500;
+        const MH = 1500;
 
-        function kU() {
-          const [UU, XU] = (0, cU.useState)(null);
-          (0, cU.useEffect)((() => {
-            if (null === UU) return;
-            const zU = setTimeout((() => {
-              XU(null)
-            }), gU);
+        function xH() {
+          const [HH, BH] = (0, AH.useState)(null);
+          (0, AH.useEffect)((() => {
+            if (null === HH) return;
+            const LH = setTimeout((() => {
+              BH(null)
+            }), MH);
             return () => {
-              clearTimeout(zU)
+              clearTimeout(LH)
             }
-          }), [UU]);
-          return [UU, UU => {
-            (0, IU.e)(UU).then((() => {
-              XU({
-                text: UU,
+          }), [HH]);
+          return [HH, HH => {
+            (0, YH.c)(HH).then((() => {
+              BH({
+                text: HH,
                 failed: !1
               })
-            }), (zU => {
-              console.error("Could not copy to the clipboard", zU), XU({
-                text: UU,
+            }), (LH => {
+              console.error("Could not copy to the clipboard", LH), BH({
+                text: HH,
                 failed: !0
               })
             }))
           }]
         }
 
-        function GU(UU) {
+        function vH(HH) {
           let {
-            text: XU,
-            label: zU,
-            className: cU
-          } = UU;
-          const [yU, AU] = kU(), FU = !1 === (null === yU || void 0 === yU ? void 0 : yU.failed);
-          return (0, pU.jsxs)("button", {
+            text: BH,
+            label: LH,
+            className: AH
+          } = HH;
+          const [rH, hH] = xH(), tH = !1 === (null === rH || void 0 === rH ? void 0 : rH.failed);
+          return (0, uH.jsxs)("button", {
             type: "button",
-            className: QU()("DocsCopyButton", cU, {
-              Copied: FU
+            className: SH()("DocsCopyButton", AH, {
+              Copied: tH
             }),
             title: "Copy to clipboard",
-            "aria-label": zU ? void 0 : `Copy ${XU}`,
-            onClick: UU => {
-              UU.stopPropagation(), AU(XU)
+            "aria-label": LH ? void 0 : `Copy ${BH}`,
+            onClick: HH => {
+              HH.stopPropagation(), hH(BH)
             },
-            children: [(0, pU.jsx)(tU, {
-              name: FU ? "check" : "copy"
-            }), zU && (0, pU.jsx)("span", {
-              children: FU ? "Copied" : null !== yU && void 0 !== yU && yU.failed ? "Copy failed" : zU
+            children: [(0, uH.jsx)(WH, {
+              name: tH ? "check" : "copy"
+            }), LH && (0, uH.jsx)("span", {
+              children: tH ? "Copied" : null !== rH && void 0 !== rH && rH.failed ? "Copy failed" : LH
             })]
           })
         }
-        EU.b.registerLanguage("javascript", YU.c), EU.b.registerLanguage("typescript", NU.c);
-        const BU = {
+        EH.c.registerLanguage("javascript", XH.e), EH.c.registerLanguage("typescript", GH.b);
+        const PH = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          ZU = {
+          TH = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          RU = 24;
+          UH = 24;
 
-        function PU(UU) {
+        function VH(HH) {
           let {
-            code: XU,
-            lang: zU,
-            compact: yU = !1
-          } = UU;
-          const AU = (0, cU.useMemo)((() => function(UU, XU) {
-              const zU = BU[XU];
-              return zU ? EU.b.highlight(UU, {
-                language: zU
-              }).value : UU.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(XU, zU)), [XU, zU]),
-            FU = XU.split("\n").length,
-            oU = !yU && FU > RU + 6,
-            [DU, YU] = (0, cU.useState)(!1),
-            NU = BU[zU];
-          return (0, pU.jsxs)("div", {
-            className: QU()("DocsCodeBlock", {
-              Compact: yU,
-              Collapsed: oU && !DU
+            code: BH,
+            lang: LH,
+            compact: rH = !1
+          } = HH;
+          const hH = (0, AH.useMemo)((() => function(HH, BH) {
+              const LH = PH[BH];
+              return LH ? EH.c.highlight(HH, {
+                language: LH
+              }).value : HH.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(BH, LH)), [BH, LH]),
+            tH = BH.split("\n").length,
+            zH = !rH && tH > UH + 6,
+            [CH, XH] = (0, AH.useState)(!1),
+            GH = PH[LH];
+          return (0, uH.jsxs)("div", {
+            className: SH()("DocsCodeBlock", {
+              Compact: rH,
+              Collapsed: zH && !CH
             }),
-            children: [!yU && (0, pU.jsxs)("div", {
+            children: [!rH && (0, uH.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, pU.jsx)("span", {
+              children: [(0, uH.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: NU ? ZU[NU] : "Text"
-              }), (0, pU.jsx)(GU, {
-                text: XU,
+                children: GH ? TH[GH] : "Text"
+              }), (0, uH.jsx)(vH, {
+                text: BH,
                 label: "Copy"
               })]
-            }), (0, pU.jsx)("pre", {
-              children: (0, pU.jsx)("code", {
+            }), (0, uH.jsx)("pre", {
+              children: (0, uH.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: AU
+                  __html: hH
                 }
               })
-            }), oU && (0, pU.jsxs)("button", {
+            }), zH && (0, uH.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": DU,
+              "aria-expanded": CH,
               onClick: () => {
-                YU(!DU)
+                XH(!CH)
               },
-              children: [(0, pU.jsx)(tU, {
-                name: DU ? "chevron-up" : "chevron-down"
-              }), DU ? "Show less" : `Show all ${FU} lines`]
+              children: [(0, uH.jsx)(WH, {
+                name: CH ? "chevron-up" : "chevron-down"
+              }), CH ? "Show less" : `Show all ${tH} lines`]
             })]
           })
         }
-        var WU = zU(5262);
-        var dU = zU(5270);
-        const LU = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var OH = LH(5218);
+        var bH = LH(5220);
+        const kH = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function eU(UU) {
-          const XU = new Map;
-          let zU, cU = [],
-            yU = !1;
-          const QU = () => {
-            zU && XU.set(zU.name, zU.lines.join("\n").trimEnd())
+        function mH(HH) {
+          const BH = new Map;
+          let LH, AH = [],
+            rH = !1;
+          const SH = () => {
+            LH && BH.set(LH.name, LH.lines.join("\n").trimEnd())
           };
-          for (const AU of UU.split("\n")) {
-            const UU = AU.match(LU);
-            yU || AU.startsWith("/*") ? (yU || (QU(), zU = void 0), cU.push(AU), yU = !AU.includes("*/")) : UU ? (QU(), zU = {
-              name: UU[1],
-              lines: [...cU, AU]
-            }, cU = []) : zU && (AU.startsWith(" ") || AU.startsWith("\t") || /^[}\])|]/.test(AU)) ? zU.lines.push(AU) : zU && "" !== AU.trim() && (QU(), zU = void 0)
+          for (const hH of HH.split("\n")) {
+            const HH = hH.match(kH);
+            rH || hH.startsWith("/*") ? (rH || (SH(), LH = void 0), AH.push(hH), rH = !hH.includes("*/")) : HH ? (SH(), LH = {
+              name: HH[1],
+              lines: [...AH, hH]
+            }, AH = []) : LH && (hH.startsWith(" ") || hH.startsWith("\t") || /^[}\])|]/.test(hH)) ? LH.lines.push(hH) : LH && "" !== hH.trim() && (SH(), LH = void 0)
           }
-          return QU(), XU
+          return SH(), BH
         }
 
-        function CU(UU) {
-          return "methods" === UU || "callbacks" === UU || "settings" === UU
+        function oH(HH) {
+          return "methods" === HH || "callbacks" === HH || "settings" === HH
         }
-        const wU = {
+        const IH = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (UU, XU) => `api.setClientOption(playerId, "${UU}", ${XU})`
+              setterSnippet: (HH, BH) => `api.setClientOption(playerId, "${HH}", ${BH})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (UU, XU) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${UU}", ${XU})`
+              setterSnippet: (HH, BH) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${HH}", ${BH})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (UU, XU) => `api.setMobSetting(mobId, "${UU}", ${XU})`
+              setterSnippet: (HH, BH) => `api.setMobSetting(mobId, "${HH}", ${BH})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (UU, XU) => `api.setVehicleSetting(vehicleId, "${UU}", ${XU})`
+              setterSnippet: (HH, BH) => `api.setVehicleSetting(vehicleId, "${HH}", ${BH})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          qU = {
+          fH = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function OU(UU) {
-          return UU.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function lH(HH) {
+          return HH.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function SU(UU) {
-          let XU = !1;
-          return UU.split("\n").map((UU => (UU.startsWith("```") && (XU = !XU), !XU && /^#{3,} /.test(UU) ? UU.slice(1) : UU))).join("\n")
+        function KH(HH) {
+          let BH = !1;
+          return HH.split("\n").map((HH => (HH.startsWith("```") && (BH = !BH), !BH && /^#{3,} /.test(HH) ? HH.slice(1) : HH))).join("\n")
         }
 
-        function rU(UU) {
-          return "readme" === UU ? "getting-started" : OU(UU)
+        function cH(HH) {
+          return "readme" === HH ? "getting-started" : lH(HH)
         }
-        const uU = "## Glossary of Referenced Types";
-        const fU = [{
+        const eH = "## Glossary of Referenced Types";
+        const qH = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...dU.b.flatMap((UU => {
-            const XU = {
-              id: UU.id,
-              slug: rU(UU.id),
-              title: UU.title,
-              markdown: UU.content,
-              ...wU[UU.id]
+          }, ...bH.c.flatMap((HH => {
+            const BH = {
+              id: HH.id,
+              slug: cH(HH.id),
+              title: HH.title,
+              markdown: HH.content,
+              ...IH[HH.id]
             };
-            if ("readme" === UU.id) return function(UU) {
-              const XU = UU.markdown.indexOf(uU),
-                zU = UU.markdown.indexOf("\n```", XU),
-                cU = UU.markdown.indexOf("\n```", zU + 1);
-              if (-1 === XU || -1 === zU || -1 === cU) throw new Error(`Getting started has no "${uU}" section with a code block`);
-              const yU = UU.markdown.slice(XU + 31, zU).trim(),
-                QU = [...eU(UU.markdown.slice(UU.markdown.indexOf("\n", zU + 1) + 1, cU))].map((UU => {
-                  let [XU, zU] = UU;
-                  return `## ${XU}\n\n\`\`\`ts\n${zU}\n\`\`\`\n`
+            if ("readme" === HH.id) return function(HH) {
+              const BH = HH.markdown.indexOf(eH),
+                LH = HH.markdown.indexOf("\n```", BH),
+                AH = HH.markdown.indexOf("\n```", LH + 1);
+              if (-1 === BH || -1 === LH || -1 === AH) throw new Error(`Getting started has no "${eH}" section with a code block`);
+              const rH = HH.markdown.slice(BH + 31, LH).trim(),
+                SH = [...mH(HH.markdown.slice(HH.markdown.indexOf("\n", LH + 1) + 1, AH))].map((HH => {
+                  let [BH, LH] = HH;
+                  return `## ${BH}\n\n\`\`\`ts\n${LH}\n\`\`\`\n`
                 })),
-                AU = UU.markdown.slice(UU.markdown.indexOf("\n", cU + 1) + 1);
+                hH = HH.markdown.slice(HH.markdown.indexOf("\n", AH + 1) + 1);
               return [{
-                ...UU,
-                markdown: `${UU.markdown.slice(0,XU)}${AU}`
+                ...HH,
+                markdown: `${HH.markdown.slice(0,BH)}${hH}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${yU}\n\n${QU.join("\n")}`
+                markdown: `# Types\n\n${rH}\n\n${SH.join("\n")}`
               }]
-            }(XU);
-            if ("howTo" === UU.id) {
+            }(BH);
+            if ("howTo" === HH.id) {
               const {
-                parent: UU,
-                guides: zU
-              } = function(UU) {
-                const [XU, ...zU] = UU.markdown.split(/^(?=## )/m), cU = [XU], yU = [];
-                for (const AU of zU) {
-                  var QU;
-                  const XU = AU.indexOf("\n"),
-                    zU = AU.slice(3, XU).trim(),
-                    FU = AU.slice(XU + 1);
-                  if (!FU.includes("```")) {
-                    cU.push(AU);
+                parent: HH,
+                guides: LH
+              } = function(HH) {
+                const [BH, ...LH] = HH.markdown.split(/^(?=## )/m), AH = [BH], rH = [];
+                for (const hH of LH) {
+                  var SH;
+                  const BH = hH.indexOf("\n"),
+                    LH = hH.slice(3, BH).trim(),
+                    tH = hH.slice(BH + 1);
+                  if (!tH.includes("```")) {
+                    AH.push(hH);
                     continue
                   }
-                  const oU = null !== (QU = qU[zU]) && void 0 !== QU ? QU : {
+                  const zH = null !== (SH = fH[LH]) && void 0 !== SH ? SH : {
                     icon: "lightbulb",
-                    summary: `How to use ${zU.toLowerCase()} in World Code.`
+                    summary: `How to use ${LH.toLowerCase()} in World Code.`
                   };
-                  yU.push({
-                    id: `${UU.id}${zU.split(/[^A-Za-z0-9]+/).map((UU=>UU.charAt(0).toUpperCase()+UU.slice(1))).join("")}`,
-                    slug: `${UU.slug}-${OU(zU)}`,
-                    title: zU,
+                  rH.push({
+                    id: `${HH.id}${LH.split(/[^A-Za-z0-9]+/).map((HH=>HH.charAt(0).toUpperCase()+HH.slice(1))).join("")}`,
+                    slug: `${HH.slug}-${lH(LH)}`,
+                    title: LH,
                     layout: "article",
-                    sourceAnchor: (0, WU.r)(zU),
-                    markdown: `# ${zU}\n\n${SU(FU)}`,
-                    ...oU
+                    sourceAnchor: (0, OH.r)(LH),
+                    markdown: `# ${LH}\n\n${KH(tH)}`,
+                    ...zH
                   })
                 }
                 return {
                   parent: {
-                    ...UU,
-                    markdown: cU.join(""),
-                    childPageIds: yU.map((UU => UU.id))
+                    ...HH,
+                    markdown: AH.join(""),
+                    childPageIds: rH.map((HH => HH.id))
                   },
-                  guides: yU
+                  guides: rH
                 }
-              }(XU);
-              return [UU, ...zU]
+              }(BH);
+              return [HH, ...LH]
             }
-            return [XU]
+            return [BH]
           }))],
-          iU = [{
+          gH = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...fU.filter((UU => void 0 !== UU.sourceAnchor)).map((UU => UU.id))]
+            pageIds: ["howTo", ...qH.filter((HH => void 0 !== HH.sourceAnchor)).map((HH => HH.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function HU(UU) {
-          return fU.find((XU => XU.id === UU))
+        function NH(HH) {
+          return qH.find((BH => BH.id === HH))
         }
-        const MU = new Map;
+        const RH = new Map;
 
-        function vU(UU) {
-          let XU = MU.get(UU.id);
-          return XU || (XU = (0, WU.w)(UU.markdown, "changelog" === UU.layout ? 3 : 2), MU.set(UU.id, XU)), XU
-        }
-
-        function VU(UU, XU) {
-          return vU(UU).sections.some((UU => UU.heading.anchor === XU || UU.blocks.some((UU => "heading" === UU.kind && UU.anchor === XU))))
+        function jH(HH) {
+          let BH = RH.get(HH.id);
+          return BH || (BH = (0, OH.z)(HH.markdown, "changelog" === HH.layout ? 3 : 2), RH.set(HH.id, BH)), BH
         }
 
-        function sU(UU) {
-          const [XU, ...zU] = UU.replace(/^#/, "").split("-"), cU = fU.find((UU => UU.id === XU));
-          if (!cU) return null;
-          const yU = zU.length > 0 ? (0, WU.r)(zU.join("-")) : "";
-          for (const AU of null !== (QU = cU.childPageIds) && void 0 !== QU ? QU : []) {
-            var QU;
-            const UU = HU(AU);
-            if (UU.sourceAnchor === yU) return {
-              page: UU,
+        function nH(HH, BH) {
+          return jH(HH).sections.some((HH => HH.heading.anchor === BH || HH.blocks.some((HH => "heading" === HH.kind && HH.anchor === BH))))
+        }
+
+        function FH(HH) {
+          const [BH, ...LH] = HH.replace(/^#/, "").split("-"), AH = qH.find((HH => HH.id === BH));
+          if (!AH) return null;
+          const rH = LH.length > 0 ? (0, OH.r)(LH.join("-")) : "";
+          for (const hH of null !== (SH = AH.childPageIds) && void 0 !== SH ? SH : []) {
+            var SH;
+            const HH = NH(hH);
+            if (HH.sourceAnchor === rH) return {
+              page: HH,
               anchor: ""
             };
-            if (VU(UU, yU)) return {
-              page: UU,
-              anchor: yU
+            if (nH(HH, rH)) return {
+              page: HH,
+              anchor: rH
             }
           }
           return {
-            page: cU,
-            anchor: yU
+            page: AH,
+            anchor: rH
           }
         }
-        const nU = {
+        const DH = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function mU(UU, XU) {
-          let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const cU = XU.slug ? `${UU}/${XU.slug}` : UU;
-          return zU ? `${cU}#${zU}` : cU
+        function wH(HH, BH) {
+          let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const AH = BH.slug ? `${HH}/${BH.slug}` : HH;
+          return LH ? `${AH}#${LH}` : AH
         }
-        var lU = zU(5290);
-        const xU = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          JU = new Set(["GameApi", "Console", "_TypeOf"]),
-          jU = 4;
+        var ZH = LH(5240);
+        const dH = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          aH = new Set(["GameApi", "Console", "_TypeOf"]),
+          sH = 4;
 
-        function KU(UU) {
-          let XU = UU.length;
-          for (; XU > 0 && "" === UU[XU - 1].trim();) XU--;
-          return UU.slice(0, XU)
+        function JH(HH) {
+          let BH = HH.length;
+          for (; BH > 0 && "" === HH[BH - 1].trim();) BH--;
+          return HH.slice(0, BH)
         }
 
-        function bU(UU) {
-          var XU;
-          const zU = KU(UU);
-          if (null === (XU = zU.at(-1)) || void 0 === XU || !XU.trimEnd().endsWith("*/")) return {
-            lines: zU,
+        function iH(HH) {
+          var BH;
+          const LH = JH(HH);
+          if (null === (BH = LH.at(-1)) || void 0 === BH || !BH.trimEnd().endsWith("*/")) return {
+            lines: LH,
             doc: ""
           };
-          const cU = zU.findLastIndex((UU => UU.startsWith("/**")));
-          return -1 === cU ? {
-            lines: zU,
+          const AH = LH.findLastIndex((HH => HH.startsWith("/**")));
+          return -1 === AH ? {
+            lines: LH,
             doc: ""
           } : {
-            lines: KU(zU.slice(0, cU)),
-            doc: zU.slice(cU).join("\n")
+            lines: JH(LH.slice(0, AH)),
+            doc: LH.slice(AH).join("\n")
           }
         }
 
-        function TU(UU) {
-          var XU;
-          const zU = UU.split("\n"),
-            cU = zU.flatMap(((UU, XU) => xU.test(UU) ? [XU] : []));
-          let yU = bU(zU.slice(0, null !== (XU = cU[0]) && void 0 !== XU ? XU : zU.length)).doc;
-          return cU.map(((UU, XU) => {
-            var QU;
-            const AU = bU(zU.slice(UU, null !== (QU = cU[XU + 1]) && void 0 !== QU ? QU : zU.length)),
-              FU = {
-                name: zU[UU].match(xU)[1],
-                doc: yU,
-                lines: AU.lines
+        function pH(HH) {
+          var BH;
+          const LH = HH.split("\n"),
+            AH = LH.flatMap(((HH, BH) => dH.test(HH) ? [BH] : []));
+          let rH = iH(LH.slice(0, null !== (BH = AH[0]) && void 0 !== BH ? BH : LH.length)).doc;
+          return AH.map(((HH, BH) => {
+            var SH;
+            const hH = iH(LH.slice(HH, null !== (SH = AH[BH + 1]) && void 0 !== SH ? SH : LH.length)),
+              tH = {
+                name: LH[HH].match(dH)[1],
+                doc: rH,
+                lines: hH.lines
               };
-            return yU = AU.doc, FU
+            return rH = hH.doc, tH
           }))
         }
 
-        function hU(UU) {
-          var XU;
-          const zU = UU.match(/^readonly \[([\s\S]*)\]$/);
-          return zU ? null !== (XU = zU[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== XU ? XU : [] : null
+        function yH(HH) {
+          var BH;
+          const LH = HH.match(/^readonly \[([\s\S]*)\]$/);
+          return LH ? null !== (BH = LH[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== BH ? BH : [] : null
         }
 
-        function UX(UU) {
-          if (!UU.startsWith("{") || !UU.endsWith("}")) return null;
-          const XU = {
+        function HB(HH) {
+          if (!HH.startsWith("{") || !HH.endsWith("}")) return null;
+          const BH = {
               keys: [],
               values: []
             },
-            zU = UU => {
-              const zU = UU.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              zU && (XU.keys.push(zU[1].startsWith('"') ? zU[1] : `"${zU[1]}"`), XU.values.push(zU[2].trim()))
+            LH = HH => {
+              const LH = HH.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              LH && (BH.keys.push(LH[1].startsWith('"') ? LH[1] : `"${LH[1]}"`), BH.values.push(LH[2].trim()))
             };
-          let cU = 0,
-            yU = "";
-          for (const QU of UU.slice(1, -1)) "{[(".includes(QU) ? cU++ : "}])".includes(QU) && cU--, ";" === QU && 0 === cU ? (zU(yU), yU = "") : yU += QU;
-          return zU(yU), XU
+          let AH = 0,
+            rH = "";
+          for (const SH of HH.slice(1, -1)) "{[(".includes(SH) ? AH++ : "}])".includes(SH) && AH--, ";" === SH && 0 === AH ? (LH(rH), rH = "") : rH += SH;
+          return LH(rH), BH
         }
 
-        function XX(UU) {
-          return UU.length > jU ? `\n\t| ${UU.join("\n\t| ")}` : UU.join(" | ")
+        function BB(HH) {
+          return HH.length > sH ? `\n\t| ${HH.join("\n\t| ")}` : HH.join(" | ")
         }
 
-        function zX(UU, XU) {
-          const zU = function(UU, XU) {
-            return UU.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((UU, zU) => {
-              var cU;
-              const yU = null === (cU = XU.get(zU)) || void 0 === cU ? void 0 : cU.object;
-              return yU ? XX(yU.values) : UU
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((UU, zU) => {
-              var cU, yU;
-              const QU = null === (cU = XU.get(zU)) || void 0 === cU || null === (yU = cU.object) || void 0 === yU ? void 0 : yU.values.map(hU);
-              return null !== QU && void 0 !== QU && QU.every((UU => null !== UU)) ? XX([...new Set(QU.flat())]) : UU
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((UU, zU) => {
-              var cU;
-              const yU = null === (cU = XU.get(zU)) || void 0 === cU ? void 0 : cU.members;
-              return yU ? XX(yU) : UU
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((UU, zU) => {
-              var cU;
-              const yU = null === (cU = XU.get(zU)) || void 0 === cU ? void 0 : cU.object;
-              return yU ? XX(yU.keys) : UU
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((UU, zU) => {
-              var cU, yU;
-              return null !== (cU = null === (yU = XU.get(zU)) || void 0 === yU ? void 0 : yU.text) && void 0 !== cU ? cU : UU
+        function LB(HH, BH) {
+          const LH = function(HH, BH) {
+            return HH.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((HH, LH) => {
+              var AH;
+              const rH = null === (AH = BH.get(LH)) || void 0 === AH ? void 0 : AH.object;
+              return rH ? BB(rH.values) : HH
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((HH, LH) => {
+              var AH, rH;
+              const SH = null === (AH = BH.get(LH)) || void 0 === AH || null === (rH = AH.object) || void 0 === rH ? void 0 : rH.values.map(yH);
+              return null !== SH && void 0 !== SH && SH.every((HH => null !== HH)) ? BB([...new Set(SH.flat())]) : HH
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((HH, LH) => {
+              var AH;
+              const rH = null === (AH = BH.get(LH)) || void 0 === AH ? void 0 : AH.members;
+              return rH ? BB(rH) : HH
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((HH, LH) => {
+              var AH;
+              const rH = null === (AH = BH.get(LH)) || void 0 === AH ? void 0 : AH.object;
+              return rH ? BB(rH.keys) : HH
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((HH, LH) => {
+              var AH, rH;
+              return null !== (AH = null === (rH = BH.get(LH)) || void 0 === rH ? void 0 : rH.text) && void 0 !== AH ? AH : HH
             }))
-          }(UU.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), XU);
-          return [UU.doc, zU].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(HH.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), BH);
+          return [HH.doc, LH].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function cX(UU) {
-          const XU = TU(UU),
-            zU = function(UU) {
-              const XU = new Map,
-                zU = UU.find((UU => "_TypeOf" === UU.name));
-              let cU = null;
-              const yU = () => {
-                if (cU) {
-                  const UU = cU.lines.join("\n");
-                  XU.set(cU.name, {
-                    text: UU,
-                    members: hU(UU),
-                    object: UX(UU)
+        function AB(HH) {
+          const BH = pH(HH),
+            LH = function(HH) {
+              const BH = new Map,
+                LH = HH.find((HH => "_TypeOf" === HH.name));
+              let AH = null;
+              const rH = () => {
+                if (AH) {
+                  const HH = AH.lines.join("\n");
+                  BH.set(AH.name, {
+                    text: HH,
+                    members: yH(HH),
+                    object: HB(HH)
                   })
                 }
               };
-              for (const QU of zU.lines.slice(1, -1)) {
-                const UU = QU.match(/^\t([\w$]+): (.+)$/);
-                UU ? (yU(), cU = {
-                  name: UU[1],
-                  lines: [UU[2]]
-                }) : cU && cU.lines.push(QU.replace(/^\t/, ""))
+              for (const SH of LH.lines.slice(1, -1)) {
+                const HH = SH.match(/^\t([\w$]+): (.+)$/);
+                HH ? (rH(), AH = {
+                  name: HH[1],
+                  lines: [HH[2]]
+                }) : AH && AH.lines.push(SH.replace(/^\t/, ""))
               }
-              return yU(), XU
-            }(XU),
-            cU = new Map;
-          for (const yU of XU) JU.has(yU.name) || cU.has(yU.name) || cU.set(yU.name, zX(yU, zU));
-          return cU
+              return rH(), BH
+            }(BH),
+            AH = new Map;
+          for (const rH of BH) aH.has(rH.name) || AH.has(rH.name) || AH.set(rH.name, LB(rH, LH));
+          return AH
         }
-        let yX, QX, AX;
+        let rB, SB, hB;
 
-        function FX() {
-          return QX ??= function(UU) {
-            const XU = TU(UU).find((UU => "GameApi" === UU.name)),
-              zU = new Map,
-              cU = XU.lines;
-            for (let QU = 0; QU < cU.length; QU++) {
-              var yU;
-              if (!cU[QU].trimStart().startsWith("/**")) continue;
-              const UU = QU;
-              for (; QU < cU.length && !cU[QU].includes("*/");) QU++;
-              const XU = null === (yU = cU[QU + 1]) || void 0 === yU ? void 0 : yU.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!XU) continue;
-              let AU = null;
-              const FU = [];
-              let oU = "description",
-                DU = !1;
-              for (const zU of cU.slice(UU, QU + 1).join("\n").split("\n").map((UU => UU.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const UU = zU.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                UU ? (AU = UU[1].trim(), oU = "deprecation") : zU.startsWith("@") ? (oU = "otherTag", DU = !0) : "" === zU.trim() ? DU || (oU = "description", FU.push(zU)) : "deprecation" !== oU || /^[A-Z]/.test(zU.trim()) ? "otherTag" !== oU && (oU = "description", FU.push(zU)) : AU = `${AU} ${zU.trim()}`.trim()
+        function tB() {
+          return SB ??= function(HH) {
+            const BH = pH(HH).find((HH => "GameApi" === HH.name)),
+              LH = new Map,
+              AH = BH.lines;
+            for (let SH = 0; SH < AH.length; SH++) {
+              var rH;
+              if (!AH[SH].trimStart().startsWith("/**")) continue;
+              const HH = SH;
+              for (; SH < AH.length && !AH[SH].includes("*/");) SH++;
+              const BH = null === (rH = AH[SH + 1]) || void 0 === rH ? void 0 : rH.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!BH) continue;
+              let hH = null;
+              const tH = [];
+              let zH = "description",
+                CH = !1;
+              for (const LH of AH.slice(HH, SH + 1).join("\n").split("\n").map((HH => HH.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const HH = LH.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                HH ? (hH = HH[1].trim(), zH = "deprecation") : LH.startsWith("@") ? (zH = "otherTag", CH = !0) : "" === LH.trim() ? CH || (zH = "description", tH.push(LH)) : "deprecation" !== zH || /^[A-Z]/.test(LH.trim()) ? "otherTag" !== zH && (zH = "description", tH.push(LH)) : hH = `${hH} ${LH.trim()}`.trim()
               }
-              zU.set(XU[1], {
-                deprecation: AU,
-                description: FU.join("\n").trim()
+              LH.set(BH[1], {
+                deprecation: hH,
+                description: tH.join("\n").trim()
               })
             }
-            return zU
-          }(lU.default), QX
+            return LH
+          }(ZH.default), SB
         }
 
-        function oX() {
-          if (!AX) {
-            AX = new Map;
-            for (const UU of fU) {
-              const XU = (0, WU.u)(vU(UU)).flatMap((UU => UU.blocks));
-              for (const UU of (0, WU.k)(XU))
-                if ("ts" === UU.lang || "typescript" === UU.lang)
-                  for (const [XU, zU] of eU(UU.code)) AX.set(XU, zU)
+        function zB() {
+          if (!hB) {
+            hB = new Map;
+            for (const HH of qH) {
+              const BH = (0, OH.v)(jH(HH)).flatMap((HH => HH.blocks));
+              for (const HH of (0, OH.j)(BH))
+                if ("ts" === HH.lang || "typescript" === HH.lang)
+                  for (const [BH, LH] of mH(HH.code)) hB.set(BH, LH)
             }
-            for (const [UU, XU] of(yX ??= cX(lU.default), yX)) AX.has(UU) || AX.set(UU, XU)
+            for (const [HH, BH] of(rB ??= AB(ZH.default), rB)) hB.has(HH) || hB.set(HH, BH)
           }
-          return AX
+          return hB
         }
-        const DX = {
+        const CB = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let EX;
+        let EB;
 
-        function YX() {
-          if (!EX) {
-            EX = new Map;
-            for (const UU of fU)
-              if (CU(UU.layout))
-                for (const XU of vU(UU).sections) EX.has(XU.heading.text) || EX.set(XU.heading.text, {
-                  pageId: UU.id,
-                  anchor: XU.heading.anchor
+        function XB() {
+          if (!EB) {
+            EB = new Map;
+            for (const HH of qH)
+              if (oH(HH.layout))
+                for (const BH of jH(HH).sections) EB.has(BH.heading.text) || EB.set(BH.heading.text, {
+                  pageId: HH.id,
+                  anchor: BH.heading.anchor
                 })
           }
-          return EX
+          return EB
         }
 
-        function NX(UU) {
-          const XU = UU.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return XU ? YX().get(XU[1]) : void 0
+        function GB(HH) {
+          const BH = HH.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return BH ? XB().get(BH[1]) : void 0
         }
-        const IX = (0, cU.createContext)("/docs"),
-          pX = (0, cU.createContext)(null),
-          aX = (0, cU.createContext)(!1),
-          tX = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const YB = (0, AH.createContext)("/docs"),
+          uB = (0, AH.createContext)(null),
+          QB = (0, AH.createContext)(!1),
+          WB = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function gX(UU) {
-          const XU = UU.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return XU ? XU[1] : null
+        function MB(HH) {
+          const BH = HH.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return BH ? BH[1] : null
         }
 
-        function kX(UU) {
+        function xB(HH) {
           let {
-            colour: XU
-          } = UU;
-          return (0, pU.jsx)("span", {
+            colour: BH
+          } = HH;
+          return (0, uH.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: XU
+              background: BH
             },
             "aria-hidden": "true"
           })
         }
 
-        function GX(UU) {
-          const XU = [];
-          let zU = 0;
-          for (const cU of UU.matchAll(tX)) XU.push(UU.slice(zU, cU.index), (0, pU.jsx)(kX, {
-            colour: cU[0]
-          }), cU[0]), zU = cU.index + cU[0].length;
-          return XU.push(UU.slice(zU)), XU
+        function vB(HH) {
+          const BH = [];
+          let LH = 0;
+          for (const AH of HH.matchAll(WB)) BH.push(HH.slice(LH, AH.index), (0, uH.jsx)(xB, {
+            colour: AH[0]
+          }), AH[0]), LH = AH.index + AH[0].length;
+          return BH.push(HH.slice(LH)), BH
         }
 
-        function BX(UU) {
+        function PB(HH) {
           let {
-            href: XU,
-            children: zU
-          } = UU;
-          const yU = (0, cU.useContext)(IX);
-          if (XU.startsWith("#")) {
-            const UU = sU(XU);
-            if (UU) return (0, pU.jsx)(AU.b, {
-              to: mU(yU, UU.page, UU.anchor),
-              children: (0, pU.jsx)(aX.Provider, {
+            href: BH,
+            children: LH
+          } = HH;
+          const rH = (0, AH.useContext)(YB);
+          if (BH.startsWith("#")) {
+            const HH = FH(BH);
+            if (HH) return (0, uH.jsx)(hH.e, {
+              to: wH(rH, HH.page, HH.anchor),
+              children: (0, uH.jsx)(QB.Provider, {
                 value: !0,
-                children: zU
+                children: LH
               })
             })
           }
-          return (0, pU.jsx)("a", {
-            href: XU,
+          return (0, uH.jsx)("a", {
+            href: BH,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, pU.jsx)(aX.Provider, {
+            children: (0, uH.jsx)(QB.Provider, {
               value: !0,
-              children: zU
+              children: LH
             })
           })
         }
 
-        function ZX(UU) {
+        function TB(HH) {
           let {
-            code: XU
-          } = UU;
-          const zU = (0, cU.useContext)(IX);
-          if ((0, cU.useContext)(aX)) return (0, pU.jsx)("code", {
+            code: BH
+          } = HH;
+          const LH = (0, AH.useContext)(YB);
+          if ((0, AH.useContext)(QB)) return (0, uH.jsx)("code", {
             className: "DocsInlineCode",
-            children: XU
+            children: BH
           });
-          if (oX().has(XU)) return (0, pU.jsx)(dX, {
-            type: XU
+          if (zB().has(BH)) return (0, uH.jsx)(bB, {
+            type: BH
           });
-          const yU = NX(XU);
-          if (yU) return (0, pU.jsx)(AU.b, {
+          const rH = GB(BH);
+          if (rH) return (0, uH.jsx)(hH.e, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: mU(zU, HU(yU.pageId), yU.anchor),
-            children: XU
+            to: wH(LH, NH(rH.pageId), rH.anchor),
+            children: BH
           });
-          const QU = gX(XU);
-          return (0, pU.jsxs)("code", {
+          const SH = MB(BH);
+          return (0, uH.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [QU && (0, pU.jsx)(kX, {
-              colour: QU
-            }), XU]
+            children: [SH && (0, uH.jsx)(xB, {
+              colour: SH
+            }), BH]
           })
         }
 
-        function RX(UU) {
+        function UB(HH) {
           let {
-            text: XU
-          } = UU;
-          const zU = [];
-          let yU = 0;
-          for (const cU of XU.matchAll(WU.e)) {
-            cU.index > yU && zU.push(...GX(XU.slice(yU, cU.index)));
-            const [, UU, QU, AU, FU, oU] = cU;
-            UU ? zU.push((0, pU.jsx)(ZX, {
-              code: (0, WU.l)(UU, QU)
-            })) : AU ? zU.push((0, pU.jsx)("strong", {
-              children: (0, pU.jsx)(RX, {
-                text: AU
+            text: BH
+          } = HH;
+          const LH = [];
+          let rH = 0;
+          for (const AH of BH.matchAll(OH.e)) {
+            AH.index > rH && LH.push(...vB(BH.slice(rH, AH.index)));
+            const [, HH, SH, hH, tH, zH] = AH;
+            HH ? LH.push((0, uH.jsx)(TB, {
+              code: (0, OH.l)(HH, SH)
+            })) : hH ? LH.push((0, uH.jsx)("strong", {
+              children: (0, uH.jsx)(UB, {
+                text: hH
               })
-            })) : zU.push((0, pU.jsx)(BX, {
-              href: oU,
-              children: (0, pU.jsx)(RX, {
-                text: FU
+            })) : LH.push((0, uH.jsx)(PB, {
+              href: zH,
+              children: (0, uH.jsx)(UB, {
+                text: tH
               })
-            })), yU = cU.index + cU[0].length
+            })), rH = AH.index + AH[0].length
           }
-          return yU < XU.length && zU.push(...GX(XU.slice(yU))), (0, pU.jsx)(pU.Fragment, {
-            children: zU.map(((UU, XU) => (0, pU.jsx)(cU.Fragment, {
-              children: UU
-            }, XU)))
+          return rH < BH.length && LH.push(...vB(BH.slice(rH))), (0, uH.jsx)(uH.Fragment, {
+            children: LH.map(((HH, BH) => (0, uH.jsx)(AH.Fragment, {
+              children: HH
+            }, BH)))
           })
         }
-        const PX = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          WX = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const VB = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          OB = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function dX(UU) {
+        function bB(HH) {
           let {
-            type: XU
-          } = UU;
-          const zU = oX(),
-            yU = [];
-          for (const cU of XU.trim().matchAll(PX)) {
-            const [UU, XU, QU, AU, FU] = cU;
-            XU ? yU.push((0, pU.jsx)("span", {
+            type: BH
+          } = HH;
+          const LH = zB(),
+            rH = [];
+          for (const AH of BH.trim().matchAll(VB)) {
+            const [HH, BH, SH, hH, tH] = AH;
+            BH ? rH.push((0, uH.jsx)("span", {
               className: "DocsTypeString",
-              children: UU
-            })) : QU && zU.has(QU) ? yU.push((0, pU.jsx)(qX, {
-              name: QU,
-              definition: zU.get(QU)
-            })) : QU ? yU.push((0, pU.jsx)("span", {
-              className: WX.has(QU) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: UU
-            })) : AU ? yU.push((0, pU.jsx)("span", {
+              children: HH
+            })) : SH && LH.has(SH) ? rH.push((0, uH.jsx)(fB, {
+              name: SH,
+              definition: LH.get(SH)
+            })) : SH ? rH.push((0, uH.jsx)("span", {
+              className: OB.has(SH) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: HH
+            })) : hH ? rH.push((0, uH.jsx)("span", {
               className: "DocsTypeNumber",
-              children: UU
-            })) : FU ? yU.push(" ") : yU.push((0, pU.jsx)("span", {
+              children: HH
+            })) : tH ? rH.push(" ") : rH.push((0, uH.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: UU
+              children: HH
             }))
           }
-          return (0, pU.jsx)("code", {
+          return (0, uH.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: yU.map(((UU, XU) => (0, pU.jsx)(cU.Fragment, {
-              children: UU
-            }, XU)))
+            children: rH.map(((HH, BH) => (0, uH.jsx)(AH.Fragment, {
+              children: HH
+            }, BH)))
           })
         }
-        const LX = 480,
-          eX = 6,
-          CX = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let wX = 0;
+        const kB = 480,
+          mB = 6,
+          oB = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let IB = 0;
 
-        function qX(UU) {
+        function fB(HH) {
           let {
-            name: XU,
-            definition: zU
-          } = UU;
-          const yU = (0, cU.useContext)(IX),
-            QU = DX[XU],
-            FU = (0, cU.useRef)(null),
-            oU = (0, cU.useRef)(null),
-            EU = (0, cU.useRef)(null),
-            [YU, NU] = (0, cU.useState)(!1),
-            [IU, aU] = (0, cU.useState)(null),
-            gU = (0, cU.useRef)(),
-            kU = (0, cU.useContext)(pX),
-            [GU] = (0, cU.useState)((() => "DocsTypePopover-" + wX++)),
-            BU = () => {
-              clearTimeout(gU.current), NU(!0)
+            name: BH,
+            definition: LH
+          } = HH;
+          const rH = (0, AH.useContext)(YB),
+            SH = CB[BH],
+            tH = (0, AH.useRef)(null),
+            zH = (0, AH.useRef)(null),
+            EH = (0, AH.useRef)(null),
+            [XH, GH] = (0, AH.useState)(!1),
+            [YH, QH] = (0, AH.useState)(null),
+            MH = (0, AH.useRef)(),
+            xH = (0, AH.useContext)(uB),
+            [vH] = (0, AH.useState)((() => "DocsTypePopover-" + IB++)),
+            PH = () => {
+              clearTimeout(MH.current), GH(!0)
             },
-            ZU = () => {
-              clearTimeout(gU.current), gU.current = setTimeout((() => {
-                NU(!1)
+            TH = () => {
+              clearTimeout(MH.current), MH.current = setTimeout((() => {
+                GH(!1)
               }), 120)
             };
-          return (0, cU.useEffect)((() => {
-            if (!YU) return;
-            const UU = UU => {
-              if ("Escape" === UU.key) {
-                var XU, zU;
-                if (null !== (XU = oU.current) && void 0 !== XU && XU.contains(document.activeElement)) null === (zU = FU.current) || void 0 === zU || zU.focus();
-                NU(!1)
+          return (0, AH.useEffect)((() => {
+            if (!XH) return;
+            const HH = HH => {
+              if ("Escape" === HH.key) {
+                var BH, LH;
+                if (null !== (BH = zH.current) && void 0 !== BH && BH.contains(document.activeElement)) null === (LH = tH.current) || void 0 === LH || LH.focus();
+                GH(!1)
               }
             };
-            return document.addEventListener("keydown", UU), () => {
-              document.removeEventListener("keydown", UU)
+            return document.addEventListener("keydown", HH), () => {
+              document.removeEventListener("keydown", HH)
             }
-          }), [YU]), (0, cU.useEffect)((() => () => {
-            clearTimeout(gU.current)
-          }), []), (0, cU.useLayoutEffect)((() => {
-            if (!YU || !FU.current || !oU.current) return void aU(null);
-            const UU = FU.current.getBoundingClientRect(),
-              XU = oU.current.offsetHeight,
-              zU = Math.min(LX, window.innerWidth - 32),
-              cU = Math.min(Math.max(16, UU.left), window.innerWidth - zU - 16),
-              yU = UU.bottom + eX + XU < window.innerHeight;
-            aU({
-              left: cU,
-              top: yU ? UU.bottom + eX : Math.max(16, UU.top - eX - XU)
+          }), [XH]), (0, AH.useEffect)((() => () => {
+            clearTimeout(MH.current)
+          }), []), (0, AH.useLayoutEffect)((() => {
+            if (!XH || !tH.current || !zH.current) return void QH(null);
+            const HH = tH.current.getBoundingClientRect(),
+              BH = zH.current.offsetHeight,
+              LH = Math.min(kB, window.innerWidth - 32),
+              AH = Math.min(Math.max(16, HH.left), window.innerWidth - LH - 16),
+              rH = HH.bottom + mB + BH < window.innerHeight;
+            QH({
+              left: AH,
+              top: rH ? HH.bottom + mB : Math.max(16, HH.top - mB - BH)
             })
-          }), [YU]), (0, pU.jsxs)(pU.Fragment, {
-            children: [(0, pU.jsx)("button", {
+          }), [XH]), (0, uH.jsxs)(uH.Fragment, {
+            children: [(0, uH.jsx)("button", {
               type: "button",
-              ref: FU,
+              ref: tH,
               className: "DocsTypeLink",
-              "aria-expanded": YU,
-              "aria-describedby": YU ? GU : void 0,
-              onMouseEnter: BU,
-              onMouseLeave: ZU,
-              onFocus: BU,
-              onBlur: ZU,
-              onKeyDown: UU => {
-                "Tab" === UU.key && !UU.shiftKey && EU.current && (UU.preventDefault(), EU.current.focus())
+              "aria-expanded": XH,
+              "aria-describedby": XH ? vH : void 0,
+              onMouseEnter: PH,
+              onMouseLeave: TH,
+              onFocus: PH,
+              onBlur: TH,
+              onKeyDown: HH => {
+                "Tab" === HH.key && !HH.shiftKey && EH.current && (HH.preventDefault(), EH.current.focus())
               },
-              onClick: BU,
-              children: XU
-            }), YU && (0, DU.createPortal)((0, pU.jsxs)("span", {
-              ref: oU,
-              id: GU,
+              onClick: PH,
+              children: BH
+            }), XH && (0, CH.createPortal)((0, uH.jsxs)("span", {
+              ref: zH,
+              id: vH,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: IU ? {
-                left: IU.left,
-                top: IU.top,
-                maxWidth: LX
+              style: YH ? {
+                left: YH.left,
+                top: YH.top,
+                maxWidth: kB
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: BU,
-              onMouseLeave: ZU,
-              onFocus: BU,
-              onBlur: ZU,
-              children: [(0, pU.jsxs)("span", {
+              onMouseEnter: PH,
+              onMouseLeave: TH,
+              onFocus: PH,
+              onBlur: TH,
+              children: [(0, uH.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, pU.jsx)("span", {
+                children: [(0, uH.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: XU
-                }), QU && (0, pU.jsxs)(AU.b, {
-                  ref: EU,
+                  children: BH
+                }), SH && (0, uH.jsxs)(hH.e, {
+                  ref: EH,
                   className: "DocsTypePopoverLink",
-                  to: mU(yU, HU(QU)),
+                  to: wH(rH, NH(SH)),
                   onClick: () => {
-                    NU(!1)
+                    GH(!1)
                   },
-                  onKeyDown: UU => {
-                    if ("Tab" === UU.key) {
-                      var XU;
-                      if (UU.preventDefault(), UU.shiftKey || !FU.current || ! function(UU, XU) {
-                          const zU = [...document.querySelectorAll(CX)],
-                            cU = zU.slice(zU.indexOf(UU) + 1).find((UU => UU.getClientRects().length > 0 && !(null !== XU && void 0 !== XU && XU.contains(UU))));
-                          return null === cU || void 0 === cU || cU.focus(), void 0 !== cU
-                        }(FU.current, oU.current)) null === (XU = FU.current) || void 0 === XU || XU.focus();
-                      UU.shiftKey || NU(!1)
+                  onKeyDown: HH => {
+                    if ("Tab" === HH.key) {
+                      var BH;
+                      if (HH.preventDefault(), HH.shiftKey || !tH.current || ! function(HH, BH) {
+                          const LH = [...document.querySelectorAll(oB)],
+                            AH = LH.slice(LH.indexOf(HH) + 1).find((HH => HH.getClientRects().length > 0 && !(null !== BH && void 0 !== BH && BH.contains(HH))));
+                          return null === AH || void 0 === AH || AH.focus(), void 0 !== AH
+                        }(tH.current, zH.current)) null === (BH = tH.current) || void 0 === BH || BH.focus();
+                      HH.shiftKey || GH(!1)
                     }
                   },
-                  children: [HU(QU).title, (0, pU.jsx)(tU, {
+                  children: [NH(SH).title, (0, uH.jsx)(WH, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, pU.jsx)(PU, {
+              }), (0, uH.jsx)(VH, {
                 lang: "ts",
-                code: zU,
+                code: LH,
                 compact: !0
               })]
-            }), null !== kU && void 0 !== kU ? kU : document.body)]
+            }), null !== xH && void 0 !== xH ? xH : document.body)]
           })
         }
-        var OX = zU(212),
-          SX = zU(5299),
-          rX = zU(5301),
-          uX = zU(5303);
-        const fX = {
+        var lB = LH(176),
+          KB = LH(5248),
+          cB = LH(5250),
+          eB = LH(5253);
+        const qB = {
           progressBar: {
-            Sz: 30,
-            rz: .075,
-            uz: 5,
-            fz: !1,
+            jH: 30,
+            nH: .075,
+            FH: 5,
+            DH: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            iz: "fa-solid fa-computer-mouse",
+            dH: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            vz: 3e3,
+            sH: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            Vz: !0,
+            JH: !0,
             scale: 3,
             rotation: 15,
-            sz: !1
+            iH: !1
           },
           gravityBar: {
-            Sz: 30,
-            mz: .25,
-            lz: 3,
-            xz: .8,
+            jH: 30,
+            yH: .25,
+            HB: 3,
+            BB: .8,
             gravity: 1,
-            Jz: 1.5,
-            jz: 8,
-            Kz: 4,
-            fz: !1,
+            LB: 1.5,
+            AB: 8,
+            rB: 4,
+            DH: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            Tz: .15,
+            hB: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            Uc: 5,
-            Xc: 1200,
-            zc: .15,
-            yc: 3,
+            zB: 5,
+            CB: 1200,
+            EB: .15,
+            XB: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var iX = zU(320),
-          HX = zU(2067);
+        var gB = LH(304),
+          NB = LH(2073);
 
-        function MX(UU) {
-          return UU.startsWith("fa-")
+        function RB(HH) {
+          return HH.startsWith("fa-")
         }
-        const vX = {
+        const jB = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          VX = {
+          nB = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function sX(UU) {
-          return "string" === typeof UU ? "text" : "entityName" in UU || "translationKey" in UU ? "other" : (0, iX.Cb)(UU) ? "progressBar" : (0, iX.yb)(UU) ? "keyBinding" : "icon" in UU ? "icon" : "str" in UU && "string" === typeof UU.str ? "text" : "other"
+        function FB(HH) {
+          return "string" === typeof HH ? "text" : "entityName" in HH || "translationKey" in HH ? "other" : (0, gB.Eb)(HH) ? "progressBar" : (0, gB.Cb)(HH) ? "keyBinding" : "icon" in HH ? "icon" : "str" in HH && "string" === typeof HH.str ? "text" : "other"
         }
-        const nX = [{
+        const DB = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          mX = {
+          wB = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...nX],
+            }, ...DB],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: HX.j
+                options: NB.m
               },
               isRequired: !0
-            }, ...nX],
+            }, ...DB],
             other: []
           };
 
-        function lX(UU) {
-          return "string" === typeof UU ? {
-            str: UU
-          } : UU
+        function ZB(HH) {
+          return "string" === typeof HH ? {
+            str: HH
+          } : HH
         }
 
-        function xX(UU, XU) {
-          let zU = lX(UU);
-          for (const cU of XU) zU = zU && "object" === typeof zU ? zU[cU] : void 0;
-          return zU
+        function dB(HH, BH) {
+          let LH = ZB(HH);
+          for (const AH of BH) LH = LH && "object" === typeof LH ? LH[AH] : void 0;
+          return LH
         }
 
-        function JX(UU, XU, zU) {
-          const cU = (UU, yU) => {
-            var QU;
-            const AU = XU[yU],
-              FU = {
-                ...UU
+        function aB(HH, BH, LH) {
+          const AH = (HH, rH) => {
+            var SH;
+            const hH = BH[rH],
+              tH = {
+                ...HH
               };
-            if (yU === XU.length - 1) return void 0 === zU ? delete FU[AU] : FU[AU] = zU, FU;
-            const oU = cU(null !== (QU = UU[AU]) && void 0 !== QU ? QU : {}, yU + 1);
-            return 0 === Object.keys(oU).length ? delete FU[AU] : FU[AU] = oU, FU
+            if (rH === BH.length - 1) return void 0 === LH ? delete tH[hH] : tH[hH] = LH, tH;
+            const zH = AH(null !== (SH = HH[hH]) && void 0 !== SH ? SH : {}, rH + 1);
+            return 0 === Object.keys(zH).length ? delete tH[hH] : tH[hH] = zH, tH
           };
-          return function(UU) {
-            const XU = Object.keys(UU);
-            return "string" === typeof UU.str && 1 === XU.length ? UU.str : UU
-          }(cU(lX(UU), 0))
+          return function(HH) {
+            const BH = Object.keys(HH);
+            return "string" === typeof HH.str && 1 === BH.length ? HH.str : HH
+          }(AH(ZB(HH), 0))
         }
 
-        function jX(UU, XU) {
-          const zU = sX(UU),
-            cU = mX[zU].find((UU => UU.path.join(".") === XU.join("."))),
-            yU = null !== cU && void 0 !== cU && cU.isRequired && "other" !== zU ? xX(VX[zU], XU) : void 0;
-          return JX(UU, XU, yU)
+        function sB(HH, BH) {
+          const LH = FB(HH),
+            AH = wB[LH].find((HH => HH.path.join(".") === BH.join("."))),
+            rH = null !== AH && void 0 !== AH && AH.isRequired && "other" !== LH ? dB(nB[LH], BH) : void 0;
+          return aB(HH, BH, rH)
         }
 
-        function KX(UU) {
-          switch (sX(UU)) {
+        function JB(HH) {
+          switch (FB(HH)) {
             case "text":
-              return String(xX(UU, ["str"]));
+              return String(dB(HH, ["str"]));
             case "icon":
-              return String(xX(UU, ["icon"]));
+              return String(dB(HH, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(xX(UU,["progress"])))}%`;
+              return `${Math.round(100*Number(dB(HH,["progress"])))}%`;
             case "keyBinding":
-              return String(xX(UU, ["action"]));
+              return String(dB(HH, ["action"]));
             case "other":
-              return JSON.stringify(UU)
+              return JSON.stringify(HH)
           }
         }
-        const bX = /^[A-Za-z_$][\w$]*$/;
+        const iB = /^[A-Za-z_$][\w$]*$/;
 
-        function TX(UU) {
-          if (Array.isArray(UU)) return `[${UU.map(TX).join(", ")}]`;
-          if (UU && "object" === typeof UU) {
-            const XU = Object.entries(UU).map((UU => {
-              let [XU, zU] = UU;
-              return `${bX.test(XU)?XU:JSON.stringify(XU)}: ${TX(zU)}`
+        function pB(HH) {
+          if (Array.isArray(HH)) return `[${HH.map(pB).join(", ")}]`;
+          if (HH && "object" === typeof HH) {
+            const BH = Object.entries(HH).map((HH => {
+              let [BH, LH] = HH;
+              return `${iB.test(BH)?BH:JSON.stringify(BH)}: ${pB(LH)}`
             }));
-            return 0 === XU.length ? "{}" : `{ ${XU.join(", ")} }`
+            return 0 === BH.length ? "{}" : `{ ${BH.join(", ")} }`
           }
-          return JSON.stringify(UU)
+          return JSON.stringify(HH)
         }
 
-        function hX(UU) {
-          const XU = UU.map(TX),
-            zU = `[${XU.join(", ")}]`;
-          return zU.length <= 60 ? zU : `[\n${XU.map((UU=>`    ${UU},`)).join("\n")}\n]`
+        function yB(HH) {
+          const BH = HH.map(pB),
+            LH = `[${BH.join(", ")}]`;
+          return LH.length <= 60 ? LH : `[\n${BH.map((HH=>`    ${HH},`)).join("\n")}\n]`
         }
-        const Uz = {
+        const HL = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function Xz(UU) {
-          let XU = "";
-          for (let yU = 0; yU < UU.length; yU++) {
-            const QU = UU[yU];
-            if ("\\" === QU) {
-              var zU;
-              const cU = null !== (zU = UU[yU + 1]) && void 0 !== zU ? zU : "";
-              XU += "'" === cU ? "'" : QU + cU, yU++
-            } else if ('"' === QU) XU += '\\"';
+        function BL(HH) {
+          let BH = "";
+          for (let rH = 0; rH < HH.length; rH++) {
+            const SH = HH[rH];
+            if ("\\" === SH) {
+              var LH;
+              const AH = null !== (LH = HH[rH + 1]) && void 0 !== LH ? LH : "";
+              BH += "'" === AH ? "'" : SH + AH, rH++
+            } else if ('"' === SH) BH += '\\"';
             else {
-              var cU;
-              XU += null !== (cU = Uz[QU]) && void 0 !== cU ? cU : QU
+              var AH;
+              BH += null !== (AH = HL[SH]) && void 0 !== AH ? AH : SH
             }
           }
-          return `"${XU}"`
+          return `"${BH}"`
         }
 
-        function zz(UU) {
-          if ("string" === typeof UU) return !0;
-          if (!UU || "object" !== typeof UU || Array.isArray(UU)) return !1;
-          const XU = UU;
-          return "ProgressBar" === XU.type ? "number" === typeof XU.progress : "StyledKeyBinding" === XU.type ? HX.j.includes(XU.action) : "string" === typeof XU.icon || "string" === typeof XU.str || "string" === typeof XU.entityName || "string" === typeof XU.translationKey
+        function LL(HH) {
+          if ("string" === typeof HH) return !0;
+          if (!HH || "object" !== typeof HH || Array.isArray(HH)) return !1;
+          const BH = HH;
+          return "ProgressBar" === BH.type ? "number" === typeof BH.progress : "StyledKeyBinding" === BH.type ? NB.m.includes(BH.action) : "string" === typeof BH.icon || "string" === typeof BH.str || "string" === typeof BH.entityName || "string" === typeof BH.translationKey
         }
 
-        function cz(UU) {
-          let XU;
+        function AL(HH) {
+          let BH;
           try {
-            XU = function(UU) {
-              let XU = "",
-                zU = "",
-                cU = 0;
-              const yU = () => {
-                XU += zU.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), zU = ""
+            BH = function(HH) {
+              let BH = "",
+                LH = "",
+                AH = 0;
+              const rH = () => {
+                BH += LH.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), LH = ""
               };
-              for (; cU < UU.length;) {
-                const QU = UU.slice(cU).search(/["'`]|\/\//);
-                if (-1 === QU) {
-                  zU += UU.slice(cU);
+              for (; AH < HH.length;) {
+                const SH = HH.slice(AH).search(/["'`]|\/\//);
+                if (-1 === SH) {
+                  LH += HH.slice(AH);
                   break
                 }
-                zU += UU.slice(cU, cU + QU);
-                const AU = cU + QU,
-                  FU = UU[AU];
-                if ("/" === FU) {
-                  const XU = UU.indexOf("\n", AU);
-                  cU = -1 === XU ? UU.length : XU;
+                LH += HH.slice(AH, AH + SH);
+                const hH = AH + SH,
+                  tH = HH[hH];
+                if ("/" === tH) {
+                  const BH = HH.indexOf("\n", hH);
+                  AH = -1 === BH ? HH.length : BH;
                   continue
                 }
-                if (yU(), "`" === FU) throw new Error("Use quotes rather than template strings.");
-                let oU = AU + 1;
-                for (; oU < UU.length && UU[oU] !== FU;) oU += "\\" === UU[oU] ? 2 : 1;
-                if (oU >= UU.length) throw new Error("A string is missing its closing quote.");
-                const DU = UU.slice(AU + 1, oU);
-                XU += Xz(DU), cU = oU + 1
+                if (rH(), "`" === tH) throw new Error("Use quotes rather than template strings.");
+                let zH = hH + 1;
+                for (; zH < HH.length && HH[zH] !== tH;) zH += "\\" === HH[zH] ? 2 : 1;
+                if (zH >= HH.length) throw new Error("A string is missing its closing quote.");
+                const CH = HH.slice(hH + 1, zH);
+                BH += BL(CH), AH = zH + 1
               }
-              return yU(), JSON.parse(XU)
-            }(UU.trim())
-          } catch (cU) {
+              return rH(), JSON.parse(BH)
+            }(HH.trim())
+          } catch (AH) {
             return {
               parts: null,
-              error: cU instanceof SyntaxError ? "This isn't a valid array yet." : cU.message
+              error: AH instanceof SyntaxError ? "This isn't a valid array yet." : AH.message
             }
           }
-          if (!Array.isArray(XU)) return {
+          if (!Array.isArray(BH)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const zU = XU.findIndex((UU => !zz(UU)));
-          return -1 !== zU ? {
+          const LH = BH.findIndex((HH => !LL(HH)));
+          return -1 !== LH ? {
             parts: null,
-            error: `Part ${zU+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${LH+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: XU,
+            parts: BH,
             error: null
           }
         }
-        const yz = 1 / OX.f.clientTicksPerSecond,
-          Qz = 700,
-          Az = {
+        const rL = 1 / lB.g.clientTicksPerSecond,
+          SL = 700,
+          hL = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          Fz = {
-            progressBar: fX.progressBar.iz,
-            timedClick: fX.timedClick.icon,
-            gravityBar: fX.gravityBar.icon,
-            precisionBar: fX.precisionBar.icon,
-            rhythmClick: fX.rhythmClick.icon
+          tL = {
+            progressBar: qB.progressBar.dH,
+            timedClick: qB.timedClick.icon,
+            gravityBar: qB.gravityBar.icon,
+            precisionBar: qB.precisionBar.icon,
+            rhythmClick: qB.rhythmClick.icon
           };
 
-        function oz(UU) {
+        function zL(HH) {
           let {
-            type: XU
-          } = UU;
-          const [zU, yU] = (0, cU.useState)("ready"), [AU, FU] = (0, cU.useState)(1), [oU, DU] = (0, cU.useState)(!0), EU = (0, cU.useRef)(null), YU = (0, cU.useRef)(null), NU = (0, cU.useRef)(null), IU = (0, cU.useRef)(new Set), aU = (0, cU.useRef)(!1), gU = Fz[XU], kU = (0, cU.useMemo)((() => ({
+            type: BH
+          } = HH;
+          const [LH, rH] = (0, AH.useState)("ready"), [hH, tH] = (0, AH.useState)(1), [zH, CH] = (0, AH.useState)(!0), EH = (0, AH.useRef)(null), XH = (0, AH.useRef)(null), GH = (0, AH.useRef)(null), YH = (0, AH.useRef)(new Set), QH = (0, AH.useRef)(!1), MH = tL[BH], xH = (0, AH.useMemo)((() => ({
             getState: () => {
-              var UU, XU;
-              return null !== (UU = null === (XU = NU.current) || void 0 === XU ? void 0 : XU.getState()) && void 0 !== UU ? UU : Az
+              var HH, BH;
+              return null !== (HH = null === (BH = GH.current) || void 0 === BH ? void 0 : BH.getState()) && void 0 !== HH ? HH : hL
             },
-            onFrame: UU => (IU.current.add(UU), () => {
-              IU.current.delete(UU)
+            onFrame: HH => (YH.current.add(HH), () => {
+              YH.current.delete(HH)
             })
           })), []);
-          (0, cU.useEffect)((() => {
-            const UU = EU.current,
-              XU = YU.current;
-            if (!UU || !XU) return;
-            const zU = new ResizeObserver((() => {
-              FU(UU.clientWidth / Math.max(1, XU.offsetWidth))
+          (0, AH.useEffect)((() => {
+            const HH = EH.current,
+              BH = XH.current;
+            if (!HH || !BH) return;
+            const LH = new ResizeObserver((() => {
+              tH(HH.clientWidth / Math.max(1, BH.offsetWidth))
             }));
-            return zU.observe(UU), () => {
-              zU.disconnect()
+            return LH.observe(HH), () => {
+              LH.disconnect()
             }
-          }), []), (0, cU.useEffect)((() => {
-            var UU;
-            if ("playing" !== zU) return;
-            let cU = !1;
-            const QU = new uX.g[XU](fX[XU], (UU => {
-              cU = !0, DU(!1), yU(UU ? "succeeded" : "failed")
+          }), []), (0, AH.useEffect)((() => {
+            var HH;
+            if ("playing" !== LH) return;
+            let AH = !1;
+            const SH = new eB.f[BH](qB[BH], (HH => {
+              AH = !0, CH(!1), rH(HH ? "succeeded" : "failed")
             }), (() => {}));
-            NU.current = QU;
-            let AU = 0,
-              FU = performance.now(),
-              oU = requestAnimationFrame((function UU(XU) {
-                for (AU += Math.min(.25, (XU - FU) / 1e3), FU = XU; AU >= yz && !cU;) AU -= yz, QU.handleTick(yz);
-                for (const zU of IU.current) zU();
-                cU || (oU = requestAnimationFrame(UU))
+            GH.current = SH;
+            let hH = 0,
+              tH = performance.now(),
+              zH = requestAnimationFrame((function HH(BH) {
+                for (hH += Math.min(.25, (BH - tH) / 1e3), tH = BH; hH >= rL && !AH;) hH -= rL, SH.handleTick(rL);
+                for (const LH of YH.current) LH();
+                AH || (zH = requestAnimationFrame(HH))
               }));
-            return null === (UU = EU.current) || void 0 === UU || UU.focus({
+            return null === (HH = EH.current) || void 0 === HH || HH.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(oU), QU.tearDown(), NU.current = null, aU.current = !1
+              cancelAnimationFrame(zH), SH.tearDown(), GH.current = null, QH.current = !1
             }
-          }), [zU, XU]), (0, cU.useEffect)((() => {
-            if (oU) return;
-            const UU = setTimeout((() => {
-              DU(!0)
-            }), Qz);
+          }), [LH, BH]), (0, AH.useEffect)((() => {
+            if (zH) return;
+            const HH = setTimeout((() => {
+              CH(!0)
+            }), SL);
             return () => {
-              clearTimeout(UU)
+              clearTimeout(HH)
             }
-          }), [oU]);
-          const GU = UU => {
-            var XU;
-            "playing" === zU && aU.current !== UU && (aU.current = UU, null === (XU = NU.current) || void 0 === XU || XU.handleMouseInput(UU))
+          }), [zH]);
+          const vH = HH => {
+            var BH;
+            "playing" === LH && QH.current !== HH && (QH.current = HH, null === (BH = GH.current) || void 0 === BH || BH.handleMouseInput(HH))
           };
-          return (0, pU.jsxs)("div", {
+          return (0, uH.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, pU.jsxs)("div", {
-              ref: EU,
-              className: QU()("DocsQteStage", {
-                Playing: "playing" === zU
+            children: [(0, uH.jsxs)("div", {
+              ref: EH,
+              className: SH()("DocsQteStage", {
+                Playing: "playing" === LH
               }),
-              tabIndex: "playing" === zU ? 0 : -1,
-              role: "playing" === zU ? "button" : void 0,
-              "aria-label": "playing" === zU ? `${XU} quick time event: click or press Space` : void 0,
-              onPointerDown: UU => {
-                0 === UU.button && GU(!0)
+              tabIndex: "playing" === LH ? 0 : -1,
+              role: "playing" === LH ? "button" : void 0,
+              "aria-label": "playing" === LH ? `${BH} quick time event: click or press Space` : void 0,
+              onPointerDown: HH => {
+                0 === HH.button && vH(!0)
               },
               onPointerUp: () => {
-                GU(!1)
+                vH(!1)
               },
               onPointerLeave: () => {
-                GU(!1)
+                vH(!1)
               },
               onPointerCancel: () => {
-                GU(!1)
+                vH(!1)
               },
-              onKeyDown: UU => {
-                "playing" !== zU || " " !== UU.key && "Enter" !== UU.key || (UU.preventDefault(), GU(!0))
+              onKeyDown: HH => {
+                "playing" !== LH || " " !== HH.key && "Enter" !== HH.key || (HH.preventDefault(), vH(!0))
               },
-              onKeyUp: UU => {
-                "playing" !== zU || " " !== UU.key && "Enter" !== UU.key || GU(!1)
+              onKeyUp: HH => {
+                "playing" !== LH || " " !== HH.key && "Enter" !== HH.key || vH(!1)
               },
-              children: [(0, pU.jsx)("div", {
-                ref: YU,
+              children: [(0, uH.jsx)("div", {
+                ref: XH,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${AU})`
+                  transform: `scale(${hH})`
                 },
-                children: "playing" === zU && (0, pU.jsx)(rX.b.Provider, {
-                  value: kU,
-                  children: (0, pU.jsx)(SX.d, {
+                children: "playing" === LH && (0, uH.jsx)(cB.e.Provider, {
+                  value: xH,
+                  children: (0, uH.jsx)(KB.b, {
                     qte: {
-                      type: XU,
-                      parameters: fX[XU]
+                      type: BH,
+                      parameters: qB[BH]
                     }
                   })
                 })
-              }), "playing" !== zU && (0, pU.jsxs)("div", {
+              }), "playing" !== LH && (0, uH.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== zU && (0, pU.jsxs)("div", {
-                  className: QU()("DocsQteResult", "succeeded" === zU ? "Succeeded" : "Failed"),
-                  children: [(0, pU.jsx)(tU, {
-                    name: "succeeded" === zU ? "check" : "cross",
+                children: ["ready" !== LH && (0, uH.jsxs)("div", {
+                  className: SH()("DocsQteResult", "succeeded" === LH ? "Succeeded" : "Failed"),
+                  children: [(0, uH.jsx)(WH, {
+                    name: "succeeded" === LH ? "check" : "cross",
                     isTinted: !0
-                  }), (0, pU.jsx)("span", {
-                    children: "succeeded" === zU ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, uH.jsx)("span", {
+                    children: "succeeded" === LH ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, pU.jsxs)("button", {
+                }), (0, uH.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !oU,
+                  disabled: !zH,
                   onClick: () => {
-                    yU("playing")
+                    rH("playing")
                   },
-                  children: [(0, pU.jsx)(tU, {
-                    name: "ready" === zU ? "play" : "replay"
-                  }), (0, pU.jsx)("span", {
-                    children: "ready" === zU ? `Try ${XU}` : "Play again"
+                  children: [(0, uH.jsx)(WH, {
+                    name: "ready" === LH ? "play" : "replay"
+                  }), (0, uH.jsx)("span", {
+                    children: "ready" === LH ? `Try ${BH}` : "Play again"
                   })]
                 })]
               })]
-            }), gU && !MX(gU) && (0, pU.jsxs)("p", {
+            }), MH && !RB(MH) && (0, uH.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, pU.jsx)("code", {
-                children: gU
+              children: ["The ", (0, uH.jsx)("code", {
+                children: MH
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function Dz(UU) {
+        function CL(HH) {
           let {
-            level: XU,
-            text: zU,
-            anchor: cU,
-            className: yU
-          } = UU;
-          const AU = `h${Math.min(XU,6)}`;
-          return (0, pU.jsxs)(AU, {
-                id: cU,
-                className: QU()("DocsHeading", yU),
-                children: [(0, pU.jsx)(RX, {
-                      text: zU
-                    }), (0, pU.jsx)("a", {
+            level: BH,
+            text: LH,
+            anchor: AH,
+            className: rH
+          } = HH;
+          const hH = `h${Math.min(BH,6)}`;
+          return (0, uH.jsxs)(hH, {
+                id: AH,
+                className: SH()("DocsHeading", rH),
+                children: [(0, uH.jsx)(UB, {
+                      text: LH
+                    }), (0, uH.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${cU}`,
-                        "aria-label": `Link to ${zU.replace(/`/g,"")}`,children:"#"})]})}function Ez(UU){let{items:XU,ordered:zU}=UU;const cU=zU?"ol":"ul";return(0,pU.jsx)(cU,{className:"DocsList",children:XU.map(((UU,XU)=>(0,pU.jsxs)("li",{children:[(0,pU.jsx)(RX,{text:UU.text}),UU.children.length>0&&(0,pU.jsx)(Ez,{items:UU.children,ordered:zU})]},XU)))})}function Yz(UU){const XU=UU[0],zU="paragraph"===(null===XU||void 0===XU?void 0:XU.kind)?XU.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(zU)?"warning":/^\*\*(tip|prefer)/.test(zU)?"tip":"note"}function Nz(UU){let{block:XU}=UU;switch(XU.kind){case"heading":return(0,pU.jsx)(Dz,{level:XU.level,text:XU.text,anchor:XU.anchor});case"paragraph":return(0,pU.jsx)("p",{children:(0,pU.jsx)(RX,{text:XU.text})});case"code":{const UU="ts"===XU.lang?function(UU){const XU=UU.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return XU&&Object.hasOwn(fX,XU[1])?XU[1]:null}(XU.code):null;return(0,pU.jsxs)(pU.Fragment,{children:[(0,pU.jsx)(PU,{code:XU.code,lang:XU.lang}),UU&&(0,pU.jsx)(oz,{type:UU})]})}case"table":return(0,pU.jsx)("div",{className:"DocsTableScroll",children:(0,pU.jsxs)("table",{className:"DocsTable",children:[(0,pU.jsx)("thead",{children:(0,pU.jsx)("tr",{children:XU.header.map(((UU,XU)=>(0,pU.jsx)("th",{children:(0,pU.jsx)(RX,{text:UU})},XU)))})}),(0,pU.jsx)("tbody",{children:XU.rows.map(((UU,XU)=>(0,pU.jsx)("tr",{children:UU.map(((UU,XU)=>(0,pU.jsx)("td",{children:(0,pU.jsx)(RX,{text:UU})},XU)))},XU)))})]})});case"list":return(0,pU.jsx)(Ez,{items:XU.items,ordered:XU.ordered});case"quote":return(0,pU.jsx)("aside",{className:QU()("DocsCallout",Yz(XU.blocks)),children:(0,pU.jsx)(Iz,{blocks:XU.blocks})});case"rule":return(0,pU.jsx)("hr",{className:"DocsRule"})}}function Iz(UU){let{blocks:XU}=UU;return(0,pU.jsx)(pU.Fragment,{children:XU.map(((UU,XU)=>(0,pU.jsx)(Nz,{block:UU},XU)))})}var pz=zU(5276),az=zU(5282);function tz(UU){return"blocks"===UU||"items"===UU}const gz=new Map;function kz(UU){let XU=gz.get(UU);return XU||(XU=function(UU){const XU={entries:[],legend:[],notes:[],examples:[]};let zU=!1;for(const QU of UU.split(/\r?\n/).slice(1)){if(QU.startsWith("#")){const UU=QU.replace(/^# ?/,""),cU=UU.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);cU?XU.legend.push({code:cU[1],meaning:cU[2],usage:cU[3].trim()}):/^Examples:/.test(UU.trim())?zU=!0:zU&&UU.trim()?XU.examples.push(UU.trim()):UU.trim()&&!/^\s/.test(UU)&&XU.notes.push(UU.trim());continue}const UU=QU.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var cU,yU;UU&&XU.entries.push({name:UU[1],variants:null!==(cU=null===(yU=UU[2])||void 0===yU?void 0:yU.split(","))&&void 0!==cU?cU:[]})}return XU}("blocks"===UU?pz:az),gz.set(UU,XU)),XU}function Gz(UU){let{className:XU,value:zU,placeholder:cU,label:yU,onChange:QU,count:AU,children:FU}=UU;return(0,pU.jsxs)("div",{className:XU,children:[(0,pU.jsx)(tU,{name:"magnifying-glass"}),(0,pU.jsx)("input",{type:"search",value:zU,placeholder:cU,"aria-label":yU,onChange:UU=>{QU(UU.target.value)}}),FU,AU&&(0,pU.jsxs)("span",{className:"DocsFilterCount",children:[AU.visible," of ",AU.total]})]})}var Bz=zU(1390);function Zz(UU){const XU=UU.trim().match(/^(` {
+                        href: `#${AH}`,
+                        "aria-label": `Link to ${LH.replace(/`/g,"")}`,children:"#"})]})}function EL(HH){let{items:BH,ordered:LH}=HH;const AH=LH?"ol":"ul";return(0,uH.jsx)(AH,{className:"DocsList",children:BH.map(((HH,BH)=>(0,uH.jsxs)("li",{children:[(0,uH.jsx)(UB,{text:HH.text}),HH.children.length>0&&(0,uH.jsx)(EL,{items:HH.children,ordered:LH})]},BH)))})}function XL(HH){const BH=HH[0],LH="paragraph"===(null===BH||void 0===BH?void 0:BH.kind)?BH.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(LH)?"warning":/^\*\*(tip|prefer)/.test(LH)?"tip":"note"}function GL(HH){let{block:BH}=HH;switch(BH.kind){case"heading":return(0,uH.jsx)(CL,{level:BH.level,text:BH.text,anchor:BH.anchor});case"paragraph":return(0,uH.jsx)("p",{children:(0,uH.jsx)(UB,{text:BH.text})});case"code":{const HH="ts"===BH.lang?function(HH){const BH=HH.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return BH&&Object.hasOwn(qB,BH[1])?BH[1]:null}(BH.code):null;return(0,uH.jsxs)(uH.Fragment,{children:[(0,uH.jsx)(VH,{code:BH.code,lang:BH.lang}),HH&&(0,uH.jsx)(zL,{type:HH})]})}case"table":return(0,uH.jsx)("div",{className:"DocsTableScroll",children:(0,uH.jsxs)("table",{className:"DocsTable",children:[(0,uH.jsx)("thead",{children:(0,uH.jsx)("tr",{children:BH.header.map(((HH,BH)=>(0,uH.jsx)("th",{children:(0,uH.jsx)(UB,{text:HH})},BH)))})}),(0,uH.jsx)("tbody",{children:BH.rows.map(((HH,BH)=>(0,uH.jsx)("tr",{children:HH.map(((HH,BH)=>(0,uH.jsx)("td",{children:(0,uH.jsx)(UB,{text:HH})},BH)))},BH)))})]})});case"list":return(0,uH.jsx)(EL,{items:BH.items,ordered:BH.ordered});case"quote":return(0,uH.jsx)("aside",{className:SH()("DocsCallout",XL(BH.blocks)),children:(0,uH.jsx)(YL,{blocks:BH.blocks})});case"rule":return(0,uH.jsx)("hr",{className:"DocsRule"})}}function YL(HH){let{blocks:BH}=HH;return(0,uH.jsx)(uH.Fragment,{children:BH.map(((HH,BH)=>(0,uH.jsx)(GL,{block:HH},BH)))})}var uL=LH(5228),QL=LH(5232);function WL(HH){return"blocks"===HH||"items"===HH}const ML=new Map;function xL(HH){let BH=ML.get(HH);return BH||(BH=function(HH){const BH={entries:[],legend:[],notes:[],examples:[]};let LH=!1;for(const SH of HH.split(/\r?\n/).slice(1)){if(SH.startsWith("#")){const HH=SH.replace(/^# ?/,""),AH=HH.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);AH?BH.legend.push({code:AH[1],meaning:AH[2],usage:AH[3].trim()}):/^Examples:/.test(HH.trim())?LH=!0:LH&&HH.trim()?BH.examples.push(HH.trim()):HH.trim()&&!/^\s/.test(HH)&&BH.notes.push(HH.trim());continue}const HH=SH.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var AH,rH;HH&&BH.entries.push({name:HH[1],variants:null!==(AH=null===(rH=HH[2])||void 0===rH?void 0:rH.split(","))&&void 0!==AH?AH:[]})}return BH}("blocks"===HH?uL:QL),ML.set(HH,BH)),BH}function vL(HH){let{className:BH,value:LH,placeholder:AH,label:rH,onChange:SH,count:hH,children:tH}=HH;return(0,uH.jsxs)("div",{className:BH,children:[(0,uH.jsx)(WH,{name:"magnifying-glass"}),(0,uH.jsx)("input",{type:"search",value:LH,placeholder:AH,"aria-label":rH,onChange:HH=>{SH(HH.target.value)}}),tH,hH&&(0,uH.jsxs)("span",{className:"DocsFilterCount",children:[hH.visible," of ",hH.total]})]})}var PL=LH(1315);function TL(HH){const BH=HH.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return XU?XU[2]:null}function Rz(UU){return"paragraph"===UU.kind&&""===UU.text.trim()}function Pz(UU){const XU={name:UU.heading.text,description:[],params:[],returns:null};let zU="description";for(const yU of UU.blocks)if(!Rz(yU))if("heading"===yU.kind&&/^Parameters:?$/.test(yU.text))zU="params";else if("heading"===yU.kind&&/^Returns:?$/.test(yU.text))zU="returns",XU.returns={type:"",description:[]};else if("params"!==zU||"table"!==yU.kind){if("returns"===zU&&"paragraph"===yU.kind&&""===XU.returns.type){const UU=Zz(yU.text);if(null!==UU){XU.returns.type=UU.replaceAll("\\|","|");continue}}"returns"===zU?XU.returns.description.push(yU):XU.description.push(yU)}else for(const[UU,zU,QU]of yU.rows){var cU;XU.params.push({name:UU,type:null!==(cU=Zz(zU))&&void 0!==cU?cU:zU,description:null!==QU&&void 0!==QU?QU:""})}return XU}const Wz=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function dz(UU){return UU.filter((UU=>!Rz(UU)))}const Lz=/^[\w][\w .'&!:()-]*$/,ez=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function Cz(UU){var XU;if("code"===UU.kind&&"text"===UU.lang){const XU=UU.code.split("\n").map((UU=>UU.trim())).filter(Boolean);return XU.length>0&&XU.every((UU=>Lz.test(UU)))?XU.map((UU=>({name:UU}))):null}return"paragraph"===UU.kind&&ez.test(UU.text.trim())?[...UU.text.matchAll(/`([ ^ `]+)` / g)].flatMap((UU => UU[1].split(/,\s*/).map((UU => ({
-                              name: UU.trim()
-                            }))))): "table" === UU.kind && null !== (XU = UU.header[0]) && void 0 !== XU && XU.startsWith("Song") ? UU.rows.map((UU => {
-                              let [XU, zU] = UU;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return BH?BH[2]:null}function UL(HH){return"paragraph"===HH.kind&&""===HH.text.trim()}function VL(HH){const BH={name:HH.heading.text,description:[],params:[],returns:null};let LH="description";for(const rH of HH.blocks)if(!UL(rH))if("heading"===rH.kind&&/^Parameters:?$/.test(rH.text))LH="params";else if("heading"===rH.kind&&/^Returns:?$/.test(rH.text))LH="returns",BH.returns={type:"",description:[]};else if("params"!==LH||"table"!==rH.kind){if("returns"===LH&&"paragraph"===rH.kind&&""===BH.returns.type){const HH=TL(rH.text);if(null!==HH){BH.returns.type=HH.replaceAll("\\|","|");continue}}"returns"===LH?BH.returns.description.push(rH):BH.description.push(rH)}else for(const[HH,LH,SH]of rH.rows){var AH;BH.params.push({name:HH,type:null!==(AH=TL(LH))&&void 0!==AH?AH:LH,description:null!==SH&&void 0!==SH?SH:""})}return BH}const OL=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function bL(HH){return HH.filter((HH=>!UL(HH)))}const kL=/^[\w][\w .'&!:()-]*$/,mL=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function oL(HH){var BH;if("code"===HH.kind&&"text"===HH.lang){const BH=HH.code.split("\n").map((HH=>HH.trim())).filter(Boolean);return BH.length>0&&BH.every((HH=>kL.test(HH)))?BH.map((HH=>({name:HH}))):null}return"paragraph"===HH.kind&&mL.test(HH.text.trim())?[...HH.text.matchAll(/`([ ^ `]+)` / g)].flatMap((HH => HH[1].split(/,\s*/).map((HH => ({
+                              name: HH.trim()
+                            }))))): "table" === HH.kind && null !== (BH = HH.header[0]) && void 0 !== BH && BH.startsWith("Song") ? HH.rows.map((HH => {
+                              let [BH, LH] = HH;
                               return {
-                                name: XU.replace(/`/g, ""),
-                                caption: zU
+                                name: BH.replace(/`/g, ""),
+                                caption: LH
                               }
                             })) : null
                           }
 
-                          function wz(UU) {
-                            const XU = [];
-                            for (const zU of UU) {
-                              const UU = Cz(zU),
-                                cU = XU.at(-1),
-                                yU = "table" === zU.kind;
-                              UU ? "names" === (null === cU || void 0 === cU ? void 0 : cU.kind) && cU.isSongs === yU ? cU.names.push(...UU) : XU.push({
+                          function IL(HH) {
+                            const BH = [];
+                            for (const LH of HH) {
+                              const HH = oL(LH),
+                                AH = BH.at(-1),
+                                rH = "table" === LH.kind;
+                              HH ? "names" === (null === AH || void 0 === AH ? void 0 : AH.kind) && AH.isSongs === rH ? AH.names.push(...HH) : BH.push({
                                 kind: "names",
-                                names: UU,
-                                isSongs: yU
-                              }) : XU.push({
+                                names: HH,
+                                isSongs: rH
+                              }) : BH.push({
                                 kind: "block",
-                                block: zU
+                                block: LH
                               })
                             }
-                            return XU
+                            return BH
                           }
-                          const qz = {
+                          const fL = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function Oz(UU, XU) {
-                            return `${qz[UU]}-${(0,WU.r)(XU)}`
+                          function lL(HH, BH) {
+                            return `${fL[HH]}-${(0,OH.r)(BH)}`
                           }
-                          const Sz = new WeakMap;
+                          const KL = new WeakMap;
 
-                          function rz(UU, XU, zU) {
-                            let cU = Sz.get(XU);
-                            if (!cU) {
-                              cU = new Map;
-                              const zU = new Set;
-                              for (const yU of (0, WU.u)(XU)) {
-                                const XU = wz(dz(yU.blocks)).map((XU => {
-                                  if ("block" === XU.kind) return XU;
+                          function cL(HH, BH, LH) {
+                            let AH = KL.get(BH);
+                            if (!AH) {
+                              AH = new Map;
+                              const LH = new Set;
+                              for (const rH of (0, OH.v)(BH)) {
+                                const BH = IL(bL(rH.blocks)).map((BH => {
+                                  if ("block" === BH.kind) return BH;
                                   return {
                                     kind: "names",
-                                    names: XU.names.map((XU => {
-                                      var cU, QU;
-                                      const AU = Oz(UU, XU.name);
-                                      let FU = AU;
-                                      for (let UU = 2; zU.has(FU); UU++) FU = `${AU}-${UU}`;
-                                      return zU.add(FU), {
-                                        ...XU,
-                                        anchor: FU,
-                                        heading: null !== (cU = null === (QU = yU.heading) || void 0 === QU ? void 0 : QU.text) && void 0 !== cU ? cU : ""
+                                    names: BH.names.map((BH => {
+                                      var AH, SH;
+                                      const hH = lL(HH, BH.name);
+                                      let tH = hH;
+                                      for (let HH = 2; LH.has(tH); HH++) tH = `${hH}-${HH}`;
+                                      return LH.add(tH), {
+                                        ...BH,
+                                        anchor: tH,
+                                        heading: null !== (AH = null === (SH = rH.heading) || void 0 === SH ? void 0 : SH.text) && void 0 !== AH ? AH : ""
                                       }
                                     })),
-                                    isSongs: XU.isSongs
+                                    isSongs: BH.isSongs
                                   }
                                 }));
-                                cU.set(yU.blocks, XU)
+                                AH.set(rH.blocks, BH)
                               }
-                              Sz.set(XU, cU)
+                              KL.set(BH, AH)
                             }
-                            const yU = cU.get(zU);
-                            if (!yU) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return yU
+                            const rH = AH.get(LH);
+                            if (!rH) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return rH
                           }
-                          const uz = "/textures/docs/skinPreviews",
-                            fz = [{
+                          const eL = "/textures/docs/skinPreviews",
+                            qL = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var iz = zU(4593),
-                            Hz = zU(4608);
+                          var gL = LH(4599),
+                            NL = LH(4617);
 
-                          function Mz(UU) {
-                            return Object.hasOwn(iz.i, UU) ? iz.i[UU] : null
+                          function RL(HH) {
+                            return Object.hasOwn(gL.d, HH) ? gL.d[HH] : null
                           }
-                          const vz = {
+                          const jL = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: Hz.f.Standard
+                            blendMode: NL.f.Standard
                           };
 
-                          function Vz(UU, XU, zU) {
-                            return XU + (zU - XU) * UU()
+                          function nL(HH, BH, LH) {
+                            return BH + (LH - BH) * HH()
                           }
 
-                          function sz(UU, XU, zU) {
-                            return UU + (XU - UU) * zU
+                          function FL(HH, BH, LH) {
+                            return HH + (BH - HH) * LH
                           }
 
-                          function nz(UU) {
-                            return UU.length > 0 && "timeFraction" in UU[0]
+                          function DL(HH) {
+                            return HH.length > 0 && "timeFraction" in HH[0]
                           }
 
-                          function mz(UU, XU) {
-                            if (0 === UU.colorGradients.length) return [{
+                          function wL(HH, BH) {
+                            if (0 === HH.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!nz(UU.colorGradients)) {
-                              const zU = UU.colorGradients,
+                            if (!DL(HH.colorGradients)) {
+                              const LH = HH.colorGradients,
                                 {
-                                  color: cU
-                                } = zU[Math.floor(XU() * zU.length) % zU.length];
+                                  color: AH
+                                } = LH[Math.floor(BH() * LH.length) % LH.length];
                               return [{
                                 at: 0,
-                                colour: [cU[0] / 255, cU[1] / 255, cU[2] / 255, 1]
+                                colour: [AH[0] / 255, AH[1] / 255, AH[2] / 255, 1]
                               }]
                             }
-                            return [...UU.colorGradients].sort(((UU, XU) => UU.timeFraction - XU.timeFraction)).map((UU => {
-                              var zU, cU, yU;
-                              const QU = UU.minColor,
-                                AU = null !== (zU = UU.maxColor) && void 0 !== zU ? zU : QU,
-                                FU = XU(),
-                                oU = [sz(QU[0], AU[0], FU) / 255, sz(QU[1], AU[1], FU) / 255, sz(QU[2], AU[2], FU) / 255, sz(null !== (cU = QU[3]) && void 0 !== cU ? cU : 1, null !== (yU = AU[3]) && void 0 !== yU ? yU : 1, FU)];
+                            return [...HH.colorGradients].sort(((HH, BH) => HH.timeFraction - BH.timeFraction)).map((HH => {
+                              var LH, AH, rH;
+                              const SH = HH.minColor,
+                                hH = null !== (LH = HH.maxColor) && void 0 !== LH ? LH : SH,
+                                tH = BH(),
+                                zH = [FL(SH[0], hH[0], tH) / 255, FL(SH[1], hH[1], tH) / 255, FL(SH[2], hH[2], tH) / 255, FL(null !== (AH = SH[3]) && void 0 !== AH ? AH : 1, null !== (rH = hH[3]) && void 0 !== rH ? rH : 1, tH)];
                               return {
-                                at: UU.timeFraction,
-                                colour: oU
+                                at: HH.timeFraction,
+                                colour: zH
                               }
                             }))
                           }
 
-                          function lz(UU, XU, zU, cU) {
-                            const yU = Vz(cU, UU.minEmitPower, UU.maxEmitPower),
-                              QU = XU => Vz(cU, Math.min(UU.dir1[XU], UU.dir2[XU]), Math.max(UU.dir1[XU], UU.dir2[XU])) * yU,
-                              AU = [...UU.velocityGradients].sort(((UU, XU) => UU.timeFraction - XU.timeFraction)).map((UU => ({
-                                at: UU.timeFraction,
-                                factor: Vz(cU, UU.factor, UU.factor2)
+                          function ZL(HH, BH, LH, AH) {
+                            const rH = nL(AH, HH.minEmitPower, HH.maxEmitPower),
+                              SH = BH => nL(AH, Math.min(HH.dir1[BH], HH.dir2[BH]), Math.max(HH.dir1[BH], HH.dir2[BH])) * rH,
+                              hH = [...HH.velocityGradients].sort(((HH, BH) => HH.timeFraction - BH.timeFraction)).map((HH => ({
+                                at: HH.timeFraction,
+                                factor: nL(AH, HH.factor, HH.factor2)
                               })));
                             return {
-                              pos: [Vz(cU, XU[0], zU[0]), Vz(cU, XU[1], zU[1]), Vz(cU, XU[2], zU[2])],
-                              dir: [QU(0), QU(1), QU(2)],
+                              pos: [nL(AH, BH[0], LH[0]), nL(AH, BH[1], LH[1]), nL(AH, BH[2], LH[2])],
+                              dir: [SH(0), SH(1), SH(2)],
                               age: 0,
-                              life: Vz(cU, UU.minLifeTime, UU.maxLifeTime),
-                              size: Vz(cU, UU.minSize, UU.maxSize),
-                              colours: mz(UU, cU),
-                              velocityFactors: AU
+                              life: nL(AH, HH.minLifeTime, HH.maxLifeTime),
+                              size: nL(AH, HH.minSize, HH.maxSize),
+                              colours: wL(HH, AH),
+                              velocityFactors: hH
                             }
                           }
 
-                          function xz(UU, XU, zU, cU) {
-                            if (XU < UU[0].at) return zU(Math.min(1, UU.length - 1));
-                            for (let yU = 0; yU < UU.length - 1; yU++)
-                              if (XU <= UU[yU + 1].at) {
-                                const QU = UU[yU + 1].at - UU[yU].at;
-                                return cU(zU(yU), zU(yU + 1), QU > 0 ? (XU - UU[yU].at) / QU : 1)
-                              } return zU(UU.length - 1)
+                          function dL(HH, BH, LH, AH) {
+                            if (BH < HH[0].at) return LH(Math.min(1, HH.length - 1));
+                            for (let rH = 0; rH < HH.length - 1; rH++)
+                              if (BH <= HH[rH + 1].at) {
+                                const SH = HH[rH + 1].at - HH[rH].at;
+                                return AH(LH(rH), LH(rH + 1), SH > 0 ? (BH - HH[rH].at) / SH : 1)
+                              } return LH(HH.length - 1)
                           }
 
-                          function Jz(UU) {
-                            return xz(UU.colours, UU.age / UU.life, (XU => UU.colours[XU].colour), ((UU, XU, zU) => [sz(UU[0], XU[0], zU), sz(UU[1], XU[1], zU), sz(UU[2], XU[2], zU), sz(UU[3], XU[3], zU)]))
+                          function aL(HH) {
+                            return dL(HH.colours, HH.age / HH.life, (BH => HH.colours[BH].colour), ((HH, BH, LH) => [FL(HH[0], BH[0], LH), FL(HH[1], BH[1], LH), FL(HH[2], BH[2], LH), FL(HH[3], BH[3], LH)]))
                           }
 
-                          function jz(UU, XU, zU) {
-                            if (UU.age += zU, UU.age >= UU.life) return !1;
-                            const cU = function(UU) {
-                              return 0 === UU.velocityFactors.length ? 1 : xz(UU.velocityFactors, UU.age / UU.life, (XU => UU.velocityFactors[XU].factor), sz)
-                            }(UU) * zU;
-                            for (let QU = 0; QU < 3; QU++) {
-                              var yU;
-                              UU.pos[QU] += UU.dir[QU] * cU, UU.dir[QU] += (null !== (yU = XU[QU]) && void 0 !== yU ? yU : 0) * zU
+                          function sL(HH, BH, LH) {
+                            if (HH.age += LH, HH.age >= HH.life) return !1;
+                            const AH = function(HH) {
+                              return 0 === HH.velocityFactors.length ? 1 : dL(HH.velocityFactors, HH.age / HH.life, (BH => HH.velocityFactors[BH].factor), FL)
+                            }(HH) * LH;
+                            for (let SH = 0; SH < 3; SH++) {
+                              var rH;
+                              HH.pos[SH] += HH.dir[SH] * AH, HH.dir[SH] += (null !== (rH = BH[SH]) && void 0 !== rH ? rH : 0) * LH
                             }
                             return !0
                           }
 
-                          function Kz(UU) {
-                            return String(Math.round(1e6 * UU) / 1e6)
+                          function JL(HH) {
+                            return String(Math.round(1e6 * HH) / 1e6)
                           }
 
-                          function bz(UU) {
-                            return `[${UU.map(Kz).join(", ")}]`
+                          function iL(HH) {
+                            return `[${HH.map(JL).join(", ")}]`
                           }
 
-                          function Tz(UU, XU) {
-                            const zU = `${XU}    `;
-                            return `[\n${(nz(UU)?UU.map((UU=>{const XU=[`${zU}    timeFraction: ${Kz(UU.timeFraction)},`,`${zU}    minColor: ${bz(UU.minColor)},`];return UU.maxColor&&XU.push(`${zU}    maxColor: ${bz(UU.maxColor)},`),`${zU}{\n${XU.join("\n")}\n${zU}},`})):UU.map((UU=>`
+                          function pL(HH, BH) {
+                            const LH = `${BH}    `;
+                            return `[\n${(DL(HH)?HH.map((HH=>{const BH=[`${LH}    timeFraction: ${JL(HH.timeFraction)},`,`${LH}    minColor: ${iL(HH.minColor)},`];return HH.maxColor&&BH.push(`${LH}    maxColor: ${iL(HH.maxColor)},`),`${LH}{\n${BH.join("\n")}\n${LH}},`})):HH.map((HH=>`
                             $ {
-                              zU
+                              LH
                             } {
                               color: $ {
-                                bz(UU.color)
+                                iL(HH.color)
                               }
-                            }, `))).join("\n")}\n${XU}]`
+                            }, `))).join("\n")}\n${BH}]`
                           }
-                          const hz = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            Uc = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const Xc = .6;
+                          const yL = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            HA = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const BA = .6;
 
-                          function zc(UU, XU) {
-                            return `${XU?"song":"sound"}:${UU}`
+                          function LA(HH, BH) {
+                            return `${BH?"song":"sound"}:${HH}`
                           }
-                          let cc = {
+                          let AA = {
                               track: null,
-                              volume: Xc
+                              volume: BA
                             },
-                            yc = null,
-                            Qc = 0,
-                            Ac = 0;
-                          const Fc = new Set;
+                            rA = null,
+                            SA = 0,
+                            hA = 0;
+                          const tA = new Set;
 
-                          function oc(UU) {
-                            cc = {
-                              ...cc,
-                              ...UU
-                            }, Fc.forEach((UU => {
-                              UU()
+                          function zA(HH) {
+                            AA = {
+                              ...AA,
+                              ...HH
+                            }, tA.forEach((HH => {
+                              HH()
                             }))
                           }
 
-                          function Dc(UU) {
-                            cc.track && oc({
+                          function CA(HH) {
+                            AA.track && zA({
                               track: {
-                                ...cc.track,
-                                ...UU
+                                ...AA.track,
+                                ...HH
                               }
                             })
                           }
 
-                          function Ec(UU) {
-                            const [XU, zU] = (0, cU.useState)((() => UU(cc))), yU = (0, cU.useRef)(UU);
-                            return yU.current = UU, (0, cU.useEffect)((() => {
-                              const UU = () => {
-                                zU((() => yU.current(cc)))
+                          function EA(HH) {
+                            const [BH, LH] = (0, AH.useState)((() => HH(AA))), rH = (0, AH.useRef)(HH);
+                            return rH.current = HH, (0, AH.useEffect)((() => {
+                              const HH = () => {
+                                LH((() => rH.current(AA)))
                               };
-                              return Fc.add(UU), UU(), () => {
-                                Fc.delete(UU)
+                              return tA.add(HH), HH(), () => {
+                                tA.delete(HH)
                               }
-                            }), []), XU
+                            }), []), BH
                           }
 
-                          function Yc() {
-                            Qc++;
-                            const UU = yc;
-                            yc = null, null === UU || void 0 === UU || UU.stop()
+                          function XA() {
+                            SA++;
+                            const HH = rA;
+                            rA = null, null === HH || void 0 === HH || HH.stop()
                           }
 
-                          function Nc(UU, XU) {
-                            let cU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            Yc();
-                            const yU = Qc,
+                          function GA(HH, BH) {
+                            let AH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            XA();
+                            const rH = SA,
                               {
-                                track: QU
-                              } = cc,
-                              AU = QU && QU.name === UU && QU.isSong === XU ? QU.duration : 0;
-                            Ac = cU, oc({
+                                track: SH
+                              } = AA,
+                              hH = SH && SH.name === HH && SH.isSong === BH ? SH.duration : 0;
+                            hA = AH, zA({
                               track: {
-                                name: UU,
-                                isSong: XU,
+                                name: HH,
+                                isSong: BH,
                                 status: "loading",
-                                duration: AU
+                                duration: hH
                               }
-                            }), Promise.all([zU.e(241), zU.e(272)]).then((() => zU(40909))).then((zU => {
+                            }), Promise.all([LH.e(249), LH.e(278)]).then((() => LH(41086))).then((LH => {
                               let {
-                                playDocsSound: QU
-                              } = zU;
-                              yU === Qc && (yc = QU(UU, XU, cc.volume, cU, {
-                                onPlay: UU => {
-                                  yU === Qc && Dc({
+                                playDocsSound: SH
+                              } = LH;
+                              rH === SA && (rA = SH(HH, BH, AA.volume, AH, {
+                                onPlay: HH => {
+                                  rH === SA && CA({
                                     status: "playing",
-                                    duration: UU
+                                    duration: HH
                                   })
                                 },
-                                onEnd: UU => {
-                                  var XU, zU;
-                                  yU === Qc && (yc = null, UU ? oc({
+                                onEnd: HH => {
+                                  var BH, LH;
+                                  rH === SA && (rA = null, HH ? zA({
                                     track: null
-                                  }) : (Ac = null !== (XU = null === (zU = cc.track) || void 0 === zU ? void 0 : zU.duration) && void 0 !== XU ? XU : 0, Dc({
+                                  }) : (hA = null !== (BH = null === (LH = AA.track) || void 0 === LH ? void 0 : LH.duration) && void 0 !== BH ? BH : 0, CA({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((XU => {
-                              console.error(`Could not play docs sound ${UU}`, XU), yU === Qc && oc({
+                            })).catch((BH => {
+                              console.error(`Could not play docs sound ${HH}`, BH), rH === SA && zA({
                                 track: null
                               })
                             }))
                           }
 
-                          function Ic() {
+                          function YA() {
                             const {
-                              track: UU
-                            } = cc;
-                            if (!UU) return;
-                            if ("playing" === UU.status && yc) return Ac = yc.wG(), yc.pause(), void Dc({
+                              track: HH
+                            } = AA;
+                            if (!HH) return;
+                            if ("playing" === HH.status && rA) return hA = rA.hT(), rA.pause(), void CA({
                               status: "paused"
                             });
-                            if ("loading" === UU.status) return Yc(), void Dc({
+                            if ("loading" === HH.status) return XA(), void CA({
                               status: "paused"
                             });
-                            if (yc) return void yc.resume();
-                            const XU = UU.duration > 0 && Ac >= UU.duration - .05;
-                            Nc(UU.name, UU.isSong, XU ? 0 : Ac)
+                            if (rA) return void rA.resume();
+                            const BH = HH.duration > 0 && hA >= HH.duration - .05;
+                            GA(HH.name, HH.isSong, BH ? 0 : hA)
                           }
 
-                          function pc() {
-                            var UU;
-                            return yc && "playing" === (null === (UU = cc.track) || void 0 === UU ? void 0 : UU.status) ? yc.wG() : Ac
+                          function uA() {
+                            var HH;
+                            return rA && "playing" === (null === (HH = AA.track) || void 0 === HH ? void 0 : HH.status) ? rA.hT() : hA
                           }
 
-                          function ac(UU) {
-                            var XU;
-                            null === (XU = yc) || void 0 === XU || XU.setVolume(UU), oc({
-                              volume: UU
+                          function QA(HH) {
+                            var BH;
+                            null === (BH = rA) || void 0 === BH || BH.setVolume(HH), zA({
+                              volume: HH
                             })
                           }
 
-                          function tc() {
-                            Yc(), Ac = 0, oc({
+                          function WA() {
+                            XA(), hA = 0, zA({
                               track: null
                             })
                           }
-                          const gc = (0, cU.createContext)(null);
-                          let kc = null;
+                          const MA = (0, AH.createContext)(null);
+                          let xA = null;
 
-                          function Gc() {
-                            const [UU, XU] = (0, cU.useState)(null);
-                            return (0, cU.useEffect)((() => {
-                              let UU = !1;
-                              return kc ??= Promise.all([zU.e(84), zU.e(87), zU.e(85), zU.e(86), zU.e(200), zU.e(35), zU.e(245)]).then((() => zU(40906))), kc.then((zU => {
-                                UU || XU(zU)
-                              }), (UU => {
-                                console.error("Could not load the docs gallery's textures", UU), kc = null
+                          function vA() {
+                            const [HH, BH] = (0, AH.useState)(null);
+                            return (0, AH.useEffect)((() => {
+                              let HH = !1;
+                              return xA ??= Promise.all([LH.e(84), LH.e(87), LH.e(85), LH.e(86), LH.e(204), LH.e(35), LH.e(253)]).then((() => LH(41078))), xA.then((LH => {
+                                HH || BH(LH)
+                              }), (HH => {
+                                console.error("Could not load the docs gallery's textures", HH), xA = null
                               })), () => {
-                                UU = !0
+                                HH = !0
                               }
-                            }), []), UU
+                            }), []), HH
                           }
-                          const Bc = 24,
-                            Zc = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const PA = 24,
+                            TA = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function Rc(UU, XU) {
-                            const zU = "skins" === UU ? function(UU, XU) {
-                              const zU = fz.find((XU => UU.startsWith(XU.heading)));
-                              return zU ? function(UU, XU) {
-                                return `${UU}-${XU}`
-                              }(zU.prefix, XU) : null
-                            }(XU.heading, XU.name) : null;
-                            return null === zU ? null : `${uz}/${zU}.webp`
+                          function UA(HH, BH) {
+                            const LH = "skins" === HH ? function(HH, BH) {
+                              const LH = qL.find((BH => HH.startsWith(BH.heading)));
+                              return LH ? function(HH, BH) {
+                                return `${HH}-${BH}`
+                              }(LH.prefix, BH) : null
+                            }(BH.heading, BH.name) : null;
+                            return null === LH ? null : `${eL}/${LH}.webp`
                           }
 
-                          function Pc(UU) {
+                          function VA(HH) {
                             let {
-                              kind: XU,
-                              entry: zU,
-                              assets: yU,
-                              renderedUrl: AU
-                            } = UU;
+                              kind: BH,
+                              entry: LH,
+                              assets: rH,
+                              renderedUrl: hH
+                            } = HH;
                             const {
-                              name: FU
-                            } = zU, [oU, DU] = (0, cU.useState)(!1);
-                            if ("icons" === XU && MX(FU)) return (0, pU.jsx)(Bz.d, {
+                              name: tH
+                            } = LH, [zH, CH] = (0, AH.useState)(!1);
+                            if ("icons" === BH && RB(tH)) return (0, uH.jsx)(PL.c, {
                               className: "DocsTileIcon",
-                              name: FU
+                              name: tH
                             });
-                            let EU = null;
-                            var YU;
-                            if ("icons" === XU) EU = null !== (YU = null === yU || void 0 === yU ? void 0 : yU.getIngameIconUrl(FU)) && void 0 !== YU ? YU : null;
-                            else if ("particles" === XU) {
-                              var NU, IU, aU;
-                              EU = null !== (NU = null === yU || void 0 === yU ? void 0 : yU.getParticleTextureUrl(null !== (IU = null === (aU = Mz(FU)) || void 0 === aU ? void 0 : aU.texture) && void 0 !== IU ? IU : FU)) && void 0 !== NU ? NU : null
-                            } else "skins" === XU && (EU = null !== AU && void 0 !== AU ? AU : Zc.test(FU) ? `/textures/charSkins/previews/${FU}_preview.png` : null);
-                            return !EU || oU ? (0, pU.jsx)(tU, {
+                            let EH = null;
+                            var XH;
+                            if ("icons" === BH) EH = null !== (XH = null === rH || void 0 === rH ? void 0 : rH.getIngameIconUrl(tH)) && void 0 !== XH ? XH : null;
+                            else if ("particles" === BH) {
+                              var GH, YH, QH;
+                              EH = null !== (GH = null === rH || void 0 === rH ? void 0 : rH.getParticleTextureUrl(null !== (YH = null === (QH = RL(tH)) || void 0 === QH ? void 0 : QH.texture) && void 0 !== YH ? YH : tH)) && void 0 !== GH ? GH : null
+                            } else "skins" === BH && (EH = null !== hH && void 0 !== hH ? hH : TA.test(tH) ? `/textures/charSkins/previews/${tH}_preview.png` : null);
+                            return !EH || zH ? (0, uH.jsx)(WH, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === XU ? "person" : "image"
-                            }) : (0, pU.jsx)("img", {
-                              className: QU()("DocsTileImage", {
-                                Pixelated: "skins" !== XU
+                              name: "skins" === BH ? "person" : "image"
+                            }) : (0, uH.jsx)("img", {
+                              className: SH()("DocsTileImage", {
+                                Pixelated: "skins" !== BH
                               }),
-                              src: EU,
-                              srcSet: EU === AU ? `${EU} 2x` : void 0,
+                              src: EH,
+                              srcSet: EH === hH ? `${EH} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${EU}`), DU(!0)
+                                console.warn(`Docs gallery: could not load ${EH}`), CH(!0)
                               }
                             })
                           }
 
-                          function Wc(UU) {
+                          function OA(HH) {
                             let {
-                              entry: XU,
-                              isSong: zU
-                            } = UU;
-                            const cU = Ec((UU => {
+                              entry: BH,
+                              isSong: LH
+                            } = HH;
+                            const AH = EA((HH => {
                                 let {
-                                  track: cU
-                                } = UU;
-                                return (null === cU || void 0 === cU ? void 0 : cU.name) === XU.name && cU.isSong === zU ? cU.status : null
+                                  track: AH
+                                } = HH;
+                                return (null === AH || void 0 === AH ? void 0 : AH.name) === BH.name && AH.isSong === LH ? AH.status : null
                               })),
-                              yU = null !== cU && "paused" !== cU;
-                            return (0, pU.jsxs)("button", {
+                              rH = null !== AH && "paused" !== AH;
+                            return (0, uH.jsxs)("button", {
                               type: "button",
-                              id: XU.anchor,
-                              className: QU()("DocsSoundTile", {
-                                Playing: yU
+                              id: BH.anchor,
+                              className: SH()("DocsSoundTile", {
+                                Playing: rH
                               }),
-                              "data-docs-track": zc(XU.name, zU),
-                              "aria-label": yU ? `Pause ${XU.name}` : `Play ${XU.name}`,
+                              "data-docs-track": LA(BH.name, LH),
+                              "aria-label": rH ? `Pause ${BH.name}` : `Play ${BH.name}`,
                               onClick: () => {
-                                null !== cU ? Ic() : Nc(XU.name, zU)
+                                null !== AH ? YA() : GA(BH.name, LH)
                               },
-                              children: [(0, pU.jsx)("span", {
+                              children: [(0, uH.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, pU.jsx)(tU, {
-                                  name: yU ? "pause" : "play"
+                                children: (0, uH.jsx)(WH, {
+                                  name: rH ? "pause" : "play"
                                 })
-                              }), (0, pU.jsx)("code", {
+                              }), (0, uH.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: XU.name
-                              }), XU.caption && (0, pU.jsx)("span", {
+                                children: BH.name
+                              }), BH.caption && (0, uH.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: XU.caption
+                                children: BH.caption
                               })]
                             })
                           }
 
-                          function dc(UU) {
+                          function bA(HH) {
                             let {
-                              kind: XU,
-                              names: zU,
-                              isSongs: yU
-                            } = UU;
-                            const AU = Gc(),
-                              [FU, oU] = kU(),
-                              DU = !1 === (null === FU || void 0 === FU ? void 0 : FU.failed) ? FU.text : null,
-                              EU = (0, cU.useContext)(gc),
-                              [YU, NU] = (0, cU.useState)(""),
-                              IU = YU.trim().toLowerCase(),
-                              aU = IU ? zU.filter((UU => UU.name.toLowerCase().includes(IU))) : zU;
-                            return (0, pU.jsxs)("div", {
+                              kind: BH,
+                              names: LH,
+                              isSongs: rH
+                            } = HH;
+                            const hH = vA(),
+                              [tH, zH] = xH(),
+                              CH = !1 === (null === tH || void 0 === tH ? void 0 : tH.failed) ? tH.text : null,
+                              EH = (0, AH.useContext)(MA),
+                              [XH, GH] = (0, AH.useState)(""),
+                              YH = XH.trim().toLowerCase(),
+                              QH = YH ? LH.filter((HH => HH.name.toLowerCase().includes(YH))) : LH;
+                            return (0, uH.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [zU.length > Bc && (0, pU.jsx)(Gz, {
+                              children: [LH.length > PA && (0, uH.jsx)(vL, {
                                 className: "DocsGalleryFilter",
-                                value: YU,
-                                placeholder: `Filter ${zU.length} names\u2026`,
+                                value: XH,
+                                placeholder: `Filter ${LH.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: NU,
-                                count: IU ? {
-                                  visible: aU.length,
-                                  total: zU.length
+                                onChange: GH,
+                                count: YH ? {
+                                  visible: QH.length,
+                                  total: LH.length
                                 } : null
-                              }), (0, pU.jsx)("div", {
-                                className: QU()("DocsGalleryGrid", `Kind-${XU}`, {
-                                  Songs: yU
+                              }), (0, uH.jsx)("div", {
+                                className: SH()("DocsGalleryGrid", `Kind-${BH}`, {
+                                  Songs: rH
                                 }),
-                                children: aU.map((UU => {
-                                  if ("sounds" === XU) return (0, pU.jsx)(Wc, {
-                                    entry: UU,
-                                    isSong: yU
-                                  }, UU.anchor);
-                                  if (EU && "particles" === XU && Mz(UU.name)) return (0, pU.jsxs)("button", {
+                                children: QH.map((HH => {
+                                  if ("sounds" === BH) return (0, uH.jsx)(OA, {
+                                    entry: HH,
+                                    isSong: rH
+                                  }, HH.anchor);
+                                  if (EH && "particles" === BH && RL(HH.name)) return (0, uH.jsxs)("button", {
                                     type: "button",
-                                    id: UU.anchor,
-                                    className: QU()("DocsTile Previewable", {
-                                      Copied: DU === UU.name
+                                    id: HH.anchor,
+                                    className: SH()("DocsTile Previewable", {
+                                      Copied: CH === HH.name
                                     }),
-                                    title: `Play "${UU.name}" in the playground and copy its name`,
+                                    title: `Play "${HH.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      EU(UU.name), oU(UU.name)
+                                      EH(HH.name), zH(HH.name)
                                     },
-                                    children: [(0, pU.jsxs)("span", {
+                                    children: [(0, uH.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, pU.jsx)(Pc, {
-                                        kind: XU,
-                                        entry: UU,
-                                        assets: AU,
+                                      children: [(0, uH.jsx)(VA, {
+                                        kind: BH,
+                                        entry: HH,
+                                        assets: hH,
                                         renderedUrl: null
-                                      }), (0, pU.jsx)("span", {
+                                      }), (0, uH.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, pU.jsx)(tU, {
+                                        children: (0, uH.jsx)(WH, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, pU.jsx)("span", {
+                                    }), (0, uH.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: DU === UU.name ? "Copied!" : UU.name
+                                      children: CH === HH.name ? "Copied!" : HH.name
                                     })]
-                                  }, UU.anchor);
-                                  const zU = Rc(XU, UU);
-                                  return (0, pU.jsxs)("button", {
+                                  }, HH.anchor);
+                                  const LH = UA(BH, HH);
+                                  return (0, uH.jsxs)("button", {
                                     type: "button",
-                                    id: UU.anchor,
-                                    className: QU()("DocsTile", {
-                                      Copied: DU === UU.name
+                                    id: HH.anchor,
+                                    className: SH()("DocsTile", {
+                                      Copied: CH === HH.name
                                     }),
-                                    title: `Copy "${UU.name}"`,
+                                    title: `Copy "${HH.name}"`,
                                     onClick: () => {
-                                      oU(UU.name)
+                                      zH(HH.name)
                                     },
-                                    children: [(0, pU.jsx)("span", {
-                                      className: QU()("DocsTilePreview", {
-                                        Rendered: null !== zU
+                                    children: [(0, uH.jsx)("span", {
+                                      className: SH()("DocsTilePreview", {
+                                        Rendered: null !== LH
                                       }),
-                                      children: (0, pU.jsx)(Pc, {
-                                        kind: XU,
-                                        entry: UU,
-                                        assets: AU,
-                                        renderedUrl: zU
+                                      children: (0, uH.jsx)(VA, {
+                                        kind: BH,
+                                        entry: HH,
+                                        assets: hH,
+                                        renderedUrl: LH
                                       })
-                                    }), (0, pU.jsx)("span", {
+                                    }), (0, uH.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: DU === UU.name ? "Copied!" : UU.name
+                                      children: CH === HH.name ? "Copied!" : HH.name
                                     })]
-                                  }, UU.anchor)
+                                  }, HH.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function Lc(UU) {
+                          function kA(HH) {
                             let {
-                              kind: XU,
-                              content: zU,
-                              blocks: cU
-                            } = UU;
-                            return (0, pU.jsx)(pU.Fragment, {
-                              children: rz(XU, zU, cU).map(((UU, zU) => "block" === UU.kind ? (0, pU.jsx)(Nz, {
-                                block: UU.block
-                              }, zU) : (0, pU.jsx)(dc, {
-                                kind: XU,
-                                names: UU.names,
-                                isSongs: UU.isSongs
-                              }, zU)))
+                              kind: BH,
+                              content: LH,
+                              blocks: AH
+                            } = HH;
+                            return (0, uH.jsx)(uH.Fragment, {
+                              children: cL(BH, LH, AH).map(((HH, LH) => "block" === HH.kind ? (0, uH.jsx)(GL, {
+                                block: HH.block
+                              }, LH) : (0, uH.jsx)(bA, {
+                                kind: BH,
+                                names: HH.names,
+                                isSongs: HH.isSongs
+                              }, LH)))
                             })
                           }
-                          const ec = [{
+                          const mA = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,789 +2161,789 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function Cc(UU) {
+                          function oA(HH) {
                             let {
-                              cards: XU = ec,
-                              label: zU = "Start here"
-                            } = UU;
-                            const yU = (0, cU.useContext)(IX);
-                            return (0, pU.jsx)("nav", {
+                              cards: BH = mA,
+                              label: LH = "Start here"
+                            } = HH;
+                            const rH = (0, AH.useContext)(YB);
+                            return (0, uH.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": zU,
-                              children: XU.map((UU => {
+                              "aria-label": LH,
+                              children: BH.map((HH => {
                                 let {
-                                  pageId: XU,
-                                  countNoun: zU
-                                } = UU;
-                                const cU = HU(XU);
-                                return (0, pU.jsxs)(AU.b, {
-                                  to: mU(yU, cU),
+                                  pageId: BH,
+                                  countNoun: LH
+                                } = HH;
+                                const AH = NH(BH);
+                                return (0, uH.jsxs)(hH.e, {
+                                  to: wH(rH, AH),
                                   className: "DocsLandingCard",
-                                  children: [(0, pU.jsx)("span", {
+                                  children: [(0, uH.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, pU.jsx)(tU, {
-                                      name: cU.icon
+                                    children: (0, uH.jsx)(WH, {
+                                      name: AH.icon
                                     })
-                                  }), (0, pU.jsx)("span", {
+                                  }), (0, uH.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: cU.title
-                                  }), (0, pU.jsx)("span", {
+                                    children: AH.title
+                                  }), (0, uH.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: cU.summary
-                                  }), zU && (0, pU.jsxs)("span", {
+                                    children: AH.summary
+                                  }), LH && (0, uH.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [vU(cU).sections.length, " ", zU]
+                                    children: [jH(AH).sections.length, " ", LH]
                                   })]
-                                }, XU)
+                                }, BH)
                               }))
                             })
                           }
-                          const wc = 240;
+                          const IA = 240;
 
-                          function qc(UU) {
+                          function fA(HH) {
                             let {
-                              faces: XU
-                            } = UU;
-                            return (0, pU.jsxs)("span", {
+                              faces: BH
+                            } = HH;
+                            return (0, uH.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, pU.jsx)("span", {
+                              children: [(0, uH.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${XU.top}")`
+                                  backgroundImage: `url("${BH.top}")`
                                 }
-                              }), (0, pU.jsx)("span", {
+                              }), (0, uH.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${XU.left}")`
+                                  backgroundImage: `url("${BH.left}")`
                                 }
-                              }), (0, pU.jsx)("span", {
+                              }), (0, uH.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${XU.right}")`
+                                  backgroundImage: `url("${BH.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function Oc(UU) {
+                          function lA(HH) {
                             let {
-                              src: XU
-                            } = UU;
-                            const [zU, yU] = (0, cU.useState)(!1);
-                            return zU ? null : (0, pU.jsx)("img", {
-                              src: XU,
+                              src: BH
+                            } = HH;
+                            const [LH, rH] = (0, AH.useState)(!1);
+                            return LH ? null : (0, uH.jsx)("img", {
+                              src: BH,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${XU}`), yU(!0)
+                                console.warn(`Docs catalogue: could not load ${BH}`), rH(!0)
                               }
                             })
                           }
 
-                          function Sc(UU) {
+                          function KA(HH) {
                             let {
-                              kind: XU
-                            } = UU;
-                            const zU = kz(XU),
-                              yU = Gc(),
-                              AU = (0, FU.w)(),
-                              [oU, DU] = (0, cU.useState)(""),
-                              [EU, YU] = (0, cU.useState)(null),
-                              [NU, IU] = (0, cU.useState)(wc),
-                              [aU, gU] = (0, cU.useState)(null),
-                              kU = (0, cU.useRef)(null),
-                              BU = oU.trim().toLowerCase();
-                            (0, cU.useEffect)((() => {
-                              const UU = (0, WU.n)(AU.hash),
-                                cU = zU.entries.find((zU => Oz(XU, zU.name) === UU));
-                              if (cU) kU.current = cU.name, DU(cU.name), YU(null), gU(cU.name);
-                              else if (null !== kU.current) {
-                                const UU = kU.current;
-                                kU.current = null, DU((XU => XU === UU ? "" : XU)), gU(null)
+                              kind: BH
+                            } = HH;
+                            const LH = xL(BH),
+                              rH = vA(),
+                              hH = (0, tH.s)(),
+                              [zH, CH] = (0, AH.useState)(""),
+                              [EH, XH] = (0, AH.useState)(null),
+                              [GH, YH] = (0, AH.useState)(IA),
+                              [QH, MH] = (0, AH.useState)(null),
+                              xH = (0, AH.useRef)(null),
+                              PH = zH.trim().toLowerCase();
+                            (0, AH.useEffect)((() => {
+                              const HH = (0, OH.p)(hH.hash),
+                                AH = LH.entries.find((LH => lL(BH, LH.name) === HH));
+                              if (AH) xH.current = AH.name, CH(AH.name), XH(null), MH(AH.name);
+                              else if (null !== xH.current) {
+                                const HH = xH.current;
+                                xH.current = null, CH((BH => BH === HH ? "" : BH)), MH(null)
                               }
-                            }), [zU, XU, AU.hash, AU.key]), (0, cU.useEffect)((() => {
-                              var UU;
-                              null !== aU && (null === (UU = document.getElementById(Oz(XU, aU))) || void 0 === UU || UU.scrollIntoView({
+                            }), [LH, BH, hH.hash, hH.key]), (0, AH.useEffect)((() => {
+                              var HH;
+                              null !== QH && (null === (HH = document.getElementById(lL(BH, QH))) || void 0 === HH || HH.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [XU, aU]);
-                            const ZU = zU.entries.filter((UU => (!BU || UU.name.toLowerCase().includes(BU)) && (!EU || UU.variants.includes(EU))));
-                            return (0, pU.jsxs)("div", {
+                            }), [BH, QH]);
+                            const TH = LH.entries.filter((HH => (!PH || HH.name.toLowerCase().includes(PH)) && (!EH || HH.variants.includes(EH))));
+                            return (0, uH.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [zU.notes.length > 0 && (0, pU.jsx)("div", {
+                              children: [LH.notes.length > 0 && (0, uH.jsx)("div", {
                                 className: "DocsProse",
-                                children: zU.notes.map((UU => (0, pU.jsx)("p", {
-                                  children: UU
-                                }, UU)))
-                              }), zU.legend.length > 0 && (0, pU.jsx)("div", {
+                                children: LH.notes.map((HH => (0, uH.jsx)("p", {
+                                  children: HH
+                                }, HH)))
+                              }), LH.legend.length > 0 && (0, uH.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, pU.jsxs)("table", {
+                                children: (0, uH.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, pU.jsx)("thead", {
-                                    children: (0, pU.jsxs)("tr", {
-                                      children: [(0, pU.jsx)("th", {
+                                  children: [(0, uH.jsx)("thead", {
+                                    children: (0, uH.jsxs)("tr", {
+                                      children: [(0, uH.jsx)("th", {
                                         children: "Code"
-                                      }), (0, pU.jsx)("th", {
+                                      }), (0, uH.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, pU.jsx)("th", {
+                                      }), (0, uH.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, pU.jsx)("tbody", {
-                                    children: zU.legend.map((UU => (0, pU.jsxs)("tr", {
-                                      children: [(0, pU.jsx)("td", {
-                                        children: (0, pU.jsx)("button", {
+                                  }), (0, uH.jsx)("tbody", {
+                                    children: LH.legend.map((HH => (0, uH.jsxs)("tr", {
+                                      children: [(0, uH.jsx)("td", {
+                                        children: (0, uH.jsx)("button", {
                                           type: "button",
-                                          className: QU()("DocsVariantChip", {
-                                            Active: EU === UU.code
+                                          className: SH()("DocsVariantChip", {
+                                            Active: EH === HH.code
                                           }),
-                                          "aria-pressed": EU === UU.code,
-                                          title: `Show only ${XU} with ${UU.meaning} variants`,
+                                          "aria-pressed": EH === HH.code,
+                                          title: `Show only ${BH} with ${HH.meaning} variants`,
                                           onClick: () => {
-                                            YU(EU === UU.code ? null : UU.code)
+                                            XH(EH === HH.code ? null : HH.code)
                                           },
-                                          children: UU.code
+                                          children: HH.code
                                         })
-                                      }), (0, pU.jsx)("td", {
-                                        children: UU.meaning
-                                      }), (0, pU.jsx)("td", {
-                                        children: (0, pU.jsx)("code", {
+                                      }), (0, uH.jsx)("td", {
+                                        children: HH.meaning
+                                      }), (0, uH.jsx)("td", {
+                                        children: (0, uH.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: UU.usage
+                                          children: HH.usage
                                         })
                                       })]
-                                    }, UU.code)))
+                                    }, HH.code)))
                                   })]
                                 })
-                              }), zU.examples.length > 0 && (0, pU.jsx)(PU, {
+                              }), LH.examples.length > 0 && (0, uH.jsx)(VH, {
                                 lang: "text",
-                                code: zU.examples.join("\n")
-                              }), (0, pU.jsx)(Gz, {
+                                code: LH.examples.join("\n")
+                              }), (0, uH.jsx)(vL, {
                                 className: "DocsFilterBar",
-                                value: oU,
-                                placeholder: `Search ${zU.entries.length} ${XU}\u2026`,
-                                label: `Search ${XU}`,
-                                onChange: UU => {
-                                  DU(UU), IU(wc)
+                                value: zH,
+                                placeholder: `Search ${LH.entries.length} ${BH}\u2026`,
+                                label: `Search ${BH}`,
+                                onChange: HH => {
+                                  CH(HH), YH(IA)
                                 },
-                                count: BU || EU ? {
-                                  visible: ZU.length,
-                                  total: zU.entries.length
+                                count: PH || EH ? {
+                                  visible: TH.length,
+                                  total: LH.entries.length
                                 } : null,
-                                children: EU && (0, pU.jsxs)("button", {
+                                children: EH && (0, uH.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    YU(null)
+                                    XH(null)
                                   },
-                                  children: [EU, " ", (0, pU.jsx)(tU, {
+                                  children: [EH, " ", (0, uH.jsx)(WH, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, pU.jsx)("div", {
+                              }), (0, uH.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: ZU.slice(0, NU).map((UU => {
-                                  const zU = "blocks" === XU ? null === yU || void 0 === yU ? void 0 : yU.getBlockFaces(UU.name) : null,
-                                    cU = yU && !zU ? yU.getItemTextureUrl(UU.name) : null;
-                                  return (0, pU.jsxs)("div", {
-                                    id: Oz(XU, UU.name),
-                                    className: QU()("DocsCatalogueTile", {
-                                      Linked: UU.name === aU
+                                children: TH.slice(0, GH).map((HH => {
+                                  const LH = "blocks" === BH ? null === rH || void 0 === rH ? void 0 : rH.getBlockFaces(HH.name) : null,
+                                    AH = rH && !LH ? rH.getItemTextureUrl(HH.name) : null;
+                                  return (0, uH.jsxs)("div", {
+                                    id: lL(BH, HH.name),
+                                    className: SH()("DocsCatalogueTile", {
+                                      Linked: HH.name === QH
                                     }),
-                                    children: [(0, pU.jsxs)("span", {
+                                    children: [(0, uH.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [zU && (0, pU.jsx)(qc, {
-                                        faces: zU
-                                      }), cU && (0, pU.jsx)(Oc, {
-                                        src: cU
+                                      children: [LH && (0, uH.jsx)(fA, {
+                                        faces: LH
+                                      }), AH && (0, uH.jsx)(lA, {
+                                        src: AH
                                       })]
-                                    }), (0, pU.jsx)("span", {
+                                    }), (0, uH.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: UU.name
-                                    }), UU.variants.length > 0 && (0, pU.jsx)("span", {
+                                      children: HH.name
+                                    }), HH.variants.length > 0 && (0, uH.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: UU.variants.map((UU => (0, pU.jsx)("span", {
-                                        children: UU
-                                      }, UU)))
-                                    }), (0, pU.jsx)(GU, {
-                                      text: UU.name,
+                                      children: HH.variants.map((HH => (0, uH.jsx)("span", {
+                                        children: HH
+                                      }, HH)))
+                                    }), (0, uH.jsx)(vH, {
+                                      text: HH.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, UU.name)
+                                  }, HH.name)
                                 }))
-                              }), ZU.length > NU && (0, pU.jsxs)("button", {
+                              }), TH.length > GH && (0, uH.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  IU(ZU.length)
+                                  YH(TH.length)
                                 },
-                                children: ["Show all ", ZU.length]
-                              }), 0 === ZU.length && (0, pU.jsxs)("p", {
+                                children: ["Show all ", TH.length]
+                              }), 0 === TH.length && (0, uH.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", XU, " match."]
+                                children: ["No ", BH, " match."]
                               })]
                             })
                           }
-                          var rc = zU(5349),
-                            uc = zU(1639);
-                          const fc = .95 * rc.c;
+                          var cA = LH(5296),
+                            eA = LH(1603);
+                          const qA = .95 * cA.c;
 
-                          function ic(UU) {
-                            return /^\s*```/.test(UU)
+                          function gA(HH) {
+                            return /^\s*```/.test(HH)
                           }
 
-                          function Hc(UU, XU) {
-                            const zU = [
+                          function NA(HH, BH) {
+                            const LH = [
                               []
                             ];
-                            let cU = !1;
-                            for (const yU of UU.split("\n")) !cU && XU(yU) && zU.at(-1).length > 0 && zU.push([]), ic(yU) && (cU = !cU), zU.at(-1).push(yU);
-                            return zU.map((UU => UU.join("\n").trim())).filter(Boolean)
+                            let AH = !1;
+                            for (const rH of HH.split("\n")) !AH && BH(rH) && LH.at(-1).length > 0 && LH.push([]), gA(rH) && (AH = !AH), LH.at(-1).push(rH);
+                            return LH.map((HH => HH.join("\n").trim())).filter(Boolean)
                           }
 
-                          function Mc(UU, XU) {
-                            const zU = `${"#".repeat(XU)} `,
-                              cU = [];
-                            let yU = !1;
-                            for (const QU of UU.split("\n")) ic(QU) ? yU = !yU : !yU && QU.startsWith(zU) && cU.push(QU.slice(zU.length).trim());
-                            return cU
+                          function RA(HH, BH) {
+                            const LH = `${"#".repeat(BH)} `,
+                              AH = [];
+                            let rH = !1;
+                            for (const SH of HH.split("\n")) gA(SH) ? rH = !rH : !rH && SH.startsWith(LH) && AH.push(SH.slice(LH.length).trim());
+                            return AH
                           }
 
-                          function vc(UU) {
-                            return UU.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function jA(HH) {
+                            return HH.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class Vc {
-                            constructor(UU, XU) {
-                              this.origin = XU, this.pages = void 0, this.partPaths = new Map;
-                              const zU = UU.map((UU => {
-                                const XU = XU => this.resolveLinks(UU, XU).length,
-                                  zU = function(UU, XU) {
-                                    const zU = UU.map((UU => XU(UU.markdown) + 2)),
-                                      cU = zU.reduce(((UU, XU) => UU + XU), 0),
-                                      yU = cU / Math.ceil(cU / fc),
-                                      QU = [];
-                                    let AU = 0;
-                                    return UU.forEach(((UU, XU) => {
-                                      const cU = zU[XU];
-                                      (0 === QU.length || AU + cU > fc || AU + cU / 2 > yU) && (QU.push([]), AU = 0), QU.at(-1).push(UU), AU += cU
-                                    })), QU
-                                  }(function(UU, XU) {
-                                    return Hc(UU, (UU => UU.startsWith("## "))).flatMap((UU => {
-                                      var zU;
-                                      const cU = null !== (zU = Mc(UU, 2)[0]) && void 0 !== zU ? zU : "";
-                                      if (XU(UU) <= fc) return [{
-                                        markdown: UU,
-                                        section: cU
+                          class nA {
+                            constructor(HH, BH) {
+                              this.origin = BH, this.pages = void 0, this.partPaths = new Map;
+                              const LH = HH.map((HH => {
+                                const BH = BH => this.resolveLinks(HH, BH).length,
+                                  LH = function(HH, BH) {
+                                    const LH = HH.map((HH => BH(HH.markdown) + 2)),
+                                      AH = LH.reduce(((HH, BH) => HH + BH), 0),
+                                      rH = AH / Math.ceil(AH / qA),
+                                      SH = [];
+                                    let hH = 0;
+                                    return HH.forEach(((HH, BH) => {
+                                      const AH = LH[BH];
+                                      (0 === SH.length || hH + AH > qA || hH + AH / 2 > rH) && (SH.push([]), hH = 0), SH.at(-1).push(HH), hH += AH
+                                    })), SH
+                                  }(function(HH, BH) {
+                                    return NA(HH, (HH => HH.startsWith("## "))).flatMap((HH => {
+                                      var LH;
+                                      const AH = null !== (LH = RA(HH, 2)[0]) && void 0 !== LH ? LH : "";
+                                      if (BH(HH) <= qA) return [{
+                                        markdown: HH,
+                                        section: AH
                                       }];
-                                      let yU = !1,
-                                        QU = "";
-                                      return Hc(UU, (UU => {
-                                        const XU = yU && "" !== UU.trim();
-                                        return yU = "" === UU.trim(), XU
-                                      })).map((UU => {
-                                        var XU;
-                                        const zU = Mc(UU, 3),
-                                          yU = UU.startsWith("### ") ? zU[0] : QU;
-                                        return QU = null !== (XU = zU.at(-1)) && void 0 !== XU ? XU : QU, {
-                                          markdown: UU,
-                                          section: cU || yU
+                                      let rH = !1,
+                                        SH = "";
+                                      return NA(HH, (HH => {
+                                        const BH = rH && "" !== HH.trim();
+                                        return rH = "" === HH.trim(), BH
+                                      })).map((HH => {
+                                        var BH;
+                                        const LH = RA(HH, 3),
+                                          rH = HH.startsWith("### ") ? LH[0] : SH;
+                                        return SH = null !== (BH = LH.at(-1)) && void 0 !== BH ? BH : SH, {
+                                          markdown: HH,
+                                          section: AH || rH
                                         }
                                       }))
                                     }))
-                                  }(vc(UU), XU), XU);
+                                  }(jA(HH), BH), BH);
                                 return {
-                                  page: UU,
-                                  groups: zU.length > 1 ? zU : []
+                                  page: HH,
+                                  groups: LH.length > 1 ? LH : []
                                 }
                               }));
                               for (const {
-                                  page: cU,
-                                  groups: yU
+                                  page: AH,
+                                  groups: rH
                                 }
-                                of zU) yU.forEach(((UU, XU) => {
-                                const zU = (0, rc.u)(cU.slug, XU);
-                                for (const yU of UU.flatMap((UU => [...Mc(UU.markdown, 2), ...Mc(UU.markdown, 3)]))) {
-                                  const UU = `${cU.id}#${(0,WU.r)(yU)}`;
-                                  this.partPaths.has(UU) || this.partPaths.set(UU, zU)
+                                of LH) rH.forEach(((HH, BH) => {
+                                const LH = (0, cA.u)(AH.slug, BH);
+                                for (const rH of HH.flatMap((HH => [...RA(HH.markdown, 2), ...RA(HH.markdown, 3)]))) {
+                                  const HH = `${AH.id}#${(0,OH.r)(rH)}`;
+                                  this.partPaths.has(HH) || this.partPaths.set(HH, LH)
                                 }
                               }));
-                              this.pages = zU.map((UU => {
+                              this.pages = LH.map((HH => {
                                 let {
-                                  page: XU,
-                                  groups: zU
-                                } = UU;
+                                  page: BH,
+                                  groups: LH
+                                } = HH;
                                 return {
-                                  page: XU,
-                                  path: (0, rc.t)(XU.slug),
-                                  markdown: `# ${XU.title}\n\n${this.resolveLinks(XU,vc(XU))}\n`,
-                                  parts: zU.map(((UU, cU) => this.renderPart(XU, UU, cU, zU.length)))
+                                  page: BH,
+                                  path: (0, cA.r)(BH.slug),
+                                  markdown: `# ${BH.title}\n\n${this.resolveLinks(BH,jA(BH))}\n`,
+                                  parts: LH.map(((HH, AH) => this.renderPart(BH, HH, AH, LH.length)))
                                 }
                               }))
                             }
-                            url(UU) {
-                              return `${this.origin}${UU}`
+                            url(HH) {
+                              return `${this.origin}${HH}`
                             }
-                            getPage(UU) {
-                              return this.pages.find((XU => XU.page.id === UU))
+                            getPage(HH) {
+                              return this.pages.find((BH => BH.page.id === HH))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((UU => (UU.parts.length > 0 ? UU.parts : [{
-                                path: UU.path,
+                              return this.pages.flatMap((HH => (HH.parts.length > 0 ? HH.parts : [{
+                                path: HH.path,
                                 label: "",
-                                markdown: UU.markdown
-                              }]).filter((UU => UU.markdown.length > rc.c))))
+                                markdown: HH.markdown
+                              }]).filter((HH => HH.markdown.length > cA.c))))
                             }
-                            markdownUrl(UU, XU) {
-                              const zU = XU && this.partPaths.get(`${UU.id}#${XU}`) || (0, rc.t)(UU.slug);
-                              return this.url(XU ? `${zU}#${XU}` : zU)
+                            markdownUrl(HH, BH) {
+                              const LH = BH && this.partPaths.get(`${HH.id}#${BH}`) || (0, cA.r)(HH.slug);
+                              return this.url(BH ? `${LH}#${BH}` : LH)
                             }
-                            resolveLinks(UU, XU) {
-                              return XU.replace(/\]\((#[^)]+)\)/g, ((XU, zU) => {
-                                var cU;
-                                const yU = null !== (cU = sU(zU)) && void 0 !== cU ? cU : this.samePageTarget(UU, zU);
-                                return yU ? `](${this.markdownUrl(yU.page,yU.anchor)})` : XU
+                            resolveLinks(HH, BH) {
+                              return BH.replace(/\]\((#[^)]+)\)/g, ((BH, LH) => {
+                                var AH;
+                                const rH = null !== (AH = FH(LH)) && void 0 !== AH ? AH : this.samePageTarget(HH, LH);
+                                return rH ? `](${this.markdownUrl(rH.page,rH.anchor)})` : BH
                               }))
                             }
-                            samePageTarget(UU, XU) {
-                              const zU = (0, WU.r)(XU.slice(1));
-                              return VU(UU, zU) ? {
-                                page: UU,
-                                anchor: zU
+                            samePageTarget(HH, BH) {
+                              const LH = (0, OH.r)(BH.slice(1));
+                              return nH(HH, LH) ? {
+                                page: HH,
+                                anchor: LH
                               } : null
                             }
-                            renderPart(UU, XU, zU, cU) {
-                              const yU = function(UU) {
-                                  const XU = UU.map((UU => UU.section)).filter(Boolean);
-                                  if (0 === XU.length) return "";
-                                  const zU = XU[0],
-                                    cU = XU.at(-1);
-                                  return zU === cU ? zU : `${zU} to ${cU}`
-                                }(XU),
-                                QU = XU.map((UU => UU.markdown)).join("\n\n"),
-                                AU = yU ? `It covers ${yU}. ` : "",
-                                FU = `Part ${zU+1} of ${cU} of [${UU.title}](${this.url((0,rc.t)(UU.slug))}). ${AU}[llms.txt](${this.url(rc.i)}) lists every part.`;
+                            renderPart(HH, BH, LH, AH) {
+                              const rH = function(HH) {
+                                  const BH = HH.map((HH => HH.section)).filter(Boolean);
+                                  if (0 === BH.length) return "";
+                                  const LH = BH[0],
+                                    AH = BH.at(-1);
+                                  return LH === AH ? LH : `${LH} to ${AH}`
+                                }(BH),
+                                SH = BH.map((HH => HH.markdown)).join("\n\n"),
+                                hH = rH ? `It covers ${rH}. ` : "",
+                                tH = `Part ${LH+1} of ${AH} of [${HH.title}](${this.url((0,cA.r)(HH.slug))}). ${hH}[llms.txt](${this.url(cA.h)}) lists every part.`;
                               return {
-                                path: (0, rc.u)(UU.slug, zU),
-                                label: yU,
-                                markdown: `# ${UU.title}, part ${zU+1} of ${cU}\n\n${FU}\n\n${this.resolveLinks(UU,QU)}\n`
+                                path: (0, cA.u)(HH.slug, LH),
+                                label: rH,
+                                markdown: `# ${HH.title}, part ${LH+1} of ${AH}\n\n${tH}\n\n${this.resolveLinks(HH,SH)}\n`
                               }
                             }
-                            llmsTxt(UU) {
-                              const XU = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${sc(rc.c)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const zU of iU) {
-                                XU.push("", `## ${zU.title}`, "");
-                                for (const UU of zU.pageIds) {
-                                  const zU = this.getPage(UU),
+                            llmsTxt(HH) {
+                              const BH = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${FA(cA.c)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const LH of gH) {
+                                BH.push("", `## ${LH.title}`, "");
+                                for (const HH of LH.pageIds) {
+                                  const LH = this.getPage(HH),
                                     {
-                                      page: cU,
-                                      parts: yU
-                                    } = zU,
-                                    QU = `About ${sc(zU.markdown.length)} tokens${yU.length>0?`, in ${yU.length} parts:`:"."}`;
-                                  XU.push(`- [${cU.title}](${this.url(zU.path)}): ${cU.summary} ${QU}`), yU.forEach(((UU, zU) => {
-                                    XU.push(`  - [Part ${zU+1}${UU.label?`: ${UU.label}`:""}](${this.url(UU.path)})`)
+                                      page: AH,
+                                      parts: rH
+                                    } = LH,
+                                    SH = `About ${FA(LH.markdown.length)} tokens${rH.length>0?`, in ${rH.length} parts:`:"."}`;
+                                  BH.push(`- [${AH.title}](${this.url(LH.path)}): ${AH.summary} ${SH}`), rH.forEach(((HH, LH) => {
+                                    BH.push(`  - [Part ${LH+1}${HH.label?`: ${HH.label}`:""}](${this.url(HH.path)})`)
                                   }))
                                 }
                               }
-                              return XU.push("", "## Optional", "", `- [Every page in one file](${this.url(rc.e)}): About ${sc(UU.length)} tokens, for a model with a large context window.`, ""), XU.join("\n")
+                              return BH.push("", "## Optional", "", `- [Every page in one file](${this.url(cA.g)}): About ${FA(HH.length)} tokens, for a model with a large context window.`, ""), BH.join("\n")
                             }
                             llmsFullTxt() {
-                              return iU.flatMap((UU => UU.pageIds.map((UU => this.getPage(UU).markdown)))).join("\n---\n\n")
+                              return gH.flatMap((HH => HH.pageIds.map((HH => this.getPage(HH).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const UU = this.llmsFullTxt(),
-                                XU = this.llmsTxt(UU),
-                                zU = new Map([
-                                  [rc.o, XU],
-                                  [rc.i, XU],
-                                  [rc.e, UU]
+                              const HH = this.llmsFullTxt(),
+                                BH = this.llmsTxt(HH),
+                                LH = new Map([
+                                  [cA.n, BH],
+                                  [cA.h, BH],
+                                  [cA.g, HH]
                                 ]);
-                              for (const cU of this.pages) {
-                                zU.set(cU.path, cU.markdown);
-                                for (const UU of cU.parts) zU.set(UU.path, UU.markdown)
+                              for (const AH of this.pages) {
+                                LH.set(AH.path, AH.markdown);
+                                for (const HH of AH.parts) LH.set(HH.path, HH.markdown)
                               }
-                              return zU
+                              return LH
                             }
                           }
 
-                          function sc(UU) {
-                            return `${Math.max(1,Math.round(UU/4e3))}K`
+                          function FA(HH) {
+                            return `${Math.max(1,Math.round(HH/4e3))}K`
                           }
-                          let nc = null;
+                          let DA = null;
 
-                          function mc() {
-                            return nc ??= new Vc(fU, uc.b), nc
+                          function wA() {
+                            return DA ??= new nA(qH, eA.c), DA
                           }
-                          var lc = zU(5353);
-                          const xc = [lc.i, lc.p];
+                          var ZA = LH(5302);
+                          const dA = [ZA.h, ZA.p];
 
-                          function Jc(UU) {
-                            return mc().getPage(UU.id).parts.length > 0 ? `Read ${rc.l}, then the parts of the Bloxd Code API's ${UU.title} page it lists, so I can ask questions about it.` : `Read ${uc.b}${(0,rc.t)(UU.slug)} so I can ask questions about it. ${lc.o}`
+                          function aA(HH) {
+                            return wA().getPage(HH.id).parts.length > 0 ? `Read ${cA.l}, then the parts of the Bloxd Code API's ${HH.title} page it lists, so I can ask questions about it.` : `Read ${eA.c}${(0,cA.r)(HH.slug)} so I can ask questions about it. ${ZA.o}`
                           }
 
-                          function jc(UU) {
+                          function sA(HH) {
                             let {
-                              page: XU
-                            } = UU;
-                            const [zU, cU] = kU();
-                            return (0, pU.jsxs)("div", {
+                              page: BH
+                            } = HH;
+                            const [LH, AH] = xH();
+                            return (0, uH.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, pU.jsxs)("button", {
+                              children: [(0, uH.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  cU(mc().getPage(XU.id).markdown)
+                                  AH(wA().getPage(BH.id).markdown)
                                 },
-                                children: [(0, pU.jsx)(tU, {
-                                  name: !1 === (null === zU || void 0 === zU ? void 0 : zU.failed) ? "check" : "copy"
-                                }), (0, pU.jsx)("span", {
-                                  children: zU ? zU.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, uH.jsx)(WH, {
+                                  name: !1 === (null === LH || void 0 === LH ? void 0 : LH.failed) ? "check" : "copy"
+                                }), (0, uH.jsx)("span", {
+                                  children: LH ? LH.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), xc.map((UU => (0, pU.jsxs)("a", {
+                              }), dA.map((HH => (0, uH.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: (0, lc.e)(UU, Jc(XU)),
+                                href: (0, ZA.e)(HH, aA(BH)),
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, pU.jsx)(tU, {
+                                children: [(0, uH.jsx)(WH, {
                                   name: "external-link"
-                                }), (0, pU.jsxs)("span", {
-                                  children: ["Open in ", UU.name]
+                                }), (0, uH.jsxs)("span", {
+                                  children: ["Open in ", HH.name]
                                 })]
-                              }, UU.name)))]
+                              }, HH.name)))]
                             })
                           }
 
-                          function Kc(UU) {
-                            return `#${[0,1,2].map((XU=>Math.round(Math.min(255,Math.max(0,UU[XU]))).toString(16).padStart(2,"0"))).join("")}`
+                          function JA(HH) {
+                            return `#${[0,1,2].map((BH=>Math.round(Math.min(255,Math.max(0,HH[BH]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function bc(UU) {
-                            return [parseInt(UU.slice(1, 3), 16), parseInt(UU.slice(3, 5), 16), parseInt(UU.slice(5, 7), 16)]
+                          function iA(HH) {
+                            return [parseInt(HH.slice(1, 3), 16), parseInt(HH.slice(3, 5), 16), parseInt(HH.slice(5, 7), 16)]
                           }
 
-                          function Tc(UU) {
+                          function pA(HH) {
                             let {
-                              label: XU,
-                              min: zU,
-                              max: cU,
-                              step: yU,
-                              low: QU,
-                              high: AU,
-                              onChange: FU
-                            } = UU;
-                            return (0, pU.jsxs)("div", {
+                              label: BH,
+                              min: LH,
+                              max: AH,
+                              step: rH,
+                              low: SH,
+                              high: hH,
+                              onChange: tH
+                            } = HH;
+                            return (0, uH.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, pU.jsxs)("div", {
+                              children: [(0, uH.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, pU.jsx)("span", {
-                                  children: XU
-                                }), (0, pU.jsx)("span", {
+                                children: [(0, uH.jsx)("span", {
+                                  children: BH
+                                }), (0, uH.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: QU === AU ? QU : `${QU}\u2013${AU}`
+                                  children: SH === hH ? SH : `${SH}\u2013${hH}`
                                 })]
-                              }), (0, pU.jsxs)("div", {
+                              }), (0, uH.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, pU.jsx)("input", {
+                                children: [(0, uH.jsx)("input", {
                                   type: "range",
-                                  min: zU,
-                                  max: cU,
-                                  step: yU,
-                                  value: Math.min(cU, QU),
-                                  "aria-label": `Minimum ${XU.toLowerCase()}`,
-                                  onChange: UU => {
-                                    const XU = Number(UU.target.value);
-                                    FU(XU, Math.max(XU, AU))
+                                  min: LH,
+                                  max: AH,
+                                  step: rH,
+                                  value: Math.min(AH, SH),
+                                  "aria-label": `Minimum ${BH.toLowerCase()}`,
+                                  onChange: HH => {
+                                    const BH = Number(HH.target.value);
+                                    tH(BH, Math.max(BH, hH))
                                   }
-                                }), (0, pU.jsx)("input", {
+                                }), (0, uH.jsx)("input", {
                                   type: "range",
-                                  min: zU,
-                                  max: cU,
-                                  step: yU,
-                                  value: Math.min(cU, AU),
-                                  "aria-label": `Maximum ${XU.toLowerCase()}`,
-                                  onChange: UU => {
-                                    const XU = Number(UU.target.value);
-                                    FU(Math.min(XU, QU), XU)
+                                  min: LH,
+                                  max: AH,
+                                  step: rH,
+                                  value: Math.min(AH, hH),
+                                  "aria-label": `Maximum ${BH.toLowerCase()}`,
+                                  onChange: HH => {
+                                    const BH = Number(HH.target.value);
+                                    tH(Math.min(BH, SH), BH)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function hc(UU) {
+                          function yA(HH) {
                             let {
-                              label: XU,
-                              min: zU,
-                              max: cU,
-                              step: yU,
-                              value: QU,
-                              onChange: AU,
-                              format: FU = String
-                            } = UU;
-                            return (0, pU.jsxs)("div", {
+                              label: BH,
+                              min: LH,
+                              max: AH,
+                              step: rH,
+                              value: SH,
+                              onChange: hH,
+                              format: tH = String
+                            } = HH;
+                            return (0, uH.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, pU.jsxs)("div", {
+                              children: [(0, uH.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, pU.jsx)("span", {
-                                  children: XU
-                                }), (0, pU.jsx)("span", {
+                                children: [(0, uH.jsx)("span", {
+                                  children: BH
+                                }), (0, uH.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: FU(QU)
+                                  children: tH(SH)
                                 })]
-                              }), (0, pU.jsx)("input", {
+                              }), (0, uH.jsx)("input", {
                                 type: "range",
-                                min: zU,
-                                max: cU,
-                                step: yU,
-                                value: Math.min(cU, Math.max(zU, QU)),
-                                "aria-label": XU,
-                                onChange: UU => {
-                                  AU(Number(UU.target.value))
+                                min: LH,
+                                max: AH,
+                                step: rH,
+                                value: Math.min(AH, Math.max(LH, SH)),
+                                "aria-label": BH,
+                                onChange: HH => {
+                                  hH(Number(HH.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function Uy(UU) {
+                          function Hr(HH) {
                             let {
-                              opts: XU,
-                              onChange: zU
-                            } = UU;
-                            const cU = XU.colorGradients;
-                            if (!nz(cU)) return (0, pU.jsxs)("div", {
+                              opts: BH,
+                              onChange: LH
+                            } = HH;
+                            const AH = BH.colorGradients;
+                            if (!DL(AH)) return (0, uH.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, pU.jsx)("div", {
+                              children: [(0, uH.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, pU.jsx)("span", {
+                                children: (0, uH.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, pU.jsx)("div", {
+                              }), (0, uH.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: cU.map(((UU, XU) => (0, pU.jsx)("input", {
+                                children: AH.map(((HH, BH) => (0, uH.jsx)("input", {
                                   type: "color",
-                                  value: Kc(UU.color),
-                                  "aria-label": `Colour ${XU+1}`,
-                                  onChange: UU => {
-                                    const yU = [...cU];
-                                    yU[XU] = {
-                                      color: bc(UU.target.value)
-                                    }, zU(yU)
+                                  value: JA(HH.color),
+                                  "aria-label": `Colour ${BH+1}`,
+                                  onChange: HH => {
+                                    const rH = [...AH];
+                                    rH[BH] = {
+                                      color: iA(HH.target.value)
+                                    }, LH(rH)
                                   }
-                                }, XU)))
+                                }, BH)))
                               })]
                             });
-                            const yU = (UU, XU) => {
-                              const yU = [...cU];
-                              yU[UU] = XU, zU(yU)
+                            const rH = (HH, BH) => {
+                              const rH = [...AH];
+                              rH[HH] = BH, LH(rH)
                             };
-                            return (0, pU.jsxs)("div", {
+                            return (0, uH.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, pU.jsxs)("div", {
+                              children: [(0, uH.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, pU.jsx)("span", {
+                                children: [(0, uH.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, pU.jsx)("span", {
+                                }), (0, uH.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), cU.map(((UU, XU) => {
-                                var zU;
-                                const cU = null !== (zU = UU.maxColor) && void 0 !== zU ? zU : UU.minColor;
-                                return (0, pU.jsxs)("div", {
+                              }), AH.map(((HH, BH) => {
+                                var LH;
+                                const AH = null !== (LH = HH.maxColor) && void 0 !== LH ? LH : HH.minColor;
+                                return (0, uH.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, pU.jsxs)("span", {
+                                  children: [(0, uH.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * UU.timeFraction), "%"]
-                                  }), (0, pU.jsx)("span", {
+                                    children: [Math.round(100 * HH.timeFraction), "%"]
+                                  }), (0, uH.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${Kc(UU.minColor)}, ${Kc(cU)})`
+                                      background: `linear-gradient(90deg, ${JA(HH.minColor)}, ${JA(AH)})`
                                     }
-                                  }), (0, pU.jsx)("input", {
+                                  }), (0, uH.jsx)("input", {
                                     type: "color",
-                                    value: Kc(UU.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*UU.timeFraction)}%`,
-                                    onChange: zU => {
-                                      yU(XU, {
-                                        ...UU,
-                                        minColor: [...bc(zU.target.value), UU.minColor[3]]
+                                    value: JA(HH.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*HH.timeFraction)}%`,
+                                    onChange: LH => {
+                                      rH(BH, {
+                                        ...HH,
+                                        minColor: [...iA(LH.target.value), HH.minColor[3]]
                                       })
                                     }
-                                  }), (0, pU.jsx)("input", {
+                                  }), (0, uH.jsx)("input", {
                                     type: "color",
-                                    value: Kc(cU),
-                                    "aria-label": `Maximum colour at ${Math.round(100*UU.timeFraction)}%`,
-                                    onChange: zU => {
-                                      yU(XU, {
-                                        ...UU,
-                                        maxColor: [...bc(zU.target.value), cU[3]]
+                                    value: JA(AH),
+                                    "aria-label": `Maximum colour at ${Math.round(100*HH.timeFraction)}%`,
+                                    onChange: LH => {
+                                      rH(BH, {
+                                        ...HH,
+                                        maxColor: [...iA(LH.target.value), AH[3]]
                                       })
                                     }
                                   })]
-                                }, XU)
+                                }, BH)
                               }))]
                             })
                           }
-                          const Xy = [-.5, -.5, -.5],
-                            zy = [.5, .5, .5],
-                            cy = [0, 1, 2, 3, 4, 5, 6, 7].map((UU => [1 & UU ? zy[0] : Xy[0], 2 & UU ? zy[1] : Xy[1], 4 & UU ? zy[2] : Xy[2]]));class yy {
+                          const Br = [-.5, -.5, -.5],
+                            Lr = [.5, .5, .5],
+                            Ar = [0, 1, 2, 3, 4, 5, 6, 7].map((HH => [1 & HH ? Lr[0] : Br[0], 2 & HH ? Lr[1] : Br[1], 4 & HH ? Lr[2] : Br[2]]));class rr {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(UU, XU, zU, cU) {
-                              const yU = Math.round(31 * XU),
-                                QU = Math.round(31 * zU),
-                                AU = Math.round(31 * cU),
-                                FU = `${yU}|${QU}|${AU}`;
-                              let oU = this.tints.get(UU);
-                              (!oU || oU.size > 2e3) && (oU = new Map, this.tints.set(UU, oU));
-                              let DU = oU.get(FU);
-                              if (DU) return DU;
-                              DU = document.createElement("canvas"), DU.width = UU.naturalWidth || 16, DU.height = UU.naturalHeight || 16;
-                              const EU = DU.getContext("2d");
-                              return EU ? (EU.imageSmoothingEnabled = !1, EU.drawImage(UU, 0, 0, DU.width, DU.height), EU.globalCompositeOperation = "multiply", EU.fillStyle = `rgb(${yU/31*255}, ${QU/31*255}, ${AU/31*255})`, EU.fillRect(0, 0, DU.width, DU.height), EU.globalCompositeOperation = "destination-in", EU.drawImage(UU, 0, 0, DU.width, DU.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), oU.set(FU, DU), DU
+                            get(HH, BH, LH, AH) {
+                              const rH = Math.round(31 * BH),
+                                SH = Math.round(31 * LH),
+                                hH = Math.round(31 * AH),
+                                tH = `${rH}|${SH}|${hH}`;
+                              let zH = this.tints.get(HH);
+                              (!zH || zH.size > 2e3) && (zH = new Map, this.tints.set(HH, zH));
+                              let CH = zH.get(tH);
+                              if (CH) return CH;
+                              CH = document.createElement("canvas"), CH.width = HH.naturalWidth || 16, CH.height = HH.naturalHeight || 16;
+                              const EH = CH.getContext("2d");
+                              return EH ? (EH.imageSmoothingEnabled = !1, EH.drawImage(HH, 0, 0, CH.width, CH.height), EH.globalCompositeOperation = "multiply", EH.fillStyle = `rgb(${rH/31*255}, ${SH/31*255}, ${hH/31*255})`, EH.fillRect(0, 0, CH.width, CH.height), EH.globalCompositeOperation = "destination-in", EH.drawImage(HH, 0, 0, CH.width, CH.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), zH.set(tH, CH), CH
                             }
                           }
 
-                          function Qy(UU) {
+                          function Sr(HH) {
                             let {
-                              opts: XU,
-                              textureUrl: zU,
-                              burst: yU,
-                              paused: QU
-                            } = UU;
-                            const AU = (0, cU.useRef)(null),
-                              FU = (0, cU.useRef)(XU);
-                            FU.current = XU;
-                            const oU = (0, cU.useRef)(QU);
-                            oU.current = QU;
-                            const DU = (0, cU.useRef)(null),
-                              EU = (0, cU.useRef)(null),
-                              YU = (0, cU.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(UU) {
-                                let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const zU = [-.5, -.5, -.5],
-                                  cU = [.5, .5, .5];
-                                let yU = .5;
-                                for (let QU = 0; QU < 40; QU++) {
-                                  const QU = lz(UU, zU, cU, XU),
-                                    AU = Math.max(QU.life / 30, .001);
-                                  for (; jz(QU, UU.gravity, AU);) yU = Math.max(yU, Math.hypot(QU.pos[0], QU.pos[1], QU.pos[2]) + QU.size / 2)
+                              opts: BH,
+                              textureUrl: LH,
+                              burst: rH,
+                              paused: SH
+                            } = HH;
+                            const hH = (0, AH.useRef)(null),
+                              tH = (0, AH.useRef)(BH);
+                            tH.current = BH;
+                            const zH = (0, AH.useRef)(SH);
+                            zH.current = SH;
+                            const CH = (0, AH.useRef)(null),
+                              EH = (0, AH.useRef)(null),
+                              XH = (0, AH.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(HH) {
+                                let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const LH = [-.5, -.5, -.5],
+                                  AH = [.5, .5, .5];
+                                let rH = .5;
+                                for (let SH = 0; SH < 40; SH++) {
+                                  const SH = ZL(HH, LH, AH, BH),
+                                    hH = Math.max(SH.life / 30, .001);
+                                  for (; sL(SH, HH.gravity, hH);) rH = Math.max(rH, Math.hypot(SH.pos[0], SH.pos[1], SH.pos[2]) + SH.size / 2)
                                 }
-                                return yU
-                              }(XU)))), [XU]),
-                              NU = (0, cU.useRef)(YU);
-                            return NU.current = YU, (0, cU.useEffect)((() => {
-                              if (DU.current = null, !zU) return;
-                              const UU = new Image;
-                              let XU = !1;
-                              return UU.onload = () => {
-                                XU || (DU.current = UU)
-                              }, UU.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${zU}`)
-                              }, UU.src = zU, () => {
-                                XU = !0
+                                return rH
+                              }(BH)))), [BH]),
+                              GH = (0, AH.useRef)(XH);
+                            return GH.current = XH, (0, AH.useEffect)((() => {
+                              if (CH.current = null, !LH) return;
+                              const HH = new Image;
+                              let BH = !1;
+                              return HH.onload = () => {
+                                BH || (CH.current = HH)
+                              }, HH.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${LH}`)
+                              }, HH.src = LH, () => {
+                                BH = !0
                               }
-                            }), [zU]), (0, cU.useEffect)((() => {
-                              var UU;
-                              null === (UU = EU.current) || void 0 === UU || UU.call(EU)
-                            }), [XU, yU]), (0, cU.useEffect)((() => {
-                              const UU = AU.current,
-                                XU = null === UU || void 0 === UU ? void 0 : UU.getContext("2d");
-                              if (!UU || !XU) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const zU = new yy;
-                              let cU = [],
-                                yU = 0,
-                                QU = -.7,
-                                YU = NU.current,
-                                IU = performance.now(),
-                                pU = 0,
-                                aU = !0,
-                                tU = null;
-                              const gU = () => {
-                                const UU = FU.current,
-                                  XU = Math.min(400, Math.max(0, Math.ceil(UU.manualEmitCount)));
-                                cU = [];
-                                for (let zU = 0; zU < XU; zU++) cU.push(lz(UU, Xy, zy, Math.random));
-                                yU = 0
+                            }), [LH]), (0, AH.useEffect)((() => {
+                              var HH;
+                              null === (HH = EH.current) || void 0 === HH || HH.call(EH)
+                            }), [BH, rH]), (0, AH.useEffect)((() => {
+                              const HH = hH.current,
+                                BH = null === HH || void 0 === HH ? void 0 : HH.getContext("2d");
+                              if (!HH || !BH) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const LH = new rr;
+                              let AH = [],
+                                rH = 0,
+                                SH = -.7,
+                                XH = GH.current,
+                                YH = performance.now(),
+                                uH = 0,
+                                QH = !0,
+                                WH = null;
+                              const MH = () => {
+                                const HH = tH.current,
+                                  BH = Math.min(400, Math.max(0, Math.ceil(HH.manualEmitCount)));
+                                AH = [];
+                                for (let LH = 0; LH < BH; LH++) AH.push(ZL(HH, Br, Lr, Math.random));
+                                rH = 0
                               };
-                              EU.current = gU, gU();
-                              const kU = AU => {
-                                pU = requestAnimationFrame(kU);
-                                const EU = Math.min(.05, (AU - IU) / 1e3);
-                                if (IU = AU, !aU) return;
-                                const GU = window.devicePixelRatio || 1,
-                                  BU = Math.round(UU.clientWidth * GU),
-                                  ZU = Math.round(UU.clientHeight * GU);
-                                if (0 === BU || 0 === ZU) return;
-                                UU.width === BU && UU.height === ZU || (UU.width = BU, UU.height = ZU);
-                                const RU = FU.current;
-                                null === tU && (QU += .18 * EU), YU += (NU.current - YU) * Math.min(1, 4 * EU);
-                                const PU = .6 * EU;
-                                cU = cU.filter((UU => jz(UU, RU.gravity, PU))), 0 !== cU.length || oU.current || (yU += EU, yU > .6 && gU());
-                                const WU = function(UU, XU, zU, cU) {
-                                  const yU = 3.2 * cU,
-                                    QU = .44 * Math.min(UU, XU) * yU / cU,
-                                    AU = Math.cos(zU),
-                                    FU = Math.sin(zU),
-                                    oU = Math.cos(.42),
-                                    DU = Math.sin(.42);
-                                  return (zU, cU, EU) => {
-                                    const YU = zU * FU + EU * AU,
-                                      NU = yU - (cU * DU + YU * oU);
-                                    if (NU < .05) return null;
-                                    const IU = QU / NU;
+                              EH.current = MH, MH();
+                              const xH = hH => {
+                                uH = requestAnimationFrame(xH);
+                                const EH = Math.min(.05, (hH - YH) / 1e3);
+                                if (YH = hH, !QH) return;
+                                const vH = window.devicePixelRatio || 1,
+                                  PH = Math.round(HH.clientWidth * vH),
+                                  TH = Math.round(HH.clientHeight * vH);
+                                if (0 === PH || 0 === TH) return;
+                                HH.width === PH && HH.height === TH || (HH.width = PH, HH.height = TH);
+                                const UH = tH.current;
+                                null === WH && (SH += .18 * EH), XH += (GH.current - XH) * Math.min(1, 4 * EH);
+                                const VH = .6 * EH;
+                                AH = AH.filter((HH => sL(HH, UH.gravity, VH))), 0 !== AH.length || zH.current || (rH += EH, rH > .6 && MH());
+                                const OH = function(HH, BH, LH, AH) {
+                                  const rH = 3.2 * AH,
+                                    SH = .44 * Math.min(HH, BH) * rH / AH,
+                                    hH = Math.cos(LH),
+                                    tH = Math.sin(LH),
+                                    zH = Math.cos(.42),
+                                    CH = Math.sin(.42);
+                                  return (LH, AH, EH) => {
+                                    const XH = LH * tH + EH * hH,
+                                      GH = rH - (AH * CH + XH * zH);
+                                    if (GH < .05) return null;
+                                    const YH = SH / GH;
                                     return {
-                                      x: UU / 2 + (zU * AU - EU * FU) * IU,
-                                      y: XU / 2 - (cU * oU - YU * DU) * IU,
-                                      scale: IU,
-                                      depth: NU
+                                      x: HH / 2 + (LH * hH - EH * tH) * YH,
+                                      y: BH / 2 - (AH * zH - XH * CH) * YH,
+                                      scale: YH,
+                                      depth: GH
                                     }
                                   }
-                                }(BU, ZU, QU, YU);
-                                ! function(UU, XU, zU, cU, yU) {
-                                  const QU = UU.createLinearGradient(0, 0, 0, zU);
-                                  QU.addColorStop(0, "#23262d"), QU.addColorStop(1, "#16181c"), UU.globalCompositeOperation = "source-over", UU.globalAlpha = 1, UU.fillStyle = QU, UU.fillRect(0, 0, XU, zU);
-                                  const AU = (XU, zU) => {
-                                      const yU = cU(XU[0], XU[1], XU[2]),
-                                        QU = cU(zU[0], zU[1], zU[2]);
-                                      yU && QU && (UU.beginPath(), UU.moveTo(yU.x, yU.y), UU.lineTo(QU.x, QU.y), UU.stroke())
+                                }(PH, TH, SH, XH);
+                                ! function(HH, BH, LH, AH, rH) {
+                                  const SH = HH.createLinearGradient(0, 0, 0, LH);
+                                  SH.addColorStop(0, "#23262d"), SH.addColorStop(1, "#16181c"), HH.globalCompositeOperation = "source-over", HH.globalAlpha = 1, HH.fillStyle = SH, HH.fillRect(0, 0, BH, LH);
+                                  const hH = (BH, LH) => {
+                                      const rH = AH(BH[0], BH[1], BH[2]),
+                                        SH = AH(LH[0], LH[1], LH[2]);
+                                      rH && SH && (HH.beginPath(), HH.moveTo(rH.x, rH.y), HH.lineTo(SH.x, SH.y), HH.stroke())
                                     },
-                                    FU = Math.ceil(yU) + 1,
-                                    oU = Xy[1];
-                                  UU.lineWidth = 1, UU.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let DU = -FU; DU <= FU; DU++) AU([DU + .5, oU, .5 - FU], [DU + .5, oU, FU + .5]), AU([.5 - FU, oU, DU + .5], [FU + .5, oU, DU + .5]);
-                                  UU.strokeStyle = "rgba(255, 255, 255, 0.28)", UU.setLineDash([4, 4]);
-                                  for (const DU of cy)
-                                    for (const UU of cy) {
-                                      const XU = [0, 1, 2].filter((XU => DU[XU] !== UU[XU]));
-                                      1 === XU.length && DU[XU[0]] < UU[XU[0]] && AU(DU, UU)
+                                    tH = Math.ceil(rH) + 1,
+                                    zH = Br[1];
+                                  HH.lineWidth = 1, HH.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let CH = -tH; CH <= tH; CH++) hH([CH + .5, zH, .5 - tH], [CH + .5, zH, tH + .5]), hH([.5 - tH, zH, CH + .5], [tH + .5, zH, CH + .5]);
+                                  HH.strokeStyle = "rgba(255, 255, 255, 0.28)", HH.setLineDash([4, 4]);
+                                  for (const CH of Ar)
+                                    for (const HH of Ar) {
+                                      const BH = [0, 1, 2].filter((BH => CH[BH] !== HH[BH]));
+                                      1 === BH.length && CH[BH[0]] < HH[BH[0]] && hH(CH, HH)
                                     }
-                                  UU.setLineDash([])
-                                }(XU, BU, ZU, WU, YU);
-                                const dU = DU.current,
-                                  LU = cU.map((UU => ({
-                                    particle: UU,
-                                    at: WU(UU.pos[0], UU.pos[1], UU.pos[2])
-                                  }))).filter((UU => null !== UU.at)).sort(((UU, XU) => XU.at.depth - UU.at.depth));
-                                XU.imageSmoothingEnabled = !1;
-                                for (const UU of function(UU) {
-                                    switch (UU) {
-                                      case Hz.f.OneOne:
+                                  HH.setLineDash([])
+                                }(BH, PH, TH, OH, XH);
+                                const bH = CH.current,
+                                  kH = AH.map((HH => ({
+                                    particle: HH,
+                                    at: OH(HH.pos[0], HH.pos[1], HH.pos[2])
+                                  }))).filter((HH => null !== HH.at)).sort(((HH, BH) => BH.at.depth - HH.at.depth));
+                                BH.imageSmoothingEnabled = !1;
+                                for (const HH of function(HH) {
+                                    switch (HH) {
+                                      case NL.f.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case Hz.f.Add:
+                                      case NL.f.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case Hz.f.Multiply:
+                                      case NL.f.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case Hz.f.MultiplyAdd:
+                                      case NL.f.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2957,665 +2957,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(RU.blendMode)) {
-                                  XU.globalCompositeOperation = UU.operation;
+                                  }(UH.blendMode)) {
+                                  BH.globalCompositeOperation = HH.operation;
                                   for (const {
-                                      particle: cU,
-                                      at: yU
+                                      particle: AH,
+                                      at: rH
                                     }
-                                    of LU) {
-                                    const [QU, AU, FU, oU] = Jz(cU), DU = Math.max(1, cU.size * yU.scale);
-                                    XU.globalAlpha = UU.usesAlpha ? Math.min(1, Math.max(0, oU)) : 1, dU ? XU.drawImage(zU.get(dU, QU, AU, FU), yU.x - DU / 2, yU.y - DU / 2, DU, DU) : (XU.fillStyle = `rgb(${255*QU}, ${255*AU}, ${255*FU})`, XU.fillRect(yU.x - DU / 2, yU.y - DU / 2, DU, DU))
+                                    of kH) {
+                                    const [SH, hH, tH, zH] = aL(AH), CH = Math.max(1, AH.size * rH.scale);
+                                    BH.globalAlpha = HH.usesAlpha ? Math.min(1, Math.max(0, zH)) : 1, bH ? BH.drawImage(LH.get(bH, SH, hH, tH), rH.x - CH / 2, rH.y - CH / 2, CH, CH) : (BH.fillStyle = `rgb(${255*SH}, ${255*hH}, ${255*tH})`, BH.fillRect(rH.x - CH / 2, rH.y - CH / 2, CH, CH))
                                   }
                                 }
-                                XU.globalCompositeOperation = "source-over", XU.globalAlpha = 1
+                                BH.globalCompositeOperation = "source-over", BH.globalAlpha = 1
                               };
-                              pU = requestAnimationFrame(kU);
-                              const GU = new IntersectionObserver((UU => {
-                                let [XU] = UU;
-                                aU = XU.isIntersecting
+                              uH = requestAnimationFrame(xH);
+                              const vH = new IntersectionObserver((HH => {
+                                let [BH] = HH;
+                                QH = BH.isIntersecting
                               }));
-                              GU.observe(UU);
-                              const BU = XU => {
-                                  tU = XU.clientX, UU.setPointerCapture(XU.pointerId)
+                              vH.observe(HH);
+                              const PH = BH => {
+                                  WH = BH.clientX, HH.setPointerCapture(BH.pointerId)
                                 },
-                                ZU = UU => {
-                                  null !== tU && (QU += .01 * (UU.clientX - tU), tU = UU.clientX)
+                                TH = HH => {
+                                  null !== WH && (SH += .01 * (HH.clientX - WH), WH = HH.clientX)
                                 },
-                                RU = () => {
-                                  tU = null
+                                UH = () => {
+                                  WH = null
                                 };
-                              return UU.addEventListener("pointerdown", BU), UU.addEventListener("pointermove", ZU), UU.addEventListener("pointerup", RU), UU.addEventListener("pointercancel", RU), () => {
-                                cancelAnimationFrame(pU), GU.disconnect(), EU.current = null, UU.removeEventListener("pointerdown", BU), UU.removeEventListener("pointermove", ZU), UU.removeEventListener("pointerup", RU), UU.removeEventListener("pointercancel", RU)
+                              return HH.addEventListener("pointerdown", PH), HH.addEventListener("pointermove", TH), HH.addEventListener("pointerup", UH), HH.addEventListener("pointercancel", UH), () => {
+                                cancelAnimationFrame(uH), vH.disconnect(), EH.current = null, HH.removeEventListener("pointerdown", PH), HH.removeEventListener("pointermove", TH), HH.removeEventListener("pointerup", UH), HH.removeEventListener("pointercancel", UH)
                               }
-                            }), []), (0, pU.jsx)("canvas", {
-                              ref: AU,
+                            }), []), (0, uH.jsx)("canvas", {
+                              ref: hH,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${XU.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${BH.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const Ay = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            Fy = [{
-                              mode: Hz.f.OneOne,
+                          const hr = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            tr = [{
+                              mode: NL.f.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: Hz.f.Standard,
+                              mode: NL.f.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: Hz.f.Add,
+                              mode: NL.f.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: Hz.f.Multiply,
+                              mode: NL.f.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: Hz.f.MultiplyAdd,
+                              mode: NL.f.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            oy = (0, cU.forwardRef)((function(UU, XU) {
-                              var zU, yU;
+                            zr = (0, AH.forwardRef)((function(HH, BH) {
+                              var LH, rH;
                               let {
-                                textures: AU
-                              } = UU;
-                              const FU = Gc(),
-                                oU = (0, cU.useRef)(null),
-                                [DU, EU] = (0, cU.useState)(vz),
-                                [YU, NU] = (0, cU.useState)("example"),
-                                [IU, aU] = (0, cU.useState)(0),
-                                [gU, kU] = (0, cU.useState)(!1),
-                                BU = UU => {
-                                  const XU = "example" === UU ? vz : Mz(UU);
-                                  XU && (EU(XU), NU(UU))
+                                textures: hH
+                              } = HH;
+                              const tH = vA(),
+                                zH = (0, AH.useRef)(null),
+                                [CH, EH] = (0, AH.useState)(jL),
+                                [XH, GH] = (0, AH.useState)("example"),
+                                [YH, QH] = (0, AH.useState)(0),
+                                [MH, xH] = (0, AH.useState)(!1),
+                                PH = HH => {
+                                  const BH = "example" === HH ? jL : RL(HH);
+                                  BH && (EH(BH), GH(HH))
                                 };
-                              (0, cU.useImperativeHandle)(XU, (() => ({
-                                preview: UU => {
-                                  var XU;
-                                  BU(UU), null === (XU = oU.current) || void 0 === XU || XU.scrollIntoView({
+                              (0, AH.useImperativeHandle)(BH, (() => ({
+                                preview: HH => {
+                                  var BH;
+                                  PH(HH), null === (BH = zH.current) || void 0 === BH || BH.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const ZU = UU => {
-                                  EU({
-                                    ...DU,
-                                    ...UU
-                                  }), NU(null)
+                              const TH = HH => {
+                                  EH({
+                                    ...CH,
+                                    ...HH
+                                  }), GH(null)
                                 },
-                                RU = function(UU, XU) {
-                                  if (null !== XU) return `${hz}    presetId: "${XU}",\n${Uc}\n})`;
-                                  const zU = UU.velocityGradients.map((UU => `        {\n            timeFraction: ${Kz(UU.timeFraction)},\n            factor: ${Kz(UU.factor)},\n            factor2: ${Kz(UU.factor2)},\n        },`)),
-                                    cU = [`    dir1: ${bz(UU.dir1)},`, `    dir2: ${bz(UU.dir2)},`, Uc, `    texture: "${UU.texture}",`, `    minLifeTime: ${Kz(UU.minLifeTime)},`, `    maxLifeTime: ${Kz(UU.maxLifeTime)},`, `    minEmitPower: ${Kz(UU.minEmitPower)},`, `    maxEmitPower: ${Kz(UU.maxEmitPower)},`, `    minSize: ${Kz(UU.minSize)},`, `    maxSize: ${Kz(UU.maxSize)},`, `    manualEmitCount: ${Kz(UU.manualEmitCount)},`, `    gravity: ${bz(UU.gravity)},`, `    colorGradients: ${Tz(UU.colorGradients,"    ")},`, `    velocityGradients: ${zU.length>0?`[\n${zU.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${Kz(UU.blendMode)},`];
-                                  return void 0 !== UU.hideDist && cU.push(`    hideDist: ${Kz(UU.hideDist)},`), `${hz}${cU.join("\n")}\n})`
-                                }(DU, null === YU || "example" === YU ? null : YU),
-                                WU = AU.includes(DU.texture) ? AU : [...AU, DU.texture];
-                              return (0, pU.jsxs)("section", {
-                                ref: oU,
+                                UH = function(HH, BH) {
+                                  if (null !== BH) return `${yL}    presetId: "${BH}",\n${HA}\n})`;
+                                  const LH = HH.velocityGradients.map((HH => `        {\n            timeFraction: ${JL(HH.timeFraction)},\n            factor: ${JL(HH.factor)},\n            factor2: ${JL(HH.factor2)},\n        },`)),
+                                    AH = [`    dir1: ${iL(HH.dir1)},`, `    dir2: ${iL(HH.dir2)},`, HA, `    texture: "${HH.texture}",`, `    minLifeTime: ${JL(HH.minLifeTime)},`, `    maxLifeTime: ${JL(HH.maxLifeTime)},`, `    minEmitPower: ${JL(HH.minEmitPower)},`, `    maxEmitPower: ${JL(HH.maxEmitPower)},`, `    minSize: ${JL(HH.minSize)},`, `    maxSize: ${JL(HH.maxSize)},`, `    manualEmitCount: ${JL(HH.manualEmitCount)},`, `    gravity: ${iL(HH.gravity)},`, `    colorGradients: ${pL(HH.colorGradients,"    ")},`, `    velocityGradients: ${LH.length>0?`[\n${LH.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${JL(HH.blendMode)},`];
+                                  return void 0 !== HH.hideDist && AH.push(`    hideDist: ${JL(HH.hideDist)},`), `${yL}${AH.join("\n")}\n})`
+                                }(CH, null === XH || "example" === XH ? null : XH),
+                                OH = hH.includes(CH.texture) ? hH : [...hH, CH.texture];
+                              return (0, uH.jsxs)("section", {
+                                ref: zH,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, pU.jsxs)("header", {
+                                children: [(0, uH.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, pU.jsxs)("div", {
-                                    children: [(0, pU.jsx)("div", {
+                                  children: [(0, uH.jsxs)("div", {
+                                    children: [(0, uH.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, pU.jsx)("div", {
+                                    }), (0, uH.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, pU.jsx)(GU, {
-                                    text: RU,
+                                  }), (0, uH.jsx)(vH, {
+                                    text: UH,
                                     label: "Copy code"
                                   })]
-                                }), (0, pU.jsxs)("div", {
+                                }), (0, uH.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, pU.jsx)("button", {
+                                  children: [(0, uH.jsx)("button", {
                                     type: "button",
-                                    className: QU()("DocsVariantChip", {
-                                      Active: "example" === YU
+                                    className: SH()("DocsVariantChip", {
+                                      Active: "example" === XH
                                     }),
                                     onClick: () => {
-                                      BU("example")
+                                      PH("example")
                                     },
                                     children: "Example"
-                                  }), Ay.filter((UU => null !== Mz(UU))).map((UU => (0, pU.jsx)("button", {
+                                  }), hr.filter((HH => null !== RL(HH))).map((HH => (0, uH.jsx)("button", {
                                     type: "button",
-                                    className: QU()("DocsVariantChip", {
-                                      Active: YU === UU
+                                    className: SH()("DocsVariantChip", {
+                                      Active: XH === HH
                                     }),
                                     onClick: () => {
-                                      BU(UU)
+                                      PH(HH)
                                     },
-                                    children: UU
-                                  }, UU))), (0, pU.jsxs)("select", {
+                                    children: HH
+                                  }, HH))), (0, uH.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== YU && void 0 !== YU ? YU : "custom",
+                                    value: null !== XH && void 0 !== XH ? XH : "custom",
                                     "aria-label": "Preset",
-                                    onChange: UU => {
-                                      BU(UU.target.value)
+                                    onChange: HH => {
+                                      PH(HH.target.value)
                                     },
-                                    children: [(0, pU.jsx)("option", {
+                                    children: [(0, uH.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === YU && (0, pU.jsx)("option", {
+                                    }), null === XH && (0, uH.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), iz.e.map((UU => (0, pU.jsx)("option", {
-                                      value: UU,
-                                      children: UU
-                                    }, UU)))]
+                                    }), gL.b.map((HH => (0, uH.jsx)("option", {
+                                      value: HH,
+                                      children: HH
+                                    }, HH)))]
                                   })]
-                                }), (0, pU.jsxs)("div", {
+                                }), (0, uH.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, pU.jsxs)("div", {
+                                  children: [(0, uH.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, pU.jsx)(Qy, {
-                                      opts: DU,
-                                      textureUrl: null !== (zU = null === FU || void 0 === FU ? void 0 : FU.getParticleTextureUrl(DU.texture)) && void 0 !== zU ? zU : null,
-                                      burst: IU,
-                                      paused: gU
-                                    }), (0, pU.jsxs)("div", {
+                                    children: [(0, uH.jsx)(Sr, {
+                                      opts: CH,
+                                      textureUrl: null !== (LH = null === tH || void 0 === tH ? void 0 : tH.getParticleTextureUrl(CH.texture)) && void 0 !== LH ? LH : null,
+                                      burst: YH,
+                                      paused: MH
+                                    }), (0, uH.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, pU.jsxs)("button", {
+                                      children: [(0, uH.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          aU(IU + 1)
+                                          QH(YH + 1)
                                         },
-                                        children: [(0, pU.jsx)(tU, {
+                                        children: [(0, uH.jsx)(WH, {
                                           name: "replay"
-                                        }), (0, pU.jsx)("span", {
+                                        }), (0, uH.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, pU.jsxs)("button", {
+                                      }), (0, uH.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": gU,
+                                        "aria-pressed": MH,
                                         onClick: () => {
-                                          kU(!gU)
+                                          xH(!MH)
                                         },
-                                        children: [(0, pU.jsx)(tU, {
-                                          name: gU ? "play" : "pause"
-                                        }), (0, pU.jsx)("span", {
-                                          children: gU ? "Loop" : "Stop looping"
+                                        children: [(0, uH.jsx)(WH, {
+                                          name: MH ? "play" : "pause"
+                                        }), (0, uH.jsx)("span", {
+                                          children: MH ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, pU.jsxs)("div", {
+                                  }), (0, uH.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, pU.jsxs)("div", {
+                                    children: [(0, uH.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, pU.jsxs)("div", {
+                                      children: [(0, uH.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, pU.jsx)("span", {
+                                        children: [(0, uH.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, pU.jsx)("code", {
+                                        }), (0, uH.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: DU.texture
+                                          children: CH.texture
                                         })]
-                                      }), (0, pU.jsx)("div", {
+                                      }), (0, uH.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: WU.map((UU => {
-                                          var XU;
-                                          const zU = null !== (XU = null === FU || void 0 === FU ? void 0 : FU.getParticleTextureUrl(UU)) && void 0 !== XU ? XU : null;
-                                          return (0, pU.jsx)("button", {
+                                        children: OH.map((HH => {
+                                          var BH;
+                                          const LH = null !== (BH = null === tH || void 0 === tH ? void 0 : tH.getParticleTextureUrl(HH)) && void 0 !== BH ? BH : null;
+                                          return (0, uH.jsx)("button", {
                                             type: "button",
-                                            className: QU()("DocsParticleTexture", {
-                                              Active: DU.texture === UU
+                                            className: SH()("DocsParticleTexture", {
+                                              Active: CH.texture === HH
                                             }),
-                                            title: UU,
-                                            "aria-label": UU,
-                                            "aria-pressed": DU.texture === UU,
+                                            title: HH,
+                                            "aria-label": HH,
+                                            "aria-pressed": CH.texture === HH,
                                             onClick: () => {
-                                              ZU({
-                                                texture: UU
+                                              TH({
+                                                texture: HH
                                               })
                                             },
-                                            children: zU ? (0, pU.jsx)("img", {
-                                              src: zU,
+                                            children: LH ? (0, uH.jsx)("img", {
+                                              src: LH,
                                               alt: ""
-                                            }) : (0, pU.jsx)(tU, {
+                                            }) : (0, uH.jsx)(WH, {
                                               name: "image"
                                             })
-                                          }, UU)
+                                          }, HH)
                                         }))
                                       })]
-                                    }), (0, pU.jsx)(hc, {
+                                    }), (0, uH.jsx)(yA, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: DU.manualEmitCount,
-                                      onChange: UU => {
-                                        ZU({
-                                          manualEmitCount: UU
+                                      value: CH.manualEmitCount,
+                                      onChange: HH => {
+                                        TH({
+                                          manualEmitCount: HH
                                         })
                                       }
-                                    }), (0, pU.jsx)(Tc, {
+                                    }), (0, uH.jsx)(pA, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: DU.minLifeTime,
-                                      high: DU.maxLifeTime,
-                                      onChange: (UU, XU) => {
-                                        ZU({
-                                          minLifeTime: UU,
-                                          maxLifeTime: XU
+                                      low: CH.minLifeTime,
+                                      high: CH.maxLifeTime,
+                                      onChange: (HH, BH) => {
+                                        TH({
+                                          minLifeTime: HH,
+                                          maxLifeTime: BH
                                         })
                                       }
-                                    }), (0, pU.jsx)(Tc, {
+                                    }), (0, uH.jsx)(pA, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: DU.minEmitPower,
-                                      high: DU.maxEmitPower,
-                                      onChange: (UU, XU) => {
-                                        ZU({
-                                          minEmitPower: UU,
-                                          maxEmitPower: XU
+                                      low: CH.minEmitPower,
+                                      high: CH.maxEmitPower,
+                                      onChange: (HH, BH) => {
+                                        TH({
+                                          minEmitPower: HH,
+                                          maxEmitPower: BH
                                         })
                                       }
-                                    }), (0, pU.jsx)(Tc, {
+                                    }), (0, uH.jsx)(pA, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: DU.minSize,
-                                      high: DU.maxSize,
-                                      onChange: (UU, XU) => {
-                                        ZU({
-                                          minSize: UU,
-                                          maxSize: XU
+                                      low: CH.minSize,
+                                      high: CH.maxSize,
+                                      onChange: (HH, BH) => {
+                                        TH({
+                                          minSize: HH,
+                                          maxSize: BH
                                         })
                                       }
-                                    }), (0, pU.jsx)(hc, {
+                                    }), (0, uH.jsx)(yA, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (yU = DU.gravity[1]) && void 0 !== yU ? yU : 0,
-                                      onChange: UU => {
-                                        var XU, zU;
-                                        ZU({
-                                          gravity: [null !== (XU = DU.gravity[0]) && void 0 !== XU ? XU : 0, UU, null !== (zU = DU.gravity[2]) && void 0 !== zU ? zU : 0]
+                                      value: null !== (rH = CH.gravity[1]) && void 0 !== rH ? rH : 0,
+                                      onChange: HH => {
+                                        var BH, LH;
+                                        TH({
+                                          gravity: [null !== (BH = CH.gravity[0]) && void 0 !== BH ? BH : 0, HH, null !== (LH = CH.gravity[2]) && void 0 !== LH ? LH : 0]
                                         })
                                       }
-                                    }), (0, pU.jsxs)("div", {
+                                    }), (0, uH.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, pU.jsx)("div", {
+                                      children: [(0, uH.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, pU.jsx)("span", {
+                                        children: (0, uH.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, pU.jsx)("select", {
+                                      }), (0, uH.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: DU.blendMode,
+                                        value: CH.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: UU => {
-                                          ZU({
-                                            blendMode: Number(UU.target.value)
+                                        onChange: HH => {
+                                          TH({
+                                            blendMode: Number(HH.target.value)
                                           })
                                         },
-                                        children: Fy.map((UU => {
+                                        children: tr.map((HH => {
                                           let {
-                                            mode: XU,
-                                            label: zU
-                                          } = UU;
-                                          return (0, pU.jsx)("option", {
-                                            value: XU,
-                                            children: zU
-                                          }, XU)
+                                            mode: BH,
+                                            label: LH
+                                          } = HH;
+                                          return (0, uH.jsx)("option", {
+                                            value: BH,
+                                            children: LH
+                                          }, BH)
                                         }))
                                       })]
-                                    }), (0, pU.jsx)(Uy, {
-                                      opts: DU,
-                                      onChange: UU => {
-                                        ZU({
-                                          colorGradients: UU
+                                    }), (0, uH.jsx)(Hr, {
+                                      opts: CH,
+                                      onChange: HH => {
+                                        TH({
+                                          colorGradients: HH
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, pU.jsx)(PU, {
-                                  code: RU,
+                                }), (0, uH.jsx)(VH, {
+                                  code: UH,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var Dy = zU(4906),
-                            Ey = zU(1978);
+                          var Cr = LH(4877),
+                            Er = LH(1967);
 
-                          function Yy(UU, XU) {
-                            return UU ? Dy.e.includes(XU) ? UU.getIngameIconUrl(XU) : UU.getItemIconUrl(XU) : null
+                          function Xr(HH, BH) {
+                            return HH ? Cr.b.includes(BH) ? HH.getIngameIconUrl(BH) : HH.getItemIconUrl(BH) : null
                           }
 
-                          function Ny(UU) {
-                            var XU, zU, cU;
+                          function Gr(HH) {
+                            var BH, LH, AH;
                             let {
-                              part: yU,
-                              assets: AU
-                            } = UU;
-                            const FU = Yy(AU, yU.icon),
-                              oU = null !== (XU = null === (zU = yU.style) || void 0 === zU ? void 0 : zU.fontSize) && void 0 !== XU ? XU : "1.8em",
-                              DU = (0, iX.fc)(yU.style);
-                            return (0, pU.jsxs)("span", {
-                              className: QU()("DocsBloxdTextIcon", {
-                                Missing: !FU
+                              part: rH,
+                              assets: hH
+                            } = HH;
+                            const tH = Xr(hH, rH.icon),
+                              zH = null !== (BH = null === (LH = rH.style) || void 0 === LH ? void 0 : LH.fontSize) && void 0 !== BH ? BH : "1.8em",
+                              CH = (0, gB.kc)(rH.style);
+                            return (0, uH.jsxs)("span", {
+                              className: SH()("DocsBloxdTextIcon", {
+                                Missing: !tH
                               }),
                               style: {
-                                width: oU,
-                                height: oU,
-                                opacity: null === (cU = yU.style) || void 0 === cU ? void 0 : cU.opacity
+                                width: zH,
+                                height: zH,
+                                opacity: null === (AH = rH.style) || void 0 === AH ? void 0 : AH.opacity
                               },
-                              title: FU ? void 0 : "No Bloxd icon, item or block has this name",
-                              children: [FU && DU && (0, pU.jsx)("span", {
+                              title: tH ? void 0 : "No Bloxd icon, item or block has this name",
+                              children: [tH && CH && (0, uH.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: DU,
-                                  maskImage: `url("${FU}")`,
-                                  WebkitMaskImage: `url("${FU}")`
+                                  background: CH,
+                                  maskImage: `url("${tH}")`,
+                                  WebkitMaskImage: `url("${tH}")`
                                 }
-                              }), FU ? (0, pU.jsx)("img", {
-                                src: FU,
+                              }), tH ? (0, uH.jsx)("img", {
+                                src: tH,
                                 alt: "",
-                                className: QU()({
-                                  Tinted: DU
+                                className: SH()({
+                                  Tinted: CH
                                 })
-                              }) : (0, pU.jsx)(tU, {
+                              }) : (0, uH.jsx)(WH, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function Iy(UU) {
+                          function Yr(HH) {
                             let {
-                              parts: XU,
-                              className: zU
-                            } = UU;
-                            const cU = Gc(),
-                              yU = [];
-                            let AU = [];
-                            const FU = UU => {
-                              AU.length > 0 && (yU.push((0, pU.jsx)(Ey.d, {
-                                text: AU
-                              }, `run-${UU}`)), AU = [])
+                              parts: BH,
+                              className: LH
+                            } = HH;
+                            const AH = vA(),
+                              rH = [];
+                            let hH = [];
+                            const tH = HH => {
+                              hH.length > 0 && (rH.push((0, uH.jsx)(Er.b, {
+                                text: hH
+                              }, `run-${HH}`)), hH = [])
                             };
-                            return XU.forEach(((UU, XU) => {
-                              "icon" !== sX(UU) || MX(UU.icon) ? AU.push(UU) : (FU(XU), yU.push((0, pU.jsx)(Ny, {
-                                part: UU,
-                                assets: cU
-                              }, `icon-${XU}`)))
-                            })), FU(XU.length), (0, pU.jsx)("div", {
-                              className: QU()("DocsStyledTextPreview", zU),
-                              children: yU
+                            return BH.forEach(((HH, BH) => {
+                              "icon" !== FB(HH) || RB(HH.icon) ? hH.push(HH) : (tH(BH), rH.push((0, uH.jsx)(Gr, {
+                                part: HH,
+                                assets: AH
+                              }, `icon-${BH}`)))
+                            })), tH(BH.length), (0, uH.jsx)("div", {
+                              className: SH()("DocsStyledTextPreview", LH),
+                              children: rH
                             })
                           }
-                          const py = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let ay = null;
+                          const ur = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let Qr = null;
 
-                          function ty(UU) {
-                            if (ay ??= document.createElement("canvas").getContext("2d"), !ay) return "#000000";
-                            ay.fillStyle = "#000000", ay.fillStyle = UU;
-                            const XU = ay.fillStyle;
-                            return XU.startsWith("#") ? XU : "#000000"
+                          function Wr(HH) {
+                            if (Qr ??= document.createElement("canvas").getContext("2d"), !Qr) return "#000000";
+                            Qr.fillStyle = "#000000", Qr.fillStyle = HH;
+                            const BH = Qr.fillStyle;
+                            return BH.startsWith("#") ? BH : "#000000"
                           }
 
-                          function gy(UU) {
+                          function Mr(HH) {
                             let {
-                              value: XU,
-                              label: zU,
-                              onChange: cU
-                            } = UU;
-                            return (0, pU.jsxs)("span", {
+                              value: BH,
+                              label: LH,
+                              onChange: AH
+                            } = HH;
+                            return (0, uH.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, pU.jsx)("input", {
+                              children: [(0, uH.jsx)("input", {
                                 type: "color",
-                                value: ty(XU),
-                                "aria-label": `${zU} picker`,
-                                onChange: UU => {
-                                  cU(UU.target.value)
+                                value: Wr(BH),
+                                "aria-label": `${LH} picker`,
+                                onChange: HH => {
+                                  AH(HH.target.value)
                                 }
-                              }), (0, pU.jsx)("input", {
+                              }), (0, uH.jsx)("input", {
                                 type: "text",
-                                value: XU,
+                                value: BH,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": zU,
+                                "aria-label": LH,
                                 spellCheck: !1,
-                                onChange: UU => {
-                                  cU(UU.target.value)
+                                onChange: HH => {
+                                  AH(HH.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function ky(UU) {
+                          function xr(HH) {
                             let {
-                              value: XU,
-                              fontAwesomeIcons: zU,
-                              onChange: yU
-                            } = UU;
-                            const AU = Gc(),
-                              [FU, oU] = (0, cU.useState)(MX(XU) ? "fontAwesome" : "bloxd"),
-                              [DU, EU] = (0, cU.useState)(""),
-                              YU = DU.trim().toLowerCase(),
-                              NU = "bloxd" === FU ? Dy.e : zU,
-                              IU = YU ? NU.filter((UU => UU.toLowerCase().includes(YU))) : NU;
-                            return (0, pU.jsxs)("div", {
+                              value: BH,
+                              fontAwesomeIcons: LH,
+                              onChange: rH
+                            } = HH;
+                            const hH = vA(),
+                              [tH, zH] = (0, AH.useState)(RB(BH) ? "fontAwesome" : "bloxd"),
+                              [CH, EH] = (0, AH.useState)(""),
+                              XH = CH.trim().toLowerCase(),
+                              GH = "bloxd" === tH ? Cr.b : LH,
+                              YH = XH ? GH.filter((HH => HH.toLowerCase().includes(XH))) : GH;
+                            return (0, uH.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, pU.jsx)("input", {
+                              children: [(0, uH.jsx)("input", {
                                 type: "text",
-                                value: XU,
+                                value: BH,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: UU => {
-                                  yU(UU.target.value)
+                                onChange: HH => {
+                                  rH(HH.target.value)
                                 }
-                              }), (0, pU.jsx)("p", {
+                              }), (0, uH.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, pU.jsxs)("div", {
+                              }), (0, uH.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((UU => (0, pU.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((HH => (0, uH.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": FU === UU,
-                                    className: QU()("DocsVariantChip", {
-                                      Active: FU === UU
+                                    "aria-selected": tH === HH,
+                                    className: SH()("DocsVariantChip", {
+                                      Active: tH === HH
                                     }),
                                     onClick: () => {
-                                      oU(UU)
+                                      zH(HH)
                                     },
-                                    children: "bloxd" === UU ? `Bloxd icons (${Dy.e.length})` : `Font Awesome (${zU.length})`
-                                  }, UU))), (0, pU.jsx)("input", {
+                                    children: "bloxd" === HH ? `Bloxd icons (${Cr.b.length})` : `Font Awesome (${LH.length})`
+                                  }, HH))), (0, uH.jsx)("input", {
                                     type: "search",
-                                    value: DU,
+                                    value: CH,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: UU => {
-                                      EU(UU.target.value)
+                                    onChange: HH => {
+                                      EH(HH.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, pU.jsxs)("div", {
+                              }), (0, uH.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [IU.map((UU => {
-                                  const zU = "bloxd" === FU ? Yy(AU, UU) : null;
-                                  return (0, pU.jsx)("button", {
+                                children: [YH.map((HH => {
+                                  const LH = "bloxd" === tH ? Xr(hH, HH) : null;
+                                  return (0, uH.jsx)("button", {
                                     type: "button",
-                                    title: UU,
-                                    "aria-label": UU,
-                                    "aria-pressed": UU === XU,
-                                    className: QU()("DocsIconPickerOption", {
-                                      Active: UU === XU
+                                    title: HH,
+                                    "aria-label": HH,
+                                    "aria-pressed": HH === BH,
+                                    className: SH()("DocsIconPickerOption", {
+                                      Active: HH === BH
                                     }),
                                     onClick: () => {
-                                      yU(UU)
+                                      rH(HH)
                                     },
-                                    children: "fontAwesome" === FU ? (0, pU.jsx)(Bz.d, {
-                                      name: UU
-                                    }) : zU ? (0, pU.jsx)("img", {
-                                      src: zU,
+                                    children: "fontAwesome" === tH ? (0, uH.jsx)(PL.c, {
+                                      name: HH
+                                    }) : LH ? (0, uH.jsx)("img", {
+                                      src: LH,
                                       alt: ""
-                                    }) : (0, pU.jsx)(tU, {
+                                    }) : (0, uH.jsx)(WH, {
                                       name: "image"
                                     })
-                                  }, UU)
-                                })), 0 === IU.length && (0, pU.jsxs)("p", {
+                                  }, HH)
+                                })), 0 === YH.length && (0, uH.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", DU, "\u201d."]
+                                  children: ["No icons match \u201c", CH, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function Gy(UU) {
+                          function vr(HH) {
                             let {
-                              property: XU,
-                              value: zU,
-                              fontAwesomeIcons: cU,
-                              onChange: yU
-                            } = UU;
+                              property: BH,
+                              value: LH,
+                              fontAwesomeIcons: AH,
+                              onChange: rH
+                            } = HH;
                             const {
-                              field: QU,
-                              label: AU
-                            } = XU, FU = UU => "" !== UU || XU.isRequired ? UU : void 0;
-                            switch (QU.kind) {
+                              field: SH,
+                              label: hH
+                            } = BH, tH = HH => "" !== HH || BH.isRequired ? HH : void 0;
+                            switch (SH.kind) {
                               case "text":
-                                return QU.multiline ? (0, pU.jsx)("textarea", {
-                                  value: String(null !== zU && void 0 !== zU ? zU : ""),
+                                return SH.multiline ? (0, uH.jsx)("textarea", {
+                                  value: String(null !== LH && void 0 !== LH ? LH : ""),
                                   rows: 2,
-                                  "aria-label": AU,
-                                  onChange: UU => {
-                                    yU(UU.target.value)
+                                  "aria-label": hH,
+                                  onChange: HH => {
+                                    rH(HH.target.value)
                                   }
-                                }) : (0, pU.jsx)("input", {
+                                }) : (0, uH.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== zU && void 0 !== zU ? zU : ""),
-                                  "aria-label": AU,
-                                  onChange: UU => {
-                                    yU(FU(UU.target.value))
+                                  value: String(null !== LH && void 0 !== LH ? LH : ""),
+                                  "aria-label": hH,
+                                  onChange: HH => {
+                                    rH(tH(HH.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, pU.jsx)("input", {
+                                return (0, uH.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== zU && void 0 !== zU ? zU : ""),
-                                  placeholder: XU.defaultText,
+                                  value: String(null !== LH && void 0 !== LH ? LH : ""),
+                                  placeholder: BH.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": AU,
+                                  "aria-label": hH,
                                   spellCheck: !1,
-                                  onChange: UU => {
-                                    yU(FU(UU.target.value.trim()))
+                                  onChange: HH => {
+                                    rH(tH(HH.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, pU.jsx)(gy, {
-                                  value: String(null !== zU && void 0 !== zU ? zU : ""),
-                                  label: AU,
-                                  onChange: UU => {
-                                    yU(FU(UU))
+                                return (0, uH.jsx)(Mr, {
+                                  value: String(null !== LH && void 0 !== LH ? LH : ""),
+                                  label: hH,
+                                  onChange: HH => {
+                                    rH(tH(HH))
                                   }
                                 });
                               case "colours": {
-                                const UU = Array.isArray(zU) ? zU : [],
-                                  XU = UU => {
-                                    yU(UU.length > 0 ? UU : void 0)
+                                const HH = Array.isArray(LH) ? LH : [],
+                                  BH = HH => {
+                                    rH(HH.length > 0 ? HH : void 0)
                                   };
-                                return (0, pU.jsxs)("div", {
+                                return (0, uH.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [UU.map(((zU, cU) => (0, pU.jsxs)("span", {
+                                  children: [HH.map(((LH, AH) => (0, uH.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, pU.jsx)(gy, {
-                                      value: zU,
-                                      label: `${AU} ${cU+1}`,
-                                      onChange: zU => {
-                                        XU(UU.map(((UU, XU) => XU === cU ? zU : UU)))
+                                    children: [(0, uH.jsx)(Mr, {
+                                      value: LH,
+                                      label: `${hH} ${AH+1}`,
+                                      onChange: LH => {
+                                        BH(HH.map(((HH, BH) => BH === AH ? LH : HH)))
                                       }
-                                    }), (0, pU.jsx)("button", {
+                                    }), (0, uH.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${cU+1}`,
+                                      "aria-label": `Remove colour ${AH+1}`,
                                       onClick: () => {
-                                        XU(UU.filter(((UU, XU) => XU !== cU)))
+                                        BH(HH.filter(((HH, BH) => BH !== AH)))
                                       },
-                                      children: (0, pU.jsx)(tU, {
+                                      children: (0, uH.jsx)(WH, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, cU))), (0, pU.jsxs)("button", {
+                                  }, AH))), (0, uH.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var zU;
-                                      XU([...UU, null !== (zU = UU.at(-1)) && void 0 !== zU ? zU : "#ffffff"])
+                                      var LH;
+                                      BH([...HH, null !== (LH = HH.at(-1)) && void 0 !== LH ? LH : "#ffffff"])
                                     },
-                                    children: [(0, pU.jsx)(tU, {
+                                    children: [(0, uH.jsx)(WH, {
                                       name: "plus"
-                                    }), 0 === UU.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === HH.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var oU;
-                                const UU = "number" === typeof zU ? zU : Number(null !== (oU = XU.defaultText) && void 0 !== oU ? oU : 0);
-                                return (0, pU.jsxs)("span", {
+                                var zH;
+                                const HH = "number" === typeof LH ? LH : Number(null !== (zH = BH.defaultText) && void 0 !== zH ? zH : 0);
+                                return (0, uH.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, pU.jsx)("input", {
+                                  children: [(0, uH.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: UU,
-                                    "aria-label": AU,
-                                    onChange: UU => {
-                                      yU(Number(UU.target.value))
+                                    value: HH,
+                                    "aria-label": hH,
+                                    onChange: HH => {
+                                      rH(Number(HH.target.value))
                                     }
-                                  }), (0, pU.jsx)("output", {
-                                    children: UU.toFixed(2)
+                                  }), (0, uH.jsx)("output", {
+                                    children: HH.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, pU.jsxs)("select", {
-                                  value: String(null !== zU && void 0 !== zU ? zU : ""),
-                                  "aria-label": AU,
-                                  onChange: UU => {
-                                    yU(FU(UU.target.value))
+                                return (0, uH.jsxs)("select", {
+                                  value: String(null !== LH && void 0 !== LH ? LH : ""),
+                                  "aria-label": hH,
+                                  onChange: HH => {
+                                    rH(tH(HH.target.value))
                                   },
-                                  children: [!XU.isRequired && (0, pU.jsxs)("option", {
+                                  children: [!BH.isRequired && (0, uH.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", XU.defaultText, ")"]
-                                  }), QU.options.map((UU => (0, pU.jsx)("option", {
-                                    value: UU,
-                                    children: UU
-                                  }, UU)))]
+                                    children: ["Default (", BH.defaultText, ")"]
+                                  }), SH.options.map((HH => (0, uH.jsx)("option", {
+                                    value: HH,
+                                    children: HH
+                                  }, HH)))]
                                 });
                               case "icon":
-                                return (0, pU.jsx)(ky, {
-                                  value: String(null !== zU && void 0 !== zU ? zU : ""),
-                                  fontAwesomeIcons: cU,
-                                  onChange: yU
+                                return (0, uH.jsx)(xr, {
+                                  value: String(null !== LH && void 0 !== LH ? LH : ""),
+                                  fontAwesomeIcons: AH,
+                                  onChange: rH
                                 })
                             }
                           }
 
-                          function By(UU) {
-                            let XU;
+                          function Pr(HH) {
+                            let BH;
                             try {
-                              XU = JSON.parse(UU)
-                            } catch (zU) {
+                              BH = JSON.parse(HH)
+                            } catch (LH) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${zU.message}`
+                                error: `Not valid JSON yet: ${LH.message}`
                               }
                             }
-                            return zz(XU) ? {
-                              part: XU,
+                            return LL(BH) ? {
+                              part: BH,
                               error: null
                             } : {
                               part: null,
@@ -3623,150 +3623,150 @@ export const modules = {
                             }
                           }
 
-                          function Zy(UU) {
+                          function Tr(HH) {
                             let {
-                              parts: XU,
-                              index: zU,
-                              fontAwesomeIcons: yU,
-                              onChange: QU,
-                              Cw: AU,
-                              onClose: FU
-                            } = UU;
-                            const oU = (0, cU.useContext)(pX),
-                              EU = (0, cU.useRef)(null),
-                              YU = XU[zU],
-                              NU = sX(YU),
-                              [IU, aU] = (0, cU.useState)((() => JSON.stringify(YU, null, 2))),
-                              gU = (0, cU.useMemo)((() => "other" === NU ? By(IU).error : null), [NU, IU]);
-                            (0, cU.useEffect)((() => {
-                              var UU;
-                              null === (UU = EU.current) || void 0 === UU || UU.focus()
+                              parts: BH,
+                              index: LH,
+                              fontAwesomeIcons: rH,
+                              onChange: SH,
+                              bq: hH,
+                              onClose: tH
+                            } = HH;
+                            const zH = (0, AH.useContext)(uB),
+                              EH = (0, AH.useRef)(null),
+                              XH = BH[LH],
+                              GH = FB(XH),
+                              [YH, QH] = (0, AH.useState)((() => JSON.stringify(XH, null, 2))),
+                              MH = (0, AH.useMemo)((() => "other" === GH ? Pr(YH).error : null), [GH, YH]);
+                            (0, AH.useEffect)((() => {
+                              var HH;
+                              null === (HH = EH.current) || void 0 === HH || HH.focus()
                             }), []);
-                            const kU = (0, pU.jsx)("div", {
+                            const xH = (0, uH.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: UU => {
-                                UU.target === UU.currentTarget && FU()
+                              onMouseDown: HH => {
+                                HH.target === HH.currentTarget && tH()
                               },
-                              children: (0, pU.jsxs)("div", {
-                                ref: EU,
+                              children: (0, uH.jsxs)("div", {
+                                ref: EH,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${zU+1}: ${vX[NU]}`,
+                                "aria-label": `Edit part ${LH+1}: ${jB[GH]}`,
                                 tabIndex: -1,
-                                onKeyDown: UU => {
-                                  "Escape" === UU.key ? (UU.stopPropagation(), FU()) : "Tab" === UU.key && EU.current && function(UU, XU) {
-                                    const zU = Array.from(UU.querySelectorAll(CX)),
-                                      cU = zU[0],
-                                      yU = zU.at(-1);
-                                    if (!cU || !yU) return;
-                                    const QU = document.activeElement;
-                                    !XU.shiftKey || QU !== cU && QU !== UU ? XU.shiftKey || QU !== yU || (XU.preventDefault(), cU.focus()) : (XU.preventDefault(), yU.focus())
-                                  }(EU.current, UU)
+                                onKeyDown: HH => {
+                                  "Escape" === HH.key ? (HH.stopPropagation(), tH()) : "Tab" === HH.key && EH.current && function(HH, BH) {
+                                    const LH = Array.from(HH.querySelectorAll(oB)),
+                                      AH = LH[0],
+                                      rH = LH.at(-1);
+                                    if (!AH || !rH) return;
+                                    const SH = document.activeElement;
+                                    !BH.shiftKey || SH !== AH && SH !== HH ? BH.shiftKey || SH !== rH || (BH.preventDefault(), AH.focus()) : (BH.preventDefault(), rH.focus())
+                                  }(EH.current, HH)
                                 },
-                                children: [(0, pU.jsxs)("header", {
+                                children: [(0, uH.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, pU.jsxs)("div", {
-                                    children: [(0, pU.jsxs)("div", {
+                                  children: [(0, uH.jsxs)("div", {
+                                    children: [(0, uH.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", zU + 1]
-                                    }), (0, pU.jsx)("div", {
+                                      children: ["Part ", LH + 1]
+                                    }), (0, uH.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: vX[NU]
+                                      children: jB[GH]
                                     })]
-                                  }), (0, pU.jsx)("button", {
+                                  }), (0, uH.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: FU,
-                                    children: (0, pU.jsx)(tU, {
+                                    onClick: tH,
+                                    children: (0, uH.jsx)(WH, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, pU.jsx)(Iy, {
-                                  parts: XU,
+                                }), (0, uH.jsx)(Yr, {
+                                  parts: BH,
                                   className: "DocsTextDialogPreview"
-                                }), (0, pU.jsx)("div", {
+                                }), (0, uH.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === NU ? (0, pU.jsxs)("label", {
+                                  children: "other" === GH ? (0, uH.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, pU.jsx)("span", {
+                                    children: [(0, uH.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, pU.jsx)("textarea", {
+                                    }), (0, uH.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: IU,
+                                      value: YH,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: UU => {
-                                        aU(UU.target.value);
-                                        const XU = By(UU.target.value);
-                                        null !== XU.part && QU(XU.part)
+                                      onChange: HH => {
+                                        QH(HH.target.value);
+                                        const BH = Pr(HH.target.value);
+                                        null !== BH.part && SH(BH.part)
                                       }
-                                    }), gU && (0, pU.jsx)("span", {
+                                    }), MH && (0, uH.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: gU
+                                      children: MH
                                     })]
-                                  }) : mX[NU].map((UU => {
-                                    const XU = xX(YU, UU.path),
-                                      zU = UU.isRequired ? JSON.stringify(jX(YU, UU.path)) === JSON.stringify(YU) : void 0 === XU;
-                                    return (0, pU.jsxs)("div", {
+                                  }) : wB[GH].map((HH => {
+                                    const BH = dB(XH, HH.path),
+                                      LH = HH.isRequired ? JSON.stringify(sB(XH, HH.path)) === JSON.stringify(XH) : void 0 === BH;
+                                    return (0, uH.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, pU.jsxs)("div", {
+                                      children: [(0, uH.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, pU.jsx)("span", {
-                                          children: UU.label
-                                        }), (0, pU.jsxs)("button", {
+                                        children: [(0, uH.jsx)("span", {
+                                          children: HH.label
+                                        }), (0, uH.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: zU,
-                                          "aria-label": `Reset ${UU.label.toLowerCase()} to default`,
+                                          disabled: LH,
+                                          "aria-label": `Reset ${HH.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            QU(jX(YU, UU.path))
+                                            SH(sB(XH, HH.path))
                                           },
-                                          children: [(0, pU.jsx)(tU, {
+                                          children: [(0, uH.jsx)(WH, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, pU.jsx)(Gy, {
-                                        property: UU,
-                                        value: XU,
-                                        fontAwesomeIcons: yU,
-                                        onChange: XU => {
-                                          QU(JX(YU, UU.path, XU))
+                                      }), (0, uH.jsx)(vr, {
+                                        property: HH,
+                                        value: BH,
+                                        fontAwesomeIcons: rH,
+                                        onChange: BH => {
+                                          SH(aB(XH, HH.path, BH))
                                         }
-                                      }), !UU.isRequired && (0, pU.jsxs)("span", {
+                                      }), !HH.isRequired && (0, uH.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", UU.defaultText]
+                                        children: ["Default: ", HH.defaultText]
                                       })]
-                                    }, UU.path.join("."))
+                                    }, HH.path.join("."))
                                   }))
-                                }), (0, pU.jsxs)("footer", {
+                                }), (0, uH.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, pU.jsxs)("button", {
+                                  children: [(0, uH.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: AU,
-                                    children: [(0, pU.jsx)(tU, {
+                                    onClick: hH,
+                                    children: [(0, uH.jsx)(WH, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, pU.jsx)("button", {
+                                  }), (0, uH.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: FU,
+                                    onClick: tH,
                                     children: "Done"
                                   })]
-                                }), (0, pU.jsx)("datalist", {
+                                }), (0, uH.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: py.map((UU => (0, pU.jsx)("option", {
-                                    value: UU
-                                  }, UU)))
+                                  children: ur.map((HH => (0, uH.jsx)("option", {
+                                    value: HH
+                                  }, HH)))
                                 })]
                               })
                             });
-                            return oU ? (0, DU.createPortal)(kU, oU) : kU
+                            return zH ? (0, CH.createPortal)(xH, zH) : xH
                           }
-                          const Ry = [{
+                          const Ur = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3810,265 +3810,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            Py = Object.keys(VX);
+                            Vr = Object.keys(nB);
 
-                          function Wy(UU) {
+                          function Or(HH) {
                             let {
-                              fontAwesomeIcons: XU
-                            } = UU;
-                            const [zU, yU] = (0, cU.useState)(Ry[0].parts), [AU, FU] = (0, cU.useState)((() => hX(Ry[0].parts))), [oU, DU] = (0, cU.useState)(null), [EU, YU] = (0, cU.useState)(!1), [NU, IU] = (0, cU.useState)(null), [aU, gU] = (0, cU.useState)(!1), [kU, GU] = (0, cU.useState)(null), BU = (0, cU.useRef)(null), ZU = hX(zU);
-                            (0, cU.useLayoutEffect)((() => {
-                              var UU;
-                              if (!kU) return;
-                              const XU = UU => {
-                                  var XU;
-                                  return null === (XU = BU.current) || void 0 === XU ? void 0 : XU.querySelector(`[data-focus-key="${UU}"]`)
+                              fontAwesomeIcons: BH
+                            } = HH;
+                            const [LH, rH] = (0, AH.useState)(Ur[0].parts), [hH, tH] = (0, AH.useState)((() => yB(Ur[0].parts))), [zH, CH] = (0, AH.useState)(null), [EH, XH] = (0, AH.useState)(!1), [GH, YH] = (0, AH.useState)(null), [QH, MH] = (0, AH.useState)(!1), [xH, vH] = (0, AH.useState)(null), PH = (0, AH.useRef)(null), TH = yB(LH);
+                            (0, AH.useLayoutEffect)((() => {
+                              var HH;
+                              if (!xH) return;
+                              const BH = HH => {
+                                  var BH;
+                                  return null === (BH = PH.current) || void 0 === BH ? void 0 : BH.querySelector(`[data-focus-key="${HH}"]`)
                                 },
-                                zU = XU(kU.key);
-                              null === (UU = zU && !zU.disabled ? zU : XU(kU.fallback)) || void 0 === UU || UU.focus(), GU(null)
-                            }), [kU]);
-                            const RU = UU => {
-                                yU(UU), FU(hX(UU)), DU(null)
+                                LH = BH(xH.key);
+                              null === (HH = LH && !LH.disabled ? LH : BH(xH.fallback)) || void 0 === HH || HH.focus(), vH(null)
+                            }), [xH]);
+                            const UH = HH => {
+                                rH(HH), tH(yB(HH)), CH(null)
                               },
-                              WU = UU => {
-                                RU(zU.filter(((XU, zU) => zU !== UU))), GU({
-                                  key: `edit-${Math.min(UU,zU.length-2)}`,
+                              OH = HH => {
+                                UH(LH.filter(((BH, LH) => LH !== HH))), vH({
+                                  key: `edit-${Math.min(HH,LH.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              dU = (UU, XU) => {
-                                const cU = [...zU],
-                                  [yU] = cU.splice(UU, 1);
-                                cU.splice(UU + XU, 0, yU), RU(cU);
-                                GU({
-                                  key: `${XU<0?"up":"down"}-${UU+XU}`,
-                                  fallback: `edit-${UU+XU}`
+                              bH = (HH, BH) => {
+                                const AH = [...LH],
+                                  [rH] = AH.splice(HH, 1);
+                                AH.splice(HH + BH, 0, rH), UH(AH);
+                                vH({
+                                  key: `${BH<0?"up":"down"}-${HH+BH}`,
+                                  fallback: `edit-${HH+BH}`
                                 })
                               };
-                            return (0, pU.jsxs)("section", {
-                              ref: BU,
+                            return (0, uH.jsxs)("section", {
+                              ref: PH,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, pU.jsx)("header", {
+                              children: [(0, uH.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, pU.jsxs)("div", {
-                                  children: [(0, pU.jsx)("div", {
+                                children: (0, uH.jsxs)("div", {
+                                  children: [(0, uH.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, pU.jsx)("div", {
+                                  }), (0, uH.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, pU.jsx)("div", {
+                              }), (0, uH.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: Ry.map((UU => (0, pU.jsx)("button", {
+                                children: Ur.map((HH => (0, uH.jsx)("button", {
                                   type: "button",
-                                  className: QU()("DocsVariantChip", {
-                                    Active: ZU === hX(UU.parts)
+                                  className: SH()("DocsVariantChip", {
+                                    Active: TH === yB(HH.parts)
                                   }),
                                   onClick: () => {
-                                    RU(UU.parts)
+                                    UH(HH.parts)
                                   },
-                                  children: UU.label
-                                }, UU.label)))
-                              }), (0, pU.jsx)(Iy, {
-                                parts: zU,
+                                  children: HH.label
+                                }, HH.label)))
+                              }), (0, uH.jsx)(Yr, {
+                                parts: LH,
                                 className: "DocsTextEditorPreview"
-                              }), (0, pU.jsxs)("div", {
+                              }), (0, uH.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, pU.jsxs)("div", {
+                                children: [(0, uH.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, pU.jsx)("div", {
+                                  children: [(0, uH.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, pU.jsxs)("ol", {
+                                  }), (0, uH.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [zU.map(((UU, XU) => {
-                                      const cU = sX(UU);
-                                      return (0, pU.jsxs)("li", {
+                                    children: [LH.map(((HH, BH) => {
+                                      const AH = FB(HH);
+                                      return (0, uH.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, pU.jsxs)("button", {
+                                        children: [(0, uH.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${XU}`,
-                                          "aria-label": `Edit part ${XU+1}, ${vX[cU]}`,
+                                          "data-focus-key": `edit-${BH}`,
+                                          "aria-label": `Edit part ${BH+1}, ${jB[AH]}`,
                                           onClick: () => {
-                                            IU(XU)
+                                            YH(BH)
                                           },
-                                          children: [(0, pU.jsx)("span", {
+                                          children: [(0, uH.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: vX[cU]
-                                          }), (0, pU.jsx)(Iy, {
-                                            parts: [UU],
+                                            children: jB[AH]
+                                          }), (0, uH.jsx)(Yr, {
+                                            parts: [HH],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== cU && (0, pU.jsx)("code", {
+                                          }), "text" !== AH && (0, uH.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: KX(UU)
+                                            children: JB(HH)
                                           })]
-                                        }), (0, pU.jsxs)("span", {
+                                        }), (0, uH.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, pU.jsx)("button", {
+                                          children: [(0, uH.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${XU+1} up`,
-                                            "data-focus-key": `up-${XU}`,
-                                            disabled: 0 === XU,
+                                            "aria-label": `Move part ${BH+1} up`,
+                                            "data-focus-key": `up-${BH}`,
+                                            disabled: 0 === BH,
                                             onClick: () => {
-                                              dU(XU, -1)
+                                              bH(BH, -1)
                                             },
-                                            children: (0, pU.jsx)(tU, {
+                                            children: (0, uH.jsx)(WH, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, pU.jsx)("button", {
+                                          }), (0, uH.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${XU+1} down`,
-                                            "data-focus-key": `down-${XU}`,
-                                            disabled: XU === zU.length - 1,
+                                            "aria-label": `Move part ${BH+1} down`,
+                                            "data-focus-key": `down-${BH}`,
+                                            disabled: BH === LH.length - 1,
                                             onClick: () => {
-                                              dU(XU, 1)
+                                              bH(BH, 1)
                                             },
-                                            children: (0, pU.jsx)(tU, {
+                                            children: (0, uH.jsx)(WH, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, pU.jsx)("button", {
+                                          }), (0, uH.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${XU+1}`,
+                                            "aria-label": `Remove part ${BH+1}`,
                                             onClick: () => {
-                                              WU(XU)
+                                              OH(BH)
                                             },
-                                            children: (0, pU.jsx)(tU, {
+                                            children: (0, uH.jsx)(WH, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, XU)
-                                    })), 0 === zU.length && (0, pU.jsx)("li", {
+                                      }, BH)
+                                    })), 0 === LH.length && (0, uH.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, pU.jsxs)("div", {
+                                  }), (0, uH.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: UU => {
-                                      "Escape" === UU.key && aU && (UU.stopPropagation(), gU(!1), GU({
+                                    onKeyDown: HH => {
+                                      "Escape" === HH.key && QH && (HH.stopPropagation(), MH(!1), vH({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, pU.jsxs)("button", {
+                                    children: [(0, uH.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": aU,
+                                      "aria-expanded": QH,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        gU(!aU)
+                                        MH(!QH)
                                       },
-                                      children: [(0, pU.jsx)(tU, {
+                                      children: [(0, uH.jsx)(WH, {
                                         name: "plus"
-                                      }), "Add a part", (0, pU.jsx)(tU, {
-                                        name: aU ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, uH.jsx)(WH, {
+                                        name: QH ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), aU && (0, pU.jsx)("ul", {
+                                    }), QH && (0, uH.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: Py.map((UU => (0, pU.jsx)("li", {
-                                        children: (0, pU.jsx)("button", {
+                                      children: Vr.map((HH => (0, uH.jsx)("li", {
+                                        children: (0, uH.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (UU => {
-                                              RU([...zU, VX[UU]]), gU(!1), IU(zU.length)
-                                            })(UU)
+                                            (HH => {
+                                              UH([...LH, nB[HH]]), MH(!1), YH(LH.length)
+                                            })(HH)
                                           },
-                                          children: vX[UU]
+                                          children: jB[HH]
                                         })
-                                      }, UU)))
+                                      }, HH)))
                                     })]
                                   })]
-                                }), (0, pU.jsxs)("div", {
+                                }), (0, uH.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, pU.jsxs)("div", {
+                                  children: [(0, uH.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, pU.jsxs)("button", {
+                                    children: ["Code", (0, uH.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": EU,
+                                      "aria-pressed": EH,
                                       onClick: () => {
-                                        YU(!EU)
+                                        XH(!EH)
                                       },
-                                      children: [(0, pU.jsx)(tU, {
-                                        name: EU ? "check" : "pencil"
-                                      }), EU ? "Done" : "Edit"]
+                                      children: [(0, uH.jsx)(WH, {
+                                        name: EH ? "check" : "pencil"
+                                      }), EH ? "Done" : "Edit"]
                                     })]
-                                  }), EU ? (0, pU.jsxs)(pU.Fragment, {
-                                    children: [(0, pU.jsx)("textarea", {
+                                  }), EH ? (0, uH.jsxs)(uH.Fragment, {
+                                    children: [(0, uH.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: AU,
+                                      value: hH,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: UU => {
-                                        FU(UU.target.value);
-                                        const XU = cz(UU.target.value);
-                                        DU(XU.error), XU.parts && yU(XU.parts)
+                                      onChange: HH => {
+                                        tH(HH.target.value);
+                                        const BH = AL(HH.target.value);
+                                        CH(BH.error), BH.parts && rH(BH.parts)
                                       }
-                                    }), oU && (0, pU.jsx)("p", {
+                                    }), zH && (0, uH.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: oU
+                                      children: zH
                                     })]
-                                  }) : (0, pU.jsx)(PU, {
+                                  }) : (0, uH.jsx)(VH, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${ZU})`
+                                    code: `api.sendMessage(playerId, ${TH})`
                                   })]
                                 })]
-                              }), null !== NU && NU < zU.length && (0, pU.jsx)(Zy, {
-                                parts: zU,
-                                index: NU,
-                                fontAwesomeIcons: XU,
-                                onChange: UU => {
-                                  ((UU, XU) => {
-                                    RU(zU.map(((zU, cU) => cU === UU ? XU : zU)))
-                                  })(NU, UU)
+                              }), null !== GH && GH < LH.length && (0, uH.jsx)(Tr, {
+                                parts: LH,
+                                index: GH,
+                                fontAwesomeIcons: BH,
+                                onChange: HH => {
+                                  ((HH, BH) => {
+                                    UH(LH.map(((LH, AH) => AH === HH ? BH : LH)))
+                                  })(GH, HH)
                                 },
-                                Cw: () => {
-                                  WU(NU), IU(null)
+                                bq: () => {
+                                  OH(GH), YH(null)
                                 },
                                 onClose: () => {
-                                  IU(null), GU({
-                                    key: `edit-${NU}`,
+                                  YH(null), vH({
+                                    key: `edit-${GH}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var dy = zU(5369),
-                            Ly = zU(5358),
-                            ey = zU(5364),
-                            Cy = zU(5374);
-                          const wy = 40,
-                            qy = 800,
-                            Oy = 150,
-                            Sy = 8e3,
-                            ry = 2e3;
+                          var br = LH(5325),
+                            kr = LH(5308),
+                            mr = LH(5319),
+                            or = LH(5333);
+                          const Ir = 40,
+                            fr = 800,
+                            lr = 150,
+                            Kr = 8e3,
+                            cr = 2e3;
 
-                          function uy(UU, XU) {
-                            return 12 * Math.log2(XU / UU)
+                          function er(HH, BH) {
+                            return 12 * Math.log2(BH / HH)
                           }
 
-                          function fy(UU, XU) {
-                            return Math.round(UU * 2 ** (XU / 12) * 10) / 10
+                          function qr(HH, BH) {
+                            return Math.round(HH * 2 ** (BH / 12) * 10) / 10
                           }
 
-                          function iy(UU) {
-                            return `${UU} ms`
+                          function gr(HH) {
+                            return `${HH} ms`
                           }
 
-                          function Hy(UU) {
-                            return `${UU} st`
+                          function Nr(HH) {
+                            return `${HH} st`
                           }
-                          const My = [{
+                          const Rr = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4086,769 +4086,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function vy(UU) {
+                          function jr(HH) {
                             let {
-                              synth: XU,
-                              onChange: zU
-                            } = UU;
-                            const cU = (0, dy.l)(XU);
-                            return (0, pU.jsxs)("div", {
+                              synth: BH,
+                              onChange: LH
+                            } = HH;
+                            const AH = (0, br.k)(BH);
+                            return (0, uH.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, pU.jsxs)("div", {
+                              children: [(0, uH.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, pU.jsx)("div", {
+                                children: [(0, uH.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, pU.jsxs)("div", {
+                                }), (0, uH.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, pU.jsx)("div", {
+                                  children: [(0, uH.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, pU.jsx)("span", {
+                                    children: (0, uH.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, pU.jsx)("div", {
+                                  }), (0, uH.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: dy.h.map((UU => (0, pU.jsx)("button", {
+                                    children: br.g.map((HH => (0, uH.jsx)("button", {
                                       type: "button",
-                                      className: QU()("DocsVariantChip", {
-                                        Active: XU.waveform === UU
+                                      className: SH()("DocsVariantChip", {
+                                        Active: BH.waveform === HH
                                       }),
-                                      "aria-pressed": XU.waveform === UU,
+                                      "aria-pressed": BH.waveform === HH,
                                       onClick: () => {
-                                        zU({
-                                          waveform: UU
+                                        LH({
+                                          waveform: HH
                                         })
                                       },
-                                      children: UU
-                                    }, UU)))
+                                      children: HH
+                                    }, HH)))
                                   })]
-                                }), (0, pU.jsx)(hc, {
+                                }), (0, uH.jsx)(yA, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: uy(wy, qy),
+                                  max: er(Ir, fr),
                                   step: .1,
-                                  value: uy(wy, XU.pitchHz),
-                                  format: () => `${XU.pitchHz} Hz`,
-                                  onChange: UU => {
-                                    zU({
-                                      pitchHz: fy(wy, UU)
+                                  value: er(Ir, BH.pitchHz),
+                                  format: () => `${BH.pitchHz} Hz`,
+                                  onChange: HH => {
+                                    LH({
+                                      pitchHz: qr(Ir, HH)
                                     })
                                   }
-                                }), (0, pU.jsx)(hc, {
+                                }), (0, uH.jsx)(yA, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: XU.syllableMs,
-                                  format: iy,
-                                  onChange: UU => {
-                                    zU({
-                                      syllableMs: UU
+                                  value: BH.syllableMs,
+                                  format: gr,
+                                  onChange: HH => {
+                                    LH({
+                                      syllableMs: HH
                                     })
                                   }
-                                }), (0, pU.jsx)(hc, {
+                                }), (0, uH.jsx)(yA, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: XU.volume,
-                                  onChange: UU => {
-                                    zU({
-                                      volume: UU
+                                  value: BH.volume,
+                                  onChange: HH => {
+                                    LH({
+                                      volume: HH
                                     })
                                   }
                                 })]
-                              }), (0, pU.jsxs)("div", {
+                              }), (0, uH.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, pU.jsx)("div", {
+                                children: [(0, uH.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, pU.jsx)(hc, {
+                                }), (0, uH.jsx)(yA, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: XU.durationMs,
-                                  format: iy,
-                                  onChange: UU => {
-                                    zU({
-                                      durationMs: UU
+                                  value: BH.durationMs,
+                                  format: gr,
+                                  onChange: HH => {
+                                    LH({
+                                      durationMs: HH
                                     })
                                   }
-                                }), (0, pU.jsx)(hc, {
+                                }), (0, uH.jsx)(yA, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: cU.durationMs,
+                                  max: AH.durationMs,
                                   step: 1,
-                                  value: cU.attackMs,
-                                  format: iy,
-                                  onChange: UU => {
-                                    zU({
-                                      attackMs: UU
+                                  value: AH.attackMs,
+                                  format: gr,
+                                  onChange: HH => {
+                                    LH({
+                                      attackMs: HH
                                     })
                                   }
-                                }), (0, pU.jsx)(hc, {
+                                }), (0, uH.jsx)(yA, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: cU.durationMs - cU.attackMs,
+                                  max: AH.durationMs - AH.attackMs,
                                   step: 1,
-                                  value: cU.releaseMs,
-                                  format: iy,
-                                  onChange: UU => {
-                                    zU({
-                                      releaseMs: UU
+                                  value: AH.releaseMs,
+                                  format: gr,
+                                  onChange: HH => {
+                                    LH({
+                                      releaseMs: HH
                                     })
                                   }
-                                }), (0, pU.jsx)(hc, {
+                                }), (0, uH.jsx)(yA, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: XU.glideSemitones,
-                                  format: Hy,
-                                  onChange: UU => {
-                                    zU({
-                                      glideSemitones: UU
+                                  value: BH.glideSemitones,
+                                  format: Nr,
+                                  onChange: HH => {
+                                    LH({
+                                      glideSemitones: HH
                                     })
                                   }
-                                }), (0, pU.jsxs)("label", {
+                                }), (0, uH.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, pU.jsx)("input", {
+                                  children: [(0, uH.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== XU.lowpassHz,
-                                    onChange: UU => {
-                                      zU({
-                                        lowpassHz: UU.target.checked ? ry : null
+                                    checked: null !== BH.lowpassHz,
+                                    onChange: HH => {
+                                      LH({
+                                        lowpassHz: HH.target.checked ? cr : null
                                       })
                                     }
-                                  }), (0, pU.jsx)("span", {
+                                  }), (0, uH.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== XU.lowpassHz && (0, pU.jsx)(hc, {
+                                }), null !== BH.lowpassHz && (0, uH.jsx)(yA, {
                                   label: "Filter",
                                   min: 0,
-                                  max: uy(Oy, Sy),
+                                  max: er(lr, Kr),
                                   step: .1,
-                                  value: uy(Oy, XU.lowpassHz),
-                                  format: () => `${XU.lowpassHz} Hz`,
-                                  onChange: UU => {
-                                    zU({
-                                      lowpassHz: fy(Oy, UU)
+                                  value: er(lr, BH.lowpassHz),
+                                  format: () => `${BH.lowpassHz} Hz`,
+                                  onChange: HH => {
+                                    LH({
+                                      lowpassHz: qr(lr, HH)
                                     })
                                   }
                                 })]
-                              }), (0, pU.jsxs)("div", {
+                              }), (0, uH.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, pU.jsx)("div", {
+                                children: [(0, uH.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), My.map((UU => {
+                                }), Rr.map((HH => {
                                   let {
-                                    key: cU,
-                                    label: yU,
-                                    max: QU
-                                  } = UU;
-                                  return (0, pU.jsx)(hc, {
-                                    label: yU,
+                                    key: AH,
+                                    label: rH,
+                                    max: SH
+                                  } = HH;
+                                  return (0, uH.jsx)(yA, {
+                                    label: rH,
                                     min: 0,
-                                    max: QU,
+                                    max: SH,
                                     step: .1,
-                                    value: XU.intonation[cU],
-                                    format: Hy,
-                                    onChange: UU => {
-                                      zU({
+                                    value: BH.intonation[AH],
+                                    format: Nr,
+                                    onChange: HH => {
+                                      LH({
                                         intonation: {
-                                          ...XU.intonation,
-                                          [cU]: UU
+                                          ...BH.intonation,
+                                          [AH]: HH
                                         }
                                       })
                                     }
-                                  }, cU)
+                                  }, AH)
                                 }))]
                               })]
                             })
                           }
-                          const Vy = Object.keys(dy.i),
-                            sy = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const nr = Object.keys(br.i),
+                            Fr = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function ny(UU) {
-                            var XU;
-                            const zU = JSON.stringify((0, dy.l)(UU));
-                            return null !== (XU = Vy.find((UU => JSON.stringify((0, dy.l)(dy.i[UU])) === zU))) && void 0 !== XU ? XU : null
+                          function Dr(HH) {
+                            var BH;
+                            const LH = JSON.stringify((0, br.k)(HH));
+                            return null !== (BH = nr.find((HH => JSON.stringify((0, br.k)(br.i[HH])) === LH))) && void 0 !== BH ? BH : null
                           }
 
-                          function my(UU) {
-                            let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof UU || null === UU) return JSON.stringify(UU);
-                            return `{\n${Object.entries(UU).map((UU=>{let[zU,cU]=UU;return`${XU}    ${zU}: ${my(cU,`${XU}    `)},`})).join("\n")}\n${XU}}`
+                          function wr(HH) {
+                            let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof HH || null === HH) return JSON.stringify(HH);
+                            return `{\n${Object.entries(HH).map((HH=>{let[LH,AH]=HH;return`${BH}    ${LH}: ${wr(AH,`${BH}    `)},`})).join("\n")}\n${BH}}`
                           }
 
-                          function ly(UU, XU, zU) {
-                            const cU = ny(UU),
-                              yU = [`    line: ${JSON.stringify(XU)},`];
-                            return zU && yU.push(`    speakerName: ${JSON.stringify(zU)},`), yU.push("    voice,"), `const voice = ${cU?JSON.stringify(cU):my((0,dy.l)(UU))}\n\napi.setClientOption(playerId, "dialogue", {\n${yU.join("\n")}\n})`
+                          function Zr(HH, BH, LH) {
+                            const AH = Dr(HH),
+                              rH = [`    line: ${JSON.stringify(BH)},`];
+                            return LH && rH.push(`    speakerName: ${JSON.stringify(LH)},`), rH.push("    voice,"), `const voice = ${AH?JSON.stringify(AH):wr((0,br.k)(HH))}\n\napi.setClientOption(playerId, "dialogue", {\n${rH.join("\n")}\n})`
                           }
-                          const xy = 400,
-                            Jy = 90;
-                          let jy = null;
+                          const dr = 400,
+                            ar = 90;
+                          let sr = null;
 
-                          function Ky(UU, XU, zU) {
-                            return jy ??= new AudioContext, jy.resume(), (0, Cy.b)(jy, jy.destination, UU, XU, zU, (() => {}))
+                          function Jr(HH, BH, LH) {
+                            return sr ??= new AudioContext, sr.resume(), (0, or.b)(sr, sr.destination, HH, BH, LH, (() => {}))
                           }
 
-                          function by() {
-                            const [UU, XU] = (0, cU.useState)(dy.i.regular), [zU, yU] = (0, cU.useState)(sy[0]), [AU, FU] = (0, cU.useState)("Innkeeper"), [oU, DU] = (0, cU.useState)(0), EU = Ec((UU => UU.volume)), YU = (0, cU.useRef)(null), NU = (0, cU.useRef)(0), IU = (0, cU.useRef)(0), aU = () => {
-                              var UU;
-                              null === (UU = YU.current) || void 0 === UU || UU.call(YU), YU.current = null
+                          function ir() {
+                            const [HH, BH] = (0, AH.useState)(br.i.regular), [LH, rH] = (0, AH.useState)(Fr[0]), [hH, tH] = (0, AH.useState)("Innkeeper"), [zH, CH] = (0, AH.useState)(0), EH = EA((HH => HH.volume)), XH = (0, AH.useRef)(null), GH = (0, AH.useRef)(0), YH = (0, AH.useRef)(0), QH = () => {
+                              var HH;
+                              null === (HH = XH.current) || void 0 === HH || HH.call(XH), XH.current = null
                             };
-                            (0, cU.useEffect)((() => () => {
-                              var UU;
-                              null === (UU = YU.current) || void 0 === UU || UU.call(YU), window.clearTimeout(NU.current)
+                            (0, AH.useEffect)((() => () => {
+                              var HH;
+                              null === (HH = XH.current) || void 0 === HH || HH.call(XH), window.clearTimeout(GH.current)
                             }), []);
-                            const gU = (0, cU.useMemo)((() => ({
-                                line: zU,
-                                speakerName: AU || void 0,
-                                voice: UU
-                              })), [zU, AU, UU]),
-                              kU = (0, cU.useRef)(gU);
-                            kU.current = gU;
-                            const BU = ny(UU),
-                              ZU = UU => {
-                                window.clearTimeout(NU.current), aU();
+                            const MH = (0, AH.useMemo)((() => ({
+                                line: LH,
+                                speakerName: hH || void 0,
+                                voice: HH
+                              })), [LH, hH, HH]),
+                              xH = (0, AH.useRef)(MH);
+                            xH.current = MH;
+                            const PH = Dr(HH),
+                              TH = HH => {
+                                window.clearTimeout(GH.current), QH();
                                 const {
-                                  plan: XU,
-                                  synth: zU
-                                } = (0, ey.g)(UU);
-                                zU && (YU.current = Ky(zU, XU.blips, EU)), DU((UU => UU + 1))
+                                  plan: BH,
+                                  synth: LH
+                                } = (0, mr.d)(HH);
+                                LH && (XH.current = Jr(LH, BH.blips, EH)), CH((HH => HH + 1))
                               },
-                              RU = ly(UU, zU, AU);
-                            return (0, pU.jsxs)("section", {
+                              UH = Zr(HH, LH, hH);
+                            return (0, uH.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, pU.jsxs)("header", {
+                              children: [(0, uH.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, pU.jsxs)("div", {
-                                  children: [(0, pU.jsx)("div", {
+                                children: [(0, uH.jsxs)("div", {
+                                  children: [(0, uH.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, pU.jsx)("div", {
+                                  }), (0, uH.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, pU.jsx)(GU, {
-                                  text: RU,
+                                }), (0, uH.jsx)(vH, {
+                                  text: UH,
                                   label: "Copy code"
                                 })]
-                              }), (0, pU.jsxs)("div", {
+                              }), (0, uH.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [Vy.map((UU => (0, pU.jsx)("button", {
+                                children: [nr.map((HH => (0, uH.jsx)("button", {
                                   type: "button",
-                                  className: QU()("DocsVariantChip", {
-                                    Active: BU === UU
+                                  className: SH()("DocsVariantChip", {
+                                    Active: PH === HH
                                   }),
-                                  "aria-pressed": BU === UU,
+                                  "aria-pressed": PH === HH,
                                   onClick: () => {
-                                    (UU => {
-                                      const zU = dy.i[UU];
-                                      XU(zU), ZU({
-                                        ...gU,
-                                        voice: zU
+                                    (HH => {
+                                      const LH = br.i[HH];
+                                      BH(LH), TH({
+                                        ...MH,
+                                        voice: LH
                                       })
-                                    })(UU)
+                                    })(HH)
                                   },
-                                  children: UU
-                                }, UU))), !BU && (0, pU.jsx)("span", {
+                                  children: HH
+                                }, HH))), !PH && (0, uH.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, pU.jsxs)("div", {
+                              }), (0, uH.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, pU.jsxs)("div", {
+                                children: [(0, uH.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, pU.jsx)("div", {
+                                  children: [(0, uH.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, pU.jsx)(Ly.d, {
-                                      display: gU
-                                    }, oU)
-                                  }), (0, pU.jsxs)("form", {
+                                    children: (0, uH.jsx)(kr.e, {
+                                      display: MH
+                                    }, zH)
+                                  }), (0, uH.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: UU => {
-                                      UU.preventDefault(), ZU(gU)
+                                    onSubmit: HH => {
+                                      HH.preventDefault(), TH(MH)
                                     },
-                                    children: [(0, pU.jsx)("input", {
-                                      value: zU,
+                                    children: [(0, uH.jsx)("input", {
+                                      value: LH,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: UU => {
-                                        yU(UU.target.value)
+                                      onChange: HH => {
+                                        rH(HH.target.value)
                                       }
-                                    }), (0, pU.jsxs)("button", {
+                                    }), (0, uH.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, pU.jsx)(tU, {
+                                      children: [(0, uH.jsx)(WH, {
                                         name: "play"
-                                      }), (0, pU.jsx)("span", {
+                                      }), (0, uH.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, pU.jsx)("div", {
+                                  }), (0, uH.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: sy.map((UU => (0, pU.jsx)("button", {
+                                    children: Fr.map((HH => (0, uH.jsx)("button", {
                                       type: "button",
-                                      className: QU()("DocsVariantChip", {
-                                        Active: zU === UU
+                                      className: SH()("DocsVariantChip", {
+                                        Active: LH === HH
                                       }),
                                       onClick: () => {
-                                        var XU;
-                                        yU(XU = UU), ZU({
-                                          ...gU,
-                                          line: XU
+                                        var BH;
+                                        rH(BH = HH), TH({
+                                          ...MH,
+                                          line: BH
                                         })
                                       },
-                                      children: UU
-                                    }, UU)))
-                                  }), (0, pU.jsxs)("label", {
+                                      children: HH
+                                    }, HH)))
+                                  }), (0, uH.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, pU.jsx)("span", {
+                                    children: [(0, uH.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, pU.jsx)("input", {
-                                      value: AU,
+                                    }), (0, uH.jsx)("input", {
+                                      value: hH,
                                       placeholder: "No name",
-                                      onChange: UU => {
-                                        FU(UU.target.value)
+                                      onChange: HH => {
+                                        tH(HH.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, pU.jsx)(vy, {
-                                  synth: UU,
-                                  onChange: zU => {
-                                    const cU = {
-                                      ...UU,
-                                      ...zU
+                                }), (0, uH.jsx)(jr, {
+                                  synth: HH,
+                                  onChange: LH => {
+                                    const AH = {
+                                      ...HH,
+                                      ...LH
                                     };
-                                    XU(cU);
-                                    const yU = {
-                                        ...gU,
-                                        voice: cU
+                                    BH(AH);
+                                    const rH = {
+                                        ...MH,
+                                        voice: AH
                                       },
-                                      QU = performance.now();
-                                    if (QU - IU.current >= Jy) {
-                                      IU.current = QU, aU();
-                                      const UU = (0, ey.g)(yU).plan.blips[0];
-                                      UU && (YU.current = Ky((0, dy.l)(cU), [{
-                                        ...UU,
+                                      SH = performance.now();
+                                    if (SH - YH.current >= ar) {
+                                      YH.current = SH, QH();
+                                      const HH = (0, mr.d)(rH).plan.blips[0];
+                                      HH && (XH.current = Jr((0, br.k)(AH), [{
+                                        ...HH,
                                         atMs: 0
-                                      }], EU))
+                                      }], EH))
                                     }
-                                    window.clearTimeout(NU.current), NU.current = window.setTimeout((() => {
-                                      ZU(kU.current)
-                                    }), xy)
+                                    window.clearTimeout(GH.current), GH.current = window.setTimeout((() => {
+                                      TH(xH.current)
+                                    }), dr)
                                   }
                                 })]
-                              }), (0, pU.jsx)(PU, {
-                                code: RU,
+                              }), (0, uH.jsx)(VH, {
+                                code: UH,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var Ty = zU(5387);
-                          const hy = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            UQ = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            XQ = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${UQ}`, "g"), Ty.n],
+                          var pr = LH(5347);
+                          const yr = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            HS = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            BS = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${HS}`, "g"), pr.j],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, Ty.n]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, pr.j]
                             ];
 
-                          function zQ(UU) {
-                            return `${UU.pageId}#${UU.anchor}`
+                          function LS(HH) {
+                            return `${HH.pageId}#${HH.anchor}`
                           }
-                          let cQ, yQ, QQ;
+                          let AS, rS, SS;
 
-                          function AQ(UU) {
-                            const XU = (0, WU.i)(UU),
-                              zU = new Set;
-                            for (const [, , cU] of XU.matchAll(WU.d)) {
-                              const UU = cU.startsWith("#") ? sU(cU) : null,
-                                XU = UU ? zQ({
-                                  pageId: UU.page.id,
-                                  anchor: UU.anchor
+                          function hS(HH) {
+                            const BH = (0, OH.f)(HH),
+                              LH = new Set;
+                            for (const [, , AH] of BH.matchAll(OH.c)) {
+                              const HH = AH.startsWith("#") ? FH(AH) : null,
+                                BH = HH ? LS({
+                                  pageId: HH.page.id,
+                                  anchor: HH.anchor
                                 }) : null;
-                              null !== XU && (cQ || (cQ = new Set(fU.flatMap((UU => CU(UU.layout) ? vU(UU).sections.map((XU => zQ({
-                                pageId: UU.id,
-                                anchor: XU.heading.anchor
-                              }))) : [])))), cQ).has(XU) && zU.add(XU)
+                              null !== BH && (AS || (AS = new Set(qH.flatMap((HH => oH(HH.layout) ? jH(HH).sections.map((BH => LS({
+                                pageId: HH.id,
+                                anchor: BH.heading.anchor
+                              }))) : [])))), AS).has(BH) && LH.add(BH)
                             }
-                            for (const [, , cU] of XU.matchAll(hy)) {
-                              const UU = NX(cU);
-                              UU && zU.add(zQ(UU))
+                            for (const [, , AH] of BH.matchAll(yr)) {
+                              const HH = GB(AH);
+                              HH && LH.add(LS(HH))
                             }
-                            return zU
+                            return LH
                           }
 
-                          function FQ(UU, XU) {
-                            const zU = new Set,
-                              cU = function(UU) {
-                                return UU.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(UU);
-                            for (const [, yU] of cU.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) zU.add(yU);
-                            for (const [yU, QU] of XQ)
-                              for (const [, UU] of(0, Ty.e)(cU, yU, QU)) XU.has(UU) && zU.add(UU);
-                            return zU
+                          function tS(HH, BH) {
+                            const LH = new Set,
+                              AH = function(HH) {
+                                return HH.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(HH);
+                            for (const [, rH] of AH.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) LH.add(rH);
+                            for (const [rH, SH] of BS)
+                              for (const [, HH] of(0, pr.c)(AH, rH, SH)) BH.has(HH) && LH.add(HH);
+                            return LH
                           }
 
-                          function oQ(UU, XU, zU, cU) {
-                            const yU = UU.get(XU);
-                            yU ? !cU && yU.some((UU => UU.pageId === zU.pageId)) || yU.push(zU) : UU.set(XU, [zU])
+                          function zS(HH, BH, LH, AH) {
+                            const rH = HH.get(BH);
+                            rH ? !AH && rH.some((HH => HH.pageId === LH.pageId)) || rH.push(LH) : HH.set(BH, [LH])
                           }
-                          const DQ = /^[A-Za-z_$][\w$]*$/;
+                          const CS = /^[A-Za-z_$][\w$]*$/;
 
-                          function EQ(UU) {
-                            return DQ.test(UU.name) ? UU.name : "options"
-                          }
-
-                          function YQ(UU, XU) {
-                            const zU = UU.params.map(EQ).join(", ");
-                            return XU ? `${UU.name} = (${zU}) => {\n\t\n}` : `api.${UU.name}(${zU})`
+                          function ES(HH) {
+                            return CS.test(HH.name) ? HH.name : "options"
                           }
 
-                          function NQ(UU) {
+                          function XS(HH, BH) {
+                            const LH = HH.params.map(ES).join(", ");
+                            return BH ? `${HH.name} = (${LH}) => {\n\t\n}` : `api.${HH.name}(${LH})`
+                          }
+
+                          function GS(HH) {
                             let {
-                              method: XU,
-                              isCallback: zU
-                            } = UU;
-                            return (0, pU.jsxs)("div", {
+                              method: BH,
+                              isCallback: LH
+                            } = HH;
+                            return (0, uH.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, pU.jsxs)("span", {
+                              children: [(0, uH.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [zU ? (0, pU.jsxs)(pU.Fragment, {
-                                  children: [(0, pU.jsx)("span", {
+                                children: [LH ? (0, uH.jsxs)(uH.Fragment, {
+                                  children: [(0, uH.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: XU.name
-                                  }), (0, pU.jsx)("span", {
+                                    children: BH.name
+                                  }), (0, uH.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, pU.jsxs)(pU.Fragment, {
-                                  children: [(0, pU.jsx)("span", {
+                                }) : (0, uH.jsxs)(uH.Fragment, {
+                                  children: [(0, uH.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, pU.jsx)("span", {
+                                  }), (0, uH.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: XU.name
-                                  }), (0, pU.jsx)("span", {
+                                    children: BH.name
+                                  }), (0, uH.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), XU.params.map(((UU, zU) => (0, pU.jsxs)(cU.Fragment, {
-                                  children: [zU > 0 && (0, pU.jsx)("span", {
+                                }), BH.params.map(((HH, LH) => (0, uH.jsxs)(AH.Fragment, {
+                                  children: [LH > 0 && (0, uH.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, pU.jsx)("a", {
+                                  }), (0, uH.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${XU.name}-${EQ(UU)}`,
-                                    children: UU.name
+                                    href: `#${BH.name}-${ES(HH)}`,
+                                    children: HH.name
                                   })]
-                                }, UU.name))), (0, pU.jsx)("span", {
+                                }, HH.name))), (0, uH.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: zU ? ") => " : ")"
-                                }), zU && !XU.returns && (0, pU.jsx)("span", {
+                                  children: LH ? ") => " : ")"
+                                }), LH && !BH.returns && (0, uH.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), XU.returns && XU.returns.type && (0, pU.jsxs)("span", {
+                              }), BH.returns && BH.returns.type && (0, uH.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!zU && (0, pU.jsx)("span", {
+                                children: [!LH && (0, uH.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, pU.jsx)(dX, {
-                                  type: XU.returns.type
+                                }), (0, uH.jsx)(bB, {
+                                  type: BH.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function IQ(UU) {
+                          function YS(HH) {
                             let {
-                              title: XU,
-                              references: zU
-                            } = UU;
-                            const yU = (0, cU.useContext)(IX);
-                            return (0, pU.jsxs)("div", {
+                              title: BH,
+                              references: LH
+                            } = HH;
+                            const rH = (0, AH.useContext)(YB);
+                            return (0, uH.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, pU.jsx)("span", {
+                              children: [(0, uH.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: XU
-                              }), zU.map((UU => (0, pU.jsx)(AU.b, {
-                                to: mU(yU, HU(UU.pageId), UU.anchor),
-                                children: UU.label
-                              }, `${UU.pageId}#${UU.anchor}`)))]
+                                children: BH
+                              }), LH.map((HH => (0, uH.jsx)(hH.e, {
+                                to: wH(rH, NH(HH.pageId), HH.anchor),
+                                children: HH.label
+                              }, `${HH.pageId}#${HH.anchor}`)))]
                             })
                           }
 
-                          function pQ(UU) {
-                            var XU, zU;
+                          function uS(HH) {
+                            var BH, LH;
                             let {
-                              pageId: cU,
-                              anchor: yU
-                            } = UU;
-                            const QU = zQ({
-                                pageId: cU,
-                                anchor: yU
+                              pageId: AH,
+                              anchor: rH
+                            } = HH;
+                            const SH = LS({
+                                pageId: AH,
+                                anchor: rH
                               }),
-                              AU = null !== (XU = function() {
-                                if (!QQ) {
-                                  QQ = new Map;
-                                  const cU = new Set(fU.filter((UU => "callbacks" === UU.layout)).flatMap((UU => vU(UU).sections.map((UU => UU.heading.text)))));
-                                  for (const yU of fU)
-                                    if ("article" === yU.layout || "snippets" === yU.layout)
-                                      for (const QU of (0, WU.u)(vU(yU)))
+                              hH = null !== (BH = function() {
+                                if (!SS) {
+                                  SS = new Map;
+                                  const AH = new Set(qH.filter((HH => "callbacks" === HH.layout)).flatMap((HH => jH(HH).sections.map((HH => HH.heading.text)))));
+                                  for (const rH of qH)
+                                    if ("article" === rH.layout || "snippets" === rH.layout)
+                                      for (const SH of (0, OH.v)(jH(rH)))
                                         for (const {
-                                            code: AU
+                                            code: hH
                                           }
-                                          of(0, WU.k)(QU.blocks))
-                                          for (const FU of FQ(AU, cU)) {
-                                            const cU = YX().get(FU);
-                                            if (cU) {
-                                              var UU, XU, zU;
-                                              const AU = {
-                                                pageId: yU.id,
-                                                anchor: null !== (UU = null === (XU = QU.heading) || void 0 === XU ? void 0 : XU.anchor) && void 0 !== UU ? UU : "",
-                                                label: null !== (zU = yU.navTitle) && void 0 !== zU ? zU : yU.title
+                                          of(0, OH.j)(SH.blocks))
+                                          for (const tH of tS(hH, AH)) {
+                                            const AH = XB().get(tH);
+                                            if (AH) {
+                                              var HH, BH, LH;
+                                              const hH = {
+                                                pageId: rH.id,
+                                                anchor: null !== (HH = null === (BH = SH.heading) || void 0 === BH ? void 0 : BH.anchor) && void 0 !== HH ? HH : "",
+                                                label: null !== (LH = rH.navTitle) && void 0 !== LH ? LH : rH.title
                                               };
-                                              oQ(QQ, zQ(cU), AU, !1)
+                                              zS(SS, LS(AH), hH, !1)
                                             }
                                           }
                                 }
-                                return QQ
-                              }().get(QU)) && void 0 !== XU ? XU : [],
-                              FU = null !== (zU = function() {
-                                if (!yQ) {
-                                  yQ = new Map;
-                                  const UU = HU("changelog");
-                                  for (const XU of vU(UU).sections) {
-                                    const zU = new Set(XU.blocks.flatMap((UU => [...AQ(UU)])));
-                                    for (const cU of zU) {
-                                      const zU = {
-                                        pageId: UU.id,
-                                        anchor: XU.heading.anchor,
-                                        label: XU.heading.text
+                                return SS
+                              }().get(SH)) && void 0 !== BH ? BH : [],
+                              tH = null !== (LH = function() {
+                                if (!rS) {
+                                  rS = new Map;
+                                  const HH = NH("changelog");
+                                  for (const BH of jH(HH).sections) {
+                                    const LH = new Set(BH.blocks.flatMap((HH => [...hS(HH)])));
+                                    for (const AH of LH) {
+                                      const LH = {
+                                        pageId: HH.id,
+                                        anchor: BH.heading.anchor,
+                                        label: BH.heading.text
                                       };
-                                      oQ(yQ, cU, zU, !0)
+                                      zS(rS, AH, LH, !0)
                                     }
                                   }
                                 }
-                                return yQ
-                              }().get(QU)) && void 0 !== zU ? zU : [];
-                            return 0 === AU.length && 0 === FU.length ? null : (0, pU.jsxs)("footer", {
+                                return rS
+                              }().get(SH)) && void 0 !== LH ? LH : [];
+                            return 0 === hH.length && 0 === tH.length ? null : (0, uH.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [AU.length > 0 && (0, pU.jsx)(IQ, {
+                              children: [hH.length > 0 && (0, uH.jsx)(YS, {
                                 title: "Used in",
-                                references: AU
-                              }), FU.length > 0 && (0, pU.jsx)(IQ, {
+                                references: hH
+                              }), tH.length > 0 && (0, uH.jsx)(YS, {
                                 title: "Changelog",
-                                references: FU
+                                references: tH
                               })]
                             })
                           }
 
-                          function aQ(UU) {
+                          function QS(HH) {
                             let {
-                              method: XU,
-                              pageId: zU,
-                              anchor: cU,
-                              isCallback: yU
-                            } = UU;
-                            const QU = yU ? void 0 : FX().get(XU.name),
-                              AU = XU.description.length > 0 || null === QU || void 0 === QU || !QU.description ? XU.description : (0, WU.y)(QU.description);
-                            return (0, pU.jsxs)("article", {
+                              method: BH,
+                              pageId: LH,
+                              anchor: AH,
+                              isCallback: rH
+                            } = HH;
+                            const SH = rH ? void 0 : tB().get(BH.name),
+                              hH = BH.description.length > 0 || null === SH || void 0 === SH || !SH.description ? BH.description : (0, OH.D)(SH.description);
+                            return (0, uH.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, pU.jsxs)("header", {
+                              children: [(0, uH.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, pU.jsx)(Dz, {
+                                children: [(0, uH.jsx)(CL, {
                                   level: 2,
-                                  text: XU.name,
-                                  anchor: cU,
+                                  text: BH.name,
+                                  anchor: AH,
                                   className: "DocsCardTitle"
-                                }), (0, pU.jsx)(GU, {
-                                  text: YQ(XU, yU),
-                                  label: yU ? "Copy handler" : "Copy call",
+                                }), (0, uH.jsx)(vH, {
+                                  text: XS(BH, rH),
+                                  label: rH ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, pU.jsx)(NQ, {
-                                method: XU,
-                                isCallback: yU
-                              }), QU && null !== QU.deprecation && (0, pU.jsxs)("aside", {
+                              }), (0, uH.jsx)(GS, {
+                                method: BH,
+                                isCallback: rH
+                              }), SH && null !== SH.deprecation && (0, uH.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, pU.jsx)("strong", {
+                                children: [(0, uH.jsx)("strong", {
                                   children: "Deprecated"
-                                }), QU.deprecation && (0, pU.jsxs)(pU.Fragment, {
-                                  children: [": ", (0, pU.jsx)(RX, {
-                                    text: (FU = QU.deprecation, (0, Ty.z)(FU, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, Ty.j)("`\\w"), (UU => {
-                                      let [XU] = UU;
-                                      return YX().has(XU) ? `\`${XU}\`` : XU
+                                }), SH.deprecation && (0, uH.jsxs)(uH.Fragment, {
+                                  children: [": ", (0, uH.jsx)(UB, {
+                                    text: (tH = SH.deprecation, (0, pr.o)(tH, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, pr.i)("`\\w"), (HH => {
+                                      let [BH] = HH;
+                                      return XB().has(BH) ? `\`${BH}\`` : BH
                                     })))
                                   })]
                                 })]
-                              }), AU.length > 0 && (0, pU.jsx)("div", {
+                              }), hH.length > 0 && (0, uH.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, pU.jsx)(Iz, {
-                                  blocks: AU
+                                children: (0, uH.jsx)(YL, {
+                                  blocks: hH
                                 })
-                              }), XU.params.length > 0 && (0, pU.jsxs)("section", {
+                              }), BH.params.length > 0 && (0, uH.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, pU.jsx)("h3", {
+                                children: [(0, uH.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, pU.jsx)("dl", {
+                                }), (0, uH.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: XU.params.map((UU => (0, pU.jsxs)("div", {
-                                    id: `${XU.name}-${EQ(UU)}`,
+                                  children: BH.params.map((HH => (0, uH.jsxs)("div", {
+                                    id: `${BH.name}-${ES(HH)}`,
                                     className: "DocsParam",
-                                    children: [(0, pU.jsxs)("dt", {
-                                      children: [(0, pU.jsx)("code", {
+                                    children: [(0, uH.jsxs)("dt", {
+                                      children: [(0, uH.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: UU.name
-                                      }), (0, pU.jsx)(dX, {
-                                        type: UU.type
+                                        children: HH.name
+                                      }), (0, uH.jsx)(bB, {
+                                        type: HH.type
                                       })]
-                                    }), UU.description && (0, pU.jsx)("dd", {
-                                      children: (0, pU.jsx)(RX, {
-                                        text: UU.description
+                                    }), HH.description && (0, uH.jsx)("dd", {
+                                      children: (0, uH.jsx)(UB, {
+                                        text: HH.description
                                       })
                                     })]
-                                  }, UU.name)))
+                                  }, HH.name)))
                                 })]
-                              }), XU.returns && (XU.returns.type || XU.returns.description.length > 0) && (0, pU.jsxs)("section", {
+                              }), BH.returns && (BH.returns.type || BH.returns.description.length > 0) && (0, uH.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, pU.jsx)("h3", {
+                                children: [(0, uH.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, pU.jsxs)("div", {
+                                }), (0, uH.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [XU.returns.type && (0, pU.jsx)(dX, {
-                                    type: XU.returns.type
-                                  }), XU.returns.description.length > 0 && (0, pU.jsx)("div", {
+                                  children: [BH.returns.type && (0, uH.jsx)(bB, {
+                                    type: BH.returns.type
+                                  }), BH.returns.description.length > 0 && (0, uH.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, pU.jsx)(Iz, {
-                                      blocks: XU.returns.description
+                                    children: (0, uH.jsx)(YL, {
+                                      blocks: BH.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, pU.jsx)(pQ, {
-                                pageId: zU,
-                                anchor: cU
+                              }), (0, uH.jsx)(uS, {
+                                pageId: LH,
+                                anchor: AH
                               })]
                             });
-                            var FU
+                            var tH
                           }
 
-                          function tQ(UU) {
-                            var XU;
-                            return null !== UU.defaultValue && "undefined" !== UU.defaultValue ? UU.defaultValue : null !== (XU = UU.example) && void 0 !== XU ? XU : "value"
+                          function WS(HH) {
+                            var BH;
+                            return null !== HH.defaultValue && "undefined" !== HH.defaultValue ? HH.defaultValue : null !== (BH = HH.example) && void 0 !== BH ? BH : "value"
                           }
 
-                          function gQ(UU) {
+                          function MS(HH) {
                             let {
-                              setting: XU,
-                              pageId: zU,
-                              anchor: cU,
-                              setterSnippet: yU
-                            } = UU;
-                            const QU = null === XU.defaultValue ? null : gX(XU.defaultValue);
-                            return (0, pU.jsxs)("article", {
+                              setting: BH,
+                              pageId: LH,
+                              anchor: AH,
+                              setterSnippet: rH
+                            } = HH;
+                            const SH = null === BH.defaultValue ? null : MB(BH.defaultValue);
+                            return (0, uH.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, pU.jsxs)("header", {
+                              children: [(0, uH.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, pU.jsx)(Dz, {
+                                children: [(0, uH.jsx)(CL, {
                                   level: 2,
-                                  text: XU.name,
-                                  anchor: cU,
+                                  text: BH.name,
+                                  anchor: AH,
                                   className: "DocsCardTitle"
-                                }), (0, pU.jsx)(GU, {
-                                  text: yU(XU.name, tQ(XU)),
+                                }), (0, uH.jsx)(vH, {
+                                  text: rH(BH.name, WS(BH)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, pU.jsxs)("dl", {
+                              }), (0, uH.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, pU.jsxs)("div", {
-                                  children: [(0, pU.jsx)("dt", {
+                                children: [(0, uH.jsxs)("div", {
+                                  children: [(0, uH.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, pU.jsx)("dd", {
-                                    children: (0, pU.jsx)(dX, {
-                                      type: XU.type
+                                  }), (0, uH.jsx)("dd", {
+                                    children: (0, uH.jsx)(bB, {
+                                      type: BH.type
                                     })
                                   })]
-                                }), null !== XU.defaultValue && (0, pU.jsxs)("div", {
-                                  children: [(0, pU.jsx)("dt", {
+                                }), null !== BH.defaultValue && (0, uH.jsxs)("div", {
+                                  children: [(0, uH.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, pU.jsx)("dd", {
-                                    children: (0, pU.jsxs)("code", {
+                                  }), (0, uH.jsx)("dd", {
+                                    children: (0, uH.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [QU && (0, pU.jsx)(kX, {
-                                        colour: QU
-                                      }), XU.defaultValue]
+                                      children: [SH && (0, uH.jsx)(xB, {
+                                        colour: SH
+                                      }), BH.defaultValue]
                                     })
                                   })]
-                                }), null !== XU.example && (0, pU.jsxs)("div", {
-                                  children: [(0, pU.jsx)("dt", {
+                                }), null !== BH.example && (0, uH.jsxs)("div", {
+                                  children: [(0, uH.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, pU.jsx)("dd", {
-                                    children: (0, pU.jsx)("code", {
+                                  }), (0, uH.jsx)("dd", {
+                                    children: (0, uH.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: XU.example
+                                      children: BH.example
                                     })
                                   })]
                                 })]
-                              }), XU.description.length > 0 && (0, pU.jsx)("div", {
+                              }), BH.description.length > 0 && (0, uH.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, pU.jsx)(Iz, {
-                                  blocks: XU.description
+                                children: (0, uH.jsx)(YL, {
+                                  blocks: BH.description
                                 })
-                              }), (0, pU.jsx)(pQ, {
-                                pageId: zU,
-                                anchor: cU
+                              }), (0, uH.jsx)(uS, {
+                                pageId: LH,
+                                anchor: AH
                               })]
                             })
                           }
 
-                          function kQ(UU) {
+                          function xS(HH) {
                             let {
-                              section: XU
-                            } = UU;
-                            return (0, pU.jsxs)("article", {
+                              section: BH
+                            } = HH;
+                            return (0, uH.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, pU.jsx)(Dz, {
+                              children: [(0, uH.jsx)(CL, {
                                 level: 2,
-                                text: XU.heading.text,
-                                anchor: XU.heading.anchor,
+                                text: BH.heading.text,
+                                anchor: BH.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, pU.jsx)("div", {
+                              }), (0, uH.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, pU.jsx)(Iz, {
-                                  blocks: XU.blocks
+                                children: (0, uH.jsx)(YL, {
+                                  blocks: BH.blocks
                                 })
                               })]
                             })
                           }
 
-                          function GQ(UU) {
+                          function vS(HH) {
                             let {
-                              section: XU
-                            } = UU;
-                            return (0, pU.jsxs)("section", {
+                              section: BH
+                            } = HH;
+                            return (0, uH.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, pU.jsx)(Dz, {
-                                level: XU.heading.level,
-                                text: XU.heading.text,
-                                anchor: XU.heading.anchor
-                              }), (0, pU.jsx)(Iz, {
-                                blocks: XU.blocks
+                              children: [(0, uH.jsx)(CL, {
+                                level: BH.heading.level,
+                                text: BH.heading.text,
+                                anchor: BH.heading.anchor
+                              }), (0, uH.jsx)(YL, {
+                                blocks: BH.blocks
                               })]
                             })
                           }
-                          const BQ = {
+                          const PS = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4857,337 +4857,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function ZQ(UU) {
+                          function TS(HH) {
                             let {
-                              page: XU,
-                              section: zU
-                            } = UU;
-                            if ("methods" === XU.layout || "callbacks" === XU.layout) return (0, pU.jsx)(aQ, {
-                              method: Pz(zU),
-                              pageId: XU.id,
-                              anchor: zU.heading.anchor,
-                              isCallback: "callbacks" === XU.layout
+                              page: BH,
+                              section: LH
+                            } = HH;
+                            if ("methods" === BH.layout || "callbacks" === BH.layout) return (0, uH.jsx)(QS, {
+                              method: VL(LH),
+                              pageId: BH.id,
+                              anchor: LH.heading.anchor,
+                              isCallback: "callbacks" === BH.layout
                             });
-                            if ("settings" === XU.layout) {
-                              const UU = function(UU) {
-                                const XU = {
-                                  name: UU.heading.text,
+                            if ("settings" === BH.layout) {
+                              const HH = function(HH) {
+                                const BH = {
+                                  name: HH.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const cU of UU.blocks) {
-                                  var zU;
-                                  if (Rz(cU)) continue;
-                                  const UU = "paragraph" === cU.kind ? cU.text.match(Wz) : null;
-                                  if (!UU) {
-                                    XU.description.push(cU);
+                                for (const AH of HH.blocks) {
+                                  var LH;
+                                  if (UL(AH)) continue;
+                                  const HH = "paragraph" === AH.kind ? AH.text.match(OL) : null;
+                                  if (!HH) {
+                                    BH.description.push(AH);
                                     continue
                                   }
-                                  const yU = null !== (zU = Zz(UU[2])) && void 0 !== zU ? zU : UU[2];
-                                  "Type" === UU[1] ? XU.type = yU : "Default" === UU[1] ? XU.defaultValue = yU : "" !== yU && (XU.example = yU)
+                                  const rH = null !== (LH = TL(HH[2])) && void 0 !== LH ? LH : HH[2];
+                                  "Type" === HH[1] ? BH.type = rH : "Default" === HH[1] ? BH.defaultValue = rH : "" !== rH && (BH.example = rH)
                                 }
-                                return XU.type ? XU : null
-                              }(zU);
-                              if (UU) return (0, pU.jsx)(gQ, {
-                                setting: UU,
-                                pageId: XU.id,
-                                anchor: zU.heading.anchor,
-                                setterSnippet: XU.setterSnippet
+                                return BH.type ? BH : null
+                              }(LH);
+                              if (HH) return (0, uH.jsx)(MS, {
+                                setting: HH,
+                                pageId: BH.id,
+                                anchor: LH.heading.anchor,
+                                setterSnippet: BH.setterSnippet
                               })
                             }
-                            return "snippets" === XU.layout ? (0, pU.jsx)(kQ, {
-                              section: zU
-                            }) : "changelog" === XU.layout ? (0, pU.jsxs)("section", {
+                            return "snippets" === BH.layout ? (0, uH.jsx)(xS, {
+                              section: LH
+                            }) : "changelog" === BH.layout ? (0, uH.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, pU.jsx)("div", {
+                              children: [(0, uH.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, pU.jsx)(Dz, {
+                                children: (0, uH.jsx)(CL, {
                                   level: 2,
-                                  text: zU.heading.text,
-                                  anchor: zU.heading.anchor
+                                  text: LH.heading.text,
+                                  anchor: LH.heading.anchor
                                 })
-                              }), (0, pU.jsx)("div", {
+                              }), (0, uH.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, pU.jsx)(Iz, {
-                                  blocks: dz(zU.blocks)
+                                children: (0, uH.jsx)(YL, {
+                                  blocks: bL(LH.blocks)
                                 })
                               })]
-                            }) : XU.gallery ? (0, pU.jsxs)("section", {
+                            }) : BH.gallery ? (0, uH.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, pU.jsx)(Dz, {
-                                level: zU.heading.level,
-                                text: zU.heading.text,
-                                anchor: zU.heading.anchor
-                              }), (0, pU.jsx)(Lc, {
-                                kind: XU.gallery,
-                                content: vU(XU),
-                                blocks: zU.blocks
+                              children: [(0, uH.jsx)(CL, {
+                                level: LH.heading.level,
+                                text: LH.heading.text,
+                                anchor: LH.heading.anchor
+                              }), (0, uH.jsx)(kA, {
+                                kind: BH.gallery,
+                                content: jH(BH),
+                                blocks: LH.blocks
                               })]
-                            }) : (0, pU.jsx)(GQ, {
-                              section: zU
+                            }) : (0, uH.jsx)(vS, {
+                              section: LH
                             })
                           }
 
-                          function RQ(UU) {
+                          function US(HH) {
                             let {
-                              page: XU,
-                              onTocChange: zU
-                            } = UU;
-                            const yU = vU(XU),
-                              [QU, AU] = (0, cU.useState)(""),
-                              FU = "article" !== XU.layout,
-                              oU = tz(XU.gallery) ? XU.gallery : null,
-                              DU = null !== oU,
-                              EU = QU.trim().toLowerCase(),
-                              YU = (0, cU.useRef)(null),
-                              NU = (0, cU.useCallback)((UU => {
-                                var XU;
-                                null === (XU = YU.current) || void 0 === XU || XU.preview(UU)
+                              page: BH,
+                              onTocChange: LH
+                            } = HH;
+                            const rH = jH(BH),
+                              [SH, hH] = (0, AH.useState)(""),
+                              tH = "article" !== BH.layout,
+                              zH = WL(BH.gallery) ? BH.gallery : null,
+                              CH = null !== zH,
+                              EH = SH.trim().toLowerCase(),
+                              XH = (0, AH.useRef)(null),
+                              GH = (0, AH.useCallback)((HH => {
+                                var BH;
+                                null === (BH = XH.current) || void 0 === BH || BH.preview(HH)
                               }), []),
-                              IU = (0, cU.useMemo)((() => {
-                                if (!XU.hasParticlePlayground) return [];
-                                const UU = wz(yU.intro).find((UU => "names" === UU.kind && !UU.names.some((UU => null !== Mz(UU.name)))));
-                                return "names" === (null === UU || void 0 === UU ? void 0 : UU.kind) ? UU.names.map((UU => UU.name)) : []
-                              }), [XU, yU]),
-                              aU = (0, cU.useMemo)((() => {
-                                if (!XU.hasTextPlayground) return [];
-                                const UU = yU.sections.flatMap((UU => UU.blocks.flatMap((UU => {
-                                  var XU;
-                                  return (null !== (XU = Cz(UU)) && void 0 !== XU ? XU : []).flatMap((UU => MX(UU.name) ? [UU.name] : []))
+                              YH = (0, AH.useMemo)((() => {
+                                if (!BH.hasParticlePlayground) return [];
+                                const HH = IL(rH.intro).find((HH => "names" === HH.kind && !HH.names.some((HH => null !== RL(HH.name)))));
+                                return "names" === (null === HH || void 0 === HH ? void 0 : HH.kind) ? HH.names.map((HH => HH.name)) : []
+                              }), [BH, rH]),
+                              QH = (0, AH.useMemo)((() => {
+                                if (!BH.hasTextPlayground) return [];
+                                const HH = rH.sections.flatMap((HH => HH.blocks.flatMap((HH => {
+                                  var BH;
+                                  return (null !== (BH = oL(HH)) && void 0 !== BH ? BH : []).flatMap((HH => RB(HH.name) ? [HH.name] : []))
                                 }))));
-                                return [...new Set(UU)]
-                              }), [XU, yU]),
-                              tU = (0, cU.useMemo)((() => EU ? yU.sections.filter((UU => function(UU, XU) {
-                                return !!UU.heading.text.toLowerCase().includes(XU) || UU.blocks.some((UU => (0, WU.i)(UU).toLowerCase().includes(XU)))
-                              }(UU, EU))) : yU.sections), [yU, EU]),
-                              gU = (0, cU.useMemo)((() => function(UU, XU) {
-                                return "article" !== UU.layout ? XU.map((UU => ({
-                                  anchor: UU.heading.anchor,
-                                  text: UU.heading.text,
+                                return [...new Set(HH)]
+                              }), [BH, rH]),
+                              WH = (0, AH.useMemo)((() => EH ? rH.sections.filter((HH => function(HH, BH) {
+                                return !!HH.heading.text.toLowerCase().includes(BH) || HH.blocks.some((HH => (0, OH.f)(HH).toLowerCase().includes(BH)))
+                              }(HH, EH))) : rH.sections), [rH, EH]),
+                              MH = (0, AH.useMemo)((() => function(HH, BH) {
+                                return "article" !== HH.layout ? BH.map((HH => ({
+                                  anchor: HH.heading.anchor,
+                                  text: HH.heading.text,
                                   level: 2
-                                }))) : XU.flatMap((UU => {
-                                  const XU = UU.blocks.flatMap((UU => "heading" === UU.kind && 3 === UU.level ? [{
-                                    anchor: UU.anchor,
-                                    text: UU.text,
+                                }))) : BH.flatMap((HH => {
+                                  const BH = HH.blocks.flatMap((HH => "heading" === HH.kind && 3 === HH.level ? [{
+                                    anchor: HH.anchor,
+                                    text: HH.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: UU.heading.anchor,
-                                    text: UU.heading.text,
+                                    anchor: HH.heading.anchor,
+                                    text: HH.heading.text,
                                     level: 2
-                                  }, ...XU]
+                                  }, ...BH]
                                 }))
-                              }(XU, tU)), [XU, tU]);
-                            return (0, cU.useEffect)((() => {
-                              zU(gU)
-                            }), [gU, zU]), (0, pU.jsxs)("article", {
+                              }(BH, WH)), [BH, WH]);
+                            return (0, AH.useEffect)((() => {
+                              LH(MH)
+                            }), [MH, LH]), (0, uH.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, pU.jsxs)("header", {
+                              children: [(0, uH.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, pU.jsx)("h1", {
+                                children: [(0, uH.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: yU.title || XU.title
-                                }), (0, pU.jsx)("p", {
+                                  children: rH.title || BH.title
+                                }), (0, uH.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: XU.summary
-                                }), (0, pU.jsx)(jc, {
-                                  page: XU
-                                }), FU && (0, pU.jsx)("div", {
+                                  children: BH.summary
+                                }), (0, uH.jsx)(sA, {
+                                  page: BH
+                                }), tH && (0, uH.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, pU.jsxs)("span", {
-                                    children: [(0, pU.jsx)("strong", {
-                                      children: yU.sections.length
-                                    }), " ", BQ[XU.layout]]
+                                  children: (0, uH.jsxs)("span", {
+                                    children: [(0, uH.jsx)("strong", {
+                                      children: rH.sections.length
+                                    }), " ", PS[BH.layout]]
                                   })
                                 })]
-                              }), "" === XU.slug && (0, pU.jsx)(Cc, {}), oU && (0, pU.jsx)(Sc, {
-                                kind: oU
-                              }, oU), XU.hasParticlePlayground && (0, pU.jsx)(oy, {
-                                ref: YU,
-                                textures: IU
-                              }), !DU && yU.intro.length > 0 && (0, pU.jsx)("div", {
+                              }), "" === BH.slug && (0, uH.jsx)(oA, {}), zH && (0, uH.jsx)(KA, {
+                                kind: zH
+                              }, zH), BH.hasParticlePlayground && (0, uH.jsx)(zr, {
+                                ref: XH,
+                                textures: YH
+                              }), !CH && rH.intro.length > 0 && (0, uH.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: XU.gallery ? (0, pU.jsx)(gc.Provider, {
-                                  value: XU.hasParticlePlayground ? NU : null,
-                                  children: (0, pU.jsx)(Lc, {
-                                    kind: XU.gallery,
-                                    content: yU,
-                                    blocks: yU.intro
+                                children: BH.gallery ? (0, uH.jsx)(MA.Provider, {
+                                  value: BH.hasParticlePlayground ? GH : null,
+                                  children: (0, uH.jsx)(kA, {
+                                    kind: BH.gallery,
+                                    content: rH,
+                                    blocks: rH.intro
                                   })
-                                }) : (0, pU.jsx)(Iz, {
-                                  blocks: dz(yU.intro)
+                                }) : (0, uH.jsx)(YL, {
+                                  blocks: bL(rH.intro)
                                 })
-                              }), XU.hasTextPlayground && (0, pU.jsx)(Wy, {
-                                fontAwesomeIcons: aU
-                              }), XU.hasVoicePlayground && (0, pU.jsx)(by, {}), XU.childPageIds && (0, pU.jsx)(Cc, {
-                                cards: XU.childPageIds.map((UU => ({
-                                  pageId: UU
+                              }), BH.hasTextPlayground && (0, uH.jsx)(Or, {
+                                fontAwesomeIcons: QH
+                              }), BH.hasVoicePlayground && (0, uH.jsx)(ir, {}), BH.childPageIds && (0, uH.jsx)(oA, {
+                                cards: BH.childPageIds.map((HH => ({
+                                  pageId: HH
                                 }))),
-                                label: XU.title
-                              }), FU && (0, pU.jsx)(Gz, {
+                                label: BH.title
+                              }), tH && (0, uH.jsx)(vL, {
                                 className: "DocsFilterBar",
-                                value: QU,
-                                placeholder: `Filter ${yU.sections.length} ${BQ[XU.layout]}\u2026`,
-                                label: `Filter ${BQ[XU.layout]}`,
-                                onChange: AU,
-                                count: EU ? {
-                                  visible: tU.length,
-                                  total: yU.sections.length
+                                value: SH,
+                                placeholder: `Filter ${rH.sections.length} ${PS[BH.layout]}\u2026`,
+                                label: `Filter ${PS[BH.layout]}`,
+                                onChange: hH,
+                                count: EH ? {
+                                  visible: WH.length,
+                                  total: rH.sections.length
                                 } : null
-                              }), !DU && (0, pU.jsxs)("div", {
-                                className: `DocsSections Layout-${XU.layout}`,
-                                children: [tU.map((UU => (0, pU.jsx)(ZQ, {
-                                  page: XU,
-                                  section: UU
-                                }, UU.heading.anchor))), 0 === tU.length && (0, pU.jsxs)("p", {
+                              }), !CH && (0, uH.jsxs)("div", {
+                                className: `DocsSections Layout-${BH.layout}`,
+                                children: [WH.map((HH => (0, uH.jsx)(TS, {
+                                  page: BH,
+                                  section: HH
+                                }, HH.heading.anchor))), 0 === WH.length && (0, uH.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", BQ[XU.layout], " match \u201c", QU, "\u201d."]
+                                  children: ["No ", PS[BH.layout], " match \u201c", SH, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const PQ = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const VS = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function WQ(UU) {
+                          function OS(HH) {
                             let {
-                              entry: XU,
-                              isActive: zU,
-                              onNavigate: cU,
-                              label: yU,
-                              children: AU
-                            } = UU;
-                            return (0, pU.jsx)("a", {
-                              href: `#${XU.anchor}`,
-                              "aria-label": yU,
-                              className: QU()(`Level${XU.level}`, {
-                                Active: zU
+                              entry: BH,
+                              isActive: LH,
+                              onNavigate: AH,
+                              label: rH,
+                              children: hH
+                            } = HH;
+                            return (0, uH.jsx)("a", {
+                              href: `#${BH.anchor}`,
+                              "aria-label": rH,
+                              className: SH()(`Level${BH.level}`, {
+                                Active: LH
                               }),
-                              "aria-current": zU ? "location" : void 0,
-                              onClick: UU => {
-                                UU.preventDefault(), cU(XU.anchor)
+                              "aria-current": LH ? "location" : void 0,
+                              onClick: HH => {
+                                HH.preventDefault(), AH(BH.anchor)
                               },
-                              children: AU
+                              children: hH
                             })
                           }
 
-                          function dQ(UU) {
+                          function bS(HH) {
                             let {
-                              toc: XU,
-                              activeAnchor: zU,
-                              onNavigate: yU
-                            } = UU;
-                            const AU = Math.max(0, XU.findIndex((UU => UU.anchor === zU))),
-                              FU = (0, cU.useRef)(null),
-                              oU = (0, cU.useRef)(!1);
-                            (0, cU.useEffect)((() => {
-                              var UU, zU;
-                              const cU = null === (UU = FU.current) || void 0 === UU ? void 0 : UU.closest(".DocsToc"),
-                                yU = null === (zU = FU.current) || void 0 === zU ? void 0 : zU.querySelector(".DocsTimelineNotch.Active");
-                              if (!cU || !yU) return;
-                              let QU = 0;
-                              if (AU === XU.length - 1) QU = cU.scrollHeight;
-                              else if (AU > 0) {
-                                const UU = cU.getBoundingClientRect(),
-                                  XU = yU.getBoundingClientRect();
-                                QU = cU.scrollTop + XU.top + XU.height / 2 - (UU.top + cU.clientHeight / 2)
+                              toc: BH,
+                              activeAnchor: LH,
+                              onNavigate: rH
+                            } = HH;
+                            const hH = Math.max(0, BH.findIndex((HH => HH.anchor === LH))),
+                              tH = (0, AH.useRef)(null),
+                              zH = (0, AH.useRef)(!1);
+                            (0, AH.useEffect)((() => {
+                              var HH, LH;
+                              const AH = null === (HH = tH.current) || void 0 === HH ? void 0 : HH.closest(".DocsToc"),
+                                rH = null === (LH = tH.current) || void 0 === LH ? void 0 : LH.querySelector(".DocsTimelineNotch.Active");
+                              if (!AH || !rH) return;
+                              let SH = 0;
+                              if (hH === BH.length - 1) SH = AH.scrollHeight;
+                              else if (hH > 0) {
+                                const HH = AH.getBoundingClientRect(),
+                                  BH = rH.getBoundingClientRect();
+                                SH = AH.scrollTop + BH.top + BH.height / 2 - (HH.top + AH.clientHeight / 2)
                               }
-                              cU.scrollTo({
-                                top: QU,
-                                behavior: oU.current ? "smooth" : "auto"
-                              }), oU.current = !0
-                            }), [AU, XU.length]);
-                            const DU = [];
-                            return XU.forEach(((UU, XU) => {
-                              var zU, cU, yU;
-                              const QU = function(UU) {
-                                  const XU = UU.trim().match(PQ);
-                                  return XU ? {
-                                    day: XU[1],
-                                    month: `${XU[2]} ${XU[3]}`
+                              AH.scrollTo({
+                                top: SH,
+                                behavior: zH.current ? "smooth" : "auto"
+                              }), zH.current = !0
+                            }), [hH, BH.length]);
+                            const CH = [];
+                            return BH.forEach(((HH, BH) => {
+                              var LH, AH, rH;
+                              const SH = function(HH) {
+                                  const BH = HH.trim().match(VS);
+                                  return BH ? {
+                                    day: BH[1],
+                                    month: `${BH[2]} ${BH[3]}`
                                   } : null
-                                }(UU.text),
-                                AU = null !== (zU = null === QU || void 0 === QU ? void 0 : QU.month) && void 0 !== zU ? zU : null;
-                              null !== AU && (null === (cU = DU.at(-1)) || void 0 === cU ? void 0 : cU.month) === AU || DU.push({
-                                month: AU,
+                                }(HH.text),
+                                hH = null !== (LH = null === SH || void 0 === SH ? void 0 : SH.month) && void 0 !== LH ? LH : null;
+                              null !== hH && (null === (AH = CH.at(-1)) || void 0 === AH ? void 0 : AH.month) === hH || CH.push({
+                                month: hH,
                                 entries: []
-                              }), DU.at(-1).entries.push({
-                                entry: UU,
-                                day: null !== (yU = null === QU || void 0 === QU ? void 0 : QU.day) && void 0 !== yU ? yU : null,
-                                index: XU
+                              }), CH.at(-1).entries.push({
+                                entry: HH,
+                                day: null !== (rH = null === SH || void 0 === SH ? void 0 : SH.day) && void 0 !== rH ? rH : null,
+                                index: BH
                               })
-                            })), (0, pU.jsx)("ol", {
-                              ref: FU,
+                            })), (0, uH.jsx)("ol", {
+                              ref: tH,
                               className: "DocsTimeline",
-                              children: DU.map((UU => {
+                              children: CH.map((HH => {
                                 let {
-                                  month: XU,
-                                  entries: zU
-                                } = UU;
-                                return (0, pU.jsxs)("li", {
+                                  month: BH,
+                                  entries: LH
+                                } = HH;
+                                return (0, uH.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [XU && (0, pU.jsx)("span", {
+                                  children: [BH && (0, uH.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: XU
-                                  }), (0, pU.jsx)("ol", {
-                                    children: zU.map((UU => {
+                                    children: BH
+                                  }), (0, uH.jsx)("ol", {
+                                    children: LH.map((HH => {
                                       let {
-                                        entry: XU,
-                                        day: zU,
-                                        index: cU
-                                      } = UU;
-                                      return (0, pU.jsx)("li", {
-                                        className: QU()("DocsTimelineNotch", {
-                                          Passed: cU < AU,
-                                          Active: cU === AU
+                                        entry: BH,
+                                        day: LH,
+                                        index: AH
+                                      } = HH;
+                                      return (0, uH.jsx)("li", {
+                                        className: SH()("DocsTimelineNotch", {
+                                          Passed: AH < hH,
+                                          Active: AH === hH
                                         }),
-                                        children: (0, pU.jsx)(WQ, {
-                                          entry: XU,
-                                          isActive: cU === AU,
-                                          onNavigate: yU,
-                                          label: XU.text,
-                                          children: (0, pU.jsx)("span", {
+                                        children: (0, uH.jsx)(OS, {
+                                          entry: BH,
+                                          isActive: AH === hH,
+                                          onNavigate: rH,
+                                          label: BH.text,
+                                          children: (0, uH.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== zU && void 0 !== zU ? zU : XU.text
+                                            children: null !== LH && void 0 !== LH ? LH : BH.text
                                           })
                                         })
-                                      }, XU.anchor)
+                                      }, BH.anchor)
                                     }))
                                   })]
-                                }, zU[0].entry.anchor)
+                                }, LH[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function LQ(UU) {
+                          function kS(HH) {
                             let {
-                              isChangelog: XU,
-                              toc: zU,
-                              activeAnchor: cU,
-                              onNavigate: yU
-                            } = UU;
-                            return 0 === zU.length ? null : (0, pU.jsxs)(pU.Fragment, {
-                              children: [(0, pU.jsx)("div", {
+                              isChangelog: BH,
+                              toc: LH,
+                              activeAnchor: AH,
+                              onNavigate: rH
+                            } = HH;
+                            return 0 === LH.length ? null : (0, uH.jsxs)(uH.Fragment, {
+                              children: [(0, uH.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: XU ? "Updates" : "On this page"
-                              }), XU ? (0, pU.jsx)(dQ, {
-                                toc: zU,
-                                activeAnchor: cU,
-                                onNavigate: yU
-                              }) : (0, pU.jsx)("ul", {
-                                children: zU.map((UU => (0, pU.jsx)("li", {
-                                  children: (0, pU.jsx)(WQ, {
-                                    entry: UU,
-                                    isActive: UU.anchor === cU,
-                                    onNavigate: yU,
-                                    children: UU.text.replace(/`/g, "")
+                                children: BH ? "Updates" : "On this page"
+                              }), BH ? (0, uH.jsx)(bS, {
+                                toc: LH,
+                                activeAnchor: AH,
+                                onNavigate: rH
+                              }) : (0, uH.jsx)("ul", {
+                                children: LH.map((HH => (0, uH.jsx)("li", {
+                                  children: (0, uH.jsx)(OS, {
+                                    entry: HH,
+                                    isActive: HH.anchor === AH,
+                                    onNavigate: rH,
+                                    children: HH.text.replace(/`/g, "")
                                   })
-                                }, UU.anchor)))
+                                }, HH.anchor)))
                               })]
                             })
                           }
-                          const eQ = {
+                          const mS = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5195,7 +5195,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            CQ = {
+                            oS = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5203,1086 +5203,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            wQ = 20,
-                            qQ = 10,
-                            OQ = 40,
-                            SQ = 120;
-                          let rQ;
+                            IS = 20,
+                            fS = 10,
+                            lS = 40,
+                            KS = 120;
+                          let cS;
 
-                          function uQ(UU) {
-                            const XU = UU.gallery;
-                            if (!XU) return [];
-                            if (tz(XU)) return function(UU) {
-                              return kz(UU).entries.map((UU => UU.name))
-                            }(XU).map((zU => ({
-                              page: UU,
-                              anchor: Oz(XU, zU),
-                              title: zU,
-                              kind: CQ[XU],
+                          function eS(HH) {
+                            const BH = HH.gallery;
+                            if (!BH) return [];
+                            if (WL(BH)) return function(HH) {
+                              return xL(HH).entries.map((HH => HH.name))
+                            }(BH).map((LH => ({
+                              page: HH,
+                              anchor: lL(BH, LH),
+                              title: LH,
+                              kind: oS[BH],
                               text: "",
-                              listedUnder: UU.title
+                              listedUnder: HH.title
                             })));
-                            const zU = vU(UU);
-                            return (0, WU.u)(zU).flatMap((cU => {
-                              const yU = cU.heading ? `${UU.title} \u203a ${cU.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : UU.title;
-                              return rz(XU, zU, cU.blocks).flatMap((zU => "names" !== zU.kind ? [] : zU.names.map((cU => {
-                                const QU = zU.isSongs ? "Song" : CQ[XU];
+                            const LH = jH(HH);
+                            return (0, OH.v)(LH).flatMap((AH => {
+                              const rH = AH.heading ? `${HH.title} \u203a ${AH.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : HH.title;
+                              return cL(BH, LH, AH.blocks).flatMap((LH => "names" !== LH.kind ? [] : LH.names.map((AH => {
+                                const SH = LH.isSongs ? "Song" : oS[BH];
                                 return {
-                                  page: UU,
-                                  anchor: cU.anchor,
-                                  title: cU.name,
-                                  kind: QU,
+                                  page: HH,
+                                  anchor: AH.anchor,
+                                  title: AH.name,
+                                  kind: SH,
                                   text: "",
-                                  listedUnder: yU
+                                  listedUnder: rH
                                 }
                               }))))
                             }))
                           }
 
-                          function fQ(UU, XU, zU) {
-                            const cU = UU.title.toLowerCase();
-                            let yU = 0;
-                            if (cU === XU) yU = 100;
-                            else if (cU.startsWith(XU)) yU = 80;
-                            else if (cU.includes(XU)) yU = 60;
-                            else if (zU.every((UU => cU.includes(UU)))) yU = 45;
+                          function qS(HH, BH, LH) {
+                            const AH = HH.title.toLowerCase();
+                            let rH = 0;
+                            if (AH === BH) rH = 100;
+                            else if (AH.startsWith(BH)) rH = 80;
+                            else if (AH.includes(BH)) rH = 60;
+                            else if (LH.every((HH => AH.includes(HH)))) rH = 45;
                             else {
-                              if (!UU.text.toLowerCase().includes(XU)) return 0;
-                              yU = 20
+                              if (!HH.text.toLowerCase().includes(BH)) return 0;
+                              rH = 20
                             }
-                            return yU - Math.min(cU.length / 10, 9) + ("Page" === UU.kind ? 8 : "Method" === UU.kind ? 3 : 0) - (UU.listedUnder ? wQ : 0)
+                            return rH - Math.min(AH.length / 10, 9) + ("Page" === HH.kind ? 8 : "Method" === HH.kind ? 3 : 0) - (HH.listedUnder ? IS : 0)
                           }
 
-                          function iQ(UU, XU) {
-                            const zU = UU.toLowerCase().indexOf(XU),
-                              cU = Math.max(0, zU - SQ / 3);
-                            return `${cU>0?"\u2026":""}${UU.slice(cU,cU+SQ)}${cU+SQ<UU.length?"\u2026":""}`
+                          function gS(HH, BH) {
+                            const LH = HH.toLowerCase().indexOf(BH),
+                              AH = Math.max(0, LH - KS / 3);
+                            return `${AH>0?"\u2026":""}${HH.slice(AH,AH+KS)}${AH+KS<HH.length?"\u2026":""}`
                           }
 
-                          function HQ(UU) {
+                          function NS(HH) {
                             let {
-                              text: XU,
-                              query: zU
-                            } = UU;
-                            const cU = zU ? XU.toLowerCase().indexOf(zU) : -1;
-                            return -1 === cU ? (0, pU.jsx)(pU.Fragment, {
-                              children: XU
-                            }) : (0, pU.jsxs)(pU.Fragment, {
-                              children: [XU.slice(0, cU), (0, pU.jsx)("mark", {
-                                children: XU.slice(cU, cU + zU.length)
-                              }), XU.slice(cU + zU.length)]
+                              text: BH,
+                              query: LH
+                            } = HH;
+                            const AH = LH ? BH.toLowerCase().indexOf(LH) : -1;
+                            return -1 === AH ? (0, uH.jsx)(uH.Fragment, {
+                              children: BH
+                            }) : (0, uH.jsxs)(uH.Fragment, {
+                              children: [BH.slice(0, AH), (0, uH.jsx)("mark", {
+                                children: BH.slice(AH, AH + LH.length)
+                              }), BH.slice(AH + LH.length)]
                             })
                           }
 
-                          function MQ(UU) {
+                          function RS(HH) {
                             let {
-                              basePath: XU,
-                              onClose: zU
-                            } = UU;
-                            const yU = (0, FU.y)(),
-                              [AU, oU] = (0, cU.useState)(""),
-                              [DU, EU] = (0, cU.useState)(0),
-                              YU = (0, cU.useRef)(null),
-                              NU = (0, cU.useRef)(null),
-                              IU = AU.trim().toLowerCase(),
-                              aU = (0, cU.useMemo)((() => {
-                                const UU = (rQ || (rQ = fU.flatMap((UU => {
-                                  const XU = vU(UU);
+                              basePath: BH,
+                              onClose: LH
+                            } = HH;
+                            const rH = (0, tH.u)(),
+                              [hH, zH] = (0, AH.useState)(""),
+                              [CH, EH] = (0, AH.useState)(0),
+                              XH = (0, AH.useRef)(null),
+                              GH = (0, AH.useRef)(null),
+                              YH = hH.trim().toLowerCase(),
+                              QH = (0, AH.useMemo)((() => {
+                                const HH = (cS || (cS = qH.flatMap((HH => {
+                                  const BH = jH(HH);
                                   return [{
-                                    page: UU,
+                                    page: HH,
                                     anchor: "",
-                                    title: UU.title,
+                                    title: HH.title,
                                     kind: "Page",
-                                    text: UU.summary
-                                  }, ...XU.sections.flatMap((XU => {
-                                    const zU = XU.blocks.filter((UU => "paragraph" === UU.kind)).map(WU.i).join(" ").replace(/[`*]/g, ""),
-                                      cU = {
-                                        page: UU,
-                                        anchor: XU.heading.anchor,
-                                        title: XU.heading.text.replace(/`/g, ""),
-                                        kind: eQ[UU.layout],
-                                        text: zU
+                                    text: HH.summary
+                                  }, ...BH.sections.flatMap((BH => {
+                                    const LH = BH.blocks.filter((HH => "paragraph" === HH.kind)).map(OH.f).join(" ").replace(/[`*]/g, ""),
+                                      AH = {
+                                        page: HH,
+                                        anchor: BH.heading.anchor,
+                                        title: BH.heading.text.replace(/`/g, ""),
+                                        kind: mS[HH.layout],
+                                        text: LH
                                       },
-                                      yU = XU.blocks.flatMap((XU => "article" === UU.layout && "heading" === XU.kind && 3 === XU.level ? [{
-                                        page: UU,
-                                        anchor: XU.anchor,
-                                        title: XU.text.replace(/`/g, ""),
+                                      rH = BH.blocks.flatMap((BH => "article" === HH.layout && "heading" === BH.kind && 3 === BH.level ? [{
+                                        page: HH,
+                                        anchor: BH.anchor,
+                                        title: BH.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: cU.title
+                                        text: AH.title
                                       }] : []));
-                                    return [cU, ...yU]
-                                  })), ...uQ(UU)]
-                                }))), rQ);
-                                if (!IU) return UU.filter((UU => "Page" === UU.kind));
-                                const XU = IU.split(/\s+/);
-                                let zU = 0;
-                                return UU.map((UU => ({
-                                  entry: UU,
-                                  score: fQ(UU, IU, XU)
-                                }))).filter((UU => UU.score > 0)).sort(((UU, XU) => XU.score - UU.score)).filter((UU => !UU.entry.listedUnder || (zU++, zU <= qQ))).slice(0, OQ).map((UU => UU.entry))
-                              }), [IU]);
-                            (0, cU.useEffect)((() => {
-                              EU(0)
-                            }), [IU]), (0, cU.useEffect)((() => {
-                              const UU = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [AH, ...rH]
+                                  })), ...eS(HH)]
+                                }))), cS);
+                                if (!YH) return HH.filter((HH => "Page" === HH.kind));
+                                const BH = YH.split(/\s+/);
+                                let LH = 0;
+                                return HH.map((HH => ({
+                                  entry: HH,
+                                  score: qS(HH, YH, BH)
+                                }))).filter((HH => HH.score > 0)).sort(((HH, BH) => BH.score - HH.score)).filter((HH => !HH.entry.listedUnder || (LH++, LH <= fS))).slice(0, lS).map((HH => HH.entry))
+                              }), [YH]);
+                            (0, AH.useEffect)((() => {
+                              EH(0)
+                            }), [YH]), (0, AH.useEffect)((() => {
+                              const HH = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === UU || void 0 === UU || UU.focus()
+                                null === HH || void 0 === HH || HH.focus()
                               }
-                            }), []), (0, cU.useEffect)((() => {
-                              var UU, XU;
-                              null === (UU = YU.current) || void 0 === UU || null === (XU = UU.querySelector(".Active")) || void 0 === XU || XU.scrollIntoView({
+                            }), []), (0, AH.useEffect)((() => {
+                              var HH, BH;
+                              null === (HH = XH.current) || void 0 === HH || null === (BH = HH.querySelector(".Active")) || void 0 === BH || BH.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [DU]);
-                            const gU = UU => {
-                              yU(mU(XU, UU.page, UU.anchor)), zU()
+                            }), [CH]);
+                            const MH = HH => {
+                              rH(wH(BH, HH.page, HH.anchor)), LH()
                             };
-                            return (0, pU.jsx)("div", {
+                            return (0, uH.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: UU => {
-                                UU.target === UU.currentTarget && zU()
+                              onMouseDown: HH => {
+                                HH.target === HH.currentTarget && LH()
                               },
-                              children: (0, pU.jsxs)("div", {
+                              children: (0, uH.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: UU => {
-                                  UU.target !== NU.current && UU.preventDefault()
+                                onMouseDown: HH => {
+                                  HH.target !== GH.current && HH.preventDefault()
                                 },
-                                onKeyDown: UU => {
-                                  if ("Escape" === UU.key) zU();
-                                  else if ("Tab" === UU.key) {
-                                    var XU;
-                                    UU.preventDefault(), null === (XU = NU.current) || void 0 === XU || XU.focus()
+                                onKeyDown: HH => {
+                                  if ("Escape" === HH.key) LH();
+                                  else if ("Tab" === HH.key) {
+                                    var BH;
+                                    HH.preventDefault(), null === (BH = GH.current) || void 0 === BH || BH.focus()
                                   }
                                 },
-                                children: [(0, pU.jsxs)("div", {
+                                children: [(0, uH.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, pU.jsx)(tU, {
+                                  children: [(0, uH.jsx)(WH, {
                                     name: "magnifying-glass"
-                                  }), (0, pU.jsx)("input", {
-                                    ref: NU,
+                                  }), (0, uH.jsx)("input", {
+                                    ref: GH,
                                     autoFocus: !0,
-                                    value: AU,
+                                    value: hH,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": aU.length > 0 ? `DocsSearchResult-${DU}` : void 0,
-                                    onChange: UU => {
-                                      oU(UU.target.value)
+                                    "aria-activedescendant": QH.length > 0 ? `DocsSearchResult-${CH}` : void 0,
+                                    onChange: HH => {
+                                      zH(HH.target.value)
                                     },
-                                    onKeyDown: UU => {
-                                      if ("ArrowDown" === UU.key || "ArrowUp" === UU.key) {
-                                        UU.preventDefault();
-                                        const XU = "ArrowDown" === UU.key ? 1 : -1;
-                                        EU((DU + XU + aU.length) % Math.max(aU.length, 1))
-                                      } else "Enter" === UU.key && aU[DU] && gU(aU[DU])
+                                    onKeyDown: HH => {
+                                      if ("ArrowDown" === HH.key || "ArrowUp" === HH.key) {
+                                        HH.preventDefault();
+                                        const BH = "ArrowDown" === HH.key ? 1 : -1;
+                                        EH((CH + BH + QH.length) % Math.max(QH.length, 1))
+                                      } else "Enter" === HH.key && QH[CH] && MH(QH[CH])
                                     }
-                                  }), (0, pU.jsx)("kbd", {
+                                  }), (0, uH.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, pU.jsxs)("ul", {
+                                }), (0, uH.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: YU,
+                                  ref: XH,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!IU && (0, pU.jsx)("li", {
+                                  children: [!YH && (0, uH.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), aU.map(((UU, XU) => {
-                                    var zU;
-                                    return (0, pU.jsxs)("li", {
-                                      id: `DocsSearchResult-${XU}`,
+                                  }), QH.map(((HH, BH) => {
+                                    var LH;
+                                    return (0, uH.jsxs)("li", {
+                                      id: `DocsSearchResult-${BH}`,
                                       role: "option",
-                                      "aria-selected": XU === DU,
-                                      className: QU()("DocsSearchResult", {
-                                        Active: XU === DU
+                                      "aria-selected": BH === CH,
+                                      className: SH()("DocsSearchResult", {
+                                        Active: BH === CH
                                       }),
                                       onMouseMove: () => {
-                                        EU(XU)
+                                        EH(BH)
                                       },
                                       onClick: () => {
-                                        gU(UU)
+                                        MH(HH)
                                       },
-                                      children: [(0, pU.jsx)(tU, {
-                                        name: UU.page.icon
-                                      }), (0, pU.jsxs)("div", {
+                                      children: [(0, uH.jsx)(WH, {
+                                        name: HH.page.icon
+                                      }), (0, uH.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, pU.jsx)("div", {
+                                        children: [(0, uH.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, pU.jsx)(HQ, {
-                                            text: UU.title,
-                                            query: IU
+                                          children: (0, uH.jsx)(NS, {
+                                            text: HH.title,
+                                            query: YH
                                           })
-                                        }), UU.text && (0, pU.jsx)("div", {
+                                        }), HH.text && (0, uH.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, pU.jsx)(HQ, {
-                                            text: iQ(UU.text, IU),
-                                            query: IU
+                                          children: (0, uH.jsx)(NS, {
+                                            text: gS(HH.text, YH),
+                                            query: YH
                                           })
                                         })]
-                                      }), (0, pU.jsx)("span", {
+                                      }), (0, uH.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === UU.kind ? "Page" : null !== (zU = UU.listedUnder) && void 0 !== zU ? zU : `${UU.kind} \xb7 ${UU.page.title}`
+                                        children: "Page" === HH.kind ? "Page" : null !== (LH = HH.listedUnder) && void 0 !== LH ? LH : `${HH.kind} \xb7 ${HH.page.title}`
                                       })]
-                                    }, `${UU.page.id}#${UU.anchor}`)
-                                  })), IU && 0 === aU.length && (0, pU.jsxs)("li", {
+                                    }, `${HH.page.id}#${HH.anchor}`)
+                                  })), YH && 0 === QH.length && (0, uH.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", AU, "\u201d."]
+                                    children: ["Nothing matches \u201c", hH, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function vQ(UU, XU) {
-                            if (XU < 10) return `${UU.toFixed(1)}s`;
-                            const zU = Math.floor(UU);
-                            return `${Math.floor(zU/60)}:${String(zU%60).padStart(2,"0")}`
+                          function jS(HH, BH) {
+                            if (BH < 10) return `${HH.toFixed(1)}s`;
+                            const LH = Math.floor(HH);
+                            return `${Math.floor(LH/60)}:${String(LH%60).padStart(2,"0")}`
                           }
 
-                          function VQ() {
-                            const UU = Ec((UU => UU.track)),
-                              XU = Ec((UU => UU.volume)),
-                              [zU, yU] = (0, cU.useState)(0),
-                              AU = (0, cU.useRef)(Xc);
-                            if ((0, cU.useEffect)((() => {
-                                if (!UU) return;
-                                if (yU(pc()), "playing" !== UU.status) return;
-                                let XU = 0;
-                                const zU = () => {
-                                  yU(pc()), XU = requestAnimationFrame(zU)
+                          function nS() {
+                            const HH = EA((HH => HH.track)),
+                              BH = EA((HH => HH.volume)),
+                              [LH, rH] = (0, AH.useState)(0),
+                              hH = (0, AH.useRef)(BA);
+                            if ((0, AH.useEffect)((() => {
+                                if (!HH) return;
+                                if (rH(uA()), "playing" !== HH.status) return;
+                                let BH = 0;
+                                const LH = () => {
+                                  rH(uA()), BH = requestAnimationFrame(LH)
                                 };
-                                return XU = requestAnimationFrame(zU), () => {
-                                  cancelAnimationFrame(XU)
+                                return BH = requestAnimationFrame(LH), () => {
+                                  cancelAnimationFrame(BH)
                                 }
-                              }), [UU]), !UU) return null;
-                            const FU = "paused" !== UU.status,
-                              oU = Math.min(zU, UU.duration);
-                            return (0, pU.jsx)("div", {
+                              }), [HH]), !HH) return null;
+                            const tH = "paused" !== HH.status,
+                              zH = Math.min(LH, HH.duration);
+                            return (0, uH.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, pU.jsxs)("section", {
+                              children: (0, uH.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, pU.jsx)("button", {
+                                children: [(0, uH.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": FU ? `Pause ${UU.name}` : `Play ${UU.name}`,
-                                  onClick: Ic,
-                                  children: (0, pU.jsx)(tU, {
-                                    name: FU ? "pause" : "play"
+                                  "aria-label": tH ? `Pause ${HH.name}` : `Play ${HH.name}`,
+                                  onClick: YA,
+                                  children: (0, uH.jsx)(WH, {
+                                    name: tH ? "pause" : "play"
                                   })
-                                }), (0, pU.jsxs)("div", {
+                                }), (0, uH.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, pU.jsxs)("div", {
+                                  children: [(0, uH.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, pU.jsx)("code", {
-                                      children: UU.name
-                                    }), (0, pU.jsx)("span", {
-                                      children: UU.isSong ? "Song" : "Sound"
+                                    children: [(0, uH.jsx)("code", {
+                                      children: HH.name
+                                    }), (0, uH.jsx)("span", {
+                                      children: HH.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, pU.jsxs)("div", {
+                                  }), (0, uH.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, pU.jsx)("span", {
-                                      children: vQ(oU, UU.duration)
-                                    }), (0, pU.jsx)("input", {
+                                    children: [(0, uH.jsx)("span", {
+                                      children: jS(zH, HH.duration)
+                                    }), (0, uH.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: UU.duration || 1,
+                                      max: HH.duration || 1,
                                       step: .01,
-                                      value: oU,
-                                      disabled: 0 === UU.duration,
+                                      value: zH,
+                                      disabled: 0 === HH.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${vQ(oU,UU.duration)} of ${vQ(UU.duration,UU.duration)}`,
-                                      onChange: UU => {
-                                        const XU = Number(UU.target.value);
-                                        ! function(UU) {
-                                          var XU;
-                                          Ac = UU, null === (XU = yc) || void 0 === XU || XU.seek(UU)
-                                        }(XU), yU(XU)
+                                      "aria-valuetext": `${jS(zH,HH.duration)} of ${jS(HH.duration,HH.duration)}`,
+                                      onChange: HH => {
+                                        const BH = Number(HH.target.value);
+                                        ! function(HH) {
+                                          var BH;
+                                          hA = HH, null === (BH = rA) || void 0 === BH || BH.seek(HH)
+                                        }(BH), rH(BH)
                                       }
-                                    }), (0, pU.jsx)("span", {
-                                      children: UU.duration > 0 ? vQ(UU.duration, UU.duration) : "\u2013"
+                                    }), (0, uH.jsx)("span", {
+                                      children: HH.duration > 0 ? jS(HH.duration, HH.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, pU.jsxs)("div", {
+                                }), (0, uH.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, pU.jsx)("button", {
+                                  children: [(0, uH.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === XU ? "Unmute" : "Mute",
+                                    "aria-label": 0 === BH ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === XU ? ac(AU.current) : (AU.current = XU, ac(0))
+                                      0 === BH ? QA(hH.current) : (hH.current = BH, QA(0))
                                     },
-                                    children: (0, pU.jsx)(tU, {
+                                    children: (0, uH.jsx)(WH, {
                                       name: "volume",
-                                      className: QU()({
-                                        Muted: 0 === XU
+                                      className: SH()({
+                                        Muted: 0 === BH
                                       })
                                     })
-                                  }), (0, pU.jsx)("input", {
+                                  }), (0, uH.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: XU,
+                                    value: BH,
                                     "aria-label": "Volume",
-                                    onChange: UU => {
-                                      ac(Number(UU.target.value))
+                                    onChange: HH => {
+                                      QA(Number(HH.target.value))
                                     }
                                   })]
-                                }), (0, pU.jsx)("button", {
+                                }), (0, uH.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var XU;
-                                    null === (XU = document.querySelector(`[data-docs-track="${CSS.escape(zc(UU.name,UU.isSong))}"]`)) || void 0 === XU || XU.focus(), tc()
+                                    var BH;
+                                    null === (BH = document.querySelector(`[data-docs-track="${CSS.escape(LA(HH.name,HH.isSong))}"]`)) || void 0 === BH || BH.focus(), WA()
                                   },
-                                  children: (0, pU.jsx)(tU, {
+                                  children: (0, uH.jsx)(WH, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var sQ = zU(42);
-                          const nQ = "docsTheme",
-                            mQ = window.matchMedia("(prefers-color-scheme: light)");
+                          var FS = LH(30);
+                          const DS = "docsTheme",
+                            wS = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function lQ(UU) {
+                          function ZS(HH) {
                             let {
-                              theme: XU,
-                              onChange: zU
-                            } = UU;
-                            const cU = "dark" === XU ? "light" : "dark";
-                            return (0, pU.jsx)("button", {
+                              theme: BH,
+                              onChange: LH
+                            } = HH;
+                            const AH = "dark" === BH ? "light" : "dark";
+                            return (0, uH.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${cU} theme`,
-                              title: `Switch to ${cU} theme`,
+                              "aria-label": `Switch to ${AH} theme`,
+                              title: `Switch to ${AH} theme`,
                               onClick: () => {
-                                zU(cU)
+                                LH(AH)
                               },
-                              children: (0, pU.jsx)(tU, {
-                                name: "dark" === XU ? "moon" : "sun"
+                              children: (0, uH.jsx)(WH, {
+                                name: "dark" === BH ? "moon" : "sun"
                               })
                             })
                           }
-                          const xQ = "https://github.com/Bloxdy/code-api",
-                            JQ = "https://discord.gg/playbloxd",
-                            jQ = 180,
-                            KQ = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const dS = "https://github.com/Bloxdy/code-api",
+                            aS = "https://discord.gg/playbloxd",
+                            sS = 180,
+                            JS = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function bQ(UU) {
+                          function iS(HH) {
                             let {
-                              basePath: XU,
-                              activePageId: zU,
-                              onNavigate: cU
-                            } = UU;
-                            return (0, pU.jsx)("nav", {
+                              basePath: BH,
+                              activePageId: LH,
+                              onNavigate: AH
+                            } = HH;
+                            return (0, uH.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: iU.map((UU => (0, pU.jsxs)("div", {
+                              children: gH.map((HH => (0, uH.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, pU.jsx)("div", {
+                                children: [(0, uH.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: UU.title
-                                }), UU.pageIds.map((UU => {
-                                  var yU;
-                                  const FU = HU(UU);
-                                  return (0, pU.jsxs)(AU.b, {
-                                    to: mU(XU, FU),
-                                    className: QU()("DocsNavLink", {
-                                      Active: FU.id === zU
+                                  children: HH.title
+                                }), HH.pageIds.map((HH => {
+                                  var rH;
+                                  const tH = NH(HH);
+                                  return (0, uH.jsxs)(hH.e, {
+                                    to: wH(BH, tH),
+                                    className: SH()("DocsNavLink", {
+                                      Active: tH.id === LH
                                     }),
-                                    "aria-current": FU.id === zU ? "page" : void 0,
-                                    onClick: cU,
-                                    children: [(0, pU.jsx)(tU, {
-                                      name: FU.icon
-                                    }), (0, pU.jsx)("span", {
-                                      children: null !== (yU = FU.navTitle) && void 0 !== yU ? yU : FU.title
+                                    "aria-current": tH.id === LH ? "page" : void 0,
+                                    onClick: AH,
+                                    children: [(0, uH.jsx)(WH, {
+                                      name: tH.icon
+                                    }), (0, uH.jsx)("span", {
+                                      children: null !== (rH = tH.navTitle) && void 0 !== rH ? rH : tH.title
                                     })]
-                                  }, FU.id)
+                                  }, tH.id)
                                 }))]
-                              }, UU.title)))
+                              }, HH.title)))
                             })
                           }
 
-                          function TQ(UU) {
+                          function pS(HH) {
                             let {
-                              basePath: XU,
-                              pageId: zU
-                            } = UU;
-                            const cU = iU.flatMap((UU => UU.pageIds)),
-                              yU = cU.indexOf(zU),
-                              QU = yU > 0 ? HU(cU[yU - 1]) : null,
-                              FU = yU < cU.length - 1 ? HU(cU[yU + 1]) : null;
-                            return (0, pU.jsxs)("nav", {
+                              basePath: BH,
+                              pageId: LH
+                            } = HH;
+                            const AH = gH.flatMap((HH => HH.pageIds)),
+                              rH = AH.indexOf(LH),
+                              SH = rH > 0 ? NH(AH[rH - 1]) : null,
+                              tH = rH < AH.length - 1 ? NH(AH[rH + 1]) : null;
+                            return (0, uH.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [QU ? (0, pU.jsxs)(AU.b, {
+                              children: [SH ? (0, uH.jsxs)(hH.e, {
                                 className: "DocsPagerLink Previous",
-                                to: mU(XU, QU),
-                                children: [(0, pU.jsx)("span", {
+                                to: wH(BH, SH),
+                                children: [(0, uH.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, pU.jsx)("span", {
+                                }), (0, uH.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: QU.title
+                                  children: SH.title
                                 })]
-                              }) : (0, pU.jsx)("span", {}), FU && (0, pU.jsxs)(AU.b, {
+                              }) : (0, uH.jsx)("span", {}), tH && (0, uH.jsxs)(hH.e, {
                                 className: "DocsPagerLink Next",
-                                to: mU(XU, FU),
-                                children: [(0, pU.jsx)("span", {
+                                to: wH(BH, tH),
+                                children: [(0, uH.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, pU.jsx)("span", {
+                                }), (0, uH.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: FU.title
+                                  children: tH.title
                                 })]
                               })]
                             })
                           }
 
-                          function hQ(UU) {
+                          function yS(HH) {
                             let {
-                              basePath: XU,
-                              embedded: zU = !1
-                            } = UU;
+                              basePath: BH,
+                              embedded: LH = !1
+                            } = HH;
                             const {
-                              pageSlug: yU = ""
-                            } = (0, FU.C)(), DU = (0, FU.w)(), EU = (0, FU.y)(), YU = (NU = yU, fU.find((UU => UU.slug === NU)));
-                            var NU;
-                            const [IU, aU] = function() {
-                              const [UU, XU] = (0, cU.useState)((() => {
-                                const UU = sQ.k.getItem(nQ);
-                                return "dark" === UU || "light" === UU ? UU : null
-                              })), [zU, yU] = (0, cU.useState)(mQ.matches ? "light" : "dark");
-                              return (0, cU.useEffect)((() => {
-                                const UU = () => {
-                                  yU(mQ.matches ? "light" : "dark")
+                              pageSlug: rH = ""
+                            } = (0, tH.A)(), CH = (0, tH.s)(), EH = (0, tH.u)(), XH = (GH = rH, qH.find((HH => HH.slug === GH)));
+                            var GH;
+                            const [YH, QH] = function() {
+                              const [HH, BH] = (0, AH.useState)((() => {
+                                const HH = FS.e.getItem(DS);
+                                return "dark" === HH || "light" === HH ? HH : null
+                              })), [LH, rH] = (0, AH.useState)(wS.matches ? "light" : "dark");
+                              return (0, AH.useEffect)((() => {
+                                const HH = () => {
+                                  rH(wS.matches ? "light" : "dark")
                                 };
-                                return mQ.addEventListener("change", UU), () => {
-                                  mQ.removeEventListener("change", UU)
+                                return wS.addEventListener("change", HH), () => {
+                                  wS.removeEventListener("change", HH)
                                 }
-                              }), []), [null !== UU && void 0 !== UU ? UU : zU, UU => {
-                                sQ.k.setItem(nQ, UU), XU(UU)
+                              }), []), [null !== HH && void 0 !== HH ? HH : LH, HH => {
+                                FS.e.setItem(DS, HH), BH(HH)
                               }]
-                            }(), [gU, kU] = (0, cU.useState)(null), [GU, BU] = (0, cU.useState)(!1), [ZU, RU] = (0, cU.useState)(!1), [PU, dU] = (0, cU.useState)([]), LU = function(UU, XU) {
-                              const [zU, yU] = (0, cU.useState)("");
-                              return (0, cU.useEffect)((() => {
-                                if (!XU) return;
-                                let zU = 0;
-                                const cU = () => {
-                                    var cU, QU;
-                                    zU = 0;
-                                    const AU = XU.getBoundingClientRect().top + jQ;
-                                    let FU = null !== (cU = null === (QU = UU[0]) || void 0 === QU ? void 0 : QU.anchor) && void 0 !== cU ? cU : "";
-                                    for (const XU of UU) {
-                                      const UU = document.getElementById(XU.anchor);
-                                      UU && UU.getBoundingClientRect().top <= AU && (FU = XU.anchor)
+                            }(), [MH, xH] = (0, AH.useState)(null), [vH, PH] = (0, AH.useState)(!1), [TH, UH] = (0, AH.useState)(!1), [VH, bH] = (0, AH.useState)([]), kH = function(HH, BH) {
+                              const [LH, rH] = (0, AH.useState)("");
+                              return (0, AH.useEffect)((() => {
+                                if (!BH) return;
+                                let LH = 0;
+                                const AH = () => {
+                                    var AH, SH;
+                                    LH = 0;
+                                    const hH = BH.getBoundingClientRect().top + sS;
+                                    let tH = null !== (AH = null === (SH = HH[0]) || void 0 === SH ? void 0 : SH.anchor) && void 0 !== AH ? AH : "";
+                                    for (const BH of HH) {
+                                      const HH = document.getElementById(BH.anchor);
+                                      HH && HH.getBoundingClientRect().top <= hH && (tH = BH.anchor)
                                     }
-                                    XU.scrollTop + XU.clientHeight >= XU.scrollHeight - 2 && XU.scrollTop > 0 && UU.length > 0 && (FU = UU[UU.length - 1].anchor), yU(FU)
+                                    BH.scrollTop + BH.clientHeight >= BH.scrollHeight - 2 && BH.scrollTop > 0 && HH.length > 0 && (tH = HH[HH.length - 1].anchor), rH(tH)
                                   },
-                                  QU = () => {
-                                    zU || (zU = requestAnimationFrame(cU))
+                                  SH = () => {
+                                    LH || (LH = requestAnimationFrame(AH))
                                   };
-                                return cU(), XU.addEventListener("scroll", QU, {
+                                return AH(), BH.addEventListener("scroll", SH, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(zU), XU.removeEventListener("scroll", QU)
+                                  cancelAnimationFrame(LH), BH.removeEventListener("scroll", SH)
                                 }
-                              }), [UU, XU]), zU
-                            }(PU, gU), eU = "" === yU && DU.hash ? function(UU) {
-                              const XU = (0, WU.n)(UU);
-                              if (VU(HU("welcome"), XU)) return null;
-                              const zU = Object.hasOwn(nU, XU) ? nU[XU] : null;
-                              if (zU) return {
-                                page: HU(zU.pageId),
-                                anchor: zU.anchor
+                              }), [HH, BH]), LH
+                            }(VH, MH), mH = "" === rH && CH.hash ? function(HH) {
+                              const BH = (0, OH.p)(HH);
+                              if (nH(NH("welcome"), BH)) return null;
+                              const LH = Object.hasOwn(DH, BH) ? DH[BH] : null;
+                              if (LH) return {
+                                page: NH(LH.pageId),
+                                anchor: LH.anchor
                               };
-                              const cU = HU("readme");
-                              return VU(cU, XU) ? {
-                                page: cU,
-                                anchor: XU
-                              } : sU(`#${XU}`)
-                            }(DU.hash) : null;
-                            (0, cU.useEffect)((() => (oU.e.set({
+                              const AH = NH("readme");
+                              return nH(AH, BH) ? {
+                                page: AH,
+                                anchor: BH
+                              } : FH(`#${BH}`)
+                            }(CH.hash) : null;
+                            (0, AH.useEffect)((() => (zH.c.set({
                               musicOnFromPage: !1
                             }), () => {
-                              oU.e.set({
+                              zH.c.set({
                                 musicOnFromPage: !0
-                              }), tc()
-                            })), []), (0, cU.useEffect)((() => {
-                              const UU = UU => {
-                                const XU = UU.target;
-                                if (XU.closest(".DocsTextDialog")) return;
-                                const zU = XU.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(XU.tagName);
-                                "k" === UU.key && (UU.metaKey || UU.ctrlKey) || "/" === UU.key && !zU ? (UU.preventDefault(), RU(!0)) : "Escape" === UU.key && BU(!1)
+                              }), WA()
+                            })), []), (0, AH.useEffect)((() => {
+                              const HH = HH => {
+                                const BH = HH.target;
+                                if (BH.closest(".DocsTextDialog")) return;
+                                const LH = BH.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(BH.tagName);
+                                "k" === HH.key && (HH.metaKey || HH.ctrlKey) || "/" === HH.key && !LH ? (HH.preventDefault(), UH(!0)) : "Escape" === HH.key && PH(!1)
                               };
-                              return window.addEventListener("keydown", UU), () => {
-                                window.removeEventListener("keydown", UU)
+                              return window.addEventListener("keydown", HH), () => {
+                                window.removeEventListener("keydown", HH)
                               }
                             }), []);
-                            const CU = (0, cU.useRef)(null);
-                            (0, cU.useLayoutEffect)((() => {
-                              var UU, XU;
-                              if (!gU) return;
-                              const zU = CU.current === DU.pathname;
-                              CU.current = DU.pathname;
-                              const cU = (0, WU.n)(DU.hash),
-                                yU = cU ? document.getElementById(cU) : null;
-                              if (null === (UU = gU.querySelector(".DocsTargeted")) || void 0 === UU || UU.classList.remove("DocsTargeted"), null === yU || void 0 === yU || null === (XU = yU.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === XU || XU.classList.add("DocsTargeted"), yU) {
-                                var QU;
-                                const UU = yU.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (QU = yU.closest(".DocsChangelogEntry")) && void 0 !== QU ? QU : yU).scrollIntoView({
-                                  block: UU ? "center" : "start",
-                                  behavior: zU ? "smooth" : "auto"
+                            const oH = (0, AH.useRef)(null);
+                            (0, AH.useLayoutEffect)((() => {
+                              var HH, BH;
+                              if (!MH) return;
+                              const LH = oH.current === CH.pathname;
+                              oH.current = CH.pathname;
+                              const AH = (0, OH.p)(CH.hash),
+                                rH = AH ? document.getElementById(AH) : null;
+                              if (null === (HH = MH.querySelector(".DocsTargeted")) || void 0 === HH || HH.classList.remove("DocsTargeted"), null === rH || void 0 === rH || null === (BH = rH.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === BH || BH.classList.add("DocsTargeted"), rH) {
+                                var SH;
+                                const HH = rH.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (SH = rH.closest(".DocsChangelogEntry")) && void 0 !== SH ? SH : rH).scrollIntoView({
+                                  block: HH ? "center" : "start",
+                                  behavior: LH ? "smooth" : "auto"
                                 })
-                              } else zU || gU.scrollTo({
+                              } else LH || MH.scrollTo({
                                 top: 0
                               })
-                            }), [gU, DU.pathname, DU.hash, DU.key]);
-                            const wU = (0, cU.useCallback)((() => {
-                                BU(!1)
+                            }), [MH, CH.pathname, CH.hash, CH.key]);
+                            const IH = (0, AH.useCallback)((() => {
+                                PH(!1)
                               }), []),
-                              qU = (0, cU.useCallback)((UU => {
-                                EU({
-                                  hash: UU
+                              fH = (0, AH.useCallback)((HH => {
+                                EH({
+                                  hash: HH
                                 })
-                              }), [EU]);
-                            if (eU) return (0, pU.jsx)(FU.e, {
+                              }), [EH]);
+                            if (mH) return (0, uH.jsx)(tH.c, {
                               replace: !0,
-                              to: mU(XU, eU.page, eU.anchor)
+                              to: wH(BH, mH.page, mH.anchor)
                             });
-                            if (!YU) return (0, pU.jsx)(FU.e, {
+                            if (!XH) return (0, uH.jsx)(tH.c, {
                               replace: !0,
-                              to: XU
+                              to: BH
                             });
-                            const OU = zU ? "div" : "main";
-                            return (0, pU.jsx)(IX.Provider, {
-                              value: XU,
-                              children: (0, pU.jsx)(pX.Provider, {
-                                value: gU,
-                                children: (0, pU.jsxs)("div", {
-                                  ref: kU,
-                                  className: QU()("DocsSite", {
-                                    Embedded: zU,
-                                    NavOpen: GU
+                            const lH = LH ? "div" : "main";
+                            return (0, uH.jsx)(YB.Provider, {
+                              value: BH,
+                              children: (0, uH.jsx)(uB.Provider, {
+                                value: MH,
+                                children: (0, uH.jsxs)("div", {
+                                  ref: xH,
+                                  className: SH()("DocsSite", {
+                                    Embedded: LH,
+                                    NavOpen: vH
                                   }),
-                                  "data-theme": IU,
-                                  children: [(0, pU.jsxs)("header", {
+                                  "data-theme": YH,
+                                  children: [(0, uH.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, pU.jsx)("button", {
+                                    children: [(0, uH.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": GU ? "Close menu" : "Open menu",
-                                      "aria-expanded": GU,
+                                      "aria-label": vH ? "Close menu" : "Open menu",
+                                      "aria-expanded": vH,
                                       onClick: () => {
-                                        BU(!GU)
+                                        PH(!vH)
                                       },
-                                      children: (0, pU.jsx)(tU, {
-                                        name: GU ? "cross" : "menu"
+                                      children: (0, uH.jsx)(WH, {
+                                        name: vH ? "cross" : "menu"
                                       })
-                                    }), (0, pU.jsxs)(AU.b, {
-                                      to: XU,
+                                    }), (0, uH.jsxs)(hH.e, {
+                                      to: BH,
                                       className: "DocsBrand",
-                                      children: [(0, pU.jsx)("img", {
+                                      children: [(0, uH.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, pU.jsx)("span", {
+                                      }), (0, uH.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, pU.jsx)("span", {
+                                      }), (0, uH.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, pU.jsxs)("button", {
+                                    }), (0, uH.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        RU(!0)
+                                        UH(!0)
                                       },
-                                      children: [(0, pU.jsx)(tU, {
+                                      children: [(0, uH.jsx)(WH, {
                                         name: "magnifying-glass"
-                                      }), (0, pU.jsx)("span", {
+                                      }), (0, uH.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, pU.jsxs)("kbd", {
-                                        children: [KQ ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, uH.jsxs)("kbd", {
+                                        children: [JS ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, pU.jsxs)("div", {
+                                    }), (0, uH.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, pU.jsxs)("a", {
-                                        href: JQ,
+                                      children: [(0, uH.jsxs)("a", {
+                                        href: aS,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, pU.jsx)(tU, {
+                                        children: [(0, uH.jsx)(WH, {
                                           name: "discord"
-                                        }), (0, pU.jsx)("span", {
+                                        }), (0, uH.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, pU.jsxs)("a", {
-                                        href: xQ,
+                                      }), (0, uH.jsxs)("a", {
+                                        href: dS,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, pU.jsx)(tU, {
+                                        children: [(0, uH.jsx)(WH, {
                                           name: "external-link"
-                                        }), (0, pU.jsx)("span", {
+                                        }), (0, uH.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !zU && (0, pU.jsxs)(AU.b, {
+                                      }), !LH && (0, uH.jsxs)(hH.e, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, pU.jsx)(tU, {
+                                        children: [(0, uH.jsx)(WH, {
                                           name: "play"
-                                        }), (0, pU.jsx)("span", {
+                                        }), (0, uH.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, pU.jsx)(lQ, {
-                                        theme: IU,
-                                        onChange: aU
+                                      }), (0, uH.jsx)(ZS, {
+                                        theme: YH,
+                                        onChange: QH
                                       })]
                                     })]
-                                  }), (0, pU.jsxs)("div", {
+                                  }), (0, uH.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, pU.jsx)("aside", {
+                                    children: [(0, uH.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, pU.jsx)(bQ, {
-                                        basePath: XU,
-                                        activePageId: YU.id,
-                                        onNavigate: wU
+                                      children: (0, uH.jsx)(iS, {
+                                        basePath: BH,
+                                        activePageId: XH.id,
+                                        onNavigate: IH
                                       })
-                                    }), (0, pU.jsx)("div", {
+                                    }), (0, uH.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: wU
-                                    }), (0, pU.jsxs)(OU, {
+                                      onClick: IH
+                                    }), (0, uH.jsxs)(lH, {
                                       className: "DocsMain",
-                                      children: [(0, pU.jsx)(RQ, {
-                                        page: YU,
-                                        onTocChange: dU
-                                      }, YU.id), (0, pU.jsx)(TQ, {
-                                        basePath: XU,
-                                        pageId: YU.id
+                                      children: [(0, uH.jsx)(US, {
+                                        page: XH,
+                                        onTocChange: bH
+                                      }, XH.id), (0, uH.jsx)(pS, {
+                                        basePath: BH,
+                                        pageId: XH.id
                                       })]
-                                    }), (0, pU.jsx)("aside", {
-                                      className: QU()("DocsToc", {
-                                        Timeline: "changelog" === YU.layout
+                                    }), (0, uH.jsx)("aside", {
+                                      className: SH()("DocsToc", {
+                                        Timeline: "changelog" === XH.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, pU.jsx)(LQ, {
-                                        isChangelog: "changelog" === YU.layout,
-                                        toc: PU,
-                                        activeAnchor: LU,
-                                        onNavigate: qU
+                                      children: (0, uH.jsx)(kS, {
+                                        isChangelog: "changelog" === XH.layout,
+                                        toc: VH,
+                                        activeAnchor: kH,
+                                        onNavigate: fH
                                       })
                                     })]
-                                  }), (0, pU.jsx)(VQ, {}), ZU && (0, pU.jsx)(MQ, {
-                                    basePath: XU,
+                                  }), (0, uH.jsx)(nS, {}), TH && (0, uH.jsx)(RS, {
+                                    basePath: BH,
                                     onClose: () => {
-                                      RU(!1)
+                                      UH(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 5262: (UU, XU, zU) => {
-                          zU.d(XU, {
-                            d: () => cU,
-                            e: () => AU,
-                            i: () => tU,
-                            k: () => aU,
-                            l: () => FU,
-                            n: () => yU,
-                            r: () => QU,
-                            u: () => pU,
-                            w: () => IU,
-                            y: () => NU
+                        }, 5218: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            D: () => GH,
+                            c: () => AH,
+                            e: () => hH,
+                            f: () => WH,
+                            j: () => QH,
+                            l: () => tH,
+                            p: () => rH,
+                            r: () => SH,
+                            v: () => uH,
+                            z: () => YH
                           });
-                          const cU = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const AH = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function yU(UU) {
+                          function rH(HH) {
                             try {
-                              return decodeURIComponent(UU.slice(1))
+                              return decodeURIComponent(HH.slice(1))
                             } catch {
-                              return UU.slice(1)
+                              return HH.slice(1)
                             }
                           }
 
-                          function QU(UU) {
-                            return UU.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function SH(HH) {
+                            return HH.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const AU = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${cU.source}`, "g");
+                          const hH = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${AH.source}`, "g");
 
-                          function FU(UU, XU) {
-                            return 2 === UU.length ? XU.replace(/^ (.*) $/, "$1") : XU
-                          }
-
-                          function oU(UU) {
-                            return "" === UU.trim()
+                          function tH(HH, BH) {
+                            return 2 === HH.length ? BH.replace(/^ (.*) $/, "$1") : BH
                           }
 
-                          function DU(UU) {
-                            const XU = [];
-                            for (const zU of UU.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) XU.length > 0 && XU[XU.length - 1].endsWith("\\") ? XU[XU.length - 1] += `|${zU}` : XU.push(zU);
-                            return XU.map((UU => UU.trim().replaceAll("\\|", "|")))
+                          function zH(HH) {
+                            return "" === HH.trim()
                           }
-                          const EU = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function YU(UU) {
-                            const XU = [],
-                              zU = [{
+                          function CH(HH) {
+                            const BH = [];
+                            for (const LH of HH.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) BH.length > 0 && BH[BH.length - 1].endsWith("\\") ? BH[BH.length - 1] += `|${LH}` : BH.push(LH);
+                            return BH.map((HH => HH.trim().replaceAll("\\|", "|")))
+                          }
+                          const EH = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function XH(HH) {
+                            const BH = [],
+                              LH = [{
                                 indent: -1,
-                                items: XU
+                                items: BH
                               }];
-                            let cU = null;
-                            for (const yU of UU) {
-                              const UU = yU.match(EU);
-                              if (!UU) {
-                                cU && (cU.text += ` ${yU.trim()}`);
+                            let AH = null;
+                            for (const rH of HH) {
+                              const HH = rH.match(EH);
+                              if (!HH) {
+                                AH && (AH.text += ` ${rH.trim()}`);
                                 continue
                               }
-                              const XU = UU[1].replace(/\t/g, "  ").length;
-                              for (; XU <= zU[zU.length - 1].indent;) zU.pop();
-                              cU = {
-                                text: UU[3].trim(),
+                              const BH = HH[1].replace(/\t/g, "  ").length;
+                              for (; BH <= LH[LH.length - 1].indent;) LH.pop();
+                              AH = {
+                                text: HH[3].trim(),
                                 children: []
-                              }, zU[zU.length - 1].items.push(cU), zU.push({
-                                indent: XU,
-                                items: cU.children
+                              }, LH[LH.length - 1].items.push(AH), LH.push({
+                                indent: BH,
+                                items: AH.children
                               })
                             }
-                            return XU
+                            return BH
                           }
 
-                          function NU(UU) {
-                            const XU = UU.replace(/\r\n/g, "\n").split("\n"),
-                              zU = [];
-                            let cU = 0;
-                            for (; cU < XU.length;) {
-                              const UU = XU[cU];
-                              if (oU(UU)) {
-                                cU++;
+                          function GH(HH) {
+                            const BH = HH.replace(/\r\n/g, "\n").split("\n"),
+                              LH = [];
+                            let AH = 0;
+                            for (; AH < BH.length;) {
+                              const HH = BH[AH];
+                              if (zH(HH)) {
+                                AH++;
                                 continue
                               }
-                              const yU = UU.match(/^\s*```\s*(\w*)\s*$/);
-                              if (yU) {
-                                const UU = [];
-                                for (cU++; cU < XU.length && !/^\s*```\s*$/.test(XU[cU]);) UU.push(XU[cU]), cU++;
-                                cU++, zU.push({
+                              const rH = HH.match(/^\s*```\s*(\w*)\s*$/);
+                              if (rH) {
+                                const HH = [];
+                                for (AH++; AH < BH.length && !/^\s*```\s*$/.test(BH[AH]);) HH.push(BH[AH]), AH++;
+                                AH++, LH.push({
                                   kind: "code",
-                                  lang: yU[1] || "text",
-                                  code: UU.join("\n").replace(/\s+$/, "")
+                                  lang: rH[1] || "text",
+                                  code: HH.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const AU = UU.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (AU) {
-                                const UU = AU[2].trim();
-                                zU.push({
+                              const hH = HH.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (hH) {
+                                const HH = hH[2].trim();
+                                LH.push({
                                   kind: "heading",
-                                  level: AU[1].length,
-                                  text: UU,
-                                  anchor: QU(UU)
-                                }), cU++;
+                                  level: hH[1].length,
+                                  text: HH,
+                                  anchor: SH(HH)
+                                }), AH++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(UU)) {
-                                zU.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(HH)) {
+                                LH.push({
                                   kind: "rule"
-                                }), cU++;
+                                }), AH++;
                                 continue
                               }
-                              if (UU.trim().startsWith("|") && cU + 1 < XU.length && /^\s*\|[\s:|-]+\|\s*$/.test(XU[cU + 1])) {
-                                const yU = DU(UU),
-                                  QU = [];
-                                for (cU += 2; cU < XU.length && XU[cU].trim().startsWith("|");) QU.push(DU(XU[cU])), cU++;
-                                zU.push({
+                              if (HH.trim().startsWith("|") && AH + 1 < BH.length && /^\s*\|[\s:|-]+\|\s*$/.test(BH[AH + 1])) {
+                                const rH = CH(HH),
+                                  SH = [];
+                                for (AH += 2; AH < BH.length && BH[AH].trim().startsWith("|");) SH.push(CH(BH[AH])), AH++;
+                                LH.push({
                                   kind: "table",
-                                  header: yU,
-                                  rows: QU
+                                  header: rH,
+                                  rows: SH
                                 });
                                 continue
                               }
-                              if (UU.startsWith(">")) {
-                                const UU = [];
-                                for (; cU < XU.length && XU[cU].startsWith(">");) UU.push(XU[cU].replace(/^>\s?/, "")), cU++;
-                                zU.push({
+                              if (HH.startsWith(">")) {
+                                const HH = [];
+                                for (; AH < BH.length && BH[AH].startsWith(">");) HH.push(BH[AH].replace(/^>\s?/, "")), AH++;
+                                LH.push({
                                   kind: "quote",
-                                  blocks: NU(UU.join("\n"))
+                                  blocks: GH(HH.join("\n"))
                                 });
                                 continue
                               }
-                              if (EU.test(UU)) {
-                                const yU = [],
-                                  QU = /^\s*\d+\./.test(UU);
-                                for (; cU < XU.length && !oU(XU[cU]) && (EU.test(XU[cU]) || /^\s+\S/.test(XU[cU]));) yU.push(XU[cU]), cU++;
-                                zU.push({
+                              if (EH.test(HH)) {
+                                const rH = [],
+                                  SH = /^\s*\d+\./.test(HH);
+                                for (; AH < BH.length && !zH(BH[AH]) && (EH.test(BH[AH]) || /^\s+\S/.test(BH[AH]));) rH.push(BH[AH]), AH++;
+                                LH.push({
                                   kind: "list",
-                                  ordered: QU,
-                                  items: YU(yU)
+                                  ordered: SH,
+                                  items: XH(rH)
                                 });
                                 continue
                               }
-                              const FU = [];
-                              for (; cU < XU.length && !oU(XU[cU]) && !/^\s*```/.test(XU[cU]) && !/^#{1,6}\s/.test(XU[cU]) && !XU[cU].startsWith(">") && !EU.test(XU[cU]) && (!XU[cU].trim().startsWith("|") || 0 !== FU.length);) FU.push(XU[cU].trim()), cU++;
-                              0 === FU.length && (FU.push(XU[cU].trim()), cU++), zU.push({
+                              const tH = [];
+                              for (; AH < BH.length && !zH(BH[AH]) && !/^\s*```/.test(BH[AH]) && !/^#{1,6}\s/.test(BH[AH]) && !BH[AH].startsWith(">") && !EH.test(BH[AH]) && (!BH[AH].trim().startsWith("|") || 0 !== tH.length);) tH.push(BH[AH].trim()), AH++;
+                              0 === tH.length && (tH.push(BH[AH].trim()), AH++), LH.push({
                                 kind: "paragraph",
-                                text: FU.join(" ")
+                                text: tH.join(" ")
                               })
                             }
-                            return zU
+                            return LH
                           }
 
-                          function IU(UU) {
-                            let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const zU = NU(UU);
-                            let cU = "";
-                            const yU = [],
-                              QU = [],
-                              AU = new Map;
-                            for (const DU of zU) {
-                              if ("heading" === DU.kind) {
-                                var FU;
-                                const UU = (null !== (FU = AU.get(DU.anchor)) && void 0 !== FU ? FU : 0) + 1;
-                                AU.set(DU.anchor, UU), UU > 1 && (DU.anchor = `${DU.anchor}-${UU}`)
+                          function YH(HH) {
+                            let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const LH = GH(HH);
+                            let AH = "";
+                            const rH = [],
+                              SH = [],
+                              hH = new Map;
+                            for (const CH of LH) {
+                              if ("heading" === CH.kind) {
+                                var tH;
+                                const HH = (null !== (tH = hH.get(CH.anchor)) && void 0 !== tH ? tH : 0) + 1;
+                                hH.set(CH.anchor, HH), HH > 1 && (CH.anchor = `${CH.anchor}-${HH}`)
                               }
-                              if ("heading" === DU.kind && 1 === DU.level && !cU) {
-                                cU = DU.text;
+                              if ("heading" === CH.kind && 1 === CH.level && !AH) {
+                                AH = CH.text;
                                 continue
                               }
-                              if ("heading" === DU.kind && DU.level <= XU) {
-                                QU.push({
-                                  heading: DU,
+                              if ("heading" === CH.kind && CH.level <= BH) {
+                                SH.push({
+                                  heading: CH,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const UU = QU.at(-1);
-                              UU ? UU.blocks.push(DU) : yU.push(DU)
+                              const HH = SH.at(-1);
+                              HH ? HH.blocks.push(CH) : rH.push(CH)
                             }
-                            const oU = UU => {
+                            const zH = HH => {
                               for (;
-                                "rule" === (null === (XU = UU.at(-1)) || void 0 === XU ? void 0 : XU.kind);) {
-                                var XU;
-                                UU.pop()
+                                "rule" === (null === (BH = HH.at(-1)) || void 0 === BH ? void 0 : BH.kind);) {
+                                var BH;
+                                HH.pop()
                               }
                             };
-                            oU(yU);
-                            for (const DU of QU) oU(DU.blocks);
+                            zH(rH);
+                            for (const CH of SH) zH(CH.blocks);
                             return {
-                              title: cU,
-                              intro: yU,
-                              sections: QU
+                              title: AH,
+                              intro: rH,
+                              sections: SH
                             }
                           }
 
-                          function pU(UU) {
+                          function uH(HH) {
                             return [{
                               heading: null,
-                              blocks: UU.intro
-                            }, ...UU.sections.map((UU => ({
-                              heading: UU.heading,
-                              blocks: UU.blocks
+                              blocks: HH.intro
+                            }, ...HH.sections.map((HH => ({
+                              heading: HH.heading,
+                              blocks: HH.blocks
                             })))]
                           }
 
-                          function aU(UU) {
-                            return UU.flatMap((UU => "code" === UU.kind ? [UU] : "quote" === UU.kind ? aU(UU.blocks) : []))
+                          function QH(HH) {
+                            return HH.flatMap((HH => "code" === HH.kind ? [HH] : "quote" === HH.kind ? QH(HH.blocks) : []))
                           }
 
-                          function tU(UU) {
-                            switch (UU.kind) {
+                          function WH(HH) {
+                            switch (HH.kind) {
                               case "heading":
                               case "paragraph":
-                                return UU.text;
+                                return HH.text;
                               case "code":
-                                return UU.code;
+                                return HH.code;
                               case "table":
-                                return [UU.header, ...UU.rows].map((UU => UU.join(" "))).join(" ");
+                                return [HH.header, ...HH.rows].map((HH => HH.join(" "))).join(" ");
                               case "list": {
-                                const XU = UU => UU.map((UU => `${UU.text} ${XU(UU.children)}`)).join(" ");
-                                return XU(UU.items)
+                                const BH = HH => HH.map((HH => `${HH.text} ${BH(HH.children)}`)).join(" ");
+                                return BH(HH.items)
                               }
                               case "quote":
-                                return UU.blocks.map(tU).join(" ");
+                                return HH.blocks.map(WH).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 5360: (UU, XU, zU) => {
-                          zU.d(XU, {
-                            e: () => FU
+                        }, 5314: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            b: () => tH
                           });
-                          var cU = zU(61),
-                            yU = zU(320),
-                            QU = zU(1993),
-                            AU = zU(1305);
+                          var AH = LH(45),
+                            rH = LH(304),
+                            SH = LH(1986),
+                            hH = LH(1225);
 
-                          function FU(UU) {
+                          function tH(HH) {
                             let {
-                              text: XU
-                            } = UU;
-                            const zU = [];
-                            let FU = "";
-                            return (0, yU.rc)(XU).forEach(((UU, XU) => {
-                              if ("string" === typeof UU || !(0, QU.g)(UU.icon)) return void(FU += "string" === typeof UU ? UU : UU.icon);
-                              const yU = Math.max(0, FU.trimEnd().search(/\S{1,12}$/));
-                              zU.push((0, AU.jsxs)(cU.Fragment, {
-                                children: [FU.slice(0, yU), (0, AU.jsxs)("span", {
+                              text: BH
+                            } = HH;
+                            const LH = [];
+                            let tH = "";
+                            return (0, rH.tc)(BH).forEach(((HH, BH) => {
+                              if ("string" === typeof HH || !(0, SH.f)(HH.icon)) return void(tH += "string" === typeof HH ? HH : HH.icon);
+                              const rH = Math.max(0, tH.trimEnd().search(/\S{1,12}$/));
+                              LH.push((0, hH.jsxs)(AH.Fragment, {
+                                children: [tH.slice(0, rH), (0, hH.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [FU.slice(yU), (0, AU.jsx)("span", {
+                                  children: [tH.slice(rH), (0, hH.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": UU.icon,
-                                    children: (0, AU.jsx)(QU.c, {
-                                      itemName: UU.icon,
+                                    "aria-label": HH.icon,
+                                    children: (0, hH.jsx)(SH.e, {
+                                      itemName: HH.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, XU)), FU = ""
-                            })), zU.push(FU), (0, AU.jsx)(AU.Fragment, {
-                              children: zU
+                              }, BH)), tH = ""
+                            })), LH.push(tH), (0, hH.jsx)(hH.Fragment, {
+                              children: LH
                             })
                           }
-                        }, 5299: (UU, XU, zU) => {
-                          zU.d(XU, {
-                            g: () => kU,
-                            d: () => gU
+                        }, 5248: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            f: () => xH,
+                            b: () => MH
                           });
-                          var cU = zU(61),
-                            yU = zU(1492),
-                            QU = zU(1978),
-                            AU = zU(5301),
-                            FU = zU(1305);
-                          const oU = (0, cU.memo)((function(UU) {
+                          var AH = LH(45),
+                            rH = LH(1450),
+                            SH = LH(1967),
+                            hH = LH(5250),
+                            tH = LH(1225);
+                          const zH = (0, AH.memo)((function(HH) {
                             let {
-                              initialParameters: XU
-                            } = UU;
-                            const zU = (0, cU.useRef)(null),
-                              yU = (0, cU.useRef)(null),
-                              oU = (0, cU.useRef)(0),
-                              DU = (0, cU.useRef)(null),
-                              EU = XU.description,
-                              YU = XU.iz,
+                              initialParameters: BH
+                            } = HH;
+                            const LH = (0, AH.useRef)(null),
+                              rH = (0, AH.useRef)(null),
+                              zH = (0, AH.useRef)(0),
+                              CH = (0, AH.useRef)(null),
+                              EH = BH.description,
+                              XH = BH.dH,
                               {
-                                scale: NU,
-                                rotation: IU
-                              } = null !== XU && void 0 !== XU ? XU : {},
-                              pU = (0, AU.d)();
-                            return (0, cU.useEffect)((() => {
-                              const UU = pU.onFrame((() => {
-                                const UU = pU.getState();
-                                if (!UU.isActive || !zU.current || !yU.current) return;
-                                const XU = UU.state;
-                                if (zU.current.value = XU.progress, XU.clickCount > oU.current) {
-                                  oU.current = XU.clickCount;
-                                  const UU = yU.current;
-                                  UU.classList.add("pulse"), DU.current = setTimeout((() => {
-                                    UU.classList.remove("pulse")
+                                scale: GH,
+                                rotation: YH
+                              } = null !== BH && void 0 !== BH ? BH : {},
+                              uH = (0, hH.f)();
+                            return (0, AH.useEffect)((() => {
+                              const HH = uH.onFrame((() => {
+                                const HH = uH.getState();
+                                if (!HH.isActive || !LH.current || !rH.current) return;
+                                const BH = HH.state;
+                                if (LH.current.value = BH.progress, BH.clickCount > zH.current) {
+                                  zH.current = BH.clickCount;
+                                  const HH = rH.current;
+                                  HH.classList.add("pulse"), CH.current = setTimeout((() => {
+                                    HH.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(DU.current), UU()
+                                clearTimeout(CH.current), HH()
                               }
-                            }), [pU]), (0, FU.jsx)(FU.Fragment, {
-                              children: (0, FU.jsxs)("div", {
+                            }), [uH]), (0, tH.jsx)(tH.Fragment, {
+                              children: (0, tH.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== NU && {
-                                    "--scale": NU
+                                  ...null !== GH && {
+                                    "--scale": GH
                                   },
-                                  ...null !== IU && {
-                                    "--rotation": `${IU}deg`
+                                  ...null !== YH && {
+                                    "--rotation": `${YH}deg`
                                   }
                                 },
-                                children: [(0, FU.jsx)("progress", {
+                                children: [(0, tH.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: zU
-                                }), (0, FU.jsx)("span", {
+                                  ref: LH
+                                }), (0, tH.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: yU,
-                                  children: (0, FU.jsx)(QU.d, {
+                                  ref: rH,
+                                  children: (0, tH.jsx)(SH.b, {
                                     text: [{
-                                      icon: YU
+                                      icon: XH
                                     }]
                                   })
-                                }), (0, FU.jsx)("div", {
+                                }), (0, tH.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, FU.jsx)(QU.d, {
-                                    text: EU
+                                  children: (0, tH.jsx)(SH.b, {
+                                    text: EH
                                   })
                                 })]
                               })
                             })
                           }));
-                          var DU = zU(1106),
-                            EU = zU.n(DU);
-                          const YU = 2 * Math.PI * 90,
-                            NU = (0, cU.memo)((function(UU) {
+                          var CH = LH(1038),
+                            EH = LH.n(CH);
+                          const XH = 2 * Math.PI * 90,
+                            GH = (0, AH.memo)((function(HH) {
                               let {
-                                initialParameters: XU
-                              } = UU;
-                              const zU = (0, cU.useRef)(null),
-                                yU = (0, cU.useRef)(null),
-                                oU = (0, cU.useRef)(null),
-                                DU = XU.label,
-                                NU = XU.icon,
-                                IU = XU.Vz,
+                                initialParameters: BH
+                              } = HH;
+                              const LH = (0, AH.useRef)(null),
+                                rH = (0, AH.useRef)(null),
+                                zH = (0, AH.useRef)(null),
+                                CH = BH.label,
+                                GH = BH.icon,
+                                YH = BH.JH,
                                 {
-                                  scale: pU,
-                                  rotation: aU,
-                                  sz: tU
-                                } = null !== XU && void 0 !== XU ? XU : {},
-                                gU = (0, AU.d)();
-                              return (0, cU.useEffect)((() => {
-                                const UU = gU.onFrame((() => {
-                                  var UU, XU;
-                                  const cU = gU.getState();
-                                  if (!cU.isActive || !yU.current) return;
-                                  const QU = cU.state,
-                                    AU = null !== (UU = QU.timeRemaining) && void 0 !== UU ? UU : 0,
-                                    FU = null !== (XU = QU.vz) && void 0 !== XU ? XU : 1,
-                                    DU = YU * (1 - AU / FU);
-                                  yU.current.style.strokeDashoffset = `${DU}`, zU.current && (zU.current.style.opacity = AU > 0 ? "1" : "0"), oU.current && IU && (oU.current.textContent = `${(AU/1e3).toFixed(1)}s`)
+                                  scale: uH,
+                                  rotation: QH,
+                                  iH: WH
+                                } = null !== BH && void 0 !== BH ? BH : {},
+                                MH = (0, hH.f)();
+                              return (0, AH.useEffect)((() => {
+                                const HH = MH.onFrame((() => {
+                                  var HH, BH;
+                                  const AH = MH.getState();
+                                  if (!AH.isActive || !rH.current) return;
+                                  const SH = AH.state,
+                                    hH = null !== (HH = SH.timeRemaining) && void 0 !== HH ? HH : 0,
+                                    tH = null !== (BH = SH.sH) && void 0 !== BH ? BH : 1,
+                                    CH = XH * (1 - hH / tH);
+                                  rH.current.style.strokeDashoffset = `${CH}`, LH.current && (LH.current.style.opacity = hH > 0 ? "1" : "0"), zH.current && YH && (zH.current.textContent = `${(hH/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  UU()
+                                  HH()
                                 }
-                              }), [gU, IU]), (0, FU.jsxs)("div", {
+                              }), [MH, YH]), (0, tH.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: zU,
+                                ref: LH,
                                 style: {
-                                  ...null !== pU && {
-                                    "--scale": pU
+                                  ...null !== uH && {
+                                    "--scale": uH
                                   },
-                                  ...null !== aU && {
-                                    "--rotation": `${aU}deg`
+                                  ...null !== QH && {
+                                    "--rotation": `${QH}deg`
                                   }
                                 },
-                                children: [(0, FU.jsxs)("div", {
+                                children: [(0, tH.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, FU.jsxs)("svg", {
+                                  children: [(0, tH.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, FU.jsx)("circle", {
+                                    children: [(0, tH.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, FU.jsx)("circle", {
+                                    }), (0, tH.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6290,80 +6290,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: YU,
-                                      ref: yU
+                                      strokeDasharray: XH,
+                                      ref: rH
                                     })]
-                                  }), (0, FU.jsx)("div", {
+                                  }), (0, tH.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, FU.jsx)(QU.d, {
+                                    children: (0, tH.jsx)(SH.b, {
                                       text: [{
-                                        icon: NU
+                                        icon: GH
                                       }],
-                                      className: EU()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: tU
+                                      className: EH()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: WH
                                       })
                                     })
                                   })]
-                                }), (0, FU.jsxs)("div", {
+                                }), (0, tH.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, FU.jsx)(QU.d, {
-                                    text: DU,
+                                  children: [(0, tH.jsx)(SH.b, {
+                                    text: CH,
                                     className: "QTETimedClickLabelText"
-                                  }), IU && (0, FU.jsx)("span", {
+                                  }), YH && (0, tH.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: oU
+                                    ref: zH
                                   })]
                                 })]
                               })
                             })),
-                            IU = (0, cU.memo)((function(UU) {
+                            YH = (0, AH.memo)((function(HH) {
                               let {
-                                initialParameters: XU
-                              } = UU;
-                              const zU = (0, cU.useRef)(null),
-                                yU = (0, cU.useRef)(null),
-                                oU = (0, cU.useRef)(null),
-                                DU = (0, cU.useRef)(!1),
-                                EU = XU.description,
-                                YU = null === XU || void 0 === XU ? void 0 : XU.icon,
-                                NU = (0, AU.d)();
-                              return (0, cU.useEffect)((() => {
-                                const UU = NU.onFrame((() => {
-                                  const UU = NU.getState();
-                                  if (!UU.isActive) return;
-                                  const XU = UU.state;
-                                  if (zU.current) {
-                                    const UU = 100 * (XU.catchZonePosition - XU.mz / 2);
-                                    zU.current.style.left = `${UU}%`, zU.current.style.width = 100 * XU.mz + "%", XU.isCatching !== DU.current && (DU.current = XU.isCatching, XU.isCatching ? zU.current.classList.add("catching") : zU.current.classList.remove("catching"))
+                                initialParameters: BH
+                              } = HH;
+                              const LH = (0, AH.useRef)(null),
+                                rH = (0, AH.useRef)(null),
+                                zH = (0, AH.useRef)(null),
+                                CH = (0, AH.useRef)(!1),
+                                EH = BH.description,
+                                XH = null === BH || void 0 === BH ? void 0 : BH.icon,
+                                GH = (0, hH.f)();
+                              return (0, AH.useEffect)((() => {
+                                const HH = GH.onFrame((() => {
+                                  const HH = GH.getState();
+                                  if (!HH.isActive) return;
+                                  const BH = HH.state;
+                                  if (LH.current) {
+                                    const HH = 100 * (BH.catchZonePosition - BH.yH / 2);
+                                    LH.current.style.left = `${HH}%`, LH.current.style.width = 100 * BH.yH + "%", BH.isCatching !== CH.current && (CH.current = BH.isCatching, BH.isCatching ? LH.current.classList.add("catching") : LH.current.classList.remove("catching"))
                                   }
-                                  yU.current && (yU.current.style.left = 100 * XU.moverPosition + "%"), oU.current && (oU.current.value = XU.progress)
+                                  rH.current && (rH.current.style.left = 100 * BH.moverPosition + "%"), zH.current && (zH.current.value = BH.progress)
                                 }));
                                 return () => {
-                                  UU()
+                                  HH()
                                 }
-                              }), [NU]), (0, FU.jsxs)("div", {
+                              }), [GH]), (0, tH.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, FU.jsx)("div", {
+                                children: [(0, tH.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, FU.jsx)(QU.d, {
-                                    text: EU
+                                  children: (0, tH.jsx)(SH.b, {
+                                    text: EH
                                   })
-                                }), (0, FU.jsx)("progress", {
+                                }), (0, tH.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: oU
-                                }), (0, FU.jsxs)("div", {
+                                  ref: zH
+                                }), (0, tH.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, FU.jsx)("div", {
+                                  children: [(0, tH.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: zU
-                                  }), (0, FU.jsx)("div", {
+                                    ref: LH
+                                  }), (0, tH.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: yU,
-                                    children: (0, FU.jsx)("span", {
-                                      children: YU && (0, FU.jsx)(QU.d, {
+                                    ref: rH,
+                                    children: (0, tH.jsx)("span", {
+                                      children: XH && (0, tH.jsx)(SH.b, {
                                         text: [{
-                                          icon: YU,
+                                          icon: XH,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6374,782 +6374,782 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var pU = zU(646);
-                          const aU = (0, cU.memo)((function(UU) {
+                          var uH = LH(619);
+                          const QH = (0, AH.memo)((function(HH) {
                               let {
-                                initialParameters: XU
-                              } = UU;
-                              const zU = (0, cU.useRef)(null),
-                                yU = XU.label,
-                                oU = XU.Tz,
+                                initialParameters: BH
+                              } = HH;
+                              const LH = (0, AH.useRef)(null),
+                                rH = BH.label,
+                                zH = BH.hB,
                                 {
-                                  icon: DU,
-                                  scale: EU,
-                                  rotation: YU
-                                } = null !== XU && void 0 !== XU ? XU : {},
-                                NU = 100 * (.5 - oU / 2),
-                                IU = 100 * oU,
-                                aU = (0, AU.d)();
-                              return (0, cU.useEffect)((() => {
-                                const UU = aU.onFrame((() => {
-                                  const UU = aU.getState();
-                                  if (!UU.isActive || !zU.current) return;
-                                  const XU = UU.state;
-                                  zU.current.style.left = 100 * XU.markerPosition + "%"
+                                  icon: CH,
+                                  scale: EH,
+                                  rotation: XH
+                                } = null !== BH && void 0 !== BH ? BH : {},
+                                GH = 100 * (.5 - zH / 2),
+                                YH = 100 * zH,
+                                QH = (0, hH.f)();
+                              return (0, AH.useEffect)((() => {
+                                const HH = QH.onFrame((() => {
+                                  const HH = QH.getState();
+                                  if (!HH.isActive || !LH.current) return;
+                                  const BH = HH.state;
+                                  LH.current.style.left = 100 * BH.markerPosition + "%"
                                 }));
                                 return () => {
-                                  UU()
+                                  HH()
                                 }
-                              }), [aU]), (0, FU.jsxs)("div", {
+                              }), [QH]), (0, tH.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, pU.P)(EU) && {
-                                    "--scale": EU
+                                  ...!(0, uH.M)(EH) && {
+                                    "--scale": EH
                                   },
-                                  ...!(0, pU.P)(YU) && {
-                                    "--rotation": `${YU}deg`
+                                  ...!(0, uH.M)(XH) && {
+                                    "--rotation": `${XH}deg`
                                   }
                                 },
-                                children: [DU && (0, FU.jsx)(QU.d, {
+                                children: [CH && (0, tH.jsx)(SH.b, {
                                   text: [{
-                                    icon: DU
+                                    icon: CH
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, FU.jsxs)("div", {
+                                }), (0, tH.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, FU.jsx)("div", {
+                                  children: [(0, tH.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${NU}%`,
-                                      width: `${IU}%`
+                                      left: `${GH}%`,
+                                      width: `${YH}%`
                                     }
-                                  }), (0, FU.jsx)("div", {
+                                  }), (0, tH.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: zU
+                                    ref: LH
                                   })]
-                                }), (0, FU.jsx)("div", {
+                                }), (0, tH.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, FU.jsx)(QU.d, {
-                                    text: yU
+                                  children: (0, tH.jsx)(SH.b, {
+                                    text: rH
                                   })
                                 })]
                               })
                             })),
-                            tU = (0, cU.memo)((function(UU) {
+                            WH = (0, AH.memo)((function(HH) {
                               let {
-                                initialParameters: XU
-                              } = UU;
-                              const zU = (0, cU.useRef)(null),
-                                [yU, oU] = (0, cU.useState)((() => new Array(XU.Uc).fill("pending"))),
-                                [DU, EU] = (0, cU.useState)((() => {
-                                  const UU = XU.yc;
-                                  return (0, pU.P)(UU) || UU <= 0 ? [] : new Array(UU).fill("pending")
+                                initialParameters: BH
+                              } = HH;
+                              const LH = (0, AH.useRef)(null),
+                                [rH, zH] = (0, AH.useState)((() => new Array(BH.zB).fill("pending"))),
+                                [CH, EH] = (0, AH.useState)((() => {
+                                  const HH = BH.XB;
+                                  return (0, uH.M)(HH) || HH <= 0 ? [] : new Array(HH).fill("pending")
                                 })),
-                                YU = XU.label,
+                                XH = BH.label,
                                 {
-                                  icon: NU
-                                } = XU,
-                                IU = (0, cU.useRef)(0),
-                                aU = (0, cU.useRef)(0),
-                                tU = (0, cU.useRef)([]),
-                                gU = (0, AU.d)();
-                              return (0, cU.useEffect)((() => {
-                                const UU = gU.onFrame((() => {
-                                  const UU = gU.getState();
-                                  if (!UU.isActive || !zU.current) return;
-                                  const XU = UU.state,
-                                    cU = 30 + 60 * XU.outerCircleProgress;
-                                  if (zU.current.setAttribute("r", String(cU)), !0 === XU.lastClickResult && XU.successes > IU.current) {
-                                    zU.current.classList.remove("QTERhythmClickOuterCircle--miss"), zU.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const UU = setTimeout((() => {
-                                      var UU;
-                                      null === (UU = zU.current) || void 0 === UU || UU.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: GH
+                                } = BH,
+                                YH = (0, AH.useRef)(0),
+                                QH = (0, AH.useRef)(0),
+                                WH = (0, AH.useRef)([]),
+                                MH = (0, hH.f)();
+                              return (0, AH.useEffect)((() => {
+                                const HH = MH.onFrame((() => {
+                                  const HH = MH.getState();
+                                  if (!HH.isActive || !LH.current) return;
+                                  const BH = HH.state,
+                                    AH = 30 + 60 * BH.outerCircleProgress;
+                                  if (LH.current.setAttribute("r", String(AH)), !0 === BH.lastClickResult && BH.successes > YH.current) {
+                                    LH.current.classList.remove("QTERhythmClickOuterCircle--miss"), LH.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const HH = setTimeout((() => {
+                                      var HH;
+                                      null === (HH = LH.current) || void 0 === HH || HH.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    tU.current.push(UU)
-                                  } else if (!1 === XU.lastClickResult && XU.misses > aU.current) {
-                                    zU.current.classList.remove("QTERhythmClickOuterCircle--hit"), zU.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const UU = setTimeout((() => {
-                                      var UU;
-                                      null === (UU = zU.current) || void 0 === UU || UU.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    WH.current.push(HH)
+                                  } else if (!1 === BH.lastClickResult && BH.misses > QH.current) {
+                                    LH.current.classList.remove("QTERhythmClickOuterCircle--hit"), LH.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const HH = setTimeout((() => {
+                                      var HH;
+                                      null === (HH = LH.current) || void 0 === HH || HH.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    tU.current.push(UU)
+                                    WH.current.push(HH)
                                   }
-                                  XU.successes === IU.current && XU.misses === aU.current || (IU.current = XU.successes, aU.current = XU.misses, oU((UU => {
-                                    const zU = [...UU];
-                                    for (let cU = 0; cU < XU.Uc; cU++) zU[cU] = cU < XU.successes ? "success" : "pending";
-                                    return zU
-                                  })), EU((UU => {
-                                    if (0 === UU.length) return UU;
-                                    const zU = [...UU];
-                                    for (let cU = 0; cU < zU.length; cU++) zU[cU] = cU < XU.misses ? "miss" : "pending";
-                                    return zU
+                                  BH.successes === YH.current && BH.misses === QH.current || (YH.current = BH.successes, QH.current = BH.misses, zH((HH => {
+                                    const LH = [...HH];
+                                    for (let AH = 0; AH < BH.zB; AH++) LH[AH] = AH < BH.successes ? "success" : "pending";
+                                    return LH
+                                  })), EH((HH => {
+                                    if (0 === HH.length) return HH;
+                                    const LH = [...HH];
+                                    for (let AH = 0; AH < LH.length; AH++) LH[AH] = AH < BH.misses ? "miss" : "pending";
+                                    return LH
                                   })))
                                 }));
                                 return () => {
-                                  UU();
-                                  for (const UU of tU.current) clearTimeout(UU);
-                                  tU.current = []
+                                  HH();
+                                  for (const HH of WH.current) clearTimeout(HH);
+                                  WH.current = []
                                 }
-                              }), [gU]), (0, FU.jsxs)("div", {
+                              }), [MH]), (0, tH.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, FU.jsx)("div", {
+                                children: [(0, tH.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: yU.map(((UU, XU) => (0, FU.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === UU ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, XU)))
-                                }), (0, FU.jsxs)("div", {
+                                  children: rH.map(((HH, BH) => (0, tH.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === HH ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, BH)))
+                                }), (0, tH.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, FU.jsxs)("svg", {
+                                  children: [(0, tH.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, FU.jsx)("circle", {
+                                    children: [(0, tH.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, FU.jsx)("circle", {
+                                    }), (0, tH.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: zU
+                                      ref: LH
                                     })]
-                                  }), NU && (0, FU.jsx)("div", {
+                                  }), GH && (0, tH.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, FU.jsx)(QU.d, {
+                                    children: (0, tH.jsx)(SH.b, {
                                       text: [{
-                                        icon: NU
+                                        icon: GH
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), DU.length > 0 && (0, FU.jsx)("div", {
+                                }), CH.length > 0 && (0, tH.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: DU.map(((UU, XU) => (0, FU.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === UU ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, XU)))
-                                }), (0, FU.jsx)("div", {
+                                  children: CH.map(((HH, BH) => (0, tH.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === HH ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, BH)))
+                                }), (0, tH.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, FU.jsx)(QU.d, {
-                                    text: YU
+                                  children: (0, tH.jsx)(SH.b, {
+                                    text: XH
                                   })
                                 })]
                               })
                             }));
 
-                          function gU(UU) {
+                          function MH(HH) {
                             let {
-                              qte: XU
-                            } = UU;
-                            switch (XU.type) {
+                              qte: BH
+                            } = HH;
+                            switch (BH.type) {
                               case "progressBar":
-                                return (0, FU.jsx)(oU, {
-                                  initialParameters: XU.parameters
+                                return (0, tH.jsx)(zH, {
+                                  initialParameters: BH.parameters
                                 });
                               case "timedClick":
-                                return (0, FU.jsx)(NU, {
-                                  initialParameters: XU.parameters
+                                return (0, tH.jsx)(GH, {
+                                  initialParameters: BH.parameters
                                 });
                               case "gravityBar":
-                                return (0, FU.jsx)(IU, {
-                                  initialParameters: XU.parameters
+                                return (0, tH.jsx)(YH, {
+                                  initialParameters: BH.parameters
                                 });
                               case "precisionBar":
-                                return (0, FU.jsx)(aU, {
-                                  initialParameters: XU.parameters
+                                return (0, tH.jsx)(QH, {
+                                  initialParameters: BH.parameters
                                 });
                               case "rhythmClick":
-                                return (0, FU.jsx)(tU, {
-                                  initialParameters: XU.parameters
+                                return (0, tH.jsx)(WH, {
+                                  initialParameters: BH.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const kU = (0, cU.memo)((function() {
-                            const [UU, XU] = (0, cU.useState)({
+                          const xH = (0, AH.memo)((function() {
+                            const [HH, BH] = (0, AH.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, yU.f)("qteStateUpdated", (UU => {
-                              XU(UU)
-                            })), UU.isActive && UU.type ? (0, FU.jsx)("div", {
+                            return (0, rH.d)("qteStateUpdated", (HH => {
+                              BH(HH)
+                            })), HH.isActive && HH.type ? (0, tH.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, FU.jsx)(gU, {
-                                qte: UU
+                              children: (0, tH.jsx)(MH, {
+                                qte: HH
                               })
                             }) : null
                           }))
-                        }, 5301: (UU, XU, zU) => {
-                          zU.d(XU, {
-                            b: () => FU,
-                            d: () => oU
+                        }, 5250: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            e: () => tH,
+                            f: () => zH
                           });
-                          var cU = zU(61),
-                            yU = zU(1322),
-                            QU = zU(5303);
-                          const AU = {
-                              getState: () => QU.e.getCurrentState(),
-                              onFrame: yU.r
+                          var AH = LH(45),
+                            rH = LH(1253),
+                            SH = LH(5253);
+                          const hH = {
+                              getState: () => SH.d.getCurrentState(),
+                              onFrame: rH.x
                             },
-                            FU = (0, cU.createContext)(AU);
+                            tH = (0, AH.createContext)(hH);
 
-                          function oU() {
-                            return (0, cU.useContext)(FU)
+                          function zH() {
+                            return (0, AH.useContext)(tH)
                           }
-                        }, 5364: (UU, XU, zU) => {
-                          zU.d(XU, {
-                            d: () => rU,
-                            g: () => SU
+                        }, 5319: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            b: () => cH,
+                            d: () => KH
                           });
-                          var cU = zU(5369),
-                            yU = zU(320);
-                          const QU = 120,
-                            AU = 260,
-                            FU = 1.15,
-                            oU = 1.2,
-                            DU = 2,
-                            EU = 1.08,
-                            YU = .8,
-                            NU = .95,
-                            IU = 8,
-                            pU = "[\"')\\]\u300d\u300f\uff09]*",
-                            aU = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${pU}$`),
-                            tU = new RegExp(`[?\uff1f]${pU}$`),
-                            gU = new RegExp(`[!\uff01]${pU}$`),
-                            kU = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            GU = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            BU = new RegExp(`[${GU}]`),
-                            ZU = new RegExp(`[${GU}]|[^${GU}]+`, "g"),
-                            RU = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var AH = LH(5325),
+                            rH = LH(304);
+                          const SH = 120,
+                            hH = 260,
+                            tH = 1.15,
+                            zH = 1.2,
+                            CH = 2,
+                            EH = 1.08,
+                            XH = .8,
+                            GH = .95,
+                            YH = 8,
+                            uH = "[\"')\\]\u300d\u300f\uff09]*",
+                            QH = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${uH}$`),
+                            WH = new RegExp(`[?\uff1f]${uH}$`),
+                            MH = new RegExp(`[!\uff01]${uH}$`),
+                            xH = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            vH = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            PH = new RegExp(`[${vH}]`),
+                            TH = new RegExp(`[${vH}]|[^${vH}]+`, "g"),
+                            UH = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function PU(UU) {
-                            let XU = 2166136261;
-                            for (let zU = 0; zU < UU.length; zU++) XU ^= UU.charCodeAt(zU), XU = Math.imul(XU, 16777619);
-                            return (XU >>> 0) / 4294967295 * 2 - 1
+                          function VH(HH) {
+                            let BH = 2166136261;
+                            for (let LH = 0; LH < HH.length; LH++) BH ^= HH.charCodeAt(LH), BH = Math.imul(BH, 16777619);
+                            return (BH >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function WU(UU) {
-                            var XU;
-                            if (BU.test(UU)) return 1;
-                            const zU = UU.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              cU = zU.replace(/[^0-9]/g, "");
-                            if (cU.length > 0 && !/\p{L}/u.test(zU)) return Math.min(cU.length, 4);
-                            const yU = null !== (XU = zU.match(RU)) && void 0 !== XU ? XU : [];
-                            if (0 === yU.length) {
-                              var QU, AU;
-                              const UU = null !== (QU = null === (AU = zU.match(/\p{L}/gu)) || void 0 === AU ? void 0 : AU.length) && void 0 !== QU ? QU : 0;
-                              return 0 === UU ? 0 : Math.min(Math.max(1, Math.round(UU / 2.5)), IU)
+                          function OH(HH) {
+                            var BH;
+                            if (PH.test(HH)) return 1;
+                            const LH = HH.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              AH = LH.replace(/[^0-9]/g, "");
+                            if (AH.length > 0 && !/\p{L}/u.test(LH)) return Math.min(AH.length, 4);
+                            const rH = null !== (BH = LH.match(UH)) && void 0 !== BH ? BH : [];
+                            if (0 === rH.length) {
+                              var SH, hH;
+                              const HH = null !== (SH = null === (hH = LH.match(/\p{L}/gu)) || void 0 === hH ? void 0 : hH.length) && void 0 !== SH ? SH : 0;
+                              return 0 === HH ? 0 : Math.min(Math.max(1, Math.round(HH / 2.5)), YH)
                             }
-                            const FU = zU.replace(/[^\p{L}]/gu, ""),
-                              oU = yU.length > 1 && "e" === yU.at(-1) && FU.endsWith("e") && !FU.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(UU.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(yU.length - (oU ? 1 : 0), IU)
+                            const tH = LH.replace(/[^\p{L}]/gu, ""),
+                              zH = rH.length > 1 && "e" === rH.at(-1) && tH.endsWith("e") && !tH.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(HH.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(rH.length - (zH ? 1 : 0), YH)
                           }
 
-                          function dU(UU) {
-                            return UU.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function bH(HH) {
+                            return HH.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function LU(UU) {
-                            const XU = UU.replace(/[^\p{L}]/gu, "");
-                            return XU.length >= 2 && XU === XU.toUpperCase() && XU !== XU.toLowerCase()
+                          function kH(HH) {
+                            const BH = HH.replace(/[^\p{L}]/gu, "");
+                            return BH.length >= 2 && BH === BH.toUpperCase() && BH !== BH.toLowerCase()
                           }
 
-                          function eU(UU, XU) {
-                            var zU;
-                            const IU = XU && (0, cU.l)(XU),
-                              pU = null !== (zU = null === IU || void 0 === IU ? void 0 : IU.syllableMs) && void 0 !== zU ? zU : cU.e,
-                              GU = function(UU) {
-                                const XU = [];
-                                for (const cU of (0, yU.rc)(UU))
-                                  if ("string" === typeof cU)
-                                    for (const UU of cU.split(/(\s+)/)) {
-                                      if ("" === UU) continue;
-                                      if (/^\s+$/.test(UU)) {
-                                        XU.push({
+                          function mH(HH, BH) {
+                            var LH;
+                            const YH = BH && (0, AH.k)(BH),
+                              uH = null !== (LH = null === YH || void 0 === YH ? void 0 : YH.syllableMs) && void 0 !== LH ? LH : AH.e,
+                              vH = function(HH) {
+                                const BH = [];
+                                for (const AH of (0, rH.tc)(HH))
+                                  if ("string" === typeof AH)
+                                    for (const HH of AH.split(/(\s+)/)) {
+                                      if ("" === HH) continue;
+                                      if (/^\s+$/.test(HH)) {
+                                        BH.push({
                                           kind: "space",
-                                          text: UU
+                                          text: HH
                                         });
                                         continue
                                       }
-                                      if (!BU.test(UU)) {
-                                        XU.push({
+                                      if (!PH.test(HH)) {
+                                        BH.push({
                                           kind: "word",
-                                          text: UU,
+                                          text: HH,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let cU = !0;
-                                      for (const yU of null !== (zU = UU.match(ZU)) && void 0 !== zU ? zU : []) {
-                                        var zU;
-                                        const UU = XU.at(-1);
-                                        cU || "word" !== (null === UU || void 0 === UU ? void 0 : UU.kind) || BU.test(yU) || /[\p{L}\p{N}]/u.test(yU) ? (cU || XU.push({
+                                      let AH = !0;
+                                      for (const rH of null !== (LH = HH.match(TH)) && void 0 !== LH ? LH : []) {
+                                        var LH;
+                                        const HH = BH.at(-1);
+                                        AH || "word" !== (null === HH || void 0 === HH ? void 0 : HH.kind) || PH.test(rH) || /[\p{L}\p{N}]/u.test(rH) ? (AH || BH.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), XU.push({
+                                        }), BH.push({
                                           kind: "word",
-                                          text: yU,
+                                          text: rH,
                                           delayMs: 0
-                                        }), cU = !1) : UU.text += yU
+                                        }), AH = !1) : HH.text += rH
                                       }
-                                    } else XU.push({
+                                    } else BH.push({
                                       kind: "icon",
-                                      text: cU.icon,
+                                      text: AH.icon,
                                       delayMs: 0
                                     });
-                                return XU
-                              }(UU),
-                              RU = [];
-                            let eU = [];
-                            for (const cU of GU) "space" !== cU.kind && (eU.push(cU), aU.test(cU.text) && (RU.push(eU), eU = []));
-                            RU.push(eU);
-                            const CU = [];
-                            let wU = 0;
-                            for (const cU of RU) {
-                              var qU, OU;
-                              const UU = null !== (qU = null === (OU = cU.at(-1)) || void 0 === OU ? void 0 : OU.text) && void 0 !== qU ? qU : "",
-                                XU = tU.test(UU),
-                                zU = gU.test(UU),
-                                yU = cU.map((UU => "word" === UU.kind ? WU(UU.text) : 1)),
-                                GU = yU.findLastIndex((UU => UU > 0));
-                              for (const [tU, gU] of cU.entries()) {
-                                const UU = "word" === gU.kind,
-                                  cU = yU[tU];
-                                gU.delayMs = wU;
-                                for (let yU = 0; IU && yU < cU; yU++) {
+                                return BH
+                              }(HH),
+                              UH = [];
+                            let mH = [];
+                            for (const AH of vH) "space" !== AH.kind && (mH.push(AH), QH.test(AH.text) && (UH.push(mH), mH = []));
+                            UH.push(mH);
+                            const oH = [];
+                            let IH = 0;
+                            for (const AH of UH) {
+                              var fH, lH;
+                              const HH = null !== (fH = null === (lH = AH.at(-1)) || void 0 === lH ? void 0 : lH.text) && void 0 !== fH ? fH : "",
+                                BH = WH.test(HH),
+                                LH = MH.test(HH),
+                                rH = AH.map((HH => "word" === HH.kind ? OH(HH.text) : 1)),
+                                vH = rH.findLastIndex((HH => HH > 0));
+                              for (const [WH, MH] of AH.entries()) {
+                                const HH = "word" === MH.kind,
+                                  AH = rH[WH];
+                                MH.delayMs = IH;
+                                for (let rH = 0; YH && rH < AH; rH++) {
                                   const {
-                                    intonation: QU
-                                  } = IU;
-                                  let AU = GU > 0 ? -QU.declineSemitones * (tU / GU) : 0;
-                                  AU += PU(`${dU(gU.text)}|${yU}`) * QU.variationSemitones;
-                                  const aU = Math.min(1, QU.variationSemitones);
-                                  let kU = IU.glideSemitones,
-                                    BU = 1;
-                                  zU && (AU += QU.exclaimLiftSemitones, BU *= FU), XU && tU === GU && (AU += QU.questionRiseSemitones * (cU > 1 ? .5 + .5 * yU / (cU - 1) : 1), yU === cU - 1 && (kU = Math.abs(kU) + QU.questionRiseSemitones / 2)), UU && LU(gU.text) && (AU += DU * aU, BU *= oU), cU > 1 && 0 === yU && (AU += YU * aU, BU *= EU), CU.push({
-                                    atMs: wU + yU * pU,
-                                    semitones: AU,
-                                    glideSemitones: kU,
-                                    durationMs: yU < cU - 1 ? Math.min(IU.durationMs, pU * NU) : IU.durationMs,
-                                    level: BU
+                                    intonation: SH
+                                  } = YH;
+                                  let hH = vH > 0 ? -SH.declineSemitones * (WH / vH) : 0;
+                                  hH += VH(`${bH(MH.text)}|${rH}`) * SH.variationSemitones;
+                                  const QH = Math.min(1, SH.variationSemitones);
+                                  let xH = YH.glideSemitones,
+                                    PH = 1;
+                                  LH && (hH += SH.exclaimLiftSemitones, PH *= tH), BH && WH === vH && (hH += SH.questionRiseSemitones * (AH > 1 ? .5 + .5 * rH / (AH - 1) : 1), rH === AH - 1 && (xH = Math.abs(xH) + SH.questionRiseSemitones / 2)), HH && kH(MH.text) && (hH += CH * QH, PH *= zH), AH > 1 && 0 === rH && (hH += XH * QH, PH *= EH), oH.push({
+                                    atMs: IH + rH * uH,
+                                    semitones: hH,
+                                    glideSemitones: xH,
+                                    durationMs: rH < AH - 1 ? Math.min(YH.durationMs, uH * GH) : YH.durationMs,
+                                    level: PH
                                   })
                                 }
-                                wU += cU * pU + (aU.test(gU.text) ? AU : kU.test(gU.text) ? QU : 0)
+                                IH += AH * uH + (QH.test(MH.text) ? hH : xH.test(MH.text) ? SH : 0)
                               }
                             }
                             return {
-                              pieces: GU.map((UU => "space" === UU.kind ? UU : "icon" === UU.kind ? {
+                              pieces: vH.map((HH => "space" === HH.kind ? HH : "icon" === HH.kind ? {
                                 kind: "icon",
-                                icon: UU.text,
-                                delayMs: UU.delayMs
+                                icon: HH.text,
+                                delayMs: HH.delayMs
                               } : {
                                 kind: "word",
-                                text: UU.text,
-                                delayMs: UU.delayMs
+                                text: HH.text,
+                                delayMs: HH.delayMs
                               })),
-                              blips: CU
+                              blips: oH
                             }
                           }
-                          var CU = zU(1193),
-                            wU = zU(1266),
-                            qU = zU(2012);
+                          var oH = LH(1123),
+                            IH = LH(1194),
+                            fH = LH(2003);
 
-                          function OU(UU) {
-                            if ("string" === typeof UU) return UU;
-                            const XU = wU.h.get().getCurrentLanguageCode();
-                            return (0, CU.t)(XU, UU.translationKey, (0, CU.p)(UU.params, qU.c.shown))
+                          function lH(HH) {
+                            if ("string" === typeof HH) return HH;
+                            const BH = IH.g.get().getCurrentLanguageCode();
+                            return (0, oH.r)(BH, HH.translationKey, (0, oH.q)(HH.params, fH.c.shown))
                           }
 
-                          function SU(UU) {
-                            const XU = void 0 === UU.voice ? null : (0, cU.o)(UU.voice),
-                              zU = XU && (0, cU.l)(XU);
+                          function KH(HH) {
+                            const BH = void 0 === HH.voice ? null : (0, AH.l)(HH.voice),
+                              LH = BH && (0, AH.k)(BH);
                             return {
-                              plan: eU(OU(UU.line), zU),
-                              synth: zU
+                              plan: mH(lH(HH.line), LH),
+                              synth: LH
                             }
                           }
 
-                          function rU(UU) {
-                            const XU = [];
-                            let zU = [];
-                            for (const [yU, QU] of UU.entries()) {
-                              var cU;
-                              "space" === QU.kind && (" " !== QU.text || "icon" !== (null === (cU = UU[yU + 1]) || void 0 === cU ? void 0 : cU.kind)) ? (zU.length > 0 && XU.push(zU), XU.push([QU]), zU = []) : zU.push(QU)
+                          function cH(HH) {
+                            const BH = [];
+                            let LH = [];
+                            for (const [rH, SH] of HH.entries()) {
+                              var AH;
+                              "space" === SH.kind && (" " !== SH.text || "icon" !== (null === (AH = HH[rH + 1]) || void 0 === AH ? void 0 : AH.kind)) ? (LH.length > 0 && BH.push(LH), BH.push([SH]), LH = []) : LH.push(SH)
                             }
-                            return zU.length > 0 && XU.push(zU), XU
+                            return LH.length > 0 && BH.push(LH), BH
                           }
-                        }, 5374: (UU, XU, zU) => {
-                          zU.d(XU, {
-                            b: () => EU,
-                            e: () => YU
+                        }, 5333: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            b: () => EH,
+                            f: () => XH
                           });
-                          var cU = zU(5378),
-                            yU = zU(27);
-                          const QU = .25,
-                            AU = .85,
-                            FU = .02,
-                            oU = .01;
+                          var AH = LH(5335),
+                            rH = LH(15);
+                          const SH = .25,
+                            hH = .85,
+                            tH = .02,
+                            zH = .01;
 
-                          function DU(UU, XU, zU, cU, yU, QU, FU) {
+                          function CH(HH, BH, LH, AH, rH, SH, tH) {
                             const {
-                              waveform: oU,
-                              pitchHz: DU,
-                              attackMs: EU,
-                              releaseMs: YU,
-                              lowpassHz: NU
-                            } = zU, IU = yU + cU.durationMs / 1e3, pU = DU * 2 ** (cU.semitones / 12), aU = UU.createOscillator();
-                            aU.type = oU, aU.frequency.setValueAtTime(pU, yU), aU.frequency.exponentialRampToValueAtTime(pU * 2 ** (cU.glideSemitones / 12), IU);
-                            const tU = yU + Math.min(EU, cU.durationMs) / 1e3,
-                              gU = UU.createGain();
-                            gU.gain.setValueAtTime(0, yU), gU.gain.linearRampToValueAtTime(QU, tU), gU.gain.linearRampToValueAtTime(QU * AU, Math.max(tU, IU - YU / 1e3)), gU.gain.linearRampToValueAtTime(0, IU);
-                            const kU = [aU];
-                            if (null !== NU) {
-                              const XU = UU.createBiquadFilter();
-                              XU.type = "lowpass", XU.frequency.value = NU, kU.push(XU)
+                              waveform: zH,
+                              pitchHz: CH,
+                              attackMs: EH,
+                              releaseMs: XH,
+                              lowpassHz: GH
+                            } = LH, YH = rH + AH.durationMs / 1e3, uH = CH * 2 ** (AH.semitones / 12), QH = HH.createOscillator();
+                            QH.type = zH, QH.frequency.setValueAtTime(uH, rH), QH.frequency.exponentialRampToValueAtTime(uH * 2 ** (AH.glideSemitones / 12), YH);
+                            const WH = rH + Math.min(EH, AH.durationMs) / 1e3,
+                              MH = HH.createGain();
+                            MH.gain.setValueAtTime(0, rH), MH.gain.linearRampToValueAtTime(SH, WH), MH.gain.linearRampToValueAtTime(SH * hH, Math.max(WH, YH - XH / 1e3)), MH.gain.linearRampToValueAtTime(0, YH);
+                            const xH = [QH];
+                            if (null !== GH) {
+                              const BH = HH.createBiquadFilter();
+                              BH.type = "lowpass", BH.frequency.value = GH, xH.push(BH)
                             }
-                            kU.push(gU, XU);
-                            for (let AU = 1; AU < kU.length; AU++) kU[AU - 1].connect(kU[AU]);
-                            return aU.onended = () => {
-                              for (const UU of kU.slice(0, -1)) UU.disconnect();
-                              FU()
-                            }, aU.start(yU), aU.stop(IU), aU
+                            xH.push(MH, BH);
+                            for (let hH = 1; hH < xH.length; hH++) xH[hH - 1].connect(xH[hH]);
+                            return QH.onended = () => {
+                              for (const HH of xH.slice(0, -1)) HH.disconnect();
+                              tH()
+                            }, QH.start(rH), QH.stop(YH), QH
                           }
 
-                          function EU(UU, XU, zU, cU, yU, AU) {
-                            if (0 === cU.length) return AU(), () => {};
-                            const EU = QU * zU.volume * yU,
-                              YU = UU.createGain();
-                            YU.connect(XU);
-                            const NU = UU.currentTime + FU,
-                              IU = new Set;
-                            for (const QU of cU) {
-                              const XU = DU(UU, YU, zU, QU, NU + QU.atMs / 1e3, EU * QU.level, (() => {
-                                IU.delete(XU), 0 === IU.size && (YU.disconnect(), AU())
+                          function EH(HH, BH, LH, AH, rH, hH) {
+                            if (0 === AH.length) return hH(), () => {};
+                            const EH = SH * LH.volume * rH,
+                              XH = HH.createGain();
+                            XH.connect(BH);
+                            const GH = HH.currentTime + tH,
+                              YH = new Set;
+                            for (const SH of AH) {
+                              const BH = CH(HH, XH, LH, SH, GH + SH.atMs / 1e3, EH * SH.level, (() => {
+                                YH.delete(BH), 0 === YH.size && (XH.disconnect(), hH())
                               }));
-                              IU.add(XU)
+                              YH.add(BH)
                             }
                             return () => {
-                              const XU = UU.currentTime;
-                              YU.gain.setTargetAtTime(0, XU, oU);
-                              for (const UU of IU) try {
-                                UU.stop(XU + 5 * oU)
+                              const BH = HH.currentTime;
+                              XH.gain.setTargetAtTime(0, BH, zH);
+                              for (const HH of YH) try {
+                                HH.stop(BH + 5 * zH)
                               } catch {}
                             }
                           }
 
-                          function YU(UU, XU) {
-                            var zU;
-                            const QU = cU.Howler.ctx,
-                              AU = cU.Howler.masterGain;
-                            if (!QU || !AU || !yU.e.get("soundOnFromAd")) return () => {};
-                            const FU = cU.Howler;
-                            return null === (zU = FU._autoResume) || void 0 === zU || zU.call(FU), EU(QU, AU, UU, XU, yU.e.get("soundVolume"), (() => {
-                              var UU;
-                              null === (UU = FU._autoSuspend) || void 0 === UU || UU.call(FU)
+                          function XH(HH, BH) {
+                            var LH;
+                            const SH = AH.Howler.ctx,
+                              hH = AH.Howler.masterGain;
+                            if (!SH || !hH || !rH.c.get("soundOnFromAd")) return () => {};
+                            const tH = AH.Howler;
+                            return null === (LH = tH._autoResume) || void 0 === LH || LH.call(tH), EH(SH, hH, HH, BH, rH.c.get("soundVolume"), (() => {
+                              var HH;
+                              null === (HH = tH._autoSuspend) || void 0 === HH || HH.call(tH)
                             }))
                           }
-                        }, 5353: (UU, XU, zU) => {
-                          zU.d(XU, {
-                            e: () => FU,
-                            i: () => yU,
-                            l: () => oU,
-                            o: () => AU,
-                            p: () => QU
+                        }, 5302: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            e: () => tH,
+                            h: () => rH,
+                            l: () => zH,
+                            o: () => hH,
+                            p: () => SH
                           });
-                          var cU = zU(5349);
-                          const yU = {
+                          var AH = LH(5296);
+                          const rH = {
                               name: "ChatGPT",
                               url: "https://chatgpt.com/?hints=search&q="
                             },
-                            QU = {
+                            SH = {
                               name: "Claude",
                               url: "https://claude.ai/new?q="
                             },
-                            AU = `${cU.l} lists every page of the Bloxd Code API docs.`;
+                            hH = `${AH.l} lists every page of the Bloxd Code API docs.`;
 
-                          function FU(UU, XU) {
-                            return `${UU.url}${encodeURIComponent(XU.toWellFormed())}`
+                          function tH(HH, BH) {
+                            return `${HH.url}${encodeURIComponent(BH.toWellFormed())}`
                           }
 
-                          function oU(UU) {
-                            const XU = FU(yU, UU);
-                            return XU.length <= 3e4 ? {
-                              url: XU,
+                          function zH(HH) {
+                            const BH = tH(rH, HH);
+                            return BH.length <= 3e4 ? {
+                              url: BH,
                               sendsPrompt: !0
                             } : {
-                              url: new URL(yU.url).origin,
+                              url: new URL(rH.url).origin,
                               sendsPrompt: !1
                             }
                           }
-                        }, 5378: (UU, XU, zU) => {
-                          zU.r(XU), zU.d(XU, {
-                            Howl: () => yU.Howl,
-                            Howler: () => yU.Howler,
-                            musicOutput: () => tU,
-                            readyAudioContext: () => gU
+                        }, 5335: (HH, BH, LH) => {
+                          LH.r(BH), LH.d(BH, {
+                            Howl: () => rH.Howl,
+                            Howler: () => rH.Howler,
+                            musicOutput: () => WH,
+                            readyAudioContext: () => MH
                           });
-                          var cU, yU = zU(5383),
-                            QU = zU(3837),
-                            AU = zU(5092);
-                          const FU = yU.Howler;
+                          var AH, rH = LH(5343),
+                            SH = LH(3811),
+                            hH = LH(5067);
+                          const tH = rH.Howler;
 
-                          function oU() {
-                            var UU, XU;
-                            if (FU.ctx || !FU.usingWebAudio || "undefined" === typeof AudioContext || !(0, AU.j)()) return;
-                            const zU = navigator.audioSession;
-                            let cU;
-                            "auto" === (null === zU || void 0 === zU ? void 0 : zU.type) && (zU.type = "ambient");
+                          function zH() {
+                            var HH, BH;
+                            if (tH.ctx || !tH.usingWebAudio || "undefined" === typeof AudioContext || !(0, hH.i)()) return;
+                            const LH = navigator.audioSession;
+                            let AH;
+                            "auto" === (null === LH || void 0 === LH ? void 0 : LH.type) && (LH.type = "ambient");
                             try {
-                              cU = new AudioContext({
+                              AH = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const yU = cU.createGain();
-                            yU.gain.setValueAtTime(FU._muted ? 0 : null !== (UU = FU._volume) && void 0 !== UU ? UU : 1, cU.currentTime), yU.connect(cU.destination), FU.ctx = cU, FU.masterGain = yU, null === (XU = FU._setup) || void 0 === XU || XU.call(FU)
+                            const rH = AH.createGain();
+                            rH.gain.setValueAtTime(tH._muted ? 0 : null !== (HH = tH._volume) && void 0 !== HH ? HH : 1, AH.currentTime), rH.connect(AH.destination), tH.ctx = AH, tH.masterGain = rH, null === (BH = tH._setup) || void 0 === BH || BH.call(tH)
                           }
-                          FU._mobileUnloaded = !0;
-                          const DU = FU.volume.bind(yU.Howler);
-                          FU.volume = function() {
-                            return oU(), DU(...arguments)
+                          tH._mobileUnloaded = !0;
+                          const CH = tH.volume.bind(rH.Howler);
+                          tH.volume = function() {
+                            return zH(), CH(...arguments)
                           };
-                          const EU = FU.mute.bind(yU.Howler);
-                          FU.mute = UU => (oU(), EU(UU));
-                          const YU = yU.Howl.prototype,
-                            NU = YU.init;
+                          const EH = tH.mute.bind(rH.Howler);
+                          tH.mute = HH => (zH(), EH(HH));
+                          const XH = rH.Howl.prototype,
+                            GH = XH.init;
 
-                          function IU() {
-                            for (; FU._html5AudioPool.length < FU.html5PoolSize;) {
-                              const UU = new Audio;
-                              UU._unlocked = !0, FU._releaseHtml5Audio(UU)
+                          function YH() {
+                            for (; tH._html5AudioPool.length < tH.html5PoolSize;) {
+                              const HH = new Audio;
+                              HH._unlocked = !0, tH._releaseHtml5Audio(HH)
                             }
-                            for (const XU of FU._howls)
-                              if (!XU._webAudio)
-                                for (const zU of XU._getSoundIds()) {
-                                  var UU;
-                                  const cU = null === (UU = XU._soundById(zU)) || void 0 === UU ? void 0 : UU._node;
-                                  cU && !cU._unlocked && (cU._unlocked = !0, cU.load())
+                            for (const BH of tH._howls)
+                              if (!BH._webAudio)
+                                for (const LH of BH._getSoundIds()) {
+                                  var HH;
+                                  const AH = null === (HH = BH._soundById(LH)) || void 0 === HH ? void 0 : HH._node;
+                                  AH && !AH._unlocked && (AH._unlocked = !0, AH.load())
                                 }
                           }
-                          YU.init = function(UU) {
-                            return oU(), NU.call(this, UU)
-                          }, (0, AU.j)() && (FU._unlockAudio = () => {
-                            const UU = FU.ctx;
-                            if (FU._audioUnlocked || !UU) return;
-                            FU.autoUnlock = !1;
-                            const XU = UU.createBuffer(1, 1, 22050);
-                            FU._scratchBuffer = XU;
-                            const zU = new AbortController;
-                            let cU = "afterPaint";
-                            const yU = () => {
-                                var cU;
-                                if (FU._audioUnlocked) return;
-                                null === (cU = FU._autoResume) || void 0 === cU || cU.call(FU);
-                                const yU = UU.createBufferSource();
-                                yU.buffer = XU, yU.connect(UU.destination), yU.start(0), UU.resume().catch((() => {})), yU.onended = () => {
-                                  yU.disconnect(0), FU._audioUnlocked = !0, zU.abort();
-                                  for (const UU of FU._howls) UU._emit("unlock")
+                          XH.init = function(HH) {
+                            return zH(), GH.call(this, HH)
+                          }, (0, hH.i)() && (tH._unlockAudio = () => {
+                            const HH = tH.ctx;
+                            if (tH._audioUnlocked || !HH) return;
+                            tH.autoUnlock = !1;
+                            const BH = HH.createBuffer(1, 1, 22050);
+                            tH._scratchBuffer = BH;
+                            const LH = new AbortController;
+                            let AH = "afterPaint";
+                            const rH = () => {
+                                var AH;
+                                if (tH._audioUnlocked) return;
+                                null === (AH = tH._autoResume) || void 0 === AH || AH.call(tH);
+                                const rH = HH.createBufferSource();
+                                rH.buffer = BH, rH.connect(HH.destination), rH.start(0), HH.resume().catch((() => {})), rH.onended = () => {
+                                  rH.disconnect(0), tH._audioUnlocked = !0, LH.abort();
+                                  for (const HH of tH._howls) HH._emit("unlock")
                                 }
                               },
-                              oU = () => {
-                                IU(), yU()
+                              zH = () => {
+                                YH(), rH()
                               },
-                              DU = XU => {
-                                if (IU(), "inTap" === cU) {
-                                  if ("running" === UU.state) return;
-                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), yU()
-                                } else "afterPaint" === cU && (cU = "queued", (0, QU.d)(XU.timeStamp, (() => {
-                                  cU = "inTap", yU()
+                              CH = BH => {
+                                if (YH(), "inTap" === AH) {
+                                  if ("running" === HH.state) return;
+                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), rH()
+                                } else "afterPaint" === AH && (AH = "queued", (0, SH.c)(BH.timeStamp, (() => {
+                                  AH = "inTap", rH()
                                 })))
                               };
-                            for (const QU of ["touchstart", "touchend"]) document.addEventListener(QU, oU, {
+                            for (const SH of ["touchstart", "touchend"]) document.addEventListener(SH, zH, {
                               capture: !0,
-                              signal: zU.signal
+                              signal: LH.signal
                             });
-                            for (const QU of AU.c) document.addEventListener(QU, DU, {
+                            for (const SH of hH.d) document.addEventListener(SH, CH, {
                               capture: !0,
-                              signal: zU.signal
+                              signal: LH.signal
                             })
                           });
-                          let pU = 0;
-                          const aU = null === (cU = FU._autoSuspend) || void 0 === cU ? void 0 : cU.bind(yU.Howler);
+                          let uH = 0;
+                          const QH = null === (AH = tH._autoSuspend) || void 0 === AH ? void 0 : AH.bind(rH.Howler);
 
-                          function tU() {
-                            gU();
+                          function WH() {
+                            MH();
                             const {
-                              ctx: UU,
-                              masterGain: XU
-                            } = FU;
-                            return UU && XU ? {
-                              ctx: UU,
-                              destination: XU,
-                              holdAwake: UU => {
-                                var XU, zU;
-                                (pU += UU ? 1 : -1, UU) ? null === (XU = FU._autoResume) || void 0 === XU || XU.call(FU): null === (zU = FU._autoSuspend) || void 0 === zU || zU.call(FU)
+                              ctx: HH,
+                              masterGain: BH
+                            } = tH;
+                            return HH && BH ? {
+                              ctx: HH,
+                              destination: BH,
+                              holdAwake: HH => {
+                                var BH, LH;
+                                (uH += HH ? 1 : -1, HH) ? null === (BH = tH._autoResume) || void 0 === BH || BH.call(tH): null === (LH = tH._autoSuspend) || void 0 === LH || LH.call(tH)
                               },
                               wake: () => {
-                                var XU;
-                                "running" !== UU.state && (null === (XU = FU._autoResume) || void 0 === XU || XU.call(FU), UU.resume().catch((() => {})))
+                                var BH;
+                                "running" !== HH.state && (null === (BH = tH._autoResume) || void 0 === BH || BH.call(tH), HH.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function gU() {
-                            var UU;
-                            (FU.volume(), FU.ctx && FU.autoUnlock) && (null === (UU = FU._unlockAudio) || void 0 === UU || UU.call(FU))
+                          function MH() {
+                            var HH;
+                            (tH.volume(), tH.ctx && tH.autoUnlock) && (null === (HH = tH._unlockAudio) || void 0 === HH || HH.call(tH))
                           }
-                          aU && (FU._autoSuspend = () => pU > 0 ? yU.Howler : aU())
-                        }, 5387: (UU, XU, zU) => {
-                          function cU(UU) {
+                          QH && (tH._autoSuspend = () => uH > 0 ? rH.Howler : QH())
+                        }, 5347: (HH, BH, LH) => {
+                          function AH(HH) {
                             return {
-                              notAfter: UU
+                              notAfter: HH
                             }
                           }
-                          zU.d(XU, {
-                            C: () => YU,
-                            d: () => oU,
-                            e: () => DU,
-                            i: () => FU,
-                            j: () => cU,
-                            n: () => yU,
-                            r: () => QU,
-                            v: () => AU,
-                            z: () => EU
+                          LH.d(BH, {
+                            b: () => zH,
+                            c: () => CH,
+                            g: () => tH,
+                            i: () => AH,
+                            j: () => rH,
+                            k: () => SH,
+                            n: () => hH,
+                            o: () => EH,
+                            s: () => XH
                           });
-                          const yU = cU("\\w$."),
-                            QU = cU("\\w.,");
+                          const rH = AH("\\w$."),
+                            SH = AH("\\w.,");
 
-                          function AU(UU) {
-                            return XU => oU(XU, UU)
+                          function hH(HH) {
+                            return BH => zH(BH, HH)
                           }
 
-                          function FU(UU) {
-                            return XU => !UU.test(XU.input.slice(0, XU.index))
+                          function tH(HH) {
+                            return BH => !HH.test(BH.input.slice(0, BH.index))
                           }
 
-                          function oU(UU, XU) {
-                            return UU.index > 0 && new RegExp(`[${XU}]`).test(UU.input[UU.index - 1])
+                          function zH(HH, BH) {
+                            return HH.index > 0 && new RegExp(`[${BH}]`).test(HH.input[HH.index - 1])
                           }
 
-                          function DU(UU, XU, zU) {
-                            return function(UU) {
-                              return void 0 !== UU && "function" !== typeof UU
-                            }(zU) ? function(UU, XU, zU) {
-                              const cU = XU.flags.replace(/[gy]/g, ""),
-                                yU = new RegExp(`[^${zU}](?:${XU.source})`, `${cU}g`),
-                                QU = [],
-                                AU = zU => {
-                                  const cU = zU.index + zU[0].length;
-                                  return ("" === zU[0] ? NU(UU, XU, cU) : cU) - 1
+                          function CH(HH, BH, LH) {
+                            return function(HH) {
+                              return void 0 !== HH && "function" !== typeof HH
+                            }(LH) ? function(HH, BH, LH) {
+                              const AH = BH.flags.replace(/[gy]/g, ""),
+                                rH = new RegExp(`[^${LH}](?:${BH.source})`, `${AH}g`),
+                                SH = [],
+                                hH = LH => {
+                                  const AH = LH.index + LH[0].length;
+                                  return ("" === LH[0] ? GH(HH, BH, AH) : AH) - 1
                                 },
-                                FU = new RegExp(`(?:${XU.source})`, `${cU}y`).exec(UU);
-                              if (FU) {
-                                if (QU.push(FU), !XU.global) return QU;
-                                yU.lastIndex = AU(FU)
+                                tH = new RegExp(`(?:${BH.source})`, `${AH}y`).exec(HH);
+                              if (tH) {
+                                if (SH.push(tH), !BH.global) return SH;
+                                rH.lastIndex = hH(tH)
                               }
-                              for (let oU = yU.exec(UU); oU; oU = yU.exec(UU)) {
-                                const zU = NU(UU, XU, oU.index) - oU.index;
-                                if (oU[0] = oU[0].slice(zU), oU.index += zU, QU.push(oU), !XU.global) break;
-                                yU.lastIndex = AU(oU)
+                              for (let zH = rH.exec(HH); zH; zH = rH.exec(HH)) {
+                                const LH = GH(HH, BH, zH.index) - zH.index;
+                                if (zH[0] = zH[0].slice(LH), zH.index += LH, SH.push(zH), !BH.global) break;
+                                rH.lastIndex = hH(zH)
                               }
-                              return QU
-                            }(UU, XU, zU.notAfter) : function(UU, XU, zU) {
-                              const cU = new RegExp(XU.source, `${XU.flags.replace(/[gy]/g,"")}g`),
-                                yU = [];
-                              for (let QU = cU.exec(UU); QU; QU = cU.exec(UU))
-                                if (!zU || zU(QU)) {
-                                  if (yU.push(QU), !XU.global) break;
-                                  "" === QU[0] && (cU.lastIndex = NU(UU, XU, cU.lastIndex))
-                                } else cU.lastIndex = NU(UU, XU, QU.index);
-                              return yU
-                            }(UU, XU, zU)
+                              return SH
+                            }(HH, BH, LH.notAfter) : function(HH, BH, LH) {
+                              const AH = new RegExp(BH.source, `${BH.flags.replace(/[gy]/g,"")}g`),
+                                rH = [];
+                              for (let SH = AH.exec(HH); SH; SH = AH.exec(HH))
+                                if (!LH || LH(SH)) {
+                                  if (rH.push(SH), !BH.global) break;
+                                  "" === SH[0] && (AH.lastIndex = GH(HH, BH, AH.lastIndex))
+                                } else AH.lastIndex = GH(HH, BH, SH.index);
+                              return rH
+                            }(HH, BH, LH)
                           }
 
-                          function EU(UU, XU, zU, cU) {
-                            let yU = "",
-                              QU = 0;
-                            for (const AU of DU(UU, XU, zU)) yU += UU.slice(QU, AU.index) + cU(AU), QU = AU.index + AU[0].length;
-                            return yU + UU.slice(QU)
+                          function EH(HH, BH, LH, AH) {
+                            let rH = "",
+                              SH = 0;
+                            for (const hH of CH(HH, BH, LH)) rH += HH.slice(SH, hH.index) + AH(hH), SH = hH.index + hH[0].length;
+                            return rH + HH.slice(SH)
                           }
 
-                          function YU(UU, XU, zU) {
-                            const cU = [];
-                            let yU = 0;
-                            for (const QU of DU(UU, XU, zU)) cU.push(UU.slice(yU, QU.index)), yU = QU.index + QU[0].length;
-                            return [...cU, UU.slice(yU)]
+                          function XH(HH, BH, LH) {
+                            const AH = [];
+                            let rH = 0;
+                            for (const SH of CH(HH, BH, LH)) AH.push(HH.slice(rH, SH.index)), rH = SH.index + SH[0].length;
+                            return [...AH, HH.slice(rH)]
                           }
 
-                          function NU(UU, XU, zU) {
-                            var cU;
-                            return zU + (XU.unicode && (null !== (cU = UU.codePointAt(zU)) && void 0 !== cU ? cU : 0) > 65535 ? 2 : 1)
+                          function GH(HH, BH, LH) {
+                            var AH;
+                            return LH + (BH.unicode && (null !== (AH = HH.codePointAt(LH)) && void 0 !== AH ? AH : 0) > 65535 ? 2 : 1)
                           }
-                        }, 5349: (UU, XU, zU) => {
-                          zU.d(XU, {
-                            c: () => yU,
-                            e: () => oU,
-                            i: () => QU,
-                            l: () => AU,
-                            o: () => FU,
-                            q: () => tU,
-                            t: () => EU,
-                            u: () => YU,
-                            x: () => aU,
-                            y: () => IU
+                        }, 5296: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            A: () => YH,
+                            c: () => rH,
+                            g: () => zH,
+                            h: () => SH,
+                            l: () => hH,
+                            n: () => tH,
+                            p: () => WH,
+                            r: () => EH,
+                            u: () => XH,
+                            x: () => QH
                           });
-                          var cU = zU(1639);
-                          const yU = 24e3,
-                            QU = "/docs/llms.txt",
-                            AU = `${cU.b}${QU}`,
-                            FU = "/llms.txt",
-                            oU = "/docs/llms-full.txt";
+                          var AH = LH(1603);
+                          const rH = 24e3,
+                            SH = "/docs/llms.txt",
+                            hH = `${AH.c}${SH}`,
+                            tH = "/llms.txt",
+                            zH = "/docs/llms-full.txt";
 
-                          function DU(UU) {
-                            return UU || "index"
+                          function CH(HH) {
+                            return HH || "index"
                           }
 
-                          function EU(UU) {
-                            return `/docs/${DU(UU)}.md`
+                          function EH(HH) {
+                            return `/docs/${CH(HH)}.md`
                           }
 
-                          function YU(UU, XU) {
-                            return `/docs/${DU(UU)}/${XU+1}.md`
+                          function XH(HH, BH) {
+                            return `/docs/${CH(HH)}/${BH+1}.md`
                           }
-                          const NU = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const GH = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function IU(UU) {
-                            const XU = NU.exec(UU);
-                            return null === XU ? null : {
-                              name: XU[1],
-                              part: void 0 === XU[2] ? null : Number(XU[2])
+                          function YH(HH) {
+                            const BH = GH.exec(HH);
+                            return null === BH ? null : {
+                              name: BH[1],
+                              part: void 0 === BH[2] ? null : Number(BH[2])
                             }
                           }
-                          const pU = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const uH = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function aU(UU) {
-                            const XU = pU.exec(UU);
-                            if (null === XU) return null;
-                            const [, zU = "", cU] = XU;
-                            return void 0 === cU ? EU(zU) : YU(zU, Number(cU) - 1)
+                          function QH(HH) {
+                            const BH = uH.exec(HH);
+                            if (null === BH) return null;
+                            const [, LH = "", AH] = BH;
+                            return void 0 === AH ? EH(LH) : XH(LH, Number(AH) - 1)
                           }
 
-                          function tU(UU) {
-                            return `/docsHtml/${DU(UU)}.html`
+                          function WH(HH) {
+                            return `/docsHtml/${CH(HH)}.html`
                           }
-                        }, 5369: (UU, XU, zU) => {
-                          zU.d(XU, {
-                            e: () => yU,
-                            h: () => cU,
-                            i: () => QU,
-                            l: () => oU,
-                            o: () => AU
+                        }, 5325: (HH, BH, LH) => {
+                          LH.d(BH, {
+                            e: () => rH,
+                            g: () => AH,
+                            i: () => SH,
+                            k: () => zH,
+                            l: () => hH
                           });
-                          const cU = ["sine", "triangle", "square", "sawtooth"],
-                            yU = 55,
-                            QU = {
+                          const AH = ["sine", "triangle", "square", "sawtooth"],
+                            rH = 55,
+                            SH = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7288,38 +7288,38 @@ export const modules = {
                               }
                             };
 
-                          function AU(UU) {
-                            return "string" !== typeof UU ? UU : Object.hasOwn(QU, UU) ? QU[UU] : null
+                          function hH(HH) {
+                            return "string" !== typeof HH ? HH : Object.hasOwn(SH, HH) ? SH[HH] : null
                           }
 
-                          function FU(UU, XU, zU) {
-                            return Math.min(zU, Math.max(XU, UU))
+                          function tH(HH, BH, LH) {
+                            return Math.min(LH, Math.max(BH, HH))
                           }
 
-                          function oU(UU) {
-                            const XU = FU(UU.durationMs, 10, 500),
-                              zU = FU(UU.attackMs, 0, XU),
+                          function zH(HH) {
+                            const BH = tH(HH.durationMs, 10, 500),
+                              LH = tH(HH.attackMs, 0, BH),
                               {
-                                intonation: yU
-                              } = UU;
+                                intonation: rH
+                              } = HH;
                             return {
-                              waveform: cU.includes(UU.waveform) ? UU.waveform : "sine",
-                              pitchHz: FU(UU.pitchHz, 20, 4e3),
-                              glideSemitones: FU(UU.glideSemitones, -24, 24),
-                              durationMs: XU,
-                              attackMs: zU,
-                              releaseMs: FU(UU.releaseMs, 0, XU - zU),
-                              lowpassHz: null === UU.lowpassHz ? null : FU(UU.lowpassHz, 20, 2e4),
-                              volume: FU(UU.volume, 0, 2),
+                              waveform: AH.includes(HH.waveform) ? HH.waveform : "sine",
+                              pitchHz: tH(HH.pitchHz, 20, 4e3),
+                              glideSemitones: tH(HH.glideSemitones, -24, 24),
+                              durationMs: BH,
+                              attackMs: LH,
+                              releaseMs: tH(HH.releaseMs, 0, BH - LH),
+                              lowpassHz: null === HH.lowpassHz ? null : tH(HH.lowpassHz, 20, 2e4),
+                              volume: tH(HH.volume, 0, 2),
                               intonation: {
-                                variationSemitones: FU(yU.variationSemitones, 0, 6),
-                                declineSemitones: FU(yU.declineSemitones, 0, 12),
-                                questionRiseSemitones: FU(yU.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: FU(yU.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: tH(rH.variationSemitones, 0, 6),
+                                declineSemitones: tH(rH.declineSemitones, 0, 12),
+                                questionRiseSemitones: tH(rH.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: tH(rH.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: FU(UU.syllableMs, 25, 200)
+                              syllableMs: tH(HH.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const UU in modules) Object.freeze(modules[UU]);
+                      for (const HH in modules) Object.freeze(modules[HH]);

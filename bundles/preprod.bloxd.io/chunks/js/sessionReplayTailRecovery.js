@@ -1,560 +1,560 @@
 export const id = 64;
 export const ids = [64];
 export const modules = {
-  40673: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      recoverReplayTails: () => uU
+  40811: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      recoverReplayTails: () => eH
     });
-    var cU = zU(40576),
-      yU = zU(42),
-      QU = zU(40569),
-      AU = zU(40543),
-      FU = zU(40573),
-      oU = zU(1220);
-    const DU = 35e3;
-    async function EU(UU, XU, zU) {
-      const cU = {
-          token: UU.token,
-          sequence: XU
+    var AH = LH(40735),
+      rH = LH(30),
+      SH = LH(40725),
+      hH = LH(40704),
+      tH = LH(40732),
+      zH = LH(1148);
+    const CH = 35e3;
+    async function EH(HH, BH, LH) {
+      const AH = {
+          token: HH.token,
+          sequence: BH
         },
-        yU = (0, oU.n)(DU),
-        QU = void 0 === zU ? yU : (0, oU.i)([zU, yU]);
-      let AU = !1;
+        rH = (0, zH.u)(CH),
+        SH = void 0 === LH ? rH : (0, zH.o)([LH, rH]);
+      let hH = !1;
       try {
-        const XU = await fetch(UU.releaseUrl, {
+        const BH = await fetch(HH.releaseUrl, {
           method: "POST",
           headers: {
             "Content-Type": "text/plain"
           },
-          body: JSON.stringify(cU),
-          signal: QU
+          body: JSON.stringify(AH),
+          signal: SH
         });
-        if (503 === XU.status) {
+        if (503 === BH.status) {
           const {
-            reason: UU
-          } = await XU.json();
-          AU = "release_retrying" === UU || "shutting_down" === UU
+            reason: HH
+          } = await BH.json();
+          hH = "release_retrying" === HH || "shutting_down" === HH
         }
-        if (!XU.ok) throw new Error(`HTTP ${XU.status}`);
-        const zU = await XU.json();
-        return "stored" === zU.outcome ? zU.stored : null
-      } catch (FU) {
-        if (QU.aborted || AU) throw FU;
-        return console.warn(`Session replay couldn't ask the part joiner about video segment ${XU}; uploading it from the journal.`, FU), null
+        if (!BH.ok) throw new Error(`HTTP ${BH.status}`);
+        const LH = await BH.json();
+        return "stored" === LH.outcome ? LH.stored : null
+      } catch (tH) {
+        if (SH.aborted || hH) throw tH;
+        return console.warn(`Session replay couldn't ask the part joiner about video segment ${BH}; uploading it from the journal.`, tH), null
       }
     }
-    var YU = zU(40607),
-      NU = zU(40644),
-      IU = zU(5139),
-      pU = zU(40613);
-    async function aU(UU, XU, zU) {
-      if (!UU.mayStartUpload()) return "retryLater";
+    var XH = LH(40756),
+      GH = LH(40785),
+      YH = LH(5111),
+      uH = LH(40760);
+    async function QH(HH, BH, LH) {
+      if (!HH.mayStartUpload()) return "retryLater";
       const {
-        kind: cU,
-        sequence: yU,
-        contentType: QU
-      } = zU;
-      let AU;
+        kind: AH,
+        sequence: rH,
+        contentType: SH
+      } = LH;
+      let hH;
       try {
-        AU = await zU.bytes()
-      } catch (FU) {
-        return console.warn(`Session replay couldn't mux late ${cU} segment ${yU}; skipping it.`, FU), "refused"
+        hH = await LH.bytes()
+      } catch (tH) {
+        return console.warn(`Session replay couldn't mux late ${AH} segment ${rH}; skipping it.`, tH), "refused"
       }
       try {
-        const zU = UU.transportFor(XU),
-          FU = await zU.requestPutUrl({
-            uploadToken: XU.uploadToken,
-            kind: cU,
-            sequence: yU,
-            contentType: QU,
-            byteLength: AU.byteLength,
+        const LH = HH.transportFor(BH),
+          tH = await LH.requestPutUrl({
+            uploadToken: BH.uploadToken,
+            kind: AH,
+            sequence: rH,
+            contentType: SH,
+            byteLength: hH.byteLength,
             late: !0
           });
-        return "rejected" in FU ? (console.warn(`Session replay late ${cU} segment ${yU} refused: ${FU.reason}`), FU.retryable ? "retryLater" : "refused") : (await zU.put(FU.uploadUrl, AU, QU, FU.ifNoneMatch), "uploaded")
-      } catch (FU) {
-        return console.warn(`Session replay late ${cU} segment ${yU} upload failed; trying again later.`, FU), "retryLater"
+        return "rejected" in tH ? (console.warn(`Session replay late ${AH} segment ${rH} refused: ${tH.reason}`), tH.retryable ? "retryLater" : "refused") : (await LH.put(tH.uploadUrl, hH, SH, tH.ifNoneMatch), "uploaded")
+      } catch (tH) {
+        return console.warn(`Session replay late ${AH} segment ${rH} upload failed; trying again later.`, tH), "retryLater"
       }
     }
-    async function tU(UU, XU, zU) {
-      var cU;
-      const yU = UU.nowMs(),
-        QU = (null !== (cU = zU.domSegments) && void 0 !== cU ? cU : []).filter((UU => UU.endMs <= yU));
-      for (const AU of [...zU.videoSegments, ...zU.telemetrySegments, ...QU]) zU.endedAtMs = Math.max(zU.endedAtMs, AU.endMs);
-      for (const AU of (0, pU.e)({
-          uploadToken: XU.uploadToken,
-          manifest: zU,
+    async function WH(HH, BH, LH) {
+      var AH;
+      const rH = HH.nowMs(),
+        SH = (null !== (AH = LH.domSegments) && void 0 !== AH ? AH : []).filter((HH => HH.endMs <= rH));
+      for (const hH of [...LH.videoSegments, ...LH.telemetrySegments, ...SH]) LH.endedAtMs = Math.max(LH.endedAtMs, hH.endMs);
+      for (const hH of (0, uH.i)({
+          uploadToken: BH.uploadToken,
+          manifest: LH,
           creatorGrants: [],
           late: !0
         })) {
-        const zU = await UU.postManifest(XU, AU);
-        if ("uploaded" !== zU) return zU
+        const LH = await HH.postManifest(BH, hH);
+        if ("uploaded" !== LH) return LH
       }
       return "uploaded"
     }
-    var gU = zU(40679),
-      kU = zU(40698),
-      GU = zU(40747),
-      BU = zU(40771),
-      ZU = zU(40754);
-    class RU {
-      constructor(UU, XU, zU, cU, yU) {
-        this.frameDurationS = zU, this.onFragment = yU, this.firstTimestampUs = void 0, this.lastTimestampUs = void 0, this.output = void 0, this.source = void 0, this.pending = void 0, this.chunkCount = 0, this.boxes = [], this.addingTimestampUs = null, this.firstTimestampUs = XU, this.lastTimestampUs = XU;
-        const QU = UU => {
-          this.boxes.push(UU)
+    var MH = LH(40818),
+      xH = LH(40832),
+      vH = LH(40888),
+      PH = LH(40916),
+      TH = LH(40900);
+    class UH {
+      constructor(HH, BH, LH, AH, rH) {
+        this.frameDurationS = LH, this.onFragment = rH, this.firstTimestampUs = void 0, this.lastTimestampUs = void 0, this.output = void 0, this.source = void 0, this.pending = void 0, this.chunkCount = 0, this.boxes = [], this.addingTimestampUs = null, this.firstTimestampUs = BH, this.lastTimestampUs = BH;
+        const SH = HH => {
+          this.boxes.push(HH)
         };
-        this.output = new gU.e({
-          format: new kU.g({
+        this.output = new MH.d({
+          format: new xH.e({
             fastStart: "fragmented",
-            minimumFragmentDuration: cU,
-            onFtyp: QU,
-            onMoov: QU,
-            onMoof: QU,
-            onMdat: UU => {
-              QU(UU), this.fragmentDone()
+            minimumFragmentDuration: AH,
+            onFtyp: SH,
+            onMoov: SH,
+            onMoof: SH,
+            onMdat: HH => {
+              SH(HH), this.fragmentDone()
             }
           }),
-          target: new GU.d
-        }), this.source = new BU.g(UU), this.output.addVideoTrack(this.source), this.pending = this.output.start()
+          target: new vH.g
+        }), this.source = new PH.j(HH), this.output.addVideoTrack(this.source), this.pending = this.output.start()
       }
       get durationUs() {
         return this.lastTimestampUs - this.firstTimestampUs
       }
-      add(UU, XU) {
-        const zU = new Uint8Array(UU.byteLength);
-        UU.copyTo(zU), this.addData(zU, UU.type, UU.timestamp, XU)
+      add(HH, BH) {
+        const LH = new Uint8Array(HH.byteLength);
+        HH.copyTo(LH), this.addData(LH, HH.type, HH.timestamp, BH)
       }
-      addData(UU, XU, zU, cU) {
-        const yU = new ZU.e(UU, XU, (zU - this.firstTimestampUs) / 1e6, this.frameDurationS),
-          QU = 0 === this.chunkCount++;
-        this.lastTimestampUs = Math.max(this.lastTimestampUs, zU), this.pending = this.pending.then((() => (this.addingTimestampUs = zU, this.source.add(yU, QU ? {
-          decoderConfig: cU
+      addData(HH, BH, LH, AH) {
+        const rH = new TH.b(HH, BH, (LH - this.firstTimestampUs) / 1e6, this.frameDurationS),
+          SH = 0 === this.chunkCount++;
+        this.lastTimestampUs = Math.max(this.lastTimestampUs, LH), this.pending = this.pending.then((() => (this.addingTimestampUs = LH, this.source.add(rH, SH ? {
+          decoderConfig: AH
         } : void 0))))
       }
       async finish() {
         await this.pending, this.addingTimestampUs = null, await this.output.finalize()
       }
       fragmentDone() {
-        var UU;
-        const XU = PU(this.boxes);
+        var HH;
+        const BH = VH(this.boxes);
         this.boxes = [], this.onFragment({
-          bytes: XU,
-          endUs: null !== (UU = this.addingTimestampUs) && void 0 !== UU ? UU : this.lastTimestampUs + 1e6 * this.frameDurationS
+          bytes: BH,
+          endUs: null !== (HH = this.addingTimestampUs) && void 0 !== HH ? HH : this.lastTimestampUs + 1e6 * this.frameDurationS
         })
       }
     }
 
-    function PU(UU) {
-      const XU = new Uint8Array(UU.reduce(((UU, XU) => UU + XU.byteLength), 0));
-      let zU = 0;
-      for (const cU of UU) XU.set(cU, zU), zU += cU.byteLength;
-      return XU
+    function VH(HH) {
+      const BH = new Uint8Array(HH.reduce(((HH, BH) => HH + BH.byteLength), 0));
+      let LH = 0;
+      for (const AH of HH) BH.set(AH, LH), LH += AH.byteLength;
+      return BH
     }
-    zU(40603);
+    LH(40751);
 
-    function WU(UU, XU, zU, cU) {
-      const yU = UU / 1e3 + zU;
+    function OH(HH, BH, LH, AH) {
+      const rH = HH / 1e3 + LH;
       return {
-        startMs: yU,
-        endMs: yU + XU / 1e3 + 1e3 / cU
+        startMs: rH,
+        endMs: rH + BH / 1e3 + 1e3 / AH
       }
     }
-    const dU = 2,
-      LU = 18e5;
+    const bH = 2,
+      kH = 18e5;
 
-    function eU(UU, XU) {
-      const zU = XU[XU.length - 1].timestampUs - UU.firstTimestampUs,
+    function mH(HH, BH) {
+      const LH = BH[BH.length - 1].timestampUs - HH.firstTimestampUs,
         {
-          startMs: cU,
-          endMs: yU
-        } = WU(UU.firstTimestampUs, zU, UU.epochOffsetMs, UU.fps);
+          startMs: AH,
+          endMs: rH
+        } = OH(HH.firstTimestampUs, LH, HH.epochOffsetMs, HH.fps);
       return {
-        startMs: Math.round(cU),
-        endMs: Math.round(yU),
-        width: UU.width,
-        height: UU.height,
-        codec: UU.codec
+        startMs: Math.round(AH),
+        endMs: Math.round(rH),
+        width: HH.width,
+        height: HH.height,
+        codec: HH.codec
       }
     }
-    async function CU(UU, XU) {
-      const zU = [],
-        cU = new RU(UU.containerCodec, UU.firstTimestampUs, 1 / UU.fps, dU, (UU => {
+    async function oH(HH, BH) {
+      const LH = [],
+        AH = new UH(HH.containerCodec, HH.firstTimestampUs, 1 / HH.fps, bH, (HH => {
           let {
-            bytes: XU
-          } = UU;
-          zU.push(XU)
+            bytes: BH
+          } = HH;
+          LH.push(BH)
         }));
-      for (const yU of XU) cU.addData(yU.data, yU.key ? "key" : "delta", yU.timestampUs, UU.decoderConfig);
-      return await cU.finish(), PU(zU).buffer
+      for (const rH of BH) AH.addData(rH.data, rH.key ? "key" : "delta", rH.timestampUs, HH.decoderConfig);
+      return await AH.finish(), VH(LH).buffer
     }
 
-    function wU(UU, XU, zU) {
-      var cU;
-      const yU = null === (cU = UU.videoProgress) || void 0 === cU ? void 0 : cU.find((UU => UU.segmentId === XU));
-      return void 0 !== yU && (null === zU || yU.partsLanded > zU.partsLanded) ? yU : zU
+    function IH(HH, BH, LH) {
+      var AH;
+      const rH = null === (AH = HH.videoProgress) || void 0 === AH ? void 0 : AH.find((HH => HH.segmentId === BH));
+      return void 0 !== rH && (null === LH || rH.partsLanded > LH.partsLanded) ? rH : LH
     }
-    const qU = 6e5;
-    async function OU(UU, XU) {
-      const zU = {
-        recordingId: XU.recordingId,
+    const fH = 6e5;
+    async function lH(HH, BH) {
+      const LH = {
+        recordingId: BH.recordingId,
         outcome: "nothing",
         videoSegments: 0,
         telemetrySegments: 0,
         domSegments: 0
       };
-      if (UU.nowMs() > UU.lateUploadUntilMs(XU) - qU) return {
-        ...zU,
+      if (HH.nowMs() > HH.lateUploadUntilMs(BH) - fH) return {
+        ...LH,
         outcome: "expired"
       };
-      const cU = new Set;
-      let yU;
+      const AH = new Set;
+      let rH;
       try {
-        yU = await async function(UU, XU, zU, cU) {
+        rH = await async function(HH, BH, LH, AH) {
           const {
-            partJoiner: yU
-          } = XU;
-          if (void 0 === yU) return zU;
-          const QU = UU.nowMs() > XU.manifest.endedAtMs + LU,
-            AU = new Map;
+            partJoiner: rH
+          } = BH;
+          if (void 0 === rH) return LH;
+          const SH = HH.nowMs() > BH.manifest.endedAtMs + kH,
+            hH = new Map;
           for (const {
-              header: oU,
-              sequence: DU,
-              progress: EU
+              header: zH,
+              sequence: CH,
+              progress: EH
             }
-            of zU.video)
-            if (null !== DU && null === wU(XU, oU.segmentId, EU)) {
-              let XU;
+            of LH.video)
+            if (null !== CH && null === IH(BH, zH.segmentId, EH)) {
+              let BH;
               try {
-                XU = await UU.releaseJoined(yU, DU)
-              } catch (FU) {
-                if (!QU) {
-                  cU.add(oU.segmentId);
+                BH = await HH.releaseJoined(rH, CH)
+              } catch (tH) {
+                if (!SH) {
+                  AH.add(zH.segmentId);
                   continue
                 }
-                console.warn(`Session replay's part joiner didn't answer about video segment ${DU} in time; uploading it from the journal.`, FU), XU = null
+                console.warn(`Session replay's part joiner didn't answer about video segment ${CH} in time; uploading it from the journal.`, tH), BH = null
               }
-              null !== XU && AU.set(oU.segmentId, XU)
+              null !== BH && hH.set(zH.segmentId, BH)
             } return {
-            ...zU,
-            joined: AU
+            ...LH,
+            joined: hH
           }
-        }(UU, XU, await UU.store.read(XU), cU)
-      } catch (gU) {
-        return console.warn(`Session replay couldn't read what an earlier page load left of ${XU.recordingId}; trying again later.`, gU), {
-          ...zU,
+        }(HH, BH, await HH.store.read(BH), AH)
+      } catch (MH) {
+        return console.warn(`Session replay couldn't read what an earlier page load left of ${BH.recordingId}; trying again later.`, MH), {
+          ...LH,
           outcome: "retryLater"
         }
       }
-      const QU = [],
-        AU = {
-          ...XU.manifest,
+      const SH = [],
+        hH = {
+          ...BH.manifest,
           videoSegments: [],
           telemetrySegments: [],
-          ...yU.dom.length + yU.domTails.length > 0 ? {
-            domSegments: QU
+          ...rH.dom.length + rH.domTails.length > 0 ? {
+            domSegments: SH
           } : {}
         },
-        FU = () => AU.videoSegments.length + AU.telemetrySegments.length + QU.length > 0,
-        oU = function(UU, XU) {
-          let zU = UU.video.reduce(((UU, XU) => {
+        tH = () => hH.videoSegments.length + hH.telemetrySegments.length + SH.length > 0,
+        zH = function(HH, BH) {
+          let LH = HH.video.reduce(((HH, BH) => {
             let {
-              sequence: zU
-            } = XU;
-            return null === zU ? UU : Math.max(UU, zU + 1)
-          }), XU.nextVideoSequence);
+              sequence: LH
+            } = BH;
+            return null === LH ? HH : Math.max(HH, LH + 1)
+          }), BH.nextVideoSequence);
           return {
-            segments: [...UU.video].sort(((UU, XU) => UU.header.segmentId - XU.header.segmentId)).map((cU => {
-              var yU, QU, AU;
+            segments: [...HH.video].sort(((HH, BH) => HH.header.segmentId - BH.header.segmentId)).map((AH => {
+              var rH, SH, hH;
               let {
-                header: FU,
-                sequence: oU,
-                progress: DU,
-                chunks: EU
-              } = cU;
-              const YU = wU(XU, FU.segmentId, DU),
-                NU = null === (yU = UU.joined) || void 0 === yU ? void 0 : yU.get(FU.segmentId),
-                IU = null !== oU && void 0 !== NU ? {
-                  sequence: oU,
-                  ...NU.meta
-                } : null !== oU && null !== YU ? {
-                  sequence: oU,
-                  ...YU.meta,
-                  startMs: Math.round(YU.meta.startMs),
-                  endMs: Math.round(YU.meta.endMs),
-                  parts: YU.partsLanded
+                header: tH,
+                sequence: zH,
+                progress: CH,
+                chunks: EH
+              } = AH;
+              const XH = IH(BH, tH.segmentId, CH),
+                GH = null === (rH = HH.joined) || void 0 === rH ? void 0 : rH.get(tH.segmentId),
+                YH = null !== zH && void 0 !== GH ? {
+                  sequence: zH,
+                  ...GH.meta
+                } : null !== zH && null !== XH ? {
+                  sequence: zH,
+                  ...XH.meta,
+                  startMs: Math.round(XH.meta.startMs),
+                  endMs: Math.round(XH.meta.endMs),
+                  parts: XH.partsLanded
                 } : null,
-                pU = null !== (QU = null !== (AU = null === NU || void 0 === NU ? void 0 : NU.completeUntilUs) && void 0 !== AU ? AU : null === YU || void 0 === YU ? void 0 : YU.completeUntilUs) && void 0 !== QU ? QU : null,
-                aU = function(UU) {
-                  const XU = [...UU].sort(((UU, XU) => UU.index - XU.index)),
-                    zU = [];
-                  for (const cU of XU) {
-                    if (0 === zU.length ? !cU.key : cU.index !== zU[0].index + zU.length) break;
-                    zU.push(cU)
+                uH = null !== (SH = null !== (hH = null === GH || void 0 === GH ? void 0 : GH.completeUntilUs) && void 0 !== hH ? hH : null === XH || void 0 === XH ? void 0 : XH.completeUntilUs) && void 0 !== SH ? SH : null,
+                QH = function(HH) {
+                  const BH = [...HH].sort(((HH, BH) => HH.index - BH.index)),
+                    LH = [];
+                  for (const AH of BH) {
+                    if (0 === LH.length ? !AH.key : AH.index !== LH[0].index + LH.length) break;
+                    LH.push(AH)
                   }
-                  return zU
-                }(null === pU ? EU : EU.filter((UU => UU.timestampUs >= pU))),
-                tU = 0 === aU.length ? null : {
-                  sequence: zU++,
+                  return LH
+                }(null === uH ? EH : EH.filter((HH => HH.timestampUs >= uH))),
+                WH = 0 === QH.length ? null : {
+                  sequence: LH++,
                   header: {
-                    ...FU,
-                    firstTimestampUs: aU[0].timestampUs
+                    ...tH,
+                    firstTimestampUs: QH[0].timestampUs
                   },
-                  chunks: aU
+                  chunks: QH
                 };
               return {
-                segmentId: FU.segmentId,
-                landed: IU,
-                tail: tU
+                segmentId: tH.segmentId,
+                landed: YH,
+                tail: WH
               }
             })),
-            nextSequence: zU
+            nextSequence: LH
           }
-        }(yU, XU),
-        DU = function(UU, XU) {
-          var zU;
-          let cU = UU.dom.reduce(((UU, XU) => {
+        }(rH, BH),
+        CH = function(HH, BH) {
+          var LH;
+          let AH = HH.dom.reduce(((HH, BH) => {
             let {
-              sequence: zU
-            } = XU;
-            return Math.max(UU, zU + 1)
-          }), null !== (zU = XU.nextDomSequence) && void 0 !== zU ? zU : 0);
-          const yU = [...UU.domTails].sort(((UU, XU) => UU.chunkIndex - XU.chunkIndex || UU.fromChar - XU.fromChar)),
-            QU = [];
-          for (const AU of yU) {
-            const UU = QU[QU.length - 1],
-              XU = (null === UU || void 0 === UU ? void 0 : UU.chunkIndex) === AU.chunkIndex;
-            AU.fromChar === (XU ? UU.text.length : 0) && (XU ? (UU.text += AU.text, UU.last = AU) : QU.push({
-              chunkIndex: AU.chunkIndex,
-              sequence: cU++,
-              text: AU.text,
-              last: AU
+              sequence: LH
+            } = BH;
+            return Math.max(HH, LH + 1)
+          }), null !== (LH = BH.nextDomSequence) && void 0 !== LH ? LH : 0);
+          const rH = [...HH.domTails].sort(((HH, BH) => HH.chunkIndex - BH.chunkIndex || HH.fromChar - BH.fromChar)),
+            SH = [];
+          for (const hH of rH) {
+            const HH = SH[SH.length - 1],
+              BH = (null === HH || void 0 === HH ? void 0 : HH.chunkIndex) === hH.chunkIndex;
+            hH.fromChar === (BH ? HH.text.length : 0) && (BH ? (HH.text += hH.text, HH.last = hH) : SH.push({
+              chunkIndex: hH.chunkIndex,
+              sequence: AH++,
+              text: hH.text,
+              last: hH
             }))
           }
           return {
-            tails: QU,
-            nextSequence: cU
+            tails: SH,
+            nextSequence: AH
           }
-        }(yU, XU),
-        EU = {
+        }(rH, BH),
+        EH = {
           videoSegmentIds: [],
           telemetrySequences: [],
           domSequences: [],
           domTailChunks: []
         };
-      let YU = !1;
-      const NU = async yU => {
-        if (FU()) {
-          const FU = await tU(UU, XU, AU);
-          if ("retryLater" === yU && "uploaded" === FU) try {
-            var QU;
-            const zU = DU.tails.find((UU => {
+      let XH = !1;
+      const GH = async rH => {
+        if (tH()) {
+          const tH = await WH(HH, BH, hH);
+          if ("retryLater" === rH && "uploaded" === tH) try {
+            var SH;
+            const LH = CH.tails.find((HH => {
                 let {
-                  chunkIndex: XU
-                } = UU;
-                return !EU.domTailChunks.includes(XU)
+                  chunkIndex: BH
+                } = HH;
+                return !EH.domTailChunks.includes(BH)
               })),
-              cU = null !== (QU = null === zU || void 0 === zU ? void 0 : zU.sequence) && void 0 !== QU ? QU : DU.nextSequence;
-            await UU.store.forgetSent({
-              ...XU,
-              nextVideoSequence: oU.nextSequence,
-              nextDomSequence: cU
-            }, EU)
-          } catch (gU) {
-            console.warn(`Session replay couldn't drop what it sent of ${XU.recordingId} from its journal.`, gU)
+              AH = null !== (SH = null === LH || void 0 === LH ? void 0 : LH.sequence) && void 0 !== SH ? SH : CH.nextSequence;
+            await HH.store.forgetSent({
+              ...BH,
+              nextVideoSequence: zH.nextSequence,
+              nextDomSequence: AH
+            }, EH)
+          } catch (MH) {
+            console.warn(`Session replay couldn't drop what it sent of ${BH.recordingId} from its journal.`, MH)
           }
-          if ("refused" === FU && cU.size > 0) return {
-            ...zU,
+          if ("refused" === tH && AH.size > 0) return {
+            ...LH,
             outcome: "refused"
           }
         }
         return {
-          ...zU,
-          outcome: yU
+          ...LH,
+          outcome: rH
         }
       };
       for (const {
-          segmentId: tU,
-          landed: kU,
-          tail: GU
+          segmentId: WH,
+          landed: xH,
+          tail: vH
         }
-        of oU.segments)
-        if (!cU.has(tU)) {
-          if (null !== kU && AU.videoSegments.push(kU), null !== GU) {
-            const cU = await aU(UU, XU, {
+        of zH.segments)
+        if (!AH.has(WH)) {
+          if (null !== xH && hH.videoSegments.push(xH), null !== vH) {
+            const AH = await QH(HH, BH, {
               kind: "video",
-              sequence: GU.sequence,
+              sequence: vH.sequence,
               contentType: "video/mp4",
-              bytes: () => UU.mux(GU.header, GU.chunks)
+              bytes: () => HH.mux(vH.header, vH.chunks)
             });
-            if ("retryLater" === cU) return await NU(cU);
-            "refused" === cU ? YU = !0 : (AU.videoSegments.push({
-              sequence: GU.sequence,
-              ...eU(GU.header, GU.chunks)
-            }), zU.videoSegments++)
+            if ("retryLater" === AH) return await GH(AH);
+            "refused" === AH ? XH = !0 : (hH.videoSegments.push({
+              sequence: vH.sequence,
+              ...mH(vH.header, vH.chunks)
+            }), LH.videoSegments++)
           }
-          EU.videoSegmentIds.push(tU)
-        } const IU = [...yU.telemetry].sort(((UU, XU) => UU.sequence - XU.sequence));
-      for (const tU of IU) {
-        const cU = tU.landed ? "uploaded" : await aU(UU, XU, {
+          EH.videoSegmentIds.push(WH)
+        } const YH = [...rH.telemetry].sort(((HH, BH) => HH.sequence - BH.sequence));
+      for (const WH of YH) {
+        const AH = WH.landed ? "uploaded" : await QH(HH, BH, {
           kind: "telemetry",
-          sequence: tU.sequence,
+          sequence: WH.sequence,
           contentType: "application/octet-stream",
-          bytes: async () => tU.bytes
+          bytes: async () => WH.bytes
         });
-        if ("retryLater" === cU) return await NU(cU);
-        EU.telemetrySequences.push(tU.sequence), "refused" !== cU ? (AU.telemetrySegments.push({
-          sequence: tU.sequence,
-          startMs: Math.round(tU.startMs),
-          endMs: Math.round(tU.endMs)
-        }), zU.telemetrySegments++) : YU = !0
+        if ("retryLater" === AH) return await GH(AH);
+        EH.telemetrySequences.push(WH.sequence), "refused" !== AH ? (hH.telemetrySegments.push({
+          sequence: WH.sequence,
+          startMs: Math.round(WH.startMs),
+          endMs: Math.round(WH.endMs)
+        }), LH.telemetrySegments++) : XH = !0
       }
-      const pU = [...yU.dom].sort(((UU, XU) => UU.sequence - XU.sequence));
+      const uH = [...rH.dom].sort(((HH, BH) => HH.sequence - BH.sequence));
       for (const {
-          sequence: tU,
-          chunk: kU,
-          bytes: GU
+          sequence: WH,
+          chunk: xH,
+          bytes: vH
         }
-        of pU) {
-        const cU = null === GU ? "uploaded" : await aU(UU, XU, {
+        of uH) {
+        const AH = null === vH ? "uploaded" : await QH(HH, BH, {
           kind: "dom",
-          sequence: tU,
+          sequence: WH,
           contentType: "application/octet-stream",
-          bytes: async () => GU
+          bytes: async () => vH
         });
-        if ("retryLater" === cU) return await NU(cU);
-        EU.domSequences.push(tU), QU.push({
-          sequence: tU,
-          ...kU
-        }), "uploaded" === cU && zU.domSegments++
+        if ("retryLater" === AH) return await GH(AH);
+        EH.domSequences.push(WH), SH.push({
+          sequence: WH,
+          ...xH
+        }), "uploaded" === AH && LH.domSegments++
       }
       for (const {
-          chunkIndex: tU,
-          sequence: kU,
-          text: GU,
-          last: BU
+          chunkIndex: WH,
+          sequence: xH,
+          text: vH,
+          last: PH
         }
-        of DU.tails) {
-        let cU;
-        const yU = await aU(UU, XU, {
+        of CH.tails) {
+        let AH;
+        const rH = await QH(HH, BH, {
           kind: "dom",
-          sequence: kU,
+          sequence: xH,
           contentType: "application/octet-stream",
-          bytes: async () => (cU = await UU.packDom(GU), cU.bytes.buffer)
+          bytes: async () => (AH = await HH.packDom(vH), AH.bytes.buffer)
         });
-        if ("retryLater" === yU) return await NU(yU);
-        if (EU.domTailChunks.push(tU), "refused" === yU) {
-          YU = !0;
+        if ("retryLater" === rH) return await GH(rH);
+        if (EH.domTailChunks.push(WH), "refused" === rH) {
+          XH = !0;
           continue
         }
         const {
-          bytes: AU,
-          inflatedBytes: FU
-        } = cU, {
-          startMs: oU,
-          endMs: DU,
-          summary: IU
-        } = BU;
-        QU.push({
-          sequence: kU,
-          startMs: oU,
-          endMs: DU,
-          byteLength: AU.byteLength,
+          bytes: hH,
+          inflatedBytes: tH
+        } = AH, {
+          startMs: zH,
+          endMs: CH,
+          summary: YH
+        } = PH;
+        SH.push({
+          sequence: xH,
+          startMs: zH,
+          endMs: CH,
+          byteLength: hH.byteLength,
           summary: {
-            ...IU,
-            size: FU
+            ...YH,
+            size: tH
           }
-        }), zU.domSegments++
+        }), LH.domSegments++
       }
-      return cU.size > 0 ? await NU("retryLater") : FU() ? {
-        ...zU,
-        outcome: await tU(UU, XU, AU)
-      } : YU ? {
-        ...zU,
+      return AH.size > 0 ? await GH("retryLater") : tH() ? {
+        ...LH,
+        outcome: await WH(HH, BH, hH)
+      } : XH ? {
+        ...LH,
         outcome: "refused"
-      } : zU
+      } : LH
     }
-    var SU = zU(40586),
-      rU = zU(40622);
-    async function uU() {
-      const UU = "undefined" === typeof navigator ? void 0 : navigator.locks;
-      if (!NU.b.supported || void 0 === UU) return;
-      const XU = new NU.b,
-        zU = new SU.b,
-        oU = new QU.d,
-        DU = await async function(UU) {
-          const XU = [];
-          for (const cU of await UU.store.listRecordings()) {
-            let yU = {
-              recordingId: cU.recordingId,
+    var KH = LH(40745),
+      cH = LH(40769);
+    async function eH() {
+      const HH = "undefined" === typeof navigator ? void 0 : navigator.locks;
+      if (!GH.d.supported || void 0 === HH) return;
+      const BH = new GH.d,
+        LH = new KH.b,
+        zH = new SH.c,
+        CH = await async function(HH) {
+          const BH = [];
+          for (const AH of await HH.store.listRecordings()) {
+            let rH = {
+              recordingId: AH.recordingId,
               outcome: "live",
               videoSegments: 0,
               telemetrySegments: 0,
               domSegments: 0
             };
             try {
-              await UU.withLock(cU.recordingId, (async () => {
-                const XU = (await UU.store.listRecordings()).find((UU => {
+              await HH.withLock(AH.recordingId, (async () => {
+                const BH = (await HH.store.listRecordings()).find((HH => {
                   let {
-                    recordingId: XU
-                  } = UU;
-                  return XU === cU.recordingId
+                    recordingId: BH
+                  } = HH;
+                  return BH === AH.recordingId
                 }));
-                if (void 0 !== XU) {
+                if (void 0 !== BH) {
                   try {
-                    yU = await OU(UU, XU)
-                  } catch (zU) {
-                    console.warn(`Session replay couldn't recover what an earlier page load left of ${cU.recordingId}; forgetting it.`, zU), yU = {
-                      ...yU,
+                    rH = await lH(HH, BH)
+                  } catch (LH) {
+                    console.warn(`Session replay couldn't recover what an earlier page load left of ${AH.recordingId}; forgetting it.`, LH), rH = {
+                      ...rH,
                       outcome: "failed"
                     }
                   }
-                  "retryLater" !== yU.outcome && await UU.store.deleteRecording(cU.recordingId)
-                } else yU = {
-                  ...yU,
+                  "retryLater" !== rH.outcome && await HH.store.deleteRecording(AH.recordingId)
+                } else rH = {
+                  ...rH,
                   outcome: "nothing"
                 }
               }))
-            } catch (zU) {
-              console.warn(`Session replay couldn't forget ${cU.recordingId}'s journal.`, zU)
+            } catch (LH) {
+              console.warn(`Session replay couldn't forget ${AH.recordingId}'s journal.`, LH)
             }
-            XU.push(yU)
+            BH.push(rH)
           }
-          return XU
+          return BH
         }({
-          store: XU,
-          transportFor: UU => {
-            var XU;
-            return new rU.g((null !== (XU = UU.endpoints) && void 0 !== XU ? XU : (0, FU.d)()).segmentUploadUrl, {
-              relay: zU.for(UU)
+          store: BH,
+          transportFor: HH => {
+            var BH;
+            return new cH.e((null !== (BH = HH.endpoints) && void 0 !== BH ? BH : (0, tH.c)()).segmentUploadUrl, {
+              relay: LH.for(HH)
             })
           },
-          postManifest: (UU, XU) => {
-            var zU;
-            return (0, YU.b)((null !== (zU = UU.endpoints) && void 0 !== zU ? zU : (0, FU.d)()).manifestUrl, XU)
+          postManifest: (HH, BH) => {
+            var LH;
+            return (0, XH.e)((null !== (LH = HH.endpoints) && void 0 !== LH ? LH : (0, tH.c)()).manifestUrl, BH)
           },
-          withLock: async (XU, zU) => {
-            await UU.request((0, IU.v)(XU), {
+          withLock: async (BH, LH) => {
+            await HH.request((0, YH.u)(BH), {
               ifAvailable: !0
-            }, (async UU => {
-              null !== UU && await zU()
+            }, (async HH => {
+              null !== HH && await LH()
             }))
           },
-          mux: CU,
-          packDom: UU => oU.pack(UU).catch((() => (0, AU.b)(UU))),
-          releaseJoined: EU,
+          mux: oH,
+          packDom: HH => zH.pack(HH).catch((() => (0, hH.c)(HH))),
+          releaseJoined: EH,
           nowMs: Date.now,
-          lateUploadUntilMs: UU => {
-            var XU;
-            return null !== (XU = UU.lateUploadUntilMs) && void 0 !== XU ? XU : UU.expiresAtMs + cU.e
+          lateUploadUntilMs: HH => {
+            var BH;
+            return null !== (BH = HH.lateUploadUntilMs) && void 0 !== BH ? BH : HH.expiresAtMs + AH.b
           },
           mayStartUpload: () => !0
         }).finally((() => {
-          oU.close()
+          zH.close()
         }));
-      for (const cU of DU) "live" !== cU.outcome && console.info(`Session replay: ${cU.outcome} what an earlier page load left of ${cU.recordingId} (${cU.videoSegments} video, ${cU.telemetrySegments} telemetry, ${cU.domSegments} page recording).`);
-      0 === (await XU.listRecordings()).length && yU.k.removeItem(IU.k)
+      for (const AH of CH) "live" !== AH.outcome && console.info(`Session replay: ${AH.outcome} what an earlier page load left of ${AH.recordingId} (${AH.videoSegments} video, ${AH.telemetrySegments} telemetry, ${AH.domSegments} page recording).`);
+      0 === (await BH.listRecordings()).length && rH.e.removeItem(YH.m)
     }
   },
-  40752: () => {}
+  40891: () => {}
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

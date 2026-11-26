@@ -1,573 +1,1037 @@
 export const id = 287;
 export const ids = [287];
 export const modules = {
-  41549: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => PU,
-      h: () => ZU,
-      i: () => GU,
-      k: () => BU,
-      n: () => kU,
-      o: () => gU
+  41478: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => kH
     });
-    var cU = zU(41134),
-      yU = zU(41202),
-      QU = zU(37819),
-      AU = zU(41237),
-      FU = zU(41557),
-      oU = zU(41422),
-      DU = zU(41160),
-      EU = zU(41415),
-      YU = zU(37841),
-      NU = zU(41406),
-      IU = zU(41400),
-      pU = zU(41438),
-      aU = zU(37863);
-    const tU = {
-      effect: null,
-      subMesh: null
-    };
-    class gU extends EU.d {
-      constructor(UU, XU, zU) {
-        let cU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        super(UU, XU, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4]), this._textures = {}, this._internalTextures = {}, this._textureArrays = {}, this._externalTextures = {}, this._floats = {}, this._ints = {}, this._uints = {}, this._floatsArrays = {}, this._colors3 = {}, this._colors3Arrays = {}, this._colors4 = {}, this._colors4Arrays = {}, this._vectors2 = {}, this._vectors3 = {}, this._vectors4 = {}, this._quaternions = {}, this._quaternionsArrays = {}, this._matrices = {}, this._matrixArrays = {}, this._matrices3x3 = {}, this._matrices2x2 = {}, this._vectors2Arrays = {}, this._vectors3Arrays = {}, this._vectors4Arrays = {}, this._uniformBuffers = {}, this._textureSamplers = {}, this._storageBuffers = {}, this._cachedWorldViewMatrix = new QU.e, this._cachedWorldViewProjectionMatrix = new QU.e, this._multiview = !1, this._vertexPullingMetadata = null, this._materialHelperNeedsPreviousMatrices = !1, this._shaderPath = zU, this._options = {
-          needAlphaBlending: !1,
-          needAlphaTesting: !1,
-          attributes: ["position", "normal", "uv"],
-          uniforms: ["worldViewProjection"],
-          uniformBuffers: [],
-          samplers: [],
-          externalTextures: [],
-          samplerObjects: [],
-          storageBuffers: [],
-          defines: [],
-          useClipPlane: !1,
-          ...cU
+    var AH = LH(41290),
+      rH = LH(41297),
+      SH = LH(37963),
+      hH = LH(41483),
+      tH = LH(41520),
+      zH = LH(41464),
+      CH = LH(41387);
+    let EH = (() => {
+      var HH;
+      let BH, LH, hH, tH, EH, XH, GH, YH, uH, QH, WH, MH = [],
+        xH = [],
+        vH = [],
+        PH = [],
+        TH = [],
+        UH = [],
+        VH = [],
+        OH = [],
+        bH = [],
+        kH = [],
+        mH = [],
+        oH = [],
+        IH = [],
+        fH = [],
+        lH = [],
+        KH = [],
+        cH = [],
+        eH = [],
+        qH = [],
+        gH = [],
+        NH = [],
+        RH = [];
+      return HH = class {
+        constructor() {
+          this.keysUp = (0, AH.k)(this, MH, [38]), this.keysUpward = ((0, AH.k)(this, xH), (0, AH.k)(this, vH, [33])), this.keysDown = ((0, AH.k)(this, PH), (0, AH.k)(this, TH, [40])), this.keysDownward = ((0, AH.k)(this, UH), (0, AH.k)(this, VH, [34])), this.keysLeft = ((0, AH.k)(this, OH), (0, AH.k)(this, bH, [37])), this.keysRight = ((0, AH.k)(this, kH), (0, AH.k)(this, mH, [39])), this.rotationSpeed = ((0, AH.k)(this, oH), (0, AH.k)(this, IH, .5)), this.keysRotateLeft = ((0, AH.k)(this, fH), (0, AH.k)(this, lH, [])), this.keysRotateRight = ((0, AH.k)(this, KH), (0, AH.k)(this, cH, [])), this.keysRotateUp = ((0, AH.k)(this, eH), (0, AH.k)(this, qH, [])), this.keysRotateDown = ((0, AH.k)(this, gH), (0, AH.k)(this, NH, [])), this._keys = ((0, AH.k)(this, RH), new Array)
         }
-      }
-      get shaderPath() {
-        return this._shaderPath
-      }
-      set shaderPath(UU) {
-        this._shaderPath = UU
-      }
-      get options() {
-        return this._options
-      }
-      get isMultiview() {
-        return this._multiview
-      }
-      getClassName() {
-        return "ShaderMaterial"
-      }
-      needAlphaBlending() {
-        return this.alpha < 1 || this._options.needAlphaBlending
-      }
-      needAlphaTesting() {
-        return this._options.needAlphaTesting
-      }
-      _checkUniform(UU) {
-        -1 === this._options.uniforms.indexOf(UU) && this._options.uniforms.push(UU)
-      }
-      setTexture(UU, XU) {
-        return -1 === this._options.samplers.indexOf(UU) && this._options.samplers.push(UU), this._textures[UU] = XU, this
-      }
-      setInternalTexture(UU, XU) {
-        return -1 === this._options.samplers.indexOf(UU) && this._options.samplers.push(UU), this._internalTextures[UU] = XU, this
-      }
-      removeTexture(UU) {
-        delete this._textures[UU]
-      }
-      setTextureArray(UU, XU) {
-        return -1 === this._options.samplers.indexOf(UU) && this._options.samplers.push(UU), this._checkUniform(UU), this._textureArrays[UU] = XU, this
-      }
-      setExternalTexture(UU, XU) {
-        return -1 === this._options.externalTextures.indexOf(UU) && this._options.externalTextures.push(UU), this._externalTextures[UU] = XU, this
-      }
-      setFloat(UU, XU) {
-        return this._checkUniform(UU), this._floats[UU] = XU, this
-      }
-      setInt(UU, XU) {
-        return this._checkUniform(UU), this._ints[UU] = XU, this
-      }
-      setUInt(UU, XU) {
-        return this._checkUniform(UU), this._uints[UU] = XU, this
-      }
-      setFloats(UU, XU) {
-        return this._checkUniform(UU), this._floatsArrays[UU] = XU, this
-      }
-      setColor3(UU, XU) {
-        return this._checkUniform(UU), this._colors3[UU] = XU, this
-      }
-      setColor3Array(UU, XU) {
-        return this._checkUniform(UU), this._colors3Arrays[UU] = XU.reduce(((UU, XU) => (UU.push(XU.r, XU.g, XU.b), UU)), []), this
-      }
-      setColor4(UU, XU) {
-        return this._checkUniform(UU), this._colors4[UU] = XU, this
-      }
-      setColor4Array(UU, XU) {
-        return this._checkUniform(UU), this._colors4Arrays[UU] = XU.reduce(((UU, XU) => (UU.push(XU.r, XU.g, XU.b, XU.a), UU)), []), this
-      }
-      setVector2(UU, XU) {
-        return this._checkUniform(UU), this._vectors2[UU] = XU, this
-      }
-      setVector3(UU, XU) {
-        return this._checkUniform(UU), this._vectors3[UU] = XU, this
-      }
-      setVector4(UU, XU) {
-        return this._checkUniform(UU), this._vectors4[UU] = XU, this
-      }
-      setQuaternion(UU, XU) {
-        return this._checkUniform(UU), this._quaternions[UU] = XU, this
-      }
-      setQuaternionArray(UU, XU) {
-        return this._checkUniform(UU), this._quaternionsArrays[UU] = XU.reduce(((UU, XU) => (XU.toArray(UU, UU.length), UU)), []), this
-      }
-      setMatrix(UU, XU) {
-        return this._checkUniform(UU), this._matrices[UU] = XU, this
-      }
-      setMatrices(UU, XU) {
-        this._checkUniform(UU);
-        const zU = new Float32Array(16 * XU.length);
-        for (let cU = 0; cU < XU.length; cU++) {
-          XU[cU].copyToArray(zU, 16 * cU)
+        attachControl(HH) {
+          HH = CH.i.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.yN(), this._engine = this._scene.Iu(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
+            this._keys.length = 0
+          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((BH => {
+            const LH = BH.event;
+            if (!LH.metaKey)
+              if (BH.type === zH.c.KEYDOWN) {
+                if (-1 !== this.keysUp.indexOf(LH.keyCode) || -1 !== this.keysDown.indexOf(LH.keyCode) || -1 !== this.keysLeft.indexOf(LH.keyCode) || -1 !== this.keysRight.indexOf(LH.keyCode) || -1 !== this.keysUpward.indexOf(LH.keyCode) || -1 !== this.keysDownward.indexOf(LH.keyCode) || -1 !== this.keysRotateLeft.indexOf(LH.keyCode) || -1 !== this.keysRotateRight.indexOf(LH.keyCode) || -1 !== this.keysRotateUp.indexOf(LH.keyCode) || -1 !== this.keysRotateDown.indexOf(LH.keyCode)) {
+                  -1 === this._keys.indexOf(LH.keyCode) && this._keys.push(LH.keyCode), HH || LH.preventDefault()
+                }
+              } else if (-1 !== this.keysUp.indexOf(LH.keyCode) || -1 !== this.keysDown.indexOf(LH.keyCode) || -1 !== this.keysLeft.indexOf(LH.keyCode) || -1 !== this.keysRight.indexOf(LH.keyCode) || -1 !== this.keysUpward.indexOf(LH.keyCode) || -1 !== this.keysDownward.indexOf(LH.keyCode) || -1 !== this.keysRotateLeft.indexOf(LH.keyCode) || -1 !== this.keysRotateRight.indexOf(LH.keyCode) || -1 !== this.keysRotateUp.indexOf(LH.keyCode) || -1 !== this.keysRotateDown.indexOf(LH.keyCode)) {
+              const BH = this._keys.indexOf(LH.keyCode);
+              BH >= 0 && this._keys.splice(BH, 1), HH || LH.preventDefault()
+            }
+          })))
         }
-        return this._matrixArrays[UU] = zU, this
-      }
-      setMatrix3x3(UU, XU) {
-        return this._checkUniform(UU), this._matrices3x3[UU] = XU, this
-      }
-      setMatrix2x2(UU, XU) {
-        return this._checkUniform(UU), this._matrices2x2[UU] = XU, this
-      }
-      setArray2(UU, XU) {
-        return this._checkUniform(UU), this._vectors2Arrays[UU] = XU, this
-      }
-      setArray3(UU, XU) {
-        return this._checkUniform(UU), this._vectors3Arrays[UU] = XU, this
-      }
-      setArray4(UU, XU) {
-        return this._checkUniform(UU), this._vectors4Arrays[UU] = XU, this
-      }
-      setUniformBuffer(UU, XU) {
-        return -1 === this._options.uniformBuffers.indexOf(UU) && this._options.uniformBuffers.push(UU), this._uniformBuffers[UU] = XU, this
-      }
-      setTextureSampler(UU, XU) {
-        return -1 === this._options.samplerObjects.indexOf(UU) && this._options.samplerObjects.push(UU), this._textureSamplers[UU] = XU, this
-      }
-      setStorageBuffer(UU, XU) {
-        return -1 === this._options.storageBuffers.indexOf(UU) && this._options.storageBuffers.push(UU), this._storageBuffers[UU] = XU, this
-      }
-      setDefine(UU, XU) {
-        const zU = UU.trimEnd() + " ",
-          cU = this.options.defines.findIndex((XU => XU === UU || XU.startsWith(zU)));
-        return cU >= 0 && this.options.defines.splice(cU, 1), ("boolean" !== typeof XU || XU) && this.options.defines.push(zU + XU), this
-      }
-      isReadyForSubMesh(UU, XU, zU) {
-        return this.isReady(UU, zU, XU)
-      }
-      isReady(UU, XU, zU) {
-        const cU = zU && this._storeEffectOnSubMeshes;
-        if (this.isFrozen) {
-          const UU = cU ? zU._drawWrapper : this._drawWrapper;
-          if (UU.effect && UU._wasPreviouslyReady && UU._wasPreviouslyUsingInstances === XU) return !0
+        detachControl() {
+          this._scene && (this._onKeyboardObserver && this._scene.onKeyboardObservable.remove(this._onKeyboardObserver), this._onCanvasBlurObserver && this._engine.onCanvasBlurObservable.remove(this._onCanvasBlurObserver), this._onKeyboardObserver = null, this._onCanvasBlurObserver = null), this._keys.length = 0
         }
-        const QU = this.nS(),
-          FU = QU.qp(),
-          DU = [],
-          EU = [];
-        let YU = null,
-          aU = this._shaderPath,
-          gU = this._options.uniforms,
-          kU = this._options.uniformBuffers,
-          GU = this._options.samplers;
-        FU.getCaps().multiview && QU.activeCamera && QU.activeCamera.outputRenderTarget && QU.activeCamera.outputRenderTarget.getViewCount() > 1 && (this._multiview = !0, DU.push("#define MULTIVIEW"), -1 !== gU.indexOf("viewProjection") && -1 === gU.indexOf("viewProjectionR") && gU.push("viewProjectionR"));
-        for (let yU = 0; yU < this._options.defines.length; yU++) {
-          const UU = 0 === this._options.defines[yU].indexOf("#define") ? this._options.defines[yU] : `#define ${this._options.defines[yU]}`;
-          DU.push(UU)
-        }
-        for (let yU = 0; yU < this._options.attributes.length; yU++) EU.push(this._options.attributes[yU]);
-        if (UU && UU.isVerticesDataPresent(AU.h.ColorKind) && (-1 === EU.indexOf(AU.h.ColorKind) && EU.push(AU.h.ColorKind), DU.push("#define VERTEXCOLOR")), XU && (DU.push("#define INSTANCES"), (0, IU.nb)(EU, this._materialHelperNeedsPreviousMatrices), UU?.hasThinInstances && (DU.push("#define THIN_INSTANCES"), UU && UU.isVerticesDataPresent(AU.h.ColorInstanceKind) && (EU.push(AU.h.ColorInstanceKind), DU.push("#define INSTANCESCOLOR")))), UU && UU.useBones && UU.computeBonesUsingShaders && UU.skeleton) {
-          EU.push(AU.h.MatricesIndicesKind), EU.push(AU.h.MatricesWeightsKind), UU.numBoneInfluencers > 4 && (EU.push(AU.h.MatricesIndicesExtraKind), EU.push(AU.h.MatricesWeightsExtraKind));
-          const XU = UU.skeleton;
-          DU.push("#define NUM_BONE_INFLUENCERS " + UU.numBoneInfluencers), YU = new oU.d, YU.addCPUSkinningFallback(0, UU), XU.isUsingTextureForMatrices ? (DU.push("#define BONETEXTURE"), -1 === gU.indexOf("boneTextureInfo") && gU.push("boneTextureInfo"), -1 === this._options.samplers.indexOf("boneSampler") && this._options.samplers.push("boneSampler")) : (DU.push("#define BonesPerMesh " + (XU.bones.length + 1)), -1 === gU.indexOf("mBones") && gU.push("mBones"))
-        } else DU.push("#define NUM_BONE_INFLUENCERS 0");
-        let BU = 0;
-        const ZU = UU ? UU.morphTargetManager : null;
-        if (ZU) {
-          const XU = -1 !== DU.indexOf("#define UV1"),
-            zU = -1 !== DU.indexOf("#define UV2"),
-            cU = -1 !== DU.indexOf("#define TANGENT"),
-            yU = -1 !== DU.indexOf("#define NORMAL"),
-            QU = -1 !== DU.indexOf("#define VERTEXCOLOR");
-          BU = (0, IU.O)(ZU, DU, EU, UU, !0, yU, cU, XU, zU, QU), ZU.isUsingTextureForTargets && (-1 === gU.indexOf("morphTargetTextureIndices") && gU.push("morphTargetTextureIndices"), -1 === this._options.samplers.indexOf("morphTargets") && this._options.samplers.push("morphTargets")), BU > 0 && (gU = gU.slice(), gU.push("morphTargetInfluences"), gU.push("morphTargetCount"), gU.push("morphTargetTextureInfo"), gU.push("morphTargetTextureIndices"))
-        } else DU.push("#define NUM_MORPH_INFLUENCERS 0");
-        if (UU) {
-          const zU = UU.bakedVertexAnimationManager;
-          zU && zU.isEnabled && (DU.push("#define BAKED_VERTEX_ANIMATION_TEXTURE"), -1 === gU.indexOf("bakedVertexAnimationSettings") && gU.push("bakedVertexAnimationSettings"), -1 === gU.indexOf("bakedVertexAnimationTextureSizeInverted") && gU.push("bakedVertexAnimationTextureSizeInverted"), -1 === gU.indexOf("bakedVertexAnimationTime") && gU.push("bakedVertexAnimationTime"), -1 === this._options.samplers.indexOf("bakedVertexAnimationTexture") && this._options.samplers.push("bakedVertexAnimationTexture"), XU && EU.push("bakedVertexAnimationSettingsInstanced"))
-        }
-        for (const yU in this._textures)
-          if (!this._textures[yU].isReady()) return !1;
-        for (const yU in this._internalTextures)
-          if (!this._internalTextures[yU].isReady) return !1;
-        UU && this.needAlphaTestingForMesh(UU) && DU.push("#define ALPHATEST"), !1 !== this._options.useClipPlane && ((0, NU.c)(gU), (0, NU.m)(this, QU, DU)), QU.fogEnabled && UU?.applyFog && QU.fogMode !== yU.d.FOGMODE_NONE && (DU.push("#define FOG"), -1 === gU.indexOf("view") && gU.push("view"), -1 === gU.indexOf("vFogInfos") && gU.push("vFogInfos"), -1 === gU.indexOf("vFogColor") && gU.push("vFogColor")), this._useLogarithmicDepth && (DU.push("#define LOGARITHMICDEPTH"), -1 === gU.indexOf("logarithmicDepthConstant") && gU.push("logarithmicDepthConstant"));
-        const RU = zU ? zU.getRenderingMesh() : UU;
-        if (RU && this.useVertexPulling) {
-          const UU = RU.geometry;
-          UU && (this._vertexPullingMetadata = (0, pU.f)(UU), this._vertexPullingMetadata && this._vertexPullingMetadata.forEach(((UU, XU) => {
-            gU.push(`vp_${XU}_info`)
-          }))), DU.push("#define USE_VERTEX_PULLING");
-          const XU = RU.geometry?.getIndexBuffer();
-          XU && !RU.isUnIndexed && (DU.push("#define VERTEX_PULLING_USE_INDEX_BUFFER"), XU.is32Bits && DU.push("#define VERTEX_PULLING_INDEX_BUFFER_32BITS"))
-        }
-        this.customShaderNameResolve && (gU = gU.slice(), kU = kU.slice(), GU = GU.slice(), aU = this.customShaderNameResolve(this.name, gU, kU, GU, DU, EU));
-        const PU = cU ? zU._getDrawWrapper(void 0, !0) : this._drawWrapper,
-          WU = PU?.effect ?? null,
-          dU = PU?.defines ?? null,
-          LU = DU.join("\n");
-        let eU = WU;
-        return dU !== LU && (eU = FU.createEffect(aU, {
-          attributes: EU,
-          uniformsNames: gU,
-          uniformBuffersNames: kU,
-          samplers: GU,
-          defines: LU,
-          fallbacks: YU,
-          onCompiled: this.onCompiled,
-          onError: this.onError,
-          indexParameters: {
-            maxSimultaneousMorphTargets: BU
-          },
-          shaderLanguage: this._options.shaderLanguage,
-          extraInitializationsAsync: this._options.extraInitializationsAsync
-        }, FU), cU ? zU.setEffect(eU, LU, this._materialContext) : PU && PU.setEffect(eU, LU), this._onEffectCreatedObservable && (tU.effect = eU, tU.subMesh = zU ?? UU?.uB[0] ?? null, this._onEffectCreatedObservable.notifyObservers(tU))), PU._wasPreviouslyUsingInstances = !!XU, !!eU?.isReady() && (WU !== eU && QU.resetCachedMaterial(), PU._wasPreviouslyReady = !0, !0)
-      }
-      bindOnlyWorldMatrix(UU, XU) {
-        const zU = XU ?? this.getEffect();
-        if (!zU) return;
-        const cU = this._options.uniforms; - 1 !== cU.indexOf("world") && zU.setMatrix("world", UU);
-        const yU = this.nS(); - 1 !== cU.indexOf("worldView") && (UU.multiplyToRef(yU.getViewMatrix(), this._cachedWorldViewMatrix), zU.setMatrix("worldView", this._cachedWorldViewMatrix)), -1 !== cU.indexOf("worldViewProjection") && (UU.multiplyToRef(yU.getTransformMatrix(), this._cachedWorldViewProjectionMatrix), zU.setMatrix("worldViewProjection", this._cachedWorldViewProjectionMatrix)), -1 !== cU.indexOf("view") && zU.setMatrix("view", yU.getViewMatrix())
-      }
-      bindForSubMesh(UU, XU, zU) {
-        this.bind(UU, XU, zU._drawWrapperOverride?.effect, zU)
-      }
-      bind(UU, XU, zU, cU) {
-        const yU = cU && this._storeEffectOnSubMeshes,
-          QU = zU ?? (yU ? cU.effect : this.getEffect());
-        if (!QU) return;
-        const AU = this.nS();
-        this._activeEffect = QU, this.bindOnlyWorldMatrix(UU, zU);
-        const FU = this._options.uniformBuffers;
-        let oU = !1;
-        if (QU && FU && FU.length > 0 && AU.qp().supportsUniformBuffers)
-          for (let EU = 0; EU < FU.length; ++EU) {
-            switch (FU[EU]) {
-              case "Mesh":
-                XU && (XU.getMeshUniformBuffer().bindToEffect(QU, "Mesh"), XU.transferToEffect(UU));
-                break;
-              case "Scene":
-                (0, IU.x)(QU, AU.getSceneUniformBuffer()), AU.finalizeSceneUbo(), oU = !0
+        checkInputs() {
+          if (this._onKeyboardObserver) {
+            const HH = this.camera,
+              BH = HH.movement.input,
+              LH = BH.getEntry("keyboard", "translate"),
+              AH = BH.getEntry("keyboard", "rotate"),
+              rH = AH?.sensitivity ?? 1,
+              hH = HH._localDirection.SBH(0, 0, 0);
+            for (let SH = 0; SH < this._keys.length; SH++) {
+              const BH = this._keys[SH]; - 1 !== this.keysLeft.indexOf(BH) ? hH.x -= 1 : -1 !== this.keysUp.indexOf(BH) ? hH.z += 1 : -1 !== this.keysRight.indexOf(BH) ? hH.x += 1 : -1 !== this.keysDown.indexOf(BH) ? hH.z -= 1 : -1 !== this.keysUpward.indexOf(BH) ? hH.y += 1 : -1 !== this.keysDownward.indexOf(BH) ? hH.y -= 1 : -1 !== this.keysRotateLeft.indexOf(BH) ? AH && (HH.cameraRotation.y -= this._getLocalRotation() * rH) : -1 !== this.keysRotateRight.indexOf(BH) ? AH && (HH.cameraRotation.y += this._getLocalRotation() * rH) : -1 !== this.keysRotateUp.indexOf(BH) ? AH && (HH.cameraRotation.x -= this._getLocalRotation() * rH) : -1 !== this.keysRotateDown.indexOf(BH) && AH && (HH.cameraRotation.x += this._getLocalRotation() * rH)
+            }
+            if (LH && (0 !== hH.x || 0 !== hH.y || 0 !== hH.z)) {
+              const BH = HH._computeLocalCameraSpeed() * (LH.sensitivity ?? 1);
+              hH.normalize().scaleInPlace(BH), HH.yN().useRightHandedSystem && (hH.z *= -1), HH.getViewMatrix().invertToRef(HH._cameraTransformMatrix), SH.o.TransformNormalToRef(hH, HH._cameraTransformMatrix, HH._transformedDirection), HH.cameraDirection.addInPlace(HH._transformedDirection)
             }
           }
-        const DU = XU && yU ? this._mustRebind(AU, QU, cU, XU.visibility) : AU.getCachedMaterial() !== this;
-        if (QU && DU) {
-          let UU;
-          for (UU in oU || -1 === this._options.uniforms.indexOf("view") || QU.setMatrix("view", AU.getViewMatrix()), oU || -1 === this._options.uniforms.indexOf("projection") || QU.setMatrix("projection", AU.getProjectionMatrix()), oU || -1 === this._options.uniforms.indexOf("viewProjection") || (QU.setMatrix("viewProjection", AU.getTransformMatrix()), this._multiview && QU.setMatrix("viewProjectionR", AU._transformMatrixR)), AU.activeCamera && -1 !== this._options.uniforms.indexOf("cameraPosition") && QU.setVector3("cameraPosition", AU.activeCamera.globalPosition), (0, IU.h)(XU, QU), (0, NU.e)(QU, this, AU), this._vertexPullingMetadata && (0, pU.c)(QU, this._vertexPullingMetadata), this._useLogarithmicDepth && (0, IU.t)(yU ? cU.materialDefines : QU.defines, QU, AU), XU && (0, IU.i)(AU, XU, QU), this._textures) QU.setTexture(UU, this._textures[UU]);
-          for (UU in this._internalTextures) QU._bindTexture(UU, this._internalTextures[UU]);
-          for (UU in this._textureArrays) QU.setTextureArray(UU, this._textureArrays[UU]);
-          for (UU in this._ints) QU.setInt(UU, this._ints[UU]);
-          for (UU in this._uints) QU.setUInt(UU, this._uints[UU]);
-          for (UU in this._floats) QU.setFloat(UU, this._floats[UU]);
-          for (UU in this._floatsArrays) QU.setArray(UU, this._floatsArrays[UU]);
-          for (UU in this._colors3) QU.setColor3(UU, this._colors3[UU]);
-          for (UU in this._colors3Arrays) QU.setArray3(UU, this._colors3Arrays[UU]);
-          for (UU in this._colors4) {
-            const XU = this._colors4[UU];
-            QU.setFloat4(UU, XU.r, XU.g, XU.b, XU.a)
+        }
+        getClassName() {
+          return "FreeCameraKeyboardMoveInput"
+        }
+        _onLostFocus() {
+          this._keys.length = 0
+        }
+        getSimpleName() {
+          return "keyboard"
+        }
+        _getLocalRotation() {
+          const HH = this.camera._calculateHandednessMultiplier();
+          return this.rotationSpeed * this._engine.getDeltaTime() / 1e3 * HH
+        }
+      }, (() => {
+        const SH = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        BH = [(0, rH.H)()], LH = [(0, rH.H)()], hH = [(0, rH.H)()], tH = [(0, rH.H)()], EH = [(0, rH.H)()], XH = [(0, rH.H)()], GH = [(0, rH.H)()], YH = [(0, rH.H)()], uH = [(0, rH.H)()], QH = [(0, rH.H)()], WH = [(0, rH.H)()], (0, AH.g)(null, null, BH, {
+          kind: "field",
+          name: "keysUp",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "keysUp" in HH,
+            get: HH => HH.keysUp,
+            set: (HH, BH) => {
+              HH.keysUp = BH
+            }
+          },
+          metadata: SH
+        }, MH, xH), (0, AH.g)(null, null, LH, {
+          kind: "field",
+          name: "keysUpward",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "keysUpward" in HH,
+            get: HH => HH.keysUpward,
+            set: (HH, BH) => {
+              HH.keysUpward = BH
+            }
+          },
+          metadata: SH
+        }, vH, PH), (0, AH.g)(null, null, hH, {
+          kind: "field",
+          name: "keysDown",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "keysDown" in HH,
+            get: HH => HH.keysDown,
+            set: (HH, BH) => {
+              HH.keysDown = BH
+            }
+          },
+          metadata: SH
+        }, TH, UH), (0, AH.g)(null, null, tH, {
+          kind: "field",
+          name: "keysDownward",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "keysDownward" in HH,
+            get: HH => HH.keysDownward,
+            set: (HH, BH) => {
+              HH.keysDownward = BH
+            }
+          },
+          metadata: SH
+        }, VH, OH), (0, AH.g)(null, null, EH, {
+          kind: "field",
+          name: "keysLeft",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "keysLeft" in HH,
+            get: HH => HH.keysLeft,
+            set: (HH, BH) => {
+              HH.keysLeft = BH
+            }
+          },
+          metadata: SH
+        }, bH, kH), (0, AH.g)(null, null, XH, {
+          kind: "field",
+          name: "keysRight",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "keysRight" in HH,
+            get: HH => HH.keysRight,
+            set: (HH, BH) => {
+              HH.keysRight = BH
+            }
+          },
+          metadata: SH
+        }, mH, oH), (0, AH.g)(null, null, GH, {
+          kind: "field",
+          name: "rotationSpeed",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "rotationSpeed" in HH,
+            get: HH => HH.rotationSpeed,
+            set: (HH, BH) => {
+              HH.rotationSpeed = BH
+            }
+          },
+          metadata: SH
+        }, IH, fH), (0, AH.g)(null, null, YH, {
+          kind: "field",
+          name: "keysRotateLeft",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "keysRotateLeft" in HH,
+            get: HH => HH.keysRotateLeft,
+            set: (HH, BH) => {
+              HH.keysRotateLeft = BH
+            }
+          },
+          metadata: SH
+        }, lH, KH), (0, AH.g)(null, null, uH, {
+          kind: "field",
+          name: "keysRotateRight",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "keysRotateRight" in HH,
+            get: HH => HH.keysRotateRight,
+            set: (HH, BH) => {
+              HH.keysRotateRight = BH
+            }
+          },
+          metadata: SH
+        }, cH, eH), (0, AH.g)(null, null, QH, {
+          kind: "field",
+          name: "keysRotateUp",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "keysRotateUp" in HH,
+            get: HH => HH.keysRotateUp,
+            set: (HH, BH) => {
+              HH.keysRotateUp = BH
+            }
+          },
+          metadata: SH
+        }, qH, gH), (0, AH.g)(null, null, WH, {
+          kind: "field",
+          name: "keysRotateDown",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "keysRotateDown" in HH,
+            get: HH => HH.keysRotateDown,
+            set: (HH, BH) => {
+              HH.keysRotateDown = BH
+            }
+          },
+          metadata: SH
+        }, NH, RH), SH && Object.defineProperty(HH, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: SH
+        })
+      })(), HH
+    })();
+    tH.c.FreeCameraKeyboardMoveInput = EH;
+    var XH = LH(37997),
+      GH = LH(41458);
+    let YH = (() => {
+      var HH;
+      let BH, LH, SH = [],
+        hH = [],
+        tH = [],
+        zH = [];
+      return HH = class {
+        _applyPointerRotation(HH, BH) {
+          this._pointerConditions.button = this._currentActiveButton;
+          const LH = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions);
+          if (!LH || "rotate" !== LH.interaction) return;
+          const AH = LH.Fy ?? LH.sensitivity ?? 1 / this.angularSensibility,
+            rH = LH.I6 ?? LH.sensitivity ?? 1 / this.angularSensibility;
+          this.camera.cameraRotation.y += HH * AH, this.camera.cameraRotation.x += BH * rH
+        }
+        constructor() {
+          let HH = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+          this.touchEnabled = HH, this.buttons = (0, AH.k)(this, SH, [0, 1, 2]), this.angularSensibility = ((0, AH.k)(this, hH), (0, AH.k)(this, tH, 2e3)), this._pointerInput = (0, AH.k)(this, zH), this._previousPosition = null, this.onPointerMovedObservable = new XH.d, this._allowCameraRotation = !0, this._currentActiveButton = -1, this._activePointerId = -1, this._pointerConditions = {}
+        }
+        attachControl(HH) {
+          HH = CH.i.BackCompatCameraNoPreventDefault(arguments);
+          const BH = this.camera.Iu(),
+            LH = BH.getInputElement();
+          this._pointerInput || (this._pointerInput = AH => {
+            const rH = AH.event,
+              SH = "touch" === rH.pointerType;
+            if (!this.touchEnabled && SH) return;
+            if (AH.type !== GH.d.POINTERMOVE && -1 === this.buttons.indexOf(rH.button)) return;
+            const hH = rH.target;
+            if (AH.type === GH.d.POINTERDOWN) {
+              if (SH && -1 !== this._activePointerId || !SH && -1 !== this._currentActiveButton) return;
+              this._activePointerId = rH.pointerId;
+              try {
+                hH?.setPointerCapture(rH.pointerId)
+              } catch (tH) {} - 1 === this._currentActiveButton && (this._currentActiveButton = rH.button), this._previousPosition = {
+                x: rH.clientX,
+                y: rH.clientY
+              }, HH || (rH.preventDefault(), LH && LH.focus()), BH.isPointerLock && this._onMouseMove && this._onMouseMove(AH.event)
+            } else if (AH.type === GH.d.POINTERUP) {
+              if (SH && this._activePointerId !== rH.pointerId || !SH && this._currentActiveButton !== rH.button) return;
+              try {
+                hH?.releasePointerCapture(rH.pointerId)
+              } catch (tH) {}
+              this._currentActiveButton = -1, this._previousPosition = null, HH || rH.preventDefault(), this._activePointerId = -1
+            } else if (AH.type === GH.d.POINTERMOVE && (this._activePointerId === rH.pointerId || !SH))
+              if (BH.isPointerLock && this._onMouseMove) this._onMouseMove(AH.event);
+              else if (this._previousPosition) {
+              const BH = this.camera._calculateHandednessMultiplier(),
+                LH = (rH.clientX - this._previousPosition.x) * BH,
+                AH = (rH.clientY - this._previousPosition.y) * BH;
+              this._allowCameraRotation && this._applyPointerRotation(LH, AH), this.onPointerMovedObservable.notifyObservers({
+                offsetX: LH,
+                offsetY: AH
+              }), this._previousPosition = {
+                x: rH.clientX,
+                y: rH.clientY
+              }, HH || rH.preventDefault()
+            }
+          }), this._onMouseMove = LH => {
+            if (!BH.isPointerLock) return;
+            const AH = this.camera._calculateHandednessMultiplier();
+            this._applyPointerRotation(LH.movementX * AH, LH.movementY * AH), this._previousPosition = null, HH || LH.preventDefault()
+          }, this._observer = this.camera.yN()._inputManager._addCameraPointerObserver(this._pointerInput, GH.d.POINTERDOWN | GH.d.POINTERUP | GH.d.POINTERMOVE), LH && (this._contextMenuBind = HH => this.onContextMenu(HH), LH.addEventListener("contextmenu", this._contextMenuBind, !1))
+        }
+        onContextMenu(HH) {
+          HH.preventDefault()
+        }
+        detachControl() {
+          if (this._observer) {
+            if (this.camera.yN()._inputManager._removeCameraPointerObserver(this._observer), this._contextMenuBind) {
+              const HH = this.camera.Iu().getInputElement();
+              HH && HH.removeEventListener("contextmenu", this._contextMenuBind)
+            }
+            this.onPointerMovedObservable && this.onPointerMovedObservable.clear(), this._observer = null, this._onMouseMove = null, this._previousPosition = null
           }
-          for (UU in this._colors4Arrays) QU.setArray4(UU, this._colors4Arrays[UU]);
-          for (UU in this._vectors2) QU.setVector2(UU, this._vectors2[UU]);
-          for (UU in this._vectors3) QU.setVector3(UU, this._vectors3[UU]);
-          for (UU in this._vectors4) QU.setVector4(UU, this._vectors4[UU]);
-          for (UU in this._quaternions) QU.setQuaternion(UU, this._quaternions[UU]);
-          for (UU in this._matrices) QU.setMatrix(UU, this._matrices[UU]);
-          for (UU in this._matrixArrays) QU.setMatrices(UU, this._matrixArrays[UU]);
-          for (UU in this._matrices3x3) QU.setMatrix3x3(UU, this._matrices3x3[UU]);
-          for (UU in this._matrices2x2) QU.setMatrix2x2(UU, this._matrices2x2[UU]);
-          for (UU in this._vectors2Arrays) QU.setArray2(UU, this._vectors2Arrays[UU]);
-          for (UU in this._vectors3Arrays) QU.setArray3(UU, this._vectors3Arrays[UU]);
-          for (UU in this._vectors4Arrays) QU.setArray4(UU, this._vectors4Arrays[UU]);
-          for (UU in this._quaternionsArrays) QU.setArray4(UU, this._quaternionsArrays[UU]);
-          for (UU in this._uniformBuffers) {
-            const XU = this._uniformBuffers[UU].getBuffer();
-            XU && QU.bindUniformBuffer(XU, UU)
+          this._activePointerId = -1, this._currentActiveButton = -1
+        }
+        getClassName() {
+          return "FreeCameraMouseInput"
+        }
+        getSimpleName() {
+          return "mouse"
+        }
+      }, (() => {
+        const CH = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        BH = [(0, rH.H)()], LH = [(0, rH.H)()], (0, AH.g)(null, null, BH, {
+          kind: "field",
+          name: "buttons",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "buttons" in HH,
+            get: HH => HH.buttons,
+            set: (HH, BH) => {
+              HH.buttons = BH
+            }
+          },
+          metadata: CH
+        }, SH, hH), (0, AH.g)(null, null, LH, {
+          kind: "field",
+          name: "angularSensibility",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "angularSensibility" in HH,
+            get: HH => HH.angularSensibility,
+            set: (HH, BH) => {
+              HH.angularSensibility = BH
+            }
+          },
+          metadata: CH
+        }, tH, zH), CH && Object.defineProperty(HH, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: CH
+        })
+      })(), HH
+    })();
+    tH.c.FreeCameraMouseInput = YH;
+    var uH = LH(41466);
+    let QH = (() => {
+      var HH;
+      let BH, LH, SH, hH = [],
+        tH = [],
+        zH = [],
+        EH = [],
+        YH = [],
+        QH = [];
+      return HH = class {
+        constructor() {
+          this.wheelPrecisionX = (0, AH.k)(this, hH, 3), this.wheelPrecisionY = ((0, AH.k)(this, tH), (0, AH.k)(this, zH, 3)), this.wheelPrecisionZ = ((0, AH.k)(this, EH), (0, AH.k)(this, YH, 3)), this.onChangedObservable = ((0, AH.k)(this, QH), new XH.d), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0, this._ffMultiplier = 12, this._normalize = 120
+        }
+        attachControl(HH) {
+          HH = CH.i.BackCompatCameraNoPreventDefault(arguments), this._wheel = BH => {
+            if (BH.type !== GH.d.POINTERWHEEL) return;
+            const LH = BH.event,
+              AH = LH.deltaMode === uH.d.DOM_DELTA_LINE ? this._ffMultiplier : 1;
+            this._wheelDeltaX += this.wheelPrecisionX * AH * LH.deltaX / this._normalize, this._wheelDeltaY -= this.wheelPrecisionY * AH * LH.deltaY / this._normalize, this._wheelDeltaZ += this.wheelPrecisionZ * AH * LH.deltaZ / this._normalize, LH.preventDefault && (HH || LH.preventDefault())
+          }, this._observer = this.camera.yN()._inputManager._addCameraPointerObserver(this._wheel, GH.d.POINTERWHEEL)
+        }
+        detachControl() {
+          this._observer && (this.camera.yN()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null), this.onChangedObservable && this.onChangedObservable.clear()
+        }
+        checkInputs() {
+          this.onChangedObservable.notifyObservers({
+            wheelDeltaX: this._wheelDeltaX,
+            wheelDeltaY: this._wheelDeltaY,
+            wheelDeltaZ: this._wheelDeltaZ
+          }), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0
+        }
+        getClassName() {
+          return "BaseCameraMouseWheelInput"
+        }
+        getSimpleName() {
+          return "mousewheel"
+        }
+      }, (() => {
+        const CH = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        BH = [(0, rH.H)()], LH = [(0, rH.H)()], SH = [(0, rH.H)()], (0, AH.g)(null, null, BH, {
+          kind: "field",
+          name: "wheelPrecisionX",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "wheelPrecisionX" in HH,
+            get: HH => HH.wheelPrecisionX,
+            set: (HH, BH) => {
+              HH.wheelPrecisionX = BH
+            }
+          },
+          metadata: CH
+        }, hH, tH), (0, AH.g)(null, null, LH, {
+          kind: "field",
+          name: "wheelPrecisionY",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "wheelPrecisionY" in HH,
+            get: HH => HH.wheelPrecisionY,
+            set: (HH, BH) => {
+              HH.wheelPrecisionY = BH
+            }
+          },
+          metadata: CH
+        }, zH, EH), (0, AH.g)(null, null, SH, {
+          kind: "field",
+          name: "wheelPrecisionZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "wheelPrecisionZ" in HH,
+            get: HH => HH.wheelPrecisionZ,
+            set: (HH, BH) => {
+              HH.wheelPrecisionZ = BH
+            }
+          },
+          metadata: CH
+        }, YH, QH), CH && Object.defineProperty(HH, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: CH
+        })
+      })(), HH
+    })();
+    var WH;
+    ! function(HH) {
+      HH[HH.MoveRelative = 0] = "MoveRelative", HH[HH.RotateRelative = 1] = "RotateRelative", HH[HH.MoveScene = 2] = "MoveScene"
+    }(WH || (WH = {}));
+    let MH = (() => {
+      var HH;
+      let BH, LH, hH, tH, zH, CH, EH, XH, GH, YH = QH,
+        uH = [];
+      return HH = class extends YH {
+        constructor() {
+          super(...arguments), this.camera = (0, AH.k)(this, uH), this._moveRelative = SH.o.Zero(), this._rotateRelative = SH.o.Zero(), this._moveScene = SH.o.Zero(), this._wheelXAction = WH.MoveRelative, this._wheelXActionCoordinate = 0, this._wheelYAction = WH.MoveRelative, this._wheelYActionCoordinate = 2, this._wheelZAction = null, this._wheelZActionCoordinate = null
+        }
+        getClassName() {
+          return "FreeCameraMouseWheelInput"
+        }
+        set wheelXMoveRelative(HH) {
+          null === HH && this._wheelXAction !== WH.MoveRelative || (this._wheelXAction = WH.MoveRelative, this._wheelXActionCoordinate = HH)
+        }
+        get wheelXMoveRelative() {
+          return this._wheelXAction !== WH.MoveRelative ? null : this._wheelXActionCoordinate
+        }
+        set wheelYMoveRelative(HH) {
+          null === HH && this._wheelYAction !== WH.MoveRelative || (this._wheelYAction = WH.MoveRelative, this._wheelYActionCoordinate = HH)
+        }
+        get wheelYMoveRelative() {
+          return this._wheelYAction !== WH.MoveRelative ? null : this._wheelYActionCoordinate
+        }
+        set wheelZMoveRelative(HH) {
+          null === HH && this._wheelZAction !== WH.MoveRelative || (this._wheelZAction = WH.MoveRelative, this._wheelZActionCoordinate = HH)
+        }
+        get wheelZMoveRelative() {
+          return this._wheelZAction !== WH.MoveRelative ? null : this._wheelZActionCoordinate
+        }
+        set wheelXRotateRelative(HH) {
+          null === HH && this._wheelXAction !== WH.RotateRelative || (this._wheelXAction = WH.RotateRelative, this._wheelXActionCoordinate = HH)
+        }
+        get wheelXRotateRelative() {
+          return this._wheelXAction !== WH.RotateRelative ? null : this._wheelXActionCoordinate
+        }
+        set wheelYRotateRelative(HH) {
+          null === HH && this._wheelYAction !== WH.RotateRelative || (this._wheelYAction = WH.RotateRelative, this._wheelYActionCoordinate = HH)
+        }
+        get wheelYRotateRelative() {
+          return this._wheelYAction !== WH.RotateRelative ? null : this._wheelYActionCoordinate
+        }
+        set wheelZRotateRelative(HH) {
+          null === HH && this._wheelZAction !== WH.RotateRelative || (this._wheelZAction = WH.RotateRelative, this._wheelZActionCoordinate = HH)
+        }
+        get wheelZRotateRelative() {
+          return this._wheelZAction !== WH.RotateRelative ? null : this._wheelZActionCoordinate
+        }
+        set wheelXMoveScene(HH) {
+          null === HH && this._wheelXAction !== WH.MoveScene || (this._wheelXAction = WH.MoveScene, this._wheelXActionCoordinate = HH)
+        }
+        get wheelXMoveScene() {
+          return this._wheelXAction !== WH.MoveScene ? null : this._wheelXActionCoordinate
+        }
+        set wheelYMoveScene(HH) {
+          null === HH && this._wheelYAction !== WH.MoveScene || (this._wheelYAction = WH.MoveScene, this._wheelYActionCoordinate = HH)
+        }
+        get wheelYMoveScene() {
+          return this._wheelYAction !== WH.MoveScene ? null : this._wheelYActionCoordinate
+        }
+        set wheelZMoveScene(HH) {
+          null === HH && this._wheelZAction !== WH.MoveScene || (this._wheelZAction = WH.MoveScene, this._wheelZActionCoordinate = HH)
+        }
+        get wheelZMoveScene() {
+          return this._wheelZAction !== WH.MoveScene ? null : this._wheelZActionCoordinate
+        }
+        checkInputs() {
+          if (0 === this._wheelDeltaX && 0 === this._wheelDeltaY && 0 == this._wheelDeltaZ) return;
+          this._moveRelative.IHH(0), this._rotateRelative.IHH(0), this._moveScene.IHH(0), this._updateCamera(), this.camera.yN().useRightHandedSystem && (this._moveRelative.z *= -1);
+          const HH = SH.e.Zero();
+          this.camera.getViewMatrix().invertToRef(HH);
+          const BH = SH.o.Zero();
+          SH.o.TransformNormalToRef(this._moveRelative, HH, BH), this.camera.cameraRotation.x += this._rotateRelative.x / 200, this.camera.cameraRotation.y += this._rotateRelative.y / 200, this.camera.cameraDirection.addInPlace(BH), this.camera.cameraDirection.addInPlace(this._moveScene), super.checkInputs()
+        }
+        _updateCamera() {
+          this._updateCameraProperty(this._wheelDeltaX, this._wheelXAction, this._wheelXActionCoordinate), this._updateCameraProperty(this._wheelDeltaY, this._wheelYAction, this._wheelYActionCoordinate), this._updateCameraProperty(this._wheelDeltaZ, this._wheelZAction, this._wheelZActionCoordinate)
+        }
+        _updateCameraProperty(HH, BH, LH) {
+          if (0 === HH) return;
+          if (null === BH || null === LH) return;
+          let AH = null;
+          switch (BH) {
+            case WH.MoveRelative:
+              AH = this._moveRelative;
+              break;
+            case WH.RotateRelative:
+              AH = this._rotateRelative;
+              break;
+            case WH.MoveScene:
+              AH = this._moveScene
           }
-          const zU = AU.qp(),
-            FU = zU.setExternalTexture;
-          if (FU)
-            for (UU in this._externalTextures) FU.call(zU, UU, this._externalTextures[UU]);
-          const DU = zU.setTextureSampler;
-          if (DU)
-            for (UU in this._textureSamplers) DU.call(zU, UU, this._textureSamplers[UU]);
-          const EU = zU.setStorageBuffer;
-          if (EU)
-            for (UU in this._storageBuffers) EU.call(zU, UU, this._storageBuffers[UU])
-        }
-        if (QU && XU && (DU || !this.isFrozen)) {
-          (0, IU.w)(XU, QU), XU.morphTargetManager && XU.morphTargetManager.isUsingTextureForTargets && XU.morphTargetManager._bind(QU);
-          const UU = XU.bakedVertexAnimationManager;
-          if (UU && UU.isEnabled) {
-            const UU = yU ? cU._drawWrapper : this._drawWrapper;
-            XU.bakedVertexAnimationManager?.bind(QU, !!UU._wasPreviouslyUsingInstances)
+          switch (LH) {
+            case 0:
+              AH.set(HH, 0, 0);
+              break;
+            case 1:
+              AH.set(0, HH, 0);
+              break;
+            case 2:
+              AH.set(0, 0, HH)
           }
         }
-        this._afterBind(XU, QU, cU)
-      }
-      getActiveTextures() {
-        const UU = super.getActiveTextures();
-        for (const XU in this._textures) UU.push(this._textures[XU]);
-        for (const XU in this._textureArrays) {
-          const zU = this._textureArrays[XU];
-          for (let XU = 0; XU < zU.length; XU++) UU.push(zU[XU])
+      }, (() => {
+        const SH = "function" === typeof Symbol && Symbol.metadata ? Object.create(YH[Symbol.metadata] ?? null) : void 0;
+        BH = [(0, rH.H)()], LH = [(0, rH.H)()], hH = [(0, rH.H)()], tH = [(0, rH.H)()], zH = [(0, rH.H)()], CH = [(0, rH.H)()], EH = [(0, rH.H)()], XH = [(0, rH.H)()], GH = [(0, rH.H)()], (0, AH.g)(HH, null, BH, {
+          kind: "setter",
+          name: "wheelXMoveRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "wheelXMoveRelative" in HH,
+            set: (HH, BH) => {
+              HH.wheelXMoveRelative = BH
+            }
+          },
+          metadata: SH
+        }, null, uH), (0, AH.g)(HH, null, LH, {
+          kind: "setter",
+          name: "wheelYMoveRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "wheelYMoveRelative" in HH,
+            set: (HH, BH) => {
+              HH.wheelYMoveRelative = BH
+            }
+          },
+          metadata: SH
+        }, null, uH), (0, AH.g)(HH, null, hH, {
+          kind: "setter",
+          name: "wheelZMoveRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "wheelZMoveRelative" in HH,
+            set: (HH, BH) => {
+              HH.wheelZMoveRelative = BH
+            }
+          },
+          metadata: SH
+        }, null, uH), (0, AH.g)(HH, null, tH, {
+          kind: "setter",
+          name: "wheelXRotateRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "wheelXRotateRelative" in HH,
+            set: (HH, BH) => {
+              HH.wheelXRotateRelative = BH
+            }
+          },
+          metadata: SH
+        }, null, uH), (0, AH.g)(HH, null, zH, {
+          kind: "setter",
+          name: "wheelYRotateRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "wheelYRotateRelative" in HH,
+            set: (HH, BH) => {
+              HH.wheelYRotateRelative = BH
+            }
+          },
+          metadata: SH
+        }, null, uH), (0, AH.g)(HH, null, CH, {
+          kind: "setter",
+          name: "wheelZRotateRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "wheelZRotateRelative" in HH,
+            set: (HH, BH) => {
+              HH.wheelZRotateRelative = BH
+            }
+          },
+          metadata: SH
+        }, null, uH), (0, AH.g)(HH, null, EH, {
+          kind: "setter",
+          name: "wheelXMoveScene",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "wheelXMoveScene" in HH,
+            set: (HH, BH) => {
+              HH.wheelXMoveScene = BH
+            }
+          },
+          metadata: SH
+        }, null, uH), (0, AH.g)(HH, null, XH, {
+          kind: "setter",
+          name: "wheelYMoveScene",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "wheelYMoveScene" in HH,
+            set: (HH, BH) => {
+              HH.wheelYMoveScene = BH
+            }
+          },
+          metadata: SH
+        }, null, uH), (0, AH.g)(HH, null, GH, {
+          kind: "setter",
+          name: "wheelZMoveScene",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "wheelZMoveScene" in HH,
+            set: (HH, BH) => {
+              HH.wheelZMoveScene = BH
+            }
+          },
+          metadata: SH
+        }, null, uH), SH && Object.defineProperty(HH, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: SH
+        })
+      })(), HH
+    })();
+    tH.c.FreeCameraMouseWheelInput = MH;
+    let xH = (() => {
+      var HH;
+      let BH, LH, hH = [],
+        tH = [],
+        zH = [],
+        EH = [];
+      return HH = class {
+        constructor() {
+          let HH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          this.allowMouse = HH, this.touchAngularSensibility = (0, AH.k)(this, hH, 2e5), this.touchMoveSensibility = ((0, AH.k)(this, tH), (0, AH.k)(this, zH, 250)), this.singleFingerRotate = ((0, AH.k)(this, EH), !1), this._offsetX = null, this._offsetY = null, this._pointerPressed = new Array, this._isSafari = CH.i.IsSafari()
         }
-        return UU
-      }
-      hasTexture(UU) {
-        if (super.hasTexture(UU)) return !0;
-        for (const zU in this._textures)
-          if (this._textures[zU] === UU) return !0;
-        const XU = UU.getInternalTexture();
-        for (const zU in this._internalTextures)
-          if (this._internalTextures[zU] === XU) return !0;
-        for (const zU in this._textureArrays) {
-          const XU = this._textureArrays[zU];
-          for (let zU = 0; zU < XU.length; zU++)
-            if (XU[zU] === UU) return !0
-        }
-        return !1
-      }
-      clone(UU) {
-        const XU = cU.b.Clone((() => new gU(UU, this.nS(), this._shaderPath, this._options, this._storeEffectOnSubMeshes)), this);
-        XU.name = UU, XU.id = UU, "object" === typeof XU._shaderPath && (XU._shaderPath = {
-          ...XU._shaderPath
-        }), this._options = {
-          ...this._options
-        };
-        const zU = Object.keys(this._options);
-        for (const cU of zU) {
-          const UU = this._options[cU];
-          Array.isArray(UU) && (this._options[cU] = UU.slice(0))
-        }
-        this.stencil.copyTo(XU.stencil);
-        for (const cU in this._textures) XU.setTexture(cU, this._textures[cU]);
-        for (const cU in this._internalTextures) XU.setInternalTexture(cU, this._internalTextures[cU]);
-        for (const cU in this._textureArrays) XU.setTextureArray(cU, this._textureArrays[cU]);
-        for (const cU in this._externalTextures) XU.setExternalTexture(cU, this._externalTextures[cU]);
-        for (const cU in this._ints) XU.setInt(cU, this._ints[cU]);
-        for (const cU in this._uints) XU.setUInt(cU, this._uints[cU]);
-        for (const cU in this._floats) XU.setFloat(cU, this._floats[cU]);
-        for (const cU in this._floatsArrays) XU.setFloats(cU, this._floatsArrays[cU]);
-        for (const cU in this._colors3) XU.setColor3(cU, this._colors3[cU]);
-        for (const cU in this._colors3Arrays) XU._colors3Arrays[cU] = this._colors3Arrays[cU];
-        for (const cU in this._colors4) XU.setColor4(cU, this._colors4[cU]);
-        for (const cU in this._colors4Arrays) XU._colors4Arrays[cU] = this._colors4Arrays[cU];
-        for (const cU in this._vectors2) XU.setVector2(cU, this._vectors2[cU]);
-        for (const cU in this._vectors3) XU.setVector3(cU, this._vectors3[cU]);
-        for (const cU in this._vectors4) XU.setVector4(cU, this._vectors4[cU]);
-        for (const cU in this._quaternions) XU.setQuaternion(cU, this._quaternions[cU]);
-        for (const cU in this._quaternionsArrays) XU._quaternionsArrays[cU] = this._quaternionsArrays[cU];
-        for (const cU in this._matrices) XU.setMatrix(cU, this._matrices[cU]);
-        for (const cU in this._matrixArrays) XU._matrixArrays[cU] = this._matrixArrays[cU].slice();
-        for (const cU in this._matrices3x3) XU.setMatrix3x3(cU, this._matrices3x3[cU]);
-        for (const cU in this._matrices2x2) XU.setMatrix2x2(cU, this._matrices2x2[cU]);
-        for (const cU in this._vectors2Arrays) XU.setArray2(cU, this._vectors2Arrays[cU]);
-        for (const cU in this._vectors3Arrays) XU.setArray3(cU, this._vectors3Arrays[cU]);
-        for (const cU in this._vectors4Arrays) XU.setArray4(cU, this._vectors4Arrays[cU]);
-        for (const cU in this._uniformBuffers) XU.setUniformBuffer(cU, this._uniformBuffers[cU]);
-        for (const cU in this._textureSamplers) XU.setTextureSampler(cU, this._textureSamplers[cU]);
-        for (const cU in this._storageBuffers) XU.setStorageBuffer(cU, this._storageBuffers[cU]);
-        return XU
-      }
-      dispose(UU, XU, zU) {
-        if (XU) {
-          let UU;
-          for (UU in this._textures) this._textures[UU].dispose();
-          for (UU in this._internalTextures) this._internalTextures[UU].dispose();
-          for (UU in this._textureArrays) {
-            const XU = this._textureArrays[UU];
-            for (let UU = 0; UU < XU.length; UU++) XU[UU].dispose()
+        attachControl(HH) {
+          HH = CH.i.BackCompatCameraNoPreventDefault(arguments);
+          let BH = null;
+          if (void 0 === this._pointerInput && (this._onLostFocus = () => {
+              this._offsetX = null, this._offsetY = null
+            }, this._pointerInput = LH => {
+              const AH = LH.event,
+                rH = "mouse" === AH.pointerType || this._isSafari && "undefined" === typeof AH.pointerType;
+              if (this.allowMouse || !rH)
+                if (LH.type === GH.d.POINTERDOWN) {
+                  if (HH || AH.preventDefault(), this._pointerPressed.push(AH.pointerId), 1 !== this._pointerPressed.length) return;
+                  BH = {
+                    x: AH.clientX,
+                    y: AH.clientY
+                  }
+                } else if (LH.type === GH.d.POINTERUP) {
+                HH || AH.preventDefault();
+                const LH = this._pointerPressed.indexOf(AH.pointerId);
+                if (-1 === LH) return;
+                if (this._pointerPressed.splice(LH, 1), 0 != LH) return;
+                BH = null, this._offsetX = null, this._offsetY = null
+              } else if (LH.type === GH.d.POINTERMOVE) {
+                if (HH || AH.preventDefault(), !BH) return;
+                if (0 != this._pointerPressed.indexOf(AH.pointerId)) return;
+                this._offsetX = AH.clientX - BH.x, this._offsetY = -(AH.clientY - BH.y)
+              }
+            }), this._observer = this.camera.yN()._inputManager._addCameraPointerObserver(this._pointerInput, GH.d.POINTERDOWN | GH.d.POINTERUP | GH.d.POINTERMOVE), this._onLostFocus) {
+            const HH = this.camera.Iu().getInputElement();
+            HH && HH.addEventListener("blur", this._onLostFocus)
           }
         }
-        this._textures = {}, this._internalTextures = {}, super.dispose(UU, XU, zU)
-      }
-      serialize() {
-        const UU = cU.b.Serialize(this);
-        let XU;
-        for (XU in UU.customType = "BABYLON.ShaderMaterial", UU.uniqueId = this.uniqueId, UU.options = this._options, UU.shaderPath = this._shaderPath, UU.storeEffectOnSubMeshes = this._storeEffectOnSubMeshes, UU.stencil = this.stencil.serialize(), UU.textures = {}, this._textures) UU.textures[XU] = this._textures[XU].serialize();
-        for (XU in UU.textureArrays = {}, this._textureArrays) {
-          UU.textureArrays[XU] = [];
-          const zU = this._textureArrays[XU];
-          for (let cU = 0; cU < zU.length; cU++) UU.textureArrays[XU].push(zU[cU].serialize())
+        detachControl() {
+          if (this._pointerInput) {
+            if (this._observer && (this.camera.yN()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null), this._onLostFocus) {
+              const HH = this.camera.Iu().getInputElement();
+              HH && HH.removeEventListener("blur", this._onLostFocus), this._onLostFocus = null
+            }
+            this._pointerPressed.length = 0, this._offsetX = null, this._offsetY = null
+          }
         }
-        for (XU in UU.ints = {}, this._ints) UU.ints[XU] = this._ints[XU];
-        for (XU in UU.uints = {}, this._uints) UU.uints[XU] = this._uints[XU];
-        for (XU in UU.floats = {}, this._floats) UU.floats[XU] = this._floats[XU];
-        for (XU in UU.floatsArrays = {}, this._floatsArrays) UU.floatsArrays[XU] = this._floatsArrays[XU];
-        for (XU in UU.colors3 = {}, this._colors3) {
-          const zU = this._colors3[XU];
-          UU.colors3[XU] = [zU.r, zU.g, zU.b]
+        checkInputs() {
+          if (null === this._offsetX || null === this._offsetY) return;
+          if (0 === this._offsetX && 0 === this._offsetY) return;
+          const HH = this.camera,
+            BH = HH.movement.input,
+            LH = BH.getEntry("touch", "rotate"),
+            AH = BH.getEntry("touch", "translate"),
+            rH = HH._calculateHandednessMultiplier(),
+            hH = this.singleFingerRotate && 1 === this._pointerPressed.length || !this.singleFingerRotate && this._pointerPressed.length > 1;
+          if (LH) {
+            const BH = LH.sensitivity ?? 1 / this.touchAngularSensibility;
+            HH.cameraRotation.y = this._offsetX * rH * BH, hH && (HH.cameraRotation.x = -this._offsetY * rH * BH)
+          }
+          if (!hH && AH) {
+            const BH = HH._computeLocalCameraSpeed(),
+              LH = AH.sensitivity ?? (0 !== this.touchMoveSensibility ? 1 / this.touchMoveSensibility : 0),
+              rH = SH.l.lu[0];
+            rH.SBH(0, 0, BH * this._offsetY * LH), SH.e.RotationYawPitchRollToRef(HH.rotation.y, HH.rotation.x, 0, HH._cameraRotationMatrix), SH.o.TransformCoordinatesToRef(rH, HH._cameraRotationMatrix, rH), HH.cameraDirection.addInPlace(rH)
+          }
         }
-        for (XU in UU.colors3Arrays = {}, this._colors3Arrays) UU.colors3Arrays[XU] = this._colors3Arrays[XU];
-        for (XU in UU.colors4 = {}, this._colors4) {
-          const zU = this._colors4[XU];
-          UU.colors4[XU] = [zU.r, zU.g, zU.b, zU.a]
+        getClassName() {
+          return "FreeCameraTouchInput"
         }
-        for (XU in UU.colors4Arrays = {}, this._colors4Arrays) UU.colors4Arrays[XU] = this._colors4Arrays[XU];
-        for (XU in UU.vectors2 = {}, this._vectors2) {
-          const zU = this._vectors2[XU];
-          UU.vectors2[XU] = [zU.x, zU.y]
+        getSimpleName() {
+          return "touch"
         }
-        for (XU in UU.vectors3 = {}, this._vectors3) {
-          const zU = this._vectors3[XU];
-          UU.vectors3[XU] = [zU.x, zU.y, zU.z]
-        }
-        for (XU in UU.vectors4 = {}, this._vectors4) {
-          const zU = this._vectors4[XU];
-          UU.vectors4[XU] = [zU.x, zU.y, zU.z, zU.w]
-        }
-        for (XU in UU.quaternions = {}, this._quaternions) UU.quaternions[XU] = this._quaternions[XU].cyU();
-        for (XU in UU.matrices = {}, this._matrices) UU.matrices[XU] = this._matrices[XU].cyU();
-        for (XU in UU.matrixArray = {}, this._matrixArrays) UU.matrixArray[XU] = this._matrixArrays[XU];
-        for (XU in UU.matrices3x3 = {}, this._matrices3x3) UU.matrices3x3[XU] = this._matrices3x3[XU];
-        for (XU in UU.matrices2x2 = {}, this._matrices2x2) UU.matrices2x2[XU] = this._matrices2x2[XU];
-        for (XU in UU.vectors2Arrays = {}, this._vectors2Arrays) UU.vectors2Arrays[XU] = this._vectors2Arrays[XU];
-        for (XU in UU.vectors3Arrays = {}, this._vectors3Arrays) UU.vectors3Arrays[XU] = this._vectors3Arrays[XU];
-        for (XU in UU.vectors4Arrays = {}, this._vectors4Arrays) UU.vectors4Arrays[XU] = this._vectors4Arrays[XU];
-        for (XU in UU.quaternionsArrays = {}, this._quaternionsArrays) UU.quaternionsArrays[XU] = this._quaternionsArrays[XU];
-        return UU
-      }
-    }
-
-    function kU(UU, XU, zU) {
-      const yU = cU.b.Parse((() => new gU(UU.name, XU, UU.shaderPath, UU.options, UU.storeEffectOnSubMeshes)), UU, XU, zU);
-      let AU;
-      for (AU in UU.stencil && yU.stencil.parse(UU.stencil, XU, zU), UU.textures) yU.setTexture(AU, FU.e.Parse(UU.textures[AU], XU, zU));
-      for (AU in UU.textureArrays) {
-        const cU = UU.textureArrays[AU],
-          QU = [];
-        for (let UU = 0; UU < cU.length; UU++) QU.push(FU.e.Parse(cU[UU], XU, zU));
-        yU.setTextureArray(AU, QU)
-      }
-      for (AU in UU.ints) yU.setInt(AU, UU.ints[AU]);
-      for (AU in UU.uints) yU.setUInt(AU, UU.uints[AU]);
-      for (AU in UU.floats) yU.setFloat(AU, UU.floats[AU]);
-      for (AU in UU.floatsArrays) yU.setFloats(AU, UU.floatsArrays[AU]);
-      for (AU in UU.colors3) {
-        const XU = UU.colors3[AU];
-        yU.setColor3(AU, {
-          r: XU[0],
-          g: XU[1],
-          b: XU[2]
+      }, (() => {
+        const SH = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        BH = [(0, rH.H)()], LH = [(0, rH.H)()], (0, AH.g)(null, null, BH, {
+          kind: "field",
+          name: "touchAngularSensibility",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "touchAngularSensibility" in HH,
+            get: HH => HH.touchAngularSensibility,
+            set: (HH, BH) => {
+              HH.touchAngularSensibility = BH
+            }
+          },
+          metadata: SH
+        }, hH, tH), (0, AH.g)(null, null, LH, {
+          kind: "field",
+          name: "touchMoveSensibility",
+          static: !1,
+          private: !1,
+          access: {
+            has: HH => "touchMoveSensibility" in HH,
+            get: HH => HH.touchMoveSensibility,
+            set: (HH, BH) => {
+              HH.touchMoveSensibility = BH
+            }
+          },
+          metadata: SH
+        }, zH, EH), SH && Object.defineProperty(HH, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: SH
         })
+      })(), HH
+    })();
+    tH.c.FreeCameraTouchInput = xH;
+    var vH, PH, TH, UH = LH(41169);
+    class VH extends tH.e {
+      constructor(HH) {
+        super(HH), this._mouseInput = null, this._mouseWheelInput = null
       }
-      for (AU in UU.colors3Arrays) {
-        const XU = UU.colors3Arrays[AU].reduce(((UU, XU, zU) => (zU % 3 === 0 ? UU.push([XU]) : UU[UU.length - 1].push(XU), UU)), []).map((UU => ({
-          r: UU[0],
-          g: UU[1],
-          b: UU[2]
-        })));
-        yU.setColor3Array(AU, XU)
+      addKeyboard() {
+        return this.add(new EH), this
       }
-      for (AU in UU.colors4) {
-        const XU = UU.colors4[AU];
-        yU.setColor4(AU, {
-          r: XU[0],
-          g: XU[1],
-          b: XU[2],
-          a: XU[3]
-        })
+      addMouse() {
+        let HH = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._mouseInput || (this._mouseInput = new YH(HH), this.add(this._mouseInput)), this
       }
-      for (AU in UU.colors4Arrays) {
-        const XU = UU.colors4Arrays[AU].reduce(((UU, XU, zU) => (zU % 4 === 0 ? UU.push([XU]) : UU[UU.length - 1].push(XU), UU)), []).map((UU => ({
-          r: UU[0],
-          g: UU[1],
-          b: UU[2],
-          a: UU[3]
-        })));
-        yU.setColor4Array(AU, XU)
+      removeMouse() {
+        return this._mouseInput && this.remove(this._mouseInput), this
       }
-      for (AU in UU.vectors2) {
-        const XU = UU.vectors2[AU];
-        yU.setVector2(AU, {
-          x: XU[0],
-          y: XU[1]
-        })
+      addMouseWheel() {
+        return this._mouseWheelInput || (this._mouseWheelInput = new MH, this.add(this._mouseWheelInput)), this
       }
-      for (AU in UU.vectors3) {
-        const XU = UU.vectors3[AU];
-        yU.setVector3(AU, {
-          x: XU[0],
-          y: XU[1],
-          z: XU[2]
-        })
+      removeMouseWheel() {
+        return this._mouseWheelInput && this.remove(this._mouseWheelInput), this
       }
-      for (AU in UU.vectors4) {
-        const XU = UU.vectors4[AU];
-        yU.setVector4(AU, {
-          x: XU[0],
-          y: XU[1],
-          z: XU[2],
-          w: XU[3]
-        })
+      addTouch() {
+        return this.add(new xH), this
       }
-      for (AU in UU.quaternions) yU.setQuaternion(AU, QU.f.FromArray(UU.quaternions[AU]));
-      for (AU in UU.matrices) yU.setMatrix(AU, QU.e.FromArray(UU.matrices[AU]));
-      const oU = yU;
-      for (AU in UU.matrixArray) oU._matrixArrays[AU] = new Float32Array(UU.matrixArray[AU]);
-      for (AU in UU.matrices3x3) yU.setMatrix3x3(AU, UU.matrices3x3[AU]);
-      for (AU in UU.matrices2x2) yU.setMatrix2x2(AU, UU.matrices2x2[AU]);
-      for (AU in UU.vectors2Arrays) yU.setArray2(AU, UU.vectors2Arrays[AU]);
-      for (AU in UU.vectors3Arrays) yU.setArray3(AU, UU.vectors3Arrays[AU]);
-      for (AU in UU.vectors4Arrays) yU.setArray4(AU, UU.vectors4Arrays[AU]);
-      for (AU in UU.quaternionsArrays) yU.setArray4(AU, UU.quaternionsArrays[AU]);
-      return yU
-    }
-    async function GU(UU, XU, zU) {
-      let cU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
-      return await new Promise(((yU, QU) => {
-        const AU = new DU.e;
-        AU.addEventListener("readystatechange", (() => {
-          if (4 == AU.readyState)
-            if (200 == AU.status) {
-              const XU = kU(JSON.parse(AU.responseText), zU || YU.b.LastCreatedScene, cU);
-              UU && (XU.name = UU), yU(XU)
-            } else QU("Unable to load the ShaderMaterial")
-        })), AU.open("GET", XU), AU.send()
-      }))
-    }
-    async function BU(UU, XU) {
-      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const cU = this?.SnippetUrl ?? gU.SnippetUrl;
-      return await new Promise(((yU, QU) => {
-        const AU = new DU.e;
-        AU.addEventListener("readystatechange", (() => {
-          if (4 == AU.readyState)
-            if (200 == AU.status) {
-              const cU = JSON.parse(JSON.parse(AU.responseText).jsonPayload),
-                QU = kU(JSON.parse(cU.shaderMaterial), XU || YU.b.LastCreatedScene, zU);
-              QU.snippetId = UU, yU(QU)
-            } else QU("Unable to load the snippet " + UU)
-        })), AU.open("GET", cU + "/" + UU.replace(/#/g, "/")), AU.send()
-      }))
-    }
-    gU.SnippetUrl = "https://snippet.babylonjs.com";
-    const ZU = BU;
-    let RU = !1;
-
-    function PU() {
-      RU || (RU = !0, gU.Parse = kU, gU.ParseFromFileAsync = GU, gU.ParseFromSnippetAsync = BU, gU.CreateFromSnippetAsync = ZU, (0, aU.h)("BABYLON.ShaderMaterial", gU))
-    }
+      clear() {
+        super.clear(), this._mouseInput = null
+      }
+    }(vH = VH.prototype).addDeviceOrientation ?? (vH.addDeviceOrientation = (0, UH.f)("FreeCameraInputsManager", "addDeviceOrientation")), (PH = VH.prototype).addVirtualJoystick ?? (PH.addVirtualJoystick = (0, UH.f)("FreeCameraInputsManager", "addVirtualJoystick")), (TH = VH.prototype).addGamepad ?? (TH.addGamepad = (0, UH.f)("FreeCameraInputsManager", "addGamepad"));
+    var OH = LH(41184),
+      bH = LH(38012);
+    let kH = (() => {
+        var HH;
+        let BH, LH, tH, zH, EH = hH.e,
+          XH = [],
+          GH = [],
+          YH = [],
+          uH = [],
+          QH = [],
+          WH = [],
+          MH = [],
+          xH = [];
+        return HH = class extends EH {
+          get angularSensibility() {
+            const HH = this.inputs.attached.mouse;
+            return HH ? HH.angularSensibility : 0
+          }
+          set angularSensibility(HH) {
+            const BH = this.inputs.attached.mouse;
+            BH && (BH.angularSensibility = HH)
+          }
+          get keysUp() {
+            const HH = this.inputs.attached.keyboard;
+            return HH ? HH.keysUp : []
+          }
+          set keysUp(HH) {
+            const BH = this.inputs.attached.keyboard;
+            BH && (BH.keysUp = HH)
+          }
+          get keysUpward() {
+            const HH = this.inputs.attached.keyboard;
+            return HH ? HH.keysUpward : []
+          }
+          set keysUpward(HH) {
+            const BH = this.inputs.attached.keyboard;
+            BH && (BH.keysUpward = HH)
+          }
+          get keysDown() {
+            const HH = this.inputs.attached.keyboard;
+            return HH ? HH.keysDown : []
+          }
+          set keysDown(HH) {
+            const BH = this.inputs.attached.keyboard;
+            BH && (BH.keysDown = HH)
+          }
+          get keysDownward() {
+            const HH = this.inputs.attached.keyboard;
+            return HH ? HH.keysDownward : []
+          }
+          set keysDownward(HH) {
+            const BH = this.inputs.attached.keyboard;
+            BH && (BH.keysDownward = HH)
+          }
+          get keysLeft() {
+            const HH = this.inputs.attached.keyboard;
+            return HH ? HH.keysLeft : []
+          }
+          set keysLeft(HH) {
+            const BH = this.inputs.attached.keyboard;
+            BH && (BH.keysLeft = HH)
+          }
+          get keysRight() {
+            const HH = this.inputs.attached.keyboard;
+            return HH ? HH.keysRight : []
+          }
+          set keysRight(HH) {
+            const BH = this.inputs.attached.keyboard;
+            BH && (BH.keysRight = HH)
+          }
+          get keysRotateLeft() {
+            const HH = this.inputs.attached.keyboard;
+            return HH ? HH.keysRotateLeft : []
+          }
+          set keysRotateLeft(HH) {
+            const BH = this.inputs.attached.keyboard;
+            BH && (BH.keysRotateLeft = HH)
+          }
+          get keysRotateRight() {
+            const HH = this.inputs.attached.keyboard;
+            return HH ? HH.keysRotateRight : []
+          }
+          set keysRotateRight(HH) {
+            const BH = this.inputs.attached.keyboard;
+            BH && (BH.keysRotateRight = HH)
+          }
+          get keysRotateUp() {
+            const HH = this.inputs.attached.keyboard;
+            return HH ? HH.keysRotateUp : []
+          }
+          set keysRotateUp(HH) {
+            const BH = this.inputs.attached.keyboard;
+            BH && (BH.keysRotateUp = HH)
+          }
+          get keysRotateDown() {
+            const HH = this.inputs.attached.keyboard;
+            return HH ? HH.keysRotateDown : []
+          }
+          set keysRotateDown(HH) {
+            const BH = this.inputs.attached.keyboard;
+            BH && (BH.keysRotateDown = HH)
+          }
+          constructor(HH, BH, LH) {
+            var rH;
+            super(HH, BH, LH, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3]), rH = this, this.ellipsoid = (0, AH.k)(this, XH, new SH.o(.5, 1, .5)), this.ellipsoidOffset = ((0, AH.k)(this, GH), (0, AH.k)(this, YH, new SH.o(0, 0, 0))), this.checkCollisions = ((0, AH.k)(this, uH), (0, AH.k)(this, QH, !1)), this.applyGravity = ((0, AH.k)(this, WH), (0, AH.k)(this, MH, !1)), this.inputs = (0, AH.k)(this, xH), this._needMoveForGravity = !1, this._oldPosition = SH.o.Zero(), this._diffPosition = SH.o.Zero(), this._newPosition = SH.o.Zero(), this._collisionMask = -1, this._onCollisionPositionChange = function(HH, BH) {
+              let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+              rH._newPosition.Tm(BH), rH._newPosition.subtractToRef(rH._oldPosition, rH._diffPosition), rH._diffPosition.length() > OH.c.CollisionsEpsilon && (rH.position.addToRef(rH._diffPosition, rH._deferredPositionUpdate), rH._deferOnly ? rH._deferredUpdated = !0 : rH.position.Tm(rH._deferredPositionUpdate), rH.fG && LH && rH.fG(LH))
+            }, this.inputs = new VH(this), this.inputs.addKeyboard().addMouse()
+          }
+          attachControl(HH, BH) {
+            BH = CH.i.BackCompatCameraNoPreventDefault(arguments), this.inputs.attachElement(BH)
+          }
+          detachControl() {
+            this.inputs.detachElement(), this.cameraDirection = new SH.o(0, 0, 0), this.cameraRotation = new SH.n(0, 0)
+          }
+          get collisionMask() {
+            return this._collisionMask
+          }
+          set collisionMask(HH) {
+            this._collisionMask = isNaN(HH) ? -1 : HH
+          }
+          _collideWithWorld(HH) {
+            let BH;
+            BH = this.parent ? SH.o.TransformCoordinates(this.position, this.parent.getWorldMatrix()) : this.position, BH.subtractFromFloatsToRef(0, this.ellipsoid.y, 0, this._oldPosition), this._oldPosition.addInPlace(this.ellipsoidOffset);
+            const LH = this.yN().collisionCoordinator;
+            this._collider || (this._collider = LH.createCollider()), this._collider._radius = this.ellipsoid, this._collider.collisionMask = this._collisionMask;
+            let AH = HH;
+            this.applyGravity && (AH = HH.add(this.yN().gravity)), LH.getNewPosition(this._oldPosition, AH, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
+          }
+          _checkInputs() {
+            this._localDirection || (this._localDirection = SH.o.Zero(), this._transformedDirection = SH.o.Zero()), this.inputs.checkInputs(), super._checkInputs()
+          }
+          set needMoveForGravity(HH) {
+            this._needMoveForGravity = HH
+          }
+          get needMoveForGravity() {
+            return this._needMoveForGravity
+          }
+          _decideIfNeedsToMove() {
+            return this._needMoveForGravity || Math.abs(this.cameraDirection.x) > 0 || Math.abs(this.cameraDirection.y) > 0 || Math.abs(this.cameraDirection.z) > 0
+          }
+          _updatePosition() {
+            this.checkCollisions && this.yN().collisionsEnabled ? this._collideWithWorld(this.cameraDirection) : super._updatePosition()
+          }
+          dispose() {
+            this.inputs.clear(), super.dispose()
+          }
+          getClassName() {
+            return "FreeCamera"
+          }
+        }, (() => {
+          const SH = "function" === typeof Symbol && Symbol.metadata ? Object.create(EH[Symbol.metadata] ?? null) : void 0;
+          BH = [(0, rH.F)()], LH = [(0, rH.F)()], tH = [(0, rH.H)()], zH = [(0, rH.H)()], (0, AH.g)(null, null, BH, {
+            kind: "field",
+            name: "ellipsoid",
+            static: !1,
+            private: !1,
+            access: {
+              has: HH => "ellipsoid" in HH,
+              get: HH => HH.ellipsoid,
+              set: (HH, BH) => {
+                HH.ellipsoid = BH
+              }
+            },
+            metadata: SH
+          }, XH, GH), (0, AH.g)(null, null, LH, {
+            kind: "field",
+            name: "ellipsoidOffset",
+            static: !1,
+            private: !1,
+            access: {
+              has: HH => "ellipsoidOffset" in HH,
+              get: HH => HH.ellipsoidOffset,
+              set: (HH, BH) => {
+                HH.ellipsoidOffset = BH
+              }
+            },
+            metadata: SH
+          }, YH, uH), (0, AH.g)(null, null, tH, {
+            kind: "field",
+            name: "checkCollisions",
+            static: !1,
+            private: !1,
+            access: {
+              has: HH => "checkCollisions" in HH,
+              get: HH => HH.checkCollisions,
+              set: (HH, BH) => {
+                HH.checkCollisions = BH
+              }
+            },
+            metadata: SH
+          }, QH, WH), (0, AH.g)(null, null, zH, {
+            kind: "field",
+            name: "applyGravity",
+            static: !1,
+            private: !1,
+            access: {
+              has: HH => "applyGravity" in HH,
+              get: HH => HH.applyGravity,
+              set: (HH, BH) => {
+                HH.applyGravity = BH
+              }
+            },
+            metadata: SH
+          }, MH, xH), SH && Object.defineProperty(HH, Symbol.metadata, {
+            enumerable: !0,
+            configurable: !0,
+            writable: !0,
+            value: SH
+          })
+        })(), HH
+      })(),
+      mH = !1;
+    mH || (mH = !0, (0, bH.f)("BABYLON.FreeCamera", kH))
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

@@ -1,30 +1,30 @@
 export const id = 66;
 export const ids = [66];
 export const modules = {
-  53793: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      startPageTexturePackFeed: () => AU
+  54593: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      startPageTexturePackFeed: () => hH
     });
-    var cU = zU(1203),
-      yU = zU(42),
-      QU = zU(53776);
+    var AH = LH(1131),
+      rH = LH(30),
+      SH = LH(54579);
 
-    function AU(UU, XU) {
-      const zU = new QU.d({
-        store: yU.g,
-        warn: UU,
-        oneShot: XU,
-        fetchLatest: async UU => {
-          const XU = await fetch(`${cU.clientSideServerUrls.texturePackUrl}/${UU}.json`, {
+    function hH(HH, BH) {
+      const LH = new SH.d({
+        store: rH.c,
+        warn: HH,
+        oneShot: BH,
+        fetchLatest: async HH => {
+          const BH = await fetch(`${AH.clientSideServerUrls.texturePackUrl}/${HH}.json`, {
             cache: "reload"
           });
-          if (!XU.ok) throw new Error(`fetching texture pack ${UU} answered HTTP ${XU.status}`);
-          return await XU.json()
+          if (!BH.ok) throw new Error(`fetching texture pack ${HH} answered HTTP ${BH.status}`);
+          return await BH.json()
         }
       });
-      return (0, QU.e)(zU), zU
+      return (0, SH.h)(LH), LH
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

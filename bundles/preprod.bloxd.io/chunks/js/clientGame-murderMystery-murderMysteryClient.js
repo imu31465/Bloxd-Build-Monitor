@@ -1,11 +1,11 @@
 export const id = 23;
 export const ids = [23];
 export const modules = {
-  40333: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      default: () => cU
+  40472: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      default: () => AH
     });
-    const cU = () => ({
+    const AH = () => ({
       plugins: {
         cosmeticCompanions: null
       }
@@ -13,4 +13,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

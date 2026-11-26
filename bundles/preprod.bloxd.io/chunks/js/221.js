@@ -1,535 +1,802 @@
 export const id = 221;
 export const ids = [221];
 export const modules = {
-  34959: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => OU,
-      g: () => qU,
-      i: () => wU
+  37093: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      capturePreviewPicture: () => MH,
+      holdPreviewsLow: () => hH.f,
+      openLiveFigure: () => WH,
+      rasterNametag: () => TH
     });
-    var cU = zU(34968);
-    const yU = {
-        fileBytes: 4194304,
-        vertices: 65535,
-        indices: 196608,
-        accessorElements: 196608,
-        primitives: 64,
-        nodes: 128,
-        meshes: 64,
-        materials: 8,
-        images: 8,
-        imageSide: 1024
+    var AH = LH(1182),
+      rH = LH(2760),
+      SH = LH(35016),
+      hH = LH(37100),
+      tH = LH(37105),
+      zH = LH(37110),
+      CH = LH(37157),
+      EH = LH(3840);
+    const XH = 480,
+      GH = 16,
+      YH = {
+        minGapMs: 250,
+        now: () => performance.now(),
+        skip: hH.p
       },
-      QU = {
-        items: 1024,
-        perFile: 1024,
-        surfaces: 256,
-        few: 64,
-        bounds: 16,
-        attributeMembers: 32
-      },
-      AU = 1048576,
-      FU = "is not a binary glTF 2.0 file",
-      oU = "loads data from outside the file",
-      DU = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
-      EU = {
-        POSITION: "VEC3",
-        NORMAL: "VEC3",
-        TEXCOORD_0: "VEC2",
-        COLOR_0: "VEC4"
-      },
-      YU = {
-        type: "VEC2",
-        componentTypes: [5126, 5121, 5123]
-      },
-      NU = {
-        TANGENT: {
-          type: "VEC4",
-          componentTypes: [5126]
-        },
-        TEXCOORD_1: YU,
-        TEXCOORD_2: YU,
-        TEXCOORD_3: YU,
-        TEXCOORD_4: YU,
-        TEXCOORD_5: YU
-      },
-      IU = new Set(cU.i.map((UU => {
-        let [XU] = UU;
-        return XU
-      }))),
-      pU = {
-        1: "line",
-        2: "line loop",
-        3: "line strip",
-        5: "triangle strip",
-        6: "triangle fan"
-      },
-      aU = 5126;
+      uH = 30,
+      QH = 1e4;
 
-    function tU(UU) {
-      return UU.toLocaleString("en-US")
-    }
-
-    function gU(UU, XU, zU) {
-      return UU > XU ? `has ${tU(UU)} ${zU} (the limit is ${tU(XU)})` : null
-    }
-
-    function kU(UU, XU) {
-      return Number.isInteger(UU) && UU >= 0 && UU < (null !== XU && void 0 !== XU ? XU : 0)
-    }
-
-    function GU(UU) {
-      return Number.isInteger(UU) && UU >= 0
-    }
-
-    function BU(UU, XU) {
-      return void 0 !== UU && (!Array.isArray(UU) || UU.length > XU)
-    }
-
-    function ZU(UU, XU) {
-      return "object" === typeof UU && null !== UU && Object.keys(UU).length > XU
-    }
-
-    function RU(UU) {
-      var XU;
-      return `${UU.normalized?"normalized ":""}${null!==(XU=cU.g[UU.componentType])&&void 0!==XU?XU:UU.componentType} ${UU.type}`
-    }
-
-    function PU(UU) {
-      const XU = XU => {
-        var zU;
-        return null !== (zU = UU[XU]) && void 0 !== zU ? zU : -1
-      };
-      return 255 === XU(0) && 216 === XU(1) ? "JPEG" : 82 === XU(0) && 73 === XU(1) && 87 === XU(8) && 69 === XU(9) ? "WebP" : 171 === XU(0) && 75 === XU(1) && 84 === XU(2) && 88 === XU(3) ? "KTX2" : "non-PNG"
-    }
-
-    function WU(UU) {
-      return UU.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((XU, zU) => UU[zU] === XU)) && 73 === UU[12] && 72 === UU[13] && 68 === UU[14] && 82 === UU[15]
-    }
-
-    function dU(UU) {
-      return /^[aeiou]/i.test(UU) ? `an ${UU}` : `a ${UU}`
-    }
-
-    function LU(UU) {
-      const XU = UU.byteStride;
-      return void 0 === XU || Number.isInteger(XU) && XU >= 4 && XU <= 252 && XU % 4 === 0
-    }
-
-    function eU(UU, XU, zU) {
-      var cU, yU;
-      const QU = null === (cU = UU.bufferViews) || void 0 === cU ? void 0 : cU[zU];
-      if (!QU || !XU || 0 !== QU.buffer) return null;
-      const AU = null !== (yU = QU.byteOffset) && void 0 !== yU ? yU : 0;
-      return !GU(AU) || !GU(QU.byteLength) || AU + QU.byteLength > XU.byteLength ? null : XU.subarray(AU, AU + QU.byteLength)
-    }
-
-    function CU(UU, XU) {
-      var zU, yU, QU;
-      const AU = cU.o[XU.type],
-        FU = cU.d[XU.componentType];
-      if (!AU || !FU || !Number.isInteger(XU.count) || XU.count < 0) return !1;
-      if (void 0 === XU.bufferView) return !0;
-      const oU = null === (zU = UU.bufferViews) || void 0 === zU ? void 0 : zU[XU.bufferView],
-        DU = null !== (yU = XU.byteOffset) && void 0 !== yU ? yU : 0;
-      if (!oU || !GU(DU) || DU % FU !== 0) return !1;
-      const EU = AU * FU,
-        YU = null !== (QU = oU.byteStride) && void 0 !== QU ? QU : EU;
-      if (YU < EU) return !1;
-      return (0 === XU.count ? 0 : DU + YU * (XU.count - 1) + EU) <= oU.byteLength
-    }
-
-    function wU(UU) {
-      return UU > yU.fileBytes ? `is ${(UU/AU).toFixed(1)} MiB (the limit is ${yU.fileBytes/AU} MiB)` : null
-    }
-
-    function qU(UU, XU) {
-      try {
-        return function(UU, XU) {
-          var zU, AU, YU, tU, GU, wU, qU, OU, SU, rU, uU, fU, iU, HU, MU, vU, VU;
-          const sU = Array.isArray(UU.extensionsUsed) && UU.extensionsUsed.includes("KHR_draco_mesh_compression");
-          if (function(UU, XU) {
-              var zU, cU;
-              const {
-                items: yU,
-                perFile: AU,
-                surfaces: FU,
-                few: oU,
-                bounds: DU,
-                attributeMembers: EU
-              } = QU;
-              if (BU(UU.extensionsRequired, oU) || BU(UU.animations, 1 / 0) || BU(UU.skins, 1 / 0)) return !0;
-              if (null !== (zU = UU.animations) && void 0 !== zU && zU.length || null !== (cU = UU.skins) && void 0 !== cU && cU.length) return !1;
-              if ([
-                  [UU.buffers, oU],
-                  [UU.scenes, oU],
-                  [UU.bufferViews, yU],
-                  [UU.accessors, yU],
-                  [UU.nodes, yU],
-                  [UU.meshes, yU],
-                  [UU.materials, FU],
-                  [UU.textures, FU],
-                  [UU.samplers, FU],
-                  [UU.images, FU]
-                ].some((UU => {
-                  let [XU, zU] = UU;
-                  return BU(XU, zU)
-                }))) return !0;
-              for (const QU of null !== (YU = UU.accessors) && void 0 !== YU ? YU : []) {
-                var YU, NU, IU;
-                if (Number.isInteger(QU.count) && (!Number.isSafeInteger(QU.count) || Object.is(QU.count, -0)) || BU(null !== (NU = QU.min) && void 0 !== NU ? NU : void 0, DU) || BU(null !== (IU = QU.max) && void 0 !== IU ? IU : void 0, DU)) return !0
-              }
-              for (const QU of null !== (pU = UU.scenes) && void 0 !== pU ? pU : []) {
-                var pU;
-                if (BU(QU.nodes, yU)) return !0
-              }
-              let aU = 0;
-              for (const QU of null !== (tU = UU.nodes) && void 0 !== tU ? tU : []) {
-                var tU, gU, kU;
-                if (BU(QU.children, AU)) return !0;
-                aU += null !== (gU = null === (kU = QU.children) || void 0 === kU ? void 0 : kU.length) && void 0 !== gU ? gU : 0
-              }
-              if (aU > AU) return !0;
-              let GU = 0;
-              for (const QU of null !== (RU = UU.meshes) && void 0 !== RU ? RU : []) {
-                var RU;
-                if (!Array.isArray(QU.primitives)) return !0;
-                if (GU += QU.primitives.length, GU > AU) return !0;
-                for (const UU of QU.primitives) {
-                  var PU;
-                  const zU = XU ? null === (PU = UU.extensions) || void 0 === PU ? void 0 : PU.KHR_draco_mesh_compression : void 0;
-                  if (ZU(UU.attributes, EU) || ZU(null === zU || void 0 === zU ? void 0 : zU.attributes, EU)) return !0
+    function WH(HH, BH, LH, zH) {
+      const CH = SH.h.openCharacter(HH, "player");
+      let EH = !1,
+        XH = !1,
+        uH = null;
+      const WH = async () => {
+        const HH = CH.dev.canvas(),
+          BH = await (AH = () => HH.isConnected && function(HH) {
+            const {
+              x: BH,
+              width: LH
+            } = xH(HH);
+            if (0 === LH || 0 === HH.height) return !1;
+            if (vH ??= document.createElement("canvas").getContext("2d", {
+                willReadFrequently: !0
+              }), null === vH) return !1;
+            const AH = vH.canvas;
+            AH.height = Math.min(HH.height, GH), AH.width = Math.max(1, Math.round(LH * AH.height / HH.height));
+            const rH = vH;
+            return rH.imageSmoothingQuality = "high", rH.drawImage(HH, BH, 0, LH, HH.height, 0, 0, AH.width, AH.height), PH(rH.getImageData(0, 0, AH.width, AH.height).data)
+          }(HH), rH = hH.d, SH = () => !EH && CH.isReady(), tH = YH, new Promise((HH => {
+            let BH = Number.NEGATIVE_INFINITY;
+            const LH = () => {
+              rH((() => {
+                try {
+                  if (!SH()) return void HH(!1);
+                  if (tH.skip()) return void HH(!0);
+                  const rH = tH.now();
+                  if (rH - BH >= tH.minGapMs && (BH = rH, AH())) return void HH(!0);
+                  LH()
+                } catch (rH) {
+                  console.warn("[loading-character] couldn't read a figure's frame", rH), HH(!1)
                 }
-              }
-              return !1
-            }(UU, sU)) return FU;
-          const nU = null === (zU = UU.asset) || void 0 === zU ? void 0 : zU.version;
-          if ("string" !== typeof nU || !/^2\.\d+/.test(nU)) return `uses glTF version ${null!==nU&&void 0!==nU?nU:"(none)"}`;
-          const mU = null === (AU = UU.asset) || void 0 === AU ? void 0 : AU.minVersion;
-          if (void 0 !== mU && "2.0" !== mU) return `uses glTF version ${mU}`;
-          for (const cU of null !== (lU = UU.extensionsRequired) && void 0 !== lU ? lU : []) {
-            var lU;
-            if (!DU.has(cU)) return `requires the glTF extension ${cU}`
-          }
-          if (null !== (YU = UU.animations) && void 0 !== YU && YU.length) return "has animations";
-          if (null !== (tU = UU.skins) && void 0 !== tU && tU.length) return "uses skins";
-          const xU = null !== (GU = UU.buffers) && void 0 !== GU ? GU : [];
-          for (const [cU, yU] of xU.entries()) {
-            if (void 0 !== yU.uri) return oU;
-            if (cU > 0 || !XU) return FU
-          }
-          for (const [cU, yU] of(null !== (JU = UU.bufferViews) && void 0 !== JU ? JU : []).entries()) {
-            var JU;
-            if (!eU(UU, XU, cU) || !LU(yU)) return FU
-          }
-          const jU = null !== (wU = UU.accessors) && void 0 !== wU ? wU : [];
-          for (const cU of jU) {
-            if (void 0 !== cU.sparse) return "uses sparse accessors";
-            const XU = Number.isInteger(cU.count) ? gU(cU.count, yU.accessorElements, "elements in an accessor") : null;
-            if (XU) return XU;
-            if (!CU(UU, cU)) return FU
-          }
-          const KU = null !== (qU = UU.scenes) && void 0 !== qU ? qU : [];
-          if (1 !== KU.length) return `has ${KU.length} scenes`;
-          const bU = (0, cU.u)(UU);
-          if (void 0 !== bU && 0 !== bU) return FU;
-          const TU = null !== (OU = UU.nodes) && void 0 !== OU ? OU : [],
-            hU = null !== (SU = UU.meshes) && void 0 !== SU ? SU : [],
-            UX = null !== (rU = UU.materials) && void 0 !== rU ? rU : [],
-            XX = null !== (uU = UU.textures) && void 0 !== uU ? uU : [],
-            zX = null !== (fU = UU.images) && void 0 !== fU ? fU : [],
-            cX = null !== (iU = null !== (HU = null !== (MU = gU(TU.length, yU.nodes, "nodes")) && void 0 !== MU ? MU : gU(hU.length, yU.meshes, "meshes")) && void 0 !== HU ? HU : gU(UX.length, yU.materials, "materials")) && void 0 !== iU ? iU : gU(zX.length, yU.images, "images");
-          if (cX) return cX;
-          const yX = new Set;
-          for (const cU of TU)
-            for (const UU of null !== (QX = cU.children) && void 0 !== QX ? QX : []) {
-              var QX;
-              if (!kU(UU, TU.length) || yX.has(UU)) return FU;
-              yX.add(UU)
-            }
-          const AX = new Set,
-            FX = UU => {
-              var XU;
-              return !AX.has(UU) && (AX.add(UU), (null !== (XU = TU[UU].children) && void 0 !== XU ? XU : []).every(FX))
+              }))
             };
-          for (const cU of null !== (oX = KU[0].nodes) && void 0 !== oX ? oX : []) {
-            var oX;
-            if (!kU(cU, TU.length) || yX.has(cU) || !FX(cU)) return FU
-          }
-          for (const cU of TU) {
-            if (void 0 !== cU.matrix) return "uses node matrices";
-            if (void 0 !== cU.skin) return "uses skins";
-            if (void 0 !== cU.weights) return "uses morph targets";
-            if (void 0 !== cU.mesh && !kU(cU.mesh, hU.length)) return FU;
-            const UU = [
-              [cU.translation, 3],
-              [cU.rotation, 4],
-              [cU.scale, 3]
-            ];
-            for (const [XU, zU] of UU)
-              if (void 0 !== XU && (!Array.isArray(XU) || XU.length !== zU || !XU.every((UU => Number.isFinite(UU))))) return FU
-          }
-          let DX = -1,
-            EX = 0,
-            YX = 0,
-            NX = null;
-          for (const yU of hU) {
-            if (void 0 !== yU.weights) return "uses morph targets";
-            if (0 === yU.primitives.length) return FU;
-            for (const zU of yU.primitives) {
-              var IX, pX;
-              const yU = null !== (IX = zU.mode) && void 0 !== IX ? IX : 4;
-              var aX;
-              if (4 !== yU && 0 !== yU) return `uses ${null!==(aX=pU[yU])&&void 0!==aX?aX:`mode ${yU}`} primitives`;
-              if (void 0 !== zU.targets) return "uses morph targets";
-              if (void 0 !== zU.material && !kU(zU.material, UX.length)) return FU;
-              const QU = sU ? null === (pX = zU.extensions) || void 0 === pX ? void 0 : pX.KHR_draco_mesh_compression : void 0;
-              if (QU) {
-                if (4 !== yU) return "uses Draco-compressed points";
-                if (!eU(UU, XU, QU.bufferView) || "object" !== typeof QU.attributes) return FU
-              }
-              const AU = zU.attributes;
-              if ("object" !== typeof AU || null === AU) return FU;
-              if (void 0 === AU.POSITION) return "has a primitive with no positions";
-              if (!kU(AU.POSITION, jU.length)) return FU;
-              const oU = jU[AU.POSITION].count;
-              for (const [UU, XU] of Object.entries(AU)) {
-                if (!kU(XU, jU.length)) return FU;
-                if (/^(JOINTS|WEIGHTS)_\d+$/.test(UU)) return "uses skins";
-                const zU = jU[XU],
-                  cU = EU[UU];
-                if (cU && (zU.componentType !== aU || zU.normalized || zU.type !== cU)) return `stores ${UU} as ${RU(zU)}`;
-                const yU = NU[UU];
-                if (yU && (zU.type !== yU.type || !yU.componentTypes.includes(zU.componentType) || zU.componentType === aU === !!zU.normalized)) return `stores ${UU} as ${RU(zU)}`;
-                if (IU.has(UU) && zU.count !== oU) return "has vertex attributes of different lengths"
-              }
-              if (QU) {
-                if (void 0 === zU.indices) return FU;
-                for (const XU in QU.attributes)
-                  if (IU.has(XU) && void 0 === AU[XU]) return FU;
-                if (void 0 === QU.attributes.POSITION) return FU;
-                const UU = kU(zU.indices, jU.length) ? jU[zU.indices].count : -1;
-                if (0 === UU) return FU;
-                if (-1 === DX) DX = QU.bufferView, EX = oU, YX = UU;
-                else {
-                  NX ??= new Map([
-                    [DX, [EX, YX]]
-                  ]);
-                  const XU = NX.get(QU.bufferView);
-                  if (XU && (XU[0] !== oU || XU[1] !== UU)) return FU;
-                  NX.set(QU.bufferView, null !== XU && void 0 !== XU ? XU : [oU, UU])
-                }
-              }
-              let DU = oU;
-              if (void 0 !== zU.indices) {
-                if (!kU(zU.indices, jU.length)) return FU;
-                const UU = jU[zU.indices];
-                if ("SCALAR" !== UU.type) return FU;
-                if (5121 === UU.componentType) return "uses 8-bit indices";
-                var tX;
-                if (5123 !== UU.componentType && 5125 !== UU.componentType) return `stores indices as ${null!==(tX=cU.g[UU.componentType])&&void 0!==tX?tX:UU.componentType}`;
-                if (!QU && void 0 === UU.bufferView) return FU;
-                DU = UU.count
-              }
-              if (4 === yU && DU % 3 !== 0) return FU
-            }
-          }
-          let gX = 0,
-            kX = 0,
-            GX = 0;
-          for (let cU = 0; cU < TU.length; cU++) {
-            const UU = TU[cU].mesh;
-            if (void 0 !== UU && AX.has(cU))
-              for (const XU of hU[UU].primitives) GX++, gX += jU[XU.attributes.POSITION].count, void 0 !== XU.indices && (kX += jU[XU.indices].count)
-          }
-          const BX = null !== (vU = null !== (VU = gU(gX, yU.vertices, "vertices")) && void 0 !== VU ? VU : gU(kX, yU.indices, "indices")) && void 0 !== vU ? vU : gU(GX, yU.primitives, "primitives");
-          if (BX) return BX;
-          for (const cU of UX) {
-            var ZX, RX;
-            if (void 0 !== cU.emissiveTexture) return "uses an emissive texture";
-            const XU = null !== (ZX = cU.alphaMode) && void 0 !== ZX ? ZX : "OPAQUE";
-            if ("OPAQUE" !== XU && "MASK" !== XU && "BLEND" !== XU) return FU;
-            const zU = null === (RX = cU.pbrMetallicRoughness) || void 0 === RX ? void 0 : RX.baseColorTexture;
-            if (zU) {
-              var PX, WX, dX, LX, eX;
-              const XU = null !== (PX = UU.extensionsUsed) && void 0 !== PX && PX.includes("KHR_texture_transform") ? null === (WX = zU.extensions) || void 0 === WX ? void 0 : WX.KHR_texture_transform : void 0;
-              if (0 !== (null !== (dX = zU.texCoord) && void 0 !== dX ? dX : 0) || 0 !== (null !== (LX = null === XU || void 0 === XU ? void 0 : XU.texCoord) && void 0 !== LX ? LX : 0)) return "uses a second UV set";
-              const cU = XX[zU.index];
-              if (!cU || !kU(cU.source, zX.length) || void 0 !== cU.sampler && !kU(cU.sampler, null === (eX = UU.samplers) || void 0 === eX ? void 0 : eX.length)) return FU
-            }
-          }
-          for (const cU of zX) {
-            if (void 0 !== cU.uri) return oU;
-            if (void 0 === cU.bufferView) return FU;
-            const zU = eU(UU, XU, cU.bufferView);
-            if (!zU) return FU;
-            if ("image/png" !== cU.mimeType) {
-              var CX, wX, qX;
-              return `has ${dU(null!==(CX=null!==(wX={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(qX=cU.mimeType)&&void 0!==qX?qX:""])&&void 0!==wX?wX:cU.mimeType)&&void 0!==CX?CX:"untyped")} image`
-            }
-            if (!WU(zU)) return `has ${dU(PU(zU))} image`;
-            const QU = new DataView(zU.buffer, zU.byteOffset, zU.byteLength),
-              AU = QU.getUint32(16),
-              DU = QU.getUint32(20);
-            if (AU > yU.imageSide || DU > yU.imageSide) return `has a ${AU} \xd7 ${DU} image (the limit is ${yU.imageSide})`
-          }
-          return null
-        }(UU, XU)
-      } catch {
-        return FU
+            LH()
+          })));
+        var AH, rH, SH, tH;
+        return !BH || EH || XH || (XH = !0, LH(!0)), BH
+      };
+      return CH.ready.then((() => {
+        if (EH) return !1;
+        for (const hH of AH.r) {
+          var HH;
+          CH.setCosmetic(hH, null !== (HH = BH.cosmetics[hH]) && void 0 !== HH ? HH : (0, rH.d)(hH))
+        }
+        const LH = Promise.all(AH.r.map((HH => CH.untilDrawn(HH)))).then((() => !0)),
+          SH = new Promise((HH => {
+            setTimeout((() => {
+              (0, hH.d)((() => {
+                HH(!1)
+              }))
+            }), QH)
+          }));
+        return Promise.race([LH, SH])
+      })).then((async HH => {
+        if (!EH && CH.isReady() && await WH() && HH) return MH(CH.dev.canvas(), (() => !EH && CH.isReady())).then((HH => {
+          null === HH || EH || zH(HH)
+        }))
+      })).catch((HH => {
+        console.warn("[loading-character] a figure couldn't draw", HH)
+      })), {
+        resize: (HH, BH) => {
+          const AH = (0, tH.e)(HH, BH, window.devicePixelRatio),
+            rH = null !== uH && (uH[0] !== AH[0] || uH[1] !== AH[1]);
+          uH = AH, CH.resize(HH, BH), rH && XH && (XH = !1, LH(!1), WH())
+        },
+        close: () => {
+          EH = !0, CH.close()
+        }
       }
     }
 
-    function OU(UU) {
-      const XU = wU(UU.byteLength);
-      if (XU) return XU;
-      try {
-        const {
-          json: XU,
-          bin: zU
-        } = (0, cU.w)(UU);
-        return qU(XU, zU)
-      } catch (zU) {
-        if (zU instanceof cU.n) return zU.reason;
-        throw zU
+    function MH(HH, BH) {
+      return new Promise((LH => {
+        const AH = rH => {
+          (0, hH.d)((() => {
+            if (!BH()) return void LH(null);
+            const SH = HH.isConnected ? function(HH) {
+              let {
+                canvas: BH,
+                x: LH,
+                width: AH
+              } = HH;
+              if (0 === AH || 0 === BH.height) return null;
+              const rH = Math.min(1, XH / BH.height),
+                SH = document.createElement("canvas");
+              SH.width = Math.max(1, Math.round(AH * rH)), SH.height = Math.max(1, Math.round(BH.height * rH));
+              const hH = SH.getContext("2d", {
+                willReadFrequently: !0
+              });
+              if (!hH) return null;
+              if (hH.drawImage(BH, LH, 0, AH, BH.height, 0, 0, SH.width, SH.height), !PH(hH.getImageData(0, 0, SH.width, SH.height).data)) return null;
+              return SH.toDataURL("image/webp", .85)
+            }(xH(HH)) : null;
+            null !== SH || rH <= 1 || !HH.isConnected ? LH(SH) : AH(rH - 1)
+          }))
+        };
+        AH(uH)
+      }))
+    }
+
+    function xH(HH) {
+      const BH = Math.min(HH.width, Math.round(HH.height * EH.c));
+      return {
+        canvas: HH,
+        x: Math.round((HH.width - BH) / 2),
+        width: BH
+      }
+    }
+    let vH = null;
+
+    function PH(HH) {
+      for (let BH = 3; BH < HH.length; BH += 4)
+        if (0 !== HH[BH]) return !0;
+      return !1
+    }
+    async function TH(HH) {
+      var BH;
+      await CH.h.load();
+      const LH = {
+          name: HH.name,
+          info: null,
+          colour: null !== (BH = HH.nameColour) && void 0 !== BH ? BH : "default",
+          ranks: HH.ranks,
+          effects: [],
+          health: null,
+          Ot: null,
+          hideNameSeed: null,
+          player: !HH.isYou
+        },
+        AH = document.createElement("canvas"),
+        [rH, SH] = (0, zH.i)((0, zH.k)(zH.e.Nametag, LH), AH, !0);
+      return 0 === rH || 0 === SH ? null : {
+        src: AH.toDataURL("image/png"),
+        width: rH,
+        height: SH
       }
     }
   },
-  34968: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => pU,
-      g: () => IU,
-      i: () => tU,
-      m: () => AU,
-      n: () => QU,
-      o: () => aU,
-      p: () => YU,
-      t: () => NU,
-      u: () => FU,
-      w: () => EU
+  35018: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH,
+      h: () => rH,
+      j: () => EH
     });
-    const cU = 1179937895,
-      yU = 1313821514;
-    class QU extends Error {
-      constructor(UU) {
-        super(`GLB refused: it ${UU}`), this.reason = UU, this.name = "GlbRefused"
-      }
-    }
-    class AU extends Error {
-      constructor(UU) {
-        super(UU), this.name = "GlbError"
-      }
-    }
+    var AH = LH(1565);
 
-    function FU(UU) {
-      return Reflect.get(UU, "scene")
-    }
-    const oU = 5130562,
-      DU = "is not a binary glTF 2.0 file";
-
-    function EU(UU) {
-      var XU;
-      const zU = UU instanceof Uint8Array ? UU : new Uint8Array(UU),
-        AU = function(UU) {
-          const XU = new DataView(UU.buffer, UU.byteOffset, UU.byteLength);
-          if (UU.byteLength < 20 || XU.getUint32(0, !0) !== cU || 2 !== XU.getUint32(4, !0)) return null;
-          const zU = Math.min(XU.getUint32(8, !0), UU.byteLength),
-            QU = XU.getUint32(12, !0);
-          if (XU.getUint32(16, !0) !== yU || 20 + QU > zU) return null;
-          let AU;
-          try {
-            AU = JSON.parse((new TextDecoder).decode(UU.subarray(20, 20 + QU)))
-          } catch {
-            return null
-          }
-          return "object" === typeof AU && null !== AU ? {
-            json: AU,
-            jsonEnd: 20 + QU,
-            length: zU
-          } : null
-        }(zU);
-      if (null === AU) throw new QU(DU);
-      const FU = AU.json,
-        {
-          jsonEnd: EU,
-          length: YU
-        } = AU,
-        NU = new DataView(zU.buffer, zU.byteOffset, zU.byteLength);
-      let IU = -1,
-        pU = 0;
-      for (let cU = EU; cU < YU;) {
-        if (cU + 8 > YU) throw new QU(DU);
-        const UU = NU.getUint32(cU, !0),
-          XU = NU.getUint32(cU + 4, !0);
-        if (cU + 8 + UU > YU || XU === yU || XU === oU && -1 !== IU) throw new QU(DU);
-        XU === oU && (IU = cU + 8, pU = UU), cU += 8 + UU
-      }
-      let aU = null;
-      const tU = null === (XU = FU.buffers) || void 0 === XU ? void 0 : XU[0];
-      if (-1 !== IU && tU && void 0 === tU.uri) {
-        if (!(tU.byteLength >= 0) || tU.byteLength > pU) throw new QU(DU);
-        aU = new Uint8Array(zU.buffer, zU.byteOffset + IU, tU.byteLength)
-      }
+    function rH(HH) {
+      var BH;
       return {
-        json: FU,
-        bin: aU,
-        fileBytes: zU.byteLength
+        ...hH.store,
+        yaw: hH.store.yaw + (null !== (BH = AH.c[HH].previewYaw) && void 0 !== BH ? BH : 0)
+      }
+    }
+    const SH = {
+        yaw: .61 * Math.PI,
+        pitch: Math.PI / 2.05,
+        radius: 30,
+        target: [0, 0, 0]
+      },
+      hH = {
+        player: SH,
+        store: {
+          ...SH,
+          radius: 33,
+          target: [0, 3.9, 0]
+        }
+      };
+
+    function tH(HH, BH) {
+      HH instanceof Promise ? HH.then(BH).catch((HH => {
+        console.error("Couldn't open the preview", HH)
+      })) : BH(HH)
+    }
+    class zH {
+      constructor(HH) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, tH(HH, (HH => {
+          this.closed ? HH.close() : (this.opened = HH, null !== this.size && HH.resize(this.size.width, this.size.height), null !== this.view && HH.show(this.view))
+        }))
+      }
+      show(HH) {
+        var BH;
+        this.view = HH, null === (BH = this.opened) || void 0 === BH || BH.show(HH)
+      }
+      resize(HH, BH) {
+        var LH;
+        this.size = {
+          width: HH,
+          height: BH
+        }, null === (LH = this.opened) || void 0 === LH || LH.resize(HH, BH)
+      }
+      close() {
+        var HH;
+        this.closed = !0, null === (HH = this.opened) || void 0 === HH || HH.close(), this.opened = null
+      }
+    }
+    class CH {
+      constructor(HH) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(HH).then((HH => HH.ready)), tH(HH, (HH => {
+          this.closed ? HH.close() : (this.opened = HH, null !== this.size && HH.resize(this.size.width, this.size.height))
+        }))
+      }
+      get dev() {
+        return this.opened.dev
+      }
+      isReady() {
+        var HH, BH;
+        return null !== (HH = null === (BH = this.opened) || void 0 === BH ? void 0 : BH.isReady()) && void 0 !== HH && HH
+      }
+      setCosmetic(HH, BH) {
+        var LH;
+        null === (LH = this.opened) || void 0 === LH || LH.setCosmetic(HH, BH)
+      }
+      playEmote(HH) {
+        var BH;
+        null === (BH = this.opened) || void 0 === BH || BH.playEmote(HH)
+      }
+      setOrbit(HH) {
+        var BH;
+        null === (BH = this.opened) || void 0 === BH || BH.setOrbit(HH)
+      }
+      resetCamera() {
+        var HH;
+        null === (HH = this.opened) || void 0 === HH || HH.resetCamera()
+      }
+      async untilDrawn(HH) {
+        var BH;
+        await this.ready, await (null === (BH = this.opened) || void 0 === BH ? void 0 : BH.untilDrawn(HH))
+      }
+      resize(HH, BH) {
+        var LH;
+        this.size = {
+          width: HH,
+          height: BH
+        }, null === (LH = this.opened) || void 0 === LH || LH.resize(HH, BH)
+      }
+      close() {
+        var HH;
+        this.closed = !0, null === (HH = this.opened) || void 0 === HH || HH.close(), this.opened = null
+      }
+    }
+    const EH = new class {
+      constructor() {
+        this.host = null, this.makeDefault = null
+      }
+      setHost(HH) {
+        this.host = HH
+      }
+      setDefaultHost(HH) {
+        this.makeDefault = HH
+      }
+      current() {
+        if (null === this.host) {
+          if (null === this.makeDefault) throw new Error("no preview host");
+          this.host = this.makeDefault()
+        }
+        return this.host
+      }
+      openMob(HH) {
+        return new zH(this.current().openMob(HH))
+      }
+      openPet(HH) {
+        return new zH(this.current().openPet(HH))
+      }
+      openMobLineup(HH) {
+        return new zH(this.current().openMobLineup(HH))
+      }
+      openCharacter(HH, BH) {
+        return new CH(this.current().openCharacter(HH, BH))
+      }
+    }
+  },
+  35016: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => AH.d,
+      g: () => AH.h,
+      h: () => AH.j
+    });
+    var AH = LH(35018);
+    class rH {
+      constructor(HH) {
+        this.load = HH, this.loaded = null, this.loading = null
+      }
+      run(HH) {
+        return null !== this.loaded ? HH(this.loaded) : (this.loading ??= this.load().then((HH => (this.loaded = HH, HH)), (HH => {
+          throw this.loading = null, HH
+        })), this.loading.then(HH))
+      }
+    }
+    class SH {
+      constructor() {
+        this.mobScene = new rH((() => Promise.all([LH.e(84), LH.e(259), LH.e(258), LH.e(283), LH.e(111), LH.e(284), LH.e(87), LH.e(281), LH.e(85), LH.e(86), LH.e(291), LH.e(285), LH.e(290), LH.e(288), LH.e(280), LH.e(303), LH.e(255), LH.e(272), LH.e(286), LH.e(289), LH.e(89), LH.e(249), LH.e(204), LH.e(109), LH.e(261), LH.e(252), LH.e(268), LH.e(219), LH.e(269), LH.e(88), LH.e(273)]).then((() => LH(42386))))), this.characterScene = new rH((() => Promise.all([LH.e(84), LH.e(259), LH.e(258), LH.e(283), LH.e(111), LH.e(284), LH.e(87), LH.e(281), LH.e(85), LH.e(86), LH.e(291), LH.e(285), LH.e(290), LH.e(288), LH.e(280), LH.e(303), LH.e(255), LH.e(272), LH.e(286), LH.e(289), LH.e(89), LH.e(249), LH.e(204), LH.e(109), LH.e(261), LH.e(252), LH.e(268), LH.e(219), LH.e(269), LH.e(88), LH.e(218)]).then((() => LH(42476)))))
+      }
+      openMob(HH) {
+        return this.mobScene.run((BH => BH.openMobPreview(HH)))
+      }
+      openPet(HH) {
+        return this.mobScene.run((BH => BH.openPetPreview(HH)))
+      }
+      openMobLineup(HH) {
+        return this.mobScene.run((BH => BH.openMobLineupPreview(HH)))
+      }
+      openCharacter(HH, BH) {
+        return this.characterScene.run((LH => LH.openCharacterPreview(HH, BH)))
+      }
+    }
+    AH.j.setDefaultHost((() => new SH))
+  },
+  37112: (HH, BH, LH) => {
+    function AH(HH, BH, LH) {
+      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(HH, BH).getContext("2d", LH);
+      const AH = document.createElement("canvas");
+      return AH.width = HH, AH.height = BH, AH.getContext("2d", LH)
+    }
+
+    function rH(HH, BH) {
+      return HH.getContext("2d", BH)
+    }
+    LH.d(BH, {
+      d: () => rH,
+      h: () => AH
+    })
+  },
+  37105: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => SH
+    });
+    const AH = 4e5,
+      rH = 2;
+
+    function SH(HH, BH, LH) {
+      let [SH, hH] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [HH, BH], tH = Math.min(Number.isFinite(LH) && LH > 0 ? LH : 1, rH);
+      const zH = Math.max(0, SH, HH) * Math.max(0, hH, BH) * tH * tH;
+      return zH > AH && (tH *= Math.sqrt(AH / zH)), [Math.max(1, Math.floor(Math.max(0, HH) * tH)), Math.max(1, Math.floor(Math.max(0, BH) * tH))]
+    }
+  },
+  37162: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => EH,
+      h: () => zH,
+      k: () => tH,
+      l: () => CH
+    });
+    var AH = LH(2010);
+    let rH = null,
+      SH = 0;
+    const hH = new Set;
+
+    function tH() {
+      return rH
+    }
+
+    function zH() {
+      return SH
+    }
+
+    function CH(HH) {
+      rH = HH, SH++, (0, AH.e)();
+      for (const BH of hH) BH()
+    }
+
+    function EH(HH) {
+      hH.add(HH)
+    }
+  },
+  37100: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => QH,
+      f: () => EH,
+      i: () => YH,
+      j: () => XH,
+      k: () => WH,
+      l: () => uH,
+      p: () => GH
+    });
+    const AH = 30,
+      rH = 4;
+    let SH = 0,
+      hH = !1,
+      tH = !1,
+      zH = Number.NEGATIVE_INFINITY,
+      CH = [];
+
+    function EH() {
+      0 === SH && (hH = !1, tH = !1), SH++;
+      let HH = !1;
+      return () => {
+        HH || (HH = !0, SH--)
       }
     }
 
-    function YU(UU) {
-      const XU = UU.slice(UU.indexOf(",") + 1),
-        zU = Uint8Array.fromBase64;
-      if (zU) return zU(XU).buffer;
-      const cU = atob(XU),
-        yU = new Uint8Array(cU.length);
-      for (let QU = 0; QU < cU.length; QU++) yU[QU] = cU.charCodeAt(QU);
-      return yU.buffer
+    function XH(HH) {
+      HH && (tH = !0)
     }
-    async function NU(UU) {
-      if (UU.startsWith("data:")) return YU(UU);
-      const XU = await fetch(UU);
-      if (!XU.ok) throw new AU(`fetching ${UU} failed: ${XU.status} ${XU.statusText}`);
-      return await XU.arrayBuffer()
+
+    function GH() {
+      return tH
     }
-    const IU = {
-        5120: "i8",
-        5121: "u8",
-        5122: "i16",
-        5123: "u16",
-        5125: "u32",
-        5126: "f32"
+
+    function YH(HH) {
+      hH = HH
+    }
+
+    function uH(HH) {
+      return !(SH > 0 && (hH || HH - zH < 1e3 / AH - rH)) && (zH = HH, !0)
+    }
+
+    function QH(HH) {
+      CH.push(HH)
+    }
+
+    function WH() {
+      if (0 === CH.length) return;
+      const HH = CH;
+      CH = [];
+      for (const LH of HH) try {
+        LH()
+      } catch (BH) {
+        console.warn("[bloxd-previews] an after-draw callback threw", BH)
+      }
+    }
+  },
+  37177: (HH, BH, LH) => {
+    function AH() {
+      return LH(37184)
+    }
+
+    function rH() {
+      return LH(37187)
+    }
+
+    function SH(HH) {
+      return ["pl", "ru", "tr", "uk", "vi"].includes(HH)
+    }
+    LH.d(BH, {
+      e: () => SH,
+      h: () => AH,
+      k: () => rH
+    })
+  },
+  37110: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => WH,
+      i: () => jH,
+      k: () => IH,
+      o: () => KH
+    });
+    var AH = LH(37146),
+      rH = LH(37112),
+      SH = LH(37120),
+      hH = LH(37127);
+
+    function tH(HH, BH, LH) {
+      const AH = "object" === typeof HH && null !== HH ? HH : {},
+        rH = function(HH, BH, LH) {
+          if (!Array.isArray(HH) || 0 === HH.length) return [];
+          const AH = [{
+            width: 0,
+            height: 0,
+            y: 0,
+            items: []
+          }];
+          for (const tH of (0, hH.i)(HH, hH.e.DEFAULT_FONT_SIZE, LH)) {
+            if ("text" !== tH.kind) {
+              AH[AH.length - 1].items.push({
+                content: tH,
+                chars: 1,
+                size: {
+                  x: 0,
+                  width: 0
+                }
+              });
+              continue
+            }
+            if (0 === tH.text.length) continue;
+            const HH = AH[AH.length - 1].items.reduce(((HH, BH) => HH + ("text" === BH.content.kind ? (0, SH.b)(BH.content.text) : BH.chars)), 0);
+            (0, SH.e)(tH.text, HH).forEach(((HH, BH) => {
+              BH > 0 && AH.push({
+                width: 0,
+                height: 0,
+                y: 0,
+                items: []
+              }), HH.length > 0 && AH[AH.length - 1].items.push({
+                content: {
+                  ...tH,
+                  text: HH
+                },
+                chars: HH.length,
+                size: {
+                  x: 0,
+                  width: 0
+                }
+              })
+            }))
+          }
+          let rH = hH.e.VERTICAL_PADDING / 2;
+          for (const SH of AH) {
+            if (0 === SH.items.length) continue;
+            const {
+              width: HH,
+              height: AH,
+              sizes: tH
+            } = (0, hH.h)(SH.items.map((HH => HH.content)), BH, LH);
+            SH.items.forEach(((HH, BH) => {
+              HH.size = tH[BH]
+            })), SH.width = HH, SH.height = AH, SH.y = rH, rH += AH + hH.e.LINE_SPACING
+          }
+          return AH
+        }(AH.content, BH, LH);
+      let tH = 0,
+        zH = hH.e.VERTICAL_PADDING,
+        CH = 0;
+      for (const SH of rH) {
+        tH = Math.max(tH, SH.width + 2 * hH.e.HORIZONTAL_PADDING), zH += SH.height + hH.e.LINE_SPACING;
+        for (const HH of SH.items) CH += HH.chars
+      }
+      const EH = "string" === typeof AH.backgroundColor ? AH.backgroundColor : "#22283b";
+      return {
+        width: tH,
+        height: zH,
+        chars: CH,
+        draw: (HH, BH) => {
+          const AH = [];
+          if (HH.fillStyle = EH, HH.fillRect(0, 0, tH, zH), null === BH)
+            for (const SH of rH) SH.items.length > 0 && (0, hH.t)(SH.items.map((HH => HH.content)), 0, SH.y, SH.height, HH, LH, AH);
+          else {
+            let SH = 0;
+            for (const tH of rH)
+              for (const rH of tH.items) {
+                if (SH >= BH) break;
+                const zH = "text" === rH.content.kind ? {
+                  ...rH.content,
+                  text: rH.content.text.substring(0, BH - SH)
+                } : rH.content;
+                (0, hH.p)(zH, rH.size.x, tH.y, tH.height, HH, LH, AH, rH.size.width), SH += rH.chars
+              }
+          }(0, hH.m)(AH, HH)
+        }
+      }
+    }
+    var zH = LH(37135),
+      CH = LH(37139);
+    const EH = 256,
+      XH = 1024,
+      GH = {
+        width: 1,
+        height: 7 / 8
+      };
+    var YH = LH(37149);
+    const uH = {
+      leaderboard: ""
+    };
+    var QH = LH(37157);
+    const WH = {
+        Nametag: 1,
+        MultilineText: 2,
+        Board: 3,
+        Leaderboard: 4
       },
-      pU = {
-        5120: 1,
-        5121: 1,
-        5122: 2,
-        5123: 2,
-        5125: 4,
-        5126: 4
+      MH = 2048,
+      xH = 256,
+      vH = 10,
+      PH = 4,
+      TH = 65536,
+      UH = new TextDecoder;
+    let VH = QH.o,
+      OH = -1;
+    const bH = new Map,
+      kH = new Map;
+    let mH = 0;
+    const oH = new TextEncoder;
+
+    function IH(HH, BH) {
+      const LH = oH.encode(JSON.stringify(BH)),
+        AH = new Uint8Array(LH.length + 1);
+      return AH[0] = HH, AH.set(LH, 1), AH
+    }
+    const fH = {
+        name: "Ag",
+        info: null,
+        colour: "default",
+        ranks: [],
+        effects: [],
+        health: .5,
+        Ot: null,
+        hideNameSeed: null
       },
-      aU = {
-        SCALAR: 1,
-        VEC2: 2,
-        VEC3: 3,
-        VEC4: 4,
-        MAT2: 4,
-        MAT3: 9,
-        MAT4: 16
-      },
-      tU = [
-        ["POSITION", "position"],
-        ["NORMAL", "normal"],
-        ["TANGENT", "tangent"],
-        ["TEXCOORD_0", "uv"],
-        ["TEXCOORD_1", "uv2"],
-        ["TEXCOORD_2", "uv3"],
-        ["TEXCOORD_3", "uv4"],
-        ["TEXCOORD_4", "uv5"],
-        ["TEXCOORD_5", "uv6"],
-        ["COLOR_0", "color"]
-      ]
+      lH = [IH(WH.Nametag, fH), IH(WH.Nametag, {
+        ...fH,
+        info: {
+          content: [{
+            str: "Ag"
+          }],
+          subtitle: ["Ag"]
+        }
+      }), IH(WH.MultilineText, {
+        box: {
+          content: ["Ag"]
+        },
+        shown: null
+      }), ...AH.c.map(((HH, BH) => IH(WH.Board, {
+        shared: {
+          text: "Ag",
+          textSize: BH
+        },
+        w: 0,
+        h: 0
+      })))];
+
+    function KH(HH) {
+      QH.h.load().then((() => {
+        if (HH()) return;
+        const BH = (0, rH.h)(1, 1, {
+          willReadFrequently: !0
+        });
+        var LH;
+        BH && (LH = BH.canvas, lH.map((HH => jH(HH, LH))))
+      }))
+    }
+    let cH = QH.q;
+
+    function eH() {
+      bH.clear(), kH.clear()
+    }
+
+    function qH(HH, BH) {
+      const LH = HH.get(BH);
+      return void 0 !== LH && (HH.delete(BH), HH.set(BH, LH)), LH
+    }
+
+    function gH(HH, BH, LH) {
+      HH.set(BH, LH), HH.size > xH && HH.delete(HH.keys().next().value)
+    }
+
+    function NH(HH, BH, LH) {
+      if (HH === WH.Nametag) {
+        let HH = qH(bH, BH);
+        return void 0 === HH && (HH = (0, zH.e)(JSON.parse(BH), LH, VH), gH(bH, BH, HH)), HH
+      }
+      if (HH === WH.MultilineText) {
+        var rH;
+        const HH = JSON.parse(BH),
+          AH = JSON.stringify(null !== (rH = HH.box) && void 0 !== rH ? rH : null),
+          SH = "number" === typeof HH.shown ? HH.shown : null;
+        let hH = qH(kH, AH);
+        void 0 === hH && (hH = tH(HH.box, LH, VH), gH(kH, AH, hH));
+        const zH = null === SH ? null : Math.min(Math.max(0, Math.floor(SH)), hH.chars),
+          CH = hH;
+        return {
+          width: CH.width,
+          height: CH.height,
+          draw: HH => {
+            CH.draw(HH, zH)
+          }
+        }
+      }
+      if (HH === WH.Board) return function(HH, BH) {
+        var LH;
+        if (!BH.canSeePlayerWrittenText) return null;
+        const {
+          shared: rH,
+          w: SH = 0,
+          h: hH = 0
+        } = HH, tH = !SH;
+        let zH;
+        if (tH) {
+          var YH, uH;
+          zH = null !== (YH = null === rH || void 0 === rH || null === (uH = rH.text) || void 0 === uH ? void 0 : uH.toString()) && void 0 !== YH ? YH : ""
+        } else {
+          if ("string" !== typeof(null === rH || void 0 === rH ? void 0 : rH.text)) return null;
+          zH = rH.text
+        }
+        if ("" === zH.trim()) return null;
+        const QH = null !== (LH = null === rH || void 0 === rH ? void 0 : rH.textSize) && void 0 !== LH ? LH : 0,
+          WH = AH.c[QH].ingameFontSize;
+        let MH = GH,
+          xH = EH;
+        tH || (zH = (0, AH.n)(zH, QH, SH, hH), MH = (0, AH.u)(SH, hH), xH = Math.min(EH, XH / Math.max(MH.width, MH.height)));
+        const vH = Math.round(xH * MH.width),
+          PH = Math.round(xH * MH.height),
+          TH = xH / EH;
+        return {
+          width: vH,
+          height: PH,
+          draw: HH => {
+            CH.d.fontSize = WH * TH, CH.d.fontWeight = "bold", CH.d.font = "'Jetbrains Mono', monospace", CH.d.drawText(HH, zH, 0, (-10 - 7 * QH) * TH, vH, PH)
+          }
+        }
+      }(JSON.parse(BH), VH);
+      if (HH === WH.Leaderboard) return function(HH, BH, LH) {
+        var AH;
+        const rH = (0, YH.f)(HH.opts, uH),
+          SH = (0, YH.d)(rH, LH),
+          hH = {
+            top: (0, YH.e)(rH, (0, YH.g)(HH.top)),
+            around: null !== (AH = HH.around) && void 0 !== AH ? AH : null,
+            showPlayerText: BH.canSeePlayerWrittenText,
+            localPlayerDbId: BH.localPlayerDbId
+          };
+        return {
+          width: SH.pixelWidth,
+          height: SH.pixelHeight,
+          draw: HH => {
+            const {
+              a: BH,
+              d: LH
+            } = HH.getTransform();
+            (0, YH.b)(HH, Math.round(SH.pixelWidth * BH), Math.round(SH.pixelHeight * LH), SH, rH, hH)
+          }
+        }
+      }(JSON.parse(BH), VH, MH);
+      throw new Error(`unknown text plane kind ${HH}`)
+    }
+    const RH = 2 ** Math.floor(Math.log2(MH));
+
+    function jH(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        AH = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      try {
+        if (HH.length < 2) return [0, 0];
+        const SH = (0, rH.d)(BH);
+        if (!SH) return [0, 0];
+        const hH = cH();
+        hH !== OH && (OH = hH, eH());
+        const [tH] = HH, zH = UH.decode(HH.subarray(1));
+        let CH;
+        tH !== WH.Board && tH !== WH.Leaderboard || !VH.canSeePlayerWrittenText || VH.glyphsShown(zH), SH.save();
+        try {
+          CH = NH(tH, zH, SH)
+        } finally {
+          SH.restore()
+        }
+        if (null === CH || !(CH.width > 0 && CH.height > 0)) return [0, 0];
+        const EH = Math.min(1, MH / CH.width, MH / CH.height),
+          XH = HH => AH ? function(HH) {
+            const BH = 2 ** Math.ceil(Math.log2(HH));
+            return Math.min(RH, BH - HH > HH - BH / 2 ? BH / 2 : BH)
+          }(HH) : Math.min(MH, Math.ceil(HH * EH)),
+          [GH, YH] = [XH(CH.width), XH(CH.height)];
+        ! function(HH, BH, LH, AH, rH) {
+          const SH = Math.max(HH.width, LH),
+            hH = Math.max(HH.height, AH),
+            tH = rH || SH * hH > Math.max(PH * LH * AH, TH),
+            [zH, CH] = tH ? [LH, AH] : [SH, hH];
+          zH === HH.width && CH === HH.height ? BH.clearRect(0, 0, zH, CH) : (HH.width = zH, HH.height = CH)
+        }(BH, SH, GH, YH, LH), SH.save();
+        try {
+          const [HH, BH] = AH ? [GH / CH.width, YH / CH.height] : [EH, EH];
+          1 === HH && 1 === BH || SH.scale(HH, BH), CH.draw(SH)
+        } finally {
+          SH.restore()
+        }
+        return [GH, YH]
+      } catch (SH) {
+        ! function(HH, BH) {
+          mH < vH && (mH++, console.warn(`[bloxd-wasm-client] ${HH}`, BH))
+        }("could not raster a text plane", SH);
+        try {
+          BH.width = 1
+        } catch {}
+        return [0, 0]
+      }
+    }
+  },
+  37184: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
+  },
+  37187: (HH, BH, LH) => {
+    HH.exports = LH.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

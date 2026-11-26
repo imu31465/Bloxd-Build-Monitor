@@ -1,40 +1,37 @@
 export const id = 192;
 export const ids = [192];
 export const modules = {
-  9619: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      pageBody: () => cU
+  9726: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      pageBody: () => AH
     });
-    const cU = {
-      whatIs: ["Capture the points, hold the line, win the fight. Bloxd Frontline is a 12v12 FPS where Red and Blue go head to head in fast domination rounds. It's free to play online and there's nothing to install. Gear up at the Armorer, pick one of 17 kits, jump in a vehicle and push the line with your team. You can hop in on your own, but it's better with a full squad."],
-      howToPlay: ["You'll join Red or Blue and spawn at your base. Head to the Armorer to choose a kit, then get out there and capture the lettered points on the map. Every point you hold earns your team tickets. First team to 100 tickets takes the round. There's a timer as well, so don't let up. If you go down, you're back in the fight after 5 seconds.", "Kills, captures and wins all earn gold. You can spend it on a mystery kit draw, or at the Quartermaster next to your Armorer for Frag Grenades, healing potions and buffs that last the whole round. Vehicles spawn at each base and around the map. They're great for pushing forward fast, but enemy guns and explosives can wreck them. Your base has a shield over it that pushes enemies out, so there's always somewhere safe to regroup."],
-      features: ["Domination Rounds: Capture Points and Race to 100 Tickets", "17 Unique Kits, Including Combat Medic, Ninja, Juggernaut, Wrecker and Marksman", "Vehicles to Drive into Battle", "Quartermaster Buffs: Fleet Footed, Rapid Deploy, Fast Hands and Sure Grip", "Shielded Team Bases and Auto-Balanced Teams", "Ranks from Bronze to Moonstone, Plus Tracked Stats", "Party Up and Play with a Full Squad"],
-      tips: ["Capture points together and hold them so your tickets keep climbing", "Try a few kits at the Armorer until you find one that fits how you play", "Play Combat Medic to keep your team in the fight", "Buy buffs early. They stop selling in the last minute of a round", "Captures trigger Rally windows that cut your team's respawn time", "Use the Ninja's smoke grenades to cover a push onto a point", "Grab a vehicle when you need to reach a point on the other side of the map"],
-      similarGames: ["shooting", "pirates", "bedwars", "skywars"],
+    const AH = {
+      whatIs: ["Build machines on your own floating island and watch them work! That's Bloxd Build a Factory 2 in one line. You mine ore, link your machines up with conveyor belts and turn a couple of drills into a massive, fully automated factory. Never played a factory game before? Don't worry, it's easy to pick up. The original Build a Factory is a race to launch a rocket before a shared world resets. This one's about growing your own island."],
+      howToPlay: ["Use your Workbench to make a Machine Bench. Build a Burner Drill, stick it on an ore Deposit and give it fuel, and it starts mining by itself. Belt the ore into a Crusher to turn it into Grit (that's crushed ore), then into a Smelter to make bars. From there you can press bars into plates, spin Copper Bars into wire and make parts like Motors at the Parts Bench. Give your Core the parts it asks for and it moves up a tier, which unlocks better machines.", "For power you've got Generators, Solar Panels and Volt Engines. Drop down into the Wilds below your island to find rare ore, open ruin chests for Salvage and break fallen comets, then head home and build bigger. When you log off, your island pauses and picks up right where it left off when you're back."],
+      features: ["Your Own Floating Factory Island", "Conveyor Belts, Fast Belts, Splitters, Sorting Gates, Belt Lifts and Tunnels", "Drills, Crushers, Smelters, Presses, Wire Mills, Assemblers and More", "Tier Up Your Core to Unlock New Machines, Then Build the Star Spire", "Power from Generators, Solar Panels and Volt Engines", "Explore the Wilds for Rare Ore, Ruin Chests and Comets", "Fill Star Forge Orders for Deposit Seeds and Comet Cores", "Build Several Islands, Play Co-op with Friends or Visit Theirs"],
+      tips: ["Use Deposit Seeds to grow Deposits that never run out", "Crush ore into Grit before you smelt it and you'll get twice the bars", "Teach a Sorting Gate an item and it'll send that item down its own belt", "A Power Coupler makes Crushers, Smelters and Alloy Kilns twice as fast", "Belt spare items into a Storage Silo so your belts don't jam", "Carry an Ore Lens in the Wilds and it'll point you to the nearest rare ore"],
+      similarGames: ["survivalFactory", "skyblock", "oneBlock", "classic_survival"],
       faq: [{
-        question: "What is Bloxd Frontline?",
-        answer: "A 12v12 team shooter on Bloxd.io. You capture points, pick kits and drive vehicles to win domination rounds."
+        question: "What is Build a Factory 2 on Bloxd?",
+        answer: "An idle factory builder. You build machines on your own floating island, connect them with conveyor belts and let them make everything for you."
       }, {
-        question: "How does a team win in Bloxd Frontline?",
-        answer: "By holding points to earn tickets. The first team to reach 100 tickets wins the round."
+        question: "Is Build a Factory 2 an idle factory game?",
+        answer: "Partly. Once it's set up, your factory runs by itself while you explore the Wilds or plan your next build. It pauses while you're offline and carries on where it stopped when you come back."
       }, {
-        question: "What do kits do in Bloxd Frontline?",
-        answer: "They decide your weapons and abilities. Combat Medic brings strong healing, the Ninja has smoke grenades and the Juggernaut carries a belt-fed GPMG."
+        question: "How do I unlock new machines in Build a Factory 2?",
+        answer: "Tier up your Core by giving it the parts it asks for, like Motors and, later on, Logic Boards. Every new tier unlocks more machines and items."
       }, {
-        question: "How do I unlock new kits?",
-        answer: "Spend gold on a mystery kit draw. Draw one you already own and you'll get gems instead, which you can use to buy a specific locked kit."
+        question: "What's the best way to power my factory?",
+        answer: "You've got a few options. Burn Coal or Charcoal in a Generator, build Solar Panels (they keep running at night at half power), or run Volt Engines on Voltite Cells for loads of power. Add Charge Vaults to store more."
       }, {
-        question: "Does Bloxd Frontline have vehicles?",
-        answer: "Yep. They spawn at each base and around the map. Guns and explosives can destroy them, so drive carefully."
+        question: "What are the Wilds?",
+        answer: "The land below your island. Drop down to mine rare ore, loot ruin chests for Salvage, explore the Old Works and break fallen comets for Comet Cores."
       }, {
-        question: "How is Frontline different from Cube Warfare?",
-        answer: "Frontline is 12v12 objective play with points, kits and vehicles. Cube Warfare is quicker Free-For-All, Team Deathmatch and Gun Game fights where killstreaks matter most."
-      }, {
-        question: "Can I squad up with friends in Bloxd Frontline?",
-        answer: "Yes. Party up with your friends and you'll play together as a squad."
+        question: "Can friends help build my factory?",
+        answer: "Definitely. Invite friends to a shared co-op island, or use /visit to have a look around other players' islands."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

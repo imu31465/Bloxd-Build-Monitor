@@ -1,409 +1,176 @@
 export const id = 623;
 export const ids = [623];
 export const modules = {
-  44692: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU
+  45323: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      _TGATextureLoader: () => tH
     });
-    var cU = zU(40961);
-    const yU = "bakedVertexAnimation",
-      QU = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\n{\n#ifdef INSTANCES\n#define BVASNAME bakedVertexAnimationSettingsInstanced\n#else\n#define BVASNAME bakedVertexAnimationSettings\n#endif\nfloat VATStartFrame=BVASNAME.x;float VATEndFrame=BVASNAME.y;float VATOffsetFrame=BVASNAME.z;float VATSpeed=BVASNAME.w;float totalFrames=VATEndFrame-VATStartFrame+1.0;float time=bakedVertexAnimationTime*VATSpeed/totalFrames;float frameCorrection=time<1.0 ? 0.0 : 1.0;float numOfFrames=totalFrames-frameCorrection;float VATFrameNum=fract(time)*numOfFrames;VATFrameNum=mod(VATFrameNum+VATOffsetFrame,numOfFrames);VATFrameNum=floor(VATFrameNum);VATFrameNum+=VATStartFrame+frameCorrection;mat4 VATInfluence;VATInfluence=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[0],VATFrameNum)*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[1],VATFrameNum)*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[2],VATFrameNum)*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[3],VATFrameNum)*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[0],VATFrameNum)*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[1],VATFrameNum)*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[2],VATFrameNum)*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[3],VATFrameNum)*matricesWeightsExtra[3];\n#endif\nfinalWorld=finalWorld*VATInfluence;}\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+    var AH = LH(39595);
+
+    function rH(HH) {
+      let BH = 0;
+      return {
+        id_length: HH[BH++],
+        colormap_type: HH[BH++],
+        image_type: HH[BH++],
+        colormap_index: HH[BH++] | HH[BH++] << 8,
+        colormap_length: HH[BH++] | HH[BH++] << 8,
+        colormap_size: HH[BH++],
+        origin: [HH[BH++] | HH[BH++] << 8, HH[BH++] | HH[BH++] << 8],
+        width: HH[BH++] | HH[BH++] << 8,
+        height: HH[BH++] | HH[BH++] << 8,
+        pixel_size: HH[BH++],
+        flags: HH[17]
+      }
     }
-  },
-  44606: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "bakedVertexAnimationDeclaration",
-      QU = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\nuniform float bakedVertexAnimationTime;\n#if !defined(WEBGL2) && !defined(WEBGPU)\nuniform vec2 bakedVertexAnimationTextureSizeInverted;\n#endif\nuniform vec4 bakedVertexAnimationSettings;uniform sampler2D bakedVertexAnimationTexture;\n#ifdef INSTANCES\nattribute vec4 bakedVertexAnimationSettingsInstanced;\n#endif\n#define inline\nmat4 readMatrixFromRawSamplerVAT(sampler2D smp,float index,float frame)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4;int frameUV=int(frame);vec4 m0=texelFetch(smp,ivec2(offset+0,frameUV),0);vec4 m1=texelFetch(smp,ivec2(offset+1,frameUV),0);vec4 m2=texelFetch(smp,ivec2(offset+2,frameUV),0);vec4 m3=texelFetch(smp,ivec2(offset+3,frameUV),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float frameUV=(frame+0.5)*bakedVertexAnimationTextureSizeInverted.y;float dx=bakedVertexAnimationTextureSizeInverted.x;vec4 m0=texture2D(smp,vec2(dx*(offset+0.5),frameUV));vec4 m1=texture2D(smp,vec2(dx*(offset+1.5),frameUV));vec4 m2=texture2D(smp,vec2(dx*(offset+2.5),frameUV));vec4 m3=texture2D(smp,vec2(dx*(offset+3.5),frameUV));return mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+
+    function SH(HH, BH) {
+      if (BH.length < 19) return void AH.e.Error("Unable to load TGA file - Not enough data to contain header");
+      let LH = 18;
+      const SH = rH(BH);
+      if (SH.id_length + LH > BH.length) return void AH.e.Error("Unable to load TGA file - Not enough data");
+      LH += SH.id_length;
+      let tH, zH = !1,
+        CH = !1,
+        EH = !1;
+      switch (SH.image_type) {
+        case 9:
+          zH = !0;
+        case 1:
+          CH = !0;
+          break;
+        case 10:
+          zH = !0;
+        case 2:
+          break;
+        case 11:
+          zH = !0;
+        case 3:
+          EH = !0
+      }
+      const XH = SH.pixel_size >> 3,
+        GH = SH.width * SH.height * XH;
+      let YH, uH, QH, WH, MH, xH, vH;
+      if (CH && (YH = BH.subarray(LH, LH += SH.colormap_length * (SH.colormap_size >> 3))), zH) {
+        let HH, AH, rH;
+        tH = new Uint8Array(GH);
+        let SH = 0;
+        const hH = new Uint8Array(XH);
+        for (; LH < GH && SH < GH;)
+          if (HH = BH[LH++], AH = 1 + (127 & HH), 128 & HH) {
+            for (rH = 0; rH < XH; ++rH) hH[rH] = BH[LH++];
+            for (rH = 0; rH < AH; ++rH) tH.set(hH, SH + rH * XH);
+            SH += XH * AH
+          } else {
+            for (AH *= XH, rH = 0; rH < AH; ++rH) tH[SH + rH] = BH[LH++];
+            SH += AH
+          }
+      } else tH = BH.subarray(LH, LH + (CH ? SH.width * SH.height : GH));
+      switch ((48 & SH.flags) >> 4) {
+        default:
+        case 2:
+          uH = 0, WH = 1, vH = SH.width, QH = 0, MH = 1, xH = SH.height;
+          break;
+        case 0:
+          uH = 0, WH = 1, vH = SH.width, QH = SH.height - 1, MH = -1, xH = -1;
+          break;
+        case 3:
+          uH = SH.width - 1, WH = -1, vH = -1, QH = 0, MH = 1, xH = SH.height;
+          break;
+        case 1:
+          uH = SH.width - 1, WH = -1, vH = -1, QH = SH.height - 1, MH = -1, xH = -1
+      }
+      const PH = "_getImageData" + (EH ? "Grey" : "") + SH.pixel_size + "bits",
+        TH = hH[PH](SH, YH, tH, QH, MH, xH, uH, WH, vH);
+      HH.Iu()._uploadDataToTextureDirectly(HH, TH)
     }
-  },
-  44597: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "bonesDeclaration",
-      QU = "#if NUM_BONE_INFLUENCERS>0\nattribute vec4 matricesIndices;attribute vec4 matricesWeights;\n#if NUM_BONE_INFLUENCERS>4\nattribute vec4 matricesIndicesExtra;attribute vec4 matricesWeightsExtra;\n#endif\n#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#ifdef BONETEXTURE\nuniform highp sampler2D boneSampler;uniform vec2 boneTextureInfo;\n#else\nuniform mat4 mBones[BonesPerMesh];\n#endif\n#ifdef BONES_VELOCITY_ENABLED\nuniform mat4 mPreviousBones[BonesPerMesh];\n#endif\n#ifdef BONETEXTURE\n#define inline\nmat4 readMatrixFromRawSampler(sampler2D smp,float index)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4; \nint textureWidth=int(boneTextureInfo.x);int y=int(offset)/textureWidth;int x=int(offset) % textureWidth;vec4 m0=texelFetch(smp,ivec2(x+0,y),0);vec4 m1=texelFetch(smp,ivec2(x+1,y),0);vec4 m2=texelFetch(smp,ivec2(x+2,y),0);vec4 m3=texelFetch(smp,ivec2(x+3,y),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float y=floor(offset/boneTextureInfo.x);float x=offset-y*boneTextureInfo.x;float dy=1.0/boneTextureInfo.y;float dx=1.0/boneTextureInfo.x;vec4 m0=texture2D(smp,vec2(dx*(x+0.5),dy*(y+0.5)));vec4 m1=texture2D(smp,vec2(dx*(x+1.5),dy*(y+0.5)));vec4 m2=texture2D(smp,vec2(dx*(x+2.5),dy*(y+0.5)));vec4 m3=texture2D(smp,vec2(dx*(x+3.5),dy*(y+0.5))); \nreturn mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44688: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "bonesVertex",
-      QU = "#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#if NUM_BONE_INFLUENCERS>0\nmat4 influence;\n#ifdef BONETEXTURE\ninfluence=readMatrixFromRawSampler(boneSampler,matricesIndices[0])*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[1])*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[2])*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[3])*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[0])*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[1])*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[2])*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[3])*matricesWeightsExtra[3];\n#endif\n#else\ninfluence=mBones[int(matricesIndices[0])]*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=mBones[int(matricesIndices[1])]*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=mBones[int(matricesIndices[2])]*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=mBones[int(matricesIndices[3])]*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=mBones[int(matricesIndicesExtra[0])]*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=mBones[int(matricesIndicesExtra[1])]*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=mBones[int(matricesIndicesExtra[2])]*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=mBones[int(matricesIndicesExtra[3])]*matricesWeightsExtra[3];\n#endif\n#endif\nfinalWorld=finalWorld*influence;\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44713: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "clipPlaneVertex",
-      QU = "#ifdef CLIPPLANE\nfClipDistance=dot(worldPos,vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nfClipDistance2=dot(worldPos,vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nfClipDistance3=dot(worldPos,vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nfClipDistance4=dot(worldPos,vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nfClipDistance5=dot(worldPos,vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nfClipDistance6=dot(worldPos,vClipPlane6);\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44634: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "clipPlaneVertexDeclaration",
-      QU = "#ifdef CLIPPLANE\nuniform vec4 vClipPlane;varying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nuniform vec4 vClipPlane2;varying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nuniform vec4 vClipPlane3;varying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nuniform vec4 vClipPlane4;varying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nuniform vec4 vClipPlane5;varying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nuniform vec4 vClipPlane6;varying float fClipDistance6;\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44566: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "decalVertexDeclaration",
-      QU = "#ifdef DECAL\nuniform vec4 vDecalInfos;uniform mat4 decalMatrix;\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44721: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "fogVertex",
-      QU = "#ifdef FOG\nvFogDistance=(view*worldPos).xyz;\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44642: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "fogVertexDeclaration",
-      QU = "#ifdef FOG\nvarying vec3 vFogDistance;\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44588: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "helperFunctions",
-      QU = "const float PI=3.1415926535897932384626433832795;const float TWO_PI=6.283185307179586;const float HALF_PI=1.5707963267948966;const float RECIPROCAL_PI=0.3183098861837907;const float RECIPROCAL_PI2=0.15915494309189535;const float RECIPROCAL_PI4=0.07957747154594767;const float HALF_MIN=5.96046448e-08; \nconst float LinearEncodePowerApprox=2.2;const float GammaEncodePowerApprox=1.0/LinearEncodePowerApprox;const vec3 LuminanceEncodeApprox=vec3(0.2126,0.7152,0.0722);const float Epsilon=0.0000001;\n#define saturate(x) clamp(x,0.0,1.0)\n#define absEps(x) abs(x)+Epsilon\n#define maxEps(x) max(x,Epsilon)\n#define saturateEps(x) clamp(x,Epsilon,1.0)\nmat3 transposeMat3(mat3 inMatrix) {vec3 i0=inMatrix[0];vec3 i1=inMatrix[1];vec3 i2=inMatrix[2];mat3 outMatrix=mat3(\nvec3(i0.x,i1.x,i2.x),\nvec3(i0.y,i1.y,i2.y),\nvec3(i0.z,i1.z,i2.z)\n);return outMatrix;}\nmat3 inverseMat3(mat3 inMatrix) {float a00=inMatrix[0][0],a01=inMatrix[0][1],a02=inMatrix[0][2];float a10=inMatrix[1][0],a11=inMatrix[1][1],a12=inMatrix[1][2];float a20=inMatrix[2][0],a21=inMatrix[2][1],a22=inMatrix[2][2];float b01=a22*a11-a12*a21;float b11=-a22*a10+a12*a20;float b21=a21*a10-a11*a20;float det=a00*b01+a01*b11+a02*b21;return mat3(b01,(-a22*a01+a02*a21),(a12*a01-a02*a11),\nb11,(a22*a00-a02*a20),(-a12*a00+a02*a10),\nb21,(-a21*a00+a01*a20),(a11*a00-a01*a10))/det;}\n#if USE_EXACT_SRGB_CONVERSIONS\nvec3 toLinearSpaceExact(vec3 color)\n{vec3 nearZeroSection=0.0773993808*color;vec3 remainingSection=pow(0.947867299*(color+vec3(0.055)),vec3(2.4));\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.04045)));\n#else\nreturn\nvec3(\ncolor.r<=0.04045 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.04045 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.04045 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\nvec3 toGammaSpaceExact(vec3 color)\n{vec3 nearZeroSection=12.92*color;vec3 remainingSection=1.055*pow(color,vec3(0.41666))-vec3(0.055);\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.0031308)));\n#else\nreturn\nvec3(\ncolor.r<=0.0031308 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.0031308 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.0031308 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\n#endif\nfloat toLinearSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=0.0773993808*color;float remainingSection=pow(0.947867299*(color+0.055),2.4);return color<=0.04045 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,LinearEncodePowerApprox);\n#endif\n}\nvec3 toLinearSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toLinearSpaceExact(color);\n#else\nreturn pow(color,vec3(LinearEncodePowerApprox));\n#endif\n}\nvec4 toLinearSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toLinearSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(LinearEncodePowerApprox)),color.a);\n#endif\n}\nfloat toGammaSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=12.92*color;float remainingSection=1.055*pow(color,0.41666)-0.055;return color<=0.0031308 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,GammaEncodePowerApprox);\n#endif\n}\nvec3 toGammaSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toGammaSpaceExact(color);\n#else\nreturn pow(color,vec3(GammaEncodePowerApprox));\n#endif\n}\nvec4 toGammaSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toGammaSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(GammaEncodePowerApprox)),color.a);\n#endif\n}\nfloat square(float value)\n{return value*value;}\nvec3 square(vec3 value)\n{return value*value;}\nfloat pow5(float value) {float sq=value*value;return sq*sq*value;}\nvec3 double_refract(vec3 I,vec3 N,float eta) {vec3 Tfront=refract(I,N,1.0/eta);vec3 Nback=normalize(reflect(N,Tfront));return refract(Tfront,-Nback,eta);}\nfloat getLuminanceUnclamped(vec3 color)\n{return dot(color,LuminanceEncodeApprox);}\nfloat getLuminance(vec3 color)\n{return saturate(getLuminanceUnclamped(color));}\nfloat getRand(vec2 seed) {return fract(sin(dot(seed.xy ,vec2(12.9898,78.233)))*43758.5453);}\nfloat dither(vec2 seed,float varianceAmount) {float rand=getRand(seed);float normVariance=varianceAmount/255.0;float dither=mix(-normVariance,normVariance,rand);return dither;}\nconst float rgbdMaxRange=255.;vec4 toRGBD(vec3 color) {float maxRGB=maxEps(max(color.r,max(color.g,color.b)));float D =max(rgbdMaxRange/maxRGB,1.);D =saturate(floor(D)/255.);vec3 rgb=color.rgb*D;rgb=toGammaSpace(rgb);return vec4(saturate(rgb),D);}\nvec3 fromRGBD(vec4 rgbd) {rgbd.rgb=toLinearSpace(rgbd.rgb);return rgbd.rgb/rgbd.a;}\nvec3 parallaxCorrectNormal( vec3 vertexPos,vec3 origVec,vec3 cubeSize,vec3 cubePos ) {vec3 invOrigVec=vec3(1.)/origVec;vec3 halfSize=cubeSize*0.5;vec3 intersecAtMaxPlane=(cubePos+halfSize-vertexPos)*invOrigVec;vec3 intersecAtMinPlane=(cubePos-halfSize-vertexPos)*invOrigVec;vec3 largestIntersec=max(intersecAtMaxPlane,intersecAtMinPlane);float distance=min(min(largestIntersec.x,largestIntersec.y),largestIntersec.z);vec3 intersectPositionWS=vertexPos+origVec*distance;return intersectPositionWS-cubePos;}\nvec3 equirectangularToCubemapDirection(vec2 uv) {float longitude=uv.x*TWO_PI-PI;float latitude=HALF_PI-uv.y*PI;vec3 direction;direction.x=cos(latitude)*sin(longitude);direction.y=sin(latitude);direction.z=cos(latitude)*cos(longitude);return direction;}\nfloat sqrtClamped(float value) {return sqrt(max(value,0.));}\nfloat avg(vec3 value) {return dot(value,vec3(0.333333333));}\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nprecision highp int;uint extractBits(uint value,int offset,int width) {return (value>>offset) & ((1u<<width)-1u);}\nint onlyBitPosition(uint value) {return (floatBitsToInt(float(value))>>23)-0x7f;}\nvec3 singleScatterToMultiScatterAlbedo(vec3 rho_ss) {vec3 s=sqrt(max(vec3(1.0)-rho_ss,vec3(0.0)));return (vec3(1.0)-s)*(vec3(1.0)-vec3(0.139)*s)/(vec3(1.0)+vec3(1.17)*s);}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return 1.0-s*s;}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms,float aniso) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return (1.0-s*s)/maxEps(1.0-aniso*s*s);}\nfloat min3(vec3 v) {return min(v.x,min(v.y,v.z));}\nfloat max3(vec3 v) {return max(v.x,max(v.y,v.z));}\nfloat uint2float(uint i) {return uintBitsToFloat(0x3F800000u | (i>>9u))-1.0;}\nvec2 plasticSequence(const uint rstate) {return vec2(uint2float(rstate*3242174889u),\nuint2float(rstate*2447445414u));}\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44609: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "instancesDeclaration",
-      QU = "#ifdef INSTANCES\nattribute vec4 world0;attribute vec4 world1;attribute vec4 world2;attribute vec4 world3;\n#ifdef INSTANCESCOLOR\nattribute vec4 instanceColor;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute vec4 previousWorld0;attribute vec4 previousWorld1;attribute vec4 previousWorld2;attribute vec4 previousWorld3;\n#ifdef THIN_INSTANCES\nuniform mat4 previousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform mat4 previousWorld;\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44684: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "instancesVertex",
-      QU = "#ifdef INSTANCES\nmat4 finalWorld=mat4(world0,world1,world2,world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=mat4(previousWorld0,previousWorld1,\npreviousWorld2,previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\nfinalWorld=world*finalWorld;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\nmat4 finalWorld=world;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=previousWorld;\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44651: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "lightVxFragmentDeclaration",
-      QU = "#ifdef LIGHT{X}\nuniform vec4 vLightData{X};uniform vec4 vLightDiffuse{X};\n#ifdef SPECULARTERM\nuniform vec4 vLightSpecular{X};\n#else\nvec4 vLightSpecular{X}=vec4(0.);\n#endif\n#ifdef SHADOW{X}\n#ifdef SHADOWCSM{X}\nuniform mat4 lightMatrix{X}[SHADOWCSMNUM_CASCADES{X}];varying vec4 vPositionFromLight{X}[SHADOWCSMNUM_CASCADES{X}];varying float vDepthMetric{X}[SHADOWCSMNUM_CASCADES{X}];varying vec4 vPositionFromCamera{X};\n#elif defined(SHADOWCUBE{X})\n#else\nvarying vec4 vPositionFromLight{X};varying float vDepthMetric{X};uniform mat4 lightMatrix{X};\n#endif\nuniform vec4 shadowsInfo{X};uniform vec2 depthValues{X};\n#endif\n#ifdef SPOTLIGHT{X}\nuniform vec4 vLightDirection{X};uniform vec4 vLightFalloff{X};\n#elif defined(POINTLIGHT{X})\nuniform vec4 vLightFalloff{X};\n#elif defined(HEMILIGHT{X})\nuniform vec3 vLightGround{X};\n#endif\n#if defined(AREALIGHT{X}) && defined(AREALIGHTUSED) && defined(AREALIGHTSUPPORTED)\nuniform vec4 vLightWidth{X};uniform vec4 vLightHeight{X};\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44656: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "lightVxUboDeclaration",
-      QU = "#ifdef LIGHT{X}\nuniform Light{X}\n{vec4 vLightData;vec4 vLightDiffuse;vec4 vLightSpecular;\n#ifdef SPOTLIGHT{X}\nvec4 vLightDirection;vec4 vLightFalloff;\n#elif defined(POINTLIGHT{X})\nvec4 vLightFalloff;\n#elif defined(HEMILIGHT{X})\nvec3 vLightGround;\n#elif defined(CLUSTLIGHT{X})\nvec2 vSliceData;vec2 vSliceRanges[CLUSTLIGHT_SLICES];\n#endif\n#if defined(AREALIGHT{X}) && defined(AREALIGHTUSED) && defined(AREALIGHTSUPPORTED)\nvec4 vLightWidth;vec4 vLightHeight;\n#endif\nvec4 shadowsInfo;vec2 depthValues;} light{X};\n#ifdef SHADOW{X}\n#ifdef SHADOWCSM{X}\nuniform mat4 lightMatrix{X}[SHADOWCSMNUM_CASCADES{X}];varying vec4 vPositionFromLight{X}[SHADOWCSMNUM_CASCADES{X}];varying float vDepthMetric{X}[SHADOWCSMNUM_CASCADES{X}];varying vec4 vPositionFromCamera{X};\n#elif defined(SHADOWCUBE{X})\n#else\nvarying vec4 vPositionFromLight{X};varying float vDepthMetric{X};uniform mat4 lightMatrix{X};\n#endif\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44671: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "logDepthDeclaration",
-      QU = "#ifdef LOGARITHMICDEPTH\nuniform float logarithmicDepthConstant;varying float vFragmentDepth;\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44732: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "logDepthVertex",
-      QU = "#ifdef LOGARITHMICDEPTH\nvFragmentDepth=1.0+gl_Position.w;gl_Position.z=log2(max(0.000001,vFragmentDepth))*logarithmicDepthConstant;\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44620: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "mainUVVaryingDeclaration",
-      QU = "#ifdef MAINUV{X}\nvarying vec2 vMainUV{X};\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44575: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "meshUboDeclaration",
-      QU = "#ifdef WEBGL2\nuniform mat4 world;uniform float visibility;\n#else\nlayout(std140,column_major) uniform;uniform Mesh\n{mat4 world;float visibility;};\n#endif\n#define WORLD_UBO\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44679: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "morphTargetsVertex",
-      QU = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\n#if {X}==0\nfor (int i=0; i<NUM_MORPH_INFLUENCERS; i++) {if (float(i)>=morphTargetCount) break;vertexID=float(gl_VertexID)*morphTargetTextureInfo.x;\n#ifdef MORPHTARGETS_POSITION\npositionUpdated+=(readVector3FromRawSampler(i,vertexID)-position)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASPOSITIONS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_NORMAL\nnormalUpdated+=(readVector3FromRawSampler(i,vertexID) -normal)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASNORMALS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_UV\nuvUpdated+=(readVector3FromRawSampler(i,vertexID).xy-uv)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASUVS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_TANGENT\ntangentUpdated.xyz+=(readVector3FromRawSampler(i,vertexID) -tangent.xyz)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASTANGENTS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_UV2\nuv2Updated+=(readVector3FromRawSampler(i,vertexID).xy-uv2)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASUV2S\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_COLOR\ncolorUpdated+=(readVector4FromRawSampler(i,vertexID)-color)*morphTargetInfluences[i];\n#endif\n}\n#endif\n#else\n#ifdef MORPHTARGETS_POSITION\npositionUpdated+=(position{X}-position)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_NORMAL\nnormalUpdated+=(normal{X}-normal)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_TANGENT\ntangentUpdated.xyz+=(tangent{X}-tangent.xyz)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_UV\nuvUpdated+=(uv_{X}-uv)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_UV2\nuv2Updated+=(uv2_{X}-uv2)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_COLOR\ncolorUpdated+=(color{X}-color)*morphTargetInfluences[{X}];\n#endif\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44663: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "morphTargetsVertexDeclaration",
-      QU = "#ifdef MORPHTARGETS\n#ifndef MORPHTARGETS_TEXTURE\n#ifdef MORPHTARGETS_POSITION\nattribute vec3 position{X};\n#endif\n#ifdef MORPHTARGETS_NORMAL\nattribute vec3 normal{X};\n#endif\n#ifdef MORPHTARGETS_TANGENT\nattribute vec3 tangent{X};\n#endif\n#ifdef MORPHTARGETS_UV\nattribute vec2 uv_{X};\n#endif\n#ifdef MORPHTARGETS_UV2\nattribute vec2 uv2_{X};\n#endif\n#ifdef MORPHTARGETS_COLOR\nattribute vec4 color{X};\n#endif\n#elif {X}==0\nuniform float morphTargetCount;\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44673: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "morphTargetsVertexGlobal",
-      QU = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\nfloat vertexID;\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44661: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "morphTargetsVertexGlobalDeclaration",
-      QU = "#ifdef MORPHTARGETS\nuniform float morphTargetInfluences[NUM_MORPH_INFLUENCERS];\n#ifdef MORPHTARGETS_TEXTURE \nuniform float morphTargetTextureIndices[NUM_MORPH_INFLUENCERS];uniform vec3 morphTargetTextureInfo;uniform highp sampler2DArray morphTargets;vec3 readVector3FromRawSampler(int targetIndex,float vertexIndex)\n{ \n#if defined(WEBGL2) || defined(WEBGPU)\nint textureWidth=int(morphTargetTextureInfo.y);int y=int(vertexIndex)/textureWidth;int x=int(vertexIndex) % textureWidth;return texelFetch(morphTargets,ivec3(x,y,int(morphTargetTextureIndices[targetIndex])),0).xyz;\n#else\nfloat y=floor(vertexIndex/morphTargetTextureInfo.y);float x=vertexIndex-y*morphTargetTextureInfo.y;vec3 textureUV=vec3((x+0.5)/morphTargetTextureInfo.y,(y+0.5)/morphTargetTextureInfo.z,morphTargetTextureIndices[targetIndex]);return texture(morphTargets,textureUV).xyz;\n#endif\n}\nvec4 readVector4FromRawSampler(int targetIndex,float vertexIndex)\n{ \n#if defined(WEBGL2) || defined(WEBGPU)\nint textureWidth=int(morphTargetTextureInfo.y);int y=int(vertexIndex)/textureWidth;int x=int(vertexIndex) % textureWidth;return texelFetch(morphTargets,ivec3(x,y,int(morphTargetTextureIndices[targetIndex])),0);\n#else\nfloat y=floor(vertexIndex/morphTargetTextureInfo.y);float x=vertexIndex-y*morphTargetTextureInfo.y;vec3 textureUV=vec3((x+0.5)/morphTargetTextureInfo.y,(y+0.5)/morphTargetTextureInfo.z,morphTargetTextureIndices[targetIndex]);return texture(morphTargets,textureUV);\n#endif\n}\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44694: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "prePassVertex",
-      QU = "#ifdef PREPASS_DEPTH\nvViewPos=(view*worldPos).rgb;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvNormViewDepth=((view*worldPos).z-cameraInfo.x)/(cameraInfo.y-cameraInfo.x);\n#endif\n#ifdef PREPASS_LOCAL_POSITION\nvPosition=positionUpdated.xyz;\n#endif\n#if (defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR)) && defined(BONES_VELOCITY_ENABLED)\nvCurrentPosition=viewProjection*worldPos;\n#if NUM_BONE_INFLUENCERS>0\nmat4 previousInfluence;previousInfluence=mPreviousBones[int(matricesIndices[0])]*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\npreviousInfluence+=mPreviousBones[int(matricesIndices[1])]*matricesWeights[1];\n#endif \n#if NUM_BONE_INFLUENCERS>2\npreviousInfluence+=mPreviousBones[int(matricesIndices[2])]*matricesWeights[2];\n#endif \n#if NUM_BONE_INFLUENCERS>3\npreviousInfluence+=mPreviousBones[int(matricesIndices[3])]*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[0])]*matricesWeightsExtra[0];\n#endif \n#if NUM_BONE_INFLUENCERS>5\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[1])]*matricesWeightsExtra[1];\n#endif \n#if NUM_BONE_INFLUENCERS>6\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[2])]*matricesWeightsExtra[2];\n#endif \n#if NUM_BONE_INFLUENCERS>7\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[3])]*matricesWeightsExtra[3];\n#endif\nvPreviousPosition=previousViewProjection*finalPreviousWorld*previousInfluence*vec4(positionUpdated,1.0);\n#else\nvPreviousPosition=previousViewProjection*finalPreviousWorld*vec4(positionUpdated,1.0);\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44618: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "prePassVertexDeclaration",
-      QU = "#ifdef PREPASS\n#ifdef PREPASS_LOCAL_POSITION\nvarying vec3 vPosition;\n#endif\n#ifdef PREPASS_DEPTH\nvarying vec3 vViewPos;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvarying float vNormViewDepth;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR)\nuniform mat4 previousViewProjection;varying vec4 vCurrentPosition;varying vec4 vPreviousPosition;\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44629: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "samplerVertexDeclaration",
-      QU = "#if defined(_DEFINENAME_) && _DEFINENAME_DIRECTUV==0\nvarying vec2 v_VARYINGNAME_UV;\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44699: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "samplerVertexImplementation",
-      QU = "#if defined(_DEFINENAME_) && _DEFINENAME_DIRECTUV==0\nif (v_INFONAME_==0.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uvUpdated,1.0,0.0));}\n#ifdef UV2\nelse if (v_INFONAME_==1.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uv2Updated,1.0,0.0));}\n#endif\n#ifdef UV3\nelse if (v_INFONAME_==2.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uv3,1.0,0.0));}\n#endif\n#ifdef UV4\nelse if (v_INFONAME_==3.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uv4,1.0,0.0));}\n#endif\n#ifdef UV5\nelse if (v_INFONAME_==4.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uv5,1.0,0.0));}\n#endif\n#ifdef UV6\nelse if (v_INFONAME_==5.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uv6,1.0,0.0));}\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44571: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "sceneUboDeclaration",
-      QU = "layout(std140,column_major) uniform;uniform Scene {mat4 viewProjection;\n#ifdef MULTIVIEW\nmat4 viewProjectionR;\n#endif \nmat4 view;mat4 projection;vec4 vEyePosition;mat4 inverseProjection;};\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44725: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "shadowsVertex",
-      QU = "#ifdef SHADOWS\n#if defined(SHADOWCSM{X})\nvPositionFromCamera{X}=view*worldPos;for (int i=0; i<SHADOWCSMNUM_CASCADES{X}; i++) {vPositionFromLight{X}[i]=lightMatrix{X}[i]*worldPos;\n#ifdef USE_REVERSE_DEPTHBUFFER\nvDepthMetric{X}[i]=(-vPositionFromLight{X}[i].z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#else\nvDepthMetric{X}[i]=(vPositionFromLight{X}[i].z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#endif\n}\n#elif defined(SHADOW{X}) && !defined(SHADOWCUBE{X})\nvPositionFromLight{X}=lightMatrix{X}*worldPos;\n#ifdef USE_REVERSE_DEPTHBUFFER\nvDepthMetric{X}=(-vPositionFromLight{X}.z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#else\nvDepthMetric{X}=(vPositionFromLight{X}.z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#endif\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44582: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "uvAttributeDeclaration",
-      QU = "#ifdef UV{X}\nattribute vec2 uv{X};\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44697: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "uvVariableDeclaration",
-      QU = "#if !defined(UV{X}) && defined(MAINUV{X})\nvec2 uv{X}=vec2(0.,0.);\n#endif\n#ifdef MAINUV{X}\nvMainUV{X}=uv{X};\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
-    }
-  },
-  44728: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => AU
-    });
-    var cU = zU(40961);
-    const yU = "vertexColorMixing",
-      QU = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvColor=vec4(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvColor*=colorUpdated;\n#else\nvColor.rgb*=colorUpdated.rgb;\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvColor*=instanceColor;\n#endif\n#endif\n";
-    cU.b.IncludesShadersStore[yU] || (cU.b.IncludesShadersStore[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+    const hH = {
+      GetTGAHeader: rH,
+      UploadContent: SH,
+      _getImageData8bits: function(HH, BH, LH, AH, rH, SH, hH, tH, zH) {
+        const CH = LH,
+          EH = BH,
+          XH = HH.width,
+          GH = HH.height;
+        let YH, uH, QH, WH = 0;
+        const MH = new Uint8Array(XH * GH * 4);
+        for (QH = AH; QH !== SH; QH += rH)
+          for (uH = hH; uH !== zH; uH += tH, WH++) YH = CH[WH], MH[4 * (uH + XH * QH) + 3] = 255, MH[4 * (uH + XH * QH) + 2] = EH[3 * YH + 0], MH[4 * (uH + XH * QH) + 1] = EH[3 * YH + 1], MH[4 * (uH + XH * QH) + 0] = EH[3 * YH + 2];
+        return MH
+      },
+      _getImageData16bits: function(HH, BH, LH, AH, rH, SH, hH, tH, zH) {
+        const CH = LH,
+          EH = HH.width,
+          XH = HH.height;
+        let GH, YH, uH, QH = 0;
+        const WH = new Uint8Array(EH * XH * 4);
+        for (uH = AH; uH !== SH; uH += rH)
+          for (YH = hH; YH !== zH; YH += tH, QH += 2) {
+            GH = CH[QH + 0] + (CH[QH + 1] << 8);
+            const HH = 255 * ((31744 & GH) >> 10) / 31 | 0,
+              BH = 255 * ((992 & GH) >> 5) / 31 | 0,
+              LH = 255 * (31 & GH) / 31 | 0;
+            WH[4 * (YH + EH * uH) + 0] = HH, WH[4 * (YH + EH * uH) + 1] = BH, WH[4 * (YH + EH * uH) + 2] = LH, WH[4 * (YH + EH * uH) + 3] = 32768 & GH ? 0 : 255
+          }
+        return WH
+      },
+      _getImageData24bits: function(HH, BH, LH, AH, rH, SH, hH, tH, zH) {
+        const CH = LH,
+          EH = HH.width,
+          XH = HH.height;
+        let GH, YH, uH = 0;
+        const QH = new Uint8Array(EH * XH * 4);
+        for (YH = AH; YH !== SH; YH += rH)
+          for (GH = hH; GH !== zH; GH += tH, uH += 3) QH[4 * (GH + EH * YH) + 3] = 255, QH[4 * (GH + EH * YH) + 2] = CH[uH + 0], QH[4 * (GH + EH * YH) + 1] = CH[uH + 1], QH[4 * (GH + EH * YH) + 0] = CH[uH + 2];
+        return QH
+      },
+      _getImageData32bits: function(HH, BH, LH, AH, rH, SH, hH, tH, zH) {
+        const CH = LH,
+          EH = HH.width,
+          XH = HH.height;
+        let GH, YH, uH = 0;
+        const QH = new Uint8Array(EH * XH * 4);
+        for (YH = AH; YH !== SH; YH += rH)
+          for (GH = hH; GH !== zH; GH += tH, uH += 4) QH[4 * (GH + EH * YH) + 2] = CH[uH + 0], QH[4 * (GH + EH * YH) + 1] = CH[uH + 1], QH[4 * (GH + EH * YH) + 0] = CH[uH + 2], QH[4 * (GH + EH * YH) + 3] = CH[uH + 3];
+        return QH
+      },
+      _getImageDataGrey8bits: function(HH, BH, LH, AH, rH, SH, hH, tH, zH) {
+        const CH = LH,
+          EH = HH.width,
+          XH = HH.height;
+        let GH, YH, uH, QH = 0;
+        const WH = new Uint8Array(EH * XH * 4);
+        for (uH = AH; uH !== SH; uH += rH)
+          for (YH = hH; YH !== zH; YH += tH, QH++) GH = CH[QH], WH[4 * (YH + EH * uH) + 0] = GH, WH[4 * (YH + EH * uH) + 1] = GH, WH[4 * (YH + EH * uH) + 2] = GH, WH[4 * (YH + EH * uH) + 3] = 255;
+        return WH
+      },
+      _getImageDataGrey16bits: function(HH, BH, LH, AH, rH, SH, hH, tH, zH) {
+        const CH = LH,
+          EH = HH.width,
+          XH = HH.height;
+        let GH, YH, uH = 0;
+        const QH = new Uint8Array(EH * XH * 4);
+        for (YH = AH; YH !== SH; YH += rH)
+          for (GH = hH; GH !== zH; GH += tH, uH += 2) QH[4 * (GH + EH * YH) + 0] = CH[uH + 0], QH[4 * (GH + EH * YH) + 1] = CH[uH + 0], QH[4 * (GH + EH * YH) + 2] = CH[uH + 0], QH[4 * (GH + EH * YH) + 3] = CH[uH + 1];
+        return QH
+      }
+    };
+    class tH {
+      constructor() {
+        this.supportCascades = !1
+      }
+      loadCubeData() {
+        throw ".env not supported in Cube."
+      }
+      loadData(HH, BH, LH) {
+        const AH = new Uint8Array(HH.buffer, HH.byteOffset, HH.byteLength),
+          hH = rH(AH);
+        LH(hH.width, hH.height, BH.generateMipMaps, !1, (() => {
+          SH(BH, AH)
+        }))
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

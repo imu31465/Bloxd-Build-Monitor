@@ -1,164 +1,165 @@
 export const id = 123;
-export const ids = [123];
+export const ids = [123, 176];
 export const modules = {
-  9484: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      default: () => tX
+  9611: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      default: () => MB
     });
-    var cU = zU(1577),
-      yU = zU(27),
-      QU = zU(5101),
-      AU = zU(61),
-      FU = zU(1492);
-    var oU = zU(2005),
-      DU = zU(1568),
-      EU = zU(1410),
-      YU = zU(1193),
-      NU = zU(9489),
-      IU = zU(5026),
-      pU = zU(173),
-      aU = zU(1131),
-      tU = zU(31),
-      gU = zU(1262),
-      kU = zU(1800),
-      GU = zU(97),
-      BU = zU(1349),
-      ZU = zU(1482),
-      RU = zU(4962),
-      PU = zU(4762),
-      WU = zU(4706),
-      dU = zU(3612),
-      LU = zU(2494),
-      eU = zU(1376),
-      CU = zU(825),
-      wU = zU(1241),
-      qU = zU(1079),
-      OU = zU(1236),
-      SU = zU(3673),
-      rU = zU(3519),
-      uU = zU(1414),
-      fU = zU(1384),
-      iU = zU(5527),
-      HU = zU(9502),
-      MU = zU(3270),
-      vU = zU(1305);
+    var AH = LH(1520),
+      rH = LH(15),
+      SH = LH(5069),
+      hH = LH(45),
+      tH = LH(1450);
+    var zH = LH(1998),
+      CH = LH(1509),
+      EH = LH(1352),
+      XH = LH(1123),
+      GH = LH(9615),
+      YH = LH(9619),
+      uH = LH(4991),
+      QH = LH(152),
+      WH = LH(1070),
+      MH = LH(18),
+      xH = LH(1188),
+      vH = LH(1789),
+      PH = LH(81),
+      TH = LH(1287),
+      UH = LH(1440),
+      VH = LH(4934),
+      OH = LH(4738),
+      bH = LH(4710),
+      kH = LH(3597),
+      mH = LH(2523),
+      oH = LH(1306),
+      IH = LH(761),
+      fH = LH(1177),
+      lH = LH(1005),
+      KH = LH(1168),
+      cH = LH(3651),
+      eH = LH(3503),
+      qH = LH(1361),
+      gH = LH(1313),
+      NH = LH(5473),
+      RH = LH(9631),
+      jH = LH(3271),
+      nH = LH(1225);
 
-    function VU(UU) {
+    function FH(HH) {
       let {
-        onApply: XU,
-        onSkip: zU
-      } = UU;
+        onApply: BH,
+        onSkip: LH
+      } = HH;
       const {
-        t: cU
-      } = (0, YU.I)();
-      return (0, AU.useEffect)((() => {
-        MU.i.skipPlayWait()
-      }), []), (0, vU.jsx)(uU.k, {
+        t: AH
+      } = (0, XH.B)();
+      return (0, hH.useEffect)((() => {
+        jH.d.skipPlayWait()
+      }), []), (0, nH.jsx)(qH.m, {
         icon: "download",
         title: "customTexturePack:downloadTitle",
-        subtitle: (0, vU.jsxs)("div", {
+        subtitle: (0, nH.jsxs)("div", {
           className: "CustomTexturePackDownloaderSubtitleText",
-          children: [cU("customTexturePack:downloadPrompt"), (0, vU.jsx)("div", {
+          children: [AH("customTexturePack:downloadPrompt"), (0, nH.jsx)("div", {
             className: "CustomTexturePackDownloaderWarningText",
-            children: cU("customTexturePack:authorWarning")
-          }), (0, vU.jsx)("div", {
+            children: AH("customTexturePack:authorWarning")
+          }), (0, nH.jsx)("div", {
             className: "CustomTexturePackDownloaderSecondaryText",
-            children: cU("customTexturePack:existingPackSaved")
+            children: AH("customTexturePack:existingPackSaved")
           })]
         }),
         confirm: {
           text: "general:apply",
-          onClick: XU
+          onClick: BH
         },
         cancel: {
           text: "customTexturePack:skip",
-          onClick: zU
+          onClick: LH
         }
       })
     }
-    async function sU() {
-      let UU = !1;
-      const XU = EU.NotificationProvider.showCustomPopup({
-        body: XU => (0, vU.jsx)(VU, {
+    async function DH() {
+      let HH = !1;
+      const BH = EH.NotificationProvider.showCustomPopup({
+        body: BH => (0, nH.jsx)(FH, {
           onApply: () => {
-            UU = !0, XU()
+            HH = !0, BH()
           },
-          onSkip: XU
+          onSkip: BH
         }),
         disableExitButton: !0,
         disablePressBackgroundToClose: !0
       });
-      return await XU.getResult(), UU
+      return await BH.getResult(), HH
     }
-    let nU = {
+    let wH = {
       wanted: !1
     };
-    let mU = null;
+    let ZH = null;
 
-    function lU(UU) {
-      UU.setGamePackConfirm(sU), mU = UU
+    function dH(HH) {
+      HH.setGamePackConfirm(DH), ZH = HH
     }
-    var xU = zU(3873),
-      JU = zU(1545),
-      jU = zU(42),
-      KU = zU(3626);
+    var aH = LH(3879),
+      sH = LH(1502),
+      JH = LH(30),
+      iH = LH(3610);
 
-    function bU(UU) {
+    function pH(HH) {
       let {
-        schematicId: XU,
-        texturePackKey: zU,
-        onClose: cU
-      } = UU;
-      const [yU, QU] = (0, AU.useState)("prompt"), [FU, oU] = (0, AU.useState)(null), DU = (0, xU.b)();
+        schematicId: BH,
+        texturePackKey: LH,
+        onClose: AH
+      } = HH;
+      const [rH, SH] = (0, hH.useState)("prompt"), [tH, zH] = (0, hH.useState)(null), CH = (0, aH.c)();
 
-      function EU() {
-        cU()
+      function EH() {
+        AH()
       }
-      return "prompt" === yU ? (0, vU.jsx)(VU, {
+      return "prompt" === rH ? (0, nH.jsx)(FH, {
         onApply: async function() {
-          QU("downloading");
+          SH("downloading");
           try {
-            const UU = await async function(UU, XU) {
-              const zU = await (0, iU.c)(XU);
-              if (zU) return {
-                pack: zU,
-                key: XU
+            const HH = await async function(HH, BH) {
+              const LH = await (0, NH.b)(BH);
+              if (LH) return {
+                pack: LH,
+                key: BH
               };
-              const cU = await aU.userContextManager.getCurrentUserContext(),
-                yU = (await JU.c.getGame(cU, UU, !0)).customTexturePackKey;
-              if (!yU) return null;
-              const QU = await (0, iU.c)(yU);
-              if (!QU) throw new Error("The texture pack could not be found");
+              const AH = await WH.userContextManager.getCurrentUserContext(),
+                rH = (await sH.d.getGame(AH, HH, !0)).customTexturePackKey;
+              if (!rH) return null;
+              const SH = await (0, NH.b)(rH);
+              if (!SH) throw new Error("The texture pack could not be found");
               return {
-                pack: QU,
-                key: yU
+                pack: SH,
+                key: rH
               }
-            }(XU, zU);
-            if (!DU.current) return;
-            if (!UU) return void cU();
-            if ((0, SU.n)(UU.pack)) return void QU("refused");
-            const yU = rU.c.toJson(),
-              AU = rU.c.isUsingTemporaryTexturePack() ? "customGame" : "player";
-            if (rU.c.setFromJson(UU.pack, "customGame"), await rU.c.saveTemporaryTexturePack(UU.key), DU.current) return void(0, kU.reloadBloxd)();
-            rU.c.setFromJson(yU, AU), await (0, KU.t)(jU.g)
-          } catch (UU) {
-            oU(UU instanceof Error ? UU.message : String(UU)), QU("error")
+            }(BH, LH);
+            if (!CH.current) return;
+            if (!HH) return void AH();
+            if ((0, cH.j)(HH.pack)) return void SH("refused");
+            const rH = eH.b.toJson(),
+              hH = eH.b.isUsingTemporaryTexturePack() ? "customGame" : "player";
+            if (eH.b.setFromJson(HH.pack, "customGame"), await eH.b.saveTemporaryTexturePack(HH.key), CH.current) return void(0, vH.reloadBloxd)();
+            eH.b.setFromJson(rH, hH), await (0, iH.k)(JH.c)
+          } catch (HH) {
+            zH(HH instanceof Error ? HH.message : String(HH)), SH("error")
           }
         },
-        onSkip: EU
-      }) : "downloading" === yU ? (0, vU.jsx)(uU.k, {
+        onSkip: EH
+      }) : "downloading" === rH ? (0, nH.jsx)(qH.m, {
         icon: "download",
         title: "customTexturePack:downloading",
-        subtitle: (0, vU.jsx)("div", {
+        subtitle: (0, nH.jsx)("div", {
           className: "CustomTexturePackDownloaderLogoLoaderContainer",
-          children: (0, vU.jsx)(fU.b, {
+          children: (0, nH.jsx)(gH.d, {
             showFace: !0
           })
         })
-      }) : "error" === yU ? (0, vU.jsx)(uU.k, {
+      }) : "error" === rH ? (0, nH.jsx)(qH.m, {
         icon: "face-worried",
         title: "customTexturePack:errorTitle",
-        subtitle: FU,
+        subtitle: tH,
         confirm: {
           text: "customTexturePack:refreshPage",
           onClick: () => {
@@ -167,671 +168,716 @@ export const modules = {
         },
         cancel: {
           text: "customTexturePack:skip",
-          onClick: EU
+          onClick: EH
         }
-      }) : "refused" === yU ? (0, vU.jsx)(uU.k, {
+      }) : "refused" === rH ? (0, nH.jsx)(qH.m, {
         icon: "face-worried",
         title: "customTexturePack:cantApplyTitle",
         subtitle: "customTexturePack:gamePackHasExternalUrls",
         confirm: {
           text: "general:continue",
-          onClick: EU
+          onClick: EH
         }
       }) : null
     }
-    var TU = zU(9510),
-      hU = zU(4700),
-      UX = zU(1857),
-      XX = zU(1835),
-      zX = zU(4704),
-      cX = zU(2205),
-      yX = zU(9516);
-    var QX = zU(5161),
-      AX = zU(1322),
-      FX = zU(1791),
-      oX = zU(687),
-      DX = zU(781),
-      EX = zU(1877);
+    var yH = LH(9637),
+      HB = LH(4699),
+      BB = LH(1839),
+      LB = LH(1826),
+      AB = LH(4701),
+      rB = LH(2213),
+      SB = LH(9644);
+    var hB = LH(5131),
+      tB = LH(1253),
+      zB = LH(1781),
+      CB = LH(642),
+      EB = LH(725),
+      XB = LH(1863);
 
-    function YX() {
-      const UU = yU.e.get("clientEscMenuOptions");
-      oU.gameBridge.send("setLookSensitivity", yU.e.get("isTouchScreen") ? (0, DX.s)(UU) : UU.mouseSensitivity)
+    function GB() {
+      const HH = rH.c.get("clientEscMenuOptions");
+      zH.gameBridge.send("setLookSensitivity", rH.c.get("isTouchScreen") ? (0, EB.q)(HH) : HH.mouseSensitivity)
     }
-    const NX = 45e3;
+    const YB = 45e3;
 
-    function IX(UU) {
-      const XU = UU.asError();
-      if (XU.debugResult.QU || (0, FX.b)(XU.debugResult.error)) return;
-      console.log("Failed to join lobby:", XU.message);
-      const zU = "timedOut" === XU.debugResult.gameServerUnreachable;
-      (0, XX.reportClientError)("matchmake_failed", XU.message, zU ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : pU.m[XU.code]);
+    function uB(HH) {
+      const BH = HH.asError();
+      if (BH.debugResult.xB || (0, zB.e)(BH.debugResult.error)) return;
+      console.log("Failed to join lobby:", BH.message);
+      const LH = "timedOut" === BH.debugResult.gameServerUnreachable;
+      (0, LB.reportClientError)("matchmake_failed", BH.message, LH ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : QH.h[BH.code]);
       const {
-        error: cU
-      } = XU.debugResult;
-      if (cU instanceof dU.q && "default" !== cU.packSource) {
-        const UU = (0, zX.d)("js", "game" === cU.packSource ? "game" : "page", (0, zX.h)(cU));
-        (0, XX.reportClientError)("texture_pack", cU, UU)
+        error: AH
+      } = BH.debugResult;
+      if (AH instanceof kH.t && "default" !== AH.packSource) {
+        const HH = (0, AB.g)("js", "game" === AH.packSource ? "game" : "page", (0, AB.h)(AH));
+        (0, LB.reportClientError)("texture_pack", AH, HH)
       }
     }
 
-    function pX(UU) {
-      if (null === UU || void 0 === UU || !UU.isError()) return !1;
-      const XU = UU.asError();
-      return XU.code === pU.m.REQUEST_TO_MATCHMAKING && !(0, FX.b)(XU.debugResult.error)
+    function QB(HH) {
+      if (null === HH || void 0 === HH || !HH.isError()) return !1;
+      const BH = HH.asError();
+      return BH.code === QH.h.REQUEST_TO_MATCHMAKING && !(0, zB.e)(BH.debugResult.error)
     }
-    async function aX(UU, XU, zU) {
-      const cU = (0, QX.J)(XU);
-      async function AU(UU, XU, zU, cU) {
-        var AU;
-        if (cU.aborted) return null;
-        null === yU.e.get("gameEntrySource") && (0, yU.n)("directPlayUrl"), oX.H && (0, HU.g)().catch((() => {})), yU.e.set({
+    async function WB(HH, BH, LH) {
+      const AH = (0, hB.K)(BH);
+      async function hH(HH, BH, LH, AH) {
+        var hH;
+        if (AH.aborted) return null;
+        null === rH.c.get("gameEntrySource") && (0, rH.l)("directPlayUrl"), CB.K && (0, RH.loadWasmPlay)().catch((() => {})), rH.c.set({
           gameState: "findingLobby"
-        }), tU.k.UY("loadingScreenState", "loadingPage:findingLobby");
-        const FU = await aU.userContextManager.getCurrentUserContext();
-        oU.gameBridge.send("setRequestedGame", {
-          gameNameWithVariation: XU,
-          discordContext: UU instanceof wU.f ? UU.getSerialisableParams() : null
-        }), (0, UX.h)(null !== (AU = MU.i.playInputAt()) && void 0 !== AU ? AU : performance.now());
-        const DU = await async function(UU, XU, zU, cU, yU) {
+        }), MH.k.AX("loadingScreenState", "loadingPage:findingLobby");
+        const tH = await WH.userContextManager.getCurrentUserContext();
+        zH.gameBridge.send("setRequestedGame", {
+          gameNameWithVariation: BH,
+          discordContext: HH instanceof fH.f ? HH.getSerialisableParams() : null
+        }), (0, BB.f)(null !== (hH = jH.d.playInputAt()) && void 0 !== hH ? hH : performance.now());
+        const CH = await async function(HH, BH, LH, AH, rH) {
           try {
-            await (0, EX.l)(QU.reqLibsLoadedPromise, NX, "Required libraries timed out")
-          } catch (AU) {
-            const UU = AU instanceof EX.g ? `Required libraries still loading after ${NX/1e3} s: ${(0,QU.requiredLibsPending)().join(", ")}` : AU.toString();
-            return gU.c.errorWithCode(UU, pU.m.LOAD_REQUIRED_LIBS, {
-              error: AU,
+            await (0, XB.j)(SH.reqLibsLoadedPromise, YB, "Required libraries timed out")
+          } catch (hH) {
+            const HH = hH instanceof XB.e ? `Required libraries still loading after ${YB/1e3} s: ${(0,SH.requiredLibsPending)().join(", ")}` : hH.toString();
+            return xH.e.errorWithCode(HH, QH.h.LOAD_REQUIRED_LIBS, {
+              error: hH,
               severity: "medium"
             })
           }
-          return tU.k.UY("matchmakeAndPlayStepCompleted", {
-            step: pU.m.LOAD_REQUIRED_LIBS,
+          return MH.k.AX("matchmakeAndPlayStepCompleted", {
+            step: QH.h.LOAD_REQUIRED_LIBS,
             totalSubSteps: 1
-          }), (0, QU.matchmakeAndPlayMaybeUnloaded)(UU, XU, zU, cU, yU)
-        }(UU, XU, zU, FU, cU), EU = DU.isError() ? DU.asError() : null;
-        if (cU.aborted) return EU && IX(DU), oU.gameBridge.send("leaveGame", {
+          }), (0, SH.matchmakeAndPlayMaybeUnloaded)(HH, BH, LH, AH, rH)
+        }(HH, BH, LH, tH, AH), EH = CH.isError() ? CH.asError() : null;
+        if (AH.aborted) return EH && uB(CH), zH.gameBridge.send("leaveGame", {
           reloadPath: null
         }), null;
-        if (null !== EU && void 0 !== EU && EU.debugResult.QU) return console.log("Join cancelled:", EU.message), null;
-        if (EU) return DU;
+        if (null !== EH && void 0 !== EH && EH.debugResult.xB) return console.log("Join cancelled:", EH.message), null;
+        if (EH) return CH;
         const {
-          gameNameWithVariation: YU,
-          lobbyName: NU
-        } = DU.getValue();
-        return YX(), (0, AX.B)().setGameViewShown(!0), FU.recordJoin(YU, NU), (0, BU.I)(), DU
+          gameNameWithVariation: XH,
+          lobbyName: GH
+        } = CH.getValue();
+        return GB(), (0, tB.K)().setGameViewShown(!0), tH.recordJoin(XH, GH), (0, TH.K)(), CH
       }
-      return cU && (0, yU.n)("updateRejoin"), (0, cX.l)((async yU => {
+      return AH && (0, rH.l)("updateRejoin"), (0, rB.i)((async rH => {
         try {
-          var QU;
-          let FU = UU,
-            oU = await AU(FU, XU, zU, yU);
-          for (let UU = 0; cU && UU < QX.k && (pX(oU) && await (0, QX.L)((0, QX.r)(UU), yU)); UU++) FU = (0, QX.t)(FU, UU + 1, "string" === typeof FU && (0, OU.G)(FU)), oU = await AU(FU, XU, zU, yU);
-          return null !== (QU = oU) && void 0 !== QU && QU.isError() && IX(oU), oU
-        } catch (FU) {
-          if ((0, XX.reportClientError)("matchmake_failed", FU, "unexpected"), oU.gameBridge.send("leaveGame", {
-              reloadPath: yU.aborted ? null : "/"
-            }), yU.aborted) return null;
-          throw FU
+          var SH;
+          let tH = HH,
+            zH = await hH(tH, BH, LH, rH);
+          for (let HH = 0; AH && HH < hB.l && (QB(zH) && await (0, hB.N)((0, hB.u)(HH), rH)); HH++) tH = (0, hB.x)(tH, HH + 1, "string" === typeof tH && (0, KH.N)(tH)), zH = await hH(tH, BH, LH, rH);
+          return null !== (SH = zH) && void 0 !== SH && SH.isError() && uB(zH), zH
+        } catch (tH) {
+          if ((0, LB.reportClientError)("matchmake_failed", tH, "unexpected"), zH.gameBridge.send("leaveGame", {
+              reloadPath: rH.aborted ? null : "/"
+            }), rH.aborted) return null;
+          throw tH
         }
-      }), (async UU => {
-        var zU;
-        if (cU) return;
-        const yU = (0, BU.B)();
-        null !== yU && (await yU, UU.aborted) || (null !== (zU = CU.d[XU]) && void 0 !== zU && zU.playAdBeforeMatchmaking ? (MU.i.skipPlayWait(), await new Promise((UU => {
-          (0, BU.bb)((() => {
-            UU(!0)
+      }), (async HH => {
+        var LH;
+        if (AH) return;
+        const rH = (0, TH.E)();
+        null !== rH && (await rH, HH.aborted) || (null !== (LH = IH.b[BH]) && void 0 !== LH && LH.playAdBeforeMatchmaking ? (jH.d.skipPlayWait(), await new Promise((HH => {
+          (0, TH.ab)((() => {
+            HH(!0)
           }), "video_start")
-        }))) : (0, BU.bb)((() => {}), "video_start"))
+        }))) : (0, TH.ab)((() => {}), "video_start"))
       }))
     }
 
-    function tX() {
+    function MB() {
       const {
-        t: UU
-      } = (0, YU.I)(), XU = (0, DU.useNavigatePreserveSearch)(), zU = (0, cU.w)(), wU = (0, cU.C)(), SU = (0, AU.useRef)({
-        t: UU,
-        navigate: XU
+        t: HH
+      } = (0, XH.B)(), BH = (0, CH.useNavigatePreserveSearch)(), LH = (0, AH.s)(), fH = (0, AH.A)(), cH = (0, hH.useRef)({
+        t: HH,
+        navigate: BH
       });
-      SU.current = {
-        t: UU,
-        navigate: XU
+      cH.current = {
+        t: HH,
+        navigate: BH
       };
-      const uU = (0, AU.useRef)("");
-      uU.current = zU.pathname + zU.search;
+      const qH = (0, hH.useRef)("");
+      qH.current = LH.pathname + LH.search;
       const {
-        gameState: fU,
-        clientEscMenuOptions: iU
-      } = (0, yU.q)(["gameState", "clientEscMenuOptions"]), MU = (0, AU.useRef)(null), VU = (0, AU.useRef)(!1);
-      var sU;
-      (0, AU.useEffect)((() => () => {
-        tU.k.UY("leftPlayPage")
-      }), []), (0, cX.m)(), (0, cX.o)(), sU = oX.H, (0, AU.useEffect)((() => {
-        if (!sU) return;
-        let UU = !0;
-        return (0, HU.g)().then((XU => {
-          UU && lU(XU)
+        gameState: gH,
+        clientEscMenuOptions: NH
+      } = (0, rH.m)(["gameState", "clientEscMenuOptions"]), jH = (0, hH.useRef)(null), FH = (0, hH.useRef)(!1);
+      var DH;
+      (0, hH.useEffect)((() => () => {
+        MH.k.AX("leftPlayPage")
+      }), []), (0, rB.j)(), (0, rB.n)(), DH = CB.K, (0, hH.useEffect)((() => {
+        if (!DH) return;
+        let HH = !0;
+        return (0, RH.loadWasmPlay)().then((BH => {
+          HH && dH(BH)
         })).catch((() => {})), () => {
-          var XU;
-          UU = !1, nU.wanted = !1, null === (XU = mU) || void 0 === XU || XU.setGamePackConfirm(null), mU = null
+          var BH;
+          HH = !1, wH.wanted = !1, null === (BH = ZH) || void 0 === BH || BH.setGamePackConfirm(null), ZH = null
         }
-      }), [sU]), (0, AU.useEffect)((() => {
-        var UU, XU, cU;
-        (0, QU.needGameClientNow)();
+      }), [DH]), (0, hH.useEffect)((() => {
+        var HH, BH, AH;
+        (0, SH.needGameClientNow)();
         const {
-          t: AU,
-          navigate: FU
-        } = SU.current, YU = (0, TU.d)(wU, zU.search);
-        if (wU.lobbyName && !new URLSearchParams(zU.search).has("lobby")) return void FU((0, eU.b)(YU.gameNameWithVariation, YU.lobbyName), {
+          t: hH,
+          navigate: tH
+        } = cH.current, XH = (0, yH.b)(fH, LH.search);
+        if (fH.lobbyName && !new URLSearchParams(LH.search).has("lobby")) return void tH((0, oH.b)(XH.gameNameWithVariation, XH.lobbyName), {
           replace: !0
         });
-        let ZU = Promise.resolve({
+        let UH = Promise.resolve({
           shouldMatchmake: !0
         });
-        const fU = new AbortController;
-        if ("/play/discord-custom-lobby" === zU.pathname) {
-          const UU = yU.e.get("discordContext");
-          if (!UU) return void FU("/");
-          ZU = IU.d.setupDiscordLobby(UU, "classic").then((() => ({
+        const gH = new AbortController;
+        if ("/play/discord-custom-lobby" === LH.pathname) {
+          const HH = rH.c.get("discordContext");
+          if (!HH) return void tH("/");
+          UH = uH.e.setupDiscordLobby(HH, "classic").then((() => ({
             shouldMatchmake: !0,
-            discordContext: UU
-          }))).catch((XU => (console.error("Failed to setup discord lobby", XU), {
+            discordContext: HH
+          }))).catch((BH => (console.error("Failed to setup discord lobby", BH), {
             shouldMatchmake: !1,
-            discordContext: UU
+            discordContext: HH
           })))
-        } else if (!YU.gameNameWithVariation || !(0, OU.E)(YU.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${YU.gameNameWithVariation}`), void FU(-1);
-        const iU = MU.current;
-        if (null !== iU && YU.gameNameWithVariation === iU.gameNameWithVariation && YU.lobbyName === iU.lobbyName) return;
-        if (oU.gameBridge.latest("connectedGame").replay) return void(0, cX.h)(null);
-        if ("releaseCountdown" === (null === (UU = (0, LU.i)(YU.gameNameWithVariation)) || void 0 === UU ? void 0 : UU.type)) return console.error(`Game hasn't been released yet: ${YU.gameNameWithVariation}`), void FU(-1);
-        const sU = VU.current;
-        VU.current = !1, (0, BU.D)(), yU.e.set({
+        } else if (!XH.gameNameWithVariation || !(0, KH.J)(XH.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${XH.gameNameWithVariation}`), void tH(-1);
+        const NH = jH.current;
+        if (null !== NH && XH.gameNameWithVariation === NH.gameNameWithVariation && XH.lobbyName === NH.lobbyName) return;
+        if (zH.gameBridge.latest("connectedGame").replay) return void(0, rB.e)(null);
+        if ("releaseCountdown" === (null === (HH = (0, mH.h)(XH.gameNameWithVariation)) || void 0 === HH ? void 0 : HH.type)) return console.error(`Game hasn't been released yet: ${XH.gameNameWithVariation}`), void tH(-1);
+        const DH = FH.current;
+        FH.current = !1, (0, TH.G)(), rH.c.set({
           gameState: "loadingScreen"
         });
-        const mU = function() {
-            nU.wanted = !1;
-            const UU = {
+        const ZH = function() {
+            wH.wanted = !1;
+            const HH = {
               wanted: !0
             };
-            return nU = UU, () => UU.wanted
+            return wH = HH, () => HH.wanted
           }(),
-          xU = YU.gameNameWithVariation;
-        if (xU && (oX.H || (0, qU.l)(xU))) {
-          const UU = oX.H ? Promise.all([(0, HU.g)(), aU.userContextManager.getCurrentUserContext()]).then((UU => {
-            let [XU, zU] = UU;
-            if (mU()) return lU(XU), XU.packForGame(xU, zU, mU)
-          })) : async function(UU, XU) {
-            await rU.c.indexedDbValuesAreLoaded();
-            const zU = await aU.userContextManager.getCurrentUserContext(),
-              cU = (0, qU.p)(UU);
-            let yU;
+          aH = XH.gameNameWithVariation;
+        if (aH && (CB.K || (0, lH.l)(aH))) {
+          const HH = CB.K ? Promise.all([(0, RH.loadWasmPlay)(), WH.userContextManager.getCurrentUserContext()]).then((HH => {
+            let [BH, LH] = HH;
+            if (ZH()) return dH(BH), BH.packForGame(aH, LH, ZH)
+          })) : async function(HH, BH) {
+            await eH.b.indexedDbValuesAreLoaded();
+            const LH = await WH.userContextManager.getCurrentUserContext(),
+              AH = (0, lH.q)(HH);
+            let rH;
             try {
-              yU = await JU.c.getGame(zU, cU, !0)
-            } catch (oU) {
-              return void console.error("Failed to get game", oU)
+              rH = await sH.d.getGame(LH, AH, !0)
+            } catch (zH) {
+              return void console.error("Failed to get game", zH)
             }
-            if (null !== XU && void 0 !== XU && XU.aborted) return;
-            const QU = yU.customTexturePackKey;
-            if (!QU) return void(rU.c.isUsingTemporaryTexturePack() && ((0, kU.reloadBloxd)(), await new Promise((() => {}))));
-            if (rU.c.isUsingTemporaryTexturePack() && rU.c.getTemporaryTexturePackSource() === QU) return;
-            const AU = EU.NotificationProvider.showCustomPopup({
-                body: UU => (0, vU.jsx)(bU, {
-                  schematicId: cU,
-                  texturePackKey: QU,
-                  onClose: UU
+            if (null !== BH && void 0 !== BH && BH.aborted) return;
+            const SH = rH.customTexturePackKey;
+            if (!SH) return void(eH.b.isUsingTemporaryTexturePack() && ((0, vH.reloadBloxd)(), await new Promise((() => {}))));
+            if (eH.b.isUsingTemporaryTexturePack() && eH.b.getTemporaryTexturePackSource() === SH) return;
+            const hH = EH.NotificationProvider.showCustomPopup({
+                body: HH => (0, nH.jsx)(pH, {
+                  schematicId: AH,
+                  texturePackKey: SH,
+                  onClose: HH
                 }),
                 disableExitButton: !0,
                 disablePressBackgroundToClose: !0
               }),
-              FU = () => {
-                AU.tearDownNotification()
+              tH = () => {
+                hH.tearDownNotification()
               };
-            null === XU || void 0 === XU || XU.addEventListener("abort", FU, {
+            null === BH || void 0 === BH || BH.addEventListener("abort", tH, {
               once: !0
-            }), await AU.getResult(), null === XU || void 0 === XU || XU.removeEventListener("abort", FU)
-          }(xU, fU.signal), XU = ZU;
-          ZU = UU.catch((UU => {
-            console.error("Failed to check for custom texture pack", UU)
-          })).then((() => XU))
+            }), await hH.getResult(), null === BH || void 0 === BH || BH.removeEventListener("abort", tH)
+          }(aH, gH.signal), BH = UH;
+          UH = HH.catch((HH => {
+            console.error("Failed to check for custom texture pack", HH)
+          })).then((() => BH))
         }
-        const jU = {
-          wasm: oX.H,
-          game: YU.gameNameWithVariation,
-          custom: void 0 !== xU && (0, qU.l)(xU),
-          lobbyName: null !== (XU = YU.lobbyName) && void 0 !== XU ? XU : null,
-          direct: null !== YU.directJoinVmUrl && void 0 !== YU.directJoinVmUrl,
-          discord: "/play/discord-custom-lobby" === zU.pathname,
-          adBeforeMatchmaking: void 0 !== xU && !0 === (null === (cU = CU.d[xU]) || void 0 === cU ? void 0 : cU.playAdBeforeMatchmaking),
-          afterAnother: null !== MU.current || (0, cX.d)()
+        const JH = {
+          wasm: CB.K,
+          game: XH.gameNameWithVariation,
+          custom: void 0 !== aH && (0, lH.l)(aH),
+          lobbyName: null !== (BH = XH.lobbyName) && void 0 !== BH ? BH : null,
+          direct: null !== XH.directJoinVmUrl && void 0 !== XH.directJoinVmUrl,
+          discord: "/play/discord-custom-lobby" === LH.pathname,
+          adBeforeMatchmaking: void 0 !== aH && !0 === (null === (AH = IH.b[aH]) || void 0 === AH ? void 0 : AH.playAdBeforeMatchmaking),
+          afterAnother: null !== jH.current || (0, rB.c)()
         };
-        (0, yX.g)(null);
-        const KU = !(UX = jU).wasm || void 0 === UX.game || UX.custom || UX.direct || UX.discord || UX.adBeforeMatchmaking || UX.afterAnother ? null : () => {
-          ! function(UU, XU) {
-            (0, yX.g)({
-              key: (0, yX.e)(UU, XU),
-              settled: Promise.all([QU.matchmakingLibrariesPromise, aU.userContextManager.getCurrentUserContext()]).then((zU => {
-                let [cU, yU] = zU;
-                if (void 0 === cU.matchmakeForAhead) throw new Error("the matchmaking chunk has no matchmaking ahead");
-                return cU.matchmakeForAhead(UU, XU, yU)
-              })).catch((UU => ({
-                result: gU.c.errorWithCode(String(UU), pU.m.REQUEST_TO_MATCHMAKING, {
-                  error: UU,
+        (0, SB.j)(null);
+        const iH = !(BB = JH).wasm || void 0 === BB.game || BB.custom || BB.direct || BB.discord || BB.adBeforeMatchmaking || BB.afterAnother ? null : () => {
+          ! function(HH, BH) {
+            (0, SB.j)({
+              key: (0, SB.f)(HH, BH),
+              settled: Promise.all([SH.matchmakingLibrariesPromise, WH.userContextManager.getCurrentUserContext()]).then((LH => {
+                let [AH, rH] = LH;
+                if (void 0 === AH.matchmakeForAhead) throw new Error("the matchmaking chunk has no matchmaking ahead");
+                return AH.matchmakeForAhead(HH, BH, rH)
+              })).catch((HH => ({
+                result: xH.e.errorWithCode(String(HH), QH.h.REQUEST_TO_MATCHMAKING, {
+                  error: HH,
                   severity: "medium"
                 }),
                 at: performance.now()
               })))
             })
-          }(jU.lobbyName, jU.game)
+          }(JH.lobbyName, JH.game)
         };
-        var UX;
-        const XX = null !== MU.current;
-        MU.current = null, (0, cX.h)(null);
-        const zX = () => {
-          sU ? (0, DU.navigateToHomePage)() : (VU.current = XX, FU(-1))
+        var BB;
+        const LB = null !== jH.current;
+        jH.current = null, (0, rB.e)(null);
+        const AB = () => {
+          DH ? (0, CH.navigateToHomePage)() : (FH.current = LB, tH(-1))
         };
-        let QX = !1;
-        const AX = zU.pathname + zU.search,
-          DX = () => !QX && uU.current === AX;
-        return (0, yX.b)(ZU, KU, (UU => {
+        let hB = !1;
+        const tB = LH.pathname + LH.search,
+          EB = () => !hB && qH.current === tB;
+        return (0, SB.d)(UH, iH, (HH => {
           let {
-            shouldMatchmake: XU,
-            discordContext: zU
-          } = UU;
-          DX() && (XU ? aX(null !== zU && void 0 !== zU ? zU : YU.lobbyName, zU ? "classic" : YU.gameNameWithVariation, YU.directJoinVmUrl).then((UU => {
-            if (null !== UU && DX())
-              if (UU.isError()) {
-                var XU, zU;
-                const cU = UU.asError(),
-                  QU = null !== (XU = cU.debugResult.severity) && void 0 !== XU ? XU : "high";
-                if (tU.k.UY("joinFailed", {
-                    step: null !== (zU = cU.code) && void 0 !== zU ? zU : null,
-                    severity: QU
-                  }), (0, FX.b)(cU.debugResult.error)) return void FX.e.reload();
-                if (cU.code === pU.m.SHADER_PACK) return void(0, hU.e)(cU.message, FU);
-                const DU = yU.e.get("gameEntrySource"),
-                  IU = cU.code === pU.m.INITIALISE_WEBGL ? (0, PU.d)() : null,
+            shouldMatchmake: BH,
+            discordContext: LH
+          } = HH;
+          EB() && (BH ? WB(null !== LH && void 0 !== LH ? LH : XH.lobbyName, LH ? "classic" : XH.gameNameWithVariation, XH.directJoinVmUrl).then((HH => {
+            if (null !== HH && EB())
+              if (HH.isError()) {
+                var BH, LH;
+                const AH = HH.asError(),
+                  SH = null !== (BH = AH.debugResult.severity) && void 0 !== BH ? BH : "high";
+                if (MH.k.AX("joinFailed", {
+                    step: null !== (LH = AH.code) && void 0 !== LH ? LH : null,
+                    severity: SH
+                  }), (0, zB.e)(AH.debugResult.error)) return void zB.i.reload();
+                if (AH.code === QH.h.SHADER_PACK) return void(0, HB.c)(AH.message, tH);
+                const CH = rH.c.get("gameEntrySource"),
+                  uH = AH.code === QH.h.INITIALISE_WEBGL ? (0, OH.e)() : null,
                   {
-                    error: aU
-                  } = cU.debugResult;
-                let gU;
-                if ((0, NU.d)(AU, cU)) gU = Promise.resolve(!1);
-                else if (null !== IU) gU = (0, PU.k)(IU);
-                else if (aU instanceof dU.q) gU = (0, WU.d)(aU);
+                    error: WH
+                  } = AH.debugResult;
+                let xH;
+                if ((0, YH.c)(hH, AH)) xH = Promise.resolve(!1);
+                else if (null !== uH) xH = (0, OH.o)(uH);
+                else if (WH instanceof kH.t) xH = (0, bH.e)(WH);
                 else {
-                  let UU;
-                  switch (QU) {
+                  let HH;
+                  switch (SH) {
                     case "low":
-                      UU = "face-diagonal-mouth";
+                      HH = "face-diagonal-mouth";
                       break;
                     case "medium":
-                      UU = "face-worried";
+                      HH = "face-worried";
                       break;
                     case "high":
-                      UU = "face-dizzy"
+                      HH = "face-dizzy"
                   }
-                  const XU = aU instanceof EX.g;
-                  let zU = cU.message;
-                  XU ? zU = AU("general:gameFilesStalled") : cU.debugResult.gameServerUnreachable && (zU = AU((0, GU.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable"));
-                  gU = EU.NotificationProvider.showPromptPopup({
-                    icon: UU,
-                    title: pU.D[cU.code],
-                    subtitle: (0, vU.jsxs)(vU.Fragment, {
-                      children: [zU, aU instanceof Error && !XU && (0, vU.jsx)("div", {
+                  const BH = WH instanceof XB.e;
+                  let LH = (0, GH.g)(AH.message);
+                  BH ? LH = hH("general:gameFilesStalled") : AH.debugResult.gameServerUnreachable && (LH = hH((0, PH.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable"));
+                  xH = EH.NotificationProvider.showPromptPopup({
+                    icon: HH,
+                    title: QH.y[AH.code],
+                    subtitle: (0, nH.jsxs)(nH.Fragment, {
+                      children: [LH, WH instanceof Error && !BH && (0, nH.jsx)("div", {
                         style: {
                           fontSize: "0.9rem",
                           paddingTop: "1rem"
                         },
-                        children: (0, vU.jsx)(RU.b, {
-                          errorString: aU.stack
+                        children: (0, nH.jsx)(VH.c, {
+                          errorString: WH.stack
                         })
                       })]
                     }),
-                    confirmText: AU("general:tryAgain"),
-                    cancelText: AU("general:cancel")
-                  }).getResult().then((UU => !0 === UU))
+                    confirmText: hH("general:tryAgain"),
+                    cancelText: hH("general:cancel")
+                  }).getResult().then((HH => !0 === HH))
                 }
-                gU.then((UU => {
-                  if (UU) {
-                    (0, yU.n)(DU);
-                    const UU = (0, eU.b)(YU.gameNameWithVariation, YU.lobbyName);
-                    "low" === QU ? FU(UU) : (0, kU.reloadBloxd)(UU)
+                xH.then((HH => {
+                  if (HH) {
+                    (0, rH.l)(CH);
+                    const HH = (0, oH.b)(XH.gameNameWithVariation, XH.lobbyName);
+                    "low" === SH ? tH(HH) : (0, vH.reloadBloxd)(HH)
                   }
-                })), oU.gameBridge.send("leaveGame", {
+                })), zH.gameBridge.send("leaveGame", {
                   reloadPath: "/"
-                }), zX()
+                }), AB()
               } else {
                 const {
-                  gameNameWithVariation: XU,
-                  lobbyName: zU
-                } = UU.getValue();
-                MU.current = {
-                  gameNameWithVariation: XU,
-                  lobbyName: zU
+                  gameNameWithVariation: BH,
+                  lobbyName: LH
+                } = HH.getValue();
+                jH.current = {
+                  gameNameWithVariation: BH,
+                  lobbyName: LH
                 };
-                const cU = (0, eU.b)(XU, zU);
-                FU(cU, {
+                const AH = (0, oH.b)(BH, LH);
+                tH(AH, {
                   replace: !0
                 })
               }
-          })).catch((UU => {
-            if (!DX()) return;
-            tU.k.UY("joinFailed", {
+          })).catch((HH => {
+            if (!EB()) return;
+            MH.k.AX("joinFailed", {
               step: null,
               severity: "unexpected"
             });
-            EU.NotificationProvider.showPromptPopup({
+            EH.NotificationProvider.showPromptPopup({
               icon: "face-dizzy",
               title: "Unexpected Error",
-              subtitle: (0, vU.jsxs)(vU.Fragment, {
-                children: [AU("homePage:pleaseCopyError"), (0, vU.jsx)("div", {
+              subtitle: (0, nH.jsxs)(nH.Fragment, {
+                children: [hH("homePage:pleaseCopyError"), (0, nH.jsx)("div", {
                   style: {
                     fontSize: "0.9rem",
                     paddingTop: "1rem"
                   },
-                  children: (0, vU.jsx)(RU.b, {
-                    errorString: UU.stack
+                  children: (0, nH.jsx)(VH.c, {
+                    errorString: HH.stack
                   })
                 })]
               }),
-              confirmText: AU("general:tryAgain"),
-              cancelText: AU("general:cancel")
-            }).getResult().then((UU => {
-              !0 === UU && (0, kU.reloadBloxd)((0, eU.b)(YU.gameNameWithVariation, YU.lobbyName))
-            })), zX()
-          })) : FU(-1))
-        }), DX), () => {
-          QX = !0, fU.abort()
+              confirmText: hH("general:tryAgain"),
+              cancelText: hH("general:cancel")
+            }).getResult().then((HH => {
+              !0 === HH && (0, vH.reloadBloxd)((0, oH.b)(XH.gameNameWithVariation, XH.lobbyName))
+            })), AB()
+          })) : tH(-1))
+        }), EB), () => {
+          hB = !0, gH.abort()
         }
-      }), [wU, zU.search, zU.pathname]), (0, AU.useEffect)((() => {
-        iU.disableFullscreen && (0, ZU.d)() ? (0, ZU.i)() : !iU.disableFullscreen && (0, ZU.e)() && (0, ZU.p)({
+      }), [fH, LH.search, LH.pathname]), (0, hH.useEffect)((() => {
+        NH.disableFullscreen && (0, UH.g)() ? (0, UH.l)() : !NH.disableFullscreen && (0, UH.k)() && (0, UH.r)({
           automatic: !0
         })
-      }), [fU, iU]), (0, AU.useEffect)((() => {
-        "inGame" === fU && YX()
-      }), [fU, iU]), (0, AU.useEffect)((() => {
-        "inGame" !== fU && yU.e.set({
+      }), [gH, NH]), (0, hH.useEffect)((() => {
+        "inGame" === gH && GB()
+      }), [gH, NH]), (0, hH.useEffect)((() => {
+        "inGame" !== gH && rH.c.set({
           openInGameMenuName: null
         })
-      }), [fU]);
-      const xU = function(UU) {
-        const XU = (0, yU.k)(UU),
-          [zU, cU] = (0, AU.useState)(0),
-          [QU, oU] = (0, AU.useState)(!1);
-        (0, FU.f)("gameJoined", (() => {
-          (0, yU.k)(yU.e.get("gameState")) && (cU((UU => UU + 1)), oU(!0))
-        })), (0, AU.useEffect)((() => {
-          XU || oU(!1)
-        }), [XU]);
-        const DU = "inGame" === UU;
+      }), [gH]);
+      const aH = function(HH) {
+        const BH = (0, rH.j)(HH),
+          [LH, AH] = (0, hH.useState)(0),
+          [SH, zH] = (0, hH.useState)(!1);
+        (0, tH.d)("gameJoined", (() => {
+          (0, rH.j)(rH.c.get("gameState")) && (AH((HH => HH + 1)), zH(!0))
+        })), (0, hH.useEffect)((() => {
+          BH || zH(!1)
+        }), [BH]);
+        const CH = "inGame" === HH;
         return {
-          mounted: DU || XU && QU,
-          shown: DU,
-          key: zU
+          mounted: CH || BH && SH,
+          shown: CH,
+          key: LH
         }
-      }(fU);
-      return (0, vU.jsx)(vU.Fragment, {
-        children: xU.mounted && (0, vU.jsx)(QU.InGameUi, {
-          shown: xU.shown
-        }, xU.key)
+      }(gH);
+      return (0, nH.jsx)(nH.Fragment, {
+        children: aH.mounted && (0, nH.jsx)(SH.InGameUi, {
+          shown: aH.shown
+        }, aH.key)
       })
     }
   },
-  5527: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => yU
+  5473: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => rH
     });
-    var cU = zU(1203);
-    async function yU(UU) {
-      const XU = await fetch(`${cU.clientSideServerUrls.s3Url}/${UU}`, {
+    var AH = LH(1131);
+    async function rH(HH) {
+      const BH = await fetch(`${AH.clientSideServerUrls.s3Url}/${HH}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === XU.status || 403 === XU.status) return null;
-      if (!XU.ok) throw new Error(`Failed to download the texture pack (${XU.status})`);
-      return await XU.json()
+      if (404 === BH.status || 403 === BH.status) return null;
+      if (!BH.ok) throw new Error(`Failed to download the texture pack (${BH.status})`);
+      return await BH.json()
     }
   },
-  9489: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => tU,
-      e: () => gU
+  9619: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => WH,
+      d: () => MH
     });
-    var cU = zU(173),
-      yU = zU(212),
-      QU = zU(1079),
-      AU = zU(1086),
-      FU = zU(1236),
-      oU = zU(2005),
-      DU = zU(2494),
-      EU = zU(1545),
-      YU = zU(1410),
-      NU = zU(1131),
-      IU = zU(9493),
-      pU = zU(1568),
-      aU = zU(1592);
+    var AH = LH(152),
+      rH = LH(176),
+      SH = LH(1005),
+      hH = LH(1016),
+      tH = LH(1168),
+      zH = LH(1998),
+      CH = LH(2523),
+      EH = LH(1502),
+      XH = LH(1352),
+      GH = LH(1070),
+      YH = LH(9627),
+      uH = LH(1509),
+      QH = LH(1536);
 
-    function tU(UU, XU) {
-      const zU = !0 === XU.debugResult.gameRefused,
-        QU = zU || XU.code === cU.m.REQUEST_TO_MATCHMAKING ? (0, IU.h)(XU.message) : null;
-      if (null !== QU) return ZU(UU, UU((0, IU.n)(QU)), UU(IU.j[QU])), !0;
-      if (zU) return async function(UU) {
+    function WH(HH, BH) {
+      const LH = !0 === BH.debugResult.gameRefused,
+        SH = LH || BH.code === AH.h.REQUEST_TO_MATCHMAKING ? (0, YH.f)(BH.message) : null;
+      if (null !== SH) return TH(HH, HH((0, YH.l)(SH)), HH(YH.j[SH])), !0;
+      if (LH) return async function(HH) {
         const {
-          gameNameWithVariation: XU,
-          lobbyName: zU,
-          shownLobbyName: cU
-        } = oU.gameBridge.latest("connectedGame"), yU = "classic" === XU && (0, FU.A)(zU) ? cU : await (0, DU.g)(UU, XU, zU);
-        return "" !== yU ? UU("general:cantJoinGame", {
-          game: yU
-        }) : UU("general:cantJoinThisGame")
-      }(UU).then((zU => {
-        ZU(UU, zU, XU.message)
+          gameNameWithVariation: BH,
+          lobbyName: LH,
+          shownLobbyName: AH
+        } = zH.gameBridge.latest("connectedGame"), rH = "classic" === BH && (0, tH.G)(LH) ? AH : await (0, CH.f)(HH, BH, LH);
+        return "" !== rH ? HH("general:cantJoinGame", {
+          game: rH
+        }) : HH("general:cantJoinThisGame")
+      }(HH).then((LH => {
+        TH(HH, LH, BH.message)
       })), !0;
       const {
-        joinFailure: AU
-      } = XU.debugResult, EU = "refused" === (null === AU || void 0 === AU ? void 0 : AU.at) ? AU.code : null;
-      return EU === yU.e.schematicNotPublished.code ? (async function(UU, XU) {
-        const zU = kU(),
-          cU = await BU(zU);
-        if (null === cU || cU.gamePublished) return void ZU(UU, UU("general:cantJoinThisGame"), XU);
-        await GU(UU, "rocket-launch", UU("studio:gameNotPublishedTitle", {
-          game: cU.name
-        }), UU("studio:publishInStudio"), zU)
-      }(UU, XU.message), !0) : (EU === yU.e.schematicBanned.code || EU === yU.e.customGameTakenDown.code) && (BU(kU()).then((XU => {
-        gU(UU, XU)
+        joinFailure: hH
+      } = BH.debugResult, EH = "refused" === (null === hH || void 0 === hH ? void 0 : hH.at) ? hH.code : null;
+      return EH === rH.e.schematicNotPublished.code ? (async function(HH, BH) {
+        const LH = xH(),
+          AH = await PH(LH);
+        if (null === AH || AH.gamePublished) return void TH(HH, HH("general:cantJoinThisGame"), BH);
+        await vH(HH, "rocket-launch", HH("studio:gameNotPublishedTitle", {
+          game: AH.name
+        }), HH("studio:publishInStudio"), LH)
+      }(HH, BH.message), !0) : (EH === rH.e.schematicBanned.code || EH === rH.e.customGameTakenDown.code) && (PH(xH()).then((BH => {
+        MH(HH, BH)
       })), !0)
     }
 
-    function gU(UU, XU) {
-      !0 !== (null === XU || void 0 === XU ? void 0 : XU.takenDown) ? ZU(UU, UU("general:cantJoinThisGame"), yU.e.customGameTakenDown.text) : GU(UU, "lock", UU("studio:gameTakenDownTitle", {
-        game: XU.name
-      }), UU("studio:viewInStudio"), XU.schematicId)
+    function MH(HH, BH) {
+      !0 !== (null === BH || void 0 === BH ? void 0 : BH.takenDown) ? TH(HH, HH("general:cantJoinThisGame"), rH.e.customGameTakenDown.text) : vH(HH, "lock", HH("studio:gameTakenDownTitle", {
+        game: BH.name
+      }), HH("studio:viewInStudio"), BH.schematicId)
     }
 
-    function kU() {
-      return (0, QU.p)(oU.gameBridge.latest("connectedGame").gameNameWithVariation)
+    function xH() {
+      return (0, SH.q)(zH.gameBridge.latest("connectedGame").gameNameWithVariation)
     }
-    async function GU(UU, XU, zU, cU, yU) {
-      !0 === await YU.NotificationProvider.showPromptPopup({
-        icon: XU,
-        title: zU,
-        confirmText: cU,
-        cancelText: UU("general:cancel")
-      }).getResult() && (0, pU.navigatePreserveSearch)((0, aU.r)((0, AU.e)(yU), "manage"))
+    async function vH(HH, BH, LH, AH, rH) {
+      !0 === await XH.NotificationProvider.showPromptPopup({
+        icon: BH,
+        title: LH,
+        confirmText: AH,
+        cancelText: HH("general:cancel")
+      }).getResult() && (0, uH.navigatePreserveSearch)((0, QH.t)((0, hH.d)(rH), "manage"))
     }
-    async function BU(UU) {
+    async function PH(HH) {
       try {
-        return await EU.c.getGame(await NU.userContextManager.getCurrentUserContext(), UU, !0)
-      } catch (XU) {
-        return (0, EU.e)(XU) || console.error(`Failed to get game ${UU}`, XU), null
+        return await EH.d.getGame(await GH.userContextManager.getCurrentUserContext(), HH, !0)
+      } catch (BH) {
+        return (0, EH.g)(BH) || console.error(`Failed to get game ${HH}`, BH), null
       }
     }
 
-    function ZU(UU, XU, zU) {
-      YU.NotificationProvider.showPromptPopup({
+    function TH(HH, BH, LH) {
+      XH.NotificationProvider.showPromptPopup({
         icon: "lock",
-        title: XU,
-        subtitle: zU,
-        confirmText: UU("general:ok"),
+        title: BH,
+        subtitle: LH,
+        confirmText: HH("general:ok"),
         cancelText: ""
       })
     }
   },
-  9510: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU
+  9637: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => hH
     });
-    var cU = zU(1376),
-      yU = zU(1236),
-      QU = zU(646);
+    var AH = LH(1306),
+      rH = LH(1168),
+      SH = LH(619);
 
-    function AU(UU) {
-      return UU = function(UU, XU) {
-        var zU;
-        const cU = new URLSearchParams(XU),
-          yU = cU.get("lobby"),
-          QU = cU.get("vm"),
-          AU = null !== (zU = yU) && void 0 !== zU ? zU : UU.lobbyName,
-          FU = null !== QU && void 0 !== QU ? QU : UU.directJoinVmUrl;
-        if (AU === UU.lobbyName && FU === UU.directJoinVmUrl) return UU;
+    function hH(HH) {
+      return HH = function(HH, BH) {
+        var LH;
+        const AH = new URLSearchParams(BH),
+          rH = AH.get("lobby"),
+          SH = AH.get("vm"),
+          hH = null !== (LH = rH) && void 0 !== LH ? LH : HH.lobbyName,
+          tH = null !== SH && void 0 !== SH ? SH : HH.directJoinVmUrl;
+        if (hH === HH.lobbyName && tH === HH.directJoinVmUrl) return HH;
         return {
-          ...UU,
-          lobbyName: AU,
-          directJoinVmUrl: FU
+          ...HH,
+          lobbyName: hH,
+          directJoinVmUrl: tH
         }
-      }(UU, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), UU = function(UU) {
-        if ((0, QU.P)(UU.directJoinVmUrl)) return UU;
-        const XU = (0, yU.S)(UU.directJoinVmUrl);
-        null === XU && (UU.directJoinVmUrl = void 0);
-        return UU
-      }(UU = function(UU) {
-        if ((0, QU.P)(UU.gameNameWithVariation)) return UU;
-        return UU.gameNameWithVariation = (0, cU.j)(UU.gameNameWithVariation), UU
-      }(UU))
+      }(HH, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), HH = function(HH) {
+        if ((0, SH.M)(HH.directJoinVmUrl)) return HH;
+        const BH = (0, rH.bb)(HH.directJoinVmUrl);
+        null === BH && (HH.directJoinVmUrl = void 0);
+        return HH
+      }(HH = function(HH) {
+        if ((0, SH.M)(HH.gameNameWithVariation)) return HH;
+        return HH.gameNameWithVariation = (0, AH.m)(HH.gameNameWithVariation), HH
+      }(HH))
     }
   },
-  9505: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => QU,
-      h: () => yU
+  9634: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => SH,
+      f: () => rH
     });
-    let cU = !1;
+    let AH = !1;
 
-    function yU() {
-      cU = !0
+    function rH() {
+      AH = !0
     }
 
-    function QU() {
-      return cU
+    function SH() {
+      return AH
     }
   },
-  9516: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => FU,
-      e: () => yU,
-      g: () => QU,
-      h: () => AU
+  9644: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => tH,
+      f: () => rH,
+      j: () => SH,
+      l: () => hH
     });
-    let cU = null;
+    let AH = null;
 
-    function yU(UU, XU) {
-      return `${XU}\n${null!==UU&&void 0!==UU?UU:""}`
+    function rH(HH, BH) {
+      return `${BH}\n${null!==HH&&void 0!==HH?HH:""}`
     }
 
-    function QU(UU) {
-      cU = UU
+    function SH(HH) {
+      AH = HH
     }
 
-    function AU(UU) {
-      const XU = cU;
-      return cU = null, null !== XU && XU.key === UU ? XU.settled : null
+    function hH(HH) {
+      const BH = AH;
+      return AH = null, null !== BH && BH.key === HH ? BH.settled : null
     }
 
-    function FU(UU, XU, zU, cU) {
-      let yU = !1;
-      null !== XU && setTimeout((() => {
-        cU() && !yU && XU()
-      }), 0), UU.then((UU => {
-        yU = !0, zU(UU)
+    function tH(HH, BH, LH, AH) {
+      let rH = !1;
+      null !== BH && setTimeout((() => {
+        AH() && !rH && BH()
+      }), 0), HH.then((HH => {
+        rH = !0, LH(HH)
       }))
     }
   },
-  9502: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => IU,
-      g: () => NU,
-      k: () => pU
+  9631: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      loadWasmPlay: () => GH,
+      loadWasmPlayAhead: () => YH,
+      loadWasmPreviews: () => uH
     });
-    var cU = zU(3519),
-      yU = zU(2410),
-      QU = zU(2210),
-      AU = zU(5085),
-      FU = zU(3887),
-      oU = zU(9505);
-    let DU = null;
+    var AH = LH(3503),
+      rH = LH(2413),
+      SH = LH(2215),
+      hH = LH(5062),
+      tH = LH(3892),
+      zH = LH(9634);
+    let CH = null;
 
-    function EU() {
-      return Promise.all([zU.e(86), zU.e(89), zU.e(103), zU.e(228), zU.e(227), zU.e(148), zU.e(212), zU.e(234), zU.e(153), zU.e(101), zU.e(236), zU.e(75)]).then((() => zU(41736)))
+    function EH() {
+      return Promise.all([LH.e(86), LH.e(89), LH.e(103), LH.e(234), LH.e(233), LH.e(150), LH.e(216), LH.e(243), LH.e(155), LH.e(101), LH.e(244), LH.e(75)]).then((() => LH(42e3)))
     }
 
-    function YU() {
-      Promise.all([zU.e(84), zU.e(87), zU.e(85), zU.e(86), zU.e(103), zU.e(100), zU.e(294), zU.e(203), zU.e(242), zU.e(268), zU.e(236), zU.e(54)]).then((() => zU(42104))).catch((() => {}))
+    function XH() {
+      Promise.all([LH.e(84), LH.e(87), LH.e(85), LH.e(86), LH.e(103), LH.e(100), LH.e(300), LH.e(207), LH.e(250), LH.e(274), LH.e(244), LH.e(54)]).then((() => LH(42318))).catch((() => {}))
     }
 
-    function NU() {
-      return AU.e.cancelDownloadForJoin(), (0, FU.e)(), (0, yU.g)(), (0, oU.h)(), (0, QU.l)(), YU(), Promise.all([zU.e(89), zU.e(103), zU.e(228), zU.e(227), zU.e(148), zU.e(153), zU.e(70)]).then((() => zU(42151))).then((UU => {
+    function GH() {
+      return hH.b.cancelDownloadForJoin(), (0, tH.e)(), (0, rH.f)(), (0, zH.f)(), (0, SH.g)(), XH(), Promise.all([LH.e(89), LH.e(103), LH.e(234), LH.e(233), LH.e(150), LH.e(155), LH.e(70)]).then((() => LH(42355))).then((HH => {
         let {
-          startJoinLoad: XU
-        } = UU;
-        XU()
-      }), (() => {})), DU ??= EU().then((UU => (UU.startWasmPlay(), UU.followPageUiPack((UU => {
-        cU.c.showGamePack(UU)
-      })), UU)), (UU => {
-        throw DU = null, UU
-      })), DU
+          startJoinLoad: BH
+        } = HH;
+        BH()
+      }), (() => {})), CH ??= EH().then((HH => (HH.startWasmPlay(), HH.followPageUiPack((HH => {
+        AH.b.showGamePack(HH)
+      })), HH)), (HH => {
+        throw CH = null, HH
+      })), CH
     }
 
-    function IU() {
-      return YU(), zU.e(296).then((() => zU(42154))).catch((() => {})), EU().then((() => {}))
+    function YH() {
+      return XH(), LH.e(124).then((() => LH(42361))).catch((() => {})), EH().then((() => {}))
     }
 
-    function pU() {
-      return EU().then((UU => {
-        UU.startWasmPreviews(), UU.prefetchWasmPreviews()
+    function uH() {
+      return EH().then((HH => {
+        HH.startWasmPreviews(), HH.prefetchWasmPreviews()
       }))
     }
   },
-  9493: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => QU,
-      f: () => AU,
-      h: () => FU,
-      j: () => DU,
-      n: () => oU
+  9627: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => SH,
+      e: () => hH,
+      f: () => tH,
+      j: () => CH,
+      l: () => zH
     });
-    var cU = zU(212),
-      yU = zU(5057);
+    var AH = LH(176),
+      rH = LH(5037);
 
-    function QU(UU) {
-      return AU(UU) === cU.e.gameOrPluginOnPlayerAuthRejected.code
+    function SH(HH) {
+      return hH(HH) === AH.e.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function AU(UU) {
-      return "object" === typeof UU && null !== UU ? UU.code : void 0
+    function hH(HH) {
+      return "object" === typeof HH && null !== HH ? HH.code : void 0
     }
 
-    function FU(UU) {
-      var XU;
-      return null !== (XU = Object.keys(yU.b).find((XU => yU.b[XU] === UU))) && void 0 !== XU ? XU : null
+    function tH(HH) {
+      var BH;
+      return null !== (BH = Object.keys(rH.d).find((BH => rH.d[BH] === HH))) && void 0 !== BH ? BH : null
     }
 
-    function oU(UU) {
-      return "notWhitelisted" === UU ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function zH(HH) {
+      return "notWhitelisted" === HH ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const DU = {
+    const CH = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
+  },
+  9615: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => CH,
+      g: () => zH
+    });
+    var AH = LH(317);
+
+    function rH(HH) {
+      if (!HH.startsWith("{")) return HH;
+      let BH;
+      try {
+        BH = JSON.parse(HH)
+      } catch {
+        return HH
+      }
+      return function(HH) {
+        if (null === (0, AH.Pe)(HH)) return !1;
+        const {
+          params: BH
+        } = HH;
+        return void 0 === BH || "object" === typeof BH && null !== BH && Object.values(BH).every((HH => "string" === typeof HH))
+      }(BH) ? BH : HH
+    }
+    var SH = LH(1123),
+      hH = LH(1194);
+
+    function tH(HH) {
+      return (0, SH.u)(hH.g.get().getCurrentLanguageCode(), HH.translationKey, HH.params)
+    }
+
+    function zH(HH) {
+      const BH = rH(HH);
+      return "string" === typeof BH ? BH : tH(BH)
+    }
+
+    function CH(HH) {
+      const BH = rH(HH);
+      return "string" === typeof BH ? BH : tH({
+        translationKey: "moderation:kicked",
+        params: {
+          reason: tH(BH)
+        }
+      })
+    }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

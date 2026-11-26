@@ -1,785 +1,826 @@
 export const id = 170;
 export const ids = [170];
 export const modules = {
-  37318: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => tU,
-      e: () => gU,
-      f: () => NU,
-      h: () => YU
-    });
-    var cU = zU(34859),
-      yU = zU(37325),
-      QU = zU(37334),
-      AU = zU(9282),
-      FU = zU(1492),
-      oU = zU(61),
-      DU = zU(73),
-      EU = zU(1305);
-
-    function YU() {
-      var UU;
-      return (0, FU.j)(yU.d, (0, yU.o)()), (0, EU.jsx)(EU.Fragment, {
-        children: null === (UU = (0, yU.o)()) || void 0 === UU ? void 0 : UU.content
-      })
-    }
-
-    function NU(UU) {
-      var XU;
-      let {
-        show: zU
-      } = UU;
-      (0, FU.j)(yU.d, (0, yU.o)());
-      const DU = null === (XU = (0, yU.o)()) || void 0 === XU ? void 0 : XU.menu;
-      return (0, oU.useEffect)((() => {
-        var UU;
-        zU || (null === DU || void 0 === DU || null === (UU = DU.onClose) || void 0 === UU || UU.call(DU), (0, QU.t)())
-      }), [zU, DU]), (0, oU.useEffect)((() => zU ? (0, AU.d)(QU.x, QU.i) : void 0), [zU]), (0, EU.jsx)(cU.e, {
-        showing: zU,
-        globallyUniqueKey: "clientGameMenu",
-        children: null === DU || void 0 === DU ? void 0 : DU.content
-      })
-    }
-    const IU = new Map,
-      pU = new Set;
-
-    function aU(UU, XU) {
-      XU ? IU.set(UU, XU) : IU.delete(UU);
-      for (const zU of pU) zU()
-    }
-
-    function tU(UU) {
-      let {
-        placement: XU = "bottom"
-      } = UU;
-      const zU = (0, oU.useRef)(null);
-      return (0, oU.useLayoutEffect)((() => {
-        const UU = zU.current;
-        return aU(XU, UU), () => {
-          IU.get(XU) === UU && aU(XU, null)
-        }
-      }), [XU]), (0, EU.jsx)("div", {
-        ref: zU,
-        id: `clientGameHud-${XU}`,
-        style: {
-          display: "contents"
-        }
-      })
-    }
-
-    function gU(UU) {
-      let {
-        children: XU,
-        placement: zU = "bottom"
-      } = UU;
-      const [cU, yU] = (0, oU.useState)((() => {
-        var UU;
-        return null !== (UU = IU.get(zU)) && void 0 !== UU ? UU : null
-      }));
-      return (0, oU.useEffect)((() => {
-        const UU = () => {
-          var UU;
-          yU(null !== (UU = IU.get(zU)) && void 0 !== UU ? UU : null)
-        };
-        return pU.add(UU), UU(), () => {
-          pU.delete(UU)
-        }
-      }), [zU]), cU ? (0, DU.createPortal)(XU, cU) : null
-    }
+  8840: (HH, BH) => {
+    var LH = "youtube",
+      AH = [61802],
+      rH = "f167",
+      SH = "M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z";
+    BH.c = {
+      prefix: "fab",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.e = BH.c
   },
-  9282: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => QU,
-      d: () => yU
+  7481: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
     });
-    let cU = null;
-    const yU = function(UU) {
-        const XU = {
-          cycle: UU,
-          canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
-        };
-        return cU = XU, () => {
-          cU === XU && (cU = null)
-        }
-      },
-      QU = () => {
-        var UU;
-        return null !== (UU = cU) && void 0 !== UU && UU.canCycle() ? cU.cycle : null
-      }
+    var LH = "bolt",
+      AH = [9889, "zap"],
+      rH = "f0e7",
+      SH = "M338.8-9.9c11.9 8.6 16.3 24.2 10.9 37.8L271.3 224 416 224c13.5 0 25.5 8.4 30.1 21.1s.7 26.9-9.6 35.5l-288 240c-11.3 9.4-27.4 9.9-39.3 1.3s-16.3-24.2-10.9-37.8L176.7 288 32 288c-13.5 0-25.5-8.4-30.1-21.1s-.7-26.9 9.6-35.5l288-240c11.3-9.4 27.4-9.9 39.3-1.3z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.faBolt = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 448, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
   },
-  39331: (UU, XU, zU) => {
-    function cU(UU, XU, zU) {
-      var cU;
-      const {
-        width: yU,
-        height: QU
-      } = zU, AU = null !== (cU = UU.text) && void 0 !== cU ? cU : UU, FU = (AU.x / 100 - .5) * yU, oU = (AU.y / 100 - .5) * QU, DU = yU / 2 - XU.x;
-      if (null !== UU.text && Math.abs(FU) <= DU && oU >= XU.top - QU / 2 && oU <= QU / 2 - XU.bottom) return {
-        x: AU.x,
-        y: AU.y
-      };
-      const EU = Math.min(0 === FU ? 1 / 0 : DU / Math.abs(FU), oU > 0 ? (QU / 2 - XU.bottom) / oU : oU < 0 ? (XU.top - QU / 2) / oU : 1 / 0);
-      return !Number.isFinite(EU) || EU < 0 ? {
-        x: 50,
-        y: 50
-      } : {
-        x: 50 + FU * EU / yU * 100,
-        y: 50 + oU * EU / QU * 100
-      }
-    }
-    zU.d(XU, {
-      d: () => cU
-    })
+  8261: (HH, BH) => {
+    var LH = "person-military-pointing",
+      AH = [],
+      rH = "e54a",
+      SH = "M214.9 14.1C202 15.2 192 26 192 39 192 52.8 203.2 64 217 64l151 0c8.8 0 16-7.2 16-16l0-30.6C384 8 376 .7 366.7 1.4L214.9 14.1zM208 112c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16L209.6 96c-1 5.2-1.6 10.5-1.6 16zM40 224c-22.1 0-40 17.9-40 40s17.9 40 40 40l152 0 0 89.4 162.8-162.8c-13.3-4.3-27.3-6.5-41.6-6.5L40 224zm345.7 20.9l-171.1 171.1 169.4 0 0-46.3 53.6 90.6c11.2 19 35.8 25.3 54.8 14.1s25.3-35.8 14.1-54.8L430.3 290.8c-11.2-19-26.6-34.5-44.6-45.9zM192 448l0 32c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-32-192 0z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.e = BH.c
   },
-  39374: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU
+  8437: (HH, BH) => {
+    var LH = "sparkle",
+      AH = [],
+      rH = "e5d6",
+      SH = "M278.5 15.6C275 6.2 266 0 256 0s-19 6.2-22.5 15.6L174.2 174.2 15.6 233.5C6.2 237 0 246 0 256s6.2 19 15.6 22.5l158.6 59.4 59.4 158.6C237 505.8 246 512 256 512s19-6.2 22.5-15.6l59.4-158.6 158.6-59.4C505.8 275 512 266 512 256s-6.2-19-15.6-22.5L337.8 174.2 278.5 15.6z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.i = BH.e
+  },
+  8554: (HH, BH) => {
+    var LH = "user",
+      AH = [128100, 62144, 62470, "user-alt", "user-large"],
+      rH = "f007",
+      SH = "M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240zm-29.7 56C95.8 304 16 383.8 16 482.3 16 498.7 29.3 512 45.7 512l356.6 0c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3l-59.4 0z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.g = BH.c
+  },
+  8684: (HH, BH) => {
+    var LH = "wrench",
+      AH = [128295],
+      rH = "f0ad",
+      SH = "M509.4 98.6c7.6-7.6 20.3-5.7 24.1 4.3 6.8 17.7 10.5 37 10.5 57.1 0 88.4-71.6 160-160 160-17.5 0-34.4-2.8-50.2-8L146.9 498.9c-28.1 28.1-73.7 28.1-101.8 0s-28.1-73.7 0-101.8L232 210.2c-5.2-15.8-8-32.6-8-50.2 0-88.4 71.6-160 160-160 20.1 0 39.4 3.7 57.1 10.5 10 3.8 11.8 16.5 4.3 24.1l-88.7 88.7c-3 3-4.7 7.1-4.7 11.3l0 41.4c0 8.8 7.2 16 16 16l41.4 0c4.2 0 8.3-1.7 11.3-4.7l88.7-88.7z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.g = BH.d
+  },
+  8700: (HH, BH, LH) => {
+    var AH = LH(7481);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.f = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  37174: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => tH,
+      f: () => hH
     });
-    const cU = 4,
-      yU = 12e3,
-      QU = 1e3;
-    class AU {
-      constructor() {
+    var AH = LH(3648);
+    let rH = null,
+      SH = null;
+
+    function hH() {
+      return SH ??= LH.e(235).then((() => LH(37091))).then((HH => {
         let {
-          limit: UU = cU,
-          windowMs: XU = yU,
-          spacingMs: zU = QU,
-          now: AU = Date.now
-        } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = UU, this.windowMs = XU, this.spacingMs = zU, this.now = AU
-      }
-      isPacing() {
-        return !this.canSendPriority() || this.isPriorityWaiting()
-      }
-      canSendPriority() {
-        return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
-      }
-      tryStart() {
-        for (const UU of this.priority) UU.flush();
-        return !this.isPacing() && (this.start(), !0)
-      }
-      start() {
-        this.prune();
-        const UU = this.now();
-        this.sent.push(UU), this.lastSentAt = UU, this.schedule(), this.notify()
-      }
-      addPriority(UU) {
-        return this.priority.add(UU), () => {
-          this.priority.delete(UU)
-        }
-      }
-      subscribe(UU) {
-        return this.listeners.add(UU), () => {
-          this.listeners.delete(UU)
-        }
-      }
-      dispose() {
-        this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
-      }
-      isPriorityWaiting() {
-        for (const UU of this.priority)
-          if (UU.waiting()) return !0;
-        return !1
-      }
-      prune() {
-        const UU = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= UU;) this.sent.shift()
-      }
-      schedule() {
-        this.clearTimer();
-        const UU = this.now(),
-          XU = this.lastSentAt + this.spacingMs,
-          zU = Math.min(XU > UU ? XU : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        zU !== 1 / 0 && (this.timer = setTimeout((() => {
-          this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, zU - UU)))
-      }
-      notify() {
-        for (const UU of this.listeners) UU()
-      }
-      clearTimer() {
-        null !== this.timer && (clearTimeout(this.timer), this.timer = null)
-      }
+          ITEM_SPRITES: BH,
+          ITEM_SPRITES_WITHOUT_FILE: LH,
+          ITEM_FILES_WITHOUT_SPRITE: SH
+        } = HH;
+        rH = function(HH, BH, LH) {
+          const rH = new Set,
+            SH = (0, AH.v)(BH);
+          let hH = 0;
+          for (const [AH, tH] of HH.entries()) AH === SH[hH] ? hH++ : rH.add(tH);
+          if ("" !== LH)
+            for (const tH of LH.split(AH.q)) rH.add(tH);
+          return rH
+        }(BH.split(AH.q), LH, SH)
+      }), (HH => {
+        throw SH = null, HH
+      })), SH
+    }
+
+    function tH(HH) {
+      var BH, LH;
+      return null !== (BH = null === (LH = rH) || void 0 === LH ? void 0 : LH.has(HH)) && void 0 !== BH && BH
     }
   },
-  37334: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => QU,
-      i: () => aU,
-      l: () => tU,
-      o: () => FU,
-      r: () => NU,
-      t: () => gU,
-      v: () => YU,
-      w: () => GU,
-      x: () => pU,
-      y: () => kU
+  37169: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => hH,
+      g: () => tH
     });
-    var cU = zU(27),
-      yU = zU(31);
-    const QU = "clientGameInventoryButtonsChanged",
-      AU = new Map;
+    var AH = LH(37174);
+    let rH = null,
+      SH = null;
 
-    function FU() {
-      return [...AU.values()].sort(((UU, XU) => {
-        var zU, cU;
-        return (null !== (zU = UU.order) && void 0 !== zU ? zU : 0) - (null !== (cU = XU.order) && void 0 !== cU ? cU : 0)
-      }))
-    }
-    let oU = null;
-
-    function DU(UU) {
-      oU = UU
-    }
-    let EU = !1;
-
-    function YU(UU) {
-      EU = !0;
-      try {
-        UU.onClick()
-      } finally {
-        EU = !1
-      }
-      UU.panel && "clientGame" === cU.e.get("openInGameMenuName") && DU(UU.id)
+    function hH() {
+      return rH ??= LH.e(73).then((() => LH(42483))).catch((HH => {
+        throw rH = null, HH
+      })), rH
     }
 
-    function NU() {
-      return EU
-    }
-
-    function IU() {
-      return FU().filter((UU => UU.panel && !UU.disabled))
-    }
-
-    function pU(UU) {
-      const XU = IU(),
-        zU = XU.findIndex((UU => UU.id === oU));
-      return !(zU < 0 || XU.length < 2) && (YU(XU[(zU + UU + XU.length) % XU.length]), !0)
-    }
-
-    function aU() {
-      return null !== oU && IU().length > 1
-    }
-
-    function tU() {
-      DU(null)
-    }
-
-    function gU() {
-      "inventory" !== cU.e.get("openInGameMenuName") && DU(null)
-    }
-
-    function kU() {
-      const UU = oU;
-      return DU(null), UU
-    }
-
-    function GU(UU) {
-      return AU.set(UU.id, UU), yU.k.UY(QU, FU(), !0), () => {
-        AU.get(UU.id) === UU && (AU.delete(UU.id), yU.k.UY(QU, FU()))
-      }
+    function tH() {
+      return SH ??= Promise.all([hH(), (0, AH.f)()]).then((HH => {
+        let [BH] = HH;
+        return BH
+      }), (HH => {
+        throw SH = null, HH
+      })), SH
     }
   },
-  37325: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => FU,
-      h: () => kU,
-      j: () => tU,
-      l: () => gU,
-      n: () => NU,
-      o: () => DU,
-      r: () => aU,
-      t: () => IU,
-      u: () => EU
+  37135: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => TH
     });
-    var cU = zU(27),
-      yU = zU(31),
-      QU = zU(1310),
-      AU = zU(37334);
-    const FU = "clientGameUiChanged";
-    let oU = null;
-
-    function DU() {
-      return oU
-    }
-
-    function EU(UU, XU) {
-      const zU = {
-        content: UU,
-        menu: XU
+    var AH = LH(4877),
+      rH = LH(1206),
+      SH = LH(602),
+      hH = LH(2108),
+      tH = LH(37127);
+    const zH = 10,
+      CH = 3,
+      EH = 3,
+      XH = [{
+        healthFraction: .25,
+        colour: "#ff0000"
+      }, {
+        healthFraction: .5,
+        colour: "#ffaa00"
+      }, {
+        healthFraction: 1,
+        colour: "#00ff00"
+      }],
+      GH = 64,
+      YH = 69,
+      uH = {
+        icon: hH.e,
+        mainRGB: "transparent",
+        chatTag: [],
+        nameTag: {
+          iconRGB: "#f38ab6",
+          iconShadowRGB: "black"
+        },
+        visible: !0
       };
-      return oU = zU, yU.k.UY(FU, oU, !0), () => {
-        oU === zU && (oU = null, pU = !1, tU(), yU.k.UY(FU, null))
-      }
-    }
-    let YU = null;
 
-    function NU() {
-      return YU
+    function QH(HH) {
+      return "object" !== typeof HH || null === HH || Array.isArray(HH) ? void 0 : HH
     }
+    const WH = new Set(AH.b);
 
-    function IU(UU) {
-      return YU = UU, () => {
-        YU === UU && (YU = null)
-      }
-    }
-    let pU = !1;
-
-    function aU() {
-      const UU = cU.e.get("openInGameMenuName");
-      "clientGame" !== UU && (pU = "inventory" === UU), (0, AU.r)() || (0, AU.l)(), (0, QU.u)(QU.c), cU.e.set({
-        openInGameMenuName: "clientGame",
-        openEverythingMenuName: null
-      })
+    function MH(HH, BH) {
+      return "string" === typeof HH ? (0, tH.v)(HH, BH) : BH
     }
 
-    function tU() {
-      GU(!1)
+    function xH(HH) {
+      return MH(HH.width, CH)
     }
 
-    function gU() {
-      GU(pU)
+    function vH(HH, BH) {
+      var LH;
+      const AH = null !== (LH = HH.applyTo) && void 0 !== LH ? LH : "both";
+      return "both" === AH || AH === BH
     }
 
-    function kU() {
-      pU && GU(!1)
+    function PH(HH) {
+      const BH = xH(HH);
+      return "glow" === HH.style ? BH * EH : Math.ceil(BH / 2) + 1
     }
 
-    function GU(UU) {
-      "clientGame" === cU.e.get("openInGameMenuName") && cU.e.set({
-        openInGameMenuName: UU ? "inventory" : null
-      }), UU || (0, AU.l)(), pU = !1
-    }
-  },
-  39378: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => AU
-    });
-    var cU = zU(61),
-      yU = zU(39339),
-      QU = zU(1305);
-
-    function AU(UU) {
+    function TH(HH, BH, LH) {
+      var AH, hH;
       let {
-        icon: XU
-      } = UU;
-      const zU = (0, cU.useCallback)((UU => {
-        null === UU || void 0 === UU || UU.replaceChildren((0, yU.e)(XU))
-      }), [XU]);
-      return (0, QU.jsx)("span", {
-        className: "SkyblockMapIconSlot",
-        ref: zU
-      })
+        nameAsGiven: CH = !1
+      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const TH = null !== (AH = QH(HH.info)) && void 0 !== AH ? AH : {},
+        UH = "string" === typeof HH.name ? HH.name : "",
+        VH = TH.subtitle;
+      if (Array.isArray(TH.content) && 0 === TH.content.length && !(Array.isArray(VH) && VH.length > 0)) return null;
+      const OH = "number" === typeof HH.hideNameSeed ? HH.hideNameSeed : null,
+        bH = "" === UH || !0 === HH.mesh || CH ? UH : (0, rH.b)(UH, !LH.canSeeRealPlayerNames, OH);
+      if (!bH && !TH.content) return null;
+      const kH = "string" === typeof HH.colour ? HH.colour : "default",
+        mH = Object.hasOwn(SH.s, kH) ? SH.s[kH] : void 0,
+        oH = TH.content ? (0, tH.i)(TH.content, tH.e.DEFAULT_FONT_SIZE, LH, mH) : [{
+          kind: "text",
+          text: bH,
+          size: tH.e.DEFAULT_FONT_SIZE,
+          colour: mH
+        }],
+        IH = [];
+      for (const rH of Array.isArray(HH.ranks) ? HH.ranks : []) {
+        const HH = (0, tH.w)(rH);
+        null !== HH && void 0 !== HH && HH.nameTag && HH.visible && IH.push({
+          kind: "rank",
+          rank: HH
+        })
+      }
+      IH.push(...oH);
+      ("boolean" === typeof HH.player ? HH.player : Array.isArray(HH.ranks)) && "" !== UH && LH.isFriend(UH) && IH.push({
+        kind: "rank",
+        rank: uH
+      }), "number" === typeof HH.Ot && IH.push({
+        kind: "text",
+        text: ` ${HH.Ot}m`,
+        size: tH.e.DEFAULT_FONT_SIZE,
+        colour: "#cef3ff"
+      });
+      const fH = VH ? (0, tH.i)(VH, tH.e.DEFAULT_SUBTITLE_FONT_SIZE, LH) : null,
+        lH = "string" === typeof TH.backgroundColor ? TH.backgroundColor : "#22283b",
+        KH = "string" === typeof TH.subtitleBackgroundColor ? TH.subtitleBackgroundColor : "#1a1e2d",
+        cH = QH(TH.healthbar),
+        eH = QH(TH.border),
+        qH = Array.isArray(HH.effects) ? HH.effects.filter((HH => "string" === typeof HH && WH.has(HH))) : [],
+        gH = "number" === typeof HH.health ? Math.max(0, Math.min(1, HH.health)) : null,
+        NH = (0, tH.h)(IH, BH, LH),
+        RH = (0, tH.h)(null !== fH && void 0 !== fH ? fH : [], BH, LH),
+        jH = {
+          width: tH.e.EFFECT_ICON_SIZE * qH.length,
+          height: qH.length > 0 ? tH.e.EFFECT_ICON_SIZE : 0
+        },
+        nH = eH && vH(eH, "nametag") ? PH(eH) : 0,
+        FH = MH(null === cH || void 0 === cH ? void 0 : cH.height, zH),
+        DH = eH && vH(eH, "healthbar") ? PH(eH) : 0,
+        wH = "never" === (null !== (hH = null === cH || void 0 === cH ? void 0 : cH.display) && void 0 !== hH ? hH : "onDamage") ? 0 : FH + DH,
+        ZH = Math.max(jH.height, nH),
+        dH = Math.max(tH.e.VERTICAL_PADDING, wH, nH);
+      let aH = Math.max(NH.width, RH.width, jH.width);
+      if (eH) {
+        const HH = PH(eH) + tH.e.HORIZONTAL_PADDING / 2;
+        aH = Math.max(aH, Math.max(NH.width, RH.width) + tH.e.HORIZONTAL_PADDING + 2 * HH)
+      }
+      const sH = NH.height + RH.height + ZH + dH,
+        JH = NH.width + tH.e.HORIZONTAL_PADDING,
+        iH = RH.width + tH.e.HORIZONTAL_PADDING,
+        pH = Math.max(JH, iH),
+        yH = (aH - pH) / 2,
+        HB = Math.max(jH.height, nH);
+      return {
+        width: aH,
+        height: sH,
+        draw: HH => {
+          const BH = [];
+          if (HH.fillStyle = lH, HH.fillRect(yH, HB, pH, NH.height), (0, tH.t)(IH, (aH - JH) / 2 + tH.e.HORIZONTAL_PADDING / 2, HB, NH.height, HH, LH, BH), fH) {
+            const AH = HB + NH.height;
+            HH.fillStyle = KH, HH.fillRect(yH, AH, pH, RH.height), (0, tH.t)(fH, (aH - iH) / 2 + tH.e.HORIZONTAL_PADDING / 2, AH, RH.height, HH, LH, BH)
+          }
+          let AH = null;
+          if (null !== gH) {
+            const BH = sH - FH - DH;
+            null !== cH && void 0 !== cH && cH.backgroundColour && (HH.fillStyle = cH.backgroundColour, HH.fillRect(yH, BH, pH, FH)), HH.fillStyle = function(HH, BH) {
+              const LH = null === HH || void 0 === HH ? void 0 : HH.foregroundColour;
+              if ("string" === typeof LH) return LH;
+              const AH = [...Array.isArray(LH) && LH.length > 0 ? LH : XH].sort(((HH, BH) => HH.healthFraction - BH.healthFraction)),
+                rH = AH.find((HH => BH <= HH.healthFraction));
+              return (null !== rH && void 0 !== rH ? rH : AH[AH.length - 1]).colour
+            }(cH, gH), HH.fillRect(yH, BH, Math.round(pH * gH), FH), AH = {
+              x: yH,
+              y: BH,
+              width: pH,
+              height: FH
+            }
+          }
+          if (eH) {
+            const BH = [];
+            vH(eH, "nametag") && BH.push({
+              x: yH,
+              y: HB,
+              width: pH,
+              height: NH.height + (fH ? RH.height : 0)
+            }), AH && vH(eH, "healthbar") && BH.push(AH), BH.length > 0 && function(HH, BH, LH) {
+              const AH = xH(BH),
+                rH = AH / 2,
+                SH = HH => HH.width > 0 && HH.height > 0,
+                hH = LH.map((HH => ({
+                  x: HH.x + rH,
+                  y: HH.y + rH,
+                  width: HH.width - AH,
+                  height: HH.height - AH
+                }))).filter(SH);
+              if (0 === hH.length) return;
+              const tH = BH => {
+                const LH = BH.filter(SH);
+                if (0 !== LH.length) {
+                  HH.beginPath();
+                  for (const BH of LH) HH.rect(BH.x, BH.y, BH.width, BH.height);
+                  HH.stroke()
+                }
+              };
+              if (HH.save(), HH.strokeStyle = BH.colour, HH.lineWidth = AH, HH.lineJoin = "round", "glow" === BH.style) HH.shadowColor = BH.colour, HH.shadowBlur = AH * EH, tH(hH), tH(hH);
+              else if ("double" === BH.style) {
+                tH(hH);
+                const HH = AH + 2;
+                tH(hH.map((BH => ({
+                  x: BH.x + HH,
+                  y: BH.y + HH,
+                  width: BH.width - 2 * HH,
+                  height: BH.height - 2 * HH
+                }))))
+              } else tH(hH);
+              HH.restore()
+            }(HH, eH, BH)
+          }(0, tH.m)(BH, HH);
+          for (let rH = 0; rH < qH.length; rH++) {
+            const BH = LH.effectImage(qH[rH]);
+            BH && (HH.imageSmoothingEnabled = !1, HH.drawImage(BH, 5 + YH * rH, 5, GH, GH))
+          }
+        }
+      }
     }
   },
-  39339: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => PU,
-      f: () => RU
+  37127: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => SH,
+      h: () => xH,
+      i: () => YH,
+      m: () => TH,
+      p: () => PH,
+      t: () => vH,
+      v: () => CH,
+      w: () => XH
     });
-    const cU = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgoAD8h2L8Cqz6T4IxLsVwyZwTb+CYAZ9imCI5Gx+cisEK73/7jYLRFcKtxqcIwzPE+BymgXwAABikVOyJwpyoAAAAAElFTkSuQmCC",
-      yU = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUUlEQVR4nGNgIAP8x4FRwH8w+OqOim+LYyiGSLzQR8G/DipgKgy2Vvqfc+INmEZm4zQRphCniTA3wRXeFseuECQIwlfbmMEYxsfqc2KChyAAANDbei83hMJpAAAAAElFTkSuQmCC",
-      QU = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIAP8x4FRwH8QePfuFQq+dO44hmKwxOMHN1Hw4b3bMRW6unv/zznxBkwjs3GaCFOI00SYm2AKQWysCkGCILxm6TwwhvGx+pyY4CEIAG45h2BiJfmeAAAAAElFTkSuQmCC";
-    var AU = zU(39342);
-    const FU = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIAP8J0bs//M750GCKPg5Qgyh8OT2Vf870vxR8MntqzAVysnL/wcBmCIQAIlhVQjCMIUwPobCjAC7/+XZSSgYJIZVoZGWKlwRiI1NISwosGHSAAAPvV+9cOwRMQAAAABJRU5ErkJggg==";
-    var oU = zU(39348);
-    var DU = zU(39353);
-    var EU = zU(39361);
-    const YU = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAf0lEQVR4nO3VsQkEIRCG0ek/MbwWbMXk4u1kOBi4bWANhA0U3oM/9zOZCAAAAAAm8lf/Nza+1+NiNym4BKfgEjxOCR6Th7ZPX9rsI2I3Q/AluAnugvOU4Fw8M6vnKnaTgkvwEFyC8/TgtniWZovdpOAS3AR3we2UYAAAAIDYxQ2IeNNWBgNQ/AAAAABJRU5ErkJggg==";
-    zU(61);
-    const NU = zU.p + "static/media/quest_search.b4f00072d5f134fdf189ecb8a48edc99.svg";
-    const IU = zU.p + "static/media/quest_talk.7d2326c7bdb6bc060cc0cde294f4fa89.svg",
-      pU = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAANklEQVR4nGNgIBP8R8NYwX8QuH7nGRwzYFEMVwQzDcSetXgHdsXEKIIrJkYRusn4FVHdRJwAALfWRnO5uwepAAAAAElFTkSuQmCC";
-    var aU = zU(19102),
-      tU = zU(21217),
-      gU = zU(23505),
-      kU = zU(25090),
-      GU = zU(26809);
-    const BU = {
-      ashen_fort: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIAP8R6PR2RCBzRu2/kemQbirvQ/GRlUIwyAFIJyUkIFbobyUHhjjVAiSgCmM1p9HWCFI0YKYD/gVgjDMapAibAphQYENkwYAeH1pEdiBhHAAAAAASUVORK5CYII=",
-      auction: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgoAD8h2K84P+kApf/vw4qEFT8H6SoJsr8/5quIMKKg62VwIrxmfx/apEbWBKkCOQMbArhimB8YhThBUQpIggAQqYxE90Y9BMAAAAASUVORK5CYII=",
-      bank: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgIBP8R8NYwX8w+OoOwbfFcSr+/+ugAhi/X8zz/0gVD1aFCNNui6Ow0RWDBWGmIbPJVwhzFwgjs7G6EwcmDQAAuONyKxIgH/AAAAAASUVORK5CYII=",
-      carrot: aU,
-      castle: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgoAD8R8I4wf+pRW7/n2nrgzEDDsX/YQrxmfr/yIHdYAkQDWNP6uvDUAxXAMIgBSCcm5mJqRAkAVIUbK0ExgQV1kSZgzEuhXDPYMGkAQC0sV3YpEV43gAAAABJRU5ErkJggg==",
-      cinderfall: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATUlEQVR4nGNgoAD8h2K84P//N/5gjE/x/78dLHCFIDYuxWDJxqys/362tjgVwhXBFOJS/P+yCROKImNNbbAYhkJ000AKQRir9TgwaQAA9pxTDDdv+r4AAAAASUVORK5CYII=",
-      combat_1: tU,
-      cow: FU,
-      craft: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPklEQVR4nGNgIAH8JxIz/L+2JA2Mp6VZYGUzwBSCBPFhBphCYq0GKy7w0kARwCGGIgjHhBTiNxHdLTjECAMAZEReU1MzQpcAAAAASUVORK5CYII=",
-      dungeons: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQUlEQVR4nGNgIBP8R8NYwf++KbPhOKewHKtiuAJ5KT0wBinEphis6L+1AVwhiA0Sw6oQpgiGKVdIjBvBinFg0gAAOOVdfOFyr7kAAAAASUVORK5CYII=",
-      emberwatch: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATElEQVR4nGNgoAD8h2L8Cv6/8f//t4PlPy4N/48c2A2WACm6bMIEZk/q68NQDFYIwyAFIJybmYnbVJCJ+BTBFRIyjSSFcJ8TE0Q4AQDqiVfWwMcDkgAAAABJRU5ErkJggg==",
-      enemy: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAU0lEQVR4nGNgIBP8R8NYwf///W3/n3r4wjEDFsUYikB4s4o2hmKwhDY3L1wRiI1ToQgLK1whiI1TIQjnCYqBMUgRNoVgxSAJmCIQjdfnxAQPXgAAraZYPXKBMfkAAAAASUVORK5CYII=",
-      farm: zU(26825),
-      farming_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgoAD8h2K84P+nbP//87SU8Cr+D1J0w1H///9LXjgV/4cpQsbYFIMlPjw+hILxKqyJMv8fbK1EuUKwYhyYNAAAbaVgzAUMTa8AAAAASUVORK5CYII=",
-      fishing: cU,
-      fishing_1: cU,
-      forest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8R8NYwf+c/TZgbN+jA8YMWBRjKAJhg3JlDMUoikAKQFgxWgi7qcQogiuuiTL/H2ythFcRSQrBiolRhBMAAJ9tQRoOB1rEAAAAAElFTkSuQmCC",
-      guardian_gold: yU,
-      guardian_iron: QU,
-      hub: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAWElEQVR4nGNgoAL4T5SirGUf/uNTDJa0r78GxjpRK7Aq/v8p2x8s8eHxIThGVwhWdMNR//88LSWwgv+XvLArhJlwcnMXfhNBgjVR5nCFIDY2hXCPYMGkAQDGNGSEX91FFwAAAABJRU5ErkJggg==",
-      island: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgoAD8h2K84L//OlcwxqcYrECvyQKOGXAohkn870pxgLMxFC17FgfGOfut4Ni7Xwe74u60ADDO8rIC03jdCVIEwkT5nBhFOAEAI1k9HXZqyYAAAAAASUVORK5CYII=",
-      melon: gU,
-      mines: kU,
-      mining_1: kU,
-      npc: AU,
-      npc_beaver_lumberjack: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASUlEQVR4nGNgIAP8h2JcfDD4XxQVCMYwBSB2nJsbhmKwhJKyMlwDiI1TYUVyMFgBCIPYeBX+/3zt/6vbJ6moEBljUwhWjAOTBgAZSmJ9XCb2zAAAAABJRU5ErkJggg==",
-      npc_chef: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIBP8R8NYwf+v33/B8f1nH7AqRlEEU3gfi+L/RVGB/y/feQlXAGKDxLAqlJDX//9pfycYg9g4FYIUxLm5gfHJvgz8Cl9vaQFjkEIQxuohHJg0AACncHuimGgHPgAAAABJRU5ErkJggg==",
-      npc_cow: FU,
-      npc_draugr_warper: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAb0lEQVR4nGNgIBIwIrH/41PDCFPU+/IzVlXF4rxgdSwwgUV33oFpXh42MP35yy+sVv///x9is8GxR2D6gpUcRAEjxGYmZF2nvv/BygYBuNUwk0BASoKHIe38M+wKQZLIAMa/iOZGsDuxehtVDWEAAHwCHXf9ctZjAAAAAElFTkSuQmCC",
-      npc_dwarf_blue_hair: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIBP8R8NYwf//51lRMAMWxf/TM0r+/z/AjoLTM0owFENMeSCBirGY+l+r/SpY8OGmBjBGFkNR6DD9FVwRDIPEyFYIVowDkwYAEBZzAwnUgyIAAAAASUVORK5CYII=",
-      npc_dwarf_braided_hair: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8R8NYwX9deRUUzIBFMYYiXIr/h5rqYMUYCr9+/wUWjLE2AGNkMRSF6Q6mcEUwDBLDUIiuCNlkDA/hwKQBAPnYUUW1+JaKAAAAAElFTkSuQmCC",
-      npc_dwarf_child: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATklEQVR4nGNgIBP8R8NYwX8lZeX/6hoaYAxiY1P8f1trHlbMgKb4/5qGDKwYQ+HX77/+q0jKwxWA2CAxDIVEW32gqwRDEUgMq4dwYNIAAP19arcJQ+nsAAAAAElFTkSuQmCC",
-      npc_dwarf_forked_beard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIBP8R8NYwX91DQ0UzIBFMVhick4EXBGMja74f1tKAFaMofDr91//VSTlwSaBMIgNEsOqEN2NWBWCTFFSVkbBIDGsHsKBSQMAnGRas5Ev2yIAAAAASUVORK5CYII=",
-      npc_dwarf_ginger_beard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgIBP8R8NYwf//B9hRMAMWxf//n2f9//+BBCo+z4qh+P/dFd0YGKvCr99//WfQ8/z/dNMUMAaxwWLoCt/umPn/ZaMLCgaJYSgEmfK4wgEFg03G5iEcmDQAAGl2d4woNRHRAAAAAElFTkSuQmCC",
-      npc_dwarf_grey_beard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQklEQVR4nGNgIBP8R8NYwX8vUxsUzIBFMYYiXIr/O+mbYcUYCr9+//VfRVIebhKIDRLDUJiSkoIVk60QrBgHJg0AAIrsWQuZyZ2qAAAAAElFTkSuQmCC",
-      npc_dwarf_hair_buns: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVklEQVR4nGNgIBP8R8NYwX8tRXkUzIBF8X81OZn/ilKSYBqZzYCmGCw4JTsarhDGxlD49fsvsOC8omQwRhZDUbisLBOuCIZBYhgK0RUhm4zhIRyYNAAAK2NaB/Me8/sAAAAASUVORK5CYII=",
-      npc_dwarf_purple_beard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgIBP8R8NYwX8bw8D/LqYRYAxiY1P8/+TEQqyYAU3x/z2tWVgxhsKv33+BBZFNgomhKIS5DR2TrRCsGAcmDQAAxtNi2UvD/ZAAAAAASUVORK5CYII=",
-      npc_dwarf_red_hair: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXUlEQVR4nGNgIBP8R8NYwf//DyT+/3cqhOAHElgV/y8urv///zwrCi4ursdQDJEEmYiMz7NiKpxiZvXfUEnr/7npBWAMYoPEsCqEKQLhDdUR/5uNTchXCFaMA5MGAHoVbT+3iic1AAAAAElFTkSuQmCC",
-      npc_dwarf_short_beard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATklEQVR4nGNgIBP8R8NYwX91DQ0UzIBF8f9trXlYMQOa4v9rGjKwYgyFX7//AgsimwQTQ1F4oKsEw40gMQyFIFOUlJVRMDY3ghXjwKQBAAoPYHs6ybo9AAAAAElFTkSuQmCC",
-      npc_farmer_gill: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAWUlEQVR4nGNgIBP8R8NYwf+bW0v+b53gD8cMOBT/X2cfgYIZsChEMQmfqf/PXrr1X0Je///rLS1gDGKDxLAq/LS/E67wZF/G/2XrdmFXCFOETyFYMQ5MGgAAx9NujhmsqqEAAAAASUVORK5CYII=",
-      npc_fire_mage: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIBP8R8NYwf8jtqZwvNJMH6tiFEX4FP//v5EDK8ZQ+PX7r/8WQuz/1+YFgjGIDRLDULi9LAKuCIZBYhgKJ+nJYcVYPYQDkwYAY/ZlGR1JAIkAAAAASUVORK5CYII=",
-      npc_forge_mother: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXklEQVR4nGNgIAP8x4FRwP+vzy+AJSKd7MEYWQxF4avbJ8EYphDGx1D49fsvTBOhYigKfS0s/l9dPAsFg8SwKpyYkAVXBGLjVPj/POv//x+0Ifg8K1aFYMXEBA9BAACWKnGnkFHGrQAAAABJRU5ErkJggg==",
-      npc_goblin_goggles: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgklEQVR4nGNkQAX/0fiMGAyQIhMPGxRVZ3YcgathwqUIBKBi/2Gq//tMzWDw4HBkwAZ2/NjPsCV7Btzq/1+//2LQ1dFkSMgoBQssmNHNcPnKdQZuTjawgXCFTd0zsJpYV5oBVsgCEzj+7wRWhTAA8wwcPNt2A4zRAUrw4DAMWQ1hAADlHCXxWLGl2AAAAABJRU5ErkJggg==",
-      npc_goblin_mad_scientist: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAV0lEQVR4nGNgIBP8R8NYwX/PzoT/qpZGYAxiY1P8//8DCayYAU3x/7OXboEFkRXAxFAUfv3+67+SsvL//+dZwRjEBolhKIQpQMcYCkGOx4axeggHJg0AAFKzbFf/ov6kAAAAAElFTkSuQmCC",
-      npc_gold_guardian: yU,
-      npc_gold_watermelon_stag: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAWElEQVR4nGNgIAP8R6KR2Sjg/5sH4f9hNDKbAZ9ifIoYQIKfV6nAFSKxURVt8jH7f1+R9//ZVH8wBrFBYuiKwZIgiS27w8AYxAaJ4TQVWSEuN4IVo2HSAQCFHFiN1+WGFAAAAABJRU5ErkJggg==",
-      npc_head_8_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAdElEQVR4nGNgIBIwIrH/41PDCFO06sIzMMNbQ5Jh643ncFVhBlJgdXCFSnJqDBJiMgwvXj1BMe7eo1tghSzIgrPqMlAU+eXUwNlMyBINs7gYZJTkwBjERgYoCud0iGBlYygEgStrdoAxVq/DPIQhi6mGMAAAMzccpadovTMAAAAASUVORK5CYII=",
-      npc_human_archer: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAc0lEQVR4nGNkQID/DNgBI5wAKTqwtAOrKofoCrA6FmTBvinLUBQV5UTB2SgKf//5i8N2BoTVX7//YuC2VmfwZOYCC2z/+43h69GbDNycbGB1cIWHXBywmmS35wBYIRNOu9AA3I1ffnzFqxBmNdh6ItQQBgAsaRzpv2C9aQAAAABJRU5ErkJggg==",
-      npc_human_desert_guard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAfklEQVR4nGNkQID/DNgBI5wAKfpxdztWVRzKnmB1LDCBdReZGUSEhVAUvXn7Ds6GKwSB23MnoigUDIiFs5lgDH9PB4Zll+7DJUBskBiKQ0FunBoXy/D9xw8UEzk5OBiyFy1GdSPHpTMM+rw8KApvfv6CaTUhALMabD0RaggDACCpH2oXfV//AAAAAElFTkSuQmCC",
-      npc_human_sentry: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYUlEQVR4nGNgIBIwIrH/41PDCFOkqamJVdX169fB6liQBXNMTVAUTTl9BkPj/6/ff4Gs/j81LhaMkcVQrO4JC2Xg5OBA0f39xw+GklWrUa2edvYcTh+DABNeWSRAdPAQDQAzViKkGPwLjwAAAABJRU5ErkJggg==",
-      npc_iron_guardian: QU,
-      npc_jackal_priest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAdklEQVR4nGNgQID/UIyVzwQT1NTUZBAWFoYrALFBYjDFjDCF/zdyMGADjP4/wBQLTODVVXkGh8UwCyDgQOw/BgaGmyhWg8GZcxexsjEUmhjpM3z79g2MQWxkALcaBP79/cvAwc4OZyO8gGYiPoDQghqGuNQQBgAoCCX1U3QMRQAAAABJRU5ErkJggg==",
-      npc_minotaur: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAaklEQVR4nGNgIAP8R6KR2Sjg/9fnF8AKMgJ8wBhZDEXhq9snwRimEMbHUPj1+6//DBYBCBMtAiBi6ApBkhMTsv5fXTwLjEHsODc37Ar/n2eFKwSxcSp8sGHO//8ftMEYxMamEKwYByYNAABmXHNFjN9ucgAAAABJRU5ErkJggg==",
-      npc_minotaur_elder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAg0lEQVR4nGNgIBIwIrH/41PDBFP09fkFMKMuJxWMQQAq9h9ZIcPXLz8ZXt0+CTcGxAaJwQBcIbeMIYOYqjlcAsQGiaG78X9ZajxDvJ01iuMWHjrK0DV7IVgd3EQQ2LMX4k50NgiwIHPy8mczMCiqgdlaOrcYyqdFYVgN9x0WgKyGMAAArq0oYNR0jFIAAAAASUVORK5CYII=",
-      npc_minotaur_warrior: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAjUlEQVR4nGNkQAX/0fiMGAyQooWVjiiq4tv3o6th+P/q9sn//z9oo+BXt0/+h9nCgmLE/VuoFvMgmHCF3DKGDIycvxmq3XzA/G137jHwcediKuwLDme4ungWXCKKgYFh3fLtDAcvQ/hMyDbt2XsBKxtF4Y8/vxn8A4wYuHmZwBjEBolhDR5Un2BVQxgAAJW+Nj/Gsfy4AAAAAElFTkSuQmCC",
-      npc_monster_hunter_lorenzo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIAP8x4FRwH9NLa3/ru5eYBoZM6AphkvsrU0BY5wKv37/9d/awAauEMQGiWEoPNmaDVcEw7PigjAVIlsHw3gVIrsRm0KwYmKChyAAAIfVZAdaM2LxAAAAAElFTkSuQmCC",
-      npc_npc_pig_head: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXklEQVR4nGNgIAP8h2JcfDD4/3Lyjv9fe3bCJMHsl5N3YCj+/3/HfQjecAWOX2JVuOHKfwZ1U7giEBunQpB1yBinwkJta7giEBurwrOXbv3/+v0XCgaJYfU5DkwaAADzDIUDTIstKgAAAABJRU5ErkJggg==",
-      npc_painter_spencer: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgklEQVR42mNgIBIwovH/45JHVvj/XZc7w+/vfxme3GViYGBgYDBetAuuBqbw/+MKB6xWynYcYGBgYGCEK/z6/ReDsoYpg5OsMAMDAwPDvsdvGe7eOM3AzcmGqjDFyZPh26+fKKZ9+/mDYcPpYwwMDAyMTMT6Gq4Q3TR8wfOfyCDEDwAFFSX0ZxYXtAAAAABJRU5ErkJggg==",
-      npc_pig: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAARklEQVR4nGNgIAP8x4FRwP/3x87A8ds9R+CYAU0xiiQMP1y0FlOhu7YJhkKQGFYTQSYgY5xWg0yAKYKxyXYjWDExwUMQAABoKIoUBfmEPAAAAABJRU5ErkJggg==",
-      npc_pig_napoleon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgoAD8h2K84L++ofF/V3dvvIr/gxRtszH9//X7LzCbAYvi///Ps/6Xk5dHwSAxdMX//2+48p9B3RRMw9gvJ+/ArvBrz04UjFNhobY1XBGIjU0hWDEOTBoAAIrnYG/Xae9eAAAAAElFTkSuQmCC",
-      npc_pig_worker: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgIAP8R8NYwf/YhDQ4dnb1xKnhP0gSHesbGmMo/v9/w5X/DOqmYBrGfjl5B3aFhdrW/7/27ARjEBunQpAEOsZQGGLn+L8oKvD/1++/wBjEBolh9RAOTBoAAGcEbivle0KRAAAAAElFTkSuQmCC",
-      npc_piggy_banker: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXElEQVR4nGNgIBP8R8NYwX9Xd+//2jq6cMyAQ/F/OXn5//8fSPz/f54VzGbAohAsgQ2jK/7/f8OV/wzqpmAaxn45eQd2hV97dqJgnAoLta3hikBsbArBinFg0gAAgophxWZsQvAAAAAASUVORK5CYII=",
-      npc_portal_mage: oU,
-      npc_rabbit_aristocrat: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXklEQVR4nGNgIAP8h2JcfDD4P3fB+v/3csphkmB2S/tUDMX/+yYuIE7h3AXrwYqRMU4TlZSV4YpAbJwKYe4EYRC7prYLU6GLocX/ODe3/1+//wJjEBskhtXnODBpAAD3lm2BX81XrwAAAABJRU5ErkJggg==",
-      npc_smuglyn: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAASklEQVR42mNgIAP8x4FRFWlqamLF6IrBgj1hoSgYq8Kv33/9txBi/z81LhaMQWyQGIbC5VmZcEUwDBLDUIiuCIRB1pOtkOjgIQgAhutlSTAZTWcAAAAASUVORK5CYII=",
-      npc_tentacle_boy: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAiElEQVR4nGNkQID/DNgBI5wAKXJw8Wb48vkjhqozJ4+A1bHABKI0arEad+akBdzY/ybmNgw/f/3CqpCdjQ1sKthEM4scHM5DsZ7hf23T3v9fv//6z8srAmaj80FqmGC6JMSkUExB54Ot1ubgYSgoXQkWuHXrKpiG8UFyMAA3HkbjEIMoRqMxxABOskezGUlSqQAAAABJRU5ErkJggg==",
-      npc_tentacle_girl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgklEQVR4nGNgwA3+QzEYMOGQ/H9viS7Dp4N+MDEGFmRFO8PqGYTFRBjevnrDwMCwjuHN4/twSRZsikD07U1BUKnLKArBQExYAIxh7OvX78DlUNzoMbEWKxtDYb11MFY2htXPPr5nOH7mApiW4hdECxAkX/fbJIGDYqV3MYwND0eiAQAf4TQGGrZ+tQAAAABJRU5ErkJggg==",
-      npc_tentacle_guy: DU,
-      npc_tentacle_guy_fisherman: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIBP8R8NYwX9XD7//JuY2cMyARTFcUtfQDIxxKf4fHFaFgRPjWzAVVpXP/K+krAymYWycCrMzeuEKQWycCmE0jI1NIVgxEo3MJg0AAIJsWIj/ilEbAAAAAElFTkSuQmCC",
-      npc_wolf_in_suit: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgIAP8h2JcfDD47+0X/N/a1gEmCWY7u3piKAYrRMfOuBQqKSvDFYHYOBV+/f4LbCUIg9g4FYIUgEwCYbxu/P/5GtxEEBubQrBiHJg0AAB07Vx5G7sqWQAAAABJRU5ErkJggg==",
-      npc_wolf_security: EU,
-      player: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQElEQVR4nGNgoAD8h2K84D8M4FP8/9HLz3CFIDYuxUQpBEugK8SmGCy4cttpmASYjVUhkiJ8YhAJbO7GGT64AACb2mXTEt92cwAAAABJRU5ErkJggg==",
-      portal: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAU0lEQVR4nGNgIAP8x4FRwP9YmzYwtlOJAWMYG10xWOL7zz9wfPLcDdwKQZL901eAMUixrowDpkKQbphJMFPxKoSZCMI4FYIkQBiZjdXnxAQPQQAAOtFywhRvXJwAAAAASUVORK5CYII=",
-      portal_orange: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgIAP8x4FRwP9YmzYwtlOJAWMYG10xWOLzJAs4/tSkglshSPJjldT/D4UCYMW6Mg6YCkG6YSbBTMWrEGQiDONUCJIAYWQ2Vp8TEzwEAQAA6GVEbqZ9DwAAAABJRU5ErkJggg==",
-      quest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAMElEQVR4nGNgoAD8h2K84P//Xwf+/35tSFDxf+or/P3a8P/nVSrEuZMoRVQ3EScAAIINMAfVJxmxAAAAAElFTkSuQmCC",
-      quest_search: NU,
-      quest_talk: IU,
-      scorched_flats: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUUlEQVR4nGNgIBP8R8NYwf8HT+6jYAYsisES/vIicEUg9t4TuzAUY5gGUoRNIVwxSBJGY1W0wF0LjKuMFcAYxsewGiYJchtMAzaFYMU4MGkAADMzb36mUd86AAAAAElFTkSuQmCC",
-      scorp_pit: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgoAD8R8I4wf//l6rA+MUCG5yK/z/T1kc27T8uxeiCWBXCrUQ2cUOCHHYTQRIgU2BuxKYQxUSYApwmIgmi08QDAPP+Ttl2n8EbAAAAAElFTkSuQmCC",
-      shooting_gallery: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8x4IxwP9n2vpw/P+SFxijK4ZIIoGaKHP8CkE0WNH///83q2jjVwhj41WIDLAphCsGScIwLl+DFRMKGoIAAPFdcuGHeG5wAAAAAElFTkSuQmCC",
-      smelt: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgIBH8J4DB4P+8efPwYgaoYjCnoKAAK56HTSG6lXgV/n5t+P9zhQphhSBFeBUS4xmwYmKChygAADFjjqm4UTd5AAAAAElFTkSuQmCC",
-      talk: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAANElEQVR4nGNgIBH8x4Ph4D8+wICkGC6Ai2Yg2cRdx67hxBjuhGnA5xkUk3FJYphKSBFBAACXuoGa4rCq3AAAAABJRU5ErkJggg==",
-      tower_of_doom: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPUlEQVR4nGNgIAP8J0bsf1VBG0gQBduaucHYmAr/X/L6/9/aAKdCBpjiqKAkMMaliPoKwYrQFeJUjAOTBgBhWEzjnMiaVwAAAABJRU5ErkJggg==",
-      unknown: pU,
-      watermelon: GU
+    var AH = LH(602),
+      rH = LH(304);
+    const SH = {
+        DEFAULT_FONT_SIZE: 47,
+        DEFAULT_SUBTITLE_FONT_SIZE: 30,
+        HORIZONTAL_PADDING: 30,
+        VERTICAL_PADDING: 22,
+        TEXT_SHADOW_WIDTH: 2,
+        LINE_SPACING: 8,
+        EFFECT_ICON_SIZE: 70
+      },
+      hH = 41;
+
+    function tH(HH) {
+      return `bolder ${HH}px 'Jetbrains Mono'`
+    }
+
+    function zH(HH) {
+      return "object" === typeof HH && null !== HH
+    }
+
+    function CH(HH, BH) {
+      const LH = "number" === typeof HH ? HH : "string" === typeof HH ? Number(HH.replace("px", "")) : NaN;
+      return Number.isFinite(LH) && LH > 0 ? LH : BH
+    }
+
+    function EH(HH) {
+      return zH(HH) ? HH : void 0
+    }
+
+    function XH(HH) {
+      const BH = "number" === typeof HH ? AH.u[HH] : HH;
+      return "string" === typeof BH && Object.hasOwn(AH.j, BH) ? AH.j[BH] : void 0
+    }
+
+    function GH(HH, BH) {
+      return "string" === typeof HH ? HH : zH(HH) ? "string" === typeof HH.translationKey ? BH.translate(HH.translationKey, HH.params).map((HH => "string" === typeof HH ? HH : HH.icon)).join("") : "string" === typeof HH.entityName ? BH.shownPlayerName(HH.entityName) : "" : void 0 === HH || null === HH ? "" : String(HH)
+    }
+
+    function YH(HH, BH, LH, AH) {
+      if (!Array.isArray(HH)) return [];
+      const hH = [];
+      for (const uH of HH) {
+        var tH, XH;
+        if (zH(uH) && "chatTag" in uH) {
+          hH.push({
+            kind: "rank",
+            rank: uH
+          });
+          continue
+        }
+        if (zH(uH) && "icon" in uH && !("mainRGB" in uH)) {
+          var YH;
+          hH.push({
+            kind: "icon",
+            icon: String(uH.icon),
+            size: CH(null === (YH = EH(uH.style)) || void 0 === YH ? void 0 : YH.fontSize, SH.DEFAULT_FONT_SIZE)
+          });
+          continue
+        }
+        if (zH(uH) && (0, rH.Eb)(uH)) {
+          hH.push({
+            kind: "text",
+            text: "",
+            size: BH,
+            colour: AH
+          });
+          continue
+        }
+        let HH, QH;
+        zH(uH) && (0, rH.Cb)(uH) ? (HH = LH.keyBindingText(String(uH.action)), QH = EH(uH.style)) : zH(uH) && "str" in uH ? (HH = uH.str, QH = EH(uH.style)) : HH = uH;
+        const WH = CH(null === (tH = QH) || void 0 === tH ? void 0 : tH.fontSize, BH),
+          MH = null !== (XH = (0, rH.kc)(QH)) && void 0 !== XH ? XH : AH;
+        if (zH(HH) && "string" === typeof HH.translationKey) {
+          const BH = LH.translate(HH.translationKey, HH.params);
+          if (BH.some((HH => "string" !== typeof HH))) {
+            for (const HH of BH) hH.push("string" === typeof HH ? {
+              kind: "text",
+              text: HH,
+              size: WH,
+              colour: MH
+            } : {
+              kind: "icon",
+              icon: HH.icon,
+              size: WH
+            });
+            continue
+          }
+        }
+        hH.push({
+          kind: "text",
+          text: GH(HH, LH),
+          size: WH,
+          colour: MH
+        })
+      }
+      return hH
+    }
+
+    function uH(HH) {
+      return void 0 !== HH && "rank" !== HH.kind
+    }
+
+    function QH(HH, BH) {
+      const LH = uH(HH),
+        AH = uH(BH);
+      return void 0 === HH && !AH || !LH && void 0 === BH ? 0 : LH !== AH ? .5 * SH.HORIZONTAL_PADDING : 0
+    }
+
+    function WH(HH) {
+      return "rank" === HH.kind ? SH.DEFAULT_FONT_SIZE : HH.size
+    }
+
+    function MH(HH, BH, LH) {
+      return "icon" === HH.kind ? HH.size : "rank" === HH.kind ? function(HH, BH) {
+        const LH = BH.rankIcon(HH.rank.icon);
+        return LH ? hH * (LH.width / LH.height) : hH
+      }(HH, LH) + SH.HORIZONTAL_PADDING : (LH.glyphsShown(HH.text), BH.font = tH(HH.size), BH.measureText(HH.text).width)
+    }
+
+    function xH(HH, BH, LH) {
+      if (0 === HH.length) return {
+        width: 0,
+        height: 0,
+        sizes: []
+      };
+      let AH = 0;
+      for (const SH of HH) AH = Math.max(AH, WH(SH));
+      const rH = [];
+      let hH = QH(void 0, HH[0]);
+      for (let SH = 0; SH < HH.length; SH++) {
+        const AH = hH;
+        hH += MH(HH[SH], BH, LH), hH += QH(HH[SH], HH[SH + 1]), rH.push({
+          x: AH,
+          width: hH - AH
+        })
+      }
+      return {
+        width: hH,
+        height: AH + SH.VERTICAL_PADDING,
+        sizes: rH
+      }
+    }
+
+    function vH(HH, BH, LH, AH, rH, SH, hH) {
+      BH += QH(void 0, HH[0]);
+      for (let tH = 0; tH < HH.length; tH++) {
+        const zH = PH(HH[tH], BH, LH, AH, rH, SH, hH);
+        BH += 0 === zH ? 0 : zH + QH(HH[tH], HH[tH + 1])
+      }
+    }
+
+    function PH(HH, BH, LH, AH, rH, zH, CH, EH) {
+      var XH;
+      if ("icon" === HH.kind) {
+        const AH = zH.iconImage(HH.icon);
+        return AH && CH.push({
+          image: AH,
+          x: BH,
+          y: LH + SH.VERTICAL_PADDING / 2,
+          size: HH.size
+        }), HH.size
+      }
+      if ("rank" === HH.kind) {
+        const tH = null !== EH && void 0 !== EH ? EH : MH(HH, rH, zH);
+        return function(HH, BH, LH, AH, rH, tH, zH) {
+          var CH, EH;
+          const {
+            rank: XH
+          } = HH;
+          tH.fillStyle = XH.mainRGB, tH.fillRect(BH, LH, AH, rH);
+          const GH = zH.rankIcon(XH.icon);
+          if (!GH) return;
+          const YH = hH / GH.height,
+            uH = BH + (AH - GH.width * YH) / 2,
+            QH = LH + (rH - hH) / 2,
+            WH = new Path2D(GH.path),
+            MH = SH.TEXT_SHADOW_WIDTH,
+            xH = (null === (CH = XH.nameTag) || void 0 === CH ? void 0 : CH.iconShadowRGB) || "black";
+          for (const SH of [-1, 1])
+            for (const HH of [-1, 1]) UH(tH, WH, uH + MH * SH, QH + MH * HH, YH, xH);
+          UH(tH, WH, uH, QH, YH, (null === (EH = XH.nameTag) || void 0 === EH ? void 0 : EH.iconRGB) || "white")
+        }(HH, BH, LH, tH, AH, rH, zH), tH
+      }
+      if (0 === HH.text.length) return 0;
+      const GH = tH(HH.size);
+      rH.font = GH;
+      const YH = null !== EH && void 0 !== EH ? EH : rH.measureText(HH.text).width;
+      return function(HH, BH, LH, AH, rH, hH) {
+        const tH = SH.TEXT_SHADOW_WIDTH;
+        hH.font = AH, hH.fillStyle = "black";
+        for (const SH of [-1, 1])
+          for (const AH of [-1, 1]) hH.fillText(HH, BH + tH * SH, LH + tH * AH);
+        hH.fillStyle = rH, hH.fillText(HH, BH, LH)
+      }(HH.text, BH, LH + AH - SH.VERTICAL_PADDING + 5, GH, null !== (XH = HH.colour) && void 0 !== XH ? XH : "white", rH), YH
+    }
+
+    function TH(HH, BH) {
+      for (const {
+          image: LH,
+          x: AH,
+          y: rH,
+          size: SH
+        }
+        of HH) BH.imageSmoothingEnabled = !1, BH.drawImage(LH, AH, rH, SH, SH)
+    }
+
+    function UH(HH, BH, LH, AH, rH, SH) {
+      HH.save(), HH.translate(LH, AH), HH.scale(rH, rH), HH.fillStyle = SH, HH.fill(BH), HH.restore()
+    }
+  },
+  37157: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => aH,
+      e: () => HB,
+      g: () => FH,
+      h: () => wH,
+      j: () => ZH,
+      k: () => dH,
+      o: () => AB,
+      p: () => DH,
+      q: () => jH
+    });
+    var AH = LH(4877),
+      rH = LH(4895),
+      SH = LH(35006),
+      hH = LH(3639),
+      tH = LH(3637),
+      zH = LH(1336),
+      CH = LH(37112),
+      EH = LH(81),
+      XH = LH(1204),
+      GH = LH(37162),
+      YH = LH(37169),
+      uH = LH(8840),
+      QH = LH(8261),
+      WH = LH(8437),
+      MH = LH(8554),
+      xH = LH(8684),
+      vH = LH(8700);
+    const PH = {
+      youtube: uH.e,
+      "person-military-pointing": QH.e,
+      sparkle: WH.i,
+      user: MH.g,
+      wrench: xH.g,
+      zap: vH.f
     };
 
-    function ZU(UU, XU) {
-      const zU = document.createElement("img");
-      return zU.className = XU, zU.src = UU, zU.alt = "", zU.draggable = !1, zU
-    }
-
-    function RU(UU) {
-      return Object.hasOwn(BU, UU) || UU.startsWith("npc_")
-    }
-
-    function PU(UU) {
-      var XU;
-      const zU = null !== (XU = BU[UU]) && void 0 !== XU ? XU : UU.startsWith("npc_") ? AU : pU;
-      if ("portal" !== UU) return ZU(zU, "SkyblockMapIcon");
-      const cU = document.createElement("span");
-      cU.className = "SkyblockMapIcon Portal";
-      const yU = document.createElement("span");
-      return yU.className = "SkyblockMapIconTint", yU.style.maskImage = yU.style.webkitMaskImage = `url("${YU}")`, cU.append(ZU(zU, "SkyblockMapIconLayer"), yU, ZU(YU, "SkyblockMapIconLayer SkyblockMapIconShade")), cU
-    }
-  },
-  34891: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => yU,
-      f: () => AU
-    });
-    const cU = [{
-      threshold: 10n ** 180n,
-      suffix: "NoQig"
-    }, {
-      threshold: 10n ** 177n,
-      suffix: "OcQig"
-    }, {
-      threshold: 10n ** 174n,
-      suffix: "SpQig"
-    }, {
-      threshold: 10n ** 171n,
-      suffix: "SQig"
-    }, {
-      threshold: 10n ** 168n,
-      suffix: "QiQig"
-    }, {
-      threshold: 10n ** 165n,
-      suffix: "QaQig"
-    }, {
-      threshold: 10n ** 162n,
-      suffix: "TQig"
-    }, {
-      threshold: 10n ** 159n,
-      suffix: "DQig"
-    }, {
-      threshold: 10n ** 156n,
-      suffix: "UQig"
-    }, {
-      threshold: 10n ** 153n,
-      suffix: "Qig"
-    }, {
-      threshold: 10n ** 150n,
-      suffix: "NoQag"
-    }, {
-      threshold: 10n ** 147n,
-      suffix: "OcQag"
-    }, {
-      threshold: 10n ** 144n,
-      suffix: "SpQag"
-    }, {
-      threshold: 10n ** 141n,
-      suffix: "SQag"
-    }, {
-      threshold: 10n ** 138n,
-      suffix: "QiQag"
-    }, {
-      threshold: 10n ** 135n,
-      suffix: "QaQag"
-    }, {
-      threshold: 10n ** 132n,
-      suffix: "TQag"
-    }, {
-      threshold: 10n ** 129n,
-      suffix: "DQag"
-    }, {
-      threshold: 10n ** 126n,
-      suffix: "UQag"
-    }, {
-      threshold: 10n ** 123n,
-      suffix: "Qag"
-    }, {
-      threshold: 10n ** 120n,
-      suffix: "NoTg"
-    }, {
-      threshold: 10n ** 117n,
-      suffix: "OcTg"
-    }, {
-      threshold: 10n ** 114n,
-      suffix: "SpTg"
-    }, {
-      threshold: 10n ** 111n,
-      suffix: "STg"
-    }, {
-      threshold: 10n ** 108n,
-      suffix: "QiTg"
-    }, {
-      threshold: 10n ** 105n,
-      suffix: "QaTg"
-    }, {
-      threshold: 10n ** 102n,
-      suffix: "TTg"
-    }, {
-      threshold: 10n ** 99n,
-      suffix: "DTg"
-    }, {
-      threshold: 10n ** 96n,
-      suffix: "UTg"
-    }, {
-      threshold: 10n ** 93n,
-      suffix: "Tg"
-    }, {
-      threshold: 10n ** 90n,
-      suffix: "NoVg"
-    }, {
-      threshold: 10n ** 87n,
-      suffix: "OcVg"
-    }, {
-      threshold: 10n ** 84n,
-      suffix: "SpVg"
-    }, {
-      threshold: 10n ** 81n,
-      suffix: "SVg"
-    }, {
-      threshold: 10n ** 78n,
-      suffix: "QiVg"
-    }, {
-      threshold: 10n ** 75n,
-      suffix: "QaVg"
-    }, {
-      threshold: 10n ** 72n,
-      suffix: "TVg"
-    }, {
-      threshold: 10n ** 69n,
-      suffix: "DVg"
-    }, {
-      threshold: 10n ** 66n,
-      suffix: "UVg"
-    }, {
-      threshold: 10n ** 63n,
-      suffix: "Vg"
-    }, {
-      threshold: 10n ** 60n,
-      suffix: "NoD"
-    }, {
-      threshold: 10n ** 57n,
-      suffix: "OcD"
-    }, {
-      threshold: 10n ** 54n,
-      suffix: "SpD"
-    }, {
-      threshold: 10n ** 51n,
-      suffix: "SD"
-    }, {
-      threshold: 10n ** 48n,
-      suffix: "QiD"
-    }, {
-      threshold: 10n ** 45n,
-      suffix: "QaD"
-    }, {
-      threshold: 10n ** 42n,
-      suffix: "TD"
-    }, {
-      threshold: 10n ** 39n,
-      suffix: "DD"
-    }, {
-      threshold: 10n ** 36n,
-      suffix: "UD"
-    }, {
-      threshold: 10n ** 33n,
-      suffix: "D"
-    }, {
-      threshold: 10n ** 30n,
-      suffix: "No"
-    }, {
-      threshold: 10n ** 27n,
-      suffix: "Oc"
-    }, {
-      threshold: 10n ** 24n,
-      suffix: "Sep"
-    }, {
-      threshold: 10n ** 21n,
-      suffix: "S"
-    }, {
-      threshold: 10n ** 18n,
-      suffix: "Qi"
-    }, {
-      threshold: 10n ** 15n,
-      suffix: "Qa"
-    }, {
-      threshold: 10n ** 12n,
-      suffix: "T"
-    }, {
-      threshold: 10n ** 9n,
-      suffix: "B"
-    }, {
-      threshold: 10n ** 6n,
-      suffix: "M"
-    }, {
-      threshold: 1000n,
-      suffix: "K"
-    }];
-
-    function yU(UU) {
-      let XU, zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof UU) {
-        if (!Number.isFinite(UU)) return "0";
-        if (Math.abs(UU) < 100) {
-          const XU = UU < 0 ? "-" : "",
-            zU = Math.abs(UU);
-          return zU >= 10 ? `${XU}${zU.toFixed(1).replace(/\.0$/,"")}` : `${XU}${zU.toFixed(2).replace(/\.?0+$/,"")}`
-        }
-        XU = BigInt(Math.floor(UU))
-      } else XU = UU;
-      const yU = XU < 0n ? -XU : XU,
-        QU = XU < 0n ? "-" : "",
-        AU = yU.toString();
-      if (AU.length <= zU) return `${QU}${AU}`;
-      const FU = 3 * Math.floor((AU.length - 1) / 3);
-      if (FU < 3) return `${QU}${AU}`;
-      if (FU > 3 * cU.length) {
-        const UU = AU[0],
-          XU = AU.slice(1, 3).replace(/0+$/, "");
-        return `${QU}${XU?`${UU}.${XU}`:UU}e${AU.length-1}`
-      }
-      const {
-        threshold: oU,
-        suffix: DU
-      } = cU[cU.length - FU / 3], EU = yU / oU, YU = Number(1000n * (yU % oU) / oU), NU = Number(EU) + YU / 1e3;
-      let IU;
-      return IU = NU >= 100 ? Math.floor(NU).toString() : NU >= 10 ? NU.toFixed(1).replace(/\.0$/, "") : NU.toFixed(2).replace(/\.?0+$/, ""), `${QU}${IU}${DU}`
-    }
-    const QU = cU.map((UU => {
-      let {
-        threshold: XU,
-        suffix: zU
-      } = UU;
+    function TH(HH) {
+      const [BH, LH, , , AH] = HH.icon;
       return {
-        threshold: Number(XU),
-        suffix: zU
+        width: BH,
+        height: LH,
+        path: "string" === typeof AH ? AH : AH.join(" ")
       }
-    })).filter((UU => {
-      let {
-        threshold: XU
-      } = UU;
-      return Number.isFinite(XU)
-    }));
-
-    function AU(UU) {
-      const XU = Math.abs(UU),
-        zU = UU < 0 ? "-" : "";
-      for (const {
-          threshold: cU,
-          suffix: yU
-        }
-        of QU)
-        if (XU >= cU) {
-          const UU = XU / cU;
-          if (UU >= 1e3) return `${zU}${XU.toExponential(2).replace("e+","e")}`;
-          let QU;
-          return QU = UU >= 100 ? Math.floor(UU).toString() : UU >= 10 ? UU.toFixed(1).replace(/\.0$/, "") : UU.toFixed(2).replace(/\.?0+$/, ""), `${zU}${QU}${yU}`
-        } return `${zU}${XU}`
     }
-  },
-  19102: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAFT2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjEwIgogICBleGlmOlBpeGVsWURpbWVuc2lvbj0iMTAiCiAgIGV4aWY6Q29sb3JTcGFjZT0iMSIKICAgdGlmZjpJbWFnZVdpZHRoPSIxMCIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMTAiCiAgIHRpZmY6UmVzb2x1dGlvblVuaXQ9IjIiCiAgIHRpZmY6WFJlc29sdXRpb249IjcyLzEiCiAgIHRpZmY6WVJlc29sdXRpb249IjcyLzEiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjUtMDktMTFUMDY6MDg6MTMtMDQ6MDAiCiAgIHhtcDpNZXRhZGF0YURhdGU9IjIwMjUtMDktMTFUMDY6MDg6MTMtMDQ6MDAiPgogICA8ZGM6dGl0bGU+CiAgICA8cmRmOkFsdD4KICAgICA8cmRmOmxpIHhtbDpsYW5nPSJ4LWRlZmF1bHQiPlBsYW5rczwvcmRmOmxpPgogICAgPC9yZGY6QWx0PgogICA8L2RjOnRpdGxlPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJwcm9kdWNlZCIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWZmaW5pdHkgRGVzaWduZXIgMS4xMC42IgogICAgICBzdEV2dDp3aGVuPSIyMDI1LTA5LTExVDA2OjA4OjEzLTA0OjAwIi8+CiAgICA8L3JkZjpTZXE+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InIiPz5RDOytAAABgWlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kbtLA0EQhz9PxTcRtLAQDKJWKlEhaGOR4AvUIp7gq0kul0RI4nEXkWAr2AoKoo2vQv8CbQVrQVAUQay1VbTRcM7lAhExs8zOt7/dGXZnQVGTWsqq8EEqnTFDYwHv3PyCt+qVGuqoRaEtrFnG1MyoSkn7vKfMibc9Tq3S5/61uqhuaVBWLTysGWZGeFx4ci1jOLwj3KwlwlHhM+FuUy4ofOfoEZdfHI67/O2wqYaCoDQKe+O/OPKLtYSZEpaX05FKrmqF+zgvqdfTszMS28VbsQgxRgAvE4wQxE8fQzL76aGfXllRIt+Xz59mRXI1mQ2ymCwTJ0GGblFXpbouMSa6LiNJ1un/375asYF+t3p9ACqfbfu9E6q2Ibdl219Htp07hvInuEwX81cOYfBD9K2i1nEAng04vypqkV242ISWRyNshvNSubgSi8HbKTTMQ9MN1C66PSvsc/IA6rp81TXs7UOXnPcs/QAlUWfIbV2y+QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAG9JREFUGJVjYKAQ/IdiOGDEpqh6jiYDAwMDQ2vKdbgaJnzG5nSqwEzHUPj/1WJThpZPDxg+vv2N212vFpv+/9/H+f9yFi/MjXB3wtz4/38fJwMDAwPDlTssDLrTPmO4nwXGuHIHwsSmCMVELGLkAQBi0iUZsdoC/wAAAABJRU5ErkJggg=="
-  },
-  21217: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAABgWlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kc8rRFEUxz9miMYIsbCweGlYDflREymLmRgKizHKYPPmmTejZsbrvZFkq2wVJTZ+LfgL2CprpYiUbFkTG/ScZ6Zmkjm3c8/nfu89p3vPBVc0rWWsym7IZHNmJBxUZmKzSvUzNbTSyCAeVbOMiamRKGXt444KJ950OrXKn/vXahcSlgYVNcJDmmHmhEeFx1dyhsPbws1aSl0QPhX2m3JB4VtHj+f5xeFknr8cNqORELgahJVkCcdLWEuZGWF5Ob5Melkr3Md5iTeRnZ6S2CbeikWEMEEUxhgmRIAeBmQO0EkvXbKiTH73b/4kS5KryWywiskiSVLk8Iu6LNUTEnXREzLSrDr9/9tXS+/rzVf3BqHqybbf2qF6C743bfvz0La/j8D9CBfZYv7SAfS/i75Z1Hz7UL8OZ5dFLb4D5xvQ8mCopvorucVdug6vJ1AXg6Zr8Mzle1bY5/geomvyVVewuwcdcr5+/gejEmgBy3n7uAAAAGRJREFUGJWVkDEOgCAMRZ+Eu5iQeBtu6MpRnNkYuUZhULQwKP7lN+n7bVOY1HJ5+eJsq8q+AiA5ARCDALAdpxsdk5yIQYhBcL5rPWCDmka4j73oBscJzptug9UpDWsIfrxn9kQqJZUnE6phAjUAAAAASUVORK5CYII="
-  },
-  23505: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGtJREFUGJVjYKAC+A/FDAwMDAxMuBR9fr6D4esduAasCv9/fr6D4cX7yyiC6Ar/f36+g4GBgYFBQlAXp0K4InTTGBgYGBjRrYOZxPTVg4FbBUUNROHXO6iYgYHhv3eYEHafImMXfz6siggCADC+M1RlDaxOAAAAAElFTkSuQmCC"
-  },
-  25090: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE9JREFUGJVjYCASMKLx/+OSR1b4/z9PMqqqL3OxGcbwHxl3MXj9/8+T/B+LLQgNNVHm/6E24FT4f2qRG9xUXAqRFTHgUoiuCNnNWD1COQAAFWcvZJ927BwAAAAASUVORK5CYII="
-  },
-  26809: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAH1JREFUGJVjYKAC+A/FDAwMDAxMuBSdyDdkWLzBGKYBq8L/J+wNGR4se4IiiK7w/wl7QwYGBgYGBS0ZnArhih5cQzUNWeH/E/mGcAUKWjIMtwuZGGIDzjIwMDAwwgkGBob/UIfDQWzAWQbvMCHGraveYXoCGbv482HxJxEAAJssJtLET2YfAAAAAElFTkSuQmCC"
-  },
-  26825: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAItJREFUGJVjYKAA/Ifh3nJb/Arv7E79X+Mp+p+BgeH/1EYX7Ir299n8v7M79f/+PhuYyQwMDAwMTOgqZXU1GR5fvs4gq6vJcGd3KswpDCzoCmGKHl++zrB3901UybBACwYGBob/NZ6icLfBMFSOgRHJbQwMDAwMjkVHGMICLRiRDVq1/gTCE+gmkA0A4Aw5D/wQUU0AAAAASUVORK5CYII="
-  },
-  39342: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIAP8x4FRwP9sF+X/XVEGKDjbRRlDMVjww44uFHyyKw5TIUjC2n4BXBGIjVMh0SaSpHBBkC0Y41IIVkxM8BAEAGLKe3rsiWx2AAAAAElFTkSuQmCC"
-  },
-  39348: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg=="
-  },
-  39353: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
-  },
-  39361: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAT0lEQVR4nGNgIAP8h2JcfDD4X2lg/D9RRhQmCWbnq6piKAYrRMf52BSCTHAU54QrArGRbEA18ev3X3CFIDZOq2GmwkzDqxAdY/U5DkwaAACgalVtqFSm5wAAAABJRU5ErkJggg=="
+    const UH = new Map(Object.entries(PH).map((HH => {
+      let [BH, LH] = HH;
+      return [BH, TH(LH)]
+    })));
+    let VH = !1;
+    const OH = new Set;
+    var bH = LH(37177);
+    const kH = "Jetbrains Mono",
+      mH = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+2248,U+26A1,U+2713,U+FEFF,U+FFFD",
+      oH = "U+0100-0130,U+0132-0151,U+0154-017F,U+018F-0190,U+0192,U+019B,U+01A0-01A1,U+01AF-01B0,U+01CD-01CE,U+01D0,U+01D2,U+01D4,U+01D6,U+01D8,U+01DA,U+01DC,U+01E6-01E7,U+01EA-01EB,U+01F4-01F5,U+01FC-01FF,U+0218-021B,U+0232-0233,U+0237,U+0259,U+02B9-02BA,U+02C7,U+02C9,U+02D8-02D9,U+02DB,U+02DD,U+02F3,U+02F7,U+0300-0303,U+0306-0307,U+0309-030C,U+030F,U+0312,U+031B,U+0323,U+0325-0328,U+0336-0338,U+0374-0375,U+037E,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03CF,U+03D5-03D7,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0493,U+049A-049B,U+04A2-04A3,U+04AE-04B1,U+04B6-04B7,U+04BA-04BB,U+04D8-04D9,U+04DC-04DF,U+04E4-04E9,U+04F4-04F5,U+0AEA,U+1E80-1E85,U+1E9E,U+1EA0-1EF9,U+2070,U+2074-207A,U+207C,U+2080-2089,U+20AB,U+20AE,U+20B4,U+20BD,U+20BF,U+2102,U+210D,U+2113,U+2115-2116,U+2119-211A,U+211D,U+2124,U+212E,U+2140,U+218A-218B,U+2194-2199,U+219D-219E,U+21A0,U+21A2-21A3,U+21A5-21A7,U+21A9-21AA,U+21AD,U+21BE,U+21C9,U+21D0-21D4,U+21DB,U+21DE-21DF,U+21E5,U+21E7-21E8,U+21EA,U+2200-220C,U+220E-2211,U+2213,U+2218-221A,U+221E,U+2223-2225,U+2227-222B,U+2234-2239,U+223C,U+223E,U+2243,U+2245,U+2247,U+2249,U+224B,U+224D,U+2254,U+2257,U+225F-2265,U+226A-2273,U+227A-227C,U+2282-2289,U+228E-2299,U+229B-22A5,U+22B4,U+22B8,U+22BB-22BD,U+22C2-22C4,U+22C6,U+22C8-22CA,U+22CE,U+22D0,U+22E2,U+22EE-22F1,U+2302-2305,U+2308-230B,U+2318,U+231C-231F,U+2324-2326,U+2328,U+232B,U+2336-237A,U+2389-238B,U+2395,U+239B-23AD,U+23CE,U+23FB-23FE,U+2400-2421,U+2423-2424,U+2500-25A1,U+25AA-25AB,U+25B2-25CC,U+25CE-25CF,U+25D4-25D5,U+25E6-25EB,U+25EF,U+25F6,U+266D,U+266F,U+2687,U+26A0,U+2715,U+2717,U+2736,U+276E-2771,U+2794,U+279C-279E,U+27C5-27C6,U+27DC,U+27E6-27EB,U+27F5-27F7,U+2916,U+294A,U+2987-2988,U+2A00,U+2A05-2A06,U+2B58,U+E0A0-E0A2,U+E0B0-E0B3,U+FE62,U+FF5B,U+FF5D,U+16910,U+1D538-1D539,U+1D53B-1D53E,U+1D540-1D544,U+1D546,U+1D54A-1D550,U+1D552-1D56B";
+
+    function IH(HH) {
+      return HH.split(",").map((HH => {
+        const [BH, LH = BH] = HH.slice(2).split("-");
+        return [parseInt(BH, 16), parseInt(LH, 16)]
+      }))
+    }
+    const fH = {
+        latin: IH(mH),
+        rest: IH(oH)
+      },
+      lH = new RegExp(`[${fH.rest.map((HH=>{let[BH,LH]=HH;return`\\u{${BH.toString(16)}}-\\u{${LH.toString(16)}}`})).join("")}]`, "u");
+
+    function KH(HH) {
+      return BH => {
+        console.warn(`[bloxd-wasm-client] the text font's ${HH} file did not load`, BH)
+      }
+    }
+    const cH = 397,
+      eH = 1,
+      qH = {
+        translate: HH => [HH],
+        keyBindingText: HH => HH,
+        isFriend: () => !1,
+        hiddenNames: {},
+        loadsFontRest: !1
+      };
+    let gH = null,
+      NH = 0,
+      RH = "none";
+
+    function jH() {
+      return NH
+    }
+    const nH = new Set;
+
+    function FH(HH) {
+      return nH.add(HH), () => {
+        nH.delete(HH)
+      }
+    }
+
+    function DH() {
+      NH++, !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0] ? RH = "all" : "none" === RH && (RH = "notBoards");
+      for (const HH of nH) HH()
+    }(0, zH.m)((() => {
+      (function() {
+        const HH = VH;
+        return VH = !1, HH
+      })() && DH(!1)
+    }));
+    const wH = new class {
+      constructor(HH) {
+        this.loaded = HH, this.latin = null, this.rest = null, this.restWanted = !1
+      }
+      load() {
+        if (null === this.latin) {
+          this.latin = new FontFace(kH, `url(${(0,bH.h)()}) format("woff2")`, {
+            unicodeRange: mH
+          }).load().then((HH => {
+            document.fonts.add(HH), this.loaded()
+          }), KH("Latin"));
+          const HH = new FontFace(kH, `url(${(0,bH.k)()}) format("woff2")`, {
+            unicodeRange: oH,
+            display: "swap"
+          });
+          document.fonts.add(HH), HH.loaded.then((() => {
+            this.loaded()
+          }), KH("rest")), this.rest = HH, this.restWanted && HH.load()
+        }
+        return this.latin
+      }
+      loadRest() {
+        var HH;
+        this.restWanted || (this.restWanted = !0, null === (HH = this.rest) || void 0 === HH || HH.load())
+      }
+      async untilLoadedFor(HH) {
+        await this.load(), this.loadFor(HH), await document.fonts.load(`16px '${kH}'`, HH).catch((BH => {
+          console.warn("[bloxd-wasm-client] the text font did not load for", HH, BH)
+        }))
+      }
+      loadFor(HH) {
+        !this.restWanted && lH.test(HH) && this.loadRest()
+      }
+    }(DH);
+
+    function ZH(HH) {
+      Object.assign(qH, HH), qH.loadsFontRest && wH.loadRest(), DH(!1)
+    }
+
+    function dH(HH) {
+      HH !== gH && (gH = HH, DH())
+    }
+
+    function aH(HH) {
+      if ("none" === RH || null === HH) return;
+      HH(cH, "all" === RH ? 0 : eH, new Uint8Array(0)) && (RH = "none")
+    }
+    const sH = new Map,
+      JH = new Map;
+
+    function iH(HH, BH, LH) {
+      var AH;
+      const rH = LH ? `${HH}#${LH.join(",")}` : HH,
+        SH = sH.get(rH);
+      if (SH) return SH.image;
+      const hH = {
+        image: null !== (AH = JH.get(rH)) && void 0 !== AH ? AH : null
+      };
+      return sH.set(rH, hH), BH().then((async HH => {
+        if (null === HH) return null;
+        const BH = new Image;
+        BH.crossOrigin = "anonymous", BH.src = HH, await BH.decode();
+        const AH = await createImageBitmap(BH);
+        if (!LH) return AH;
+        try {
+          return function(HH, BH) {
+            let [LH, AH, rH] = BH;
+            const SH = (0, CH.h)(HH.width, HH.height),
+              {
+                canvas: hH
+              } = SH;
+            return SH.drawImage(HH, 0, 0), SH.globalCompositeOperation = "multiply", SH.fillStyle = `rgb(${LH}, ${AH}, ${rH})`, SH.fillRect(0, 0, hH.width, hH.height), SH.globalCompositeOperation = "destination-in", SH.drawImage(HH, 0, 0), hH
+          }(AH, LH)
+        } finally {
+          AH.close()
+        }
+      })).then((HH => {
+        sH.get(rH) === hH && JH.delete(rH), HH !== hH.image && (hH.image = HH, DH(!1))
+      }), (BH => {
+        console.warn(`[bloxd-wasm-client] text icon ${HH} did not load`, BH), sH.get(rH) === hH && (sH.delete(rH), JH.delete(rH), null !== hH.image && DH(!1))
+      })), hH.image
+    }(0, GH.e)((() => {
+      JH.clear();
+      for (const [HH, {
+          image: BH
+        }] of sH) null !== BH && JH.set(HH, BH);
+      sH.clear(), DH(!1)
+    }));
+    const pH = new Set(AH.b),
+      yH = new Set(["CubeBlock", "SlabBlock", "StairsBlock"]);
+
+    function HB() {
+      (0, YH.g)().catch((() => {}))
+    }
+
+    function BB(HH) {
+      return pH.has(HH) ? iH(`icon:${HH}`, (async () => {
+        var BH, LH;
+        return null !== (BH = null === (LH = (0, GH.k)()) || void 0 === LH ? void 0 : LH.textureUrl(HH)) && void 0 !== BH ? BH : (await (0, YH.c)()).ingameIconUrl(HH)
+      })) : null
+    }
+    let LB = "unasked";
+    const AB = {
+      get canSeeRealPlayerNames() {
+        return EH.featureFlags.canSeeRealPlayerNames
+      },
+      get canSeePlayerWrittenText() {
+        return EH.featureFlags.canSeePlayerWrittenText
+      },
+      get localPlayerDbId() {
+        return gH
+      },
+      shownPlayerName: HH => (0, XH.f)(HH, qH.hiddenNames),
+      translate: (HH, BH) => {
+        const LH = "object" === typeof BH && null !== BH ? BH : void 0;
+        return qH.translate(HH, (0, XH.g)(LH, qH.hiddenNames))
+      },
+      keyBindingText: HH => qH.keyBindingText(HH),
+      isFriend: HH => qH.isFriend(HH, qH.hiddenNames),
+      iconImage: function(HH) {
+        if (pH.has(HH)) return BB(HH);
+        if ("unasked" === LB && (LB = "loading", (0, tH.h)().then((() => {
+            LB = "in", DH(!1)
+          }), (HH => {
+            LB = "failed", console.warn("[bloxd-wasm-client] the item sprite table did not load, so text item icons stay blank", HH)
+          }))), "in" !== LB) return null;
+        const BH = (0, hH.e)(HH),
+          LH = void 0 === BH ? void 0 : (0, SH.itemTypeNameOf)(BH);
+        if ("Gun" === LH) return null;
+        const AH = (0, tH.d)(HH),
+          zH = void 0 !== LH && yH.has(LH);
+        if (zH && void 0 === AH) return null;
+        const CH = void 0 !== BH && "GrayscaleArmour" === (0, SH.itemTypeOf)(BH) || Object.hasOwn(rH.c, HH),
+          EH = null !== AH && void 0 !== AH ? AH : HH;
+        return iH(zH ? `block:${EH}` : `item:${EH}`, (async () => {
+          var HH, BH;
+          const LH = (0, GH.k)(),
+            AH = await (0, YH.g)();
+          return null !== (HH = null !== (BH = null === LH || void 0 === LH ? void 0 : LH.textureUrl(EH)) && void 0 !== BH ? BH : AH.itemSpriteUrl(EH)) && void 0 !== HH ? HH : zH ? null : AH.notFoundUrl()
+        }), CH ? (0, rH.g)(HH) : void 0)
+      },
+      effectImage: BB,
+      rankIcon: function(HH) {
+        const BH = UH.get(HH);
+        if (BH) return BH;
+        const LH = (0, zH.d)(HH, (0, zH.g)(HH));
+        if (!LH) return (0, zH.e)("brands") && (0, zH.e)("solid") ? OH.has(HH) || (OH.add(HH), console.warn(`[bloxd-wasm-client] unknown rank icon "${HH}": not in the bundled Font Awesome subset, so its tag draws no icon`)) : VH = !0, null;
+        const AH = TH(LH);
+        return UH.set(HH, AH), AH
+      },
+      glyphsShown: HH => {
+        wH.loadFor(HH)
+      }
+    }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

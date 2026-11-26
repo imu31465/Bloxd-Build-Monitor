@@ -1,40 +1,40 @@
 export const id = 196;
 export const ids = [196];
 export const modules = {
-  9640: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      pageBody: () => cU
+  9749: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      pageBody: () => AH
     });
-    const cU = {
-      whatIs: ["Can your team last 99 nights of darkness? Bloxd Escape the Forest is a co-op horror survival game for teams of up to 6, and you can jump in for free straight from your browser. Make camp, keep the fire going, search for the missing children and watch out for whatever comes out after sunset. Get through all 99 nights, then find your way out."],
-      howToPlay: ["Your team starts around the campfire. During the day you'll gather wood, hunt Pigs and Cows for meat and explore the landmarks dotted around the forest. Throw fuel into the fire to level it up. Each new level unlocks crafting recipes and helps you find the lost kids. Bring back Monster Hearts to push the fire even higher.", 'When "Night Approaches" pops up, head back to camp. Monsters are scared of fire, but some nights the Horde attacks, the Monster wakes up or the Warper rises. If you go down, a teammate can revive you with a Revive Splash Potion.', "Every lost kid you find adds days to your count, which gets you closer to 99. Do quests for the Travelling Trader, then follow Maverick the wizard's guidance to the frozen forest. Collect the portal keystones, open the portal and send the kids home."],
-      features: ["Co-op with Up to 6 Players", "Survive 99 Nights, Then See How Much Longer You Can Last", "Level Up the Campfire to Unlock New Recipes", "Rescue the Lost Kids and Send Them Home", "Quests from the Travelling Trader and Maverick the Wizard", "Explore Landmarks like the Graveyard, Frozen Lagoon, Molten Gorge and Mount Doomrock", "Night Attacks from the Horde, the Monster and the Warper", "Revive Teammates and Repair the Respawn Pod", "Show Your Best Score on Your Nametag and Earn Aura XP", "Inferno Mode with a Day Multiplier"],
-      tips: ["Keep the fire fuelled. It's your best protection at night", "Cook Raw Morsels and Steak on the fire before you eat them", 'Get back to camp as soon as you see "Night Approaches"', "Bring Monster Hearts to the fire to reach the higher levels", "Place your Radar near the fire", "Throw a Decoy to distract monsters, or throw an Invisibility Potion to hide", "Fire a Call for Help flare if you go down", "Bring armour, ideally enchanted, before you go hunting for portal keystones"],
-      similarGames: ["horrorHotel", "containmentBreach", "classic_survivalDayNight", "backrooms"],
+    const AH = {
+      whatIs: ["Capture the points, hold the line, win the fight. Bloxd Frontline is a 12v12 FPS where Red and Blue go head to head in fast domination rounds. It's free to play online and there's nothing to install. Gear up at the Armorer, pick one of 17 kits, jump in a vehicle and push the line with your team. You can hop in on your own, but it's better with a full squad."],
+      howToPlay: ["You'll join Red or Blue and spawn at your base. Head to the Armorer to choose a kit, then get out there and capture the lettered points on the map. Every point you hold earns your team tickets. First team to 100 tickets takes the round. There's a timer as well, so don't let up. If you go down, you're back in the fight after 5 seconds.", "Kills, captures and wins all earn gold. You can spend it on a mystery kit draw, or at the Quartermaster next to your Armorer for Frag Grenades, healing potions and buffs that last the whole round. Vehicles spawn at each base and around the map. They're great for pushing forward fast, but enemy guns and explosives can wreck them. Your base has a shield over it that pushes enemies out, so there's always somewhere safe to regroup."],
+      features: ["Domination Rounds: Capture Points and Race to 100 Tickets", "17 Unique Kits, Including Combat Medic, Ninja, Juggernaut, Wrecker and Marksman", "Vehicles to Drive into Battle", "Quartermaster Buffs: Fleet Footed, Rapid Deploy, Fast Hands and Sure Grip", "Shielded Team Bases and Auto-Balanced Teams", "Ranks from Bronze to Moonstone, Plus Tracked Stats", "Party Up and Play with a Full Squad"],
+      tips: ["Capture points together and hold them so your tickets keep climbing", "Try a few kits at the Armorer until you find one that fits how you play", "Play Combat Medic to keep your team in the fight", "Buy buffs early. They stop selling in the last minute of a round", "Captures trigger Rally windows that cut your team's respawn time", "Use the Ninja's smoke grenades to cover a push onto a point", "Grab a vehicle when you need to reach a point on the other side of the map"],
+      similarGames: ["shooting", "pirates", "bedwars", "skywars"],
       faq: [{
-        question: "What is Bloxd Escape the Forest?",
-        answer: "A co-op horror survival mode for up to 6 players. You team up, survive 99 nights, rescue the lost kids and send them home through the portal."
+        question: "What is Bloxd Frontline?",
+        answer: "A 12v12 team shooter on Bloxd.io. You capture points, pick kits and drive vehicles to win domination rounds."
       }, {
-        question: "In Escape the Forest, how do you survive 99 nights?",
-        answer: "Keep the campfire fuelled and stay close to it at night, because monsters are scared of fire. Level the fire up, cook your food and stick with your team."
+        question: "How does a team win in Bloxd Frontline?",
+        answer: "By holding points to earn tickets. The first team to reach 100 tickets wins the round."
       }, {
-        question: "How many players can team up in Escape the Forest?",
-        answer: "Up to 6 in each game, and others can join to spectate."
+        question: "What do kits do in Bloxd Frontline?",
+        answer: "They decide your weapons and abilities. Combat Medic brings strong healing, the Ninja has smoke grenades and the Juggernaut carries a belt-fed GPMG."
       }, {
-        question: "Where are the lost kids?",
-        answer: "Out in the forest. Level up your fire to find more of them, then go searching. Every kid you find adds to your day count."
+        question: "How do I unlock new kits?",
+        answer: "Spend gold on a mystery kit draw. Draw one you already own and you'll get gems instead, which you can use to buy a specific locked kit."
       }, {
-        question: "What happens if you go down?",
-        answer: "A teammate can revive you with a Revive Splash Potion. You can fire a Call for Help flare too, and the Respawn Pod can bring back players who die."
+        question: "Does Bloxd Frontline have vehicles?",
+        answer: "Yep. They spawn at each base and around the map. Guns and explosives can destroy them, so drive carefully."
       }, {
-        question: "How do you escape the forest?",
-        answer: "Follow Maverick the wizard's guidance to the frozen forest, collect the portal keystones, open the portal and send the kids home."
+        question: "How is Frontline different from Cube Warfare?",
+        answer: "Frontline is 12v12 objective play with points, kits and vehicles. Cube Warfare is quicker Free-For-All, Team Deathmatch and Gun Game fights where killstreaks matter most."
       }, {
-        question: "Is there anything after night 99?",
-        answer: "You've beaten the challenge by then, but how much longer can you survive? Your best number of nights survived shows on your nametag."
+        question: "Can I squad up with friends in Bloxd Frontline?",
+        answer: "Yes. Party up with your friends and you'll play together as a squad."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

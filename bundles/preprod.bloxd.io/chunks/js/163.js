@@ -1,124 +1,70 @@
 export const id = 163;
 export const ids = [163];
 export const modules = {
-  7337: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      AdMobSdkAdaptor: () => YU
+  7271: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      GameDistributionSdkAdaptor: () => SH
     });
-    var cU = zU(1351),
-      yU = zU(27),
-      QU = zU(1734),
-      AU = zU(142),
-      FU = zU(3861),
-      oU = zU(344),
-      DU = zU(1783);
-    const EU = {
-      mobileAndroid: {
-        banners: {
-          leaderboard_1: "ca-app-pub-5991928098122027/7081016880",
-          leaderboard_4: "ca-app-pub-5991928098122027/6301601920",
-          leaderboard_5: "ca-app-pub-5991928098122027/7592152779",
-          skyscraper_1: "ca-app-pub-5991928098122027/1026744422",
-          skyscraper_2: "ca-app-pub-5991928098122027/3483866894",
-          square_1: "ca-app-pub-5991928098122027/6381115670"
-        },
-        rewarded: "ca-app-pub-5991928098122027/5726886857",
-        interstitial: "ca-app-pub-5991928098122027/1979213537"
-      },
-      mobileIos: {
-        banners: {
-          leaderboard_1: "ca-app-pub-5991928098122027/4652945503",
-          leaderboard_4: "ca-app-pub-5991928098122027/2921518285",
-          leaderboard_5: "ca-app-pub-5991928098122027/7518781992",
-          skyscraper_1: "ca-app-pub-5991928098122027/8344778507",
-          skyscraper_2: "ca-app-pub-5991928098122027/3781201590",
-          square_1: "ca-app-pub-5991928098122027/2468119924"
-        },
-        rewarded: "ca-app-pub-5991928098122027/5014392212",
-        interstitial: "ca-app-pub-5991928098122027/4405533493"
-      }
-    };
-    class YU extends cU.d {
-      constructor(UU) {
-        super(), this.name = "admob", this.bannerAutoRefresh = "alwaysOn", this.adUnitIds = void 0, this.bannerPlacementByBloxdId = new Map, this.bannerFirstResponseSeen = new Set, this.fullScreenAdsInFlight = 0, this.adUnitIds = EU[UU], QU.d.on("ads.bannerStatus", (UU => {
-          let {
-            placementId: XU,
-            shown: zU,
-            error: cU
-          } = UU;
-          const yU = !this.bannerFirstResponseSeen.has(XU);
-          this.bannerFirstResponseSeen.add(XU), yU ? ((0, DU.k)(zU), zU ? console.log(`AD ${XU}: AdMob banner loaded`) : console.warn(`AD ${XU}: AdMob banner failed to load: ${cU}`)) : zU || console.warn(`AD ${XU}: AdMob banner refresh failed: ${cU}`)
-        }))
+    var AH = LH(1289),
+      rH = LH(1110);
+    class SH extends AH.b {
+      constructor(HH) {
+        super(), this.setOnEndCb = HH, this.name = "gamedistribution"
       }
       static async setup() {
-        const UU = "mobileIos" === AU.siteUsed ? "mobileIos" : "mobileAndroid";
-        return console.log(`AD: AdMobSDK initialised for ${UU}`), new YU(UU)
-      }
-      muteGameDuring(UU) {
-        return this.fullScreenAdsInFlight++, yU.e.set({
-          soundOnFromAd: !1
-        }), UU.finally((() => {
-          this.fullScreenAdsInFlight--, 0 === this.fullScreenAdsInFlight && yU.e.set({
-            soundOnFromAd: !0
-          })
+        let HH;
+        let BH;
+        return window.GD_OPTIONS = {
+          gameId: "b35b336d21654aa5a378480d13ed7225",
+          onEvent: LH => {
+            const AH = () => {
+              BH && (window.adCompleteSoResume(), BH = !1), HH && (HH(), HH = null)
+            };
+            switch (LH.name) {
+              case "SDK_GAME_START":
+                console.log("Gamedis SDK_GAME_START"), BH = !1, HH ? (HH(), HH = null, window.adCompleteSoResume()) : console.error("onEndCb is not defined during SDK_GAME_START for gamedis sdk. Probably means error happened before.");
+                break;
+              case "SDK_GAME_PAUSE":
+                console.log("Gamedis SDK_GAME_PAUSE"), window.adStartSoPause(null, {
+                  preventMovement: !0
+                }), BH = !0;
+                break;
+              case "SDK_ERROR":
+                console.error("Gamedis SDK_ERROR fired"), AH();
+                break;
+              case "SDK_GDPR_TRACKING":
+              case "SDK_GDPR_TARGETING":
+              default:
+                break;
+              case "AD_ERROR":
+                console.error("Gamedis AD_ERROR fired"), AH();
+                break;
+              case "AD_IS_ALREADY_RUNNING":
+                console.error("Gamedis AD_IS_ALREADY_RUNNING fired"), AH();
+                break;
+              case "DISPLAYAD_ERROR":
+                console.error("Gamedis DISPLAYAD_ERROR fired"), console.error(LH)
+            }
+          }
+        }, await (0, rH.e)("https://html5.api.gamedistribution.com/main.min.js", {
+          id: "gamedistribution-jssdk"
+        }), new SH((BH => {
+          HH = BH
         }))
       }
-      playRewarded(UU, XU) {
-        const zU = this.adUnitIds.rewarded;
-        this.muteGameDuring(QU.d.request("ads.showRewarded", {
-          placementId: zU
-        })).then((zU => {
-          let {
-            rewarded: cU
-          } = zU;
-          cU ? UU() : XU()
-        }), (UU => {
-          console.warn(`AD ${zU}: AdMob rewarded failed:`, UU), XU()
-        }))
+      playVideoAd(HH, BH) {
+        this.setOnEndCb(HH), console.log("Requesting gamedis preroll"), window.gdsdk.showAd()
       }
-      playVideoAd(UU, XU) {
-        const zU = this.adUnitIds.interstitial;
-        this.muteGameDuring(QU.d.request("ads.showInterstitial", {
-          placementId: zU
-        })).then((() => {
-          UU()
-        }), (XU => {
-          console.warn(`AD ${zU}: AdMob interstitial failed:`, XU), UU()
-        }))
+      willRequestBanner() {
+        return void 0 !== window.gdsdk.AdType.Display
       }
-      renderBanner(UU) {
-        const XU = (0, FU.c)(UU),
-          zU = this.adUnitIds.banners[XU];
-        if (void 0 === zU) return;
-        const cU = document.getElementById(UU.divId);
-        if (!cU) return void console.warn(`AD ${XU}: AdMob renderBanner called but div ${UU.divId} is not in DOM`);
-        const yU = cU.getBoundingClientRect(),
-          AU = window.innerWidth,
-          EU = window.innerHeight;
-        if (0 === AU || 0 === EU) return void console.warn(`AD ${XU}: AdMob renderBanner skipped \u2014 viewport has zero dimension`);
-        const YU = {
-          x1: oU.d.clamp(yU.left / AU * 100, 0, 100),
-          y1: oU.d.clamp(yU.top / EU * 100, 0, 100),
-          x2: oU.d.clamp(yU.right / AU * 100, 0, 100),
-          y2: oU.d.clamp(yU.bottom / EU * 100, 0, 100)
-        };
-        this.bannerPlacementByBloxdId.set(XU, zU), console.log(`AD ${XU}: AdMob renderBanner placementId=${zU} box=`, YU), (0, DU.g)("site_sdk"), QU.d.emit("ads.showBanner", {
-          placementId: zU,
-          ...YU
-        })
-      }
-      clearBanner(UU) {
-        const XU = (0, FU.c)(UU),
-          zU = this.bannerPlacementByBloxdId.get(XU);
-        void 0 !== zU && (this.bannerPlacementByBloxdId.delete(XU), this.bannerFirstResponseSeen.delete(zU), console.log(`AD ${XU}: AdMob clearBanner placementId=${zU}`), QU.d.emit("ads.hideBanner", {
-          placementId: zU
-        }))
-      }
-      canShowBloxdAd(UU) {
-        return !1
+      renderBanner(HH) {
+        console.log("Getting new gamedis banners"), this.willRequestBanner() ? (console.log("requesting gamedis banner into", document.getElementById(HH.divId)), console.log("Params to window.gdsdk.showAd", window.gdsdk.AdType.Display, HH.divId), window.gdsdk.showAd(window.gdsdk.AdType.Display, {
+          containerId: HH.divId
+        }).then((() => console.info("showAd(window.gdsdk.AdType.Display) resolved."))).catch((HH => console.info(HH)))) : console.error("window.gdsdk.AdType.Display is undefined")
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

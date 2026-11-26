@@ -1,146 +1,273 @@
 export const id = 156;
 export const ids = [156];
 export const modules = {
-  7294: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      BloxdDiscordSDK: () => aU,
-      DiscordLoginCancelledError: () => pU,
-      discordPopupTimeoutMs: () => IU
+  45221: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      compilePagePack: () => CH,
+      prefetchCompiler: () => tH,
+      reconcileHint: () => zH
     });
-    var cU = zU(173),
-      yU = zU(1241),
-      QU = zU(1131),
-      AU = zU(1151),
-      FU = zU.n(AU),
-      oU = zU(1203),
-      DU = zU(42),
-      EU = zU(646),
-      YU = zU(1410),
-      NU = zU(1211);
-    const IU = 6e5;
-    class pU extends Error {
-      constructor() {
-        super(...arguments), this.name = QU.discordLoginCancelledErrorName
+    var AH = LH(7165),
+      rH = LH(7201),
+      SH = LH(7179),
+      hH = LH(7196);
+
+    function tH() {
+      (0, AH.loadPageShaderPackCompiler)()
+    }
+    async function zH() {
+      const HH = await (0, AH.loadPageShaderPackCompiler)();
+      await (HH ? (0, rH.reconcileStoredShaderPackHint)(HH) : (0, rH.forgetShaderPackActiveHint)())
+    }
+    async function CH(HH) {
+      const BH = await (0, AH.loadPageShaderPackCompiler)();
+      if (!BH) return {
+        status: "none"
+      };
+      const LH = await (0, hH.b)(HH, BH),
+        tH = (0, rH.storedPackOutcome)(LH, BH);
+      if ("none" === tH.kind) return {
+        status: "none"
+      };
+      const zH = BH.YBH((0, rH.storedShaderPackFiles)(LH), (0, SH.shaderPackTextures)());
+      if ("blocked" === tH.kind) return {
+        status: "blocked",
+        messageKey: tH.messageKey,
+        variants: 0 === zH.errors.length ? zH.variants : null
+      };
+      if (zH.errors.length > 0) return console.error("Shader pack failed to compile after passing validation", zH.errors), {
+        status: "none"
+      };
+      const {
+        name: CH,
+        keepCircleShadows: EH
+      } = LH.manifest;
+      return {
+        status: "active",
+        pack: {
+          name: CH,
+          variants: zH.variants,
+          keepCircleShadows: !0 === EH
+        }
       }
     }
-    class aU {
-      constructor() {
-        this.popupWindowPromise = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindow = null, this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.bloxdDiscordRefreshTokenKey = "4PSIDTCPM", this.discordRedirectUrl = yU.p[NU.d.clientEnvironment];
-        const UU = new URL(this.discordRedirectUrl).origin;
-        window.addEventListener("message", (XU => {
-          var zU;
-          if (XU.origin !== UU || "oauth_authentication_discord" !== (null === (zU = XU.data) || void 0 === zU ? void 0 : zU.type)) return;
-          if ("string" !== typeof XU.data.code || !XU.data.code) return void this.failPopup(new pU("Discord authentication was cancelled on Discord"));
-          const cU = this.popupWindowPromiseResolve;
-          this.resetPopupState(), null === cU || void 0 === cU || cU(XU.data.code)
-        }))
-      }
-      resetPopupState() {
-        null !== this.popupWindowCheckInterval && window.clearInterval(this.popupWindowCheckInterval), null !== this.popupWindowTimeout && window.clearTimeout(this.popupWindowTimeout), this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindowPromise = null, this.popupWindow = null
-      }
-      failPopup(UU) {
-        var XU;
-        const zU = this.popupWindowPromiseReject;
-        null === (XU = this.popupWindow) || void 0 === XU || XU.close(), this.resetPopupState(), null === zU || void 0 === zU || zU(UU)
-      }
-      openDiscordOAuthWindow() {
-        const UU = NU.d.discordClientID;
-        return window.open(`https://discord.com/oauth2/authorize?response_type=code&client_id=${UU}&scope=identify%20guilds&redirect_uri=${this.discordRedirectUrl}&integration_type=0`, "oauth_authentication", `popup,width=480,height=720,top=${window.screen.height/2-360},left=${window.screen.width/2-240}`)
-      }
-      async showDiscordAuthPrompt() {
-        return new Promise(((UU, XU) => {
-          YU.NotificationProvider.showPromptPopup({
-            title: "Discord Login Required",
-            confirmText: "Continue",
-            confirmTooltip: "Open Discord login window",
-            cancelText: "Cancel",
-            cancelTooltip: "Cancel Discord login"
-          }).getResult().then((zU => {
-            !0 === zU ? UU() : XU(new pU("Discord login was cancelled"))
-          })).catch(XU)
-        }))
-      }
-      signInWithPopup() {
-        if (null !== this.popupWindowPromise) return this.popupWindowPromise;
-        const UU = new Promise(((UU, XU) => {
-          this.popupWindowPromiseResolve = UU, this.popupWindowPromiseReject = XU
-        }));
-        return this.popupWindowPromise = UU, DU.c.removeItem(this.bloxdDiscordRefreshTokenKey), this.popupWindowTimeout = window.setTimeout((() => {
-          this.failPopup(new Error("Discord authentication timed out"))
-        }), IU), this.openPopup(UU).catch((XU => {
-          this.popupWindowPromise === UU && this.failPopup(XU instanceof Error ? XU : new Error(String(XU)))
-        })), UU
-      }
-      async openPopup(UU) {
-        let XU = this.openDiscordOAuthWindow();
-        if (!XU) {
-          if (await this.showDiscordAuthPrompt(), this.popupWindowPromise !== UU) return;
-          XU = this.openDiscordOAuthWindow()
+  },
+  7201: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      forgetShaderPackActiveHint: () => oH,
+      isOtherApiVersion: () => OH,
+      isShaderPackActive: () => PH,
+      isShaderPackChangePending: () => VH,
+      markShaderPackChangePending: () => UH,
+      pageShaderPackValidationVersion: () => bH,
+      reconcileStoredShaderPackHint: () => mH,
+      removeShaderPack: () => vH,
+      replaceShaderPack: () => WH,
+      saveShaderPack: () => QH,
+      shaderPackNeedsCheck: () => kH,
+      storedPackOutcome: () => TH,
+      storedShaderPackFiles: () => GH,
+      toStoredShaderPack: () => XH
+    });
+    var AH = LH(5531),
+      rH = LH(5523),
+      SH = LH(30),
+      hH = LH(3831),
+      tH = LH(7209),
+      zH = LH(7179);
+    const CH = "shaderPackChangePending";
+    let EH = null;
+
+    function XH(HH, BH, LH) {
+      return {
+        manifest: HH.manifest,
+        files: (0, AH.t)(HH.files),
+        validation: BH,
+        ...LH && {
+          listing: LH
         }
-        if (console.log("Discord OAuth window opened:", XU), !XU) throw new Error("Failed to open Discord authentication popup - popup may have been blocked");
-        this.popupWindow = XU;
-        const zU = window.setInterval((() => {
-          XU.closed && this.popupWindowPromise === UU && (window.clearInterval(zU), this.popupWindowCheckInterval = null, window.setTimeout((() => {
-            this.popupWindowPromise === UU && this.failPopup(new pU("Discord authentication was cancelled - popup window was closed"))
-          }), 1e3))
-        }), 200);
-        this.popupWindowCheckInterval = zU
-      }
-      async exchangeAuthorizationCodeForAccessToken(UU, XU) {
-        const {
-          accessToken: zU,
-          refreshToken: cU
-        } = await FU()((async () => await (0, QU.postJsonWithMetricsCookiesAndJsonResponse)(`${oU.clientSideServerUrls.indexUrl}/index/discord/log-event`, {
-          authorizationCode: UU,
-          bloxdClientEnvironment: NU.d.clientEnvironment,
-          instanceId: null
-        }, {
-          retries: 0
-        }, XU.getMetricsCookies())), {
-          retries: 3
-        });
-        return DU.c.setItem(this.bloxdDiscordRefreshTokenKey, cU), zU
-      }
-      hasCurrentUser() {
-        const UU = DU.c.getItem(this.bloxdDiscordRefreshTokenKey);
-        return !(0, EU.P)(UU)
-      }
-      async getCurrentUser(UU) {
-        const XU = DU.c.getItem(this.bloxdDiscordRefreshTokenKey);
-        if (!XU) return null;
-        let zU;
-        try {
-          const cU = await FU()((async () => {
-            try {
-              return await (0, QU.postJsonWithMetricsCookiesAndJsonResponse)(`${oU.clientSideServerUrls.indexUrl}/index/discord/collect-event`, {
-                refreshToken: XU
-              }, {
-                retries: 0
-              }, UU.getMetricsCookies())
-            } catch (zU) {
-              if (tU(zU)) throw new(FU().AbortError)(zU);
-              throw zU
-            }
-          }), {
-            retries: 3
-          });
-          zU = cU.accessToken, DU.c.setItem(this.bloxdDiscordRefreshTokenKey, cU.refreshToken)
-        } catch (cU) {
-          return tU(cU) ? (DU.c.removeItem(this.bloxdDiscordRefreshTokenKey), null) : (console.error("Failed to refresh Discord access token:", cU), null)
-        }
-        return {
-          accessToken: zU
-        }
-      }
-      signOut() {
-        this.failPopup(new pU("Signed out of Discord during login")), DU.c.removeItem(this.bloxdDiscordRefreshTokenKey)
       }
     }
 
-    function tU(UU) {
-      return UU instanceof cU.e && 435 === UU.httpCode
+    function GH(HH) {
+      return Object.keys(HH.files).map((BH => ({
+        path: BH,
+        source: HH.files[BH]
+      })))
+    }
+    let YH = Promise.resolve();
+
+    function uH(HH) {
+      const BH = YH.then(HH);
+      return YH = BH.catch((() => {})), BH
+    }
+
+    function QH(HH, BH) {
+      return uH((() => MH(HH, BH)))
+    }
+
+    function WH(HH, BH, LH) {
+      return uH((async () => JSON.stringify(await (0, tH.e)()) === JSON.stringify(HH) && (null === BH ? (await xH(), !0) : MH(BH, LH))))
+    }
+    async function MH(HH, BH) {
+      const LH = await SH.c.setItem(tH.c, HH);
+      return LH && IH(HH, BH), LH
+    }
+    async function xH() {
+      await SH.c.removeItem(tH.c), SH.e.removeItem(hH.d)
+    }
+
+    function vH() {
+      return uH(xH)
+    }
+
+    function PH(HH, BH) {
+      return "active" === TH(HH, BH).kind
+    }
+
+    function TH(HH, BH) {
+      var LH;
+      return null === HH ? {
+        kind: "none",
+        reason: "nothingStored"
+      } : OH(HH) ? {
+        kind: "none",
+        reason: "otherApiVersion"
+      } : !1 !== (null === (LH = HH.validation) || void 0 === LH ? void 0 : LH.ok) || HH.validation.fromRecheck ? null === BH ? {
+        kind: "none",
+        reason: "noCompiler"
+      } : kH(HH, BH) ? {
+        kind: "blocked",
+        messageKey: "shaderPack:failedUnchecked"
+      } : HH.validation.ok ? {
+        kind: "active"
+      } : {
+        kind: "blocked",
+        messageKey: "shaderPack:failedValidation"
+      } : {
+        kind: "none",
+        reason: "failedWhenLoaded"
+      }
+    }
+
+    function UH() {
+      SH.f.setItem(CH, performance.timeOrigin)
+    }
+
+    function VH() {
+      return SH.f.getItem(CH) === performance.timeOrigin
+    }
+
+    function OH(HH) {
+      return !(0, rH.g)(HH.manifest.apiVersion)
+    }
+
+    function bH(HH) {
+      return EH ??= HH.kN((0, zH.shaderPackTextures)()), EH
+    }
+
+    function kH(HH, BH) {
+      var LH;
+      return (null === (LH = HH.validation) || void 0 === LH ? void 0 : LH.headerVersion) !== bH(BH)
+    }
+
+    function mH(HH) {
+      return uH((async () => {
+        IH(await (0, tH.e)(!0), HH)
+      }))
+    }
+
+    function oH() {
+      return uH((async () => {
+        SH.e.removeItem(hH.d)
+      }))
+    }
+
+    function IH(HH, BH) {
+      PH(HH, BH) ? SH.e.setItem(hH.d, !0) : SH.e.removeItem(hH.d)
+    }
+  },
+  7196: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => zH,
+      d: () => tH
+    });
+    var AH = LH(7201),
+      rH = LH(7179),
+      SH = LH(105);
+    const hH = 100;
+    async function tH(HH, BH) {
+      var LH;
+      let AH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (LH = navigator.gpu) && void 0 !== LH ? LH : null;
+      const hH = HH.YBH(BH, (0, rH.shaderPackTextures)());
+      if (hH.errors.length > 0) return CH(HH, hH.errors, hH.offInStrict);
+      const tH = await async function(HH) {
+        if (!HH) return null;
+        try {
+          const BH = await (0, SH.y)(HH);
+          return BH ? await BH.requestDevice() : null
+        } catch (BH) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", BH), null
+        }
+      }(AH);
+      if (!tH) return null;
+      let zH = !1;
+      tH.lost.then((() => {
+        zH = !0
+      }));
+      try {
+        const BH = await Promise.all(hH.validationModules.map((BH => async function(HH, BH, LH) {
+          BH.pushErrorScope("validation");
+          const AH = BH.createShaderModule({
+              code: LH.code
+            }),
+            rH = BH.popErrorScope(),
+            {
+              messages: SH
+            } = await AH.getCompilationInfo(),
+            hH = SH.filter((HH => "error" === HH.type)).map((BH => HH.mapValidationMessage(LH, BH))),
+            tH = await rH;
+          tH && 0 === hH.length && hH.push({
+            file: null,
+            line: 0,
+            message: tH.message,
+            variants: [LH.key]
+          });
+          return hH
+        }(HH, tH, BH))));
+        return zH ? null : CH(HH, HH.rrH(BH.flat()), hH.offInStrict)
+      } catch (EH) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", EH), null
+      } finally {
+        tH.destroy()
+      }
+    }
+    async function zH(HH, BH) {
+      var LH;
+      if (!(0, AH.shaderPackNeedsCheck)(HH, BH) || (0, AH.isOtherApiVersion)(HH)) return HH;
+      const rH = await tH(BH, (0, AH.storedShaderPackFiles)(HH));
+      if (!rH) return HH;
+      const SH = !1 === (null === (LH = HH.validation) || void 0 === LH ? void 0 : LH.ok) && !HH.validation.fromRecheck,
+        hH = {
+          ...HH,
+          validation: SH ? rH : {
+            ...rH,
+            fromRecheck: !0
+          }
+        };
+      return await (0, AH.replaceShaderPack)(HH, hH, BH) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), hH
+    }
+
+    function CH(HH, BH, LH) {
+      return {
+        headerVersion: (0, AH.pageShaderPackValidationVersion)(HH),
+        ok: 0 === BH.length,
+        errors: BH.slice(0, hH),
+        moreErrors: Math.max(0, BH.length - hH),
+        offInStrict: LH
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

@@ -1,19 +1,19 @@
 export const id = 696;
 export const ids = [696];
 export const modules = {
-  64561: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      greasedLinePixelShaderWGSL: () => AU
+  64714: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      textureMergerPixelShader: () => hH
     });
-    var cU = zU(40961);
-    const yU = "greasedLinePixelShader",
-      QU = "var grlColors: texture_2d<f32>;var grlColorsSampler: sampler;uniform grlUseColors: f32;uniform grlUseDash: f32;uniform grlDashArray: f32;uniform grlDashOffset: f32;uniform grlDashRatio: f32;uniform grlVisibility: f32;uniform grlColorsWidth: f32;uniform grl_colorModeAndColorDistributionType: vec2f;uniform grlColor: vec3f;varying grlCounters: f32;varying grlColorPointer: f32;\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\nlet grlColorMode: f32=uniforms.grl_colorModeAndColorDistributionType.x;let grlColorDistributionType: f32=uniforms.grl_colorModeAndColorDistributionType.y;var outColor=vec4(uniforms.grlColor,1.);outColor.a=step(fragmentInputs.grlCounters,uniforms.grlVisibility);if (outColor.a==0.0) {discard;}\nif (uniforms.grlUseDash==1.0) {let dashPosition=(fragmentInputs.grlCounters+uniforms.grlDashOffset) % uniforms.grlDashArray;outColor.a*=ceil(dashPosition-(uniforms.grlDashArray*uniforms.grlDashRatio));if (outColor.a==0.0) {discard;}}\nif (uniforms.grlUseColors==1.) {\n#ifdef GREASED_LINE_COLOR_DISTRIBUTION_TYPE_LINE\nlet grlColor: vec4f=textureSample(grlColors,grlColorsSampler,vec2f(fragmentInputs.grlCounters,0.));\n#else\nlet lookup: vec2f=vec2(fract(fragmentInputs.grlColorPointer/uniforms.grlColorsWidth),1.0-floor(fragmentInputs.grlColorPointer/uniforms.grlColorsWidth));let grlColor: vec4f=textureSample(grlColors,grlColorsSampler,lookup);\n#endif\nif (grlColorMode==COLOR_MODE_SET) {outColor=grlColor;} else if (grlColorMode==COLOR_MODE_ADD) {outColor+=grlColor;} else if (grlColorMode==COLOR_MODE_MULTIPLY) {outColor*=grlColor;}}\n#if !defined(PREPASS) && !defined(ORDER_INDEPENDENT_TRANSPARENCY)\nfragmentOutputs.color=outColor;\n#endif\n#if ORDER_INDEPENDENT_TRANSPARENCY\nif (fragDepth==nearestDepth) {fragmentOutputs.frontColor=vec4f(fragmentOutputs.frontColor.rgb+outColor.rgb*outColor.a*alphaMultiplier,1.0-alphaMultiplier*(1.0-outColor.a));} else {fragmentOutputs.backColor+=outColor;}\n#endif\n#define CUSTOM_FRAGMENT_MAIN_END\n}\n";
-    cU.b.ShadersStoreWGSL[yU] || (cU.b.ShadersStoreWGSL[yU] = QU);
-    const AU = {
-      name: yU,
-      shader: QU
+    var AH = LH(41138);
+    const rH = "textureMergerPixelShader",
+      SH = "#ifdef USE_TEXTURE0\nuniform sampler2D inputTexture0;\n#endif\n#ifdef USE_TEXTURE1\nuniform sampler2D inputTexture1;\n#endif\n#ifdef USE_TEXTURE2\nuniform sampler2D inputTexture2;\n#endif\n#ifdef USE_TEXTURE3\nuniform sampler2D inputTexture3;\n#endif\n#ifdef RED_FROM_TEXTURE\nuniform int redTextureIndex;uniform int redSourceChannel;\n#else\nuniform float redConstantValue;\n#endif\n#ifdef GREEN_FROM_TEXTURE\nuniform int greenTextureIndex;uniform int greenSourceChannel;\n#else\nuniform float greenConstantValue;\n#endif\n#ifdef BLUE_FROM_TEXTURE\nuniform int blueTextureIndex;uniform int blueSourceChannel;\n#else\nuniform float blueConstantValue;\n#endif\n#ifdef ALPHA_FROM_TEXTURE\nuniform int alphaTextureIndex;uniform int alphaSourceChannel;\n#else\nuniform float alphaConstantValue;\n#endif\nvarying vec2 vUV;\n#if defined(RED_FROM_TEXTURE) || defined(GREEN_FROM_TEXTURE) || defined(BLUE_FROM_TEXTURE) || defined(ALPHA_FROM_TEXTURE)\nvec4 sampleTexture(int textureIndex,vec2 uv) {switch (textureIndex) {\n#ifdef USE_TEXTURE0\ncase 0:\nreturn texture2D(inputTexture0,uv);\n#endif\n#ifdef USE_TEXTURE1\ncase 1:\nreturn texture2D(inputTexture1,uv);\n#endif\n#ifdef USE_TEXTURE2\ncase 2:\nreturn texture2D(inputTexture2,uv);\n#endif\n#ifdef USE_TEXTURE3\ncase 3:\nreturn texture2D(inputTexture3,uv);\n#endif\ndefault:\nreturn vec4(0.0,0.0,0.0,1.0); }}\nfloat extractChannel(vec4 color,int channelIndex) {switch (channelIndex) {case 0:\nreturn color.r; \ncase 1:\nreturn color.g; \ncase 2:\nreturn color.b; \ndefault:\nreturn color.a; }}\n#endif\nvoid main() {vec2 uv=vUV;\n#ifdef RED_FROM_TEXTURE\nvec4 redSample=sampleTexture(redTextureIndex,uv);float r=extractChannel(redSample,redSourceChannel);\n#else\nfloat r=redConstantValue;\n#endif\n#ifdef GREEN_FROM_TEXTURE\nvec4 greenSample=sampleTexture(greenTextureIndex,uv);float g=extractChannel(greenSample,greenSourceChannel);\n#else\nfloat g=greenConstantValue;\n#endif\n#ifdef BLUE_FROM_TEXTURE\nvec4 blueSample=sampleTexture(blueTextureIndex,uv);float b=extractChannel(blueSample,blueSourceChannel);\n#else\nfloat b=blueConstantValue;\n#endif\n#ifdef ALPHA_FROM_TEXTURE\nvec4 alphaSample=sampleTexture(alphaTextureIndex,uv);float a=extractChannel(alphaSample,alphaSourceChannel);\n#else\nfloat a=alphaConstantValue;\n#endif\ngl_FragColor=vec4(r,g,b,a);}";
+    AH.c.ShadersStore[rH] || (AH.c.ShadersStore[rH] = SH);
+    const hH = {
+      name: rH,
+      shader: SH
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

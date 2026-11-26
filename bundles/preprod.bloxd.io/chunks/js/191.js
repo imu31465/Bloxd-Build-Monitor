@@ -1,49 +1,43 @@
 export const id = 191;
 export const ids = [191];
 export const modules = {
-  9612: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      pageBody: () => cU
+  9724: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      pageBody: () => AH
     });
-    const cU = {
-      whatIs: ["Sharp aim and quick feet are what separate top frag from instant respawn. Bloxd Cube Warfare is a fast, free block FPS where the firefights don't stop. You can play Free-For-All, Team Deathmatch or Gun Game, and you'll unlock over 15 guns along the way. If you'd rather have objectives, kits and vehicles in big 12v12 battles, have a look at Frontline."],
-      howToPlay: ["Join a match and vote on the map. In Free-For-All it's every player for themselves. Team Deathmatch puts you on a side, and your team has to outscore the other one. Rounds last 10 minutes. Get taken down and you'll respawn with 8 seconds of invincibility, though your killstreak resets.", "Keep taking down opponents without going down yourself and you'll build killstreaks. They reward you across 3 tiers with things like extra health, more damage, faster movement or free blocks. New guns unlock in the shop. There are pistols, SMGs, shotguns, sniper rifles and LMGs, and you can take any of them into Teams or FFA. Gun Game has its own queue. Every elimination swaps your weapon for the next one, and to win you need a final takedown with the sword.", "Some matches throw in a twist. In Collect Diamonds you gather diamonds to win. Explosives keeps handing you explosives, and each takedown gets you more."],
-      features: ["Free-For-All, Team Deathmatch and Gun Game", "Over 15 Guns, Including the AK-47, AWP, Deagle, Striker-12 and GPMG", "Killstreak Rewards Across 3 Tiers", "Place Blocks for Cover with Killstreak Rewards", "Match Modifiers: Collect Diamonds and Explosives", "Maps Including Snowbase, Sienna, Cabins and More, with Map Voting", "Leaderboards and Player Stats"],
-      tips: ["Keep moving. Standing still makes you an easy target", "Go for headshots, especially once you've got the Goodaimer killstreak", "Use those 8 seconds of respawn invincibility to get back into position", "Stay alive to keep your killstreak going, because it resets when you're taken down", "Place blocks for cover, but remember every map has a build height limit", "In Collect Diamonds, shoot the diamonds around the map so they drop, then grab them", "Try every gun in Gun Game before you unlock your favourite in the shop"],
-      similarGames: ["frontline", "classic_survivalGuns", "infection", "skywars"],
+    const AH = {
+      whatIs: ["The world is ending, and the only way out is up. Bloxd Build a Factory is the original factory mode on Bloxd. You automate a factory, build a rocket and launch it to escape before time runs out. It's a race against everyone else in your world, the fastest launches go top of the leaderboard, and you don't need to install anything first.", "The world resets every 6 hours, so every session is a brand new race to the stars. Want a factory that keeps going forever? Have a look at the Persistent world or Build a Factory 2."],
+      howToPlay: ["Place your first Chest (or bed) and you'll get an Auto Miner and, in public lobbies, a Protector. Craft some Pipes and hook the Auto Miner up to the Chest. Open the Auto Miner, put some Coal in to fuel it, and now it mines for you.", "Next up, craft an Extractor Pipe and an Auto Crafter. Connect a Chest to the Auto Crafter with the Extractor Pipe and it'll turn your resources into new items by itself. As things grow, add Auto Harvesters for crops and Solar Panels with Wire for power. Splitter, Filter and Merger Pipes send items exactly where they need to go.", "Then place your Rocket Ship and upgrade it one stage at a time using whatever your factory makes. When it's ready, launch it, escape the dying world and set your time. Upgrades are cheaper in the resetting world, so a full rocket fits into one session.", "In the Persistent world, nothing resets. You launch rockets to reach the Moon, mine Lunite there and build faster Lunite machines."],
+      features: ["Factory Automation with a Rocket Race at the End", "Auto Miners, Auto Crafters and Auto Harvesters", "Pipes, Extractor, Splitter, Filter and Merger Pipes", "Solar Panels and Wire for Power", "Leaderboard for Best Launch Time and Rocket Stage", "Fresh World Every 6 Hours", "Persistent World with Moon Trips and Lunite Machines", "Step-by-Step Tutorial for New Players"],
+      tips: ["Follow the tutorial and you'll have your first Auto Miner running in no time", "Keep your Auto Miners topped up with Coal so they never stop", "Use Extractor Pipes to feed Chests into your Auto Crafters", "Filter and Splitter Pipes sort items into the right machines", "Leave about 50 blocks of open air above your Solar Panels", "Upgrade your rocket as soon as you can afford the next stage", 'Keep an eye on the "World resets in" timer and plan your launch before it runs out', "In the Persistent world each chunk holds up to 5 Auto Miners, 5 Auto Crafters and 5 Auto Harvesters, so spread your factory out", "Mine Lunite on the Moon to craft Lunite machines that run 1.5\xd7 faster"],
+      similarGames: ["buildAFactory2", "skyblock", "oneBlock", "classic_survival"],
       faq: [{
-        question: "What is Cube Warfare?",
-        answer: "A fast block shooter with 10-minute rounds, killstreak rewards and over 15 guns to unlock."
+        question: "What is Bloxd Build a Factory?",
+        answer: "A factory automation race. You automate your factory, build a rocket and try to escape the dying world as fast as you can."
       }, {
-        question: "What modes are in Cube Warfare?",
-        answer: "Free-For-All, Team Deathmatch and Gun Game. You'll be in Free-For-All by default."
+        question: "How do you build a rocket in Bloxd Build a Factory?",
+        answer: "Place your Rocket Ship from your inventory, then feed it resources from your factory to upgrade it stage by stage. Once it's finished, launch it to beat the game."
       }, {
-        question: "How does team deathmatch work in Cube Warfare?",
-        answer: "Pick Team Deathmatch and work with your team to outscore the other side before the 10-minute round is up."
+        question: "What's the goal in Build a Factory?",
+        answer: "Launch a rocket and escape the dying world. Your final time gets saved, and the quickest launches end up on the leaderboard."
       }, {
-        question: "What is Gun Game in Bloxd Cube Warfare?",
-        answer: "It's a mode with its own queue. Each elimination upgrades your weapon, and a final takedown with the sword wins it."
+        question: "How often does the Build a Factory world reset?",
+        answer: "Every 6 hours. After you launch, you can jump into another lobby and play again, or hang around until your world resets."
       }, {
-        question: "How do I unlock new guns in Cube Warfare?",
-        answer: "Through the shop. Once they're unlocked you can take them into Free-For-All or Team Deathmatch, and Gun Game lets you try the lot."
+        question: "What is the Persistent world in Build a Factory?",
+        answer: "It's a Build a Factory world that never resets. You can build up to 5 Auto Miners, 5 Auto Crafters and 5 Auto Harvesters per chunk, and you launch rockets to climb the leaderboard and reach the Moon."
       }, {
-        question: "How many guns are in Cube Warfare?",
-        answer: "Over 15. That includes the AK-47, AWP, M16, MP40, SKAR, Deagle and Striker-12."
+        question: "How do you get to the Moon in Build a Factory?",
+        answer: "In the Persistent world, launch a rocket. You'll land on the Moon, where you can mine Lunite. No rocket to get back? Open the shop to return home."
       }, {
-        question: "What are killstreaks in Cube Warfare?",
-        answer: "Rewards for taking down opponents without being eliminated, like Healthup, Hitem, Speedy and Autoblocks. There are 3 tiers, and your streak resets when you go down."
+        question: "What does Lunite do?",
+        answer: "You use it to craft Lunite Auto Miners, Auto Crafters and Auto Harvesters. They run 1.5\xd7 faster, and the Lunite Auto Crafter and Auto Harvester can sometimes give you extra items."
       }, {
-        question: "What is Collect Diamonds?",
-        answer: "A match modifier for Free-For-All and Team Deathmatch. You need 30 diamonds to win in FFA, or 100 as a team. When someone's taken down they drop all their diamonds, so you can steal theirs. Shoot the diamonds placed around the map and they'll drop too. Those respawn every 15 seconds."
-      }, {
-        question: "What is the Explosives modifier?",
-        answer: "You keep getting explosives all match, and every takedown gives you more."
-      }, {
-        question: "What maps are in Cube Warfare?",
-        answer: "Snowbase, Sienna and Cabins, among others. You get to vote for the next one."
+        question: "What's the difference between Build a Factory and Build a Factory 2?",
+        answer: "Build a Factory is a race to launch a rocket in a shared world that resets. In Build a Factory 2 you get your own floating factory island that you grow at your own pace."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

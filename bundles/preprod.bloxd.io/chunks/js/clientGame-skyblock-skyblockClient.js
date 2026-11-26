@@ -1,370 +1,370 @@
 export const id = 30;
 export const ids = [30];
 export const modules = {
-  5358: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => tU,
-      f: () => gU
+  5308: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => WH,
+      h: () => MH
     });
-    var cU = zU(1106),
-      yU = zU.n(cU),
-      QU = zU(61),
-      AU = zU(1193),
-      FU = zU(5360),
-      oU = zU(1978),
-      DU = zU(2616),
-      EU = zU(5364),
-      YU = zU(1305);
-    const NU = new WeakMap;
-    let IU = 0;
+    var AH = LH(1038),
+      rH = LH.n(AH),
+      SH = LH(45),
+      hH = LH(1123),
+      tH = LH(5314),
+      zH = LH(1967),
+      CH = LH(2628),
+      EH = LH(5319),
+      XH = LH(1225);
+    const GH = new WeakMap;
+    let YH = 0;
 
-    function pU(UU) {
-      let XU = NU.get(UU);
-      return void 0 === XU && (XU = IU++, NU.set(UU, XU)), XU
+    function uH(HH) {
+      let BH = GH.get(HH);
+      return void 0 === BH && (BH = YH++, GH.set(HH, BH)), BH
     }
 
-    function aU(UU) {
+    function QH(HH) {
       let {
-        piece: XU
-      } = UU;
-      return "space" === XU.kind ? (0, YU.jsx)(YU.Fragment, {
-        children: XU.text
-      }) : (0, YU.jsx)("span", {
+        piece: BH
+      } = HH;
+      return "space" === BH.kind ? (0, XH.jsx)(XH.Fragment, {
+        children: BH.text
+      }) : (0, XH.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${XU.delayMs}ms`
+          "--word-delay": `${BH.delayMs}ms`
         },
-        children: (0, YU.jsx)(FU.e, {
-          text: "icon" === XU.kind ? `[[${XU.icon}]]` : XU.text
+        children: (0, XH.jsx)(tH.b, {
+          text: "icon" === BH.kind ? `[[${BH.icon}]]` : BH.text
         })
       })
     }
 
-    function tU(UU) {
+    function WH(HH) {
       let {
-        display: XU
-      } = UU;
+        display: BH
+      } = HH;
       const {
-        selectedLanguage: zU
-      } = (0, AU.I)(), cU = (0, QU.useMemo)((() => (0, EU.d)((0, EU.g)(XU).plan.pieces)), [XU, zU.code]);
-      return (0, YU.jsxs)("div", {
-        className: yU()("Dialogue", {
-          DialogueAnimateIn: !1 !== XU.animateIn
+        selectedLanguage: LH
+      } = (0, hH.B)(), AH = (0, SH.useMemo)((() => (0, EH.b)((0, EH.d)(BH).plan.pieces)), [BH, LH.code]);
+      return (0, XH.jsxs)("div", {
+        className: rH()("Dialogue", {
+          DialogueAnimateIn: !1 !== BH.animateIn
         }),
-        children: [XU.speakerName && (0, YU.jsx)(oU.d, {
-          text: XU.speakerName,
+        children: [BH.speakerName && (0, XH.jsx)(zH.b, {
+          text: BH.speakerName,
           className: "DialogueSpeaker"
-        }), (0, YU.jsx)("p", {
+        }), (0, XH.jsx)("p", {
           className: "DialogueLine",
-          children: cU.map(((UU, XU) => 1 === UU.length && "space" === UU[0].kind ? UU[0].text : (0, YU.jsx)("span", {
+          children: AH.map(((HH, BH) => 1 === HH.length && "space" === HH[0].kind ? HH[0].text : (0, XH.jsx)("span", {
             className: "DialogueGlue",
-            children: UU.map(((UU, XU) => (0, YU.jsx)(aU, {
-              piece: UU
-            }, XU)))
-          }, XU)))
+            children: HH.map(((HH, BH) => (0, XH.jsx)(QH, {
+              piece: HH
+            }, BH)))
+          }, BH)))
         })]
       })
     }
-    const gU = (0, QU.memo)((function() {
-      const UU = (0, DU.f)("dialogue");
-      return (0, YU.jsx)("div", {
+    const MH = (0, SH.memo)((function() {
+      const HH = (0, CH.j)("dialogue");
+      return (0, XH.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: UU && (0, YU.jsx)(tU, {
-          display: UU
-        }, pU(UU))
+        children: HH && (0, XH.jsx)(WH, {
+          display: HH
+        }, uH(HH))
       })
     }))
   },
-  5360: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => FU
+  5314: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => tH
     });
-    var cU = zU(61),
-      yU = zU(320),
-      QU = zU(1993),
-      AU = zU(1305);
+    var AH = LH(45),
+      rH = LH(304),
+      SH = LH(1986),
+      hH = LH(1225);
 
-    function FU(UU) {
+    function tH(HH) {
       let {
-        text: XU
-      } = UU;
-      const zU = [];
-      let FU = "";
-      return (0, yU.rc)(XU).forEach(((UU, XU) => {
-        if ("string" === typeof UU || !(0, QU.g)(UU.icon)) return void(FU += "string" === typeof UU ? UU : UU.icon);
-        const yU = Math.max(0, FU.trimEnd().search(/\S{1,12}$/));
-        zU.push((0, AU.jsxs)(cU.Fragment, {
-          children: [FU.slice(0, yU), (0, AU.jsxs)("span", {
+        text: BH
+      } = HH;
+      const LH = [];
+      let tH = "";
+      return (0, rH.tc)(BH).forEach(((HH, BH) => {
+        if ("string" === typeof HH || !(0, SH.f)(HH.icon)) return void(tH += "string" === typeof HH ? HH : HH.icon);
+        const rH = Math.max(0, tH.trimEnd().search(/\S{1,12}$/));
+        LH.push((0, hH.jsxs)(AH.Fragment, {
+          children: [tH.slice(0, rH), (0, hH.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [FU.slice(yU), (0, AU.jsx)("span", {
+            children: [tH.slice(rH), (0, hH.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": UU.icon,
-              children: (0, AU.jsx)(QU.c, {
-                itemName: UU.icon,
+              "aria-label": HH.icon,
+              children: (0, hH.jsx)(SH.e, {
+                itemName: HH.icon,
                 amount: 0
               })
             })]
           })]
-        }, XU)), FU = ""
-      })), zU.push(FU), (0, AU.jsx)(AU.Fragment, {
-        children: zU
+        }, BH)), tH = ""
+      })), LH.push(tH), (0, hH.jsx)(hH.Fragment, {
+        children: LH
       })
     }
   },
-  34859: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => QU
+  34986: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => SH
     });
-    var cU = zU(4977),
-      yU = zU(4982);
+    var AH = LH(4947),
+      rH = LH(4951);
 
-    function QU(UU) {
+    function SH(HH) {
       let {
-        children: XU,
-        showing: zU,
-        globallyUniqueKey: QU,
-        alwaysMountChildren: AU = !1,
-        doGameplayStartStopOnShow: FU = !0,
-        keepsMovement: oU = !1
-      } = UU;
-      return (0, yU.c)(!0, zU, QU, oU), (0, cU.d)(FU, zU), zU || AU ? XU : null
+        children: BH,
+        showing: LH,
+        globallyUniqueKey: SH,
+        alwaysMountChildren: hH = !1,
+        doGameplayStartStopOnShow: tH = !0,
+        keepsMovement: zH = !1
+      } = HH;
+      return (0, rH.c)(!0, LH, SH, zH), (0, AH.e)(tH, LH), LH || hH ? BH : null
     }
   },
-  5364: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => rU,
-      g: () => SU
+  5319: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => cH,
+      d: () => KH
     });
-    var cU = zU(5369),
-      yU = zU(320);
-    const QU = 120,
-      AU = 260,
-      FU = 1.15,
-      oU = 1.2,
-      DU = 2,
-      EU = 1.08,
-      YU = .8,
-      NU = .95,
-      IU = 8,
-      pU = "[\"')\\]\u300d\u300f\uff09]*",
-      aU = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${pU}$`),
-      tU = new RegExp(`[?\uff1f]${pU}$`),
-      gU = new RegExp(`[!\uff01]${pU}$`),
-      kU = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      GU = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      BU = new RegExp(`[${GU}]`),
-      ZU = new RegExp(`[${GU}]|[^${GU}]+`, "g"),
-      RU = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var AH = LH(5325),
+      rH = LH(304);
+    const SH = 120,
+      hH = 260,
+      tH = 1.15,
+      zH = 1.2,
+      CH = 2,
+      EH = 1.08,
+      XH = .8,
+      GH = .95,
+      YH = 8,
+      uH = "[\"')\\]\u300d\u300f\uff09]*",
+      QH = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${uH}$`),
+      WH = new RegExp(`[?\uff1f]${uH}$`),
+      MH = new RegExp(`[!\uff01]${uH}$`),
+      xH = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      vH = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      PH = new RegExp(`[${vH}]`),
+      TH = new RegExp(`[${vH}]|[^${vH}]+`, "g"),
+      UH = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function PU(UU) {
-      let XU = 2166136261;
-      for (let zU = 0; zU < UU.length; zU++) XU ^= UU.charCodeAt(zU), XU = Math.imul(XU, 16777619);
-      return (XU >>> 0) / 4294967295 * 2 - 1
+    function VH(HH) {
+      let BH = 2166136261;
+      for (let LH = 0; LH < HH.length; LH++) BH ^= HH.charCodeAt(LH), BH = Math.imul(BH, 16777619);
+      return (BH >>> 0) / 4294967295 * 2 - 1
     }
 
-    function WU(UU) {
-      var XU;
-      if (BU.test(UU)) return 1;
-      const zU = UU.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        cU = zU.replace(/[^0-9]/g, "");
-      if (cU.length > 0 && !/\p{L}/u.test(zU)) return Math.min(cU.length, 4);
-      const yU = null !== (XU = zU.match(RU)) && void 0 !== XU ? XU : [];
-      if (0 === yU.length) {
-        var QU, AU;
-        const UU = null !== (QU = null === (AU = zU.match(/\p{L}/gu)) || void 0 === AU ? void 0 : AU.length) && void 0 !== QU ? QU : 0;
-        return 0 === UU ? 0 : Math.min(Math.max(1, Math.round(UU / 2.5)), IU)
+    function OH(HH) {
+      var BH;
+      if (PH.test(HH)) return 1;
+      const LH = HH.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        AH = LH.replace(/[^0-9]/g, "");
+      if (AH.length > 0 && !/\p{L}/u.test(LH)) return Math.min(AH.length, 4);
+      const rH = null !== (BH = LH.match(UH)) && void 0 !== BH ? BH : [];
+      if (0 === rH.length) {
+        var SH, hH;
+        const HH = null !== (SH = null === (hH = LH.match(/\p{L}/gu)) || void 0 === hH ? void 0 : hH.length) && void 0 !== SH ? SH : 0;
+        return 0 === HH ? 0 : Math.min(Math.max(1, Math.round(HH / 2.5)), YH)
       }
-      const FU = zU.replace(/[^\p{L}]/gu, ""),
-        oU = yU.length > 1 && "e" === yU.at(-1) && FU.endsWith("e") && !FU.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(UU.replace(/[^\p{L}]/gu, ""));
-      return Math.min(yU.length - (oU ? 1 : 0), IU)
+      const tH = LH.replace(/[^\p{L}]/gu, ""),
+        zH = rH.length > 1 && "e" === rH.at(-1) && tH.endsWith("e") && !tH.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(HH.replace(/[^\p{L}]/gu, ""));
+      return Math.min(rH.length - (zH ? 1 : 0), YH)
     }
 
-    function dU(UU) {
-      return UU.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function bH(HH) {
+      return HH.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function LU(UU) {
-      const XU = UU.replace(/[^\p{L}]/gu, "");
-      return XU.length >= 2 && XU === XU.toUpperCase() && XU !== XU.toLowerCase()
+    function kH(HH) {
+      const BH = HH.replace(/[^\p{L}]/gu, "");
+      return BH.length >= 2 && BH === BH.toUpperCase() && BH !== BH.toLowerCase()
     }
 
-    function eU(UU, XU) {
-      var zU;
-      const IU = XU && (0, cU.l)(XU),
-        pU = null !== (zU = null === IU || void 0 === IU ? void 0 : IU.syllableMs) && void 0 !== zU ? zU : cU.e,
-        GU = function(UU) {
-          const XU = [];
-          for (const cU of (0, yU.rc)(UU))
-            if ("string" === typeof cU)
-              for (const UU of cU.split(/(\s+)/)) {
-                if ("" === UU) continue;
-                if (/^\s+$/.test(UU)) {
-                  XU.push({
+    function mH(HH, BH) {
+      var LH;
+      const YH = BH && (0, AH.k)(BH),
+        uH = null !== (LH = null === YH || void 0 === YH ? void 0 : YH.syllableMs) && void 0 !== LH ? LH : AH.e,
+        vH = function(HH) {
+          const BH = [];
+          for (const AH of (0, rH.tc)(HH))
+            if ("string" === typeof AH)
+              for (const HH of AH.split(/(\s+)/)) {
+                if ("" === HH) continue;
+                if (/^\s+$/.test(HH)) {
+                  BH.push({
                     kind: "space",
-                    text: UU
+                    text: HH
                   });
                   continue
                 }
-                if (!BU.test(UU)) {
-                  XU.push({
+                if (!PH.test(HH)) {
+                  BH.push({
                     kind: "word",
-                    text: UU,
+                    text: HH,
                     delayMs: 0
                   });
                   continue
                 }
-                let cU = !0;
-                for (const yU of null !== (zU = UU.match(ZU)) && void 0 !== zU ? zU : []) {
-                  var zU;
-                  const UU = XU.at(-1);
-                  cU || "word" !== (null === UU || void 0 === UU ? void 0 : UU.kind) || BU.test(yU) || /[\p{L}\p{N}]/u.test(yU) ? (cU || XU.push({
+                let AH = !0;
+                for (const rH of null !== (LH = HH.match(TH)) && void 0 !== LH ? LH : []) {
+                  var LH;
+                  const HH = BH.at(-1);
+                  AH || "word" !== (null === HH || void 0 === HH ? void 0 : HH.kind) || PH.test(rH) || /[\p{L}\p{N}]/u.test(rH) ? (AH || BH.push({
                     kind: "space",
                     text: "\u200b"
-                  }), XU.push({
+                  }), BH.push({
                     kind: "word",
-                    text: yU,
+                    text: rH,
                     delayMs: 0
-                  }), cU = !1) : UU.text += yU
+                  }), AH = !1) : HH.text += rH
                 }
-              } else XU.push({
+              } else BH.push({
                 kind: "icon",
-                text: cU.icon,
+                text: AH.icon,
                 delayMs: 0
               });
-          return XU
-        }(UU),
-        RU = [];
-      let eU = [];
-      for (const cU of GU) "space" !== cU.kind && (eU.push(cU), aU.test(cU.text) && (RU.push(eU), eU = []));
-      RU.push(eU);
-      const CU = [];
-      let wU = 0;
-      for (const cU of RU) {
-        var qU, OU;
-        const UU = null !== (qU = null === (OU = cU.at(-1)) || void 0 === OU ? void 0 : OU.text) && void 0 !== qU ? qU : "",
-          XU = tU.test(UU),
-          zU = gU.test(UU),
-          yU = cU.map((UU => "word" === UU.kind ? WU(UU.text) : 1)),
-          GU = yU.findLastIndex((UU => UU > 0));
-        for (const [tU, gU] of cU.entries()) {
-          const UU = "word" === gU.kind,
-            cU = yU[tU];
-          gU.delayMs = wU;
-          for (let yU = 0; IU && yU < cU; yU++) {
+          return BH
+        }(HH),
+        UH = [];
+      let mH = [];
+      for (const AH of vH) "space" !== AH.kind && (mH.push(AH), QH.test(AH.text) && (UH.push(mH), mH = []));
+      UH.push(mH);
+      const oH = [];
+      let IH = 0;
+      for (const AH of UH) {
+        var fH, lH;
+        const HH = null !== (fH = null === (lH = AH.at(-1)) || void 0 === lH ? void 0 : lH.text) && void 0 !== fH ? fH : "",
+          BH = WH.test(HH),
+          LH = MH.test(HH),
+          rH = AH.map((HH => "word" === HH.kind ? OH(HH.text) : 1)),
+          vH = rH.findLastIndex((HH => HH > 0));
+        for (const [WH, MH] of AH.entries()) {
+          const HH = "word" === MH.kind,
+            AH = rH[WH];
+          MH.delayMs = IH;
+          for (let rH = 0; YH && rH < AH; rH++) {
             const {
-              intonation: QU
-            } = IU;
-            let AU = GU > 0 ? -QU.declineSemitones * (tU / GU) : 0;
-            AU += PU(`${dU(gU.text)}|${yU}`) * QU.variationSemitones;
-            const aU = Math.min(1, QU.variationSemitones);
-            let kU = IU.glideSemitones,
-              BU = 1;
-            zU && (AU += QU.exclaimLiftSemitones, BU *= FU), XU && tU === GU && (AU += QU.questionRiseSemitones * (cU > 1 ? .5 + .5 * yU / (cU - 1) : 1), yU === cU - 1 && (kU = Math.abs(kU) + QU.questionRiseSemitones / 2)), UU && LU(gU.text) && (AU += DU * aU, BU *= oU), cU > 1 && 0 === yU && (AU += YU * aU, BU *= EU), CU.push({
-              atMs: wU + yU * pU,
-              semitones: AU,
-              glideSemitones: kU,
-              durationMs: yU < cU - 1 ? Math.min(IU.durationMs, pU * NU) : IU.durationMs,
-              level: BU
+              intonation: SH
+            } = YH;
+            let hH = vH > 0 ? -SH.declineSemitones * (WH / vH) : 0;
+            hH += VH(`${bH(MH.text)}|${rH}`) * SH.variationSemitones;
+            const QH = Math.min(1, SH.variationSemitones);
+            let xH = YH.glideSemitones,
+              PH = 1;
+            LH && (hH += SH.exclaimLiftSemitones, PH *= tH), BH && WH === vH && (hH += SH.questionRiseSemitones * (AH > 1 ? .5 + .5 * rH / (AH - 1) : 1), rH === AH - 1 && (xH = Math.abs(xH) + SH.questionRiseSemitones / 2)), HH && kH(MH.text) && (hH += CH * QH, PH *= zH), AH > 1 && 0 === rH && (hH += XH * QH, PH *= EH), oH.push({
+              atMs: IH + rH * uH,
+              semitones: hH,
+              glideSemitones: xH,
+              durationMs: rH < AH - 1 ? Math.min(YH.durationMs, uH * GH) : YH.durationMs,
+              level: PH
             })
           }
-          wU += cU * pU + (aU.test(gU.text) ? AU : kU.test(gU.text) ? QU : 0)
+          IH += AH * uH + (QH.test(MH.text) ? hH : xH.test(MH.text) ? SH : 0)
         }
       }
       return {
-        pieces: GU.map((UU => "space" === UU.kind ? UU : "icon" === UU.kind ? {
+        pieces: vH.map((HH => "space" === HH.kind ? HH : "icon" === HH.kind ? {
           kind: "icon",
-          icon: UU.text,
-          delayMs: UU.delayMs
+          icon: HH.text,
+          delayMs: HH.delayMs
         } : {
           kind: "word",
-          text: UU.text,
-          delayMs: UU.delayMs
+          text: HH.text,
+          delayMs: HH.delayMs
         })),
-        blips: CU
+        blips: oH
       }
     }
-    var CU = zU(1193),
-      wU = zU(1266),
-      qU = zU(2012);
+    var oH = LH(1123),
+      IH = LH(1194),
+      fH = LH(2003);
 
-    function OU(UU) {
-      if ("string" === typeof UU) return UU;
-      const XU = wU.h.get().getCurrentLanguageCode();
-      return (0, CU.t)(XU, UU.translationKey, (0, CU.p)(UU.params, qU.c.shown))
+    function lH(HH) {
+      if ("string" === typeof HH) return HH;
+      const BH = IH.g.get().getCurrentLanguageCode();
+      return (0, oH.r)(BH, HH.translationKey, (0, oH.q)(HH.params, fH.c.shown))
     }
 
-    function SU(UU) {
-      const XU = void 0 === UU.voice ? null : (0, cU.o)(UU.voice),
-        zU = XU && (0, cU.l)(XU);
+    function KH(HH) {
+      const BH = void 0 === HH.voice ? null : (0, AH.l)(HH.voice),
+        LH = BH && (0, AH.k)(BH);
       return {
-        plan: eU(OU(UU.line), zU),
-        synth: zU
+        plan: mH(lH(HH.line), LH),
+        synth: LH
       }
     }
 
-    function rU(UU) {
-      const XU = [];
-      let zU = [];
-      for (const [yU, QU] of UU.entries()) {
-        var cU;
-        "space" === QU.kind && (" " !== QU.text || "icon" !== (null === (cU = UU[yU + 1]) || void 0 === cU ? void 0 : cU.kind)) ? (zU.length > 0 && XU.push(zU), XU.push([QU]), zU = []) : zU.push(QU)
+    function cH(HH) {
+      const BH = [];
+      let LH = [];
+      for (const [rH, SH] of HH.entries()) {
+        var AH;
+        "space" === SH.kind && (" " !== SH.text || "icon" !== (null === (AH = HH[rH + 1]) || void 0 === AH ? void 0 : AH.kind)) ? (LH.length > 0 && BH.push(LH), BH.push([SH]), LH = []) : LH.push(SH)
       }
-      return zU.length > 0 && XU.push(zU), XU
+      return LH.length > 0 && BH.push(LH), BH
     }
   },
-  39296: (UU, XU, zU) => {
-    function cU(UU, XU, zU) {
-      const cU = new Set,
-        yU = new ResizeObserver(zU),
-        QU = () => {
-          const XU = new Set(document.querySelectorAll(UU));
-          let QU = !1;
-          for (const UU of cU) XU.has(UU) || (yU.unobserve(UU), cU.delete(UU), QU = !0);
-          for (const UU of XU) cU.has(UU) || (yU.observe(UU), AU.observe(UU, {
+  39388: (HH, BH, LH) => {
+    function AH(HH, BH, LH) {
+      const AH = new Set,
+        rH = new ResizeObserver(LH),
+        SH = () => {
+          const BH = new Set(document.querySelectorAll(HH));
+          let SH = !1;
+          for (const HH of AH) BH.has(HH) || (rH.unobserve(HH), AH.delete(HH), SH = !0);
+          for (const HH of BH) AH.has(HH) || (rH.observe(HH), hH.observe(HH, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), cU.add(UU));
-          QU && zU()
+          }), AH.add(HH));
+          SH && LH()
         },
-        AU = new MutationObserver((XU => {
-          XU.some((UU => "attributes" === UU.type)) && zU(), XU.some((XU => function(UU, XU, zU) {
-            if ("childList" !== UU.type) return !1;
-            for (const cU of UU.addedNodes)
-              if (cU instanceof Element && (cU.matches(XU) || cU.querySelector(XU))) return !0;
-            for (const cU of UU.removedNodes)
-              if (cU instanceof Element)
-                for (const UU of zU)
-                  if (cU.contains(UU)) return !0;
+        hH = new MutationObserver((BH => {
+          BH.some((HH => "attributes" === HH.type)) && LH(), BH.some((BH => function(HH, BH, LH) {
+            if ("childList" !== HH.type) return !1;
+            for (const AH of HH.addedNodes)
+              if (AH instanceof Element && (AH.matches(BH) || AH.querySelector(BH))) return !0;
+            for (const AH of HH.removedNodes)
+              if (AH instanceof Element)
+                for (const HH of LH)
+                  if (AH.contains(HH)) return !0;
             return !1
-          }(XU, UU, cU))) && QU()
+          }(BH, HH, AH))) && SH()
         }));
-      AU.observe(document.body, {
+      hH.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const FU of XU) yU.observe(FU);
-      return window.addEventListener("resize", zU), QU(), zU(), () => {
-        yU.disconnect(), AU.disconnect(), window.removeEventListener("resize", zU)
+      for (const tH of BH) rH.observe(tH);
+      return window.addEventListener("resize", LH), SH(), LH(), () => {
+        rH.disconnect(), hH.disconnect(), window.removeEventListener("resize", LH)
       }
     }
-    zU.d(XU, {
-      e: () => cU
+    LH.d(BH, {
+      c: () => AH
     })
   },
-  9449: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => FU,
-      e: () => oU
+  9577: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => tH,
+      g: () => zH
     });
-    var cU = zU(27),
-      yU = zU(1360),
-      QU = zU(97);
-    const AU = {
+    var AH = LH(15),
+      rH = LH(1297),
+      SH = LH(81);
+    const hH = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -407,41 +407,41 @@ export const modules = {
       }
     };
 
-    function FU() {
-      return (0, QU.isMobile)() && "function" === typeof navigator.vibrate
+    function tH() {
+      return (0, SH.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const oU = new class {
-      constructor(UU) {
-        this.deps = UU, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const zH = new class {
+      constructor(HH) {
+        this.deps = HH, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(UU, XU) {
-        var zU;
+      play(HH, BH) {
+        var LH;
         if (!this.deps.enabled()) return;
-        const cU = AU[UU],
-          yU = null !== XU && void 0 !== XU ? XU : cU.pattern;
-        if (null === yU) return void console.warn("No vibration pattern for", UU);
-        const QU = this.deps.now();
-        QU - this.lastAnyAt < 40 && cU.priority < this.playingPriority || QU - (null !== (zU = this.lastAt.get(UU)) && void 0 !== zU ? zU : -1 / 0) < cU.minGapMs || QU < this.playingUntil && cU.priority < this.playingPriority || (this.lastAt.set(UU, QU), this.lastAnyAt = QU, this.playingUntil = QU + yU.reduce(((UU, XU) => UU + XU), 0), this.playingPriority = cU.priority, this.deps.vibrate(yU))
+        const AH = hH[HH],
+          rH = null !== BH && void 0 !== BH ? BH : AH.pattern;
+        if (null === rH) return void console.warn("No vibration pattern for", HH);
+        const SH = this.deps.now();
+        SH - this.lastAnyAt < 40 && AH.priority < this.playingPriority || SH - (null !== (LH = this.lastAt.get(HH)) && void 0 !== LH ? LH : -1 / 0) < AH.minGapMs || SH < this.playingUntil && AH.priority < this.playingPriority || (this.lastAt.set(HH, SH), this.lastAnyAt = SH, this.playingUntil = SH + rH.reduce(((HH, BH) => HH + BH), 0), this.playingPriority = AH.priority, this.deps.vibrate(rH))
       }
     }({
-      vibrate: UU => {
-        navigator.vibrate([...UU])
+      vibrate: HH => {
+        navigator.vibrate([...HH])
       },
       now: () => performance.now(),
-      enabled: () => FU() && cU.e.get("isTouchScreen") && cU.e.get("clientEscMenuOptions").vibration && !(0, yU.c)()
+      enabled: () => tH() && AH.c.get("isTouchScreen") && AH.c.get("clientEscMenuOptions").vibration && !(0, rH.d)()
     })
   },
-  5369: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => yU,
-      h: () => cU,
-      i: () => QU,
-      l: () => oU,
-      o: () => AU
+  5325: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => rH,
+      g: () => AH,
+      i: () => SH,
+      k: () => zH,
+      l: () => hH
     });
-    const cU = ["sine", "triangle", "square", "sawtooth"],
-      yU = 55,
-      QU = {
+    const AH = ["sine", "triangle", "square", "sawtooth"],
+      rH = 55,
+      SH = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -580,39 +580,39 @@ export const modules = {
         }
       };
 
-    function AU(UU) {
-      return "string" !== typeof UU ? UU : Object.hasOwn(QU, UU) ? QU[UU] : null
+    function hH(HH) {
+      return "string" !== typeof HH ? HH : Object.hasOwn(SH, HH) ? SH[HH] : null
     }
 
-    function FU(UU, XU, zU) {
-      return Math.min(zU, Math.max(XU, UU))
+    function tH(HH, BH, LH) {
+      return Math.min(LH, Math.max(BH, HH))
     }
 
-    function oU(UU) {
-      const XU = FU(UU.durationMs, 10, 500),
-        zU = FU(UU.attackMs, 0, XU),
+    function zH(HH) {
+      const BH = tH(HH.durationMs, 10, 500),
+        LH = tH(HH.attackMs, 0, BH),
         {
-          intonation: yU
-        } = UU;
+          intonation: rH
+        } = HH;
       return {
-        waveform: cU.includes(UU.waveform) ? UU.waveform : "sine",
-        pitchHz: FU(UU.pitchHz, 20, 4e3),
-        glideSemitones: FU(UU.glideSemitones, -24, 24),
-        durationMs: XU,
-        attackMs: zU,
-        releaseMs: FU(UU.releaseMs, 0, XU - zU),
-        lowpassHz: null === UU.lowpassHz ? null : FU(UU.lowpassHz, 20, 2e4),
-        volume: FU(UU.volume, 0, 2),
+        waveform: AH.includes(HH.waveform) ? HH.waveform : "sine",
+        pitchHz: tH(HH.pitchHz, 20, 4e3),
+        glideSemitones: tH(HH.glideSemitones, -24, 24),
+        durationMs: BH,
+        attackMs: LH,
+        releaseMs: tH(HH.releaseMs, 0, BH - LH),
+        lowpassHz: null === HH.lowpassHz ? null : tH(HH.lowpassHz, 20, 2e4),
+        volume: tH(HH.volume, 0, 2),
         intonation: {
-          variationSemitones: FU(yU.variationSemitones, 0, 6),
-          declineSemitones: FU(yU.declineSemitones, 0, 12),
-          questionRiseSemitones: FU(yU.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: FU(yU.exclaimLiftSemitones, 0, 12)
+          variationSemitones: tH(rH.variationSemitones, 0, 6),
+          declineSemitones: tH(rH.declineSemitones, 0, 12),
+          questionRiseSemitones: tH(rH.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: tH(rH.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: FU(UU.syllableMs, 25, 200)
+        syllableMs: tH(HH.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

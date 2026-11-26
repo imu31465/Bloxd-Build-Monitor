@@ -1,364 +1,620 @@
 export const id = 234;
 export const ids = [234];
 export const modules = {
-  37083: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => EU,
-      i: () => FU,
-      l: () => DU,
-      o: () => oU,
-      q: () => GU
+  37366: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => hH,
+      c: () => rH,
+      f: () => SH
     });
-    var cU = zU(654),
-      yU = zU(1817),
-      QU = zU(5326);
-    class AU {
-      constructor(UU, XU) {
-        this.width = UU, this.xY = XU, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(UU * XU)
-      }
-      push(UU) {
-        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const zU = this.data,
-          cU = this.next * this.width;
-        for (let yU = 0; yU < this.width; yU++) zU[cU + yU] = UU[XU + yU];
-        this.next = (this.next + 1) % this.xY, this.size = Math.min(this.size + 1, this.xY)
-      }
-      rows() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
-        const zU = [],
-          cU = (this.next - this.size + this.xY) % this.xY;
-        for (let yU = 0; yU < this.size; yU++) {
-          const QU = (cU + yU) % this.xY * this.width;
-          this.data[QU + UU] >= XU && zU.push(Array.from(this.data.subarray(QU, QU + this.width)))
-        }
-        return zU
-      }
-      lines() {
-        return this.rows().map((UU => UU.join(",")))
+    var AH = LH(1863);
+    class rH extends Error {
+      constructor(HH) {
+        super("The game server didn't answer in time"), this.leg = HH, this.name = "SeatRequestTimedOut"
       }
     }
-    const FU = 10,
-      oU = {
-        idle: 0,
-        cY: 1,
-        LO: 2,
-        kS: 3,
-        Yt: 4
-      },
-      DU = {
-        none: 0,
-        skipped: 1,
-        paced: 2,
-        drawn: 3
-      },
-      EU = {
-        lockGained: 1,
-        lockLost: 2,
-        lockError: 3,
-        visible: 4,
-        hidden: 5,
-        focus: 6,
-        blur: 7,
-        jsClient: 8,
-        wasmClient: 9,
-        droppedCopies: 10,
-        stepsLost: 11,
-        cameraSetsLost: 12
-      },
-      YU = 12e3,
-      NU = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
-      IU = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
-      pU = ["nowMs", "dtMs", "heading", "pitch", "kind"],
-      aU = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
-      tU = ["nowMs", "change", "count"];
-
-    function gU(UU) {
-      return "js" === UU ? EU.jsClient : EU.wasmClient
-    }
-    class kU {
+    const SH = new class {
       constructor() {
-        this.steps = new AU(FU, YU), this.events = new AU(IU.length, YU), this.frames = new AU(pU.length, YU), this.cameraSets = new AU(QU.d, 256), this.changes = new AU(tU.length, 256)
+        this.count = 0, this.answers = 0, this.waiting = new Set
       }
-    }
-    const GU = new class {
-      constructor() {
-        this.rings = null, this.sample = new Float64Array(IU.length), this.startedClient = null, this.startedAtMs = 0
+      get answered() {
+        return this.answers
       }
-      get client() {
-        return this.startedClient
+      answer() {
+        this.answers++
       }
-      start(UU, XU) {
-        this.startedClient = UU, this.startedAtMs = performance.now(), null !== this.rings ? this.change(gU(UU)) : XU && this.allocate()
+      add() {
+        this.count++;
+        for (const HH of this.waiting) HH()
       }
-      lockGained() {
-        this.allocate(), this.change(EU.lockGained)
+      remove() {
+        this.count--
       }
-      allocate() {
-        null === this.rings && (this.rings = new kU, null !== this.startedClient && this.changeAt(this.startedAtMs, gU(this.startedClient), 1))
-      }
-      step(UU, XU) {
-        var zU;
-        UU[XU + 6] !== oU.Yt && (null === (zU = this.rings) || void 0 === zU || zU.steps.push(UU, XU))
-      }
-      cameraSet(UU, XU) {
-        var zU;
-        null === (zU = this.rings) || void 0 === zU || zU.cameraSets.push(UU, XU)
-      }
-      mouseMove(UU, XU) {
-        const zU = this.rings;
-        if (null === zU) return;
-        const cU = this.sample;
-        cU[0] = UU.timeStamp, cU[1] = performance.now(), cU[2] = UU.movementX, cU[3] = UU.movementY, cU[4] = XU ? 1 : 0, zU.events.push(cU)
-      }
-      frame(UU, XU, zU, cU) {
-        const yU = this.rings;
-        if (null === yU || cU === DU.none) return;
-        const QU = this.sample;
-        QU[0] = performance.now(), QU[1] = UU, QU[2] = XU, QU[3] = zU, QU[4] = cU, yU.frames.push(QU)
-      }
-      change(UU) {
-        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.changeAt(performance.now(), UU, XU)
-      }
-      changeAt(UU, XU, zU) {
-        const cU = this.rings;
-        if (null === cU) return;
-        const yU = this.sample;
-        yU[0] = UU, yU[1] = XU, yU[2] = zU, cU.changes.push(yU)
-      }
-      dumpText() {
-        var UU, XU;
-        const zU = this.rings;
-        return [`look records (${this.startedClient}): ${NU.join(",")}`, ...null !== (UU = null === zU || void 0 === zU ? void 0 : zU.steps.lines()) && void 0 !== UU ? UU : [], `mousemove events: ${IU.join(",")}`, ...null !== (XU = null === zU || void 0 === zU ? void 0 : zU.events.lines()) && void 0 !== XU ? XU : []].join("\n")
-      }
-      toJson(UU, XU) {
-        var zU;
-        const yU = UU - 6e4,
-          QU = this.rings,
-          AU = function(UU, XU) {
-            var zU;
-            let cU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-            const QU = null !== (zU = null === UU || void 0 === UU ? void 0 : UU.rows(cU, yU)) && void 0 !== zU ? zU : [];
-            return {
-              columns: XU,
-              fromMs: 0 === QU.length ? null : QU[0][cU],
-              rows: QU
-            }
+      whenSlow(HH) {
+        return this.count > 0 || HH.aborted ? Promise.resolve(!HH.aborted) : new Promise((BH => {
+          const LH = () => {
+            this.waiting.delete(LH), BH(!HH.aborted)
           };
-        return {
-          version: cU.d,
-          client: null !== (zU = this.startedClient) && void 0 !== zU ? zU : "not started",
-          savedAt: (new Date).toISOString(),
-          savedAtMs: UU,
-          keptMs: 6e4,
-          page: window.location.href,
-          userAgent: navigator.userAgent,
-          devicePixelRatio: window.devicePixelRatio,
-          screen: {
-            width: window.screen.width,
-            height: window.screen.height
-          },
-          Tt: null !== document.pointerLockElement,
-          visibility: document.visibilityState,
-          ...XU,
-          outcomes: oU,
-          frameKinds: DU,
-          changes: EU,
-          lookSteps: AU(null === QU || void 0 === QU ? void 0 : QU.steps, NU),
-          mouseMoves: AU(null === QU || void 0 === QU ? void 0 : QU.events, IU, 1),
-          frames: AU(null === QU || void 0 === QU ? void 0 : QU.frames, pU),
-          cameraSets: AU(null === QU || void 0 === QU ? void 0 : QU.cameraSets, aU),
-          pageChanges: AU(null === QU || void 0 === QU ? void 0 : QU.changes, tU)
-        }
+          this.waiting.add(LH), HH.addEventListener("abort", LH, {
+            once: !0
+          })
+        }))
       }
-      save(UU) {
-        const XU = JSON.stringify(this.toJson(performance.now(), UU));
-        (0, yU.c)(new Blob([XU], {
-          type: "application/json"
-        }), `bloxd-mouse-look-${(new Date).toISOString().replace(/[:.]/g,"-")}.json`)
+    };
+    class hH {
+      constructor(HH) {
+        this.timeout = void 0, this.slow = void 0, this.countedSlow = !1, this.timeout = new AH.b(45e3, HH), this.slow = new AH.b(8e3, (() => {
+          this.countedSlow = !0, SH.add()
+        }))
+      }
+      restart() {
+        SH.answer(), this.uncountSlow(), this.timeout.restart(), this.slow.restart()
+      }
+      stop() {
+        this.timeout.stop(), this.slow.stop(), this.uncountSlow()
+      }
+      answered() {
+        this.stop(), SH.answer()
+      }
+      socketOpened() {
+        this.slow.stop(), this.uncountSlow(), SH.answer()
+      }
+      uncountSlow() {
+        this.countedSlow && (this.countedSlow = !1, SH.remove())
       }
     }
   },
-  37081: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      LOOK_DEBUG_HEADER: () => EU,
-      endLookDebugTake: () => gU,
-      noteLookDroppedCopy: () => kU,
-      saveLookCapture: () => GU,
-      startLookDebug: () => tU
+  37030: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => AH,
+      g: () => rH,
+      j: () => SH,
+      l: () => hH
     });
-    var cU = zU(5326),
-      yU = zU(3099),
-      QU = zU(1974);
-    const AU = new Map(Object.entries(cU.f).map((UU => {
-      let [XU, zU] = UU;
-      return [zU, XU]
-    })));
+    const AH = 1024,
+      rH = 1024 * AH;
 
-    function FU(UU) {
-      return (0, QU.D)(UU).toFixed(1)
+    function SH(HH) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, HH / rH)))
     }
 
-    function oU(UU, XU) {
-      return `camera set by ${AU.get(UU[XU+1])}: heading ${`${FU(UU[XU+2])} -> ${FU(UU[XU+4])}`} deg, pitch ${`${FU(UU[XU+3])} -> ${FU(UU[XU+5])}`} deg, at ${UU[XU].toFixed(1)} ms`
+    function hH(HH) {
+      return (HH / rH).toFixed(1)
     }
-    var DU = zU(37083);
-    const EU = 2;
+  },
+  37351: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => SH,
+      d: () => zH,
+      f: () => tH,
+      h: () => hH,
+      l: () => CH,
+      n: () => EH,
+      p: () => GH
+    });
+    var AH = LH(176);
+    const rH = 32 * LH(37030).g,
+      SH = 6144,
+      hH = 4608,
+      tH = 512,
+      zH = function() {
+        const HH = GH(AH.g.maxChunkHorizAddDistance + 1, AH.g.maxChunkVertAddDistance + 1);
+        let BH = HH;
+        for (; XH(BH) < HH;) BH++;
+        return BH
+      }();
 
-    function YU(UU) {
-      return Number.isFinite(UU) ? String(Math.round(10 * UU) / 10) : String(UU)
-    }
-
-    function NU(UU) {
-      return Number.isFinite(UU) ? UU.toFixed(1) : String(UU)
-    }
-    class IU {
-      constructor() {
-        this.frames = 0, this.looked = 0, this.idle = 0, this.LO = 0, this.pastLimit = 0, this.lockSkips = 0, this.Yt = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
-      }
-      moved() {
-        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.LO > 0 || this.dropped > 0 || this.cameraSets > 0
-      }
-      hasEvent() {
-        return this.LO > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
-      }
-    }
-    class pU {
-      constructor() {
-        var UU = this;
-        this.topicOn = (0, yU.q)("look"), this.remote = (0, yU.t)(), this.tally = new IU, this.takes = null, this.started = !1, this.record = function(XU) {
-          let zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          if (DU.q.step(XU, zU), !UU.topicOn) return;
-          const cU = XU[zU],
-            yU = XU[zU + 1],
-            QU = XU[zU + 2],
-            AU = XU[zU + 3],
-            FU = XU[zU + 4],
-            oU = XU[zU + 5],
-            EU = XU[zU + 6],
-            IU = XU[zU + 7],
-            pU = XU[zU + 8],
-            aU = XU[zU + 9],
-            tU = UU.tally;
-          switch (tU.frames++, EU) {
-            case DU.o.idle:
-              return void tU.idle++;
-            case DU.o.Yt:
-              return void tU.Yt++;
-            case DU.o.kS:
-              return tU.lockSkips++, void(0 === QU && 0 === AU || UU.outlier(`lock skip dropped raw (${YU(QU)}, ${YU(AU)}) at ${NU(cU)} ms`))
-          }
-          tU.looked++, Number.isFinite(yU) && (tU.dtMin = Math.min(tU.dtMin, yU), tU.dtMax = Math.max(tU.dtMax, yU), tU.dtSum += yU, yU > 0 && (tU.peakRate = Math.max(tU.peakRate, Math.hypot(FU, oU) / yU))), tU.raw[0] += QU, tU.raw[1] += AU, tU.turned[0] += FU, tU.turned[1] += oU;
-          const gU = Math.abs(QU) > aU || Math.abs(AU) > aU,
-            kU = `raw (${YU(QU)}, ${YU(AU)}) over ${NU(yU)} ms, limit ${YU(aU)}, filter v (${IU.toFixed(3)}, ${pU.toFixed(3)}) px/ms, at ${NU(cU)} ms`;
-          EU === DU.o.LO ? (tU.LO++, UU.outlier(`spike put right: ${kU} -> turned (${YU(FU)}, ${YU(oU)})`)) : gU ? (tU.pastLimit++, UU.outlier(`kept past limit: ${kU}`)) : yU > 50 && (tU.longFrames++, UU.remote || UU.outlier(`long frame: ${kU}, turned in full`))
-        }, this.onMouseMove = UU => {
-          const XU = null !== document.pointerLockElement;
-          if (DU.q.mouseMove(UU, XU), !this.topicOn) return;
-          const zU = this.tally,
-            {
-              movementX: cU,
-              movementY: yU
-            } = UU;
-          zU.events++;
-          const QU = Math.max(Math.abs(cU), Math.abs(yU));
-          zU.eventMax = Math.max(zU.eventMax, QU), QU >= 200 && (zU.bigEvents++, this.eventOutlier(`big mousemove (${cU}, ${yU}) at ${NU(UU.timeStamp)} ms, lock ${XU?"uD":"free"}`))
-        }, this.onLockChange = () => {
-          const UU = document.pointerLockElement;
-          UU ? DU.q.lockGained() : DU.q.change(DU.e.lockLost), this.topicOn && (0, yU.l)("look", `pointer lock ${UU?`gained (${UU.tagName.toLowerCase()})`:"lost"} at ${NU(performance.now())} ms`)
-        }, this.onLockError = () => {
-          DU.q.change(DU.e.lockError), this.topicOn && (0, yU.l)("look", `pointer lock request failed at ${NU(performance.now())} ms`)
-        }, this.onVisibility = () => {
-          DU.q.change("hidden" === document.visibilityState ? DU.e.hidden : DU.e.visible), this.topicOn && (0, yU.l)("look", `page ${document.visibilityState} at ${NU(performance.now())} ms`)
-        }, this.onFocus = () => {
-          DU.q.change(DU.e.focus)
-        }, this.onBlur = () => {
-          DU.q.change(DU.e.blur)
-        }, this.flush = () => {
-          if (this.takeRecords(), !this.topicOn) return;
-          const UU = this.tally;
-          if (this.tally = new IU, !UU.moved() || this.remote && !UU.hasEvent()) return;
-          const XU = UU.looked > 0 ? UU.dtSum / UU.looked : NaN,
-            zU = [`${UU.frames} frames (${UU.looked} looked, ${UU.idle} idle${"wasm"===DU.q.client?`, ${UU.Yt} carried`:""})`, `dt avg ${NU(XU)} min ${NU(UU.dtMin)} max ${NU(UU.dtMax)}, ${UU.longFrames} long`, `${UU.events} mousemoves (max ${YU(UU.eventMax)} px, ${UU.bigEvents} big)`, `raw (${YU(UU.raw[0])}, ${YU(UU.raw[1])}) turned (${YU(UU.turned[0])}, ${YU(UU.turned[1])})`, `peak ${UU.peakRate.toFixed(2)} px/ms`, `put right ${UU.LO}, past limit ${UU.pastLimit}, lock skips ${UU.lockSkips}`, "lock " + (document.pointerLockElement ? "uD" : "free")];
-          UU.dropped > 0 && zU.push(`${UU.dropped} doubled spike copies dropped`), UU.cameraSets > 0 && zU.push(`${UU.cameraSets} camera sets`), UU.cameraSetsLost > 0 && zU.push(`${UU.cameraSetsLost} camera set records lost`), UU.lost > 0 && zU.push(`${UU.lost} records lost`), UU.suppressed > 0 && zU.push(`${UU.suppressed} outlier lines not shown`), (0, yU.l)("look", `1s: ${zU.join("; ")}`)
-        }
-      }
-      start(UU, XU) {
-        if (DU.q.start(UU, null !== document.pointerLockElement), this.takes = XU, this.topicOn) {
-          const {
-            screen: XU
-          } = window;
-          (0, yU.l)("look", `start: ${UU} client, dpr ${window.devicePixelRatio}, screen ${XU.width}x${XU.height}, pointer lock ${document.pointerLockElement?"uD":"free"}`)
-        }
-        this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
-          capture: !0,
-          passive: !0
-        }), window.addEventListener("focus", this.onFocus), window.addEventListener("blur", this.onBlur), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.topicOn && !this.remote && (0, yU.h)("look", (() => DU.q.dumpText())))
-      }
-      outlier(UU) {
-        const XU = this.tally;
-        XU.outliers >= 20 ? XU.suppressed++ : (XU.outliers++, (0, yU.l)("look", UU))
-      }
-      eventOutlier(UU) {
-        const XU = this.tally;
-        XU.eventLines >= 10 ? XU.suppressed++ : (XU.eventLines++, (0, yU.l)("look", UU))
-      }
-      takeRecords() {
-        if (null === this.takes) return;
-        const UU = this.takes.look();
-        if (UU.length >= EU) {
-          this.counted(DU.e.stepsLost, UU[0]), this.counted(DU.e.droppedCopies, UU[1]);
-          for (let XU = EU; XU + DU.i <= UU.length; XU += DU.i) this.record(UU, XU)
-        }
-        const XU = this.takes.cameraSets();
-        if (XU.length >= cU.b) {
-          this.counted(DU.e.cameraSetsLost, XU[0]);
-          for (let UU = cU.b; UU + cU.d <= XU.length; UU += cU.d) DU.q.cameraSet(XU, UU), this.topicOn && (this.tally.cameraSets++, this.outlier(oU(XU, UU)))
-        }
-      }
-      droppedCopy() {
-        this.counted(DU.e.droppedCopies, 1)
-      }
-      counted(UU, XU) {
-        if (0 === XU) return;
-        if (DU.q.change(UU, XU), !this.topicOn) return;
-        const zU = this.tally;
-        UU === DU.e.droppedCopies ? zU.dropped += XU : UU === DU.e.stepsLost ? zU.lost += XU : zU.cameraSetsLost += XU
-      }
-      endTake() {
-        this.takeRecords(), this.takes = null
-      }
-    }
-    let aU = null;
-
-    function tU(UU) {
-      let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      return aU ??= new pU, aU.start(UU, XU), aU.record
+    function CH(HH) {
+      return Math.floor(rH * HH / SH)
     }
 
-    function gU() {
-      var UU;
-      null === (UU = aU) || void 0 === UU || UU.endTake()
+    function EH(HH) {
+      const BH = XH(HH);
+      let LH = AH.g.maxChunkHorizAddDistance,
+        rH = AH.g.maxChunkVertAddDistance;
+      if (GH(LH + 1, rH + 1) <= BH) return null;
+      for (; GH(LH + 1, rH + 1) > BH && (LH > 0 || rH > 0);) LH > rH ? LH-- : rH--;
+      return {
+        horizontal: LH,
+        vertical: rH
+      }
     }
 
-    function kU() {
-      var UU;
-      null === (UU = aU) || void 0 === UU || UU.droppedCopy()
+    function XH(HH) {
+      return HH - Math.floor(HH / 6)
     }
-    async function GU(UU) {
-      var XU;
-      null === (XU = aU) || void 0 === XU || XU.takeRecords();
+
+    function GH(HH, BH) {
+      const LH = Math.max(HH, BH);
+      let AH = 0;
+      for (let rH = -LH; rH <= LH; rH++)
+        for (let SH = -LH; SH <= LH; SH++)
+          for (let hH = -LH; hH <= LH; hH++) YH(HH, BH, rH, SH, hH) && AH++;
+      return AH
+    }
+
+    function YH(HH, BH, LH, AH, rH) {
+      const SH = LH * LH + rH * rH;
+      return HH === BH ? SH + AH * AH <= HH * HH : HH > BH ? Math.abs(AH) <= BH && SH + AH * AH <= HH * HH : SH <= HH * HH && SH + AH * AH <= BH * BH
+    }
+  },
+  37347: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => OH,
+      d: () => FH,
+      f: () => nH,
+      g: () => jH,
+      k: () => KH,
+      o: () => RH,
+      p: () => gH
+    });
+    var AH = LH(176),
+      rH = LH(81),
+      SH = LH(120),
+      hH = LH(277),
+      tH = LH(4780),
+      zH = LH(644),
+      CH = LH(669),
+      EH = LH(4786),
+      XH = LH(4802),
+      GH = LH(37351),
+      YH = LH(37358);
+    const uH = 1048576,
+      QH = 1024 * uH,
+      WH = 400 * uH,
+      MH = 147456,
+      xH = .5,
+      vH = 2048,
+      PH = 1.5 * QH,
+      TH = 768 * uH;
+
+    function UH(HH) {
       const {
-        clientHintsRead: cU,
-        debugDeviceLines: yU
-      } = await zU.e(34).then((() => zU(34738)));
-      await cU, DU.q.save({
-        ...UU,
-        device: yU()
-      })
+        os: BH,
+        deviceMemory: LH
+      } = HH;
+      if ("ios" === BH) switch ((0, hH.g)(HH)) {
+        case "ipad_m":
+          return {
+            footprintBytes: VH(GH.b), basis: "ipad-m", namesLimit: !1
+          };
+        case "ipad":
+          return {
+            footprintBytes: TH, basis: "ipad", namesLimit: !0
+          };
+        case "iphone_6gb":
+          return {
+            footprintBytes: PH, basis: "iphone-6gb", namesLimit: !0
+          };
+        case "iphone":
+          return {
+            footprintBytes: TH, basis: "iphone", namesLimit: !0
+          }
+      }
+      return "number" === typeof LH && Number.isFinite(LH) && LH > 0 ? {
+        footprintBytes: LH * QH * xH,
+        basis: `memory-${LH}`,
+        namesLimit: !0
+      } : "android" === BH ? {
+        footprintBytes: TH,
+        basis: "android",
+        namesLimit: !0
+      } : {
+        footprintBytes: VH(GH.h),
+        basis: "unreported",
+        namesLimit: !1
+      }
+    }
+
+    function VH(HH) {
+      return WH + HH * MH
+    }
+
+    function OH() {
+      let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : fH(),
+        BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SH.siteUsed;
+      if ("android" !== HH.os || "mobileAndroid" === BH) return !0;
+      const {
+        footprintBytes: LH,
+        basis: AH
+      } = UH(HH);
+      return "android" === AH || LH > 2 * QH
+    }
+
+    function bH(HH) {
+      const BH = Math.min(HH, VH(GH.b));
+      return WH + Math.max(0, BH - WH) / 2
+    }
+
+    function kH(HH, BH, LH) {
+      var rH, SH, hH, tH;
+      let zH = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        {
+          footprintBytes: CH,
+          basis: YH,
+          namesLimit: uH
+        } = UH(HH);
+      LH && (CH = bH(CH), YH += "+killed", uH = !0), null !== BH && VH(BH) < CH && (CH = VH(BH), YH += "+learned", uH = !0), YH += (0, XH.v)(null !== (rH = HH.x32) && void 0 !== rH ? rH : null) + (0, EH.h)(null !== (SH = HH.lowRam) && void 0 !== SH ? SH : null), "fix" === HH.x32 && VH(vH) < CH && (CH = VH(vH), uH = !0), zH && (CH = bH(CH), YH += "+refused", uH = !0);
+      const QH = function(HH) {
+          const BH = Math.floor((HH - WH) / MH);
+          return Math.min(GH.b, Math.max(GH.f, BH))
+        }(CH),
+        xH = uH && QH < GH.b ? Math.min(QH, GH.d) : QH,
+        PH = (0, GH.n)(xH);
+      return {
+        footprintBytes: CH,
+        shedFootprintBytes: uH ? Math.max(CH, VH(xH)) : null,
+        chunkCap: xH,
+        maxHorizDistance: null !== (hH = null === PH || void 0 === PH ? void 0 : PH.horizontal) && void 0 !== hH ? hH : AH.g.maxChunkHorizAddDistance,
+        maxVertDistance: null !== (tH = null === PH || void 0 === PH ? void 0 : PH.vertical) && void 0 !== tH ? tH : AH.g.maxChunkVertAddDistance,
+        basis: YH
+      }
+    }
+    let mH = null,
+      oH = null,
+      IH = null;
+
+    function fH() {
+      var HH, BH;
+      return mH ??= {
+        os: (0, rH.getOperatingSystem)(),
+        deviceMemory: navigator.deviceMemory,
+        ...(0, hH.h)()
+      }, {
+        ...mH,
+        x32: null !== (HH = (0, XH.u)()) && void 0 !== HH ? HH : void 0,
+        lowRam: null !== (BH = (0, EH.e)()) && void 0 !== BH ? BH : void 0
+      }
+    }
+
+    function lH() {
+      return kH(fH(), (0, tH.g)(), (0, zH.M)("wasm").length > 0, gH())
+    }
+
+    function KH() {
+      return IH ??= (0, YH.o)(kH(fH(), null, !1, gH()).chunkCap), IH
+    }
+    const cH = "wasmMemoryRecord",
+      eH = {
+        halvedAt: null,
+        reloadSpent: !1
+      };
+
+    function qH() {
+      let HH = null;
+      try {
+        var BH;
+        HH = JSON.parse(null !== (BH = (0, CH.o)((0, CH.v)(), cH)) && void 0 !== BH ? BH : "null")
+      } catch {
+        return eH
+      }
+      if ("object" !== typeof HH || null === HH) return eH;
+      const {
+        halvedAt: LH,
+        reloadSpent: AH
+      } = HH;
+      return {
+        halvedAt: "number" === typeof LH && Number.isFinite(LH) ? LH : null,
+        reloadSpent: !0 === AH
+      }
+    }
+
+    function gH() {
+      return null !== qH().halvedAt
+    }
+
+    function NH(HH) {
+      const BH = (0, CH.v)(),
+        LH = JSON.stringify(HH);
+      try {
+        null === BH || void 0 === BH || BH.setItem(cH, LH)
+      } catch {
+        return !1
+      }
+      return (0, CH.o)(BH, cH) === LH
+    }
+
+    function RH() {
+      let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now(),
+        BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const LH = qH();
+      return null === LH.halvedAt ? NH({
+        halvedAt: HH,
+        reloadSpent: BH
+      }) ? (IH = null, oH = null, "halve") : (console.warn("[bloxd-wasm-client] the tab's memory record wouldn't keep: no further step"), "spent") : LH.reloadSpent ? "spent" : NH({
+        ...LH,
+        reloadSpent: !0
+      }) ? "reload" : (console.warn("[bloxd-wasm-client] the tab's memory record wouldn't keep: no further step"), "spent")
+    }
+
+    function jH() {
+      return oH ??= lH(), oH
+    }
+
+    function nH() {
+      var HH;
+      return (null !== (HH = oH) && void 0 !== HH ? HH : lH()).basis
+    }
+
+    function FH(HH, BH) {
+      return HH.setChunkCap(BH.chunkCap)
+    }
+  },
+  37358: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => kH,
+      g: () => TH,
+      j: () => XH,
+      n: () => UH,
+      o: () => xH,
+      r: () => OH,
+      w: () => bH,
+      z: () => GH
+    });
+    var AH = LH(37030),
+      rH = LH(37351);
+    const SH = 64 * AH.c,
+      hH = 40 * AH.g,
+      tH = 36 * AH.g,
+      zH = 20 * AH.g,
+      CH = 2 * AH.g,
+      EH = 5 * AH.g;
+
+    function XH(HH) {
+      return "footprint" !== HH && "gcPressure" !== HH
+    }
+
+    function GH(HH) {
+      return XH(HH) ? "wasm memory was refused" : "gcPressure" === HH ? "the page's full GCs ran high" : "the tab's footprint reached its budget"
+    }
+    const YH = 2 * AH.g,
+      uH = 4 * AH.g,
+      QH = 35 * AH.g + YH + uH,
+      WH = 6.5 * AH.g,
+      MH = 132.5 * AH.c;
+
+    function xH(HH) {
+      const BH = WH + (0, rH.l)(HH) + HH * MH;
+      return Math.ceil((2 * QH + BH) / SH) * SH
+    }
+    xH(rH.b), AH.g, AH.g, AH.g;
+    const vH = {
+        targetBytes: hH,
+        leastBytes: zH
+      },
+      PH = {
+        targetBytes: tH,
+        leastBytes: zH
+      };
+
+    function TH(HH) {
+      return {
+        targetBytes: HH,
+        leastBytes: 0
+      }
+    }
+
+    function UH(HH) {
+      return HH >= rH.b ? vH : PH
+    }
+    const VH = 2 * SH;
+
+    function OH(HH, BH, LH) {
+      return HH + BH + VH > LH
+    }
+    const bH = {
+      now: () => performance.now(),
+      requestIdle: "function" === typeof requestIdleCallback ? HH => {
+        requestIdleCallback(HH)
+      } : null
+    };
+    class kH {
+      constructor(HH, BH, LH) {
+        let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bH;
+        this.memory = HH, this.readPeakStoredChunks = BH, this.onError = LH, this.clock = AH, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.gcSheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
+          reserves: 0,
+          allocations: 0
+        }, this.joinReserveTaken = null, this.ceilingBytes = null, this.ballastCheckAt = -1 / 0, this.ballastPeakBytes = 0, this.distanceInUse = null, this.footprint = null, this.gcPressure = null
+      }
+      setShed(HH, BH, LH) {
+        this.shedding = {
+          shed: HH,
+          XX: BH,
+          readDistanceInUse: LH
+        }
+      }
+      shedDistanceInUse() {
+        return this.distanceInUse
+      }
+      setFootprint(HH) {
+        this.footprint = HH
+      }
+      setGcPressure(HH) {
+        this.gcPressure = {
+          highEpisode: HH,
+          shedEpisode: null,
+          nextAt: null
+        }
+      }
+      setCeiling(HH) {
+        this.ceilingBytes = HH, this.call((() => {
+          this.memory.setCeiling(HH)
+        }), void 0)
+      }
+      ceilingMayRefuse(HH, BH) {
+        var LH;
+        return OH(this.memory.memoryBytes(), HH, null !== (LH = this.ceilingBytes) && void 0 !== LH ? LH : BH)
+      }
+      reserveAtJoin(HH) {
+        let {
+          targetBytes: BH,
+          leastBytes: LH
+        } = HH;
+        const AH = this.memory.memoryBytes(),
+          rH = AH + LH,
+          SH = Math.max(BH + (this.ballastOn() ? EH : 0), rH),
+          hH = this.call((() => this.memory.reserveUpFront(SH) ? "target" : SH > rH && this.memory.reserveUpFront(rH) ? "least" : "none"), "none");
+        if (this.stopped) return !1;
+        if ("target" !== hH) {
+          const HH = "least" === hH ? `took ${rH} bytes instead` : "frames grow it in steps";
+          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${SH} bytes was refused at ${AH} bytes; ${HH}`)
+        }
+        return this.joinReserveTaken = hH, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== hH && this.shedFor("joinReserve"), "none" !== hH
+      }
+      afterFrame() {
+        if (this.stopped) return;
+        const HH = this.clock.now(),
+          BH = null !== this.stepsHeldUntil && HH >= this.stepsHeldUntil;
+        if (BH && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
+        if (null === this.stepsHeldUntil && HH >= this.ballastCheckAt && (this.takeBallast(HH), this.stopped)) return;
+        const LH = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
+          AH = BH && "now" === LH ? "none" : LH,
+          {
+            requestIdle: rH
+          } = this.clock;
+        "now" === AH || null !== this.pendingSince && HH - this.pendingSince >= 500 ? this.step() : "idle" === AH && null === this.pendingSince && (null === rH ? this.step() : (this.pendingSince = HH, rH((() => {
+          null !== this.pendingSince && this.step()
+        })))), HH - this.statsAt >= 1e3 && (this.statsAt = HH, this.refreshStats(), this.checkFootprint(), this.checkGcPressure(HH))
+      }
+      refreshStats() {
+        this.call((() => {
+          var HH, BH;
+          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (BH = this.shedding.readDistanceInUse()) && void 0 !== BH ? BH : this.distanceInUse);
+          null === (HH = this.footprint) || void 0 === HH || HH.read(this.memory.memoryBytes() + this.workersMemoryBytes())
+        }), void 0)
+      }
+      stop() {
+        this.stopped = !0, this.pendingSince = null
+      }
+      noteMeshWorker(HH, BH) {
+        this.noteWorker(`Mesh${HH}`, BH)
+      }
+      meshWorkerGone(HH) {
+        this.workerGone(`Mesh${HH}`)
+      }
+      noteWorldgen(HH) {
+        this.noteWorker("Worldgen", HH)
+      }
+      worldgenGone() {
+        this.workerGone("Worldgen")
+      }
+      noteWorker(HH, BH) {
+        const LH = this.workers.get(HH);
+        null !== LH && void 0 !== LH && LH.gone && (this.replacedRefusals.reserves += LH.stats.reservesRefused, this.replacedRefusals.allocations += LH.stats.allocationsRefused), this.workers.set(HH, {
+          stats: BH,
+          gone: !1
+        })
+      }
+      workerGone(HH) {
+        const BH = this.workers.get(HH);
+        BH && (BH.gone = !0)
+      }
+      details() {
+        var HH, BH;
+        const LH = this.memory.memoryBytes(),
+          rH = {
+            wasmMemoryNow: `${(0,AH.l)(LH)} MiB`,
+            wasmMemoryMiB: String(Math.floor(LH / AH.g))
+          };
+        null !== this.joinReserveTaken && (rH.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (rH.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
+        const SH = this.main;
+        if (SH) {
+          rH.wasmMemoryMain = mH(SH);
+          const HH = Math.max(0, SH.peakLiveBytes - this.ballastPeakBytes),
+            BH = 0 === this.peakStoredChunks ? "-" : (HH / this.peakStoredChunks / AH.c).toFixed(1);
+          rH.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${BH} KiB`
+        }
+        for (const [AH, {
+            stats: tH,
+            gone: zH
+          }] of this.workers) rH[`wasmMemory${AH}`] = mH(tH) + (zH ? " (gone)" : "");
+        const hH = null !== (HH = null === (BH = this.footprint) || void 0 === BH ? void 0 : BH.describe()) && void 0 !== HH ? HH : null;
+        return null !== hH && (rH.wasmMemoryFootprint = hH), rH
+      }
+      pageKillSnapshot() {
+        var HH, BH, LH, rH, SH;
+        let hH = (null !== (HH = null === (BH = this.main) || void 0 === BH ? void 0 : BH.reservesRefused) && void 0 !== HH ? HH : 0) + this.replacedRefusals.reserves,
+          tH = (null !== (LH = null === (rH = this.main) || void 0 === rH ? void 0 : rH.allocationsRefused) && void 0 !== LH ? LH : 0) + this.replacedRefusals.allocations;
+        for (const {
+            stats: AH
+          }
+          of this.workers.values()) hH += AH.reservesRefused, tH += AH.allocationsRefused;
+        return {
+          wasmMainMiB: Number((0, AH.l)(this.memory.memoryBytes())),
+          wasmWorkersMiB: Number((0, AH.l)(this.workersMemoryBytes())),
+          peakStoredChunks: this.peakStoredChunks,
+          refusedReserves: hH,
+          refusedAllocations: tH,
+          sheds: this.sheds,
+          ...null === (SH = this.footprint) || void 0 === SH ? void 0 : SH.snapshot()
+        }
+      }
+      workersMemoryBytes() {
+        let HH = 0;
+        for (const {
+            stats: BH,
+            gone: LH
+          }
+          of this.workers.values()) HH += LH ? 0 : BH.memoryBytes;
+        return HH
+      }
+      checkFootprint() {
+        null === this.footprint || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil || this.footprint.takeShed() && this.shedFor("footprint")
+      }
+      checkGcPressure(HH) {
+        const BH = this.gcPressure;
+        if (null === BH) return;
+        if (null !== BH.nextAt || "undefined" !== typeof document && document.hidden || (BH.nextAt = HH + 6e4), null === BH.nextAt || HH < BH.nextAt) return;
+        if (this.stopped || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil) return;
+        const LH = BH.highEpisode();
+        null !== LH && LH !== BH.shedEpisode && (BH.shedEpisode = LH, BH.nextAt = HH + 3e4, this.shedFor("gcPressure"))
+      }
+      step() {
+        this.pendingSince = null, this.call((() => this.memory.reserveAhead(CH)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
+      }
+      ballastOn() {
+        return null !== this.shedding
+      }
+      takeBallast(HH) {
+        if (!this.ballastOn() || null === this.joinReserveTaken) return;
+        this.ballastCheckAt = HH + 1e3;
+        const BH = this.call((() => this.memory.takeBallast()), 0);
+        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, BH)
+      }
+      takePressure() {
+        return this.ballastOn() && this.call((() => this.memory.takePressure()), !1)
+      }
+      stopSteps(HH) {
+        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${HH}: frames grow on demand from here`)
+      }
+      shedFor(HH) {
+        const {
+          shedding: BH
+        } = this;
+        if (null === BH) return;
+        this.pendingSince = null;
+        const LH = this.call((() => BH.shed(HH)), null);
+        if (this.stopped) return;
+        if (null === LH) return void(XH(HH) && this.stopSteps("nothing is left to shed"));
+        this.sheds++, this.shedCap = LH, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats();
+        const AH = "gcPressure" === HH ? ++this.gcSheds : this.sheds - this.gcSheds;
+        BH.XX(HH, AH, this.details())
+      }
+      call(HH, BH) {
+        if (this.stopped) return BH;
+        try {
+          return HH()
+        } catch (LH) {
+          return this.stop(), this.onError(LH), BH
+        }
+      }
+    }
+
+    function mH(HH) {
+      const BH = (HH, BH) => `${HH}/${(0,AH.l)(BH)}`;
+      return `memory ${(0,AH.l)(HH.memoryBytes)} live ${(0,AH.l)(HH.liveBytes)} peak ${(0,AH.l)(HH.peakLiveBytes)} unused ${(0,AH.l)(HH.unusedBytes)} ceiling ${(0,AH.l)(HH.ceilingBytes)} MiB; grows upFront ${BH(HH.grows.upFront,HH.grownBytes.upFront)} ahead ${BH(HH.grows.ahead,HH.grownBytes.ahead)} inFrame ${BH(HH.grows.onDemandInFrame,HH.grownBytes.onDemandInFrame)} other ${BH(HH.grows.onDemand,HH.grownBytes.onDemand)}; refused reserves ${HH.reservesRefused} allocations ${HH.allocationsRefused}`
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

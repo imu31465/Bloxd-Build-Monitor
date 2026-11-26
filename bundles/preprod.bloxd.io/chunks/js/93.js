@@ -1,99 +1,99 @@
 export const id = 93;
 export const ids = [93];
 export const modules = {
-  5243: UU => {
-    function XU(UU) {
-      return UU instanceof Map ? UU.clear = UU.delete = UU.set = function() {
+  5202: HH => {
+    function BH(HH) {
+      return HH instanceof Map ? HH.clear = HH.delete = HH.set = function() {
         throw new Error("map is read-only")
-      } : UU instanceof Set && (UU.add = UU.clear = UU.delete = function() {
+      } : HH instanceof Set && (HH.add = HH.clear = HH.delete = function() {
         throw new Error("set is read-only")
-      }), Object.freeze(UU), Object.getOwnPropertyNames(UU).forEach((zU => {
-        const cU = UU[zU],
-          yU = typeof cU;
-        "object" !== yU && "function" !== yU || Object.isFrozen(cU) || XU(cU)
-      })), UU
+      }), Object.freeze(HH), Object.getOwnPropertyNames(HH).forEach((LH => {
+        const AH = HH[LH],
+          rH = typeof AH;
+        "object" !== rH && "function" !== rH || Object.isFrozen(AH) || BH(AH)
+      })), HH
     }
-    class zU {
-      constructor(UU) {
-        void 0 === UU.data && (UU.data = {}), this.data = UU.data, this.isMatchIgnored = !1
+    class LH {
+      constructor(HH) {
+        void 0 === HH.data && (HH.data = {}), this.data = HH.data, this.isMatchIgnored = !1
       }
       ignoreMatch() {
         this.isMatchIgnored = !0
       }
     }
 
-    function cU(UU) {
-      return UU.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
+    function AH(HH) {
+      return HH.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
     }
 
-    function yU(UU) {
-      const XU = Object.create(null);
-      for (const QU in UU) XU[QU] = UU[QU];
-      for (var zU = arguments.length, cU = new Array(zU > 1 ? zU - 1 : 0), yU = 1; yU < zU; yU++) cU[yU - 1] = arguments[yU];
-      return cU.forEach((function(UU) {
-        for (const zU in UU) XU[zU] = UU[zU]
-      })), XU
+    function rH(HH) {
+      const BH = Object.create(null);
+      for (const SH in HH) BH[SH] = HH[SH];
+      for (var LH = arguments.length, AH = new Array(LH > 1 ? LH - 1 : 0), rH = 1; rH < LH; rH++) AH[rH - 1] = arguments[rH];
+      return AH.forEach((function(HH) {
+        for (const LH in HH) BH[LH] = HH[LH]
+      })), BH
     }
-    const QU = UU => !!UU.scope;
-    class AU {
-      constructor(UU, XU) {
-        this.buffer = "", this.classPrefix = XU.classPrefix, UU.walk(this)
+    const SH = HH => !!HH.scope;
+    class hH {
+      constructor(HH, BH) {
+        this.buffer = "", this.classPrefix = BH.classPrefix, HH.walk(this)
       }
-      addText(UU) {
-        this.buffer += cU(UU)
+      addText(HH) {
+        this.buffer += AH(HH)
       }
-      openNode(UU) {
-        if (!QU(UU)) return;
-        const XU = ((UU, XU) => {
+      openNode(HH) {
+        if (!SH(HH)) return;
+        const BH = ((HH, BH) => {
           let {
-            prefix: zU
-          } = XU;
-          if (UU.startsWith("language:")) return UU.replace("language:", "language-");
-          if (UU.includes(".")) {
-            const XU = UU.split(".");
-            return [`${zU}${XU.shift()}`, ...XU.map(((UU, XU) => `${UU}${"_".repeat(XU+1)}`))].join(" ")
+            prefix: LH
+          } = BH;
+          if (HH.startsWith("language:")) return HH.replace("language:", "language-");
+          if (HH.includes(".")) {
+            const BH = HH.split(".");
+            return [`${LH}${BH.shift()}`, ...BH.map(((HH, BH) => `${HH}${"_".repeat(BH+1)}`))].join(" ")
           }
-          return `${zU}${UU}`
-        })(UU.scope, {
+          return `${LH}${HH}`
+        })(HH.scope, {
           prefix: this.classPrefix
         });
-        this.span(XU)
+        this.span(BH)
       }
-      closeNode(UU) {
-        QU(UU) && (this.buffer += "</span>")
+      closeNode(HH) {
+        SH(HH) && (this.buffer += "</span>")
       }
       value() {
         return this.buffer
       }
-      span(UU) {
-        this.buffer += `<span class="${UU}">`
+      span(HH) {
+        this.buffer += `<span class="${HH}">`
       }
     }
-    const FU = function() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const XU = {
+    const tH = function() {
+      let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const BH = {
         children: []
       };
-      return Object.assign(XU, UU), XU
+      return Object.assign(BH, HH), BH
     };
-    class oU {
+    class zH {
       constructor() {
-        this.WG = FU(), this.stack = [this.WG]
+        this.RP = tH(), this.stack = [this.RP]
       }
       get top() {
         return this.stack[this.stack.length - 1]
       }
       get root() {
-        return this.WG
+        return this.RP
       }
-      add(UU) {
-        this.top.children.push(UU)
+      add(HH) {
+        this.top.children.push(HH)
       }
-      openNode(UU) {
-        const XU = FU({
-          scope: UU
+      openNode(HH) {
+        const BH = tH({
+          scope: HH
         });
-        this.add(XU), this.stack.push(XU)
+        this.add(BH), this.stack.push(BH)
       }
       closeNode() {
         if (this.stack.length > 1) return this.stack.pop()
@@ -102,391 +102,391 @@ export const modules = {
         for (; this.closeNode(););
       }
       toJSON() {
-        return JSON.stringify(this.WG, null, 4)
+        return JSON.stringify(this.RP, null, 4)
       }
-      walk(UU) {
-        return this.constructor._walk(UU, this.WG)
+      walk(HH) {
+        return this.constructor._walk(HH, this.RP)
       }
-      static _walk(UU, XU) {
-        return "string" === typeof XU ? UU.addText(XU) : XU.children && (UU.openNode(XU), XU.children.forEach((XU => this._walk(UU, XU))), UU.closeNode(XU)), UU
+      static _walk(HH, BH) {
+        return "string" === typeof BH ? HH.addText(BH) : BH.children && (HH.openNode(BH), BH.children.forEach((BH => this._walk(HH, BH))), HH.closeNode(BH)), HH
       }
-      static _collapse(UU) {
-        "string" !== typeof UU && UU.children && (UU.children.every((UU => "string" === typeof UU)) ? UU.children = [UU.children.join("")] : UU.children.forEach((UU => {
-          oU._collapse(UU)
+      static _collapse(HH) {
+        "string" !== typeof HH && HH.children && (HH.children.every((HH => "string" === typeof HH)) ? HH.children = [HH.children.join("")] : HH.children.forEach((HH => {
+          zH._collapse(HH)
         })))
       }
     }
-    class DU extends oU {
-      constructor(UU) {
-        super(), this.options = UU
+    class CH extends zH {
+      constructor(HH) {
+        super(), this.options = HH
       }
-      addText(UU) {
-        "" !== UU && this.add(UU)
+      addText(HH) {
+        "" !== HH && this.add(HH)
       }
-      startScope(UU) {
-        this.openNode(UU)
+      startScope(HH) {
+        this.openNode(HH)
       }
       endScope() {
         this.closeNode()
       }
-      __addSublanguage(UU, XU) {
-        const zU = UU.root;
-        XU && (zU.scope = `language:${XU}`), this.add(zU)
+      __addSublanguage(HH, BH) {
+        const LH = HH.root;
+        BH && (LH.scope = `language:${BH}`), this.add(LH)
       }
       toHTML() {
-        return new AU(this, this.options).value()
+        return new hH(this, this.options).value()
       }
       finalize() {
         return this.closeAllNodes(), !0
       }
     }
 
-    function EU(UU) {
-      return UU ? "string" === typeof UU ? UU : UU.source : null
+    function EH(HH) {
+      return HH ? "string" === typeof HH ? HH : HH.source : null
     }
 
-    function YU(UU) {
-      return pU("(?=", UU, ")")
+    function XH(HH) {
+      return uH("(?=", HH, ")")
     }
 
-    function NU(UU) {
-      return pU("(?:", UU, ")*")
+    function GH(HH) {
+      return uH("(?:", HH, ")*")
     }
 
-    function IU(UU) {
-      return pU("(?:", UU, ")?")
+    function YH(HH) {
+      return uH("(?:", HH, ")?")
     }
 
-    function pU() {
-      for (var UU = arguments.length, XU = new Array(UU), zU = 0; zU < UU; zU++) XU[zU] = arguments[zU];
-      return XU.map((UU => EU(UU))).join("")
+    function uH() {
+      for (var HH = arguments.length, BH = new Array(HH), LH = 0; LH < HH; LH++) BH[LH] = arguments[LH];
+      return BH.map((HH => EH(HH))).join("")
     }
 
-    function aU() {
-      for (var UU = arguments.length, XU = new Array(UU), zU = 0; zU < UU; zU++) XU[zU] = arguments[zU];
-      const cU = function(UU) {
-        const XU = UU[UU.length - 1];
-        return "object" === typeof XU && XU.constructor === Object ? (UU.splice(UU.length - 1, 1), XU) : {}
-      }(XU);
-      return "(" + (cU.capture ? "" : "?:") + XU.map((UU => EU(UU))).join("|") + ")"
+    function QH() {
+      for (var HH = arguments.length, BH = new Array(HH), LH = 0; LH < HH; LH++) BH[LH] = arguments[LH];
+      const AH = function(HH) {
+        const BH = HH[HH.length - 1];
+        return "object" === typeof BH && BH.constructor === Object ? (HH.splice(HH.length - 1, 1), BH) : {}
+      }(BH);
+      return "(" + (AH.capture ? "" : "?:") + BH.map((HH => EH(HH))).join("|") + ")"
     }
 
-    function tU(UU) {
-      return new RegExp(UU.toString() + "|").exec("").length - 1
+    function WH(HH) {
+      return new RegExp(HH.toString() + "|").exec("").length - 1
     }
-    const gU = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+    const MH = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
 
-    function kU(UU, XU) {
+    function xH(HH, BH) {
       let {
-        joinWith: zU
-      } = XU, cU = 0;
-      return UU.map((UU => {
-        cU += 1;
-        const XU = cU;
-        let zU = EU(UU),
-          yU = "";
-        for (; zU.length > 0;) {
-          const UU = gU.exec(zU);
-          if (!UU) {
-            yU += zU;
+        joinWith: LH
+      } = BH, AH = 0;
+      return HH.map((HH => {
+        AH += 1;
+        const BH = AH;
+        let LH = EH(HH),
+          rH = "";
+        for (; LH.length > 0;) {
+          const HH = MH.exec(LH);
+          if (!HH) {
+            rH += LH;
             break
           }
-          yU += zU.substring(0, UU.index), zU = zU.substring(UU.index + UU[0].length), "\\" === UU[0][0] && UU[1] ? yU += "\\" + String(Number(UU[1]) + XU) : (yU += UU[0], "(" === UU[0] && cU++)
+          rH += LH.substring(0, HH.index), LH = LH.substring(HH.index + HH[0].length), "\\" === HH[0][0] && HH[1] ? rH += "\\" + String(Number(HH[1]) + BH) : (rH += HH[0], "(" === HH[0] && AH++)
         }
-        return yU
-      })).map((UU => `(${UU})`)).join(zU)
+        return rH
+      })).map((HH => `(${HH})`)).join(LH)
     }
-    const GU = "[a-zA-Z]\\w*",
-      BU = "[a-zA-Z_]\\w*",
-      ZU = "\\b\\d+(\\.\\d+)?",
-      RU = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
-      PU = "\\b(0b[01]+)",
-      WU = {
-        gY: "\\\\[\\s\\S]",
+    const vH = "[a-zA-Z]\\w*",
+      PH = "[a-zA-Z_]\\w*",
+      TH = "\\b\\d+(\\.\\d+)?",
+      UH = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
+      VH = "\\b(0b[01]+)",
+      OH = {
+        PX: "\\\\[\\s\\S]",
         relevance: 0
       },
-      dU = {
+      bH = {
         scope: "string",
-        gY: "'",
+        PX: "'",
         end: "'",
         illegal: "\\n",
-        contains: [WU]
+        contains: [OH]
       },
-      LU = {
+      kH = {
         scope: "string",
-        gY: '"',
+        PX: '"',
         end: '"',
         illegal: "\\n",
-        contains: [WU]
+        contains: [OH]
       },
-      eU = function(UU, XU) {
-        const zU = yU({
+      mH = function(HH, BH) {
+        const LH = rH({
           scope: "comment",
-          gY: UU,
-          end: XU,
+          PX: HH,
+          end: BH,
           contains: []
         }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {});
-        zU.contains.push({
+        LH.contains.push({
           scope: "doctag",
-          gY: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
+          PX: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
           end: /(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):/,
           excludeBegin: !0,
           relevance: 0
         });
-        const cU = aU("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
-        return zU.contains.push({
-          gY: pU(/[ ]+/, "(", cU, /[.]?[:]?([.][ ]|[ ])/, "){3}")
-        }), zU
+        const AH = QH("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+        return LH.contains.push({
+          PX: uH(/[ ]+/, "(", AH, /[.]?[:]?([.][ ]|[ ])/, "){3}")
+        }), LH
       },
-      CU = eU("//", "$"),
-      wU = eU("/\\*", "\\*/"),
-      qU = eU("#", "$"),
-      OU = {
+      oH = mH("//", "$"),
+      IH = mH("/\\*", "\\*/"),
+      fH = mH("#", "$"),
+      lH = {
         scope: "number",
-        gY: ZU,
+        PX: TH,
         relevance: 0
       },
-      SU = {
+      KH = {
         scope: "number",
-        gY: RU,
+        PX: UH,
         relevance: 0
       },
-      rU = {
+      cH = {
         scope: "number",
-        gY: PU,
+        PX: VH,
         relevance: 0
       },
-      uU = {
+      eH = {
         scope: "regexp",
-        gY: /\/(?=[^/\n]*\/)/,
+        PX: /\/(?=[^/\n]*\/)/,
         end: /\/[gimuy]*/,
-        contains: [WU, {
-          gY: /\[/,
+        contains: [OH, {
+          PX: /\[/,
           end: /\]/,
           relevance: 0,
-          contains: [WU]
+          contains: [OH]
         }]
       },
-      fU = {
+      qH = {
         scope: "title",
-        gY: GU,
+        PX: vH,
         relevance: 0
       },
-      iU = {
+      gH = {
         scope: "title",
-        gY: BU,
+        PX: PH,
         relevance: 0
       },
-      HU = {
-        gY: "\\.\\s*" + BU,
+      NH = {
+        PX: "\\.\\s*" + PH,
         relevance: 0
       };
-    var MU = Object.freeze({
+    var RH = Object.freeze({
       __proto__: null,
-      APOS_STRING_MODE: dU,
-      BACKSLASH_ESCAPE: WU,
-      BINARY_NUMBER_MODE: rU,
-      BINARY_NUMBER_RE: PU,
-      COMMENT: eU,
-      C_BLOCK_COMMENT_MODE: wU,
-      C_LINE_COMMENT_MODE: CU,
-      C_NUMBER_MODE: SU,
-      C_NUMBER_RE: RU,
-      END_SAME_AS_BEGIN: function(UU) {
-        return Object.assign(UU, {
-          "on:begin": (UU, XU) => {
-            XU.data._beginMatch = UU[1]
+      APOS_STRING_MODE: bH,
+      BACKSLASH_ESCAPE: OH,
+      BINARY_NUMBER_MODE: cH,
+      BINARY_NUMBER_RE: VH,
+      COMMENT: mH,
+      C_BLOCK_COMMENT_MODE: IH,
+      C_LINE_COMMENT_MODE: oH,
+      C_NUMBER_MODE: KH,
+      C_NUMBER_RE: UH,
+      END_SAME_AS_BEGIN: function(HH) {
+        return Object.assign(HH, {
+          "on:begin": (HH, BH) => {
+            BH.data._beginMatch = HH[1]
           },
-          "on:end": (UU, XU) => {
-            XU.data._beginMatch !== UU[1] && XU.ignoreMatch()
+          "on:end": (HH, BH) => {
+            BH.data._beginMatch !== HH[1] && BH.ignoreMatch()
           }
         })
       },
-      HASH_COMMENT_MODE: qU,
-      IDENT_RE: GU,
+      HASH_COMMENT_MODE: fH,
+      IDENT_RE: vH,
       MATCH_NOTHING_RE: /\b\B/,
-      METHOD_GUARD: HU,
-      NUMBER_MODE: OU,
-      NUMBER_RE: ZU,
+      METHOD_GUARD: NH,
+      NUMBER_MODE: lH,
+      NUMBER_RE: TH,
       PHRASAL_WORDS_MODE: {
-        gY: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
+        PX: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
       },
-      QUOTE_STRING_MODE: LU,
-      REGEXP_MODE: uU,
+      QUOTE_STRING_MODE: kH,
+      REGEXP_MODE: eH,
       RE_STARTERS_RE: "!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~",
       SHEBANG: function() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        const XU = /^#![ ]*\//;
-        return UU.binary && (UU.gY = pU(XU, /.*\b/, UU.binary, /\b.*/)), yU({
+        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        const BH = /^#![ ]*\//;
+        return HH.binary && (HH.PX = uH(BH, /.*\b/, HH.binary, /\b.*/)), rH({
           scope: "meta",
-          gY: XU,
+          PX: BH,
           end: /$/,
           relevance: 0,
-          "on:begin": (UU, XU) => {
-            0 !== UU.index && XU.ignoreMatch()
+          "on:begin": (HH, BH) => {
+            0 !== HH.index && BH.ignoreMatch()
           }
-        }, UU)
+        }, HH)
       },
-      TITLE_MODE: fU,
-      UNDERSCORE_IDENT_RE: BU,
-      UNDERSCORE_TITLE_MODE: iU
+      TITLE_MODE: qH,
+      UNDERSCORE_IDENT_RE: PH,
+      UNDERSCORE_TITLE_MODE: gH
     });
 
-    function vU(UU, XU) {
-      "." === UU.input[UU.index - 1] && XU.ignoreMatch()
+    function jH(HH, BH) {
+      "." === HH.input[HH.index - 1] && BH.ignoreMatch()
     }
 
-    function VU(UU, XU) {
-      void 0 !== UU.className && (UU.scope = UU.className, delete UU.className)
+    function nH(HH, BH) {
+      void 0 !== HH.className && (HH.scope = HH.className, delete HH.className)
     }
 
-    function sU(UU, XU) {
-      XU && UU.beginKeywords && (UU.gY = "\\b(" + UU.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", UU.__beforeBegin = vU, UU.keywords = UU.keywords || UU.beginKeywords, delete UU.beginKeywords, void 0 === UU.relevance && (UU.relevance = 0))
+    function FH(HH, BH) {
+      BH && HH.beginKeywords && (HH.PX = "\\b(" + HH.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", HH.__beforeBegin = jH, HH.keywords = HH.keywords || HH.beginKeywords, delete HH.beginKeywords, void 0 === HH.relevance && (HH.relevance = 0))
     }
 
-    function nU(UU, XU) {
-      Array.isArray(UU.illegal) && (UU.illegal = aU(...UU.illegal))
+    function DH(HH, BH) {
+      Array.isArray(HH.illegal) && (HH.illegal = QH(...HH.illegal))
     }
 
-    function mU(UU, XU) {
-      if (UU.match) {
-        if (UU.gY || UU.end) throw new Error("begin & end are not supported with match");
-        UU.gY = UU.match, delete UU.match
+    function wH(HH, BH) {
+      if (HH.match) {
+        if (HH.PX || HH.end) throw new Error("begin & end are not supported with match");
+        HH.PX = HH.match, delete HH.match
       }
     }
 
-    function lU(UU, XU) {
-      void 0 === UU.relevance && (UU.relevance = 1)
+    function ZH(HH, BH) {
+      void 0 === HH.relevance && (HH.relevance = 1)
     }
-    const xU = (UU, XU) => {
-        if (!UU.beforeMatch) return;
-        if (UU.starts) throw new Error("beforeMatch cannot be used with starts");
-        const zU = Object.assign({}, UU);
-        Object.keys(UU).forEach((XU => {
-          delete UU[XU]
-        })), UU.keywords = zU.keywords, UU.gY = pU(zU.beforeMatch, YU(zU.gY)), UU.starts = {
+    const dH = (HH, BH) => {
+        if (!HH.beforeMatch) return;
+        if (HH.starts) throw new Error("beforeMatch cannot be used with starts");
+        const LH = Object.assign({}, HH);
+        Object.keys(HH).forEach((BH => {
+          delete HH[BH]
+        })), HH.keywords = LH.keywords, HH.PX = uH(LH.beforeMatch, XH(LH.PX)), HH.starts = {
           relevance: 0,
-          contains: [Object.assign(zU, {
+          contains: [Object.assign(LH, {
             endsParent: !0
           })]
-        }, UU.relevance = 0, delete zU.beforeMatch
+        }, HH.relevance = 0, delete LH.beforeMatch
       },
-      JU = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
+      aH = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
 
-    function jU(UU, XU) {
-      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
-      const cU = Object.create(null);
-      return "string" === typeof UU ? yU(zU, UU.split(" ")) : Array.isArray(UU) ? yU(zU, UU) : Object.keys(UU).forEach((function(zU) {
-        Object.assign(cU, jU(UU[zU], XU, zU))
-      })), cU;
+    function sH(HH, BH) {
+      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
+      const AH = Object.create(null);
+      return "string" === typeof HH ? rH(LH, HH.split(" ")) : Array.isArray(HH) ? rH(LH, HH) : Object.keys(HH).forEach((function(LH) {
+        Object.assign(AH, sH(HH[LH], BH, LH))
+      })), AH;
 
-      function yU(UU, zU) {
-        XU && (zU = zU.map((UU => UU.toLowerCase()))), zU.forEach((function(XU) {
-          const zU = XU.split("|");
-          cU[zU[0]] = [UU, KU(zU[0], zU[1])]
+      function rH(HH, LH) {
+        BH && (LH = LH.map((HH => HH.toLowerCase()))), LH.forEach((function(BH) {
+          const LH = BH.split("|");
+          AH[LH[0]] = [HH, JH(LH[0], LH[1])]
         }))
       }
     }
 
-    function KU(UU, XU) {
-      return XU ? Number(XU) : function(UU) {
-        return JU.includes(UU.toLowerCase())
-      }(UU) ? 0 : 1
+    function JH(HH, BH) {
+      return BH ? Number(BH) : function(HH) {
+        return aH.includes(HH.toLowerCase())
+      }(HH) ? 0 : 1
     }
-    const bU = {},
-      TU = UU => {
-        console.error(UU)
+    const iH = {},
+      pH = HH => {
+        console.error(HH)
       },
-      hU = function(UU) {
-        for (var XU = arguments.length, zU = new Array(XU > 1 ? XU - 1 : 0), cU = 1; cU < XU; cU++) zU[cU - 1] = arguments[cU];
-        console.log(`WARN: ${UU}`, ...zU)
+      yH = function(HH) {
+        for (var BH = arguments.length, LH = new Array(BH > 1 ? BH - 1 : 0), AH = 1; AH < BH; AH++) LH[AH - 1] = arguments[AH];
+        console.log(`WARN: ${HH}`, ...LH)
       },
-      UX = (UU, XU) => {
-        bU[`${UU}/${XU}`] || (console.log(`Deprecated as of ${UU}. ${XU}`), bU[`${UU}/${XU}`] = !0)
+      HB = (HH, BH) => {
+        iH[`${HH}/${BH}`] || (console.log(`Deprecated as of ${HH}. ${BH}`), iH[`${HH}/${BH}`] = !0)
       },
-      XX = new Error;
+      BB = new Error;
 
-    function zX(UU, XU, zU) {
+    function LB(HH, BH, LH) {
       let {
-        key: cU
-      } = zU, yU = 0;
-      const QU = UU[cU],
-        AU = {},
-        FU = {};
-      for (let oU = 1; oU <= XU.length; oU++) FU[oU + yU] = QU[oU], AU[oU + yU] = !0, yU += tU(XU[oU - 1]);
-      UU[cU] = FU, UU[cU]._emit = AU, UU[cU]._multi = !0
+        key: AH
+      } = LH, rH = 0;
+      const SH = HH[AH],
+        hH = {},
+        tH = {};
+      for (let zH = 1; zH <= BH.length; zH++) tH[zH + rH] = SH[zH], hH[zH + rH] = !0, rH += WH(BH[zH - 1]);
+      HH[AH] = tH, HH[AH]._emit = hH, HH[AH]._multi = !0
     }
 
-    function cX(UU) {
-      ! function(UU) {
-        UU.scope && "object" === typeof UU.scope && null !== UU.scope && (UU.beginScope = UU.scope, delete UU.scope)
-      }(UU), "string" === typeof UU.beginScope && (UU.beginScope = {
-          _wrap: UU.beginScope
-        }), "string" === typeof UU.endScope && (UU.endScope = {
-          _wrap: UU.endScope
+    function AB(HH) {
+      ! function(HH) {
+        HH.scope && "object" === typeof HH.scope && null !== HH.scope && (HH.beginScope = HH.scope, delete HH.scope)
+      }(HH), "string" === typeof HH.beginScope && (HH.beginScope = {
+          _wrap: HH.beginScope
+        }), "string" === typeof HH.endScope && (HH.endScope = {
+          _wrap: HH.endScope
         }),
-        function(UU) {
-          if (Array.isArray(UU.gY)) {
-            if (UU.skip || UU.excludeBegin || UU.returnBegin) throw TU("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), XX;
-            if ("object" !== typeof UU.beginScope || null === UU.beginScope) throw TU("beginScope must be object"), XX;
-            zX(UU, UU.gY, {
+        function(HH) {
+          if (Array.isArray(HH.PX)) {
+            if (HH.skip || HH.excludeBegin || HH.returnBegin) throw pH("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), BB;
+            if ("object" !== typeof HH.beginScope || null === HH.beginScope) throw pH("beginScope must be object"), BB;
+            LB(HH, HH.PX, {
               key: "beginScope"
-            }), UU.gY = kU(UU.gY, {
+            }), HH.PX = xH(HH.PX, {
               joinWith: ""
             })
           }
-        }(UU),
-        function(UU) {
-          if (Array.isArray(UU.end)) {
-            if (UU.skip || UU.excludeEnd || UU.returnEnd) throw TU("skip, excludeEnd, returnEnd not compatible with endScope: {}"), XX;
-            if ("object" !== typeof UU.endScope || null === UU.endScope) throw TU("endScope must be object"), XX;
-            zX(UU, UU.end, {
+        }(HH),
+        function(HH) {
+          if (Array.isArray(HH.end)) {
+            if (HH.skip || HH.excludeEnd || HH.returnEnd) throw pH("skip, excludeEnd, returnEnd not compatible with endScope: {}"), BB;
+            if ("object" !== typeof HH.endScope || null === HH.endScope) throw pH("endScope must be object"), BB;
+            LB(HH, HH.end, {
               key: "endScope"
-            }), UU.end = kU(UU.end, {
+            }), HH.end = xH(HH.end, {
               joinWith: ""
             })
           }
-        }(UU)
+        }(HH)
     }
 
-    function yX(UU) {
-      function XU(XU, zU) {
-        return new RegExp(EU(XU), "m" + (UU.case_insensitive ? "i" : "") + (UU.unicodeRegex ? "u" : "") + (zU ? "g" : ""))
+    function rB(HH) {
+      function BH(BH, LH) {
+        return new RegExp(EH(BH), "m" + (HH.case_insensitive ? "i" : "") + (HH.unicodeRegex ? "u" : "") + (LH ? "g" : ""))
       }
-      class zU {
+      class LH {
         constructor() {
           this.matchIndexes = {}, this.regexes = [], this.matchAt = 1, this.position = 0
         }
-        addRule(UU, XU) {
-          XU.position = this.position++, this.matchIndexes[this.matchAt] = XU, this.regexes.push([XU, UU]), this.matchAt += tU(UU) + 1
+        addRule(HH, BH) {
+          BH.position = this.position++, this.matchIndexes[this.matchAt] = BH, this.regexes.push([BH, HH]), this.matchAt += WH(HH) + 1
         }
         compile() {
           0 === this.regexes.length && (this.exec = () => null);
-          const UU = this.regexes.map((UU => UU[1]));
-          this.matcherRe = XU(kU(UU, {
+          const HH = this.regexes.map((HH => HH[1]));
+          this.matcherRe = BH(xH(HH, {
             joinWith: "|"
           }), !0), this.lastIndex = 0
         }
-        exec(UU) {
+        exec(HH) {
           this.matcherRe.lastIndex = this.lastIndex;
-          const XU = this.matcherRe.exec(UU);
-          if (!XU) return null;
-          const zU = XU.findIndex(((UU, XU) => XU > 0 && void 0 !== UU)),
-            cU = this.matchIndexes[zU];
-          return XU.splice(0, zU), Object.assign(XU, cU)
+          const BH = this.matcherRe.exec(HH);
+          if (!BH) return null;
+          const LH = BH.findIndex(((HH, BH) => BH > 0 && void 0 !== HH)),
+            AH = this.matchIndexes[LH];
+          return BH.splice(0, LH), Object.assign(BH, AH)
         }
       }
-      class cU {
+      class AH {
         constructor() {
           this.rules = [], this.multiRegexes = [], this.count = 0, this.lastIndex = 0, this.regexIndex = 0
         }
-        getMatcher(UU) {
-          if (this.multiRegexes[UU]) return this.multiRegexes[UU];
-          const XU = new zU;
-          return this.rules.slice(UU).forEach((UU => {
-            let [zU, cU] = UU;
-            return XU.addRule(zU, cU)
-          })), XU.compile(), this.multiRegexes[UU] = XU, XU
+        getMatcher(HH) {
+          if (this.multiRegexes[HH]) return this.multiRegexes[HH];
+          const BH = new LH;
+          return this.rules.slice(HH).forEach((HH => {
+            let [LH, AH] = HH;
+            return BH.addRule(LH, AH)
+          })), BH.compile(), this.multiRegexes[HH] = BH, BH
         }
         resumingScanAtSamePosition() {
           return 0 !== this.regexIndex
@@ -494,81 +494,81 @@ export const modules = {
         considerAll() {
           this.regexIndex = 0
         }
-        addRule(UU, XU) {
-          this.rules.push([UU, XU]), "gY" === XU.type && this.count++
+        addRule(HH, BH) {
+          this.rules.push([HH, BH]), "PX" === BH.type && this.count++
         }
-        exec(UU) {
-          const XU = this.getMatcher(this.regexIndex);
-          XU.lastIndex = this.lastIndex;
-          let zU = XU.exec(UU);
+        exec(HH) {
+          const BH = this.getMatcher(this.regexIndex);
+          BH.lastIndex = this.lastIndex;
+          let LH = BH.exec(HH);
           if (this.resumingScanAtSamePosition())
-            if (zU && zU.index === this.lastIndex);
+            if (LH && LH.index === this.lastIndex);
             else {
-              const XU = this.getMatcher(0);
-              XU.lastIndex = this.lastIndex + 1, zU = XU.exec(UU)
-            } return zU && (this.regexIndex += zU.position + 1, this.regexIndex === this.count && this.considerAll()), zU
+              const BH = this.getMatcher(0);
+              BH.lastIndex = this.lastIndex + 1, LH = BH.exec(HH)
+            } return LH && (this.regexIndex += LH.position + 1, this.regexIndex === this.count && this.considerAll()), LH
         }
       }
-      if (UU.compilerExtensions || (UU.compilerExtensions = []), UU.contains && UU.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
-      return UU.classNameAliases = yU(UU.classNameAliases || {}),
-        function zU(QU, AU) {
-          const FU = QU;
-          if (QU.isCompiled) return FU;
-          [VU, mU, cX, xU].forEach((UU => UU(QU, AU))), UU.compilerExtensions.forEach((UU => UU(QU, AU))), QU.__beforeBegin = null, [sU, nU, lU].forEach((UU => UU(QU, AU))), QU.isCompiled = !0;
-          let oU = null;
-          return "object" === typeof QU.keywords && QU.keywords.$pattern && (QU.keywords = Object.assign({}, QU.keywords), oU = QU.keywords.$pattern, delete QU.keywords.$pattern), oU = oU || /\w+/, QU.keywords && (QU.keywords = jU(QU.keywords, UU.case_insensitive)), FU.keywordPatternRe = XU(oU, !0), AU && (QU.gY || (QU.gY = /\B|\b/), FU.beginRe = XU(FU.gY), QU.end || QU.endsWithParent || (QU.end = /\B|\b/), QU.end && (FU.endRe = XU(FU.end)), FU.terminatorEnd = EU(FU.end) || "", QU.endsWithParent && AU.terminatorEnd && (FU.terminatorEnd += (QU.end ? "|" : "") + AU.terminatorEnd)), QU.illegal && (FU.illegalRe = XU(QU.illegal)), QU.contains || (QU.contains = []), QU.contains = [].concat(...QU.contains.map((function(UU) {
-            return function(UU) {
-              UU.variants && !UU.cachedVariants && (UU.cachedVariants = UU.variants.map((function(XU) {
-                return yU(UU, {
+      if (HH.compilerExtensions || (HH.compilerExtensions = []), HH.contains && HH.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
+      return HH.classNameAliases = rH(HH.classNameAliases || {}),
+        function LH(SH, hH) {
+          const tH = SH;
+          if (SH.isCompiled) return tH;
+          [nH, wH, AB, dH].forEach((HH => HH(SH, hH))), HH.compilerExtensions.forEach((HH => HH(SH, hH))), SH.__beforeBegin = null, [FH, DH, ZH].forEach((HH => HH(SH, hH))), SH.isCompiled = !0;
+          let zH = null;
+          return "object" === typeof SH.keywords && SH.keywords.$pattern && (SH.keywords = Object.assign({}, SH.keywords), zH = SH.keywords.$pattern, delete SH.keywords.$pattern), zH = zH || /\w+/, SH.keywords && (SH.keywords = sH(SH.keywords, HH.case_insensitive)), tH.keywordPatternRe = BH(zH, !0), hH && (SH.PX || (SH.PX = /\B|\b/), tH.beginRe = BH(tH.PX), SH.end || SH.endsWithParent || (SH.end = /\B|\b/), SH.end && (tH.endRe = BH(tH.end)), tH.terminatorEnd = EH(tH.end) || "", SH.endsWithParent && hH.terminatorEnd && (tH.terminatorEnd += (SH.end ? "|" : "") + hH.terminatorEnd)), SH.illegal && (tH.illegalRe = BH(SH.illegal)), SH.contains || (SH.contains = []), SH.contains = [].concat(...SH.contains.map((function(HH) {
+            return function(HH) {
+              HH.variants && !HH.cachedVariants && (HH.cachedVariants = HH.variants.map((function(BH) {
+                return rH(HH, {
                   variants: null
-                }, XU)
+                }, BH)
               })));
-              if (UU.cachedVariants) return UU.cachedVariants;
-              if (QX(UU)) return yU(UU, {
-                starts: UU.starts ? yU(UU.starts) : null
+              if (HH.cachedVariants) return HH.cachedVariants;
+              if (SB(HH)) return rH(HH, {
+                starts: HH.starts ? rH(HH.starts) : null
               });
-              if (Object.isFrozen(UU)) return yU(UU);
-              return UU
-            }("self" === UU ? QU : UU)
-          }))), QU.contains.forEach((function(UU) {
-            zU(UU, FU)
-          })), QU.starts && zU(QU.starts, AU), FU.matcher = function(UU) {
-            const XU = new cU;
-            return UU.contains.forEach((UU => XU.addRule(UU.gY, {
-              rule: UU,
-              type: "gY"
-            }))), UU.terminatorEnd && XU.addRule(UU.terminatorEnd, {
+              if (Object.isFrozen(HH)) return rH(HH);
+              return HH
+            }("self" === HH ? SH : HH)
+          }))), SH.contains.forEach((function(HH) {
+            LH(HH, tH)
+          })), SH.starts && LH(SH.starts, hH), tH.matcher = function(HH) {
+            const BH = new AH;
+            return HH.contains.forEach((HH => BH.addRule(HH.PX, {
+              rule: HH,
+              type: "PX"
+            }))), HH.terminatorEnd && BH.addRule(HH.terminatorEnd, {
               type: "end"
-            }), UU.illegal && XU.addRule(UU.illegal, {
+            }), HH.illegal && BH.addRule(HH.illegal, {
               type: "illegal"
-            }), XU
-          }(FU), FU
-        }(UU)
+            }), BH
+          }(tH), tH
+        }(HH)
     }
 
-    function QX(UU) {
-      return !!UU && (UU.endsWithParent || QX(UU.starts))
+    function SB(HH) {
+      return !!HH && (HH.endsWithParent || SB(HH.starts))
     }
-    class AX extends Error {
-      constructor(UU, XU) {
-        super(UU), this.name = "HTMLInjectionError", this.html = XU
+    class hB extends Error {
+      constructor(HH, BH) {
+        super(HH), this.name = "HTMLInjectionError", this.html = BH
       }
     }
-    const FX = cU,
-      oX = yU,
-      DX = Symbol("nomatch"),
-      EX = function(UU) {
-        const cU = Object.create(null),
-          yU = Object.create(null),
-          QU = [];
-        let AU = !0;
-        const FU = "Could not find the language '{}', did you forget to load/include a language module?",
-          oU = {
+    const tB = AH,
+      zB = rH,
+      CB = Symbol("nomatch"),
+      EB = function(HH) {
+        const AH = Object.create(null),
+          rH = Object.create(null),
+          SH = [];
+        let hH = !0;
+        const tH = "Could not find the language '{}', did you forget to load/include a language module?",
+          zH = {
             disableAutodetect: !0,
             name: "Plain text",
             contains: []
           };
-        let EU = {
+        let EH = {
           ignoreUnescapedHTML: !1,
           throwUnescapedHTML: !1,
           noHighlightRe: /^(no-?highlight)$/i,
@@ -576,575 +576,575 @@ export const modules = {
           classPrefix: "hljs-",
           cssSelector: "pre code",
           languages: null,
-          __emitter: DU
+          __emitter: CH
         };
 
-        function tU(UU) {
-          return EU.noHighlightRe.test(UU)
+        function WH(HH) {
+          return EH.noHighlightRe.test(HH)
         }
 
-        function gU(UU, XU, zU) {
-          let cU = "",
-            yU = "";
-          "object" === typeof XU ? (cU = UU, zU = XU.ignoreIllegals, yU = XU.language) : (UX("10.7.0", "highlight(lang, code, ...args) has been deprecated."), UX("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), yU = UU, cU = XU), void 0 === zU && (zU = !0);
-          const QU = {
-            code: cU,
-            language: yU
+        function MH(HH, BH, LH) {
+          let AH = "",
+            rH = "";
+          "object" === typeof BH ? (AH = HH, LH = BH.ignoreIllegals, rH = BH.language) : (HB("10.7.0", "highlight(lang, code, ...args) has been deprecated."), HB("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), rH = HH, AH = BH), void 0 === LH && (LH = !0);
+          const SH = {
+            code: AH,
+            language: rH
           };
-          LU("before:highlight", QU);
-          const AU = QU.result ? QU.result : kU(QU.language, QU.code, zU);
-          return AU.code = QU.code, LU("after:highlight", AU), AU
+          kH("before:highlight", SH);
+          const hH = SH.result ? SH.result : xH(SH.language, SH.code, LH);
+          return hH.code = SH.code, kH("after:highlight", hH), hH
         }
 
-        function kU(UU, XU, yU, QU) {
-          const oU = Object.create(null);
+        function xH(HH, BH, rH, SH) {
+          const zH = Object.create(null);
 
-          function DU() {
-            if (!LU.keywords) return void CU.addText(wU);
-            let UU = 0;
-            LU.keywordPatternRe.lastIndex = 0;
-            let XU = LU.keywordPatternRe.exec(wU),
-              zU = "";
-            for (; XU;) {
-              zU += wU.substring(UU, XU.index);
-              const yU = RU.case_insensitive ? XU[0].toLowerCase() : XU[0],
-                QU = (cU = yU, LU.keywords[cU]);
-              if (QU) {
-                const [UU, cU] = QU;
-                if (CU.addText(zU), zU = "", oU[yU] = (oU[yU] || 0) + 1, oU[yU] <= 7 && (qU += cU), UU.startsWith("_")) zU += XU[0];
+          function CH() {
+            if (!kH.keywords) return void oH.addText(IH);
+            let HH = 0;
+            kH.keywordPatternRe.lastIndex = 0;
+            let BH = kH.keywordPatternRe.exec(IH),
+              LH = "";
+            for (; BH;) {
+              LH += IH.substring(HH, BH.index);
+              const rH = UH.case_insensitive ? BH[0].toLowerCase() : BH[0],
+                SH = (AH = rH, kH.keywords[AH]);
+              if (SH) {
+                const [HH, AH] = SH;
+                if (oH.addText(LH), LH = "", zH[rH] = (zH[rH] || 0) + 1, zH[rH] <= 7 && (fH += AH), HH.startsWith("_")) LH += BH[0];
                 else {
-                  const zU = RU.classNameAliases[UU] || UU;
-                  NU(XU[0], zU)
+                  const LH = UH.classNameAliases[HH] || HH;
+                  GH(BH[0], LH)
                 }
-              } else zU += XU[0];
-              UU = LU.keywordPatternRe.lastIndex, XU = LU.keywordPatternRe.exec(wU)
+              } else LH += BH[0];
+              HH = kH.keywordPatternRe.lastIndex, BH = kH.keywordPatternRe.exec(IH)
             }
-            var cU;
-            zU += wU.substring(UU), CU.addText(zU)
+            var AH;
+            LH += IH.substring(HH), oH.addText(LH)
           }
 
-          function YU() {
-            null != LU.subLanguage ? function() {
-              if ("" === wU) return;
-              let UU = null;
-              if ("string" === typeof LU.subLanguage) {
-                if (!cU[LU.subLanguage]) return void CU.addText(wU);
-                UU = kU(LU.subLanguage, wU, !0, eU[LU.subLanguage]), eU[LU.subLanguage] = UU._top
-              } else UU = GU(wU, LU.subLanguage.length ? LU.subLanguage : null);
-              LU.relevance > 0 && (qU += UU.relevance), CU.__addSublanguage(UU._emitter, UU.language)
-            }() : DU(), wU = ""
+          function XH() {
+            null != kH.subLanguage ? function() {
+              if ("" === IH) return;
+              let HH = null;
+              if ("string" === typeof kH.subLanguage) {
+                if (!AH[kH.subLanguage]) return void oH.addText(IH);
+                HH = xH(kH.subLanguage, IH, !0, mH[kH.subLanguage]), mH[kH.subLanguage] = HH._top
+              } else HH = vH(IH, kH.subLanguage.length ? kH.subLanguage : null);
+              kH.relevance > 0 && (fH += HH.relevance), oH.__addSublanguage(HH._emitter, HH.language)
+            }() : CH(), IH = ""
           }
 
-          function NU(UU, XU) {
-            "" !== UU && (CU.startScope(XU), CU.addText(UU), CU.endScope())
+          function GH(HH, BH) {
+            "" !== HH && (oH.startScope(BH), oH.addText(HH), oH.endScope())
           }
 
-          function IU(UU, XU) {
-            let zU = 1;
-            const cU = XU.length - 1;
-            for (; zU <= cU;) {
-              if (!UU._emit[zU]) {
-                zU++;
+          function YH(HH, BH) {
+            let LH = 1;
+            const AH = BH.length - 1;
+            for (; LH <= AH;) {
+              if (!HH._emit[LH]) {
+                LH++;
                 continue
               }
-              const cU = RU.classNameAliases[UU[zU]] || UU[zU],
-                yU = XU[zU];
-              cU ? NU(yU, cU) : (wU = yU, DU(), wU = ""), zU++
+              const AH = UH.classNameAliases[HH[LH]] || HH[LH],
+                rH = BH[LH];
+              AH ? GH(rH, AH) : (IH = rH, CH(), IH = ""), LH++
             }
           }
 
-          function pU(UU, XU) {
-            return UU.scope && "string" === typeof UU.scope && CU.openNode(RU.classNameAliases[UU.scope] || UU.scope), UU.beginScope && (UU.beginScope._wrap ? (NU(wU, RU.classNameAliases[UU.beginScope._wrap] || UU.beginScope._wrap), wU = "") : UU.beginScope._multi && (IU(UU.beginScope, XU), wU = "")), LU = Object.create(UU, {
+          function uH(HH, BH) {
+            return HH.scope && "string" === typeof HH.scope && oH.openNode(UH.classNameAliases[HH.scope] || HH.scope), HH.beginScope && (HH.beginScope._wrap ? (GH(IH, UH.classNameAliases[HH.beginScope._wrap] || HH.beginScope._wrap), IH = "") : HH.beginScope._multi && (YH(HH.beginScope, BH), IH = "")), kH = Object.create(HH, {
               parent: {
-                value: LU
+                value: kH
               }
-            }), LU
+            }), kH
           }
 
-          function aU(UU, XU, cU) {
-            let yU = function(UU, XU) {
-              const zU = UU && UU.exec(XU);
-              return zU && 0 === zU.index
-            }(UU.endRe, cU);
-            if (yU) {
-              if (UU["on:end"]) {
-                const cU = new zU(UU);
-                UU["on:end"](XU, cU), cU.isMatchIgnored && (yU = !1)
+          function QH(HH, BH, AH) {
+            let rH = function(HH, BH) {
+              const LH = HH && HH.exec(BH);
+              return LH && 0 === LH.index
+            }(HH.endRe, AH);
+            if (rH) {
+              if (HH["on:end"]) {
+                const AH = new LH(HH);
+                HH["on:end"](BH, AH), AH.isMatchIgnored && (rH = !1)
               }
-              if (yU) {
-                for (; UU.endsParent && UU.parent;) UU = UU.parent;
-                return UU
+              if (rH) {
+                for (; HH.endsParent && HH.parent;) HH = HH.parent;
+                return HH
               }
             }
-            if (UU.endsWithParent) return aU(UU.parent, XU, cU)
+            if (HH.endsWithParent) return QH(HH.parent, BH, AH)
           }
 
-          function tU(UU) {
-            return 0 === LU.matcher.regexIndex ? (wU += UU[0], 1) : (rU = !0, 0)
+          function WH(HH) {
+            return 0 === kH.matcher.regexIndex ? (IH += HH[0], 1) : (cH = !0, 0)
           }
 
-          function gU(UU) {
-            const zU = UU[0],
-              cU = XU.substring(UU.index),
-              yU = aU(LU, UU, cU);
-            if (!yU) return DX;
-            const QU = LU;
-            LU.endScope && LU.endScope._wrap ? (YU(), NU(zU, LU.endScope._wrap)) : LU.endScope && LU.endScope._multi ? (YU(), IU(LU.endScope, UU)) : QU.skip ? wU += zU : (QU.returnEnd || QU.excludeEnd || (wU += zU), YU(), QU.excludeEnd && (wU = zU));
+          function MH(HH) {
+            const LH = HH[0],
+              AH = BH.substring(HH.index),
+              rH = QH(kH, HH, AH);
+            if (!rH) return CB;
+            const SH = kH;
+            kH.endScope && kH.endScope._wrap ? (XH(), GH(LH, kH.endScope._wrap)) : kH.endScope && kH.endScope._multi ? (XH(), YH(kH.endScope, HH)) : SH.skip ? IH += LH : (SH.returnEnd || SH.excludeEnd || (IH += LH), XH(), SH.excludeEnd && (IH = LH));
             do {
-              LU.scope && CU.closeNode(), LU.skip || LU.subLanguage || (qU += LU.relevance), LU = LU.parent
-            } while (LU !== yU.parent);
-            return yU.starts && pU(yU.starts, UU), QU.returnEnd ? 0 : zU.length
+              kH.scope && oH.closeNode(), kH.skip || kH.subLanguage || (fH += kH.relevance), kH = kH.parent
+            } while (kH !== rH.parent);
+            return rH.starts && uH(rH.starts, HH), SH.returnEnd ? 0 : LH.length
           }
-          let BU = {};
+          let PH = {};
 
-          function ZU(cU, QU) {
-            const FU = QU && QU[0];
-            if (wU += cU, null == FU) return YU(), 0;
-            if ("gY" === BU.type && "end" === QU.type && BU.index === QU.index && "" === FU) {
-              if (wU += XU.slice(QU.index, QU.index + 1), !AU) {
-                const XU = new Error(`0 width match regex (${UU})`);
-                throw XU.languageName = UU, XU.badRule = BU.rule, XU
+          function TH(AH, SH) {
+            const tH = SH && SH[0];
+            if (IH += AH, null == tH) return XH(), 0;
+            if ("PX" === PH.type && "end" === SH.type && PH.index === SH.index && "" === tH) {
+              if (IH += BH.slice(SH.index, SH.index + 1), !hH) {
+                const BH = new Error(`0 width match regex (${HH})`);
+                throw BH.languageName = HH, BH.badRule = PH.rule, BH
               }
               return 1
             }
-            if (BU = QU, "gY" === QU.type) return function(UU) {
-              const XU = UU[0],
-                cU = UU.rule,
-                yU = new zU(cU),
-                QU = [cU.__beforeBegin, cU["on:begin"]];
-              for (const zU of QU)
-                if (zU && (zU(UU, yU), yU.isMatchIgnored)) return tU(XU);
-              return cU.skip ? wU += XU : (cU.excludeBegin && (wU += XU), YU(), cU.returnBegin || cU.excludeBegin || (wU = XU)), pU(cU, UU), cU.returnBegin ? 0 : XU.length
-            }(QU);
-            if ("illegal" === QU.type && !yU) {
-              const UU = new Error('Illegal lexeme "' + FU + '" for mode "' + (LU.scope || "<unnamed>") + '"');
-              throw UU.mode = LU, UU
+            if (PH = SH, "PX" === SH.type) return function(HH) {
+              const BH = HH[0],
+                AH = HH.rule,
+                rH = new LH(AH),
+                SH = [AH.__beforeBegin, AH["on:begin"]];
+              for (const LH of SH)
+                if (LH && (LH(HH, rH), rH.isMatchIgnored)) return WH(BH);
+              return AH.skip ? IH += BH : (AH.excludeBegin && (IH += BH), XH(), AH.returnBegin || AH.excludeBegin || (IH = BH)), uH(AH, HH), AH.returnBegin ? 0 : BH.length
+            }(SH);
+            if ("illegal" === SH.type && !rH) {
+              const HH = new Error('Illegal lexeme "' + tH + '" for mode "' + (kH.scope || "<unnamed>") + '"');
+              throw HH.mode = kH, HH
             }
-            if ("end" === QU.type) {
-              const UU = gU(QU);
-              if (UU !== DX) return UU
+            if ("end" === SH.type) {
+              const HH = MH(SH);
+              if (HH !== CB) return HH
             }
-            if ("illegal" === QU.type && "" === FU) return wU += "\n", 1;
-            if (SU > 1e5 && SU > 3 * QU.index) {
+            if ("illegal" === SH.type && "" === tH) return IH += "\n", 1;
+            if (KH > 1e5 && KH > 3 * SH.index) {
               throw new Error("potential infinite loop, way more iterations than matches")
             }
-            return wU += FU, FU.length
+            return IH += tH, tH.length
           }
-          const RU = PU(UU);
-          if (!RU) throw TU(FU.replace("{}", UU)), new Error('Unknown language: "' + UU + '"');
-          const WU = yX(RU);
-          let dU = "",
-            LU = QU || WU;
-          const eU = {},
-            CU = new EU.__emitter(EU);
+          const UH = VH(HH);
+          if (!UH) throw pH(tH.replace("{}", HH)), new Error('Unknown language: "' + HH + '"');
+          const OH = rB(UH);
+          let bH = "",
+            kH = SH || OH;
+          const mH = {},
+            oH = new EH.__emitter(EH);
           ! function() {
-            const UU = [];
-            for (let XU = LU; XU !== RU; XU = XU.parent) XU.scope && UU.unshift(XU.scope);
-            UU.forEach((UU => CU.openNode(UU)))
+            const HH = [];
+            for (let BH = kH; BH !== UH; BH = BH.parent) BH.scope && HH.unshift(BH.scope);
+            HH.forEach((HH => oH.openNode(HH)))
           }();
-          let wU = "",
-            qU = 0,
-            OU = 0,
-            SU = 0,
-            rU = !1;
+          let IH = "",
+            fH = 0,
+            lH = 0,
+            KH = 0,
+            cH = !1;
           try {
-            if (RU.__emitTokens) RU.__emitTokens(XU, CU);
+            if (UH.__emitTokens) UH.__emitTokens(BH, oH);
             else {
-              for (LU.matcher.considerAll();;) {
-                SU++, rU ? rU = !1 : LU.matcher.considerAll(), LU.matcher.lastIndex = OU;
-                const UU = LU.matcher.exec(XU);
-                if (!UU) break;
-                const zU = ZU(XU.substring(OU, UU.index), UU);
-                OU = UU.index + zU
+              for (kH.matcher.considerAll();;) {
+                KH++, cH ? cH = !1 : kH.matcher.considerAll(), kH.matcher.lastIndex = lH;
+                const HH = kH.matcher.exec(BH);
+                if (!HH) break;
+                const LH = TH(BH.substring(lH, HH.index), HH);
+                lH = HH.index + LH
               }
-              ZU(XU.substring(OU))
+              TH(BH.substring(lH))
             }
-            return CU.finalize(), dU = CU.toHTML(), {
-              language: UU,
-              value: dU,
-              relevance: qU,
+            return oH.finalize(), bH = oH.toHTML(), {
+              language: HH,
+              value: bH,
+              relevance: fH,
               illegal: !1,
-              _emitter: CU,
-              _top: LU
+              _emitter: oH,
+              _top: kH
             }
-          } catch (uU) {
-            if (uU.message && uU.message.includes("Illegal")) return {
-              language: UU,
-              value: FX(XU),
+          } catch (eH) {
+            if (eH.message && eH.message.includes("Illegal")) return {
+              language: HH,
+              value: tB(BH),
               illegal: !0,
               relevance: 0,
               _illegalBy: {
-                message: uU.message,
-                index: OU,
-                context: XU.slice(OU - 100, OU + 100),
-                mode: uU.mode,
-                resultSoFar: dU
+                message: eH.message,
+                index: lH,
+                context: BH.slice(lH - 100, lH + 100),
+                mode: eH.mode,
+                resultSoFar: bH
               },
-              _emitter: CU
+              _emitter: oH
             };
-            if (AU) return {
-              language: UU,
-              value: FX(XU),
+            if (hH) return {
+              language: HH,
+              value: tB(BH),
               illegal: !1,
               relevance: 0,
-              errorRaised: uU,
-              _emitter: CU,
-              _top: LU
+              errorRaised: eH,
+              _emitter: oH,
+              _top: kH
             };
-            throw uU
+            throw eH
           }
         }
 
-        function GU(UU, XU) {
-          XU = XU || EU.languages || Object.keys(cU);
-          const zU = function(UU) {
-              const XU = {
-                value: FX(UU),
+        function vH(HH, BH) {
+          BH = BH || EH.languages || Object.keys(AH);
+          const LH = function(HH) {
+              const BH = {
+                value: tB(HH),
                 illegal: !1,
                 relevance: 0,
-                _top: oU,
-                _emitter: new EU.__emitter(EU)
+                _top: zH,
+                _emitter: new EH.__emitter(EH)
               };
-              return XU._emitter.addText(UU), XU
-            }(UU),
-            yU = XU.filter(PU).filter(dU).map((XU => kU(XU, UU, !1)));
-          yU.unshift(zU);
-          const QU = yU.sort(((UU, XU) => {
-              if (UU.relevance !== XU.relevance) return XU.relevance - UU.relevance;
-              if (UU.language && XU.language) {
-                if (PU(UU.language).supersetOf === XU.language) return 1;
-                if (PU(XU.language).supersetOf === UU.language) return -1
+              return BH._emitter.addText(HH), BH
+            }(HH),
+            rH = BH.filter(VH).filter(bH).map((BH => xH(BH, HH, !1)));
+          rH.unshift(LH);
+          const SH = rH.sort(((HH, BH) => {
+              if (HH.relevance !== BH.relevance) return BH.relevance - HH.relevance;
+              if (HH.language && BH.language) {
+                if (VH(HH.language).supersetOf === BH.language) return 1;
+                if (VH(BH.language).supersetOf === HH.language) return -1
               }
               return 0
             })),
-            [AU, FU] = QU,
-            DU = AU;
-          return DU.secondBest = FU, DU
+            [hH, tH] = SH,
+            CH = hH;
+          return CH.secondBest = tH, CH
         }
 
-        function BU(UU) {
-          let XU = null;
-          const zU = function(UU) {
-            let XU = UU.className + " ";
-            XU += UU.parentNode ? UU.parentNode.className : "";
-            const zU = EU.languageDetectRe.exec(XU);
-            if (zU) {
-              const XU = PU(zU[1]);
-              return XU || (hU(FU.replace("{}", zU[1])), hU("Falling back to no-highlight mode for this block.", UU)), XU ? zU[1] : "no-highlight"
+        function PH(HH) {
+          let BH = null;
+          const LH = function(HH) {
+            let BH = HH.className + " ";
+            BH += HH.parentNode ? HH.parentNode.className : "";
+            const LH = EH.languageDetectRe.exec(BH);
+            if (LH) {
+              const BH = VH(LH[1]);
+              return BH || (yH(tH.replace("{}", LH[1])), yH("Falling back to no-highlight mode for this block.", HH)), BH ? LH[1] : "no-highlight"
             }
-            return XU.split(/\s+/).find((UU => tU(UU) || PU(UU)))
-          }(UU);
-          if (tU(zU)) return;
-          if (LU("before:highlightElement", {
-              el: UU,
-              language: zU
-            }), UU.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", UU);
-          if (UU.children.length > 0 && (EU.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(UU)), EU.throwUnescapedHTML)) {
-            throw new AX("One of your code blocks includes unescaped HTML.", UU.innerHTML)
+            return BH.split(/\s+/).find((HH => WH(HH) || VH(HH)))
+          }(HH);
+          if (WH(LH)) return;
+          if (kH("before:highlightElement", {
+              el: HH,
+              language: LH
+            }), HH.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", HH);
+          if (HH.children.length > 0 && (EH.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(HH)), EH.throwUnescapedHTML)) {
+            throw new hB("One of your code blocks includes unescaped HTML.", HH.innerHTML)
           }
-          XU = UU;
-          const cU = XU.textContent,
-            QU = zU ? gU(cU, {
-              language: zU,
+          BH = HH;
+          const AH = BH.textContent,
+            SH = LH ? MH(AH, {
+              language: LH,
               ignoreIllegals: !0
-            }) : GU(cU);
-          UU.innerHTML = QU.value, UU.dataset.highlighted = "yes",
-            function(UU, XU, zU) {
-              const cU = XU && yU[XU] || zU;
-              UU.classList.add("hljs"), UU.classList.add(`language-${cU}`)
-            }(UU, zU, QU.language), UU.result = {
-              language: QU.language,
-              re: QU.relevance,
-              relevance: QU.relevance
-            }, QU.secondBest && (UU.secondBest = {
-              language: QU.secondBest.language,
-              relevance: QU.secondBest.relevance
-            }), LU("after:highlightElement", {
-              el: UU,
-              result: QU,
-              text: cU
+            }) : vH(AH);
+          HH.innerHTML = SH.value, HH.dataset.highlighted = "yes",
+            function(HH, BH, LH) {
+              const AH = BH && rH[BH] || LH;
+              HH.classList.add("hljs"), HH.classList.add(`language-${AH}`)
+            }(HH, LH, SH.language), HH.result = {
+              language: SH.language,
+              re: SH.relevance,
+              relevance: SH.relevance
+            }, SH.secondBest && (HH.secondBest = {
+              language: SH.secondBest.language,
+              relevance: SH.secondBest.relevance
+            }), kH("after:highlightElement", {
+              el: HH,
+              result: SH,
+              text: AH
             })
         }
-        let ZU = !1;
+        let TH = !1;
 
-        function RU() {
-          if ("loading" === document.readyState) return ZU || window.addEventListener("DOMContentLoaded", (function() {
-            RU()
-          }), !1), void(ZU = !0);
-          document.querySelectorAll(EU.cssSelector).forEach(BU)
+        function UH() {
+          if ("loading" === document.readyState) return TH || window.addEventListener("DOMContentLoaded", (function() {
+            UH()
+          }), !1), void(TH = !0);
+          document.querySelectorAll(EH.cssSelector).forEach(PH)
         }
 
-        function PU(UU) {
-          return UU = (UU || "").toLowerCase(), cU[UU] || cU[yU[UU]]
+        function VH(HH) {
+          return HH = (HH || "").toLowerCase(), AH[HH] || AH[rH[HH]]
         }
 
-        function WU(UU, XU) {
+        function OH(HH, BH) {
           let {
-            languageName: zU
-          } = XU;
-          "string" === typeof UU && (UU = [UU]), UU.forEach((UU => {
-            yU[UU.toLowerCase()] = zU
+            languageName: LH
+          } = BH;
+          "string" === typeof HH && (HH = [HH]), HH.forEach((HH => {
+            rH[HH.toLowerCase()] = LH
           }))
         }
 
-        function dU(UU) {
-          const XU = PU(UU);
-          return XU && !XU.disableAutodetect
+        function bH(HH) {
+          const BH = VH(HH);
+          return BH && !BH.disableAutodetect
         }
 
-        function LU(UU, XU) {
-          const zU = UU;
-          QU.forEach((function(UU) {
-            UU[zU] && UU[zU](XU)
+        function kH(HH, BH) {
+          const LH = HH;
+          SH.forEach((function(HH) {
+            HH[LH] && HH[LH](BH)
           }))
         }
-        Object.assign(UU, {
-          highlight: gU,
-          highlightAuto: GU,
-          highlightAll: RU,
-          highlightElement: BU,
-          highlightBlock: function(UU) {
-            return UX("10.7.0", "highlightBlock will be removed entirely in v12.0"), UX("10.7.0", "Please use highlightElement now."), BU(UU)
+        Object.assign(HH, {
+          highlight: MH,
+          highlightAuto: vH,
+          highlightAll: UH,
+          highlightElement: PH,
+          highlightBlock: function(HH) {
+            return HB("10.7.0", "highlightBlock will be removed entirely in v12.0"), HB("10.7.0", "Please use highlightElement now."), PH(HH)
           },
-          configure: function(UU) {
-            EU = oX(EU, UU)
+          configure: function(HH) {
+            EH = zB(EH, HH)
           },
           initHighlighting: () => {
-            RU(), UX("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
+            UH(), HB("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
           },
           initHighlightingOnLoad: function() {
-            RU(), UX("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
+            UH(), HB("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
           },
-          registerLanguage: function(XU, zU) {
-            let yU = null;
+          registerLanguage: function(BH, LH) {
+            let rH = null;
             try {
-              yU = zU(UU)
-            } catch (QU) {
-              if (TU("Language definition for '{}' could not be registered.".replace("{}", XU)), !AU) throw QU;
-              TU(QU), yU = oU
+              rH = LH(HH)
+            } catch (SH) {
+              if (pH("Language definition for '{}' could not be registered.".replace("{}", BH)), !hH) throw SH;
+              pH(SH), rH = zH
             }
-            yU.name || (yU.name = XU), cU[XU] = yU, yU.rawDefinition = zU.bind(null, UU), yU.aliases && WU(yU.aliases, {
-              languageName: XU
+            rH.name || (rH.name = BH), AH[BH] = rH, rH.rawDefinition = LH.bind(null, HH), rH.aliases && OH(rH.aliases, {
+              languageName: BH
             })
           },
-          unregisterLanguage: function(UU) {
-            delete cU[UU];
-            for (const XU of Object.keys(yU)) yU[XU] === UU && delete yU[XU]
+          unregisterLanguage: function(HH) {
+            delete AH[HH];
+            for (const BH of Object.keys(rH)) rH[BH] === HH && delete rH[BH]
           },
           listLanguages: function() {
-            return Object.keys(cU)
+            return Object.keys(AH)
           },
-          getLanguage: PU,
-          registerAliases: WU,
-          autoDetection: dU,
-          inherit: oX,
-          addPlugin: function(UU) {
-            ! function(UU) {
-              UU["before:highlightBlock"] && !UU["before:highlightElement"] && (UU["before:highlightElement"] = XU => {
-                UU["before:highlightBlock"](Object.assign({
-                  block: XU.el
-                }, XU))
-              }), UU["after:highlightBlock"] && !UU["after:highlightElement"] && (UU["after:highlightElement"] = XU => {
-                UU["after:highlightBlock"](Object.assign({
-                  block: XU.el
-                }, XU))
+          getLanguage: VH,
+          registerAliases: OH,
+          autoDetection: bH,
+          inherit: zB,
+          addPlugin: function(HH) {
+            ! function(HH) {
+              HH["before:highlightBlock"] && !HH["before:highlightElement"] && (HH["before:highlightElement"] = BH => {
+                HH["before:highlightBlock"](Object.assign({
+                  block: BH.el
+                }, BH))
+              }), HH["after:highlightBlock"] && !HH["after:highlightElement"] && (HH["after:highlightElement"] = BH => {
+                HH["after:highlightBlock"](Object.assign({
+                  block: BH.el
+                }, BH))
               })
-            }(UU), QU.push(UU)
+            }(HH), SH.push(HH)
           },
-          removePlugin: function(UU) {
-            const XU = QU.indexOf(UU); - 1 !== XU && QU.splice(XU, 1)
+          removePlugin: function(HH) {
+            const BH = SH.indexOf(HH); - 1 !== BH && SH.splice(BH, 1)
           }
-        }), UU.debugMode = function() {
-          AU = !1
-        }, UU.safeMode = function() {
-          AU = !0
-        }, UU.versionString = "11.11.1", UU.regex = {
-          concat: pU,
-          lookahead: YU,
-          either: aU,
-          optional: IU,
-          anyNumberOfTimes: NU
+        }), HH.debugMode = function() {
+          hH = !1
+        }, HH.safeMode = function() {
+          hH = !0
+        }, HH.versionString = "11.11.1", HH.regex = {
+          concat: uH,
+          lookahead: XH,
+          either: QH,
+          optional: YH,
+          anyNumberOfTimes: GH
         };
-        for (const zU in MU) "object" === typeof MU[zU] && XU(MU[zU]);
-        return Object.assign(UU, MU), UU
+        for (const LH in RH) "object" === typeof RH[LH] && BH(RH[LH]);
+        return Object.assign(HH, RH), HH
       },
-      YX = EX({});
-    YX.newInstance = () => EX({}), UU.exports = YX, YX.HighlightJS = YX, YX.default = YX
+      XB = EB({});
+    XB.newInstance = () => EB({}), HH.exports = XB, XB.HighlightJS = XB, XB.default = XB
   },
-  5235: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => cU
+  5194: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => AH
     });
-    const cU = zU(5243)
+    const AH = LH(5202)
   },
-  5251: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => YU
+  5207: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => XH
     });
-    const cU = "[A-Za-z$_][0-9A-Za-z$_]*",
-      yU = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      QU = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      AU = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      FU = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      oU = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      DU = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      EU = [].concat(oU, AU, FU);
+    const AH = "[A-Za-z$_][0-9A-Za-z$_]*",
+      rH = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      SH = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      hH = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      tH = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      zH = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      CH = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      EH = [].concat(zH, hH, tH);
 
-    function YU(UU) {
-      const XU = UU.regex,
-        zU = cU,
-        YU = "<>",
-        NU = "</>",
-        IU = {
-          gY: /<[A-Za-z0-9\\._:-]+/,
+    function XH(HH) {
+      const BH = HH.regex,
+        LH = AH,
+        XH = "<>",
+        GH = "</>",
+        YH = {
+          PX: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (UU, XU) => {
-            const zU = UU[0].length + UU.index,
-              cU = UU.input[zU];
-            if ("<" === cU || "," === cU) return void XU.ignoreMatch();
-            let yU;
-            ">" === cU && (((UU, XU) => {
+          isTrulyOpeningTag: (HH, BH) => {
+            const LH = HH[0].length + HH.index,
+              AH = HH.input[LH];
+            if ("<" === AH || "," === AH) return void BH.ignoreMatch();
+            let rH;
+            ">" === AH && (((HH, BH) => {
               let {
-                after: zU
-              } = XU;
-              const cU = "</" + UU[0].slice(1);
-              return -1 !== UU.input.indexOf(cU, zU)
-            })(UU, {
-              after: zU
-            }) || XU.ignoreMatch());
-            const QU = UU.input.substring(zU);
-            ((yU = QU.match(/^\s*=/)) || (yU = QU.match(/^\s+extends\s+/)) && 0 === yU.index) && XU.ignoreMatch()
+                after: LH
+              } = BH;
+              const AH = "</" + HH[0].slice(1);
+              return -1 !== HH.input.indexOf(AH, LH)
+            })(HH, {
+              after: LH
+            }) || BH.ignoreMatch());
+            const SH = HH.input.substring(LH);
+            ((rH = SH.match(/^\s*=/)) || (rH = SH.match(/^\s+extends\s+/)) && 0 === rH.index) && BH.ignoreMatch()
           }
         },
-        pU = {
-          $pattern: cU,
-          keyword: yU,
-          literal: QU,
-          built_in: EU,
-          "variable.language": DU
+        uH = {
+          $pattern: AH,
+          keyword: rH,
+          literal: SH,
+          built_in: EH,
+          "variable.language": CH
         },
-        aU = "[0-9](_?[0-9])*",
-        tU = `\\.(${aU})`,
-        gU = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        kU = {
+        QH = "[0-9](_?[0-9])*",
+        WH = `\\.(${QH})`,
+        MH = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        xH = {
           className: "number",
           variants: [{
-            gY: `(\\b(${gU})((${tU})|\\.)?|(${tU}))[eE][+-]?(${aU})\\b`
+            PX: `(\\b(${MH})((${WH})|\\.)?|(${WH}))[eE][+-]?(${QH})\\b`
           }, {
-            gY: `\\b(${gU})\\b((${tU})\\b|\\.)?|(${tU})\\b`
+            PX: `\\b(${MH})\\b((${WH})\\b|\\.)?|(${WH})\\b`
           }, {
-            gY: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            PX: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            gY: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            PX: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            gY: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            PX: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            gY: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            PX: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            gY: "\\b0[0-7]+n?\\b"
+            PX: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        GU = {
+        vH = {
           className: "subst",
-          gY: "\\$\\{",
+          PX: "\\$\\{",
           end: "\\}",
-          keywords: pU,
+          keywords: uH,
           contains: []
         },
-        BU = {
-          gY: ".?html`",
+        PH = {
+          PX: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [UU.BACKSLASH_ESCAPE, GU],
+            contains: [HH.BACKSLASH_ESCAPE, vH],
             subLanguage: "xml"
           }
         },
-        ZU = {
-          gY: ".?css`",
+        TH = {
+          PX: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [UU.BACKSLASH_ESCAPE, GU],
+            contains: [HH.BACKSLASH_ESCAPE, vH],
             subLanguage: "css"
           }
         },
-        RU = {
-          gY: ".?gql`",
+        UH = {
+          PX: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [UU.BACKSLASH_ESCAPE, GU],
+            contains: [HH.BACKSLASH_ESCAPE, vH],
             subLanguage: "graphql"
           }
         },
-        PU = {
+        VH = {
           className: "string",
-          gY: "`",
+          PX: "`",
           end: "`",
-          contains: [UU.BACKSLASH_ESCAPE, GU]
+          contains: [HH.BACKSLASH_ESCAPE, vH]
         },
-        WU = {
+        OH = {
           className: "comment",
-          variants: [UU.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [HH.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              gY: "(?=@[A-Za-z]+)",
+              PX: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                gY: "@[A-Za-z]+"
+                PX: "@[A-Za-z]+"
               }, {
                 className: "type",
-                gY: "\\{",
+                PX: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                gY: zU + "(?=\\s*(-)|$)",
+                PX: LH + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                gY: /(?=[^\n])\s/,
+                PX: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), UU.C_BLOCK_COMMENT_MODE, UU.C_LINE_COMMENT_MODE]
+          }), HH.C_BLOCK_COMMENT_MODE, HH.C_LINE_COMMENT_MODE]
         },
-        dU = [UU.APOS_STRING_MODE, UU.QUOTE_STRING_MODE, BU, ZU, RU, PU, {
+        bH = [HH.APOS_STRING_MODE, HH.QUOTE_STRING_MODE, PH, TH, UH, VH, {
           match: /\$\d+/
-        }, kU];
-      GU.contains = dU.concat({
-        gY: /\{/,
+        }, xH];
+      vH.contains = bH.concat({
+        PX: /\{/,
         end: /\}/,
-        keywords: pU,
-        contains: ["self"].concat(dU)
+        keywords: uH,
+        contains: ["self"].concat(bH)
       });
-      const LU = [].concat(WU, GU.contains),
-        eU = LU.concat([{
-          gY: /(\s*)\(/,
+      const kH = [].concat(OH, vH.contains),
+        mH = kH.concat([{
+          PX: /(\s*)\(/,
           end: /\)/,
-          keywords: pU,
-          contains: ["self"].concat(LU)
+          keywords: uH,
+          contains: ["self"].concat(kH)
         }]),
-        CU = {
+        oH = {
           className: "params",
-          gY: /(\s*)\(/,
+          PX: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: pU,
-          contains: eU
+          keywords: uH,
+          contains: mH
         },
-        wU = {
+        IH = {
           variants: [{
-            match: [/class/, /\s+/, zU, /\s+/, /extends/, /\s+/, XU.concat(zU, "(", XU.concat(/\./, zU), ")*")],
+            match: [/class/, /\s+/, LH, /\s+/, /extends/, /\s+/, BH.concat(LH, "(", BH.concat(/\./, LH), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1152,24 +1152,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, zU],
+            match: [/class/, /\s+/, LH],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        qU = {
+        fH = {
           relevance: 0,
-          match: XU.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: BH.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...AU, ...FU]
+            _: [...hH, ...tH]
           }
         },
-        OU = {
+        lH = {
           variants: [{
-            match: [/function/, /\s+/, zU, /(?=\s*\()/]
+            match: [/function/, /\s+/, LH, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1178,53 +1178,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [CU],
+          contains: [oH],
           illegal: /%/
         };
-      const SU = {
-        match: XU.concat(/\b/, (rU = [...oU, "super", "import"].map((UU => `${UU}\\s*\\(`)), XU.concat("(?!", rU.join("|"), ")")), zU, XU.lookahead(/\s*\(/)),
+      const KH = {
+        match: BH.concat(/\b/, (cH = [...zH, "super", "import"].map((HH => `${HH}\\s*\\(`)), BH.concat("(?!", cH.join("|"), ")")), LH, BH.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var rU;
-      const uU = {
-          gY: XU.concat(/\./, XU.lookahead(XU.concat(zU, /(?![0-9A-Za-z$_(])/))),
-          end: zU,
+      var cH;
+      const eH = {
+          PX: BH.concat(/\./, BH.lookahead(BH.concat(LH, /(?![0-9A-Za-z$_(])/))),
+          end: LH,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        fU = {
-          match: [/get|set/, /\s+/, zU, /(?=\()/],
+        qH = {
+          match: [/get|set/, /\s+/, LH, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            gY: /\(\)/
-          }, CU]
+            PX: /\(\)/
+          }, oH]
         },
-        iU = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + UU.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        HU = {
-          match: [/const|var|let/, /\s+/, zU, /\s*/, /=\s*/, /(async\s*)?/, XU.lookahead(iU)],
+        gH = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + HH.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        NH = {
+          match: [/const|var|let/, /\s+/, LH, /\s*/, /=\s*/, /(async\s*)?/, BH.lookahead(gH)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [CU]
+          contains: [oH]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: pU,
+        keywords: uH,
         exports: {
-          PARAMS_CONTAINS: eU,
-          CLASS_REFERENCE: qU
+          PARAMS_CONTAINS: mH,
+          CLASS_REFERENCE: fH
         },
         illegal: /#(?![$_A-z])/,
-        contains: [UU.SHEBANG({
+        contains: [HH.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1232,265 +1232,265 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          gY: /^\s*['"]use (strict|asm)['"]/
-        }, UU.APOS_STRING_MODE, UU.QUOTE_STRING_MODE, BU, ZU, RU, PU, WU, {
+          PX: /^\s*['"]use (strict|asm)['"]/
+        }, HH.APOS_STRING_MODE, HH.QUOTE_STRING_MODE, PH, TH, UH, VH, OH, {
           match: /\$\d+/
-        }, kU, qU, {
+        }, xH, fH, {
           scope: "attr",
-          match: zU + XU.lookahead(":"),
+          match: LH + BH.lookahead(":"),
           relevance: 0
-        }, HU, {
-          gY: "(" + UU.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, NH, {
+          PX: "(" + HH.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [WU, UU.REGEXP_MODE, {
+          contains: [OH, HH.REGEXP_MODE, {
             className: "function",
-            gY: iU,
+            PX: gH,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                gY: UU.UNDERSCORE_IDENT_RE,
+                PX: HH.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                gY: /\(\s*\)/,
+                PX: /\(\s*\)/,
                 skip: !0
               }, {
-                gY: /(\s*)\(/,
+                PX: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: pU,
-                contains: eU
+                keywords: uH,
+                contains: mH
               }]
             }]
           }, {
-            gY: /,/,
+            PX: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              gY: YU,
-              end: NU
+              PX: XH,
+              end: GH
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              gY: IU.gY,
-              "on:begin": IU.isTrulyOpeningTag,
-              end: IU.end
+              PX: YH.PX,
+              "on:begin": YH.isTrulyOpeningTag,
+              end: YH.end
             }],
             subLanguage: "xml",
             contains: [{
-              gY: IU.gY,
-              end: IU.end,
+              PX: YH.PX,
+              end: YH.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, OU, {
+        }, lH, {
           beginKeywords: "while if switch catch for"
         }, {
-          gY: "\\b(?!function)" + UU.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          PX: "\\b(?!function)" + HH.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [CU, UU.inherit(UU.TITLE_MODE, {
-            gY: zU,
+          contains: [oH, HH.inherit(HH.TITLE_MODE, {
+            PX: LH,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, uU, {
-          match: "\\$" + zU,
+        }, eH, {
+          match: "\\$" + LH,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [CU]
-        }, SU, {
+          contains: [oH]
+        }, KH, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, wU, fU, {
+        }, IH, qH, {
           match: /\$[(.]/
         }]
       }
     }
   },
-  5253: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => NU
+  5214: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => GH
     });
-    const cU = "[A-Za-z$_][0-9A-Za-z$_]*",
-      yU = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      QU = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      AU = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      FU = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      oU = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      DU = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      EU = [].concat(oU, AU, FU);
+    const AH = "[A-Za-z$_][0-9A-Za-z$_]*",
+      rH = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      SH = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      hH = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      tH = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      zH = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      CH = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      EH = [].concat(zH, hH, tH);
 
-    function YU(UU) {
-      const XU = UU.regex,
-        zU = cU,
-        YU = "<>",
-        NU = "</>",
-        IU = {
-          gY: /<[A-Za-z0-9\\._:-]+/,
+    function XH(HH) {
+      const BH = HH.regex,
+        LH = AH,
+        XH = "<>",
+        GH = "</>",
+        YH = {
+          PX: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (UU, XU) => {
-            const zU = UU[0].length + UU.index,
-              cU = UU.input[zU];
-            if ("<" === cU || "," === cU) return void XU.ignoreMatch();
-            let yU;
-            ">" === cU && (((UU, XU) => {
+          isTrulyOpeningTag: (HH, BH) => {
+            const LH = HH[0].length + HH.index,
+              AH = HH.input[LH];
+            if ("<" === AH || "," === AH) return void BH.ignoreMatch();
+            let rH;
+            ">" === AH && (((HH, BH) => {
               let {
-                after: zU
-              } = XU;
-              const cU = "</" + UU[0].slice(1);
-              return -1 !== UU.input.indexOf(cU, zU)
-            })(UU, {
-              after: zU
-            }) || XU.ignoreMatch());
-            const QU = UU.input.substring(zU);
-            ((yU = QU.match(/^\s*=/)) || (yU = QU.match(/^\s+extends\s+/)) && 0 === yU.index) && XU.ignoreMatch()
+                after: LH
+              } = BH;
+              const AH = "</" + HH[0].slice(1);
+              return -1 !== HH.input.indexOf(AH, LH)
+            })(HH, {
+              after: LH
+            }) || BH.ignoreMatch());
+            const SH = HH.input.substring(LH);
+            ((rH = SH.match(/^\s*=/)) || (rH = SH.match(/^\s+extends\s+/)) && 0 === rH.index) && BH.ignoreMatch()
           }
         },
-        pU = {
-          $pattern: cU,
-          keyword: yU,
-          literal: QU,
-          built_in: EU,
-          "variable.language": DU
+        uH = {
+          $pattern: AH,
+          keyword: rH,
+          literal: SH,
+          built_in: EH,
+          "variable.language": CH
         },
-        aU = "[0-9](_?[0-9])*",
-        tU = `\\.(${aU})`,
-        gU = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        kU = {
+        QH = "[0-9](_?[0-9])*",
+        WH = `\\.(${QH})`,
+        MH = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        xH = {
           className: "number",
           variants: [{
-            gY: `(\\b(${gU})((${tU})|\\.)?|(${tU}))[eE][+-]?(${aU})\\b`
+            PX: `(\\b(${MH})((${WH})|\\.)?|(${WH}))[eE][+-]?(${QH})\\b`
           }, {
-            gY: `\\b(${gU})\\b((${tU})\\b|\\.)?|(${tU})\\b`
+            PX: `\\b(${MH})\\b((${WH})\\b|\\.)?|(${WH})\\b`
           }, {
-            gY: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            PX: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            gY: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            PX: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            gY: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            PX: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            gY: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            PX: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            gY: "\\b0[0-7]+n?\\b"
+            PX: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        GU = {
+        vH = {
           className: "subst",
-          gY: "\\$\\{",
+          PX: "\\$\\{",
           end: "\\}",
-          keywords: pU,
+          keywords: uH,
           contains: []
         },
-        BU = {
-          gY: ".?html`",
+        PH = {
+          PX: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [UU.BACKSLASH_ESCAPE, GU],
+            contains: [HH.BACKSLASH_ESCAPE, vH],
             subLanguage: "xml"
           }
         },
-        ZU = {
-          gY: ".?css`",
+        TH = {
+          PX: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [UU.BACKSLASH_ESCAPE, GU],
+            contains: [HH.BACKSLASH_ESCAPE, vH],
             subLanguage: "css"
           }
         },
-        RU = {
-          gY: ".?gql`",
+        UH = {
+          PX: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [UU.BACKSLASH_ESCAPE, GU],
+            contains: [HH.BACKSLASH_ESCAPE, vH],
             subLanguage: "graphql"
           }
         },
-        PU = {
+        VH = {
           className: "string",
-          gY: "`",
+          PX: "`",
           end: "`",
-          contains: [UU.BACKSLASH_ESCAPE, GU]
+          contains: [HH.BACKSLASH_ESCAPE, vH]
         },
-        WU = {
+        OH = {
           className: "comment",
-          variants: [UU.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [HH.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              gY: "(?=@[A-Za-z]+)",
+              PX: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                gY: "@[A-Za-z]+"
+                PX: "@[A-Za-z]+"
               }, {
                 className: "type",
-                gY: "\\{",
+                PX: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                gY: zU + "(?=\\s*(-)|$)",
+                PX: LH + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                gY: /(?=[^\n])\s/,
+                PX: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), UU.C_BLOCK_COMMENT_MODE, UU.C_LINE_COMMENT_MODE]
+          }), HH.C_BLOCK_COMMENT_MODE, HH.C_LINE_COMMENT_MODE]
         },
-        dU = [UU.APOS_STRING_MODE, UU.QUOTE_STRING_MODE, BU, ZU, RU, PU, {
+        bH = [HH.APOS_STRING_MODE, HH.QUOTE_STRING_MODE, PH, TH, UH, VH, {
           match: /\$\d+/
-        }, kU];
-      GU.contains = dU.concat({
-        gY: /\{/,
+        }, xH];
+      vH.contains = bH.concat({
+        PX: /\{/,
         end: /\}/,
-        keywords: pU,
-        contains: ["self"].concat(dU)
+        keywords: uH,
+        contains: ["self"].concat(bH)
       });
-      const LU = [].concat(WU, GU.contains),
-        eU = LU.concat([{
-          gY: /(\s*)\(/,
+      const kH = [].concat(OH, vH.contains),
+        mH = kH.concat([{
+          PX: /(\s*)\(/,
           end: /\)/,
-          keywords: pU,
-          contains: ["self"].concat(LU)
+          keywords: uH,
+          contains: ["self"].concat(kH)
         }]),
-        CU = {
+        oH = {
           className: "params",
-          gY: /(\s*)\(/,
+          PX: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: pU,
-          contains: eU
+          keywords: uH,
+          contains: mH
         },
-        wU = {
+        IH = {
           variants: [{
-            match: [/class/, /\s+/, zU, /\s+/, /extends/, /\s+/, XU.concat(zU, "(", XU.concat(/\./, zU), ")*")],
+            match: [/class/, /\s+/, LH, /\s+/, /extends/, /\s+/, BH.concat(LH, "(", BH.concat(/\./, LH), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1498,24 +1498,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, zU],
+            match: [/class/, /\s+/, LH],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        qU = {
+        fH = {
           relevance: 0,
-          match: XU.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: BH.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...AU, ...FU]
+            _: [...hH, ...tH]
           }
         },
-        OU = {
+        lH = {
           variants: [{
-            match: [/function/, /\s+/, zU, /(?=\s*\()/]
+            match: [/function/, /\s+/, LH, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1524,53 +1524,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [CU],
+          contains: [oH],
           illegal: /%/
         };
-      const SU = {
-        match: XU.concat(/\b/, (rU = [...oU, "super", "import"].map((UU => `${UU}\\s*\\(`)), XU.concat("(?!", rU.join("|"), ")")), zU, XU.lookahead(/\s*\(/)),
+      const KH = {
+        match: BH.concat(/\b/, (cH = [...zH, "super", "import"].map((HH => `${HH}\\s*\\(`)), BH.concat("(?!", cH.join("|"), ")")), LH, BH.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var rU;
-      const uU = {
-          gY: XU.concat(/\./, XU.lookahead(XU.concat(zU, /(?![0-9A-Za-z$_(])/))),
-          end: zU,
+      var cH;
+      const eH = {
+          PX: BH.concat(/\./, BH.lookahead(BH.concat(LH, /(?![0-9A-Za-z$_(])/))),
+          end: LH,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        fU = {
-          match: [/get|set/, /\s+/, zU, /(?=\()/],
+        qH = {
+          match: [/get|set/, /\s+/, LH, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            gY: /\(\)/
-          }, CU]
+            PX: /\(\)/
+          }, oH]
         },
-        iU = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + UU.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        HU = {
-          match: [/const|var|let/, /\s+/, zU, /\s*/, /=\s*/, /(async\s*)?/, XU.lookahead(iU)],
+        gH = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + HH.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        NH = {
+          match: [/const|var|let/, /\s+/, LH, /\s*/, /=\s*/, /(async\s*)?/, BH.lookahead(gH)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [CU]
+          contains: [oH]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: pU,
+        keywords: uH,
         exports: {
-          PARAMS_CONTAINS: eU,
-          CLASS_REFERENCE: qU
+          PARAMS_CONTAINS: mH,
+          CLASS_REFERENCE: fH
         },
         illegal: /#(?![$_A-z])/,
-        contains: [UU.SHEBANG({
+        contains: [HH.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1578,151 +1578,151 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          gY: /^\s*['"]use (strict|asm)['"]/
-        }, UU.APOS_STRING_MODE, UU.QUOTE_STRING_MODE, BU, ZU, RU, PU, WU, {
+          PX: /^\s*['"]use (strict|asm)['"]/
+        }, HH.APOS_STRING_MODE, HH.QUOTE_STRING_MODE, PH, TH, UH, VH, OH, {
           match: /\$\d+/
-        }, kU, qU, {
+        }, xH, fH, {
           scope: "attr",
-          match: zU + XU.lookahead(":"),
+          match: LH + BH.lookahead(":"),
           relevance: 0
-        }, HU, {
-          gY: "(" + UU.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, NH, {
+          PX: "(" + HH.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [WU, UU.REGEXP_MODE, {
+          contains: [OH, HH.REGEXP_MODE, {
             className: "function",
-            gY: iU,
+            PX: gH,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                gY: UU.UNDERSCORE_IDENT_RE,
+                PX: HH.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                gY: /\(\s*\)/,
+                PX: /\(\s*\)/,
                 skip: !0
               }, {
-                gY: /(\s*)\(/,
+                PX: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: pU,
-                contains: eU
+                keywords: uH,
+                contains: mH
               }]
             }]
           }, {
-            gY: /,/,
+            PX: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              gY: YU,
-              end: NU
+              PX: XH,
+              end: GH
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              gY: IU.gY,
-              "on:begin": IU.isTrulyOpeningTag,
-              end: IU.end
+              PX: YH.PX,
+              "on:begin": YH.isTrulyOpeningTag,
+              end: YH.end
             }],
             subLanguage: "xml",
             contains: [{
-              gY: IU.gY,
-              end: IU.end,
+              PX: YH.PX,
+              end: YH.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, OU, {
+        }, lH, {
           beginKeywords: "while if switch catch for"
         }, {
-          gY: "\\b(?!function)" + UU.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          PX: "\\b(?!function)" + HH.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [CU, UU.inherit(UU.TITLE_MODE, {
-            gY: zU,
+          contains: [oH, HH.inherit(HH.TITLE_MODE, {
+            PX: LH,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, uU, {
-          match: "\\$" + zU,
+        }, eH, {
+          match: "\\$" + LH,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [CU]
-        }, SU, {
+          contains: [oH]
+        }, KH, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, wU, fU, {
+        }, IH, qH, {
           match: /\$[(.]/
         }]
       }
     }
 
-    function NU(UU) {
-      const XU = UU.regex,
-        zU = YU(UU),
-        AU = cU,
-        FU = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
-        oU = {
-          gY: [/namespace/, /\s+/, UU.IDENT_RE],
+    function GH(HH) {
+      const BH = HH.regex,
+        LH = XH(HH),
+        hH = AH,
+        tH = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
+        zH = {
+          PX: [/namespace/, /\s+/, HH.IDENT_RE],
           beginScope: {
             1: "keyword",
             3: "title.class"
           }
         },
-        NU = {
+        GH = {
           beginKeywords: "interface",
           end: /\{/,
           excludeEnd: !0,
           keywords: {
             keyword: "interface extends",
-            built_in: FU
+            built_in: tH
           },
-          contains: [zU.exports.CLASS_REFERENCE]
+          contains: [LH.exports.CLASS_REFERENCE]
         },
-        IU = {
-          $pattern: cU,
-          keyword: yU.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
-          literal: QU,
-          built_in: EU.concat(FU),
-          "variable.language": DU
+        YH = {
+          $pattern: AH,
+          keyword: rH.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
+          literal: SH,
+          built_in: EH.concat(tH),
+          "variable.language": CH
         },
-        pU = {
+        uH = {
           className: "meta",
-          gY: "@" + AU
+          PX: "@" + hH
         },
-        aU = (UU, XU, zU) => {
-          const cU = UU.contains.findIndex((UU => UU.label === XU));
-          if (-1 === cU) throw new Error("can not find mode to replace");
-          UU.contains.splice(cU, 1, zU)
+        QH = (HH, BH, LH) => {
+          const AH = HH.contains.findIndex((HH => HH.label === BH));
+          if (-1 === AH) throw new Error("can not find mode to replace");
+          HH.contains.splice(AH, 1, LH)
         };
-      Object.assign(zU.keywords, IU), zU.exports.PARAMS_CONTAINS.push(pU);
-      const tU = zU.contains.find((UU => "attr" === UU.scope)),
-        gU = Object.assign({}, tU, {
-          match: XU.concat(AU, XU.lookahead(/\s*\?:/))
+      Object.assign(LH.keywords, YH), LH.exports.PARAMS_CONTAINS.push(uH);
+      const WH = LH.contains.find((HH => "attr" === HH.scope)),
+        MH = Object.assign({}, WH, {
+          match: BH.concat(hH, BH.lookahead(/\s*\?:/))
         });
-      zU.exports.PARAMS_CONTAINS.push([zU.exports.CLASS_REFERENCE, tU, gU]), zU.contains = zU.contains.concat([pU, oU, NU, gU]), aU(zU, "shebang", UU.SHEBANG()), aU(zU, "use_strict", {
+      LH.exports.PARAMS_CONTAINS.push([LH.exports.CLASS_REFERENCE, WH, MH]), LH.contains = LH.contains.concat([uH, zH, GH, MH]), QH(LH, "shebang", HH.SHEBANG()), QH(LH, "use_strict", {
         className: "meta",
         relevance: 10,
-        gY: /^\s*['"]use strict['"]/
+        PX: /^\s*['"]use strict['"]/
       });
-      return zU.contains.find((UU => "func.def" === UU.label)).relevance = 0, Object.assign(zU, {
+      return LH.contains.find((HH => "func.def" === HH.label)).relevance = 0, Object.assign(LH, {
         name: "TypeScript",
         aliases: ["ts", "tsx", "mts", "cts"]
-      }), zU
+      }), LH
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

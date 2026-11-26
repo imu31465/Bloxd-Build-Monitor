@@ -1,60 +1,60 @@
 export const id = 104;
 export const ids = [104];
 export const modules = {
-  5326: (UU, XU, zU) => {
-    zU.d(XU, {
-      $: () => ZU,
-      $b: () => MU,
-      C: () => FU,
-      Cb: () => vU,
-      Eb: () => uU,
-      F: () => cU,
-      Fb: () => HU,
-      I: () => QU,
-      Jb: () => fU,
-      K: () => BU,
-      Mb: () => tU,
-      O: () => TU,
-      Qb: () => CU,
-      R: () => YU,
-      Sb: () => eU,
-      T: () => NU,
-      Vb: () => iU,
-      W: () => EU,
-      Xb: () => mU,
-      Y: () => DU,
-      b: () => kU,
-      bc: () => VU,
-      cb: () => oU,
-      d: () => gU,
-      e: () => KU,
-      f: () => GU,
-      fc: () => sU,
-      gb: () => aU,
-      gc: () => dU,
-      h: () => jU,
-      hb: () => pU,
-      hc: () => LU,
-      ic: () => xU,
-      k: () => IU,
-      lb: () => wU,
-      mc: () => yU,
-      o: () => WU,
-      ob: () => OU,
-      oc: () => bU,
-      s: () => JU,
-      sb: () => SU,
-      t: () => PU,
-      ub: () => qU,
-      w: () => RU,
-      xb: () => rU,
-      yb: () => lU,
-      z: () => AU,
-      zb: () => nU
+  5268: (HH, BH, LH) => {
+    LH.d(BH, {
+      $: () => CH,
+      $b: () => RH,
+      A: () => UH,
+      Ab: () => ZH,
+      C: () => hH,
+      Db: () => DH,
+      Eb: () => jH,
+      Fb: () => eH,
+      G: () => tH,
+      H: () => AH,
+      Hb: () => NH,
+      I: () => SH,
+      Kb: () => qH,
+      Lb: () => WH,
+      M: () => PH,
+      Ob: () => oH,
+      Q: () => pH,
+      Qb: () => mH,
+      T: () => XH,
+      Tb: () => gH,
+      V: () => GH,
+      Xb: () => wH,
+      Y: () => EH,
+      ac: () => nH,
+      bc: () => FH,
+      c: () => xH,
+      d: () => MH,
+      db: () => TH,
+      ec: () => bH,
+      fb: () => zH,
+      gb: () => QH,
+      gc: () => kH,
+      h: () => JH,
+      hb: () => uH,
+      ic: () => dH,
+      l: () => vH,
+      lb: () => IH,
+      lc: () => rH,
+      nc: () => iH,
+      p: () => sH,
+      pb: () => lH,
+      q: () => YH,
+      s: () => OH,
+      tb: () => KH,
+      ub: () => fH,
+      v: () => aH,
+      wb: () => cH,
+      z: () => VH
     });
-    const cU = 32,
-      yU = 33.333333333333336,
-      QU = {
+    const AH = 32,
+      rH = 33.333333333333336,
+      SH = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -88,36 +88,36 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      AU = {
+      hH = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      FU = {
+      tH = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      oU = {
+      zH = {
         AheadMask: 15,
         Defaulted: 128,
         LagsShift: 8,
         CountMask: 4095
       },
-      DU = {
+      CH = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      EU = {
+      EH = {
         PlayerBound: 32,
         JoinPreload: 64
       },
-      YU = 14,
-      NU = {
+      XH = 14,
+      GH = {
         ChunksReceived: 0,
         ChunksStored: 1,
         JobsSent: 2,
@@ -133,14 +133,14 @@ export const modules = {
         FirstViewGaps: 12,
         FirstViewGapMs: 13
       },
-      IU = {
+      YH = {
         Look: 0,
         Remesh: 1,
         CameraSet: 2
       },
-      pU = 8,
-      aU = 1,
-      tU = {
+      uH = 8,
+      QH = 1,
+      WH = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -149,16 +149,16 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      gU = 6,
-      kU = 1,
-      GU = {
+      MH = 6,
+      xH = 1,
+      vH = {
         SetCamDir: 0,
         Forced: 1,
         ScriptedTake: 2,
         ScriptedPose: 3,
         ScriptedRelease: 4
       },
-      BU = {
+      PH = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -186,12 +186,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      ZU = {
+      TH = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      RU = {
+      UH = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -245,7 +245,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      PU = {
+      VH = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -255,10 +255,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      WU = 4,
-      dU = 4,
-      LU = 65535,
-      eU = {
+      OH = 4,
+      bH = 4,
+      kH = 65535,
+      mH = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -271,7 +271,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      CU = {
+      oH = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -279,12 +279,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      wU = 88,
-      qU = 0,
-      OU = 24,
-      SU = 48,
-      rU = 80,
-      uU = {
+      IH = 88,
+      fH = 0,
+      lH = 24,
+      KH = 48,
+      cH = 80,
+      eH = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -295,18 +295,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      fU = {
+      qH = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      iU = {
+      gH = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      HU = {
+      NH = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -324,34 +324,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      MU = {
+      RH = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      vU = 65535,
-      VU = {
+      jH = 65535,
+      nH = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      sU = {
+      FH = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      nU = 2,
-      mU = {
+      DH = 2,
+      wH = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      lU = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      xU = {
+      ZH = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      dH = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -365,7 +365,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      JU = {
+      aH = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -392,7 +392,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      jU = {
+      sH = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -550,12 +550,13 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      KU = 8,
-      bU = {
+      JH = 8,
+      iH = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
         Chat: 64,
+        ChatRemoved: 108,
         UiRequestPopup: 8,
         TaskProgress: 9,
         CustomKillfeed: 15,
@@ -576,8 +577,8 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      TU = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      pH = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

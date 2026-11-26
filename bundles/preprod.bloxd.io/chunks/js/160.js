@@ -1,214 +1,276 @@
 export const id = 160;
 export const ids = [160];
 export const modules = {
-  7315: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      BloxdMsnAccountSdk: () => YU,
-      MsnSdkAdaptor: () => aU
+  7259: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      BloxdDiscordActivitySdk: () => vH
     });
-    var cU = zU(1351),
-      yU = zU(1184),
-      QU = zU(3861),
-      AU = zU(646),
-      FU = zU(1774);
-    const oU = "https://assets.msn.com/staticsb/statics/latest/msstart-games-sdk/msstart-v1.0.0-rc.23.min.js";
-    let DU = null;
-
-    function EU() {
-      return DU ??= async function() {
-        await (0, yU.c)(oU, {}, !1);
-        for (let UU = 0; UU < 50 && !window.$msstart; UU++) await (0, AU.S)(100)
-      }(), DU
-    }
-    class YU {
-      constructor() {}
-      static async setup() {
-        if (null !== (0, FU.c)()) return new YU;
-        try {
-          await Promise.race([EU(), (0, AU.S)(1e4).then((() => {
-            throw new Error("Not loaded after 10000ms")
-          }))])
-        } catch (UU) {
-          return console.error("MSN Play SDK failed to load, so MSN Play accounts are unavailable:", UU), null
-        }
-        return window.$msstart ? new YU : (console.error("MSN Play SDK script loaded but window.$msstart is missing, so MSN Play accounts are unavailable"), null)
-      }
-      async getSignedInUser() {
-        const UU = (0, FU.c)();
-        if (null !== UU) return UU;
-        try {
-          return await Promise.race([window.$msstart.getSignedInUserAsync(), (0, AU.S)(1e4).then((() => {
-            throw new Error("No answer after 10000ms")
-          }))])
-        } catch (XU) {
-          return "USER_NOT_CONSENTED" !== (null === XU || void 0 === XU ? void 0 : XU.code) && console.error("Failed to get the signed-in MSN Play player:", XU), null
-        }
-      }
-      async signIn() {
-        var UU;
-        return null !== (UU = (0, FU.c)()) && void 0 !== UU ? UU : await window.$msstart.signInAsync()
-      }
-    }
-    const NU = 20,
-      IU = {
-        top: [{
-          width: 970,
-          height: 250
-        }, {
-          width: 728,
-          height: 90
-        }, {
-          width: 320,
-          height: 50
-        }],
-        right: [{
-          width: 300,
-          height: 600
-        }, {
-          width: 160,
-          height: 600
-        }, {
-          width: 300,
-          height: 250
-        }, {
-          width: 320,
-          height: 50
-        }],
-        left: [{
-          width: 300,
-          height: 600
-        }, {
-          width: 160,
-          height: 600
-        }, {
-          width: 300,
-          height: 250
-        }, {
-          width: 320,
-          height: 50
-        }]
+    var AH = LH(7262),
+      rH = LH(1177),
+      SH = LH(1123),
+      hH = LH(619),
+      tH = LH(1194),
+      zH = LH(1789),
+      CH = LH(1297),
+      EH = LH(761),
+      XH = LH(15),
+      GH = LH(1139),
+      YH = LH(2523),
+      uH = function(HH) {
+        return HH.APPLICATION_COMMANDS = "applications.commands", HH.IDENTIFY = "identify", HH.EMAIL = "email", HH.GUILDS = "guilds", HH.READ_DM_CHANNELS = "dm_channels.read", HH.WRITE_ACTIVITIES = "rpc.activities.write", HH
+      }(uH || {}),
+      QH = function(HH) {
+        return HH[HH.CLOSE_NORMAL = 1e3] = "CLOSE_NORMAL", HH[HH.CLOSE_UNSUPPORTED = 1003] = "CLOSE_UNSUPPORTED", HH[HH.CLOSE_ABNORMAL = 1006] = "CLOSE_ABNORMAL", HH[HH.INVALID_CLIENTID = 4e3] = "INVALID_CLIENTID", HH[HH.INVALID_ORIGIN = 4001] = "INVALID_ORIGIN", HH[HH.RATELIMITED = 4002] = "RATELIMITED", HH[HH.TOKEN_REVOKED = 4003] = "TOKEN_REVOKED", HH[HH.INVALID_VERSION = 4004] = "INVALID_VERSION", HH[HH.INVALID_ENCODING = 4005] = "INVALID_ENCODING", HH
+      }(QH || {}),
+      WH = function(HH) {
+        return HH[HH.PLAYING = 0] = "PLAYING", HH[HH.STREAMING = 1] = "STREAMING", HH[HH.LISTENING = 2] = "LISTENING", HH[HH.WATCHING = 3] = "WATCHING", HH[HH.CUSTOM = 4] = "CUSTOM", HH[HH.COMPETING = 5] = "COMPETING", HH
+      }(WH || {});
+    const MH = {
+        Minigames: "Playing",
+        Puzzle: "Solving",
+        Escape: "Escaping",
+        Parkour: "Parkouring",
+        "Cool Parkour": "Parkouring",
+        "Two Player Parkour": "Parkouring",
+        "Clutch Parkour": "Parkouring",
+        "Challenging Parkour": "Parkouring",
+        "Progressive Parkour": "Parkouring",
+        "Themed Parkour": "Parkouring",
+        Obby: "Parkouring",
+        Tower: "Climbing",
+        Roleplay: "Roleplaying",
+        Arena: "Battling",
+        Duels: "Duelling",
+        Shooting: "Shooting",
+        Survival: "Surviving",
+        Simulator: "Grinding",
+        Tycoon: "Building",
+        Clicker: "Clicking",
+        PvE: "Battling",
+        Building: "Building",
+        Horror: "Surviving",
+        "Lucky Block": "Battling",
+        Racing: "Racing",
+        Driving: "Driving",
+        "Cool Build": "Building",
+        Adventure: "Adventuring",
+        Other: "Being mischievous"
       },
-      pU = {
-        leaderboard: {
-          1: ["right", "left"],
-          5: ["top", "left"]
-        },
-        square: {
-          1: []
-        },
-        skyscraper: {
-          2: []
-        }
+      xH = {
+        goalRush: "Playing",
+        heroesvbrainrots: "Battling",
+        hideseek: "Playing",
+        bingo: "Playing"
       };
-    class aU extends cU.d {
-      constructor() {
-        super(), this.name = "msn", this.currentlyShowingBannerPlacement = null, this.isCurrentlyClearingAllBanners = !1
+    class vH {
+      constructor(HH) {
+        this.discordSdk = HH, this.guildNameCache = {}, this.startTime = Date.now(), this.cachedAccessToken = null, this.activityUpdateId = 0
       }
       static async setup() {
-        return await EU(), new aU
-      }
-      playVideoAd(UU, XU) {
-        this.playVideoOrRewarded("video", UU, UU)
-      }
-      playRewarded(UU, XU) {
-        this.playVideoOrRewarded("rewarded", UU, XU)
-      }
-      canShowBloxdAd(UU) {
-        for (const XU in pU)
-          if (UU.adId in pU[XU]) return !1;
-        return !0
-      }
-      async renderBanner(UU) {
-        if (null !== this.currentlyShowingBannerPlacement) return void console.log(`AD ${(0,QU.c)(UU)}: msn placement is already showing so not requesting`);
-        const XU = pU[UU.adType][UU.adId];
-        if ((0, AU.P)(XU)) return void console.warn(`AD ${(0,QU.c)(UU)}: no msn placement is configured for this bloxd placement so not showing any ad`);
-        const zU = [];
-        for (const cU of XU)
-          for (const UU of IU[cU])
-            if (UU.width <= window.innerWidth - 40 && UU.height <= window.innerHeight - 40) {
-              const XU = {
-                placement: cU,
-                width: UU.width,
-                height: UU.height
-              };
-              if (!zU.some((UU => gU(XU, UU)))) {
-                zU.push(XU);
-                break
-              }
-            } if (zU.length > 0) {
-          console.log(`AD ${(0,QU.c)(UU)}: Attempting to show msn units: `, zU);
-          const XU = zU.map((UU => `${UU.placement}:${UU.width}x${UU.height}`));
-          this.currentlyShowingBannerPlacement = {
-            placementId: (0, QU.c)(UU),
-            renderPromise: window.$msstart.showDisplayAdsAsync(XU).then((() => {
-              console.log(`AD ${(0,QU.c)(UU)}: Successfully request msn banner ad`)
-            })).catch((XU => {
-              console.log(`AD ${(0,QU.c)(UU)}: Error while requesting msn banner ad`, XU)
-            }))
-          }
-        } else console.warn(`AD ${(0,QU.c)(UU)}: couldn't find an msn unit that fit screen size`)
-      }
-      async clearBanner(UU) {
-        null !== this.currentlyShowingBannerPlacement && (0, QU.c)(UU) === this.currentlyShowingBannerPlacement.placementId && (console.log(`AD ${(0,QU.c)(UU)}: Attempting to clear msn banner ads for banner`, UU), await this.clearAllBannerAds())
-      }
-      async clearAllBannerAds() {
+        console.log("Setting up Discord SDK with client id", GH.e.discordClientID);
+        const HH = new AH.b(GH.e.discordClientID);
+        let BH = !1;
+        setTimeout((() => {
+          BH || (console.warn("Discord SDK took too long to initialize"), (0, zH.reloadBloxd)())
+        }), 15e3), await HH.ready(), BH = !0;
         try {
-          if (this.isCurrentlyClearingAllBanners) return;
-          this.isCurrentlyClearingAllBanners = !0, null !== this.currentlyShowingBannerPlacement && await this.currentlyShowingBannerPlacement.renderPromise, await window.$msstart.hideDisplayAdsAsync(), console.log("AD: Successfully cleared all msn banner ads")
-        } catch (UU) {
-          console.log("AD: Error while clearing all msn banner ads", UU)
-        } finally {
-          this.currentlyShowingBannerPlacement = null, this.isCurrentlyClearingAllBanners = !1
+          const {
+            enabled: BH
+          } = await HH.commands.encourageHardwareAcceleration();
+          BH || console.warn("Hardware acceleration not enabled in the Discord client")
+        } catch (rH) {
+          console.error("Failed to encourage hardware acceleration in the Discord client", rH)
+        }
+        const LH = new vH(HH);
+        return LH.isMobilePlatform() && (LH.applyDiscordSafeAreaNotch(), window.addEventListener("resize", (() => {
+          LH.applyDiscordSafeAreaNotch()
+        }))), LH
+      }
+      async updateActivityDescription(HH) {
+        const BH = ++this.activityUpdateId;
+        let LH, AH;
+        switch (HH) {
+          case "homePage":
+            LH = "Chilling in the Main Menu";
+            break;
+          case "inGame": {
+            const HH = await this.getInGameDescriptions();
+            LH = HH.primary, AH = HH.secondary;
+            break
+          }
+        }
+        BH === this.activityUpdateId && await this.discordSdk.commands.setActivity({
+          activity: {
+            type: WH.PLAYING,
+            details: LH,
+            state: AH,
+            assets: {
+              large_image: "icon",
+              large_text: LH
+            },
+            timestamps: {
+              start: this.startTime
+            }
+          }
+        }).catch((HH => {
+          console.error(`Failed to update Discord activity rich presence with description="${LH}":`, HH)
+        }))
+      }
+      async getInGameDescriptions() {
+        const HH = (0, CH.c)(),
+          {
+            verb: BH,
+            title: LH
+          } = await this.getGameVerbAndTitle(HH.requestedGameNameWithVariation);
+        if ((0, CH.g)(HH)) return {
+          primary: `${BH} in a Discord World`
+        };
+        const AH = `${BH} in ${LH}`;
+        return (0, hH.M)(HH.lobbyName) ? {
+          primary: AH
+        } : {
+          primary: AH,
+          secondary: `Lobby ${HH.lobbyName}`
         }
       }
-      playVideoOrRewarded(UU, XU, zU) {
-        const cU = XU => {
-          console.error(`AD: Error while playing MSN ${UU} ad: `, XU), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), zU()
+      async getGameVerbAndTitle(HH) {
+        var BH;
+        const LH = "Playing";
+        if ((0, hH.M)(HH)) return {
+          verb: LH,
+          title: "Bloxd"
         };
-        if (window.$msstart) {
-          console.log(`AD: Attempting to play MSN ${UU} ad`), document.getElementById("GenericVideoWrapper").style.display = "flex";
-          const zU = async () => {
-            try {
-              const zU = await window.$msstart.loadAdsAsync("rewarded" === UU),
-                cU = await window.$msstart.showAdsAsync(zU.instanceId);
-              this.clearAllBannerAds(), await cU.showAdsCompletedAsync, console.log(`AD: Successfully finished MSN ${UU} ad`), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), XU()
-            } catch (zU) {
-              cU(zU)
-            }
+        const AH = (0, EH.h)(HH);
+        var rH;
+        if (null !== AH) return {
+          verb: null !== (rH = xH[HH]) && void 0 !== rH ? rH : MH[AH.type],
+          title: await (0, SH.y)(tH.d.ENGLISH, AH.title)
+        };
+        const zH = await (0, YH.e)(HH);
+        return {
+          verb: null !== (BH = zH && MH[zH.gameCategory]) && void 0 !== BH ? BH : LH,
+          title: (null === zH || void 0 === zH ? void 0 : zH.name) || "a Custom World"
+        }
+      }
+      getCurrentChannelType() {
+        const {
+          channelId: HH,
+          guildId: BH
+        } = this.getCurrentChannelAndGuild();
+        return null !== BH ? rH.d.GUILD : null !== HH ? rH.d.DM : null
+      }
+      getRequiredScopeForCurrentChannel() {
+        const HH = this.getCurrentChannelType(),
+          BH = [uH.APPLICATION_COMMANDS, uH.IDENTIFY, uH.EMAIL, uH.GUILDS, uH.WRITE_ACTIVITIES];
+        switch (HH) {
+          case rH.d.DM:
+          case rH.d.GUILD:
+            return [...BH];
+          default:
+            throw new Error(`Unknown Discord channel type: ${HH}`)
+        }
+      }
+      getCurrentChannelAndGuild() {
+        const {
+          channelId: HH,
+          guildId: BH
+        } = this.discordSdk;
+        return {
+          channelId: null !== HH && void 0 !== HH ? HH : null,
+          guildId: null !== BH && void 0 !== BH ? BH : null
+        }
+      }
+      getInstanceId() {
+        return this.discordSdk.instanceId
+      }
+      async askDiscordUserForAuthorization() {
+        const HH = this.getRequiredScopeForCurrentChannel(),
+          {
+            code: BH
+          } = await this.discordSdk.commands.authorize({
+            client_id: GH.e.discordClientID,
+            response_type: "code",
+            state: "",
+            prompt: "none",
+            scope: HH
+          });
+        return BH
+      }
+      getCachedAccessToken() {
+        return this.cachedAccessToken
+      }
+      setCachedAccessToken(HH) {
+        this.cachedAccessToken = HH
+      }
+      registerGuild(HH, BH) {
+        this.guildNameCache[HH] = BH
+      }
+      async authenticate(HH) {
+        return this.discordSdk.commands.authenticate({
+          access_token: HH
+        }).then((HH => null !== HH))
+      }
+      async getUserLocale() {
+        try {
+          const {
+            locale: HH
+          } = await this.discordSdk.commands.userSettingsGetLocale();
+          return HH
+        } catch (HH) {
+          return console.error("Failed to get user locale from Discord:", HH.stack), null
+        }
+      }
+      async getChannelName(HH) {
+        return this.discordSdk.commands.getChannel({
+          channel_id: HH
+        }).then((HH => HH.name)).catch((HH => "Your Current Discord Chat"))
+      }
+      async getDiscordContextFromChannelId(HH) {
+        const BH = await this.getChannelName(HH);
+        return rH.g.from({
+          type: rH.d.DM,
+          channelId: HH,
+          channelName: BH
+        })
+      }
+      getDiscordContextFromGuildId(HH) {
+        const BH = this.guildNameCache[HH];
+        return (0, hH.M)(BH) ? null : rH.f.from({
+          type: rH.d.GUILD,
+          guildId: HH,
+          guildName: BH
+        })
+      }
+      async getCurrentDiscordContext() {
+        const {
+          channelId: HH,
+          guildId: BH
+        } = this.getCurrentChannelAndGuild();
+        return null !== BH ? this.getDiscordContextFromGuildId(BH) : null !== HH ? this.getDiscordContextFromChannelId(HH) : null
+      }
+      exit(HH) {
+        console.log("Exiting Discord Activity:", HH), this.discordSdk.close(QH.CLOSE_NORMAL, HH)
+      }
+      isMobilePlatform() {
+        return this.discordSdk.platform === AH.d.MOBILE
+      }
+      applyDiscordSafeAreaNotch() {
+        const HH = getComputedStyle(document.documentElement),
+          BH = (BH, LH) => {
+            const AH = parseFloat(HH.getPropertyValue(`--discord-safe-area-inset-${BH}`));
+            return isNaN(AH) || 0 === LH ? 0 : AH / LH * 100
           };
-          window.adStartSoPause(null, {
-            preventMovement: !0
-          }), zU()
-        } else cU(`AD: Can't play MSN ${UU} ad because sdk is not loaded`)
+        XH.c.set({
+          notchSize: {
+            top: BH("top", window.innerHeight),
+            right: Math.max(BH("right", window.innerWidth), 7),
+            bottom: 0,
+            left: BH("left", window.innerWidth)
+          }
+        })
       }
-    }
-
-    function tU(UU) {
-      let XU, zU;
-      switch (UU.placement) {
-        case "top":
-          XU = (window.innerWidth - UU.width) / 2, zU = NU;
-          break;
-        case "right":
-          XU = window.innerWidth - UU.width - NU, zU = window.innerHeight / 2 - UU.height / 2 - 10;
-          break;
-        case "left":
-          XU = NU, zU = window.innerHeight / 2 - UU.height / 2 - 10
-      }
-      return {
-        x1: XU,
-        y1: zU,
-        x2: XU + UU.width,
-        y2: zU + UU.height
-      }
-    }
-
-    function gU(UU, XU) {
-      const zU = tU(UU),
-        cU = tU(XU);
-      return !(zU.x2 <= cU.x1 || cU.x2 <= zU.x1 || zU.y2 <= cU.y1 || cU.y2 <= zU.y1)
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

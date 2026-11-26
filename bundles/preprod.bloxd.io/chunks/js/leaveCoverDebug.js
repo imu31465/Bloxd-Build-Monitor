@@ -1,167 +1,167 @@
 export const id = 45;
 export const ids = [45];
 export const modules = {
-  5196: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      LEAVE_POINTER_MARGIN_PX: () => AU,
-      RECHECK_MS: () => QU,
-      iframeHost: () => EU,
-      isNear: () => aU,
-      leaveCoverLine: () => NU,
-      overlaps: () => pU,
-      resetLeaveCoverDebugForTest: () => kU,
-      startLeaveCoverDebug: () => BU,
-      startLeaveCoverProbe: () => GU,
-      whereIs: () => YU
+  5160: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      LEAVE_POINTER_MARGIN_PX: () => hH,
+      RECHECK_MS: () => SH,
+      iframeHost: () => EH,
+      isNear: () => QH,
+      leaveCoverLine: () => GH,
+      overlaps: () => uH,
+      resetLeaveCoverDebugForTest: () => xH,
+      startLeaveCoverDebug: () => PH,
+      startLeaveCoverProbe: () => vH,
+      whereIs: () => XH
     });
-    var cU = zU(5204),
-      yU = zU(3099);
-    const QU = 2e3,
-      AU = 32,
-      FU = 80,
-      oU = ".EverythingMenuBannerDiv";
+    var AH = LH(5165),
+      rH = LH(3105);
+    const SH = 2e3,
+      hH = 32,
+      tH = 80,
+      zH = ".EverythingMenuBannerDiv";
 
-    function DU(UU) {
-      const XU = UU.trim().replace(/[\s=]+/g, ".").slice(0, FU);
-      return "" === XU ? "-" : XU
+    function CH(HH) {
+      const BH = HH.trim().replace(/[\s=]+/g, ".").slice(0, tH);
+      return "" === BH ? "-" : BH
     }
 
-    function EU(UU, XU) {
-      const zU = UU.getAttribute("src");
-      if (null === zU || "" === zU.trim()) return "none";
+    function EH(HH, BH) {
+      const LH = HH.getAttribute("src");
+      if (null === LH || "" === LH.trim()) return "none";
       try {
-        const UU = new URL(zU, XU);
-        return "http:" === UU.protocol || "https:" === UU.protocol ? UU.hostname : UU.protocol.replace(":", "")
+        const HH = new URL(LH, BH);
+        return "http:" === HH.protocol || "https:" === HH.protocol ? HH.hostname : HH.protocol.replace(":", "")
       } catch {
         return "invalid"
       }
     }
 
-    function YU(UU, XU) {
-      return null !== UU.closest(oU) ? "banner" : null !== XU && XU.contains(UU) ? "app" : "body"
+    function XH(HH, BH) {
+      return null !== HH.closest(zH) ? "banner" : null !== BH && BH.contains(HH) ? "app" : "body"
     }
 
-    function NU(UU, XU, zU, cU) {
-      var yU, QU, AU, FU;
-      if (null === UU || UU === XU || XU.contains(UU)) return null;
-      const oU = null === (yU = UU.ownerDocument.defaultView) || void 0 === yU ? void 0 : yU.getComputedStyle(UU),
-        NU = UU.getBoundingClientRect();
-      return `leave covered ${[["trigger",cU],["where",YU(UU,zU)],["tag",UU.tagName.toLowerCase()],["id",DU(UU.id)],["class",DU(null!==(QU=UU.getAttribute("class"))&&void 0!==QU?QU:"")],["z",DU(null!==(AU=null===oU||void 0===oU?void 0:oU.zIndex)&&void 0!==AU?AU:"")],["position",DU(null!==(FU=null===oU||void 0===oU?void 0:oU.position)&&void 0!==FU?FU:"")],["size",`${Math.round(NU.width)}x${Math.round(NU.height)}`],["iframe","IFRAME"===UU.tagName?DU(EU(UU,UU.ownerDocument.baseURI)):"-"]].map((UU=>{let[XU,zU]=UU;return`${XU}=${zU}`})).join(" ")}`
+    function GH(HH, BH, LH, AH) {
+      var rH, SH, hH, tH;
+      if (null === HH || HH === BH || BH.contains(HH)) return null;
+      const zH = null === (rH = HH.ownerDocument.defaultView) || void 0 === rH ? void 0 : rH.getComputedStyle(HH),
+        GH = HH.getBoundingClientRect();
+      return `leave covered ${[["trigger",AH],["where",XH(HH,LH)],["tag",HH.tagName.toLowerCase()],["id",CH(HH.id)],["class",CH(null!==(SH=HH.getAttribute("class"))&&void 0!==SH?SH:"")],["z",CH(null!==(hH=null===zH||void 0===zH?void 0:zH.zIndex)&&void 0!==hH?hH:"")],["position",CH(null!==(tH=null===zH||void 0===zH?void 0:zH.position)&&void 0!==tH?tH:"")],["size",`${Math.round(GH.width)}x${Math.round(GH.height)}`],["iframe","IFRAME"===HH.tagName?CH(EH(HH,HH.ownerDocument.baseURI)):"-"]].map((HH=>{let[BH,LH]=HH;return`${BH}=${LH}`})).join(" ")}`
     }
 
-    function IU(UU) {
-      const XU = UU.getBoundingClientRect();
-      return 0 === XU.width || 0 === XU.height ? null : {
-        x: XU.left + XU.width / 2,
-        y: XU.top + XU.height / 2
+    function YH(HH) {
+      const BH = HH.getBoundingClientRect();
+      return 0 === BH.width || 0 === BH.height ? null : {
+        x: BH.left + BH.width / 2,
+        y: BH.top + BH.height / 2
       }
     }
 
-    function pU(UU, XU) {
-      const zU = UU.getBoundingClientRect(),
-        cU = XU.getBoundingClientRect();
-      return Math.max(zU.left, cU.left) < Math.min(zU.right, cU.right) && Math.max(zU.top, cU.top) < Math.min(zU.bottom, cU.bottom)
+    function uH(HH, BH) {
+      const LH = HH.getBoundingClientRect(),
+        AH = BH.getBoundingClientRect();
+      return Math.max(LH.left, AH.left) < Math.min(LH.right, AH.right) && Math.max(LH.top, AH.top) < Math.min(LH.bottom, AH.bottom)
     }
 
-    function aU(UU, XU, zU, cU) {
-      const yU = UU.getBoundingClientRect();
-      return XU >= yU.left - cU && XU <= yU.right + cU && zU >= yU.top - cU && zU <= yU.bottom + cU
+    function QH(HH, BH, LH, AH) {
+      const rH = HH.getBoundingClientRect();
+      return BH >= rH.left - AH && BH <= rH.right + AH && LH >= rH.top - AH && LH <= rH.bottom + AH
     }
 
-    function tU(UU) {
-      (0, yU.l)("leavecover", UU)
+    function WH(HH) {
+      (0, rH.j)("leavecover", HH)
     }
-    const gU = new Set;
+    const MH = new Set;
 
-    function kU() {
-      gU.clear()
+    function xH() {
+      MH.clear()
     }
 
-    function GU(UU) {
-      let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tU;
-      const zU = UU.ownerDocument,
-        cU = zU.defaultView;
-      if (null === cU) return () => {};
-      const yU = (UU, zU) => {
-          null === UU || gU.has(zU) || (gU.add(zU), XU(UU))
+    function vH(HH) {
+      let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : WH;
+      const LH = HH.ownerDocument,
+        AH = LH.defaultView;
+      if (null === AH) return () => {};
+      const rH = (HH, LH) => {
+          null === HH || MH.has(LH) || (MH.add(LH), BH(HH))
         },
-        FU = XU => {
-          const cU = UU.isConnected ? IU(UU) : null;
-          if (null === cU) return;
-          const QU = zU.elementFromPoint(cU.x, cU.y);
-          if (null !== QU) {
-            const cU = zU.getElementById("root");
-            yU(NU(QU, UU, cU, XU), YU(QU, cU))
+        tH = BH => {
+          const AH = HH.isConnected ? YH(HH) : null;
+          if (null === AH) return;
+          const SH = LH.elementFromPoint(AH.x, AH.y);
+          if (null !== SH) {
+            const AH = LH.getElementById("root");
+            rH(GH(SH, HH, AH, BH), XH(SH, AH))
           }
         };
-      let oU = null;
-      const DU = UU => {
-        oU = {
-          x: UU.clientX,
-          y: UU.clientY
+      let zH = null;
+      const CH = HH => {
+        zH = {
+          x: HH.clientX,
+          y: HH.clientY
         }
       };
-      let EU = null;
-      const kU = () => {
-          EU = setTimeout((() => {
-            EU = null;
-            const XU = zU.activeElement;
-            if ("IFRAME" !== (null === XU || void 0 === XU ? void 0 : XU.tagName) || !UU.isConnected) return;
-            const cU = IU(UU),
-              QU = null !== cU && aU(XU, cU.x, cU.y, 0),
-              FU = oU,
-              DU = null !== FU && aU(UU, FU.x, FU.y, AU);
-            if (pU(XU, UU) && (QU || DU)) {
-              const cU = zU.getElementById("root");
-              yU(NU(XU, UU, cU, "blurIframe"), YU(XU, cU))
+      let EH = null;
+      const xH = () => {
+          EH = setTimeout((() => {
+            EH = null;
+            const BH = LH.activeElement;
+            if ("IFRAME" !== (null === BH || void 0 === BH ? void 0 : BH.tagName) || !HH.isConnected) return;
+            const AH = YH(HH),
+              SH = null !== AH && QH(BH, AH.x, AH.y, 0),
+              tH = zH,
+              CH = null !== tH && QH(HH, tH.x, tH.y, hH);
+            if (uH(BH, HH) && (SH || CH)) {
+              const AH = LH.getElementById("root");
+              rH(GH(BH, HH, AH, "blurIframe"), XH(BH, AH))
             }
           }), 0)
         },
-        GU = cU.requestAnimationFrame((() => {
-          FU("open")
+        vH = AH.requestAnimationFrame((() => {
+          tH("open")
         })),
-        BU = setTimeout((() => {
-          FU("recheck")
-        }), QU);
-      return cU.addEventListener("pointermove", DU, {
+        PH = setTimeout((() => {
+          tH("recheck")
+        }), SH);
+      return AH.addEventListener("pointermove", CH, {
         capture: !0,
         passive: !0
-      }), cU.addEventListener("pointerdown", DU, {
+      }), AH.addEventListener("pointerdown", CH, {
         capture: !0,
         passive: !0
-      }), cU.addEventListener("blur", kU), () => {
-        cU.cancelAnimationFrame(GU), clearTimeout(BU), null !== EU && clearTimeout(EU), cU.removeEventListener("pointermove", DU, {
+      }), AH.addEventListener("blur", xH), () => {
+        AH.cancelAnimationFrame(vH), clearTimeout(PH), null !== EH && clearTimeout(EH), AH.removeEventListener("pointermove", CH, {
           capture: !0
-        }), cU.removeEventListener("pointerdown", DU, {
+        }), AH.removeEventListener("pointerdown", CH, {
           capture: !0
-        }), cU.removeEventListener("blur", kU)
+        }), AH.removeEventListener("blur", xH)
       }
     }
 
-    function BU() {
-      (0, cU.h)(GU)
+    function PH() {
+      (0, AH.f)(vH)
     }
   },
-  5204: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => AU,
-      e: () => QU,
-      h: () => yU
+  5165: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => hH,
+      e: () => SH,
+      f: () => rH
     });
-    let cU = null;
+    let AH = null;
 
-    function yU(UU) {
-      cU = UU
+    function rH(HH) {
+      AH = HH
     }
 
-    function QU() {
-      return cU
+    function SH() {
+      return AH
     }
 
-    function AU(UU) {
-      return "bloxd" === UU.site && !UU.isMobileApp && !UU.isTouchScreen
+    function hH(HH) {
+      return "bloxd" === HH.site && !HH.isMobileApp && !HH.isTouchScreen
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

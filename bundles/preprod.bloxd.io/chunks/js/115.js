@@ -1,79 +1,79 @@
 export const id = 115;
 export const ids = [115];
 export const modules = {
-  5424: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => NU
+  5383: (HH, BH, LH) => {
+    LH.d(BH, {
+      b: () => GH
     });
-    var cU = zU(1106),
-      yU = zU.n(cU),
-      QU = zU(1390),
-      AU = zU(1384),
-      FU = zU(3887),
-      oU = zU(142),
-      DU = zU(3929),
-      EU = zU(3914),
-      YU = zU(1305);
+    var AH = LH(1038),
+      rH = LH.n(AH),
+      SH = LH(1315),
+      hH = LH(1313),
+      tH = LH(3892),
+      zH = LH(120),
+      CH = LH(3924),
+      EH = LH(3917),
+      XH = LH(1225);
 
-    function NU(UU) {
+    function GH(HH) {
       let {
-        game: XU
-      } = UU;
-      const zU = (0, oU.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        cU = (0, DU.c)(XU, zU),
-        NU = (0, FU.f)(cU),
-        IU = void 0 !== NU.blurhash;
-      return (0, YU.jsxs)("div", {
+        game: BH
+      } = HH;
+      const LH = (0, zH.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        AH = (0, CH.h)(BH, LH),
+        GH = (0, tH.g)(AH),
+        YH = void 0 !== GH.blurhash;
+      return (0, XH.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [NU.isLoading && !IU && (0, YU.jsx)(AU.b, {
+        children: [GH.isLoading && !YH && (0, XH.jsx)(hH.d, {
           loaderType: "Secondary"
-        }), !NU.failed && (null !== NU.src || IU) && (0, YU.jsx)("div", {
-          className: yU()("SchematicImage", EU.i, {
-            SchematicImageFadeIn: NU.fadeIn && !IU
+        }), !GH.failed && (null !== GH.src || YH) && (0, XH.jsx)("div", {
+          className: rH()("SchematicImage", EH.i, {
+            SchematicImageFadeIn: GH.fadeIn && !YH
           }),
-          style: (0, EU.h)(NU),
-          children: (0, YU.jsx)(EU.d, {
-            image: NU
+          style: (0, EH.f)(GH),
+          children: (0, XH.jsx)(EH.e, {
+            image: GH
           })
-        }), NU.failed && (0, YU.jsx)("div", {
+        }), GH.failed && (0, XH.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, YU.jsx)(QU.d, {
+          children: (0, XH.jsx)(SH.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  7115: (UU, XU, zU) => {
-    zU.r(XU), zU.d(XU, {
-      default: () => HU
+  7071: (HH, BH, LH) => {
+    LH.r(BH), LH.d(BH, {
+      default: () => NH
     });
-    zU(5415);
-    var cU = zU(61),
-      yU = zU(1106),
-      QU = zU.n(yU),
-      AU = zU(320),
-      FU = zU(1086),
-      oU = zU(1236),
-      DU = zU(1077),
-      EU = zU(1193),
-      YU = zU(1545),
-      NU = zU(3945),
-      IU = zU(1129),
-      pU = zU(5424),
-      aU = zU(2841),
-      tU = zU(1494),
-      gU = zU(5004),
-      kU = zU(5433),
-      GU = zU(1384),
-      BU = zU(1568),
-      ZU = zU(4997),
-      RU = zU(2702),
-      PU = zU(5438),
-      WU = zU(7e3),
-      dU = zU(1592),
-      LU = zU(1305);
-    const eU = [{
+    LH(5379);
+    var AH = LH(45),
+      rH = LH(1038),
+      SH = LH.n(rH),
+      hH = LH(304),
+      tH = LH(1016),
+      zH = LH(1168),
+      CH = LH(998),
+      EH = LH(1123),
+      XH = LH(1502),
+      GH = LH(3935),
+      YH = LH(1061),
+      uH = LH(5383),
+      QH = LH(2833),
+      WH = LH(1455),
+      MH = LH(4973),
+      xH = LH(5386),
+      vH = LH(1313),
+      PH = LH(1509),
+      TH = LH(4969),
+      UH = LH(2710),
+      VH = LH(5388),
+      OH = LH(6957),
+      bH = LH(1536),
+      kH = LH(1225);
+    const mH = [{
         scope: "customGames",
         title: "studio:leaderboardCustomGames"
       }, {
@@ -83,407 +83,407 @@ export const modules = {
         scope: "dormantGames",
         title: "studio:leaderboardDormantGames"
       }],
-      CU = 25,
-      wU = "scope",
-      qU = "category",
-      OU = "customGames";
-    const SU = 7,
-      rU = {
+      oH = 25,
+      IH = "scope",
+      fH = "category",
+      lH = "customGames";
+    const KH = 7,
+      cH = {
         playsPerDay: null,
         avgPlaytimeMinutes: null,
         retention: null
       };
 
-    function uU(UU) {
+    function eH(HH) {
       let {
-        position: XU
-      } = UU;
-      const zU = WU.c[XU];
-      return (0, LU.jsxs)("td", {
-        className: QU()("StudioLeaderboardPosition", {
-          StudioLeaderboardTopPosition: void 0 !== zU,
-          [`StudioLeaderboardTopPosition${XU}`]: void 0 !== zU
+        position: BH
+      } = HH;
+      const LH = OH.c[BH];
+      return (0, kH.jsxs)("td", {
+        className: SH()("StudioLeaderboardPosition", {
+          StudioLeaderboardTopPosition: void 0 !== LH,
+          [`StudioLeaderboardTopPosition${BH}`]: void 0 !== LH
         }),
-        children: [void 0 !== zU && (0, LU.jsx)("img", {
+        children: [void 0 !== LH && (0, kH.jsx)("img", {
           className: "StudioLeaderboardPositionItem",
-          src: zU,
+          src: LH,
           alt: ""
-        }), XU]
+        }), BH]
       })
     }
 
-    function fU(UU) {
+    function qH(HH) {
       let {
-        discoverability: XU
-      } = UU;
+        discoverability: BH
+      } = HH;
       const {
-        playsPerDay: zU,
-        avgPlaytimeMinutes: yU,
-        retention: QU
-      } = null === XU ? rU : (0, NU.k)(XU);
-      return (0, LU.jsxs)(cU.Fragment, {
-        children: [(0, LU.jsx)("td", {
-          children: null !== zU ? (0, NU.d)(zU) : "-"
-        }), (0, LU.jsx)("td", {
-          children: null !== yU ? (0, NU.g)(yU) : "-"
-        }), (0, LU.jsx)("td", {
-          children: null !== QU ? (0, NU.i)(QU) : "-"
+        playsPerDay: LH,
+        avgPlaytimeMinutes: rH,
+        retention: SH
+      } = null === BH ? cH : (0, GH.i)(BH);
+      return (0, kH.jsxs)(AH.Fragment, {
+        children: [(0, kH.jsx)("td", {
+          children: null !== LH ? (0, GH.c)(LH) : "-"
+        }), (0, kH.jsx)("td", {
+          children: null !== rH ? (0, GH.d)(rH) : "-"
+        }), (0, kH.jsx)("td", {
+          children: null !== SH ? (0, GH.g)(SH) : "-"
         })]
       })
     }
 
-    function iU(UU) {
+    function gH(HH) {
       let {
-        discoverability: XU
-      } = UU;
-      return (0, LU.jsx)("td", {
+        discoverability: BH
+      } = HH;
+      return (0, kH.jsx)("td", {
         className: "StudioLeaderboardEngagementScore",
-        children: void 0 !== (null === XU || void 0 === XU ? void 0 : XU.engagementScore) ? (0, oU.I)(Math.round(XU.engagementScore)) : "-"
+        children: void 0 !== (null === BH || void 0 === BH ? void 0 : BH.engagementScore) ? (0, zH.T)(Math.round(BH.engagementScore)) : "-"
       })
     }
 
-    function HU() {
-      var UU, XU;
+    function NH() {
+      var HH, BH;
       const {
-        t: zU
-      } = (0, EU.I)(), yU = (0, BU.useNavigatePreserveSearch)(), {
-        userContext: QU,
-        isUserContextUpdating: WU
-      } = (0, IU.d)(), rU = (0, RU.o)(), [HU, MU] = (0, ZU.q)(), vU = (VU = HU.get(wU), eU.some((UU => UU.scope === VU)) ? VU : OU);
-      var VU;
-      const sU = function(UU) {
-          return AU.T.includes(UU) ? UU : null
-        }(HU.get(qU)),
-        nU = (0, ZU.e)(HU.get(ZU.c)),
-        [mU, lU] = (0, cU.useState)(null),
-        [xU, JU] = (0, cU.useState)(!1);
+        t: LH
+      } = (0, EH.B)(), rH = (0, PH.useNavigatePreserveSearch)(), {
+        userContext: SH,
+        isUserContextUpdating: OH
+      } = (0, YH.e)(), cH = (0, UH.l)(), [NH, RH] = (0, TH.p)(), jH = (nH = NH.get(IH), mH.some((HH => HH.scope === nH)) ? nH : lH);
+      var nH;
+      const FH = function(HH) {
+          return hH.Z.includes(HH) ? HH : null
+        }(NH.get(fH)),
+        DH = (0, TH.g)(NH.get(TH.c)),
+        [wH, ZH] = (0, AH.useState)(null),
+        [dH, aH] = (0, AH.useState)(!1);
 
-      function jU(UU) {
-        MU((XU => {
-          (0, ZU.i)(XU, wU, UU.scope === OU ? null : UU.scope), (0, ZU.i)(XU, qU, UU.category), (0, ZU.m)(XU, UU.page)
+      function sH(HH) {
+        RH((BH => {
+          (0, TH.j)(BH, IH, HH.scope === lH ? null : HH.scope), (0, TH.j)(BH, fH, HH.category), (0, TH.m)(BH, HH.page)
         }))
       }
-      const KU = !WU && QU.playerHasRank("developer"),
-        bU = KU && "allGames" === vU,
-        TU = KU && "dormantGames" === vU;
-      (0, cU.useEffect)((() => {
-        if (WU) return;
-        let UU = !1;
-        return lU(null), JU(!1), YU.c.getPublishedGamePreviews(QU, {
+      const JH = !OH && SH.playerHasRank("developer"),
+        iH = JH && "allGames" === jH,
+        pH = JH && "dormantGames" === jH;
+      (0, AH.useEffect)((() => {
+        if (OH) return;
+        let HH = !1;
+        return ZH(null), aH(!1), XH.d.getPublishedGamePreviews(SH, {
           searchQuery: null,
-          pageNumber: nU,
-          pageSize: CU,
+          pageNumber: DH,
+          pageSize: oH,
           onlyFavouriteGames: !1,
           onlyOwnedGames: !1,
           onlyApprovedGames: !1,
           schematicIdsToExclude: [],
-          gameCategories: null !== sU ? [sU] : [],
+          gameCategories: null !== FH ? [FH] : [],
           upAndComing: !1,
-          dormantGames: TU,
+          dormantGames: pH,
           sortByEngagementScore: !0,
-          firstPartyGameNames: bU ? DU.c : void 0,
+          firstPartyGameNames: iH ? CH.d : void 0,
           includeOwners: !0
-        }).then((XU => {
-          UU || lU(XU)
-        })).catch((XU => {
-          console.error("Failed to load the studio leaderboard", XU), UU || JU(!0)
+        }).then((BH => {
+          HH || ZH(BH)
+        })).catch((BH => {
+          console.error("Failed to load the studio leaderboard", BH), HH || aH(!0)
         })), () => {
-          UU = !0
+          HH = !0
         }
-      }), [WU, bU, TU, sU, nU, QU]);
-      const hU = null !== (UU = null === mU || void 0 === mU ? void 0 : mU.results) && void 0 !== UU ? UU : null,
-        UX = function(UU, XU, zU) {
-          const [yU, QU] = (0, cU.useState)({}), AU = zU ? (null !== UU && void 0 !== UU ? UU : []).flatMap((UU => "firstPartyGame" === UU.type ? [(0, FU.f)(UU.gameNameWithVariation, !0)] : [])).join(",") : "", oU = (0, cU.useMemo)((() => "" === AU ? [] : AU.split(",")), [AU]);
-          return (0, cU.useEffect)((() => {
-            if (0 === oU.length) return void QU({});
-            let UU = !1;
-            return YU.c.getGamesByAnalyticsIds(XU, oU).then((XU => {
-              UU || QU(XU)
-            })).catch((UU => {
-              console.error("Failed to load first party discoverability for the studio leaderboard", UU)
+      }), [OH, iH, pH, FH, DH, SH]);
+      const yH = null !== (HH = null === wH || void 0 === wH ? void 0 : wH.results) && void 0 !== HH ? HH : null,
+        HB = function(HH, BH, LH) {
+          const [rH, SH] = (0, AH.useState)({}), hH = LH ? (null !== HH && void 0 !== HH ? HH : []).flatMap((HH => "firstPartyGame" === HH.type ? [(0, tH.g)(HH.gameNameWithVariation, !0)] : [])).join(",") : "", zH = (0, AH.useMemo)((() => "" === hH ? [] : hH.split(",")), [hH]);
+          return (0, AH.useEffect)((() => {
+            if (0 === zH.length) return void SH({});
+            let HH = !1;
+            return XH.d.getGamesByAnalyticsIds(BH, zH).then((BH => {
+              HH || SH(BH)
+            })).catch((HH => {
+              console.error("Failed to load first party discoverability for the studio leaderboard", HH)
             })), () => {
-              UU = !0
+              HH = !0
             }
-          }), [oU, XU]), yU
-        }(hU, QU, KU),
-        XX = null !== hU ? function(UU, XU, zU, cU, yU) {
-          return UU.map(((UU, QU) => {
-            var AU;
-            const oU = cU + QU + 1;
-            if ("customGame" === UU.type) {
-              const XU = UU.preview;
+          }), [zH, BH]), rH
+        }(yH, SH, JH),
+        BB = null !== yH ? function(HH, BH, LH, AH, rH) {
+          return HH.map(((HH, SH) => {
+            var hH;
+            const zH = AH + SH + 1;
+            if ("customGame" === HH.type) {
+              const BH = HH.preview;
               return {
-                key: XU.schematicId,
-                position: oU,
-                thumbnail: (0, LU.jsx)(pU.d, {
-                  game: XU
+                key: BH.schematicId,
+                position: zH,
+                thumbnail: (0, kH.jsx)(uH.b, {
+                  game: BH
                 }),
-                name: XU.name,
-                owner: UU.owner,
-                category: XU.gameCategory,
-                ccu: XU.ccu,
-                favourites: XU.favourites,
-                discoverability: (0, NU.m)(XU) ? XU : null,
-                url: (0, dU.r)((0, FU.e)(XU.schematicId))
+                name: BH.name,
+                owner: HH.owner,
+                category: BH.gameCategory,
+                ccu: BH.ccu,
+                favourites: BH.favourites,
+                discoverability: (0, GH.j)(BH) ? BH : null,
+                url: (0, bH.t)((0, tH.d)(BH.schematicId))
               }
             }
-            const DU = UU.gameNameWithVariation,
-              EU = (0, FU.f)(DU, !0);
+            const CH = HH.gameNameWithVariation,
+              EH = (0, tH.g)(CH, !0);
             return {
-              key: DU,
-              position: oU,
-              thumbnail: (0, LU.jsx)(PU.b, {
-                game: DU
+              key: CH,
+              position: zH,
+              thumbnail: (0, kH.jsx)(VH.d, {
+                game: CH
               }),
-              name: (0, dU.n)(DU, yU),
+              name: (0, bH.q)(CH, rH),
               owner: null,
-              category: (0, dU.f)(DU),
-              ccu: (0, RU.e)(DU, XU),
+              category: (0, bH.i)(CH),
+              ccu: (0, UH.e)(CH, BH),
               favourites: null,
-              discoverability: null !== (AU = zU[EU]) && void 0 !== AU ? AU : null,
-              url: (0, dU.r)(EU)
+              discoverability: null !== (hH = LH[EH]) && void 0 !== hH ? hH : null,
+              url: (0, bH.t)(EH)
             }
           }))
-        }(hU, rU, UX, (nU - 1) * CU, zU) : [],
-        zX = !xU && null === mU,
-        cX = !zX && !xU && 0 === XX.length,
-        yX = null !== (XU = null === mU || void 0 === mU ? void 0 : mU.totalPages) && void 0 !== XU ? XU : 1;
-      return (0, LU.jsxs)("div", {
+        }(yH, cH, HB, (DH - 1) * oH, LH) : [],
+        LB = !dH && null === wH,
+        AB = !LB && !dH && 0 === BB.length,
+        rB = null !== (BH = null === wH || void 0 === wH ? void 0 : wH.totalPages) && void 0 !== BH ? BH : 1;
+      return (0, kH.jsxs)("div", {
         className: "StudioPage StudioLeaderboard",
-        children: [(0, LU.jsx)("div", {
+        children: [(0, kH.jsx)("div", {
           className: "StudioPageHeader",
-          children: (0, LU.jsx)("h1", {
+          children: (0, kH.jsx)("h1", {
             className: "StudioPageTitle",
-            children: zU("studio:leaderboard")
+            children: LH("studio:leaderboard")
           })
-        }), (0, LU.jsxs)("div", {
+        }), (0, kH.jsxs)("div", {
           className: "StudioLeaderboardBanner",
-          children: [!TU && (0, LU.jsx)("div", {
-            children: zU("studio:leaderboardBanner")
-          }), TU && (0, LU.jsx)("div", {
-            children: zU("studio:leaderboardDormantBanner")
-          }), (0, LU.jsx)("div", {
-            children: zU("studio:leaderboardMetricsBanner", {
-              days: SU
+          children: [!pH && (0, kH.jsx)("div", {
+            children: LH("studio:leaderboardBanner")
+          }), pH && (0, kH.jsx)("div", {
+            children: LH("studio:leaderboardDormantBanner")
+          }), (0, kH.jsx)("div", {
+            children: LH("studio:leaderboardMetricsBanner", {
+              days: KH
             })
           })]
-        }), KU && (0, LU.jsx)("div", {
+        }), JH && (0, kH.jsx)("div", {
           className: "StudioLeaderboardScopes",
-          children: eU.map((UU => (0, LU.jsx)(tU.O, {
-            active: vU === UU.scope,
+          children: mH.map((HH => (0, kH.jsx)(WH.W, {
+            active: jH === HH.scope,
             onClick: () => {
-              jU({
-                scope: UU.scope,
-                category: sU,
+              sH({
+                scope: HH.scope,
+                category: FH,
                 page: 1
               })
             },
-            children: zU(UU.title)
-          }, UU.scope)))
-        }), (0, LU.jsxs)("div", {
+            children: LH(HH.title)
+          }, HH.scope)))
+        }), (0, kH.jsxs)("div", {
           className: "StudioLeaderboardCategories",
-          children: [(0, LU.jsx)(tU.O, {
-            active: null === sU,
+          children: [(0, kH.jsx)(WH.W, {
+            active: null === FH,
             onClick: () => {
-              jU({
-                scope: vU,
+              sH({
+                scope: jH,
                 category: null,
                 page: 1
               })
             },
-            children: zU("studio:leaderboardAllCategories")
-          }), AU.T.map((UU => (0, LU.jsx)(tU.O, {
-            active: sU === UU,
+            children: LH("studio:leaderboardAllCategories")
+          }), hH.Z.map((HH => (0, kH.jsx)(WH.W, {
+            active: FH === HH,
             onClick: () => {
-              jU({
-                scope: vU,
-                category: UU,
+              sH({
+                scope: jH,
+                category: HH,
                 page: 1
               })
             },
-            children: (0, AU.gb)(UU)
-          }, UU)))]
-        }), zX && (0, LU.jsx)("div", {
+            children: (0, hH.mb)(HH)
+          }, HH)))]
+        }), LB && (0, kH.jsx)("div", {
           className: "StudioPageLoader AnimFadeIn",
-          children: (0, LU.jsx)(GU.b, {})
-        }), xU && (0, LU.jsx)("div", {
+          children: (0, kH.jsx)(vH.d, {})
+        }), dH && (0, kH.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: zU("studio:failedToLoadLeaderboard")
-        }), cX && (0, LU.jsx)("div", {
+          children: LH("studio:failedToLoadLeaderboard")
+        }), AB && (0, kH.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: zU("studio:leaderboardEmpty")
-        }), !zX && !xU && !cX && (0, LU.jsx)("div", {
+          children: LH("studio:leaderboardEmpty")
+        }), !LB && !dH && !AB && (0, kH.jsx)("div", {
           className: "StudioLeaderboardTableScroll AnimFadeIn",
-          children: (0, LU.jsx)(kU.b, {
+          children: (0, kH.jsx)(xH.c, {
             className: "StudioTable",
             columns: [{
               key: "position",
               header: "#"
             }, {
               key: "game",
-              header: zU("general:game")
+              header: LH("general:game")
             }, {
               key: "owner",
-              header: zU("general:owner")
-            }, ...null === sU ? [{
+              header: LH("general:owner")
+            }, ...null === FH ? [{
               key: "category",
-              header: zU("general:category")
-            }] : [], ...KU ? [{
+              header: LH("general:category")
+            }] : [], ...JH ? [{
               key: "engagementScore",
               header: "engagementScore"
             }] : [], {
               key: "playsPerDay",
-              header: zU("studio:leaderboardPlaysPerDay")
+              header: LH("studio:leaderboardPlaysPerDay")
             }, {
               key: "sessionLength",
-              header: zU("studio:leaderboardSessionLength")
+              header: LH("studio:leaderboardSessionLength")
             }, {
               key: "retention",
-              header: zU("studio:leaderboardSessionsPerPlayer")
-            }, ...TU ? [] : [{
+              header: LH("studio:leaderboardSessionsPerPlayer")
+            }, ...pH ? [] : [{
               key: "ccu",
-              header: zU("studio:metricCcu")
+              header: LH("studio:metricCcu")
             }], {
               key: "favourites",
-              header: zU("general:favourites")
+              header: LH("general:favourites")
             }],
-            rows: XX,
-            getRowKey: UU => UU.key,
-            renderRow: UU => (0, LU.jsxs)("tr", {
+            rows: BB,
+            getRowKey: HH => HH.key,
+            renderRow: HH => (0, kH.jsxs)("tr", {
               onClick: () => {
-                yU(UU.url)
+                rH(HH.url)
               },
-              children: [(0, LU.jsx)(uU, {
-                position: UU.position
-              }), (0, LU.jsx)("td", {
-                children: (0, LU.jsx)(PU.e, {
-                  thumbnail: UU.thumbnail,
-                  name: UU.name
+              children: [(0, kH.jsx)(eH, {
+                position: HH.position
+              }), (0, kH.jsx)("td", {
+                children: (0, kH.jsx)(VH.h, {
+                  thumbnail: HH.thumbnail,
+                  name: HH.name
                 })
-              }), (0, LU.jsxs)("td", {
+              }), (0, kH.jsxs)("td", {
                 className: "StudioLeaderboardOwner",
-                children: [null === UU.owner && "-", null !== UU.owner && (0, LU.jsx)(aU.f, {
-                  playerSocialPreview: UU.owner,
+                children: [null === HH.owner && "-", null !== HH.owner && (0, kH.jsx)(QH.g, {
+                  playerSocialPreview: HH.owner,
                   showLocation: !1,
                   opensProfileCard: !1
                 })]
-              }), null === sU && (0, LU.jsx)("td", {
-                children: (0, AU.gb)(UU.category)
-              }), KU && (0, LU.jsx)(iU, {
-                discoverability: UU.discoverability
-              }), (0, LU.jsx)(fU, {
-                discoverability: UU.discoverability
-              }), !TU && (0, LU.jsx)("td", {
-                children: null !== UU.ccu ? (0, oU.I)(UU.ccu) : "-"
-              }), (0, LU.jsx)("td", {
-                children: null !== UU.favourites ? (0, oU.I)(UU.favourites) : "-"
+              }), null === FH && (0, kH.jsx)("td", {
+                children: (0, hH.mb)(HH.category)
+              }), JH && (0, kH.jsx)(gH, {
+                discoverability: HH.discoverability
+              }), (0, kH.jsx)(qH, {
+                discoverability: HH.discoverability
+              }), !pH && (0, kH.jsx)("td", {
+                children: null !== HH.ccu ? (0, zH.T)(HH.ccu) : "-"
+              }), (0, kH.jsx)("td", {
+                children: null !== HH.favourites ? (0, zH.T)(HH.favourites) : "-"
               })]
             })
           })
-        }), !xU && (0, LU.jsx)(gU.c, {
+        }), !dH && (0, kH.jsx)(MH.e, {
           className: "AnimFadeIn",
-          page: nU,
-          totalPages: yX,
-          onSetPage: UU => {
-            jU({
-              scope: vU,
-              category: sU,
-              page: UU
+          page: DH,
+          totalPages: rB,
+          onSetPage: HH => {
+            sH({
+              scope: jH,
+              category: FH,
+              page: HH
             })
           }
         })]
       })
     }
   },
-  5438: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => AU,
-      e: () => QU
+  5388: (HH, BH, LH) => {
+    LH.d(BH, {
+      d: () => hH,
+      h: () => SH
     });
-    var cU = zU(1592),
-      yU = zU(1305);
+    var AH = LH(1536),
+      rH = LH(1225);
 
-    function QU(UU) {
+    function SH(HH) {
       let {
-        thumbnail: XU,
-        name: zU
-      } = UU;
-      return (0, yU.jsxs)("div", {
+        thumbnail: BH,
+        name: LH
+      } = HH;
+      return (0, rH.jsxs)("div", {
         className: "StudioTableGameCell",
-        children: [(0, yU.jsx)("div", {
+        children: [(0, rH.jsx)("div", {
           className: "StudioTableThumbnail",
-          children: XU
-        }), (0, yU.jsx)("span", {
+          children: BH
+        }), (0, rH.jsx)("span", {
           className: "StudioTableGameName",
-          children: zU
+          children: LH
         })]
       })
     }
 
-    function AU(UU) {
+    function hH(HH) {
       let {
-        game: XU
-      } = UU;
-      return (0, yU.jsx)("img", {
+        game: BH
+      } = HH;
+      return (0, rH.jsx)("img", {
         className: "StudioTableThumbnailImage",
-        src: (0, cU.k)(XU),
+        src: (0, AH.o)(BH),
         alt: ""
       })
     }
   },
-  7e3: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => cU
+  6957: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => AH
     });
-    const cU = {
-      1: zU(7009),
-      2: zU(7018),
-      3: zU(7021)
+    const AH = {
+      1: LH(6966),
+      2: LH(6972),
+      3: LH(6974)
     }
   },
-  5433: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => FU
+  5386: (HH, BH, LH) => {
+    LH.d(BH, {
+      c: () => tH
     });
-    var cU = zU(61),
-      yU = zU(1106),
-      QU = zU.n(yU),
-      AU = zU(1305);
+    var AH = LH(45),
+      rH = LH(1038),
+      SH = LH.n(rH),
+      hH = LH(1225);
 
-    function FU(UU) {
+    function tH(HH) {
       let {
-        columns: XU,
-        rows: zU,
-        getRowKey: yU,
-        renderRow: FU,
-        className: oU
-      } = UU;
-      return (0, AU.jsxs)("table", {
-        className: QU()("Table", oU),
-        children: [(0, AU.jsx)("thead", {
-          children: (0, AU.jsx)("tr", {
-            children: XU.map((UU => (0, AU.jsx)("th", {
-              children: UU.header
-            }, UU.key)))
+        columns: BH,
+        rows: LH,
+        getRowKey: rH,
+        renderRow: tH,
+        className: zH
+      } = HH;
+      return (0, hH.jsxs)("table", {
+        className: SH()("Table", zH),
+        children: [(0, hH.jsx)("thead", {
+          children: (0, hH.jsx)("tr", {
+            children: BH.map((HH => (0, hH.jsx)("th", {
+              children: HH.header
+            }, HH.key)))
           })
-        }), (0, AU.jsx)("tbody", {
-          children: zU.map((UU => (0, AU.jsx)(cU.Fragment, {
-            children: FU(UU)
-          }, yU(UU))))
+        }), (0, hH.jsx)("tbody", {
+          children: LH.map((HH => (0, hH.jsx)(AH.Fragment, {
+            children: tH(HH)
+          }, rH(HH))))
         })]
       })
     }
   },
-  5415: () => {},
-  7009: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
+  5379: () => {},
+  6966: HH => {
+    HH.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
   },
-  7018: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
+  6972: HH => {
+    HH.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
   },
-  7021: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
+  6974: HH => {
+    HH.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);

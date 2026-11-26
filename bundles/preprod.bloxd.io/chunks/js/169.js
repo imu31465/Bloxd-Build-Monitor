@@ -1,3344 +1,2816 @@
+/*! For license information please see cwj32u.169.937b64ab.chunk.js.LICENSE.txt */
 export const id = 169;
 export const ids = [169];
 export const modules = {
-  9447: (UU, XU, zU) => {
-    zU.d(XU, {
-      b: () => FU
-    });
-    var cU = zU(27),
-      yU = zU(1193),
-      QU = zU(5540),
-      AU = zU(1305);
-
-    function FU(UU) {
-      let {
-        note: XU
-      } = UU;
-      const {
-        t: zU
-      } = (0, yU.I)(), {
-        clientEscMenuOptions: FU
-      } = (0, cU.q)(["clientEscMenuOptions"]);
-      return (0, AU.jsx)(QU.e, {
-        label: zU("touchSettings:actionButtons"),
-        checked: FU.touchActionButtons,
-        onClick: UU => {
-          cU.e.setClientEscMenuOptions({
-            touchActionButtons: UU
-          })
-        },
-        circleInfoText: zU("touchSettings:actionButtonsInfo"),
-        note: XU
-      })
-    }
+  7315: (HH, BH, LH) => {
+    var AH = LH(7323);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.f = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
   },
-  9441: (UU, XU, zU) => {
-    zU.d(XU, {
-      d: () => ez,
-      f: () => Lz
-    });
-    var cU = zU(1193),
-      yU = zU(61),
-      QU = zU(2058),
-      AU = zU(2067),
-      FU = zU(1106),
-      oU = zU.n(FU),
-      DU = zU(1494),
-      EU = zU(27),
-      YU = zU(97),
-      NU = zU(114),
-      IU = zU(5540),
-      pU = zU(2616),
-      aU = zU(287),
-      tU = zU(2071),
-      gU = zU(2077),
-      kU = zU(9443),
-      GU = zU(9447),
-      BU = zU(320),
-      ZU = zU(1305);
-    const RU = {
-      floating: "settingsMenu:joystickFloating",
-      fixed_shown: "settingsMenu:joystickFixed",
-      fixed_hidden: "settingsMenu:joystickHidden"
-    };
-    var PU = zU(9449);
-    var WU = zU(1521),
-      dU = zU(1410),
-      LU = zU(9457),
-      eU = zU(1457),
-      CU = zU(1390),
-      wU = zU(9459),
-      qU = zU(2645);
-
-    function OU(UU) {
-      let {
-        className: XU,
-        keepPlace: zU
-      } = UU;
-      return zU ? (0, ZU.jsx)("div", {
-        className: oU()(XU, "Placeholder")
-      }) : null
-    }
-
-    function SU(UU) {
-      let {
-        id: XU,
-        elements: zU,
-        actionButtons: yU,
-        keyNames: QU,
-        className: AU,
-        keepPlace: FU,
-        onHidden: oU
-      } = UU;
-      const {
-        t: EU
-      } = (0, cU.I)();
-      if (!wU.i[XU].hide) return (0, ZU.jsx)(OU, {
-        className: AU,
-        keepPlace: FU
-      });
-      const YU = (0, qU.q)(zU, XU);
-      return (0, ZU.jsx)(DU.O, {
-        className: AU,
-        ariaLabel: EU(YU ? "hudLayout:showElement" : "hudLayout:hideElement", {
-          name: (0, wU.y)(XU, yU, EU, QU)
-        }),
-        pressed: !YU,
-        onClick: () => {
-          oU(XU, !YU)
-        },
-        children: (0, ZU.jsx)(CU.d, {
-          name: YU ? "eye-slash" : "eye"
-        })
-      })
-    }
-
-    function rU(UU) {
-      let {
-        id: XU,
-        elements: zU,
-        actionButtons: yU,
-        keyNames: QU,
-        className: AU,
-        keepPlace: FU,
-        onlyWhenMoved: oU,
-        locked: EU,
-        onReset: YU
-      } = UU;
-      const {
-        t: NU
-      } = (0, cU.I)(), IU = wU.i[XU], pU = (0, qU.H)(zU[XU]);
-      return !IU.move && !IU.scale || oU && pU ? (0, ZU.jsx)(OU, {
-        className: AU,
-        keepPlace: FU
-      }) : (0, ZU.jsx)(DU.O, {
-        className: AU,
-        disabled: pU || EU,
-        ariaLabel: NU("hudLayout:resetElement", {
-          name: (0, wU.y)(XU, yU, NU, QU)
-        }),
-        analyticsClick: {
-          id: "hud_layout.reset_element",
-          value: XU
-        },
-        onClick: UU => {
-          oU && HU(UU.currentTarget), YU(XU)
-        },
-        children: (0, ZU.jsx)(CU.d, {
-          name: "rotate-left"
-        })
-      })
-    }
-
-    function uU(UU) {
-      let {
-        id: XU,
-        actionButtons: zU,
-        keyNames: yU,
-        className: QU,
-        keepPlace: AU,
-        locked: FU,
-        lockable: oU,
-        onLocked: EU
-      } = UU;
-      const {
-        t: YU
-      } = (0, cU.I)();
-      return oU || FU ? (0, ZU.jsx)(DU.O, {
-        className: QU,
-        ariaLabel: YU(FU ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
-          name: (0, wU.y)(XU, zU, YU, yU)
-        }),
-        pressed: FU,
-        active: FU,
-        analyticsClick: {
-          id: "hud_layout.edit",
-          value: `${FU?"unlock":"lock"}:${XU}`
-        },
-        onClick: () => {
-          EU(XU, !FU)
-        },
-        children: (0, ZU.jsx)(CU.d, {
-          name: FU ? "lock" : "lock-open"
-        })
-      }) : (0, ZU.jsx)(OU, {
-        className: QU,
-        keepPlace: AU
-      })
-    }
-
-    function fU(UU) {
-      let {
-        className: XU,
-        open: zU,
-        name: yU,
-        onToggle: QU
-      } = UU;
-      const {
-        t: AU
-      } = (0, cU.I)();
-      return (0, ZU.jsx)(DU.O, {
-        className: XU,
-        ariaLabel: AU(zU ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
-          name: yU
-        }),
-        pressed: zU,
-        analyticsClick: {
-          id: "hud_layout.children",
-          value: zU ? "close" : "open"
-        },
-        onClick: () => {
-          QU(!zU)
-        },
-        children: (0, ZU.jsx)(CU.d, {
-          name: zU ? "angle-up" : "angle-down"
-        })
-      })
-    }
-
-    function iU(UU, XU) {
-      var zU;
-      UU.contains(document.activeElement) && XU.focus({
-        preventScroll: !0
-      }), null === (zU = (0, eU.e)()) || void 0 === zU || zU.handOverPadFocus(UU, XU)
-    }
-
-    function HU(UU) {
-      const XU = UU.closest("[data-hud-row]"),
-        zU = null === XU || void 0 === XU ? void 0 : XU.querySelector(".HudElementRowName");
-      return !(!XU || !zU) && (iU(XU, zU), !0)
-    }
-    const MU = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
-
-    function vU(UU, XU) {
-      return "joystick" === UU && !XU
-    }
-
-    function VU() {
-      const {
-        t: UU
-      } = (0, cU.I)();
-      return (0, ZU.jsx)(DU.O, {
-        className: "HudFixJoystickButton",
-        analyticsClick: {
-          id: "hud_layout.fix_joystick"
-        },
-        onClick: UU => {
-          const XU = UU.currentTarget;
-          if (!HU(XU)) {
-            const UU = function(UU) {
-              var XU, zU;
-              const cU = [UU.previousElementSibling, UU.nextElementSibling].find((UU => UU instanceof HTMLElement && UU.matches(MU)));
-              return null !== (XU = null !== cU && void 0 !== cU ? cU : null === (zU = UU.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === zU ? void 0 : zU.querySelector(`:is(${MU}):not(.HudFixJoystickButton)`)) && void 0 !== XU ? XU : null
-            }(XU);
-            UU && iU(XU, UU)
-          }
-          EU.e.setClientEscMenuOptions({
-            joystickMode: "fixed_shown"
-          })
-        },
-        children: UU("hudLayout:fixJoystick")
-      })
-    }
-    var sU = zU(73),
-      nU = zU(1294),
-      mU = zU(3478),
-      lU = zU(3021),
-      xU = zU(9461),
-      JU = zU(9466),
-      jU = zU(2651),
-      KU = zU(2668),
-      bU = zU(3519),
-      TU = zU(9471);
-    const hU = UU => ({
-      [wU.g]: UU
-    });
-
-    function UX(UU) {
-      let {
-        id: XU,
-        slot: zU,
-        icon: cU,
-        label: QU,
-        hidden: AU,
-        className: FU,
-        face: DU
-      } = UU;
-      const EU = (0, yU.useRef)(null);
-      return (0, yU.useLayoutEffect)((() => {
-        DU && EU.current && (0, TU.n)(EU.current, DU)
-      }), [DU]), (0, ZU.jsxs)("div", {
-        className: oU()("TouchKeyHit", `TouchSlot${zU}`, FU, {
-          HudPreviewGhost: AU.has(XU)
-        }),
-        ...hU(XU),
-        children: [DU && (0, ZU.jsx)("div", {
-          ref: EU,
-          className: oU()("TouchKey", {
-            Labelled: DU.classList.contains("Labelled")
-          })
-        }), !DU && (0, ZU.jsxs)("div", {
-          className: oU()("TouchKey", {
-            Labelled: void 0 !== QU
-          }),
-          children: [cU && (0, ZU.jsx)(CU.d, {
-            name: cU
-          }), void 0 !== QU && (0, ZU.jsx)("span", {
-            className: "TouchKeyLabel",
-            children: QU
-          })]
-        })]
-      })
-    }
-
-    function XX(UU) {
-      let {
-        item: XU,
-        selected: zU
-      } = UU;
-      const cU = (0, yU.useRef)(null);
-      return (0, yU.useLayoutEffect)((() => {
-        cU.current && (0, TU.n)(cU.current, XU)
-      }), [XU]), (0, ZU.jsx)("div", {
-        ref: cU,
-        className: oU()("InvenItem", {
-          Selected: zU
-        })
-      })
-    }
-    const zX = {
-        emotes: "face-smile",
-        perspective: "video",
-        scoreboard: "list",
-        tasks: "bars",
-        cosmetics: "shirt",
-        invite: "user-plus",
-        settings: "gear"
-      },
-      cX = UU => void 0 === UU ? {} : {
-        style: {
-          "--parked": UU
-        }
-      };
-
-    function yX(UU) {
-      let {
-        id: XU,
-        hidden: zU,
-        parked: cU,
-        unslotted: yU = !1
-      } = UU;
-      return (0, ZU.jsx)("div", {
-        className: oU()("TopRightIcon", KU.r[XU], {
-          HudPreviewGhost: zU.has(XU),
-          [jU.d]: void 0 !== cU,
-          [jU.g]: yU
-        }),
-        ...cX(cU),
-        children: (0, ZU.jsx)("div", {
-          className: "UiItemIcon SmallTextBold",
-          ...hU(XU),
-          children: (0, ZU.jsx)("div", {
-            className: "ScaleOnHover",
-            children: (0, ZU.jsx)(CU.d, {
-              name: zX[XU]
-            })
-          })
-        })
-      })
-    }
-
-    function QX(UU) {
-      let {
-        portraitPhone: XU,
-        icons: zU,
-        pinnedIcons: cU,
-        hidden: QU,
-        moved: AU,
-        trayState: FU
-      } = UU;
-      const DU = XU ? (0, jU.I)(zU) : [],
-        EU = zU.filter((UU => "settings" === UU)),
-        YU = zU.filter((UU => "settings" !== UU && !DU.includes(UU))).reverse(),
-        NU = DU.length > 0 && "gone" === FU,
-        IU = [...EU, ...NU ? ["tray"] : [], ...YU].filter((UU => "tray" === UU || QU.has(UU) && !AU.has(UU))),
-        pU = UU => {
-          const XU = IU.indexOf(UU);
-          return XU < 0 ? void 0 : XU
-        },
-        aU = (UU, XU) => (0, ZU.jsx)(yX, {
-          id: UU,
-          hidden: QU,
-          parked: XU ? pU(UU) : void 0,
-          unslotted: XU && QU.has(UU) && AU.has(UU)
-        }, UU);
-      return (0, ZU.jsxs)("div", {
-        className: oU()("TopRightIcons TouchInGame", {
-          Column: XU
-        }),
-        children: [EU.map((UU => aU(UU, !0))), DU.length > 0 && (0, ZU.jsxs)("div", {
-          className: oU()("TopRightIcon TopRightTrayToggle Open", {
-            [jU.d]: NU
-          }),
-          ...cX(pU("tray")),
-          children: [(0, ZU.jsx)("div", {
-            className: oU()("UiItemIcon SmallTextBold", {
-              HudPreviewGhost: "filled" !== FU
-            }),
-            children: (0, ZU.jsx)("div", {
-              className: "ScaleOnHover",
-              children: (0, ZU.jsx)(CU.d, {
-                name: "ellipsis"
-              })
-            })
-          }), (0, ZU.jsx)("div", {
-            className: "TopRightTray",
-            children: DU.map((UU => aU(UU, !1)))
-          })]
-        }), YU.map((UU => (0, ZU.jsxs)(yU.Fragment, {
-          children: ["perspective" === UU && null !== cU.rightOfCamera && (0, ZU.jsx)(AX, {
-            icon: cU.rightOfCamera
-          }), aU(UU, !0)]
-        }, UU))), null !== cU.leftEnd && (0, ZU.jsx)(AX, {
-          icon: cU.leftEnd
-        })]
-      })
-    }
-
-    function AX(UU) {
-      let {
-        icon: XU
-      } = UU;
-      return (0, ZU.jsx)("div", {
-        className: "TopRightIcon",
-        children: (0, ZU.jsx)("div", {
-          className: "UiItemIcon SmallTextBold",
-          children: (0, ZU.jsx)("div", {
-            className: "ScaleOnHover",
-            children: (0, ZU.jsx)(CU.d, {
-              name: XU
-            })
-          })
-        })
-      })
-    }
-
-    function FX(UU) {
-      let {
-        next: XU,
-        hidden: zU
-      } = UU;
-      return (0, ZU.jsx)("div", {
-        className: oU()("HotBarArrow", XU ? "Next" : "Previous", {
-          HudPreviewGhost: zU
-        }),
-        ...hU("arrows"),
-        children: (0, ZU.jsx)("div", {
-          className: "UiItemIcon SmallTextBold",
-          children: (0, ZU.jsx)("div", {
-            className: "ScaleOnHover",
-            children: (0, ZU.jsx)(CU.d, {
-              name: XU ? "caret-right" : "caret-left"
-            })
-          })
-        })
-      })
-    }
-
-    function oX() {
-      return (0, ZU.jsx)("div", {
-        className: "SocialBarContainer",
-        children: (0, ZU.jsx)("div", {
-          className: "SocialBarOuter",
-          children: (0, ZU.jsx)("div", {
-            className: "SocialBar",
-            children: (0, ZU.jsx)("div", {
-              className: "CondensedSocialBarInner",
-              children: (0, ZU.jsx)("div", {
-                className: "CondensedSectionsContainer",
-                children: (0, ZU.jsxs)("div", {
-                  className: "CondensedSections",
-                  children: [(0, ZU.jsxs)("div", {
-                    className: "CondensedSection CondensedSectionFriendRequests",
-                    children: [(0, ZU.jsx)("div", {
-                      className: "CondensedSectionValue",
-                      children: "0"
-                    }), (0, ZU.jsx)("div", {
-                      className: "CondensedSectionIcon",
-                      children: (0, ZU.jsx)(CU.d, {
-                        name: "user-clock"
-                      })
-                    })]
-                  }), (0, ZU.jsx)("div", {
-                    className: "SocialBarDividerContainer",
-                    children: (0, ZU.jsx)("div", {
-                      className: "SocialBarDivider"
-                    })
-                  }), (0, ZU.jsxs)("div", {
-                    className: "CondensedSection CondensedSectionOnlineFriends",
-                    children: [(0, ZU.jsx)("div", {
-                      className: "CondensedSectionValue",
-                      children: "0"
-                    }), (0, ZU.jsx)("div", {
-                      className: "CondensedSectionIcon",
-                      children: (0, ZU.jsx)(CU.d, {
-                        name: "user"
-                      })
-                    })]
-                  })]
-                })
-              })
-            })
-          })
-        })
-      })
-    }
-    const DX = {
-        J: "JumpKey",
-        C: "CrouchKey"
-      },
-      EX = {
-        P: {
-          icon: "crosshairs",
-          labelKey: "touchKeys:scope"
-        },
-        X: {
-          icon: "feather-pointed",
-          labelKey: "touchKeys:fly"
-        }
-      },
-      YX = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-      NX = {
-        0: "swords",
-        1: "hammer",
-        2: "cube",
-        3: "cubes",
-        5: "cookie"
-      };
-
-    function IX(UU) {
-      let {
-        presence: XU,
-        portraitPhone: zU,
-        hidden: yU,
-        actionButtons: QU,
-        joystickFixed: AU,
-        keysAbove: FU,
-        auraBar: DU,
-        trayState: EU,
-        moved: NU
-      } = UU;
-      const {
-        t: IU
-      } = (0, cU.I)(), {
-        faces: pU,
-        items: aU
-      } = XU, tU = UU => ({
-        HudPreviewGhost: (0, wU.J)(UU).some((UU => yU.has(UU)))
-      });
-      return (0, ZU.jsxs)("div", {
-        className: "InGameUi HudPreviewInGameUi",
-        children: [(0, ZU.jsx)("div", {
-          className: "InGameHeaderContainer Touchscreen",
-          children: (0, ZU.jsxs)("div", {
-            className: "InGameHeader",
-            children: [(0, ZU.jsx)("div", {
-              className: "InGameHeaderLogo",
-              children: "bloxd.io"
-            }), (0, ZU.jsx)("div", {
-              className: "InGameHeaderSpacer"
-            }), (0, ZU.jsx)("div", {
-              className: "InGameHeaderGameName",
-              children: IU("hudLayout:previewGameName")
-            })]
-          })
-        }), (0, ZU.jsx)("div", {
-          className: "TopLeftElements",
-          children: (0, ZU.jsx)("div", {
-            className: "InGameHeaderAndChat",
-            children: (0, ZU.jsxs)("div", {
-              className: "Chat",
-              children: [(0, ZU.jsx)("div", {
-                className: "ChatMessages HideScrollbar",
-                children: [IU("hudLayout:previewChatLine"), IU("hudLayout:previewChatJoined", {
-                  name: "Arthur"
-                }), IU("hudLayout:previewChatJoined", {
-                  name: "Alex"
-                })].map((UU => (0, ZU.jsx)("div", {
-                  className: "MessageWrapper",
-                  children: (0, ZU.jsx)("div", {
-                    className: "TextFromServer",
-                    children: (0, ZU.jsx)("div", {
-                      className: "IndividualText",
-                      children: UU
-                    })
-                  })
-                }, UU)))
-              }), (0, ZU.jsx)("button", {
-                type: "button",
-                tabIndex: -1,
-                className: oU()("ChatIconWrapper SmallTextLight", tU("chat")),
-                ...hU("chat"),
-                children: (0, ZU.jsx)(CU.d, {
-                  name: "comment-dots",
-                  className: "ChatIcon"
-                })
-              })]
-            })
-          })
-        }), (0, ZU.jsx)("div", {
-          className: "RightElements RightElementsTouchscreen",
-          children: (0, ZU.jsxs)("div", {
-            className: "TopRightElements",
-            children: [(0, ZU.jsx)("div", {
-              className: "TopRightElementsLeft",
-              children: (0, ZU.jsx)("div", {
-                className: "TopRightIconsContainer",
-                ...hU("menu"),
-                children: (0, ZU.jsx)(QX, {
-                  portraitPhone: zU,
-                  icons: XU.rowIcons,
-                  pinnedIcons: XU.pinnedIcons,
-                  hidden: yU,
-                  trayState: EU,
-                  moved: NU
-                })
-              })
-            }), YU.featureFlags.useSocialFeatures && (0, ZU.jsx)("div", {
-              className: "TopRightElementsRight",
-              children: (0, ZU.jsx)(oX, {})
-            })]
-          })
-        }), (0, ZU.jsx)("div", {
-          className: "HudPreviewCrosshair"
-        }), (0, ZU.jsx)("div", {
-          className: "TouchInteractHit HudPreviewInteract",
-          children: (0, ZU.jsxs)("div", {
-            className: "TouchInteractKey",
-            ...hU("interact"),
-            children: [(0, ZU.jsx)("div", {
-              className: "TouchInteractIcon",
-              children: (0, ZU.jsx)(CU.d, {
-                name: "hand-back-point-up"
-              })
-            }), (0, ZU.jsx)("div", {
-              children: IU("hudLayout:previewInteract")
-            })]
-          })
-        }), (0, ZU.jsx)("div", {
-          className: "BottomCentre",
-          children: (0, ZU.jsxs)("div", {
-            className: "BottomElements",
-            children: [(0, ZU.jsx)("div", {
-              className: "BottomLeftElements Touch"
-            }), (0, ZU.jsxs)("div", {
-              className: "BottomMiddleElements",
-              children: [(0, ZU.jsx)("div", {
-                className: "BottomScreenStatBarList",
-                ...hU("hotbar"),
-                children: (0, ZU.jsx)("div", {
-                  className: "BottomScreenStatBarWrapper",
-                  children: (0, ZU.jsxs)("div", {
-                    className: "BottomScreenStatBarBackground",
-                    children: [(0, ZU.jsx)("div", {
-                      className: "BottomScreenStatBar HealthBar",
-                      style: {
-                        transform: "scaleX(0.8)",
-                        transformOrigin: "left center"
-                      }
-                    }), (0, ZU.jsxs)("div", {
-                      className: "BottomScreenStatBarText SmallTextBold",
-                      children: [(0, ZU.jsx)(CU.d, {
-                        name: "heart"
-                      }), " 80/100"]
-                    })]
-                  })
-                })
-              }), DU && (0, ZU.jsxs)("div", {
-                className: "AuraBarWrapper",
-                children: [(0, ZU.jsxs)("div", {
-                  className: "AuraBarLabel SmallTextBold",
-                  children: [(0, ZU.jsx)("img", {
-                    className: "AuraBarLabelImage",
-                    src: (0, bU.e)("glint"),
-                    alt: ""
-                  }), (0, ZU.jsx)("div", {
-                    className: "AuraBarLabelText",
-                    children: "0"
-                  })]
-                }), (0, ZU.jsx)("div", {
-                  className: "AuraBar",
-                  children: (0, ZU.jsx)("div", {
-                    className: "AuraBarBackground",
-                    style: {
-                      width: "40%"
-                    }
-                  })
-                })]
-              }), (0, ZU.jsx)("div", {
-                className: "HotBarRow",
-                children: (0, ZU.jsx)("div", {
-                  className: oU()("HotBarContainer Touch", {
-                    KeysAbove: FU
-                  }),
-                  children: (0, ZU.jsxs)("div", {
-                    className: "HotBar",
-                    ...hU("hotbar"),
-                    children: [(0, ZU.jsxs)("div", {
-                      className: oU()("TouchInventoryKeys", {
-                        NoAuraBar: !DU
-                      }),
-                      children: [(0, ZU.jsx)("div", {
-                        className: oU()("TouchInventoryKey ShopKey", tU("shop"), {
-                          Hidden: !XU.shop
-                        }),
-                        ...hU("shop"),
-                        children: (0, ZU.jsx)("div", {
-                          className: "UiItemIcon SmallTextBold",
-                          children: (0, ZU.jsx)("div", {
-                            className: "ScaleOnHover",
-                            children: (0, ZU.jsx)(CU.d, {
-                              name: "cart-shopping"
-                            })
-                          })
-                        })
-                      }), (0, ZU.jsx)("div", {
-                        className: oU()("TouchInventoryKey BagKey", tU("bag"), {
-                          Hidden: !XU.bag
-                        }),
-                        ...hU("bag"),
-                        children: (0, ZU.jsx)("div", {
-                          className: "UiItemIcon SmallTextBold",
-                          children: (0, ZU.jsx)("div", {
-                            className: "ScaleOnHover",
-                            children: (0, ZU.jsx)(CU.d, {
-                              name: "backpack"
-                            })
-                          })
-                        })
-                      })]
-                    }), (0, ZU.jsx)(FX, {
-                      next: !1,
-                      hidden: yU.has("arrows")
-                    }), (0, ZU.jsxs)("div", {
-                      className: "HotBarGameItemsContainer",
-                      children: [null !== aU && aU.map(((UU, XU) => (0, ZU.jsx)(XX, {
-                        item: UU,
-                        selected: UU.classList.contains("Selected")
-                      }, XU))), null === aU && YX.map((UU => {
-                        const XU = NX[UU];
-                        return (0, ZU.jsx)("div", {
-                          className: oU()("InvenItem", {
-                            Selected: 0 === UU
-                          }),
-                          children: XU && (0, ZU.jsx)("div", {
-                            className: "HudPreviewItem",
-                            children: (0, ZU.jsx)(CU.d, {
-                              name: XU
-                            })
-                          })
-                        }, UU)
-                      }))]
-                    }), (0, ZU.jsx)(FX, {
-                      next: !0,
-                      hidden: yU.has("arrows")
-                    })]
-                  })
-                })
-              })]
-            }), (0, ZU.jsx)("div", {
-              className: "BottomRightElements",
-              children: (0, ZU.jsxs)("div", {
-                className: "TouchComponentsButtons",
-                children: [null !== pU && TU.i.map((UU => {
-                  const XU = pU[UU];
-                  return XU && (0, ZU.jsx)(UX, {
-                    id: TU.g[UU],
-                    slot: UU,
-                    face: XU,
-                    className: DX[UU],
-                    hidden: yU
-                  }, UU)
-                })), (0, TU.r)(XU, QU).map((UU => (0, ZU.jsx)(UX, {
-                  id: TU.g[UU],
-                  slot: UU,
-                  icon: EX[UU].icon,
-                  label: IU(EX[UU].labelKey),
-                  className: "HudPreviewContextSlot",
-                  hidden: yU
-                }, UU))), null === pU && (0, ZU.jsxs)(ZU.Fragment, {
-                  children: [(0, ZU.jsx)(UX, {
-                    id: "jump",
-                    slot: "J",
-                    icon: "arrow-up-from-line",
-                    className: "JumpKey",
-                    hidden: yU
-                  }), (0, ZU.jsx)(UX, {
-                    id: "crouch",
-                    slot: "C",
-                    icon: "arrow-down-to-line",
-                    className: "CrouchKey",
-                    hidden: yU
-                  }), QU && (0, ZU.jsxs)(ZU.Fragment, {
-                    children: [(0, ZU.jsx)(UX, {
-                      id: "attack",
-                      slot: "A",
-                      icon: "swords",
-                      hidden: yU
-                    }), (0, ZU.jsx)(UX, {
-                      id: "use",
-                      slot: "U",
-                      icon: "hand-back-point-up",
-                      hidden: yU
-                    })]
-                  }), (0, TU.l)(QU).map((UU => (0, ZU.jsx)(UX, {
-                    id: TU.g[UU],
-                    slot: UU,
-                    icon: EX[UU].icon,
-                    label: IU(EX[UU].labelKey),
-                    hidden: yU
-                  }, UU))), (0, ZU.jsx)(UX, {
-                    id: "game",
-                    slot: "G",
-                    icon: "bolt",
-                    hidden: yU
-                  })]
-                })]
-              })
-            })]
-          })
-        }), (0, ZU.jsxs)("div", {
-          className: "TouchMovementWrapper",
-          children: [(0, ZU.jsx)("div", {
-            className: "JoystickZone HudPreviewJoystickZone",
-            children: (0, ZU.jsxs)("div", {
-              className: oU()("Joystick Resting HudPreviewJoystick", {
-                Floating: !AU
-              }),
-              ...hU("joystick"),
-              children: [(0, ZU.jsx)("div", {
-                className: "JoystickBase"
-              }), (0, ZU.jsx)("div", {
-                className: "JoystickKnob"
-              })]
-            })
-          }), XU.sprint && (0, ZU.jsx)("div", {
-            className: oU()("TouchSprintHit", tU("sprint"), {
-              AtHome: !AU
-            }),
-            ...hU("sprint"),
-            children: (0, ZU.jsx)("div", {
-              className: "TouchKey TouchSprintKey Lit",
-              children: (0, ZU.jsx)(CU.d, {
-                name: "person-running"
-              })
-            })
-          })]
-        })]
-      })
-    }
-
-    function pX() {
-      const [UU, XU] = (0, yU.useState)({}), zU = (0, yU.useCallback)((UU => {
-        XU((XU => [...new Set([...Object.keys(XU), ...Object.keys(UU)])].every((zU => XU[zU] === UU[zU])) ? XU : UU))
-      }), []);
-      return [UU, zU]
-    }
-    const aX = .05;
-
-    function tX(UU) {
-      var XU;
-      let {
-        selected: zU,
-        layout: yU,
-        actionButtons: QU,
-        keyNames: AU,
-        overlaps: FU,
-        scaleCaps: EU,
-        joystickFixed: YU,
-        onScale: NU,
-        onHidden: IU,
-        onReset: pU,
-        locked: aU,
-        lockable: tU,
-        onLocked: gU,
-        extra: kU
-      } = UU;
-      const {
-        t: GU
-      } = (0, cU.I)(), BU = zU ? wU.i[zU] : null, RU = null !== zU && aU.has(zU), PU = (zU && yU.hudElements[zU] || qU.m)[2], WU = null !== (XU = zU && EU[zU]) && void 0 !== XU ? XU : qU.f, dU = UU => {
-        zU && NU(zU, Math.min(WU, Math.round(100 * (PU + .1 * UU)) / 100))
-      };
-      return (0, ZU.jsxs)(ZU.Fragment, {
-        children: [(0, ZU.jsxs)("div", {
-          className: oU()("HudQuickName SmallTextBold", {
-            Overlap: FU.length > 0
-          }),
-          children: [FU.length > 0 && (0, ZU.jsx)(CU.d, {
-            name: "triangle-exclamation"
-          }), BU ? (0, wU.y)(BU.id, QU, GU, AU) : GU("hudLayout:fullScreenHint"), FU.length > 0 && (0, ZU.jsx)("span", {
-            className: "HudQuickOverlap",
-            children: GU("hudLayout:overlapsShort", {
-              names: (0, wU.v)(FU, QU, GU, AU)
-            })
-          })]
-        }), (null === BU || void 0 === BU ? void 0 : BU.scale) && (0, ZU.jsxs)("div", {
-          className: "HudQuickSize",
-          children: [(0, ZU.jsx)(DU.O, {
-            disabled: RU || PU <= qU.j,
-            ariaLabel: GU("hudLayout:smaller"),
-            onClick: () => {
-              dU(-1)
-            },
-            children: (0, ZU.jsx)(CU.d, {
-              name: "minus"
-            })
-          }), (0, ZU.jsx)("span", {
-            className: "HudQuickSizeValue",
-            children: `${Math.round(100*PU)}%`
-          }), (0, ZU.jsx)(DU.O, {
-            disabled: RU || PU >= WU,
-            ariaLabel: GU("hudLayout:larger"),
-            onClick: () => {
-              dU(1)
-            },
-            children: (0, ZU.jsx)(CU.d, {
-              name: "plus"
-            })
-          })]
-        }), (BU || kU) && (0, ZU.jsxs)("div", {
-          className: "HudQuickActions",
-          children: [BU && (0, ZU.jsxs)(ZU.Fragment, {
-            children: [(0, ZU.jsx)(uU, {
-              id: BU.id,
-              actionButtons: QU,
-              keyNames: AU,
-              locked: RU,
-              lockable: tU(BU.id),
-              onLocked: gU
-            }), (0, ZU.jsx)(SU, {
-              id: BU.id,
-              elements: yU.hudElements,
-              actionButtons: QU,
-              keyNames: AU,
-              onHidden: IU
-            }), (0, ZU.jsx)(rU, {
-              id: BU.id,
-              elements: yU.hudElements,
-              actionButtons: QU,
-              keyNames: AU,
-              locked: RU,
-              onReset: pU
-            }), vU(BU.id, YU) && (0, ZU.jsx)(VU, {})]
-          }), kU]
-        })]
-      })
-    }
-    var gX = zU(1115),
-      kX = zU(4839);
-    const GX = "HudPreviewDoc",
-      BX = {
-        hotbar: "TouchHotbar",
-        keysAbove: "TouchHotbarKeysAbove",
-        hasShop: "TouchHotbarHasShop",
-        hasBag: "TouchHotbarHasBag"
-      },
-      ZX = new Set([GX, ...Object.values(BX)]),
-      RX = new Set(qU.w.map(KU.I)),
-      PX = new Set(KU.l),
-      WX = 'style, link[rel="stylesheet"]';
-
-    function dX(UU, XU, zU, cU) {
-      const yU = new Map,
-        QU = new Set,
-        AU = new URL(UU.baseURI).origin,
-        FU = XU => {
-          var zU;
-          if ("LINK" !== XU.nodeName) return !0;
-          const cU = null === (zU = XU.getAttribute("href")) || void 0 === zU ? void 0 : zU.trim();
-          if (!cU) return !1;
-          try {
-            return new URL(cU, UU.baseURI).origin === AU
-          } catch {
-            return !1
-          }
-        };
-      let oU = null;
-      const DU = () => {
-          oU !== (0 === QU.size) && (oU = 0 === QU.size, null === cU || void 0 === cU || cU(oU))
-        },
-        EU = UU => {
-          const XU = UU.cloneNode(!0);
-          if ("LINK" === XU.tagName) {
-            QU.add(XU);
-            const UU = () => {
-              QU.delete(XU), DU()
-            };
-            XU.addEventListener("load", UU), XU.addEventListener("error", UU), zU && XU.addEventListener("load", zU)
-          }
-          return XU
-        },
-        YU = () => {
-          const cU = function(UU) {
-              const XU = [...UU.body.children].filter((UU => UU.matches(WX)));
-              return [...UU.head.querySelectorAll(WX), ...XU]
-            }(UU).filter(FU),
-            AU = new Set(cU);
-          for (const [UU, XU] of yU) AU.has(UU) || (XU.remove(), yU.delete(UU), QU.delete(XU));
-          let oU = null;
-          for (let UU = cU.length - 1; UU >= 0; UU--) {
-            const QU = cU[UU];
-            let AU = yU.get(QU);
-            AU ? "STYLE" === QU.tagName && AU.textContent !== QU.textContent && (AU.textContent = QU.textContent, null === zU || void 0 === zU || zU()) : (AU = EU(QU), yU.set(QU, AU), XU.head.insertBefore(AU, oU)), oU = AU
-          }
-          DU()
-        };
-      YU();
-      const NU = new MutationObserver(YU);
-      return NU.observe(UU.head, {
-        childList: !0,
-        subtree: !0,
-        characterData: !0
-      }), NU.observe(UU.body, {
-        childList: !0
-      }), () => {
-        NU.disconnect()
-      }
-    }
-
-    function LX(UU, XU, zU) {
-      let {
-        keysAbove: cU
-      } = zU;
-      const yU = [...UU.documentElement.classList].filter((UU => !ZX.has(UU) && !PX.has(UU))),
-        QU = [...XU.documentElement.classList].filter((UU => PX.has(UU))),
-        AU = [GX, BX.hotbar, BX.hasShop, BX.hasBag];
-      cU && AU.push(BX.keysAbove), XU.documentElement.className = [...yU, ...AU, ...QU].join(" ")
-    }
-    const eX = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
-
-    function CX(UU, XU, zU, cU, yU) {
-      const QU = (0, qU.x)(zU, cU, "joystick"),
-        AU = (0, KU.L)((0, KU.$)(zU, cU, yU), cU),
-        FU = AU.classes.filter((UU => !RX.has(UU))),
-        oU = XU.documentElement,
-        DU = zU.hudLayouts[cU].hudSafe,
-        EU = (0, KU.R)(DU, window.innerWidth, window.innerHeight, wX(), DU ? (0, KU.db)(XU) : 0);
-      (0, KU.fb)({
-        ...AU,
-        classes: FU
-      }, {
-        vars: oU,
-        safe: oU,
-        classes: oU
-      }), oU.style.setProperty("--preview-joystick-shift-left", `${EU[3]}px`), oU.style.setProperty("--preview-joystick-shift-bottom", `${EU[2]}px`), oU.style.setProperty("--preview-joystick-scale", String(QU[2])), (0, kX.f)(oU, XU, zU, cU);
-      for (const YU of eX) oU.style.setProperty(YU, UU.documentElement.style.getPropertyValue(YU) || "0px")
-    }
-
-    function wX() {
-      return (0, KU.Z)(EU.e.get("notchSize"), window.innerWidth, window.innerHeight)
-    }
-
-    function qX(UU) {
-      return (0, KU.A)(wX(), (0, KU.db)(UU))
-    }
-
-    function OX(UU, XU, zU) {
-      const cU = UU.documentElement.style,
-        yU = (0, KU.V)(XU),
-        QU = cU.getPropertyValue(yU);
-      try {
-        return zU((UU => {
-          cU.setProperty(yU, String(UU))
-        }))
-      } finally {
-        "" === QU ? cU.removeProperty(yU) : cU.setProperty(yU, QU)
-      }
-    }
-
-    function SX(UU, XU) {
-      const [zU, cU] = OX(UU, "hotbar", (XU => {
-        const zU = zU => {
-          var cU, yU;
-          return XU(zU), null !== (cU = null === (yU = UU.querySelector(".HotBarGameItemsContainer")) || void 0 === yU ? void 0 : yU.getBoundingClientRect().width) && void 0 !== cU ? cU : 0
-        };
-        return [zU(1), zU(qU.f)]
-      }));
-      return zU <= 0 ? qU.f : Math.min(qU.f, Math.max(1, Math.floor(cU / zU / XU + 1e-6) * XU))
-    }
-    const rX = 3,
-      uX = .5,
-      fX = UU => UU.right - UU.left;
-    const iX = (UU, XU) => Math.abs((0, xU.b)(UU).x - (0, xU.b)(XU).x) + Math.abs((0, xU.b)(UU).y - (0, xU.b)(XU).y) + Math.abs(fX(UU) - fX(XU));
-
-    function HX(UU, XU, zU, cU, yU) {
-      let {
-        canKeep: QU = () => !0,
-        passes: AU = rX,
-        before: FU
-      } = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-      const oU = XU.hudLayouts[zU].hudLocked.filter(QU);
-      if (0 === oU.length) return XU;
-      const DU = [...wU.e].filter((cU => !oU.includes(cU) && (0, qU.x)(UU, zU, cU).join() === (0, qU.x)(XU, zU, cU).join())),
-        EU = UU => {
-          const XU = (0, xU.N)(DU.flatMap((XU => UU[XU] ? [UU[XU]] : [])));
-          return {
-            ...UU,
-            cluster: null !== XU && void 0 !== XU ? XU : void 0
-          }
-        };
-      let YU = null;
-      const NU = UU => {
-          YU = UU;
-          const XU = yU(UU);
-          return XU && {
-            ...XU,
-            boxes: EU(XU.boxes)
-          }
-        },
-        IU = FU ? {
-          ...FU,
-          boxes: EU(FU.boxes)
-        } : NU(UU),
-        pU = IU && NU(XU);
-      if (!IU || !pU) return XU;
-      const aU = IU.boxes;
-      let tU = pU.boxes;
-      const gU = IU.keysAbove !== pU.keysAbove,
-        kU = gU || Boolean(IU.shopAlone) !== Boolean(pU.shopAlone),
-        GU = new Set(oU.filter((UU => !(0, wU.B)(UU) || !("bag" === UU ? gU : kU))));
-      let BU = XU;
-      for (let PU = 0; PU < AU && GU.size > 0; PU++) {
-        var ZU, RU;
-        const UU = new Map;
-        for (const XU of GU) {
-          const yU = aU[XU],
-            QU = tU[XU],
-            AU = yU && QU ? MX(XU, (0, qU.x)(BU, zU, XU), yU, QU, cU) : null;
-          AU ? UU.set(XU, AU) : GU.delete(XU)
-        }
-        if (0 === UU.size) break;
-        let yU = BU;
-        for (const [XU, cU] of UU) yU = (0, qU.hb)(yU, zU, XU, cU);
-        const QU = null === (ZU = NU(yU)) || void 0 === ZU ? void 0 : ZU.boxes;
-        if (!QU) return XU;
-        let AU = BU;
-        for (const [XU, cU] of UU) {
-          const UU = QU[XU];
-          UU && iX(aU[XU], UU) < iX(aU[XU], tU[XU]) - uX ? AU = (0, qU.hb)(AU, zU, XU, cU) : GU.delete(XU)
-        }
-        if (AU === BU) break;
-        const FU = [...UU.keys()].every((UU => GU.has(UU)));
-        BU = FU ? yU : AU;
-        const oU = FU ? QU : null === (RU = NU(BU)) || void 0 === RU ? void 0 : RU.boxes;
-        if (!oU) return XU;
-        tU = oU
-      }
-      return YU !== BU && yU(BU), BU
-    }
-
-    function MX(UU, XU, zU, cU, yU) {
-      let [QU, AU, FU] = XU;
-      const oU = qU.s[UU],
-        DU = {};
-      oU.scale && fX(cU) > 0 && Math.abs(fX(zU) - fX(cU)) > uX && (DU.scale = Math.max(qU.j, Math.min(qU.f, FU * fX(zU) / fX(cU))));
-      const EU = (0, xU.b)(zU).x - (0, xU.b)(cU).x,
-        YU = (0, xU.b)(zU).y - (0, xU.b)(cU).y;
-      return oU.move && (Math.abs(EU) > uX || Math.abs(YU) > uX) && (DU.dx = QU + EU / yU.width, DU.dy = AU + YU / yU.height), void 0 === DU.scale && void 0 === DU.dx ? null : DU
-    }
-    let vX = 0;
-
-    function VX() {
-      return vX > 0
-    }
-    const sX = UU => 0 === UU.dx && 0 === UU.dy,
-      nX = .001,
-      mX = UU => Math.abs(UU.dx) >= 5e-4 || Math.abs(UU.dy) >= 5e-4 ? UU : {
-        dx: UU.dx,
-        dy: UU.dy < 0 ? -.001 : nX
-      };
-
-    function lX(UU) {
-      let {
-        preview: XU,
-        stageRef: zU,
-        ringRef: cU,
-        centreLineRef: QU,
-        snapCentre: AU,
-        ready: FU,
-        measure: oU,
-        k: DU,
-        viewport: EU,
-        boxes: YU,
-        pieces: NU,
-        selected: IU,
-        insets: pU,
-        layout: aU,
-        canMove: tU,
-        onSelect: gU,
-        onMove: kU
-      } = UU;
-      const GU = (0, yU.useRef)(null),
-        BU = (0, yU.useCallback)((() => null !== GU.current), []),
-        ZU = (UU, XU) => {
-          if (!XU) return null;
-          const zU = (0, xU.b)(UU.origin),
-            cU = (0, xU.b)(XU),
-            yU = (UU.to.dx - UU.from.dx) * EU.width,
-            QU = (UU.to.dy - UU.from.dy) * EU.height,
-            AU = XU.right - XU.left,
-            FU = XU.bottom - XU.top;
-          return {
-            skew: {
-              x: cU.x - zU.x - yU,
-              y: cU.y - zU.y - QU
-            },
-            box: {
-              left: zU.x - AU / 2,
-              top: zU.y - FU / 2,
-              right: zU.x + AU / 2,
-              bottom: zU.y + FU / 2
-            }
-          }
-        },
-        RU = (UU, zU) => {
-          var yU;
-          const AU = GU.current;
-          if (!AU || AU.pointerId !== UU.pointerId) return;
-          GU.current = null, null === (yU = QU.current) || void 0 === yU || yU.classList.remove("Shown", "Snapped");
-          const FU = cU.current;
-          if (FU && null !== AU.ringStyle && FU.setAttribute("style", AU.ringStyle), zU && AU.moved) {
-            const UU = sX(AU.to) ? null : oU(AU.id),
-              XU = UU ? (0, xU.M)(UU, (0, xU.I)(EU.width, EU.height, pU)) : {
-                x: 0,
-                y: 0
-              },
-              zU = {
-                dx: AU.to.dx + XU.x / EU.width,
-                dy: AU.to.dy + XU.y / EU.height
-              },
-              cU = sX(AU.to) ? zU : mX(zU);
-            kU(AU.id, cU.dx, cU.dy)
-          } else XU(AU.id, null), zU && AU.tapPick && gU(AU.tapPick)
-        };
-      return {
-        busy: BU,
-        handlers: {
-          onPointerDown: UU => {
-            var XU;
-            if (!FU || GU.current || !UU.target.closest(".HudPreviewHandle")) return;
-            const cU = zU.current.getBoundingClientRect(),
-              yU = {
-                x: (UU.clientX - cU.left) / DU,
-                y: (UU.clientY - cU.top) / DU
-              },
-              QU = (0, xU.C)(yU, NU, 40 / DU),
-              AU = null !== IU ? wU.q.get(IU) : void 0,
-              oU = void 0 !== AU && null !== (0, xU.C)(yU, NU.filter((UU => {
-                let {
-                  id: XU
-                } = UU;
-                return AU.has(XU)
-              })), 40 / DU),
-              EU = "menu" === IU && void 0 !== YU.menu && (0, xU.f)(YU.menu, yU) && ("menu" === QU || null !== QU && (0, jU.A)(QU, aU.hudElements[QU])),
-              pU = oU ? IU : EU ? "menu" : null,
-              kU = null !== pU,
-              BU = null !== pU && void 0 !== pU ? pU : QU;
-            if (!BU) return;
-            if (function(UU) {
-                vX++;
-                const XU = zU => {
-                  zU.pointerId === UU && (vX = Math.max(0, vX - 1), window.removeEventListener("pointerup", XU, !0), window.removeEventListener("pointercancel", XU, !0))
-                };
-                window.addEventListener("pointerup", XU, !0), window.addEventListener("pointercancel", XU, !0)
-              }(UU.pointerId), !tU(BU)) return void gU(kU && QU ? QU : BU);
-            gU(BU);
-            const [ZU, RU] = null !== (XU = aU.hudElements[BU]) && void 0 !== XU ? XU : [0, 0], PU = {
-              dx: ZU,
-              dy: RU
-            }, WU = {
-              skew: {
-                x: 0,
-                y: 0
-              },
-              box: YU[BU]
-            };
-            GU.current = {
-              id: BU,
-              pointerId: UU.pointerId,
-              startX: UU.clientX,
-              startY: UU.clientY,
-              origin: YU[BU],
-              from: PU,
-              to: PU,
-              moved: !1,
-              home: sX(PU) ? {
-                centre: (0, xU.b)(YU[BU]),
-                anchor: WU
-              } : null,
-              away: sX(PU) ? null : WU,
-              anchor: WU,
-              ringStyle: null,
-              tapPick: kU ? QU : null
-            }, UU.currentTarget.setPointerCapture(UU.pointerId)
-          },
-          onPointerMove: UU => {
-            const zU = GU.current;
-            if (!zU || zU.pointerId !== UU.pointerId) return;
-            const yU = UU.clientX - zU.startX,
-              FU = UU.clientY - zU.startY;
-            if (!zU.moved && Math.hypot(yU, FU) < 5) return;
-            const YU = !zU.moved;
-            var NU, IU;
-            (zU.moved = !0, YU) && (zU.ringStyle = null !== (NU = null === (IU = cU.current) || void 0 === IU ? void 0 : IU.getAttribute("style")) && void 0 !== NU ? NU : null);
-            const aU = (0, xU.I)(EU.width, EU.height, pU);
-            if (!zU.home) {
-              var tU;
-              zU.to = {
-                dx: 0,
-                dy: 0
-              }, XU(zU.id, zU.to);
-              const UU = oU(zU.id),
-                cU = null !== (tU = ZU(zU, UU)) && void 0 !== tU ? tU : {
-                  skew: {
-                    x: 0,
-                    y: 0
-                  },
-                  box: zU.origin
-                },
-                yU = (0, xU.b)(zU.origin);
-              zU.home = {
-                centre: UU ? (0, xU.b)(UU) : {
-                  x: yU.x - zU.from.dx * EU.width,
-                  y: yU.y - zU.from.dy * EU.height
-                },
-                anchor: cU
-              }
-            }
-            const gU = zU.home;
-            let kU = !1;
-            const BU = UU => {
-                kU = !1;
-                let cU = (0, xU.s)(UU.box, yU / DU, FU / DU, aU);
-                const QU = EU.width / 2;
-                if (AU && Math.abs((0, xU.b)(zU.origin).x + cU.x - QU) <= 8 / DU) {
-                  const XU = QU - (0, xU.b)(zU.origin).x,
-                    yU = (0, xU.s)(UU.box, XU, cU.y, aU);
-                  kU = Math.abs(yU.x - XU) < .01, kU && (cU = yU)
-                }
-                const oU = (0, xU.z)(zU.from, cU.x - UU.skew.x, cU.y - UU.skew.y, EU.width, EU.height);
-                zU.to = mX(oU), zU.anchor = UU, XU(zU.id, zU.to)
-              },
-              RU = (0, xU.s)(gU.anchor.box, yU / DU, FU / DU, aU),
-              PU = QU.current,
-              WU = (0, xU.b)(zU.origin),
-              dU = ((0, qU.O)(zU.id) ? 20 : 6) / DU;
-            if (Math.abs(WU.x + RU.x - gU.centre.x) <= dU && Math.abs(WU.y + RU.y - gU.centre.y) <= dU) zU.to = {
-              dx: 0,
-              dy: 0
-            }, zU.anchor = gU.anchor, kU = AU && Math.abs(gU.centre.x - EU.width / 2) < 1, XU(zU.id, zU.to);
-            else if (zU.away) BU(zU.away);
-            else {
-              var LU;
-              BU(gU.anchor), zU.away = null !== (LU = ZU(zU, oU(zU.id))) && void 0 !== LU ? LU : gU.anchor, BU(zU.away)
-            }
-            null === PU || void 0 === PU || PU.classList.add("Shown"), null === PU || void 0 === PU || PU.classList.toggle("Snapped", kU), (UU => {
-              const XU = cU.current;
-              if (XU) {
-                const {
-                  skew: zU,
-                  box: cU
-                } = UU.anchor;
-                XU.style.left = cU.left * DU + "px", XU.style.top = cU.top * DU + "px", XU.style.width = (cU.right - cU.left) * DU + "px", XU.style.height = (cU.bottom - cU.top) * DU + "px", XU.style.translate = `${((UU.to.dx-UU.from.dx)*EU.width+zU.x)*DU}px ${((UU.to.dy-UU.from.dy)*EU.height+zU.y)*DU}px`
-              }
-            })(zU)
-          },
-          onPointerUp: UU => {
-            RU(UU, !0)
-          },
-          onPointerCancel: UU => {
-            RU(UU, !1)
-          }
-        }
-      }
-    }
-    var xX = zU(9475);
-
-    function JX(UU, XU) {
-      return Object.keys(UU).filter((UU => UU !== XU)).map((XU => UU[XU]))
-    }
-
-    function jX(UU) {
-      return UU.map((UU => {
-        let {
-          id: XU,
-          box: zU
-        } = UU;
-        return `${XU}:${zU.left},${zU.top},${zU.right},${zU.bottom}`
-      })).join(";")
-    }
-
-    function KX(UU) {
-      const XU = [],
-        zU = XU => (0, qU.O)(XU) && !UU.documentElement.classList.contains((0, KU.P)(XU));
-      for (const FU of UU.querySelectorAll(`[${wU.g}]`)) {
-        const UU = zU(FU.getAttribute(wU.g)) ? FU.querySelector(".ScaleOnHover") : null,
-          cU = (null !== UU && void 0 !== UU ? UU : FU).getBoundingClientRect();
-        (cU.width > 0 || cU.height > 0) && XU.push({
-          id: FU.getAttribute(wU.g),
-          box: (0, xU.j)(cU)
-        })
-      }
-      const cU = UU => (0, xU.N)(XU.filter((XU => {
-          let {
-            id: zU
-          } = XU;
-          return UU(zU)
-        })).map((UU => {
-          let {
-            box: XU
-          } = UU;
-          return XU
-        }))),
-        yU = {};
-      for (const FU of new Set(XU.map((UU => UU.id)))) yU[FU] = cU((UU => UU === FU));
-      for (const [FU, oU] of wU.q) {
-        const UU = cU((UU => oU.has(UU)));
-        UU && (yU[FU] = UU)
-      }
-      const QU = UU.querySelector(".TouchInventoryKeys"),
-        AU = QU ? (0, xU.j)(QU.getBoundingClientRect()) : null;
-      return {
-        boxes: yU,
-        pieces: XU,
-        pairHome: AU
-      }
-    }
-
-    function bX(UU, XU, zU) {
-      const cU = XU.right - XU.left,
-        yU = XU.bottom - XU.top;
-      return OX(UU, "cluster", (XU => {
-        const QU = zU => {
-            XU(zU);
-            const cU = [...UU.querySelectorAll(`[${wU.g}]:not(.HudPreviewGhost)`)].filter((UU => wU.e.has(UU.getAttribute(wU.g)))).map((UU => (0, xU.j)(UU.getBoundingClientRect()))),
-              yU = (0, xU.N)(cU);
-            return yU ? {
-              w: yU.right - yU.left,
-              h: yU.bottom - yU.top
-            } : null
-          },
-          AU = UU => !UU || UU.w <= cU && UU.h <= yU,
-          FU = QU(1),
-          oU = QU(qU.f);
-        if (!FU || AU(oU)) return qU.f;
-        const DU = (UU, XU, zU) => XU > UU ? 1 + (zU - UU) * (qU.f - 1) / (XU - UU) : qU.f;
-        let EU = Math.floor(Math.min(qU.f, DU(FU.w, oU.w, cU), DU(FU.h, oU.h, yU)) / zU + 1e-6) * zU;
-        for (; EU > 1 && !AU(QU(EU));) EU = Math.round(100 * (EU - zU)) / 100;
-        return Math.max(1, EU)
-      }))
-    }
-
-    function TX(UU) {
-      LX(document, UU, {
-        keysAbove: !1
-      });
-      const XU = parseFloat(getComputedStyle(UU.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
-        zU = Number.isFinite(XU) && XU < 0;
-      return LX(document, UU, {
-        keysAbove: zU
-      }), (0, xX.b)(UU), zU
-    }
-
-    function hX(UU) {
-      const XU = UU.querySelector(".TouchInventoryKey.ShopKey");
-      return null !== XU && "1" === getComputedStyle(XU).getPropertyValue("--touch-shop-above").trim()
-    }
-
-    function Uz(UU, XU) {
-      let {
-        layout: zU,
-        orientation: cU,
-        viewport: QU,
-        replicaKey: AU,
-        joystickFixed: FU,
-        busy: oU
-      } = XU;
-      const [DU, EU] = (0, yU.useState)(null), [YU, NU] = (0, yU.useState)({
-        boxes: {},
-        pieces: []
-      }), [IU, pU] = (0, yU.useState)({
-        top: 0,
-        right: 0,
-        bottom: 0,
-        left: 0
-      }), [aU, tU] = (0, yU.useState)(!1), [gU, kU] = (0, yU.useState)(!1), [GU, BU] = (0, yU.useState)(!1), ZU = (0, yU.useCallback)((UU => {
-        kU(UU), UU && BU(!0)
-      }), []), RU = zU.hudLayouts[cU].hudSafe;
-      (0, yU.useLayoutEffect)((() => {
-        const XU = UU.current.contentDocument;
-        XU.open(), XU.write("<!DOCTYPE html><html><head></head><body></body></html>"), XU.close(), EU(XU)
-      }), [UU]);
-      const PU = (0, yU.useCallback)((() => {
-          DU && ((0, jU.D)(DU), NU(KX(DU)), pU(function(UU, XU) {
-            const zU = qX(UU),
-              [cU, yU, QU, AU] = XU ? (0, KU.E)(XU, window.innerWidth, window.innerHeight, zU) : zU;
-            return {
-              top: cU,
-              right: yU,
-              bottom: QU,
-              left: AU
-            }
-          }(DU, RU)))
-        }), [DU, RU]),
-        WU = (0, yU.useCallback)((() => {
-          DU && tU(TX(DU))
-        }), [DU]),
-        dU = (0, yU.useRef)((() => {}));
-      return dU.current = () => {
-        WU(), oU() || PU()
-      }, (0, yU.useLayoutEffect)((() => {
-        if (DU) return dX(document, DU, (() => {
-          dU.current()
-        }), ZU)
-      }), [DU, ZU]), (0, yU.useLayoutEffect)(WU, [WU, QU]), (0, yU.useLayoutEffect)((() => {
-        DU && (LX(document, DU, {
-          keysAbove: aU
-        }), CX(document, DU, zU, cU, FU), WU(), PU())
-      }), [DU, zU, cU, aU, AU, FU, QU, PU, WU]), (0, yU.useEffect)((() => {
-        var UU;
-        if (!DU) return;
-        const XU = new ResizeObserver((() => {
-          oU() || PU()
-        }));
-        for (const zU of DU.querySelectorAll(`[${wU.g}]`)) XU.observe(zU);
-        return null === (UU = DU.fonts) || void 0 === UU || UU.ready.then(PU), () => {
-          XU.disconnect()
-        }
-      }), [DU, PU, oU, AU]), {
-        doc: DU,
-        boxes: YU.boxes,
-        pieces: YU.pieces,
-        insets: IU,
-        keysAbove: aU,
-        ready: gU,
-        settled: GU
-      }
-    }
-    const Xz = ["Above", "Below", "Left", "Right"];
-
-    function zz(UU, XU, zU, cU, yU) {
-      const QU = zU[UU],
-        AU = (QU.left + QU.right) / 2,
-        FU = (QU.top + QU.bottom) / 2,
-        oU = (7.5 * XU.length + 14) / cU,
-        DU = 18 / cU,
-        EU = {
-          Above: {
-            left: AU - oU / 2,
-            top: QU.top - DU,
-            right: AU + oU / 2,
-            bottom: QU.top
-          },
-          Below: {
-            left: AU - oU / 2,
-            top: QU.bottom,
-            right: AU + oU / 2,
-            bottom: QU.bottom + DU
-          },
-          Left: {
-            left: QU.left - oU,
-            top: FU - DU / 2,
-            right: QU.left,
-            bottom: FU + DU / 2
-          },
-          Right: {
-            left: QU.right,
-            top: FU - DU / 2,
-            right: QU.right + oU,
-            bottom: FU + DU / 2
-          }
-        },
-        YU = JX(zU, UU),
-        NU = {
-          left: 0,
-          top: 0,
-          right: yU.width,
-          bottom: yU.height
-        };
-      return Xz[(0, xU.x)(Xz.map((UU => EU[UU])), YU, {
-        bounds: NU
-      })]
-    }
-
-    function cz() {
-      const [UU, XU] = (0, mU.e)();
-      return (0, yU.useMemo)((() => ({
-        width: UU,
-        height: XU
-      })), [UU, XU])
-    }
-
-    function yz(UU) {
-      var XU;
-      const {
-        layout: zU,
-        orientation: QU,
-        selected: AU,
-        onSelect: FU,
-        onMove: DU,
-        canMove: EU,
-        actionButtons: YU,
-        joystickFixed: NU,
-        presence: IU,
-        keyNames: aU,
-        maxHeight: tU,
-        fill: gU = !1,
-        apiRef: kU
-      } = UU, {
-        t: GU
-      } = (0, cU.I)(), BU = cz(), RU = (null !== (XU = (0, pU.f)("maxAuraLevel")) && void 0 !== XU ? XU : 0) > 0, PU = zU.hudLayouts[QU], WU = (0, yU.useRef)(null), dU = (0, yU.useRef)(null), LU = (0, yU.useRef)(null), eU = (0, yU.useRef)(null), OU = (0, yU.useRef)(null), SU = (0, yU.useRef)(null), rU = (0, lU.d)(WU).width, uU = gU ? 1 : rU > 0 ? (0, xU.G)(rU, BU.width, BU.height, tU) : 0, fU = (0, yU.useRef)((() => !1)), iU = (0, yU.useCallback)((() => fU.current()), []), HU = `${YU}:${NU}:${RU}`, {
-        doc: MU,
-        boxes: vU,
-        pieces: VU,
-        insets: nU,
-        keysAbove: mU,
-        ready: bU,
-        settled: TU
-      } = Uz(LU, {
-        layout: zU,
-        orientation: QU,
-        viewport: BU,
-        replicaKey: HU,
-        joystickFixed: NU,
-        busy: iU
-      }), hU = (0, yU.useCallback)((UU => {
-        MU && CX(document, MU, UU, QU, NU)
-      }), [MU, QU, NU]), UX = (0, yU.useCallback)((UU => {
-        if (!MU || !TU) return null;
-        hU(UU);
-        const XU = TX(MU),
-          zU = function(UU, XU) {
-            let {
-              boxes: zU,
-              pieces: cU,
-              pairHome: yU
-            } = UU;
-            const QU = cU.find((UU => wU.p.has(UU.id)));
-            if (!QU || !yU) return zU;
-            const AU = (0, xU.b)(yU),
-              FU = XU(QU.id),
-              oU = fX(QU.box) / FU / 2,
-              DU = (QU.box.bottom - QU.box.top) / FU / 2;
-            return {
-              ...zU,
-              inventory: {
-                left: AU.x - oU,
-                top: AU.y - DU,
-                right: AU.x + oU,
-                bottom: AU.y + DU
-              }
-            }
-          }(KX(MU), (XU => (0, qU.x)(UU, QU, XU)[2]));
-        return {
-          boxes: zU,
-          keysAbove: XU,
-          shopAlone: hX(MU)
-        }
-      }), [MU, TU, hU, QU]), XX = (0, yU.useRef)(null), zX = (0, yU.useRef)(null), cX = (0, yU.useRef)(zU);
-      cX.current = zU;
-      const yX = (0, yU.useCallback)((() => {
-        null !== XX.current && (cancelAnimationFrame(XX.current), XX.current = null)
-      }), []);
-      (0, yU.useEffect)((() => yX), [zU, yX]);
-      const QX = (0, yU.useRef)(-1 / 0),
-        {
-          lockable: AX
-        } = UU,
-        FX = (0, yU.useCallback)((UU => {
-          if (hU(UU), QX.current = performance.now(), !TU || 0 === zU.hudLayouts[QU].hudLocked.length) return;
-          const XU = zU;
-          yX(), XX.current = requestAnimationFrame((() => {
-            var zU;
-            if (XX.current = null, cX.current !== XU) return;
-            const cU = (null === (zU = zX.current) || void 0 === zU ? void 0 : zU.from) === XU ? zX.current.measured : UX(XU);
-            cU && (zX.current = {
-              from: XU,
-              measured: cU
-            }), hU(cU ? HX(XU, UU, QU, BU, UX, {
-              canKeep: AX,
-              passes: 1,
-              before: cU
-            }) : UU)
-          }))
-        }), [hU, TU, zU, QU, BU, UX, AX, yX]),
-        oX = lX({
-          preview: (UU, XU) => {
-            XU ? FX((0, qU.hb)(zU, QU, UU, XU)) : (yX(), hU(zU))
-          },
-          stageRef: dU,
-          ringRef: eU,
-          centreLineRef: OU,
-          snapCentre: zU.hudSnapCentre,
-          ready: TU,
-          measure: UU => {
-            const XU = MU && bU ? KX(MU).boxes[UU] : void 0;
-            return XU && (0, xU.n)(XU, BU.width, BU.height) ? XU : null
-          },
-          k: uU,
-          viewport: BU,
-          boxes: vU,
-          pieces: VU,
-          selected: AU,
-          insets: nU,
-          layout: PU,
-          canMove: EU,
-          onSelect: FU,
-          onMove: (UU, XU, zU) => {
-            yX(), DU(UU, XU, zU)
-          }
-        });
-      (0, yU.useLayoutEffect)((() => {
-        fU.current = oX.busy
-      }), [oX.busy]);
-      const DX = (0, yU.useRef)([]),
-        EX = (0, yU.useRef)(PU.hudElements);
-      (0, yU.useEffect)((() => {
-        for (const yU of Object.keys(PU.hudElements)) {
-          var UU, XU, zU, cU;
-          (null !== (UU = null === (XU = PU.hudElements[yU]) || void 0 === XU ? void 0 : XU[2]) && void 0 !== UU ? UU : 1) > (null !== (zU = null === (cU = EX.current[yU]) || void 0 === cU ? void 0 : cU[2]) && void 0 !== zU ? zU : 1) && EU(yU) && !(0, jU.A)(yU, PU.hudElements[yU]) && DX.current.push(...(0, wU.G)(yU, mU, EU))
-        }
-        EX.current = PU.hudElements
-      }), [PU.hudElements, EU, mU]), (0, yU.useEffect)((() => {
-        if (!bU) return;
-        const UU = (0, xU.I)(BU.width, BU.height, nU);
-        for (const zU of (0, wU.F)(DX.current.splice(0), vU, UU, EU)) {
-          const cU = vU[zU];
-          if (!cU || oX.busy() || !(0, xU.n)(cU, BU.width, BU.height)) continue;
-          const yU = (0, xU.M)(cU, UU);
-          if (0 !== yU.x || 0 !== yU.y) {
-            var XU;
-            const [UU, cU] = null !== (XU = PU.hudElements[zU]) && void 0 !== XU ? XU : [0, 0];
-            DU(zU, UU + yU.x / BU.width, cU + yU.y / BU.height)
-          }
-        }
-      }), [vU, bU]), (0, yU.useImperativeHandle)(kU, (() => ({
-        setScale: (UU, XU) => {
-          FX((0, qU.hb)(zU, QU, UU, {
-            scale: XU
-          }))
-        },
-        setOpacity: UU => {
-          hU({
-            ...zU,
-            hudKeyOpacity: UU
-          })
-        },
-        keepLocks: (UU, XU) => (yX(), HX(UU, XU, QU, BU, UX, {
-          canKeep: AX
-        })),
-        setSafe: UU => {
-          const XU = (0, KU.E)(UU, BU.width, BU.height, qX(null !== MU && void 0 !== MU ? MU : document));
-          FX((0, qU.lb)(zU, QU, UU)), SU.current && (SU.current.style.inset = XU.map((UU => UU * uU + "px")).join(" "))
-        }
-      })), [hU, FX, UX, yX, AX, MU, zU, QU, BU, uU]);
-      const YX = new Set(Object.keys(PU.hudElements).filter((UU => (0, qU.q)(PU.hudElements, UU)))),
-        NX = AU ? vU[AU] : void 0,
-        pX = AU ? (0, wU.y)(AU, YU, GU, aU) : "",
-        tX = (0, gX.f)(BU.width, BU.height),
-        kX = AU ? (0, JU.g)(AU, VU, PU, tX) : [],
-        GX = new Set((0, jU.u)(PU.hudElements)),
-        BX = (0, jU.M)(PU, (0, jU.I)(IU.rowIcons)).state,
-        ZX = kX.join(),
-        RX = (0, yU.useRef)(UU.onReady);
-      RX.current = UU.onReady, (0, yU.useEffect)((() => {
-        var UU;
-        null === (UU = RX.current) || void 0 === UU || UU.call(RX, TU)
-      }), [TU]);
-      const PX = (0, yU.useRef)(UU.onMeasured);
-      (0, yU.useLayoutEffect)((() => {
-        PX.current = UU.onMeasured
-      }));
-      const WX = (0, yU.useRef)({
-          layout: null,
-          input: "",
-          caps: {}
-        }),
-        dX = [jX(VU), BU.width, BU.height, nU.top, nU.right, nU.bottom, nU.left, bU, HU].join("|");
-      (0, yU.useEffect)((() => {
-        const UU = ZX ? ZX.split(",") : [],
-          XU = () => {
-            var XU;
-            null === (XU = PX.current) || void 0 === XU || XU.call(PX, vU, UU, WX.current.caps)
-          };
-        let zU;
-        const cU = () => {
-          const UU = cX.current;
-          if (!MU || UU === WX.current.layout && dX === WX.current.input) return !1;
-          const yU = QX.current + 250 - performance.now();
-          return UU === WX.current.layout && (yU > 0 || iU()) ? (zU = setTimeout((() => {
-            cU() && XU()
-          }), Math.max(yU, 62.5)), !1) : (WX.current = {
-            layout: UU,
-            input: dX,
-            caps: {
-              hotbar: SX(MU, aX),
-              cluster: bX(MU, (0, xU.I)(BU.width, BU.height, nU), aX)
-            }
-          }, !0)
-        };
-        return cU(), XU(), () => {
-          clearTimeout(zU)
-        }
-      }), [vU, ZX, MU, BU, nU, dX, iU]);
-      const LX = UU => ({
-        left: UU.left * uU,
-        top: UU.top * uU,
-        width: (UU.right - UU.left) * uU,
-        height: (UU.bottom - UU.top) * uU
-      });
-      return (0, ZU.jsx)("div", {
-        ref: WU,
-        className: oU()("HudPreviewBox", {
-          Fill: gU
-        }),
-        style: {
-          height: BU.height * uU
-        },
-        children: (0, ZU.jsxs)("div", {
-          ref: dU,
-          className: "HudPreviewStage",
-          style: {
-            width: BU.width * uU,
-            height: BU.height * uU
-          },
-          children: [(0, ZU.jsx)("iframe", {
-            ref: LU,
-            className: "HudPreviewFrame",
-            title: GU("hudLayout:preview"),
-            "aria-hidden": !0,
-            tabIndex: -1,
-            style: {
-              width: BU.width,
-              height: BU.height,
-              transform: `scale(${uU})`
-            }
-          }), MU && (0, sU.createPortal)((0, ZU.jsx)(IX, {
-            presence: IU,
-            portraitPhone: tX,
-            hidden: YX,
-            actionButtons: YU,
-            joystickFixed: NU,
-            keysAbove: mU,
-            auraBar: RU,
-            trayState: BX,
-            moved: GX
-          }), MU.body), (0, ZU.jsxs)("div", {
-            className: "HudPreviewOverlay",
-            ...oX.handlers,
-            children: [(0, ZU.jsx)("div", {
-              ref: SU,
-              className: "HudPreviewSafeZone",
-              style: {
-                top: nU.top * uU,
-                right: nU.right * uU,
-                bottom: nU.bottom * uU,
-                left: nU.left * uU
-              }
-            }), VU.map(((UU, XU) => {
-              let {
-                id: zU,
-                box: cU
-              } = UU;
-              return (0, ZU.jsx)("div", {
-                className: "HudPreviewHandle",
-                style: LX((0, xU.u)(cU, 40 / uU))
-              }, `${zU}:${XU}`)
-            })), PU.hudLocked.map((UU => {
-              const XU = vU[UU];
-              return XU && (0, ZU.jsx)("span", {
-                className: "HudPreviewLockBadge",
-                style: {
-                  left: XU.right * uU,
-                  top: XU.top * uU
-                },
-                children: (0, ZU.jsx)(CU.d, {
-                  name: "lock"
-                })
-              }, UU)
-            })), (0, ZU.jsx)("div", {
-              ref: OU,
-              className: "HudPreviewCentreLine",
-              style: {
-                left: BU.width / 2 * uU
-              }
-            }), AU && NX && (0, ZU.jsx)("div", {
-              ref: eU,
-              className: oU()("HudPreviewRing", {
-                Fixed: !EU(AU),
-                Overlap: kX.length > 0
-              }),
-              style: LX(NX),
-              children: (0, ZU.jsx)("span", {
-                className: oU()("HudPreviewRingLabel", zz(AU, pX, vU, uU, BU)),
-                children: pX
-              })
-            })]
-          })]
-        })
-      })
-    }
-
-    function Qz(UU, XU) {
-      (0, yU.useEffect)((() => {
-        var zU;
-        null === (zU = UU.current) || void 0 === zU || zU.toggleAttribute("inert", XU)
-      }), [UU, XU])
-    }
-    const Az = "hudFullScreen";
-
-    function Fz(UU) {
-      let {
-        onScale: XU,
-        onHidden: zU,
-        onReset: QU,
-        locked: AU,
-        lockable: FU,
-        onLocked: oU,
-        onClose: EU,
-        ...YU
-      } = UU;
-      const {
-        t: NU
-      } = (0, cU.I)(), IU = (0, yU.useRef)(null);
-      (0, nU.t)("popup", IU, EU),
-      function(UU) {
-        const XU = (0, yU.useRef)(UU);
-        XU.current = UU, (0, yU.useEffect)((() => {
-          window.history.pushState({
-            ...window.history.state,
-            [Az]: !0
-          }, "");
-          let UU = !1;
-          const zU = () => {
-            UU = !0, XU.current()
-          };
-          return window.addEventListener("popstate", zU), () => {
-            var XU;
-            window.removeEventListener("popstate", zU), !UU && null !== (XU = window.history.state) && void 0 !== XU && XU[Az] && window.history.back()
-          }
-        }), [])
-      }(EU), (0, yU.useEffect)((() => {
-        function UU(UU) {
-          "Escape" === UU.key && (UU.stopPropagation(), EU())
-        }
-        return window.addEventListener("keydown", UU, !0), () => {
-          window.removeEventListener("keydown", UU, !0)
-        }
-      }), [EU]);
-      const {
-        selected: pU
-      } = YU, aU = (0, yU.useRef)(null), tU = (0, yU.useRef)(null), [gU, kU] = (0, yU.useState)(!1);
-      Qz(tU, !gU);
-      const [GU, BU] = (0, yU.useState)(null), [RU, PU] = (0, yU.useState)([]), [WU, dU] = pX(), LU = (0, yU.useRef)(YU.selected);
-      LU.current = YU.selected;
-      const eU = (0, yU.useRef)({}),
-        CU = (0, yU.useCallback)((() => {
-          const UU = aU.current;
-          UU && BU(function(UU, XU, zU) {
-            var cU;
-            const {
-              innerWidth: yU,
-              innerHeight: QU
-            } = window, AU = UU.offsetWidth, FU = UU.offsetHeight, oU = Math.max(wX()[0], 6), DU = [];
-            for (const NU of [oU, .2 * QU, .5 * QU - FU / 2, .33 * QU])
-              for (const UU of [.5, .3, .7]) DU.push({
-                left: Math.max(0, Math.min(yU - AU - 6, Math.max(6, yU * UU - AU / 2))),
-                top: NU
-              });
-            const EU = DU.map((UU => ({
-                left: UU.left - 6,
-                top: UU.top - 6,
-                right: UU.left + AU + 6,
-                bottom: UU.top + FU + 6
-              }))),
-              YU = JX(XU, zU);
-            return DU[(0, xU.x)(EU, YU, {
-              avoid: zU && null !== (cU = XU[zU]) && void 0 !== cU ? cU : null
-            })]
-          }(UU, eU.current, LU.current))
-        }), []),
-        wU = (0, yU.useCallback)(((UU, XU, zU) => {
-          PU(XU), dU(zU), eU.current = UU, CU()
-        }), [CU, dU]);
-      return (0, yU.useLayoutEffect)(CU, [YU.selected, CU]), (0, sU.createPortal)((0, ZU.jsxs)("div", {
-        ref: IU,
-        className: "HudFullScreenEditor",
-        children: [(0, ZU.jsx)(yz, {
-          ...YU,
-          maxHeight: window.innerHeight,
-          fill: !0,
-          onMeasured: wU,
-          onReady: kU,
-          lockable: FU
-        }), (0, ZU.jsxs)("div", {
-          ref: aU,
-          className: "HudFullScreenToolbar",
-          style: null === GU ? void 0 : {
-            left: GU.left,
-            top: GU.top,
-            transform: "none"
-          },
-          children: [(0, ZU.jsx)("div", {
-            ref: tU,
-            className: "HudFullScreenControls",
-            children: (0, ZU.jsx)(tX, {
-              selected: pU,
-              layout: YU.layout.hudLayouts[YU.orientation],
-              actionButtons: YU.actionButtons,
-              keyNames: YU.keyNames,
-              overlaps: RU,
-              scaleCaps: WU,
-              onScale: XU,
-              onHidden: zU,
-              onReset: QU,
-              locked: AU,
-              lockable: FU,
-              onLocked: oU,
-              joystickFixed: YU.joystickFixed
-            })
-          }), (0, ZU.jsx)(DU.f, {
-            className: "HudFullScreenDone",
-            onClick: EU,
-            padDefaultFocus: !0,
-            children: NU("hudLayout:done")
-          })]
-        })]
-      }), document.body)
-    }
-    const oz = UU => `${Math.round(100*UU)}%`;
-
-    function Dz(UU) {
-      let {
-        info: XU,
-        tuple: zU,
-        props: yU
-      } = UU;
-      const {
-        t: QU
-      } = (0, cU.I)();
-      return (0, ZU.jsx)(IU.j, {
-        name: QU("hudLayout:size"),
-        min: qU.j,
-        max: qU.f,
-        step: aX,
-        initValue: zU[2],
-        disabled: yU.locked.has(XU.id),
-        selectableMax: yU.scaleCaps[XU.id],
-        cappedNote: QU("hudLayout:sizeCapped"),
-        format: oz,
-        onChange: UU => {
-          yU.onScalePreview(XU.id, UU)
-        },
-        onChangeComplete: UU => {
-          yU.onScale(XU.id, UU)
-        }
-      })
-    }
-
-    function Ez(UU) {
-      const {
-        t: XU
-      } = (0, cU.I)(), {
-        present: zU,
-        elements: QU,
-        selected: AU,
-        onSelect: FU,
-        onHidden: DU,
-        onReset: EU,
-        note: YU,
-        actionButtons: NU,
-        keyNames: IU,
-        sizeBesidePreview: pU,
-        locked: aU,
-        lockable: tU,
-        onLocked: gU
-      } = UU, {
-        rowIconsOpen: kU,
-        onRowIconsOpen: GU
-      } = UU, BU = (0, yU.useRef)(null), RU = null !== AU && (kU || !(0, qU.O)(AU));
-      return (0, yU.useEffect)((() => {
-        var UU;
-        const XU = AU ? null === (UU = BU.current) || void 0 === UU ? void 0 : UU.querySelector(`[data-hud-row="${AU}"]`) : null;
-        if (!XU) return;
-        const zU = XU.closest(".SettingsMenuRight"),
-          cU = performance.now();
-        let yU = null;
-        const QU = () => {
-            clearInterval(oU), null === zU || void 0 === zU || zU.removeEventListener("scroll", FU)
-          },
-          FU = () => {
-            VX() || QU()
-          },
-          oU = setInterval((() => {
-            const UU = performance.now();
-            UU - cU > 1500 ? QU() : VX() ? yU = null : null === yU ? yU = UU : UU - yU >= 150 && (QU(), function(UU) {
-              var XU;
-              const zU = UU.closest(".SettingsMenuRight"),
-                cU = null === (XU = UU.closest(".HudLayoutSettings")) || void 0 === XU ? void 0 : XU.querySelector(".HudLayoutPreviewBox");
-              if (!zU || !cU) return;
-              const yU = cU.getBoundingClientRect().bottom + 8,
-                QU = zU.getBoundingClientRect().bottom - 8,
-                AU = UU.getBoundingClientRect();
-              AU.top < yU ? zU.scrollBy({
-                top: AU.top - yU,
-                behavior: "smooth"
-              }) : AU.bottom > QU && zU.scrollBy({
-                top: Math.min(AU.bottom - QU, AU.top - yU),
-                behavior: "smooth"
-              })
-            }(XU))
-          }), 50);
-        return null === zU || void 0 === zU || zU.addEventListener("scroll", FU, {
-          passive: !0
-        }), QU
-      }), [AU, RU]), (0, ZU.jsx)("div", {
-        ref: BU,
-        className: "SettingBoxGroup HudElementList",
-        children: wU.l.filter((UU => zU.has(UU.id) && (kU || !(0, qU.O)(UU.id)))).map((zU => {
-          const cU = ((UU, XU) => {
-              var zU;
-              return null !== (zU = UU[XU]) && void 0 !== zU ? zU : qU.m
-            })(QU, zU.id),
-            yU = (0, qU.q)(QU, zU.id),
-            BU = zU.id === AU,
-            RU = zU.scale && !pU,
-            PU = YU(zU.id, BU);
-          return (0, ZU.jsxs)("div", {
-            "data-hud-row": zU.id,
-            className: oU()("SettingBox HudElementRow", {
-              Open: BU,
-              Hidden: yU,
-              Child: void 0 !== zU.parent,
-              Grandchild: (0, wU.t)(zU.id).length > 1
-            }),
-            children: [(0, ZU.jsxs)("div", {
-              className: "HudElementRowHead",
-              children: [(0, ZU.jsx)("button", {
-                type: "button",
-                className: "HudElementRowName",
-                "aria-expanded": RU ? BU : void 0,
-                onClick: () => {
-                  FU(zU.id)
-                },
-                children: (0, ZU.jsxs)("span", {
-                  className: "HudElementRowLabel",
-                  children: [(0, wU.y)(zU.id, NU, XU, IU), zU.scale && 1 !== cU[2] && !(BU && RU) && (0, ZU.jsxs)(ZU.Fragment, {
-                    children: [" ", (0, ZU.jsx)("span", {
-                      className: "HudElementRowSize",
-                      children: oz(cU[2])
-                    })]
-                  }), RU && (0, ZU.jsxs)(ZU.Fragment, {
-                    children: [" ", (0, ZU.jsx)("span", {
-                      className: "HudElementRowChevron",
-                      children: "\u25be"
-                    })]
-                  })]
-                })
-              }), (0, ZU.jsx)(uU, {
-                className: "HudElementRowIcon",
-                keepPlace: !0,
-                id: zU.id,
-                actionButtons: NU,
-                keyNames: IU,
-                locked: aU.has(zU.id),
-                lockable: tU(zU.id),
-                onLocked: gU
-              }), "menu" === zU.id && (0, ZU.jsx)(fU, {
-                className: "HudElementRowIcon",
-                open: kU,
-                name: (0, wU.y)(zU.id, NU, XU, IU),
-                onToggle: GU
-              }), "menu" !== zU.id && (0, ZU.jsx)(SU, {
-                className: "HudElementRowIcon",
-                keepPlace: !0,
-                id: zU.id,
-                elements: QU,
-                actionButtons: NU,
-                keyNames: IU,
-                onHidden: DU
-              }), (0, ZU.jsx)(rU, {
-                className: "HudElementRowIcon",
-                keepPlace: !0,
-                onlyWhenMoved: !0,
-                locked: aU.has(zU.id),
-                id: zU.id,
-                elements: QU,
-                actionButtons: NU,
-                keyNames: IU,
-                onReset: EU
-              })]
-            }), BU && RU && (0, ZU.jsx)(Dz, {
-              info: zU,
-              tuple: cU,
-              props: UU
-            }), PU && (0, ZU.jsx)("div", {
-              className: "HudElementNote",
-              children: PU
-            })]
-          }, zU.id)
-        }))
-      })
-    }
-
-    function Yz(UU) {
-      let {
-        preview: XU,
-        quick: zU,
-        onFullScreen: QU,
-        resting: AU,
-        onSidePanel: FU
-      } = UU;
-      const {
-        t: oU
-      } = (0, cU.I)(), EU = cz(), YU = (0, yU.useRef)(null), {
-        width: NU
-      } = (0, lU.d)(YU), IU = Math.floor(EU.width * Math.min(1, XU.maxHeight / EU.height)), pU = NU - IU - 12, aU = pU >= 130, tU = NU > 0;
-      (0, yU.useEffect)((() => {
-        tU && FU(aU)
-      }), [tU, aU, FU]);
-      const gU = (0, xU.G)(aU ? IU : NU, EU.width, EU.height, XU.maxHeight),
-        kU = AU ? (0, ZU.jsx)("div", {
-          className: "HudPreviewResting",
-          style: {
-            height: EU.height * gU
-          }
-        }) : (0, ZU.jsx)(yz, {
-          ...XU
-        }),
-        GU = UU => (0, ZU.jsxs)(DU.O, {
-          className: "HudLayoutFullScreenButton",
-          ariaLabel: oU("hudLayout:fullScreen"),
-          analyticsClick: {
-            id: "hud_layout.full_screen"
-          },
-          onClick: QU,
-          children: [(0, ZU.jsx)(CU.d, {
-            name: "expand"
-          }), UU && (0, ZU.jsx)("span", {
-            children: oU("hudLayout:fullScreen")
-          })]
-        });
-      return (0, ZU.jsxs)("div", {
-        ref: YU,
-        className: "SettingBox HudLayoutPreviewBox",
-        children: [NU > 0 && aU && (0, ZU.jsxs)("div", {
-          className: "HudLayoutPreviewRow",
-          children: [(0, ZU.jsx)("div", {
-            style: {
-              width: IU
-            },
-            children: kU
-          }), (0, ZU.jsx)("div", {
-            className: "HudLayoutSidePanel",
-            children: (0, ZU.jsx)(tX, {
-              selected: XU.selected,
-              ...zU,
-              joystickFixed: XU.joystickFixed,
-              extra: GU(!XU.selected || pU >= 278)
-            })
-          })]
-        }), NU > 0 && !aU && (0, ZU.jsxs)(ZU.Fragment, {
-          children: [kU, (0, ZU.jsx)("div", {
-            className: "HudLayoutCornerButton",
-            children: GU(!1)
-          })]
-        })]
-      })
-    }
-    var Nz = zU(2661),
-      Iz = zU(4835),
-      pz = zU(2643),
-      az = zU(2596);
-    const tz = UU => {
-      const XU = KU.s * ("sides" === UU ? window.innerWidth : window.innerHeight);
-      return Math.min(64, 2 * Math.floor(XU / 2))
-    };
-
-    function gz(UU, XU, zU) {
-      const [cU, yU, QU, AU] = UU;
-      return "sides" === XU ? [cU, zU, QU, zU] : [zU, yU, zU, AU]
-    }
-    const kz = [null, null, null, null],
-      Gz = UU => `${UU}px`;
-
-    function Bz(UU) {
-      let {
-        safe: XU,
-        onPreview: zU,
-        onCommit: QU
-      } = UU;
-      const {
-        t: AU
-      } = (0, cU.I)(), FU = (0, KU.E)(null !== XU && void 0 !== XU ? XU : kz, window.innerWidth, window.innerHeight, qX(document).map(Math.round)), oU = (0, yU.useRef)(null !== XU && void 0 !== XU ? XU : kz);
-      oU.current = null !== XU && void 0 !== XU ? XU : kz;
-      const EU = UU => {
-        const XU = Math.min(tz(UU), "sides" === UU ? Math.max(FU[1], FU[3]) : Math.max(FU[0], FU[2]));
-        return (0, ZU.jsx)(IU.j, {
-          name: AU("sides" === UU ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
-          min: 0,
-          max: tz(UU),
-          step: 2,
-          initValue: XU,
-          format: Gz,
-          onChange: XU => {
-            zU(gz(oU.current, UU, XU))
-          },
-          onChangeComplete: cU => {
-            if (cU === XU) return void zU(oU.current);
-            const yU = gz(oU.current, UU, cU);
-            oU.current = yU, QU(yU), (0, WU.reportAnalyticsClick)({
-              id: "hud_layout.safe_zone",
-              value: UU
-            })
-          }
-        })
-      };
-      return (0, ZU.jsxs)("div", {
-        className: "SettingBoxGroup HudSafeZone",
-        children: [(0, ZU.jsxs)("div", {
-          className: "SettingBox HudSafeZoneHeader",
-          children: [(0, ZU.jsx)("div", {
-            children: AU("hudLayout:safeZone")
-          }), (0, ZU.jsx)(DU.O, {
-            active: null === XU,
-            pressed: null === XU,
-            onClick: () => {
-              QU(null)
-            },
-            children: AU("hudLayout:safeZoneAuto")
-          })]
-        }), EU("sides"), EU("ends")]
-      })
-    }
-
-    function Zz() {
-      const {
-        t: UU
-      } = (0, cU.I)(), XU = (0, qU.db)(), {
-        clientEscMenuOptions: zU
-      } = (0, EU.q)(["clientEscMenuOptions"]), QU = (0, Nz.h)(), AU = XU.hudLayouts[QU], [FU, oU] = (0, yU.useState)(null), {
-        rowIconsOpen: YU,
-        onRowIconsOpen: NU,
-        select: pU
-      } = function(UU, XU) {
-        const [zU, cU] = (0, yU.useState)((() => qU.A.some((XU => void 0 !== UU.hudElements[XU] || UU.hudLocked.includes(XU))))), QU = (0, yU.useCallback)((UU => {
-          XU(UU), (0, qU.O)(UU) && cU(!0)
-        }), [XU]);
-        return {
-          rowIconsOpen: zU,
-          onRowIconsOpen: cU,
-          select: QU
-        }
-      }(AU, oU), [aU, tU] = (0, yU.useState)([]), [gU, kU] = (0, yU.useState)(null), [GU, BU] = pX(), RU = (0, yU.useCallback)(((UU, XU, zU) => {
-        tU(XU), BU(zU);
-        const cU = Object.keys(UU);
-        kU((UU => (null === UU || void 0 === UU ? void 0 : UU.size) === cU.length && cU.every((XU => UU.has(XU))) ? UU : new Set(cU)))
-      }), [BU]), {
-        gameState: PU
-      } = (0, EU.q)(["gameState"]), LU = (0, pz.k)(), eU = (0, az.s)(), [CU] = (0, yU.useState)((() => {
-        var UU, XU, zU, cU;
-        return "inGame" === PU ? (0, TU.v)(document, LU, {
-          rightOfCamera: null !== (UU = null === (XU = eU.rightOfCamera) || void 0 === XU ? void 0 : XU.icon) && void 0 !== UU ? UU : null,
-          leftEnd: null !== (zU = null === (cU = eU.leftEnd) || void 0 === cU ? void 0 : cU.icon) && void 0 !== zU ? zU : null
-        }) : TU.e
-      })), OU = (0, yU.useRef)(null), SU = (0, yU.useRef)(null), rU = function(UU) {
-        const [XU, zU] = (0, yU.useState)((() => .4 * window.innerHeight));
-        return (0, yU.useLayoutEffect)((() => {
-          var XU;
-          const cU = null === (XU = UU.current) || void 0 === XU ? void 0 : XU.closest(".SettingsMenuRight");
-          if (!cU) return;
-          const yU = () => {
-            const UU = cU.clientHeight < Rz ? .4 : .5;
-            zU(Math.max(80, cU.clientHeight * UU - 24))
-          };
-          yU();
-          const QU = new ResizeObserver(yU);
-          return QU.observe(cU), () => {
-            QU.disconnect()
-          }
-        }), [UU]), XU
-      }(SU), uU = (0, Iz.u)(zU.joystickMode), fU = zU.touchActionButtons, iU = (0, yU.useMemo)((() => (0, TU.s)(CU, fU)), [CU, fU]), HU = (0, yU.useMemo)((() => new Set((0, TU.r)(CU, fU).map((UU => TU.g[UU])))), [CU, fU]);
-      (0, yU.useEffect)((() => {
-        (0, WU.reportAnalyticsClick)({
-          id: "hud_layout.open"
-        })
-      }), []);
-      const [MU, sU] = (0, yU.useState)(!1), [nU, mU] = (0, yU.useState)(!1), lU = (0, yU.useRef)(null);
-      Qz(lU, !nU);
-      const [xU, JU] = (0, yU.useState)(!1), KU = (0, yU.useCallback)((() => {
-        JU(!1)
-      }), []), bU = (0, yU.useMemo)((() => new Set(AU.hudLocked)), [AU.hudLocked]), hU = UU => {
-        var XU, zU;
-        const cU = (0, qU.p)(),
-          yU = UU(cU);
-        (0, qU.Z)(null !== (XU = null === (zU = OU.current) || void 0 === zU ? void 0 : zU.keepLocks(cU, yU)) && void 0 !== XU ? XU : yU)
-      }, UX = (UU, XU) => {
-        hU((zU => (0, qU.hb)(zU, QU, UU, XU)))
-      }, XX = (UU, XU, zU) => {
-        UX(UU, {
-          dx: XU,
-          dy: zU
-        }), (0, WU.reportAnalyticsClick)({
-          id: "hud_layout.edit",
-          value: `move:${UU}`
-        })
-      }, zX = (UU, XU) => {
-        hU((zU => (0, qU.jb)(zU, QU, UU, XU)))
-      }, cX = UU => {
-        const XU = wU.i[UU];
-        return (XU.move || XU.scale) && ("joystick" !== UU || uU) && !(0, jU.A)(UU, AU.hudElements[UU])
-      }, yX = UU => wU.i[UU].move && ("joystick" !== UU || uU) && !bU.has(UU), QX = new Set(wU.l.map((UU => UU.id)).filter((UU => {
-        const XU = (0, qU.O)(UU) && !CU.rowIcons.includes(UU);
-        return null === gU || gU.has(UU) || (0, qU.q)(AU.hudElements, UU) && !XU
-      }))), AX = {
-        present: QX,
-        actionButtons: fU,
-        keyNames: iU,
-        scaleCaps: GU,
-        sizeBesidePreview: MU,
-        elements: AU.hudElements,
-        selected: FU,
-        onSelect: pU,
-        rowIconsOpen: YU,
-        onRowIconsOpen: NU,
-        onScalePreview: (UU, XU) => {
-          var zU;
-          null === (zU = OU.current) || void 0 === zU || zU.setScale(UU, XU)
-        },
-        onScale: (UU, XU) => {
-          UX(UU, {
-            scale: XU
-          }), (0, WU.reportAnalyticsClick)({
-            id: "hud_layout.edit",
-            value: `size:${UU}`
-          })
-        },
-        onHidden: (UU, XU) => {
-          UX(UU, {
-            hidden: XU
-          }), (0, WU.reportAnalyticsClick)({
-            id: "hud_layout.edit",
-            value: `${XU?"hide":"show"}:${UU}`
-          })
-        },
-        onReset: UU => {
-          UX(UU, qU.b)
-        },
-        locked: bU,
-        lockable: cX,
-        onLocked: zX,
-        note: (XU, zU) => {
-          const cU = zU && aU.length > 0 ? UU("hudLayout:overlapsNote", {
-            names: (0, wU.v)(aU, fU, UU, iU)
-          }) : null;
-          if (zU && vU(XU, uU)) return (0, ZU.jsxs)(ZU.Fragment, {
-            children: [cU && (0, ZU.jsx)("span", {
-              children: cU
-            }), (0, ZU.jsx)("span", {
-              children: UU("hudLayout:floatingJoystickNote")
-            }), !MU && (0, ZU.jsx)(VU, {})]
-          });
-          if (cU) return cU;
-          const yU = zU && bU.has(XU) ? UU("hudLayout:lockedNote") : null,
-            QU = zU && HU.has(XU) ? UU("hudLayout:contextSlotNote") : null;
-          return yU || QU ? (0, ZU.jsxs)(ZU.Fragment, {
-            children: [yU && (0, ZU.jsx)("span", {
-              children: yU
-            }), QU && (0, ZU.jsx)("span", {
-              children: QU
-            })]
-          }) : zU && "cluster" === XU ? UU("hudLayout:clusterNote") : zU && "inventory" === XU ? UU("hudLayout:inventoryNote") : zU && "menu" === XU ? UU("hudLayout:menuNote") : zU && (0, jU.A)(XU, AU.hudElements[XU]) && yX(XU) ? UU("hudLayout:rowIconNote") : zU && "arrows" === XU ? UU("hudLayout:arrowsNote") : zU && "sprint" === XU ? UU("hudLayout:sprintNote") : (0, wU.B)(XU) && (0, qU.q)(AU.hudElements, XU) ? UU("hudLayout:inventoryHiddenNote", {
-            name: (0, wU.y)(XU, fU, UU, iU)
-          }) : null
-        }
-      };
-      return (0, ZU.jsxs)("div", {
-        ref: SU,
-        className: "HudLayoutSettings",
-        children: [(0, ZU.jsxs)("div", {
-          ref: lU,
-          className: "HudLayoutBody",
-          children: [(0, ZU.jsx)("div", {
-            className: "HudLayoutOrientation",
-            children: UU("landscape" === QU ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
-          }), (0, ZU.jsx)(Yz, {
-            preview: {
-              layout: XU,
-              orientation: QU,
-              selected: FU,
-              onSelect: pU,
-              onMove: XX,
-              canMove: yX,
-              actionButtons: fU,
-              joystickFixed: uU,
-              presence: CU,
-              keyNames: iU,
-              maxHeight: rU,
-              apiRef: OU,
-              onMeasured: RU,
-              onReady: mU,
-              lockable: cX
-            },
-            quick: {
-              layout: AU,
-              actionButtons: fU,
-              keyNames: iU,
-              scaleCaps: GU,
-              overlaps: aU,
-              onScale: AX.onScale,
-              onHidden: AX.onHidden,
-              onReset: AX.onReset,
-              locked: bU,
-              lockable: cX,
-              onLocked: zX
-            },
-            onFullScreen: () => {
-              JU(!0)
-            },
-            resting: xU,
-            onSidePanel: sU
-          }), xU && (0, ZU.jsx)(Fz, {
-            layout: XU,
-            orientation: QU,
-            selected: FU,
-            onSelect: pU,
-            onMove: XX,
-            canMove: yX,
-            actionButtons: fU,
-            joystickFixed: uU,
-            presence: CU,
-            keyNames: iU,
-            onScale: AX.onScale,
-            onHidden: AX.onHidden,
-            onReset: AX.onReset,
-            locked: bU,
-            lockable: cX,
-            onLocked: zX,
-            apiRef: OU,
-            onClose: KU
-          }), (0, ZU.jsx)(Bz, {
-            safe: AU.hudSafe,
-            onCommit: UU => {
-              hU((XU => (0, qU.lb)(XU, QU, UU)))
-            },
-            onPreview: UU => {
-              var XU;
-              null === (XU = OU.current) || void 0 === XU || XU.setSafe(UU)
-            }
-          }), (0, ZU.jsx)(IU.e, {
-            label: UU("hudLayout:snapCentre"),
-            checked: XU.hudSnapCentre,
-            onClick: UU => {
-              (0, qU.W)(UU)
-            },
-            circleInfoText: UU("hudLayout:snapCentreInfo")
-          }), (0, ZU.jsx)(Ez, {
-            ...AX
-          }), (0, ZU.jsx)(IU.i, {
-            label: UU("hudLayout:shape"),
-            options: qU.D.map((XU => ({
-              value: XU,
-              label: UU(`hudLayout:shape_${XU}`)
-            }))),
-            value: XU.hudShape,
-            onChange: UU => {
-              hU((XU => ({
-                ...XU,
-                hudShape: UU
-              }))), (0, WU.reportAnalyticsClick)({
-                id: "hud_layout.shape",
-                value: UU
-              })
-            }
-          }), (0, ZU.jsx)(IU.j, {
-            name: UU("hudLayout:opacity"),
-            min: qU.c,
-            max: 1,
-            step: .05,
-            initValue: XU.hudKeyOpacity,
-            format: UU => `${Math.round(100*UU)}%`,
-            circleInfoText: UU("hudLayout:opacityInfo"),
-            onChange: UU => {
-              var XU;
-              null === (XU = OU.current) || void 0 === XU || XU.setOpacity(UU)
-            },
-            onChangeComplete: UU => {
-              (0, qU.S)(UU), (0, WU.reportAnalyticsClick)({
-                id: "hud_layout.edit",
-                value: "opacity"
-              })
-            }
-          })]
-        }), (0, ZU.jsx)(DU.G, {
-          className: "HudLayoutResetAll",
-          analyticsClick: {
-            id: "hud_layout.reset_all"
-          },
-          onClick: () => {
-            !async function() {
-              const UU = dU.NotificationProvider.showPromptPopup({
-                title: "hudLayout:resetAllTitle",
-                subtitle: "hudLayout:resetAllSubtitle",
-                confirmText: "hudLayout:resetAllConfirm",
-                cancelText: "general:cancel",
-                destructive: !0
-              });
-              !0 === await UU.getResult() && (0, qU.Q)()
-            }()
-          },
-          children: UU("hudLayout:resetAll")
-        })]
-      })
-    }
-    const Rz = 350;
-    const Pz = [function() {
-      const {
-        t: UU
-      } = (0, cU.I)(), [XU, zU] = (0, yU.useState)(!1), QU = (0, yU.useRef)(null);
-      return (0, yU.useEffect)((() => {
-        var UU;
-        XU && (null === (UU = QU.current) || void 0 === UU || UU.scrollIntoView({
-          block: "start",
-          behavior: "smooth"
-        }))
-      }), [XU]), (0, ZU.jsxs)("div", {
-        className: "HudLayoutSection",
-        children: [(0, ZU.jsx)(LU.c, {
-          ref: QU,
-          icon: "arrows-up-down-left-right",
-          title: UU("hudLayout:title"),
-          sub: UU("hudLayout:entrySub"),
-          expanded: XU,
-          onClick: () => {
-            zU(!XU)
-          }
-        }), XU && (0, ZU.jsx)(Zz, {})]
-      })
-    }, function() {
-      const {
-        t: UU
-      } = (0, cU.I)(), {
-        joystickMode: XU,
-        touchSpeedCurve: zU,
-        autorun: yU,
-        jumpLock: QU,
-        touchEdgeGuard: AU
-      } = (0, EU.q)(["clientEscMenuOptions"]).clientEscMenuOptions;
-      return (0, ZU.jsxs)(ZU.Fragment, {
-        children: [(0, ZU.jsx)(IU.i, {
-          label: UU("settingsMenu:joystick"),
-          options: BU.Eb.map((XU => ({
-            value: XU,
-            label: UU(RU[XU])
-          }))),
-          value: XU,
-          onChange: UU => {
-            EU.e.setClientEscMenuOptions({
-              joystickMode: UU
-            })
-          },
-          circleInfoText: UU("settingsMenu:joystickInfo")
-        }), (0, ZU.jsx)(IU.e, {
-          label: UU("settingsMenu:preciseWalking"),
-          checked: zU,
-          onClick: UU => {
-            EU.e.setClientEscMenuOptions({
-              touchSpeedCurve: UU
-            })
-          },
-          circleInfoText: UU("settingsMenu:preciseWalkingInfo")
-        }), (0, ZU.jsx)(IU.e, {
-          label: UU("settingsMenu:autoRun"),
-          checked: yU,
-          onClick: UU => {
-            EU.e.setClientEscMenuOptions({
-              autorun: UU
-            })
-          },
-          circleInfoText: UU("settingsMenu:autoRunInfo")
-        }), (0, ZU.jsx)(IU.e, {
-          label: UU("settingsMenu:jumpLock"),
-          checked: QU,
-          onClick: UU => {
-            EU.e.setClientEscMenuOptions({
-              jumpLock: UU
-            })
-          },
-          circleInfoText: UU("settingsMenu:jumpLockInfo")
-        }), (0, ZU.jsx)(IU.e, {
-          label: UU("touchSettings:stopAtEdges"),
-          checked: AU,
-          onClick: UU => {
-            EU.e.setClientEscMenuOptions({
-              touchEdgeGuard: UU
-            })
-          },
-          circleInfoText: UU("touchSettings:stopAtEdgesInfo")
-        })]
-      })
-    }, function() {
-      return (0, ZU.jsx)(GU.b, {})
-    }, function() {
-      const {
-        t: UU
-      } = (0, cU.I)(), {
-        clientEscMenuOptions: XU
-      } = (0, EU.q)(["clientEscMenuOptions"]);
-      return (0, PU.b)() ? (0, ZU.jsx)(IU.e, {
-        label: UU("settingsMenu:vibration"),
-        checked: XU.vibration,
-        onClick: UU => {
-          EU.e.setClientEscMenuOptions({
-            vibration: UU
-          })
-        },
-        circleInfoText: UU("settingsMenu:vibrationInfo")
-      }) : null
-    }];
-
-    function Wz() {
-      return (0, ZU.jsx)(ZU.Fragment, {
-        children: Pz.map(((UU, XU) => (0, ZU.jsx)(UU, {}, XU)))
-      })
-    }
-    var dz = zU(4783);
-
-    function Lz() {
-      const {
-        t: UU
-      } = (0, cU.I)(), {
-        isTouchScreen: XU,
-        clientEscMenuOptions: zU,
-        gameState: AU
-      } = (0, EU.q)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), FU = (0, pU.f)("ezBridging"), oU = (0, pU.f)("ezTowering"), tU = "inGame" !== AU || !0 === FU, gU = (0, aU.f)(), GU = null !== gU && ("inGame" !== AU || !0 === oU), [, BU] = (0, yU.useReducer)((UU => UU + 1), 0), RU = (0, kU.i)(), [PU, WU] = (0, yU.useState)(dz.e);
-      return (0, ZU.jsxs)("div", {
-        className: "SettingsMenuRightInner",
-        children: [RU && (0, ZU.jsxs)("div", {
-          className: "SettingBox SettingBoxWithButton",
-          children: [(0, ZU.jsx)("div", {
-            children: UU("controller:settingsControlsNote")
-          }), (0, ZU.jsx)(DU.O, {
-            onClick: () => {
-              EU.e.set({
-                openSettingsCategory: "controller"
-              })
-            },
-            children: UU("controller:settingsOpenController")
-          })]
-        }), (0, YU.isTouchscreen)() && !(0, YU.isMobile)() ? (0, ZU.jsx)(ZU.Fragment, {
-          children: (0, ZU.jsx)(IU.e, {
-            label: UU("settingsMenu:useTouchControls"),
-            checked: PU,
-            onClick: UU => {
-              (0, dz.c)(UU), WU(UU)
-            }
-          })
-        }) : null, XU && (0, ZU.jsx)(Wz, {}), tU && (0, ZU.jsx)(IU.e, {
-          label: UU("settingsMenu:ezBridging"),
-          checked: zU.ezBridging,
-          onClick: UU => {
-            EU.e.setClientEscMenuOptions({
-              ezBridging: UU
-            })
-          },
-          circleInfoText: UU("settingsMenu:ezBridgingInfo")
-        }), GU && (0, ZU.jsx)(IU.e, {
-          label: UU("settingsMenu:ezTowering"),
-          checked: zU.ezTowering,
-          onClick: UU => {
-            EU.e.setClientEscMenuOptions({
-              ezTowering: UU
-            })
-          },
-          circleInfoText: UU("jump" === gU ? "ezTowering:jumpInfo" : "settingsMenu:ezToweringInfo")
-        }), (0, ZU.jsx)(IU.e, {
-          label: UU("settingsMenu:crouchToggle"),
-          checked: zU.crouchIsToggle,
-          onClick: UU => {
-            EU.e.setClientEscMenuOptions({
-              crouchIsToggle: UU
-            })
-          },
-          circleInfoText: UU("settingsMenu:crouchToggleInfo")
-        }), (0, ZU.jsx)(IU.e, {
-          label: UU("settingsMenu:hideUiToggle"),
-          checked: zU.hideUiIsToggle,
-          onClick: UU => {
-            EU.e.setClientEscMenuOptions({
-              hideUiIsToggle: UU
-            })
-          },
-          circleInfoText: UU("settingsMenu:hideUiToggleInfo")
-        }), "mouseOnly" !== (0, NU.c)() && (0, ZU.jsx)(IU.j, {
-          name: UU("settingsMenu:touchscreenSensitivity"),
-          min: 1,
-          max: 900,
-          step: 1,
-          initValue: zU.touchscreenSensitivity,
-          onChange: UU => {
-            EU.e.setClientEscMenuOptions({
-              touchscreenSensitivity: UU
-            })
-          }
-        }), !(0, YU.isMobile)() && (0, ZU.jsx)(IU.j, {
-          name: UU("settingsMenu:mouseSensitivity"),
-          min: 1,
-          max: 200,
-          step: 1,
-          initValue: zU.mouseSensitivity,
-          onChange: UU => {
-            EU.e.setClientEscMenuOptions({
-              mouseSensitivity: UU
-            })
-          }
-        }), !(0, YU.isMobile)() && (0, ZU.jsxs)("div", {
-          className: "ControlsContainer",
-          children: [(0, ZU.jsx)("div", {
-            className: "SliderText",
-            children: UU("settingsMenu:keyBindings")
-          }), QU.g.map((XU => (0, ZU.jsx)(ez, {
-            title: UU(XU.name.translationKey, XU.name.params),
-            defaultOpen: QU.k.has(XU.id),
-            children: XU.actions.map((UU => (0, ZU.jsx)(Cz, {
-              noaAction: UU,
-              forceUpdate: BU,
-              clashesWith: XU.clashesWith,
-              showPadGlyph: RU
-            }, UU)))
-          }, XU.name.translationKey))), (0, ZU.jsx)(DU.G, {
-            className: "ResetBindingsButton",
-            onClick: () => {
-              (0, QU.G)(), BU()
-            },
-            children: UU("controls:resetBindings")
-          })]
-        })]
-      })
-    }
-
-    function ez(UU) {
-      let {
-        title: XU,
-        defaultOpen: zU,
-        children: cU
-      } = UU;
-      const [QU, AU] = (0, yU.useState)(zU);
-      return (0, ZU.jsxs)("div", {
-        className: oU()("ControlsSection", {
-          Collapsed: !QU
-        }),
-        children: [(0, ZU.jsxs)("div", {
-          className: "ControlsSectionHeader",
-          "data-pad-focusable": !0,
-          onClick: () => {
-            AU(!QU)
-          },
-          children: [(0, ZU.jsx)("div", {
-            className: "ControlsSectionTitle",
-            children: XU
-          }), (0, ZU.jsx)("div", {
-            className: "ControlsSectionChevron",
-            children: "\u25be"
-          })]
-        }), QU && (0, ZU.jsx)("div", {
-          className: "ControlsSectionRows",
-          children: cU
-        })]
-      })
-    }
-
-    function Cz(UU) {
-      let {
-        noaAction: XU,
-        forceUpdate: zU,
-        clashesWith: FU,
-        showPadGlyph: EU
-      } = UU;
-      const {
-        t: YU
-      } = (0, cU.I)(), NU = (0, gU.d)(XU), [IU, pU] = (0, yU.useState)(!1), [aU, kU] = (0, yU.useState)("controls:clickToEnterNewBinding"), [GU, BU] = (0, yU.useState)(null), [RU, PU] = (0, yU.useState)(null), WU = (0, yU.useRef)(null);
-      (0, yU.useEffect)((() => {
-        IU && WU.current && WU.current.focus()
-      }), [IU]);
-      const dU = QU.w[XU].filter((UU => AU.i[UU]));
-      let LU = null;
-      const eU = [],
-        CU = FU.flatMap((UU => {
-          var XU, zU;
-          return null !== (XU = null === (zU = QU.g.find((XU => XU.id === UU))) || void 0 === zU ? void 0 : zU.actions) && void 0 !== XU ? XU : []
-        }));
-      for (const cU of CU) {
-        if (cU === XU) continue;
-        const UU = QU.w[cU];
-        for (const XU of UU) dU.includes(XU) && eU.push(YU(QU.y[cU].translationKey, QU.y[cU].params))
-      }
-      eU.length > 0 && (LU = YU("controls:sharedBindingsWarning") + " ", LU += eU.join(", "));
-      const wU = () => {
-          pU(!1), BU(null), kU("controls:clickToEnterNewBinding"), PU(null)
-        },
-        qU = () => "BindingInput_" + XU;
-      return (0, ZU.jsxs)("div", {
-        className: oU()("ControlRow", {
-          WarningBorder: null !== LU
-        }),
-        children: [(0, ZU.jsxs)("div", {
-          className: "ControlRowInner",
-          children: [(0, ZU.jsxs)("div", {
-            className: "ControlName",
-            children: [YU(QU.y[XU].translationKey, QU.y[XU].params), EU && NU && (0, ZU.jsx)(tU.b, {
-              glyph: NU,
-              className: "ControlPadGlyph"
-            })]
-          }), (0, ZU.jsxs)("div", {
-            className: "ControlBindingsContainer",
-            children: [(0, ZU.jsxs)("div", {
-              className: "ControlBindingsList",
-              children: [dU.map((UU => (0, ZU.jsxs)("div", {
-                className: "ControlBinding",
-                children: [(0, ZU.jsx)("div", {
-                  children: (0, QU.p)(UU)
-                }), (0, ZU.jsx)("div", {
-                  className: "ControlBindingRemoveIcon",
-                  "data-pad-focusable": !0,
-                  onClick: () => {
-                    const cU = (0, QU.B)(XU, UU);
-                    cU.isError() ? PU(cU.asError().message) : PU(null), zU()
-                  },
-                  children: "\xd7"
-                })]
-              }, UU))), !IU && (0, ZU.jsx)("div", {
-                className: "ControlBinding ControlBindingAdd",
-                onClick: () => {
-                  pU(!0), PU(null)
-                },
-                children: (0, ZU.jsx)("div", {
-                  className: "ControlBindingAddIcon",
-                  children: "+"
-                })
-              })]
-            }), IU && (0, ZU.jsxs)("div", {
-              className: "ControlBindingAddInput",
-              children: [(0, ZU.jsxs)("div", {
-                className: "InputContainer",
-                children: [(0, ZU.jsx)("div", {
-                  className: "InputOverlay",
-                  children: GU ? (0, QU.p)(GU) : (0, ZU.jsx)("div", {
-                    className: "InputOverlayPlaceholder",
-                    children: YU(aU)
-                  })
-                }), (0, ZU.jsx)("input", {
-                  ref: WU,
-                  id: qU(),
-                  "data-pad-no-osk": !0,
-                  defaultValue: "",
-                  onKeyDown: UU => {
-                    if ("Escape" === UU.code) return wU(), UU.preventDefault(), void UU.stopPropagation();
-                    const XU = UU.code;
-                    AU.c.includes(XU) ? (PU(null), BU(XU)) : (PU("controls:keyIsReserved"), BU(null)), UU.preventDefault(), UU.stopPropagation()
-                  },
-                  onMouseDown: UU => {
-                    const XU = "Mouse" + (UU.button + 1);
-                    document.activeElement && document.activeElement.id === qU() ? AU.c.includes(XU) ? (PU(null), BU(XU)) : (PU("controls:keyIsReserved"), BU(null)) : kU("controls:enterNewBinding"), UU.stopPropagation()
-                  },
-                  onBlur: () => {
-                    kU("controls:clickToEnterNewBinding")
-                  }
-                })]
-              }), (0, ZU.jsx)(DU.f, {
-                onPointerDown: UU => {
-                  UU.preventDefault()
-                },
-                onClick: () => {
-                  (0, QU.d)(XU, GU), zU(), wU()
-                },
-                className: "ControlBindingAddButton",
-                disabled: null === GU,
-                children: YU("general:add")
-              }), (0, ZU.jsx)("div", {
-                className: "ControlBindingAddCancel",
-                onClick: () => {
-                  wU()
-                },
-                children: "\xd7"
-              })]
-            }), RU && (0, ZU.jsx)("div", {
-              className: "ControlBindingError",
-              children: YU(RU)
-            })]
-          })]
-        }), LU && (0, ZU.jsx)("div", {
-          className: "ControlRowWarning",
-          children: LU
-        })]
-      })
-    }
+  7331: (HH, BH) => {
+    var LH = "alarm-clock",
+      AH = [9200],
+      rH = "f34e",
+      SH = "M504.4 132.5c-4.5 10.5-18.4 9.8-24.9 .4-27.8-40-66.1-72.2-111-92.6-10.4-4.7-13.7-18.3-4.1-24.6 15-9.9 33-15.7 52.3-15.7 52.6 0 95.2 42.6 95.2 95.2 0 13.2-2.7 25.8-7.6 37.3zm-471.9 .4c-6.5 9.4-20.5 10.1-24.9-.4-4.9-11.5-7.6-24.1-7.6-37.3 0-52.6 42.6-95.2 95.2-95.2 19.3 0 37.3 5.8 52.3 15.7 9.6 6.3 6.3 19.9-4.1 24.6-44.8 20.4-83.1 52.6-111 92.6zM390.2 467.4C352.8 495.4 306.3 512 256 512s-96.8-16.6-134.1-44.6L86.6 502.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l35.2-35.2C48.6 384.8 32 338.3 32 288 32 164.3 132.3 64 256 64S480 164.3 480 288c0 50.3-16.6 96.8-44.6 134.2l35.2 35.2c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-35.2-35.2zM280 184c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l56 56c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-49-49 0-94.1z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.g = BH.d
   },
-  9457: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => AU
-    });
-    var cU = zU(61),
-      yU = zU(1390),
-      QU = zU(1305);
-    const AU = (0, cU.forwardRef)((function(UU, XU) {
-      let {
-        icon: zU,
-        title: cU,
-        sub: AU,
-        expanded: FU,
-        onClick: oU
-      } = UU;
-      return (0, QU.jsxs)("button", {
-        ref: XU,
-        type: "button",
-        className: "SettingBox SettingBoxFeatured FeaturedSettingsEntry",
-        "aria-expanded": FU,
-        onClick: oU,
-        children: [(0, QU.jsx)(yU.d, {
-          name: zU,
-          className: "FeaturedSettingsEntryIcon"
-        }), (0, QU.jsxs)("span", {
-          className: "FeaturedSettingsEntryText",
-          children: [(0, QU.jsx)("span", {
-            className: "FeaturedSettingsEntryTitle",
-            children: cU
-          }), (0, QU.jsx)("span", {
-            className: "FeaturedSettingsEntrySub",
-            children: AU
-          })]
-        }), (0, QU.jsx)("span", {
-          className: "FeaturedSettingsEntryChevron",
-          children: "\u25be"
-        })]
-      })
-    }))
+  7334: (HH, BH, LH) => {
+    var AH = LH(7337);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.h = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
   },
-  9252: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => gU,
-      g: () => tU,
-      h: () => EU,
-      i: () => kU,
-      j: () => GU,
-      n: () => NU
-    });
-    var cU = zU(1715),
-      yU = zU(1808);
-    const QU = UU => UU >= 56320 && UU <= 57343,
-      AU = UU => UU >= 55296 && UU <= 56319,
-      FU = (UU, XU) => XU >= 2 && QU(UU.charCodeAt(XU - 1)) && AU(UU.charCodeAt(XU - 2)) ? XU - 2 : Math.max(0, XU - 1),
-      oU = (UU, XU) => {
-        let zU;
-        var cU, yU;
-        return zU = UU.start !== UU.end ? XU < 0 ? UU.start : UU.end : XU < 0 ? FU(UU.value, UU.start) : (cU = UU.value, (yU = UU.start) + 1 < cU.length && AU(cU.charCodeAt(yU)) && QU(cU.charCodeAt(yU + 1)) ? yU + 2 : Math.min(cU.length, yU + 1)), {
-          value: UU.value,
-          start: zU,
-          end: zU
-        }
-      },
-      DU = ["text", "search", "url", "email", "tel", "password", "number"],
-      EU = UU => !(!(0, yU.e)(UU) || UU.isContentEditable || UU.hasAttribute("data-pad-no-osk")) && (UU instanceof HTMLTextAreaElement || UU instanceof HTMLInputElement && DU.includes(UU.type)),
-      YU = UU => null !== UU.selectionStart,
-      NU = UU => {
-        var XU, zU;
-        const {
-          value: cU
-        } = UU;
-        return {
-          value: cU,
-          start: null !== (XU = UU.selectionStart) && void 0 !== XU ? XU : cU.length,
-          end: null !== (zU = UU.selectionEnd) && void 0 !== zU ? zU : cU.length
-        }
-      },
-      IU = (UU, XU, zU) => {
-        if (UU.readOnly) return;
-        const yU = UU instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
-        Object.getOwnPropertyDescriptor(yU, "value").set.call(UU, XU.value), YU(UU) && UU.setSelectionRange(XU.start, XU.end), (0, cU.g)(UU, new InputEvent("input", {
-          bubbles: !0,
-          inputType: zU
-        }))
-      };
-    let pU = !1;
-    const aU = (UU, XU) => !!document.execCommand(UU, !1, XU) || (pU || (pU = !0, console.warn(`execCommand("${UU}") failed; the on-screen keyboard is setting the value directly`)), !1),
-      tU = (UU, XU) => {
-        aU("insertText", XU) || IU(UU, function(UU, XU) {
-          let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-          const cU = UU.value.slice(0, UU.start),
-            yU = UU.value.slice(UU.end);
-          let QU = zU < 0 ? XU.length : Math.max(0, zU - cU.length - yU.length);
-          QU > 0 && QU < XU.length && AU(XU.charCodeAt(QU - 1)) && QU--;
-          const FU = XU.slice(0, QU),
-            oU = cU.length + FU.length;
-          return {
-            value: cU + FU + yU,
-            start: oU,
-            end: oU
-          }
-        }(NU(UU), XU, UU.maxLength), "insertText")
-      },
-      gU = UU => {
-        aU("delete") || IU(UU, (UU => {
-          const XU = UU.start === UU.end ? FU(UU.value, UU.start) : UU.start;
-          return {
-            value: UU.value.slice(0, XU) + UU.value.slice(UU.end),
-            start: XU,
-            end: XU
-          }
-        })(NU(UU)), "deleteContentBackward")
-      },
-      kU = (UU, XU) => {
-        if (!YU(UU)) return;
-        const zU = oU(NU(UU), XU);
-        UU.setSelectionRange(zU.start, zU.end)
-      },
-      GU = UU => {
-        YU(UU) && 0 === UU.selectionStart && 0 === UU.selectionEnd && UU.setSelectionRange(UU.value.length, UU.value.length)
-      }
+  7345: (HH, BH) => {
+    var LH = "angle-down",
+      AH = [8964],
+      rH = "f107",
+      SH = "M169.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 306.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.g = BH.e
   },
-  9417: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => FU
-    });
-    var cU = zU(27),
-      yU = zU(2205),
-      QU = zU(1410),
-      AU = zU(1444);
-    const FU = async () => {
-      if ((0, AU.n)()) {
-        if (!0 !== await QU.NotificationProvider.showPromptPopup({
-            title: "controller:menusLeaveGameTitle",
-            confirmText: "controller:menusLeaveGameLeave",
-            cancelText: "controller:menusLeaveGameStay",
-            destructive: !0
-          }).getResult() || "inGame" !== cU.e.get("gameState")) return
-      }(0, yU.f)()
-    }
+  7354: (HH, BH) => {
+    var LH = "angle-up",
+      AH = [8963],
+      rH = "f106",
+      SH = "M169.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L192 205.3 54.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.f = BH.d
   },
-  9422: (UU, XU, zU) => {
-    zU.d(XU, {
-      c: () => oU,
-      f: () => QU,
-      g: () => AU,
-      k: () => yU,
-      n: () => FU
+  7337: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
     });
-    var cU = zU(2041);
-    const yU = "controllerPadShopOpen",
-      QU = UU => cU.h.includes(UU),
-      AU = UU => Object.values(UU).some((UU => !1 !== UU.canBuy && !UU.isRewardedAd)),
-      FU = (UU, XU, zU) => {
-        var cU, yU, AU, FU;
-        const oU = UU.filter((UU => !QU(UU))),
-          DU = null !== XU && UU.includes(XU) ? XU : null;
-        return null !== DU && !QU(DU) && zU(DU) ? DU : null !== (cU = null !== (yU = null !== (AU = null !== (FU = oU.find(zU)) && void 0 !== FU ? FU : oU[0]) && void 0 !== AU ? AU : DU) && void 0 !== yU ? yU : UU[0]) && void 0 !== cU ? cU : null
-      },
-      oU = UU => UU.userInput || UU.isRewardedAd || "boolean" === typeof UU.isSelected ? null : JSON.stringify([UU.image, UU.cost, UU.currency, UU.amount, UU.customTitle, UU.buyButtonText, UU.description, UU.canBuy])
+    var LH = "angles-up",
+      AH = ["angle-double-up"],
+      rH = "f102",
+      SH = "M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3 329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160zm160 352l-160-160c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 329.4 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.faAnglesUp = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 384, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
   },
-  9443: (UU, XU, zU) => {
-    zU.d(XU, {
-      e: () => DU,
-      i: () => EU
-    });
-    var cU = zU(61),
-      yU = zU(1492),
-      QU = zU(2082),
-      AU = zU(1457),
-      FU = zU(1478),
-      oU = zU(1305);
-    const DU = () => {
-        const UU = (0, AU.o)();
-        if ((0, cU.useEffect)((() => {
-            (0, AU.i)()
-          }), []), !UU) return null;
-        const {
-          ControllerCategory: XU
-        } = UU;
-        return (0, oU.jsx)(FU.c, {
-          children: (0, oU.jsx)(XU, {})
-        })
-      },
-      EU = () => {
-        var UU;
-        const XU = (0, AU.o)(),
-          [, zU] = (0, cU.useReducer)((UU => UU + 1), 0);
-        return (0, yU.f)(QU.c, zU), null !== (UU = null === XU || void 0 === XU ? void 0 : XU.hasActivePad()) && void 0 !== UU && UU
-      }
+  7362: (HH, BH) => {
+    var LH = "archway",
+      AH = [],
+      rH = "f557",
+      SH = "M32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l448 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zm0 384c-17.7 0-32 14.3-32 32s14.3 32 32 32l128 0 0-128c0-53 43-96 96-96s96 43 96 96l0 128 128 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-272-448 0 0 272z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.e = BH.b
   },
-  9237: (UU, XU, zU) => {
-    zU.d(XU, {
-      A: () => RU,
-      E: () => PU,
-      F: () => tU,
-      J: () => oU,
-      M: () => EU,
-      b: () => gU,
-      c: () => dU,
-      g: () => ZU,
-      h: () => BU,
-      l: () => pU,
-      p: () => aU,
-      q: () => NU,
-      s: () => IU,
-      t: () => WU,
-      u: () => DU,
-      w: () => LU
+  7368: (HH, BH) => {
+    var LH = "arrow-down-to-line",
+      AH = ["arrow-to-bottom"],
+      rH = "f33d",
+      SH = "M32 512c-17.7 0-32-14.3-32-32s14.3-32 32-32l320 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 512zM214.6 374.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 274.7 160 32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 242.7 73.4-73.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-128 128z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.g = BH.d
+  },
+  7375: (HH, BH) => {
+    var LH = "arrow-left",
+      AH = [8592],
+      rH = "f060",
+      SH = "M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 105.4-105.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.g = BH.e
+  },
+  7378: (HH, BH) => {
+    var LH = "arrow-right",
+      AH = [8594],
+      rH = "f061",
+      SH = "M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.e = BH.c
+  },
+  7385: (HH, BH) => {
+    var LH = "arrow-up",
+      AH = [8593],
+      rH = "f062",
+      SH = "M214.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 109.3 160 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-370.7 105.4 105.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.e = BH.d
+  },
+  7392: (HH, BH) => {
+    var LH = "arrow-up-from-line",
+      AH = [8613, "arrow-from-bottom"],
+      rH = "f342",
+      SH = "M214.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 109.3 160 352c0 17.7 14.3 32 32 32s32-14.3 32-32l0-242.7 73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l320 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 448z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  7399: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
     });
-    var cU = zU(31),
-      yU = zU(1715),
-      QU = zU(9245),
-      AU = zU(9252),
-      FU = zU(2528);
-    const oU = UU => (0, AU.h)(UU),
-      DU = UU => {
-        const XU = UU.getBoundingClientRect();
-        return {
-          x: XU.left + XU.width / 2,
-          y: XU.top + XU.height / 2
-        }
+    var LH = "arrow-up-right-from-square",
+      AH = ["external-link"],
+      rH = "f08e",
+      SH = "M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0-201.4 201.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3 448 192c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 96C35.8 96 0 131.8 0 176L0 432c0 44.2 35.8 80 80 80l256 0c44.2 0 80-35.8 80-80l0-80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 80c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l80 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 96z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faArrowUpRightFromSquare = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7406: (HH, BH, LH) => {
+    var AH = LH(7415);
+    BH.c = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.e = BH.c, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7421: (HH, BH, LH) => {
+    var AH = LH(7427);
+    BH.b = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.e = BH.b, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7427: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "arrows-left-right",
+      AH = ["arrows-h"],
+      rH = "f07e",
+      SH = "M470.6 374.6l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l41.4 41.4-357.5 0 41.4-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-96 96c-6 6-9.4 14.1-9.4 22.6s3.4 16.6 9.4 22.6l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-41.4-41.4 357.5 0-41.4 41.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.faArrowsLeftRight = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 576, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7429: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "arrows-rotate",
+      AH = [128472, "refresh", "sync"],
+      rH = "f021",
+      SH = "M65.9 228.5c13.3-93 93.4-164.5 190.1-164.5 53 0 101 21.5 135.8 56.2 .2 .2 .4 .4 .6 .6l7.6 7.2-47.9 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-128c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 53.4-11.3-10.7C390.5 28.6 326.5 0 256 0 127 0 20.3 95.4 2.6 219.5 .1 237 12.2 253.2 29.7 255.7s33.7-9.7 36.2-27.1zm443.5 64c2.5-17.5-9.7-33.7-27.1-36.2s-33.7 9.7-36.2 27.1c-13.3 93-93.4 164.5-190.1 164.5-53 0-101-21.5-135.8-56.2-.2-.2-.4-.4-.6-.6l-7.6-7.2 47.9 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 320c-8.5 0-16.7 3.4-22.7 9.5S-.1 343.7 0 352.3l1 127c.1 17.7 14.6 31.9 32.3 31.7S65.2 496.4 65 478.7l-.4-51.5 10.7 10.1c46.3 46.1 110.2 74.7 180.7 74.7 129 0 235.7-95.4 253.4-219.5z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faArrowsRotate = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7415: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "arrows-up-down-left-right",
+      AH = ["arrows"],
+      rH = "f047",
+      SH = "M278.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-64 64c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l9.4-9.4 0 114.7-114.7 0 9.4-9.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-64 64c-12.5 12.5-12.5 32.8 0 45.3l64 64c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-9.4-9.4 114.7 0 0 114.7-9.4-9.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l64 64c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-9.4 9.4 0-114.7 114.7 0-9.4 9.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-64-64c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l9.4 9.4-114.7 0 0-114.7 9.4 9.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-64-64z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faArrowsUpDownLeftRight = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7435: (HH, BH) => {
+    var LH = "award",
+      AH = [],
+      rH = "f559",
+      SH = "M245.9-25.9c-13.4-8.2-30.3-8.2-43.7 0-24.4 14.9-39.5 18.9-68.1 18.3-15.7-.4-30.3 8.1-37.9 21.9-13.7 25.1-24.8 36.2-49.9 49.9-13.8 7.5-22.2 22.2-21.9 37.9 .7 28.6-3.4 43.7-18.3 68.1-8.2 13.4-8.2 30.3 0 43.7 14.9 24.4 18.9 39.5 18.3 68.1-.4 15.7 8.1 30.3 21.9 37.9 22.1 12.1 33.3 22.1 45.1 41.5L42.7 458.5c-5.9 11.9-1.1 26.3 10.7 32.2l86 43c11.5 5.7 25.5 1.4 31.7-9.8l52.8-95.1 52.8 95.1c6.2 11.2 20.2 15.6 31.7 9.8l86-43c11.9-5.9 16.7-20.3 10.7-32.2l-48.6-97.2c11.7-19.4 23-29.4 45.1-41.5 13.8-7.5 22.2-22.2 21.9-37.9-.7-28.6 3.4-43.7 18.3-68.1 8.2-13.4 8.2-30.3 0-43.7-14.9-24.4-18.9-39.5-18.3-68.1 .4-15.7-8.1-30.3-21.9-37.9-25.1-13.7-36.2-24.8-49.9-49.9-7.5-13.8-22.2-22.2-37.9-21.9-28.6 .7-43.7-3.4-68.1-18.3zM224 96a96 96 0 1 1 0 192 96 96 0 1 1 0-192z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.f = BH.b
+  },
+  7440: (HH, BH) => {
+    var LH = "backpack",
+      AH = [127890],
+      rH = "f5d4",
+      SH = "M184 48l80 0c4.4 0 8 3.6 8 8l0 40-96 0 0-40c0-4.4 3.6-8 8-8zm-56 8l0 40C57.3 96 0 153.3 0 224L0 448c0 35.3 28.7 64 64 64l16 0 0-136c0-39.8 32.2-72 72-72l144 0c39.8 0 72 32.2 72 72l0 136 16 0c35.3 0 64-28.7 64-64l0-224c0-70.7-57.3-128-128-128l0-40c0-30.9-25.1-56-56-56L184 0c-30.9 0-56 25.1-56 56zM320 512l0-136c0-13.3-10.7-24-24-24l-144 0c-13.3 0-24 10.7-24 24l0 136 192 0zM152 176l144 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-144 0c-13.3 0-24-10.7-24-24s10.7-24 24-24z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.e = BH.c
+  },
+  7448: (HH, BH) => {
+    var LH = [128683, "cancel"],
+      AH = "f05e",
+      rH = "M367.2 412.5L99.5 144.8c-22.4 31.4-35.5 69.8-35.5 111.2 0 106 86 192 192 192 41.5 0 79.9-13.1 111.2-35.5zm45.3-45.3c22.4-31.4 35.5-69.8 35.5-111.2 0-106-86-192-192-192-41.5 0-79.9 13.1-111.2 35.5L412.5 367.2zM0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0z";
+    BH.e = {
+      prefix: "fas",
+      iconName: "ban",
+      icon: [512, 512, LH, AH, rH]
+    }, BH.f = BH.e
+  },
+  7456: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "bars",
+      AH = ["navicon"],
+      rH = "f0c9",
+      SH = "M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.faBars = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 448, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7463: (HH, BH) => {
+    var LH = [],
+      AH = "e0b2",
+      rH = "M334 448c-25.8 28-52 49.8-63.7 59.1-4.1 3.2-9.1 4.9-14.3 4.9s-10.2-1.6-14.3-4.9C230 497.8 203.8 476 178 448l156 0zM256 319.9c26.9 35.8 63.5 63.7 105.9 80.1l-211.8 0c42.4-16.3 79.1-44.3 105.9-80.1zM311 7c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L326.9 59c5.8 11.1 9.1 23.6 9.1 37l0 34.7c90.8 15.2 160 94.2 160 189.3l0 16c0 17.7-14.3 32-32 32l-16 0c-102.7 0-186.6-80.7-191.8-182.1L256 176c0 106-86 192-192 192l-16 0c-17.7 0-32-14.3-32-32l0-16c0-95.1 69.2-174.1 160-189.3L176 96c0-13.3 3.3-25.9 9.1-37L167 41 165.4 39.1c-7.7-9.4-7.1-23.3 1.7-32.1s22.7-9.3 32.1-1.7L201 7 219 25.1c11.1-5.8 23.6-9.1 37-9.1 13.3 0 25.9 3.3 36.9 9.1L311 7z";
+    BH.d = {
+      prefix: "fas",
+      iconName: "bee",
+      icon: [512, 512, LH, AH, rH]
+    }, BH.h = BH.d
+  },
+  7468: (HH, BH) => {
+    var LH = "bell",
+      AH = [128276, 61602],
+      rH = "f0f3",
+      SH = "M224 0c-17.7 0-32 14.3-32 32l0 3.2C119 50 64 114.6 64 192l0 21.7c0 48.1-16.4 94.8-46.4 132.4L7.8 358.3C2.7 364.6 0 372.4 0 380.5 0 400.1 15.9 416 35.5 416l376.9 0c19.6 0 35.5-15.9 35.5-35.5 0-8.1-2.7-15.9-7.8-22.2l-9.8-12.2C400.4 308.5 384 261.8 384 213.7l0-21.7c0-77.4-55-142-128-156.8l0-3.2c0-17.7-14.3-32-32-32zM162 464c7.1 27.6 32.2 48 62 48s54.9-20.4 62-48l-124 0z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  7476: (HH, BH) => {
+    var LH = "bells",
+      AH = [],
+      rH = "f77f",
+      SH = "M23.9 263.3l205.8 56.3c-.6-3.3-1.4-6.7-2.2-10l-5.8-21.9c-26.6-101.2 33.7-205.6 134.6-233.1 2.7-.7 5.3-1.4 8-2-16.9-37.7-49.9-67.9-92.6-79.6-75.3-20.6-152.5 23.9-172.3 99.5L93.5 94.4C82.6 135.9 58.2 172.4 24 198l-11.3 8.5c-5.7 4.3-9.8 10.4-11.6 17.4-4.5 17.1 5.7 34.8 22.8 39.5zm104.4 78.3c2.9 32.7 30.3 58.3 63.8 58.3 12.1 0 23.4-3.4 33.1-9.2 2.3-7 4-14.1 5.1-21.3l-102-27.9zM296.1 478.9l320-87.5c17.1-4.7 27.3-22.4 22.8-39.5-1.8-7-5.9-13.1-11.6-17.4L616 326c-34.1-25.6-58.6-62.1-69.5-103.6l-5.8-21.9C520.9 125 443.8 80.4 368.4 101S248.1 199.6 267.9 275.1l5.8 21.9c10.9 41.5 7.6 85.6-9.4 125.2l-5.6 13.1c-2.8 6.6-3.4 14-1.6 21 4.5 17.1 22 27.2 39.1 22.6zm63.9 32.3c10.9 19.6 31.9 32.9 55.9 32.9 35.3 0 64-28.7 64-64 0-.6 0-1.1 0-1.7L360.1 511.1z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [640, 512, AH, rH, SH]
+    }, BH.f = BH.d
+  },
+  7479: (HH, BH) => {
+    var LH = "block-question",
+      AH = [],
+      rH = "e3dd",
+      SH = "M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm73.8 149.3c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1 0 22.6-12.1 43.5-31.7 54.8L248 280.4c-.2 13-10.9 23.6-24 23.6-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1 0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM192 368a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM48 104a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM376 80a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM48 408a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm328-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.g = BH.d
+  },
+  7481: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "bolt",
+      AH = [9889, "zap"],
+      rH = "f0e7",
+      SH = "M338.8-9.9c11.9 8.6 16.3 24.2 10.9 37.8L271.3 224 416 224c13.5 0 25.5 8.4 30.1 21.1s.7 26.9-9.6 35.5l-288 240c-11.3 9.4-27.4 9.9-39.3 1.3s-16.3-24.2-10.9-37.8L176.7 288 32 288c-13.5 0-25.5-8.4-30.1-21.1s-.7-26.9 9.6-35.5l288-240c11.3-9.4 27.4-9.9 39.3-1.3z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.faBolt = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 448, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7487: (HH, BH) => {
+    var LH = "boot",
+      AH = [129406],
+      rH = "f782",
+      SH = "M0 32C0 14.3 14.3 0 32 0L288 0c17.7 0 32 14.3 32 32l0 48c0 17.7-14.3 32-32 32l-72 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l72 0 0 48-72 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l104 0c70.7 0 128 57.3 128 128L0 384 0 32zM0 432l448 0 0 28.7c0 12.4-4.5 24.4-12.7 33.8-9.7 11.1-23.8 17.5-38.6 17.5l-4.7 0c-17.8 0-34.7-7.7-46.4-21.1l-3.5-4c-3.2-3.6-8.9-3.6-12 0l-3.5 4C314.7 504.3 297.8 512 280 512s-34.7-7.7-46.4-21.1l-3.5-4c-3.2-3.6-8.9-3.6-12 0l-3.5 4C202.7 504.3 185.8 512 168 512s-34.7-7.7-46.4-21.1l-3.5-4c-3.2-3.6-8.9-3.6-12 0l-3.5 4C90.7 504.3 73.8 512 56 512l-4.7 0c-14.8 0-28.8-6.4-38.6-17.5-8.2-9.3-12.7-21.3-12.7-33.8L0 432z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.g = BH.e
+  },
+  7494: (HH, BH) => {
+    var LH = "calendar",
+      AH = [128197, 128198],
+      rH = "f133",
+      SH = "M128 0C110.3 0 96 14.3 96 32l0 32-32 0C28.7 64 0 92.7 0 128l0 48 448 0 0-48c0-35.3-28.7-64-64-64l-32 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32-128 0 0-32c0-17.7-14.3-32-32-32zM0 224L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-192-448 0z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.h = BH.d
+  },
+  7511: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "camera",
+      AH = [62258, "camera-alt"],
+      rH = "f030",
+      SH = "M149.1 64.8L138.7 96 64 96C28.7 96 0 124.7 0 160L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64l-74.7 0-10.4-31.2C356.4 45.2 338.1 32 317.4 32L194.6 32c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faCamera = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7503: (HH, BH, LH) => {
+    var AH = LH(7511);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.f = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7520: (HH, BH) => {
+    var LH = "candy-cane",
+      AH = [],
+      rH = "f786",
+      SH = "M421.8 39.6C452 85.2 456.5 142.9 435.1 192l-165.4 0 41.4-41.4c.8-.8 1.5-1.6 2.2-2.4L421.8 39.6zM268 102.9c-.8 .7-1.6 1.4-2.4 2.2l-28.1 28.1c-25 25-65.5 25-90.5 0s-25-65.5 0-90.5L175 14.6C229.9-40.2 314.5-46.7 376.5-5.6L268 102.9zM125.7 336l80-80 181 0-82.5 82.5 0-2.5-178.5 0zm117 64L141.4 501.3c-25 25-65.5 25-90.5 0s-25-65.5 0-90.5l10.7-10.7 181 0z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.f = BH.d
+  },
+  7525: (HH, BH) => {
+    var LH = "caret-down",
+      AH = [],
+      rH = "f0d7",
+      SH = "M140.3 376.8c12.6 10.2 31.1 9.5 42.8-2.2l128-128c9.2-9.2 11.9-22.9 6.9-34.9S301.4 192 288.5 192l-256 0c-12.9 0-24.6 7.8-29.6 19.8S.7 237.5 9.9 246.6l128 128 2.4 2.2z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [320, 512, AH, rH, SH]
+    }, BH.f = BH.e
+  },
+  7534: (HH, BH) => {
+    var LH = "caret-left",
+      AH = [],
+      rH = "f0d9",
+      SH = "M7.7 235.8c-10.3 12.6-9.5 31.1 2.2 42.8l128 128c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-256c0-12.9-7.8-24.6-19.8-29.6s-25.7-2.2-34.9 6.9l-128 128-2.2 2.4z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [256, 512, AH, rH, SH]
+    }, BH.e = BH.c
+  },
+  7537: (HH, BH) => {
+    var LH = "caret-right",
+      AH = [],
+      rH = "f0da",
+      SH = "M249.3 235.8c10.2 12.6 9.5 31.1-2.2 42.8l-128 128c-9.2 9.2-22.9 11.9-34.9 6.9S64.5 396.9 64.5 384l0-256c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l128 128 2.2 2.4z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [256, 512, AH, rH, SH]
+    }, BH.g = BH.e
+  },
+  7540: (HH, BH) => {
+    var LH = "caret-up",
+      AH = [],
+      rH = "f0d8",
+      SH = "M140.3 135.2c12.6-10.3 31.1-9.5 42.8 2.2l128 128c9.2 9.2 11.9 22.9 6.9 34.9S301.4 320 288.5 320l-256 0c-12.9 0-24.6-7.8-29.6-19.8S.7 274.5 9.9 265.4l128-128 2.4-2.2z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [320, 512, AH, rH, SH]
+    }, BH.g = BH.c
+  },
+  7549: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "cart-shopping",
+      AH = [128722, "shopping-cart"],
+      rH = "f07a",
+      SH = "M24-16C10.7-16 0-5.3 0 8S10.7 32 24 32l45.3 0c3.9 0 7.2 2.8 7.9 6.6l52.1 286.3c6.2 34.2 36 59.1 70.8 59.1L456 384c13.3 0 24-10.7 24-24s-10.7-24-24-24l-255.9 0c-11.6 0-21.5-8.3-23.6-19.7l-5.1-28.3 303.6 0c30.8 0 57.2-21.9 62.9-52.2L568.9 69.9C572.6 50.2 557.5 32 537.4 32l-412.7 0-.4-2c-4.8-26.6-28-46-55.1-46L24-16zM208 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm224 0a48 48 0 1 0 0-96 48 48 0 1 0 0 96z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [640, 512, AH, rH, SH]
+    }, BH.faCartShopping = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 640, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7557: (HH, BH) => {
+    var LH = "check",
+      AH = [10003, 10004],
+      rH = "f00c",
+      SH = "M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.e = BH.b
+  },
+  7566: (HH, BH) => {
+    var LH = "chess-knight",
+      AH = [9822],
+      rH = "f441",
+      SH = "M192-32c106 0 192 86 192 192l0 133.5c0 17-6.8 33.2-18.7 45.2L320 384 370.8 434.7c8.5 8.5 13.2 20 13.2 32 0 25-20.3 45.2-45.2 45.3L45.3 512c-25 0-45.2-20.3-45.2-45.3 0-12 4.8-23.5 13.2-32L64 384 64 349.4c0-18.7 8.2-36.4 22.3-48.6l89.7-76.8-48 0-12.1 12.1c-12.7 12.7-30 19.9-48 19.9-37.5 0-67.9-30.4-67.9-67.9l0-8.7c0-22.8 8.2-44.9 23.1-62.3L96 32 96 0c0-17.7 14.3-32 32-32l64 0zM160 72a24 24 0 1 0 0 48 24 24 0 1 0 0-48z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.i = BH.e
+  },
+  7570: (HH, BH) => {
+    var LH = "chess-rook",
+      AH = [9820],
+      rH = "f447",
+      SH = "M0 32L0 133.5c0 17 6.7 33.3 18.7 45.3L64 224 64 384 7.8 454.3C2.7 460.6 0 468.4 0 476.5 0 496.1 15.9 512 35.5 512l312.9 0c19.6 0 35.5-15.9 35.5-35.5 0-8.1-2.7-15.9-7.8-22.2l-56.2-70.3 0-160 45.3-45.3c12-12 18.7-28.3 18.7-45.3L384 32c0-17.7-14.3-32-32-32L320 0c-17.7 0-32 14.3-32 32l0 32-48 0 0-32c0-17.7-14.3-32-32-32L176 0c-17.7 0-32 14.3-32 32l0 32-48 0 0-32C96 14.3 81.7 0 64 0L32 0C14.3 0 0 14.3 0 32z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.f = BH.b
+  },
+  7573: (HH, BH) => {
+    var LH = "child-reaching",
+      AH = [],
+      rH = "e59d",
+      SH = "M256 64a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM152.9 169.3c-23.7-8.4-44.5-24.3-58.8-45.8L74.6 94.2C64.8 79.5 45 75.6 30.3 85.4S11.6 115 21.4 129.8L40.9 159c18.1 27.1 42.8 48.4 71.1 62.4L112 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96 32 0 0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-258.4c29.1-14.2 54.4-36.2 72.7-64.2l18.2-27.9c9.6-14.8 5.4-34.6-9.4-44.3s-34.6-5.5-44.3 9.4L291 122.4c-21.8 33.4-58.9 53.6-98.8 53.6-12.6 0-24.9-2-36.6-5.8-.9-.3-1.8-.7-2.7-.9z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.h = BH.e
+  },
+  7578: (HH, BH) => {
+    var LH = "circle",
+      AH = [128308, 128309, 128992, 128993, 128994, 128995, 128996, 9679, 9898, 9899, 11044, 61708, 61915],
+      rH = "f111",
+      SH = "M0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.e = BH.c
+  },
+  7582: (HH, BH) => {
+    var LH = "circle-check",
+      AH = [61533, "check-circle"],
+      rH = "f058",
+      SH = "M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512zM374 145.7c-10.7-7.8-25.7-5.4-33.5 5.3L221.1 315.2 169 263.1c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l72 72c5 5 11.8 7.5 18.8 7s13.4-4.1 17.5-9.8L379.3 179.2c7.8-10.7 5.4-25.7-5.3-33.5z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.g = BH.d
+  },
+  7587: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "circle-info",
+      AH = ["info-circle"],
+      rH = "f05a",
+      SH = "M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zM224 160a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm-8 64l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faCircleInfo = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7590: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "circle-plus",
+      AH = ["plus-circle"],
+      rH = "f055",
+      SH = "M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faCirclePlus = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7595: (HH, BH) => {
+    var LH = "circle-xmark",
+      AH = [61532, "times-circle", "xmark-circle"],
+      rH = "f057",
+      SH = "M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zM167 167c9.4-9.4 24.6-9.4 33.9 0l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  7599: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "clock-rotate-left",
+      AH = ["history"],
+      rH = "f1da",
+      SH = "M288 64c106 0 192 86 192 192S394 448 288 448c-65.2 0-122.9-32.5-157.6-82.3-10.1-14.5-30.1-18-44.6-7.9s-18 30.1-7.9 44.6C124.1 468.6 201 512 288 512 429.4 512 544 397.4 544 256S429.4 0 288 0C202.3 0 126.5 42.1 80 106.7L80 80c0-17.7-14.3-32-32-32S16 62.3 16 80l0 112c0 17.7 14.3 32 32 32l24.6 0c.5 0 1 0 1.5 0l86 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-38.3 0C154.9 102.6 217 64 288 64zm24 88c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.faClockRotateLeft = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 576, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7605: (HH, BH) => {
+    var LH = "cloud-snow",
+      AH = [127784],
+      rH = "f742",
+      SH = "M96 320c-53 0-96-43-96-96 0-42.5 27.6-78.6 65.9-91.2-1.3-6.7-1.9-13.7-1.9-20.8 0-61.9 50.1-112 112-112 43.1 0 80.5 24.3 99.2 60 14.7-17.1 36.5-28 60.8-28 44.2 0 80 35.8 80 80 0 5.5-.6 10.8-1.6 16 .5 0 1.1 0 1.6 0 53 0 96 43 96 96s-43 96-96 96L96 320zm0 72l0 16 16 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-16 0 0 16c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-16-16 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l16 0 0-16c0-13.3 10.7-24 24-24s24 10.7 24 24zm184 32l0 16 16 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-16 0 0 16c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-16-16 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l16 0 0-16c0-13.3 10.7-24 24-24s24 10.7 24 24zm160-56c13.3 0 24 10.7 24 24l0 16 16 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-16 0 0 16c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-16-16 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l16 0 0-16c0-13.3 10.7-24 24-24z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.e = BH.c
+  },
+  7610: (HH, BH) => {
+    var LH = "code",
+      AH = [],
+      rH = "f121",
+      SH = "M360.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm64.6 136.1c-12.5 12.5-12.5 32.8 0 45.3l73.4 73.4-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0zm-274.7 0c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 150.6 182.6c12.5-12.5 12.5-32.8 0-45.3z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.d = BH.b
+  },
+  7612: (HH, BH, LH) => {
+    var AH = LH(7621);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.f = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7623: (HH, BH) => {
+    var LH = "coins",
+      AH = [],
+      rH = "f51e",
+      SH = "M128 96l0-16c0-44.2 86-80 192-80S512 35.8 512 80l0 16c0 30.6-41.3 57.2-102 70.7-2.4-2.8-4.9-5.5-7.4-8-15.5-15.3-35.5-26.9-56.4-35.5-41.9-17.5-96.5-27.1-154.2-27.1-21.9 0-43.3 1.4-63.8 4.1-.2-1.3-.2-2.7-.2-4.1zM432 353l0-46.2c15.1-3.9 29.3-8.5 42.2-13.9 13.2-5.5 26.1-12.2 37.8-20.3l0 15.4c0 26.8-31.5 50.5-80 65zm0-96l0-33c0-4.5-.4-8.8-1-13 15.5-3.9 30-8.6 43.2-14.2s26.1-12.2 37.8-20.3l0 15.4c0 26.8-31.5 50.5-80 65zM0 240l0-16c0-44.2 86-80 192-80s192 35.8 192 80l0 16c0 44.2-86 80-192 80S0 284.2 0 240zm384 96c0 44.2-86 80-192 80S0 380.2 0 336l0-15.4c11.6 8.1 24.5 14.7 37.8 20.3 41.9 17.5 96.5 27.1 154.2 27.1s112.3-9.7 154.2-27.1c13.2-5.5 26.1-12.2 37.8-20.3l0 15.4zm0 80.6l0 15.4c0 44.2-86 80-192 80S0 476.2 0 432l0-15.4c11.6 8.1 24.5 14.7 37.8 20.3 41.9 17.5 96.5 27.1 154.2 27.1s112.3-9.7 154.2-27.1c13.2-5.5 26.1-12.2 37.8-20.3z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.d = BH.b
+  },
+  7625: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "comment-dots",
+      AH = [128172, 62075, "commenting"],
+      rH = "f4ad",
+      SH = "M256 480c141.4 0 256-107.5 256-240S397.4 0 256 0 0 107.5 0 240c0 54.3 19.2 104.3 51.6 144.5L2.8 476.8c-4.8 9-3.3 20 3.6 27.5s17.8 9.8 27.1 5.8l118.4-50.7C183.7 472.6 218.9 480 256 480zM128 208a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm128 0a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm96 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faCommentDots = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7630: (HH, BH, LH) => {
+    var AH = LH(7625);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.h = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7639: (HH, BH) => {
+    var LH = "compress",
+      AH = [],
+      rH = "f066",
+      SH = "M160 64c0-17.7-14.3-32-32-32S96 46.3 96 64l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96zM32 320c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM352 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 320c-17.7 0-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.f = BH.b
+  },
+  7642: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "computer-mouse",
+      AH = [128433, "mouse"],
+      rH = "f8cc",
+      SH = "M0 192l168 0 0-192-8 0C71.6 0 0 71.6 0 160l0 32zm0 48L0 352c0 88.4 71.6 160 160 160l64 0c88.4 0 160-71.6 160-160l0-112-384 0zm384-48l0-32C384 71.6 312.4 0 224 0l-8 0 0 192 168 0z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.faComputerMouse = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 384, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7645: (HH, BH) => {
+    var LH = "cookie",
+      AH = [127850],
+      rH = "f563",
+      SH = "M247.2 17c-22.1-3.1-44.6 .9-64.4 11.4l-74 39.5C89.1 78.4 73.2 94.9 63.4 115L26.7 190.6c-9.8 20.1-13 42.9-9.1 64.9l14.5 82.8c3.9 22.1 14.6 42.3 30.7 57.9l60.3 58.4c16.1 15.6 36.6 25.6 58.7 28.7l83 11.7c22.1 3.1 44.6-.9 64.4-11.4l74-39.5c19.7-10.5 35.6-27 45.4-47.2l36.7-75.5c9.8-20.1 13-42.9 9.1-64.9l-14.6-82.8c-3.9-22.1-14.6-42.3-30.7-57.9L388.9 57.5c-16.1-15.6-36.6-25.6-58.7-28.7L247.2 17zM208 144a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM144 336a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm224-64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.f = BH.e
+  },
+  7648: (HH, BH) => {
+    var LH = "copy",
+      AH = [],
+      rH = "f0c5",
+      SH = "M192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-200.6c0-17.4-7.1-34.1-19.7-46.2L370.6 17.8C358.7 6.4 342.8 0 326.3 0L192 0zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-16-64 0 0 16-192 0 0-256 16 0 0-64-16 0z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.f = BH.c
+  },
+  7652: (HH, BH) => {
+    var LH = "crosshairs",
+      AH = [],
+      rH = "f05b",
+      SH = "M288-16c17.7 0 32 14.3 32 32l0 18.3c98.1 14 175.7 91.6 189.7 189.7l18.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-18.3 0c-14 98.1-91.6 175.7-189.7 189.7l0 18.3c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-18.3C157.9 463.7 80.3 386.1 66.3 288L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l18.3 0C80.3 125.9 157.9 48.3 256 34.3L256 16c0-17.7 14.3-32 32-32zM131.2 288c12.7 62.7 62.1 112.1 124.8 124.8l0-12.8c0-17.7 14.3-32 32-32s32 14.3 32 32l0 12.8c62.7-12.7 112.1-62.1 124.8-124.8L432 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l12.8 0C432.1 161.3 382.7 111.9 320 99.2l0 12.8c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-12.8C193.3 111.9 143.9 161.3 131.2 224l12.8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-12.8 0zM288 208a48 48 0 1 1 0 96 48 48 0 1 1 0-96z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.e = BH.b
+  },
+  7655: (HH, BH) => {
+    var LH = "crown",
+      AH = [128081],
+      rH = "f521",
+      SH = "M313 87.2c9.2-7.3 15-18.6 15-31.2 0-22.1-17.9-40-40-40s-40 17.9-40 40c0 12.6 5.9 23.9 15 31.2L194.6 194.8c-10 15.7-31.3 19.6-46.2 8.4L88.9 158.7c4.5-6.4 7.1-14.3 7.1-22.7 0-22.1-17.9-40-40-40s-40 17.9-40 40c0 21.8 17.5 39.6 39.2 40L87.8 393.5c4.7 31.3 31.6 54.5 63.3 54.5l273.8 0c31.7 0 58.6-23.2 63.3-54.5L520.8 176c21.7-.4 39.2-18.2 39.2-40 0-22.1-17.9-40-40-40s-40 17.9-40 40c0 8.4 2.6 16.3 7.1 22.7l-59.4 44.6c-14.9 11.2-36.2 7.3-46.2-8.4L313 87.2z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.g = BH.c
+  },
+  7658: (HH, BH) => {
+    var LH = "cube",
+      AH = [],
+      rH = "f1b2",
+      SH = "M224.3-2.5c19.8-11.4 44.2-11.4 64 0L464.2 99c19.8 11.4 32 32.6 32 55.4l0 203c0 22.9-12.2 44-32 55.4L288.3 514.5c-19.8 11.4-44.2 11.4-64 0L48.5 413c-19.8-11.4-32-32.6-32-55.4l0-203c0-22.9 12.2-44 32-55.4L224.3-2.5zm207.8 360l0-166.1-143.8 83 0 166.1 143.8-83z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.d = BH.b
+  },
+  7662: (HH, BH) => {
+    var LH = "cubes",
+      AH = [],
+      rH = "f1b3",
+      SH = "M284-1.3c-17.3-10-38.7-10-56 0L143.8 47.3c-17.3 10-28 28.5-28 48.5l0 101.9-88.3 51c-17.3 10-28 28.5-28 48.5l0 97.3c0 20 10.7 38.5 28 48.5l84.3 48.6c17.3 10 38.7 10 56 0l88.3-51 88.3 51c17.3 10 38.7 10 56 0L484.5 443c17.3-10 28-28.5 28-48.5l0-97.3c0-20-10.7-38.5-28-48.5l-88.3-51 0-101.9c0-20-10.7-38.5-28-48.5L284-1.3zM232 292.6l0 106.5-88.3 51c-1.2 .7-2.6 1.1-4 1.1l0-105.3 92.3-53.3zm231.4 .6c.7 1.2 1.1 2.6 1.1 4l0 97.3c0 2.9-1.5 5.5-4 6.9l-84.3 48.6c-1.2 .7-2.6 1.1-4 1.1l0-105.3 91.2-52.6zM348.3 95.8l0 101.9-92.3 53.3 0-106.5 91.2-52.6c.7 1.2 1.1 2.6 1.1 4z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.g = BH.d
+  },
+  7669: (HH, BH, LH) => {
+    var AH = LH(7676);
+    BH.b = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.d = BH.b, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7682: (HH, BH) => {
+    var LH = "deer",
+      AH = [129420],
+      rH = "f78e",
+      SH = "M240 0c8.8 0 16 7.2 16 16l0 24c0 13.3 10.7 24 24 24l16 0c13.3 0 24-10.7 24-24l0-24c0-8.8 7.2-16 16-16s16 7.2 16 16l0 24c0 8.6-1.9 16.7-5.4 24L416 64c13.3 0 24-10.7 24-24l0-24c0-8.8 7.2-16 16-16s16 7.2 16 16l0 24c0 21.7-12.3 40.4-30.3 49.8 .6 .5 1.1 1.1 1.7 1.6l55.3 55.3c8.5 8.5 13.3 20 13.3 32 0 25-20.3 45.3-45.3 45.3l-56.1 0-26.7 80 0 176c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-112-36.3 0c-28.8 0-55.3-9.8-76.3-26.4-2.1 16.9-9.8 32.6-21.9 44.8L142.9 397c-4.6 4.6-6.2 11.5-4 17.7l19.3 54.7c7.3 20.8-8.1 42.6-30.2 42.6l-33.9 0c-13.6 0-25.7-8.6-30.2-21.4l-15.5-44c-11.4-32.4-7.4-67.8 10-96.3 6.6-10.9 6.6-25.4-2.4-34.4-3-3-5.7-6.1-8.1-9.5-1.3 12.9-12.7 22.5-25.7 21.5-13.2-1-23.1-12.6-22.1-25.8L2.4 272c4.2-54.2 49.3-96 103.7-96l85.9 0c.6 0 1.2 0 1.7 0 .8 0 1.7 0 2.5 0l106.1 0 9.6-32-38 0c-9.9 0-18-8-18-18 0-8.2 5.6-15.4 13.6-17.4L320 96 280 96c-30.9 0-56-25.1-56-56l0-24c0-8.8 7.2-16 16-16zM400 160a16 16 0 1 0 0-32 16 16 0 1 0 0 32z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.h = BH.d
+  },
+  7687: (HH, BH) => {
+    var LH = "dice",
+      AH = [127922],
+      rH = "f522",
+      SH = "M141.4 2.3C103-8 63.5 14.8 53.3 53.2L2.5 242.7C-7.8 281.1 15 320.6 53.4 330.9l189.5 50.8c38.4 10.3 77.9-12.5 88.2-50.9l50.8-189.5c10.3-38.4-12.5-77.9-50.9-88.2L141.4 2.3zm23 205.7a32 32 0 1 1 55.4-32 32 32 0 1 1 -55.4 32zM79.2 220.3a32 32 0 1 1 32 55.4 32 32 0 1 1 -32-55.4zm185 96.4a32 32 0 1 1 -32-55.4 32 32 0 1 1 32 55.4zm9-208.4a32 32 0 1 1 32 55.4 32 32 0 1 1 -32-55.4zm-121 14.4a32 32 0 1 1 -32-55.4 32 32 0 1 1 32 55.4zM418 192L377.4 343.2c-17.2 64-83 102-147 84.9l-38.3-10.3 0 30.2c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-192c0-35.3-28.7-64-64-64L418 192z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.f = BH.c
+  },
+  7689: (HH, BH, LH) => {
+    var AH = LH(7695);
+    BH.b = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.e = BH.b, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7702: (HH, BH) => {
+    var LH = "door-closed",
+      AH = [128682],
+      rH = "f52a",
+      SH = "M32 64C32 28.7 60.7 0 96 0L352 0c35.3 0 64 28.7 64 64l0 384c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 512c-17.7 0-32-14.3-32-32s14.3-32 32-32L32 64zM320 288a32 32 0 1 0 0-64 32 32 0 1 0 0 64z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.e = BH.b
+  },
+  7710: (HH, BH) => {
+    var LH = "door-open",
+      AH = [],
+      rH = "f52b",
+      SH = "M288 64l64 0 0 416c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-384c0-35.3-28.7-64-64-64l-96 0 0 0-160 0C60.7 0 32 28.7 32 64l0 384c-17.7 0-32 14.3-32 32s14.3 32 32 32l224 0c17.7 0 32-14.3 32-32l0-416zM160 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.g = BH.c
+  },
+  7713: (HH, BH) => {
+    var LH = "download",
+      AH = [],
+      rH = "f019",
+      SH = "M256 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 210.7-41.4-41.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 242.7 256 32zM64 320c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-46.9 0-56.6 56.6c-31.2 31.2-81.9 31.2-113.1 0L110.9 320 64 320zm304 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.h = BH.e
+  },
+  7715: (HH, BH, LH) => {
+    var AH = LH(7721);
+    BH.c = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.f = BH.c, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7723: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "ellipsis",
+      AH = ["ellipsis-h"],
+      rH = "f141",
+      SH = "M0 256a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm168 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm224-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.faEllipsis = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 448, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7725: (HH, BH, LH) => {
+    var AH = LH(7723);
+    BH.e = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.i = BH.e, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7729: (HH, BH) => {
+    var LH = "exclamation",
+      AH = [10069, 10071, 61738],
+      rH = "M64 432c22.1 0 40 17.9 40 40s-17.9 40-40 40-40-17.9-40-40c0-22.1 17.9-40 40-40zM64 0c26.5 0 48 21.5 48 48 0 .6 0 1.1 0 1.7l-16 304c-.9 17-15 30.3-32 30.3S33 370.7 32 353.7L16 49.7c0-.6 0-1.1 0-1.7 0-26.5 21.5-48 48-48z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [128, 512, AH, "21", rH]
+    }, BH.f = BH.d
+  },
+  7735: (HH, BH, LH) => {
+    var AH = LH(7738);
+    BH.c = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.e = BH.c, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7743: (HH, BH) => {
+    var LH = "expand",
+      AH = [],
+      rH = "f065",
+      SH = "M32 32C14.3 32 0 46.3 0 64l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zM64 352c0-17.7-14.3-32-32-32S0 334.3 0 352l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.f = BH.c
+  },
+  7748: (HH, BH, LH) => {
+    var AH = LH(7399);
+    BH.e = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.h = BH.e, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7752: (HH, BH) => {
+    var LH = [128065],
+      AH = "f06e",
+      rH = "M288 32c-80.8 0-145.5 36.8-192.6 80.6-46.8 43.5-78.1 95.4-93 131.1-3.3 7.9-3.3 16.7 0 24.6 14.9 35.7 46.2 87.7 93 131.1 47.1 43.7 111.8 80.6 192.6 80.6s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1-47.1-43.7-111.8-80.6-192.6-80.6zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64-11.5 0-22.3-3-31.7-8.4-1 10.9-.1 22.1 2.9 33.2 13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-12.2-45.7-55.5-74.8-101.1-70.8 5.3 9.3 8.4 20.1 8.4 31.7z";
+    BH.d = {
+      prefix: "fas",
+      iconName: "eye",
+      icon: [576, 512, LH, AH, rH]
+    }, BH.h = BH.d
+  },
+  7767: (HH, BH) => {
+    var LH = "eye-slash",
+      AH = [],
+      rH = "f070",
+      SH = "M41-24.9c-9.4-9.4-24.6-9.4-33.9 0S-2.3-.3 7 9.1l528 528c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-96.4-96.4c2.7-2.4 5.4-4.8 8-7.2 46.8-43.5 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1-47.1-43.7-111.8-80.6-192.6-80.6-56.8 0-105.6 18.2-146 44.2L41-24.9zM204.5 138.7c23.5-16.8 52.4-26.7 83.5-26.7 79.5 0 144 64.5 144 144 0 31.1-9.9 59.9-26.7 83.5l-34.7-34.7c12.7-21.4 17-47.7 10.1-73.7-13.7-51.2-66.4-81.6-117.6-67.9-8.6 2.3-16.7 5.7-24 10l-34.7-34.7zM325.3 395.1c-11.9 3.2-24.4 4.9-37.3 4.9-79.5 0-144-64.5-144-144 0-12.9 1.7-25.4 4.9-37.3L69.4 139.2c-32.6 36.8-55 75.8-66.9 104.5-3.3 7.9-3.3 16.7 0 24.6 14.9 35.7 46.2 87.7 93 131.1 47.1 43.7 111.8 80.6 192.6 80.6 37.3 0 71.2-7.9 101.5-20.6l-64.2-64.2z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.e = BH.d
+  },
+  7758: (HH, BH) => {
+    var LH = "eyes",
+      AH = [],
+      rH = "e367",
+      SH = "M96 224c-11.2 0-21.7 2.9-30.9 7.9 3.5-37.5 15.1-70.1 31-93.9 19.3-29 42.6-42 63.9-42s44.5 13 63.9 42c19.2 28.8 32.1 70.4 32.1 118s-12.9 89.2-32.1 118c-19.3 29-42.6 42-63.9 42s-44.5-13-63.9-42c-4.7-7-9-14.8-12.8-23.3 4.1 .8 8.4 1.3 12.7 1.3 35.3 0 64-28.7 64-64s-28.7-64-64-64zM288 120.6c-3.4-6.3-7-12.4-10.9-18.2-27-40.5-67.8-70.5-117.1-70.5S69.8 62 42.9 102.5C15.7 143.2 0 197.5 0 256S15.7 368.8 42.9 409.5C69.8 450 110.6 480 160 480s90.2-30 117.1-70.5c3.9-5.8 7.5-11.8 10.9-18.2 3.4 6.3 7 12.4 10.9 18.2 27 40.5 67.8 70.5 117.1 70.5s90.2-30 117.1-70.5C560.3 368.8 576 314.5 576 256s-15.7-112.8-42.9-153.5C506.2 62 465.4 32 416 32s-90.2 30-117.1 70.5c-3.9 5.8-7.5 11.8-10.9 18.2zm51.3 230.1c4.1 .8 8.4 1.3 12.7 1.3 35.3 0 64-28.7 64-64s-28.7-64-64-64c-11.2 0-21.7 2.9-30.9 7.9 3.5-37.5 15.1-70.1 31-93.9 19.4-29 42.6-42 63.9-42s44.5 13 63.9 42c19.2 28.8 32.1 70.4 32.1 118s-12.9 89.2-32.1 118c-19.4 29-42.6 42-63.9 42s-44.5-13-63.9-42c-4.7-7-9-14.8-12.8-23.3z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.e = BH.c
+  },
+  7776: (HH, BH) => {
+    var LH = "face-diagonal-mouth",
+      AH = [129764],
+      rH = "e47e",
+      SH = "M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zM358.1 335.2l-184 48c-12.8 3.3-25.9-4.3-29.3-17.2s4.3-25.9 17.2-29.3l184-48c12.8-3.3 25.9 4.3 29.3 17.2s-4.3 25.9-17.2 29.3zM144 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.i = BH.e
+  },
+  7695: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "face-dizzy",
+      AH = ["dizzy"],
+      rH = "f567",
+      SH = "M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zM134.1 153.9l25.9 25.9 25.9-25.9c7.8-7.8 20.5-7.8 28.3 0s7.8 20.5 0 28.3l-25.9 25.9 25.9 25.9c7.8 7.8 7.8 20.5 0 28.3s-20.5 7.8-28.3 0l-25.9-25.9-25.9 25.9c-7.8 7.8-20.5 7.8-28.3 0s-7.8-20.5 0-28.3l25.9-25.9-25.9-25.9c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0zm192 0l25.9 25.9 25.9-25.9c7.8-7.8 20.5-7.8 28.3 0s7.8 20.5 0 28.3l-25.9 25.9 25.9 25.9c7.8 7.8 7.8 20.5 0 28.3s-20.5 7.8-28.3 0l-25.9-25.9-25.9 25.9c-7.8 7.8-20.5 7.8-28.3 0s-7.8-20.5 0-28.3l25.9-25.9-25.9-25.9c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0zM256 304a64 64 0 1 1 0 128 64 64 0 1 1 0-128z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faFaceDizzy = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7779: (HH, BH) => {
+    var LH = "face-raised-eyebrow",
+      AH = [],
+      rH = "e388",
+      SH = "M0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0zm208 0a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm128 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM160 360c0 13.3 10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0c-13.3 0-24 10.7-24 24zM343.1 170.8c5.6-2.8 12.3-2.8 17.9 0l14.1 7.1c9.9 4.9 21.9 .9 26.8-8.9s.9-21.9-8.9-26.8l-14.1-7.1c-16.9-8.4-36.8-8.4-53.7 0l-46.1 23.1c-9.9 4.9-13.9 17-8.9 26.8s17 13.9 26.8 8.9l46.1-23.1zM128 148c-11 0-20 9-20 20s9 20 20 20l64 0c11 0 20-9 20-20s-9-20-20-20l-64 0z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.g = BH.d
+  },
+  7785: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "face-smile",
+      AH = [128578, "smile"],
+      rH = "f118",
+      SH = "M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zM165.4 321.9c20.4 28 53.4 46.1 90.6 46.1s70.2-18.1 90.6-46.1c7.8-10.7 22.8-13.1 33.5-5.3s13.1 22.8 5.3 33.5C356.3 390 309.2 416 256 416s-100.3-26-129.4-65.9c-7.8-10.7-5.4-25.7 5.3-33.5s25.7-5.4 33.5 5.3zM144 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faFaceSmile = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7789: (HH, BH) => {
+    var LH = "face-worried",
+      AH = [],
+      rH = "e3a3",
+      SH = "M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm-73.6-97.5c-12.4 5.2-26.5-4.1-21.1-16.4 16-36.6 52.4-62.1 94.8-62.1s78.8 25.6 94.8 62.1c5.4 12.3-8.7 21.6-21.1 16.4-22.4-9.5-47.4-14.8-73.7-14.8s-51.3 5.3-73.7 14.8zM144 272a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM192 164c-4.2 0-8.4 .3-12.5 .8-20.3 2.7-38.9 11.9-53.8 25.8-8.1 7.5-20.7 7.1-28.3-1s-7.1-20.7 1-28.3c20.6-19.3 46.8-32.4 75.9-36.2 5.8-.8 11.7-1.2 17.7-1.2 11 0 20 9 20 20s-9 20-20 20zm140.5 .8c-4.1-.5-8.3-.8-12.5-.8-11 0-20-9-20-20s9-20 20-20c6 0 11.9 .4 17.7 1.2 29.1 3.8 55.3 17 75.9 36.2 8.1 7.5 8.5 20.2 1 28.3s-20.2 8.5-28.3 1c-14.9-13.9-33.5-23.1-53.8-25.8z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.h = BH.d
+  },
+  7794: (HH, BH, LH) => {
+    var AH = LH(7801);
+    BH.e = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.i = BH.e, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7801: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "feather-pointed",
+      AH = ["feather-alt"],
+      rH = "f56b",
+      SH = "M475.3 .1c9.9-.8 19.6 3 26.6 10s10.8 16.7 10 26.6c-4 49.3-17.4 126.2-46.3 199.7-1.8 4.5-5.5 7.9-10.2 9.3L374.5 270c-3.9 1.2-6.5 4.7-6.5 8.8 0 5.1 4.1 9.2 9.2 9.2l38.6 0c12 0 19.7 12.8 13.5 23.1-4 6.7-8.3 13.2-12.7 19.6-2 2.9-5 5-8.4 6.1L310.5 366c-3.9 1.2-6.5 4.7-6.5 8.8 0 5.1 4.1 9.2 9.2 9.2l16 0c14.6 0 21 17.4 8.8 25.4-68 45-137.7 43.3-182.4 31.3-12.7-3.4-24-9.9-34.4-17.9L48 496c-8.8 8.8-23.2 8.8-32 0s-8.8-23.2 0-32l80-80 .5 .5c.7-1.3 1.6-2.5 2.7-3.6L256 224c8.8-8.8 8.8-23.2 0-32s-23.2-8.8-32 0L89.7 326.2c-8.9 8.9-24 4.4-25-8.2-4.3-53.2 9.3-123.1 72.6-186.4 91.1-91.1 254.2-124.7 337.9-131.5z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faFeatherPointed = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7803: (HH, BH, LH) => {
+    var AH = LH(7808);
+    BH.e = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.g = BH.e, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7817: (HH, BH, LH) => {
+    var AH = LH(7820);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.e = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7808: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "file-lines",
+      AH = [128441, 128462, 61686, "file-alt", "file-text"],
+      rH = "f15c",
+      SH = "M0 64C0 28.7 28.7 0 64 0L213.5 0c17 0 33.3 6.7 45.3 18.7L365.3 125.3c12 12 18.7 28.3 18.7 45.3L384 448c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64zm208-5.5l0 93.5c0 13.3 10.7 24 24 24L325.5 176 208 58.5zM120 256c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.faFileLines = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 384, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7828: (HH, BH, LH) => {
+    var AH = LH(7808);
+    BH.e = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.i = BH.e, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7833: (HH, BH) => {
+    var LH = "film",
+      AH = [127902, 62368, "film-alt", "film-simple"],
+      rH = "f008",
+      SH = "M0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM48 368l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm304-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM48 240l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm304-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM48 112l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16L64 96c-8.8 0-16 7.2-16 16zM352 96c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.h = BH.d
+  },
+  7837: (HH, BH) => {
+    var LH = "fire",
+      AH = [128293],
+      rH = "f06d",
+      SH = "M160.5-26.4c9.3-7.8 23-7.5 31.9 .9 12.3 11.6 23.3 24.4 33.9 37.4 13.5 16.5 29.7 38.3 45.3 64.2 5.2-6.8 10-12.8 14.2-17.9 1.1-1.3 2.2-2.7 3.3-4.1 7.9-9.8 17.7-22.1 30.8-22.1 13.4 0 22.8 11.9 30.8 22.1 1.3 1.7 2.6 3.3 3.9 4.8 10.3 12.4 24 30.3 37.7 52.4 27.2 43.9 55.6 106.4 55.6 176.6 0 123.7-100.3 224-224 224S0 411.7 0 288c0-91.1 41.1-170 80.5-225 19.9-27.7 39.7-49.9 54.6-65.1 8.2-8.4 16.5-16.7 25.5-24.2zM225.7 416c25.3 0 47.7-7 68.8-21 42.1-29.4 53.4-88.2 28.1-134.4-4.5-9-16-9.6-22.5-2l-25.2 29.3c-6.6 7.6-18.5 7.4-24.7-.5-17.3-22.1-49.1-62.4-65.3-83-5.4-6.9-15.2-8-21.5-1.9-18.3 17.8-51.5 56.8-51.5 104.3 0 68.6 50.6 109.2 113.7 109.2z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.f = BH.b
+  },
+  7839: (HH, BH, LH) => {
+    var AH = LH(7845);
+    BH.b = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.f = BH.b, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7852: (HH, BH) => {
+    var LH = "flag",
+      AH = [127988, 61725],
+      rH = "f024",
+      SH = "M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32L0 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-121.6 62.7-18.8c41.9-12.6 87.1-8.7 126.2 10.9 42.7 21.4 92.5 24 137.2 7.2l37.1-13.9c12.5-4.7 20.8-16.6 20.8-30l0-247.7c0-23-24.2-38-44.8-27.7l-11.8 5.9c-44.9 22.5-97.8 22.5-142.8 0-36.4-18.2-78.3-21.8-117.2-10.1L64 54.4 64 32z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.h = BH.e
+  },
+  7859: (HH, BH) => {
+    var LH = "folder",
+      AH = [128193, 128447, 61716, "folder-blank"],
+      rH = "f07b",
+      SH = "M64 448l384 0c35.3 0 64-28.7 64-64l0-240c0-35.3-28.7-64-64-64L298.7 80c-6.9 0-13.7-2.2-19.2-6.4L241.1 44.8C230 36.5 216.5 32 202.7 32L64 32C28.7 32 0 60.7 0 96L0 384c0 35.3 28.7 64 64 64z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.e = BH.b
+  },
+  7864: (HH, BH) => {
+    var LH = "folder-image",
+      AH = [],
+      rH = "e18a",
+      SH = "M448 448L64 448c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l138.7 0c13.8 0 27.3 4.5 38.4 12.8l38.4 28.8c5.5 4.2 12.3 6.4 19.2 6.4L448 80c35.3 0 64 28.7 64 64l0 240c0 35.3-28.7 64-64 64zM192 192a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM156.6 384l198.8 0c15.8 0 28.6-12.8 28.6-28.6 0-7.3-2.8-14.4-7.9-19.7L279.3 233.9c-6-6.4-14.4-9.9-23.2-9.9l-.3 0c-8.8 0-17.1 3.6-23.2 9.9L135.9 335.7c-5.1 5.3-7.9 12.4-7.9 19.7 0 15.8 12.8 28.6 28.6 28.6z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.h = BH.e
+  },
+  7867: (HH, BH) => {
+    var LH = "folder-open",
+      AH = [128194, 128449, 61717],
+      rH = "f07c",
+      SH = "M56 225.6L32.4 296.2 32.4 96c0-35.3 28.7-64 64-64l138.7 0c13.8 0 27.3 4.5 38.4 12.8l38.4 28.8c5.5 4.2 12.3 6.4 19.2 6.4l117.3 0c35.3 0 64 28.7 64 64l0 16-365.4 0c-41.3 0-78 26.4-91.1 65.6zM477.8 448L99 448c-32.8 0-55.9-32.1-45.5-63.2l48-144C108 221.2 126.4 208 147 208l378.8 0c32.8 0 55.9 32.1 45.5 63.2l-48 144c-6.5 19.6-24.9 32.8-45.5 32.8z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.i = BH.e
+  },
+  7873: (HH, BH) => {
+    var LH = "gamepad",
+      AH = [],
+      rH = "f11b",
+      SH = "M448 64c106 0 192 86 192 192S554 448 448 448l-256 0C86 448 0 362 0 256S86 64 192 64l256 0zM192 176c-13.3 0-24 10.7-24 24l0 32-32 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l32 0 0 32c0 13.3 10.7 24 24 24s24-10.7 24-24l0-32 32 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-32 0 0-32c0-13.3-10.7-24-24-24zm240 96a32 32 0 1 0 0 64 32 32 0 1 0 0-64zm64-96a32 32 0 1 0 0 64 32 32 0 1 0 0-64z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [640, 512, AH, rH, SH]
+    }, BH.h = BH.d
+  },
+  7877: (HH, BH) => {
+    var LH = "gamepad-modern",
+      AH = [127918, 63676, "gamepad-alt"],
+      rH = "e5a2",
+      SH = "M384 32c106 0 192 86 192 192l0 163c0 51.3-41.6 93-93 93-40 0-75.6-25.6-88.2-63.6l-10.8-32.4-192 0-10.8 32.4C168.5 454.4 133 480 93 480 41.6 480 0 438.4 0 387L0 224C0 118 86 32 192 32l192 0zM160 144c-13.3 0-24 10.7-24 24l0 32-32 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l32 0 0 32c0 13.3 10.7 24 24 24s24-10.7 24-24l0-32 32 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-32 0 0-32c0-13.3-10.7-24-24-24zm240 96a32 32 0 1 0 0 64 32 32 0 1 0 0-64zm64-96a32 32 0 1 0 0 64 32 32 0 1 0 0-64z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.h = BH.e
+  },
+  7881: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "gauge-high",
+      AH = [62461, "tachometer-alt", "tachometer-alt-fast"],
+      rH = "f625",
+      SH = "M0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM256 416c35.3 0 64-28.7 64-64 0-16.2-6-31.1-16-42.3l69.5-138.9c5.9-11.9 1.1-26.3-10.7-32.2s-26.3-1.1-32.2 10.7L261.1 288.2c-1.7-.1-3.4-.2-5.1-.2-35.3 0-64 28.7-64 64s28.7 64 64 64zM176 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM96 288a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm352-32a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faGaugeHigh = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7886: (HH, BH) => {
+    var LH = "gavel",
+      AH = ["legal"],
+      rH = "f0e3",
+      SH = "M169.6 153.4l-18.7-18.7c-12.5-12.5-12.5-32.8 0-45.3L265.6-25.4c12.5-12.5 32.8-12.5 45.3 0L329.6-6.6c12.5 12.5 12.5 32.8 0 45.3L214.9 153.4c-12.5 12.5-32.8 12.5-45.3 0zM276 211.7l-31.4-31.4 112-112 119.4 119.4-112 112-31.4-31.4-232 232c-15.6 15.6-40.9 15.6-56.6 0s-15.6-40.9 0-56.6l232-232zM390.9 374.6c-12.5-12.5-12.5-32.8 0-45.3L505.6 214.6c12.5-12.5 32.8-12.5 45.3 0l18.7 18.7c12.5 12.5 12.5 32.8 0 45.3L454.9 393.4c-12.5 12.5-32.8 12.5-45.3 0l-18.7-18.7z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.e = BH.d
+  },
+  7621: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "gear",
+      AH = [9881, "cog"],
+      rH = "f013",
+      SH = "M195.1 9.5C198.1-5.3 211.2-16 226.4-16l59.8 0c15.2 0 28.3 10.7 31.3 25.5L332 79.5c14.1 6 27.3 13.7 39.3 22.8l67.8-22.5c14.4-4.8 30.2 1.2 37.8 14.4l29.9 51.8c7.6 13.2 4.9 29.8-6.5 39.9L447 233.3c.9 7.4 1.3 15 1.3 22.7s-.5 15.3-1.3 22.7l53.4 47.5c11.4 10.1 14 26.8 6.5 39.9l-29.9 51.8c-7.6 13.1-23.4 19.2-37.8 14.4l-67.8-22.5c-12.1 9.1-25.3 16.7-39.3 22.8l-14.4 69.9c-3.1 14.9-16.2 25.5-31.3 25.5l-59.8 0c-15.2 0-28.3-10.7-31.3-25.5l-14.4-69.9c-14.1-6-27.2-13.7-39.3-22.8L73.5 432.3c-14.4 4.8-30.2-1.2-37.8-14.4L5.8 366.1c-7.6-13.2-4.9-29.8 6.5-39.9l53.4-47.5c-.9-7.4-1.3-15-1.3-22.7s.5-15.3 1.3-22.7L12.3 185.8c-11.4-10.1-14-26.8-6.5-39.9L35.7 94.1c7.6-13.2 23.4-19.2 37.8-14.4l67.8 22.5c12.1-9.1 25.3-16.7 39.3-22.8L195.1 9.5zM256.3 336a80 80 0 1 0 -.6-160 80 80 0 1 0 .6 160z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faGear = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7888: (HH, BH) => {
+    var LH = [128142],
+      AH = "f3a5",
+      rH = "M116.7 33.8c4.5-6.1 11.7-9.8 19.3-9.8l240 0c7.6 0 14.8 3.6 19.3 9.8l112 152c6.8 9.2 6.1 21.9-1.5 30.4l-232 256c-4.5 5-11 7.9-17.8 7.9s-13.2-2.9-17.8-7.9l-232-256c-7.7-8.5-8.3-21.2-1.5-30.4l112-152zm38.5 39.8c-3.3 2.5-4.2 7-2.1 10.5L210.5 179.8 63.3 192c-4.1 .3-7.3 3.8-7.3 8s3.2 7.6 7.3 8l192 16c.4 0 .9 0 1.3 0l192-16c4.1-.3 7.3-3.8 7.3-8s-3.2-7.6-7.3-8l-147.2-12.3 57.4-95.6c2.1-3.5 1.2-8.1-2.1-10.5s-7.9-2-10.7 1L256 172.2 165.9 74.6c-2.8-3-7.4-3.4-10.7-1z";
+    BH.d = {
+      prefix: "fas",
+      iconName: "gem",
+      icon: [512, 512, LH, AH, rH]
+    }, BH.e = BH.d
+  },
+  7893: (HH, BH) => {
+    var LH = "gift",
+      AH = [127873],
+      rH = "f06b",
+      SH = "M321.5 68.8C329.1 55.9 342.9 48 357.8 48l2.2 0c22.1 0 40 17.9 40 40s-17.9 40-40 40l-73.3 0 34.8-59.2zm-131 0l34.8 59.2-73.3 0c-22.1 0-40-17.9-40-40s17.9-40 40-40l2.2 0c14.9 0 28.8 7.9 36.3 20.8zm89.6-24.3l-24.1 41-24.1-41C215.7 16.9 186.1 0 154.2 0L152 0c-48.6 0-88 39.4-88 88 0 14.4 3.5 28 9.6 40L32 128c-17.7 0-32 14.3-32 32l0 32c0 17.7 14.3 32 32 32l448 0c17.7 0 32-14.3 32-32l0-32c0-17.7-14.3-32-32-32l-41.6 0c6.1-12 9.6-25.6 9.6-40 0-48.6-39.4-88-88-88l-2.2 0c-31.9 0-61.5 16.9-77.7 44.4zM480 272l-200 0 0 208 136 0c35.3 0 64-28.7 64-64l0-144zm-248 0l-200 0 0 144c0 35.3 28.7 64 64 64l136 0 0-208z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  7895: (HH, BH) => {
+    var LH = "gingerbread-man",
+      AH = [],
+      rH = "f79d",
+      SH = "M308.7 192c26.6-23.5 43.3-57.8 43.3-96 0-70.7-57.3-128-128-128S96 25.3 96 96c0 38.2 16.8 72.5 43.3 96L64 192c-35.3 0-64 28.7-64 64s28.7 64 64 64l19 0c20.1 0 31.3 23.2 18.8 38.9L47.6 427.2c-24.7 31.1-19.5 76.4 11.6 101.2s76.4 19.5 101.2-11.6l44.8-56.5c9.6-12.1 28-12.1 37.6 0l44.8 56.5c24.7 31.1 70 36.4 101.2 11.6s36.4-70 11.6-101.2l-54.2-68.3C333.7 343.2 344.9 320 365 320l19 0c35.3 0 64-28.7 64-64s-28.7-64-64-64l-75.3 0zM152 80a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM272 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM200 256a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm24 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.h = BH.d
+  },
+  7899: (HH, BH) => {
+    var LH = "globe",
+      AH = [127760],
+      rH = "f0ac",
+      SH = "M351.9 280l-190.9 0c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zM160.9 232l190.9 0C349 167.5 334.7 108.1 314.4 64.6 303 40.2 290.7 22.8 279.3 12.2 268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4zm-48 0C116.4 146.4 138.5 66.9 170.8 14.7 78.7 47.3 10.9 131.2 1.5 232l111.4 0zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3L1.5 280zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3l-111.4 0zm111.4-48C501.9 131.2 434.1 47.3 342 14.7 374.3 66.9 396.4 146.4 399.9 232l111.4 0z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.d = BH.b
+  },
+  7901: (HH, BH) => {
+    var LH = "grid-2",
+      AH = [],
+      rH = "e196",
+      SH = "M192 80c0-26.5-21.5-48-48-48L48 32C21.5 32 0 53.5 0 80l0 96c0 26.5 21.5 48 48 48l96 0c26.5 0 48-21.5 48-48l0-96zm0 256c0-26.5-21.5-48-48-48l-96 0c-26.5 0-48 21.5-48 48l0 96c0 26.5 21.5 48 48 48l96 0c26.5 0 48-21.5 48-48l0-96zM256 80l0 96c0 26.5 21.5 48 48 48l96 0c26.5 0 48-21.5 48-48l0-96c0-26.5-21.5-48-48-48l-96 0c-26.5 0-48 21.5-48 48zM448 336c0-26.5-21.5-48-48-48l-96 0c-26.5 0-48 21.5-48 48l0 96c0 26.5 21.5 48 48 48l96 0c26.5 0 48-21.5 48-48l0-96z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  7910: (HH, BH) => {
+    var LH = "hammer",
+      AH = [128296],
+      rH = "f6e3",
+      SH = "M246.9 18.3L271 3.8c21.6-13 46.3-19.8 71.5-19.8 36.8 0 72.2 14.6 98.2 40.7l63.9 63.9c15 15 23.4 35.4 23.4 56.6l0 30.9 19.7 19.7 0 0c15.6-15.6 40.9-15.6 56.6 0s15.6 40.9 0 56.6l-64 64c-15.6 15.6-40.9 15.6-56.6 0s-15.6-40.9 0-56.6L464 240 433.1 240c-21.2 0-41.6-8.4-56.6-23.4l-49.1-49.1c-15-15-23.4-35.4-23.4-56.6l0-12.7c0-11.2-5.9-21.7-15.5-27.4l-41.6-25c-10.4-6.2-10.4-21.2 0-27.4zM50.7 402.7l222.1-222.1 90.5 90.5-222.1 222.1c-25 25-65.5 25-90.5 0s-25-65.5 0-90.5z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [640, 512, AH, rH, SH]
+    }, BH.e = BH.b
+  },
+  7912: (HH, BH) => {
+    var LH = "hand-back-point-up",
+      AH = [],
+      rH = "e1a2",
+      SH = "M136 0C113.9 0 96 17.9 96 40l0 280c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-55.7c-2 1.4-3.9 3-5.8 4.5L39 284.8C24.4 297 16 315 16 334L16 372c0 38 16.9 74 46.1 98.3l5.4 4.5c28.8 24 65 37.1 102.4 37.1L288 512c70.7 0 128-57.3 128-128l0-96c0-26.5-21.5-48-48-48-12.4 0-23.6 4.7-32.1 12.3-1.9-24.8-22.6-44.3-47.9-44.3-12.4 0-23.6 4.7-32.1 12.3-1.9-24.8-22.6-44.3-47.9-44.3-12.3 0-23.5 4.6-32 12.2L176 40c0-22.1-17.9-40-40-40z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  7845: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "hand-fist",
+      AH = [9994, "fist-raised"],
+      rH = "f6de",
+      SH = "M160 0c17.7 0 32 14.3 32 32l0 112-64 0 0-112c0-17.7 14.3-32 32-32zM32 64c0-17.7 14.3-32 32-32S96 46.3 96 64l0 80-64 0 0-80zm192 0c0-17.7 14.3-32 32-32s32 14.3 32 32l0 96c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-96zm96 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64zm-96 88l0-.6c9.4 5.4 20.3 8.6 32 8.6 13.2 0 25.4-4 35.6-10.8 8.7 24.9 32.5 42.8 60.4 42.8 11.7 0 22.6-3.1 32-8.6l0 8.6c0 52.3-25.1 98.8-64 128l0 96c0 17.7-14.3 32-32 32l-160 0c-17.7 0-32-14.3-32-32l0-78.4c-17.3-7.9-33.2-18.8-46.9-32.5L37.5 357.5C13.5 333.5 0 300.9 0 267l0-27c0-35.3 28.7-64 64-64l88 0c22.1 0 40 17.9 40 40s-17.9 40-40 40l-56 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l56 0c39.8 0 72-32.2 72-72z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.faHandFist = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 384, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  7915: (HH, BH) => {
+    var LH = "hand-holding-medical",
+      AH = [],
+      rH = "e05c",
+      SH = "M240 24c0-13.3 10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 56 56 0c13.3 0 24 10.7 24 24l0 48c0 13.3-10.7 24-24 24l-56 0 0 56c0 13.3-10.7 24-24 24l-48 0c-13.3 0-24-10.7-24-24l0-56-56 0c-13.3 0-24-10.7-24-24l0-48c0-13.3 10.7-24 24-24l56 0 0-56zM66.7 384l42.5-42.5c24-24 56.6-37.5 90.5-37.5L352 304c17.7 0 32 14.3 32 32s-14.3 32-32 32l-72 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l112.6 0 119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5s9.3 42.8-8.5 55.9L433.1 485.5c-23.4 17.2-51.6 26.5-80.7 26.5L32 512c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l34.7 0z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  7918: (HH, BH) => {
+    var LH = "hand-point-left",
+      AH = [],
+      rH = "f0a5",
+      SH = "M32 96C14.3 96 0 110.3 0 128s14.3 32 32 32l208 0 0-64-208 0zM192 288c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0zm-64-64c0 17.7 14.3 32 32 32l48 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-48 0c-17.7 0-32 14.3-32 32zm96 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0zm88-96l-.6 0c5.4 9.4 8.6 20.3 8.6 32 0 13.2-4 25.4-10.8 35.6 24.9 8.7 42.8 32.5 42.8 60.4 0 11.7-3.1 22.6-8.6 32l8.6 0c88.4 0 160-71.6 160-160l0-61.7c0-42.4-16.9-83.1-46.9-113.1l-11.6-11.6C429.5 77.5 396.9 64 363 64l-27 0c-35.3 0-64 28.7-64 64l0 88c0 22.1 17.9 40 40 40s40-17.9 40-40l0-56c0-8.8 7.2-16 16-16s16 7.2 16 16l0 56c0 39.8-32.2 72-72 72z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.f = BH.b
+  },
+  7922: (HH, BH) => {
+    var LH = "hand-wave",
+      AH = [],
+      rH = "e1a7",
+      SH = "M392.2 67.4L391 58.9c-2.5-17.6-16.3-31.4-33.9-33.9l-8.5-1.2c-13.1-1.9-22.2-14-20.4-27.2s14-22.2 27.2-20.4l8.5 1.2c38.7 5.5 69.1 36 74.7 74.7l1.2 8.5c1.9 13.1-7.2 25.3-20.4 27.2s-25.3-7.2-27.2-20.4zM217.4 70.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192c3.3 3.3 9.4 1.1 9.4-3.7l0-77.7c0-22.1 17.9-40 40-40s40 17.9 40 40l0 176.3c0 60.2-27.9 116.9-75.5 153.7-50.8 39.2-115.5 49.7-173.6 32.7-28.4-7.1-55.3-21.8-77.6-44.1l-4.9-4.9c-83.9-83.9-130.2-130.2-139.1-139.1-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l31.9 31.9 .1 .1 46.6 46.6c5.2 5.2 13.6 5.2 18.7 0s5.2-13.6 0-18.7L89.4 198.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L261.3 280c5.2 5.2 13.6 5.2 18.7 0s5.2-13.6 0-18.7L137.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L325.3 216c5.2 5.2 13.6 5.2 18.7 0s5.2-13.6 0-18.7L217.4 70.6zM28.6 360.2c13.1-1.9 25.3 7.2 27.2 20.4l1.2 8.5c2.5 17.6 16.3 31.4 33.9 33.9l8.5 1.2c13.1 1.9 22.2 14 20.4 27.2s-14 22.2-27.2 20.4l-8.5-1.2C45.4 465 15 434.6 9.5 395.9l-1.2-8.5c-1.9-13.1 7.2-25.3 20.4-27.2z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.h = BH.d
+  },
+  7930: (HH, BH) => {
+    var LH = "hands-clapping",
+      AH = [],
+      rH = "e1a8",
+      SH = "M344 8l0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-64c0-13.3 10.7-24 24-24S344-5.3 344 8zM220 10.7l32 48c7.4 11 4.4 25.9-6.7 33.3s-25.9 4.4-33.3-6.7l-32-48c-7.4-11-4.4-25.9 6.7-33.3S212.6-.3 220 10.7zM135 119c9.4-9.4 24.6-9.4 33.9 0L292.7 242.7c10.1 10.1 27.3 2.9 27.3-11.3l0-39.4c0-17.7 14.3-32 32-32s32 14.3 32 32l0 153.6c0 57.1-30 110-78.9 139.4-64 38.4-145.8 28.3-198.5-24.4L7 361c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l53 53c6.1 6.1 16 6.1 22.1 0s6.1-16 0-22.1L23 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l93 93c6.1 6.1 16 6.1 22.1 0s6.1-16 0-22.1L55 185c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l117 117c6.1 6.1 16 6.1 22.1 0s6.1-16 0-22.1l-93-93c-9.4-9.4-9.4-24.6 0-33.9zM433.1 484.9c-24.2 14.5-50.9 22.1-77.7 23.1 48.1-39.6 76.6-99 76.6-162.4l0-98.1c8.2-.1 16-6.4 16-16l0-39.4c0-17.7 14.3-32 32-32s32 14.3 32 32l0 153.6c0 57.1-30 110-78.9 139.4zM453.3 4c11 7.4 14 22.3 6.7 33.3l-32 48c-7.4 11-22.3 14-33.3 6.7s-14-22.3-6.7-33.3l32-48c7.4-11 22.3-14 33.3-6.7z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.f = BH.c
+  },
+  7936: (HH, BH) => {
+    var LH = "hat-santa",
+      AH = [],
+      rH = "f7a7",
+      SH = "M519.9 22.2C519 9.8 508.7 0 496 0s-23 9.8-23.9 22.2c-9.4-8.1-23.7-7.7-32.6 1.2s-9.4 23.2-1.2 32.6C425.8 57 416 67.3 416 80s9.8 23 22.2 23.9c-8.1 9.4-7.7 23.7 1.2 32.6s23.2 9.4 32.6 1.2C473 150.2 483.3 160 496 160s23-9.8 23.9-22.2c9.4 8.1 23.7 7.7 32.6-1.2s9.4-23.2 1.2-32.6C566.2 103 576 92.7 576 80s-9.8-23-22.2-23.9c8.1-9.4 7.7-23.7-1.2-32.6s-23.2-9.4-32.6-1.2zM496 480c17.7 0 32-14.3 32-32l0-32c0-17.7-14.3-32-32-32L80 384c-17.7 0-32 14.3-32 32l0 32c0 17.7 14.3 32 32 32l416 0zM416 0L281.6 0c-25.3 0-48.2 14.9-58.5 38L90.7 336 484.4 336 378.4 102.9c-6.5-14.4-5.6-31 2.5-44.6L416 0z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.i = BH.e
+  },
+  7944: (HH, BH) => {
+    var LH = "hat-winter",
+      AH = [],
+      rH = "f7a8",
+      SH = "M279.9 22.2C279 9.8 268.7 0 256 0s-23 9.8-23.9 22.2c-9.4-8.1-23.7-7.7-32.6 1.2s-9.4 23.2-1.2 32.6C185.8 57 176 67.3 176 80s9.8 23 22.2 23.9c-8.1 9.4-7.7 23.7 1.2 32.6l.1 .1C131.6 158.9 88.4 221 62.9 292.6l47.3 23.6c11.3 5.6 24.5 5.6 35.8 0l70.8-35.4c24.8-12.4 53.9-12.4 78.7 0l70.8 35.4c11.3 5.6 24.5 5.6 35.8 0l47.3-23.6c-25.5-71.6-68.8-133.7-136.7-155.9 0 0 .1-.1 .1-.1 8.9-8.9 9.4-23.2 1.2-32.6 12.4-.9 22.2-11.3 22.2-23.9s-9.8-23-22.2-23.9c8.1-9.4 7.7-23.7-1.2-32.6s-23.2-9.4-32.6-1.2zM0 480c0 17.7 14.3 32 32 32l448 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-.9 0c-1.9-34.5-7-72-16-108.7l-39.7 19.9c-24.8 12.4-53.9 12.4-78.7 0l-70.8-35.4c-11.3-5.6-24.5-5.6-35.8 0l-70.8 35.4c-24.8 12.4-53.9 12.4-78.7 0L48.9 339.3c-9 36.7-14.1 74.2-16 108.7l-.9 0c-17.7 0-32 14.3-32 32z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  7948: (HH, BH) => {
+    var LH = "hat-witch",
+      AH = [],
+      rH = "f6e7",
+      SH = "M80 400l89.7-217.8c14.5-35.3 39.3-65.5 71-86.6l132-88c7.3-4.9 15.9-7.5 24.8-7.5 11.8 0 23.2 4.7 31.6 13.1l64.2 64.2c12 12 18.7 28.3 18.7 45.3l0 49.7c0 10.9-8.9 19.8-19.8 19.8-7.5 0-14.3-4.2-17.7-10.9l-13.3-26.6c-8.1-16.2-24.6-26.4-42.8-26.4-20.6 0-38.8 13.2-45.4 32.7l-.3 .9c-3.1 9.4-3.4 19.5-.6 29L432 400 80 400zM32 512c-17.7 0-32-14.3-32-32s14.3-32 32-32l448 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 512z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.f = BH.e
+  },
+  7957: (HH, BH) => {
+    var LH = "hat-wizard",
+      AH = [],
+      rH = "f6e8",
+      SH = "M64 400l85.7-208.2c17-41.3 47.8-75.3 87.2-96.3L383.8 17.2c12.3-6.6 26.5 4.7 23 18.2L369.6 177.8c-1.1 4.1-1.6 8.3-1.6 12.6 0 6.3 1.2 12.6 3.6 18.5l76.4 191.1-207.1 0 11.8-35.4 40.4-13.5c6.5-2.2 10.9-8.3 10.9-15.2s-4.4-13-10.9-15.2l-40.4-13.5-13.5-40.4C237 260.4 230.9 256 224 256s-13 4.4-15.2 10.9l-13.5 40.4-40.4 13.5C148.4 323 144 329.1 144 336s4.4 13 10.9 15.2l40.4 13.5 11.8 35.4-143.1 0zM279.6 141.5c-1.1-3.3-4.1-5.5-7.6-5.5s-6.5 2.2-7.6 5.5l-6.7 20.2-20.2 6.7c-3.3 1.1-5.5 4.1-5.5 7.6s2.2 6.5 5.5 7.6l20.2 6.7 6.7 20.2c1.1 3.3 4.1 5.5 7.6 5.5s6.5-2.2 7.6-5.5l6.7-20.2 20.2-6.7c3.3-1.1 5.5-4.1 5.5-7.6s-2.2-6.5-5.5-7.6l-20.2-6.7-6.7-20.2zM32 448l448 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 512c-17.7 0-32-14.3-32-32s14.3-32 32-32z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.g = BH.c
+  },
+  7966: (HH, BH) => {
+    var LH = "heart",
+      AH = [128153, 128154, 128155, 128156, 128420, 129293, 129294, 129505, 9829, 10084, 61578],
+      rH = "f004",
+      SH = "M241 87.1l15 20.7 15-20.7C296 52.5 336.2 32 378.9 32 452.4 32 512 91.6 512 165.1l0 2.6c0 112.2-139.9 242.5-212.9 298.2-12.4 9.4-27.6 14.1-43.1 14.1s-30.8-4.6-43.1-14.1C139.9 410.2 0 279.9 0 167.7l0-2.6C0 91.6 59.6 32 133.1 32 175.8 32 216 52.5 241 87.1z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.g = BH.c
+  },
+  7974: (HH, BH, LH) => {
+    var AH = LH(7983);
+    BH.c = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.g = BH.c, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7988: (HH, BH, LH) => {
+    var AH = LH(7599);
+    BH.c = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.f = BH.c, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  7997: (HH, BH) => {
+    var LH = "horse-saddle",
+      AH = [],
+      rH = "f8c3",
+      SH = "M448 238.1l0-78.1 16 0 9.8 19.6c12.5 25.1 42.2 36.4 68.3 26 20.5-8.2 33.9-28 33.9-50.1L576 80c0-19.1-8.4-36.3-21.7-48l5.7 0c8.8 0 16-7.2 16-16S568.8 0 560 0L448 0C377.3 0 320 57.3 320 128l0 32c0 41.8-26.7 77.4-64 90.5l0 78.6 51.7 14.8c4.1 1.2 8.2 2.1 12.3 2.8L320 480c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-164.3c19.2-19.2 31.5-45.7 32-75.7l0 0 0-1.9zM224 320l0-64c-53 0-96-43-96-96l0-29.4C106.2 136.1 87.7 150 76.3 168.8 33.2 174.5 0 211.4 0 256l0 56c0 13.3 10.7 24 24 24s24-10.7 24-24l0-56c0-13.4 6.6-25.2 16.7-32.5 1.6 13 6.3 25.4 13.6 36.4l28.2 42.4c8.3 12.4 6.4 28.7-1.2 41.6-16.5 28-20.6 62.2-10 93.9l17.5 52.4c4.4 13.1 16.6 21.9 30.4 21.9l33.7 0c21.8 0 37.3-21.4 30.4-42.1l-20.8-62.5c-2.1-6.4-.5-13.4 4.3-18.2l12.7-12.7c13.2-13.2 20.6-31.1 20.6-49.7 0-2.3-.1-4.6-.3-6.9l.3 .1zm64-160l0-32-128 0 0 32c0 35.3 28.7 64 64 64s64-28.7 64-64zM496 64a16 16 0 1 1 0 32 16 16 0 1 1 0-32z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.g = BH.e
+  },
+  8004: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "hourglass",
+      AH = [9203, 62032, "hourglass-empty"],
+      rH = "f254",
+      SH = "M0 32C0 14.3 14.3 0 32 0L352 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l0 11c0 42.4-16.9 83.1-46.9 113.1l-67.9 67.9 67.9 67.9c30 30 46.9 70.7 46.9 113.1l0 11c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 512c-17.7 0-32-14.3-32-32s14.3-32 32-32l0-11c0-42.4 16.9-83.1 46.9-113.1l67.9-67.9-67.9-67.9C48.9 158.1 32 117.4 32 75l0-11C14.3 64 0 49.7 0 32zM96 64l0 11c0 25.5 10.1 49.9 28.1 67.9l67.9 67.9 67.9-67.9c18-18 28.1-42.4 28.1-67.9l0-11-192 0zm0 384l192 0 0-11c0-25.5-10.1-49.9-28.1-67.9l-67.9-67.9-67.9 67.9c-18 18-28.1 42.4-28.1 67.9l0 11z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.faHourglass = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 384, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8006: (HH, BH) => {
+    var LH = "hourglass-clock",
+      AH = [],
+      rH = "e41b",
+      SH = "M32 32C32 14.3 46.3 0 64 0L384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l0 11c0 42.4-16.9 83.1-46.9 113.1l-67.9 67.9 17.9 17.9c-14.4 16.5-26 35.6-34.1 56.4l-29-29-67.9 67.9c-18 18-28.1 42.4-28.1 67.9l0 11 118 0c6 23.3 16.3 45 30 64L64 512c-17.7 0-32-14.3-32-32s14.3-32 32-32l0-11c0-42.4 16.9-83.1 46.9-113.1l67.9-67.9-67.9-67.9C80.9 158.1 64 117.4 64 75l0-11C46.3 64 32 49.7 32 32zm96 32l0 11c0 25.5 10.1 49.9 28.1 67.9l67.9 67.9 67.9-67.9c18-18 28.1-42.4 28.1-67.9l0-11-192 0zM288 400a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-80c-8.8 0-16 7.2-16 16l0 64c0 8.8 7.2 16 16 16l48 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-32 0 0-48c0-8.8-7.2-16-16-16z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  8011: (HH, BH, LH) => {
+    var AH = LH(8004);
+    BH.e = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.i = BH.e, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8711: (HH, BH) => {
+    var LH = "house",
+      AH = [127968, 63498, 63500, "home", "home-alt", "home-lg-alt"],
+      rH = "f015",
+      SH = "M277.8 8.6c-12.3-11.4-31.3-11.4-43.5 0l-224 208c-9.6 9-12.8 22.9-8 35.1S18.8 272 32 272l16 0 0 176c0 35.3 28.7 64 64 64l288 0c35.3 0 64-28.7 64-64l0-176 16 0c13.2 0 25-8.1 29.8-20.3s1.6-26.2-8-35.1l-224-208zM240 320l32 0c26.5 0 48 21.5 48 48l0 96-128 0 0-96c0-26.5 21.5-48 48-48z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.g = BH.e
+  },
+  8015: (HH, BH) => {
+    var LH = "ice-skate",
+      AH = [9976],
+      rH = "f7ac",
+      SH = "M288 0c17.7 0 32 14.3 32 32l0 64-56 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l56 0 0 32-56 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l56 0 91.6 27.5c40.6 12.2 68.4 49.6 68.4 92l0 24.6c0 26.5-21.5 48-48 48l0 48 72 0c13.3 0 24-10.7 24-24l0-8c0-13.3 10.7-24 24-24s24 10.7 24 24l0 8c0 39.8-32.2 72-72 72L24 512c-13.3 0-24-10.7-24-24s10.7-24 24-24l72 0 0-48c-17.7 0-32-14.3-32-32l0-279.3c0-23.5 17-43.5 40.1-47.3L256 32c0-17.7 14.3-32 32-32zM144 464l240 0 0-48-240 0 0 48z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.d = BH.c
+  },
+  8017: (HH, BH) => {
+    var LH = "icicles",
+      AH = [],
+      rH = "f7ad",
+      SH = "M75.8 304.8L1 35.7C.3 33.2 0 30.7 0 28.2 0 12.6 12.6 0 28.2 0L482.4 0c16.3 0 29.6 13.2 29.6 29.6 0 1.6-.1 3.3-.4 4.9L434.6 496.1c-1.5 9.2-9.5 15.9-18.8 15.9-9.2 0-17.1-6.6-18.7-15.6L336 160 307.2 303.9c-1.9 9.3-10.1 16.1-19.6 16.1-9.2 0-17.2-6.2-19.4-15.1L240 192 210.6 368.2c-1.5 9.1-9.4 15.8-18.6 15.8s-17.1-6.7-18.6-15.8L144 192 115.9 304.3c-2.3 9.2-10.6 15.7-20.1 15.7-9.3 0-17.5-6.2-20-15.2z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.e = BH.b
+  },
+  7983: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "icons",
+      AH = ["heart-music-camera-bolt"],
+      rH = "f86d",
+      SH = "M174.9 272c10.7 0 20.7 5.3 26.6 14.2l11.8 17.8 26.7 0c26.5 0 48 21.5 48 48l0 112c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 352c0-26.5 21.5-48 48-48l26.7 0 11.8-17.8c5.9-8.9 15.9-14.2 26.6-14.2l61.7 0zm278.6-12c5.6-4.9 13.9-5.3 19.9-.9s8.3 12.4 5.3 19.3L440.3 368 496 368c6.7 0 12.6 4.1 15 10.4s.6 13.3-4.4 17.7l-128 112c-5.6 4.9-13.9 5.3-19.9 .9s-8.3-12.4-5.3-19.3l38.5-89.7-55.8 0c-6.7 0-12.6-4.1-15-10.4s-.6-13.3 4.4-17.7l128-112zM144 360a48 48 0 1 0 0 96 48 48 0 1 0 0-96zM483.8 .4c6.5-1.1 13.1 .4 18.5 4.4 6.1 4.5 9.7 11.7 9.7 19.2l0 152-.3 4.9c-3.3 24.2-30.5 43.1-63.7 43.1-35.3 0-64-21.5-64-48s28.7-48 64-48c5.5 0 10.9 .6 16 1.6l0-49.3-112 33.6 0 110.2-.3 4.9c-3.3 24.2-30.5 43.1-63.7 43.1-35.3 0-64-21.5-64-48s28.7-48 64-48c5.5 0 10.9 .6 16 1.6L304 72c0-10.6 7-20 17.1-23l160-48 2.7-.6zM188.9 0C226 0 256 30 256 67.1l0 6.1c0 56.1-75.2 112.1-110.3 135.3-10.8 7.1-24.6 7.1-35.4 0-35.1-23.1-110.3-79.2-110.3-135.3l0-6.1C0 30 30 0 67.1 0 88.2 0 108 9.9 120.7 26.8l7.3 9.8 7.3-9.8C148 9.9 167.8 0 188.9 0z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faIcons = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8021: (HH, BH) => {
+    var LH = "image",
+      AH = [],
+      rH = "f03e",
+      SH = "M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm64 80a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM272 224c8.4 0 16.1 4.4 20.5 11.5l88 144c4.5 7.4 4.7 16.7 .5 24.3S368.7 416 360 416L88 416c-8.9 0-17.2-5-21.3-12.9s-3.5-17.5 1.6-24.8l56-80c4.5-6.4 11.8-10.2 19.7-10.2s15.2 3.8 19.7 10.2l26.4 37.8 61.4-100.5c4.4-7.1 12.1-11.5 20.5-11.5z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.e = BH.d
+  },
+  8028: (HH, BH) => {
+    var LH = "image-slash",
+      AH = [],
+      rH = "e1b7",
+      SH = "M41-24.9c-9.4-9.4-24.6-9.4-33.9 0S-2.3-.3 7 9.1l528 528c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-62.1-62.1c3.3-7.7 5.1-16.2 5.1-25.1l0-320c0-35.3-28.7-64-64-64L128 32c-8.9 0-17.4 1.8-25.1 5.1l-62-62zM179.5 113.6c4-1.1 8.2-1.6 12.5-1.6 26.5 0 48 21.5 48 48 0 4.3-.6 8.5-1.6 12.5l-58.9-58.9zM310.1 244.3l5.4-8.8c4.4-7.1 12.1-11.5 20.5-11.5s16.1 4.4 20.5 11.5l86.7 141.8-133-133zM64 133.8L64 416c0 35.3 28.7 64 64 64l282.2 0-64-64-194.2 0c-8.9 0-17.2-5-21.3-12.9s-3.5-17.5 1.6-24.8l56-80c4.5-6.4 11.8-10.2 19.7-10.2L218.2 288 64 133.8z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.f = BH.c
+  },
+  8032: (HH, BH, LH) => {
+    var AH = LH(7587);
+    BH.b = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.c = BH.b, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8039: (HH, BH) => {
+    var LH = "joystick",
+      AH = [128377],
+      rH = "f8c5",
+      SH = "M384 352c35.3 0 64 28.7 64 64l0 32c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64l0-32c0-35.3 28.7-64 64-64l320 0zM224 0c61.9 0 112 50.1 112 112 0 50.7-33.7 93.5-80 107.3l0 84.7-64 0 0-84.7c-46.3-13.8-80-56.6-80-107.3 0-61.9 50.1-112 112-112zM200 48a24 24 0 1 0 0 48 24 24 0 1 0 0-48z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  8042: (HH, BH) => {
+    var LH = "lamp-street",
+      AH = [],
+      rH = "e1c5",
+      SH = "M176 64C114.1 64 64 114.1 64 176l0 304c0 17.7-14.3 32-32 32S0 497.7 0 480L0 176c0-97.2 78.8-176 176-176 92.7 0 168.6 71.6 175.5 162.6 80.7 13.3 144.4 76.9 157.9 157.6 2.9 17.4-11.7 31.9-29.4 31.9l-73.5 0c-7.5 41-43.4 72-86.5 72s-79-31-86.5-72L160 352c-17.7 0-32.3-14.4-29.4-31.9 13.4-80.2 76.5-143.6 156.6-157.3-6.5-55.6-53.8-98.8-111.2-98.8zM283.3 352c6.2 14.1 20.3 24 36.7 24s30.5-9.9 36.7-24l-73.3 0z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.e = BH.c
+  },
+  8050: (HH, BH) => {
+    var LH = "layer-group",
+      AH = [],
+      rH = "f5fd",
+      SH = "M232.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L13.9 149.8C5.4 145.8 0 137.3 0 128s5.4-17.9 13.9-21.8L232.5 5.2zM48.1 218.4l164.3 75.9c27.7 12.8 59.6 12.8 87.3 0l164.3-75.9 34.1 15.8c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L13.9 277.8C5.4 273.8 0 265.3 0 256s5.4-17.9 13.9-21.8l34.1-15.8zM13.9 362.2l34.1-15.8 164.3 75.9c27.7 12.8 59.6 12.8 87.3 0l164.3-75.9 34.1 15.8c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L13.9 405.8C5.4 401.8 0 393.3 0 384s5.4-17.9 13.9-21.8z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.g = BH.d
+  },
+  8054: (HH, BH) => {
+    var LH = "left-from-bracket",
+      AH = [],
+      rH = "e66c",
+      SH = "M352 416c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0c53 0 96-43 96-96l0-256c0-53-43-96-96-96l-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0c17.7 0 32 14.3 32 32l0 256c0 17.7-14.3 32-32 32l-64 0zM7 239c-9.4 9.4-9.4 24.6 0 33.9L151 417c6.9 6.9 17.2 8.9 26.2 5.2S192 409.7 192 400l0-80 112 0c26.5 0 48-21.5 48-48l0-32c0-26.5-21.5-48-48-48l-112 0 0-80c0-9.7-5.8-18.5-14.8-22.2S157.9 88.2 151 95L7 239z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.e = BH.c
+  },
+  8061: (HH, BH) => {
+    var LH = "lightbulb",
+      AH = [128161],
+      rH = "f0eb",
+      SH = "M292.9 384c7.3-22.3 21.9-42.5 38.4-59.9 32.7-34.4 52.7-80.9 52.7-132.1 0-106-86-192-192-192S0 86 0 192c0 51.2 20 97.7 52.7 132.1 16.5 17.4 31.2 37.6 38.4 59.9l201.7 0zM288 432l-192 0 0 16c0 44.2 35.8 80 80 80l32 0c44.2 0 80-35.8 80-80l0-16zM184 112c-39.8 0-72 32.2-72 72 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-66.3 53.7-120 120-120 13.3 0 24 10.7 24 24s-10.7 24-24 24z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.e = BH.d
+  },
+  8068: (HH, BH) => {
+    var LH = "link",
+      AH = [128279, "chain"],
+      rH = "f0c1",
+      SH = "M419.5 96c-16.6 0-32.7 4.5-46.8 12.7-15.8-16-34.2-29.4-54.5-39.5 28.2-24 64.1-37.2 101.3-37.2 86.4 0 156.5 70 156.5 156.5 0 41.5-16.5 81.3-45.8 110.6l-71.1 71.1c-29.3 29.3-69.1 45.8-110.6 45.8-86.4 0-156.5-70-156.5-156.5 0-1.5 0-3 .1-4.5 .5-17.7 15.2-31.6 32.9-31.1s31.6 15.2 31.1 32.9c0 .9 0 1.8 0 2.6 0 51.1 41.4 92.5 92.5 92.5 24.5 0 48-9.7 65.4-27.1l71.1-71.1c17.3-17.3 27.1-40.9 27.1-65.4 0-51.1-41.4-92.5-92.5-92.5zM275.2 173.3c-1.9-.8-3.8-1.9-5.5-3.1-12.6-6.5-27-10.2-42.1-10.2-24.5 0-48 9.7-65.4 27.1L91.1 258.2c-17.3 17.3-27.1 40.9-27.1 65.4 0 51.1 41.4 92.5 92.5 92.5 16.5 0 32.6-4.4 46.7-12.6 15.8 16 34.2 29.4 54.6 39.5-28.2 23.9-64 37.2-101.3 37.2-86.4 0-156.5-70-156.5-156.5 0-41.5 16.5-81.3 45.8-110.6l71.1-71.1c29.3-29.3 69.1-45.8 110.6-45.8 86.6 0 156.5 70.6 156.5 156.9 0 1.3 0 2.6 0 3.9-.4 17.7-15.1 31.6-32.8 31.2s-31.6-15.1-31.2-32.8c0-.8 0-1.5 0-2.3 0-33.7-18-63.3-44.8-79.6z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.e = BH.c
+  },
+  8076: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "list",
+      AH = ["list-squares"],
+      rH = "f03a",
+      SH = "M40 48C26.7 48 16 58.7 16 72l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24L40 48zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L192 64zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zM16 232l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faList = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8085: (HH, BH, LH) => {
+    var AH = LH(8076);
+    BH.e = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.h = BH.e, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8089: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "location-check",
+      AH = ["map-marker-check"],
+      rH = "f606",
+      SH = "M192 0C298 0 384 84.4 384 188.6 384 307.9 263.8 450.9 213.6 505.4 201.8 518.2 182.2 518.2 170.4 505.4 120.2 450.9 0 307.9 0 188.6 0 84.4 86 0 192 0zm90.9 132.6c-10.7-7.8-25.7-5.4-33.5 5.3l-85.6 117.7-26.5-27.4c-9.2-9.5-24.4-9.8-33.9-.6-9.5 9.2-9.8 24.4-.6 33.9l46.4 48c4.9 5.1 11.8 7.8 18.9 7.3s13.6-4.1 17.8-9.8L288.2 166.1c7.8-10.7 5.4-25.7-5.3-33.5z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.faLocationCheck = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 384, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8093: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "location-xmark",
+      AH = ["map-marker-times", "map-marker-xmark"],
+      rH = "f60e",
+      SH = "M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zm259.9-64.5c-9.4-9.4-24.6-9.4-33.9 0l-33.9 33.9-33.9-33.9c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l33.9 33.9-33.9 33.9c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l33.9-33.9 33.9 33.9c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-33.9-33.9 33.9-33.9c9.4-9.4 9.4-24.6 0-33.9z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.faLocationXmark = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 384, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8100: (HH, BH) => {
+    var LH = "lock",
+      AH = [128274],
+      rH = "f023",
+      SH = "M128 96l0 64 128 0 0-64c0-35.3-28.7-64-64-64s-64 28.7-64 64zM64 160l0-64C64 25.3 121.3-32 192-32S320 25.3 320 96l0 64c35.3 0 64 28.7 64 64l0 224c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 224c0-35.3 28.7-64 64-64z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  8108: (HH, BH) => {
+    var LH = "lock-open",
+      AH = [],
+      rH = "f3c1",
+      SH = "M384 96c0-35.3 28.7-64 64-64s64 28.7 64 64l0 32c0 17.7 14.3 32 32 32s32-14.3 32-32l0-32c0-70.7-57.3-128-128-128S320 25.3 320 96l0 64-160 0c-35.3 0-64 28.7-64 64l0 224c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-224c0-35.3-28.7-64-64-64l-32 0 0-64z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  8113: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "magnifying-glass",
+      AH = [128269, "search"],
+      rH = "f002",
+      SH = "M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faMagnifyingGlass = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8122: (HH, BH, LH) => {
+    var AH = LH(8130);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.g = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8139: (HH, BH, LH) => {
+    var AH = LH(8089);
+    BH.c = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.d = BH.c, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8145: (HH, BH, LH) => {
+    var AH = LH(8093);
+    BH.b = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.d = BH.b, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8148: (HH, BH, LH) => {
+    var AH = LH(8093);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.h = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8151: (HH, BH) => {
+    var LH = "masks-theater",
+      AH = [127917, "theater-masks"],
+      rH = "f630",
+      SH = "M-5 118L23.5 279.7c14 79.5 76.3 141.8 155.8 155.8l12.7 2.2c-16.5-28.6-27.1-60.7-30.6-94.5l-24.1 4.3c-9.7 1.7-18.8-5.8-16.9-15.5 4.8-24.7 19.1-46.6 39.7-60.9l0-74.6c-1.4 .8-3 1.3-4.7 1.6l-63 11.1c-8.7 1.5-17.3-4.4-15.9-13.1 3.1-19.6 18.4-36 39.1-39.7 17.2-3 33.9 3.5 44.6 15.8l0-22.7c0-22.5 6.9-52.4 32.3-73.4 26-21.5 67.7-43.9 124.9-54.2-30.5-16.3-86.3-32-163.8-18.4-80.3 14.2-128 50.1-150.1 76.1-9 10.5-10.8 24.9-8.4 38.5zM208 138.7l0 174.8c0 80.7 50.5 152.9 126.4 180.4L362.1 504c14.1 5.1 29.6 5.1 43.7 0L433.6 494C509.5 466.4 560 394.3 560 313.5l0-174.8c0-6.9-2.1-13.8-7-18.6-22.6-22.5-78.2-56-169-56s-146.4 33.6-169 56c-4.9 4.9-7 11.7-7 18.6zm66.1 187.1c-1.4-7 7-11 12.7-6.6 26.9 20.6 60.6 32.9 97.2 32.9s70.2-12.3 97.2-32.9c5.7-4.4 14.1-.4 12.7 6.6-10.1 51.4-55.5 90.3-109.9 90.3s-99.8-38.8-109.9-90.3zm.5-101.5C281.2 205.5 299 192 320 192s38.9 13.5 45.4 32.3c2.9 8.4-4.5 15.7-13.4 15.7l-64 0c-8.8 0-16.3-7.4-13.4-15.7zM480 240l-64 0c-8.8 0-16.3-7.4-13.4-15.7 6.5-18.8 24.4-32.3 45.4-32.3s38.9 13.5 45.4 32.3c2.9 8.4-4.5 15.7-13.4 15.7z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.d = BH.b
+  },
+  8156: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "minus",
+      AH = [8211, 8722, 10134, "subtract"],
+      rH = "f068",
+      SH = "M0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.faMinus = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 448, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8161: (HH, BH, LH) => {
+    var AH = LH(8166);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.h = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8173: (HH, BH) => {
+    var LH = "moon",
+      AH = [127769, 9214],
+      rH = "f186",
+      SH = "M256 0C114.6 0 0 114.6 0 256S114.6 512 256 512c68.8 0 131.3-27.2 177.3-71.4 7.3-7 9.4-17.9 5.3-27.1s-13.7-14.9-23.8-14.1c-4.9 .4-9.8 .6-14.8 .6-101.6 0-184-82.4-184-184 0-72.1 41.5-134.6 102.1-164.8 9.1-4.5 14.3-14.3 13.1-24.4S322.6 8.5 312.7 6.3C294.4 2.2 275.4 0 256 0z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.g = BH.c
+  },
+  8175: (HH, BH, LH) => {
+    var AH = LH(7642);
+    BH.b = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.c = BH.b, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8182: (HH, BH) => {
+    var LH = "mug-hot",
+      AH = [9749],
+      rH = "f7b6",
+      SH = "M152-16c-13.3 0-24 10.7-24 24 0 38.9 23.4 59.4 39.1 73.1l1.1 1c16.3 14.3 23.8 21.8 23.8 37.9 0 13.3 10.7 24 24 24s24-10.7 24-24c0-38.9-23.4-59.4-39.1-73.1l-1.1-1C183.5 31.7 176 24.1 176 8 176-5.3 165.3-16 152-16zM96 192c-17.7 0-32 14.3-32 32l0 192c0 53 43 96 96 96l192 0c41.8 0 77.4-26.7 90.5-64l5.5 0c70.7 0 128-57.3 128-128S518.7 192 448 192L96 192zM448 384l0-128c35.3 0 64 28.7 64 64s-28.7 64-64 64zM288 8c0-13.3-10.7-24-24-24S240-5.3 240 8c0 38.9 23.4 59.4 39.1 73.1l1.1 1c16.3 14.3 23.8 21.8 23.8 37.9 0 13.3 10.7 24 24 24s24-10.7 24-24c0-38.9-23.4-59.4-39.1-73.1l-1.1-1C295.5 31.7 288 24.1 288 8z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.d = BH.b
+  },
+  8185: (HH, BH) => {
+    var LH = "music",
+      AH = [127925],
+      rH = "f001",
+      SH = "M468 7c7.6 6.1 12 15.3 12 25l0 304c0 44.2-43 80-96 80s-96-35.8-96-80 43-80 96-80c11.2 0 22 1.6 32 4.6l0-116.7-224 49.8 0 206.3c0 44.2-43 80-96 80s-96-35.8-96-80 43-80 96-80c11.2 0 22 1.6 32 4.6L128 96c0-15 10.4-28 25.1-31.2l288-64c9.5-2.1 19.4 .2 27 6.3z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.h = BH.e
+  },
+  8190: (HH, BH) => {
+    var LH = "music-slash",
+      AH = [],
+      rH = "f8d1",
+      SH = "M41-24.9c-9.4-9.4-24.6-9.4-33.9 0S-2.3-.3 7 9.1l528 528c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L468.7 402.9C494.8 388.6 512 364 512 336l0-304c0-9.7-4.4-18.9-12-25s-17.5-8.4-27-6.3l-288 64C171 67.9 160.8 80 160 94.2L41-24.9zM253.1 187.2l194.9-43.3 0 116.7c-10-2.9-20.8-4.6-32-4.6-27.3 0-51.9 9.5-69.4 24.7l-93.5-93.5zM160 229.8l0 94.7c-10-2.9-20.8-4.6-32-4.6-53 0-96 35.8-96 80s43 80 96 80 96-35.8 96-80l0-106.2-64-64z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.i = BH.e
+  },
+  8195: (HH, BH, LH) => {
+    var AH = LH(7456);
+    BH.c = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.f = BH.c, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8203: (HH, BH) => {
+    var LH = "palette",
+      AH = [127912],
+      rH = "f53f",
+      SH = "M512 256c0 .9 0 1.8 0 2.7-.4 36.5-33.6 61.3-70.1 61.3L344 320c-26.5 0-48 21.5-48 48 0 3.4 .4 6.7 1 9.9 2.1 10.2 6.5 20 10.8 29.9 6.1 13.8 12.1 27.5 12.1 42 0 31.8-21.6 60.7-53.4 62-3.5 .1-7 .2-10.6 .2-141.4 0-256-114.6-256-256S114.6 0 256 0 512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.f = BH.b
+  },
+  8208: (HH, BH) => {
+    var LH = "pants",
+      AH = [],
+      rH = "e6d5",
+      SH = "M90.9 32.4C94.5 13.6 111 0 130.2 0L382.7 0c19.2 0 35.7 13.6 39.3 32.4l8.7 45.4 .4 2.1-54.7 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l63.9 0 62.8 326.6c4.2 21.7-10 42.7-31.7 46.8l-110 21.2c-21.7 4.2-42.7-10-46.8-31.7L257.3 192.7c-.1-.4-.4-.7-.8-.7s-.8 .3-.8 .7L198.3 490.8c-4.2 21.7-25.1 35.9-46.8 31.7l-110-21.2c-21.7-4.2-35.9-25.1-31.7-46.8l62.8-326.6 63.9 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-54.7 0 .4-2.1 8.7-45.4z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.g = BH.e
+  },
+  8213: (HH, BH) => {
+    var LH = "party-horn",
+      AH = [],
+      rH = "e31b",
+      SH = "M32 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM448 160a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm32 256a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM167 153c-9.4-9.4-9.4-24.6 0-33.9l8.3-8.3c16.7-16.7 27.2-38.6 29.8-62.1l3-27.4C209.6 8.2 221.5-1.3 234.7 .1s22.7 13.3 21.2 26.5l-3 27.4c-3.8 34.3-19.2 66.3-43.6 90.7L201 153c-9.4 9.4-24.6 9.4-33.9 0zM359 311l8.2-8.2c24.4-24.4 56.4-39.8 90.7-43.6l27.4-3c13.2-1.5 25 8 26.5 21.2s-8 25-21.2 26.5l-27.4 3c-23.5 2.6-45.4 13.1-62.1 29.8L393 345c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9zM506.3 8.5c8.6 10.1 7.3 25.3-2.8 33.8l-10 8.5c-14.8 12.5-33.7 19.1-53 18.6-16.6-.4-30.6 12.4-31.6 29l-1.8 30c-2.5 42.5-38.3 75.3-80.8 74.2-7.6-.2-15 2.4-20.7 7.3l-10 8.5c-10.1 8.6-25.3 7.3-33.8-2.8s-7.3-25.3 2.8-33.8l10-8.5c14.8-12.5 33.7-19.1 53-18.6 16.6 .4 30.6-12.4 31.6-29l1.8-30c2.5-42.5 38.3-75.3 80.8-74.2 7.6 .2 15-2.4 20.7-7.3l10-8.5c10.1-8.6 25.3-7.3 33.8 2.8zM150.6 201.4l160 160c7.7 7.7 11 18.8 8.6 29.4s-9.9 19.4-20 23.2L259.5 428.9 83.1 252.5 98 212.8c3.8-10.2 12.6-17.7 23.2-20s21.7 1 29.4 8.6zM48.2 345.6l22.6-60.2 155.8 155.8-60.2 22.6-118.2-118.2zM35.9 378.5l97.6 97.6-90.3 33.8c-11.7 4.4-25 1.5-33.9-7.3S-2.4 480.5 2 468.8l33.8-90.3z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.g = BH.e
+  },
+  7820: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "paste",
+      AH = ["file-clipboard"],
+      rH = "f0ea",
+      SH = "M64 0C28.7 0 0 28.7 0 64L0 384c0 35.3 28.7 64 64 64l112 0 0-224c0-61.9 50.1-112 112-112l64 0 0-48c0-35.3-28.7-64-64-64L64 0zM248 112l-144 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l144 0c13.3 0 24 10.7 24 24s-10.7 24-24 24zm40 48c-35.3 0-64 28.7-64 64l0 224c0 35.3 28.7 64 64 64l160 0c35.3 0 64-28.7 64-64l0-165.5c0-17-6.7-33.3-18.7-45.3l-58.5-58.5c-12-12-28.3-18.7-45.3-18.7L288 160z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faPaste = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8221: (HH, BH) => {
+    var LH = "pause",
+      AH = [9208],
+      rH = "f04c",
+      SH = "M48 32C21.5 32 0 53.5 0 80L0 432c0 26.5 21.5 48 48 48l64 0c26.5 0 48-21.5 48-48l0-352c0-26.5-21.5-48-48-48L48 32zm224 0c-26.5 0-48 21.5-48 48l0 352c0 26.5 21.5 48 48 48l64 0c26.5 0 48-21.5 48-48l0-352c0-26.5-21.5-48-48-48l-64 0z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.d = BH.c
+  },
+  8224: (HH, BH) => {
+    var LH = [],
+      AH = "f1b0",
+      rH = "M234.5 92.9c14.3 42.9-.3 86.2-32.6 96.8s-70.1-15.6-84.4-58.5 .3-86.2 32.6-96.8 70.1 15.6 84.4 58.5zM100.4 198.6c18.9 32.4 14.3 70.1-10.2 84.1s-59.7-.9-78.5-33.3-14.3-70.1 10.2-84.1 59.7 .9 78.5 33.3zM69.2 401.2C121.6 259.9 214.7 224 256 224s134.4 35.9 186.8 177.2c3.6 9.7 5.2 20.1 5.2 30.5l0 1.6c0 25.8-20.9 46.7-46.7 46.7-11.5 0-22.9-1.4-34-4.2l-88-22c-15.3-3.8-31.3-3.8-46.6 0l-88 22c-11.1 2.8-22.5 4.2-34 4.2-25.8 0-46.7-20.9-46.7-46.7l0-1.6c0-10.4 1.6-20.8 5.2-30.5zM421.8 282.7c-24.5-14-29.1-51.7-10.2-84.1s54-47.3 78.5-33.3 29.1 51.7 10.2 84.1-54 47.3-78.5 33.3zM310.1 189.7c-32.3-10.6-46.9-53.9-32.6-96.8s52.1-69.1 84.4-58.5 46.9 53.9 32.6 96.8-52.1 69.1-84.4 58.5z";
+    BH.c = {
+      prefix: "fas",
+      iconName: "paw",
+      icon: [512, 512, LH, AH, rH]
+    }, BH.g = BH.c
+  },
+  8233: (HH, BH) => {
+    var LH = [128394],
+      AH = "f304",
+      rH = "M352.9 21.2L308 66.1 445.9 204 490.8 159.1C504.4 145.6 512 127.2 512 108s-7.6-37.6-21.2-51.1L455.1 21.2C441.6 7.6 423.2 0 404 0s-37.6 7.6-51.1 21.2zM274.1 100L58.9 315.1c-10.7 10.7-18.5 24.1-22.6 38.7L.9 481.6c-2.3 8.3 0 17.3 6.2 23.4s15.1 8.5 23.4 6.2l127.8-35.5c14.6-4.1 27.9-11.8 38.7-22.6L412 237.9 274.1 100z";
+    BH.d = {
+      prefix: "fas",
+      iconName: "pen",
+      icon: [512, 512, LH, AH, rH]
+    }, BH.e = BH.d
+  },
+  8236: (HH, BH) => {
+    var LH = "pen-field",
+      AH = [],
+      rH = "e211",
+      SH = "M534.4-16c18.7-18.8 49.1-18.8 67.9 0L624.2 5.9c18.9 18.9 18.7 49.6-.4 68.2l-39.8 38.9-89.3-89.3 39.7-39.7zM472.1 46.4L561.2 135.5 416 277.6c-6.9 6.8-15.3 11.9-24.5 15L320 316.5c-8.6 2.9-18.1 .6-24.6-5.8s-8.7-15.9-5.8-24.6l23.8-71.3c3.1-9.4 8.4-18 15.4-25L472.1 46.4zM64.4 176c0-44.2 35.8-80 80-80l112 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-112 0c-8.8 0-16 7.2-16 16l0 224c0 8.8 7.2 16 16 16l352 0c8.8 0 16-7.2 16-16l0-112c0-17.7 14.3-32 32-32s32 14.3 32 32l0 112c0 44.2-35.8 80-80 80l-352 0c-44.2 0-80-35.8-80-80l0-224zm160 80a32 32 0 1 1 0 64 32 32 0 1 1 0-64z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [640, 512, AH, rH, SH]
+    }, BH.f = BH.e
+  },
+  7721: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "pen-to-square",
+      AH = ["edit"],
+      rH = "f044",
+      SH = "M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L368 46.1 465.9 144 490.3 119.6c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L432 177.9 334.1 80 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faPenToSquare = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8130: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "person",
+      AH = [129485, "male"],
+      rH = "f183",
+      SH = "M248 24a56 56 0 1 0 -112 0 56 56 0 1 0 112 0zm24 212.7l46.3 62.4c10.5 14.2 30.6 17.2 44.8 6.6s17.2-30.6 6.6-44.8l-70.5-95C274 132 234.3 112 192 112s-82 20-107.2 53.9l-70.5 95c-10.5 14.2-7.6 34.2 6.6 44.8s34.2 7.6 44.8-6.6L112 236.7 112 512c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-8.8 7.2-16 16-16s16 7.2 16 16l0 160c0 17.7 14.3 32 32 32s32-14.3 32-32l0-275.3z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.faPerson = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 384, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8244: (HH, BH) => {
+    var LH = "person-arrow-down-to-line",
+      AH = [],
+      rH = "e538",
+      SH = "M192-32a56 56 0 1 1 0 112 56 56 0 1 1 0-112zM318.3 299.1l-46.3-62.4 0 243.3 272 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 544c-17.7 0-32-14.3-32-32s14.3-32 32-32l80 0 0-243.3-46.3 62.4c-10.5 14.2-30.6 17.2-44.8 6.6s-17.2-30.6-6.6-44.8l70.5-95C110 132 149.7 112 192 112s82 20 107.2 53.9l70.5 95c10.5 14.2 7.6 34.2-6.6 44.8s-34.2 7.6-44.8-6.6zM176 480l32 0 0-128c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 128zM566.6 166.6l-80 80c-12.5 12.5-32.8 12.5-45.3 0l-80-80c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L432 146.7 432 0c0-17.7 14.3-32 32-32s32 14.3 32 32l0 146.7 25.4-25.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.e = BH.d
+  },
+  8249: (HH, BH) => {
+    var LH = "person-arrow-up-from-line",
+      AH = [],
+      rH = "e539",
+      SH = "M192-32a56 56 0 1 1 0 112 56 56 0 1 1 0-112zM318.3 299.1l-46.3-62.4 0 243.3 272 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 544c-17.7 0-32-14.3-32-32s14.3-32 32-32l80 0 0-243.3-46.3 62.4c-10.5 14.2-30.6 17.2-44.8 6.6s-17.2-30.6-6.6-44.8l70.5-95C110 132 149.7 112 192 112s82 20 107.2 53.9l70.5 95c10.5 14.2 7.6 34.2-6.6 44.8s-34.2 7.6-44.8-6.6zM208 480l0-128c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 128 32 0zM566.6 102.6c-12.5 12.5-32.8 12.5-45.3 0L496 77.3 496 224c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-146.7-25.4 25.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l80-80c12.5-12.5 32.8-12.5 45.3 0l80 80c12.5 12.5 12.5 32.8 0 45.3z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  8252: (HH, BH) => {
+    var LH = "person-falling-burst",
+      AH = [],
+      rH = "e547",
+      SH = "M256 0c17.7 0 32 14.3 32 32l0 5.4c0 55.2-23.7 107-63.9 143.1l62.9 75.5 89 0c15.1 0 29.3 7.1 38.4 19.2l43.2 57.6c10.6 14.1 7.7 34.2-6.4 44.8s-34.2 7.7-44.8-6.4L368 320 263.2 320 376.8 459.8c11.1 13.7 9.1 33.9-4.7 45s-33.9 9.1-45-4.7L137.4 266.6c-6.1 15-9.4 31.3-9.4 48l0 69.4c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-69.4c0-67.4 35.4-129.9 93.2-164.6l4.6-2.8C200.4 124 224 82.4 224 37.4l0-5.4c0-17.7 14.3-32 32-32zM16 88A56 56 0 1 1 128 88 56 56 0 1 1 16 88zm376-7.9c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-48c0-13.3 10.7-24 24-24s24 10.7 24 24l0 48zm104 152c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-48 0zm-54.5-97.5c-9.4-9.4-9.4-24.6 0-33.9l33.9-33.9c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-33.9 33.9c-9.4 9.4-24.6 9.4-33.9 0z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.g = BH.d
+  },
+  8261: (HH, BH) => {
+    var LH = "person-military-pointing",
+      AH = [],
+      rH = "e54a",
+      SH = "M214.9 14.1C202 15.2 192 26 192 39 192 52.8 203.2 64 217 64l151 0c8.8 0 16-7.2 16-16l0-30.6C384 8 376 .7 366.7 1.4L214.9 14.1zM208 112c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16L209.6 96c-1 5.2-1.6 10.5-1.6 16zM40 224c-22.1 0-40 17.9-40 40s17.9 40 40 40l152 0 0 89.4 162.8-162.8c-13.3-4.3-27.3-6.5-41.6-6.5L40 224zm345.7 20.9l-171.1 171.1 169.4 0 0-46.3 53.6 90.6c11.2 19 35.8 25.3 54.8 14.1s25.3-35.8 14.1-54.8L430.3 290.8c-11.2-19-26.6-34.5-44.6-45.9zM192 448l0 32c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-32-192 0z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.e = BH.c
+  },
+  8268: (HH, BH) => {
+    var LH = "person-running",
+      AH = [127939, "running"],
+      rH = "f70c",
+      SH = "M256.5-32a56 56 0 1 1 0 112 56 56 0 1 1 0-112zM123.6 176c-3.3 0-6.2 2-7.4 5L94.2 235.9c-6.6 16.4-25.2 24.4-41.6 17.8s-24.4-25.2-17.8-41.6l21.9-54.9C67.7 129.9 94.1 112 123.6 112l97.3 0c28.5 0 54.8 15.1 69.1 39.7l32.8 56.3 61.6 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-61.6 0c-22.8 0-43.8-12.1-55.3-31.8l-10-17.1-20.7 70.4 75.4 22.6c27.7 8.3 41.8 39 30.1 65.5L285.7 509c-7.2 16.2-26.1 23.4-42.2 16.2s-23.4-26.1-16.2-42.2l49.2-110.8-95.9-28.8c-32.7-9.8-52-43.7-43.7-76.8l22.7-90.6-35.9 0zm-8 181c13.3 14.9 30.7 26.3 51.2 32.4l4.7 1.4-6.9 19.3c-5.8 16.3-16 30.8-29.3 41.8L52.9 519.8c-13.6 11.2-33.8 9.3-45-4.3s-9.3-33.8 4.3-45l82.4-67.9c4.5-3.7 7.8-8.5 9.8-13.9L115.6 357z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.g = BH.e
+  },
+  8265: (HH, BH) => {
+    var LH = "person-skiing",
+      AH = [9975, "skiing"],
+      rH = "f7c9",
+      SH = "M416 56a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zM2.7 300.9c6.1-11.8 20.6-16.3 32.4-10.2l197.8 102.7 62.3-87.2-82-92.2c-11-12.4-16.2-27.5-16.2-42.4l111.6 53.4 42.9 48.2c14.9 16.7 16.2 41.6 3.2 59.8l-64.4 90.2 128.3 66.6c13.6 7.1 29.8 7.2 43.6 .3l15.2-7.6c11.9-5.9 26.3-1.1 32.2 10.7s1.1 26.3-10.7 32.2l-15.2 7.6c-27.5 13.7-59.9 13.5-87.2-.7L12.9 333.3C1.2 327.2-3.4 312.7 2.7 300.9zM103 49.6l18 8.7 8.7-17.4c4-7.9 13.6-11.1 21.5-7.2s11.1 13.6 7.2 21.5l-8.5 17 84.8 41 .4-.2 76.1-33.8c31.3-13.9 67.9-.7 83.2 29.9l28.9 57.8 68.7 27.5c16.4 6.6 24.4 25.2 17.8 41.6s-25.2 24.4-41.6 17.8L393.8 224c-10.9-4.4-19.8-12.6-25.1-23.1l-11.5-23.1c-16.4 9.4-25.9 14.8-28.5 16.3l-7.6-3.7-185.6-89.6-9.2 18.3c-4 7.9-13.6 11.1-21.5 7.2s-11.1-13.6-7.2-21.5l9-17.9-17.6-8.5C81.1 74.6 77.8 65 81.6 57S95 45.7 103 49.6z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.g = BH.c
+  },
+  8270: (HH, BH) => {
+    var LH = "person-walking",
+      AH = [128694, "walking"],
+      rH = "f554",
+      SH = "M192 80a56 56 0 1 0 0-112 56 56 0 1 0 0 112zM105.4 227.9l22.6-22.6 0 69.3c0 28 12.2 54.7 33.5 72.9l71.4 61.2c5.9 5.1 9.8 12.1 10.9 19.8l12.6 88.1c2.5 17.5 18.7 29.7 36.2 27.2s29.7-18.7 27.2-36.2l-12.6-88.1c-3.3-23.1-14.9-44.1-32.6-59.3l-34.5-29.6 0-115.2 3.8 4.7c18.2 22.8 45.8 36 75 36l33.2 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-33.2 0c-9.7 0-18.9-4.4-25-12l-17.9-22.4c-23-28.8-57.9-45.6-94.8-45.6-32.2 0-63.1 12.8-85.8 35.6L60.1 182.6C42.1 200.6 32 225 32 250.5L32 288c0 17.7 14.3 32 32 32s32-14.3 32-32l0-37.5c0-8.5 3.4-16.6 9.4-22.6zm12.4 179.4c-1.5 5.2-4.3 10-8.1 13.8L41.4 489.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l68.3-68.3c11.5-11.5 19.9-25.8 24.4-41.5l2.2-7.6-46-39.4c-2.5-2.2-5-4.4-7.4-6.8l-10.4 36.2z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.f = BH.e
+  },
+  8278: (HH, BH) => {
+    var LH = "play",
+      AH = [9654],
+      rH = "f04b",
+      SH = "M91.2 36.9c-12.4-6.8-27.4-6.5-39.6 .7S32 57.9 32 72l0 368c0 14.1 7.5 27.2 19.6 34.4s27.2 7.5 39.6 .7l336-184c12.8-7 20.8-20.5 20.8-35.1s-8-28.1-20.8-35.1l-336-184z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.d = BH.c
+  },
+  7323: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "plus",
+      AH = [10133, 61543, "add"],
+      rH = "M256 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 160-160 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l160 0 0 160c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160 160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-160 0 0-160z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, "2b", rH]
+    }, BH.faPlus = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 448, BH.height = 512, BH.ligatures = AH, BH.unicode = "2b", BH.svgPathData = rH, BH.aliases = AH
+  },
+  8280: (HH, BH, LH) => {
+    var AH = LH(7590);
+    BH.c = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.d = BH.c, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8286: (HH, BH) => {
+    var LH = "power-off",
+      AH = [9211],
+      rH = "f011",
+      SH = "M288 0c0-17.7-14.3-32-32-32S224-17.7 224 0l0 256c0 17.7 14.3 32 32 32s32-14.3 32-32L288 0zM146.3 98.4c14.5-10.1 18-30.1 7.9-44.6s-30.1-18-44.6-7.9C43.4 92.1 0 169 0 256 0 397.4 114.6 512 256 512S512 397.4 512 256c0-87-43.4-163.9-109.7-210.1-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6c49.8 34.8 82.3 92.4 82.3 157.6 0 106-86 192-192 192S64 362 64 256c0-65.2 32.5-122.9 82.3-157.6z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  8295: (HH, BH) => {
+    var LH = "rainbow",
+      AH = [127752],
+      rH = "f75b",
+      SH = "M320 96C178.6 96 64 210.6 64 352l0 64c0 17.7-14.3 32-32 32S0 433.7 0 416l0-64C0 175.3 143.3 32 320 32S640 175.3 640 352l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64C576 210.6 461.4 96 320 96zm0 112c-79.5 0-144 64.5-144 144l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-114.9 93.1-208 208-208s208 93.1 208 208l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-79.5-64.5-144-144-144zM288 352l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-53 43-96 96-96s96 43 96 96l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-17.7-14.3-32-32-32s-32 14.3-32 32z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [640, 512, AH, rH, SH]
+    }, BH.f = BH.d
+  },
+  8301: (HH, BH) => {
+    var LH = "ranking-star",
+      AH = [],
+      rH = "e561",
+      SH = "M321.8 54.1L298.2 6.3c-3.9-8.3-16.1-8.6-20.4 0l-23.6 47.8-52.3 7.5c-9.3 1.4-13.3 12.9-6.4 19.8l38 37-9 52.1c-1.4 9.3 8.2 16.5 16.8 12.2l46.9-24.8 46.6 24.4c8.6 4.3 18.3-2.9 16.8-12.2l-9-52.1 38-36.6c6.8-6.8 2.9-18.3-6.4-19.8l-52.3-7.5zM256 256c-26.5 0-48 21.5-48 48l0 160c0 26.5 21.5 48 48 48l64 0c26.5 0 48-21.5 48-48l0-160c0-26.5-21.5-48-48-48l-64 0zM48 320c-26.5 0-48 21.5-48 48l0 96c0 26.5 21.5 48 48 48l64 0c26.5 0 48-21.5 48-48l0-96c0-26.5-21.5-48-48-48l-64 0zM416 432l0 32c0 26.5 21.5 48 48 48l64 0c26.5 0 48-21.5 48-48l0-32c0-26.5-21.5-48-48-48l-64 0c-26.5 0-48 21.5-48 48z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.d = BH.c
+  },
+  8308: (HH, BH) => {
+    var LH = "recycle",
+      AH = [9842, 9850, 9851],
+      rH = "f1b8",
+      SH = "M152.3 60C198.5-20 314-20 360.2 60l37.3 64.6 27.7-16c8.4-4.9 18.9-4.2 26.6 1.7s11.1 15.9 8.6 25.3L436.9 223c-3.4 12.8-16.6 20.4-29.4 17l-87.4-23.4c-9.4-2.5-16.3-10.4-17.6-20s3.4-19.1 11.8-23.9l27.7-16-37.3-64.6c-21.6-37.3-75.4-37.3-97 0l-5.3 9.1c-8.8 15.3-28.4 20.5-43.7 11.7S138.2 84.5 147 69.1l5.3-9.1zM449.7 279.1c15.3-8.8 34.9-3.6 43.7 11.7l5.3 9.1c46.2 80-11.5 180-103.9 180l-74.6 0 0 32c0 9.7-5.8 18.5-14.8 22.2s-19.3 1.7-26.2-5.2l-64-64c-9.4-9.4-9.4-24.6 0-33.9l64-64c6.9-6.9 17.2-8.9 26.2-5.2s14.8 12.5 14.8 22.2l0 32 74.6 0c43.1 0 70.1-46.7 48.5-84l-5.3-9.1c-8.8-15.3-3.6-34.9 11.7-43.7zM51 235.4l-27.7-16c-8.4-4.9-13.1-14.3-11.8-23.9s8.2-17.5 17.6-20L116.5 152c12.8-3.4 26 4.2 29.4 17l23.4 87.4c2.5 9.4-.9 19.3-8.6 25.3s-18.2 6.6-26.6 1.7l-27.7-16-37.3 64.6c-21.6 37.3 5.4 84 48.5 84l10.6 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-10.6 0C25.3 480-32.4 380 13.8 300L51 235.4z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.d = BH.c
+  },
+  8313: (HH, BH, LH) => {
+    var AH = LH(8318);
+    BH.c = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.f = BH.c, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8320: (HH, BH, LH) => {
+    var AH = LH(7429);
+    BH.c = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.g = BH.c, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8328: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "right-from-bracket",
+      AH = ["sign-out-alt"],
+      rH = "f2f5",
+      SH = "M505 273c9.4-9.4 9.4-24.6 0-33.9L361 95c-6.9-6.9-17.2-8.9-26.2-5.2S320 102.3 320 112l0 80-112 0c-26.5 0-48 21.5-48 48l0 32c0 26.5 21.5 48 48 48l112 0 0 80c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2L505 273zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faRightFromBracket = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8333: (HH, BH) => {
+    var LH = "rocket-launch",
+      AH = [128640],
+      rH = "e027",
+      SH = "M57 288l103.5 0c35.3 0 64 28.7 64 64l0 103.5c0 24.9 27.1 40.2 48.5 27.4L361.2 430c14.5-8.7 23.3-24.3 23.3-41.2l0-95C513.4 217.8 519.9 104.3 508.8 28.4 506.9 15.6 496.9 5.6 484.1 3.7 408.2-7.4 294.7-.9 218.6 128l-95 0c-16.9 0-32.5 8.8-41.2 23.3L29.6 239.5C16.8 260.9 32.1 288 57 288zM384.5 80a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM152.9 473.6c31.5-31.5 31.5-82.5 0-114s-82.5-31.5-114 0c-31.3 31.3-37.5 92-38.3 126.4-.4 14.6 11.2 26.2 25.9 25.9 34.5-.8 95.1-7 126.4-38.3zm-40.6-32c-10.1 10.1-28.5 13-41.3 13.7-8 .5-14.3-5.9-13.9-13.9 .7-12.8 3.7-31.2 13.7-41.3 11.4-11.4 30-11.4 41.4 0s11.4 30 0 41.4z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  8339: (HH, BH, LH) => {
+    var AH = LH(8318);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.e = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8343: (HH, BH) => {
+    var LH = "rotate-left",
+      AH = ["rotate-back", "rotate-backward", "undo-alt"],
+      rH = "f2ea",
+      SH = "M24 192l144 0c9.7 0 18.5-5.8 22.2-14.8s1.7-19.3-5.2-26.2l-46.7-46.7c75.3-58.6 184.3-53.3 253.5 15.9 75 75 75 196.5 0 271.5s-196.5 75-271.5 0c-10.2-10.2-19-21.3-26.4-33-9.5-14.9-29.3-19.3-44.2-9.8s-19.3 29.3-9.8 44.2C49.7 408.7 61.4 423.5 75 437 175 537 337 537 437 437S537 175 437 75C342.8-19.3 193.3-24.7 92.7 58.8L41 7C34.1 .2 23.8-1.9 14.8 1.8S0 14.3 0 24L0 168c0 13.3 10.7 24 24 24z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.f = BH.b
+  },
+  8318: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "rotate-right",
+      AH = ["redo-alt", "rotate-forward"],
+      rH = "f2f9",
+      SH = "M488 192l-144 0c-9.7 0-18.5-5.8-22.2-14.8s-1.7-19.3 5.2-26.2l46.7-46.7c-75.3-58.6-184.3-53.3-253.5 15.9-75 75-75 196.5 0 271.5s196.5 75 271.5 0c8.2-8.2 15.5-16.9 21.9-26.1 10.1-14.5 30.1-18 44.6-7.9s18 30.1 7.9 44.6c-8.5 12.2-18.2 23.8-29.1 34.7-100 100-262.1 100-362 0S-25 175 75 75c94.3-94.3 243.7-99.6 344.3-16.2L471 7c6.9-6.9 17.2-8.9 26.2-5.2S512 14.3 512 24l0 144c0 13.3-10.7 24-24 24z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faRotateRight = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8352: (HH, BH) => {
+    var LH = "scarf",
+      AH = [129507],
+      rH = "f7c1",
+      SH = "M184.5 0c-48.6 0-88 39.4-88 88l0 101.5c0 23.3 9.3 45.7 25.8 62.2l117.3 117.3 17 17 17-17 111-111-113-113c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L411.9 217.5c3-8.9 4.6-18.4 4.6-28l0-101.5c0-48.6-39.4-88-88-88l-144 0zM7.5 375c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l85.1-85.1-33.9-33.9-85.1 85.1zm48 48c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l85.1-85.1-33.9-33.9-85.1 85.1zm48 48c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l85.1-85.1c-11.3-11.3-22.6-22.6-33.9-33.9L103.5 471zm272 33.9c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-85.1-85.1c-11.3 11.3-22.6 22.6-33.9 33.9L375.5 505zm48-48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-85.1-85.1-33.9 33.9 85.1 85.1zm48-48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-85.1-85.1-33.9 33.9 85.1 85.1z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.h = BH.d
+  },
+  7676: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "scissors",
+      AH = [9984, 9986, 9988, "cut"],
+      rH = "f0c4",
+      SH = "M192 256l-39.5 39.5c-12.6-4.9-26.2-7.5-40.5-7.5-61.9 0-112 50.1-112 112s50.1 112 112 112 112-50.1 112-112c0-14.3-2.7-27.9-7.5-40.5L499.2 76.8c7.1-7.1 7.1-18.5 0-25.6-28.3-28.3-74.1-28.3-102.4 0L256 192 216.5 152.5c4.9-12.6 7.5-26.2 7.5-40.5 0-61.9-50.1-112-112-112S0 50.1 0 112 50.1 224 112 224c14.3 0 27.9-2.7 40.5-7.5L192 256zm97.9 97.9L396.8 460.8c28.3 28.3 74.1 28.3 102.4 0 7.1-7.1 7.1-18.5 0-25.6l-145.3-145.3-64 64zM64 112a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm48 240a48 48 0 1 1 0 96 48 48 0 1 1 0-96z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faScissors = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8356: (HH, BH, LH) => {
+    var AH = LH(8113);
+    BH.b = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.c = BH.b, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8363: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "shield",
+      AH = [128737, "shield-blank"],
+      rH = "f132",
+      SH = "M256 0c4.6 0 9.2 1 13.4 2.9L457.8 82.8c22 9.3 38.4 31 38.3 57.2-.5 99.2-41.3 280.7-213.6 363.2-16.7 8-36.1 8-52.8 0-172.4-82.5-213.1-264-213.6-363.2-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.9 1 251.4 0 256 0z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faShield = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8365: (HH, BH, LH) => {
+    var AH = LH(8372);
+    BH.b = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.d = BH.b, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8381: (HH, BH, LH) => {
+    var AH = LH(8363);
+    BH.e = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.f = BH.e, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8372: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "shield-halved",
+      AH = ["shield-alt"],
+      rH = "f3ed",
+      SH = "M256 0c4.6 0 9.2 1 13.4 2.9L457.8 82.8c22 9.3 38.4 31 38.3 57.2-.5 99.2-41.3 280.7-213.6 363.2-16.7 8-36.1 8-52.8 0-172.4-82.5-213.1-264-213.6-363.2-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.9 1 251.4 0 256 0zm0 66.8l0 378.1c138-66.8 175.1-214.8 176-303.4l-176-74.6 0 0z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faShieldHalved = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8383: (HH, BH) => {
+    var LH = "shirt",
+      AH = [128085, "t-shirt", "tshirt"],
+      rH = "f553",
+      SH = "M320.2 112c44.2 0 80-35.8 80-80l53.5 0c17 0 33.3 6.7 45.3 18.7L617.6 169.4c12.5 12.5 12.5 32.8 0 45.3l-50.7 50.7c-12.5 12.5-32.8 12.5-45.3 0l-41.4-41.4 0 224c0 35.3-28.7 64-64 64l-192 0c-35.3 0-64-28.7-64-64l0-224-41.4 41.4c-12.5 12.5-32.8 12.5-45.3 0L22.9 214.6c-12.5-12.5-12.5-32.8 0-45.3L141.5 50.7c12-12 28.3-18.7 45.3-18.7l53.5 0c0 44.2 35.8 80 80 80z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [640, 512, AH, rH, SH]
+    }, BH.f = BH.d
+  },
+  8387: (HH, BH) => {
+    var LH = "shoe",
+      AH = [],
+      rH = "e6d8",
+      SH = "M0 336L0 224c0-26.5 21.5-48 48-48l66.3 0c46 0 86.4-30.5 99-74.7l1.9-6.7c5.2-18.1 21.7-30.6 40.6-30.6 10.4 0 20.5 3.9 28.2 10.8L346.8 131.3 303 175c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l45.5-45.5 23.1 20.8c2.8 2.6 5.8 5 8.8 7.4L383 223c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39.7-39.7c2.8 1.2 5.6 2.4 8.5 3.5l92.8 35.7c36.5 14.1 63.9 43.7 75.7 79.6L0 336zm0 48l640 0 0 16c0 26.5-21.5 48-48 48l-283.2 0c-13.8 0-27.4-2.2-40.5-6.6L192 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32l0-32z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [640, 512, AH, rH, SH]
+    }, BH.g = BH.c
+  },
+  8396: (HH, BH, LH) => {
+    var AH = LH(7549);
+    BH.c = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.g = BH.c, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8400: (HH, BH, LH) => {
+    var AH = LH(8328);
+    BH.c = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.e = BH.c, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8408: (HH, BH) => {
+    var LH = "skull",
+      AH = [128128],
+      rH = "f54c",
+      SH = "M416 427.4c58.5-44 96-111.6 96-187.4 0-132.5-114.6-240-256-240S0 107.5 0 240c0 75.8 37.5 143.4 96 187.4L96 464c0 26.5 21.5 48 48 48l32 0 0-40c0-13.3 10.7-24 24-24s24 10.7 24 24l0 40 64 0 0-40c0-13.3 10.7-24 24-24s24 10.7 24 24l0 40 32 0c26.5 0 48-21.5 48-48l0-36.6zM96 256a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zm256-64a64 64 0 1 1 0 128 64 64 0 1 1 0-128z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.f = BH.e
+  },
+  8415: (HH, BH, LH) => {
+    var AH = LH(7785);
+    BH.e = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.h = BH.e, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8423: (HH, BH) => {
+    var LH = "snooze",
+      AH = [128164, "zzz"],
+      rH = "f880",
+      SH = "M192 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0-57.6 76.8c-7.3 9.7-8.4 22.7-3 33.5S179.9 192 192 192l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-32 0 57.6-76.8c7.3-9.7 8.4-22.7 3-33.5S300.1 0 288 0L192 0zM320 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0-57.6 76.8c-7.3 9.7-8.4 22.7-3 33.5S307.9 416 320 416l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-32 0 57.6-76.8c7.3-9.7 8.4-22.7 3-33.5S428.1 224 416 224l-96 0zM32 256c-17.7 0-32 14.3-32 32s14.3 32 32 32l91.7 0-116.3 139.5c-7.9 9.5-9.7 22.8-4.4 34.1S19.6 512 32 512l160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-91.7 0 116.3-139.5c7.9-9.5 9.7-22.8 4.4-34.1S204.4 256 192 256L32 256z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  8429: (HH, BH) => {
+    var LH = "snowflake",
+      AH = [10052, 10054],
+      rH = "f2dc",
+      SH = "M288.2 0c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 62.1-15-15c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l49 49 0 70.6-61.2-35.3-17.9-66.9c-3.4-12.8-16.6-20.4-29.4-17S95.3 98 98.7 110.8l5.5 20.5-53.7-31C35.2 91.5 15.6 96.7 6.8 112s-3.6 34.9 11.7 43.7l53.7 31-20.5 5.5c-12.8 3.4-20.4 16.6-17 29.4s16.6 20.4 29.4 17l66.9-17.9 61.2 35.3-61.2 35.3-66.9-17.9c-12.8-3.4-26 4.2-29.4 17s4.2 26 17 29.4l20.5 5.5-53.7 31C3.2 365.1-2 384.7 6.8 400s28.4 20.6 43.7 11.7l53.7-31-5.5 20.5c-3.4 12.8 4.2 26 17 29.4s26-4.2 29.4-17l17.9-66.9 61.2-35.3 0 70.6-49 49c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l15-15 0 62.1c0 17.7 14.3 32 32 32s32-14.3 32-32l0-62.1 15 15c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-49-49 0-70.6 61.2 35.3 17.9 66.9c3.4 12.8 16.6 20.4 29.4 17s20.4-16.6 17-29.4l-5.5-20.5 53.7 31c15.3 8.8 34.9 3.6 43.7-11.7s3.6-34.9-11.7-43.7l-53.7-31 20.5-5.5c12.8-3.4 20.4-16.6 17-29.4s-16.6-20.4-29.4-17l-66.9 17.9-61.2-35.3 61.2-35.3 66.9 17.9c12.8 3.4 26-4.2 29.4-17s-4.2-26-17-29.4l-20.5-5.5 53.7-31c15.3-8.8 20.6-28.4 11.7-43.7s-28.4-20.5-43.7-11.7l-53.7 31 5.5-20.5c3.4-12.8-4.2-26-17-29.4s-26 4.2-29.4 17l-17.9 66.9-61.2 35.3 0-70.6 49-49c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-15 15 0-62.1z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.i = BH.e
+  },
+  8434: (HH, BH) => {
+    var LH = "snowman",
+      AH = [9731, 9924],
+      rH = "f7d0",
+      SH = "M403 211.7c32.2-24.9 53-63.9 53-107.7 0-75.1-60.9-136-136-136S184 28.9 184 104c0 43.9 20.8 82.9 53 107.7-32.2 16.3-59 41.8-76.8 73.1L112 264.2 112 224c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 19.6-22.5-9.7c-12.2-5.2-26.3 .4-31.5 12.6s.4 26.3 12.6 31.5c36.1 15.5 75.9 32.5 119.4 51.2-3.9 14.9-6 30.6-6 46.7 0 70 39.1 130.8 96.6 161.9 7.9 4.3 16.9 6.1 25.9 6.1l123 0c9 0 18-1.8 25.9-6.1 57.5-31.1 96.6-92 96.6-161.9 0-16.2-2.1-31.8-6-46.7 43.5-18.7 83.4-35.7 119.4-51.2 12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6l-22.5 9.7 0-19.6c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40.2-48.2 20.6c-17.9-31.3-44.6-56.8-76.8-73.1zM296 416a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm24-120a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM248 80a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM292.2 159.3c-2.7-4.8-4.2-10.2-4.2-15.7 0-17.5 14.2-31.6 31.6-31.6l.8 0c17.5 0 31.6 14.2 31.6 31.6 0 5.5-1.4 10.9-4.2 15.7L327 195.8c-3.1 5.4-10.8 5.4-13.9 0l-20.9-36.6z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [640, 512, AH, rH, SH]
+    }, BH.f = BH.b
+  },
+  8437: (HH, BH) => {
+    var LH = "sparkle",
+      AH = [],
+      rH = "e5d6",
+      SH = "M278.5 15.6C275 6.2 266 0 256 0s-19 6.2-22.5 15.6L174.2 174.2 15.6 233.5C6.2 237 0 246 0 256s6.2 19 15.6 22.5l158.6 59.4 59.4 158.6C237 505.8 246 512 256 512s19-6.2 22.5-15.6l59.4-158.6 158.6-59.4C505.8 275 512 266 512 256s-6.2-19-15.6-22.5L337.8 174.2 278.5 15.6z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.i = BH.e
+  },
+  8446: (HH, BH) => {
+    var LH = "square-dashed",
+      AH = [],
+      rH = "e269",
+      SH = "M160 64c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32zm-40.2-3.5c2.2 17.5-10.3 33.5-27.8 35.7-14.4 1.8-25.9 13.3-27.7 27.7-2.2 17.5-18.2 30-35.7 27.8S-1.4 133.6 .7 116C6.2 72.6 40.6 38.2 84 32.7 101.6 30.6 117.6 43 119.8 60.5zm208.5 0c2.2-17.5 18.2-30 35.7-27.8 43.5 5.4 77.9 39.8 83.3 83.3 2.2 17.5-10.3 33.5-27.8 35.7s-33.5-10.3-35.7-27.8c-1.8-14.4-13.3-25.9-27.7-27.7-17.5-2.2-30-18.2-27.8-35.7zM32 192c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32S0 305.7 0 288l0-64c0-17.7 14.3-32 32-32zm384 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32zM28.5 360.2c17.5-2.2 33.5 10.3 35.7 27.8 1.8 14.4 13.3 25.9 27.7 27.7 17.5 2.2 30 18.2 27.8 35.7s-18.2 30-35.7 27.8C40.6 473.8 6.2 439.4 .7 396-1.4 378.4 11 362.4 28.5 360.2zm390.9 0c17.5 2.2 30 18.2 27.8 35.7-5.4 43.5-39.8 77.9-83.3 83.3-17.5 2.2-33.5-10.3-35.7-27.8s10.3-33.5 27.8-35.7c14.4-1.8 25.9-13.3 27.7-27.7 2.2-17.5 18.2-30 35.7-27.8zM160 448c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.d = BH.b
+  },
+  8166: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "square-minus",
+      AH = [61767, "minus-square"],
+      rH = "f146",
+      SH = "M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm72 200l176 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-176 0c-13.3 0-24-10.7-24-24s10.7-24 24-24z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.faSquareMinus = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 448, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8455: (HH, BH) => {
+    var LH = "star",
+      AH = [11088, 61446],
+      rH = "f005",
+      SH = "M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.e = BH.d
+  },
+  8444: (HH, BH) => {
+    var LH = "star-christmas",
+      AH = [],
+      rH = "f7d4",
+      SH = "M15.5 275.9L192 320 236.1 496.5c2.3 9.1 10.5 15.5 19.9 15.5s17.6-6.4 19.9-15.5L320 320 496.5 275.9c9.1-2.3 15.5-10.5 15.5-19.9s-6.4-17.6-15.5-19.9L320 192 275.9 15.5C273.6 6.4 265.4 0 256 0s-17.6 6.4-19.9 15.5L192 192 15.5 236.1C6.4 238.4 0 246.6 0 256s6.4 17.6 15.5 19.9zM71 71c-9.4 9.4-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L105 71c-9.4-9.4-24.6-9.4-33.9 0zM441 71c-9.4-9.4-24.6-9.4-33.9 0l-48 48c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9zm0 336l-48-48c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9zM71 441c9.4 9.4 24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L71 407c-9.4 9.4-9.4 24.6 0 33.9z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.h = BH.e
+  },
+  8461: (HH, BH) => {
+    var LH = "stopwatch",
+      AH = [9201],
+      rH = "f2f2",
+      SH = "M168.5 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l32 0 0 25.3c-108 11.9-192 103.5-192 214.7 0 119.3 96.7 216 216 216s216-96.7 216-216c0-39.8-10.8-77.1-29.6-109.2l28.2-28.2c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-23.4 23.4c-32.9-30.2-75.2-50.3-122-55.5l0-25.3 32 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-112 0zm80 184l0 104c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-104c0-13.3 10.7-24 24-24s24 10.7 24 24z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.h = BH.d
+  },
+  8464: (HH, BH) => {
+    var LH = "store",
+      AH = [],
+      rH = "f54e",
+      SH = "M30.7 72.3C37.6 48.4 59.5 32 84.4 32l344 0c24.9 0 46.8 16.4 53.8 40.3l23.4 80.2c12.8 43.7-20.1 87.5-65.6 87.5-26.3 0-49.4-14.9-60.8-37.1-11.6 21.9-34.6 37.1-61.4 37.1-26.6 0-49.7-15-61.3-37-11.6 22-34.7 37-61.3 37-26.8 0-49.8-15.1-61.4-37.1-11.4 22.1-34.5 37.1-60.8 37.1-45.6 0-78.4-43.7-65.6-87.5L30.7 72.3zM96.4 352l320 0 0-66.4c7.6 1.6 15.5 2.4 23.5 2.4 14.3 0 28-2.6 40.5-7.2l0 151.2c0 26.5-21.5 48-48 48l-352 0c-26.5 0-48-21.5-48-48l0-151.2c12.5 4.6 26.1 7.2 40.5 7.2 8.1 0 15.9-.8 23.5-2.4l0 66.4z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.f = BH.b
+  },
+  8472: (HH, BH, LH) => {
+    var AH = LH(8156);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.h = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8479: (HH, BH) => {
+    var LH = "sun-bright",
+      AH = ["sun-alt"],
+      rH = "e28f",
+      SH = "M288 432c13.3 0 24 10.7 24 24l0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-64c0-13.3 10.7-24 24-24zM129.6 380.4c9.4-9.4 24.6-9.4 34 0s9.4 24.6 0 34l-45.3 45.3c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l45.2-45.3zm282.8 0c9.4-9.4 24.6-9.4 34 0l45.3 45.3c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-45.3-45.3c-9.4-9.4-9.4-24.6 0-34zM288 384a128 128 0 1 1 0-256 128 128 0 1 1 0 256zM88 232c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0zm464 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0zM84.3 52.3c9.4-9.4 24.6-9.4 33.9 0l45.3 45.2c9.4 9.4 9.4 24.6 0 34s-24.6 9.4-34 0L84.3 86.3c-9.4-9.4-9.4-24.6 0-33.9zm373.4 0c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-45.3 45.3c-9.4 9.4-24.6 9.4-34 0s-9.4-24.6 0-34l45.3-45.2zM288-32c13.3 0 24 10.7 24 24l0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-64c0-13.3 10.7-24 24-24z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.h = BH.d
+  },
+  8484: (HH, BH) => {
+    var LH = "swords",
+      AH = [9876],
+      rH = "f71d",
+      SH = "M0 66.7L0 16C0 7.2 7.2 0 16 0L66.7 0c8.5 0 16.6 3.4 22.6 9.4l276.7 276.7-80 80-276.7-276.7C3.4 83.4 0 75.2 0 66.7zM400 448l-79.6 26.5c-10.1 3.4-21.1 .7-28.6-6.8-10.9-10.9-10.9-28.6 0-39.6L428.2 291.8c10.9-10.9 28.6-10.9 39.6 0 7.5 7.5 10.1 18.6 6.8 28.6L448 400 489.4 441.4c12.5 12.5 12.5 32.8 0 45.3l-2.7 2.7c-12.5 12.5-32.8 12.5-45.3 0L400 448zM112 320l30.1-30.1 80 80-30.1 30.1 28.2 28.2c10.9 10.9 10.9 28.6 0 39.6-7.5 7.5-18.6 10.1-28.6 6.8L112 448 70.6 489.4c-12.5 12.5-32.8 12.5-45.3 0l-2.7-2.7c-12.5-12.5-12.5-32.8 0-45.3L64 400 37.5 320.4c-3.4-10.1-.7-21.1 6.8-28.6 10.9-10.9 28.6-10.9 39.6 0L112 320zM502.6 89.4l-132.7 132.7-80-80 132.7-132.7c6-6 14.1-9.4 22.6-9.4L496 0c8.8 0 16 7.2 16 16l0 50.7c0 8.5-3.4 16.6-9.4 22.6z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.g = BH.e
+  },
+  8491: (HH, BH, LH) => {
+    var AH = LH(7429);
+    BH.e = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.g = BH.e, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8496: (HH, BH, LH) => {
+    var AH = LH(7881);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.f = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8500: (HH, BH, LH) => {
+    var AH = LH(7881);
+    BH.c = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.d = BH.c, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8504: (HH, BH) => {
+    var LH = "teddy-bear",
+      AH = [],
+      rH = "e3cf",
+      SH = "M400.5 228.5c15.2-21.7 45.1-27.1 66.8-11.9s27.1 45.1 11.9 66.8c-24.5 35.1-57.2 64.2-95.2 84.6l0 48 32 0c0-26.5 21.5-48 48-48s48 21.5 48 48l0 32c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64l0-32c0-26.5 21.5-48 48-48 24.9 0 45.3 18.9 47.8 43.1l.2 4.9 32 0 0-48c-38.1-20.3-70.7-49.4-95.2-84.6-15.2-21.7-9.8-51.7 11.9-66.8s51.7-9.8 66.8 11.9C143.4 274.2 196.2 304 256 304s112.6-29.8 144.5-75.5zM256 352c-35.3 0-64 28.7-64 64l128 0c0-35.3-28.7-64-64-64zM360 0c30.9 0 56 25.1 56 56 0 23.1-13.9 42.8-33.8 51.4 1.2 6.4 1.8 13.2 1.8 20.6 0 70.7-57.3 128-128 128S128 198.7 128 128c0-7.3 .6-14.2 1.8-20.6-19.9-8.6-33.8-28.4-33.8-51.4 0-30.9 25.1-56 56-56 24.4 0 45.1 15.6 52.8 37.4 15.7-3.7 33-5.4 51.2-5.4s35.5 1.7 51.2 5.4C314.9 15.6 335.6 0 360 0zM256 144c-17.7 0-32 10.7-32 24s14.3 24 32 24 32-10.7 32-24-14.3-24-32-24zM208 92a20 20 0 1 0 0 40 20 20 0 1 0 0-40zm96 0a20 20 0 1 0 0 40 20 20 0 1 0 0-40z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.e = BH.d
+  },
+  8507: (HH, BH) => {
+    var LH = "terminal",
+      AH = [],
+      rH = "f120",
+      SH = "M9.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L146.7 256 9.4 118.6zM224 384l256 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.d = BH.b
+  },
+  8509: (HH, BH, LH) => {
+    var AH = LH(8517);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.e = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8517: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "trash-can",
+      AH = [61460, "trash-alt"],
+      rH = "f2ed",
+      SH = "M136.7 5.9C141.1-7.2 153.3-16 167.1-16l113.9 0c13.8 0 26 8.8 30.4 21.9L320 32 416 32c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 96C14.3 96 0 81.7 0 64S14.3 32 32 32l96 0 8.7-26.1zM32 144l384 0 0 304c0 35.3-28.7 64-64 64L96 512c-35.3 0-64-28.7-64-64l0-304zm88 64c-13.3 0-24 10.7-24 24l0 192c0 13.3 10.7 24 24 24s24-10.7 24-24l0-192c0-13.3-10.7-24-24-24zm104 0c-13.3 0-24 10.7-24 24l0 192c0 13.3 10.7 24 24 24s24-10.7 24-24l0-192c0-13.3-10.7-24-24-24zm104 0c-13.3 0-24 10.7-24 24l0 192c0 13.3 10.7 24 24 24s24-10.7 24-24l0-192c0-13.3-10.7-24-24-24z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.faTrashCan = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 448, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8525: (HH, BH) => {
+    var LH = "tree-christmas",
+      AH = [127876],
+      rH = "f7db",
+      SH = "M403.8 170.2l1.8 2.6c3.7 6.2 4.2 13.9 1 20.6-3.6 7.6-11.3 12.5-19.7 12.5l-27.8 0 91.2 106.6c6.1 7.1 7.5 17.1 3.6 25.6-3.9 8.5-12.5 14-21.8 14l-53 0 103.2 120.4 2.1 2.8c4.3 6.8 5 15.4 1.5 22.8-3.9 8.5-12.5 14-21.8 14L48 512c-9.4 0-17.9-5.5-21.8-14-3.9-8.5-2.5-18.5 3.6-25.7L133 352 80 352c-9.4 0-17.9-5.5-21.8-14-3.9-8.5-2.5-18.5 3.6-25.6l91.2-106.6-27.8 0c-8.4 0-16.1-4.9-19.7-12.5-3.6-7.6-2.5-16.6 2.8-23.2l76.2-93.1 7.7 2.8 10 26.7 1.7 4.1c9.4 20.1 29.7 33.2 52.2 33.3 24 0 45.5-14.9 53.9-37.4l10-26.7 7.7-2.8 76.2 93.1zM320 392a24 24 0 1 0 0 48 24 24 0 1 0 0-48zM192 264a24 24 0 1 0 0 48 24 24 0 1 0 0-48zM256-64c4 0 7.6 2.5 9 6.2L282.7-10.7 329.8 7c3.8 1.4 6.2 5 6.2 9s-2.5 7.6-6.2 9L282.7 42.7 265 89.8c-1.4 3.7-5 6.2-9 6.2s-7.6-2.5-9-6.2L229.3 42.7 182.2 25c-3.7-1.4-6.2-5-6.2-9s2.5-7.6 6.2-9L229.3-10.7 247-57.8c1.4-3.8 5-6.2 9-6.2z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.e = BH.d
+  },
+  7738: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "triangle-exclamation",
+      AH = [9888, "exclamation-triangle", "warning"],
+      rH = "f071",
+      SH = "M256 0c14.7 0 28.2 8.1 35.2 21l216 400c6.7 12.4 6.4 27.4-.8 39.5S486.1 480 472 480L40 480c-14.1 0-27.2-7.4-34.4-19.5s-7.5-27.1-.8-39.5l216-400c7-12.9 20.5-21 35.2-21zm0 352a32 32 0 1 0 0 64 32 32 0 1 0 0-64zm0-192c-18.2 0-32.7 15.5-31.4 33.7l7.4 104c.9 12.5 11.4 22.3 23.9 22.3 12.6 0 23-9.7 23.9-22.3l7.4-104c1.3-18.2-13.1-33.7-31.4-33.7z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faTriangleExclamation = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8529: (HH, BH) => {
+    var LH = "trophy",
+      AH = [127942],
+      rH = "f091",
+      SH = "M144.3 0l224 0c26.5 0 48.1 21.8 47.1 48.2-.2 5.3-.4 10.6-.7 15.8l49.6 0c26.1 0 49.1 21.6 47.1 49.8-7.5 103.7-60.5 160.7-118 190.5-15.8 8.2-31.9 14.3-47.2 18.8-20.2 28.6-41.2 43.7-57.9 51.8l0 73.1 64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-192 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0 0-73.1c-16-7.7-35.9-22-55.3-48.3-18.4-4.8-38.4-12.1-57.9-23.1-54.1-30.3-102.9-87.4-109.9-189.9-1.9-28.1 21-49.7 47.1-49.7l49.6 0c-.3-5.2-.5-10.4-.7-15.8-1-26.5 20.6-48.2 47.1-48.2zM101.5 112l-52.4 0c6.2 84.7 45.1 127.1 85.2 149.6-14.4-37.3-26.3-86-32.8-149.6zM380 256.8c40.5-23.8 77.1-66.1 83.3-144.8L411 112c-6.2 60.9-17.4 108.2-31 144.8z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  8537: (HH, BH) => {
+    var LH = "truck",
+      AH = [128666, 9951],
+      rH = "f0d1",
+      SH = "M0 96C0 60.7 28.7 32 64 32l288 0c35.3 0 64 28.7 64 64l0 32 50.7 0c17 0 33.3 6.7 45.3 18.7L557.3 192c12 12 18.7 28.3 18.7 45.3L576 384c0 35.3-28.7 64-64 64l-3.3 0c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64l-102.6 0c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64L64 448c-35.3 0-64-28.7-64-64L0 96zM512 288l0-50.7-45.3-45.3-50.7 0 0 96 96 0zM192 424a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm232 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.e = BH.c
+  },
+  8541: (HH, BH) => {
+    var LH = "up-from-bracket",
+      AH = [],
+      rH = "e590",
+      SH = "M241 7c-9.4-9.4-24.6-9.4-33.9 0L63 151c-6.9 6.9-8.9 17.2-5.2 26.2S70.3 192 80 192l80 0 0 112c0 26.5 21.5 48 48 48l32 0c26.5 0 48-21.5 48-48l0-112 80 0c9.7 0 18.5-5.8 22.2-14.8s1.7-19.3-5.2-26.2L241 7zM64 352c0-17.7-14.3-32-32-32S0 334.3 0 352l0 64c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-64z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.g = BH.c
+  },
+  8549: (HH, BH) => {
+    var LH = "upload",
+      AH = [],
+      rH = "f093",
+      SH = "M256 109.3L256 320c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-210.7-41.4 41.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l96-96c12.5-12.5 32.8-12.5 45.3 0l96 96c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 109.3zM224 400c44.2 0 80-35.8 80-80l80 0c35.3 0 64 28.7 64 64l0 32c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64l0-32c0-35.3 28.7-64 64-64l80 0c0 44.2 35.8 80 80 80zm144 24a24 24 0 1 0 0-48 24 24 0 1 0 0 48z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.g = BH.d
+  },
+  8554: (HH, BH) => {
+    var LH = "user",
+      AH = [128100, 62144, 62470, "user-alt", "user-large"],
+      rH = "f007",
+      SH = "M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240zm-29.7 56C95.8 304 16 383.8 16 482.3 16 498.7 29.3 512 45.7 512l356.6 0c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3l-59.4 0z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.g = BH.c
+  },
+  8556: (HH, BH) => {
+    var LH = "user-astronaut",
+      AH = [],
+      rH = "f4fb",
+      SH = "M224 336c74.6 0 138.4-46.4 164-112l4 0c13.3 0 24-10.7 24-24l0-80c0-13.3-10.7-24-24-24l-4 0C362.4 30.4 298.6-16 224-16S85.6 30.4 60 96l-4 0c-13.3 0-24 10.7-24 24l0 80c0 13.3 10.7 24 24 24l4 0c25.6 65.6 89.4 112 164 112zM208 80l32 0c53 0 96 43 96 96s-43 96-96 96l-32 0c-53 0-96-43-96-96s43-96 96-96zM16 484.6C16 499.7 28.3 512 43.4 512l52.6 0 0-48c0-17.7 14.3-32 32-32l192 0c17.7 0 32 14.3 32 32l0 48 52.6 0c15.1 0 27.4-12.3 27.4-27.4 0-59.8-31.9-112.2-79.6-141-36.4 25.5-80.6 40.4-128.4 40.4s-92-14.9-128.4-40.4C47.9 372.4 16 424.8 16 484.6zM183.3 141.5c-.9-3.3-3.9-5.5-7.3-5.5s-6.4 2.2-7.3 5.5l-6 21.2-21.2 6c-3.3 .9-5.5 3.9-5.5 7.3s2.2 6.4 5.5 7.3l21.2 6 6 21.2c.9 3.3 3.9 5.5 7.3 5.5s6.4-2.2 7.3-5.5l6-21.2 21.2-6c3.3-.9 5.5-3.9 5.5-7.3s-2.2-6.4-5.5-7.3l-21.2-6-6-21.2zM152 488l0 24 48 0 0-24c0-13.3-10.7-24-24-24s-24 10.7-24 24zm120-24c-13.3 0-24 10.7-24 24l0 24 48 0 0-24c0-13.3-10.7-24-24-24z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.h = BH.d
+  },
+  8563: (HH, BH) => {
+    var LH = "user-check",
+      AH = [],
+      rH = "f4fc",
+      SH = "M286 304c98.5 0 178.3 79.8 178.3 178.3 0 16.4-13.3 29.7-29.7 29.7L78 512c-16.4 0-29.7-13.3-29.7-29.7 0-98.5 79.8-178.3 178.3-178.3l59.4 0zM585.7 105.9c7.8-10.7 22.8-13.1 33.5-5.3s13.1 22.8 5.3 33.5L522.1 274.9c-4.2 5.7-10.7 9.4-17.7 9.8s-14-2.2-18.9-7.3l-46.4-48c-9.2-9.5-9-24.7 .6-33.9 9.5-9.2 24.7-8.9 33.9 .6l26.5 27.4 85.6-117.7zM256.3 248a120 120 0 1 1 0-240 120 120 0 1 1 0 240z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [640, 512, AH, rH, SH]
+    }, BH.e = BH.b
+  },
+  8565: (HH, BH) => {
+    var LH = "user-clock",
+      AH = [],
+      rH = "f4fd",
+      SH = "M224 8a120 120 0 1 1 0 240 120 120 0 1 1 0-240zM194.3 304l59.4 0c3.9 0 7.9 .1 11.8 .4-16.2 28.2-25.5 60.8-25.5 95.6 0 41.8 13.4 80.5 36 112L45.7 512C29.3 512 16 498.7 16 482.3 16 383.8 95.8 304 194.3 304zM288 400a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-80c-8.8 0-16 7.2-16 16l0 64c0 8.8 7.2 16 16 16l48 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-32 0 0-48c0-8.8-7.2-16-16-16z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.f = BH.d
+  },
+  8573: (HH, BH, LH) => {
+    var AH = LH(8577);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.h = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8577: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "user-group",
+      AH = [128101, "user-friends"],
+      rH = "f500",
+      SH = "M64 128a112 112 0 1 1 224 0 112 112 0 1 1 -224 0zM0 464c0-97.2 78.8-176 176-176s176 78.8 176 176l0 6c0 23.2-18.8 42-42 42L42 512c-23.2 0-42-18.8-42-42l0-6zM432 64a96 96 0 1 1 0 192 96 96 0 1 1 0-192zm0 240c79.5 0 144 64.5 144 144l0 22.4c0 23-18.6 41.6-41.6 41.6l-144.8 0c6.6-12.5 10.4-26.8 10.4-42l0-6c0-51.5-17.4-98.9-46.5-136.7 22.6-14.7 49.6-23.3 78.5-23.3z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.faUserGroup = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 576, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8585: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "user-group-crown",
+      AH = ["users-crown"],
+      rH = "f6a5",
+      SH = "M240 128c0 35.3-28.7 64-64 64s-64-28.7-64-64l128 0zM64 25.9L64 128c0 61.9 50.1 112 112 112s112-50.1 112-112l0-102.1c0-11.9-12.5-19.6-23.2-14.3L234.3 26.8c-6.2 3.1-13.6 1.9-18.5-3L187.3-4.7c-6.2-6.2-16.4-6.2-22.6 0L136.2 23.8c-4.9 4.9-12.3 6.1-18.5 3L87.2 11.6C76.5 6.3 64 14 64 25.9zM432 256a96 96 0 1 0 0-192 96 96 0 1 0 0 192zm0 48c-29 0-56 8.6-78.5 23.3 29.2 37.8 46.5 85.2 46.5 136.7l0 6c0 15.2-3.8 29.5-10.4 42l144.8 0c23 0 41.6-18.6 41.6-41.6l0-22.4c0-79.5-64.5-144-144-144zM176 288C78.8 288 0 366.8 0 464l0 6c0 23.2 18.8 42 42 42l268 0c23.2 0 42-18.8 42-42l0-6c0-97.2-78.8-176-176-176z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.faUserGroupCrown = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 576, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8594: (HH, BH) => {
+    var LH = "user-magnifying-glass",
+      AH = [],
+      rH = "e5c5",
+      SH = "M224 248c20.9 0 40.5-5.3 57.7-14.7 10.7-12.2 23.2-22.9 37.1-31.6 15.8-20.3 25.2-45.9 25.2-73.6 0-66.3-53.7-120-120-120S104 61.7 104 128 157.7 248 224 248zm-29.7 56C95.8 304 16 383.8 16 482.3 16 498.7 29.3 512 45.7 512l356.6 0c.6 0 1.1 0 1.7 0-90.9-2.1-164-76.5-164-168 0-13.8 1.7-27.2 4.8-40l-50.5 0zM408 272.1a72 72 0 1 1 0 144 72 72 0 1 1 0-144zm0 192c24.5 0 47.2-7.3 66.2-19.9L535 505.1c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-60.8-60.9c12.6-19 19.9-41.7 19.9-66.2 0-66.3-53.7-120-120-120s-120 53.7-120 120 53.7 120 120 120z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.h = BH.e
+  },
+  8597: (HH, BH) => {
+    var LH = "user-minus",
+      AH = [],
+      rH = "f503",
+      SH = "M285.7 304c98.5 0 178.3 79.8 178.3 178.3 0 16.4-13.3 29.7-29.7 29.7L77.7 512C61.3 512 48 498.7 48 482.3 48 383.8 127.8 304 226.3 304l59.4 0zM256 248a120 120 0 1 1 0-240 120 120 0 1 1 0 240zm344-96c13.3 0 24 10.7 24 24s-10.7 24-24 24l-144 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l144 0z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [640, 512, AH, rH, SH]
+    }, BH.g = BH.c
+  },
+  8601: (HH, BH) => {
+    var LH = "user-plus",
+      AH = [],
+      rH = "f234",
+      SH = "M285.7 304c98.5 0 178.3 79.8 178.3 178.3 0 16.4-13.3 29.7-29.7 29.7L77.7 512C61.3 512 48 498.7 48 482.3 48 383.8 127.8 304 226.3 304l59.4 0zM528 80c13.3 0 24 10.7 24 24l0 48 48 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-48 0 0 48c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-48-48 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0 0-48c0-13.3 10.7-24 24-24zM256 248a120 120 0 1 1 0-240 120 120 0 1 1 0 240z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [640, 512, AH, rH, SH]
+    }, BH.f = BH.e
+  },
+  8608: (HH, BH) => {
+    var LH = "user-secret",
+      AH = [128373],
+      rH = "f21b",
+      SH = "M171-16c-36.4 0-57.8 58.3-68.3 112L72 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l24 0 0 32c0 17 3.3 33.2 9.3 48l-9.3 0 0 0-20.5 0c-15.2 0-27.5 12.3-27.5 27.5 0 3 .5 5.9 1.4 8.7l28.9 86.6C40.2 379.6 16 428.1 16 482.3 16 498.7 29.3 512 45.7 512l356.6 0c16.4 0 29.7-13.3 29.7-29.7 0-54.2-24.2-102.7-62.3-135.4l28.9-86.6c.9-2.8 1.4-5.7 1.4-8.7 0-15.2-12.3-27.5-27.5-27.5l-20.5 0 0 0-9.3 0c6-14.8 9.3-31 9.3-48l0-32 24 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-30.7 0c-10.4-53.7-31.9-112-68.3-112-9.6 0-19 3.9-27.5 8.2-8.2 4.1-18.4 7.8-25.5 7.8s-17.3-3.7-25.5-7.8C190-12.1 180.6-16 171-16zm93.7 484.4l-24.8-70.9 27.9-32.5c2.7-3.2 4.2-7.2 4.2-11.4 0-9.7-7.8-17.5-17.5-17.5l-61 0c-9.7 0-17.5 7.8-17.5 17.5 0 4.2 1.5 8.2 4.2 11.4l27.9 32.5-24.8 70.9-57-180.4 35.7 0c18.4 10.2 39.5 16 62 16s43.6-5.8 62-16l35.7 0-57 180.4zM224 256c-34.7 0-64.2-22.1-75.3-53 5.7 3.2 12.3 5 19.3 5l12.4 0c16.5 0 31.1-10.6 36.3-26.2 2.3-7 12.2-7 14.5 0 5.2 15.6 19.9 26.2 36.3 26.2l12.4 0c7 0 13.6-1.8 19.3-5-11.1 30.9-40.6 53-75.3 53z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.e = BH.c
+  },
+  8611: (HH, BH) => {
+    var LH = "user-slash",
+      AH = [62714, "user-alt-slash", "user-large-slash"],
+      rH = "f506",
+      SH = "M41-24.9c-9.4-9.4-24.6-9.4-33.9 0S-2.3-.3 7 9.1l528 528c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L311.5 245.7c55-10.9 96.5-59.5 96.5-117.7 0-66.3-53.7-120-120-120-58.2 0-106.8 41.5-117.7 96.5L41-24.9zM235.6 305.4C147.9 316.6 80 391.5 80 482.3 80 498.7 93.3 512 109.7 512l332.5 0-206.6-206.6z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.f = BH.b
+  },
+  8616: (HH, BH) => {
+    var LH = "user-unlock",
+      AH = [],
+      rH = "e058",
+      SH = "M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240zm-29.7 56C95.8 304 16 383.8 16 482.3 16 498.7 29.3 512 45.7 512l259.6 0c-.9-5.2-1.3-10.6-1.3-16.1l0-96c0-28.5 12.4-54 32-71.5l0-4.3c-24.6-12.8-52.6-20.1-82.3-20.1l-59.4 0zM496 304l48 0c0-44.2-35.8-80-80-80s-80 35.8-80 80l0 50.7c-18.6 6.6-32 24.4-32 45.3l0 96c0 26.5 21.5 48 48 48l128 0c26.5 0 48-21.5 48-48l0-96c0-26.5-21.5-48-48-48l-96 0 0-48c0-17.7 14.3-32 32-32s32 14.3 32 32z";
+    BH.e = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.h = BH.e
+  },
+  8621: (HH, BH, LH) => {
+    var AH = LH(8585);
+    BH.c = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.e = BH.c, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8624: (HH, BH) => {
+    var LH = "users-gear",
+      AH = ["users-cog"],
+      rH = "f509",
+      SH = "M320 224a104 104 0 1 0 0-208 104 104 0 1 0 0 208zM96 232a72 72 0 1 0 0-144 72 72 0 1 0 0 144zM0 416l0 32c0 17.7 14.3 32 32 32l86.7 0c-4.3-9.8-6.7-20.6-6.7-32l0-16c0-53.2 20-101.8 52.9-138.6-11.7-3.5-24.1-5.4-36.9-5.4-70.7 0-128 57.3-128 128zM616 160a72 72 0 1 0 -144 0 72 72 0 1 0 144 0zM160 432l0 16c0 17.7 14.3 32 32 32l156.8 0c-7.1-21.6-6.3-44.4 10.7-64-14-16.2-20.5-39.7-11.4-63.3 6.6-17.1 15.9-33.1 27.4-47.3 5.4-6.6 11.6-11.7 18.3-15.4-22.1-11.5-47.2-18-73.8-18-88.4 0-160 71.6-160 160zm464.6-44.1c6.3-3.6 9.5-11.1 6.8-18-4.8-12.4-11.5-24.1-19.9-34.4-4.6-5.7-12.7-6.7-19-3-21.8 12.6-48.6-2.8-48.6-28.1 0-7.3-4.9-13.8-12.1-14.9-12.9-2-26.8-2-39.7 0-7.2 1.1-12.1 7.6-12.1 14.9 0 25.2-26.8 40.7-48.6 28.1-6.3-3.6-14.4-2.6-19 3-8.4 10.3-15.1 22-19.9 34.4-2.6 6.8 .5 14.3 6.8 17.9 21.9 12.6 21.9 43.5 0 56.2-6.3 3.6-9.5 11.1-6.8 17.9 4.8 12.4 11.5 24.1 19.9 34.4 4.6 5.7 12.7 6.7 19 3 21.8-12.6 48.6 2.9 48.6 28.1 0 7.3 4.9 13.8 12.1 14.9 12.9 2 26.8 2 39.7 0 7.2-1.1 12.1-7.6 12.1-14.9 0-25.2 26.8-40.7 48.6-28.1 6.3 3.6 14.4 2.6 19-3 8.4-10.3 15.1-22 19.9-34.4 2.6-6.8-.5-14.3-6.8-17.9-21.9-12.6-21.9-43.5 0-56.2zM472 416a40 40 0 1 1 80 0 40 40 0 1 1 -80 0z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [640, 512, AH, rH, SH]
+    }, BH.g = BH.c
+  },
+  8627: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "video",
+      AH = ["video-camera"],
+      rH = "f03d",
+      SH = "M96 64c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64L96 64zM464 336l73.5 58.8c4.2 3.4 9.4 5.2 14.8 5.2 13.1 0 23.7-10.6 23.7-23.7l0-240.6c0-13.1-10.6-23.7-23.7-23.7-5.4 0-10.6 1.8-14.8 5.2L464 176 464 336z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.faVideo = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 576, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8630: (HH, BH, LH) => {
+    var AH = LH(8627);
+    BH.b = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.c = BH.b, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8638: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "volume",
+      AH = [128265, "volume-medium"],
+      rH = "f6a8",
+      SH = "M48 352l48 0 134.1 119.2c6.4 5.7 14.6 8.8 23.1 8.8 19.2 0 34.8-15.6 34.8-34.8l0-378.4c0-19.2-15.6-34.8-34.8-34.8-8.5 0-16.7 3.1-23.1 8.8L96 160 48 160c-26.5 0-48 21.5-48 48l0 96c0 26.5 21.5 48 48 48zM441.1 107c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C443.3 170.7 464 210.9 464 256s-20.7 85.3-53.2 111.8c-10.3 8.4-11.8 23.5-3.5 33.8s23.5 11.8 33.8 3.5c43.2-35.2 70.9-88.9 70.9-149s-27.7-113.8-70.9-149zm-60.5 74.5c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C361.1 227.6 368 241 368 256s-6.9 28.4-17.7 37.3c-10.3 8.4-11.8 23.5-3.5 33.8s23.5 11.8 33.8 3.5C402.1 312.9 416 286.1 416 256s-13.9-56.9-35.5-74.5z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [512, 512, AH, rH, SH]
+    }, BH.faVolume = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 512, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8643: (HH, BH, LH) => {
+    var AH = LH(8648);
+    BH.b = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.f = BH.b, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8648: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "volume-low",
+      AH = [128264, "volume-down"],
+      rH = "f027",
+      SH = "M48 352l48 0 134.1 119.2c6.4 5.7 14.6 8.8 23.1 8.8 19.2 0 34.8-15.6 34.8-34.8l0-378.4c0-19.2-15.6-34.8-34.8-34.8-8.5 0-16.7 3.1-23.1 8.8L96 160 48 160c-26.5 0-48 21.5-48 48l0 96c0 26.5 21.5 48 48 48zM380.6 181.5c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C361.1 227.6 368 241 368 256s-6.9 28.4-17.7 37.3c-10.3 8.4-11.8 23.5-3.5 33.8s23.5 11.8 33.8 3.5C402.1 312.9 416 286.1 416 256s-13.9-56.9-35.5-74.5z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [448, 512, AH, rH, SH]
+    }, BH.faVolumeLow = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 448, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8652: (HH, BH, LH) => {
+    var AH = LH(8638);
+    BH.e = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.f = BH.e, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8656: (HH, BH) => {
+    var LH = "volume-slash",
+      AH = [128263],
+      rH = "f2e2",
+      SH = "M41-24.9c-9.4-9.4-24.6-9.4-33.9 0S-2.3-.3 7 9.1l528 528c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-249-249 0-187.3c0-19.2-15.6-34.8-34.8-34.8-8.5 0-16.7 3.1-23.1 8.8L179.8 114 41-24.9zM90.2 160L80 160c-26.5 0-48 21.5-48 48l0 96c0 26.5 21.5 48 48 48l48 0 134.1 119.2c6.4 5.7 14.6 8.8 23.1 8.8 19.2 0 34.8-15.6 34.8-34.8L320 389.8 90.2 160zm349.1-49.6c-8.4 10.3-6.8 25.4 3.5 33.8 32.5 26.4 53.2 66.7 53.2 111.8 0 33-11.1 63.4-29.8 87.7l34.2 34.2c27.2-33.1 43.6-75.6 43.6-121.9 0-60.1-27.7-113.8-70.9-149-10.3-8.4-25.4-6.8-33.8 3.5zM396.5 274l35.3 35.3c10.2-15.2 16.2-33.6 16.2-53.3 0-30.1-13.9-56.9-35.5-74.5-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8c10.9 8.8 17.7 22.2 17.7 37.3 0 6.4-1.2 12.4-3.5 18z";
+    BH.c = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.d = BH.c
+  },
+  8658: (HH, BH, LH) => {
+    var AH = LH(7738);
+    BH.b = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.e = BH.b, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8662: (HH, BH) => {
+    Object.defineProperty(BH, "__esModule", {
+      value: !0
+    });
+    var LH = "wifi",
+      AH = ["wifi-3", "wifi-strong"],
+      rH = "f1eb",
+      SH = "M288 96c-90.9 0-173.2 36-233.7 94.6-12.7 12.3-33 12-45.2-.7s-12-33 .7-45.2C81.7 74.9 179.9 32 288 32S494.3 74.9 566.3 144.7c12.7 12.3 13 32.6 .7 45.2s-32.6 13-45.2 .7C461.2 132 378.9 96 288 96zM240 432a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zM168 326.2c-11.7 13.3-31.9 14.5-45.2 2.8s-14.5-31.9-2.8-45.2C161 237.4 221.1 208 288 208s127 29.4 168 75.8c11.7 13.3 10.4 33.5-2.8 45.2s-33.5 10.4-45.2-2.8C378.6 292.9 335.8 272 288 272s-90.6 20.9-120 54.2z";
+    BH.definition = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.faWifi = BH.definition, BH.prefix = "fas", BH.iconName = LH, BH.width = 576, BH.height = 512, BH.ligatures = AH, BH.unicode = rH, BH.svgPathData = SH, BH.aliases = AH
+  },
+  8670: (HH, BH, LH) => {
+    var AH = LH(8662);
+    BH.b = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.e = BH.b, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8678: (HH, BH, LH) => {
+    var AH = LH(8662);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.f = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8684: (HH, BH) => {
+    var LH = "wrench",
+      AH = [128295],
+      rH = "f0ad",
+      SH = "M509.4 98.6c7.6-7.6 20.3-5.7 24.1 4.3 6.8 17.7 10.5 37 10.5 57.1 0 88.4-71.6 160-160 160-17.5 0-34.4-2.8-50.2-8L146.9 498.9c-28.1 28.1-73.7 28.1-101.8 0s-28.1-73.7 0-101.8L232 210.2c-5.2-15.8-8-32.6-8-50.2 0-88.4 71.6-160 160-160 20.1 0 39.4 3.7 57.1 10.5 10 3.8 11.8 16.5 4.3 24.1l-88.7 88.7c-3 3-4.7 7.1-4.7 11.3l0 41.4c0 8.8 7.2 16 16 16l41.4 0c4.2 0 8.3-1.7 11.3-4.7l88.7-88.7z";
+    BH.d = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [576, 512, AH, rH, SH]
+    }, BH.g = BH.d
+  },
+  8690: (HH, BH) => {
+    var LH = [120],
+      AH = "M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z";
+    BH.d = {
+      prefix: "fas",
+      iconName: "x",
+      icon: [384, 512, LH, "58", AH]
+    }, BH.g = BH.d
+  },
+  8692: (HH, BH) => {
+    var LH = "xmark",
+      AH = [128473, 10005, 10006, 10060, 215, "close", "multiply", "remove", "times"],
+      rH = "f00d",
+      SH = "M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z";
+    BH.b = {
+      prefix: "fas",
+      iconName: LH,
+      icon: [384, 512, AH, rH, SH]
+    }, BH.c = BH.b
+  },
+  8700: (HH, BH, LH) => {
+    var AH = LH(7481);
+    BH.d = {
+      prefix: AH.prefix,
+      iconName: AH.iconName,
+      icon: [AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData]
+    }, BH.f = BH.d, AH.prefix, AH.iconName, AH.width, AH.height, AH.aliases, AH.unicode, AH.svgPathData, AH.aliases
+  },
+  8704: (HH, BH, LH) => {
+    LH.d(BH, {
+      e: () => rH,
+      i: () => SH
+    });
+    var AH = {
+        prefix: "fas",
+        iconName: "shirt",
+        icon: [640, 512, [128085, "t-shirt", "tshirt"], "f553", "M320.2 112c44.2 0 80-35.8 80-80l53.5 0c17 0 33.3 6.7 45.3 18.7L617.6 169.4c12.5 12.5 12.5 32.8 0 45.3l-50.7 50.7c-12.5 12.5-32.8 12.5-45.3 0l-41.4-41.4 0 224c0 35.3-28.7 64-64 64l-192 0c-35.3 0-64-28.7-64-64l0-224-41.4 41.4c-12.5 12.5-32.8 12.5-45.3 0L22.9 214.6c-12.5-12.5-12.5-32.8 0-45.3L141.5 50.7c12-12 28.3-18.7 45.3-18.7l53.5 0c0 44.2 35.8 80 80 80z"]
       },
-      EU = (UU, XU, zU) => ({
-        bubbles: !0,
-        cancelable: !0,
-        composed: !0,
-        view: window,
-        clientX: UU.x,
-        clientY: UU.y,
-        screenX: UU.x,
-        screenY: UU.y,
-        button: XU,
-        buttons: zU,
-        pointerId: 1,
-        pointerType: "mouse",
-        isPrimary: !0
-      }),
-      YU = (UU, XU) => {
-        (0, yU.g)(UU, XU)
-      },
-      NU = function(UU, XU) {
-        let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        const cU = 0 === zU ? 1 : 2;
-        YU(UU, new PointerEvent("pointerdown", EU(XU, zU, cU))), YU(UU, new MouseEvent("mousedown", EU(XU, zU, cU)))
-      },
-      IU = function(UU, XU) {
-        let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        YU(UU, new PointerEvent("pointerup", EU(XU, zU, 0))), YU(UU, new MouseEvent("mouseup", EU(XU, zU, 0)))
-      },
-      pU = function(UU, XU) {
-        let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        NU(UU, XU, zU), IU(UU, XU, zU), YU(UU, 0 === zU ? new MouseEvent("click", EU(XU, 0, 0)) : new MouseEvent("contextmenu", EU(XU, 2, 0)))
-      },
-      aU = function(UU, XU, zU) {
-        let {
-          leaveBelow: cU = null,
-          enterBelow: yU = null
-        } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        if (UU !== XU) {
-          if (null !== UU && void 0 !== UU && UU.isConnected) {
-            const yU = {
-              ...EU(zU, 0, 0),
-              relatedTarget: XU
-            };
-            YU(UU, new PointerEvent("pointerout", yU)), YU(UU, new MouseEvent("mouseout", yU));
-            const QU = UU => !!XU && UU.contains(XU) || !!cU && UU.contains(cU);
-            for (let XU = UU; XU && !QU(XU); XU = XU.parentElement) YU(XU, new PointerEvent("pointerleave", {
-              ...yU,
-              bubbles: !1
-            })), YU(XU, new MouseEvent("mouseleave", {
-              ...yU,
-              bubbles: !1
-            }))
-          }
-          if (XU) {
-            const cU = {
-              ...EU(zU, 0, 0),
-              relatedTarget: UU
-            };
-            YU(XU, new PointerEvent("pointerover", cU)), YU(XU, new MouseEvent("mouseover", cU));
-            const QU = [],
-              AU = XU => !(null === UU || void 0 === UU || !UU.isConnected) && XU.contains(UU) || !!yU && XU.contains(yU);
-            for (let UU = XU; UU && !AU(UU); UU = UU.parentElement) QU.push(UU);
-            for (const UU of QU.reverse()) YU(UU, new PointerEvent("pointerenter", {
-              ...cU,
-              bubbles: !1
-            })), YU(UU, new MouseEvent("mouseenter", {
-              ...cU,
-              bubbles: !1
-            }));
-            YU(XU, new PointerEvent("pointermove", EU(zU, 0, 0))), YU(XU, new MouseEvent("mousemove", EU(zU, 0, 0)))
-          }
-        } else XU && (YU(XU, new PointerEvent("pointermove", EU(zU, 0, 0))), YU(XU, new MouseEvent("mousemove", EU(zU, 0, 0))))
-      },
-      tU = UU => {
-        cU.k.UY(QU.d, UU)
-      },
-      gU = UU => {
-        if (oU(UU)) return void tU(UU);
-        const XU = UU.hasAttribute("data-pad-focusable") ? UU.querySelector("a[href]") : null,
-          zU = null !== XU && void 0 !== XU ? XU : UU;
-        pU(zU, DU(zU))
-      },
-      kU = ".Dropdown-root.is-open",
-      GU = UU => {
-        const XU = UU.querySelector(".Dropdown-control");
-        return gU(XU), XU
-      },
-      BU = UU => {
-        var XU;
-        const zU = null !== (XU = UU.closest(kU)) && void 0 !== XU ? XU : UU.querySelector(kU);
-        return zU ? GU(zU) : null
-      },
-      ZU = UU => {
-        for (const XU of document.querySelectorAll(kU)) XU.contains(UU) || GU(XU)
-      },
-      RU = UU => null !== UU.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
-      PU = UU => {
-        const XU = UU ? document.elementFromPoint(UU.x, UU.y) : null;
-        return !(null === XU || void 0 === XU || !XU.closest("[data-pad-repeat]"))
-      },
-      WU = UU => {
-        var XU;
-        return null !== (XU = [...UU.querySelectorAll("[data-pad-back]")].find(FU.m)) && void 0 !== XU ? XU : null
-      },
-      dU = UU => {
-        const XU = WU(UU);
-        return !!XU && (gU(XU), !0)
-      },
-      LU = UU => {
-        var XU, zU, cU, yU;
-        return null !== (XU = null !== (zU = null !== (cU = UU.getAttribute("data-pad-key")) && void 0 !== cU ? cU : UU.getAttribute("href")) && void 0 !== zU ? zU : null === (yU = UU.querySelector("a[href]")) || void 0 === yU ? void 0 : yU.getAttribute("href")) && void 0 !== XU ? XU : null
-      }
+      rH = AH,
+      SH = AH
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const HH in modules) Object.freeze(modules[HH]);
